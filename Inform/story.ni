@@ -2971,6 +2971,8 @@ Carry out trading:
 	let number be 0;
 	delete noun;
 
+skipcockchange is a truth state that varies.  skipcockchange is usually false.
+
 This is the sex change rule:
 	choose row monster from the table of random critters;
 	if "Just One" is listed in feats of player:
@@ -3034,13 +3036,14 @@ This is the sex change rule:
 			now the cock width of player is 1;
 			increase the cock length of player by ( cock length entry  ) divided by 3;
 			increase the cock width of player by ( cock width entry ) divided by 3;
-			now cockname of player is name entry;
-			now cock of player is cock entry;
+			if skipcockchange is false:
+				now cockname of player is name entry;
+				now cock of player is cock entry;
 			if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 				now cock length of player is 8;
 			if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
 				now cock width of player is 4;
-		otherwise if a random chance of 2 in 3 succeeds:	[Extra cocks at 67%]
+		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[Extra cocks at 67%]
 			increase cocks of player by 1;
 		if prevcock < cocks of player:		[did new cock appear?]
 			follow the cock descr rule;
@@ -3133,7 +3136,7 @@ This is the sex change rule:
 				now cunt length of player is 8;
 			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
 				now cunt width of player is 4;
-		otherwise if a random chance of 2 in 3 succeeds:	[2nd+ cunt at 67%]
+		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[2nd+ cunt at 67%]
 			increase the cunts of player by 1;
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
@@ -3170,6 +3173,8 @@ This is the sex change rule:
 		decrease cunts of player by 1;
 		follow the cock descr rule;
 		follow the cunt descr rule;
+	now skipcockchange is false;
+
 
 This is the breast change rule:
 	choose row monster from the table of random critters;

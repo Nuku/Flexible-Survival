@@ -132,7 +132,6 @@ Section 3 - Joanna the Kinkajou-Plant
 Joanna is a woman.  Joanna is in Flower Garden.
 The description of Joanna is "[joannadesc]";
 The conversation of Joanna is { "Sunshine!" }.
-lastjoannafucked is a number that varies.  lastjoannafucked is normally 555.
 lastjoannajuice is a number that varies.  lastjoannajuice is normally 555.
 joannatalk is a number that varies.
 joannaoffernum is a number that varies.
@@ -192,10 +191,10 @@ Instead of conversing the Joanna:
 		if libido of player > 100, now libido of player is 100;
 	otherwise if hp of joanna < 5:
 		say "     [one of]'I should be safe enough here.  The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'I'm really liking the new me,' she says, running her paws over her verdant body.[or]'You should remember to take a moment to smell my lovely flowers,' she says.  While she probably means her garden, she does grin and run a finger along the soft petals of her pussies.[or]'Life is so peaceful here.'[or]'Thanks for the help.  Being a plant is wonderful, but I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I think I like these ones best,' she says, walking over to one flowering bush.  She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[otherwise]'Oh, I get so sleepy when the sun's down.  I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'Be sure to let that cute bartender at the Palomino know that I'm okay.  The bartender was kind of nice to me.'[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy.'[or]'This plant body of mine has such... strange urges,' she whispers, her tendrils stirring a little.[at random]";
-	otherwise if hp of joanna is 5 and lust of joanna is 3 and ( lastjoannafucked - turns >= 5 ) and daytimer is day:
+	otherwise if hp of joanna is 5 and lust of joanna is 3 and ( lastfuck of joanna - turns >= 5 ) and daytimer is day:
 		say "[joannaoffer]";
 	otherwise if hp of joanna is 5 or hp of Joanna is 6:
-		if hp of Joanna is 6 and a random chance of 1 in 4 succeeds and joannaoffernum is not 4 and ( lastjoannafucked - turns >= 5 ) and daytimer is day:
+		if hp of Joanna is 6 and a random chance of 1 in 4 succeeds and joannaoffernum is not 4 and ( lastfuck of joanna - turns >= 5 ) and daytimer is day:
 			say "[joannaoffer2]";
 		otherwise:
 			say "     [one of]'Wouldn't you love staying here in my beautiful garden with me?'[or]'I think being a plant is wonderful,' she says, running her paws over her verdant body.[or]'You should remember to take a moment to smell my lovely flowers,' she says as she spreads the petals of her pussies with a grin.[or]She grins and cups one of the large, vaginal flowers in her paw and slowly slides her tongue around its edge before diving into it, making a sensual show of her feeding.[or]'This plant body of mine has such... wonderful urges,' she whispers, her tendrils stirring a little.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, stretching herself out on the grass, tendril cocks rustling lightly as she enjoys the sunshine[otherwise]'My kinkajou side is becoming more relaxed, making it easier to rest at night,' she says[end if].[or]'I'm feeling so much better now that I'm letting myself have sex.  This body craves it, needs it, and I'm really enjoying it as well,' she says, running a paw over your chest.[at random]";
@@ -220,7 +219,7 @@ to say plantexam:
 			say ".  She moves on to your leaking [if cunts of player > 1]cunts, fingering them[otherwise]cunt, fingering it[end if], lightly as she lets her tongue slide all over your dripping folds.  She chirrs in appreciation as she enjoys your tasty juices";
 	say ".";
 	increase libido of player by 25;
-	increase lastJoannafucked by 6;
+	increase lastfuck of joanna by 6;
 	now lust of Joanna is 1;
 	if hp of Joanna < 5, now hp of Joanna is 5;
 
@@ -261,12 +260,12 @@ to say joannaseeded:
 Section 4 - Joanna Sex
 
 instead of fucking the Joanna:
-	if lastJoannafucked - turns < 8 and hp of Joanna < 5 and hp of Joanna is not 0:
+	if lastfuck of joanna - turns < 8 and hp of Joanna < 5 and hp of Joanna is not 0:
 		say "     Having played with Joanna recently, perhaps you should wait a bit before having another romp with her.  She could use a little more time in the sun to recharge and refill on her sweet juices.";
-	otherwise if lastJoannafucked - turns < 5 and hp of Joanna >= 5 and hp of Joanna < 90:
+	otherwise if lastfuck of joanna - turns < 5 and hp of Joanna >= 5 and hp of Joanna < 90:
 		say "     Having played with Joanna recently, perhaps you should wait a bit before having another romp with her.  She could use a little more time in the sun to recharge and refill on her sweet juices.";
 	[Joanna at Palomino]
-	otherwise if lastJoannafucked - turns < 8 and hp of Joanna is 92:
+	otherwise if lastfuck of joanna - turns < 8 and hp of Joanna is 92:
 		say "     Joanna smiles at your offer, but seems happy to just dance for now.  Perhaps you should try again later.";
 	otherwise if hp of Joanna is 0 or hp of Joanna is 90 or hp of Joanna is 91:
 		say "     You hardly know her.  Perhaps you should try talking to her a bit and get to know her better before you make such an offer.";
@@ -358,6 +357,7 @@ to say joannaselection:
 		now description entry is "Take those tendrils all in one hole.";
 		now toggle entry is joannasexy rule;
 	sort the table of fucking options in sortorder order;
+	say "[line break]";
 	select an option from table of fucking options;
 	clear the screen;
 
@@ -397,6 +397,7 @@ This is the joannasexy rule:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if hp of Joanna < 5, increase hp of Joanna by 1;
+		now lastfuck of joanna is turns;
 		if lastjoannajuice is turns:
 			if lust of Joanna is 2:
 				say "     You can feel an oddly pleasant sensation suffusing you.  Centered on your belly to begin, it spreads out through your body as Joanna's juice and her sexual fluids seep into you.  You feel the telltale tingles of transformation as she's spread her plant-like infection to you from her juicy breasts.  In the warmth of the afterglow in the sunny garden, you find it all pleasant and aren't upset by her actions.  If anything, you find yourself feeling closer to her and looking forward to your next drink.";
@@ -413,11 +414,15 @@ This is the joannasexy rule:
 			if a random chance of 2 in 3 succeeds:
 				infect "Parasitic Plant";
 			otherwise:
+				now skipcockchange is true;
 				follow the sex change rule;
+				now skipcockchange is false;
 		otherwise:
 			say "     You can feel an oddly pleasant sensation as Joanna's sweet saliva and fluids seep further into your body, warming your groin and exciting you.";
 			say "[line break]";
+			now skipcockchange is true;
 			follow the sex change rule;
+			now skipcockchange is false;
 		wait for any key;
 
 
@@ -568,7 +573,7 @@ to say joannaclubsex:
 		say "     After breaking the kiss, Joanna tugs you over to the nearby couch and pulls you down overtop her.  Moving your hands to her breasts, you caress them.  They are dainty B-cups, small compared to most of those you see around now, but she clearly enjoys the attention you give them.  Leaning down, you nibble and suck her nipples while fingering her pussy.  She chirrs with delight, spreading her legs and tugging at your cock, clearly tired of waiting and eager for some action.";
 		say "     Guiding you into her dripping snatch slowly, she wraps her arms around you and moans in pleasure as you fuck her.  Her pussy squeezes around your cock as you thrust.  Holding yourself up with one hand, your other moves to keep playing with her nipples.  After a good, long romp on the couch, you thrust deep into her and moan in pleasure, blasting your hot seed deep inside the kinkajou as she cries out in ecstasy.  Once you've both recovered from your climax, she gives you another kiss before heading back onto the dance floor.";
 	increase lust of Joanna by 1;
-	now lastJoannafucked is turns;
+	now lastfuck of Joanna is turns;
 
 
 Section 9 - Definitions
