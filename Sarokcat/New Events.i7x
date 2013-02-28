@@ -75,12 +75,10 @@ Instead of Resolving a Hyena Gang:
 	if hyg is 0:
 		say "Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings you realize that it appears to advertise that you are coming up on some hyena pack's territory.  And they appear looking for more people to join...";
 		Increase hyg by 1;
-		stop the action;
-	if hyg is 1:
+	otherwise if hyg is 1:
 		Say "Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently.  Glancing around you don't see anyone near by, but the uneasy feeling of being watched won[apostrophe]t leave you alone.  Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";
 		Increase hyg by 1;
-		stop the action;	
-	if hyg is 2:
+	otherwise if hyg is 2:
 		say "As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area.  Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you, and quickly prepare for a fight, only to realize it doesn[apostrophe]t show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.[line break] 'Hey don[apostrophe]t worry,' the hyena says as she draws closer, making you nervous, 'I[apostrophe]m not here for a fight, but we[apostrophe]ve noticed you near our turf and looking at our signage before,' he says with a gesture at the graffiti, 'So I thought I[apostrophe]d come over and offer you a chance to join on up,"; 
 		if the bodyname of the player is "herm hyena":
 			say "'Besides, it looks like you would fit right in around here already,' the hyena says as shi eyes your hyenalike frame, 'What do you say to giving us a try?'";
@@ -88,10 +86,8 @@ Instead of Resolving a Hyena Gang:
 				say "'Great! I[apostrophe]ll, just go and let the others know to keep an eye out for you!  You should come back in a little bit' Shi says, with a toothy smile, 'but first.' Shi says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react shi puts you back down and gives you a big grin, before heading back towards the hyena territory.  Glancing over her shoulder she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
 				hyenaify;
 				Increase hyg by 1;
-				stop the action;	
 			otherwise:
 				say "'That[apostrophe]s to bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain[apostrophe]t no life for a hyena out there all alone,' Shi continues as she runs her pawlike hand down her soft fur, posing for you.  Before fondling her large crotch for a second and winking at you.  'If you ever change your mind, you know where to find us hun, just follow your instincts.'";
-				stop the action;	
 		otherwise:
 			say "'Membership comes with some benefits, though you[apostrophe]ll end up with a few changes as well' the hyena says as shi looks you up and down, 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
 			If player consents:
@@ -99,11 +95,9 @@ Instead of Resolving a Hyena Gang:
 				hyenaify;
 				hyenaify;
 				Increase hyg by 1;
-				stop the action;	
 			otherwise:
 				say "'That[apostrophe]s to bad,' shi says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what your missing out on,' Shi continues as she runs her pawlike hand down her soft fur, posing for you.  Before fondling her large crotch for a second and winking at you.  'If you ever change your mind, you know where to find us hun'";
-				stop the action;	
-	if hyg is 3:
+	otherwise if hyg is 3:
 		say "Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar looking hyena coming towards you from down a side street, a large grin on her hyena muzzle.  Before you can decide what to do about it, your are quickly enveloped once more in a large and enthusiastic hug. [line break]";
 		say "'I thought I scented you!' The large herm hyena exclaims, still hugging you tightly, 'I knew you[apostrophe]d come back to join us, you said you would after all.'  She says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory.  'You must be pretty special to have survived out here this long on your own, but you don[apostrophe]t have to worry about that anymore' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts.  'You have a whole gang on your side now, or pack, whatever you want to call it, you got our back, we got yours. Speaking of which,' She says as she stops in the middle of the street, facing a row of shipment warehouses. 'The names Gina, and I guess I[apostrophe]m your sponsor for now, so let me know if anyone bothers ya or if you need anything.' the newly introduced Gina says with a grin. [line break]";
 		say "'Course first we have to make sure you smell like you belong to me...' She says giving you an evil look. Before you can protest, she has you pinned to the ground underneath her, as she rubs her soft hyena furred body against yours.  The sensation and sudden pouncing cause you to gasp in surprise, and she takes advantage of your open mouth to once more give you a deep kiss, exploring your mouth with her surprisingly flexible tongue, and filling you with her almost addictive personal flavor.  Gina breaks the kiss, leaving your mouth open and panting as she continues to rub herself all over you, her hyenalike musk coating you in its arousing scent. You find it hard to think straight as she rubs her nipples across your face, letting you lick them and toy with them for a minute, before she backs off of you and hauls you unsteadily back up to your feet, still aroused and needy. [line break]";
@@ -114,6 +108,7 @@ Instead of Resolving a Hyena Gang:
 		move player to Hyena hideout;
 		now Hyena hideout is known;
 		now hyena gang is resolved;
+		now battleground is "void";
 
 
 
