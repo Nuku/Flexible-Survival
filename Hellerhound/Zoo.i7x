@@ -72,7 +72,7 @@ The marea of Sewer Grating Two is "Mall". The sewer grating two is open. The des
 
 to say birdrape:
 	if a random chance of one in three succeeds:
-		if a random chance of 1 in 2 succeeds:
+		if a random chance of 1 in 2 succeeds and inafight is not 1:
 			say "A blue bird with a white belly comes swooping down, and pecks you on the head. You have no idea what you did to annoy it, but the spot it hit hurts![line break]";
 			infect "Hermaphrodite Gryphon";
 		otherwise:
@@ -84,7 +84,7 @@ to say birdrape:
 
 
 to say cheetahrape:
-	if a random chance of 1 in 3 succeeds:
+	if a random chance of 1 in 3 succeeds and inafight is not 1:
 		say "You look behind you and freeze, a large spotted cat prowling towards you. You stand there frozen as it comes and walks up, placing its paws on your shoulders and rolling you over. You remember from TV that the best thing to do in this situation is to remain still and hope it leaves you alone. It doesn't work. [line break][line break]The cat nuzzles up to your sex, nuzzling it and lapping at it. You feel slightly more calm as it seems to be just playing with you.";
 		infect "Cheetah";
 		follow the turnpass rule;
