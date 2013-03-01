@@ -1,5 +1,5 @@
-Version 1 of Blue Chaffinch For FS by Stripes begins here.
-[3.5 - more to come]
+Version 2 of Blue Chaffinch For FS by Stripes begins here.
+[Version 2 - Progressive player victory to completion.]
 
 "Adds a unique Blue Chaffinch creature to Flexible Survivals Wandering Monsters table."
 
@@ -24,10 +24,11 @@ to say losetobluechaffinch:
 	otherwise:
 		say ".  The victorious male strides in front of you and, taking your head in his taloned hands, presses your face forward against his throbbing cock.  Dribbles of precum leak across your face and run down over your lips.  You can't help but get a quick taste of it, and after that taste, you want more.  You open your mouth and plunge it down over his seven inches of avian manhood, licking and sucking at it as he moans and chirps happily.  '[one of]Yeah, who's the big, tough bird now?' he brags[or]Lick that cock, you wimp,' he orders[or]Even as a cute birdy, I'm still all man,' he boasts[at random] pulling your face forward so he can thrust into your mouth harder.  You groan, licking and sucking at his cock as best you can while he pounds your face, finally cumming with a lot of chirping and moaning.";
 		say "     When he's done, he pulls out, wipes his messy cock against your cheek with a chuckle and flies off.  You are left sitting there with the taste of the bird's semen in your mouth and a warm feeling in your belly.";
+	if bluechaffrape > 1, decrease bluechaffrape by 1;
 
 
 to say beatthebluechaffinch:
-	say "     Your final blow sends the blue chaffinch stumbling backwards.  '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying.  Just wait until I find you next time[at random],' he chirps angrily before turning and running.  After his first couple of steps, he unfurls his wings and starts flapping to make his escape";
+	say "     Your final blow sends the blue chaffinch stumbling backwards.  '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying.  Just wait until I find you next time[at random],' he chirps [if cocks of player > 0 and bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[otherwise]angrily before turning and running[end if].  After his first couple of steps, he unfurls his wings and starts flapping to make his escape";
 	if cocks of player > 0 and bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 		if nobluechaffinchsex > 2:
 			if facename of player is "Fluffy Owl":
@@ -35,30 +36,78 @@ to say beatthebluechaffinch:
 			otherwise:
 				say ".  As before, you rein in your raptor instincts and let the braggart go, opting to instead shake your fist at him and warning him that you'll be ready, as always, to send him packing.  You hope he'll eventually learn to leave you alone, but you don't expect that'll happen anytime soon, given how fixated most infected people become.";
 		otherwise:
-			say ".  Something about seeing the small bird preparing to fly away sends shivers through your infected body and you start to give chase.  Shall you go for it or rein in these predatory instincts?";
+			if bluechaffrape < 3 or inasituation is true:
+				say ".  Something about seeing the small bird preparing to fly away sends shivers through your infected body and you start to give chase.  Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these predatory instincts?";
+			otherwise:
+				say ".  A rush of excitement for the hunt fills your predatory body again and you start to give chase before you even realize it.  Shall you [link]unleash (Y)[as]y[end link] or [link]rein in (N)[as]n[end link] these wild instincts?";
 			if the player consents:
-				say "[bluecf_sex]";
+				say "[bluecf_catching]";
 				now nobluechaffinchsex is 0;
 			otherwise:
 				say "     Regaining control of yourself, you slow to a halt and let the defeated songbird take flight.  You content yourself by screeching back that you'll send him packing again if he comes back.";
+				increase nobluechaffinchsex by 1;
 	otherwise:
 		say ".  Angered by his escape, but unable to pursue him, you shake your fist and yell back that you'll be ready for him.";
 
-to say bluecf_sex:
+to say bluecf_catching:
 	choose row monster from the table of random critters;
 	say "     Letting your anger and instincts take control, you continue the pursuit.  Noticing you coming, the blue songbird runs and flaps all the harder, staring to take to the air.  Unwilling to let him get away, you flap as well, your predatory instincts driving you to fly after him.";
 	let bonus be ( dexterity of player / 2 ) + level of player + bluechaffrape - 5;
+	if bluechaffrape is 3, increase bonus by 3;
 	let targetnum be 5 + ( ( dex entry + lev entry ) / 2 );	[difficulty partially scales up w/hard mode]
 	let dice be a random number between 1 and 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]:  ";
 	if dice + bonus >= targetnum:
-		say "You don't quite manage to take flight, but you're able to hold a little height just long enough to reach out and grab the escaping passarine by the leg.  Unable to support your added weight, you both drop back to the ground.  He flaps wildly, but it's too late, you've got him and you intend to have some fun with your pretty prize.";
-		say "     Pinning the songbird down, you give a sharp call that sends a shiver through your prey that excites you.  Quite hard from the chase, you push aside his fanned tailfeathers and shove your cock underneath it.  Taking the nape of his neck in your beak, you grip him roughly and drive your [cock size desc of player] [cock of player] shaft into him.  He gives a very refreshing warble at being roughly taken, making the corners of your beak turn up in a smile[if cock length of player > 30].  Your pulsing rod throbs inside the little guy, stuffing him so delightfully full that you can see a big bulge of ruffled feathers from your oversized phallus plowing into him[otherwise if cock length of player > 20].  Your pulsing rod throbs inside the little guy, stuffing him so full that you can see a small bulge of puffed feathers from your enlarged phallus inside him[end if].";
-		say "     He moans and squirms, though half in resistance and half in submission to the powerful predator atop him.  Reaching around, you find his stiff cock and chuckle, rubbing lightly over it.  He blushes and claws at the ground, but his hips press back into your thrusts all the more, some part of him very excited by you fucking him.  The feel of his tight, squeezing body around your shaft as well as his conflicted response is all very exciting for the instincts you've unleashed.  Eventually it all becomes too much and you grip him tightly with your hands and give a shrieking cry as you cum hard into your prey.  He groans loudly and his ass clenches down around you, cock throbbing and spurting his seed onto the ground even as you're filling him[if cock width of player > 35].  Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak.  His body left rounded like a feathery balloon, you chuckle as you pull out.  He gives a weak chirp as your hot cum pours of you his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 25].  Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon.  When you pull out, he gives a weak chirp as hot cum pours of you his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 15].  Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed.  When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[otherwise].  He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if].  He weakly mumbles something about getting you next time, but you just press a foot down onto him, gripping him with your claws as an added reminder of who's predator and who's prey before striding off.  You can't help but feel stronger for your conquest.";
-		increase bluechaffrape by 1;
-		if bluechaffrape > 3, now bluechaffrape is 3;
+		if bluechaffrape < 3 or inasituation is true:
+			say "[bluecf_sex]";
+		otherwise:
+			say "[bluechaffcaught]";
 	otherwise:
 		say "You don't quite manage to take flight, only able to gain a little height long enough to make a swipe at his leg.  You miss the grab, not quite high enough to snag him before he gets completely out of reach.  He gives a quick croaking song and chuckles as he makes a slow loop in the sky, mocking you a little longer before flying off.";
+
+
+to say bluecf_sex:
+	say "You don't quite manage to take flight, but you're able to hold a little height just long enough to reach out and grab the escaping passerine by the leg.  Unable to support your added weight, you both drop back to the ground.  He flaps wildly, but it's too late, you've got him [if bluechaffrape > 0]again [end if]and you intend to have some fun with your pretty prize.";
+	say "     Pinning the songbird down, you give a sharp call that sends a shiver through your prey that excites you.  Quite hard from the chase, you push aside his fanned tailfeathers and shove your cock underneath it.  Taking the nape of his neck in your beak, you grip him roughly and drive your [cock size desc of player] [cock of player] shaft into him.  He gives a very refreshing warble at being roughly taken, making the corners of your beak turn up in a smile[if cock length of player > 30].  Your pulsing rod throbs inside the little guy, stuffing him so delightfully full that you can see a big bulge of ruffled feathers from your oversized phallus plowing into him[otherwise if cock length of player > 20].  Your pulsing rod throbs inside the little guy, stuffing him so full that you can see a small bulge of puffed feathers from your enlarged phallus inside him[end if].";
+	attempttowait;
+	if bluechaffrape < 2:
+		say "     He moans and squirms, though half in resistance and half in submission to the powerful predator atop him.  Reaching around, you find his stiff cock and chuckle, rubbing lightly over it.  He blushes and claws at the ground, but his hips press back into your thrusts all the more, some part of him very excited by you fucking him.  The feel of his tight, squeezing body around your shaft as well as his conflicted response is all very exciting for the instincts you've unleashed.  Eventually it all becomes too much and you grip him tightly with your hands and give a shrieking cry as you cum hard into your prey.  He groans loudly and his ass clenches down around you, cock throbbing and spurting his seed onto the ground even as you're filling him[if cock width of player > 35].  Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak.  His body left rounded like a feathery balloon, making you chuckle as you pull out.  He gives a weak chirp as your hot cum pours of you his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 25].  Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon.  When you pull out, he gives a weak chirp as hot cum pours of you his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 15].  Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed.  When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[otherwise].  He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if].  He weakly mumbles something about getting you next time, but you just press a foot down onto him, gripping him with your claws as an added reminder of who's predator and who's prey before striding off.  You can't help but feel stronger for your conquest.";
+	otherwise:
+		say "     He moans and squirms only a little this time, putting up the most token of resistance to the powerful predator atop him.  Reaching around, you find his stiff cock and chuckle, stroking over it firmly, feeling it throb and pulse with his growing excitement.  He blushes and moans softly for you to just get it over with, but his hips press back into your thrusts almost eagerly.  It's clear that a growing part of him is very excited by you fucking him like this.  The feel of his tight, squeezing body around your shaft as well as his growing lust despite himself is all very arousing for the instincts you've unleashed.";
+		say "     Gripping him all the harder and sinking your talons in, you start slamming away at him in pounding thrusts with a slight pause between each.  He trembles with fear at every nip of your sharp beak, but his cock also pulses all the harder each time you do it.  Pausing in your thrusts for a moment, you run your sharp talons along his side, chuckling that he's nothing but prey now - your prey.  And with that said, you thrust into him again, causing the smaller bird to cry out as he cums.";
+		attempttowait;
+		say "     The feel of that tight little bird's ass clamping down onto your throbbing shaft as he climaxes feels wonderful.  Grabbing the nape of his neck sharply with your beak, you grip him tightly and plow into him one last time, unleashing your hot seed and filling his bowels[if cock width of player > 35].  Your [cum load size of player] load bloats the poor songbird so much that some of it leaks out of his beak as he becomes rounded liky a feathery balloon[otherwise if cock width of player > 25].  Your [cum load size of player] load bloats the poor songbird and rounded like a feathery balloon[otherwise if cock width of player > 15].  Your [cum load size of player] load gives the poor songbird a somewhat chubbier look as his belly is stuffed quite full with your seed[otherwise].  Your [cum load size of player] load makes the poor songbird's ass wet and creamy[end if].";
+		attempttowait;
+		say "     But you're not done with him this time.  After a short break, you resume thrusting, wanting a second go at your prize prey.  He releases some moans and chirps, his body again betraying him as he gets hard.  'Oh, you like that, don't you, prey?' you tease, stroking his shaft and nip at his shoulders and neck firmly.  'You're just a tasty little morsel, aren't you?' you taunt.  While the more human part of you just wanting to scare him into leaving you alone, the [bodyname of player] part of you is excited by the wild, predatory desires and power you're wielding over your appetizing victim.  More nips and bites lead to a rush of coppery excitement as you get a bit too rough, the taste of his blood causing you a shriek and cum hard into him as he sings along in lustful release, cumming powerfully as well[if cock width of player > 35].  Already overful from the last load, there's room for no more and it overflows from his beak until you're drained and he's left coughing and weak from being so bloated.  He gives a weak, gurgling chirp when you pull out, but is also in a blissful haze from his two powerful orgasms.  Chuckling, you rock the birdie on his rounded belly before leaving him behind to drain and deflate[otherwise if cock width of player > 25].  Already overful from the last load, there's nowhere for the rest of it to go but overflowing out of his beak this time until you're drained and he's left coughing and weak from being so bloated.  He gives a weak, gurgling chirp when you pull out, but is also in a blissful haze from his two powerful orgasms.  Chuckling, you rock the birdie on his rounded belly before leaving him behind to drain and deflate[otherwise if cock width of player > 15].  Already quite full from your previous release, this second one leaves him full and rounded like a feathery balloon.  He gives a weak chirp when you pull out, but is also in a blissful haze from his two powerful orgasms.  Chuckling, you give the birdie a swat on his leaking ass, leaving him behind to drain and deflate[otherwise].  His asshole, already quite messy from your sloppy seconds on him, overflows somewhat with this fresh, creamy load.  He gives a weak chirp when you pull out, but is also smiling a little from his two powerful orgasms.  Chuckling, you give the birdie a swat on his leaking ass, leaving him behind to drain and recover[end if].";
+		say "     As you're heading to go, he weakly tries to mumble some bravado about turning the tables on you next time, and you can't help but laugh.  Grabbing his ass firmly, you squeeze it hard and then press a pair of fingers into his sticky, leaking hole.  This causes him to moan and his cock to twitch in response.  Teasing that your birdie prey seems to like being fucked by the big, bad predator as you finger him roughly, he can't help but blush and grip his beak tightly to keep from moaning again.  Laughing, you leave him like that, feeling all the stronger for your conquest.";
+	if bluechaffrape < 3, increase bluechaffrape by 1;
+	if morale of player < -5:
+		increase morale of player by 5;
+	otherwise if morale of player < 0:
+		now morale of player is 0;
+	otherwise:
+		increase morale of player by 1;
+
+
+to say bluechaffcaught:
+	choose row monster from the table of random critters;
+	say "This time catching the escaping passerine seems easier than before, your prey not flying off as quickly as he previously has and you're able to grab him by both legs.  He flaps as hard as he can to support you both, but your added weight carries him back down to ground.  Holding onto him tightly, you grin down at your pretty blue prize.";
+	say "     Keeping your grip on both legs, you spread them apart and put his feathery backside on display for you.  Spindly legs and ivory ass in the air and shoulders and head on the ground, he makes a very inviting sight.  He blushes and squirms a little as you pull him inexorably closer to your hard cock, which his eyes remain locked onto.  Grinning, you press your [cock size desc of player] [cock of player] shaft against his now loosened hole and tease against it.  'I know you want it, little morsel.  Beg for it and I'll give it to you,' you say firmly.";
+	attempttowait;
+	say "     Blushing all the more and unable to do anything about it given his precarious position, he moans and chirps a little before finally giving in.  'Yes, please... just promise me... do it rough - like before,' he says, looking away, though you can still see quite a lot of blushing red through his cheek feathers.  Laughing that it appears little songbird likes being the big, bad predator's prey, you sink your claws in and drive your [cock size desc of player] cock into his ass quite hard.  After having been pounded by you several times, he has loosened up some, but he's still pleasantly tight given his size and his pained cheep really gets your blood going.  Holding him suspended upside down, you plow hard into him, grinding his upper body against the ground as you drill away at that tight ass of his.";
+	say "     Steady, hard thrusts into your rather willing victim has him panting and chirping with growing excitement.  You make sure to tease him some more when he reaches back to stroke his own cock, calling him your birdie bitch and your songbird slut.  He blushes at these names but doesn't stop, if anything, his anus squeezing and milking at your cock all the more.  As you feel yourself getting closer, you pick up the pace, digging your talons in harder and taking his thin leg in your beak, pulling him sharply upwards onto your impaling rod.  After a few hard tugs that have him moaning and chirping even as red runs up his leg, your feel your balls tighten and your shaft pulse as you start feeding your hot, [cum load size of player] load into his ass[if cock width of player > 35].  Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers with excess cum leaking from his beak as he moans and cums in delight[otherwise if cock width of player > 25].  Your [cum load size of player] output causes the blue passerine's belly to swell and bloat until he's a rounded ball of feathers as he moans and cums in delight[otherwise if cock width of player > 15].  Your [cum load size of player] output causes the blue passerine's belly to bulge a little as he moans and cums in delight[otherwise].  The feel of your [cum load size of player] output pumping into him causes the blue passerine to moan and cum in delight[end if].";
+	attempttowait;
+	say "      Releasing his leg from your beak and pulling out, you let him drop to the ground and chuckle at what a fine prey slut he's become and add that you just might want to keep him[if cock width of player > 25].  Rolling over[otherwise].  Falling over[end if] onto his side, he moans softly and struggles to get up.  'W-were you serious about that?  A-about really... keeping me?' he says with a mix of trepidation and anticipation in his voice.  How shall you respond?";
+	if the player consents:
+		say "     Moving your [bodytype of player] body over his, you nip at his neck and grope his ass.  'Maybe.  I might want a [']snack['] later,' you tease, pushing a few fingers into his creamy hole.  He blushes and nods, his hips trembling.  'A-alright then... you're caught me, you sexy hunter,' he says with nervous excitement[if cock width of player > 25].  After letting him drain, you[otherwise].  You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
+		now battleground is "void";
+		increase score by 20;
+		move Icarus to Grey Abbey Library;
+		now hp of Icarus is 1;
+		move player to Grey Abbey Library;
+	otherwise:
+		say "     Laughing, you give his ass a slap.  Why would you want to keep him now that the fun of breaking him is over, you ask.  He blushes at this and clutches at your leg, but you push him away, telling him that surely one of the big felines around would love to sink their claws into the songbird, if that's all he wants.  His shoulders sag and he struggles to his feet, limping away slowly.  You smile to yourself; it seems that's finally over with.";
+	now area entry is "nowhere";
 
 
 to say bluechaffinchdesc:
@@ -70,7 +119,7 @@ to say bluechaffinchdesc:
 	otherwise:
 		now sex entry is "Female";
 	say "     The avian creature before you is a covered in bright blue plumage that is very even in colour across most of his body.  Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white.  He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers.  His head is rounded and shaped like that of a finch, though his beak is thicker, showing his infection to somehow be that of an exotic blue chaffinch.  His eyes are like black beads with a touch of white feathers just above and below.";
-	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger.  '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist] with a bit of trepidation in passarine's boasting, clearly concerned about your nature as a predatory bird[end if].";
+	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger.  '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist] with a bit of trepidation in passerine's boasting, clearly concerned about your nature as a predatory bird[end if].";
 
 
 Section 2 - Monster Insertion
@@ -83,7 +132,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Blue Chaffinch";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passarine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";
+	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passerine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";
 	now defeated entry is "[beatthebluechaffinch]";
 	now victory entry is "[losetobluechaffinch]";
 	now desc entry is "[bluechaffinchdesc]";
@@ -123,7 +172,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "[one of]avian[or]passarine[or]songbird[or]bird-like[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "[one of]avian[or]passerine[or]songbird[or]bird-like[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

@@ -5559,7 +5559,7 @@ Include Zoo Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Capitol Events by Blue Bishop.
-[Include Warehouse Events by StripeGuy.]
+Include Warehouse Events by StripeGuy.
 Include Infected Pool for FS by Hellerhound.
 Include Hyena Situations by Hellerhound.
 Include Catapult Encounter by Hellerhound.
@@ -5825,6 +5825,7 @@ Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.
 Include Alexandra by Stripes.
+Include Icarus by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Blanche by Stripes.
