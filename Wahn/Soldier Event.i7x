@@ -58,11 +58,10 @@ when play begins:		[these exceptions are based on the second half so people aren
 
 Instead of resolving a Red Light Requisition:
 	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
-[	if Back to the Camp is resolved:
-		say "     Looks like these guys were gathering supplies for the things going on in Camp Bravo. Well, where else would they get piles of sex toys from...";
-	otherwise] 
-	if Trickster's Masterpiece is resolved:
-		say "     Looks like these guys were gathering supplies for the crazy plan of theirs with the minotaur. Well, where else would they get piles of sex toys from...";
+	if Camp Bravo is known:
+		say "     Looks like these guys were gathering supplies for the things going on in Camp Bravo. Well, where else would they get those piles of sex toys from...";
+	otherwise if Trickster's Masterpiece is resolved:
+		say "     Looks like these guys were gathering supplies for the crazy plan of theirs with the minotaur. Well, where else would they get those piles of sex toys from...";
 	otherwise:
 		say "     What's going on here? Why are soldiers looting the red light district and gathering up whole sacks of dildos and who knows what? Maybe you'll find out one of these days...";
 	increase score by 5;

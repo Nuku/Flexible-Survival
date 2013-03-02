@@ -56,14 +56,14 @@ to say losetogiant:
 		otherwise:
 			now battleground is "void";
 			say "     When he's done, he gets up slowly, looking over your bloated, sticky body.  'Now, what kind of critter are you?' he mutters to himself in obvious confusion.  Not very bright, he shrugs and makes a misguided guess, carrying you off to drop you in ";
-			let t be a random number between 1 and 8;
+			let t be a random number between 1 and 10;
 			if t is 1:
 				say "one of the pens along the fence path.  After you finally recover and enough of his massive load has leaked out and been absorbed into you for you to move, you climb the fence and get back on the path.";
 				move player to Fence Path;
 			otherwise if t is 2:
 				say "the large pasture near the northern wall of the zoo, dropping you off next to big rhino.  He gently pats the guy on his head between charges.  'Keep it up, big guy.  You'll get it soon.'  Left there to drain and absorb the massive load of cum, you can hear the constant thumping of the big rhino's feet around the ground, followed by a heavy crunch over and over again.";
 				move player to Border Wall;
-			otherwise if t is 3 or t is 4:
+			otherwise if t is 3 or t is 4 or t is 5:
 				let holder be "beagle";
 				say "[randomdesc]";		[yields 'slutname' - bottom]
 				say "[randombodypart]";		[yields 'bodyselector' - top]
@@ -75,19 +75,19 @@ to say losetogiant:
 					say "[randomdesc2]";
 				say "one of the small pens near the entryway along with a few other bloated, cum-filled [']escaped animals['] he's found.  There's currently a [slutname], a [bodyselector], a [randomdesc2] and a few others you can't quite get a good look at around your overstuffed body.  Thankfully the cage door's been left open and none of the others trapped in here feel in the mood for any fun with the other victims by the time they're recovered enough to move.  When you're ready to go a few others have replaced those who've left, but you, like those before you, have had more than enough sex for the moment.";
 				move player to Entryway;
-			otherwise if t is 5:
+			otherwise if t is 6:
 				say "the cheetah enclosure.  It is heavy with the scent of the aroused feline who lives here.  You should probably get out of here soon, but you're too bloated and full to leave for some time.  It takes quite a while for you to drain and absorb the heavy load that's filling you.";
 				move player to Cheetah Habitat;
-			otherwise if t is 5:
+			otherwise if t is 7:
 				say "one of the nearby enclosures as if not wanting to bother to find where you belong.  You're stuck in there for quite some time, unable to move until his massive load has been absorbed and leaked out of your body.  Thankfully the gate what broken when he tore it open to put you inside, so you're eventually able to make your escape.";
 				now battleground is "Zoo";
-			otherwise if t is 6:
+			otherwise if t is 8:
 				say "the nearby gator pit.  With another shrug, he heads off in search of other wayward animals.  You moan wetly, but cannot get up, too overfull with the giant's cum.  You're forced to wait there until you're body's drained and absorbed his heavy load.  The cum that leaks out of you flows down towards the broken sewer grate.";
 				move player to Gator Pit;
-			otherwise if t is 7:
+			otherwise if t is 9:
 				say "the nearby bird house.  He roughly shoves you inside before heading off in search of other wayward animals with a smile on his face.  You moan wetly, but cannot get up, too overfull with the giant's cum.  You're forced to wait there until your body's drained and absorbed his heavy load.  You can hear the rustling of feathers and the chirping of birds in here, but are thankfully unnoticed or ignored until you can move again..";
 				move player to Bird House;
-			otherwise if t is 8:
+			otherwise if t is 10:
 				say "the nearby roundabout.  He muses over where to put you, looking between the lion pit and the snake house before finally settling on the latter.  Opening the door, he roughly shoves you inside before heading off in search of other wayward animals with a smile on his face.  You moan wetly, but cannot get up, too overfull with the giant's cum, foring you to wait there until your body's drained and absorbed his heavy load.  Thankfully this place seems unoccupied, at least for the moment.";
 				move player to Snake House;
 
@@ -104,7 +104,7 @@ to say giantdesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Female";
-	say "     You find yourself faced with a giant brute of a man standing well over 40 feet tall.  This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist.  The towering man has a burly, muscled body to help support it massive height, but not unhandsomely so.  He still looks completely human, just grown to a dizzying height.  Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff.  Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on.  He has a gruff expression on his face and has dirty blond hair atop his distant.  He carries a [one of]broken telephone pole[or]metal girder[or]streetlight[or]uprooted tree[at random] like a massive club.  Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.  Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]say you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
+	say "     You find yourself faced with a giant of a man standing well over 40 feet tall.  This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist.  The towering man has a burly, muscled body to help support it massive height, but not unhandsomely so.  He still looks completely human, just grown to a dizzying height.  Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff.  Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on.  He has a gruff expression on his face and has dirty blond hair atop his distant.  He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club.  Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.  Having spotted you, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]say you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists.";
 
 
 Section 2 - Monster Insertion
@@ -136,7 +136,7 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 7;
 	now cha entry is 12;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female";	 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 99;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 22;			[Amount of Damage monster Does when attacking. Claws and massive strength]
