@@ -1,5 +1,5 @@
 Version 1 of Impala by UrsaOmega begins here.
-[Version 1 - new creature, loss+victory sex, endings]
+[Version 1.1 - Swapped to male tf default and decreased to lvl 7 (swap with Corota)]
 
 "Adds an Impala creature to Flexible Survivals Wandering Monsters table"
 
@@ -34,6 +34,13 @@ to say beattheimpala:
 		say "     Looking over her body, you feel a slight twinge of interest, but aren't aroused enough to do anything with her. Since the impala is completely naked, there isn't even anything worthwhile to take as a reward for your victory, so you just go, leaving her lying on the ground.";
 
 to say impaladesc:
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
 	say "     You hear the sound of swift footsteps and you turn to see a figure approaching you in a sort of half prance, half run. She has a thin, lithe body covered in reddish brown fur, with a white patch on her belly. She has perky breasts and her female sex is engorged with need. Her long muzzle is pointed at you, ";
 	if cocks of player > 0:
 		say "and her large doe eyes are filled with lust. 'Finally, a male to satisfy me! But are you worthy?',";
@@ -65,16 +72,16 @@ When Play begins:
 	now skin change entry is "it becomes covered in short reddish brown fur, with a white patch covering your belly";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes tight and pert, with a fuzzy impala tail growing over it";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more slender and tapered, retreating into its new fuzzy sheath";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 16;					[ These are now the creature's stats... ]
-	now dex entry is 22;					[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;					[ These values may be used as part of alternate combat.]
-	now per entry is 20;
-	now int entry is 14;
-	now cha entry is 18;
-	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 60;						[ The monster's starting hit points. ]
-	now lev entry is 11;					[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 15;					[ Monster's average damage when attacking. ]
+	now str entry is 12;					[ These are now the creature's stats... ]
+	now dex entry is 20;					[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10;					[ These values may be used as part of alternate combat.]
+	now per entry is 17;
+	now int entry is 13;
+	now cha entry is 16;
+	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 48;						[ The monster's starting hit points. ]
+	now lev entry is 7;					[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 8;					[ Monster's average damage when attacking. ]
 	now area entry is "Plains";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;					[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
