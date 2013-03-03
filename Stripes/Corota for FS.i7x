@@ -1,4 +1,5 @@
-Version 1 of Corota for FS by Stripes begins here. 
+Version 1 of Corota for FS by Stripes begins here.
+[Version 1.1 - Promoted to lvl 11 (swapped spots with Impala)]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Corota to Flexible Survival."
@@ -81,15 +82,15 @@ When Play begins:
 	now ass change entry is "your lower spine feels like someone's trying to tear it in two, and in a way someone (well, something) is!  Exploding out in a burst, your spinal column extends into two long tails, each capped with a spiked knob.  Once some muscle finally grows in on the limb, you find that each limb is fully prehensile.  If only it weren't so bloody painful growing them!";
 	now cock change entry is "a pressure builds in your cock[if cocks of player > 1]s[end if] as the nanites within struggle for dominance.  In the end, they seem to agree on a mutual condition, your groin[if cocks of player > 1]s[end if] finally exploding into change.  In seconds you're left amazed and disturbed as your cock splits down the center, small barbs forming along its length.  Waiting for it to slide into your body for protection, you're further surprised as it continues to hang limply, waiting to be aroused.";
 	now str entry is 14;
-	now dex entry is 18;
+	now dex entry is 19;
 	now sta entry is 14;
-	now per entry is 14;
+	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 52;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 8;			[Amount of Damage monster Does when attacking. Claws and massive strength]
+	now hp entry is 68;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 9;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
