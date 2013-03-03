@@ -72,12 +72,12 @@ When Play begins:
 	now skin change entry is "it becomes covered in short reddish brown fur, with a white patch covering your belly";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes tight and pert, with a fuzzy impala tail growing over it";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more slender and tapered, retreating into its new fuzzy sheath";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 12;					[ These are now the creature's stats... ]
+	now str entry is 15;					[ These are now the creature's stats... ]
 	now dex entry is 20;					[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10;					[ These values may be used as part of alternate combat.]
 	now per entry is 17;
 	now int entry is 13;
-	now cha entry is 16;
+	now cha entry is 15;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 48;						[ The monster's starting hit points. ]
 	now lev entry is 7;					[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
