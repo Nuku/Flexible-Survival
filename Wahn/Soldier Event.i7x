@@ -763,7 +763,7 @@ Instead of sniffing Quartermaster's Tent:
 
 
 Major Padgett is a man. Major Padgett is in Major's Tent.
-The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of greying hair. He looks busy with scouting reports and other paperwork.";
+The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of greying hair. He's sitting at a field desk and looks busy with scouting reports and other paperwork.";
 The conversation of Major Padgett is { "Attention!" };
 thirst of Major Padgett usually is 555.  [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
 CampBravoWomenAllowed is a number that varies.  CampBravoWomenAllowed is normally 0.
@@ -882,8 +882,7 @@ to say MajorBriefing:
 	say "     He looks a bit strangely at you, then says 'But I already - oh well, try to remember it this time: We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples..' [otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 
 to say MajorLeave:
-	say "     You excuse yourself for disturbing him and walk out of the tent.";
-	move player to Parade Ground;
+	say "     You excuse yourself for disturbing him step back from the major's desk.";
 
 
 [ thirst states of Military Radio                                    ]
@@ -1021,7 +1020,7 @@ to say CampBravoElaineAdamTalk:
 
 to say CampBravoMenPrepping:
 	say "     Four two-man teams of soldiers file into the tent and get into line in front of Elaine's desk. She accepts a salute from them, then goes over to the sacks and hands out items from them, saying 'Here, take this -' (a bottle of lube) '- that -' (a rubber dildo) '- and these -' (two butt-plugs) '- and get each other ready for Tiny Tim out there. Don't be embarrassed about it - you'll be heroes if they find a cure through your service. Also - really, really take your daily immunity boosters! You'll be carrying around potent stuff, so don't miss ANY injection.'";
-	say "     One after another the men get their special equipment, then stand around a bit sheepishly, inspecting the often brightly colored rubber toys they're supposed to put up their asses. Only when Elaine gives one of the men a nudge and says 'Go on, strip - you're not shy little girls.' does the ice break and the men start taking off their clothes. Soon eight naked men stand in the tent, with to of them sporting obvious erections as they look at the other men. These two gay - or at least bi - men take point, telling their partners to bend over, then lubing them up and starting on their asses with the dildos. The next team of men shrugs, then start emulating the others, which leaves only the two guys closest to you the odd men out.";
+	say "     One after another the men get their special equipment, then stand around a bit sheepishly, inspecting the often brightly colored rubber toys they're supposed to put up their asses. Only when Elaine gives one of the men a nudge and says 'Go on, strip - you're not shy little girls.' does the ice break and the men start taking off their clothes. Soon eight naked men stand in the tent, with two of them sporting obvious erections as they look at the other men. These two gay - or at least bi - men take point, telling their partners to bend over, then lubing them up and starting on their asses with the dildos. The next team of men shrugs, then start emulating the others, which leaves only the two guys closest to you the odd men out.";
 	say "     [line break]";
 	say "     These two, one slender redhead and his more beefy and muscular partner only hesitantly get going. The redhead bends over a storage crate, while the bigger guy takes out the dildo from its packaging, then just starts pushing it against his partner's asshole without any lube at all.";
 	say "     [line break]";
