@@ -882,7 +882,7 @@ to say MajorBriefing:
 	say "     He looks a bit strangely at you, then says 'But I already - oh well, try to remember it this time: We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples..' [otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 
 to say MajorLeave:
-	say "     You excuse yourself for disturbing him step back from the major's desk.";
+	say "     You excuse yourself for disturbing him and step back from the major's desk.";
 
 
 [ thirst states of Military Radio                                    ]
