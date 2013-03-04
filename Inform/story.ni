@@ -1464,6 +1464,7 @@ battleground is a text that varies.
 Lusting is a text that varies.
 
 Hunting is an action applying to one topic.
+ishunting is a truth state that varies.  ishunting is usually false.
 
 understand "hunt [text]" as hunting.
 
@@ -1572,7 +1573,9 @@ carry out hunting:
 			break;
 		choose row monster from the table of random critters;
 		now monsterhp is hp entry;
+		now ishunting is true;
 		challenge;
+		now ishunting is false;
 		if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 			say "As you are trying to recover from your last encounter, another roving creature finds you.";
 			Fight;
@@ -4004,6 +4007,7 @@ This is the turnpass rule:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now fightstatus is 0;
+	now ishunting is false;
 	if hp of Velos > 2:
 		if Velos is not in the location of the player:		[travelling w/player]
 			Now Velos is in the location of the player;

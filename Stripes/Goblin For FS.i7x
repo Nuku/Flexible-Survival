@@ -380,6 +380,7 @@ to say goblindesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
+	now gobgender is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You are stared at by an angry little goblin creature.  It shifts from one foot to another, as if sizing you up.  Eventually it decides to leave you alone, heading back to hide among the junk.  Well, that was odd.  Hopefully it'll tell the others to leave you alone as well.";
 		blank out the whole row;
@@ -390,10 +391,18 @@ to say goblindesc:
 		now gobgender is 1;
 	otherwise if girl is banned:
 		now gobgender is 2;
-	otherwise if a random chance of 1 in 2 succeeds:
-		now gobgender is 1;
-	otherwise:
-		now gobgender is 2;
+	otherwise if guy is warded and girl is warded:
+		now gobgender is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now gobgender is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now gobgender is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now gobgender is 1;
+		otherwise if girl is warded:
+			now gobgender is 2;
 	if gobgender is 1:
 		say "     You encounter what appears to be a female goblin.  Face and ears long and pointed in structure, her skin is leathery brown and green.  Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly.  Her attire is a crude mish-mash of scraps cobbled from her surroundings, [one of]a pair of goggles on her head[or]a magnifying monocle over one eye[or]an earring strung with a wing nut[or]a leather belt over her shoulder with a pouch on it[at random], tools and metal machinery in her possession - an illustration of her tinkering mind.  However, with one look at you, she bares a set of sharp teeth at you in devious grin, showing that she has something else entirely in store for you.";
 	otherwise if gobgender is 2:
