@@ -2978,6 +2978,14 @@ skipcockchange is a truth state that varies.  skipcockchange is usually false.
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
+	let singlesexadjust be 0;
+	if "Single Sexed" is listed in feats of player:
+		if cocks of player > 0 and cunts of player > 0:
+			let singlesexadjust be 1;	[currently herm]
+		otherwise if cocks of player > 0:
+			let singlesexadjust be 2;	[currently male]
+		otherwise if cunts of player > 0:
+			let singlesexadjust be 3;	[currently female]
 	if "Just One" is listed in feats of player:
 		if cocks entry is greater than 1:
 			now cocks entry is 1;
@@ -3000,10 +3008,6 @@ This is the sex change rule:
 			if cock length of player is less than 4, now cock length of player is 4;
 		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 			now cock length of player is 8;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
-			now cocks of player is 0;
-			now cock width of player is 0;
 		if prevcock > cock length of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of player] [one of]cock[or]penis[or]shaft[or]pole[at random] begins to diminish somewhat to better suit your new infection. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -3024,10 +3028,6 @@ This is the sex change rule:
 			if cock width of player is less than 2, now cock width of player is 2;
 		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
 			now cock width of player is 4;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
-			now cocks of player is 0;
-			now cock width of player is 0;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your impressive [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
@@ -3048,6 +3048,10 @@ This is the sex change rule:
 				now cock width of player is 4;
 		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[Extra cocks at 67%]
 			increase cocks of player by 1;
+		if singlesexadjust is 3 and sex entry is "Both":	[female remains female if herm infection]
+			now cocks of player is 0;
+			now cock length of player is 0;
+			now cock width of player is 0;
 		if prevcock < cocks of player:		[did new cock appear?]
 			follow the cock descr rule;
 			say " Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
@@ -3061,9 +3065,9 @@ This is the sex change rule:
 		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cock length of player is less than 4, now cock length of player is 4;
 			if cock width of player is less than 2, now cock width of player is 2;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
+		if (singlesexadjust is 1 or singlesexadjust is 2) and sex entry is "Female":		[male/herm becomes female if female infection]
 			now cocks of player is 0;
+			now cock length of player is 0;
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
@@ -3096,10 +3100,6 @@ This is the sex change rule:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 			now cunt length of player is 8;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
-			now cunts of player is 0;
-			now cunt width of player is 0;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -3120,10 +3120,6 @@ This is the sex change rule:
 			if cunt width of player is less than 2, now cunt width of player is 2;
 		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
 			now cunt width of player is 4;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
-			now cunts of player is 0;
-			now cunt width of player is 0;
 		if prevcunt > cunt width of player:		[did cock actually shrink?]
 			follow the cunt descr rule;
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as you are hit by an unexpected orgasm.  The squeezing does not release fully as your wet hole shrinks somewhat to better suit your new infection by becoming tighter.";
@@ -3141,6 +3137,10 @@ This is the sex change rule:
 				now cunt width of player is 4;
 		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[2nd+ cunt at 67%]
 			increase the cunts of player by 1;
+		if singlesexadjust is 2 and sex entry is "Both":	[male remains male if herm infection]
+			now cunts of player is 0;
+			now cunt length of player is 0;
+			now cunt width of player is 0;
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
@@ -3154,9 +3154,9 @@ This is the sex change rule:
 		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 			if cunt width of player is less than 2, now cunt width of player is 2;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
+		if (singlesexadjust is 1 or singlesexadjust is 3) and sex entry is "Male":	[female/herm becomes male if male infection]
 			now cunts of player is 0;
+			now cunt length of player is 0;
 			now cunt width of player is 0;
 		if prevcunt > cunt length of player or prevcunt2 > cunt width of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
@@ -3174,8 +3174,8 @@ This is the sex change rule:
 	otherwise if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 		decrease cunts of player by 1;
-		follow the cock descr rule;
-		follow the cunt descr rule;
+	follow the cock descr rule;
+	follow the cunt descr rule;
 	now skipcockchange is false;
 
 
