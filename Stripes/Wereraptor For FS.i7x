@@ -201,6 +201,18 @@ to say wereraptordesc:
 		now wrmode is 1;
 	otherwise if girl is banned:
 		now wrmode is 2;
+	otherwise if guy is warded and girl is warded:
+		now wrmode is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now wrmode is 1;
+		otherwise if girl is warded:
+			now wrmode is 2;
 	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature.  Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor";
 	if wrmode is 1:
 		say ".  And a female one at that.  Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest.  While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one.  Both have only three digits on them.  Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail.  She stares at you with a feral wildness to her yellow eyes and takes a step forward.  She hisses at you before charging forward in a rush.";

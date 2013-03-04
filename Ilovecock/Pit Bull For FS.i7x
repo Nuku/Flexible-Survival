@@ -159,6 +159,7 @@ to say pitbulldesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Female";
+	now pitbullgender is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You run into what looks to be a fairly muscled canine creature. The pit bull growls softly as it glares at you before barking a few times.  When you stand your ground, it heads off.  Hopefully it'll tell the others to leave you alone as well.";
 		blank out the whole row;
@@ -171,12 +172,16 @@ to say pitbulldesc:
 		now pitbullgender is 2;
 	otherwise if guy is warded and girl is warded:
 		now pitbullgender is a random number between 1 and 2;
-	otherwise if guy is warded:
-		now pitbullgender is 1;
-	otherwise if girl is warded:
-		now pitbullgender is 2;
-	otherwise:
-		now pitbullgender is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now pitbullgender is 1;
+		otherwise if girl is warded:
+			now pitbullgender is 2;
 	if pitbullgender is 1:
 		say "     You run into what looks to be a fairly muscled canine. The female growls deeply, adorned unkempt and dirty attire, she makes it clear that you've encroached upon her territory. Her transparently fiery temperament ill-equipped to abide such a trespass, she lunges forward to attack!";
 	otherwise if pitbullgender is 2:
