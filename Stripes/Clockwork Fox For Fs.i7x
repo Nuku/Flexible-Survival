@@ -66,6 +66,7 @@ to say beatthecfguy:
 
 to say cfgdesc:
 	choose row monster from the table of random critters;
+	now cfmode is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, mechanical fox.  The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner.  As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
 		blank out the whole row;
@@ -76,10 +77,18 @@ to say cfgdesc:
 		now cfgmode is 1;
 	otherwise if girl is banned:
 		now cfgmode is 2;
-	otherwise if a random chance of 1 in 2 succeeds:
-		now cfgmode is 1;
-	otherwise:
-		now cfgmode is 2;
+	otherwise if guy is warded and girl is warded:
+		now cfmode is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now cfmode is 1;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now cfmode is 2;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now cfmode is 1;
+		otherwise if girl is warded:
+			now cfmode is 2;
 	if cfgmode is 1:
 		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur.  She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  Her chestplate has two small breasts formed onto it.  Her arms and legs are thin and vulpine, leading down to small clawed paws.  She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";

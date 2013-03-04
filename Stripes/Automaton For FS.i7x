@@ -39,6 +39,7 @@ to say beattheautomaton:
 
 to say automatondesc:
 	choose row monster from the table of random critters;
+	now autogender is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, metallic human.  It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
 		blank out the whole row;
@@ -49,10 +50,22 @@ to say automatondesc:
 		now autogender is 1;	[male]
 	otherwise if guy is banned:
 		now autogender is 2;	[female]
-	otherwise if a random chance of 1 in 2 succeeds:
-		now autogender is 1;
-	otherwise:
+	otherwise if guy is banned:
 		now autogender is 2;
+	otherwise if girl is banned:
+		now autogender is 1;
+	otherwise if guy is warded and girl is warded:
+		now autogender is a random number between 1 and 2;
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+		if guy is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 2;
+		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 1;
+	otherwise if ishunting is false:
+		if guy is warded:
+			now autogender is 2;
+		otherwise if girl is warded:
+			now autogender is 1;
 	now metalskin is a random number between 1 and 4;
 	if autogender > 0:
 		say "     Before you is a strange person, completely human in form, but covered in a layer of metallic skin.  This polished hide is made of [if metalskin is 1]bronze[otherwise if metalskin is 2]aluminium[otherwise if metalskin is 3]cobalt with a faint blue tint[otherwise if metalskin is 4]steel[end if].  The metal [if autogender is 1]man[otherwise]woman[end if][']s eyes are featureless [if metalskin is 1]golden[otherwise if metalskin is 2]blue[otherwise if metalskin is 3]green[otherwise if metalskin is 4]red[end if] lights.  [if autogender is 1]His[otherwise]Her[end if] hair has become metallic in colour to match its skin.  This person looks like any normal person you might meet, but transformed into metal and sapped of their will.  [if autogender is 1]He[otherwise]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1].  The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[otherwise].  The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";

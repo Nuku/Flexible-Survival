@@ -139,9 +139,9 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
-	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is true ) ):
+	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is true ) ):
 		addfeat "Male Preferred" with "You will reject female mutation.";
-	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is false ) ):
+	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is false ) ):
 		addfeat "Female Preferred" with "You will reject male mutation.";
 	if "Male Preferred" is listed in feats of player:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts, curious.";
@@ -149,7 +149,7 @@ instead of addfeating the fun feats:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
 	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Single Sexed" with "You can be male, or female, but not both.";
-	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player and isHellhound is false:
+	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and isHellhound is false:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";

@@ -624,4 +624,38 @@ Instead of resolving a B&R:
 	Now B&R is resolved;
 
 
+Section 8 - Zoo Events
+
+Slumbering Giant is a situation.
+The sarea of Slumbering Giant is "Zoo";
+when play begins:
+	add Slumbering Giant to badspots of guy;
+
+Instead of resolving a Slumbering Giant:
+	say "     Going over a small rise, you are met with an impressive sight.  Lying down in one of the smaller pasture paddocks is a giant human being.  You'd guess he's about 40 feet tall and he takes up a good part of the grassy area he's sleeping in.  You'd not spotted him until now because his chosen napping spot is a depression behind the hill you're on.  He's wearing a large tan jacket that's scaled to his size and nothing else.  He groans soflty and rolls over, giving you a view of his enormous cock, semi-hard in his sleep.  Yawning wide, he gives his enormous balls a scratch and his cock a quick rub before his hand slides back to the ground with a heavy thud.  Given the size of he and knowing how grumpy you can be if someone wakes you up from a nap, you quietly turn around and sneak off, hoping he won't wake up until you're long gone from here.";
+	now Slumbering Giant is resolved;
+
+
+My Own Zoo Playset is a situation.  The level of My Own Zoo Playset is 12.
+The sarea of My Own Zoo Playset is "Zoo";
+when play begins:
+	add My Own Zoo Playset to badspots of guy;
+
+Instead of resolving a My Own Zoo Playset:
+	say "     While moving through an area of empty pens and habitats, you turn hear some activity coming from the opposite side of a thick cluster of trees.  Cautiously peering out from some bushes at the edge of the copse of trees, you are met with a startling sight.  There's a giant of a man wearing a zookeeper's jacket.  He's probably over 40 feet tall and is sitting cross-legged on the ground with a couple a cars and zoo maintenance vehicles scattered around him.  Given how the grass is all torn up with tire tracks, it looks like he's been pushing them around like they're toys.";
+	say "     And speaking of toys, he's also got an assortment of animal mutants in an enclosure.  Clearly frightened, most of them are huddling in small groups or in what dark corners they can find.  Scattered among them are others you'd almost mistake at first to be animal print balls, were they not huge and rolling around slightly as they squirm their arms and legs weakly.  Bloated like cum-filled balloons, they've clearly been left rounded by the giant as part of some more sexual playing with these gathered [']toys['].";
+	say "     At the moment, he's got a tigertaur and a panda girl in his hands, pressing them up against one another rather roughly.  It's clear that they're too scared to kiss, or fight, or make out, or whatever he has in mind, but he doesn't seem to notice, having a simple grin on his face.  As this is going on, you spot a door open very slowly on one of the battered cars and a rather nervous zebra pokes his head out.  Confirming that the giant's occupied, he hops out of the car and staggers off as quick as his battered body can take him.  Unfortunately for all involved, he doesn't get far before he's noticed by the giant.  The startled giant tosses the two in his hands back into the enclosure, dropping them about 20 feet and leaving them dazed.  He lumbers to his feet and charges after the zebra, who is running right for the nearest cover... the trees you're hiding in right now!";
+	let T be a random number between 1 and 20;
+	if "Stealth" is listed in feats of player, increase T by 3;
+	if T < 9:
+		say "     Knocking over several trees in his search, the giant spots you trying to hide.  Forgetting about the zebra, he turns his attenion on you.";
+		challenge "Giant";
+	otherwise if T < 17:
+		say "     Knocking over several trees in his search, the giant catches sight of the zebra trying to hide and grabs him roughly with both hands.  The zebra struggles briefly, but is clearly too weak to put up much of a struggle and soon gives up with a weak sigh.  The giant shakes him around roughly, telling him he's a bad zebra for trying to run away from playtime.  Sitting back down, he buries the striped equine under his enormous manhood and reaches into the enclosure to grab a fresh pair of hapless victims.  He sticks them in a car which has had its roof torn clean off and starts to make the car do doughnuts on the grass as the terrified pair scream and scramble to buckle up while being knocked around.";
+		say "     Having seen plenty and afraid of being caught by the giant while he's in the mood to [']play['] with the animals, you back out of the trees and try to get some distance between the two of you.";
+	otherwise:
+		say "     As the giant starts shoving over trees as he searches through the thicket of trees, you spot the zebra running towards you.  Grabbing his wrist as he moves past, you pull him in under the branches of a couple of the fallen trees while the giant's looking at the other end of the copse.  Keeping your hand over his muzzle you shush his surprised cry and wait with him until the giant finally either gets distracted by something else or just plain gives up.  Hearing him thump back towards his other collected [']toys['], you get the zebra to move quietly with you to the other side of the (now mostly uprooted) trees and go as quickly as he can move to get some further distance from the giant.  The zebra thanks you for your help, giving you a bottle of water he'd stashed before the two of you head your separate ways.";
+		increase carried of water bottle by 1;
+	now My Own Zoo Playset is resolved;
+
 Assorted Events ends here.
