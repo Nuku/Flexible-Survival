@@ -122,6 +122,7 @@ bcfinalchairform is a text that varies.  bcfinalchairform is normally "".
 lastsealfight is a number that varies.  lastsealfight is normally 255.
 lastoctofight is a number that varies.  lastoctofight is normally 255.
 lastorcafight is a number that varies.  lastorcafight is normally 255.
+lastorcasex is a number that varies.  lastorcasex is normally 255.
 lastbcchair is a number that varies.  lastbcchair is normally 255.
 
 
@@ -362,12 +363,30 @@ to say bcgreathall:
 			say "     You move quickly to door in the southeast end of the room.  Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
 			move player to Bouncing Play Room;
 	otherwise:
-		say "     You try to dodge, but the unsure footing [if scalevalue of player > 3]and your large size make[otherwise]makes[end if] you an easy target and you're bumped back and sent tumbling out the door your just entered through.  You roll and come to a stop on the soft floor, knocked particularly hard by the rubber inflatable.  You are left a little dizzy and confused from your tumble, but seem otherwise unharmed.";
+		say "     You try to dodge, but the unsure footing [if scalevalue of player > 3]and your large size make[otherwise]makes[end if] you an easy target and you're bumped ";
+		if lastorcasex - turns < 4:
+			say "back and sent tumbling against one of the padded walls.  You get knocked around again and dropped onto your back by a sweep of the orca's tail only to have the two meter long cetacean bellyflop onto you - good thing it's only an inflatable.";
+			if cocks of player > 0:
+				say "     Rubbing down onto you, its fins and tail manage to push away any obstructing gear between it and your groin.  The feel of its softly flexing material against your causes it to stir. which is just what the creature's been waiting for.  It trills happily and shifts position overtop of you, pressing the wet, rubbery lips of its pussy down over your stiffening member.  The feel of that slick material sliding down overtop of your shift and [if cock length of player > 30]stretching[otherwise]tightening[end if] around your shaft to make a perfect fit causes you to moan in response.";
+				say "     With you trapped beneath the giant cetacean toy, there's little you can do but respond to your instincts, bucking up into that clenching slit as the big balloon critter rides you.  As her excitement grows, she moves faster, slapping her broad tail on the floor.  This sets the wobbly castle floor to sway, further helping you to thrust up into her juicy cunt.  Any thoughts of trying to push her off are gone, instead your arms grip around your inflatable lover[if scalevalue of player < 3] as best you can[end if].  Eventually, you moan loudly and cum hard, pumping your creamy seed into her rubber passage.";
+				decrease libido of player by a random number between 0 and 5;
+				decrease humanity of player by a random number between 0 and 3;
+				say "     Once you're drained and released, she resumes her game of bumping you around, as if the sex and the shoving are all part of the same game to her.  Too dazed from the lustful sex and too many blows, you're eventually rammmed ";
+			otherwise:
+				say "     Rubbing down onto you, it turns around and presses a large, wet slit against your face.  Presented with juicy proof that the cetacean's female and getting a dose of her femmecum all over your lips and nose, you can't help but give her a quick lick.  And that quick lick quickly turns into more and more licking as her slick juices excite you.  She grinds her lower quarters down atop you while your run your tongue up and down along her lengthy slit.";
+				say "     With you trapped beneath the giant cetacean toy, there's little you can do but respond to your instincts, eating out her rubbery pussy with growing enjoyment at the task.  Her juices carry the faint taste of latex, but that seems delightful to you at this point.  You keep going at it, finally pushing her to a trilling climax send sends more of her cum washing over your face.";
+				increase libido of player by a random number between 0 and 5;
+				decrease humanity of player by a random number between 0 and 3;
+				say "     Once she's finished having her fun with you and released, she resumes her game of bumping you around, as if the sex and the shoving are all part of the same game to her.  Too dazed from the heady scent of her sex and too many blows, you're eventually rammmed ";
+			now lastorcasex is turns;
+		say "out the door your just entered through.  You roll and come to a stop on the soft floor, knocked particularly hard by the rubber inflatable.  You are left a little dizzy and confused from your tumble.  It takes you a while to recover, but you seem otherwise unharmed.";
+		if libido of player > 100, now libido of player is 100;
 		decrease humanity of player by 5;
 		if humanity of player < 10:
 			say "That last tumble knocks something loose in your already shaken mind and the last threads of your humanity snap.";
 			end the game saying "Your brain (shaken, not stirred) gave into the infection.";
 		otherwise:
+			if lastorcasex is turns, follow the turnpass rule;
 			if bcplayroomlast is true:
 				move player to Bouncing Play Room;
 			otherwise:
