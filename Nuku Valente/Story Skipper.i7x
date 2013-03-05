@@ -2344,7 +2344,7 @@ Carry out reciting:
 	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of the player;
 	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
 	if hospquest is 8, now nerminepackage is 1;
-	if hospquest > 9, add "Rapid Healing" to feats of the player;
+	if hospquest > 9 and "Rapid Healing" is not listed in feats of player, add "Rapid Healing" to feats of the player;
 	if hospquest > 13:
 		add "Physical Booster" to the feats of the player;
 		now infection terminal is in Hidden Lab;
