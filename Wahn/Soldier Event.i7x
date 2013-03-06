@@ -1,5 +1,5 @@
 Version 8 of Soldier Event by Wahn begins here.
-[Version 8.1 - Reaction to Eric while satyr-hung]
+[Version 8.2 - event with Eric fixed]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -437,12 +437,12 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "     [line break]";
 		say "     You say 'Yeah, he was bitten and got that rather surprising transformation out of it. I'll have to talk to him about that - he can't just deny that the change happened. Either he has to accept his new form, or maybe I can find a cure somewhere...' David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. 'I'd rather not talk more about things Eric might not want other people to know. Why don't you ask him about it yourself and he'll tell you what he's ready for. But... be nice, ok? He's been through a lot.'";
 		now lust of Eric is 1;
-	if hp of Eric is 10 or hp of Eric is 11:
+	otherwise if hp of Eric is 10 or hp of Eric is 11:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		say "     [line break]";
 		say "     You say 'Yeah, he was bitten and got that rather surprising transformation out of it. Hopefully he'll learn to accept his new body fully...' David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. 'I'd rather not talk more about things Eric might not want other people to know. Why don't you ask him about it yourself and he'll tell you what he's ready for. But... be nice, ok? He's been through a lot.'";
 		now lust of Eric is 1;
-	if hp of Eric is 20:
+	otherwise if hp of Eric is 20:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
 		say "     [line break]";
 		say "     You say 'Yeah, he was bitten and got that rather surprising transformation out of it. But I'm working on fixing that...' David looks over to Eric and opens his mouth to ask another question, but you put a hand on his arm and shake your head. 'I'd rather not talk more about things Eric might not want other people to know. Why don't you ask him about it yourself and he'll tell you what he's ready for. But... be nice, ok? He's been through a lot.'";
@@ -462,6 +462,8 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "     [line break]";
 		say "     His moment of hesitation tells you that David wouldn't be completely adverse to fucking your submissive cuntboy. If you could get him over the initial hangup and into that juicy pussy... maybe you should talk to Eric about making that happen.";
 		now lust of Eric is 2;
+	otherwise:
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:  [David talks with Eric about his gender and they exchange stories]
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobstrusively walk closer and overhear:";
