@@ -121,10 +121,12 @@ bcseenkingknight is a truth state that varies.  bcseenkingknight is normally fal
 bcfinalchairform is a text that varies.  bcfinalchairform is normally "".
 lastsealfight is a number that varies.  lastsealfight is normally 255.
 lastoctofight is a number that varies.  lastoctofight is normally 255.
-lastorcafight is a number that varies.  lastorcafight is normally 255.
 lastorcasex is a number that varies.  lastorcasex is normally 255.
 lastbcchair is a number that varies.  lastbcchair is normally 255.
-
+lastbcduobeaten is a number that varies.  lastbcduobeaten is normally 255.
+bcduofightlost is a truth state that varies.  bcduofightlost is usually false.
+bcduofightfled is a truth state that varies.  bcduofightfled is usually false.
+bcseenslideroom is a truth state that varies.  bcseenslideroom is normally false.
 
 The Bouncy Castle is a room.  Bouncy Castle is fasttravel.  Bouncy Castle is unknown.  Bouncy Castle is private.
 The description of Bouncy Castle is "[bcentrance]".
@@ -150,7 +152,10 @@ The description of King's Chambers is "[bckingschamber]".
 The Parapets is a room.  The Parapets is up from Ball Pit Room.
 The description of Parapets is "[bcparapets]".
 
-The Slide Room is a room.  The Slide Room is east of Parapets.
+The Upper Hall is a room.  The Upper Hall is east of Parapets.
+The description of Upper Hall is "[bcupperhall]".
+
+The Slide Room is a room.  The Slide Room is east of Upper Hall.
 The description of Slide Room is "[bcslideroom]".
 
 BouncyCastleExit is a room.  "Leaving the bouncy castle."  BouncyCastleSlideExit is east of Slide Room.  BouncyCastleExit is north of Bouncy Castle.
@@ -170,6 +175,8 @@ the scent of Great Hall is "This place smells of rubber and the ocean.";
 the scent of King's Chambers is "This place smells of rubber and the ocean.";
 
 the scent of Parapets is "This place smells of rubber and the ocean.";
+
+the scent of Upper Hall is "This place smells of rubber and the ocean.";
 
 the scent of Slide Room is "This place smells of rubber and the ocean.";
 
@@ -346,9 +353,9 @@ Chapter 6 - Great Hall
 
 to say bcgreathall:
 	say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east.  There's a door at the north and another at the southern corner of the east wall, the one which first brought you in here.  But you have little opportunity to take in much more detail than this, for the room also holds ";
-	if lastorcafight is 255:
+	if lastorcasex is 255:
 		say "a large, inflatable orca toy.  It is very round and bigger than the dolphin toys you've seen, being over two yards in from end to end and big enough for an adult to use.  The black and white inflatable bobs up in to the air and rolls over a few times with a trilling noise before charging towards you to bump you with its nose.  The blow doesn't really hurt much, but makes you stumble back on the rocking, swaying floor.  It seems intent on playfully bumping you back out the door you just came in from.";
-		now lastorcafight is turns;
+		now lastorcasex is 254;
 	otherwise:
 		say "the large orca inflatable from earlier.  It trills happily to see you again moves in to charge at you, clearly wanting to bump you around some more as part of its game.";
 	let bonus be ( dexterity of player - 10 ) / 2;
@@ -542,6 +549,7 @@ Chapter 10 - Parapets
 to say bcparapets:
 	say "[bcparapets_new]";
 
+[
 to say bcparapets_old:
 	say "     Up at the top level of the castle, this room is designed to look like it's parapets.  There floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling.  This netting extends above you as well, enclosing the space for safety.  This section covers western half of the bouncy castle with a wall dividing the two parts and another arched doorway between them.  The floor, while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below.";
 	if lastorcafight is 255:
@@ -568,7 +576,7 @@ to say bcparapets_old:
 			end the game saying "Your brain (shaken, not stirred) gave into the infection.";
 		otherwise:
 			move player to Ball Pit Room;
-
+]
 
 to say bcparapets_new:
 	let compnumber be the number of entries in childrenfaces;
@@ -782,10 +790,71 @@ to say bcchairsubmit:
 				end the game saying "You become part of the Bouncy Castle.";
 
 
-Chapter 11 - Slide Room
+Chapter 11 - Upper Hall
+
+to say bcupperhall:
+	say "     This rectangular room is another bouncing play area between the two main upper rooms.  There's a mesh-covered window on each end of it and a pair of arched doors, one leading to the [link]east[end link] and one to the [link]west[end link] from here.  You are not alone in here though";
+	if lastbcduobeaten is 255:
+		say ", as there are two animated inflatable animals in here that have come to life with your arrival.";
+		say "     The first is a male sea lion made of opaque purple vynil and a whiskered face drawn on his head.  He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock.  His companion is a female orca[if lastorcasex < 255], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside.  As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot her the damp slit at the bottom of her underbelly.  Both of them are a little over a meter long.  They move in on you, one from each side and trying to bear you down with their cuteness.";
+		now lastbcduobeaten is 254;
+		say "[bcduofight]";
+	otherwise if lastbcduobeaten is 254:
+		say ", the sea lion and orca toys still here to stop you from getting away.  Moving in towards you from each side, the duo of inflatable animals quickly bound closer.";
+		say "[bcduofight]";
+	otherwise:
+		if lastbcduobeaten - turns < 3:
+			say ", the sea lion and orca toys still here as well.  Thankfully they are still too weak and deflated from your last confrontation to try facing you again.  They are laying side by side, the sea lion's cock in being sucked by the orca and the orca's pussy being tended by the sea lion.  At a quick glance, you'd think they're just orally stimulating one another, but the are actually in the process of blowing each other up via the air nozzle located at the tip of the sea lion's cock and as the orca's clit.  At the rate they're going at it, it doesn't seem that they'll be out of commission for long.";
+		otherwise:
+			say ", the sea lion and orca toys still here as well and have managed to reinflate themselves enough to try and tackle you again.  Moving in towards you from each side the purple sea lion and the magenta orca bound towards you.";
+			now lastbcduobeaten is 254;
+			say "[bcduofight]";
+
+
+to say bcduofight:
+	challenge "Sea Lion and Orca Toys";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     With the two inflatables down, you're free to continue on.  Taking a moment to orient yourself, you consider which way to proceed.  Your options are to head [link]east[end link] to the [if bcseenslideroom is true]slide room[otherwise]next room[end if] or go back [link]west[end link] to the parapets.";
+		now lastbcduobeaten is turns;
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     Now that they've got you pinned down, the two inflatables start to fondle and grope you with their flippers.  The sea lion's cock and the orca's pussy rub against you as well.  As you grow aroused from their touch, the slowly push off your gear and clothes, leaving you bare so they may have some fun with you.";
+		if cocks of player > 0 and ( cunts of player is 0 or ( cunts of player > 0 and a random chance of 3 in 5 succeeds ) ):
+			say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock.  Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of player] [cock of player] shaft.  Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch.  She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you.";
+			say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch.  Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth.  As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
+			say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [cum load size of player] load into the inflatable female while she trills happily.  Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat.  The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenslideroom is true]slide room[otherwise]next room[end if].";
+			say "     At least they're nice enough to toss your gear out after you as they tidy up their room of your junk.";
+			attempttowait;
+		otherwise if cunts of player > 0:
+			say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your wet folds.  This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  Growing aroused despite the trouble you're in, you're soon quite wet and rubbing your hips back up against that slick shaft.  He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your [cunt size desc of player], making you moan loudly as it shifts to be just the right size to fill you fully and deeply.";
+			say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face.  Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt.  At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal.  Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily.  Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+			say "     They go at it for quite a while until you're pushed past your limit and cum hard, moaning loudly as your inner walls clamp down around the inflatable cock stuffed inside you[if cocks of player > 0] while shooting your [cum load size of player] load across yourself[end if].  This sets off the sea lion, who shoots jet after jet of air-driven semen right into your womb with barks of excitement.  The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face.  The orgasm, the gas and the juices all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenslideroom is true]slide room[otherwise]next room[end if].";
+		otherwise:
+			say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your bare groin.  This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  Growing aroused despite the trouble you're in, you're soon quite excited and rubbing your hips back up against that slick shaft.  He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your ass, making you moan loudly as it shifts to be just the right size to fill you fully and deeply.";
+			say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face.  Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt.  At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal.  Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily.  Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+			say "     They go at it for quite a while until the sea lion is pushed past his limits and shoots jet after jet of air-driven semen deep inside you with barks of excitement.  The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face.  The gas, the semen and the juices all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenslideroom is true]slide room[otherwise]next room[end if].";
+		now libido of player is ( libido of player + libido of player + 100 ) / 3;
+		move player to Slide Room;
+		attempttowait;
+		now bcduofightlost is true;
+		say "[dolcheckA]";
+	otherwise if fightoutcome >= 30:
+		if a random chance of 1 in 2 succeeds:
+			say "     Having gotten all turned around during the fight, you end up diving through one of the doorways and find yourself rushing back onto the parapets.  Thankfully, they don't seem to be pursuing you, but you've still got to deal with avoiding another chair attack.";
+			wait for any key;
+			move player to Parapets;
+		otherwise:
+			say "     Having gotten all turned around during the fight, you end up diving through one of the doorways and find yourself tumbling out into the slide room on the eastern side of the castle.";
+			wait for any key;
+			move player to Slide Room;
+			now bcduofightfled is true;
+			say "[dolcheckA]";
+
+
+Chapter 12 - Slide Room
 
 to say bcslideroom:
-	say "     The second half of the bouncy castle's upper level has the same bright, colourful walls on three sides.  The eastern wall and the ceiling are made with open mesh across parapets and towers like the previous room.  Unlike that one, there is a gap in the mesh wall to allow access to the blue waterslide down into the sea below.  There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.  If you want to leave the castle and head back to shore, you can [link]take the slide[end link].  Alternatively, there's also the doorway to the [link]west[end link] to the parapets.";
+	now bcseenslideroom is true;
+	say "     The eastern portion of the bouncy castle's upper level has the same bright, colourful walls on three sides.  The eastern wall and the ceiling are made with open mesh across parapets and towers like the previous room.  Unlike that one, there is a gap in the mesh wall to allow access to the blue waterslide down into the sea below.  There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.  If you want to leave the castle and head back to shore, you can [link]take the slide[end link].  Alternatively, there's also the doorway to the [link]west[end link] to the upper hall.";
 	say "     Despite the bright colours and soft, rounded shapes of this place, you cannot help but be disturbed.  For while the bouncy castle looks fun and safe enough as a kiddy play area, it is the contents of this room which draw your eyes.  You came hoping to find the captured vixen in her inflatable dolphin prison, but instead find a dozen of the inflatable dolphin suits hanging along the walls.";
 	say "     As you try to remain standing, the dolphins on the wall seem to shift about, perhaps from the feeble struggles of their occupants or from the simple swaying brought on by the waves.  You look over the inflated dolphin suits, trying to decide which to search first, as these are more opaque than the ones you've seen on the beach.  Since they're all inflated and full, you can't tell for certain which may hold the vixen you seek, or if they hold anyone at all.";
 	say "     There are a dozen inflated dolphins like the one you saw the vixen being stuffed into.  You will have to start checking them if you want to find her.  (Type [link]check dolphin[as]dolchecklist[end link] followed by the number you'd like to check out.)[line break]";
@@ -866,7 +935,13 @@ to say dolcheckA:		[empty]
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;
-	if dolcastlefight is not 2:		[empty suit]
+	if bcduofightlost is true:
+		say "     While you're still dazed and aroused from your encounter with the two inflatables, one of the inflated dolphin suits comes off the wall.  Moving under its own power, it tries to ensnare you while you're in a weakened state.  Were you able to concentrate, you'd probably realize that was their plan all along.  Shall you resist?";
+		now bcduofightlost is false;
+	otherwise if bcduofightfled is true:
+		say "     Unfortunately though, your escape sends you tumbling right into one of the inflatable dolphin suits.  Moving under its own power, it tries to ensnare you while you're still surprised.  It's almost like they planned this.  Shall you resist?";
+		now bcduofightfled is false;
+	otherwise if dolcastlefight is not 2:		[empty suit]
 		say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it.  You are able to find it readily and start opening it up.  As you do so, it starts to shift and move.  You are momentarily hopeful that it contains the struggling vixen, but you instead find it empty.  Moving under its own power, the inflated dolphin suit tries to envelop you.  Shall you resist?";
 	otherwise:					[lost to released toy dolphin - D]
 		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement.  Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate.  It makes a grab for you and wraps itself partially over you before you have a chance to react.  Moving under its own power, the strange suit tries to envelop you within itself.  Shall you resist?";

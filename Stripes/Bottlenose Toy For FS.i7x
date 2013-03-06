@@ -270,7 +270,7 @@ When Play begins:
 	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
-	now int entry is 12;
+	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 18;			[ The monster's starting hit points. ]
