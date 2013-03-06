@@ -38,33 +38,39 @@ to say Alexandradesc:
 
 
 Instead of conversing the Alexandra:
-	if hp of Alexandra is 1:
-		say "     The Doberman female has obtained a leather jacket and some torn jeans for herself and swapped them for her uniform.  She looks around the library and pokes her head into the bunker.  'This is a pretty nice setup you've got for yourself here, boss,' she says.  'I can see that following you was definitely the right choice.  Soon there ain't going to be any law except what we make for ourselves and it's about time I figured that out.  So no more Officer Friedrich.  It's just Alexandra the bad dog.  Mmm... it feels so good to be a bad dog,' she says with a moan, having stuffed a paw into her jeans.  She rubs herself up against you.  'As promised, I'll be your slutty doggy bitch, boss.  I'm looking forward to it,' she says with a slow lick across your cheek as she fingers herself all the more.";
-		now hp of Alexandra is 2;
-	otherwise if a random chance of 1 in 3 succeeds and Alexandrastory is false:
+	if hp of Alexandra > 1 and a random chance of 1 in 3 succeeds and Alexandrastory is false:
 		say "     Alexandra takes a seat in one of the chairs, rocking on its back legs and lighting up a smoke.  'My folks were crooks.  Did drugs and petty crimes to pay for the habit.  It was a pretty shitty home to grow up in, so I was taken away by Child Services when they finally got caught.  Not that that was much better, but I tried to convince myself I was better than them.  I decided to become a cop and tried my best to be [']a moral and upright person['],' she says with obvious scorn for her previous self.";
 		say "     'I tried to tell myself that my parents being crooks didn't matter, tried to act like stuff like that doesn't breed true.  But I always knew deep down I was lying and there's no use pretending otherwise,' she says with a growl, flicking away her cigarette.  'I'm a bad dog and am much better off just admitting it.  I certainly am enjoying myself a whole lot more as a slutty bitch, that's for damn sure.  Shit, I'm sick of talking about this crap.  Let's fuck!' she says with a growl as she hops out of the chair and grinds her body against yours.";
 		attempttowait;
 		now Alexandrastory is true;
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
-	otherwise if hp of Alexandra is 2:
-		say "     [one of]'Are you going to use your slutty bitch again soon?'[or]'I've been having beating up the strays who wander by.  It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while playing with her pussy.[or]'I hope something wanders by soon.  I'm in the mood to bust some heads,' she growls, running her paw over her nightstick.[at random]";
-	otherwise if a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is false:
-		say "     Alexandra pulls out one of the chairs and sits in it backwards, resting her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]breasts atop the back of it.  'Yeah, things kind of sucked for a while after I was taken away from my dead-beat parents.  I had a tough time fitting in, felt everyone was always judging me, so I started pretending I was a good person and I was better than my folks.  Somewhere along the lines, I forgot I was pretending, but a part of me always knew.  So when things here went in the shitter, I guess I just kept on pretending.  Being a cop and pretending to be a good girl are the only thing I knew how to do,' she says shaking her head.";
+	otherwise if hp of Alexandra > 2 and a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is false:
+		say "     Alexandra pulls out one of the chairs and sits in it backwards, resting her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]breasts atop the back of it.  'Yeah, things kind of sucked for a while after I was taken away from my dead-beat parents.  I had a tough time fitting in, felt everyone was always judging me, so I started pretending I was a good person and I was better than my folks.  Somewhere along the lines, I forgot I was pretending, but a part of me always knew.  So when things here went in the shitter, I guess I just kept on pretending.  Being a cop and pretending to be a good girl were the only thing I knew how to do,' she says shaking her head.";
 		say "     'I just kept on believing my own lie and tried my best to be a good cop.  I'm glad you came along to knock some sense into me, boss.  I ain't nothing but a bad dog and I always was.  Now I just look the part and can enjoy it,' she says, leaning back and groping her breasts.  'I was so goddamned uptight before, I never had sex until you came along.  Didn't know what I was missing,' she adds, stuffing a few fingers into her open jeans.  'Mmm... but enough talking.  Let's fuck some more,' she says, knocking the chair to the ground as she gets up.  She presses her body to yours, moaning with lustful need.";
 		attempttowait;
 		now Alexandrastory2 is true;
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
-	otherwise if a random chance of 1 in 3 succeeds and level of Alexandra is 1 and Alexandrastory3 is false:
+	otherwise if level of Alexandra is 1 and a random chance of 1 in 3 succeeds and Alexandrastory3 is false:
 		say "     'It felt so good to have you take me like that out in the street, fucking me like the bitch I am,' she says with a soft moan, her paw in her jeans.  'Mmm... I've been feeling my cunt changing a little[if cocks of player > 0 and cockname of player is listed in infections of Knotlist] to conform better to your knot[otherwise if cocks of player > 0], becoming a better fit for your sexy cock[otherwise], getting hotter and wetter at just the thought of you playing with me[end if][if cocks of player > 0] and stretching out so it give birth to as many pups as you want to breed in me[end if].  Mmm... just thinking about it's getting me all worked up again, boss?' she moans, pressing her body to yours.";
 		attempttowait;
 		now Alexandrastory3 is true;
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
-	otherwise if no_AlexandraNPC is not turns and a random chance of 1 in 3 succeeds:
+	otherwise if hp of Alexandra > 2 and no_AlexandraNPC - turns < 3 and a random chance of 1 in 3 succeeds:
 		AlexandraNPCChat;
+	otherwise:
+		say "[alexandratalk]";		[access regular conversation content]
+
+
+
+to say alexandratalk:
+	if hp of Alexandra is 1:
+		say "     The Doberman female has obtained a leather jacket and some torn jeans for herself and swapped them for her uniform.  She looks around the library and pokes her head into the bunker.  'This is a pretty nice setup you've got for yourself here, boss,' she says.  'I can see that following you was definitely the right choice.  Soon there ain't going to be any law except what we make for ourselves and it's about time I figured that out.  So no more Officer Friedrich.  It's just Alexandra the bad dog.  Mmm... it feels so good to be a bad dog,' she says with a moan, having stuffed a paw into her jeans.  She rubs herself up against you.  'As promised, I'll be your slutty doggy bitch, boss.  I'm looking forward to it,' she says with a slow lick across your cheek as she fingers herself all the more.";
+		now hp of Alexandra is 2;
+	otherwise if hp of Alexandra is 2:
+		say "     [one of]'Are you going to use your slutty bitch again soon?'[or]'I've been having beating up the strays who wander by.  It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while playing with her pussy.[or]'I hope something wanders by soon.  I'm in the mood to bust some heads,' she growls, running her paw over her nightstick.[at random]";
 	otherwise if hp of Alexandra is 3:
 		if lust of Alexandra > 12:	[visibly preggers]
 			say "     [one of]'It seems your naughty bitch has gotten herself knocked up, boss.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]'You're quite the stud, boss,' she moans, running her paws over her enlarged, pregnant belly.[or]'It looks like I'm going to have some pups,' she says, running her paws over her rounded belly with a shiver of excitement at the prospect.[or]'It's a little strange getting so pregnant so fast, but I guess that's what makes me a breeder bitch, isn't it?' she says with a smile.[at random]";
@@ -203,7 +209,9 @@ to say Alexandrasex1:		[Bend her over]
 	otherwise:
 		say "     When she finally climaxes, her pussy goes into overdrive, squeezing and milking at your cock, pushing you to orgasm moments later.  She continues to cum, moaning and barking in delight as you spray your seed into her[if cock width of player > 40].  Your massive load leaves the dobie bitch so bloated and full that she can't even move for some time, only able to rub her paws over her overstuffed womb as your seed slowly leaks out of her[otherwise if cock width of player > 20].  Your massive load leaves the dobie bitch with a full and bloated tummy that she happily strokes as she staggers back to her post[otherwise].  You drain your balls into the dobie bitch, leaving her well seeded and slowly leaking your cum from her well-fucked pussy[end if].";
 	now lastdobiemess is 1;
-	if a random chance of 2 in 5 succeeds:
+	let t be 2;
+	increase t by level of Alexandra;
+	if a random chance of t in 5 succeeds:
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 
@@ -220,7 +228,9 @@ to say Alexandrasex2:		[Against the wall]
 	otherwise:
 		say "     When she finally climaxes, her pussy goes into overdrive, squeezing and milking at your cock as she cries out for you to breed her.  Pressing her firmly against the wall, you drive hard into her a few more times before cumming hard.  She continues to cum, moaning and barking in delight as you spray your seed into her[if cock width of player > 40].  Your massive load leaves the dobie bitch so bloated and full that she can't even move for some time, only able to lie against the wall and rub her paws over her overstuffed womb as your seed slowly leaks out of her[otherwise if cock width of player > 20].  Your large load leaves the dobie bitch with a full and bloated tummy that she happily strokes as she staggers back to her post[otherwise].  You drain your balls into the dobie bitch, leaving her well seeded and slowly leaking your cum from her well-fucked pussy[end if].";
 	now lastdobiemess is 1;
-	if a random chance of 2 in 5 succeeds:
+	let t be 2;
+	increase t by level of Alexandra;
+	if a random chance of t in 5 succeeds:
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 
@@ -242,7 +252,9 @@ to say Alexandrasex3:		[All fours]
 		otherwise:
 			say "     With a final, hard thrust, you drive your pulsing rod hard into her and cum.  This sends the sexy canine over the edge and she releases a barking cry of ecstasy, her pussy squeezing and milking at your [cock of player] cock as she cums.  Keeping a firm grip on her ass, you pound your hips against her sexy rear as you spurt your thick load into her as you try to breed your sexy bitch while canine juices soak your crotch[if cock width of player > 40].  Your massive load causes the dobie bitch's belly to swell until it's touching the floor with all the jizm you're pumping into her.  Once you're done, she flops to the floor, too full and happy to do anything but lie there and rub her paws over her bloated belly as your seed slowly leaks out of her[otherwise if cock width of player > 20].  Your large load causes the dobie bitch's belly to grow rounded and slosh a little with the sound of your seed whenever she moves.  Once you're done, she rises slowly and staggers back to her post while happily stroking over her rounded belly[otherwise].  You fuck her until your balls are drained into the dobie bitch before withdrawing.  After pulling out, you get her to lick you clean[end if].";
 	now lastdobiemess is 1;
-	if hp of Alexandra is even and a random chance of 2 in 5 succeeds:
+	let t be 2;
+	increase t by level of Alexandra;
+	if hp of Alexandra is even and a random chance of t in 5 succeeds:
 		increase hp of Alexandra by 1;
 		now lust of Alexandra is 1;
 
@@ -390,6 +402,9 @@ to say alexandrafang2:
 	now level of Alexandra is 1;			[unshared bitch]
 	now A_Fang is false;				[new dialog for new status]
 	now lastdobiemess is 1;
+	if hp of Alexandra is even and a random chance of 3 in 5 succeeds:
+		increase hp of Alexandra by 1;
+		now lust of Alexandra is 1;
 	attempttowait;
 
 
@@ -504,23 +519,23 @@ to AlexandraNPCChat:
 	if A_Sven is false and Sven is bunkered, add 2 to AlexandraNPC;
 	if A_Fang is false and Fang is booked, add 3 to AlexandraNPC;
 	if A_Philip is false and Philip is bunkered, add 4 to AlexandraNPC;
-	if A_Mack is false and Mack is bunkered, add 5 to AlexandraNPC;
-	if A_Sam is false and Sam is bunkered, add 6 to AlexandraNPC;
+[	if A_Mack is false and Mack is bunkered, add 5 to AlexandraNPC;
+	if A_Sam is false and Sam is bunkered, add 6 to AlexandraNPC;	]
 	if A_Snow is false and Snow is booked, add 7 to AlexandraNPC;
 	if A_Sandra is false and Sandra is bunkered, add 8 to AlexandraNPC;
 	if A_Sally is false and Sally is bunkered, add 9 to AlexandraNPC;
 	if A_Sarah is false and Sarah is bunkered, add 10 to AlexandraNPC;
-	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;
+[	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;
 	if A_Solstice is false and Solstice is booked, add 12 to AlexandraNPC;
 	if A_David is false and David is booked, add 13 to AlexandraNPC;
 	if A_Elijah is false and Elijah is bunkered, add 14 to AlexandraNPC;
-	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;
+	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;		]
 	if A_Helen is false and Helen is booked, add 16 to AlexandraNPC;
 	if A_Xerxes is false and Xerxes is booked, add 17 to AlexandraNPC;
-	if A_Icarus is false and Icarus is booked, add 18 to AlexandraNPC;
+[	if A_Icarus is false and Icarus is booked, add 18 to AlexandraNPC;	]
 	if AlexandraNPC is empty:
 		now no_AlexandraNPC is turns;
-		try conversing Alexandra;
+		say "[alexandratalk]";
 	otherwise:
 		sort AlexandraNPC in random order;
 		if entry 1 of AlexandraNPC is 1, say "[A_NPC01]";
@@ -537,10 +552,10 @@ to AlexandraNPCChat:
 		if entry 1 of AlexandraNPC is 12, say "[A_NPC12]";
 		if entry 1 of AlexandraNPC is 13, say "[A_NPC13]";
 		if entry 1 of AlexandraNPC is 14, say "[A_NPC14]";
-		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";
+		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";	]
 		if entry 1 of AlexandraNPC is 16, say "[A_NPC16]";
 		if entry 1 of AlexandraNPC is 17, say "[A_NPC17]";
-		if entry 1 of AlexandraNPC is 18, say "[A_NPC18]";	]
+[		if entry 1 of AlexandraNPC is 18, say "[A_NPC18]";	]
 
 to say A_NPC01:	[Candy]
 	say "     'How can you stand that prissy raccoon boy, boss?' she whispers to you as Candy prances into the library to get a book.  'He's such a silly flake.  He's nothing but a useless wimp.  I could take him with one hand tied behind my back.'  Candy gives a cheery smile and wave, ignoring the glare the Doberwoman's giving him[if cocks of player > 0].  He gives his fluffy tail a big swish[end if].";
@@ -578,6 +593,14 @@ to say A_NPC09:	[Sally]
 to say A_NPC10:	[Sarah]
 	say "     'Couldn't help noticing that you've got another doggy pet.  Are you planning on being a playah and making a little harem of bitches for yourself, boss?  That's fine by me as long as they remember who's top dog around here,' she says with a growl while smacking a fist into her palm.";
 	now A_Sarah is true;
+
+to say A_NPC16:	[Helen]
+	say "     Alexandra scritches her chin as she watches Helen running around on all fours after a ball the doberwoman's just tossed to her.  'I gotta know, boss.  What'd you do to her to make her like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  I'll be sure to back you up on it, boss.'";
+	now A_Helen is true;
+
+to say A_NPC17:	[Xerxes]
+	say "     Alexandra scritches her chin as she watches Xerxes running around on all fours after a ball the doberwoman's just tossed to him.  'I gotta know, boss.  What'd you do to her to make him like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  I'll be sure to back you up on it, boss.'";
+	now A_Xerxes is true;
 
 
 Alexandra ends here.
