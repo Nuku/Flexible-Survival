@@ -1,5 +1,5 @@
-Version 2 of Alexandra by Stripes begins here.
-[Version 2.2 - expanded all sex scenes]
+Version 3 of Alexandra by Stripes begins here.
+[Version 3.0 - started interaction w/Fang]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -10,27 +10,28 @@ The description of Alexandra is "[Alexandradesc]";
 The conversation of Alexandra is { "Yes Boss!" }.
 Alexandrastory is a truth state that varies.  Alexandrastory is usually false.
 Alexandrastory2 is a truth state that varies.  Alexandrastory2 is usually false.
+Alexandrastory3 is a truth state that varies.  Alexandrastory3 is usually false.
 dobieanal is a truth state that varies.  dobieanal is usually false.
 lastdobiemess is a number that varies.
 
 [See Doberman file for collecting Alexandra.]
 
 instead of sniffing the Alexandra:
-	say "The Doberman smells of lust and sex.";
+	say "The Doberman smells of lust and sex, her scent intermixed with yours[if level of Alexandra is 2] and Fang's[end if].";
 
 to say Alexandradesc:
 	if hp of Alexandra < 3:
-		say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure with an average sized pair of breasts and a firm ass[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen masturbating or even performing self-cunnilingus[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if].";
+		say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure with an average sized pair of breasts and a firm ass[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen masturbating or even performing self-cunnilingus[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if][if level of Alexandra is 1].  She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch[end if].";
 		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if Fang is booked].  She shares this duty with Fang, alternating with the wolf[end if].  Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	otherwise if hp of Alexandra is 3 or hp of Alexandra is 5:
 		if lust of Alexandra > 12:	[visibly preggers]
-			say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become.  She has a strong, tough physique while still having a womanly figure.  Her tummy is very large and round now with her progressing pregnancy after the recent fucking you've given her, knocking the breeding bitch up with a litter of pups.  She's found a larger pair of jeans to wear, but still has to leave them unbuttoned to cope with her gravid belly[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  Her breasts are also larger than when she first arrived, having swollen with her [if hp of Alexandra is 5]earlier [end if]pregnancy[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen playing with her breasts or rubbing her bulging belly[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if].";
+			say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become.  She has a strong, tough physique while still having a womanly figure.  Her tummy is very large and round now with her progressing pregnancy after the recent fucking you've given her, knocking the breeding bitch up with a litter of pups.  She's found a larger pair of jeans to wear, but still has to leave them unbuttoned to cope with her gravid belly[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  Her breasts are also larger than when she first arrived, having swollen with her [if hp of Alexandra is 5]earlier [end if]pregnancy[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen playing with her breasts or rubbing her bulging belly[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if][if level of Alexandra is 1].  She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch[end if].";
 			say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside, not letting her current state hold her back[if Fang is booked].  She shares this duty with Fang, alternating with the wolf[end if].  Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 		otherwise:				[slightly preggers]
-			say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure.  Her tummy is looking a little more rounded and full after the recent fucking you've given her, knocking the breeding bitch up with a litter of pups[if hp of Alexandra is 5].  Her breasts are also fuller than when she first arrived, her earlier pregnancy having helped them grow[end if][if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen playing with her breasts or masturbating[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if].";
+			say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure.  Her tummy is looking a little more rounded and full after the recent fucking you've given her, knocking the breeding bitch up with a litter of pups[if hp of Alexandra is 5].  Her breasts are also fuller than when she first arrived, her earlier pregnancy having helped them grow[end if][if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen playing with her breasts or masturbating[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if][if level of Alexandra is 1].  She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch[end if].";
 			say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside, not letting her current state hold her back[if Fang is booked].  She shares this duty with Fang, alternating with the wolf[end if].  Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	otherwise if hp of Alexandra is 4:
-		say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure and a firm ass.  After her pregnancy, her breasts have gotten a little bigger and are even less covered by the open leather jacket than before[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen masturbating or even performing self-cunnilingus[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if].";
+		say "     The Doberman female has divested herself of her cop uniform and instead picked up a leather jacket and ripped jeans more suitable for the bad dog she's become[if lastdobiemess is 1 and lastfuck of alexandra - turns < 5].  The crotch of her jeans are still damp from the recent fucking she was given[otherwise if lastdobiemess is 2 and lastfuck of alexandra - turns < 5].  There is a damp stain on the ass of her jeans under her short tail from the recent fucking you gave the dobie's backside[otherwise if ( lastdobiemess is 5 or lastdobiemess is 7 ) and lastfuck of alexandra - turns < 5].  The crotch of her jeans is wet with the excess juices from her recent climax[end if].  She has a strong, tough physique while still having a womanly figure and a firm ass.  After her pregnancy, her breasts have gotten a little bigger and are even less covered by the open leather jacket than before[if lastdobiemess is 6].  The fur on her chest and breasts is spiked and messy with your semen still clinging to her fur[end if].  Her two-tone black and tan fur is a little dishevelled and scruffy, especially atop her head where it's been styled into short spikes.  No longer restrained by her earlier desires, she's no longer suppressing her lustful urges and can often be seen masturbating or even performing self-cunnilingus[if Fang is booked] when not on duty[end if][if ( lastdobiemess is 3 or lastdobiemess is 6 ) and lastfuck of alexandra - turns < 5].  The dobie's muzzle is streaked with dry patches of your cum that she's occasionally licks at[otherwise if lastdobiemess is 4 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of your feminine juices across it[otherwise if lastdobiemess is 7 and lastfuck of alexandra - turns < 5].  The dobie's muzzle fur is rough and sticky with the lingering traces of when you last had that muzzle between your legs[end if][if level of Alexandra is 1].  She's found herself a black choker to wear in imitation of a dog collar to further show herself to be your fucktoy pet bitch[end if].";
 		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if Fang is booked].  She shares this duty with Fang, alternating with the wolf[end if].  Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	if hp of Alexandra > 3:
 		say "     Alexandra's [libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if libido of Alexandra > 4].  They are a mix of boys and girls among the litters[end if].  They are a rough and rambunctious lot who hang out in one of the side rooms most of the time.  They do go outside on occasion to find some trouble to get into.  They do seem fairly self-sufficient though.";
@@ -50,10 +51,16 @@ Instead of conversing the Alexandra:
 	otherwise if hp of Alexandra is 2:
 		say "     [one of]'Are you going to use your slutty bitch again soon?'[or]'I've been having beating up the strays who wander by.  It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while playing with her pussy.[or]'I hope something wanders by soon.  I'm in the mood to bust some heads,' she growls, running her paw over her nightstick.[at random]";
 	otherwise if a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is false:
-		say "     Alexandra pulls out one of the chairs and sits in it backwards, resting her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]breasts atop the back of it.  'Yeah, things kind of sucked for a while after I was taken away from my dead-beat parents.  I had a tough time fitting in, felt everyone was always judging me, so I started pretending I was a good person and I was better than them.  Somewhere along the lines, I forgot I was pretending, but a part of me always knew.  So when things here went in the shitter, I guess I just kept on pretending.  Being a cop and pretending to be a good girl are the only thing I knew how to do,' she says shaking her head.";
+		say "     Alexandra pulls out one of the chairs and sits in it backwards, resting her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]breasts atop the back of it.  'Yeah, things kind of sucked for a while after I was taken away from my dead-beat parents.  I had a tough time fitting in, felt everyone was always judging me, so I started pretending I was a good person and I was better than my folks.  Somewhere along the lines, I forgot I was pretending, but a part of me always knew.  So when things here went in the shitter, I guess I just kept on pretending.  Being a cop and pretending to be a good girl are the only thing I knew how to do,' she says shaking her head.";
 		say "     'I just kept on believing my own lie and tried my best to be a good cop.  I'm glad you came along to knock some sense into me, boss.  I ain't nothing but a bad dog and I always was.  Now I just look the part and can enjoy it,' she says, leaning back and groping her breasts.  'I was so goddamned uptight before, I never had sex until you came along.  Didn't know what I was missing,' she adds, stuffing a few fingers into her open jeans.  'Mmm... but enough talking.  Let's fuck some more,' she says, knocking the chair to the ground as she gets up.  She presses her body to yours, moaning with lustful need.";
 		attempttowait;
 		now Alexandrastory2 is true;
+		now lastfuck of Alexandra is turns + 8;
+		try fucking Alexandra;
+	otherwise if a random chance of 1 in 3 succeeds and level of Alexandra is 1 and Alexandrastory3 is false:
+		say "     'It felt so good to have you take me like that out in the street, fucking me like the bitch I am,' she says with a soft moan, her paw in her jeans.  'Mmm... I've been feeling my cunt changing a little[if cocks of player > 0 and cockname of player is listed in infections of Knotlist] to conform better to your knot[otherwise if cocks of player > 0], becoming a better fit for your sexy cock[otherwise], getting hotter and wetter at just the thought of you playing with me[end if][if cocks of player > 0] and stretching out so it give birth to as many pups as you want to breed in me[end if].  Mmm... just thinking about it's getting me all worked up again, boss?' she moans, pressing her body to yours.";
+		attempttowait;
+		now Alexandrastory3 is true;
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
 	otherwise if no_AlexandraNPC is not turns and a random chance of 1 in 3 succeeds:
@@ -137,6 +144,11 @@ to say badAlexandrasex:
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers.";
+[	if ( cocks of player > 0 or cunts of player > 0 ) and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - hp of Fang):
+		choose a blank row in table of fucking options;
+		now title entry is "Threesome with Fang";
+		now sortorder entry is 10;
+		now description entry is "Share her with the wolf.";			]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -169,10 +181,15 @@ to say badAlexandrasex:
 					say "[Alexandrasex8]";
 				otherwise if nam is "Titty fuck":
 					say "[Alexandrasex9]";
-			otherwise:
-				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
-		wait for any key;
-		clear the screen and hyperlink list;
+				otherwise if nam is "Threesome with Fang":
+					say "[Alexandrasex10]";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	now lastfuck of Alexandra is turns;
+	wait for any key;
+	clear the screen and hyperlink list;
+
+Part 2 - Bad Alexandra Sex Scenes
 
 to say Alexandrasex1:		[Bend her over]
 	say "     You push the ex-cop down over one of the tables and spread her legs with a firm motion with your foot.  She whimpers softly in excitement and her short tail wags frantically as juices run down her legs.  Grinning at the sight, you get your cock lined up with her wet pussy and thrust into her, making her moan loudly[if lastdobiemess is 1 or lastdobiemess is 2].  Her crotch fur, damp from her messy jeans, smells strongly of your scent from the last time you used your dobie bitch[otherwise if lastdobiemess is 5 or lastdobiemess is 7].  Her crotch fur, damp from her messy jeans, smells strongly of her scent from the last time you played with your dobie bitch[end if].  Keeping her shoulders pinned down, you pound your [cock size desc of player] [cock of player] cock into her as she rocks her hips back into every thrust you make.";
@@ -313,17 +330,96 @@ to say Alexandrasex9:		[Titty fuck]
 	now lastdobiemess is 6;
 
 
+to say Alexandrasex10:		[Threesome with Fang]
+	say "***Coming soon, my apologies.";
+
+
+Part 3 - Event Scenes w/Fang
+
+to say alexandrafang0:
+	say "     You catch sight of Alexandra and Fang over by the door to the library.  While she's on guard, he's sniffing around her with obvious interest.  She acts like she's unaware of his attention, but you can see her tail wagging excitedly as he noses between her legs.  When his teeth catch onto the seat of her jeans and start tugging on them, she unzips them and starts squirming out of them, moving onto all fours.  'That's right, you big, bad wolf.  You've found yourself a juicy bitch,' she barks.";
+	say "     Shall you [link]enjoy the show (Y)[as]y[end link] as your two guards become better acquainted or do you object and [link]break them up (N)[as]y[end link], preferring to keep the doberwoman all for yourself?";
+	if the player consents:
+		say "     Moving into a better position to watch the show, you smile at Alexandra as she wags her rear invitingly for the feral wolf.  Requiring no more coaxing, he pounces atop the dog woman and grives his cock into her with a lustful growl.  She moans and pants as he shifts position and starts fucking away at your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
+		say "[alexandrafang1]";
+	otherwise:
+		if hp of Fang is 3 or hp of Fang is 4:
+			say "     Heading over towards the large wolf and the doberman bitch, you start to tell them to break it up, but Fang ignores you.  He pounces atop the dog woman and drives his cock into her with an angry growl at you, causing you to slink back.  You try to approach again, but he growls and snaps at you and you slink back from your alpha wolf, submitting to his dominance of you.  Seeing you give in and backing off, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
+			say "[alexandrafang1]";
+		otherwise if cocks of player is 0 and cunts of player > 0:
+			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps.  Remembering that you have no means to properly reinforce to your bitch that she's your sex toy if you lack a sex of your own.  You can only settle in to watch and accept that Alexandra'll need to get what her bitch body needs from Fang until you're better equipped to satisfy her.  As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
+			say "[alexandrafang1]";
+		otherwise if cocks of player is 0:		[***]
+			say "     You start to head over to the wolf and doberman, intent on showing her who she really belongs to, but you stop short after a few steps.  Lacking a cock of your own at the moment means you're ill-equipped to show the bitch her place beneath you or to provide her cunt with the proper fucking that she needs right now.  It looks like you'll just have to settle for sharing her with the wolf.  As you're sitting down somewhere lined up for the sexy show, Fang pounces atop your prize bitch, sharing in your spoils to stake a claim of his own on, and in, her.";
+			say "[alexandrafang1]";
+		otherwise:
+			say "[alexandrafang2]";
+
+to say alexandrafang1:
+	say "     Alexandra pants and moans like a bitch in heat as the wild wolf pounds into her.  As you watch, his throbbing red cock drives into her juicy canine cunt over and over again, her puffy lips stretched around that thick rod.  Her breasts sway and she pants, drooling onto the ground as she gets a rough pounding like the kind she's been trained to enjoy.  Between her raw cries of lust, she moans about being a bitch, a slut and an animal, and the wolf is more than happy to treat her as such.";
+	say "     As they continue to fuck, Fang's pace grows faster still and the wet, slick sounds of them going at it grow louder.  Watching this, you grow increasingly aroused, the sight of the policewoman so debased as to give herself willingly to an animal to be fucked and bred is very exciting[if cocks of player > 0].  Taking a hold of your throbbing cock[smn], you start playing with yourself.  You work your hand over your hard shaft, stroking in time to the wolf's frantic thrusts[otherwise if cunts of player > 0].  Slipping a hand between your legs to your wet folds, you start playing with your.  You pump a few fingers into your cunt, working in time to the wolf's frantic thrusts[otherwise].  Lacking a proper gender of your own, you run your hands all over your body, rub your bare groin and tease yourself as best you can[end if].  The show is very exciting and you find yourself longing for a chance to share the needy bitch with the wolf in the future.";
+	say "     Grinding his knot against her puffy folds, he slowly spreads them open a little more with every hard thrust into her.  Finally, her needy cunt stretches open enough and allows the thick bulb entrance before clamping down around it.  The two lustful canines howl as Fang's ballsac twitches visibly and hot juices run down Alexandra's legs  The wolf bites down onto the back of her neck as he cums heavily into her and she quivers and pants in ecstasy at this rough treatment[if cocks of player > 0 or cunts of player > 0].  Seeing them getting off and knowing the wolf's hot semen is flooding into the ex-cop has you working your hand franctically, cumming hard moments later[end if].";
+	say "     After draining his balls, the wolf climbs off of her and turns around while still tied in her, remaining locked inside her left she were a normal dog.  She flops down, tired but satisfied, rubbing at her stretched cunt and the base of the wolf cock locked inside herself with a sigh of pleasure.  From the look of them, they'll certainly be going at it again sometime soon.  You'd best be keeping an eye on your prize bitch from now on.";
+	say "[line break]";
+	if "Top Dog" is listed in feats of player:
+		say "     Your [']Top Dog['] feat has been replaced by the [']Cuckold['] feat.  Your [bold type]perception[roman type] has gone up by one and your earlier [bold type]charisma[roman type] bonus has been removed.";
+		remove "Top Dog" from feats of player;
+		decrease charisma of player by 1;
+	otherwise:
+		say "     You and Alexandra have earned the [']Cuckold['] feat, making her more fertile.  Your [bold type]perception[roman type] has also gone up by one.";
+	add "Cuckold" to feats of player;
+	increase perception of player by 1;
+	now level of Alexandra is 2;			[shared bitch]
+	now A_Fang is false;				[new dialog for new status]
+	now lastdobiemess is 99;			[last used by Fang]
+	attempttowait;
+
+
+to say alexandrafang2:
+	say "     Growling angrily at your wolf, you grab him by the scruff of the neck as he's preparing to make the leap onto the doberman's back.  He waves his paws in the air, as if trying to grab at the bitch so close.  His cock is hard and throbbing, dribbling with precum.  You hold him and give him a shake before shoving him aside.  'No, Fang, this bitch is mine,' you add, making the beta wolf slink back a couple of yards.";
+	say "     During this, Alexandra's risen to her feet and is quite angry that you've denied her a good and proper fucking from the wolf.  'Oh?  I'm all yours, am I?' she growls, pulling off her jacket to get herself completely nude.  'How about you prove it, boss?'  Clearly goading you in search of the rough sex you've denied her, you make a grab for her.";
+	say "     A brief struggle ensues with you trying to pin the obstinate bitch down which ends with her tumbling out the door of the library out into the open street.  You pounce on her before she can get back up, fighting to pin her down.  She continues to resist, barking for you to fucking take her if you're going to take her and freeing your crotch between trying to push you off.  Frustrated by your prize bitch being such a bad girl, you pin down her shoulders and drive your [cock of player] shaft into her hard, spreading her cunt[if cock length of player > 20] wide[end if], making her cry out in pleasure.  Growling dominantly down at her, you fuck her out in the plain view of the city for all to see as you stake your claim on her once again.";
+	say "     The sex is rough and wild, your hands groping lustfully at her breasts and hips while you pound away at her.  She pants and moans, her legs locked around your hips and her paws clawing and scratching at your back.  These scratches leave deep red marks that even the infection will take time to heal, but the pain of them only reinvigorates your drive to pound her bitch cunt to reminder her why you're the boss.  As you're fucking her, Fang can only watch on as you stake a fresh claim on the doberwoman and so knows she's yours, cock hard but untended.";
+	say "     As you're nearing your peak, you grab her by the muzzle and hold it closed, turning her to face you while fucking her.  'I'm the boss here, aren't I?' you growl.  She can only whimper and nod, her jaws held shut by your firm grip.  'That's right.  And that means this fucking muzzle of yours is mine,' you say, pushing her head back before grabbing her breasts roughly, groping them painfully hard.  As you squeeze her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]tits, fresh juices soak her crotch.  'And these fucking tits of yours are mind too,' you add, pinching her nipples.  Your hands then run down to her hips, squeezing her rear hard and pulling her up into another thrust.  'And that hot ass of yours, and especially,' you rumble in her ear as you pause your thrusting for a second, 'that bitch cunt of yours.  Mine!' you drill into her one last time, cumming hard.  This sets her off as well, crying out loudly with a barking howl of lust and pleasure as you fill her womb with your hot seed.";
+	say "     When you're done cumming in her[if cock width of player > 30] and she's left so stuffed she struggles to move with all your virile semen in her[otherwise if cock width of player > 20] and she's left with a bulge in her belly from all your virile semen in her[end if], you pull out and wipe your cock off across her panting muzzle.  She looks up at you with increased submission and loyalty from the rough and public claiming of her.  You grin down at your prize and grab her by the scruff of the neck, pulling her back into the library like a dog.  Inside, you leave her there on the floor, panting softly, confident now that she now knows she belongs to you exclusively.";
+	say "[line break]";
+	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile.  Your [bold type]charisma[roman type] has also gone up by one.";
+	add "Top Dog" to feats of player;
+	increase perception of player by 1;
+	decrease hp of player by 10;
+	now level of Alexandra is 1;			[unshared bitch]
+	now A_Fang is false;				[new dialog for new status]
+	now lastdobiemess is 1;
+	attempttowait;
+
+
+Part 4 - Everyturn Rule (pregnancy and Fang)
+
 an everyturn rule:
 	if lust of Alexandra > 0:
 		increase lust of Alexandra by 1;
+		if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1;
 		if lust of Alexandra >= 24 and skipturnblocker is 0:
 			say "Your thoughts wander back to Alexandra and you feel a need to go check in on her.";
 			if libido of Alexandra is 0:
 				now libido of Alexandra is a random number between 2 and 4;
 			otherwise:
 				increase libido of Alexandra by a random number between 1 and 4;
+				if level of Alexandra is 1 or level of Alexandra is 2, increase libido of Alexandra by a random number between 0 and 1;
 			now lust of Alexandra is 0;
 			now hp of Alexandra is 4;
+	otherwise if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
+		if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
+		if level of Alexandra is 0:
+			if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				say "[alexandrafang0]";
+		otherwise if level of Alexandra is 1 and hp of Fang is 3 or hp of Fang is 4:
+			if lastfuck of Fang - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+				say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
+				say "     What's yours is yours, but what's yours is his, it seems.";
+				say "[alexandrafang1]";
+	if level of Alexandra is 2 and a random chance of 1 in 10 succeeds:
+		now lastdobiemess is 99;
 
 
 [ hp of Alexandra ]
@@ -338,9 +434,19 @@ an everyturn rule:
 [ 0 = not preggers ]
 [ 1-12 = lightly preggers ]
 [ 13-24 = plumply preggers ]
+[ if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3  =  bigger breasts ]
 
 [ libido of Alexandra ]
 [ number of offspring ]
+
+[ level of Alexandra ]
+[ Alexandra + Fang ]
+[ 0 = no contact ]
+[ 1 = unshared ]
+[ 2 = shared ]
+
+[ xp of Alexandra ]
+[ turn when both Fang and Alexandra are determined to be present]
 
 [ lastdobiemess ]
 [ 0 = no sex ]
@@ -351,20 +457,24 @@ an everyturn rule:
 [ 5 = licked her ]
 [ 6 = tits ]
 [ 7 = 69 ]
+[ 99 = Fang ]
+
+
+Section 4 - Conversation on other NPCs
 
 [
 Thoughts on others:
-Candy - silly flake, wimp, I could take him easy
-Sven - noticed the player's got another fucktoy.  understands that it's now a world where what you can take is yours.
-Fang - minor changes alpha/beta, lots of fun to sneak out back with him
-Philip - stupid slob
 Mack - 
 Snow -
-Sandra - 
-Sally - 
 Sam -
-Sarah -
 David - 
+Coleen - 
+Solstice - 
+David - 
+Elijah - 
+Onyx - 
+Helen - What'd you do to her to make her like that?
+Xerxes - What'd you do to her to make him like that?
 ...
 ]
 
@@ -385,6 +495,7 @@ A_Elijah is a truth state that varies.  A_Elijah is false.
 A_Onyx is a truth state that varies.  A_Onyx is false.
 A_Helen is a truth state that varies.  A_Helen is false.
 A_Xerxes is a truth state that varies.  A_Xerxes is false.
+A_Icarus is a truth state that varies.  A_Icarus is false.
 no_AlexandraNPC is a number that varies.  no_AlexandraNPC is usually 255.
 
 to AlexandraNPCChat:
@@ -406,6 +517,7 @@ to AlexandraNPCChat:
 	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;
 	if A_Helen is false and Helen is booked, add 16 to AlexandraNPC;
 	if A_Xerxes is false and Xerxes is booked, add 17 to AlexandraNPC;
+	if A_Icarus is false and Icarus is booked, add 18 to AlexandraNPC;
 	if AlexandraNPC is empty:
 		now no_AlexandraNPC is turns;
 		try conversing Alexandra;
@@ -427,7 +539,8 @@ to AlexandraNPCChat:
 		if entry 1 of AlexandraNPC is 14, say "[A_NPC14]";
 		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";
 		if entry 1 of AlexandraNPC is 16, say "[A_NPC16]";
-		if entry 1 of AlexandraNPC is 17, say "[A_NPC17]";	]
+		if entry 1 of AlexandraNPC is 17, say "[A_NPC17]";
+		if entry 1 of AlexandraNPC is 18, say "[A_NPC18]";	]
 
 to say A_NPC01:	[Candy]
 	say "     'How can you stand that prissy raccoon boy, boss?' she whispers to you as Candy prances into the library to get a book.  'He's such a silly flake.  He's nothing but a useless wimp.  I could take him with one hand tied behind my back.'  Candy gives a cheery smile and wave, ignoring the glare the Doberwoman's giving him[if cocks of player > 0].  He gives his fluffy tail a big swish[end if].";
@@ -438,7 +551,12 @@ to say A_NPC02:	[Sven]
 	now A_Sven is true;
 
 to say A_NPC03:	[Fang]
-	say "     'That wolf that helps me guard this place, he's a quiet one.  Doesn't say much, but damn if he's not a lot of fun to sneak out back with.  I can see why you [if hp of Fang < 3]wanted to keep him[otherwise]bend over for him[end if].'";
+	if level of Alexandra is 0:
+		say "     'How'd you manage to snag one of those wolves to guard this place, boss?' she asks, clearly impressed with you.  'He looks like a lot of fun.  I might just bend over for him some time you're too busy to take care of your bitch,' she adds with a wink while rubbing a paw around in her shorts.";
+	otherwise if level of Alexandra is 1:
+		say "     'You don't need to worry, boss.  That wolf's comes sniffing around from time to time, but that's it.  Since you've staked your claim, we both understand whose bitch I am,' she says, remembering the scene with obvious delight.";
+	otherwise:
+		say "     'That wolf that helps me guard this place, he's a quiet one.  Doesn't say much, but damn if he's not a lot of fun to sneak out back with.  I can see why you [if hp of Fang < 3]wanted to keep him[otherwise]bend over for him[end if].'";
 	now A_Fang is true;
 
 to say A_NPC04:	[Philip]

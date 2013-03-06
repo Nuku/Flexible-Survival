@@ -200,6 +200,7 @@ to say fangsandrasex:
 		if the player consents:
 			say "[fangsub]";
 			now hp of Fang is 3;			[Fang becomes alpha]
+			now xp of Alexandra is 0;
 			now vmusedone of Fang is false;	[Open for fresh musings]
 			now libido of player is libido of player / 2;
 			infect "Feral Wolf";
@@ -445,6 +446,7 @@ instead of going outside from Bunker while ( lastFangfucked - turns >= 24 and hp
 	if the player consents:
 		say "[fangsub2]";
 		now hp of Fang is 4;			[Alpha Fang w/o Sandra]
+		now xp of Alexandra is 0;
 		now vmusedone of Fang is false;	[Open for fresh musings]
 		now libido of player is libido of player / 2;
 		infect "Feral Wolf";

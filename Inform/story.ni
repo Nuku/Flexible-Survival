@@ -1573,7 +1573,8 @@ carry out hunting:
 			break;
 		choose row monster from the table of random critters;
 		now monsterhp is hp entry;
-		now ishunting is true;
+		if name entry matches the text topic understood, case insensitively:
+			now ishunting is true;
 		challenge;
 		now ishunting is false;
 		if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
