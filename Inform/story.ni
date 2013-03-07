@@ -1268,7 +1268,7 @@ To say gryphon lose:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "'Call me!' the Gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
-		if cock length of player is less than 8 and cunts of player is greater than 0:
+		otherwise if cock length of player is less than 8 and cunts of player is greater than 0:
 			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the Gryphon awaits her fate with more than a little anticipation. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further you start to move your hips, grinding against the Gryphons mighty black knot. The Gryphons eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low rolling squawk.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -1289,7 +1289,7 @@ To say gryphon lose:
 			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.[impregchance]";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
-		if cocks of player is greater than 0 and cunt length of player is less than 6:
+		otherwise if cocks of player is greater than 0 and cunt length of player is less than 6:
 			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the Gryphon awaits her fate with more than a little anticipation. You move to your knee's positioning your [cock size desc of player] member at your victims quivering slit.";
 			if cock length of player is less than 6:
 				say "With almost no effort Her massive pussy swallows your entire cock. With what could almost pass for a smirk, the gryphon squawks 'I guess your just not Man enough...'. Anger and lust getting the better of you, you pull your cock out of her voluminous cunt and repositioning slightly you place the tip at the entrance to her back door. Her eyes going wide with fear, your prey is about to voice her dissent, but too late, your lust won't be denied. With some effort you push past her tightly clenched sphincter, drawing loud pained squawks from your victim. You start slowly fucking her tight asshole, in and out, gradually picking up speed. Eventually the Gryphons squawking changes pitch; however she felt before, she definitely seems to be enjoying this now.";
