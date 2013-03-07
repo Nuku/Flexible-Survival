@@ -1,5 +1,5 @@
 Warehouse Events by StripeGuy begins here.
-[Version 1.1 - Typos fixed - Wahn]
+[Version 1.1 - Typo fixes - Wahn]
 
 "Adds a series of random events to Flexible Survival set in the Warehouse area."
 
