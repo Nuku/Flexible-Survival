@@ -50,10 +50,6 @@ to say automatondesc:
 		now autogender is 1;	[male]
 	otherwise if guy is banned:
 		now autogender is 2;	[female]
-	otherwise if guy is banned:
-		now autogender is 2;
-	otherwise if girl is banned:
-		now autogender is 1;
 	otherwise if guy is warded and girl is warded:
 		now autogender is a random number between 1 and 2;
 	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
