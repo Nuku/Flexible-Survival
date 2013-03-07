@@ -102,19 +102,19 @@ Instead of Resolving a union break:
 	say "The docks are bustling, crates and muscle-powered cranes swinging everywhere, fresh-caught fish are flying too and fro, ships are tying off or casting off, and there is so much chatter and whistles! As if by magic, all that suddenly stops. Crates are set down, ropes left to hang, and all the people sudden congregate into tight knots. You casually saunter over to them, trying to ask questions while being subtle about it. A surly [one of]tenrec[or]serval[or]ox[or]gorilla[at random], [one of]draws deeply from his cigarette[or]puts away a porn mag[or]straightens their gear[or]stops chatting with a friend[at random] and answers you tersely. 'Union break.' Just as suddenly work stopped, the work kicks back in at the sound of a whistle. Cigarettes and cigars are snubbed out, dice get put away, and with a grumble everyone returns to their tasks.";
 	let t be a random number between 1 and 7;
 	if T < 6:
-				say "Once the crowd is cleared, you find little of interest to keep you lingering. Back to exploring you go.";
+		say "Once the crowd is cleared, you find little of interest to keep you lingering. Back to exploring you go.";
 	otherwise if T is 6:
-				say "With the working fellows all gone, you're left standing by your lonesome. Not for long, though, as with a creak of leather and jingle of jewelry an opossum sailor saunters by. 'It isn't just a well laid course and a weighed anchor that gets this sailor's blood a-racing. All those strong men, rhh, gets a girl going. Why don't you give my sails an unfurling?' Though she cackles manically at her own wit, it seems you are in for a fight!";
-				challenge "Opossum Sailor";
+		say "With the working fellows all gone, you're left standing by your lonesome. Not for long, though, as with a creak of leather and jingle of jewelry an opossum sailor saunters by. 'It isn't just a well laid course and a weighed anchor that gets this sailor's blood a-racing. All those strong men, rhh, gets a girl going. Why don't you give my sails an unfurling?' Though she cackles manically at her own wit, it seems you are in for a fight!";
+		challenge "Opossum Sailor";
 	otherwise if T is 7:
-				say "After everyone else has drifted past, one of the stretched-out otter looking fellows hangs back. He nudges your side, gesturing for you to lean in so he can whisper conspiratorially.  'Hey mate, you look like you have a minute. Can you give me a hand with my uh...swordfish?' He grins wickedly, letting his coat swing open to reveal his hardening cock. At least he asked first.";
-				challenge "Tenrec";
+		say "After everyone else has drifted past, one of the stretched-out otter looking fellows hangs back. He nudges your side, gesturing for you to lean in so he can whisper conspiratorially.  'Hey mate, you look like you have a minute. Can you give me a hand with my uh...swordfish?' He grins wickedly, letting his coat swing open to reveal his hardening cock. At least he asked first.";
+		challenge "Tenrec";
 	otherwise if T is 8:
-				say "You are almost bowled over by one of the hulking gorillas that keep some semblance of order in the warehouse district, unable to keep a complaining cry contained. At the sound, the huge male spins around with surprising dexterity for one so bulky. 'You talkin['] to me, punk?' Shaking your head, you try to back up and claim a lack of offense. 'Oh, you're gonna need your shinebox, kid.' Rolling up his sleeves, the huge primate advances on you.";
-				challenge "Union Gorilla";
+		say "You are almost bowled over by one of the hulking gorillas that keep some semblance of order in the warehouse district, unable to keep a complaining cry contained. At the sound, the huge male spins around with surprising dexterity for one so bulky. 'You talkin['] to me, punk?' Shaking your head, you try to back up and claim a lack of offense. 'Oh, you're gonna need your shinebox, kid.' Rolling up his sleeves, the huge primate advances on you.";
+		challenge "Union Gorilla";
 	otherwise if T is 9:
-				say "As you turn to leave and go about your business, a huge musky paw lands on your shoulder. Turning around, you see one of the longshoremen tugging his tuque back into position. 'I've never seen you around. Not working?' Without waiting for a response, he begins to just slowly push down on your shoulder, as if to put you on the ground. 'Maybe you can get a job sucking dick around here. I'll recommend you to the foreman if you're good.'";
-				challenge "Ox Longshoreman";
+		say "As you turn to leave and go about your business, a huge musky paw lands on your shoulder. Turning around, you see one of the longshoremen tugging his tuque back into position. 'I've never seen you around. Not working?' Without waiting for a response, he begins to just slowly push down on your shoulder, as if to put you on the ground. 'Maybe you can get a job sucking dick around here. I'll recommend you to the foreman if you're good.'";
+		challenge "Ox Longshoreman";
 	Now union break is resolved;
 
 Section 5-  hot stepping
