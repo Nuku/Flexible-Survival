@@ -1,4 +1,4 @@
-Version 1 of Sea Lion and Orca Toys For FS by Stripes begins here.
+Version 1 of Sea Lion and Orca For FS by Stripes begins here.
 
 "Adds a special fight with the Sea Lion and Orca Toys in the Bouncy Castle, managed as a creature.  It is not an infection."
 
@@ -115,4 +115,4 @@ this is the slaodoubleteam rule:		[struck by both at once for increased dmg]
 	follow the player injury rule;
 	say "You are [descr].";
 
-Sea Lion and Orca Toys For FS ends here.
+Sea Lion and Orca For FS ends here.
