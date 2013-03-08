@@ -3316,7 +3316,7 @@ To Infect:
 	if x is 4:
 		follow the breast change rule;
 		if bodyname of player is not name entry:
-			say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][one of]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
 		attributeinfect;			[sets the new attributes]
@@ -3394,7 +3394,7 @@ To Infect:
 		if x is 4:
 			follow the breast change rule;
 			if bodyname of player is not name entry:
-				say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+				say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][one of]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
 				now body of player is body entry;
 			attributeinfect;			[sets the new attributes]
