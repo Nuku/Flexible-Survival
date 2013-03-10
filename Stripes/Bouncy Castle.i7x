@@ -595,9 +595,9 @@ to say bcparapets_new:
 		if hardmode is true, increase chairnum by ( level of player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 		if playernum >= chairnum:
-			say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again.  But you are suddenly surprised as one of the spots slides across the floor, almost getting under your foot before you can hop to avoid it.  You take your last few steps quickly before the floor has the chance to put another spot underfoot.  Shall you head [link]east (Y)[as]y[end link] to the slide room or [link]down (N)[as]n[end link] into the ball room?";
+			say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again.  But you are suddenly surprised as one of the spots slides across the floor, almost getting under your foot before you can hop to avoid it.  You take your last few steps quickly before the floor has the chance to put another spot underfoot.  Shall you head [link]east (Y)[as]y[end link] to the next room or [link]down (N)[as]n[end link] into the ball room?";
 			if the player consents:
-				move player to Slide Room;
+				move player to Upper Hall;
 			otherwise:
 				move player to Ball Pit Room;
 		otherwise:
@@ -608,12 +608,12 @@ to say bcparapets_new:
 			otherwise:
 				say "[bcchairsubmit]";
 	otherwise:
-		say "     You take care as you navigate the room, stepping to avoid the red spots in the hopes of not activating the chair again.  You don't dare linger here given the fiendish traps hiding here.  Shall you head [link]east (Y)[as]y[end link] to the slide room or [link]down (N)[as]n[end link] into the ball room?";
+		say "     You take care as you navigate the room, stepping to avoid the red spots in the hopes of not activating the chair again.  You don't dare linger here given the fiendish traps hiding here.  Shall you head [link]east (Y)[as]y[end link] to the next room or [link]down (N)[as]n[end link] into the ball room?";
 		if the player consents:
-			move player to Slide Room;
+			move player to Upper Hall;
 		otherwise:
 			move player to Ball Pit Room;
-		
+
 
 to say bcchairfight:
 	let compnumber be ( number of entries in childrenfaces / 3 );
@@ -761,7 +761,7 @@ to say bcchairfight:
 		say "     A quick glances shows none of the red spots located in the next room.  Shall you [link]east (Y)[as]y[end link] into it or head back [link]downstairs (N)[as]n[end link] into the relative safety of the room below?";
 		if the player consents:
 			say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises.  You head to the separating wall and move through the archway into the other room.";
-			move player to Slide Room;
+			move player to Upper Hall;
 			follow the turnpass rule;
 		otherwise:
 			say "     You move quickly to the hole and grab onto the netting to safely climb down before this room can try anything else.";
