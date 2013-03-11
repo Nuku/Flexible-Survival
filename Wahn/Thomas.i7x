@@ -1,5 +1,5 @@
 Version 1 of Thomas by Wahn begins here.
-[Version 1: Basic NPC, Quest, Sex Scenes, Endings]
+[Version 1.1: Combat fixed up a bit]
 
 "Adds an NPC named Thomas to the Flexible Survival game"
 
@@ -61,19 +61,25 @@ Instead of resolving a Centaur Gangbang:
 	otherwise:
 		say "     Making your way forward behind covering bits of walls and rubble, you almost get all the way to the little herd of centaurs before one of them notices you. The third centaur nods to his fucking buddies and says 'Look - another one. I'll take care of him...'";
 		challenge "Centaur Stallion";
-		if lost is 1:
+		if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
 			say "[LoseToCentaurs]";
-		otherwise:
+		otherwise if fightoutcome >= 30:			[fled]			
+			say "[RunFromCentaurs]";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
 			say "     With the first centaur hurt and stumbling back from you, his buddies stop thrusting into their partners and attack. The one who was fucking the mare is the first to get to you...";
 			challenge "Centaur Stallion";
-			if lost is 1:
+			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
 				say "[LoseToCentaurs]";
-			otherwise:
+			otherwise if fightoutcome >= 30:			[fled]			
+				say "[RunFromCentaurs]";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 				say "     With another centaur beating a hasty retreat, only the third one - Raul - is left. He comes at you and rears up, hooves beating for your head.";
 				challenge "Centaur Stallion";
-				if lost is 1:
+				if fightoutcome >= 20 and fightoutcome <= 29:							[lost]
 					say "[LoseToCentaurs]";
-				otherwise:
+				otherwise if fightoutcome >= 30:			[fled]			
+					say "[RunFromCentaurs]";
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  	[won]
 					say "     Seeing that you have the upper hand, Raul suddenly turns around and gallops towards his buddies and Sandy. With a 'Fuck this, let's get out of here', he drives the mare out into the plains, closely followed by the other stallions.";
 					say "     [line break]";
 					say "     Having beaten the centaur stallions, you turn to their groggy human captive. Before you can make more than two steps towards him, a shudder runs though the naked man's body as it changes. Accompanied by the crunching noises of breaking and reforming bones, his lower body changes quite drastically, getting longer and developing four long legs until he looks half-horse, like his former captors.";
@@ -121,6 +127,9 @@ to say LoseToCentaurs:
 	infect "Centaur Stallion";	
 	infect "Centaur Mare";			
 	infect "Centaur Stallion";	
+	
+to say RunFromCentaurs:
+	say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened to the man you left behind with the centaurs. Most likely, he's another breeding mare by now...";
 
 Section 2 - Thomas, the herm centaur
 
@@ -398,13 +407,14 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 	say "     What's your answer to that? Do you want to try taking on the behemoth (Y), or rather run away (N) ?";
 	if player consents:
 		challenge "Behemoth";
-		if lost is 1:
+		if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
 			say "     Even though you ended up losing, the distraction you provided was enough for the young centaur and Thomas to get away safely. When you finally make your way back to your usual meeting point, all wet and sticky from your time with the behemoth, you find the two centaurs waiting for you there. Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and blond hair.";
-			say "     Shaking your hand, Felix smiles and says 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up besides him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
-		otherwise:
+		otherwise if fightoutcome >= 30:														[fled]
+			say "     Even though you turned tail and ran, the behemoth followed you quite a bit, which was enough distraction for the young centaur and Thomas to get away safely. When you finally make your way back to your usual meeting point, pretty sweaty from running like hell away from that beast, you find the two centaurs waiting for you there. Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and blond hair.";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 			say "     Having beaten the behemoth, you look around and see Thomas and the young centaur a small distance away. They wave for you to follow, then gallop off, most likely to get out of here before the behemoth decides it wants another round. Hurrying after them, you soon find yourself at the usual meeting spot with Thomas, where the two centaurs await your arrival.  Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and blond hair.";
-			say "     Shaking your hand, Felix smiles and says 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up besides him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
 		increase libido of Thomas by 10;
+		say "     Shaking your hand, Felix smiles and says 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up besides him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
 	otherwise:
 		say "     Shouting 'Sorry, I can't fight that.' you run away and only look back when you're in a somewhat safe distance. From there, you see Thomas attack the huge creature and get thrown aside with an almost casual slap. Not long after, the behemoth finally catches up with the young centaur it was chasing and... stuffs him into its pussy? Now that's a rather strange and somewhat disturbing sight. You doubt that what will emerge from those folds later will still be a centaur...";
 		say "     Having struggled to his feet, Thomas limps away from the scene towards you, a rather disappointed expression on his face. 'You were right - it's just too strong.' he sighs, then leaves.";
@@ -420,24 +430,32 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 		say "      [line break]";
 		say "     You don't have to wait too long before a group of centaurs comes into sight in the distance and veers right towards you. It's eleven stallions, and they don't look at all talkative. Shouting, they rush at you - and two of them make acquaintance the holes in the ground. Stepping right into them, they stumble, and with the crunching sound of shattering bone two of your opponents are out of the fight. That only leaves nine to come at your little group...";
 		challenge "Centaur Stallion";
-		if lost is 1:
-			say "[LoseToCentaurs2]";
-		otherwise:
+		if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+			say "     [LoseToCentaurs2]";
+		otherwise if fightoutcome >= 30:														[fled]
+			say "     [RunFromCentaurs2]";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 			say "     Having beaten one centaur, another immediately comes forward, rearing up to kick you with his front legs.";
 			challenge "Centaur Stallion";
-			if lost is 1:
-				say "[LoseToCentaurs2]";
-			otherwise:
+			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+				say "     [LoseToCentaurs2]";
+			otherwise if fightoutcome >= 30:														[fled]
+				say "     [RunFromCentaurs2]";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 				say "     With another centaur beating a hasty retreat, only a third one rushes at you.";
 				challenge "Centaur Stallion";
-				if lost is 1:
-					say "[LoseToCentaurs2]";
-				otherwise:
+				if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+					say "     [LoseToCentaurs2]";
+				otherwise if fightoutcome >= 30:														[fled]
+					say "     [RunFromCentaurs2]";
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 					say "     The fight is going well, and you have a moment time to look around - Thomas and Jill have taken down three of the other attackers and are engaged with a fourth - which only leaves an older bearded centaur for you. He shouts 'I'll show you to make off with my daughter! She's supposed to bring in good money!'";
 					challenge "Centaur Stallion";
-					if lost is 1:
-						say "[LoseToCentaurs2]";
-					otherwise:
+					if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+						say "     [LoseToCentaurs2]";
+					otherwise if fightoutcome >= 30:														[fled]
+						say "     [RunFromCentaurs2]";
+					otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 						say "     Finally, the gang of centaurs has had enough. Cursing you, they flee as fast as they're able.";
 						say "     [line break]";
 						say "     Jill hugs Thomas and you, then says 'That was my dad you just beat up - and oh, does he deserve it. Thank you both for helping me.'";
@@ -453,6 +471,10 @@ to say LoseToCentaurs2:
 	say "     [line break]";
 	say "     After the gangbang around Thomas runs its course and Jill gets fucked again several times by the bearded centaur, the hunting party moves back out into the plains, taking their thoroughly fucked mares with them.";
 	remove Thomas from play;
+	
+to say RunFromCentaurs2:
+	say "     Deciding that this is a lost fight, you run like hell, getting yourself to safety. You don't know what exactly happened to Thomas and Jill after that, but a good guess is that they were taken away with the hunting party nd both used as breeding mares...";
+	remove Thomas from play;	
 	
 Section 3 - Fucking Thomas
 
