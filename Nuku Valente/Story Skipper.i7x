@@ -21,7 +21,7 @@ to say trixiedesc:
 	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
 	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.   Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word.... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word.... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" };
 
 [
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
@@ -32,10 +32,10 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]";
 	say "[line break]'If you choose to recite it back, you'll need to recite each of the two parts on their own, one after the other, including the continuedchant part in the second.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use 'load game' to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]";
+	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]";
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
@@ -48,20 +48,15 @@ To say magic word:
 
 To reciting2:
 	say "One moment... processing...";
-[	say "Current restoration string: [trixsavetext3][line break]";	]
-	replace the text " " in trixsavetext3 with "`";
-[	say "Altered restoration string: [trixsavetext3][line break]";	]
+[	say "Current restoration string: [trixsavetext1][line break]";	]
+	replace the text " " in trixsavetext1 with "`";
+[	say "Altered restoration string: [trixsavetext1][line break]";	]
 	let lev be the level of the player;
 	let upit be 0;
-	repeat with z running from 1 to number of words in "[trixsavetext3]":
-		let b be word number z in "[trixsavetext3]";
+	repeat with z running from 1 to number of words in "[trixsavetext1]":
+		let b be word number z in "[trixsavetext1]";
 		replace the text "`" in b with " ";
-		if "continuedchant" matches the text b:
-			now upit is 1;
-			next;
 		change the text of the player's command to b;
-		if upit is 1:
-			increase z by 58;
 		if Z is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
@@ -409,6 +404,20 @@ To reciting2:
 			-- 59:	[Hospital Quest]
 				if the player's command matches "[number]":
 					now mattcollection is the number understood;
+[	say "One moment... processing stage 2...";	]
+[	say "Current restoration string: [trixsavetext2][line break]";	]
+	replace the text " " in trixsavetext2 with "`";
+[	say "Altered restoration string: [trixsavetext2][line break]";	]
+	let lev be the level of the player;
+	let upit be 0;
+	repeat with z running from 1 to number of words in "[trixsavetext2]":
+		let b be ( word number z in "[trixsavetext2]" );
+		replace the text "`" in b with " ";
+		if "continuedchant" matches the text b:
+			next;
+		change the text of the player's command to b;
+		let z2 be z + 58;
+		if z2 is:
 			-- 60:	[Orthas]
 				if the player's command matches "[number]":
 					now orthasstart is the number understood;
@@ -1177,7 +1186,30 @@ To reciting2:
 					otherwise if level of Alexandra is 2:
 						add "Top Dog" to feats of player, if absent;
 						remove "Cuckold" from feats of player, if present;
-		if upit is 1, decrease z by 58;
+			-- 127:   [Thomas HP]
+				if the player's command matches "[number]":
+					now hp of Thomas is the number understood;
+					if hp of Thomas is 0 and guy is not banned or hermaphrodite is not banned:
+						now Centaur Gangbang is unresolved;
+					if hp of Thomas > 0:
+						now Centaur Gangbang is resolved;
+						move Thomas to Dry Plains;
+					if hp of Thomas is 0 or hp of Thomas is 100:
+						remove Thomas from play;
+			-- 128:   [Thomas Libido]
+				if the player's command matches "[number]":
+					now Libido of Thomas is the number understood;
+					now ThomasSaved is turns;
+					now SandySaved is turns;
+					if hp of Thomas is 0, now libido of Thomas is 0;
+			-- 129:   [Thomas Lust]
+				if the player's command matches "[number]":
+					now Lust of Thomas is the number understood;
+					if hp of Thomas is 0, now lust of Thomas is 0;
+			-- 130:   [Thomas Quest]
+				if the player's command matches "[number]":
+					now ThomasQuestVar is the number understood;
+					if hp of Thomas is 0, now ThomasQuestVar is 0;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -1257,14 +1289,8 @@ To reciting2:
 	otherwise:
 		now Comic Shop is known;
 		now Mephitness is resolved;
-	if upit is 0:	
-		now trixsavetext3 is "[trixsavetext2]";
-		reciting2;
-	otherwise if upit is 1:
-		now trixsavetext3 is "[trixsavetext1]";
-		now upit is 0;	
-		say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
-		wait for any key;
+	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
+	wait for any key;
 
 
 
@@ -1277,7 +1303,6 @@ Check savetrix2:
 Carry out savetrix2:
 	now trixsavetext1 is "[text of the File of Trixsave]" ;
 	now trixsavetext2 is "[text of the File of Trixsave2]" ;
-	now trixsavetext3 is "[trixsavetext1]" ;
 	reciting2;	
 
 [
@@ -2420,6 +2445,30 @@ Carry out reciting:
 					otherwise if level of Alexandra is 2:
 						add "Top Dog" to feats of player, if absent;
 						remove "Cuckold" from feats of player, if present;
+			-- 127:   [Thomas HP]
+				if the player's command matches "[number]":
+					now hp of Thomas is the number understood;
+					if hp of Thomas is 0 and guy is not banned or hermaphrodite is not banned:
+						now Centaur Gangbang is unresolved;
+					if hp of Thomas > 0:
+						now Centaur Gangbang is resolved;
+						move Thomas to Dry Plains;
+					if hp of Thomas is 0 or hp of Thomas is 100:
+						remove Thomas from play;
+			-- 128:   [Thomas Libido]
+				if the player's command matches "[number]":
+					now Libido of Thomas is the number understood;
+					now ThomasSaved is turns;
+					now SandySaved is turns;
+					if hp of Thomas is 0, now libido of Thomas is 0;
+			-- 129:   [Thomas Lust]
+				if the player's command matches "[number]":
+					now Lust of Thomas is the number understood;
+					if hp of Thomas is 0, now lust of Thomas is 0;
+			-- 130:   [Thomas Quest]
+				if the player's command matches "[number]":
+					now ThomasQuestVar is the number understood;
+					if hp of Thomas is 0, now ThomasQuestVar is 0;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
