@@ -1,5 +1,5 @@
 Version 3 of Bouncy Castle by Stripes begins here.
-[Version 3.2 - Great Hall and King's Chamber tweaked]
+[Version 3.3 - Upper Hall addition]
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -32,7 +32,7 @@ Instead of resolving a Snared Vixen:
 			say "     It would take a bit of work, but you should be able to swim all the way out to the bouncy castle thanks to your gills.";
 		now Bouncy Castle is known;
 		now vixdol is 1;
-		now vixcountdown is 25;
+		now vixcountdown is 29;
 		now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" };
 		let templist be { "A", "C", "D", "E"};
 		sort templist in random order;
@@ -780,14 +780,14 @@ to say bcchairsubmit:
 	say "     You start to rub and grind yourself against the seat for further stimulation, setting the strange sex chair into motion again, building you up towards another climax even as you can feel it slowly sinking down into the floor, taking you with it.  Your sex-addled mind does not care at this point, willingly enjoying this strange capsule's delights and accepting whatever it may wish to do with you.  You move yourself with the chair's rocking motion as best you can, pushing yourself [if cunts of player > 0 or anallevel is not 1]onto those wonderfully thrusting dildos it had stuffed inside you[otherwise]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if cocks of player > 1].  You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[otherwise if cocks of player is 1].  You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all its worth[end if][if cunts of player > 0].  You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel is not 1].  You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
 	attempttowait;
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure.  When your climax finally comes[if cocks of player > 0] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if cunts of player > 1].  Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[otherwise if cunts of player is 1].  Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over them, soaking yourself and the seat[end if].  Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.  Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor.  Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body.  You give into the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
-				now bcending is 2;
-				now bodyname of player is "Captured";
-				now facename of player is "Captured";
-				now skinname of player is "Captured";
-				now tailname of player is "Captured";
-				now cockname of player is "Captured";
-				now humanity of player is 0;
-				end the game saying "You become part of the Bouncy Castle.";
+	now bcending is 2;
+	now bodyname of player is "Captured";
+	now facename of player is "Captured";
+	now skinname of player is "Captured";
+	now tailname of player is "Captured";
+	now cockname of player is "Captured";
+	now humanity of player is 0;
+	end the game saying "You become part of the Bouncy Castle.";
 
 
 Chapter 11 - Upper Hall
@@ -1060,6 +1060,75 @@ to say dolcheckE:		[vixen]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it.  It takes a little time to find it, having partially melded itself shut, but you manage to start working it open.  As you begin to get it open, it starts to shift and move with the struggles of someone inside.  When you get it open, you're pleased to see the orange fur of the vixen you seek.  Her fur has become a smooth, latex skin, but you continue on in the hope that it's not already too late.  As you get her head free and pull the breathing tube from her muzzle, her struggles grow all the more fervent.";
 	say "     'Mmm... Can we play now?  No!  Ah!  Get me out of this silly thing!' she yips with a definite squeak to her voice.  You inform her that you're trying to free her, but that you want something in return.  'Oh!  That'd be fun!' she giggles.  'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan.  After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious.  'No prob.  We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her.  With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
 	attempttowait;
+	say "     As she's pulling the last of the suit off her legs, you're interrupted by the arrival of the two strange guardians from the other room.  It seems your activity's drawn their attention and they charge at you, trying to foil the rescue attempt.  The vixen is too weak and confused to be much help in the fight, so it looks like you'll have to face the duo again.";
+	challenge "Sea Lion and Orca Toys";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "[bcfinal1]";
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		say "[bcfinal2]";
+	otherwise if fightoutcome >= 30:
+		say "[bcfinal3]";
+
+
+to say bcfinal1:		[Success - leave w/vixen]
+	say "     Having dealt with the inflatable creatures, you kick them aside and turn your attention back to the vixen.  At first, she's too focused on trying to play with the other inflatables to realize what's going on and you have to give her ass a squeeze and her muzzle a kiss to get her to focus on you long enough for you to remind her that you both need to leave before something else tries to get you.  Nodding in agreement, she hugs you tight and giggles merrily at her freedom.";
+	let x be 0;
+	if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned, let x be 1;	[blade]
+	say "     She dives happily down the slide with a giggling 'Wheeeee!' and into the water.  Her new form takes to it readily as she happily floats across the waves.  You grab your stuff and head down after her splashing into the water as she frolics about.  She swims alongside you as you head to the lines securing the bouncy castle and [if x is 0]release[otherwise]cut[end if] them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if] with the sleek vixen.  Once on the beach, you both stare out over the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
+	say "     During your trip back, you've come the realize that the vixen's still been considerably affected by her time in the dolphin suit.  While the impression you got from her old notes was different, she's certainly quite the airhead now.  She giggles and cavorts playfully, focusing on little past her own amusement from moment to moment.  Still worried about your reward, you keep talking to her, trying to keep her focused.  And while she won't divulge the location to you, you do thankfully get the impression she may still know where the stuff is hidden.";
+	attempttowait;
+	say "     It takes some prodding from you to keep her on track, but she leads you through the coastal neighbourhood.  She goes on about her new body, how sexy she's been finding this whole [']crazy-animal-sex-thingy['], and how much she's looking forward to just running around and having some fun instead of being such a stick-in-the-mud about it like she was before.  From the meandering path she takes, you worry that she has no idea where she's going, but she eventually leads you to an old house.  'See!  I knew I'd find my way back eventually.  This is my parent's old place, but they're not around, so I stashed my stuff under the porch so no one would find it.  Can you be a dear and get it out?  I don't want to tear my new, shiny skin,' she asks, running her paws over it with a happy giggle.";
+	say "     It takes some squirming, but you manage to snag the pack of bottled water and, with the vixen's help, pull it and yourself free from under the porch.  She dances happily and gives you a kiss, splitting the pack with you.  Even split between the two of you, your water supplies have been considerably improved.  You ask if there's any food, but she shakes her head and grins.  'Nope.  I think I was out looking for some when I ran into those cute dolphin girls.  Mmm... I should see if I can find one of them again.  Just one this time, though.  As fun as that suit was, I do like being a sexy vixen,' she says, giving her tail a swish.  'Well, time for me to head off, sweety.  Thanks for the rescue,' she says, giving your ass a squeeze before dashing off with a girlish giggle.";
+	increase carried of water bottle by 3;
+	increase score by 60;
+	now Bouncy Castle is unknown;
+	now vixdol is 3;
+	move player to Public Beach;
+	follow the turnpass rule;
+
+to say bcfinal2:		[Fail - caught w/vixen]
+	say "     Now that they've got you pinned down, the vixen squeaks happily and comes over to join in the fun.  You try to tell her to help you, but she's having trouble focusing and as the pair start to fondle and grope you with their flippers, it becomes harder for you to resist as well.  The sea lion's cock and the orca's pussy rub against you as well.  As you grow aroused from their touch, the slowly push off your gear and clothes, leaving you bare so they may have some fun with you.  You may as well just relax and enjoy the fun, you tell yourself.";
+	if cocks of player > 0 and ( cunts of player is 0 or ( cunts of player > 0 and a random chance of 3 in 5 succeeds ) ):
+		say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock.  Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of player] [cock of player] shaft.  Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch.  She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you.  You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your rod and the stretched pussy around it.";
+		say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch.  Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth.  As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
+		say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [cum load size of player] load into the inflatable female while she trills happily.  Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat.  The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen.  She's mounted in turn and fucked while eating your hot load from the orca's pussy.";
+	otherwise if cunts of player > 0:
+		say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your wet folds.  This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  Growing aroused despite the trouble you're in, you're soon quite wet and rubbing your hips back up against that slick shaft.  He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your [cunt size desc of player], making you moan loudly as it shifts to be just the right size to fill you fully and deeply.  You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your pussy and the throbbing cock stuffed inside it.";
+		say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face.  Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt.  At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal.  Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily.  Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+		say "     They go at it for quite a while until you're pushed past your limit and cum hard, moaning loudly as your inner walls clamp down around the inflatable cock stuffed inside you[if cocks of player > 0] while shooting your [cum load size of player] load across yourself[end if].  This sets off the sea lion, who shoots jet after jet of air-driven semen right into your womb with barks of excitement.  The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face.  The orgasm, the gas and the juices all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen.  She's mounted in turn and fucked while taking a turn eating out the orca.";
+	otherwise:
+		say "     After a few trills and barks between them, a decision seems to be reached and the sea lion moves himself over your crotch, rubbing his throbbing cock across your bare groin.  This gives you a good view of the dark purple shaft as he readies to mount you and you can see it's got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it.  Growing aroused despite the trouble you're in, you're soon quite excited and rubbing your hips back up against that slick shaft.  He barks happily now that he can see you're ready and shifts his bulky body a little, grabs you with his flippers and drives his inflated manhood into your ass, making you moan loudly as it shifts to be just the right size to fill you fully and deeply.  You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your stretched anal ring and the throbbing cock stuffed inside it.";
+		say "     Not to be left out, the orca moves up beside you and pulls presses her crotch to your face.  Presented with her juicy pussy, your eyes run over her milky white folds and the soft, magenta interior of her cunt.  At the top of it, poking partway out of the ivory lips is an air nozzle where her clit should be and wet and juicy with her arousal.  Licking your lips and drawn to the unusual pussy, you run your tongue over her strange clit and can't help but smile as she trills happily.  Soon you're digging it, licking at her eagerly and pushing your tongue past those yielding folds to get more of her juices.";
+		say "     They go at it for quite a while until the sea lion is pushed past his limits and shoots jet after jet of air-driven semen deep inside you with barks of excitement.  The orca goes off moments later, a squirt of her own juices soaking your face as her nozzle sprays a mist of latex-scented air across your face.  The gas, the semen and the juices all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen.  She's mounted in turn and fucked while taking a turn eating out the orca.";
+	attempttowait;
+	say "     When they're done with her, they press their muzzles to your lips.  As you and the vixen are kissed, there's another release of heady gas to keep you both dazed and weak.  This time they bump and push you back through to their room and then continue on, gradually leading you both back downstairs, giving you numbing kisses along the way.  Eventually you are lead into [if lastorcasex is 255]a distant room with a much larger orca inside it[otherwise]the room with the large, pushy orca[end if].";
+	say "     The larger orca does not seem perturbed by their arrival and shares a quick nuzzle with each of them.  There is a short exchange of squeaky trills and barks before you're pressed forward to kiss and lick at the big inflatable's wet pussy while the others stroke and caress you, urging you on.  Not that you need much encouragement by this point, your mind quite addled on the gas and your arousal very high.";
+	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper.  As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more.  The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her.  As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles while follow you in, the vixen being sent in behind you.  Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
+	say "     As you [if cocks of player > 0]fuck her[otherwise]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion.  This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen.  This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
+	now bcending is 4;
+	now bodyname of player is "Captured";
+	now facename of player is "Captured";
+	now skinname of player is "Captured";
+	now tailname of player is "Captured";
+	now cockname of player is "Captured";
+	now humanity of player is 0;
+	end the game saying "You and the vixen failed to escape your latex fate.";
+
+
+to say bcfinal3:		[Escape - leave w/o vixen]
+	say "     With the whole plan falling part - the vixen now an airhead, sex-crazed pool toys and an animated bouncy castle - you decide to bail out.  Seeing an opening, you dive onto the slide and take it down into the cool water.  When you surface, you start to swim away from the castle, hearing the sounds of pleasure coming from the vixen and the other two inflatables.  You suspect they're going to make sure she's finished off, so there's no point in trying to return here.  At least she's providing you a distraction.";
+	if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned:
+		say "     Frustrated with the time you've wasted on this project, you swim to the mooring lines securing the castle and cut through them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
+	otherwise:
+		say "     Frustrated with the time you've wasted on this project, you swim to the mooring lines securing the castle and untie them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
+	move player to Beach Plaza;
+	now Bouncy Castle is unknown;
+	now vixdol is 99;
+	decrease score by 10;
+
+
+[
+[ old version ]
 	let x be 0;
 	if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned, let x be 1;	[blade]
 	say "     She hugs you tight and giggles merrily at her freedom.  She dives happily down the slide with a giggling 'Wheeeee!' and into the water.  Her new form takes to it readily as she happily floats across the waves.  You grab your stuff and head down after her splashing into the water as she frolics about.  She swims alongside you as you head to the lines securing the bouncy castle and [if x is 0]release[otherwise]cut[end if] them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if] with the sleek vixen.  Once on the beach, you both stare out over the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
@@ -1073,6 +1142,7 @@ to say dolcheckE:		[vixen]
 	now vixdol is 3;
 	move player to Public Beach;
 	follow the turnpass rule;
+]
 
 
 Section 6 - Rules Modifications and Everyturn Rule
@@ -1097,7 +1167,7 @@ an everyturn rule:
 			now Bouncy Castle is unknown;
 			now vixdol is 99;
 			decrease score by 10;
-	otherwise if vixdol is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets or the player is in Great Hall or the player is in King's Chambers):
+	otherwise if vixdol is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets or the player is in Great Hall or the player is in King's Chambers or player is in Upper Hall ):
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:
 			say "     As you pause for a moment to catch your breath, you hear loud, muffled cries of ecstacy coming from somewhere on the upper level of the castle.  Given the mix of yiffs and trills to the sound and how they finish by becoming purely trills of delight, you sadly have to assume that was the vixen girl finally giving in to whatever is happening to her.  Deciding there's little point in remaining here any longer, you push your way back to the entrance.";
@@ -1147,6 +1217,12 @@ when play ends:
 	otherwise if bodyname of player is "Captured" and bcending is 3:
 		say "     Having little mind of your own past a vague sense of happiness as an inflatable chair, you spend some time in the lonely room with only the knights to watch as they'll occasionally take a break from their stoic vigil to play with one another on the walls.  Eventually though, one of the inflatable dolphin girls finds you.  Having been lonely, you do your best to look inviting and comfy and yellow.  Drawn in, she takes a seat in you.  When you inflate a cock in your seat for her to ride, she's very happy and bounces around to ride it.  Being sat in and being able to please (and pleasure) someone feels very good.  She rides herself to several orgasms in you, leaving your seat pleasantly wet and sticky.";
 		say "     When she's finally satisfied and a new thought enters her bubbleheaded mind, your pleased that she takes you out with her, showing you off to her friends.  They all take turns in you and you have a wonderful time pleasing them.  You're eventually left in the toy room where they keep all their beach toys and inflatables, but they're in there much more often than the out of the way room where you were, so you get much more use now.  You have a happy life pleasing the dolphin girls and distracting the occasional intruder until they can be found and made them into another cute dolphin playmate.";
+	otherwise if bodyname of player is "Captured" and bcending is 4:
+		say "     You are awoken to a shifting of the soft chamber around you both and, with an outpouring of sticky latex fluids, you and your womb-sibling are pushed back out into the world";
+		if cocks of player > 0:
+			say ".  You emerge as a [if cunts of player > 0]cherry red[otherwise]purple[end if] sea lion and she as an orange orca.  Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily.  After licking the tasty fluids from each other, you mount her, rocking your pinniped body atop her until you cum and fill her with your sticky seed.  From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you.  Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
+		otherwise:
+			say ".  You emerge as a [if cunts of player > 0]magenta[otherwise]dusty red[end if] orca and she as an orange one.  Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily.  After licking the tasty fluids from each other, you turn your attention to each other's pussy and eating it out until you've shared several sticky climaxes.  From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you.  Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
 
 
 Bouncy Castle ends here.
