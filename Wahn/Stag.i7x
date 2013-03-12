@@ -45,9 +45,11 @@ Instead of resolving a Dog Walking:
 		say "     Do you want to jump in to help fight the leopardmen off (Y), or rather flee before they notice you (N)? ";
 		if player consents:
 			challenge "Leopardman";
-			if lost is 1:
+			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
 				say "     After one last slash with the leopardman's claws, you collapse on the ground, bleeding. Luckily though, your intervention distracted them enough that Mike and Lea fought off three of the attackers in the meantime. Now faced with new odds, the leopardman standing over you abandons the fight, dashing away before the stag and his 'dog' can get to him...";
-			otherwise:
+			otherwise if fightoutcome >= 30:														[fled]
+				say "     You running off led to two of the leopardmen giving chase, going after you quite a bit until you manage to lose them. As you make your way back to where you last saw Mike and Lea, you see that they fought off the remaining gang members in the meantime.";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 				say "     Having given the leopardman quite a beating, you grin at the fearful look on his face as he flees, running away as fast as he can. Your intervention distracted the other members of the small gang too, which allowed Mike and Lea to fight off three of their attackers in the meantime. The remaining unhurt one throws the fight as he sees himself confronted with the three of you and flees...";	  
 				increase score by 5;
 			now hp of Mike is 3;	

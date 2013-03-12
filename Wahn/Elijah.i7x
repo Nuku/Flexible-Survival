@@ -193,22 +193,28 @@ instead of conversing the Elijah:
 			otherwise:
 				say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily.  'He's ours, you little thief.  You'll become a bitch in the hellhound kennels for trying to steal him!'";
 				challenge "Succubus";
-			if lost is 1:
+			if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 				say "[losetochurchdemons]";
-			otherwise:
+			otherwise if fightoutcome >= 30:			[fled]
+				say "[fledfromchurchdemons]";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]					
 				if girl is banned:
 					say "     The defeated incubus is driven away, fleeing through one of the doorways.  That's one down - instantly replaced by another snarling incubus lunging at you.";
 				otherwise:
 					say "     The succubus shrieks in pain, falling back from you and fleeing through one of the doorways. That's one down - instantly replaced by a snarling incubus lunging at you.";
 				challenge "Incubus";
-				if lost is 1:
+				if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 					say "[losetochurchdemons]";
-				otherwise:
+				otherwise if fightoutcome >= 30:			[fled]
+					say "[fledfromchurchdemons]";
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]					
 					say "     As the incubus falls down beaten and is pulled away by one of his brethren, the other demons take a step back, not wanting to be the next one to take you on. All except one that is - a massive brutish beast who roars at you in fury.  He pushes the others aside and comes at you.";
 					challenge "Demon Brute";
-					if lost is 1:
+					if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 						say "[losetochurchdemons]";
-					otherwise:
+					otherwise if fightoutcome >= 30:			[fled]
+						say "[fledfromchurchdemons]";
+					otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]			
 						say "     When the demon beast collapses in front of you, the rest of the mob decide to abandon the fight, leading to a mad rush away from you on wing and foot. Now let's get out of here before they change their minds or braver individuals arrive. Pulling the angel's arm over your shoulder, you lead him away as quickly as possible. When you're half a block distant, you hear an infuriated roar from the chapel.  This is followed by a harsh, growling voice yelling 'Find them, you sniveling cowards or I'll flay the skin off the lot of you!' You dodge behind a dumpster and watch demon search parties file and fly out of the ruin. Time to run.";
 						say "     [line break]";
 						say "     Against all odds, you do arrive safely at the library several hours later. There were several really close calls, but you managed to shake your hunters - for now. You put your almost delirious rescuee on one of the cots in the bunker, then lock up the entrance tight to get some much-needed rest.";
@@ -1180,6 +1186,11 @@ to say losetochurchdemons:
 	say "     You don't think you'll see that angel ever again after this, as the demons are very likely gonna take him home to hell with them, to use and abuse for all eternity.";
 	now hp of Elijah is 100;
 	remove Elijah from play;
+	
+to say fledfromchurchdemons:
+	say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened after that to the angel you left behind with all the demons. Nothing good, you're sure...";
+	now hp of Elijah is 100;
+	remove Elijah from play;	
 
 
 Section 7 - Endings
