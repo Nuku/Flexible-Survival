@@ -138,7 +138,7 @@ The description of Thomas is "[ThomasDesc]";
 The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies.  lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 ThomasSaved is a number that varies.  ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]
-SandySaved is a number that varies.  ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Jill shows up]
+SandySaved is a number that varies.  SandySaved is usually 555.						[saved to put in a delay of at least 10 turns before Jill shows up]
 ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
 ThomasPregnancy is a number that varies. 																	[pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 
@@ -399,6 +399,7 @@ to say ThomasTalk9:
 	say "     A while later, Thomas leads Sandy away, leaving you with the duty to 'Make sure the three fuckers in the pit don't get away somehow till Vance comes to take over.' Standing at the side of the pit, you wait and watch as the trapped guys broken legs slowly straighten themselves out and knit back together. Then they come back to consciousness and start shouting abuse up at you. Thankfully, not long after that point, you see someone walk up over the plains. It's a male husky, carrying a large sack over one shoulder.";
 	say "     'Ah, there you are - I'd been wondering if Thomas sent me on a wild goose chase. Name's Vance, by the way. And those are the bitches I was promised?' He nods towards the pit and sets down the sack. It's dog food, you can see now. 'Bit unruly and noisy, but I guess that'll stop in time. Oh well, I've got time to wait - they'll get hungry sometime.' Patting the sack of dry dog food, he gives the captured centaurs a somewhat hungry look. You leave him and his future husky bitches and start walking back towards your usual meeting place with Thomas.";	
 	now ThomasQuestVar is turns;
+	now SandySaved is turns;
 	increase libido of Thomas by 1;    [Sandy]
 					
 instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas < 10 and ThomasSaved - turns > 10):
