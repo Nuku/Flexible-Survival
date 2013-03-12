@@ -1,7 +1,7 @@
 Version 4 of Eric by Wahn begins here.
 [Version 4: Threesomes with David - cuntboy, cuntboy sex slave, male (horse & satyr) completed]
 
-"Adds an NPC named Eric to the Flexible Survival game"
+"Adds an NPC named Eric to the Flexible Survival game, with impreg chance"
 
 [ HP states of Eric                                                  ]
 [   0: Holed up in the lockerroom                                    ]
@@ -159,9 +159,11 @@ instead of conversing the Eric:
 			say "     Eric arms himself with a baseball bat and you move out together, mostly staying behind buildings and sneaking through the bushes. It goes pretty well, until you arrive at one of the main thoroughfare of the campus and have to step onto a large open area to move on. You almost make it, then hear a female voice behind you. Turning around, you see a succubus and incubus stand there, eying you like pieces of meat.";
 			say "     'It's just like you promised Aidan - a whole campus of pretty young things ripe for the plucking. How about you take that one,' she says with a nod to you, '- and I ride the redhead.'";
 			challenge "Incubus";
-			if lost is 1:
+			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
 				say "     The incubus leaves you lying on the ground as he struts off with his demonic partner. You collect your strewn-about belongings and are joined by Eric a moment later, who got pulled behind a bush and is looking a bit disheveled. He says 'Let's get out of here.' and leads on towards your goal.";
-			otherwise:
+			otherwise if fightoutcome >= 30:														[fled]
+				say "     Running as fast as you can, you lead the incubus for a chase over the campus grounds until you finally manage to shake him. Finally coming back to the scene of your confrontation, you find Eric crawling out of a bush, looking a bit disheveled. He says 'Let's get out of here.' and leads on towards your goal.";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 				say "     Having beaten the incubus, you look around where the succubus and Eric are. There's some movement in the bushes in one direction, so you rush over there and find Eric half-dressed with the succubus running her hands all over him. She whirls around as she notices you, hissing at the distraction. As she comes closer, you ready yourself for an attack - and then Eric hits her with his bat from behind, ending the fight early. He says 'Let's get out of here.' and leads on towards your goal.";
 				increase score by 10;
 			say "[line break]";
@@ -180,8 +182,8 @@ instead of conversing the Eric:
 				otherwise:
 					now CheerleaderFirstEncounter is 2;
 					challenge "Hulking Cheerleader";
-					now CheerleaderFirstEncounter is 1;
-				if lost is 1:
+					now CheerleaderFirstEncounter is 1;			
+				if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
 					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";
 					say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
 					say "     Not much later, Eric gasps as he has his first female orgasm, and you see his pussy juices glistening on Stacy's thrusting cock. She stops for a moment and looks down at the writhing cuntboy, then starts up again, harder and faster than before.";
@@ -191,7 +193,11 @@ instead of conversing the Eric:
 					say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 					now hp of Eric is 100;
 					remove Eric from play;
-				otherwise:
+				otherwise if fightoutcome >= 30:														[fled]
+					say "     Taking your legs under your arms, you just run, though as you dash along the corridor you notice Stacy isn't following you. Judging from the loud moans audible from her room, she's too busy fucking Eric... you're pretty sure you lost him for good and won't be seeing the handsome athlete again.";
+					now hp of Eric is 100;
+					remove Eric from play;
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]					
 					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";	      
 					if the player consents:   [take advantage and take him to the bunker]
 						say "     [line break]";
