@@ -2,9 +2,9 @@ Story Skipper by Nuku Valente begins here.
 
 The File of Trixsave is called "txsave".
 The File of Trixsave2 is called "txsave2".
-trixsavetext1 is an text that varies. trixsavetext1 is usually "no save file found".
-trixsavetext2 is an text that varies. trixsavetext2 is usually "no save file found".
-trixsavetext3 is an text that varies. trixsavetext3 is usually "".
+trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
+trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
+trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "".
 
 To savetrix:
    write "[trixsavetext1]" to the File of Trixsave;
@@ -35,7 +35,10 @@ To say magic word:
 	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]";
 	say "[line break]'If you choose to recite it back, you'll need to recite each of the two parts on their own, one after the other, including the continuedchant part in the second.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use 'load game' to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]";	
+	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}0}[level of Alexandra]";
+	replace the text " " in trixsavetext1 with "`";
+	replace the text " " in trixsavetext2 with "`";
+[	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
 	savetrix;
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
@@ -44,7 +47,10 @@ To say magic word:
 
 
 To reciting2:
-	replace the text " " in "[trixsavetext3]" with "`";
+	say "One moment... processing...";
+[	say "Current restoration string: [trixsavetext3][line break]";	]
+	replace the text " " in trixsavetext3 with "`";
+[	say "Altered restoration string: [trixsavetext3][line break]";	]
 	let lev be the level of the player;
 	let upit be 0;
 	repeat with z running from 1 to number of words in "[trixsavetext3]":
@@ -129,37 +135,62 @@ To reciting2:
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
 			-- 12:	[Body infection]
+[				say "Searching for body = [b].";	]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now monster is Y;
-						now body is body entry;				
-						now bodyname is name entry;
-						attributeinfect;
+						let num1 be the number of characters in b;
+						let num2 be the number of characters in name entry;
+						if num1 is num2:
+							now monster is Y;
+							now body of player is body entry;				
+							now bodyname of player is name entry;
+							attributeinfect;
+							break;
 			-- 13:	[Face infection]
+[				say "Searching for face = [b].";	]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now face is face entry;				
-						now facename is name entry;
+						let num1 be the number of characters in b;
+						let num2 be the number of characters in name entry;
+						if num1 is num2:
+							now face of player is face entry;				
+							now facename of player is name entry;
+							break;
 			-- 14:	[Skin infection]
+[				say "Searching for skin = [b].";	]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now skin is skin entry;				
-						now skinname is name entry;
+						let num1 be the number of characters in b;
+						let num2 be the number of characters in name entry;
+						if num1 is num2:
+							now skin of player is skin entry;				
+							now skinname of player is name entry;
+							break;
 			-- 15:	[Tail infection]
+[				say "Searching for tail = [b].";	]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now tail is tail entry;				
-						now tailname is name entry;
+						let num1 be the number of characters in b;
+						let num2 be the number of characters in name entry;
+						if num1 is num2:
+							now tail of player is tail entry;				
+							now tailname of player is name entry;
+							break;
 			-- 16:	[Cock infection]
+[				say "Searching for cock = [b].";	]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
-						now cock is cock entry;				
-						now cockname is name entry;
+						let num1 be the number of characters in b;
+						let num2 be the number of characters in name entry;
+						if num1 is num2:
+							now cock of player is cock entry;				
+							now cockname of player is name entry;
+							break;
 			-- 17:	[Tanuki]
 				if the player's command matches "[number]":
 					now SatisfiedTanuki is the number understood;
@@ -1266,7 +1297,9 @@ Check reciting:
 Carry out reciting:
 	let x be indexed text;
 	let x be the topic understood;
+[	say "Current restoration string: [X][line break]";	]
 	replace the text " " in X with "`";
+[	say "Current restoration string: [X][line break]";	]
 	let lev be the level of the player;
 	let upit be 0;
 	repeat with z running from 1 to number of words in x:
@@ -1358,9 +1391,10 @@ Carry out reciting:
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
 							now monster is Y;
-							now body is body entry;				
-							now bodyname is name entry;
+							now body of player is body entry;				
+							now bodyname of player is name entry;
 							attributeinfect;
+							break;
 			-- 13:	[Face infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -1368,8 +1402,9 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now face is face entry;				
-							now facename is name entry;
+							now face of player is face entry;				
+							now facename of player is name entry;
+							break;
 			-- 14:	[Skin infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -1377,8 +1412,9 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now skin is skin entry;				
-							now skinname is name entry;
+							now skin of player is skin entry;				
+							now skinname of player is name entry;
+							break;
 			-- 15:	[Tail infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -1386,8 +1422,9 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now tail is tail entry;				
-							now tailname is name entry;
+							now tail of player is tail entry;				
+							now tailname of player is name entry;
+							break;
 			-- 16:	[Cock infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -1395,8 +1432,9 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now cock is cock entry;				
-							now cockname is name entry;
+							now cock of player is cock entry;				
+							now cockname of player is name entry;
+							break;
 			-- 17:	[Tanuki]
 				if the player's command matches "[number]":
 					now SatisfiedTanuki is the number understood;
