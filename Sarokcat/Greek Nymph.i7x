@@ -63,14 +63,14 @@ When Play begins:
 	now cock change entry is "it seems to realize it doesn't belong on this nymph-like body"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 20;
-	now sta entry is 14;					
+	now sta entry is 14;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 40;			[ How many HP has the monster got? ]
 	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 9;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
