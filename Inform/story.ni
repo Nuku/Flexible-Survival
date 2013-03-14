@@ -5793,6 +5793,7 @@ Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
+Include Caveman by TheRecipe.
 
 
 [NPCs]
