@@ -1,5 +1,5 @@
 Version 1 of Naiad by Wahn begins here.
-[Version 1.1 - Infection Texts adjusted]
+[Version 1.2 - Endings adjusted]
 
 "Adds a Naiad to Flexible Survival's Wandering Monsters table."
 
@@ -128,10 +128,10 @@ When Play begins:
 	now altcombat entry is "default";			[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "Naiad" and cunts of player > 0:
+	if bodyname of player is "Naiad":
 		if humanity of player is less than 10:
-			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
-			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and and washed all the way down the way they came from - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
+			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As you find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
+			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and and washed all the way to the park entrance - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
 		otherwise:
 			say "When the military moves in, you're brought to a holding facility for uninfected survivors, seeing as you look human. Just to be on the safe side, the doctors give everyone a shot to neutralize infectious nanites and then you're hustled out to a disaster relief center so they can deal with the harder infected cases. Now free in the outside world, you keep yourself afloat with small jobs while training your swimming skills and taking part in one tournament after another. Soon you got a pretty good track record and are invited to join the US Olympic team...";
 
