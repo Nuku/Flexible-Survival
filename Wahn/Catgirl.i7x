@@ -92,13 +92,14 @@ When Play begins:
 
 when play ends:
 	if bodyname of player is "Catgirl" and cunts of player > 0:
-		if humanity of player is less than 10:
+		if humanity of player is less than 10:		[succumbed]
 			say "Before long, your instincts take over, with your human life only a fading memory. Driven by powerful urges to be bred by any strong male, no matter what shape, you roam the streets of the city and flirt your sexy body in front of those you meet.";
 			if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "When the military finally moves in, a scouting soldier finds you in a fight with another potential mate and 'saves' you, driving off the creature with a few shots in the air. As worked up as you are, you immediately rub up against him and soon have the human's cock balls deep inside you. Several more matings follow as he escorts you out of the city, and before you even arrive at the holding facility, your belly starts to bulge with the fruit of your soldier's fertile seed. The man smuggles you past the checkpoints and brings you home with him as his private sex-pet, very well taken care of and fucked daily. You bear him several litters of kittens, many of whom go to his buddies who helped smuggle you out.";
 			otherwise:																			[F-STERILE]
 				say "When the military finally moves in, a scouting soldier finds you in a fight with another potential mate and 'saves' you, driving off the creature with a few shots in the air. As worked up as you are, you immediately rub up against him and soon have the human's cock balls deep inside you. Several more matings follow as he escorts you out of the city, and before you arrive at the holding facility, the man radios a few of his buddies to meet the two of you in an abandoned building some blocks away. With all of them gangbanging you that whole night until dawn, your soldier has no problem convincing them to smuggle you past the checkpoints and brings you home with him as his private sex-pet. From then on, you are very well taken care of and fucked daily by the soldier or his friends coming over for some action.";
-		otherwise:
+			stop the action;   [no other succumb endings, as the player isn't in the city anymore]			
+		otherwise:		[sane]
 			if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "When the military moves in, you're brought to a holding facility with all the other survivors, with doctors and scientists struggling to check out everyone coming in. As you wait for your turn, day after day in overfilled quarters, you spend your time flirting with several of the younger soldiers, leading to more than one intimate encounter. Despite your body urging you to let them knock you up, you're always careful to use condoms, not wanting to end up like one of the baby factories you see around you.";
 			otherwise:																			[F-STERILE]
