@@ -1,5 +1,5 @@
 Version 1 of Spidertaur Male by Wahn begins here.
-[Version 1.1 - Small Adjustment to the texts]
+[Version 1.2 - Endings expanded a little]
 
 "Adds a Spidertaur to Flexible Survival's Wandering Monsters table, with impregnation chance."
 [Description text for this Extension.]
@@ -24,13 +24,12 @@ to say Spidertaur_Wins:
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip all over yourself and the silken bonds holding you.";
 		say "     The spidertaur stops for a moment and leans his upper body forward to look into your face. 'See - you liked it, prey.' he says, then gathers some of your cum in his hand and licks it off. He adds 'You taste quite nice too... too bad we're so far away from my lair - or I'd add to you my larder', then starts thrusting in and out again.";
 		say "     After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass. [mimpregchance]";
-		say "     [line break]";
 	otherwise:
 		say "     Running one of his human hands over your smooth crotch, he says 'What the...? Strange prey, you aren't even properly equipped. Well, at least there's still one hole I can enjoy. Let's start right now...' and scuttles around you to get into position.";
 		say "     [line break]";
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out till only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass. [mimpregchance]";
-		say "     [line break]";
+	say "     [WaitLineBreak]";
 	say "     Satisfied, the spidertaur pulls out of you, then steps over you again so you can see almost all of his hybrid body. 'You're a nice little catch - just right for me to fuck. You know what - I'll give you a chance... let's see if you can free yourself before another creature comes along.' With a quick move of one of his legs, he slashes the strands holding your left arm, then scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
 	say "     Thankfully, you manage to free yourself from the tough strands of spiderweb before any new creature finds you. After cleaning up as good as you can, you continue your journey through the dangerous streets of the city.";
 	
@@ -100,7 +99,12 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Spidertaur":
 		if humanity of player is less than 10:
-			say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
+			if cocks of player > 0:
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
+			otherwise if cunts of player > 0 and "Sterile" is not listed in feats of player:
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males to impregnate you and help grow your brood of little spiderlings, the rest just serve as stored food for when you get hungry.";
+			otherwise:
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males and females to have fun with, the rest just serve as stored food for when you get hungry.";
 		otherwise:
 			say "When the military moves in, you're brought to a holding facility where you get checked out and they give you a shot to make you non-infectious. As your arachnid form's abilities are perfect for exploring ruined buildings and you know your way around, you volunteer to accompany a squad of soldiers back into the city. After several weeks of helping rescue quite a few people and using your webs to subdue others so they can be treated, you're awarded a civilian service medal. Joining a group specialized in disaster rescue afterwards, your heroic deeds all over the world do a lot to improve the reputation of spiders in general, away from the 'creepy-crawley to be squished' image.";
 

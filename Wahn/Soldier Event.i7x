@@ -1,5 +1,5 @@
-Version 8 of Soldier Event by Wahn begins here.
-[Version 8.2 - event with Eric fixed]
+Version 9 of Soldier Event by Wahn begins here.
+[Version 9 - Soldier Squad III, Amy the husky npc, sex with Amy, puppies]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -26,10 +26,10 @@ Instead of resolving a Soldier Squad:
 		increase score by 10;
 		now SquadEncounters is 1;
 	otherwise if SquadEncounters is 1:
-		say "     While exploring out in the city, you come to lower class housing area at the edge of the warehouse district. Seems rather abandoned and many of the windows are broken, but ther might be someth- a sudden noise makes you whirl around and listen. Footsteps on shards of glass. Seems someone or something is coming closer just around the corner. Knowing it's not likely to be something good, you hide in the entrance of the building behind you. A moment later, two soldiers come into sight, passing you by without noticing you.";
+		say "     While exploring out in the city, you come to lower class housing area at the edge of the warehouse district. Seems rather abandoned and many of the windows are broken, but there might be someth- a sudden noise makes you whirl around and listen. Footsteps on shards of glass. Seems someone or something is coming closer just around the corner. Knowing it's not likely to be something good, you hide in the entrance of the building behind you. A moment later, two soldiers come into sight, passing you by without noticing you.";
 		say "     [WaitLineBreak]";
 		say "     'So what's with all the secrecy, Jimmy?' one of them asks the other, whom you recognize as belonging to the soldier squad you observed before. 'You'll see and thank me for getting you there. Come on, it's not much further.'";
-		say "     Having a good idea what the big surprise is, you decide to follow them unobstrusively, tailing them until they get to a nearby house. Knocking on the door, they're let in by another uniformed man. Sneaking along the buildings outer walls, careful not to step on any glass shards on the floor, you peek in over the bottom of the broken windows until - ah, there they are. It's a room at the back of the house, its floor mostly covered in a pile of mattresses. On one of them lies Davies, the soldier you saw succumb to his husky infection, panting as she strokes her breasts and bulging belly. The three men you saw before stand around her.";
+		say "     Having a good idea what the big surprise is, you decide to follow them unobtrusively, tailing them until they get to a nearby house. Knocking on the door, they're let in by another uniformed man. Sneaking along the buildings outer walls, careful not to step on any glass shards on the floor, you peek in over the bottom of the broken windows until - ah, there they are. It's a room at the back of the house, its floor mostly covered in a pile of mattresses. On one of them lies Davies, the soldier you saw succumb to his husky infection, panting as she strokes her breasts and bulging belly. The three men you saw before stand around her.";
 		say "     [WaitLineBreak]";
 		say "     '...so you see, with him - her - not being a civilian, it's fair game.' the one called Jimmy tells the newcomer, who stares wide-eyed at the husky bitch and has a noticeable tent in his pants. 'Come on, you know you want to - didn't you tell us all about how hot it was to pound that pregnant bitch wife of your neighbour? Here you got an actual bitch, ready and whining to be fucked. All of the guys already had a go - the kid's from one of us.' The man doesn't take much more convincing. He walks up to Davies, then lets his pants drop and gets on his knees before the female husky. He aims his rock-hard cock at her dripping pussy and plunges right in, fucking the transformed soldier with deep thrusts.";
 		say "     Watching their friend go at it, the two other men chuckle to each other and one remarks 'Davies always was a bit of an ass - who'd have thought he'd get so popular just by adding breasts and a cunt.' 'I know... can't wait to get in there again myself.' Both of them rub their cocks through their pants, then pull them out and slowly jerk off[if cocks of player > 0 or cunts of player > 0]. Turned on by the scene yourself, you push a hand down to your crotch and start stroking yourself[end if].";
@@ -38,17 +38,291 @@ Instead of resolving a Soldier Squad:
 		say "     You spend quite some time outside that window, watching the three men take turns banging the female husky inside[if cocks of player > 0 or cunts of player > 0]. Your own fondling brings you to a climax more than once[otherwise]. You accidentally make a little noise while shifting to get a better view when the other two move in to share her muzzle[end if], the inevitable moans thankfully overshadowed by the pants and whimpers of Davies the husky, so the men don't notice you. At some point, you reluctantly snap yourself out of the thrill of watching them and get back to survival in the city[if cocks of player > 0], leaving behind your splatters of cum on the wall under the window[otherwise if cunts of player > 0], leaving behind the small puddle of femcum you dripped onto the ground before the window[end if].";
 		increase score by 10;
 		now SquadEncounters is 2;
-		Now Soldier Squad is resolved;  [for now]
-
-[
 	otherwise if SquadEncounters is 2:
 		say "     Passing through the neighbourhood again where you last saw several members of that soldier squad from before and their husky bitch Davies, you decide to check the building out again. Hopefully they'll still be there...";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "     You make your way through the empty streets as unobstusively as you can, moving from hiding spot to hiding spot and peeking ahead before you move. And it works - you find your way to the house unnoticed. Getting back into position under the broken window, you cross your fingers and slowly raise your head to peek inside. Great - Davies the husky bitch is still there. But she's not the only one. Another female husky sits near her on a mattress, ...";
+		say "     [WaitLineBreak]";
+		say "     You make your way through the empty streets as unobtrusively as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you find your way to the house unnoticed. Getting back into position under the broken window, you cross your fingers and slowly raise your head to peek inside. Great - Davies the husky bitch is still there. But she's not the only one. Another female husky sits near her on a mattress, this one clearly younger, looking like she's in her late teens. Judging from the large wet patch between the sleeping Davies legs, the matted fur of the second husky and their similar looks, she must be the daughter of the former soldier, quickly grown to maturity after being born.";
+		say "     Looking around wide-eyed and sniffing her surroundings, the young husky explores this new room - this new world - for her, walking around on all fours. See looks so cute and innocent, dashing here and there to check out interesting things like piles of cum-stained clothing and some empty food wrappers. Then her ears suddenly perk up and she turns her head to your window. Quickly ducking out of sight, you press yourself against the wall under the windowsill and stay as quiet and unmoving as possible. Maybe you were fast enough and she did not- suddenly, the sniffing nose of the young husky comes into sight above you, followed by her whole head and shoulders as she leans far out of the window to look at you. Too far, that is - with a squeak, she tumbles out of the window right on top of you.";		
+		say "     [line break]";
+		say "     Uh oh - you now have a naked husky female on your hands - literally. What now? Trying to take her with you would be very risky, but you could try if you wanted [link](1)[as]1[end link]. Alternatively, you could tell her to keep quiet about seeing you [link](2)[as]2[end link], take the opportunity to pick her cherry right here [link](3)[as]3[end link], or just run [link](4)[as]4[end link]?";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+				break;
+			otherwise:
+				say "Invalid choice.  Type [link]1[end link] to take her with you, [link]2[end link] to talk to her, [link]3[end link] give her her first sexual experience or [link]4[end link] to run off.";
+		if calcnumber is 1:								[take her along]
+			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you innocently.* 'How about we go for a little walk? You'll get to see a bit of the city and then we can stop at my place. And that is much nicer than this wrecked house.'";
+			say "     [line break]";
+			say "     Happy to join you for an exciting new experience, the husky trots by your side as you make your way back along the side of the house, ducking under the windows along the way as you don't know if any of the soldiers are in the house. When you get to the street, you hurry her along, running between spots of concealment. Everything goes well until, several blocks away, the husky spots another dog-morph on the street. Before you can stop her, she barks a loud greeting at him and bounces out onto the open street, her tail held high. You have no choice but to follow her, stepping between the canine woman and a German Shepherd who's already giving her a hungry leer.";
+			challenge "German Shepherd";
+			if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+				say "     After finishing with you, the German Shepherd turns to your husky companion. Having followed everything that happened, she's pretty excited, standing there on all fours and squirming a bit as female juices drip from her pussy. Virgin as she is, she hasn't yet realized that she can stroke herself with her paw-hands. The male dog-morph gets behind the husky, leaning over her and reaching around to fondle her four breasts. Grinning, he says to you 'A fine bitch you have here - no, had. She's mine now!'";
+				say "     With that, he thrusts forward, burying his erection in her body with one swift move. Feeling the virgin's hymen break and hearing her pained yip at losing her cherry, the shepherd laughs. 'And a virgin too - this is just too great. Let's knock you up, girlie ...make your first time memorable with a litter of my pups.' You can only helplessly watch the dog fuck her like a wild animal until he knots in her and starts filling her with his seed. A look of pure bliss comes over the young husky and she moans as his sperm impregnates her for the very first time. Accompanied by the mocking laughter of the German Shepherd still tied to his new bitch, you slink away in defeat.";			
+				now hp of Amy is 100;			[removed from game]
+				remove Amy from play;
+			otherwise if fightoutcome >= 30:			[fled]
+				say "     Fleeing from combat with the German Shepherd, you run off without looking back. The dog-morph shouts after you 'You better run, coward. Not even man enough to lose properly. Guess I'll have to make do with your girlie...' Sliding to a halt around the next corner, you realize the husky didn't come with you when you fled. Oh damn - the thought of going back goes through your mind, then gets interrupted by a dog's yip from the way you came, signifying that your former opponent just took the girl's virginity. Too late now to do anything, you start walking away again...";
+				now hp of Amy is 100;			[removed from game]				
+				remove Amy from play;
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
+				say "     Having defeated the German Shepherd, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are now nice people. Then a large shadow falls over you two - seems your little fight attracted the attention of a wyvern!";
+				challenge "Wyvern";
+				if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+					say "     After 'hatching' from the wyvern goop egg, you look around, but there's no sign of your husky companion. Looks like her egg was laid somewhere else or is still inside the wyvern...";
+					now hp of Amy is 100;			[removed from game]				
+					remove Amy from play;
+				otherwise if fightoutcome >= 30:			[fled]
+					say "     Fleeing from combat with the wyvern, you run off without looking back. Looks like you got away clean and... sliding to a halt around the next corner, you suddenly realize the husky didn't come with you when you fled. Oh damn - you look back around the corner of the building and see the husky being covered in wyvern goop, which hardens to a hard shell around her. Then the wyvern stuffs the 'egg' into her massive vagina and flies off. You're pretty sure you won't be seeing that young woman again - at least not in any shape you'd recognize...";
+					now hp of Amy is 100;			[removed from game]				
+					remove Amy from play;
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
+					say "     Having gotten away from the wyvern, you ride a bit closer herd on your husky companion and bring her to the Grey Abbey Library safely. She's still pretty wound up from all the excitement and the new things all around her, and soon knocks over a smaller bookshelf in the entrance area as she's trying to climb up on (and sniff the books on the top board). Luckily, she can jump off before it crashes down, but she's still rather frightened at almost having a piece of furniture fall on her. You put an arm around the female husky and stroke her hair. 'Calm down, girl - you have to be a bit more careful, ok?' She nods, saying 'I will, I promise.', then rubs the side of her head against your chest.";
+					say "     'Hm, and I have to have something to call you...' Your view falls onto one of the many books tumbled all over the floor - 'The Life of Amelia Earhart'. 'How about I call you Amelia - no, Amy. Would you like that?' The husky looks at you and says 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then show her around a bit. Later, you set up some bedding for her and learn that she prefers a mattress on the ground to a real bed - you guess because she never knew anything else in her short life.";	
+					move Amy to Grey Abbey Library;
+					move player to Grey Abbey Library;
+					now hp of Amy is 10; 		[in the library, virgin]
+					now lastfuck of Amy is turns;		
+		otherwise if calcnumber is 2:			[talk]
+			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you.* 'Listen, you should get back in the room there and stay with your mother, ok? And don't tell anyone you saw me, ok?' Unquestioningly accepting your orders, the young canine woman nods, then lets herself be helped back through the window. The last you see of her is her bushy tail, wagging happily at doing what you want. Time to get out of here for now...";
+		otherwise if calcnumber is 3:			[fuck her]
+			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you.* Petting her head with one hand, you stroke over her fur with the other, feeling her feminine curves. 'You're a good dog, aren't you? A beautiful little bitch who does what she's told.' Finding you looking into her face expectantly, she hesitantly replies '...yes?' A grin on your face, you move your hands to her four breasts. 'Wonderful. You know, dogs are meant to follow their master's orders.' Her breathing deepens and a sigh escapes her lips as you start fondling her nipples, rubbing your fingers slowly around them. Then you move a hand down to her crotch and start stroking over her sensitive pussy lips, making her gasp at the feelings suddenly coursing through her body. Pushing two fingers inside her until they bump against her hymen and rubbing her clit is enough to soon give her her first climax.";
+			say "     [WaitLineBreak]";
+			if cocks of player > 0:
+				say "     As the husky rides out her orgasm, you quickly take off your clothes and use the femcum dripping from her pussy to lube up your already hard [cock of player] shaft. 'I got something even better for you now...' you tell the husky, then turn her around and make her raise her arms to hold on to the windowsill. Stepping up behind her, you rub your erect manhood up and down over her crotch, then put it between her pussy lips and press forward. The tip of your shaft poking against her fleshy barrier, you lean forward and fondle her breasts, then put a hand over her mouth, saying 'You're almost a woman now... this'll hurt just a moment.' Then you pull back a bit and thrust into her, hard, taking her virginity. She does a pained yip, muffled through your hand, then soon starts moaning as you fuck into her. Such a nice feeling to be the first to explore this juicy cunt. Eager to fill her up with your seed, you fuck her fast and hard and soon feel a familiar urge rise in your balls. Burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[end if], you give a satisfied moan and shoot string after string of cum deep into her body. ";
+				say "     [line break]";
+			say "     Satisfied, you tell the canine woman 'Listen, you should get back in the room there and stay with your mother, ok? And don't tell anyone you saw me, ok?' Unquestioningly accepting your orders, the young husky nods, then lets herself be helped back through the window. The last you see of her is her bushy tail, wagging happily at doing what you want. Time to get out of here for now...";	
+		otherwise if calcnumber is 4:			[run away]
+			say "     Just wanting to get out of the situation, you take your legs under your arms and run. Though with dog's inborn urges being what they are, the husky follows after you, taking you up on a playful hunt. It's several blocks before you can shake her - not so much because you're faster, but rather a gargoyle suddenly lunging out of the alley you just passed and pulling the dog-morph inside. Judging from the yips, grunts and moans coming from the alley soon, you don't think you'll see the husky again - at least not in a shape you recognize.";			
+			now hp of Amy is 100; 		[removed from game]
+			remove Amy from play;
 		increase score by 10;
 		now SquadEncounters is 3;		
-]
+		Now Soldier Squad is resolved;  [for now]
+
+[ Amy, the husky 																												]
+[																																				]
+[ HP of Amy							                                            		]
+[   0: starting state, not born yet					                        		]
+[  10: in the library, virgin			                                  		]
+[  11: in the library, fucked			                                  		]
+[  12: in the library, has puppies																			]
+[ 100: removed from the game (lost somewhere)                  					]
+[																																				]
+[ Lust of Amy (pregnancy timer)																					]
+[	    0: not pregnant																										]
+[  1-12: invisibly pregnant by the player                            		]
+[ 13-24: visibly pregnant by the player                            		 	]
+[																																				]
+[ Libido of Amy (puppy counter) 																				]
+[																																				]
+
+
+Amy is a woman. The hp of Amy is usually 0.
+The description of Amy is "[AmyDesc]";
+The conversation of Amy is { "Woof." };
+lastfuck of Amy is usually 555.
+AmyNewPuppies is a number that varies. AmyNewPuppies is usually 0.
+
+instead of conversing the Amy:
+	if (hp of Amy is 10):   [virgin]
+		say "     Amy says [one of]'This place is soo big. I wouldn't have believed it can exist if you hadn't brought me here.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[at random]";
+	otherwise if (hp of Amy is 11):		[fucked]
+		say "     Amy says [one of]'This place is soo big.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[or]'It feels so good to be fucked.'[or]'I can't wait to do it again with you.'[at random]";
+	otherwise if (hp of Amy is 12):		[has puppies]
+		say "     Amy says [one of]'This place is soo big. I wouldn't have believed it can exist if you hadn't brought me here.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[or]'It feels so good to be fucked.'[or]'I can't wait to do it again with you.'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[at random]";
+	otherwise:
+		say "ERROR-Amy-[hp of Amy]C: She isn't in one of the states she should be in! Please report how you got to this message.";
+	
+to say AmyDesc:
+	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if hp of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them. [otherwise]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk. [end if][if Lust of Amy > 12]There is a kind of special glow to her, and she seems to be very happy and fulfilled right now. [otherwise if Lust of Amy > 0]Her belly bulges in obvious pregnancy, making her a very content and happy husky. [end if]She doesn't wear any clothing and usually moves around on all fours like a real dog.";
+	if hp of Amy is 12:
+		if Libido of Amy is 1:
+			say "     On and around the mattress that serves as Amy's bedding, her firstborn puppy capers about, playfully exploring and looking for new interesting things. His mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with a new litter,[end if] is busy watching over him, but also immensely happy at having a child.";
+		otherwise if Libido of Amy > 1:
+			say "     On and around the mattress that serves as Amy's bedding, her [Libido of Amy] puppies caper about, playing with each other and exploring for new interesting things. Their mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with the next litter[end if] is quite busy riding herd on them all, but also immensely happy at having these children.";
+		
+The scent of Amy is "     Amy smells a bit of husky - and a ready and fertile one at that. The scent makes you pretty horny - especially after she licks your face when you come close to smell her.";
+
+An everyturn rule:
+	if Lust of Amy is 1:
+		now AmyNewPuppies is a random number between 1 and 3;
+		if player is in the Grey Abbey Library:
+			say "     Suddenly, Amy calls 'It's time!' and can be heard panting loudly. You rush over to the mattress serving as her bedding and see her lying on it, holding her bulging belly. There's a large patch of wetness under her spread legs, amniotic fluid from her womb showing that this isn't a false alarm. With nothing else you can do to help, you just sit beside Amy, holding her hand-paw and stroking her fur.";
+			if AmyNewPuppies is 1:
+				say "     Soon, her contractions come quicker and quicker, and then a single puppy slides out of her stretched vagina. It's rather large for a dog, but then - Amy isn't a normal husky either. You quickly grab a towel and wipe the newborn down, then put it up against the husky woman's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
+			otherwise if AmyNewPuppies is 2:
+				say "     Soon, her contractions come quicker and quicker, and then a puppy slides out of her stretched vagina, quickly followed by another. They're rather large for newborn dogs, but then - Amy isn't a normal husky either. You quickly grab a towel and wipe the two down, then put them up against the husky woman's breasts to drink. Hungrily sucking up milk, the little ones quickly grow, arriving at early teen development before slowing down again.";
+			otherwise if AmyNewPuppies is 3:
+				say "     Soon, her contractions come quicker and quicker, and then a puppy slides out of her stretched vagina, quickly followed by another and another. They're rather large for newborn dogs, but then - Amy isn't a normal husky either. You quickly grab a towel and wipe the three down, then put them up against the husky woman's breasts to drink. Hungrily sucking up milk, the little ones quickly grow, arriving at early teen development before slowing down again.";
+		otherwise:
+			say "     You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should go check on Amy in the library...";
+		increase Libido of Amy by AmyNewPuppies;
+		now AmyNewPuppies is 0;
+		now hp of Amy is 12;
+		increase score by a random number between 5 and 10;
+		now Lust of Amy is 0;
+	if Lust of Amy > 1:
+		decrease Lust of Amy by 1;
+		
+instead of going outside from the Bunker while (lastfuck of Amy - turns > 12):
+	move player to Grey Abbey Library;
+	now lastfuck of Amy is turns + 4;
+	if hp of Amy is 10:		[virgin]
+		say "     As you come out of the bunker, Amy pads over to you, something clearly on her mind. She says 'I feel really strange... down here.' Taking your hand, she brings it to her crotch. As you touch her swollen and dripping pussy, she gasps in lust, then says 'That feels soo good...'";
+		say "     The young husky woman is clearly aching to be fucked - maybe you should help her out with that - sometime soon. For now, you just tell her to stay calm and that what she's feeling is natural, then rub her clit a bit with your fingers. As wound up as she is, Amy orgasms pretty quickly, dripping femcum all over your hand.";
+	otherwise:
+		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
+	
+instead of navigating Grey Abbey Library while (lastfuck of Amy - turns > 12):
+	move player to Grey Abbey Library;
+	now lastfuck of Amy is turns + 4;
+	if hp of Amy is 10:		[virgin]
+		say "     As you enter the library, Amy pads over to you, something clearly on her mind. She says 'I feel really strange... down here.' Taking your hand, she brings it to her crotch. As you touch her swollen and dripping pussy, she gasps in lust, then says 'That feels soo good...'";
+		say "     The young husky woman is clearly aching to be fucked - maybe you should help her out with that - sometime soon. For now, you just tell her to stay calm and that what she's feeling is natural, then rub her clit a bit with your fingers. As wound up as she is, Amy orgasms pretty quickly, dripping femcum all over your hand.";
+	otherwise:
+		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
+
+Instead of fucking the Amy:
+	if (HP of Amy is 10):   [first time]
+		if(cocks of player > 0):      [males+herm]
+			say "     You let your gaze wander over Amy's naked form, your manhood hardening as you look at her female curves. As she notices you watching her, she innocently looks back, thinking you want to tell her something. Then her eyes move lower, spotting your erection. Wide-eyed, she pads over to you on all fours and asks 'What's that?' as she sniffs your crotch. Quickly pulling off your clothes, you show her your [cock of player] cock, explaining 'That's my penis, Amy. You can have lots of fun with it and it'll make you feel real good. Why don't you lick it a bit to get it ready?' Following your instructions, she runs her doggie tongue over your hard shaft, making you moan and tell her to continue. Soon she's sucking you off, bobbing up and down with your cock in her long muzzle.";
+			say "     [WaitLineBreak]";
+			say "     Not wanting to get off yet, you stop your husky bitch and push her softly to sit on her bedding. Kneeling down beside her, you bring your mouth to hers and kiss her, your hands roaming over her body, then holding her to lower her onto her back. Lying on top of her, you make out with the hot little husky, bringing her arousal she hasn't known before. Then you move lower, cupping her breasts and playfully sucking on her nipples before going even further down her body and arriving at her pussy. Carefully spreading her sensitive pussy lips, you put your tongue to it and lick, paying close attention to her clit. Amy gasps loudly as she experiences oral attention for the first time.";
+			say "     When she's really wet down there and panting nonstop, you decide it's time to take this one step further. Holding open her legs, your hands rubbing Amy's soft fur, you move up until your [cock of player] shaft rests hotly against her pubic mound. Leaning over her, you kiss the aroused husky and say 'Feels good, doesn't it? But I can make it even better...' Amy moans as you take hold of your cock, rubbing its head over her pussy lips. 'Do you want me to fuck you? It'll just hurt for a moment, then be amazing!' With as wound up as the female husky is now, you doubt she could say anything coherent right now - though the way she warps her arms and legs around you to pull you closer against her body is an obvious invitation...";
+			say "     [WaitLineBreak]";
+			say "  	  With a quick downward thrust, you bury your manhood in her vagina, taking Amy's virginity. She yips in pain as her hymen is broken by your invading member, then starts moaning again as you move inside her, rubbing her inner walls with your hard shaft. Fucking the husky woman feels great, with the warm and tight vagina around your cock and her soft-furred female body in your arms. Being her first time having sex, and your first time in her, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum making your shaft even wetter than before. After a few more deep thrusts, you follow her to the other side, body shuddering as your balls release burst after burst of cum to splash into the husky's womb.";
+			say "     [WaitLineBreak]";
+			say "  	  Satisfied, you stay like that with Amy for a while, running you hands through her soft belly fur, circling a nipple with your finger and making out with your canine mate.";
+			let AmyPregchance be a random number from 1 to 20;  	
+			if AmyPregchance > 7:
+				now Lust of Amy is 24;
+		otherwise if (cunts of player > 0):  [females]
+			say "     You let your gaze wander over Amy's naked form, a shiver of excitement going through you as you look at her female curves. As she notices you watching her, she innocently looks back, thinking you want to tell her something. Then her eyes move lower, spotting the wet spot in the clothes over your genitals. Curious, she pads over to you on all fours and asks 'What's up?' as she sniffs your crotch. Quickly pulling off your clothes, you show her your moist and swollen pussy, explaining 'That's my pussy, Amy. Just like yours - we can have lots of fun with them and it'll make you feel real good. Why don't you lick it a bit?' Following your instructions, she runs her doggie tongue over your clit, making you moan and tell her to continue. Soon she's lapping at your crotch, sticking her muzzle almost inside your body as she explores your depths with her tongue.";
+			say "     [WaitLineBreak]";
+			say "     Not wanting to get off yet, you stop your husky bitch and push her softly to sit on her bedding. Kneeling down beside her, you bring your mouth to hers and kiss her, your hands roaming over her body, then holding her to lower her onto her back. Lying on top of her, you make out with the hot little husky, bringing her arousal she hasn't known before. Then you move lower, cupping her breasts and playfully sucking on her nipples before going even further down her body and arriving at her pussy. Carefully spreading her sensitive pussy lips, you put your tongue to it and lick, paying close attention to her clit. Amy gasps loudly as she experiences oral attention for the first time.";
+			say "     When she's really wet down there and panting nonstop, you decide it's time to take this one step further. Grabbing the dildo you brought for this purpose from between the pile of your cast-off clothing, you kiss Amy, then hold the rubber sex top up for her to see. 'This'll give you so much pleasure - come on, lick it a bit.' As she takes it from you to put it in her mouth, you spread open her legs, your hands rubbing Amy's soft fur, then rub your fingers over her pussy mound and downwards, stroking her sensitive nether lips. Leaning over her, you say 'Feels good, doesn't it? But I can make it even better...' Taking the now wet and ready dildo from her, you rub its head over her pussy lips. 'Do you want me to fuck you with this? It'll just hurt for a moment, then be amazing!' With as wound up as the female husky is now, you doubt she could say anything coherent right now - though the way she warps her arms and legs around you to pull you closer against her body is an obvious invitation...";
+			say "     [WaitLineBreak]";
+			say "  	  Best to get it over with quickly, you push the sex toy into her with one sharp thrust, taking Amy's virginity. She yips in pain as her hymen is broken by the invading member, then starts moaning again as you move it inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though you ache for some release of your own, so you get on top of her in 69 position. Without any prompting, Amy starts licking you again, driving you to higher and higher arousal. Being her first time having sex, and you already all hot of bothered from before, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with. Just moments later, you experience your own climax, the young husky's talented tongue driving you over the edge.";
+			say "     [WaitLineBreak]";
+			say "  	  Satisfied, you lie down with Amy for a while, running you hands through her soft belly fur, circling a nipple with your finger and making out with your canine mate.";
+		otherwise:       [neuter]
+			say "     You let your gaze wander over Amy's naked form, a shiver of excitement going through you as you look at her female curves. As she notices you watching her, she innocently looks back, thinking you want to tell her something. Curious, she pads over to you on all fours and asks 'What's up?' You explain 'I want to show you something... something really nice. Come, lie down on the mattress here.'";
+			say "     [WaitLineBreak]";
+			say "     Smiling innocently at you, Amy follows your instructions. Kneeling down beside her, you bring your mouth to hers and kiss her, your hands roaming over her body. Lying on top of her, you make out with the hot little husky, bringing her arousal she hasn't known before. Then you move lower, cupping her breasts and playfully sucking on her nipples before going even further down her body and arriving at her pussy. Carefully spreading her sensitive pussy lips, you put your tongue to it and lick, paying close attention to her clit. Amy gasps loudly as she experiences oral attention for the first time.";
+			say "     When she's really wet down there and panting nonstop, you decide it's time to take this one step further. Grabbing the dildo you brought for this purpose, you kiss Amy, then hold the rubber sex top up for her to see. 'This'll give you so much pleasure - come on, lick it a bit.' As she takes it from you to put it in her mouth, you spread open her legs, your hands rubbing Amy's soft fur, then rub your fingers over her pussy mound and downwards, stroking her sensitive nether lips. Leaning over her, you say 'Feels good, doesn't it? But I can make it even better...' Taking the now wet and ready dildo from her, you rub its head over her pussy lips. 'Do you want me to fuck you with this? It'll just hurt for a moment, then be amazing!' With as wound up as the female husky is now, you doubt she could say anything coherent right now - though the way she warps her arms and legs around you to pull you closer against her body is an obvious invitation...";
+			say "     [WaitLineBreak]";
+			say "  	  Best to get it over with quickly, you push the sex toy into her with one sharp thrust, taking Amy's virginity. She yips in pain as her hymen is broken by the invading member, then starts moaning again as you move it inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though with it being her first time having sex, it's not too much longer until you drive the husky girl to a pretty noisy orgasm. As Amy reaches her goal, she gives a lust-filled howl and comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with.";
+			say "     [WaitLineBreak]";
+			say "  	  Satisfied, you lie down with Amy for a while, running you hands through her soft belly fur, circling a nipple with your finger and making out with your canine mate.";
+		now HP of Amy is 11; 
+	otherwise:   [repeat sex]
+		if (lastfuck of Amy - turns < 2):
+			say "     As you approach Amy, the young husky bitch looks at you and sighs. 'I want to have sex with you, but I'm pretty exhausted from last time. Please give me a moment to rest, ok?'";
+		otherwise:
+			say "     You walk over to Amy, who immediately starts smiling and stroking her breasts as she sees the lust-filled twinkle in your eyes.";
+			wait for any key;
+			say "[AmySexMenu]";
+			now lastfuck of Amy is turns; 
+
+to say AmySexMenu:
+	blank out the whole of table of fucking options;
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Have her blow your cock";
+		now sortorder entry is 1;
+		now description entry is "Put the husky's mouth to good use.";
+		now toggle entry is AmySex rule;
+	if (cunts of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Have her lick your pussy";
+		now sortorder entry is 2;
+		now description entry is "Put the husky's mouth to good use.";
+		now toggle entry is AmySex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Finger her pussy";
+	now sortorder entry is 3;
+	now description entry is "Finger-fuck Amy's pussy to make her cum.";
+	now toggle entry is AmySex rule;		
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her pussy";
+		now sortorder entry is 4;
+		now description entry is "Fill the husky bitch with your cock.";
+		now toggle entry is AmySex rule;
+[	if (cocks of player > 0):						[to be added another time]
+		choose a blank row in table of fucking options;
+		now title entry is "Take Amy's ass";
+		now sortorder entry is 5;
+		now description entry is "Fill the husky bitch's ass with your cock.";
+		now toggle entry is AmySex rule;		]
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the AmySex rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want?";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Have her blow your cock"):
+			say "[AmySex1]";
+		otherwise if (nam is "Have her lick your pussy"):
+			say "[AmySex2]";	
+		otherwise if (nam is "Finger her pussy"):
+			say "[AmySex3]";
+		otherwise if (nam is "Fuck her pussy"):
+			say "[AmySex4]";
+		otherwise if (nam is "Take Amy's ass"):		
+			say "[AmySex5]";		
+		wait for any key;
+		
+to say AmySex1:    [cock sucked by Amy]
+	say "     You say 'Hello Amy.', then grab the bulge in your pants and continue 'I've got something here I'd like you to help me with...' No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling out your [cock of player] cock, you hold it out with one hand, allowing Amy to put it in her muzzle and suck on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue...";
+	say "     Before too much longer, the husky girl's enthusiastic sucking drives your arousal through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. 'Good dog.' you tell her, playfully tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+			
+to say AmySex2:    [cunt licked by Amy]
+	say "     You say 'Hello Amy.', then rub the crotch of your pants and continue 'I've got something here I'd like you to help me with...' No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling off your pants, you show your already a bit moist pussy, allowing Amy to put her muzzle between your legs and lick. She really is a natural at stimulating you with that tongue of hers, pushing it into your vagina and teasing your clit with its tip...";
+	say "     Before too much longer, the husky girl's enthusiastic oral attention drives your arousal through the roof. As she goes down on you to lick your pussy again, you hold her head against your crotch, breathing deeply as the husky girl slurps up the femcum running down your legs. 'Good dog.' you tell her, playfully tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+	
+to say AmySex3:    [Amy's cunt licked/fingered]
+	say "     Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves. Coming back up for air, you say 'How about you lie down on your mattress and I take care of you? Would you like that?' as you start stroking her sensitive pussy lips, making Amy's answer a moaned 'Yesss...'.";
+	say "     Guiding the aroused husky over to her bedding, you kneel between her legs as she lies down on her back. Her pussy, already a bit swollen and moist in anticipation, lies ready for you between the canine girl's legs. Leaning forward, you bring your mouth to it, licking over her crotch, then playing with Amy's clit with the tip of your tongue. It's a lot of fun to hear her gasp and moan under your ministrations and you switch up between fingering her and licking.";
+	say "     Under your skilled fingers and tongue, it doesn't take long until Amy's moans get louder and louder and the female husky pants almost nonstop. Then suddenly, she arches her back, hands flying to hold your head in place as she climaxes. Your face is a bit wet with squirts of her femcum as you move on top of Amy afterwards to give her a deep kiss. The young husky smiles and licks your face, her arms around your body to hold you close.";
+
+to say AmySex4:    [Amy's pussy fucked by player]
+	if(Lust of Amy > 1 and Lust of Amy < 12):    [pregnant version]
+		say "     Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves and carefully touching her pregnant belly. Coming back up for air, you take one of her hands and put it to the bulge in your pants so she can feel your erection, then say 'See how hot you are? Just thinking about having sex with you makes me hard.' Reaching down between her legs, you find her sex already a bit moist, open and swollen. Stroking over her sensitive pussy lips with a finger, you ask 'Can I fuck you?'";
+		say "     The young husky's eyes find yours and give you a needful look as she nods happily, then starts rubbing her breasts and crotch against your body. You enjoy touching her for a bit, fondling her breasts and Amy rubbing your cock. As your arousal rises more and more, you decide it's time to take this to the next level. Taking the female husky's paw-hand, you lead her to her mattress, where she gets on all fours, showing her ass and the dripping vagina between her legs invitingly.";
+		say "     [WaitLineBreak]";
+		say "     Quickly sliding off your clothes, you step up and kneel behind Amy's, then lean over her. As wrap your arms around her from behind, fondling her four breasts and rubbing the bulging pregnant belly, your [cock of player] shaft comes to rest hotly against furred ass. Amy moans as you take hold of your cock, pushing it down a bit and rubbing its head over her pussy lips, then put its tip between them. Sliding into her wet and tight vagina in one smooth move, you grunt deeply as you bottom out in her, your balls touching her soft crotch-fur. You stay like that for a moment, giving her the opportunity to get used to your member spreading her inner passage, then start pulling out a bit and thrusting back in, fucking the young husky.";
+		say "     Amy is a very enthusiastic sex-partner, rocking back to meet you with her hips as you pound into her. In between moans and pants, she groans 'Harder. Harder!', only satisfied when your balls smack against her buttcheeks with an audible thud each time you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[otherwise].[end if] Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
+		say "     [WaitLineBreak]";
+		say "  	  Immensely satisfied, you stay like that on top of her for a while, then pull your softening cock out and lie down with Amy. Spooning her, you run a hand through her soft belly fur, feeling her pregnant belly, then whisper 'What a beautiful woman you are - please stay with me, forever.'";			
+	otherwise:   						   [regular version]
+		say "     Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves. Coming back up for air, you take one of her hands and put it to the bulge in your pants so she can feel your erection, then say 'See how hot you are? Just thinking about having sex with you makes me hard.' Reaching down between her legs, you find her sex already a bit moist, open and swollen. Stroking over her sensitive pussy lips with a finger, you ask 'Can I fuck you?'";
+		say "     The young husky's eyes find yours and give you a needful look as she nods happily, then starts rubbing her breasts and crotch against your body. You enjoy touching her for a bit, fondling her breasts and Amy rubbing your cock. As your arousal rises more and more, you decide it's time to take this to the next level. Taking the female husky's paw-hand, you lead her to her mattress, where she lies down on her back, spreading her legs invitingly.";
+		say "     [WaitLineBreak]";
+		say "     Quickly sliding off your clothes, you step up and kneel between Amy's legs, then lean over her. As you start making out hungrily, your [cock of player] shaft comes to rest hotly against her pubic mound. Amy moans as you take hold of your cock, rubbing its head over her pussy lips, then put its tip between them. Sliding into her wet and tight vagina in one smooth move, you grunt deeply as you bottom out in her, your balls touching her soft crotch-fur. You stay like that for a moment, giving her the opportunity to get used to your member spreading her inner passage, then start pulling out a bit and thrusting back in, fucking the young husky.";
+		say "     Amy is a very enthusiastic sex-partner, holding you close with her arms and making out as you pound into her. She even wraps her legs around your hips to pull your crotch down harder against her, moaning as your balls hit her buttcheeks when you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[otherwise].[end if] Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
+		say "     [WaitLineBreak]";
+		say "  	  Immensely satisfied, you stay like that on top of her for a while, then pull your softening cock out and lie down besides Amy. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then whisper 'What a beautiful woman you are - please stay with me, forever.'";			
+		if Lust of Amy is 0:
+			let AmyPregchance be a random number from 1 to 20;  	
+			if AmyPregchance > 10:
+				now Lust of Amy is 24;
+						
+to say AmySex5:    [Amy's ass fucked by player]
+	if(Lust of Amy > 1 and Lust of Amy < 12):    [pregnant version]
+		say "  Preg Version";
+	otherwise:   						   [regular version]
+		say "  Regular Version";
 
 Red Light Requisition is a situation.
 The sarea of Red Light Requisition is "Red";
@@ -121,8 +395,7 @@ Instead of resolving a Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
 	say "     'The brute smashed our only working radio. Now we got the mission objective locked down, but can't call in the retrieval team. Anderson's dead and that claw-slash on Kowalski's leg doesn't look good.' You peek over the window-still and see a mid-sized bar, its interior devastated by a fight. In the midst of bullet-holed walls and smashed furniture, there is a demon brute slumped down on a chair, bound with leather straps and chains. Near him, there are four soldiers, one of them just being bandaged on the thigh.";
 	say "     The apparent leader watches the wounded man being patched up, then says 'It can't be helped. No way a man supporting a wounded comrade can make it through the streets alone. I'll have to go with them. Private Jackson, guard the captive until the retrieval team arrives. If need be, give him more sedatives.' He nods to a young-looking soldier, who salutes and says 'Yes sir!' You don't want to get shot by stressed out soldiers, so you have to hurry down the alley a bit to hide behind a dumpster not to get spotted as they move out."; 
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	say "     [WaitLineBreak]";
 	say "     After waiting some minutes so be sure they're gone, you go back to the window and look in. Now there's only that one soldier in there, looking from the demon to the entrance door and back again. He looks rather nice, slender but muscular and with a handsome face. While you're still wondering if you could perhaps go in and talk to him, the demon brute makes a snorting sound, startling the soldier and you as a slight movement runs through his bound body. Private Jackson raises his weapon and steps closer, poking the demon in the chest to check if he's still unconscious.";
 	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape."; 
 	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. Carrying the man to the bar, the demon bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it."; 
@@ -134,11 +407,13 @@ Instead of resolving a Captured Demon:
 	otherwise:            [fight]
 		say "     Your decision to rush into the bar almost comes too late. The demon already has the tip of his cock poised at the soldier's virgin pucker as you throw the nearest item - a cracked beer glass - at his back to distract him. He turns with an annoyed grunt, growling 'Another mortal who wants to ride my shaft? Bring it on, weakling.'";
 		challenge "Demon Brute";
-		if lost is 1:
+		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Having dealt with you, the demon turns back to Private Jackson, who's tried to crawl off in the meantime. He picks the man up by his neck, choking him a bit and runs a clawed hand down his side, leaving shallow but long lines bloody in his pale flesh. 'Don't try to flee again. You're taxing my patience.' With that, he throws his captive back on the bar, bent over and his rear sticking out at the right height.";
 			say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, he aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the tick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 			say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
-		otherwise:
+		otherwise if fightoutcome >= 30:			[fled]
+			say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened to the young soldier you left behind with the demon brute. Nothing good, you're sure...";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]		
 			say "     After the demon vanishes, you take care of Private Jackson, who's still rather groggy from being choked and manhandled like that. He dresses as good as he can with the remains of his uniform and ends up looking more like a male stripper than a soldier, with all the naked skin he's showing. Looks rather hot, but since his thoughts are anywhere but at sex right now, you wish him the best as he moves out to rejoin his unit.";	  
 			say "     [line break]";	  
 			say "     Something tells you this might not be the last time you'll see this young man. Maybe you should go looking for the handsome [bold type]soldier[roman type] sometime... out in the city, as you doubt he'll be back in the red light district anytime soon.";	  
@@ -280,7 +555,7 @@ to say DavidPatrolRubbing:
 	say "     Gathering up some cum with your finger, you lick it off, then give your handsome Private a kiss, making him taste his own cum on your lips. You keep standing like that for a moment, your arms around his chest and slowly making out. As both of you come down from the rush of sex and David's brain starts working again, he says 'That felt amazing - but... what exactly are you?' with a nod to your genderless nether region. With a worried look he adds 'Anyways... maybe this was wrong. We didn't really have sex, but you made me cum. Feels like I'm cheating on my girlfriend Ann back home.'";
 	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
-
+[ David, the npc:																												]
 [ thirst states of David                                             		]
 [   0: had no sex of any kind with the player                        		]
 [   1: had some sort of intimate contact with the player - once      		]
@@ -466,33 +741,33 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:  [David talks with Eric about his gender and they exchange stories]
-	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobstrusively walk closer and overhear:";
+	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 	say "     [line break]";
 	say "			[DavidEricTalk]";
 	
 An everyturn rule:			[you can just wait for them to talk too]
 	if player is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
-		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobstrusively walk closer and overhear:";
+		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		say "     [line break]";
 		say "			[DavidEricTalk]";
 
 to say DavidEricTalk:
-	if hp of Eric is 1 or hp of Eric is 20:		[gender not adressed yet, or Eric waiting for a cure]
-		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughful expression, then bites his lip before... whispering something.";
+	if hp of Eric is 1 or hp of Eric is 20:		[gender not addressed yet, or Eric waiting for a cure]
+		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		say "     [WaitLineBreak]";
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - or rather between - them. Then Eric starts another story, this time about fight against the incubus and succubus you two met while on the campus...";
 		say "     [line break]";
 		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... though you should surely first sort out Eric's gender issues. Bringing up fun with David up before he's really comfortable in his skin wouldn't be a good idea.";
 	if hp of Eric is 10 or hp of Eric is 11:	[Eric talked into accepting his female parts or already fucked]
-		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughful expression, then bites his lip before... whispering something.";
+		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're female down below now - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		say "     [WaitLineBreak]";
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - or rather between - them. Then Eric starts another story, this time about fight against the incubus and succubus you two met while on the campus...";
 		say "     [line break]";
 		say "     Being on a bunk with David on one side and Eric on the other makes your thoughts wander a bit, imagining what it would be like to do... other things on a bed together. From what you can see, they like each other and might possibly be down for it... [if hp of Eric is 10]though for now, it would be best if you spent some time with Eric first and took his virginity. Pushing sex with someone he barely knows on Eric might otherwise put him back into denying his new gender.[otherwise if hp of Eric is 11]Eric should be comfortable enough with sex now to be open for some fun - as long as you're part of it. It's worth a try to talk to him about it.[end if]";
 	otherwise if hp of Eric is 21 or hp of Eric is 22 or hp of Eric is 31 or hp of Eric is 32:	[horse/satyr hung Eric]
-		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different. And when we tried to fix me later, it made me part goatman.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're different now down below - that's not all that defines you...' Eric gets a thoughful expression, then bites his lip before... whispering something.";
+		say "     '...and then, as I was bandaging my arm, I felt this wrenching pain in my gut and passed out. When I came back to I was...' Eric waves a hand at his crotch. 'You know. Different. And when we tried to fix me later, it made me part goat-man.' David nods in silent understanding and puts a hand on Eric's shoulder. 'I don't believe I can understand what you went through, but... look at it from this point - you're still a human, good-looking guy and above all still have your own mind. You should see some of the infected out there, behaving like beasts. So what if you're different now down below - that's not all that defines you...' Eric gets a thoughtful expression, then bites his lip before... whispering something.";
 		say "     Standing there, craning your head to maybe catch his words, you suddenly realize how ridiculous you must look - and that it's not a good thing to spy on friends. Not wanting to listen in any more than you already have, you go to the other side of the room and busy yourself by counting and sorting your supplies.";
 		say "     [WaitLineBreak]";
 		say "     Quite a while later, now knowing exactly how many blankets and other things are in the bunker, you turn back to the bunks and see that your two friends are still sitting there, now seemingly in much higher spirits. David gestures wildly and says '...it really was this big, a massive brute of a thing. I had no chance, until...' he spots you and smiles, waving you closer to them 'Hi there, we're just regaling each other with tales of your heroics - kicking demon butt and taking down green cheerleaders. Thanks to your timely intervention, both of us are hanging around here now in nice company, instead of getting buggered by who knows what.' Both of them smile at you and invite you to sit with - between - them. Then Eric starts another story, this time about fight against the incubus and succubus you two met while on the campus...";
@@ -531,7 +806,7 @@ to say DavidSex2:							[he sucks the player]
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 	otherwise:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
-   	say "     Pulling back from David, you quickly strip off your clothes and sit at the edge of one of the nearby bunk beds. Holding out your hard [cock of player] manhood, you wave him closer and tell the young soldier to suck you off. [if lust of David is 1]He just stands there for a moment, staring at your cock until you say 'Come on, you liked getting fucked with it, didn't you? Just give it a try...' then steps up and kneels between your legs.[otherwise]He smiles at you, licking his lips, then steps up and kneels between your legs.[end if]";
+		say "     Pulling back from David, you quickly strip off your clothes and sit at the edge of one of the nearby bunk beds. Holding out your hard [cock of player] manhood, you wave him closer and tell the young soldier to suck you off. [if lust of David is 1]He just stands there for a moment, staring at your cock until you say 'Come on, you liked getting fucked with it, didn't you? Just give it a try...' then steps up and kneels between your legs.[otherwise]He smiles at you, licking his lips, then steps up and kneels between your legs.[end if]";
 	say "     Taking hold of your cock, the young soldier holds it up and licks along the shaft before taking the tip in his mouth. You put your hands on his head and softly push it down on your cock, helping him to get into sucking on it. Soon you have him bobbing up and down on your manhood, with his lips tight around the shaft. [if lust of David is 1]Even though it's his first blow-job, he's pretty good at it, knowing how to handle a cock from being a man himself.[otherwise]He's very eager to please you, even trying to deep-throat you once or twice.[end if]";
 	say "     Before too much longer, you feel the need to cum rise in your balls and say 'I'm close, suck me harder.' [if lust of David is 0]You pull his head against your crotch as you start shooting, spurt after spurt of your seed filling his hot mouth.[otherwise]He pushes your cock into his mouth all the way as you orgasm, making you shoot directly down his throat and into his stomach.";
 	say "     [WaitLineBreak]";
@@ -1143,7 +1418,6 @@ to say AdamSexMenu:
 					say "[AdamSex4]";
 				otherwise if (nam is "Take Adam's ass"):
 					say "[AdamSex5]";
-
 
 to say AdamSex1:    [suck Adam's cock]
 	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by a line of kisses down over his abs until you're crouched in front of the half-minotaur. Stroking the obvious bulge of his cock through the fabric of his shorts, you have him moaning needfully in no time. You smile up at Adam, undoing the zipper of his sorts then pull them down off his legs, freeing his proudly erect human manhood.";
