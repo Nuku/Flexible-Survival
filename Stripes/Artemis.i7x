@@ -235,7 +235,9 @@ to say artemissex8:	[Engulf and masturbate]
 
 
 to say artemissex9:	[Engulf and sex]
+	let stfairdone be 0;
 	if location of player is State Fair:
+		let stfairdone be 1;
 		if a random chance of 1 in 3 succeeds or artemisstatefairrt is false:
 			say "     With the sights and sounds of the active midway going on, it's hard to find a moment to just stop and think about what you need to do next.  After ducking [one of]into a deserted booth[or]behind a closed attraction[or]between some stands[at random], you take a moment to get your bearings.  As you're doing this, Artemis nuzzles around your legs, purring loudly.  Familiar with her antics, you're pretty sure you know what she wants and reach down to give her a big hug and some scritches.  Even as she's starting to grow soft and her flowing rubber starts to spread over you, you spot another of the fair's rubber tigresses peeking around the corner at you both.";
 			if artemisstatefairrt is false:
@@ -250,7 +252,7 @@ to say artemissex9:	[Engulf and sex]
 			say "     With you nice and sealed up, she wastes no time quickly goes off in search of some companionship.  She struts around with confidence in her new [if player is herm]herm[otherwise if player is male]male[otherwise if player is female]female[end if] form, sleepwalking your body with considerable grace after all her practice.  And while she draws the attention of a few of the other critters around, she passes them by until she locates one of the feline tigresses.  There is only the briefest moment of hesitation before Artemis gives a lustful mrowl and strides towards the other feline";
 		say "[artemissf_sex]";
 		say "     With the felines quite satisfied by their encounter, they part ways, Artemis heading back to get your gear.  Tired after the encounter, she gives a very wide yawn of her rubbery maw and settles down for a cat nap.  Stretching out, she purrs happily while you drift off fully into slumber, only to be awoken by the fully-reformed tigress nuzzling at your cheek.  After some snuggling, you get up and head back on your way.";
-		infect "Rubber Tigress";
+		artemisinfect;
 	otherwise if lastfuck of rubber tigress - turns > 24:
 		say "     When you pause to get your bearings at a quiet point, Artemis pads up to you and sits down in front of you.  She gives a big yawn, to which you smile and pat her head.  She looks a little cross at the condescending patting and opens her muzzle even wider, rubbery maw stretching.  She points at her mouth with one hardened claw, but you just chuckle.  Reaching down to pat her head, you promise her to play with her later maybe.";
 		say "     Not liking this answer, she pounces towards your outstretched arm, engulfing it in her slick mouth in one big gulp.  Caught by surprise, you stumble back, resulting the big kitty land atop you.  She quickly starts to deflate and begins to flow over you.  Surprised by the feline's aggressive demands for the use of your [bodydesc of player] body, it seems its been too long since you've allowed her some release and she's tired of waiting.  You consider trying struggle, but already having one arm fully trapped in her, it's futile.  You instead press at the back of her head, pushing her muzzle to your lips in a deep kiss that grows deeper still as her rubbery flesh flows over your head and down your throat.";
@@ -263,9 +265,9 @@ to say artemissex9:	[Engulf and sex]
 			say "     After having covered the rest of your [body size of player], [bodydesc of player] body, all that remains is your head.  With her head still largely intact, but clearly softening in preparation of what's to come, she gives you a playful grin.  She then opens her maw very wide, which gives you a close-up view of it's gooey interior of flowing rubber moments before her head plunges over yours in one sticky bite.  Your vision is a blur of opaque orange while her liquid latex flows into your mouth and down your throat.  It is a few more seconds before she manages to flow her face back around to the front, settling into place, leaving you with orange-tinted vision as you drift off into the sleepwalking state as her new body.  After a quick stretch and a playful grope that you share sensation of, she stashes your gear and heads off in search of someone to play with.";
 		otherwise:
 			say "     After having covered the rest of your [body size of player], [bodydesc of player] body, all that remains is your head.  With her head still largely intact, but clearly softening in preparation of what's to come, she gives you a tender smile and presses his flowing muzzle to your lips in a kiss.  As you moan into your kiss, her gooey latex tongue presses into your mouth, playing with your tongue briefly before it continues to stretch out and flow down your throat, coating your insides.  As her features start to settle into place, you start to drift off into the orange-tinted dreamscape that leaves your body hers to control.  After a quick stretch and a playful grope that you share sensation of, she stashes your gear and heads off in search of someone to play with.";
-	if a random chance of 1 in 1 succeeds:				[more variations to come]
+	if a random chance of 1 in 1 succeeds and stfairdone is not 1:				[more variations to come]
 		say "     Having settled you inside her and shifted herself into that sexy feline shape that will surely draw the attention of the lustful mutants around, she takes your borrowed body out into the city again.  Moving with a fair amount of grace now, the kitty struts around, putting her body on display in a search for a playmate.  Being such a sexy sight, the smooth tigress doesn't have to wait long before managing to attract a horny ";
-		if "Less Anal" is not listed in feats of player and ( cocks of player > 0 and cunts of player is 0 ) and ( a random chance of anallevel in 12 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 12 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 12 succeeds ) ):
+		if "Less Anal" is not listed in feats of player and ( cocks of player > 0 and cunts of player is 0 ) and ( a random chance of anallevel in 12 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 12 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and guy is not banned:
 			say "[randombodypart]";		[yields male 'bodyselector']
 			if bodyselector is "tiger":
 				while bodyselector is "tiger":
@@ -398,7 +400,7 @@ to artemisnap:
 			say "     Once Artemis has reasserted control over your body, she wastes no time at all, quickly getting up and heading off in search of fun.  She strides around the midway with far more grace and confidence than she first had manipulating your body and she shows off her talents while on the prowl.  Now at the fairgrounds in her anthropomorphic body and with a gender of her own finally, there's clearly just one thing on the horny kitty's mind - to find another rubber tigress to be her playmate while she's running the show.  Despite drawing the attention of a few of the other critters around, she passes them by until she locates one of the feline tigresses.  There is only the briefest moment of hesitation before Artemis gives a lustful mrowl and strides towards the other feline";
 			say "[artemissf_sex]";
 			say "     With the felines quite satisfied by their encounter, they part ways, Artemis heading back to your resting spot so you both might finish your cat nap together.  Stretching out, she purrs happily while you drift off fully into slumber, only to be awoken by the fully-reformed tigress nuzzling at your cheek.  After some snuggling, you get up and head back on your way.";
-			infect "Rubber Tigress";
+			artemisinfect;
 		otherwise if a random chance of 2 in 5 succeeds or hp of rubber tigress is 6:	[default masturbation]
 			if cocks of player > 0 and cunts of player > 0:		[herm]
 				say "     After a bit of time just spent enjoying walking upright and casually feeling up her new body, she settles down to the main event, playing with those wonderful genitals she now possesses.  Putting her hand around [if cocks of player > 1]one of your [cock size desc of player] cocks[otherwise]your [cock size desc of player] cock[end if], she starts stroking its [cock of player] length with a soft purr.  When her other paw makes it down to your [cunt size desc of player] [if cunts of player > 1]pussies[otherwise]pussy[end if], she runs her paws over the wet, sensitive folds before pushing a few fingers into it and pumping away.  Much less frantic about her masturbation, but just as eager and overjoyed as ever, she plays with herself, and thereby with you, through several orgasms.";
@@ -429,7 +431,7 @@ to artemisnap:
 					say "well-hung [bodyselector], who she eagerly runs over to.  On her knees before him, she runs her paws along his legs and starts licking and kissing at his cock.  With such enticing, the [bodyselector] laughs and grows hard, the rubbery tigress soon taking his cock into her muzzle and throat (and thereby down your throat as well).  She licks and sucks at him eagerly, kneading her paws over his nuts as she does.  She releases wet, squeaking moans as she blows her chosen lover.  He cums soon enough, feeding a hefty load of hot, cream seed to the eager kitty.  This flows down into you, pooling in your rubber-coated stomach.  Having gotten her creamy treat, the tigress gets up, licks her muzzle and waddles off happily, rubbing her rounded belly.  Her fun over for now, she stumbles back to your resting spot where she passes out in a blissful haze and you sink further into sleep.";
 			otherwise:
 				say "     After settling you inside her, the rubber kitty controlling you takes your body out into the city again, clearly looking for more fun.  Moving with a fair amount of grace now, the kitty struts around, putting her body on display in a search for a playmate.  Being such a sexy sight, the smooth tigress doesn't have to wait long before managing to attract a horny ";
-				if "Less Anal" is not listed in feats of player and ( cocks of player > 0 and cunts of player is 0 ) and ( a random chance of anallevel in 12 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 12 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 12 succeeds ) ):
+				if "Less Anal" is not listed in feats of player and ( cocks of player > 0 and cunts of player is 0 ) and ( a random chance of anallevel in 12 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 12 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and guy is not banned:
 					say "[randombodypart]";		[yields male 'bodyselector']
 					if bodyselector is "tiger":
 						while bodyselector is "tiger":
@@ -507,6 +509,15 @@ to say artemissf_sex:
 			say "she gently coaxes the the buxom kitty onto her knees and spreads her pussy - your pussy - as an invitation for her to dive in.  Needing no more coaxing, she buries her muzzle between her lover's thighs and starts lapping at that juicy, [cunt size desc of player] cunt.  Artemis mrowls in pleasure and rubs her paws over the tigress's head, urging her on.";
 			say "     The tigress works her rubber tongue along your sensitive folds and teases your clit, making you and Artemis moan in pleasure.  Having plenty of practice at this with the others of her kind, her tongue shows considerable skill and creativity, sending waves of pleasure through your somnambulistic body.  The sounds of squeaking rubber and sticky sex fill the air as your body is used to pleasure the needy feline.  Lost in the dream-like haze of lust and pleasure, you're body is used for the mutual pleasure your feline companion encapsulating you and for yourself, and a delectable treat for the tigress lapping at your dripping pussy.  Eventually, it gets to be too much for both of you and you orgasm again, the two felines moaning and mrowling in ecstasy.  This time the rubber tigress envelopping you doesn't let up until you've had several climaxes and she's finally satisfied.  As she gently pushes the tigress's head back, Artemis looks down to show you both the sopping wet mess that is your crotch and the fact that she's drawn back her rubber coating from your pussy somewhere along the line, letting the tigress's infected saliva into your system.";
 	now artemisstatefairrt is true;
+
+to artemisinfect:
+	choose row monster from table of random critters;
+	setmonster "Rubber tigress";
+	let holdertext be "";
+	now holdertext is sex entry;
+	now sex entry is "nochange";
+	infect;
+	now sex entry is holdertext;
 
 
 [ hp of rubber tigress ]
