@@ -167,7 +167,7 @@ An everyturn rule:
 	if Lust of Amy > 1:
 		decrease Lust of Amy by 1;
 		
-instead of going outside from the Bunker while (lastfuck of Amy - turns > 12):
+instead of going outside from Bunker while ((hp of Amy is 11 or hp of Amy is 12 or hp of Amy is 13) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
 	now lastfuck of Amy is turns + 4;
 	if hp of Amy is 10:		[virgin]
@@ -176,7 +176,7 @@ instead of going outside from the Bunker while (lastfuck of Amy - turns > 12):
 	otherwise:
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 	
-instead of navigating Grey Abbey Library while (lastfuck of Amy - turns > 12):
+instead of navigating Grey Abbey Library while ((hp of Amy is 11 or hp of Amy is 12 or hp of Amy is 13) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
 	now lastfuck of Amy is turns + 4;
 	if hp of Amy is 10:		[virgin]
