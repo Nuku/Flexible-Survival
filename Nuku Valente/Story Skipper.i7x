@@ -2494,7 +2494,7 @@ Carry out reciting:
 						now Poor Kitty is resolved;
 					otherwise if hp of rubber tigress is 0 or hp of rubber tigress is 1:
 						now Poor Kitty is unresolved;
-					otherwise if hp of rubber tigress is 3;
+					otherwise if hp of rubber tigress is 3:
 						now Poor Kitty is resolved;
 						now rubber tigress is tamed;
 						now libido of rubber tigress is 30;

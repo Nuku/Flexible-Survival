@@ -1,5 +1,5 @@
-Version 4 of Stag by Wahn begins here.
-[Version 4 - Female Player + Fang/Felinoid + Helen threesomes]
+Version 5 of Stag by Wahn begins here.
+[Version 5 - Awesome Helen/Xerxes]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -14,46 +14,46 @@ when play begins:
 	add Dog Walking to badspots of furry;
 
 Instead of resolving a Dog Walking:
-	if hp of Mike is 0:   						[first meeting]
+	if hp of Mike is 0:               [first meeting]
 		say "     Around a building corner in front of you comes a young naked human woman on all fours. As she trots a bit closer and barks at you, you see she's obviously pregnant and has a collar around her neck. Before you can decide if and what to do now, a bipedal stag walks after her around the corner. He's clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail starting at his navel leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 		say "     As the guy sees you, he turns to the woman and commands 'Heel, Lea' which she immediately obeys, trotting over to stand besides him on all fours.";
 		say "     [line break]";
 		say "     What do you do now? You could just walk up and try to talk to the stag and his 'pet' (Y). Or attack him, to free the poor woman from her master (N). ";
-		if player consents: 						[talking]
+		if player consents:             [talking]
 			say "     The stag nods at you as you come closer, saying 'Hello there, I'm Mike. I've seen you look at Lea, so I'll say this right now - no, she isn't a woman I've brainwashed into acting like an animal. I'm a professional animal trainer - or I was, before this madness started - and do breed dogs... and she really is one. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them.' He kneels next to her, stroking her head and pert breasts and she gives a content whine. 'Imagine my surprise at being the owner of dozens of obedient, trained dogs with shapes like this... and as I later learned, their new form is permanent and can't be changed again.'";
 			say "     He goes on to show you the identification number tattoo on the inside of Lea's right ear from when she was a dog and has you feel her neck where there's a small identification chip under the skin too. Seems like he's telling the truth - crazy story, but which isn't these days in this city...";
 			say "     [line break]";
 			say "     You chat a bit more before Mike excuses himself, saying that Lea needs to get her exercise and that he should go on walking.";
 			now hp of Mike is 1;
-		otherwise:											[fighting]
+		otherwise:                      [fighting]
 			challenge "Stag";
 			Now Dog Walking is resolved;
 		increase score by 5;
-	otherwise if hp of Mike is 1:			[second meeting]
+	otherwise if hp of Mike is 1:     [second meeting]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behaviour as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now hp of Mike is 2;
-	otherwise if hp of Mike is 98:		[first friendly meeting after player attack]
+	otherwise if hp of Mike is 98:    [first friendly meeting after player attack]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman looks at you suspiciously and growls silently until Mike steps up and strokes her head. 'It's okay Lea, we just had a misunderstanding last time.' Hearing soothing words from her master, she trots over to you and sniffs at you before licking your hands.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now hp of Mike is 2;
-	otherwise if hp of Mike is 2:			[third meeting - they're under attack by a gang]
+	otherwise if hp of Mike is 2:     [third meeting - they're under attack by a gang]
 		say "     Moving through the streets, you hear shouting and barking from somewhere ahead. Recognizing the voices of Mike and his 'dog' Lea, you rush forward to find out what's going on.";
 		say "     You find the stag and his female companion being attacked by a gang of several leopardmen. The felines have already split them apart from each other, with three circling Mike and another two having cornered Lea against a closed loading dock.";
 		say "     Do you want to jump in to help fight the leopardmen off (Y), or rather flee before they notice you (N)? ";
 		if player consents:
 			challenge "Leopardman";
-			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+			if fightoutcome >= 20 and fightoutcome <= 29:               [lost]
 				say "     After one last slash with the leopardman's claws, you collapse on the ground, bleeding. Luckily though, your intervention distracted them enough that Mike and Lea fought off three of the attackers in the meantime. Now faced with new odds, the leopardman standing over you abandons the fight, dashing away before the stag and his 'dog' can get to him...";
-			otherwise if fightoutcome >= 30:														[fled]
+			otherwise if fightoutcome >= 30:                            [fled]
 				say "     You running off led to two of the leopardmen giving chase, going after you quite a bit until you manage to lose them. As you make your way back to where you last saw Mike and Lea, you see that they fought off the remaining gang members in the meantime.";
-			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
-				say "     Having given the leopardman quite a beating, you grin at the fearful look on his face as he flees, running away as fast as he can. Your intervention distracted the other members of the small gang too, which allowed Mike and Lea to fight off three of their attackers in the meantime. The remaining unhurt one throws the fight as he sees himself confronted with the three of you and flees...";	  
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:     [won]
+				say "     Having given the leopardman quite a beating, you grin at the fearful look on his face as he flees, running away as fast as he can. Your intervention distracted the other members of the small gang too, which allowed Mike and Lea to fight off three of their attackers in the meantime. The remaining unhurt one throws the fight as he sees himself confronted with the three of you and flees...";   
 				increase score by 5;
-			now hp of Mike is 3;	
-			say "     Nodding over to you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";	  
+			now hp of Mike is 3;  
+			say "     Nodding over to you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";   
 			move player to Mike's Office;
 			now Mike's Home is known;
 		otherwise:
@@ -75,7 +75,7 @@ to say Stag loses:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
-	if hp of Mike is 0:				[last chance to switch to friendly mode]
+	if hp of Mike is 0:       [last chance to switch to friendly mode]
 		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
 		now sortorder entry is 1;
 		now description entry is "Free Lea.";
@@ -133,7 +133,7 @@ to say Stag loses:
 					say "[MikeSex4]";
 				otherwise if (nam is "Take the stag's ass."):
 					say "[MikeSex5]";
-				if hp of Mike is 0:				[if the player hasn't selected talking above and set the hp to 98 by now, Mike will be permanently hostile (99)]
+				if hp of Mike is 0:       [if the player hasn't selected talking above and set the hp to 98 by now, Mike will be permanently hostile (99)]
 					now hp of mike is 99;
 					repeat with y running from 1 to number of filled rows in table of random critters:
 						choose row y in table of random critters;
@@ -144,10 +144,10 @@ to say Stag loses:
 							break;
 
 to say StagDesc:
-	if hp of Mike is 0:				[first encounter]
+	if hp of Mike is 0:       [first encounter]
 		say "     Seeing your aggressive stance as you come closer, the stag sighs 'Another of those savages.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you.', he says and comes at you with balled fists.";
-	otherwise:								[repeat fighting]
+	otherwise:                [repeat fighting]
 		say "     A bipedal stag accompanied by a naked, collared and pregnant human woman on all fours crosses your path. He's clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 		say "     As the guy sees you, he sighs 'That asshole again.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you.', he says and comes at you with balled fists.";
@@ -166,10 +166,10 @@ when play begins:
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Stag"; [Name of your new Monster]
+	now name entry is "Stag";                    [Name of your new Monster]
 	now attack entry is "[one of]He pushes you down against the ground with strong arms and gives you a blow in the ribs.[or]You almost stumble and fall down as he gives you a rough shove.[or]His horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection and drives the air from your lungs.[at random]";
-	now defeated entry is "[Stag loses]";      [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Stag wins]";       [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now defeated entry is "[Stag loses]";        [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[Stag wins]";         [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[StagDesc]";              [ Description of the creature when you encounter it.]
 	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
 	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
@@ -191,28 +191,28 @@ When Play begins:
 	now hp entry is 75;
 	now lev entry is 10;
 	now wdam entry is 10;
-	now area entry is "Nowhere";					[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;									[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 11;					[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;						[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;								[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;						[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;			[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;									[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;						[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;						[ Width of female sex  infection will try and give you ] 
-	now libido entry is 70;								[ Amount player Libido will go up if defeated ]
-	now loot entry is "";              		[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;        		[ Percentage chance of dropping loot, from 0-100. ]
+	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 11;          [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6;            [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
+	now breast size entry is 0;           [Size of breasts infection will try to attain ]
+	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;           [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;            [ Width of female sex  infection will try and give you ] 
+	now libido entry is 70;               [ Amount player Libido will go up if defeated ]
+	now loot entry is "";                 [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;									[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "fit";		[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "cervine";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;							[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;					[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;				[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";			[ Row used to designate any special combat features, "default" for standard combat. ]
+	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "fit";   [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "cervine";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 4 - Mike and Lea
 
@@ -251,7 +251,7 @@ Instead of fucking Mike:
 		choose row y in table of random critters;
 		if name entry is "Stag":
 			now monster is y;
-			break;	
+			break;  
 	if(hp of Mike < 5):
 		say "     Mike shakes his head and says 'Not now. I've got other things to worry about.' He turns back to Lea on the bed, stroking her hair and holding her to keep her calm.";
 	otherwise if(lastfuck of Mike - turns < 5):
@@ -308,12 +308,12 @@ Instead of fucking Mike:
 						say "[MikeSex4]";
 					otherwise if (nam is "Take Mike's ass"):
 						say "[MikeSex5]";
-		infect "Stag";			
-		infect "Stag";					[since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
+		infect "Stag";      
+		infect "Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
 		now lastfuck of Mike is turns;
 		
 
-to say MikeSex1:												[player sucks him]
+to say MikeSex1:        [player sucks him]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
 		say "     Pushing your hands down the front of his jeans, you feel for his cock and balls, groping them before you open up his zipper and pull down the pants. He's got a human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. You kneel down in front of him and stroke his shaft some more until he's fully hard.";
@@ -321,28 +321,28 @@ to say MikeSex1:												[player sucks him]
 		say "     Running your tongue over his cockhead and shaft slowly between pumping your hard up and down its length, you tease the stag until he's breathing hard and looks pleadingly down to you. You smile, then take his manhood into your mouth and start giving him an amazing blow-job, going down all the way on his cock and massaging his balls.";
 		say "     With how you worked him up beforehand, it's not too long before he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and pull his head to yours for a deep kiss, pushing the cum into Mike's mouth with your tongue. His eyes get wide as he tastes his own cum and even wider as you pull his head back a bit and say 'Now swallow!' After a moment's hesitation, he gulps down the cum and shows you his empty mouth as you ask for it.";
 		say "     Satisfied in giving him a load of cum in his stomach, you give the stag a slap on his ass and leave.";
-	otherwise:																	[post-quest, friendly]
+	otherwise:                                  [post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down the pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Licking your lips in anticipation, you kneel down in front of Mike and stroke his shaft some more until he's fully hard.";
 		say "     [WaitLineBreak]";
 		say "     Running your tongue over his cockhead and shaft slowly between pumping your hand up and down its length, you tease the stag until he's breathing hard and looks pleadingly down to you. You smile, then take his manhood into your mouth and start giving him an amazing blow-job, going down all the way on his cock and massaging his balls.";
 		say "     With how you worked him up beforehand, it's not too long before he moans 'I'm getting close...' You continue going down on him and go for some deep-throat action until he can't hold back any more and shouts in lust as his balls pump spurt after spurt of seed into your stomach. You wait till he stops twitching and the last spurt of semen leaves his cock, pull off and take a deep breath. Holding his slowly softening cock in your hand, you give it a quick kiss on the tip, then stand up and pull Mike's mouth to yours. With his arms around you and stroking your back as you make out with each other, Mike says 'Thank you, that was an amazing blow-job.' in between the kisses.";
 
-to say MikeSex2:							[he sucks the player]
+to say MikeSex2:        [he sucks the player]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
 		say "     'On your knees' you order, pushing down on his shoulders as he hesitates a moment. With the muscular stag kneeling down before you, you pull out your cock, demonstratively stroking it in front of his face and running it along the edge of his chin. Then you push it against his lips and growl 'Open up - and no teeth.'";
 		say "     [WaitLineBreak]";
 		say "     With a bit of a sullen expression, the stag opens his mouth and takes your manhood into it, bobbing up and down on your shaft. You let him suck you a while, then feel the need for something more rise inside you and grab his antlers like handholds and use them to hold his head as you start fucking his face. Going deeper and deeper, he has to cough a few times before he manages to relax his throat enough when you push all your cock inside him. It's an amazingly tight feeling as you bottom out and hold his head with your cock down his throat for a moment, then start thrusting in and out.";
 		say "     All too soon you feel your orgasm approaching and push your shaft one last time into the stag's throat as you start shooting your seed - straight into his stomach. After the first few shots, you pull out of his mouth and spray the rest of your cum all over his cervine face. With a smile on your lips, you leave the cum-splattered stag kneeling there on the street and walk away.";
-	otherwise:																	[post-quest, friendly]
+	otherwise:                                  [post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Grinding your crotch against his, you show him pretty direct how hot and hard his presence makes you.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you softly push down on his shoulders, to which he quite readily kneels down in front of you. As you pull out your cock, he takes it into a large hand, stroking it until you're fully hard, then gives its tip a quick lick.";
 		say "     [WaitLineBreak]";
 		say "     Running his tongue over your shaft slowly between pumping your up and down its length, Mike teases you until you're breathing hard and almost begging for release. Then he has mercy on you and takes your manhood into his mouth and starts giving you an amazing blow-job, going down all the way on the cock and massaging your balls.";
 		say "     With all the kissing and stroking beforehand, it's not too long before you moan 'I'm getting close...' Mike just continues going down on you, even going for some deep-throat action until you can't hold back any more and shout in lust as your balls pump spurt after spurt of seed into his stomach. He waits a moment, then pulls back a bit, taking your last few shots in his mouth. Then he stands up and gives you a deep kiss, allowing you to taste your own cum on his lips and tongue.";
 
-to say MikeSex3:												[player pussy fucked]
+to say MikeSex3:        [player pussy fucked]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
 		say "     Pushing your hands down the front of his jeans, you feel for his cock and balls, groping them a bit before you open up his zipper and pull down the pants. He's got a human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. You stroke his shaft some more until he's fully hard, then command him to lie down.";
@@ -352,7 +352,7 @@ to say MikeSex3:												[player pussy fucked]
 		say "     [line break]";
 		say "     You wait till he stops twitching and the last spurt of semen leaves his cock, then pull your pussy off his shaft and move to kneel over his face. Pulling his head up against your cum-dripping pussy, he instantly realizes what you want and starts licking you. Quite talented with his tongue, this stag - his oral attentions quickly bring you the rest of the way to your own orgasm, making your folds drip with femcum in addition to the stag's seed.";
 		say "     Thoroughly satisfied, you grin down at the stag's wet face as you stand up and walk away, leaving him lying there on the ground.";
-	otherwise:																	[post-quest, friendly]
+	otherwise:                                  [post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down the pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Reaching down to stroke him until he's fully hard, your lips find his for another kiss. Moaning 'I want you inside me', you step back and quickly take off your clothes.";
 		say "     [WaitLineBreak]";
@@ -361,7 +361,7 @@ to say MikeSex3:												[player pussy fucked]
 		say "     [line break]";
 		say "     He stays on top, breathing heavily while the last spurts of semen leave his cock, then lowers his head to yours to make out. It's pretty nice to hold his softly furred body against yours, with his slowly softening cock and deposited load giving you a comfortably full feeling. You stay like that for a while, resting together in post-coital bliss before you have to return to everyday survival in the city.";
 
-to say MikeSex4:												[player ass fucked]
+to say MikeSex4:        [player ass fucked]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
 		say "     Pushing your hands down the front of his jeans, you feel for his cock and balls, groping them a bit before you open up his zipper and pull down the pants. He's got a human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. You stroke his shaft some more until he's fully hard, then command him to lie down.";
@@ -371,7 +371,7 @@ to say MikeSex4:												[player ass fucked]
 		say "     [line break]";
 		say "     You wait till he stops twitching and the last spurt of semen leaves his cock, then pull off his shaft with a *plop* and move to kneel over his face. Saying 'Eat me out' in a commanding tone, you pull his head up against your cum-dripping asshole and after a moment's hesitation he starts licking you. Quite talented with his tongue, this stag - his oral attentions quickly bring you the rest of the way to your own orgasm, [if cocks of player > 0]with your [cock of player] cock shooting long strings of cum all over your partner's chest[otherwise if cunts of player > 0]making your folds drip with femcum[end if].";
 		say "     Thoroughly satisfied, you grin down at the stag[if cocks of player > 0] and his cum-splattered fur[end if] as you stand up and walk away, leaving him lying there on the ground.";
-	otherwise:																	[post-quest, friendly]
+	otherwise:                                  [post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down the pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Reaching down to stroke him until he's fully hard, your lips find his for another kiss. Moaning 'I want you inside me', you step back and quickly take off your clothes.";
 		say "     [WaitLineBreak]";
@@ -380,7 +380,7 @@ to say MikeSex4:												[player ass fucked]
 		say "     [line break]";
 		say "     Mike stays kneeling behind you as his manhood keeps pulsing with each shot of cum, breathing heavily and holding on to your body. After the last spurt of semen leaves his cock, he gives you a kiss on the neck, then hugs you close and pulls you down so you lie together on your sides on a mostly dry spot of the bed. You two just stay like that for a while, him spooning you with his slowly softening cock still in your ass, getting some rest before you have to return to the problems everyday survival in the city.";
 
-to say MikeSex5:												[player ass fucked]
+to say MikeSex5:        [player ass fucked]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
 		say "     Pushing your hands down the front of his jeans, you feel for his cock and balls, groping them a bit before you open up his zipper and pull down the pants. He's got a human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. You stroke his shaft some more until he's fully hard, push him over to a nearby building's wall and have him stand against it, bent over a bit and bracing himself with his hands.";
@@ -392,7 +392,7 @@ to say MikeSex5:												[player ass fucked]
 		say "     Fucking the stag with hard and deep strokes, you soon drive him over the edge, shouting 'I'm coming...' as his shaft sprays a huge load of white cum all over the wall he leans against. His inner muscles twitching around your shaft gives you the rest too, your balls tightening as they send spurt after spurt of cum deep into the stag's ass.";
 		say "     [line break]";
 		say "     Holding your arms tight around his chest until your last spurt of semen is deposited, you then pull out in one quick go from his cum-filled asshole, accompanied by a slurping noise. His hole gapes open for a second with cum running out of it, then quickly closes, trapping the rest of your seed inside. You have a last look at the cream-colored fur of his crack, wet with your cum, then give the stag a slap on the butt and leave him there like that.";
-	otherwise:																	[post-quest, friendly]
+	otherwise:                                  [post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down the pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Reaching down to stroke him until he's fully hard, your lips find his for another kiss. Moaning 'I want to fuck your ass', you step back and quickly take off your clothes.";
 		say "     [WaitLineBreak]";
@@ -418,9 +418,9 @@ instead of conversing Mike:
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
 				now hp of Mike is 5;
 			otherwise:
-				say "			You just silently shake your head.";
+				say "     You just silently shake your head.";
 		otherwise:
-			say "			You just silently shake your head.";
+			say "     You just silently shake your head.";
 	otherwise if hp of Mike is 5:
 		say "     Mike says 'I don't have anything I could give you as thanks, except... would you maybe want one of my human dogs for your own? They got well trained as dogs and are very obedient - and since they changed, I taught them a few extra tricks too...' he winks and gives a small nod to Lea and her pregnant belly.";
 		say "     Do you accept one of the human form dogs from Mike as a reward? ";
@@ -441,7 +441,7 @@ instead of conversing Mike:
 				now hp of Helen is 1;
 			now hp of Mike is 6;
 		otherwise:
-			say "     Mike shrugs as you decline, says 'As you wish. But the offer stands, so just say so if you change your mind.'"; 
+			say "     Mike shrugs as you decline, then says 'As you wish. But the offer stands, so just say so if you change your mind.'"; 
 	otherwise if hp of Mike is 6:
 		say "     Mike gives you a friendly nod, then says 'Hello again. How's it going with your new pet? No problems, I hope?' You chat a bit about caring for your human shape dog and survival in the city in general.";
 	otherwise:
@@ -461,27 +461,27 @@ instead of fucking Lea:
 instead of conversing Lea:
 	if hp of Mike < 5:
 		say "     Lea gives you a pitiful whine as you try talking to her.";
-	otherwise if hp of Mike > 4:	
+	otherwise if hp of Mike > 4:  
 		say "     Lea gives a welcoming yip as you approach, then comes closer and licks your hand. She's not really a candidate for meaningful conversation, but watching her pounce after a tennis ball and fetch it for you has a relaxing influence on you.";
 
 
 Section 5 - Xerxes
 
-[ hp states of Xerxes						]
-[   0: hasn't been brought to the bunker yet		]
-[   1: no sex with either Fang or the Felinoid		]
-[  10: got fucked only by Fang				]
-[  11: got fucked only by the Felinoid			]
-[  12: got fucked by both Fang and the Felinoid		]
-[ lust of Xerxes							]
-[   0: hasn't had sex with the player			]
-[   1: had sex with the player once				]
-[   2: awesomess message					]
-[   3: awesome upgrade						]
-[   4: awesome sex						]
-[   5: awesome sex continues					]
-[   6: offer for tattoo						]
-[   7: tattoo received						]
+[ hp states of Xerxes                              ]
+[   0: hasn't been brought to the bunker yet       ]
+[   1: no sex with either Fang or the Felinoid     ]
+[  10: got fucked only by Fang                     ]
+[  11: got fucked only by the Felinoid             ]
+[  12: got fucked by both Fang and the Felinoid    ]
+[ lust of Xerxes                                   ]
+[   0: hasn't had sex with the player              ]
+[   1: had sex with the player once                ]
+[   2: awesomess message                           ]
+[   3: awesome upgrade                             ]
+[   4: awesome sex                                 ]
+[   5: awesome sex continues                       ]
+[   6: offer for tattoo                            ]
+[   7: tattoo received                             ]
 
 
 Chapter 1 - Xerxes Basics
@@ -494,17 +494,17 @@ lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
 hp of Xerxes is usually 0.
 
 to say xerxesdesc:
-	if lust of xerxes < 3:
+	if lust of Xerxes < 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  He has short black hair and a well-developed physique, with muscular arms and legs.  All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.  He watches you attentively, eager to follow the commands of his master";
-		if lust of xerxes is 2:
+		if lust of Xerxes is 2:
 			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of Awesome fruit > 0][link]awesome[as]give Awesome fruit to Xerxes[end link][otherwise]awesome[end if]";
 		say ".";
-	otherwise if lust of xerxes is 3:
+	otherwise if lust of Xerxes is 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan.  His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place.  All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
 		say "     He has started to act a little differently since you gave him that strange fruit though.  Sometimes, it's as simple as him giving you a more human smile than a canine one when he looks at you.  He seems to listen more attentively and his barks aren't as loud and excited.  Other times, he's trying to pick up his various dog toys with his hands.  You've even spotted him trying to stand on his hind legs as a begging dog would all on his own.  When he notices you watching, he barks happily and waits attentively for the commands of his master.";
 	otherwise:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan.  His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place.  All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
-		if lust of xerxes is 7:
+		if lust of Xerxes is 7:
 			say "     Wearing nothing, the only adornment he has is the detailed tattoo he received when visiting Kara.  Starting at his neck is a detailed collar of deep black with red spikes added to it.   Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good boy' written on it in cursive writing.  Also attached to it is a red leash that hangs down from his neck, crosses one of his smooth pecs and goes back over his left shoulder to run down his back.  Just a few inches before reaching the handhold, the red switches into rainbow banding, ending in a purple loop [']resting['] against his ass.  This whole is quite detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into his skin.";
 		say "     The unexpected effects of the fruit seem to have largely settled down with him becoming smarter and able to recognize and use his human body.  He still has a thoroughly canine mind and is as loyal and obedient as ever, if not moreso.  While he is able to walk upright a little unsteadily, he still much prefers to go on all fours.  Interspersed between his normal, canine antics, he will sometimes flip through some of the books, mainly children's books.  He seems to find those with colour pictures particularly fascinating.  He has a short vocabulary of words, though usually sticks to more canine sounds, especially when he's having fun or having fun having sex.  Having a canine perspective on the world, he has no human shame and is as sexually open as ever despite his much more human capacity for reason.";
 
@@ -579,12 +579,12 @@ Instead of fucking Xerxes:
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 9;
-			now description entry is "Hot sex with Fang fucking Xerxes.";			
-		if (cunts of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
+			now description entry is "Hot sex with Fang fucking Xerxes.";     
+		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
 			now sortorder entry is 10;
-			now description entry is "Bring Xerxes to Kara to get a tattoo.";			
+			now description entry is "Bring Xerxes to Kara to get a tattoo.";     
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -633,36 +633,36 @@ Instead of fucking Xerxes:
 
 Chapter 3 - Xerxes Sex Scenes
 		
-to say XerxesSex1:												[player sucks him]
+to say XerxesSex1:                        [player sucks him]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [WaitLineBreak]";
 	say "     You push softly against him so he lies on his side, then back, with his human erection now standing proudly upwards. Pumping your hard up and down on it again, you put your lips to its tip, then go down on him. Xerxes gives a lust-filled growl and starts instinctual thrusts with his hips, putting his cock deeper into your mouth and making the most of your blow-job. It's not too much longer before he orgasms, body twitching as his human seed gushes into your mouth. You wait till you got it all, every last shot, then swallow it down. Giving your dog a last quick belly-rub over his hard abs, you stand back up and turn back to everyday survival.";
 
-to say XerxesSex2:												[he sucks the player]
+to say XerxesSex2:                        [he sucks the player]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt and give it a squeeze. Standing back up, you quickly strip off your clothes and hold your erect manhood up for Xerxes, who gives you a happy yip, then starts licking it.";
 	say "     [WaitLineBreak]";
 	say "     He runs his talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in his mouth. As Xerxes starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with his teeth and uses his tongue to caress your cock as he bobs up and down on it. With his eager sucking, it doesn't take much longer till the need to cum rises in your balls.";
 	say "     Moaning, you grab Xerxes head and do a few deep thrusts with your hips, your cock deep in his throat as it starts shooting a huge load. Pumping blast after blast directly into his stomach, you hold his head against your crotch, then pull back a moment later to let him get some air. He quickly goes back to work, catching the last spurts of cum with his mouth, then puts his lips around your cockhead, softly sucking as it goes down.";
 
-to say XerxesSex3:												[player pussy fucked]
+to say XerxesSex3:                        [player pussy fucked]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [WaitLineBreak]";
 	say "     Quickly stripping off your clothes, you get on the cot yourself and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach down to spread your folds invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest has his hips grind against you. His hard shaft quickly finds your moist opening and plunges deep into your body.";
 	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;	
+	if child is born or gestation of child is not 0, now baby is 1; 
 	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum[if cocks of player > 0] and makes your cock spray your own load all over the sheets below[end if]. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling your womb with his human seed.[fimpregchance]";
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms.";
 	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;	
+	if child is born or gestation of child is not 0, now baby is 1; 
 	if baby is 0 and gestation of child is not 0:
 		now facename of child is "human";
 		now bodyname of child is "human";
 		now skinname of child is "human";
 
-to say XerxesSex4:												[player ass fucked]
+to say XerxesSex4:                        [player ass fucked]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [WaitLineBreak]";
@@ -676,7 +676,7 @@ to say XerxesSex4:												[player ass fucked]
 		now bodyname of child is "human";
 		now skinname of child is "human";
 
-to say XerxesSex5:												[Xerxes ass fucked]
+to say XerxesSex5:                        [Xerxes ass fucked]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt and give it a squeeze, then push a finger against his tight pucker. Reaching over, you grab the bottle Mike gave you and squirt some lube on your hand, warming it up a bit before starting to push first one, then two lubed fingers up Xerxes ass. After a first little whine, Xerxes gets into this anal invasion, even giving you a lustful yip as you stroke his prostrate. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [WaitLineBreak]";
@@ -684,56 +684,56 @@ to say XerxesSex5:												[Xerxes ass fucked]
 	say "     Stroking his skin and telling him in soft tones to relax, you push forward and slide into his body. Xerxes hole is incredibly warm and tight - no wonder, with only Mike and maybe one or two of the other human dogs having been in there before you. You take a moment to appreciate the tightly gripping feel of his ass as you bottom out, then start fucking him, with Xerxes panting and yipping in lust as you slide in and out. Sounds like he really enjoys getting ass-fucked, and reaching around him you find that his manhood his rock hard.";
 	say "     Touching his cock seems to have been the last straw for his orgasm, and as you do another deep thrust into Xerxes ass he gives a deep grunt and shoots a huge load of cum all over the sheets below. With the flexing of his anal muscles around your shaft with each of his spurts, you're close behind him, moaning loudly as you cream his asshole with your sperm. With your cock twitching inside him with blast after blast of cum, you pull Xerxes upper body against your chest, and give him a deep kiss. Then, after your last shot, you pull him down to lie together with you on the cot and enjoy each other's warmth and closeness for a while as you come down from your respective orgasms.";
 
-to say XerxesSex6:												[male player and felinoid + Xerxes]
+to say XerxesSex6:                        [male player and felinoid + Xerxes]
 	say "     Accompanied by your felinoid companion, you walk over to the cot you put up here in the library for Xerxes. The large cat sniffs the human-dog's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'You want another round with him? Sure.'";
 	say "     With a quick whistle you summon Xerxes, the dog in the buck-naked body of a young man immediately rushing to you from where he was patrolling through the long rows of bookshelves in the library. He hesitates for a second as he sees the felinoid, then comes continues walking closer, looking happy at getting his master's attention. Soon he's standing on all fours next to you. 'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. The felinoid immediately joins you on Xerxes other side, rubbing the side of furred body against your dog's naked skin. The effects of his touch and heady musk take effect almost immediately, with Xerxes breathing becoming quicker as he pants in lust and his cock filling out to dangle beneath his body.";
 	say "     [WaitLineBreak]";
 	say "     Circling around to his backside, the felinoid licks Xerxes asshole with his rough tongue a few times until it's nice and wet with his saliva. Then he moves further up, licking over the muscled back of your human dog and continuing to his neck. Standing over the smaller human, his belly-fur touching Xerxes back, the felinoid now is in the perfect position to fuck him. Lowering his hind legs a bit, the feline rubs his spined cock up and down the human-dog's crack until he soon finds Xerxes tight opening and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
 	say "     [line break]";
 	say "     What would you like to do now? Do you let Xerxes blow you and feed him your load (Y), or fuck and fill the felinoid's ass (N)? ";
-	if player consents:    	[sucked by Xerxes]
+	if player consents:     [sucked by Xerxes]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, freeing your raging [cock of player] hardon and stroke it a few times before holding it out for Xerxes. Your obedient dog immediately goes for it, taking your hard length into his mouth and starts bobbing up and down on it. You give a deep moan as he keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Xerxes hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in his throat and shoot spurt after spurt of cum directly into his stomach.";
 		say "     Breathing heavily, you stand still as Xerxes softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to the cot and sit down to watch the rest of your pet's coupling.";
 		say "     [WaitLineBreak]";
 		say "     Even though the felinoid and Xerxes are quite virile males, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor, his twitching anal muscles give the large cat fucking him the last nudge towards orgasm too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Xerxes asshole with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Xerxes with him. Stretched out comfortably on the floor, the felinoid holds Xerxes against his warm belly fur with his front paws around him and starts licking his sweaty back. Looks as if he's actively trying to infect him, or at least wants to spread his scent over all of your human pet's body.";
-	otherwise:							[fucking the Felinoid]
+	otherwise:              [fucking the Felinoid]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, freeing your raging [cock of player] hardon and grab the bottle of lube Mike gave you. After spreading some of the slick substance on your shaft, you step up behind the two rutting beasts. Running your hands up through the soft fur on his lower back, you grab the felinoid's hips tightly then slam forward, burying your cock to the hilt in his warm, tight cave. Roaring at the sudden anal intrusion, the felinoid stops thrusting into Xerxes for a moment, looking back over his shoulder with partly bared teeth. That doesn't last long, though - moving in and out of his hole, your shaft stimulates his sensitive prostrate, and soon your big cat is purring in satisfaction and fucking Xerxes again.";
 		say "     [WaitLineBreak]";
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor, he starts a chain reaction. The human dog's twitching asshole drives your felinoid companion over the edge, a deep rumble of satisfaction vibrating in his throat as he fills Xerxes up with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch the felinoid's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Xerxes cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Xerxes cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking his sweaty human skin. Looks as if he's actively trying to infect him, or at least spread his scent over all of your human pet's body.";
-	if Fang is in the Grey Abbey Library:			[rivalry messages]
+	if Fang is in the Grey Abbey Library:     [rivalry messages]
 		say "     [line break]";
-		if hp of Fang is 1 or hp of Fang is 2:	[Beta Fang]
+		if hp of Fang is 1 or hp of Fang is 2:  [Beta Fang]
 			if hp of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if hp of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		otherwise:															[Alpha Fang]
+		otherwise:                              [Alpha Fang]
 			if hp of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 
-to say XerxesSex7:												[Male Player with Fang & Xerxes]
-	if (hp of Fang is 1 or hp of Fang is 2):		[Beta Fang]
+to say XerxesSex7:                        [Male Player with Fang & Xerxes]
+	if (hp of Fang is 1 or hp of Fang is 2):    [Beta Fang]
 		say "     Walking over to where Fang's leash is currently tied in the library, you kneel down beside your faithful guardian and stroke him between his ears and over his furred flank. Wagging his tail, he licks your hand, happy at getting attention from his Alpha. 'That's a good wolf. Come on, let's have some fun with Xerxes' you say and loosen Fang's leash from around his neck. Accompanied by your black wolf, you walk over to the cot you put up here in the library for your human dog.";
 		say "     With a quick whistle you summon Xerxes, the dog in the buck-naked body of a young man immediately rushing to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand before you and licks your hand in greeting as you stroke his head, then makes a beeline to sniff and be sniffed by Fang. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then say 'Here boy, I got something for you.' Xerxes eagerly dashes over, then licks your balls and cock a bit before taking it into his mouth. Quite good at blowing cock, this dog turned human teenager.";
 		say "     [WaitLineBreak]";
 		say "     As your human-dog pet blows you, Fang moves up behind him and sniffs Xerxes butt, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and as you slide your shaft once again into Xerxes throat you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Xerxes human body, front legs around his chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Xerxes ass. Driven by his feral lust, Fang ruts the teenager mercilessly, growling and panting as he thrusts in and out.";
 		say "     Getting blown as you watch Fang mounting your human-looking dog, the need to cum quickly rises inside you and you have to grab hold of Xerxes head to stop from losing it right then and there. Cock resting for a moment in his throat, you take a deep breath, then slowly pull out and take a step back. Now having his mouth free, Xerxes gives lustful pants and yips as Fang drives his shaft into him. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner.";
 		say "     [line break]";
-		say "     What do you want to do now? Get blown by Xerxes and feed him your load (Y), or fuck and come in Fang's ass (N)? ";		
-		if player consents:    	[sucking]
+		say "     What do you want to do now? Get blown by Xerxes and feed him your load (Y), or fuck and come in Fang's ass (N)? ";    
+		if player consents:     [sucking]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Xerxes immediately goes for it, taking your hard length into his mouth and starts bobbing up and down on it. You give a deep moan as he keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Xerxes hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in his throat and shoot spurt after spurt of cum directly into his stomach.";
 			say "     Breathing heavily, you stand still as Xerxes softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to the cot and sit down to watch the rest of your pet's coupling.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to down and allowing them to separate, you lay back on the cot and get comfortable.";
-		otherwise:							[fucking Fang]
+		otherwise:              [fucking Fang]
 			say "     [line break]";
 			say "     Your eyes searching out your goal - the tight hole under Fang's tail - you stroke your hard cock and step closer to Fang's rear end. Running your hands through the fur on his lower back, you grab hold of the wolf's hips and sink your [cock of player] shaft into him with one deep thrust. After giving a loud yelp at the sudden anal invasion, Fang stops for a second and looks back. Seeing it's you, he accepts being fucked as his due to the Alpha, even tightening his anal muscles around you as you move inside him. Then the hot threesome continues, now mirroring the hierarchy in your little pack.";
 			say "     [WaitLineBreak]";
@@ -752,42 +752,42 @@ to say XerxesSex7:												[Male Player with Fang & Xerxes]
 		say "     Seeing your Alpha penetrate Xerxes makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Xerxes eagerly licks your balls and cock a bit before taking it into his mouth. Ah, Mike trained this dog turned teenage human really well. He delivers an expert blowjob, even deep-throating all of your cock without any problems.";
 		say "     Getting sucked as you watch Fang mounting your human-looking dog, the need to cum quickly rises inside you and you have to grab hold of Xerxes head to stop from losing it right then and there. Cock resting for a moment in his throat, you take a deep breath, then slowly pull out and take a step back. Now having his mouth free, Xerxes gives lustful pants and yips as Fang drives his shaft into him. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner.";
 		say "     [line break]";
-		say "     What do you want to do now? Get blown by Xerxes and feed him your load (Y), or wait your turn at filling his ass (N)? ";		
-		if player consents:    	[sucking]
+		say "     What do you want to do now? Get blown by Xerxes and feed him your load (Y), or wait your turn at filling his ass (N)? ";    
+		if player consents:     [sucking]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Xerxes immediately goes for it, taking your hard length into his mouth and starts bobbing up and down on it. You give a deep moan as he keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Xerxes hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in his throat and shoot spurt after spurt of cum directly into his stomach.";
 			say "     Breathing heavily, you stand still as Xerxes softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to his nearby cot and sit down to watch the rest of your Alpha's coupling with your pet.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Xerxes still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get comfortable.";
-		otherwise:							[fucking Xerxes]
+		otherwise:              [fucking Xerxes]
 			say "     [line break]";
 			say "     Deciding that you'll wait your turn, you move over to Xerxes nearby cot and sit down on its edge, watching your companions mate and jerk off a bit to it. After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     [WaitLineBreak]";
 			say "     You move over to crouch beside them, fondling and stroking both their bodies as you wait for Fang's knot to go down. Some time later, the wolf pulls out of Xerxes hole and sits down on the floor nearby, curling up to lick himself clean. With Xerxes hole still gaping a bit and leaking some of your Alpha's seed, you quickly get on top of him and ram your erection home. Even stretched by Fang's shaft, he's still nicely tight and feeling your strong wolf's cum filling his hole and squishing around your thrusting member is a definite plus. It doesn't take all that long until you feel a familiar tingling in your balls, and with one last thrust, you bottom out inside Xerxes and come, adding your seed to Fang's load.";
 			say "     Phew. Satisfied and just a bit exhausted, you pull out of Xerxes and move over to his cot and lie down on it. The human dog follows you soon after, curling up at the foot of the bed.";
-		if felinoid companion is tamed:		[rivalry messages - Alpha Fang vs Felinoid]
+		if felinoid companion is tamed:   [rivalry messages - Alpha Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Xerxes is 10:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Xerxes a calculating look. Seems almost like he's up to something - taking Xerxes away from Fang and mounting him himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Xerxes a calculating look. Seems almost like he's up to something - mounting Xerxes ass again to make him his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 
-to say XerxesSex8:												[female player and felinoid + Xerxes]
+to say XerxesSex8:                        [female player and felinoid + Xerxes]
 	say "     Accompanied by your felinoid companion, you walk over to the cot you put up here in the library for Xerxes. The large cat sniffs the human-dog's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'You want another round with him? Sure.'";
 	say "     With a quick whistle you summon Xerxes, the dog in the buck-naked body of a young man immediately rushing to you from where he was patrolling through the long rows of bookshelves in the library. He hesitates for a second as he sees the felinoid, then comes continues walking closer, looking happy at getting his mistress's attention. Soon he's standing on all fours next to you. 'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. The felinoid immediately joins you on Xerxes other side, rubbing the side of furred body against your dog's naked skin. The effects of his touch and heady musk take effect almost immediately, with Xerxes breathing becoming quicker as he pants in lust and his cock filling out to dangle beneath his body.";
 	say "     [WaitLineBreak]";
 	say "     Circling around to his backside, the felinoid licks Xerxes asshole with his rough tongue a few times until it's nice and wet with his saliva. Then he moves further up, licking over the muscled back of your human dog and continuing to his neck. Standing over the smaller human, his belly-fur touching Xerxes back, the felinoid now is in the perfect position to fuck him. Lowering his hind legs a bit, the feline rubs his spined cock up and down the human-dog's crack until he soon finds Xerxes tight opening and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
 	say "     [line break]";
 	say "     What would you like to do now? Do you let Xerxes lick your pussy (Y), or will you slide under him to get some action with his human cock (N)? ";
-	if player consents:    	[licked by Xerxes]
+	if player consents:     [licked by Xerxes]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of the felinoid, then over the smooth skin of your human dog, you crouch down, then sit with spread legs in front of Xerxes. Your human dog has a bit of a pleasantly zoned out expression on his face, panting and grunting in lust as he's fucked. Following his mistress's orders is deeply ingrained in him though, so he immediately starts lapping at your pussy when you pull his head to it and say 'Xerxes - lick me!'";
 		say "     Soon breathing heavily from your rising lust at your pet's oral attention, you rapidly move towards orgasm. Before much longer, his wriggling tongue in your vagina drives you over the edge, moaning loudly and holding Xerxes head tight against your crotch where he happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. The felinoid ruts Xerxes with untamed abandon, growling and panting with his deep thrusts.";
 		say "     [WaitLineBreak]";
 		say "     Even though the felinoid and Xerxes are quite virile males, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor, his twitching anal muscles give the large cat fucking him the last nudge towards orgasm too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Xerxes asshole with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Xerxes with him. Stretched out comfortably on the floor, the felinoid holds Xerxes against his warm belly fur with his front paws around him and starts licking his sweaty back. Looks as if he's actively trying to infect him, or at least wants to spread his scent over all of your human pet's body.";
-	otherwise:							[fucked by Xerxes]
+	otherwise:              [fucked by Xerxes]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of the felinoid, then over the smooth skin of your human dog, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes. Your human dog has a bit of a pleasantly zoned out expression on his face, panting and grunting in lust as he's fucked. His hard cock bumps against you often, every time one of the felinoid's thrusts into his ass pushes him down.";
 		say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from the felinoid that pushes Xerxes manhood into you at first and a kind of automatic urge of his body to keep pounding into a tight and warm hole, your pet is soon fucking you enthusiastically and comes out of his blissed out submissive state for the felinoid a bit. Happy at intimate contact with his mistress, he starts licking your face and participates in hot making out as you pull his lips to yours.";
@@ -799,37 +799,37 @@ to say XerxesSex8:												[female player and felinoid + Xerxes]
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "human";
 			now bodyname of child is "human";
-			now skinname of child is "human";		
-	if Fang is in the Grey Abbey Library:			[rivalry messages]
+			now skinname of child is "human";   
+	if Fang is in the Grey Abbey Library:     [rivalry messages]
 		say "     [line break]";
-		if hp of Fang is 1 or hp of Fang is 2:	[Beta Fang]
+		if hp of Fang is 1 or hp of Fang is 2:  [Beta Fang]
 			if hp of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if hp of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		otherwise:															[Alpha Fang]
+		otherwise:                              [Alpha Fang]
 			if hp of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Xerxes a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 
 
-to say XerxesSex9:												[Female Player with Fang & Xerxes]
-	if (hp of Fang is 1 or hp of Fang is 2):		[Beta Fang]
+to say XerxesSex9:                        [Female Player with Fang & Xerxes]
+	if (hp of Fang is 1 or hp of Fang is 2):    [Beta Fang]
 		say "     Walking over to where Fang's leash is currently tied in the library, you kneel down beside your faithful guardian and stroke him between his ears and over his furred flank. Wagging his tail, he licks your hand, happy at getting attention from his Alpha. 'That's a good wolf. Come on, let's have some fun with Xerxes' you say and loosen Fang's leash from around his neck. Accompanied by your black wolf, you walk over to the cot you put up here in the library for your human dog.";
 		say "     With a quick whistle you summon Xerxes, the dog in the buck-naked body of a young man immediately rushing to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand before you and licks your hand in greeting as you stroke his head, then makes a beeline to sniff and be sniffed by Fang. Slipping out of your clothes, you rub a hand over your sensitive pussy lips till they're moist and swollen, then say 'Here boy, I got something for you.' Xerxes eagerly dashes over and sniffs your crotch, then starts lapping out the juices dripping out of your vagina. Quite good with his tongue, this dog turned human teenager.";
 		say "     [WaitLineBreak]";
 		say "     As your human-dog pet licks you, Fang moves up behind him and sniffs Xerxes butt, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and holding Xerxes head tight against your crotch to get his tongue in deeper you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Xerxes human body, front legs around his chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Xerxes ass. Driven by his feral lust, Fang ruts the teenager mercilessly, growling and panting as he thrusts in and out.";
 		say "     Getting oral as you watch Fang mounting your human-looking dog, your arousal quickly mounts and you get close to orgasm, but pull back from Xerxes as you don't just want to cross the finish line just yet. Now having his mouth free, Xerxes gives lustful pants and yips as Fang drives his shaft into him. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner. Stepping behind Fang, you crouch down to watch his canine shaft thrust in and out of the human ass below him and even reach out to fondle his furry balls. Soon they'll deliver their seed inside Xerxes body...";
 		say "     [line break]";
-		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Xerxes (Y), or crawl under him to get your pet's load inside your womb (N)? ";		
-		if player consents:    	[licked by Xerxes]
+		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Xerxes (Y), or crawl under him to get your pet's load inside your womb (N)? ";    
+		if player consents:     [licked by Xerxes]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, put your hands on Xerxes head and pull him against your crotch. The well-trained human dog immediately continues pleasing you, lapping your genitals and poking his tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until his oral attention to your vagina drives you over the edge, moaning loudly and holding Xerxes head tight against your crotch where he happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. Fang ruts Xerxes with untamed abandon, growling and panting with his deep thrusts.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to down and allowing them to separate, you lay back on the cot and get comfortable.";
-		otherwise:							[fucked by Xerxes]
+		otherwise:              [fucked by Xerxes]
 			say "     [line break]";
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time one of Fang's thrusts into his ass pushes him down.";
 			say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
@@ -841,7 +841,7 @@ to say XerxesSex9:												[Female Player with Fang & Xerxes]
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "human";
 				now bodyname of child is "human";
-				now skinname of child is "human";		
+				now skinname of child is "human";   
 		if felinoid companion is tamed:  [rivalry messages - Beta Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Xerxes is 10:
@@ -855,14 +855,14 @@ to say XerxesSex9:												[Female Player with Fang & Xerxes]
 		say "     Seeing your Alpha penetrate Xerxes makes you quite horny as well and you can't wait to get in on the action. Slipping out of your clothes, you rub a hand over your sensitive pussy lips till they're moist and swollen, then say 'Here boy, I got something for you.' and step up to Xerxes. The human dog his exuberantly happy to serve his mistress and immediately starts lapping at your crotch, licking up the juices dripping out of your vagina. Quite good with his tongue, this dog turned human teenager.";
 		say "     Getting oral as you watch your alpha mounting the human-looking dog, your arousal quickly mounts and you get close to orgasm, but pull back from Xerxes as you don't just want to cross the finish line just yet. Now having his mouth free, Xerxes gives lustful pants and yips as Fang drives his shaft into him. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner. Stepping behind Fang, you crouch down to watch his canine shaft thrust in and out of the human ass below him and even reach out to fondle his furry balls. Soon they'll deliver their seed inside Xerxes body...";
 		say "     [line break]";
-		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Xerxes (Y), or crawl under him to get your pet's load inside your womb (N)? ";		
-		if player consents:    	[licked by Xerxes]
+		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Xerxes (Y), or crawl under him to get your pet's load inside your womb (N)? ";    
+		if player consents:     [licked by Xerxes]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you put your hands on Xerxes head and pull him against your crotch. The well-trained human dog immediately continues pleasing you, licking your genitals and poking his tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until his oral attention to your vagina drives you over the edge, moaning loudly and holding Xerxes head tight against your crotch where he happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch the powerful wolf further coupling with your pet in comfort. Fang ruts Xerxes with untamed abandon, growling and panting with his deep thrusts.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Xerxes still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get a bit of rest.";
-		otherwise:							[fucked by Xerxes]
+		otherwise:              [fucked by Xerxes]
 			say "     [line break]";
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time one of Fang's thrusts into his ass pushes him down.";
 			say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my master fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
@@ -874,8 +874,8 @@ to say XerxesSex9:												[Female Player with Fang & Xerxes]
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "human";
 				now bodyname of child is "human";
-				now skinname of child is "human";				
-		if felinoid companion is tamed:		[rivalry messages - Alpha Fang vs Felinoid]
+				now skinname of child is "human";       
+		if felinoid companion is tamed:   [rivalry messages - Alpha Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Xerxes is 10:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Xerxes a calculating look. Seems almost like he's up to something - taking Xerxes away from Fang and mounting him himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
@@ -902,7 +902,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 
 instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 ):
 	move player to Grey Abbey Library;
-	if ( hp of Fang is 1 or hp of Fang is 2 ):				[Beta Fang]
+	if ( hp of Fang is 1 or hp of Fang is 2 ):        [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Xerxes, who looks to the ground, then rolls over and bares his muscled chest and genitals. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Xerxes to lick his muzzle. Looks like the question of hierarchy among your pets just got solved. With them establishing their status to each other right now peacefully, you decide not to interfere.";
 		say "     [WaitLineBreak]";
@@ -910,7 +910,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 		say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Xerxes, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and his body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 		say "     [line break]";
 		say "     You step back out from between the bookshelves and leave the two of them to wait till Fang's knot goes down. With this new development, new opportunities for fun with your pets come to your mind as you walk away...";
-	otherwise if (hp of Fang is 3 or hp of Fang is 4):	[Alpha Fang]
+	otherwise if (hp of Fang is 3 or hp of Fang is 4):  [Alpha Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't in sight any at his usual spots. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Xerxes, who looks to the ground, then rolls over and bares his muscled chest and genitals. Your strong Alpha wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Xerxes to lick his muzzle. Looks like he wants to dominate your pet too - as is his right. Xerxes seems to be readily accepting the submissive role, just like you did in the end. Arousal wells up inside you as you think back to your own first time under a dominating Fang and you can't wait to see your human dog have the same experience.";
 		say "     [WaitLineBreak]";
@@ -945,19 +945,23 @@ to say awesomexerxessex0:
 	say "     Running your hands over his body, your excitement leads you to stroke over his stiffening member.  'I think you deserves a reward for being such a clever boy.'  He gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling his hands across your body";
 	if cocks of player > 0:
 		say ".  Reaching down, he puts a hand on your hard shaft and rubs it in return.  He tries to imitate your motions, but is a little rough at first.  With a little prompting from you, he lightens his touch.  And while he's a little clumsy with his hands, he is very eager and does his best to copy what you're doing.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, your cock is in front of his face and he grins happily.  This is a trick he knows well and he quickly sets to licking and then sucking at his master's cock in return.  Well-trained at this task, he works his mouth and tongue over your pulsing shaft in an effort to please you.  Without prompting, he even ventures to put a hand on your ballsac and gently rubs at it.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is enough to set you off, pumping your hot seed into his waiting mouth before he swallows it down, not releasing your shaft until you're spent.";
 	otherwise if cunts of player > 0:
 		say ".  Reaching down, he puts a hand between your legs and rubs your pussy in return.  He is a little rough at first, but with a little prompting from you, he lightens his touch and does much better.  He listens attentively to your instructions and tries his best to follow them.  And while he's a little clumsy with his hands, he is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, your cunt is in front of his face and he grins happily.  This is a trick he knows well and he quickly sets to licking across your juicy folds and then lapping into your vagina in return.  Well-practiced at this task, he works his tongue into you in an effort to please you.  Without prompting, he even ventures to rub a finger at you clit in an effort to pleasure you.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is enough to set you off, soaking his face in your hot juices for him to lap up.  He makes sure to lick you clean, wanting to get every drop.";
 	otherwise:
 		say ".  Reaching down, he puts a hand between your legs and rubs at your bare crotch with a sad little whine.  He ends up reaching around and grabbing your ass instead and kneading it.  He is a little rough at first, but with a little prompting from you, he lightens his touch and does much better.  And while he's a little clumsy with his hands, he is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, he's left faced with your bare crotch.  After giving it a few soft licks, his tongue trails down and around and he sniffs.  Soon enough, he's nuzzling at your rear and letting his tongue rub against your asshole.  Your moan in response prompts him to continue and he works his wet tongue against your pucker[if anallevel > 1] and eventually wriggling it into your rear[end if].  Without prompting, he even teases a finger against your lubed up hole and pushes it into you in an effort to pleasure you further.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is very arousing and you smear his seed all over his cock so you can lick and suck it clean while getting every drop your virile pet can give.";
+	say "     [WaitLineBreak]";
 	say "     After the fun's over, he then moves around to snuggle up against you.  After some more kisses, he nuzzles his head under your chin so he can rest against you.  You stroke the obedient young man and scritch his head as he starts to fall asleep.  As he's drifting off, he mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping fellow in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Xerxes and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Xerxes by 1;
 
@@ -974,7 +978,7 @@ to say awesomexerxessex1:
 		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your pussy, licking excitedly at it.  He's gotten better at using his hands by this point, stroking and rubbing your sensitive folds, very eager to show you how happy he is with you.  The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while eating you out.";
 		say "     You stroke his head and scritch his ears, telling him what a good boy he is.  Though that's not all you're stroking.  Still having your hand on his cock, you've set aside the book and are now pumping at his throbbing manhood, much to your pet's delight.  You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong series orgasm that soaks his face in your juices by the time you're finally done.  After having finished you off, he bends around, shamelessly taking his own cock in his mouth like a dog licking himself and finishes himself off while you watch to get another warm load of cum to gobble down.";
 		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to enjoy, he stretches out on his back and licks his lips, rubbing a hand to gather up your female cum so he can suck it from his fingers as well.";
-	increase lust of xerxes by 1;
+	increase lust of Xerxes by 1;
 
 
 to say awesomexerxessex2:
@@ -999,9 +1003,6 @@ to say awesomexerxessex2:
 	increase score by 50;
 	increase lust of Xerxes by 1;
 	follow the turnpass rule;
-
-
-Section 6 - Helen
 
 [ hp states of Helen						]
 [   0: hasn't been brought to the bunker yet		]
@@ -1028,7 +1029,7 @@ Section 6 - Helen
 [   6: offer for tattoo						]
 [   7: tattoo received						]
 [ HelenPregnant - timer since impregnation		]
-
+Section 6 - Helen
 
 Chapter 1 - Helen Basics
 
@@ -1044,21 +1045,21 @@ to say helendesc:
 	if lust of helen < 3:
 		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[end if]";
 		if lust of helen is 2:
-			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Xerxes[end link][otherwise]awesomer[end if]";
+			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Helen[end link][otherwise]awesomer[end if]";
 		say ".";
-	otherwise if lust of helen is 3:
-		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan.  Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog.";
+	otherwise if lust of Helen is 3:
+		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan.  Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion.[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[end if]";
 		say "     She has started to act a little differently since you gave her that strange fruit though.  Sometimes, it's as simple as her giving you a more human smile than a canine one when she looks at you.  She seems to listen more attentively and her barks aren't as loud and excited.  Other times, she's trying to pick up her various dog toys with her hands.  You've even spotted her trying to stand on her hind legs as a begging dog would all on her own.  When she notices you watching, she barks happily and waits attentively for the commands of her master.";
 	otherwise:
-		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan.  Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog.";
+		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan.  Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion.[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[end if]";
 		if lust of Helen is 7:
 			say "     Wearing nothing, the only adornment she has is the detailed tattoo she received when visiting Kara.  Starting at her neck is a detailed collar of deep black with red spikes added to it.   Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good girl' written on it in cursive writing.  Also attached to it is a pink leash that hangs down from her neck, draping across her bosom and hanging down her side.  Just a few inches before reaching the handhold, the pink darkens to red before switching into rainbow banding, ending in a purple loop [']resting['] against her left thigh.  This whole is quite detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into her skin.";
 		say "     The unexpected effects of the fruit seem to have largely settled down with her becoming smarter and able to recognize and use her human body.  She still has a thoroughly canine mind and is as loyal and obedient as ever, if not moreso.  While she is able to walk upright a little unsteadily, she still much prefers to go on all fours.  Interspersed between her normal, canine antics, she will sometimes flip through some of the books, mainly children's books.  She seems to find those with colour pictures particularly fascinating.  She has a short vocabulary of words, though usually sticks to more canine sounds, especially when she's having fun or having fun having sex.  Having a canine perspective on the world, she has no human shame and is as sexually open as ever despite her much more human capacity for reason.";
 
 instead of conversing Helen:
-	if lust of helen < 3:
+	if lust of Helen < 3:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her and talk with her.  Or rather to her - as she still only has the mind of a dog and mostly replies with 'Woof?'', 'Woof.' and 'Woof!'";
-	otherwise if lust of helen is 3:
+	otherwise if lust of Helen is 3:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her and talk with her. Or rather to her, though she seems to be listening to you more attentively than she has in the past, almost as if she can understand you.  Certainly her barks of response seem more varied and coincide with points you bring up.";
 	otherwise:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her.  She snuggles up at your feet or rests her head in your lap and listens to you talk.  She doesn't say much and mostly barks in response, but will occasionally use one of her spoken words instead.  Usually, it's 'Master' or 'Friend' or 'Sex', those being her favourites, though she knows at least a couple of dozen and seems to have no problem understanding you.";
@@ -1117,11 +1118,11 @@ Instead of fucking Helen:
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Fang fucking Helen.";
-		if (cunts of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
+		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Helen a tattoo";
 			now sortorder entry is 10;
-			now description entry is "Bring Helen to Kara to get a tattoo.";			
+			now description entry is "Bring Helen to Kara to get a tattoo.";      
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1151,7 +1152,7 @@ Instead of fucking Helen:
 					otherwise if (nam is "Female threesome with Helen & Felinoid"):
 						say "[HelenSex6]";
 					otherwise if (nam is "Female threesome with Helen & Fang"):
-						say "[HelenSex7]";						
+						say "[HelenSex7]";            
 					otherwise if (nam is "Get Helen a tattoo"):
 						say "[awesomerhelensex2]";
 		if lust of Helen is 0:
@@ -1173,46 +1174,46 @@ An everyturn rule:
 
 Chapter 3 - Helen Sex Scenes
 
-to say HelenSex1:												[player licks her]
+to say HelenSex1:                       [player licks her]
 	say "     You step besides the cot you put in here for her and whistle to call Helen. The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand beside you, looking happy at getting her master's attention.";
 	say "     'Good dog' you say as you crouch down beside her, patting her head and stroking over her shoulders. Your hands stray deeper and under her body, cupping her shapely breasts and fondling them before moving on to her moist pussy. Helen gives you a pleased yip, dripping female juices over your fingers as you spread her lips. Patting the cot, you tell her 'Up here, girl' and reward her with some more stroking as she obeys.";
 	say "     [WaitLineBreak]";
 	say "     You push softly against her so she lies on her side, then back, legs spread to expose her ready pussy to you. Smiling, you go on to fondle her, then lean down to run your tongue over her nether lips. She gives you pleased moans and yips, getting louder and louder as you stick your tongue into her and do your best to orally please her. It's not too much longer before she orgasms, body shuddering as her pussy starts squirting femcum. You lick some of it up, rubbing the rest into her skin. Giving your dog a last quick belly-rub and fondle of her breasts, you stand back up and turn back to everyday survival.";
 
-to say HelenSex2:												[she sucks the player]
+to say HelenSex2:                       [she sucks the player]
 	say "     You step besides the cot you put in here for her and whistle to call Helen. The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand beside you, looking happy at getting her master's attention.";
 	say "     'Good dog' you say as you crouch down beside her, patting her head and stroking over her shoulders. Your hands stray deeper and under her body, cupping her shapely breasts and fondling them. Standing back up, you quickly strip off your clothes and hold your erect manhood up for Helen, who gives you a happy yip, then starts licking.";
 	say "     [WaitLineBreak]";
 	say "     She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it. With her eager sucking, it doesn't take much longer till the need to cum rises in your balls.";
 	say "     Moaning, you grab Helen's head and do a few deep thrusts with your hips, your cock deep in her throat as it starts shooting a huge load. Pumping blast after blast directly into her stomach, you hold her head against your crotch, then pull back a moment later to let her get some air. She quickly goes back to work, catching the last spurts of cum with her mouth, then puts her lips around your cockhead, softly sucking as it goes down.";
 
-to say HelenSex3:												[her pussy fucked]
+to say HelenSex3:                       [her pussy fucked]
 	say "     You step besides the cot you put in here for her and whistle to call Helen. The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand beside you, looking happy at getting her master's attention.";
 	say "     'Good dog' you say as you crouch down beside her, patting her head and stroking over her shoulders. Your hands stray deeper and under her body, cupping her shapely breasts and fondling them before moving on to her moist pussy. Helen gives you a pleased yip, dripping female juices over your fingers as you spread her lips. Patting the cot, you tell her 'Up here, girl' and reward her with some more stroking as she obeys.";
 	say "     [WaitLineBreak]";
 	say "     Quickly stripping off your clothes, get on the cot and kneel behind your waiting human dog. Running your hands down her body, you take some time to fondle her breasts, then stroke the soft skin of her hips and ass. Rubbing her pussy with your fingers again, you feel how moist and ready she is, your cock aching in anticipation as you move its tip into position against her.";
 	say "     Stroking Helen's soft skin and hearing her animal-like needful noises, you push forward and slide your manhood into her body. Her pussy is incredibly warm and tight - no wonder, with only Mike having been in there before you. You take a moment to appreciate the tightly gripping feel of her as you bottom out, then start fucking her, with Helen panting and yipping in lust as you slide in and out. She likes getting fucked a lot, with her body producing copious amounts of femcum to lube your coupling.";
 	say "     Helen's moans build up into a crescendo, echoing loudly through the library as she orgasms. You yourself are not far behind and soon give a deep moan as your balls start twitching and send spurt after spurt of cum to fill Helen's womb. With your cock delivering your seed into her, you pull Helen's upper body against your chest, and give her a deep kiss. Then, after your last shot, you pull her down to lie together with you on the cot and enjoy each other's warmth and closeness for a while as you come down from your respective orgasms.";
-	if thirst of Helen is 0:							[not pregnant]
-		now thirst of Helen is 1;						[pregnant]
-		now libido of Helen is 1;						[...by the player]
-		now HelenPregnant is 1;							[pregnancy timer]
+	if thirst of Helen is 0:              [not pregnant]
+		now thirst of Helen is 1;           [pregnant]
+		now libido of Helen is 1;           [...by the player]
+		now HelenPregnant is 1;             [pregnancy timer]
 		
-to say HelenSex4:												[Player fucks the felinoid as he shafts Helen]
+to say HelenSex4:                       [Player fucks the felinoid as he shafts Helen]
 	say "     Accompanied by your felinoid companion, you walk over to the cot you put up here in the library for Helen. The large cat sniffs the human-dog's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'You want another round with her? Sure.'";
 	say "     With a quick whistle you summon Helen, the dog in the buck-naked body of a young woman immediately rushing to you from where she was patrolling through the long rows of bookshelves in the library. She hesitates for a second as she sees the felinoid, then comes continues walking closer, looking happy at getting her master's attention. Soon she's standing on all fours next to you. 'Good dog' you say as you crouch down beside her, patting her head and stroking over her smooth skin and pert breasts. The felinoid immediately joins you on Helen's other side, rubbing the side of furred body against your dog's naked form. The effects of his touch and heady musk take effect almost immediately, with Helen's breathing becoming quicker as she pants in lust and her pussy gets moist and ready for sex.";
 	say "     [WaitLineBreak]";
 	say "     Circling around to her backside, the felinoid licks Helen's crotch with his rough tongue a few times. Then he moves further up, licking over the arched back of your human dog and continuing to her neck. Standing over the smaller human, his belly-fur touching Helen's back, the felinoid now is in the perfect position to fuck her. Lowering his hind legs a bit, the feline rubs his spined cock up and down the human-dog's crotch until he soon finds Helen's swollen pussy lips and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
 	say "     [line break]";
-	say "     What would you like to do now? Do you let Helen blow you and feed her your load (Y), or fuck and come in the felinoid's ass (N)? ";		
-	if player consents:    	[sucked by Helen]
+	say "     What would you like to do now? Do you let Helen blow you and feed her your load (Y), or fuck and come in the felinoid's ass (N)? ";   
+	if player consents:     [sucked by Helen]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, freeing your raging [cock of player] hardon and stroke it a few times before holding it out for Helen. Your obedient dog immediately goes for it, taking your hard length into her mouth and starts bobbing up and down on it. You give a deep moan as she keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Helen's hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
 		say "     Breathing heavily, you stand still as Helen softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to the cot and sit down to watch the rest of your pet's coupling.";
 		say "     [WaitLineBreak]";
 		say "     Even though the felinoid is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her female juices literally dripping on the library floor and creating a small puddle, that gives large cat the last nudge towards too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Helen's womb with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Helen with him. Stretched out comfortably on the floor, the felinoid holds Helen against his warm belly fur with his front paws around her and starts licking her sweaty back. Looks as if he's actively trying to infect her, or at least wants spread his scent over all of your human pet's body.";
-	otherwise:							[fucking the Felinoid]
+	otherwise:              [fucking the Felinoid]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, freeing your raging [cock of player] hardon and grab the bottle of lube Mike gave you. After spreading some of the slick substance on your shaft, you step up behind the two rutting beasts. Running your hands up through the soft fur on his lower back, you grab the felinoid's hips tightly then slam forward, burying your cock to the hilt in his warm, tight cave. Roaring at the sudden anal intrusion, the felinoid stops thrusting into Helen for a moment, looking back over his shoulder with partly bared teeth. That doesn't last long, though - moving in and out of his hole, your shaft stimulates his sensitive prostrate, and soon your big cat is purring in satisfaction and fucking Helen again.";
 		say "     [WaitLineBreak]";
@@ -1220,124 +1221,124 @@ to say HelenSex4:												[Player fucks the felinoid as he shafts Helen]
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch the felinoid's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Helen's cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Helen cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking her sweaty human skin. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
 	if Fang is in the Grey Abbey Library:
 		say "     [line break]";
-		if hp of Fang is 1 or hp of Fang is 2:	[Beta Fang]
+		if hp of Fang is 1 or hp of Fang is 2:  [Beta Fang]
 			if hp of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		otherwise:						[Alpha Fang]
+		otherwise:            [Alpha Fang]
 			if hp of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 
-to say HelenSex5:												[Player fucks Fang as he shafts Helen]
-	if (hp of Fang is 1 or hp of Fang is 2):		[Beta Fang]	
+to say HelenSex5:                       [Player fucks Fang as he shafts Helen]
+	if (hp of Fang is 1 or hp of Fang is 2):    [Beta Fang] 
 		say "     Walking over to where Fang's leash is currently tied in the library, you kneel down beside your faithful guardian and stroke him between his ears and over his furred flank. Wagging his tail, he licks your hand, happy at getting attention from his Alpha. 'That's a good wolf. Come on, let's have some fun with Helen' you say and loosen Fang's leash from around his neck. Accompanied by your black wolf, you walk over to the cot you put up here in the library for your human dog.";
 		say "     With a quick whistle you summon Helen, the dog in the buck-naked body of a young woman immediately rushing to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand before you and licks your hand in greeting as you stroke her head, then makes a beeline to sniff and be sniffed by Fang. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then say 'Here girl, I got something for you.' Helen eagerly dashes over, then licks your balls and cock a bit before taking it into her mouth. Quite good at blowing cock, this dog turned human teenager.";
 		say "     [WaitLineBreak]";
 		say "     As your human-dog pet blows you, Fang moves up behind her and sniffs Helen's pussy, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and as you slide your shaft once again into Helen's throat you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Helen's human body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Helen's pussy. Driven by his feral lust, Fang ruts the teenager mercilessly, growling and panting as he thrusts in and out.";
 		say "     Getting blown as you watch Fang mounting your human-looking dog, the need to cum quickly rises inside you and you have to grab hold of Helen's head to stop from losing it right then and there. Cock resting for a moment in his throat, you take a deep breath, then slowly pull out and take a step back. Now having his mouth free, Helen gives lustful pants and yips as Fang drives his shaft into her. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner.";
 		say "     [line break]";
-		say "     What do you want to do now? Get blown by Helen and feed her your load (Y), or fuck and come in Fang's ass (N)? ";		
-		if player consents:    	[sucking]
+		say "     What do you want to do now? Get blown by Helen and feed her your load (Y), or fuck and come in Fang's ass (N)? ";   
+		if player consents:     [sucking]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Helen immediately goes for it, taking your hard length into her mouth and starts bobbing up and down on it. You give a deep moan as she keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Helen's hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
 			say "     Breathing heavily, you stand still as Helen softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to the cot and sit down to watch the rest of your pet's coupling.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as the feelings from his ass make him shoot his seed all over the library floor. Deep inside him, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to down and allowing them to separate, you lay back on the cot and get comfortable.";
-		otherwise:							[fucking Fang]
+		otherwise:              [fucking Fang]
 			say "     [line break]";
 			say "     Your eyes searching out your goal - the tight hole under Fang's tail - you stroke your hard cock and step closer to Fang's rear end. Running your hands through the fur on his lower back, you grab hold of the wolf's hips and sink your [cock of player] shaft into him with one deep thrust. After giving a loud yelp at the sudden anal invasion, Fang stops for a second and looks back. Seeing it's you, he accepts being fucked as his due to the Alpha, even tightening his anal muscles around you as you move inside him. Then the hot threesome continues, now mirroring the hierarchy in your little pack.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and she shudders as the feelings coursing through her body reach their peak. Her pussy literally drips with female juices, leaving a small puddle beneath her on the library floor. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling her womb and sealing the deal of dominance and submission. That only leaves you, with Fang's anal muscles twitching and gripping your manhood tightly as you thrust in one last time. Filling the wolf's back passage with a huge load of your seed, you once again prove your dominance as Alpha over him.";
 			say "     Resting on Fang's furry back for a moment, you then pull your cock out of his cum-filled hole and stagger over to the nearby cot. Satisfied but exhausted after this session, you sink down on it and lie back to get some rest. Both your submissive pets still stand where they fucked, patiently waiting for Fang's knot to down and allowing them to separate.";
-		if felinoid companion is tamed:			[rivalry message - Beta Fang vs Felinoid]
+		if felinoid companion is tamed:     [rivalry message - Beta Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Helen is 10:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Helen a calculating look. You see him pad closer and give a deep, rumbling growl. Fang growls in response, but slinks back to his post by the door as soon as his knot goes down, driven off by the dominant feline creature. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional glance of interest at the dog-person and glare at the wolf. In your sleepy haze, you almost think the feline's looking at you possessively as well, but that must be your imagination you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Helen a calculating look. You see him pad closer and give a deep, rumbling growl. Fang growls in response, but slinks back to his post by the door as soon as his knot goes down, driven off by the dominant feline creature. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional possessive glance at the dog-person and glare at the wolf for touching what the Felinoid has claimed as his own. In your sleepy haze, you almost think the feline's looking at you possessively as well, but that must be your imagination you tell yourself as you doze off...";
-	otherwise if (hp of Fang is 3 or hp of Fang is 4):		[Alpha Fang]	
+	otherwise if (hp of Fang is 3 or hp of Fang is 4):    [Alpha Fang]  
 		say "     Walking over to Fang, you crouch next to the big wolf and stroke him, rubbing his warm belly fur and his quickly hardening erection. With your Alpha hot and ready to go, you give a quick whistle to summon Helen and the dog in the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand before you and licks your hand in greeting as you stroke her head, then makes a beeline to sniff and be sniffed by Fang. Already knowing what's expected of her, she then turns her backside to the wolf, taking a secure stance and spreads her legs a bit further.";
 		say "     With a satisfied growl Fang moves up behind her and sniffs Helen crotch, then jumps up and mounts her human body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Helen's ready pussy. Driven by his feral lust, Fang ruts the teenager mercilessly, growling and panting as he thrusts in and out.";
 		say "     [WaitLineBreak]";
 		say "     Seeing your Alpha penetrate Helen makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Helen eagerly licks your balls and cock a bit before taking it into her mouth. She delivers an expert blowjob, even deep-throating all of your cock without any problems.";
 		say "     Getting sucked as you watch Fang mounting your human-looking dog, the need to cum quickly rises inside you and you have to grab hold of Helen's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and take a step back. Now having her mouth free, Helen gives lustful pants and yips as Fang drives his shaft into her. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner.";
 		say "     [line break]";
-		say "     What do you want to do now? Get blown by Helen and feed her your cum (Y), or wait your turn at filling her pussy (N)? ";		
-		if player consents:    	[sucking]
+		say "     What do you want to do now? Get blown by Helen and feed her your cum (Y), or wait your turn at filling her pussy (N)? ";    
+		if player consents:     [sucking]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Helen immediately goes for it, taking your hard length into her mouth and starts bobbing up and down on it. You give a deep moan as she keeps going down further and further, deep-throating you expertly. Man - you should really stop by Mike's again and thank him for your well-trained pet. Running your hands through Helen's hair, you speed up face-fucking the teenager as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
 			say "     Breathing heavily, you stand still as Helen softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to her nearby cot and sit down to watch the rest of your Alpha's coupling with your pet.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and she shudders as the feelings coursing through her body reach their peak. Her pussy literally drips with female juices, leaving a small puddle beneath her on the library floor. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling her womb and sealing the deal of dominance and submission.";
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Helen still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get comfortable.";
-		otherwise:							[fucking Helen]
+		otherwise:              [fucking Helen]
 			say "     [line break]";
 			say "     Deciding that you'll wait your turn, you move over to Helen's nearby cot and sit down on its edge, watching your companions mate and jerk off a bit to it. After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and she shudders as the feelings coursing through her body reach their peak. Her pussy literally drips with female juices, leaving a small puddle beneath her on the library floor. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling her womb and sealing the deal of dominance and submission.";
 			say "     [WaitLineBreak]";
 			say "     You move over to crouch beside them, fondling and stroking both their bodies as you wait for Fang's knot to go down. Some time later, the wolf pulls out of Helen's hole and sits down on the floor nearby, curling up to lick himself clean. With Helen's pussy still gaping a bit and dripping femcum and your Alpha's seed, you quickly get on top of her and ram your erection home. Even stretched by Fang's shaft, she's still nicely tight and feeling your strong wolf's cum filling her hole and squishing around your thrusting member is a definite plus. It doesn't take all that long until you feel a familiar tingling in your balls, and with one last thrust, you bottom out inside Helen and come, adding your seed to Fang's load.";
 			say "     Phew. Satisfied and just a bit exhausted, you pull out of Helen and move over to her cot and lie down on it. The human dog follows you soon after, curling up at the foot of the bed.";
-		if felinoid companion is tamed:			[rivalry message - Alpha Fang vs Felinoid]
+		if felinoid companion is tamed:     [rivalry message - Alpha Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Helen is 10:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Helen a calculating look. Seems almost like he's up to something - taking Helen away from Fang and mounting her himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Helen a calculating look. Seems almost like he's up to something - filling Helen again to make her his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 
-to say HelenSex6:												[female player and felinoid + Helen]
+to say HelenSex6:                       [female player and felinoid + Helen]
 	say "     Accompanied by your felinoid companion, you walk over to the cot you put up here in the library for Helen. The large cat sniffs the human-dog's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'You want another round with her? Sure.'";
 	say "     With a quick whistle you summon Helen, the dog in the buck-naked body of a young woman immediately rushing to you from where she was patrolling through the long rows of bookshelves in the library. She hesitates for a second as she sees the felinoid, then comes continues walking closer, looking happy at getting her mistress's attention. Soon she's standing on all fours next to you. 'Good dog' you say as you crouch down beside her, patting her head and stroking over her shoulders and muscular back. The felinoid immediately joins you on Helen's other side, rubbing the side of furred body against your dog's naked skin. The effects of his touch and heady musk take effect almost immediately, with Helen's breathing becoming quicker as she pants in lust and her pussy starts to get wet.";
 	say "     [WaitLineBreak]";
 	say "     Circling around to her backside, the felinoid licks Helen's crotch with his rough tongue a few times until it's nice and wet with his saliva. Then he moves further up, licking over the muscled back of your human dog and continuing to her neck. Standing over the smaller human, his belly-fur touching Helen's back, the felinoid now is in the perfect position to fuck her. Lowering his hind legs a bit, the feline rubs his spined cock up and down the human-dog's crack until he soon finds Helen's tight opening and plunges in. With a satisfied roar, he sinks all of his manhood inside her vagina, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
 	say "     [line break]";
 	say "     What would you like to do now? Do you let Helen lick your pussy (Y), or will you slide under her to 69 as she's fucked (N)? ";
-	if player consents:    	[licked by Helen]
+	if player consents:     [licked by Helen]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of the felinoid, then over the smooth skin of your human dog, you crouch down, then sit with spread legs in front of Helen. Your human dog has a bit of a pleasantly zoned out expression on her face, panting and grunting in lust as she's fucked. Following her mistress's orders is deeply ingrained in her though, so she immediately starts lapping at your pussy when you pull her head to it and say 'Helen - lick me!'";
 		say "     Soon breathing heavily from your rising lust at your pet's oral attention, you rapidly move towards orgasm. Before much longer, her wriggling tongue in your vagina drives you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. The felinoid ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
 		say "     [WaitLineBreak]";
 		say "     Even though the felinoid is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her twitching vaginal muscles give the large cat fucking her the last nudge towards his climax too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Helen insides with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Helen with him. Stretched out comfortably on the floor, the felinoid holds Helen against his warm belly fur with his front paws around her, and starts licking her sweaty back. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
-	otherwise:							[69 with Helen]
+	otherwise:              [69 with Helen]
 		say "     [line break]";
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of the felinoid, then over the smooth skin of your human dog, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Helen. Your human dog has a bit of a pleasantly zoned out expression on her face, panting and grunting in lust as she is being fucked. Her swollen vagina is getting spread by the felinoid's invading member right in front of you, and you just have to raise your head a bit to be able to lick her and your other pet's slick shaft and furry balls.";
 		say "     Reaching down to Helen's shoulders, you pull her down towards your pussy and order her to lick you. As the human dog obediently does so, you respond in kind, teasing her clit with the tip of your tongue. Getting oral pleasure while you watch Helen being fucked up close and personal has an invigorating effect on you, driving your arousal through the roof in short order. Before much longer, her wriggling tongue in your vagina takes you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. The felinoid ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
 		say "     [WaitLineBreak]";
 		say "     Even though the felinoid is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her twitching vaginal muscles give the large cat fucking her the last nudge towards his climax too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Helen insides with his seed.";
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Helen with him. Stretched out comfortably on the floor, the felinoid holds Helen against his warm belly fur with his front paws around her, and starts licking her sweaty back. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
-	if Fang is in the Grey Abbey Library:			[rivalry messages]
+	if Fang is in the Grey Abbey Library:     [rivalry messages]
 		say "     [line break]";
-		if hp of Fang is 1 or hp of Fang is 2:	[Beta Fang]
+		if hp of Fang is 1 or hp of Fang is 2:  [Beta Fang]
 			if hp of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		otherwise:															[Alpha Fang]
+		otherwise:                              [Alpha Fang]
 			if hp of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Helen a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 
 
-to say HelenSex7:												[Female Player with Fang & Helen]
-	if (hp of Fang is 1 or hp of Fang is 2):		[Beta Fang]
+to say HelenSex7:                       [Female Player with Fang & Helen]
+	if (hp of Fang is 1 or hp of Fang is 2):    [Beta Fang]
 		say "     Walking over to where Fang's leash is currently tied in the library, you kneel down beside your faithful guardian and stroke him between his ears and over his furred flank. Wagging his tail, he licks your hand, happy at getting attention from his Alpha. 'That's a good wolf. Come on, let's have some fun with Helen' you say and loosen Fang's leash from around his neck. Accompanied by your black wolf, you walk over to the cot you put up here in the library for your human dog.";
 		say "     With a quick whistle you summon Helen, the dog in the buck-naked body of a young woman immediately rushing to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand before you and licks your hand in greeting as you stroke her head, then makes a beeline to sniff and be sniffed by Fang. Slipping out of your clothes, you rub a hand over your sensitive pussy lips till they're moist and swollen, then say 'Here girl, I got something for you.' Helen eagerly dashes over and sniffs your crotch, then starts lapping out the juices dripping out of your vagina. Quite good with his tongue, this dog turned human teenager.";
 		say "     [WaitLineBreak]";
 		say "     As your human-dog pet licks you, Fang moves up behind her and sniffs Helen butt, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and holding Helen' head tight against your crotch to get her tongue in deeper you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Helen human body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Helen's waiting vagina. Driven by his feral lust, Fang ruts the teenager mercilessly, growling and panting as he thrusts in and out.";
 		say "     Getting oral as you watch Fang mounting your human-looking dog, your arousal quickly mounts and you get close to orgasm, but pull back from Helen as you don't just want to cross the finish line just yet. Now having his mouth free, Helen gives lustful pants and yips as Fang drives his shaft into her. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner. Stepping behind Fang, you crouch down to watch his canine shaft thrust in and out of the human pussy below him and even reach out to fondle his furry balls. Soon they'll deliver their seed inside Helen body...";
 		say "     [line break]";
-		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Helen (Y), or crawl under her for some 69 action (N)? ";		
-		if player consents:    	[licked by Helen]
+		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Helen (Y), or crawl under her for some 69 action (N)? ";    
+		if player consents:     [licked by Helen]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you put your hands on Helen's head and pull her against your crotch. The well-trained human dog immediately continues pleasing you, lapping your genitals and poking her tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until her oral attention to your vagina drives you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. Fang ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as the feelings from her vagina make her come. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to down and allowing them to separate, you lay back on the cot and get comfortable.";
-		otherwise:							[69 with Helen]
+		otherwise:              [69 with Helen]
 			say "     [line break]";
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Helen - where your human dog immediately greets you by licking your pussy, making you moan in lust.";
 			say "     As the human dog laps away at your genitals, you respond in kind, teasing her clit with the tip of your tongue. Getting oral pleasure while you watch Helen being fucked up close and personal has an invigorating effect on you, driving your arousal through the roof in short order. Before much longer, her wriggling tongue in your vagina takes you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. Fang ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
@@ -1358,14 +1359,14 @@ to say HelenSex7:												[Female Player with Fang & Helen]
 		say "     Seeing your Alpha penetrate Helen makes you quite horny as well and you can't wait to get in on the action. Slipping out of your clothes, you rub a hand over your sensitive pussy lips till they're moist and swollen, then say 'Here girl, I got something for you.' and step up to Helen. The human dog his exuberantly happy to serve his mistress and immediately starts lapping at your crotch, licking up the juices dripping out of your vagina. Quite good with his tongue, this dog turned human teenager.";
 		say "     Getting oral as you watch your alpha mounting the human-looking dog, your arousal quickly mounts and you get close to orgasm, but pull back from Helen as you don't just want to cross the finish line just yet. Now having her mouth free, Helen gives lustful pants and yips as Fang drives his shaft into her. Watching the mating beasts, you walk around them slowly taking in the full glory of the powerful wolf on top of his human-looking partner. Stepping behind Fang, you crouch down to watch his canine shaft thrust in and out of the human pussy below him and even reach out to fondle his furry balls. Soon they'll deliver their seed inside Helen body...";
 		say "     [line break]";
-		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Helen (Y), or crawl under her for some 69 action (N)? ";		
-		if player consents:    	[licked by Helen]
+		say "     ...which makes you think of how you yourself want to get off. What should it be? Get back to pussy licking by Helen (Y), or crawl under her for some 69 action (N)? ";    
+		if player consents:     [licked by Helen]
 			say "     [line break]";
 			say "     Walking back around to the front of the rutting couple, you put your hands on Helen's head and pull her against your crotch. The well-trained human dog immediately continues pleasing you, lapping your genitals and poking her tongue between your pussy lips. As wound up as you already were, it doesn't take much longer until her oral attention to your vagina drives you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. Fang ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
 			say "     [WaitLineBreak]";
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as the feelings from her vagina make her come. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Helen still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get a bit of rest.";
-		otherwise:							[69 with Helen]
+		otherwise:              [69 with Helen]
 			say "     [line break]";
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Helen - where your human dog immediately greets you by licking your pussy, making you moan in lust.";
 			say "     As the human dog laps away at your genitals, you respond in kind, teasing her clit with the tip of your tongue. Getting oral pleasure while you watch Helen being fucked up close and personal has an invigorating effect on you, driving your arousal through the roof in short order. Before much longer, her wriggling tongue in your vagina takes you over the edge, moaning loudly and holding Helen's head tight against your crotch where she happily slurps up your femcum. Satisfied at getting off, you move over to the nearby cot to watch your two pets further coupling in comfort. Fang ruts Helen with untamed abandon, growling and panting with his deep thrusts.";
@@ -1373,7 +1374,7 @@ to say HelenSex7:												[Female Player with Fang & Helen]
 			say "     Even though the feral wolf is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her twitching vaginal muscles give Fang the last nudge towards his climax too. A loud howl of satisfaction fills the room as Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as the feelings from her vagina make her come. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 			say "     [line break]";
 			say "     That should strengthen the hierarchy in the pack quite nicely. With both your powerful Alpha and submissive human dog pet still standing where they fucked, patiently waiting for Fang's knot to down and allowing them to separate, you lay back on the cot and get comfortable.";
-		if felinoid companion is tamed:		[rivalry messages - Alpha Fang vs Felinoid]
+		if felinoid companion is tamed:   [rivalry messages - Alpha Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Helen is 10:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Helen a calculating look. Seems almost like he's up to something - taking Helen away from Fang and mounting her himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
@@ -1397,14 +1398,14 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 	otherwise:
 		now hp of Helen is 11;
 	now lastfuck of Helen is turns;
-	if thirst of Helen is 0:							[not pregnant]
-		now thirst of Helen is 1;						[pregnant]
-		now libido of Helen is 3;						[...by the Felinoid]
-		now HelenPregnant is 1;							[pregnancy timer]
+	if thirst of Helen is 0:              [not pregnant]
+		now thirst of Helen is 1;           [pregnant]
+		now libido of Helen is 3;           [...by the Felinoid]
+		now HelenPregnant is 1;             [pregnancy timer]
 
 instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 11) and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
 	move player to Grey Abbey Library;
-	if (hp of Fang is 1 or hp of Fang is 2):						[Beta Fang]
+	if (hp of Fang is 1 or hp of Fang is 2):            [Beta Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like the question of hierarchy among your pets just got solved. With them establishing their status to each other right now peacefully, you decide not to interfere.";
 		say "     [WaitLineBreak]";
@@ -1412,7 +1413,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 		say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as she orgasms, giving lust-filled moans and whimpers. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 		say "     [line break]";
 		say "     You step back out from between the bookshelves and leave the two of them to wait till Fang's knot goes down. With this new development, new opportunities for fun with your pets come to your mind as you walk away...";
-	otherwise if (hp of Fang is 3 or hp of Fang is 4):	[Alpha Fang]
+	otherwise if (hp of Fang is 3 or hp of Fang is 4):  [Alpha Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't in sight any at his usual spots. Wary of unannounced visitors, you look around for signs of a fight or any other indication what happened. Nothing out of the ordinary. Then you hear something from further back in the rows of bookshelves - growling.";
 		say "     Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your strong Alpha wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like he wants to dominate your pet too - as is his right. Helen seems to be readily accepting the submissive role, just like you did in the end. Arousal wells up inside you as you think back to your own first time under a dominating Fang and you can't wait to see your human dog have the same experience.";
 		say "     [WaitLineBreak]";
@@ -1426,10 +1427,10 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 		now hp of Helen is 10;
 	now lastfuck of Helen is turns;
 	now lastfangfucked is turns;
-	if thirst of Helen is 0:							[not pregnant]
-		now thirst of Helen is 1;						[pregnant]
-		now libido of Helen is 2;						[...by Fang]
-		now HelenPregnant is 1;							[pregnancy timer]
+	if thirst of Helen is 0:              [not pregnant]
+		now thirst of Helen is 1;           [pregnant]
+		now libido of Helen is 2;           [...by Fang]
+		now HelenPregnant is 1;             [pregnancy timer]
 	
 
 Chapter 5 - Awesomer Helen
@@ -1451,19 +1452,23 @@ to say awesomerhelensex0:
 	say "     Running your hands over her body, your excitement leads you to caressing her lovely bosom before dipping down to rub her wet cunt.  'I think you deserves a reward for being such a clever girl.'  She gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling her hands across your body";
 	if cocks of player > 0:
 		say ".  Reaching down, she puts a hand on your hard shaft and rubs it in return.  She is a little rough at first, but with a little prompting from you, she lightens her touch and does much better.  She listens attentively to your instructions and tries her best to follow them.  And while she's a little clumsy with her hands, she is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both good and worked up, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, your cock is in front of her face and she grins happily.  This is a trick she knows well and she quickly sets to licking and then sucking at her master's cock in return.  Well-trained at this task, she works her mouth and tongue over your pulsing shaft in an effort to please you.  Without prompting, she even ventures to put a hand on your ballsac and gently rubs at it.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is enough to set you off, pumping your hot seed into her waiting mouth before she swallows it down, not releasing your shaft until you're spent.";
 	otherwise if cunts of player > 0:
 		say ".  Reaching down, she puts a hand between your legs and rubs your pussy in return.  She tries to imitate your motions, but is a little rough at first.  With a little prompting from you, she lightens her touch.  And while she's a little clumsy with her hands, she is very eager and does her best to copy what you're doing.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both wet and dripping between your legs, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, your cunt is in front of her face and he grins happily.  This is a trick she knows well and she quickly sets to licking across your juicy folds and then lapping into your vagina in return.  Well-practiced at this task, she works her tongue into you in an effort to please you.  Without prompting, she even ventures to rub a finger at you clit in an effort to pleasure you.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is enough to set you off, soaking her face in your hot juices for her to lap up.  She makes sure to lick you clean, wanting to get every drop.";
 	otherwise:
 		say ".  Reaching down, she puts a hand between your legs and rubs at your bare crotch with a sad little whine.  She ends up reaching around and grabbing your ass instead and kneading it.  She is a little rough at first, but with a little prompting from you, she lightens her touch and does much better.  And while she's a little clumsy with her hands, she is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you've gotten her wet and dripping between her legs, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, she's left faced with your bare crotch.  After giving it a few soft licks, her tongue trails down and around and she sniffs.  Soon enough, she's nuzzling at your rear and letting her tongue rub against your asshole.  Your moan in response prompts her to continue and she works her wet tongue against your pucker[if anallevel > 1] and eventually wriggling it into your rear[end if].  Without prompting, she even teases a finger against your lubed up hole and pushes it into you in an effort to pleasure you further.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is very arousing and you lick along her thighs to clean up every last drop of your lustful pet's sweet waters.";
+	say "     [WaitLineBreak]";
 	say "     After the fun's over, she then moves around to snuggle up against you.  After some more kisses, she nuzzles her head under your chin so she can rest against you.  You stroke the obedient young woman and scritch her head as she starts to fall asleep.  As she's drifting off, she mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping female in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Helen and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Helen by 1;
 
@@ -1502,10 +1507,10 @@ to say awesomerhelensex2:
 	say "     When you get back, Kara's got her lying back on a table and is finishing up something on her left thigh.  Taking your seat, you watch the hyena's rear sway as she works.  With such a view, you can't help but notice the damp folds of her pussy.  When Kara shifts position briefly, you're gives you a good view of Helen's cunny as well with some cum leaking out of it.  It seems the two took a break to have some more fun while you were out.  Finishing up, she sets aside the needle and smears some lotion across the young woman's side.  'All done, doggy,' she says, running a paw through her lush hair.  'Now be a good girl and show your master your nice tattoo.'";
 	say "     Helen hops up off the table and heads over to you.  She struggles a bit to stand up so she can look herself over in the wall mirror while displaying her new tattoo for you.  Around her neck is a tattoo of a dog collar with red studs and a golden, bone-shaped tag.  The tag even has 'Good girl' drawn onto it in smooth cursive.  Attached to the collar is also a pink leash that hangs down from his neck and across her breast before hanging down her side.  It curves very realistically against her skin all the way down to her hip, leaving the loop [']resting['] against her bare thigh.  The last couple of inches before the loop has the leash darkening to red before being banded with a rainbow of colours to further brighten it up.";
 	say "    The tattoo looks very realistic and the leash seems to drape naturally across your pet's body as if it's really there, like it belongs there.  Surprised and impressed by the level of work that Kara's put into the piece, being far more than you'd expected, you thank her very much for it with a lustful kiss and grope.  Helen, clearly pleased as well, happily turns around in front of the mirror and gingerly touches her rapidly healing skin.  After the two of you properly show your thanks to the talented hyena, leaving her wet, sticky and thoroughly satisfied, you head back with your loyal pet at your right side, her head held high as she walks alongside you so her new tattoo can be on display.";
-	if thirst of Helen is 0:							[not pregnant]
-		now thirst of Helen is 1;						[pregnant]
-		now libido of Helen is 4;						[...by Kara]
-		now HelenPregnant is 1;							[pregnancy timer]
+	if thirst of Helen is 0:              [not pregnant]
+		now thirst of Helen is 1;           [pregnant]
+		now libido of Helen is 4;           [...by Kara]
+		now HelenPregnant is 1;             [pregnancy timer]
 	attempttowait;
 	increase carried of food by 1;
 	increase score by 50;
@@ -1518,9 +1523,9 @@ Section 7 - Endings
 when play ends:
 	if bodyname of player is "Stag":
 		if humanity of player is less than 10:
-			if hp of Mike > 0 and hp of Mike < 99:			[player met and talked with Mike]
+			if hp of Mike > 0 and hp of Mike < 99:      [player met and talked with Mike]
 				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs.[if cocks of player > 0] Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world.[end if][if cunts of player > 0]The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies...";
-			otherwise:								[only had unfriendly contact with Mike]
+			otherwise:                [only had unfriendly contact with Mike]
 				say "As you succumb to the infection, you drift aimlessly through the city for a while, having sex with anyone you come across. After a while, there's a whole herd of willing does and a few stags following you. You lead them to the park to live among the trees, unconcerned about what's going on outside of it.";
 		otherwise:
 			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
@@ -1538,26 +1543,26 @@ when play ends:
 		if humanity of player is less than 10:
 			say "After succumbing to your infection, you forget all about Helen, who faithfully waits for you to come back until she's half-starved. As her hunger finally overwhelms her sense of duty, she moves out into the city and is caught by an alpha husky who incorporates her into his pack. With them, she's pretty well taken care of from then on, as she gets fed pretty well and is often mounted by the pack leader. Over time, she bears several human-shaped puppies for him.";
 			if HelenPregnant > 0:
-				if libido of Helen is 1:						[by the player]
+				if libido of Helen is 1:            [by the player]
 					say "The first of her children - a boy - being yours from before you lost your humanity, quickly develops into a quite bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon tricks the Alpha into an unwinnable fight against a flock of gryphons. With his rival being carried away to the gryphon's flying city to serve as a submissive egg carrier, your son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
-				otherwise if libido of Helen is 2:	[by Fang]
+				otherwise if libido of Helen is 2:  [by Fang]
 					say "The first of her children - a boy - being the offspring of [if (hp of Fang is 1 or hp of Fang is 2)]your pet wolf[otherwise if (hp of Fang is 3 or hp of Fang is 4)]your dominant wolf[end if] Fang from before you lost your humanity, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the ferocious nature inherited from his father and challenges the pack's Alpha husky for dominance. It's a long fight with several quite close calls, but in the end the former packmaster can only limp away, beaten, as Fang's son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
-				otherwise if libido of Helen is 3:	[by the Felinoid]
+				otherwise if libido of Helen is 3:  [by the Felinoid]
 					say "The first of her children - a boy - being the offspring of your felinoid companion from before you lost your humanity, quickly develops into a relatively bright teenager. As he matures, he develops the ability to create a seductive, pheromone-laden smell, almost as strong as his father's was. Growing up in a pack of horny dogs and having absorbed their morals, he makes relentless use of this ability, dominating the whole pack though sexual dependence. Even though the old Alpha is still around, protecting the pack, it's now the felinoid's son who has the power. He fuck them all regularly, males and females, impregnating the female huskies as well as his human-shape half-sisters and mother.";
-				otherwise if libido of Helen is 4:	[by Kara]
+				otherwise if libido of Helen is 4:  [by Kara]
 					say "The first of her children - a boy - being the offspring of Kara, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the submissive nature inherited from his hyena father and submits to being the male bitch of the pack's alpha husky's.  This doesn't stop him from sneaking fucks from the female huskies as well as his human-shape half-sisters and mother whenever he can get away with it.  He is caught at this from time to time, but always seems to get out of the worst of the alpha's wrath by tempting the angry husky to viciously pound his ass instead, which he seems to love most of all.";
 		otherwise:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Helen is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced she's a regular survivor who had a mental break and whom you took care of. You whisper to her to stay calm and that you'll come get her before she gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Helen, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Helen > 0] and share your bed[end if].";
 			if lust of Helen > 3:
 				say "The human dog continues to grow gradually smarter and more at ease with her human body.  She certainly maintains her canine mindset and prefers to live as such, though she can pass for human when needed.  And while you are able to teach her how other people act, she has little interest in doing so when unnecessary.  Having no sense of modesty or sexual hangups, she only becomes a better and better sexual partner who's open to anything and anyone as long as you, as her master, will allow it.";
 			if HelenPregnant > 0:
-				if libido of Helen is 1:						[by the player]
+				if libido of Helen is 1:            [by the player]
 					say "Several months later, she gives birth to your child, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a quite bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts having sex with Alice, his first girlfriend, as well as her female golden retriever - thankfully using the condoms you buy him by the box, so neither of them end up pregnant. His growth spurts eventually slow to human levels and by the time he's a year old, your by then teenage looking son gets into college...";
-				otherwise if libido of Helen is 2:	[by Fang]
+				otherwise if libido of Helen is 2:  [by Fang]
 					say "Several months later, she gives birth to the offspring of [if (hp of Fang is 1 or hp of Fang is 2)]your pet wolf[otherwise if (hp of Fang is 3 or hp of Fang is 4)]your dominant wolf[end if] Fang, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts getting into fights at school over girlfriends - as well as boyfriends, whoever strikes his fancy. Over time, he acquires a few scars that give him a dashing appearance, as well as a small gang of friends and lovers, and you have to buy condoms by the box for their wild parties on most weekends. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid starts working as a car mechanic at a nearby garage...";
-				otherwise if libido of Helen is 3:	[by the Felinoid]
+				otherwise if libido of Helen is 3:  [by the Felinoid]
 					say "Several months later, she gives birth to the offspring of your felinoid companion, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and an inheritance of his father comes through - the ability to create a seductive pheromone-laden musk around himself. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate two teachers, five cheerleaders, one of your neighbours and her two German Shepherd bitches. Thankfully he went through half the football team too over the course of that weekend, otherwise there'd have been even more knocked up teenagers. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets discovered as an actor, owing his good looks and 'charming' personality...";
-				otherwise if libido of Helen is 4:	[by Kara]
+				otherwise if libido of Helen is 4:  [by Kara]
 					say "Several months later, she gives birth to the offspring of Kara, a beautiful human boy.  He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language.  He's a very obedient and peaceful child with quite a bit of artistic talent which he throws into drawing and painting.  And while his taste in girlfriends (and boyfriends, for that matter), tends towards the rougher and meaner kids, he seems to be quite happy with their abuse and rough treatment.  Certainly, you hear plenty of loud and vigorous sex coming from his room over the year it takes him to grow up to full maturity.  He becomes an artist and while he doesn't seem to make that much money at it, he's never short on lovers he can shack up with, being their fucktoy bitch for while living their for free.";
 	if hp of Mike is 100:
 		say "[line break]";
