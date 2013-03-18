@@ -216,17 +216,17 @@ When Play begins:
 
 Section 4 - Mike and Lea
 
-[ hp states of Mike																			]
-[   0: before the first meeting													]
-[   1: met once (peacefully, or talked after fight)			]
-[   2: met twice																				]
-[   3: helped in the fight against the leopardmen				]
-[   4: player got the quest to get a medkit							]
-[   5: Lea got patched up																]
-[   6: player got their own human doggie as reward			]
+[ hp states of Mike							]
+[   0: before the first meeting					]
+[   1: met once (peacefully, or talked after fight)		]
+[   2: met twice								]
+[   3: helped in the fight against the leopardmen		]
+[   4: player got the quest to get a medkit			]
+[   5: Lea got patched up						]
+[   6: player got their own human doggie as reward		]
 [  98: first friendly meeting after after player attack	]
-[  99: hostile after player attack 											]
-[ 100: lost to the leopardman gang 											]
+[  99: hostile after player attack 					]
+[ 100: lost to the leopardman gang 					]
 
 Mike is a man. Mike is in Mike's Office.
 The description of Mike is "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful..";
@@ -479,6 +479,9 @@ Section 5 - Xerxes
 [   2: awesomess message					]
 [   3: awesome upgrade						]
 [   4: awesome sex						]
+[   5: awesome sex continues					]
+[   6: offer for tattoo						]
+[   7: tattoo received						]
 
 
 Chapter 1 - Xerxes Basics
@@ -501,7 +504,10 @@ to say xerxesdesc:
 		say "     He has started to act a little differently since you gave him that strange fruit though.  Sometimes, it's as simple as him giving you a more human smile than a canine one when he looks at you.  He seems to listen more attentively and his barks aren't as loud and excited.  Other times, he's trying to pick up his various dog toys with his hands.  You've even spotted him trying to stand on his hind legs as a begging dog would all on his own.  When he notices you watching, he barks happily and waits attentively for the commands of his master.";
 	otherwise:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan.  His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place.  All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
+		if lust of xerxes is 7:
+			say "     Wearing nothing, the only adornment he has is the detailed tattoo he received when visiting Kara.  Starting at his neck is a detailed collar of deep black with red spikes added to it.   Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good boy' written on it in cursive writing.  Also attached to it is a red leash that hangs down from his neck, crosses one of his smooth pecs and goes back over his left shoulder to run down his back.  Just a few inches before reaching the handhold, the red switches into rainbow banding, ending in a purple loop [']resting['] against his ass.  This whole is quite detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into his skin.";
 		say "     The unexpected effects of the fruit seem to have largely settled down with him becoming smarter and able to recognize and use his human body.  He still has a thoroughly canine mind and is as loyal and obedient as ever, if not moreso.  While he is able to walk upright a little unsteadily, he still much prefers to go on all fours.  Interspersed between his normal, canine antics, he will sometimes flip through some of the books, mainly children's books.  He seems to find those with colour pictures particularly fascinating.  He has a short vocabulary of words, though usually sticks to more canine sounds, especially when he's having fun or having fun having sex.  Having a canine perspective on the world, he has no human shame and is as sexually open as ever despite his much more human capacity for reason.";
+
 
 instead of conversing Xerxes:
 	if lust of Xerxes < 3:
@@ -526,6 +532,8 @@ Instead of fucking Xerxes:
 		say "     Xerxes still seems a bit worn out from your last fun-time. Let him rest a bit more...";
 	otherwise if lust of Xerxes is 3:
 		say "[awesomexerxessex0]";
+	otherwise if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
+		say "[awesomexerxessex1]";
 	otherwise:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
@@ -552,13 +560,11 @@ Instead of fucking Xerxes:
 			now title entry is "Take Xerxes's ass";
 			now sortorder entry is 5;
 			now description entry is "Fill the human dog's ass with your cock.";
-		sort the table of fucking options in sortorder order;
 		if (cocks of player > 0 and Felinoid Companion is tamed and (hp of Xerxes is 11 or hp of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Felinoid";
 			now sortorder entry is 6;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
-		sort the table of fucking options in sortorder order;
 		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
@@ -569,12 +575,16 @@ Instead of fucking Xerxes:
 			now title entry is "Female threesome with Xerxes & Felinoid";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
-		sort the table of fucking options in sortorder order;
 		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Fang fucking Xerxes.";			
+		if (cunts of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Get Xerxes a tattoo";
+			now sortorder entry is 10;
+			now description entry is "Bring Xerxes to Kara to get a tattoo.";			
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -609,11 +619,15 @@ Instead of fucking Xerxes:
 						say "[XerxesSex8]";
 					otherwise if (nam is "Female threesome with Xerxes & Fang"):
 						say "[XerxesSex9]";
+					otherwise if (nam is "Get Xerxes a tattoo"):
+						say "[awesomexerxessex2]";
 		if lust of Xerxes is 0:
 			now lust of Xerxes is 1;
 		otherwise if lust of Xerxes is 1:
 			say "     Looking over the doggishly loyal young man, you can't help but smile, quite pleased with how good a pet he is.  Now, perhaps there's a way to make him even more awesome...";
 			now lust of Xerxes is 2;
+		otherwise if lust of Xerxes is 4:
+			increase lust of Xerxes by 1;
 		now lastfuck of Xerxes is turns;
 
 
@@ -947,6 +961,45 @@ to say awesomexerxessex0:
 	say "     After the fun's over, he then moves around to snuggle up against you.  After some more kisses, he nuzzles his head under your chin so he can rest against you.  You stroke the obedient young man and scritch his head as he starts to fall asleep.  As he's drifting off, he mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping fellow in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Xerxes and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Xerxes by 1;
 
+to say awesomexerxessex1:
+	say "     Wanting to play with your awesome human dog again, you head over to his cot and call out for him.  He gives a happy bark and a cry of 'Master!' before running over to you on all fours, half-hard cock swaying.  He's got another book with, though he's at least holding it in one hand this time.  He hops up onto the cot beside you, drops the book in your lap and wraps his arms around your waist.";
+	say "     You're a little surprised to see that it is an art book focused on tattooing.  It is filled with numerous photos of body art of all kinds, from simple pieces to body-wide works of grand detail.  He stares in fascination at the colourful photos as you flip through several pages of the book while petting the young man.";
+	say "     Seeing how looking at the images has gotten him quite hard, you reach over and stroke his cock with your free hand.  'Do you like those, boy?  Did you want one?'";
+	say "     He barks happily and licks your cheek.  'Xerxes want.'  When you flip to photos of tattooing being done, you tell him that it does hurt and ask him again.  'Xerxes want,' he asserts again.  'Good boy sit,' he adds with a grin, pointing to the person receiving the tattoo.  Unable not to smile at his eagerness, you ruffle his hair and scritch his ears, telling him you'll see about getting him once you find an opportunity to do so[if tattoo parlor is unknown], adding that it may have to wait until you leave the city[end if].  He gives you another rush of licks and kisses.  'Good Master.  Love Master.'";
+	if cocks of player > 0:
+		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your cock, licking and sucking at it.  He's gotten better at using his hands by this point, stroking and rubbing your stiff maleness[if cunts of player > 0] and damp pussy[end if], very eager to show you how happy he is with you.  The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while his mouth sucks you off.";
+		say "     You stroke his head and scritch his ears, telling him what a good boy he is.  Though that's not all you're stroking.  Still having your hand on his cock, you've set aside the book and are now pumping at his throbbing manhood, much to your pet's delight.  You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong orgasm that pumps your [cum load size of player] load into his mouth and down his throat by the time you're finally done.  After having finished you off, he bends around, shamelessly taking his own cock in his mouth like a dog licking himself and finishes himself off while you watch to get another warm load of cum to gobble down.";
+		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to fill his tummy, he stretches out on his back and rubs his [if cock width of player > 30]bloated[otherwise if cock width of player > 20]stuffed[otherwise]full[end if] belly with a happy grin on his handsome face.";
+	otherwise if cunts of player > 0:
+		say "     Once the bout of kisses ends, he nuzzles between your legs and goes eagerly for your pussy, licking excitedly at it.  He's gotten better at using his hands by this point, stroking and rubbing your sensitive folds, very eager to show you how happy he is with you.  The young man listens attentively as you give him instructions to improve his technique, gradually getting better at using those fingers of his to further please you while eating you out.";
+		say "     You stroke his head and scritch his ears, telling him what a good boy he is.  Though that's not all you're stroking.  Still having your hand on his cock, you've set aside the book and are now pumping at his throbbing manhood, much to your pet's delight.  You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong series orgasm that soaks his face in your juices by the time you're finally done.  After having finished you off, he bends around, shamelessly taking his own cock in his mouth like a dog licking himself and finishes himself off while you watch to get another warm load of cum to gobble down.";
+		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to enjoy, he stretches out on his back and licks his lips, rubbing a hand to gather up your female cum so he can suck it from his fingers as well.";
+	increase lust of xerxes by 1;
+
+
+to say awesomexerxessex2:
+	say "     Remembering your promise to your loyal pet, you gather your gear and stand by his cot.  Calling him over, he gives a happy bark and comes up, expecting more playtime with his master, but finding you fully equipped and ready to go out into the city.  He gives a little whine of disappointment, but sits down on his haunches and looks up at you obediently.  After rubbing his head and giving him some scritches, you lean down and ask him if he's ready to get his tattoo.  He grins happily and presses his lips to yours in a passionate kiss as his answer.  Grinning down at him, you pat his head and tell him to come along and to stay right by your side the whole time.";
+	say "     While the naked human does draw some attention from the mutants around, they thankfully leave you alone.  And while the activity and sexy sights of the city's red light district catch your pet's attention, he remains steadfastly by your side.  Your journey to the tattoo parlour is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
+	attempttowait;
+	say "     When you go inside, Kara smiles and greets you before over the newcomer.  'And who do we have here?' she asks you, her hyena mind quickly assessing that Xerxes is your subordinate.";
+	say "     'This here is Xerxes, my pet.  He's been a good boy and so we're here to get him a tattoo,' you tell her before looking down at the object of your conversation.  Xerxes is quite excited, looking all around the room and shifting around with barely contained enthusiasm.  Of everything in the room, Kara draws his attention the most.  Rubbing his head, he settles down momentarily.  'Xerxes, this is my friend Kara.  She's going to give you your tattoo,' you say, patting his side as a signal he can go, he heads over to the hyena on all fours and looks up at her with a happy smile on his handsome face.";
+	attempttowait;
+	say "     'Doggy friend!  Xerxes tattoo,' he says cheerfully, nosing at Kara's crotch and starts licking her sheath.  Already starting to poke out from the sight of the sexy young man, her cock stiffens further and is soon buried in your pet's mouth.  She moans softly and rubs a paw over his head.  'I'm a hyena you silly...  Ngg... friendly fellow, isn't he?' she adds to you and you can't help but smile.";
+	say "      While she's getting an introductory blow job from the dog-minded young man, you fill her in on the basics of the situation.  As you talk, you take a seat and enjoy the show, watching the young man work that throbbing hyena cock with his mouth and putting his increasing manual talents to work as well.  He's clearly very eager to please this new friend who's going to give him his tattoo and does his very best, working her cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls his face forward, locking that knot of hers in his mouth and feeding her load to him while hot juices run down her thighs from him fingering her pussy to orgasm as well.  Once he manages to pop his lips around her knot, he smiles up at her happily.";
+	attempttowait;
+	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' she says with a grin.  Xerxes, not picking up on her teasing, whines softly and his shoulders sag in disappointment.  '...but for such a good doggy, I'm sure I can make the time.'  This perks your pet right back up and he bounds around on all fours before jumping up and kissing her with several quick licks before diving his tongue into her muzzle.  She moans and pats him until he settles down enough to drop back down.  He then hops eagerly into the tattooing chair, his enthusiasm barely contained.";
+	say "     She turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy.  Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet.  'Do you like this one?  I think it's just right for a good boy like you,' she says, scritching his ear.  Xerxes barks happily and nuzzles into the scritches, clearly pleased with her choice.";
+	say "     As she's getting her equipment ready, she starts looking through some inks and sets them aside.  Seeing that it's mostly browns and blacks she's examining, Xerxes barks up with a call of 'colour!'  She arches her brow and asks him what colour he'd like, at which point he seems struck with indecision, pointing at colours at random, regardless of how poorly they'd go together.  You pat his side, tell him to settle down and add that perhaps the professional should pick a few nice colours.  He seems happy with this and settles back down.";
+	say "     You stick around long enough to make sure that he's settled once the tattooing starts.  He whimpers a little at the pain of it, but sits still like the good boy he is, letting the hyena do her work.  Having told you it'd take a while, you head off to scout around a bit and even manage to find a bit of food while out.  You leave some of it for Kara as payment for her work and tuck the rest away in your pack.";
+	attempttowait;
+	say "     When you get back, she's got him lying down on a table and is finishing up something on his left buttcheek.  Taking your seat, you watch the hyena's rear sway as she works.  With such a view, you can't help but notice the cum leaking from her pussy.  It seems the two took a break to have some more fun while you were out.  Finishing up, she sets aside the needle and smears some lotion across his back and bottom.  'All done, doggy,' she says, running a paw through his lush hair.  'Now be a good boy and show your master your nice tattoo.'";
+	say "     Xerxes hops up off the table and heads over to you.  He struggles a bit to stand up so he can look himself over in the wall mirror while displaying his new tattoo for you.  Around his neck is a tattoo of a dog collar with red studs and a golden, bone-shaped tag.  The tag even has 'Good boy' drawn onto it in smooth cursive.  Attached to the collar is also a red leash that hangs down from his neck and goes over his left shoulder.  At your motion, he turns around, showing you that this leash drapes across his back, curving very realistically against his skin all the way down to his rear, leaving the loop [']resting['] against his bare butt cheek.  The last couple of inches before the loop are banded with a rainbow of colours to further brighten it up.";
+	say "    The tattoo looks very realistic and the leash seems to drape naturally across your pet's body as if it's really there, like it belongs there.  Surprised and impressed by the level of work that Kara's put into the piece, being far more than you'd expected, you thank her very much for it with a lustful kiss and grope.  Xerxes, clearly pleased as well, happily turns around in front of the mirror and gingerly touches his rapidly healing skin.  After the two of you properly show your thanks to the talented hyena, leaving her wet, sticky and thoroughly satisfied, you head back with your loyal pet at your right side, his head held high as he trots on all fours beside you.";
+	increase carried of food by 1;
+	increase score by 50;
+	increase lust of Xerxes by 1;
+	follow the turnpass rule;
+
 
 Section 6 - Helen
 
@@ -965,12 +1018,15 @@ Section 6 - Helen
 [   1: pregnant by the player					]
 [   2: pregnant by Fang						]
 [   3: pregnant by the Felinoid				]
+[   4: pregnant by Kara						]
 [ lust of Helen							]
 [   0: hasn't had sex with the player			]
 [   1: had sex with the player once				]
 [   2: awesomeness message					]
 [   3: awesomer upgrade						]
 [   4: awesomer sex						]
+[   6: offer for tattoo						]
+[   7: tattoo received						]
 [ HelenPregnant - timer since impregnation		]
 
 
@@ -986,7 +1042,7 @@ HelenPregnant is a number that varies.
 
 to say helendesc:
 	if lust of helen < 3:
-		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[end if]";
+		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[end if]";
 		if lust of helen is 2:
 			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Xerxes[end link][otherwise]awesomer[end if]";
 		say ".";
@@ -995,6 +1051,8 @@ to say helendesc:
 		say "     She has started to act a little differently since you gave her that strange fruit though.  Sometimes, it's as simple as her giving you a more human smile than a canine one when she looks at you.  She seems to listen more attentively and her barks aren't as loud and excited.  Other times, she's trying to pick up her various dog toys with her hands.  You've even spotted her trying to stand on her hind legs as a begging dog would all on her own.  When she notices you watching, she barks happily and waits attentively for the commands of her master.";
 	otherwise:
 		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan.  Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog.";
+		if lust of Helen is 7:
+			say "     Wearing nothing, the only adornment she has is the detailed tattoo she received when visiting Kara.  Starting at her neck is a detailed collar of deep black with red spikes added to it.   Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good girl' written on it in cursive writing.  Also attached to it is a pink leash that hangs down from her neck, draping across her bosom and hanging down her side.  Just a few inches before reaching the handhold, the pink darkens to red before switching into rainbow banding, ending in a purple loop [']resting['] against her left thigh.  This whole is quite detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into her skin.";
 		say "     The unexpected effects of the fruit seem to have largely settled down with her becoming smarter and able to recognize and use her human body.  She still has a thoroughly canine mind and is as loyal and obedient as ever, if not moreso.  While she is able to walk upright a little unsteadily, she still much prefers to go on all fours.  Interspersed between her normal, canine antics, she will sometimes flip through some of the books, mainly children's books.  She seems to find those with colour pictures particularly fascinating.  She has a short vocabulary of words, though usually sticks to more canine sounds, especially when she's having fun or having fun having sex.  Having a canine perspective on the world, she has no human shame and is as sexually open as ever despite her much more human capacity for reason.";
 
 instead of conversing Helen:
@@ -1020,6 +1078,8 @@ Instead of fucking Helen:
 		say "     Helen still seems a bit worn out from your last fun-time. Let her rest a bit more...";
 	otherwise if lust of Helen is 3:
 		say "[awesomerhelensex0]";
+	otherwise if lust of Helen is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
+		say "[awesomerhelensex1]";
 	otherwise:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
@@ -1037,13 +1097,11 @@ Instead of fucking Helen:
 			now title entry is "Take Helen's pussy";
 			now sortorder entry is 3;
 			now description entry is "Fill the human dog's pussy with your cock.";
-		sort the table of fucking options in sortorder order;
 		if (cocks of player > 0 and Felinoid Companion is tamed and (hp of Helen is 11 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Felinoid";
 			now sortorder entry is 4;
 			now description entry is "Hot sex with the felinoid fucking Helen.";
-		sort the table of fucking options in sortorder order;
 		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (hp of Helen is 10 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
@@ -1054,12 +1112,16 @@ Instead of fucking Helen:
 			now title entry is "Female threesome with Helen & Felinoid";
 			now sortorder entry is 6;
 			now description entry is "Hot sex with the felinoid fucking Helen.";
-		sort the table of fucking options in sortorder order;
 		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (hp of Helen is 10 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Fang fucking Helen.";
+		if (cunts of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Get Helen a tattoo";
+			now sortorder entry is 10;
+			now description entry is "Bring Helen to Kara to get a tattoo.";			
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1090,11 +1152,15 @@ Instead of fucking Helen:
 						say "[HelenSex6]";
 					otherwise if (nam is "Female threesome with Helen & Fang"):
 						say "[HelenSex7]";						
+					otherwise if (nam is "Get Helen a tattoo"):
+						say "[awesomerhelensex2]";
 		if lust of Helen is 0:
 			now lust of Helen is 1;
 		otherwise if lust of Helen is 1:
 			say "     Looking over the doggishly loyal young woman, you can't help but smile, quite pleased with how good a pet she is.  Now, perhaps there's a way to make her even awesomer...";
 			now lust of Helen is 2;
+		otherwise if lust of Xerxes is 4:
+			increase lust of Xerxes by 1;
 		now lastfuck of Helen is turns;
 
 
@@ -1401,6 +1467,52 @@ to say awesomerhelensex0:
 	say "     After the fun's over, she then moves around to snuggle up against you.  After some more kisses, she nuzzles her head under your chin so she can rest against you.  You stroke the obedient young woman and scritch her head as she starts to fall asleep.  As she's drifting off, she mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping female in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Helen and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Helen by 1;
 
+
+to say awesomerhelensex1:
+	say "     Wanting to play with your awesome human dog again, you head over to her cot and call out for her.  She gives a happy bark and a cry of 'Master!' before running over to you on all fours, damp pussy dripping onto the floor.  She's got another book with, though she's at least holding it in one hand this time.  She hops up onto the cot beside you, drops the book in your lap and wraps hers arms around your waist.";
+	say "     You're a little surprised to see that it is an art book focused on tattooing.  It is filled with numerous photos of body art of all kinds, from simple pieces to body-wide works of grand detail.  She stares in fascination at the colourful photos as you flip through several pages of the book while petting the young woman.";
+	say "     Seeing how looking at the images has gotten her quite wet, you reach over and finger her pussy with your free hand.  'Do you like those, girl?  Did you want one?'";
+	say "     She barks happily and licks your cheek.  'Helen want.'  When you flip to photos of tattooing being done, you tell her that it does hurt and ask her again.  'Helen want,' she asserts again.  'Good girl sit,' she adds with a grin, pointing to the person receiving the tattoo.  Unable not to smile at her eagerness, you ruffle her hair and scritch her ears, telling her you'll see about getting her once you find an opportunity to do so[if tattoo parlor is unknown], adding that it may have to wait until you leave the city[end if].  She gives you another rush of licks and kisses.  'Good Master.  Love Master.'";
+	if cocks of player > 0:
+		say "     Once the bout of kisses ends, she nuzzles between your legs and goes eagerly for your cock, licking and sucking at it.  She's gotten better at using her hands by this point, stroking and rubbing your stiff maleness[if cunts of player > 0] and damp pussy[end if], very eager to show you how happy she is with you.  The young woman listens attentively as you give her instructions to improve her technique, gradually getting better at using those fingers of hers to further please you while her mouth sucks you off.";
+		say "     You stroke her head and scritch her ears, telling her what a good girl she is.  Though that's not all you're stroking.  Still having your hand on between her legs, you've set aside the book and are now pumping a pair of fingers into her cunny, much to your pet's delight.  You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong orgasm that pumps your [cum load size of player] load into her mouth and down her throat by the time you're finally done.  After having finished you off, she bends around and shamelessly licks herself like a dog while you watch her tongue herself to orgasm.";
+		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to fill her tummy, she stretches out on her back and rubs her [if cock width of player > 30]bloated[otherwise if cock width of player > 20]stuffed[otherwise]full[end if] belly with a happy grin on her beautiful face.";
+	otherwise if cunts of player > 0:
+		say "     Once the bout of kisses ends, she nuzzles between your legs and goes eagerly for your pussy, licking excitedly at it.  She's gotten better at using her hands by this point, stroking and rubbing your sensitive folds, very eager to show you how happy she is with you.  The young woman listens attentively as you give her instructions to improve her technique, gradually getting better at using those fingers of her to further please you while eating you out.";
+		say "     You stroke her head and scritch her ears, telling her what a good girl she is.  Though that's not all you're stroking.  Still having your hand on between her legs, you've set aside the book and are now pumping a pair of fingers into her cunny, much to your pet's delight.  You decide to take your time, coaxing your loyal pet to go slowly so you can build to a strong series orgasm that soaks his face in your juices by the time you're finally done.  After having finished you off, she bends around and shamelessly licks herself like a dog while you watch her tongue herself to orgasm.";
+		say "     Having gotten your permission to eventually get a tattoo and those tasty treats to enjoy, she stretches out on her back and licks her lips, rubbing a hand to gather up the sticky mix of your female cum and hers so she can suck it from his fingers as well.";
+	increase lust of helen by 1;
+
+
+to say awesomerhelensex2:
+	say "     Remembering your promise to your loyal pet, you gather your gear and stand by her cot.  Calling her over, she gives a happy bark and comes up, expecting more playtime with her master, but finding you fully equipped and ready to go out into the city.  She gives a little whine of disappointment, but sits down on her haunches and looks up at you obediently.  After rubbing her head and giving her some scritches, you lean down and ask her if she's ready to get her tattoo.  She grins happily and presses her lips to yours in a passionate kiss as her answer.  Grinning down at her, you pat her head and tell her to come along and to stay right by your side the whole time.";
+	say "     While the naked human does draw some attention from the mutants around, they thankfully leave you alone.  And while the activity and sexy sights of the city's red light district catch your pet's attention, she remains steadfastly by your side.  Your journey to the tattoo parlour is largely uneventful save for a couple of mutants who offer to trade for your pet, but thankfully accept your refusal and move on.";
+	attempttowait;
+	say "     When you go inside, Kara smiles and greets you before over the newcomer.  'And who do we have here?' she asks you, her hyena mind quickly assessing that Helen is your subordinate.";
+	say "     'This here is Helen, my pet.  She's been a good girl and so we're here to get her a tattoo,' you tell her before looking down at the object of your conversation.  Helen is quite excited, looking all around the room and shifting around with barely contained enthusiasm.  Of everything in the room, Kara draws her attention the most.  Rubbing her head, she settles down momentarily.  'Helen, this is my friend Kara.  She's going to give you your tattoo,' you say, patting her side as a signal she can go.  She heads over to the hyena on all fours and looks up at her with a happy smile on her lovely face.";
+	attempttowait;
+	say "     'Doggy friend!  Helen tattoo,' she says cheerfully, nosing at Kara's crotch and starts licking her sheath.  Already starting to poke out from the sight of the sexy young woman, her cock stiffens further and is soon buried in your pet's mouth.  She moans softly and rubs a paw over her head.  'I'm a hyena you silly...  Ngg... friendly girl, isn't he?' she adds to you and you can't help but smile.";
+	say "      While she's getting an introductory blow job from the dog-minded young woman, you fill her in on the basics of the situation.  As you talk, you take a seat and enjoy the show, watching the lovely woman work that throbbing hyena cock with her mouth and putting her increasing manual talents to work as well.  She's clearly very eager to please this new friend who's going to give her a tattoo and does her very best, working Kara's cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls Helen's face forward, locking that knot of hers in her mouth and feeding her load to the eager woman while hot juices run down her thighs from her fingering her pussy to orgasm as well.  Once she manages to pop her lips around her knot, she smiles up at the hyena happily.";
+	attempttowait;
+	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' Kara says with a grin.  Helen, not picking up on her teasing, whines softly and her shoulders sag in disappointment.  '...but for such a good doggy, I'm sure I can make the time.'  This perks your pet right back up and she bounds around on all fours before jumping up and kissing the hyena with several quick licks before diving her tongue into her muzzle.  She moans and pats her until she settles down enough to drop back down.  She then hops eagerly into the tattooing chair, her enthusiasm barely contained.";
+	say "     The hyena turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy.  Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet.  'Do you like this one?  I think it's just right for a good girl like you,' she says, scritching her ear.  Helen barks happily and nuzzles into the scritches, clearly pleased with her choice.";
+	say "     As the hyena is getting her equipment ready, she starts looking through some inks and sets them aside.  Seeing that it's mostly browns and blacks she's examining, Helen barks up with a call of 'colour!'  Kara arches her brow and asks what colour she'd like, at which point she seems struck with indecision, pointing at colours at random, regardless of how poorly they'd go together.  You pat her side, tell her to settle down and add that perhaps the professional should pick a few nice colours.  She seems happy with this and settles back down.";
+	say "     You stick around long enough to make sure that she's settled once the tattooing starts.  She whimpers a little at the pain of it, but sits still like the good girl she is, letting the hyena do her work.  Having told you it'd take a while, you head off to scout around a bit and even manage to find a bit of food while out.  You leave some of it for Kara as payment for her work and tuck the rest away in your pack.";
+	attempttowait;
+	say "     When you get back, Kara's got her lying back on a table and is finishing up something on her left thigh.  Taking your seat, you watch the hyena's rear sway as she works.  With such a view, you can't help but notice the damp folds of her pussy.  When Kara shifts position briefly, you're gives you a good view of Helen's cunny as well with some cum leaking out of it.  It seems the two took a break to have some more fun while you were out.  Finishing up, she sets aside the needle and smears some lotion across the young woman's side.  'All done, doggy,' she says, running a paw through her lush hair.  'Now be a good girl and show your master your nice tattoo.'";
+	say "     Helen hops up off the table and heads over to you.  She struggles a bit to stand up so she can look herself over in the wall mirror while displaying her new tattoo for you.  Around her neck is a tattoo of a dog collar with red studs and a golden, bone-shaped tag.  The tag even has 'Good girl' drawn onto it in smooth cursive.  Attached to the collar is also a pink leash that hangs down from his neck and across her breast before hanging down her side.  It curves very realistically against her skin all the way down to her hip, leaving the loop [']resting['] against her bare thigh.  The last couple of inches before the loop has the leash darkening to red before being banded with a rainbow of colours to further brighten it up.";
+	say "    The tattoo looks very realistic and the leash seems to drape naturally across your pet's body as if it's really there, like it belongs there.  Surprised and impressed by the level of work that Kara's put into the piece, being far more than you'd expected, you thank her very much for it with a lustful kiss and grope.  Helen, clearly pleased as well, happily turns around in front of the mirror and gingerly touches her rapidly healing skin.  After the two of you properly show your thanks to the talented hyena, leaving her wet, sticky and thoroughly satisfied, you head back with your loyal pet at your right side, her head held high as she walks alongside you so her new tattoo can be on display.";
+	if thirst of Helen is 0:							[not pregnant]
+		now thirst of Helen is 1;						[pregnant]
+		now libido of Helen is 4;						[...by Kara]
+		now HelenPregnant is 1;							[pregnancy timer]
+	attempttowait;
+	increase carried of food by 1;
+	increase score by 50;
+	increase lust of Xerxes by 1;
+	follow the turnpass rule;
+
+
 Section 7 - Endings
 
 when play ends:
@@ -1432,6 +1544,8 @@ when play ends:
 					say "The first of her children - a boy - being the offspring of [if (hp of Fang is 1 or hp of Fang is 2)]your pet wolf[otherwise if (hp of Fang is 3 or hp of Fang is 4)]your dominant wolf[end if] Fang from before you lost your humanity, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the ferocious nature inherited from his father and challenges the pack's Alpha husky for dominance. It's a long fight with several quite close calls, but in the end the former packmaster can only limp away, beaten, as Fang's son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
 				otherwise if libido of Helen is 3:	[by the Felinoid]
 					say "The first of her children - a boy - being the offspring of your felinoid companion from before you lost your humanity, quickly develops into a relatively bright teenager. As he matures, he develops the ability to create a seductive, pheromone-laden smell, almost as strong as his father's was. Growing up in a pack of horny dogs and having absorbed their morals, he makes relentless use of this ability, dominating the whole pack though sexual dependence. Even though the old Alpha is still around, protecting the pack, it's now the felinoid's son who has the power. He fuck them all regularly, males and females, impregnating the female huskies as well as his human-shape half-sisters and mother.";
+				otherwise if libido of Helen is 4:	[by Kara]
+					say "The first of her children - a boy - being the offspring of Kara, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the submissive nature inherited from his hyena father and submits to being the male bitch of the pack's alpha husky's.  This doesn't stop him from sneaking fucks from the female huskies as well as his human-shape half-sisters and mother whenever he can get away with it.  He is caught at this from time to time, but always seems to get out of the worst of the alpha's wrath by tempting the angry husky to viciously pound his ass instead, which he seems to love most of all.";
 		otherwise:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Helen is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced she's a regular survivor who had a mental break and whom you took care of. You whisper to her to stay calm and that you'll come get her before she gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Helen, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Helen > 0] and share your bed[end if].";
 			if lust of Helen > 3:
@@ -1443,6 +1557,8 @@ when play ends:
 					say "Several months later, she gives birth to the offspring of [if (hp of Fang is 1 or hp of Fang is 2)]your pet wolf[otherwise if (hp of Fang is 3 or hp of Fang is 4)]your dominant wolf[end if] Fang, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts getting into fights at school over girlfriends - as well as boyfriends, whoever strikes his fancy. Over time, he acquires a few scars that give him a dashing appearance, as well as a small gang of friends and lovers, and you have to buy condoms by the box for their wild parties on most weekends. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid starts working as a car mechanic at a nearby garage...";
 				otherwise if libido of Helen is 3:	[by the Felinoid]
 					say "Several months later, she gives birth to the offspring of your felinoid companion, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and an inheritance of his father comes through - the ability to create a seductive pheromone-laden musk around himself. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate two teachers, five cheerleaders, one of your neighbours and her two German Shepherd bitches. Thankfully he went through half the football team too over the course of that weekend, otherwise there'd have been even more knocked up teenagers. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets discovered as an actor, owing his good looks and 'charming' personality...";
+				otherwise if libido of Helen is 4:	[by Kara]
+					say "Several months later, she gives birth to the offspring of Kara, a beautiful human boy.  He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language.  He's a very obedient and peaceful child with quite a bit of artistic talent which he throws into drawing and painting.  And while his taste in girlfriends (and boyfriends, for that matter), tends towards the rougher and meaner kids, he seems to be quite happy with their abuse and rough treatment.  Certainly, you hear plenty of loud and vigorous sex coming from his room over the year it takes him to grow up to full maturity.  He becomes an artist and while he doesn't seem to make that much money at it, he's never short on lovers he can shack up with, being their fucktoy bitch for while living their for free.";
 	if hp of Mike is 100:
 		say "[line break]";
 		say "You don't see Mike or Lea ever again, as they were taken to the leopardmen's lair to serve as the feline's playtoys. With them face-fucking Mike all the time, forcing him to swallow their cum, it doesn't take very long till he becomes a leopardess in heat. Him and Lea are the center of many a gang-bang, during which Mike is knocked up several times with litters of leopard kits. After his and Lea's daughter is born and grows to sexual maturity, she joins the lineup of submissive breeding holes for the gang.";
