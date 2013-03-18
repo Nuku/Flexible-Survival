@@ -1,5 +1,5 @@
-Version 4 of Stag by Wahn begins here.
-[Version 4 - Female Player + Fang/Felinoid + Helen threesomes]
+Version 5 of Stag by Wahn begins here.
+[Version 5 - Awesome Helen/Xerxes]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -441,7 +441,7 @@ instead of conversing Mike:
 				now hp of Helen is 1;
 			now hp of Mike is 6;
 		otherwise:
-			say "     Mike shrugs as you decline, says 'As you wish. But the offer stands, so just say so if you change your mind.'"; 
+			say "     Mike shrugs as you decline, then says 'As you wish. But the offer stands, so just say so if you change your mind.'"; 
 	otherwise if hp of Mike is 6:
 		say "     Mike gives you a friendly nod, then says 'Hello again. How's it going with your new pet? No problems, I hope?' You chat a bit about caring for your human shape dog and survival in the city in general.";
 	otherwise:
@@ -467,18 +467,18 @@ instead of conversing Lea:
 
 Section 5 - Xerxes
 
-[ hp states of Xerxes						]
-[   0: hasn't been brought to the bunker yet		]
-[   1: no sex with either Fang or the Felinoid		]
-[  10: got fucked only by Fang				]
-[  11: got fucked only by the Felinoid			]
-[  12: got fucked by both Fang and the Felinoid		]
-[ lust of Xerxes							]
-[   0: hasn't had sex with the player			]
-[   1: had sex with the player once				]
-[   2: awesomess message					]
-[   3: awesome upgrade						]
-[   4: awesome sex						]
+[ hp states of Xerxes                              ]
+[   0: hasn't been brought to the bunker yet       ]
+[   1: no sex with either Fang or the Felinoid     ]
+[  10: got fucked only by Fang                     ]
+[  11: got fucked only by the Felinoid             ]
+[  12: got fucked by both Fang and the Felinoid    ]
+[ lust of Xerxes                                   ]
+[   0: hasn't had sex with the player              ]
+[   1: had sex with the player once                ]
+[   2: awesomess message                           ]
+[   3: awesome upgrade                             ]
+[   4: awesome sex                                 ]
 
 
 Chapter 1 - Xerxes Basics
@@ -491,12 +491,12 @@ lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
 hp of Xerxes is usually 0.
 
 to say xerxesdesc:
-	if lust of xerxes < 3:
+	if lust of Xerxes < 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  He has short black hair and a well-developed physique, with muscular arms and legs.  All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.  He watches you attentively, eager to follow the commands of his master";
-		if lust of xerxes is 2:
+		if lust of Xerxes is 2:
 			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of Awesome fruit > 0][link]awesome[as]give Awesome fruit to Xerxes[end link][otherwise]awesome[end if]";
 		say ".";
-	otherwise if lust of xerxes is 3:
+	otherwise if lust of Xerxes is 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan.  His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place.  All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
 		say "     He has started to act a little differently since you gave him that strange fruit though.  Sometimes, it's as simple as him giving you a more human smile than a canine one when he looks at you.  He seems to listen more attentively and his barks aren't as loud and excited.  Other times, he's trying to pick up his various dog toys with his hands.  You've even spotted him trying to stand on his hind legs as a begging dog would all on his own.  When he notices you watching, he barks happily and waits attentively for the commands of his master.";
 	otherwise:
@@ -931,47 +931,51 @@ to say awesomexerxessex0:
 	say "     Running your hands over his body, your excitement leads you to stroke over his stiffening member.  'I think you deserves a reward for being such a clever boy.'  He gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling his hands across your body";
 	if cocks of player > 0:
 		say ".  Reaching down, he puts a hand on your hard shaft and rubs it in return.  He tries to imitate your motions, but is a little rough at first.  With a little prompting from you, he lightens his touch.  And while he's a little clumsy with his hands, he is very eager and does his best to copy what you're doing.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, your cock is in front of his face and he grins happily.  This is a trick he knows well and he quickly sets to licking and then sucking at his master's cock in return.  Well-trained at this task, he works his mouth and tongue over your pulsing shaft in an effort to please you.  Without prompting, he even ventures to put a hand on your ballsac and gently rubs at it.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is enough to set you off, pumping your hot seed into his waiting mouth before he swallows it down, not releasing your shaft until you're spent.";
 	otherwise if cunts of player > 0:
 		say ".  Reaching down, he puts a hand between your legs and rubs your pussy in return.  He is a little rough at first, but with a little prompting from you, he lightens his touch and does much better.  He listens attentively to your instructions and tries his best to follow them.  And while he's a little clumsy with his hands, he is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, your cunt is in front of his face and he grins happily.  This is a trick he knows well and he quickly sets to licking across your juicy folds and then lapping into your vagina in return.  Well-practiced at this task, he works his tongue into you in an effort to please you.  Without prompting, he even ventures to rub a finger at you clit in an effort to pleasure you.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is enough to set you off, soaking his face in your hot juices for him to lap up.  He makes sure to lick you clean, wanting to get every drop.";
 	otherwise:
 		say ".  Reaching down, he puts a hand between your legs and rubs at your bare crotch with a sad little whine.  He ends up reaching around and grabbing your ass instead and kneading it.  He is a little rough at first, but with a little prompting from you, he lightens his touch and does much better.  And while he's a little clumsy with his hands, he is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both throbbing hard and dribbling precum, you get the young man to lie down and you move alongside him.  Now that you're in a position to get a good look at it, you can see that his penis has indeed grown, gaining about another inch in length and his balls are bigger as well.  His shaft is quite lovely, smooth and perfectly proportioned.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from the base of his shaft up its twitching length before swirling it over his glans.  You then slowly lower your lips down around the hot manmeat so you can suck your clever, loyal pet off.";
 		say "     With you laying beside him, he's left faced with your bare crotch.  After giving it a few soft licks, his tongue trails down and around and he sniffs.  Soon enough, he's nuzzling at your rear and letting his tongue rub against your asshole.  Your moan in response prompts him to continue and he works his wet tongue against your pucker[if anallevel > 1] and eventually wriggling it into your rear[end if].  Without prompting, he even teases a finger against your lubed up hole and pushes it into you in an effort to pleasure you further.";
 		say "     With all the excitement, the young man can't hold out very long and is soon pumping his sticky load across your tongue.  Even the taste of it seems better, rich and flavourful without any harshness to it.  Having that delicious load fill your mouth is very arousing and you smear his seed all over his cock so you can lick and suck it clean while getting every drop your virile pet can give.";
+	say "     [WaitLineBreak]";
 	say "     After the fun's over, he then moves around to snuggle up against you.  After some more kisses, he nuzzles his head under your chin so he can rest against you.  You stroke the obedient young man and scritch his head as he starts to fall asleep.  As he's drifting off, he mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping fellow in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Xerxes and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Xerxes by 1;
 
 
 Section 6 - Helen
 
-[ hp states of Helen						]
-[   0: hasn't been brought to the bunker yet		]
-[   1: no sex with either Fang or the Felinoid		]
-[  10: got fucked only by Fang				]
-[  11: got fucked only by the Felinoid			]
-[  12: got fucked by both Fang and the Felinoid		]
-[ thirst states of Helen					]
-[   0: Starting State - not pregnant			]
-[   1: invisibly pregnant by the player			]
-[   2: visibly pregnant by the player			]
-[	libido states of Helen					]
-[   0: Starting State - not pregnant			]
-[   1: pregnant by the player					]
-[   2: pregnant by Fang						]
-[   3: pregnant by the Felinoid				]
-[ lust of Helen							]
-[   0: hasn't had sex with the player			]
-[   1: had sex with the player once				]
-[   2: awesomeness message					]
-[   3: awesomer upgrade						]
-[   4: awesomer sex						]
-[ HelenPregnant - timer since impregnation		]
+[ hp states of Helen                                  ]
+[   0: hasn't been brought to the bunker yet          ]
+[   1: no sex with either Fang or the Felinoid        ]
+[  10: got fucked only by Fang                        ]
+[  11: got fucked only by the Felinoid                ]
+[  12: got fucked by both Fang and the Felinoid       ]
+[ thirst states of Helen                              ]
+[   0: Starting State - not pregnant                  ]
+[   1: invisibly pregnant by the player               ]
+[   2: visibly pregnant by the player                 ]
+[ libido states of Helen                              ]
+[   0: Starting State - not pregnant                  ]
+[   1: pregnant by the player                         ]
+[   2: pregnant by Fang                               ]
+[   3: pregnant by the Felinoid                       ]
+[ lust of Helen                                       ]
+[   0: hasn't had sex with the player                 ]
+[   1: had sex with the player once                   ]
+[   2: awesomeness message                            ]
+[   3: awesomer upgrade                               ]
+[   4: awesomer sex                                   ]
+[ HelenPregnant - timer since impregnation            ]
 
 
 Chapter 1 - Helen Basics
@@ -985,22 +989,22 @@ hp of Helen is usually 0.
 HelenPregnant is a number that varies.
 
 to say helendesc:
-	if lust of helen < 3:
-		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[end if]";
-		if lust of helen is 2:
-			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Xerxes[end link][otherwise]awesomer[end if]";
+	if lust of Helen < 3:
+		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master[if thirst of Helen is 2 and libido of Helen is 1]. Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]. Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]. Her belly shows a slight bulge, the result of her mating with your felinoid companion[end if]";
+		if lust of Helen is 2:
+			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Helen[end link][otherwise]awesomer[end if]";
 		say ".";
-	otherwise if lust of helen is 3:
-		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan.  Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog.";
+	otherwise if lust of Helen is 3:
+		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan.  Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion.[end if]";
 		say "     She has started to act a little differently since you gave her that strange fruit though.  Sometimes, it's as simple as her giving you a more human smile than a canine one when she looks at you.  She seems to listen more attentively and her barks aren't as loud and excited.  Other times, she's trying to pick up her various dog toys with her hands.  You've even spotted her trying to stand on her hind legs as a begging dog would all on her own.  When she notices you watching, she barks happily and waits attentively for the commands of her master.";
 	otherwise:
-		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan.  Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog.";
+		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan.  Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion.[end if]";
 		say "     The unexpected effects of the fruit seem to have largely settled down with her becoming smarter and able to recognize and use her human body.  She still has a thoroughly canine mind and is as loyal and obedient as ever, if not moreso.  While she is able to walk upright a little unsteadily, she still much prefers to go on all fours.  Interspersed between her normal, canine antics, she will sometimes flip through some of the books, mainly children's books.  She seems to find those with colour pictures particularly fascinating.  She has a short vocabulary of words, though usually sticks to more canine sounds, especially when she's having fun or having fun having sex.  Having a canine perspective on the world, she has no human shame and is as sexually open as ever despite her much more human capacity for reason.";
 
 instead of conversing Helen:
-	if lust of helen < 3:
+	if lust of Helen < 3:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her and talk with her.  Or rather to her - as she still only has the mind of a dog and mostly replies with 'Woof?'', 'Woof.' and 'Woof!'";
-	otherwise if lust of helen is 3:
+	otherwise if lust of Helen is 3:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her and talk with her. Or rather to her, though she seems to be listening to you more attentively than she has in the past, almost as if she can understand you.  Certainly her barks of response seem more varied and coincide with points you bring up.";
 	otherwise:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her.  She snuggles up at your feet or rests her head in your lap and listens to you talk.  She doesn't say much and mostly barks in response, but will occasionally use one of her spoken words instead.  Usually, it's 'Master' or 'Friend' or 'Sex', those being her favourites, though she knows at least a couple of dozen and seems to have no problem understanding you.";
@@ -1385,19 +1389,23 @@ to say awesomerhelensex0:
 	say "     Running your hands over her body, your excitement leads you to caressing her lovely bosom before dipping down to rub her wet cunt.  'I think you deserves a reward for being such a clever girl.'  She gives a happy bark and kisses you, giving you a mix of slobbery doggy licks and human kisses while fumbling her hands across your body";
 	if cocks of player > 0:
 		say ".  Reaching down, she puts a hand on your hard shaft and rubs it in return.  She is a little rough at first, but with a little prompting from you, she lightens her touch and does much better.  She listens attentively to your instructions and tries her best to follow them.  And while she's a little clumsy with her hands, she is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both good and worked up, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, your cock is in front of her face and she grins happily.  This is a trick she knows well and she quickly sets to licking and then sucking at her master's cock in return.  Well-trained at this task, she works her mouth and tongue over your pulsing shaft in an effort to please you.  Without prompting, she even ventures to put a hand on your ballsac and gently rubs at it.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is enough to set you off, pumping your hot seed into her waiting mouth before she swallows it down, not releasing your shaft until you're spent.";
 	otherwise if cunts of player > 0:
 		say ".  Reaching down, she puts a hand between your legs and rubs your pussy in return.  She tries to imitate your motions, but is a little rough at first.  With a little prompting from you, she lightens her touch.  And while she's a little clumsy with her hands, she is very eager and does her best to copy what you're doing.";
+		say "     [WaitLineBreak]";
 		say "     Once you're both wet and dripping between your legs, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, your cunt is in front of her face and he grins happily.  This is a trick she knows well and she quickly sets to licking across your juicy folds and then lapping into your vagina in return.  Well-practiced at this task, she works her tongue into you in an effort to please you.  Without prompting, she even ventures to rub a finger at you clit in an effort to pleasure you.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is enough to set you off, soaking her face in your hot juices for her to lap up.  She makes sure to lick you clean, wanting to get every drop.";
 	otherwise:
 		say ".  Reaching down, she puts a hand between your legs and rubs at your bare crotch with a sad little whine.  She ends up reaching around and grabbing your ass instead and kneading it.  She is a little rough at first, but with a little prompting from you, she lightens her touch and does much better.  And while she's a little clumsy with her hands, she is very eager to please you.";
+		say "     [WaitLineBreak]";
 		say "     Once you've gotten her wet and dripping between her legs, you get the young woman to lie down and you move alongside her.  Now that you're in a position to get a good look at it, you can see that her pussy has indeed grown larger and puffier, with a very enticing scent.  Her wet folds are very lovely and inviting.  It is a very delectable sight and you are eager to enjoy it.  You run your tongue slowly from bottom to top before swirling it over her clit.  You then slowly lower your lips against her netherlips and dive your tongue in so you can eat out your clever, loyal pet.";
 		say "     With you laying beside her, she's left faced with your bare crotch.  After giving it a few soft licks, her tongue trails down and around and she sniffs.  Soon enough, she's nuzzling at your rear and letting her tongue rub against your asshole.  Your moan in response prompts her to continue and she works her wet tongue against your pucker[if anallevel > 1] and eventually wriggling it into your rear[end if].  Without prompting, she even teases a finger against your lubed up hole and pushes it into you in an effort to pleasure you further.";
 		say "     With all the excitement, the young woman is quickly pushed to orgasm and her pussy is soon gushing juices across your tongue.  Even the taste of it seems better, rich and flavourful with a pleasant sweetness to it.  Lapping up that delicious honey is very arousing and you lick along her thighs to clean up every last drop of your lustful pet's sweet waters.";
+	say "     [WaitLineBreak]";
 	say "     After the fun's over, she then moves around to snuggle up against you.  After some more kisses, she nuzzles her head under your chin so she can rest against you.  You stroke the obedient young woman and scritch her head as she starts to fall asleep.  As she's drifting off, she mumbles 'Master friend...' softly, starting you fully awake again.  You are left staring down at the sleeping female in your arms, your mind reeling with confused thoughts.  With people all around turning in animals and mindless creatures, here is a dog who's only becoming more and more human.  After laying there for a long time and getting neither answers nor rest, you slowly disentangle yourself from Helen and, after putting a blanket over your sleeping pet, you head off to try and deal with a world that seems even more topsy-turvy than before.";
 	increase lust of Helen by 1;
 
