@@ -171,6 +171,7 @@ The player has a number called Cunt width.
 The player has a number called armor.
 The player has a number called capacity.
 A person has a number called libido.
+A person has a text called linkaction.
 
 The player has a text called skin. Skin is usually "smooth";
 The player has a text called Cock. Cock is usually "";
@@ -4513,13 +4514,12 @@ understand "linkaction [person]" as linkactioning.
 carry out linkactioning:
 	linkaction noun;
 
+linkcheck is a person that varies.
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck is greater than 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of player], [link]dismiss[as]dismiss[end link][otherwise], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
+
 to linkaction (x - Person):
-	if the number of entries in the conversation of x is greater than 0:
-		say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
-	otherwise if x is companion of player:
-		say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
-	otherwise:
-		say "Possible Action: [link]smell[as]smell [x][end link][line break]";
+	now linkcheck is x;
+	say "[linkaction of x]";
 
 [NOTE: For characters w/different action options, use a 'instead of linkactioning <name>' clause.]
 
