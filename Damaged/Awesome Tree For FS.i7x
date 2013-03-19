@@ -35,9 +35,9 @@ to say awesome attack:
 		now hunger of player is 0;
 		now thirst of player is 0;
 		if a random number between 1 and 100 > 90:
-			if Awesome Bat is not owned:
-				now carried of Awesome Bat is 1;
-				say "You get an awesome piece of wood that could be used as, an Awesome Bat!";
+			if awesome bat is not owned:
+				now carried of awesome bat is 1;
+				say "You get an awesome piece of wood that could be used as, an awesome bat!";
 		say "[Give Awesome][combat abort]";
 		now fightoutcome is 20;
 	otherwise:
@@ -48,10 +48,10 @@ to say awesome attack:
 to say awesome defeat:
 	if Awesome_noreward > 3:
 		say "You know you hesitated, you could not bring yourself to strike down another of the trees.";
-		if Awesome Bat is owned:
-			if Awesome Bat is weapon object of player:
-				try using Awesome Bat;
-			delete Awesome Bat;
+		if awesome bat is owned:
+			if awesome bat is weapon object of player:
+				try using awesome bat;
+			delete awesome bat;
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
@@ -158,7 +158,7 @@ name	desc	weight	object
 "awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
 "awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
 "awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
-"Awesome Bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
+"awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
 the scent of the awesome fruit is "[awesomefrscent]";
 
@@ -184,7 +184,7 @@ to say awesomestfrscent:
 	otherwise:
 		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
 
-the scent of the Awesome Bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
+the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
 
 to say awesome bat proc:
 	choose row monster from the table of random critters;

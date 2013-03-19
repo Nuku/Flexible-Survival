@@ -262,11 +262,11 @@ Section 5 - Transformation Mechanics
 
 Part 0 - Variables
 
-Larissa has a text called body. Body is usually "charmingly human";
-Larissa has a text called skin. Skin is usually "evenly tanned skin";
-Larissa has a text called Cock. Cock is usually "[one of]normal[or]human[or]pink[at random]";
-Larissa has a text called face. Face is usually "pretty and human";
-Larissa has a text called tail. tail is usually "";
+Larissa has a text called body. Body of Larissa is usually "charmingly human";
+Larissa has a text called skin. Skin of Larissa is usually "evenly tanned skin";
+Larissa has a text called Cock. Cock of Larissa is usually "[one of]normal[or]human[or]pink[at random]";
+Larissa has a text called face. Face of Larissa is usually "pretty and human";
+Larissa has a text called tail. tail of Larissa is usually "";
 Larissa has a truth state called tailed.  tailed is usually false.
 Larissa has a truth state called winged.  winged is usually false.
 Larissa has a text called infname. infname is usually "human";

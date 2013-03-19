@@ -361,7 +361,7 @@ to say bcgreathall:
 	let bonus be ( dexterity of player - 10 ) / 2;
 	let dice be a random number from 1 to 20;
 	say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of player]: [dice + bonus + 3 - scalevalue of player] vs 15: ";
-	if bonus + dice + 3 - scalevalue of player is greater than 14:
+	if ( bonus + dice + 3 - scalevalue of player ) is greater than 14:
 		say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you roughly out the doorway.  You have a quick moment to decide which direction you'd like to go.  Shall you head through the door to the [link]north (Y)[as]y[end link] or head back the way you came by going [link]west (N)[as]n[end link] back to the play room?";
 		if the player consents:
 			say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you.  The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";

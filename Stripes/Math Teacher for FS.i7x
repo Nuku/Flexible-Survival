@@ -96,7 +96,7 @@ When Play begins:
 	now body entry is "a human female body.  You are wearing a white, button-up shirt with a pocket protector in it.  Half-hidden by your knee-length brown skirt, you have long, shapely legs with brown high-heeled shoes on your feet";
 	now skin entry is "human";
 	now tail entry is "";
-	now cock entry is "human";
+	now cock entry is "[one of]human[or]beautifully proportioned[as decreasingly likely outcomes]";
 	now face change entry is "your head becomes human with a pretty, feminine appearance.  You can taste lipstick on your lips and your hair pulls itself back into a tight bun.  You don't remember those glasses on your nose either.  Your pleasure at seeming to become more human than most others around here fades from your mind as you start thinking about pi and trigonometry instead";
 	now body change entry is "you feel your body become just like a regular human's body, almost as if the nanites never came.  Suddenly though, you feel a new outfit appear over you, probably made of nanites.  You now wear a white, button-up shirt with a brown, knee-length skirt.  Your body changes, becoming more feminine than before.  Your legs feel... fairly normal.  They are a bit daintier than usual, but you feel like a regular human.  You almost trip with your next step though as you realize you are now wearing heels";
 	now skin change entry is "your skin ripples and settles down as what seems to be perfectly normal human skin";

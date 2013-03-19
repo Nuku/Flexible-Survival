@@ -358,6 +358,7 @@ to say beatthedobie3:			[high-lust cop player victory]
 		say "     Grabbing the Doberman female's leg, you run your hand along it while the other moves to rub her head and scritch her ears.  You brush your fingertips over her wet folds.  'Does the bad doggy's bitch pussy need attention?' you ask, drawing a canine whimper and an eager nod from her.  'Then let me see you lick yourself like a proper bitch,' you order, giving her head a push towards her crotch.  She only hesitates briefly before bending around like a normal dog and nuzzling at loins, giving her pussy a slow lick before diving her tongue into herself while you watch the show.  'Mmm... that's right.  You're a bad dog, aren't you?  My slutty bad doggy bitch,' you add, stroking her ears and petting her side.";
 		say "     You can't help but smile as you kneel down beside her to watch, savouring the cop's descent into lust.  She moans, pants and whimpers in canine pleasure as she goes to town on herself like an animal.  From the way she's looking at you, you can tell she's getting off on the fact that you're watching as well as on her own tonguework.  You stroke her head and rub her ears, smiling down at her as you tell her what a fine, obedient and slutty doggy's she's become.  As her climax comes, she pulls her muzzle away to howl in release, arching her back and burying both paws between her thighs to finger herself wildly through a powerful orgasm that has her panting and spent when it's finally over.  With that finished, you get back up and look her over as she's stretched out on the ground in a pool of sweat and sexual fluids.";
 		increase dobielibido by 1;
+	attempttowait;
 	say "     As you're preparing to leave, the Doberman moans softly for you to wait.  Curious as to what the slutty cop has to say, you turn back, wondering if you'll need to teach her another lesson.  The dog fingers herself lightly, licking cum from her paws.  'I... I... give up,' she says with a resigned sigh.  'There's no law and order left and... there's no point in pretending otherwise.  I... want the sex... the raw fucking... the lustful breeding,' she says with a few intersperced moans as her fingering grows more eager.  'And so help me God, I want you.  After all of it, I want you so bad.  I- I want to be your doggy bitch,' she moans, crawling towards you on all fours.";
 	say "     It seems you've finally completely broken the policewoman.  Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if hp of Fang > 0 and hp of Fang < 100] alongside Fang[end if] as well as a fun plaything.";
 	if the player consents:
@@ -403,6 +404,7 @@ to say Dobermandesc:
 		increase str entry by 2;
 		if hardmode is false, now lev entry is 9;
 		increase hp entry by lev entry;
+		increase monsterhp by lev entry;
 		increase wdam entry by ( wdam entry / 7 );
 
 
@@ -417,7 +419,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Doberman";
 	now attack entry is "[dobermanattack]";
-	now defeated entry is "[beattheDoberman]";				
+	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
 	now face entry is "now possesses the striking features of a cunningly handsome looking Dobie";		[ Face Description, format as the text "Your face is (your text)." ]
