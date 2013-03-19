@@ -117,16 +117,16 @@ To say Tenrec LossOral:
 		say "[line break]";
 		say "You can[']t focus at all, just when you manage to get in a rhythm with his cock sawing in and out, his paw will work your cock just so. Or suddenly a claw pricks a nipple, throwing you completely off balance again! It[']s like trying to ride out a storm or choppy seas, continual chop sending your brain reeling with a primal, needy lust. Juices flow easily from your tits, cock[smn], and cunt[sfn] as he turns you into a toy for his amusement. Skillfully, he makes the two of you orgasm in tandem, his paw aiming your [cock size desc of player] cock so that your [cum load size of player] load splatters across your [breast size desc of player] jugs and face! 'Oh, that was a good ride! I[']ll have to do it again.' With a wink and a whistle the fisherman withdraws, strolling away with a spring in his step.";
 
-
+[
 To say Tenrec Loss:
 	if libido of player < 30:
 		say "'Well, you can just throw me right over the side,' the ottershrew gasps, cradling his bruised and battered body. 'You might think you are a tough guy, but you got lucky this time.' His narrow chest heaves as he struggles to catch a breath, long thick tail flopping against the ground. 'Still, you did screw up in one place.' He grins, weakly, as his tail tenses. 'You should have put a net over me.' With a bark and a sudden muscular push of his tail, the tenrec flips right over the side of the wharf, diving into the water. You[']ll have to catch him next time!";
 	otherwise:
 		say "Would you like to[link]ride him(1)[as]1[end link], [link]use his muzzle(2)[as]2[end link] or [link]throw him back?(3)[as]3[end link]?";
 		now calcnumber is 0;
-						
+]
 
-  
+
 
 To say Tenrec LossOral:
 	say "The otter-shrew drops to his knees, blitzed by your overpowering victory. Without a word you just take him by his torpedo-like head and yank him toward your crotch. There is no need for words, your[if player is male] cock[smn] already hard and ready for him to service it with[otherwise] dripping puss[yfn] hot and aching in need to be soothed by[end if] his clever tongue. He doesn[']t complain, he knows better than to tussle with the true victor, but just opens his maw and gets to work. He keeps his teeth to himself, using only the soft parts of his curling oral digit to stroke and caress every contour of your junk. In the tidal wave of his rising enthusiasm, your personal sense of self restraint can only hold you for so long. With a heaving sigh you unroll into your orgasm, tension melting as[if player is male] your cock[smn] pulses, splattering your [cum load size of player] wad of cum all over his muzzle![otherwise] your puss[yfn] clench up and then gush a torrent of female juices.[end if] Wanting to see, you shove him away, sending the tenrec tumbling onto his back. The sight of your fuck fluids dripping down his muzzle and neck adds a fun cap to your fun. With a snigger at his sticky face, you slip back into the crowds.";

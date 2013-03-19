@@ -174,7 +174,7 @@ A person has a number called libido.
 A person has a text called linkaction.
 
 The player has a text called skin. Skin is usually "smooth";
-The player has a text called Cock. Cock is usually "";
+The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
 The player has a text called face. Face is usually "charmingly human";
 The player has a text called tail. tail is usually "";
 The player has a text called body. Body is usually "charmingly human";
@@ -1919,6 +1919,10 @@ carry out Inventorying:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
+					if Xerxes is visible and lust of Xerxes is 2 and name entry is "awesome fruit":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Xerxes[end link]";
+					if Helen is visible and lust of Helen is 2 and name entry is "awesomer fruit":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Helen[end link]";
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
@@ -5332,7 +5336,7 @@ When play ends:
 		if bodyname of player is "Dragoness":
 			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
 
-			
+
 Book 8 - People
 
 [Rod and Ronda Mallrat have been moved to the RodAndRonda file]

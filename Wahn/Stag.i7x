@@ -54,6 +54,7 @@ Instead of resolving a Dog Walking:
 				increase score by 5;
 			now hp of Mike is 3;  
 			say "     Nodding over to you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";   
+			now battleground is "void";
 			move player to Mike's Office;
 			now Mike's Home is known;
 		otherwise:
@@ -416,6 +417,7 @@ instead of conversing Mike:
 			if player consents:
 				say "     You pull the medkit out and start to patch Lea up while Mike holds her tight as she struggles, whining pitifully as you do the painful but necessary steps of cleaning and disinfecting her wound. It's not an easy task, but soon she's well taken care of, with a fresh white bandage around her upper torso.";
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
+				delete medkit;
 				now hp of Mike is 5;
 			otherwise:
 				say "     You just silently shake your head.";
