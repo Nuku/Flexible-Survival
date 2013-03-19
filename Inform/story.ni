@@ -1918,9 +1918,9 @@ carry out Inventorying:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
-					if Xerxes is visible and lust of Xerxes is 2 and name entry is "Awesome fruit":
+					if Xerxes is visible and lust of Xerxes is 2 and name entry is "awesome fruit":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Xerxes[end link]";
-					if Helen is visible and lust of Helen is 2 and name entry is "Awesomer fruit":
+					if Helen is visible and lust of Helen is 2 and name entry is "awesomer fruit":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Helen[end link]";
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
