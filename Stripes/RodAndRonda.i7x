@@ -202,7 +202,7 @@ instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 )
 
 
 before conversing the Nermine while hp of Ronda is 5:
-	if lizard juice is owned and Awesomest Fruit is owned:
+	if lizard juice is owned and awesomest fruit is owned:
 		say "[rondaitems]" instead;
 
 to say rondaitems:
@@ -211,7 +211,7 @@ to say rondaitems:
 	now Art Collector is unresolved;
 	increase score by 10;
 	delete lizard juice;
-	delete Awesomest Fruit;
+	delete awesomest fruit;
 
 before conversing the Nermine while hp of Ronda is 7:
 	say "[rondaitems2]" instead;

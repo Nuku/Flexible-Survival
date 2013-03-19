@@ -497,7 +497,7 @@ to say xerxesdesc:
 	if lust of Xerxes < 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  He has short black hair and a well-developed physique, with muscular arms and legs.  All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.  He watches you attentively, eager to follow the commands of his master";
 		if lust of Xerxes is 2:
-			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of Awesome fruit > 0][link]awesome[as]give Awesome fruit to Xerxes[end link][otherwise]awesome[end if]";
+			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of awesome fruit > 0][link]awesome[as]give awesome fruit to Xerxes[end link][otherwise]awesome[end if]";
 		say ".";
 	otherwise if lust of Xerxes is 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan.  His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place.  All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
@@ -928,7 +928,7 @@ instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library 
 
 Chapter 5 - Awesome Xerxes
 
-instead of trading the Awesome fruit when the current action involves the Xerxes:
+instead of trading the awesome fruit when the current action involves the Xerxes:
 	if lust of Xerxes < 2:
 		say "     Aren't you jumping the gun a little?";
 	otherwise if lust of Xerxes is 2:
@@ -1045,7 +1045,7 @@ to say helendesc:
 	if lust of helen < 3:
 		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[end if]";
 		if lust of helen is 2:
-			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of Awesomer fruit > 0][link]awesomer[as]give Awesomer fruit to Helen[end link][otherwise]awesomer[end if]";
+			say ".  You are quite pleased at having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of awesomer fruit > 0][link]awesomer[as]give awesomer fruit to Helen[end link][otherwise]awesomer[end if]";
 		say ".";
 	otherwise if lust of Helen is 3:
 		say "     Originally one of Mike's dogs, Helen now is a young human female of about nineteen.  Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan.  Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place.  All in all, he's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion.[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[end if]";
@@ -1435,7 +1435,7 @@ instead of going outside from Bunker while (Helen is in the Grey Abbey Library a
 
 Chapter 5 - Awesomer Helen
 
-instead of trading the Awesomer fruit when the current action involves the Helen:
+instead of trading the awesomer fruit when the current action involves the Helen:
 	if lust of Helen < 2:
 		say "     Aren't you jumping the gun a little?";
 	otherwise if lust of Helen is 2:

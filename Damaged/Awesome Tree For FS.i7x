@@ -20,14 +20,14 @@ to say infect:
 	
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		increase carried of Awesome Fruit by 1;
-		say "You gain 1x Awesome Fruit!";
+		increase carried of awesome fruit by 1;
+		say "You gain 1x awesome fruit!";
 	if a random number between 1 and 100 > 40:
-		increase carried of Awesomer Fruit by 1;
-		say "You gain 1x Awesomer Fruit!";
+		increase carried of awesomer fruit by 1;
+		say "You gain 1x awesomer fruit!";
 	if a random number between 1 and 100 > 85:
-		increase carried of Awesomest Fruit by 1;
-		say "You gain 1x Awesomest Fruit!";
+		increase carried of awesomest fruit by 1;
+		say "You gain 1x awesomest fruit!";
 		
 to say awesome attack:
 	if Awesome_boredom is 4:
@@ -136,7 +136,7 @@ When Play begins:
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 2;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Awesomest Fruit";			[ Loot monster drops, ]
+	now loot entry is "awesomest fruit";			[ Loot monster drops, ]
 	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -155,12 +155,12 @@ Section 3 - Monster Heat
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Awesomest Fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
-"Awesomer Fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
-"Awesome Fruit"	"The most Awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
+"awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
+"awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
+"awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 "Awesome Bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
-the scent of the Awesome Fruit is "[awesomefrscent]";
+the scent of the awesome fruit is "[awesomefrscent]";
 
 to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
@@ -168,7 +168,7 @@ to say awesomefrscent:
 	otherwise:
 		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
 
-the scent of the Awesomer Fruit is "[awesomerfrscent]";
+the scent of the awesomer fruit is "[awesomerfrscent]";
 
 to say awesomerfrscent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
@@ -176,7 +176,7 @@ to say awesomerfrscent:
 	otherwise:
 		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
 
-the scent of the Awesomest Fruit is "[awesomestfrscent]";
+the scent of the awesomest fruit is "[awesomestfrscent]";
 
 to say awesomestfrscent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
@@ -200,8 +200,8 @@ The weapon type of awesome bat is "Melee". It is not temporary.
 
 
 
-Awesomest Fruit is a grab object;
-Awesomest Fruit has a usedesc "[awesomest fruit use]";
+awesomest fruit is a grab object;
+awesomest fruit has a usedesc "[awesomest fruit use]";
 
 To say awesomest fruit use:
 	let omonster be monster;
@@ -216,13 +216,13 @@ To say awesomest fruit use:
 		now sex entry is "Both";
 		now breasts entry is 2;
 		now breast size entry is 3;
-		say "You bite into the Awesomest Fruit!";
+		say "You bite into the awesomest fruit!";
 		now Awesome_forcesex is 1;
 		infect;
 	now monster is omonster;
 
-Awesomer Fruit is a grab object;
-Awesomer Fruit has a usedesc "[awesomer fruit use]";
+awesomer fruit is a grab object;
+awesomer fruit has a usedesc "[awesomer fruit use]";
 
 To say awesomer fruit use:
 	let omonster be monster;
@@ -237,13 +237,13 @@ To say awesomer fruit use:
 		now sex entry is "Female";
 		now breasts entry is 2;
 		now breast size entry is 3;
-		say "You bite into the Awesomer Fruit!";
+		say "You bite into the awesomer fruit!";
 		now Awesome_forcesex is 1;
 		infect;
 	now monster is omonster;
 	
-Awesome Fruit is a grab object;
-Awesome Fruit has a usedesc "[awesome fruit use]";
+awesome fruit is a grab object;
+awesome fruit has a usedesc "[awesome fruit use]";
 	
 To say awesome fruit use:
 	let omonster be monster;
@@ -258,7 +258,7 @@ To say awesome fruit use:
 		now sex entry is "Male";
 		now breasts entry is 0;
 		now breast size entry is 0;
-		say "You bite into the Awesome Fruit!";
+		say "You bite into the awesome fruit!";
 		now Awesome_forcesex is 1;
 		infect;	
 	now monster is omonster;
