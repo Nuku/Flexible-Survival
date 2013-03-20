@@ -1259,6 +1259,8 @@ To reciting2:
 					otherwise if hp of Tristian is 8:
 						now hp of Tristian is 7;
 					if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;
+					if hp of Tristian is 11:
+						move Lance to PALOMINO;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2569,6 +2571,8 @@ Carry out reciting:
 					otherwise if hp of Tristian is 8:
 						now hp of Tristian is 7;
 					if hp of Tristian is 10 or hp of Tristian is 12, now hp of Tristian is 7;
+					if hp of Tristian is 11:
+						move Lance to PALOMINO;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
