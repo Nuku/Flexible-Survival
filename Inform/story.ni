@@ -5698,6 +5698,7 @@ Include Sand Man by Wahn.
 Include Naiad by Wahn.
 Include Furling by Wahn.
 Include Spartan by Wahn.
+Include Helot by Wahn.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Male Peacock for FS By Lago Moro.
