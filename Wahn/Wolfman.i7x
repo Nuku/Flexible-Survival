@@ -640,19 +640,16 @@ to say WolfTeamManager:
 		now hp of Septus is 7;
 		wolfmaninfect;
 		increase score by 25;
-		let strup be 0;
-		let charup be 0;
-		if strength of player < 18:
+		if strength of player < 20:
 			increase strength of player by 1;
 			increase capacity of player by 5;
-			now strup is 1;
-		if charisma of player < 18:
+			say "Your [bold type]strength[roman type] has been increased by 1.";
+		otherwise if charisma of player < 20:
 			increase charisma of player by 1;
-			now charup is 1;
-		if strup is 1 or charup is 1:
-			say "Your [if strup is 1 and charup is 1][bold type]strength[roman type] and [bold type]charisma[roman type] have[otherwise if strup is 1][bold type]strength[roman type] has[otherwise][bold type]charisma[roman type] has[end if] gone up by 1.";
+			say "Your [bold type]charisma[roman type] has been increased by 1.";
 		otherwise:
 			increase maxhp of player by level of player / 2;
+			say "Your maximum [bold type]hit points[roman type] has been increased by [level of player / 2].";
 		decrease humanity of player by 12;
 		if thirst of Jennifer is 0:		[guaranteed preggers after orgy]
 			now Jenniferpregnant is 48;
