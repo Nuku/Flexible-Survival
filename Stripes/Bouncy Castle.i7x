@@ -143,6 +143,12 @@ The description of Ball Pit Room is "[bcballpitroom]".
 The Toy Room is a room.  The Toy Room is west of Bouncy Castle.
 The description of Toy Room is "[bctoyroom]".
 
+The Punching Pillars is a room.  The Punching Pillars is west of Ball Pit Room.
+The description of Punching Pillars is "[bcpunchingpillars]".
+
+The Knight's Chambers is a room.  The Knight's Chambers is north of Punching Pillars.
+The description of Knight's Chambers is "[bcknightschambers]".
+
 The Great Hall is a room.  The Great Hall is east of Bouncing Play Room.
 The description of Great Hall is "[bcgreathall]".
 
@@ -217,7 +223,7 @@ to say bcfencingroom:
 		if calcnumber is 1:
 			say "     You snatch at one of the swords and easily catch it by the hilt, turning and swinging it towards with others with a loud 'Aha!'  The sword parries a few strikes coming at you, but others strike you from behind.  Laughing, you hop to turn around and face those, fencing with them.  Soon you're hopping around the room and trying to weave around the pillars to swordfight with the boffer weapons as you laugh heartily.  Having fun playing with the animated weapons, you lose track of time until you are eventually left exhausted and drop to the floor, panting to regain your breath as you giggle merrily.  The swords, also appearing to be tired or content with their playtime, settle back down onto the floor.";
 			increase morale of player by 2;
-			decrease humanity of player by 5;
+			decrease humanity of player by 8;
 			decrease libido of player by 5;
 			if libido of player < 0, now libido of player is 0;
 			now bcswordplay is true;
@@ -238,7 +244,7 @@ to say bcfencingroom:
 					move player to Bouncy Castle;
 			otherwise:
 				say "You try your best to move towards the door, but the unsteady footing and the wild blows from every direction send you tumbling around until you finally fall to the floor.  The foam swords pound on you for a while as you squirm around, trying to get up but becoming increasingly giddy.  You laugh and giggle madly as they bash you around for what seems like a couple of hours until the swords settle down and you manage to crawl into the next room.";
-				decrease humanity of player by 3;
+				decrease humanity of player by 5;
 				follow the turnpass rule;
 				if calcnumber is 2:
 					move player to Bouncing Play Room;
@@ -307,7 +313,7 @@ to say bcplayroom:
 Chapter 4 - Ball Pit Room
 
 to say bcballpitroom:
-	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls.  You are able to wade your way through them slowly to move around.  The room itself is fairly large, bigger than the entrance room, but having the same overall design.  There's two arch-shaped windows in the south wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  In the southwest corner of the room, there is a large mesh ladder for the children to climb [link]up[end link] to the upper level of the bouncy castle.  There are also three doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the west heading to a hall filled with .";
+	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls.  You are able to wade your way through them slowly to move around.  The room itself is fairly large, bigger than the entrance room, but having the same overall design.  There's two arch-shaped windows in the south wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  In the southwest corner of the room, there is a large mesh ladder for the children to climb [link]up[end link] to the upper level of the bouncy castle.  There are also three doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the west heading to a hall filled with padded pillars made for punching.";
 
 
 Chapter 5 - Toy Room
@@ -318,7 +324,7 @@ to say bctoyroom:
 		if lastoctofight is 255:
 			say "     As you're looking around, some of the junk scattered here starts to shift and move.  Thinking at first it only the result of your weight shifting the floor, you try to tread more carefully.  But when the yellow tentacles start to appear from beneath the mess, you find yourself surrounded.  One large pile shifts and you see a grinning inflatable with a vapid expression of joy on its smooth, round face.  The inflatable octopus is sunshine yellow with amber along the underside of the inflated tentacles and on a few spots atop its head.  It shambles towards you as its curled tentacles try to wrap around you";
 			if bodyname of player is "Anime Babe":
-				say ".  Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your minds commands to resist";
+				say ".  Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your mind's commands to resist";
 			say ".";
 		otherwise:
 			say "     As you try to move around the room, the yellow octopus rouses itself and makes another grab at you with its sunshine yellow tentacles.  It grins at you with the same, unchanging expression of giggling happiness";
@@ -449,7 +455,7 @@ to say bckingchair:
 	let playernum be a random number between 1 and strength of player;
 	let chairnum be 15;
 	if skinname of player is listed in infections of Latexlist, increase chairnum by 2;
-	if hardmode is true, increase chairnum by ( level of player / 5 );
+	if hardmode is true, increase chairnum by ( level of player / 6 );
 	let chairnum be a random number between 1 and chairnum;
 	if playernum >= chairnum:
 		let chairescape be true;
@@ -463,6 +469,10 @@ to say bckingchair:
 			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a a phallic dildo to push into your relaxing anus.  For some reason, you've become aroused by the chair's actions and the feel of that cock-like bulge pushing into you has made you realize it.";
 		attempttowait;
 		let playernum be ( 150 + humanity of player + level of player + strength of player - libido of player);
+		if cunts of player > 1:
+			decrease playernum by 10;
+		otherwise if cocks of player is 0 and cunts of player is 0:
+			increase playernum by 10;
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 170;
 		if skinname of player is listed in infections of Latexlist, increase chairnum by 30;
@@ -540,6 +550,178 @@ to say bckingchair_accept:
 	now cockname of player is "Captured";
 	now humanity of player is 0;
 	end the game saying "You are transformed into an inflatable [bcfinalchairform] chair.";
+
+
+Chapter 8 - Punching Pillars
+
+bcseenpunchingpillars is a truth state that varies.  bcseenpunchingpillars is normally false.
+primarycolourlist is a list of text that varies.  primarycolourlist is normally {"red", "yellow", "blue"}.
+ppcolour is a text that varies.  ppcolour is normally "green".
+bcfinalpillarform is a text that varies.  bcfinalpillarform is normally "black knight".
+
+to say bcpunchingpillars:
+	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the east wall and weapon racks between the windows on the west.  The room itself has several shoulder-height pillars which seem padded for punching.  These pillars come in several bright colours and have designs of wolf men, orcs, cat people and other aggressive foes.  As you walk further into the room, the pillars ";
+	if bcseenpunchingpillars is false:
+		say "start to rock a little before thick tendrils of gooey latex flow out of them and make a grab for you";
+	otherwise:
+		say "start to rock again, releasing fresh tendrils of gooey latex out of themselves in an attempt to grab you";
+	if bodyname of player is "Anime Babe":
+		say ".  The sight of these tentacles has your anime babe body shiver in anticipation despite how you might truly feel about the prospect";
+	if bcseenpunchingpillars is false:
+		say ".";
+		say "[bcpptendril]";
+	otherwise:
+		say ".  Shall you attempt to fight (Y) off these flowing tentacles or accept (N) their embrace and see what comes?";
+		if the player consents:
+			say "[bcpptendril]";
+		otherwise:
+			say "[bcpptendril_accept]";
+
+to say bcpptendril:
+	let tendrilescape be false;
+	let compnumber be the number of entries in childrenfaces;
+	if companion of player is not nullpet, increase compnumber by 1;
+	sort primarycolourlist in random order;
+	now ppcolour is entry 1 in primarycolourlist;
+	say "     [one of]Before you can move away, the pillar in front of you strikes you with one of the tentacles with a wet, sticky sound[or]As you're attempting to move away, a pillar behind you strikes you with one of its tentacles with a wet, sticky sound[at random][if weapon object of player is not journal].  You attempt to fight it off with your [weapon of player], but it seems to have no effect on the flowing [ppcolour] latex[end if].  Trying to steady yourself on the unsteady floor with the slimy appendage wrapping around your leg, you attempt to pull yourself free[if compnumber is 1].  Your companion moves to assist you, but is ensnared by the tendrils of another of the pillars[otherwise if compnumber > 1].  Your companions move to assist you, but are ensnared by the tendrils of the other pillars[end if].";
+	let playernum be strength of player + dexterity of player + scalevalue of player;
+	if bcseenpunchingpillars is true, increase playernum by 5;
+	let playernum be a random number between 1 and playernum;
+	let tendrilnum be 30;
+	if skinname of player is listed in infections of Latexlist, increase tendrilnum by 2;
+	if bodyname of player is "Anime Babe", increase tendrilnum by 4;
+	if hardmode is true, increase tendrilnum by ( level of player / 4 );
+	let tendrilnum be a random number between 1 and tendrilnum;
+	if playernum >= tendrilnum:
+		let tendrilescape be true;
+	otherwise:
+		say "     Making a hard pull to get yourself free of the tendril sends you tumbling to the soft floor of the bouncy castle as you lose your footing.  Looking down, you see another [ppcolour] tentacle grab your other leg and they start pulling you towards the [ppcolour] pillar.  You can also see that the tentacles aren't just grabbing onto you, but are actually flowing over you, gooey latex rippling along the spreading surface.  When a third tendril for the pillar reaches you, it strikes at your crotch, quickly spreading out across your [if cocks of player is 0 and cunts of player is 0]barren crotch[otherwise]loins[end if], sending a rush of arousal through you as the goo spreads across your [if cocks of player > 0 and cunts of player > 0]cock[smn] and even into your puss[yfn][otherwise if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]cunt[sfn][otherwise]ass and pushes into your asshole[end if]";
+		if cunts of player > 0:
+			say ".  You feel an uncontrolled wave of pleasure as liquid latex flows into your vagina[sfn] and asshole, as if trying coat you inside and out[if cocks of player > 0] while it ripples and flows over your hard manhood[end if].";
+		otherwise:
+			say ".  You feel an uncontrolled wave of pleasure as liquid latex flows into your rectum, as if trying coat you inside and out[if cocks of player > 0] while it ripples and flows over your hard manhood[end if].";
+		let playernum be ( 150 + humanity of player + level of player + strength of player - libido of player);
+		if ( cunts of player + cocks of player ) > 1:
+			decrease playernum by 10;
+		otherwise if cocks of player is 0 and cunts of player is 0:
+			increase playernum by 10;
+		let playernum be a random number between 1 and playernum;
+		let tendrilnum be 170;
+		if skinname of player is listed in infections of Latexlist, increase tendrilnum by 15;
+		if bodyname of player is "Anime Babe", increase tendrilnum by 25;
+		if hardmode is true, increase tendrilnum by level of player;
+		let tendrilnum be a random number between 1 and tendrilnum;
+		if playernum >= tendrilnum:
+			let tendrilescape be true;
+		otherwise:
+			say "     You try to keep struggling, but the sensation of that latex goo coating you and pulsing into your lower body becomes increasingly pleasurable and distracting.  You try to pull yourself away, but you're finding it difficult to do anything besides enjoy the intense sensations you're receiving as the [ppcolour] latex ";
+			if cocks of player > 0 and cunts of player > 0:
+				say "squeezes and pumps at your [cock size desc of player] [cock of player] cock[smn], milking you man meat until you cum with a loud groan.  This sends ripples of ecstasy through your [cunt size desc of player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+			otherwise if cocks of player > 0:
+				say "squeezes and pumps at your [cock size desc of player] [cock of player] cock[smn], milking you man meat until you cum with a loud groan[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+			otherwise if cunts of player > 0:
+				say "pumping and pushing inside your [cunt size desc of player] cunt[sfn], pushing you to orgasm.  This releases your feminine juices, allowing the sliding goo even better access to your vagina[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+			otherwise:
+				say "pumping and pushing inside your rectum, sending debilitating waves of pleasure through you[if anallevel is not 1].  As this orgasmic rush has your body quivering, you can feel the gooey flow working its way further into your bowels[end if].";
+			say "     As you're coming down from your climax, you notice that you've been dragged much closer to the pillar and that it's about to grab you with another set of tentacles.  Trying your best to shake off the afterglow, you try to grip the padded floor as best you can and pull out of its grip before it's too late.  With the [ppcolour] stuff climbing quickly up your chest and more about to latch onto your arms, you know this is probably your last chance to get away for it does... whatever kinky, delightful - no, terrible! - thing it has planned for you.";
+			increase libido of player by 8;
+			decrease humanity of player by 3;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, increase humanity of player by 1;
+			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
+			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
+			if libido of player > 100, now libido of player is 100;
+			attempttowait;
+			let playernum be a random number between 1 and ( strength of player + scalevalue of player );
+			let tendrilnum be 18;
+			if skinname of player is listed in infections of Latexlist, increase tendrilnum by 2;
+			if bodyname of player is "Anime Babe", increase tendrilnum by 3;
+			if hardmode is true, increase tendrilnum by ( level of player / 6 );
+			let tendrilnum be a random number between 1 and tendrilnum;
+			if playernum >= tendrilnum:
+				let tendrilescape be true;
+			otherwise:
+				say "     You pull as hard as you can, but just as you're starting to make back some ground, the tendrils latch onto your wrists and pull your arms up.  Lacking any means of pulling away, you are drawn inexorably towards the pillar as you feel your arousal growing out of control again.  The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you.  Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but give in and accept the situation, another fresh orgasm rocking through you.  You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholely into the now-bulging pillar.";
+				say "     Inside, you experience orgasm after orgasm as the [ppcolour] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
+				now bcending is 5;
+				now bcfinalpillarform is bodyname of player;
+				now bodyname of player is "Captured";
+				now facename of player is "Captured";
+				now skinname of player is "Captured";
+				now tailname of player is "Captured";
+				now cockname of player is "Captured";
+				now humanity of player is 0;
+				end the game saying "You are transformed into another [ppcolour] pillar.";
+	if tendrilescape is true:
+		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound.  The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1].  You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[otherwise if compnumber > 1].  You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if].  You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed.  You have two options for exit from this room.  Shall you head through the door to the [link]north (Y)[as]y[end link] or head back the way you came by going [link]east (N)[as]n[end link] back to the ball pit?";
+		if the player consents:
+			say "     You move quickly to the northern doorway, doing your best to avoid the grabby tentacles, push aside the plastic curtain and dive into the next room.  You pant for breath and pull yourself to your feet so you can look around the room.";
+			move player to Knight's Chambers;
+		otherwise:
+			say "     You move quickly to the eastern doorway, doing your best to avoid the grabby tentacles.  Pushing aside the plastic curtain, you dive into the next room, safely landing in the ball pit.";
+			move player to Ball Pit Room;
+	now bcseenpunchingpillars is true;
+
+
+to say bcpptendril_accept:
+	let compnumber be the number of entries in childrenfaces;
+	if companion of player is not nullpet, increase compnumber by 1;
+	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you.  The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolour] latex[if compnumber is 1].  Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles['][otherwise if compnumber > 1].  Your companion, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles['][end if].  Some of the tendrils slide across your arms and legs while others wrap around your chest.";
+	say "     You can't help but moan as one goes to your waist and [ppcolour] latex flows over your [if cocks of player is 0 and cunts of player is 0]barren crotch[otherwise]loins[end if], sending a rush of arousal through you as the goo spreads across your [if cocks of player > 0 and cunts of player > 0]cock[smn] and even into your puss[yfn][otherwise if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]cunt[sfn][otherwise]ass and pushes into your asshole[end if]";
+	if cunts of player > 0:
+		say ".  You feel an unrestrained wave of pleasure as liquid latex flows into your vagina[sfn] and asshole, as if trying coat you inside and out[if cocks of player > 0] while it ripples and flows over your hard manhood[end if].";
+	otherwise:
+		say ".  You feel an unrestrained wave of pleasure as liquid latex flows into your rectum, as if trying coat you inside and out[if cocks of player > 0] while it ripples and flows over your hard manhood[end if].";
+	say "     Awash in the delights of the pillar's flowing touch, you can feel the latex goo coating you and pulsing into your lower body.  Having that rippling flow of goo inside your [bodytype of player] body becomes increasingly pleasurable and distracting, keeping you from noticing at first that your hands are starting to sink right into the [ppcolour] pillar.  As it is, you find it difficult to do anything besides enjoy the intense sensations you're receiving as the [ppcolour] latex ";
+	if cocks of player > 0 and cunts of player > 0:
+		say "squeezes and pumps at your [cock size desc of player] [cock of player] cock[smn], milking you man meat until you cum with a loud groan.  This sends ripples of ecstasy through your [cunt size desc of player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+	otherwise if cocks of player > 0:
+		say "squeezes and pumps at your [cock size desc of player] [cock of player] cock[smn], milking you man meat until you cum with a loud groan[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+	otherwise if cunts of player > 0:
+		say "pumping and pushing inside your [cunt size desc of player] cunt[sfn], pushing you to orgasm.  This releases your feminine juices, allowing the sliding goo even better access to your vagina[if anallevel is not 1].  As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+	otherwise:
+		say "pumping and pushing inside your rectum, sending debilitating waves of pleasure through you[if anallevel is not 1].  As this orgasmic rush has your body quivering, you can feel the gooey flow working its way further into your bowels[end if].";
+	say "     It is only as you're coming down from this orgasm that you notice that you're being pulled right into the pillar that's ensnared you.  For the briefest of moments, you consider struggling, but it passes as another squeeze and push from the goo at your crotch sends lustful pleasure through you again[if compnumber is 1].  Glancing over, you can see your companion similarly being pulled into their pillar, a gooey tentacle thrusting down their throat as green latex flows from it over their head[otherwise if compnumber > 1].  Glancing over, you can see your companions similarly being pulled into their pillars, the one closest to you having a gooey tentacle thrusting down their throat as green latex flows from it over their head[end if].";
+	say "     You are drawn inexorably towards the pillar as you feel your arousal building again.  The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you.  Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but gulp the thick white stuff down as a fresh orgasm rocks through you.  You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholely into the now-bulging pillar.";
+	say "     Inside, you experience orgasm after orgasm as the [ppcolour] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
+	now bcending is 5;
+	now bcfinalpillarform is bodyname of player;
+	now bodyname of player is "Captured";
+	now facename of player is "Captured";
+	now skinname of player is "Captured";
+	now tailname of player is "Captured";
+	now cockname of player is "Captured";
+	now humanity of player is 0;
+	end the game saying "You are transformed into another [ppcolour] pillar.";
+
+
+Chapter 9 - Knight's Chambers
+
+floatertaken is a truth state that varies.  floatertaken is usually false.
+
+to say bcknightschambers:
+	say "     This room is designed to be a knight's chambers.  The wall designs have a knight donning his armour, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this.  There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here.  There's a window on the north wall and another two on the west.  There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
+	if floatertaken is false:
+		say "     Also in this room is an inflatable floater shaped like a cute, white ducky.  The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of player > 2]even [end if]fit you.  It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides.  These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor.  As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around.  Odd behaviour when compared to that of the other creatures you've seen here.  Shall you pick it up?";
+		if the player consents:
+			say "     Wary of some kind of trap, you cautiously reach out for the white inflatable and give it a gentle poke.  When it does nothing more than flap its tiny wings all the more, you touch it again and then let your hand rest on its surface.  Not seeing or feeling anything strange happening, you pick it up.  The ducky toy flaps its wings excitedly and almost seems to smile.  You strongly suspect that this is not another trap of the castle, but an earlier victim of it.  Certainly the cute little thing seems safe enough, so you decide to take it with you.  You could put it on and wear it or let its air our and store it in your pack.";
+			increase score by 5;
+			now carried of ducky swimring is 1;
+			now floatertaken is true;
+		otherwise:
+			say "     Worried that this might be some new form of trap laid by the castle, you take a step back and leave the duck swim ring where it is.  It seems a little sad that you've not touched it, but continues to try and get your attention by what little movement it is capable of.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"ducky swimring"	"[if ducky swimring is equipped]A child's swim ring shaped like a duck with a cute head, puffy little wings on its sides and a tuft of a tail at its back.  It always seems to be sized right to fit you.[otherwise]A child's swim ring shaped like a duck with a cute head, puffy little wings on its side and a tuft of a tail at its back when its inflated.  At the moment, you've got it deflated for easier storage, though you could always put it on.[end if]"	1	ducky swimring
+
+ducky swimring is equipment. It is not temporary.
+The placement of ducky swimring is "waist".
+The descmod of ducky swimring is "You are wearing your cute ducky inflatable around your waist.  Sure, it looks a little silly, but it's a mad world out there.".
+The slot of ducky swimring is "waist".
+
+the scent of ducky swimring is "The ducky smells of latex.";
 
 
 Book 2 - Upper Floor
@@ -1225,6 +1407,11 @@ when play ends:
 			say ".  You emerge as a [if cunts of player > 0]cherry red[otherwise]purple[end if] sea lion and she as an orange orca.  Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily.  After licking the tasty fluids from each other, you mount her, rocking your pinniped body atop her until you cum and fill her with your sticky seed.  From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you.  Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
 		otherwise:
 			say ".  You emerge as a [if cunts of player > 0]magenta[otherwise]dusty red[end if] orca and she as an orange one.  Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily.  After licking the tasty fluids from each other, you turn your attention to each other's pussy and eating it out until you've shared several sticky climaxes.  From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you.  Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
+	otherwise if bodyname of player is "Captured" and bcending is 5:
+		let compnumber be the number of entries in childrenfaces;
+		if companion of player is not nullpet, increase compnumber by 1;
+		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolour] latex.  Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar.  Soon enough, you're rooted in place among the others of your kind in the room.  On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolour] surface[if compnumber is 1].  Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[otherwise if compnumber > 1].  Your companions, similarly transformed, have become colourful pillars with designs suiting their previous forms[end if].";
+		say "     Your existence is a simple one, your previous mind erased and left empty save for thoughts of lust and transforming others into joining with the bouncy castle as you have.  Pleasure mostly comes in the form of dolphin girls who wander into the room to be sexually assaulted by your tendrils until you're both satiated.  On other occasionals, you send out tendrils to some of the other pillars and pleasure one another, forming phalli and orifices for them, spraying your latex cum onto and into each other.  But sometimes, your greatest delight will come when some wanderer makes their way into your room.  When this happens, you grapple them with tentacles of [ppcolour] goo, sexually pleasuring yourself and them as you draw them inexorably into you to be consumed and transformed into another punching pillar, as was done to you on that fateful day.";
 
 
 Bouncy Castle ends here.
