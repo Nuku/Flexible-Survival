@@ -4570,12 +4570,16 @@ This is the self examine rule:
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
-			say " [descmod of x][run paragraph on]";
+			say "  [descmod of x][run paragraph on]";
 	say " Your body is [body of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "body":
-			say " [descmod of x][run paragraph on]";
+			say "  [descmod of x][run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "waist":
+			say "  [descmod of x][run paragraph on]";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
