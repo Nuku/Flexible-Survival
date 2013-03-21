@@ -23,6 +23,7 @@ fightoutcome is a number that varies.	[ Used to track the different outcomes of 
 absorb is a number that varies.           [ Used to track the damage absorbed by armour/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
+duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-minute save has been used this turn. ]
 velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute save has been used this turn. ]
 velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
 plhitbonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
@@ -109,6 +110,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if name entry is "Mental Mouse", decrease plmindbonus by 1;
 	if hp of Velos > 2 and scalevalue of player < 3:
 		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
+	if ducky swimring is equipped:
+		now duckyactive is true;
 	now fightoutcome is 100;
 	say "You run into a [name entry].[line break][desc entry][line break]";
 
@@ -767,6 +770,9 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 			now avoidance is 1;
 	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes ) succeeds:
 		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
+	otherwise if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
+		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
 		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
