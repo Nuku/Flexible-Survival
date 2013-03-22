@@ -324,7 +324,7 @@ to say JenniferSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Have a hot threesome with them.";
 		now toggle entry is JenniferSex rule;
-	if cocks of player > 0 and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and bodyname of player is "Football Wolfman" and hp of player > 0:
+	if hp of Septus < 7 and cocks of player > 0 and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and bodyname of player is "Football Wolfman" and hp of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest you become team manager";
 		now sortorder entry is 100;
