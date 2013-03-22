@@ -44,6 +44,7 @@ monsterpoison is a number that varies.	[ Used to track how poisoned the monster 
 [ 	10 - 19 Plaver Victory			]
 [ 10 *	victory				]
 [ 11		v. (submit to player master)	]
+[ 13		v. (player vores)			]
 [ 18		v. (monster flee)			]
 [ 19		neutral peace			]
 [							]
@@ -1035,6 +1036,24 @@ to win:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	let ok be 1;
+	if "Vore Belly" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10:
+		let vorechance be 20 + ( hunger of player * 2 );
+		if "Automatic Survival" is listed in feats of player, now vorechance is 70;
+		if vorecount > 20:
+			increase vorechance by 40;
+		otherwise:
+			increase vorechance by vorecount * 2;
+		increase vorechance by ( 100 - humanity of player ) / 4;
+		increase vorechance by ( scalevalue of player - scale entry ) * 5;
+		if a random chance of vorechance in 300 succeeds:					[chance for vore]
+			if name entry is not listed in infections of VoreExclusion:
+				say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
+				if the player consents:
+					now ok is 0;
+					vorebyplayer;		[See Alt Vore file]
+					now fightoutcome is 13;	[player vored foe]
+				otherwise:
+					now ok is 1;
 	if "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
@@ -1065,7 +1084,8 @@ to win:
 		add loot entry to the invent of the player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		decrease lootchance entry by z;
-	vialchance (name entry);
+	if fightoutcome is not 13:
+		vialchance (name entry);
 	let reward be lev entry * 2;
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
