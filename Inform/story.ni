@@ -4100,7 +4100,7 @@ This is the turnpass rule:
 		increase hunger of player by 1;
 		if number of entries in childrenfaces is greater than 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
 		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
-	if "Vore Belly" is listed in feats of player:
+	if "Vore Predator" is listed in feats of player:
 		increase hunger of player by a random number between 1 and 5;
 		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
 	if a random number from 1 to 25 is greater than ( a random number between 1 and ( stamina of player + 1 ) ):

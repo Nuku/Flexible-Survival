@@ -1036,9 +1036,9 @@ to win:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	let ok be 1;
-	if "Vore Belly" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10:
-		let vorechance be 20 + ( hunger of player * 2 );
-		if "Automatic Survival" is listed in feats of player, now vorechance is 70;
+	if "Vore Predator" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10:
+		let vorechance be 25 + ( hunger of player * 2 );
+		if "Automatic Survival" is listed in feats of player, now vorechance is 75;
 		if vorecount > 20:
 			increase vorechance by 40;
 		otherwise:
@@ -1052,6 +1052,7 @@ to win:
 					now ok is 0;
 					vorebyplayer;		[See Alt Vore file]
 					now fightoutcome is 13;	[player vored foe]
+					attempttowait;
 				otherwise:
 					now ok is 1;
 	if "Control Freak" is listed in feats of player:
