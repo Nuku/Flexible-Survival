@@ -156,7 +156,9 @@ Every turn while hp of Velos > 2:
 		Now Velos is in the location of the player;
 		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels illicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
+
 an everyturn rule:
+	veloslevelcheck;
 	if hp of Velos > 2 and hp of Velos < 8:			[daily favour growth]
 		if lastfuck of velos - turns >= 8:
 			now lastfuck of Velos is turns;
@@ -180,7 +182,8 @@ an everyturn rule:
 					say "     [one of]You're briefly distracted by your somewhat pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your form[or]You forced to tense a bit as your distended torso twitches with a sudden jolt of movement by your residence[or]Though you can handle your inhabitant's weight far better than any normal person rightly should, you're occasionally forced to catch your breath before moving on[cycling].";
 				otherwise:							[large player]
 					say "     [one of]You tense slightly as your occupant makes a rather sudden jolt within your confines, though it's not enough to be a substantial distraction[or]Your briefly forced to grit your teeth in a wave of tense, twisted pleasure, the serpent readjusting himself a fair bit. A little embarrassed afterwards, you hope nobody saw that, as his occupancy isn't made outwardly apparent[or]You're lightly assaulted with some rather erratic movement by your resident. Aimless as it is, you get the impression he's lost track of his orientation[cycling].";
-
+	if level of velos > 2:
+		now velossaved is false;	[reset velos's fight saving feature]
 
 Section 4 - Musing w/Velos
 

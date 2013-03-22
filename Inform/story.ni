@@ -4065,11 +4065,12 @@ This is the turnpass rule:
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y from the table of random critters;
 				if name entry is bodyname of player:
-					now monster is y;
-					say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
-					now researchbypass is 1;
-					infect;
-					now researchbypass is 0;
+					if there is no resbypass in row monster of table of random critters or resbypass entry is false:
+						now monster is y;
+						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
+						now researchbypass is 1;
+						infect;
+						now researchbypass is 0;
 					break;
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
@@ -4095,11 +4096,14 @@ This is the turnpass rule:
 		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
 		if "Cold Fish" is listed in feats of player, now libido of player is 60;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
-	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
+	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase hunger of player by 1;
 		if number of entries in childrenfaces is greater than 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
 		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
-	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 3 ) minus 1 ):
+	if "Vore Belly" is listed in feats of player:
+		increase hunger of player by a random number between 1 and 5;
+		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
+	if a random number from 1 to 25 is greater than ( a random number between 1 and ( stamina of player + 1 ) ):
 		increase thirst of player by 3;
 		if number of entries in childrenfaces is greater than 0, increase thirst of player by 1;
 		if "Spartan Diet" is listed in feats of player, decrease thirst of player by 1;
@@ -4570,12 +4574,16 @@ This is the self examine rule:
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
-			say " [descmod of x][run paragraph on]";
+			say "  [descmod of x][run paragraph on]";
 	say " Your body is [body of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "body":
-			say " [descmod of x][run paragraph on]";
+			say "  [descmod of x][run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "waist":
+			say "  [descmod of x][run paragraph on]";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
@@ -5496,6 +5504,7 @@ Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
 Include Masturbate by Stripes.
 Include Alt Combat by Stripes.
+Include Alt Vore by Stripes.
 Include BFandI by Stripes.
 Include Parasite by Stripes.
 

@@ -23,6 +23,7 @@ fightoutcome is a number that varies.	[ Used to track the different outcomes of 
 absorb is a number that varies.           [ Used to track the damage absorbed by armour/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
+duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-minute save has been used this turn. ]
 velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute save has been used this turn. ]
 velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
 plhitbonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
@@ -43,6 +44,7 @@ monsterpoison is a number that varies.	[ Used to track how poisoned the monster 
 [ 	10 - 19 Plaver Victory			]
 [ 10 *	victory				]
 [ 11		v. (submit to player master)	]
+[ 13		v. (player vores)			]
 [ 18		v. (monster flee)			]
 [ 19		neutral peace			]
 [							]
@@ -109,6 +111,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if name entry is "Mental Mouse", decrease plmindbonus by 1;
 	if hp of Velos > 2 and scalevalue of player < 3:
 		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
+	if ducky swimring is equipped:
+		now duckyactive is true;
 	now fightoutcome is 100;
 	say "You run into a [name entry].[line break][desc entry][line break]";
 
@@ -768,6 +772,9 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes ) succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
+	otherwise if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
+		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
+		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
 		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
 		increase hp of player by 5;
@@ -1029,6 +1036,24 @@ to win:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	let ok be 1;
+	if "Vore Belly" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10:
+		let vorechance be 20 + ( hunger of player * 2 );
+		if "Automatic Survival" is listed in feats of player, now vorechance is 70;
+		if vorecount > 20:
+			increase vorechance by 40;
+		otherwise:
+			increase vorechance by vorecount * 2;
+		increase vorechance by ( 100 - humanity of player ) / 4;
+		increase vorechance by ( scalevalue of player - scale entry ) * 5;
+		if a random chance of vorechance in 300 succeeds:					[chance for vore]
+			if name entry is not listed in infections of VoreExclusion:
+				say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
+				if the player consents:
+					now ok is 0;
+					vorebyplayer;		[See Alt Vore file]
+					now fightoutcome is 13;	[player vored foe]
+				otherwise:
+					now ok is 1;
 	if "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
@@ -1059,7 +1084,8 @@ to win:
 		add loot entry to the invent of the player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		decrease lootchance entry by z;
-	vialchance (name entry);
+	if fightoutcome is not 13:
+		vialchance (name entry);
 	let reward be lev entry * 2;
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
