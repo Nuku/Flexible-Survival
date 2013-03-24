@@ -4704,6 +4704,12 @@ This is the location choice rule:
 			extend game by 240;
 			now hardmode is true;
 			now levelwindow is 99999;
+		if hardmode is false:
+			say "Would you like to play hard mode?";
+			if the player consents:
+				now hardmode is true;
+				now levelwindow is 99999;
+				say "Hardmode activated!";
 	now scenario is title entry;
 	now the menu depth is 0;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
