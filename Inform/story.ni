@@ -5872,7 +5872,7 @@ Include Stag by Wahn.
 Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Francois by AGentlemanCalledB.
-
+Include Karen by AGentlemanCalledB.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

@@ -293,7 +293,7 @@ Instead of fucking the Rex:
 				say "     You eventually return to your senses, the fog seaming to have lifted from your mind once again and you note the burning desires within you seem to have diminished, but so has some of your resistance to Rex and the retriever infection.";
 				if hp of Rex < 9, increase hp of Rex by 1;
 
-Section 5a - Karen
+[Section 5a - Karen
 
 Karen is a woman.
 The description of Karen is "[Karendescribing]";
@@ -331,7 +331,7 @@ to say RetrieverGirldesc:
 	say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";
 
 instead of sniffing the Retriever Girl:
-	say "Karen has a light scent of an aroused female canine.";
+	say "Karen has a light scent of an aroused female canine.";]
 
 Section 6 - Rex Pet Events
 
