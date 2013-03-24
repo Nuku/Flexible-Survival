@@ -1334,7 +1334,7 @@ Section 6 - Rules Modifications and Everyturn Rule
 Instead of exploring while player is in Bouncy Castle:
 	say "There is nowhere to explore out here.";
 
-Instead of exploring while player is in Bouncy Castle:
+Instead of scavenging while player is in Bouncy Castle:
 	say "There is nowhere to scavenge out here.";
 
 an everyturn rule:
