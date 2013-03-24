@@ -1,6 +1,6 @@
 Version 3 of Retriever by AGentlemanCalledB begins here.
 "Adds a retriever creature to Flexible Survivals Wandering Monsters table"
-[Version 3 - Updates for compatability with Rex overhaul]
+[Version 3 - Updates for compatibility with Rex overhaul]
 
 Section 1 - Monster Responses
 
@@ -9,47 +9,88 @@ when play begins:
 	add { "Retriever" } to infections of furry;
 
 to say losetoRetriever:
-	say "As you collapse, unable to resist the retriever girl's assault any longer she approaches you with an expression somewhere between hunger and lust";
-	if cocks of player > 0:
-		say ".  You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
-		say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with you seed.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "Afterwards, she collapses atop you, almost as exhausted as you are, the two of you lay there for some time lost in the afterglow of your lovemaking, before she raises herself off your, running her belly contently as she pads away leaving you to recover on your own.";
+	if hp of Karen is 4:
+		say "	Struggling to stay upright after Rex's brutal assault, he plants his feet firmly with a low growl before charging towards you, planting his shoulder squarely in the middle of your chest and knocking you to the ground.";
 	otherwise:
-		say ".  As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
-		say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "Before getting up to leave you canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone, you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
+		say "As you collapse, unable to resist the retriever girl's assault any longer she approaches you with an expression somewhere between hunger and lust";
+		if cocks of player > 0:
+			say ".  You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
+			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with you seed.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "Afterwards, she collapses atop you, almost as exhausted as you are, the two of you lay there for some time lost in the afterglow of your lovemaking, before she raises herself off your, running her belly contently as she pads away leaving you to recover on your own.";
+		otherwise:
+			say ".  As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
+			say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "Before getting up to leave you canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone, you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
 
 to say beattheRetriever:
-	if libido of player > 60:
-		say "As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted too (Y/N).";
-		if the player consents:
-			say "You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins too pant happily and spreads her legs before you.";
-			if cocks of player > 0:
-				say "Already fully erect by the time you reach her you waste no time in jumping on the prone canine. As you tease her outer folds with your [cock size desc of player] [cock of player] cock she begins to whimper needfully, already begins to buck against you, trying to force you inside her. You begin trust into her slowly, soon easily matching her own pace, each push eliciting another whimper or small back from your retriever lover.";
-				say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly  forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-				say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the  retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
-			otherwise:
-				say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
-				say "Before long her expert ministrations have you approaching climax and, eager to return the favor you find yourself driving deeper and deeper into your lover's sopping cunt.";
-				say "Without warning she suddenly drivers muzzle into your you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-				say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did too you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
-				say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
-		otherwise:
-			say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing too her feet again, you brace yourself for another attack, but it never comes.  She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
+	if hp of Karen is 4:
+		say "	Still reeling from your last blow, Rex stumbles back and falls too one knee. He glances over at Karen, huddled in the corner of the room before looking up at you with his pleading eyes awaiting your final decisive strike which knocks the beaten canine to the floor.";
 	otherwise:
-		say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be an continue on your way.";
+		if libido of player > 60:
+			say "As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted too (Y/N).";
+			if the player consents:
+				say "You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins too pant happily and spreads her legs before you.";
+				if cocks of player > 0:
+					say "Already fully erect by the time you reach her you waste no time in jumping on the prone canine. As you tease her outer folds with your [cock size desc of player] [cock of player] cock she begins to whimper needfully, already begins to buck against you, trying to force you inside her. You begin trust into her slowly, soon easily matching her own pace, each push eliciting another whimper or small back from your retriever lover.";
+					say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly  forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
+					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+					say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the  retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
+				otherwise:
+					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
+					say "Before long her expert ministrations have you approaching climax and, eager to return the favor you find yourself driving deeper and deeper into your lover's sopping cunt.";
+					say "Without warning she suddenly drivers muzzle into your you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
+					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did too you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
+					say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
+			otherwise:
+				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing too her feet again, you brace yourself for another attack, but it never comes.  She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
+		otherwise:
+			say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be an continue on your way.";
 
 to say Retrieverdesc:
-	say "As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
-	say "When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hp of Karen is 4:			[Fight against Rex]
+		say "	Standing before you is Rex, a large male golden retriever. His long, thickly furred tail whips about in irritation behind him as he assumes an aggressive fighting stance. Clearly he isn't pleased with your little escape plan.";
+		if hardmode is true and level of player > 10, let debit be level of player - 10;
+		now hp entry is 95 + ( debit * 4 );
+		now monsterhp is 95 + ( debit * 4 );
+		now wdam entry is 11 + ( debit / 4 );
+		now lev entry is 10 + debit;
+		now libido entry is 70;
+		now str entry is 19;
+		now dex entry is 20 + (debit / 5);
+		now sta entry is 15;
+		now per entry is 15;
+		now int entry is 14;
+		now cha entry is 18;
+	otherwise:				[Fight Against Normal Retriever girl]
+		say "	As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
+		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitgrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
+		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		now hp entry is 45 + ( debit * 4 );
+		now monsterhp is 45 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 4 );
+		now lev entry is 5 + debit;
+		now libido entry is 70;
+		now str entry is 15;
+		now dex entry is 18 + (debit / 5);
+		now sta entry is 15;
+		now per entry is 15;
+		now int entry is 12;
+		now cha entry is 18;
+
+to say RetrieverAttack:
+	if hp of Karen is 4:
+		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]With his short claws[or]with a balled fist[or]in anger[at random] Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].";
+	otherwise:
+		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way.[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off.[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek.[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react.[at random]";
 
 Section 2 - Monster Insertion
 
@@ -61,7 +102,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Retriever";
-	now attack entry is "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way.[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off.[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek.[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react.[at random]";
+	now attack entry is "[RetrieverAttack]";
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
@@ -111,7 +152,9 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Retriever":
 		if humanity of player is less than 10:
-			if hp of Rex is 10:
+			if hp of Rex is 49:
+				say "	Eventually Rex emerges from the back room, grinning happily as his newest retriever pet pads along behind him on all fours. The extended 'training' session having reduced your mind to little more then a sex crazed animal you eagerly follow your master into his life beyond the city, not caring where his life leads you or how you get there, so long as his wonderful cock is never far from your [if cunts of player > 0]dripping pussy[otherwise]needy body[end if].";
+			otherwise if hp of Rex is 10:
 				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for,  with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
 				if cunts of player > 0:
@@ -121,6 +164,8 @@ when play ends:
 						say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 				otherwise:
 					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+			otherwise if Retriever Girl is Tamed:
+				say "	As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city and Karen quickly follows suite. The two of you eventually catch a familiar male scent, and your bodies, eager for an alpha's touch, soon lead you too him. With your minds gone none of you are ever entirely aware of your previous relationships, but somehow you know you belong together. And so your small retriever pack sets off into the city, eager to bolster your numbers and enjoy your carefree lives as lusty canines.";
 			otherwise if hp of Rex > 5:
 				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
@@ -139,7 +184,12 @@ when play ends:
 				otherwise:
 					say "     You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		otherwise:
-			if hp of Rex > 9:
+			if Retriever Girl is tamed:
+				say "	Once the military moves into the city you and Karen are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors";
+				say ". Thanks to the success of your business and the friendly and upbeat demeanor provided by your retriever infection, neither of you ever have difficulty finding company too follow home for the night.";
+				if cocks of player > 0:
+					say "	However, the nights you spend in eachother's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
+			otherwise if hp of Rex > 9:
 				say "     Despite having submitted yourself to a life as Rex's pet, you manage too maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you too continue wearing your collar and occasionally giving you a refresher 'lesson' too ensure your training hasn't been forgotten.";
 			otherwise:
 				say "     Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
@@ -152,12 +202,19 @@ when play ends:
 					say "     You manage to smuggle your dog-cock shaped sex toy out of the city with you, Frequently needing it to satisfy your body's strange new needs.";
 				say "     You lead [if hp of Rex is 4]an otherwise normal[otherwise]a relatively normal[end if] life outside the city, ending up working as a [if cunts of player > 0]waitress[otherwise]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
 	otherwise:
-		if hp of Rex > 9:
+		if hp of Rex > 9 and hp of Rex < 50:
 			if humanity of player is less than 10:
 				say "     With your mind lost too another infection out in the city, you quickly forget your submission too Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
 			otherwise:
 				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
 		otherwise if hp of Rex is 4:
 			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seam to diminish as well.";
+		if Retriever Girl is tamed:
+			if humanity of player is less than 10:
+				say "	With your mind lost too another infection you quickly forget your commitment too Karen, and as you settle into your new life Karen leaves you. Having lost yet another master to the infection she returns too her home in the high rise district to await military rescue.";
+			otherwise:
+				say "	When the military finally arrives and begins evacuating people from the city Karen happily comes with you, following you wherever your life takes you. She spends most of her time at your home, cooking, cleaning and generally being a good companion. You frequently take the time to show her how thankful you are for all her help, both with innocent play, trips too the [one of]park[or]beach[or]city[at random], as well as more lustful playtime.";
+				if cocks of player > 0:
+					say "	Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever/[bodyname of player] hybrid pups prove to be wonderful companions, just like their mother.";
 
 Retriever ends here.
