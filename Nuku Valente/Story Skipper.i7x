@@ -1141,6 +1141,18 @@ To reciting2:
 			-- 122:	[Rex]
 				if the player's command matches "[number]":
 					now hp of Rex is the number understood;
+			-- 123:	[Karen]
+				if the player's command matches "[number]":
+					now hp of Karen is the number understood;
+					now carried of Dog Bone is 0;
+					now ForcedAdoption is unresolved;
+					now Rex's Place is unknown;
+					if guy is banned or girl is banned or furry is banned:
+						now hp of Rex is 0;
+						now hp of Karen is 0;
+						now ForcedAdoption is resolved;
+					if hp of Rex > 0:
+						now Entrance to the High Rise District is known;
 					if hp of Rex > 0 and hp of Rex < 5:
 						now carried of Dog Bone is 1;
 						now ForcedAdoption is unresolved;
@@ -1148,10 +1160,12 @@ To reciting2:
 						now carried of Dog Bone is 0;
 						now Rex's Place is known;
 						now ForcedAdoption is resolved;
-			-- 123:	[Karen]
-				if the player's command matches "[number]":
-[					now hp of Karen is the number understood;	]
-					let y be 0;
+					if hp of Rex is 50:
+						now Rex's Place is unknown;
+					if hp of Karen >= 5:
+						now Retriever Girl is tamed;
+					otherwise:
+						now Retriever Girl is not tamed;
 			-- 124:	[François]
 				if the player's command matches "[number]":
 					now hp of François is the number understood;
@@ -2454,6 +2468,18 @@ Carry out reciting:
 			-- 122:	[Rex]
 				if the player's command matches "[number]":
 					now hp of Rex is the number understood;
+			-- 123:	[Karen]
+				if the player's command matches "[number]":
+					now hp of Karen is the number understood;
+					now carried of Dog Bone is 0;
+					now ForcedAdoption is unresolved;
+					now Rex's Place is unknown;
+					if guy is banned or girl is banned or furry is banned:
+						now hp of Rex is 0;
+						now hp of Karen is 0;
+						now ForcedAdoption is resolved;
+					if hp of Rex > 0:
+						now Entrance to the High Rise District is known;
 					if hp of Rex > 0 and hp of Rex < 5:
 						now carried of Dog Bone is 1;
 						now ForcedAdoption is unresolved;
@@ -2461,10 +2487,12 @@ Carry out reciting:
 						now carried of Dog Bone is 0;
 						now Rex's Place is known;
 						now ForcedAdoption is resolved;
-			-- 123:	[Karen]
-				if the player's command matches "[number]":
-[					now hp of Karen is the number understood;	]
-					let y be 0;
+					if hp of Rex is 50:
+						now Rex's Place is unknown;
+					if hp of Karen >= 5:
+						now Retriever Girl is tamed;
+					otherwise:
+						now Retriever Girl is not tamed;
 			-- 124:	[François]
 				if the player's command matches "[number]":
 					now hp of François is the number understood;

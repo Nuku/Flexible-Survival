@@ -67,8 +67,7 @@ to say psychfirstarrival:
 		now battleground is "void";
 
 
-instead of sniffing Psych Department:
-	say "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.";
+the scent of Psych Department is "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.";
 
 
 Section 3 - Doctor Moffatt
@@ -78,8 +77,7 @@ The description of Doctor Moffatt is "[drmoffattdesc]";
 The conversation of Doctor Moffatt is { "..." }.
 wrcurseMoffatt is a number that varies.
 
-instead of sniffing the Doctor Moffatt:
-	say "She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger.  She also has a pleasant, perfumed scent beneath that.";
+the scent of Doctor Moffatt is "She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger.  She also has a pleasant, perfumed scent beneath that.";
 
 to say drmoffattdesc:
 	say "     Doctor Moffatt, the shemale skunk, has a very striking appearance.  Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in colour like her nose and hair.  Her fur is a mix of grays, dark and light, instead of the starker constrast of black and white you'd expect on a skunk.  She has a huge, fluffy tail, as long as she is tall and as wide as her hips.  And those hips are quite wide indeed.  The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs.";
@@ -195,7 +193,9 @@ patients: psycho weasels behaviour/they'd just be running amok if we didn't/we'v
 I must say, it's quite pleasant to be able to enjoy some kinks otherwise impossible.
 ]
 
-instead of fucking the Doctor Moffatt:
+the fuckscene of Doctor Moffatt is "[sexwithDrMoffatt]".
+
+to say sexwithDrMoffatt:
 	[puts Hyperskunk as lead monster in case of infection/impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;

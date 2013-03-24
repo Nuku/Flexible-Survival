@@ -22,8 +22,7 @@ North of Hospital Halls is Hospital interior.
 
 The marea of Hospital Halls is "Hospital".
 
-instead of sniffing City Hospital:
-	say "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.";
+the scent of City Hospital is "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.";
 
 
 Section 2 - Hospital Events
@@ -121,8 +120,7 @@ name	desc	weight	object
 
 bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary.  The objsize of bonesaw is 2.
 
-instead of sniffing the bonesaw:
-	say "The bonesaw smells faintly of antiseptic and blood.";
+the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.";
 
 
 Staff Lounge is a situation.
@@ -411,8 +409,7 @@ The Dexterity of helper dog is 15;
 The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.";
 The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
 
-instead of sniffing helper dog:
-	say "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
+the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
 
 when play ends:
 	if helper dog is tamed:
@@ -445,8 +442,7 @@ Up of Locked stairwell is Hidden Lab
 
 The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].";
 
-instead of sniffing the Hidden Lab:
-	say "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.";
+the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.";
 
 [Message indicating progress]
 to say hospprogress:
@@ -491,11 +487,9 @@ The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with r
 
 The conversation of Doctor Mouse is { "Squeak!" }.
 
-instead of sniffing Doctor Mouse:
-	say "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
+the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
 
-instead of linkactioning Doctor Mouse when hospquest >= 14:
-	say "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link], [link]volunteer[end link][line break]";
+the linkaction of Doctor Mouse is "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link][if hospquest >= 14], [link]volunteer[end link][end if][line break]";
 
 
 to say meetdrmouse:
@@ -634,8 +628,7 @@ It is not temporary.
 instead of using scientific device:
 	say "     You don't really know what it's for, but Dr Mouse says he needs it for something.";
 
-instead of sniffing the scientific device:
-	say "     The large electronic device smells faintly of ozone and magic smoke.  Hopefully it still works.";
+the scent of the scientific device is "     The large electronic device smells faintly of ozone and magic smoke.  Hopefully it still works.";
 
 
 to say hospquestpt2:
@@ -1435,7 +1428,9 @@ it is part of the player.
 It is not temporary.
 lavalamplick is a number that varies.
 
-instead of sniffing the lava lamp:
+the scent of the lava lamp is "[smellingthelavalamp]".
+
+to say smellingthelavalamp:
 	if lavalamplick is 0:
 		say "     You sniff the improvised lava lamp dildo.  It smells strongly of the triceratops woman's arousing scent.  You find yourself tempted to lick it.  Do you follow your urge? (Y/N)";
 		if the player consents:
@@ -1534,8 +1529,7 @@ name	desc	weight	object
 
 spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
 
-instead of sniffing the spear:
-	say "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.";
+the scent of the spear is "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.";
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	increase carried of package by 1;
@@ -1558,8 +1552,7 @@ It is not temporary.
 instead of using package:
 	say "     You ponder the old box, string-tied box in your hands, wondering what the doctor's receiving.";
 
-instead of sniffing the package:
-	say "The old box smells of dust and times long past that may never have been at all.";
+the scent of the package is "The old box smells of dust and times long past that may never have been at all.";
 
 
 Section 8 - Endings

@@ -635,8 +635,7 @@ It is not temporary.
 instead of using wolfsbane:
 	say "     You shouldn't mess with that stuff.  Nermine needs it for your cure.  Besides, isn't it poisonous?  Hey... waitaminit.";
 
-instead of sniffing the wolfsbane:
-	say "     The wolfsbane has a strong scent that makes you sick to your stomach.";
+the scent of wolfsbane is "     The wolfsbane has a strong scent that makes you sick to your stomach.";
 
 
 Part 2 - Getting the Knife
@@ -703,8 +702,7 @@ name	desc	weight	object
 
 silver knife is an armament. It is part of the player. It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]". The weapon damage of silver knife is 6. The weapon type of silver knife is "Melee". It is not temporary.  the objsize of silver knife is 2.  the hitbonus of silver knife is 2.
 
-instead of sniffing the silver knife:
-	say "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.";
+the scent of the silver knife is "     While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.";
 
 chainmail vest is equipment. It is not temporary.
 The AC of chainmail vest is 40.
@@ -713,7 +711,7 @@ The placement of chainmail vest is "body".
 The descmod of chainmail vest is "You are wearing a chainmail vest that covers your torso and shoulders.".
 The slot of chainmail vest is "body".
 
-the scent of chainmail vest is "There is little scent to the chainmail itself.";
+the scent of chainmail vest is "     There is little scent to the chainmail itself.";
 
 
 Part 3 - Dinosaur Skeleton

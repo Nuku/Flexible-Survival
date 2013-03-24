@@ -161,11 +161,9 @@ The conversation of Solstice is { "Treasure!" }.
 to say solsticedesc:
 	say "     Transformed by the strange artifact you helped her recover, Solstice has become an unusual, gryphon-like creature.  Her upper body is decidedly avian in nature, with black feathers and a crow's head and beak.  Her eyes are sharp and have a lustful glint as they look at you.  She has a pair of broad, black wings attached to her back as well.  Her paws resemble bird-like talons.  There are some hints of her previous, vulpine nature as well, with foxish ears and mammalian breasts filling her red shirt.  Her lower body is largely unchanged and is that of a sexy, multi-tailed vixen, though those tails now in in black plumage.  Her fur is a silvery gray in stark contrast to her darker feathers.  Along with her red, sleeveless top, the vulpogryph wears a pair of khaki shorts with attached pouches.  She's even set up her bedroll in one of the reading rooms to the side of the library and is keeping her small backpack there as well.";
 
-instead of linkactioning Solstice:
-	say "Possible Actions: [link]talk[as]talk Solstice[end link], [link]smell[as]smell Solstice[end link], [link]fuck[as]fuck Solstice[end link], [link]lesson[as]lesson Solstice[end link][line break]";
+the linkaction of Solstice is "Possible Actions: [link]talk[as]talk Solstice[end link], [link]smell[as]smell Solstice[end link], [link]fuck[as]fuck Solstice[end link], [link]lesson[as]lesson Solstice[end link][line break]";
 
-instead of sniffing Solstice:
-	say "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.";
+the scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.";
 
 Instead of conversing Solstice:
 	say "[one of]'It's so nice being here with you, my sweety,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures.  We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if player is fullyvg]'You make such a sexy vulpogryph, my dear.  I knew you'd make a wonderful mate,' she purrs sensually as she runs her taloned paws over you.[otherwise if player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear.  You'll be my perfect mate,' she purrs sensually as she runs her taloned paws over you.[otherwise]'I think you'd look much better as a sexy vulpogryph like me, hon,' she purrs sensually as she runs her taloned paws over you.[end if][or]'Mmm... you should stay here with me, sexy.  We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";
@@ -215,7 +213,9 @@ carry out lessontiming:
 
 Section 4 - Fucking Solstice
 
-instead of fucking Solstice:
+the fuckscene of Solstice is "[sexwithSolstice0]".
+
+to say sexwithSolstice0:
 	if lastfuck of Solstice - turns is less than 8:
 		say "     'As much as I'd enjoy that,' Solstice replies, running her taloned paws over you.  'I'm not quite up for another go quite yet.  Can I get a rain check on that?'";
 	otherwise:

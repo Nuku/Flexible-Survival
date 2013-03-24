@@ -17,11 +17,9 @@ Larissa has a list of text called vials.
 
 The description of Larissa is "[larissadesc]";
 
-instead of sniffing Larissa:
-	say "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
+the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
 
-instead of linkactioning Larissa when hp of Larissa >= 2:
-	say "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link], [link]TF[as]transform Larissa[end link][line break]";
+the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if hp of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
 
 
 [-----------------------------------------------------------------------------------------------------]
@@ -111,7 +109,9 @@ Part 2 - Zephyr-Matt Quest
 
 Section 4 - Fucking
 
-instead of fucking Larissa:
+the fuckscene of Larissa is "[sexwithLarissa]".
+
+to say sexwithLarissa:
 	if lastfuck of Larissa - turns < 8:
 		say "     'We'll have to put that on hold, hon.  I'm not due to get another break for a while yet.'";
 	otherwise if cocks of player is 0 and cunts of player is 0:

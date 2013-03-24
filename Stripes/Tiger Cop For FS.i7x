@@ -126,8 +126,7 @@ Section 2 - Tiger Cop character and Police Car location
 Police Car is a room. It is private. It is fasttravel.
 The description of Police Car is "[policecardesc]";
 
-Instead of sniffing the Police Car:
-	say "This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.";
+the scent of the Police Car is "This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.";
 
 to say policecardesc:
 	if Sgt Marks is in Police Car:
@@ -147,8 +146,7 @@ The description of Sgt Marks is "     The tiger cop is quite large and impressiv
 The conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
 sgtmarkstalk is an number that varies.
 
-Instead of sniffing the Sgt Marks:
-	say "The tiger cop growls and pushes you away as you come up to sniff him.";
+the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.";
 
 Instead of conversing the Sgt Marks:
 	if sgtmarkstalk is 0:
@@ -178,9 +176,7 @@ An everyturn rule:
 			say "[line break]     [bold type]Your 24 hours are up.  Sgt Marks has left without you.[roman type]";
 			now mqcountdown is 10;
 
-
-Instead of fucking the Sgt Marks:
-	say "     'Smarten up and save it for those fine pussies.  They'll be all ours once this is over.'";
+the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussies.  They'll be all ours once this is over.'";
 
 
 Section 3 - Motel Quest
@@ -490,8 +486,7 @@ name	desc	weight	object
 
 nightstick is an armament. It is part of the player. It has a weapon "[one of]your nightstick[or]your t-baton[or]your side-handle baton[or]your police nightstick[or]your black nightstick[at random]". The weapon damage of nightstick is 6. The weapon type of nightstick is "Melee". It is not temporary.
 
-instead of sniffing the nightstick:
-	say "The nightstick smells faintly of violent authority.";
+the scent of the nightstick is "     The nightstick smells faintly of violent authority.";
 
 Section 7 - Monster Desc for Tiger Cop
 

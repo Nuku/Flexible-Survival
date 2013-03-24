@@ -125,7 +125,49 @@ to say ocelotloss_bt_j2:	[sub on dom - jerk]
 
 
 to say losetoocelot_ld:
-	say "...";
+	choose row monster from the table of random critters;
+	if hp of player > 0:
+		say "     Opting to give in rather than fight the large feline, you let him wrap his arms around you and pull you into his lap as he sits down with you.  He runs his paws over your [bodytype of player] body.  He nuzzles at your neck and licks your throat softly.";
+	otherwise:
+		say "     Beaten by the large, powerful feline, you are grabbed rather roughly in his arms and pulled into his lap as he sits down.  He runs his paws over your [bodytype of player] body.  He nuzzles at your neck and licks your throat softly.";
+	if ocelotchoice is 0:
+		say "     'Mmm... what kind of a kitty are you, deep down?' he purrs, rubbing a paw over your crotch and groping your ass with the other.  'Are you going to be another big, dom kitty like me or a sexy little toy for me to play with?'  He nips at your shoulder and gropes you some more.  'Which will it be?'  It seems you have some kind of choice to make.  (Y=big kitty, N=little kitty) ";
+		if the player consents:
+			now ocelotchoice is 2;
+			now cock length entry is 10;
+			now cock width entry is 6;
+			now breast size entry is 5;
+			now cunt length entry is 10;
+			now cunt width entry is 4;
+		otherwise:
+			now ocelotchoice is 1;
+	if ocelotchoice is 1:				[sub-ocelot chosen]
+		if cocks of player > 0:
+			say "     'Purrrrr... [if player is ocelotbodied]a cute kitty fucktoy in need of some proper attention from a big, strong kitty[otherwise]There it is.  I smell a cute kitty fucktoy inside you, eager for some proper attention from a big, strong kitty[end if].'  ...
+
+
+  He snuggles you close and takes your cock in his paw.  The feline's touch soon has you erect.  Eager and excited now, you return the favour to him, even lowering yourself to your knees to lick and suck at his shaft.  He purrs happily, rubbing your head as you bob over his six inch cock.";
+			if cunts of player > 0 and a random chance of 3 in 4 succeeds:	[vaginal]
+				say "[ocelotloss_bt_v1]";
+			otherwise if cunts of player is 0 and "Less Anal" is not listed in feats of player and ( ( a random chance of 1 in 4 succeeds ) or ( "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 1 in 4 succeeds ) ):	[anal]
+				say "[ocelotloss_bt_a1]";
+			otherwise:	[oral]
+				say "[ocelotloss_bt_o1]";
+		otherwise if cunts of player > 0:
+			say "     'Purrrrr... [if player is ocelotbodied]a cute kitty girl for me to play with[otherwise]There it is.  I smell a cute kitty fucktoy inside you, eager to come out and play[end if].'  He snuggles you close and rubs a paw over your [if cunts of player > 0]pussy[otherwise]pussies[end if], slipping his fingers into you.  The feline's touch soon has you wet and ready.  Eager and excited now, you return the favour to him by stroking his erection, even lowering yourself to your knees to lick and suck at his shaft.  He purrs happily, rubbing your head as you bob over his six inch cock.";
+			if a random chance of 3 in 4 succeeds or ( "Submissive" is listed in feats of player and a random chance of 1 in 4 succeeds ):[vaginal]
+				say "[ocelotloss_bt_v1]";
+			otherwise:	[oral]
+				say "[ocelotloss_bt_o1]";
+		otherwise:
+			say "     'Purrrrr... [if player is ocelotbodied]you poor kitty fucktoy.  Left with nothing for me to play with[otherwise]There it is.  I smell a cute kitty fucktoy inside you, eager to come out and play.  But he's got no toys to play with[end if],' he adds, groping your bare groin sadly.  He snuggles you close and kisses you tenderly, his paws groping your ass while grinding his throbbing cock against your hip.  Eager and excited now, you lower yourself to your knees to lick and suck at his shaft.  He purrs happily, rubbing your head as you bob over his six inch cock.";
+			if "Less Anal" is not listed in feats of player and ( ( a random chance of 1 in 4 succeeds ) or ( "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( bodyname of player is "Ocelot" and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 1 in 4 succeeds ) ):	[anal]
+				say "[ocelotloss_bt_a1]";
+			otherwise:	[oral]
+				say "[ocelotloss_bt_o1]";
+
+
+
 
 
 to say beattheocelot:

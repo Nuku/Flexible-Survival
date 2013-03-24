@@ -68,8 +68,7 @@ The Dexterity of bee girl is 16;
 The summondesc of bee girl is "Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]";
 
-instead of sniffing the bee girl:
-	say "Honey, unsurprisingly, smells of honey.";
+the scent of the bee girl is "Honey, unsurprisingly, smells of honey.";
 
 
 Section 3 - Sexxxings

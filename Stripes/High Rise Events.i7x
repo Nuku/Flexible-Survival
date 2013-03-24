@@ -114,8 +114,7 @@ name	desc	weight	object
 
 cleaver is an armament. It is part of the player. It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]". The weapon damage of cleaver is 6. The weapon type of cleaver is "Melee". It is not temporary.
 
-instead of sniffing the cleaver:
-	say "The heavy blade smells faintly of blood.";
+the scent of the cleaver is "The heavy blade smells faintly of blood.";
 
 Section 3- Small Park
 
@@ -372,8 +371,7 @@ name	desc	weight	object
 
 golf club is an armament. It is part of the player. It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]". The weapon damage of golf club is 5. The weapon type of golf club is "Melee". It is not temporary.
 
-instead of sniffing the golf club:
-	say "The golf club smells faintly of grass, bad slices and bashed heads.";
+the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.";
 
 
 Section 7- Electronics Store

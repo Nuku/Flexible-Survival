@@ -67,8 +67,7 @@ Instead of resolving a Mephitness:
 Comic Shop is a room. It is fasttravel. It is private.
 The description of Comic Shop is "[comicshopdesc]";
 
-instead of sniffing Comic Shop:
-	say "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.";
+the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.";
 
 to say comicshopdesc:
 	say "     The shadowy comic shop is on the second floor of a run down building at the edge of the neighbourhood.  It is wedged between other similarly decrepit looking establishments.  Being behind a barred door and upstairs seems to have saved it from the lustful hordes of monsters.  The shop itself is fairly large, but there is little space to move.  There are shelves and displays everywhere for comics, manga and games, making it very difficult to navigate around inside.";
@@ -83,8 +82,7 @@ lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 franksex is a number that varies.
 frankmalesex is a number that varies.
 
-instead of sniffing the Frank:
-	say "The large skunk fellow smells of musty comics, Cheetohs and male skunk.";
+the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.";
 
 to say frankdesc:
 	say "     Frank is a heavy-set skunk fellow.  His encounter with the skunks seems to have slimmed him down a little, but he is still quite portly.  His black and white fur is thick and soft.  As he now has fur, he's forgone wearing clothes aside from a ballcap with the store logo on it.";
@@ -92,7 +90,9 @@ to say frankdesc:
 Instead of conversing the Frank:
 	say "     [one of]'I never should have listened to that stupid coyote,' he grumbles angrily.  'He didn't know what he was talking about at all.'[or]'Do you prefer Batman or Superman?' he asks before going off into a long discussion about comics.[or]'It's too bad there aren't any cool skunk superheroes,' he muses.[or]'Which do you think is better?  4th edition or 3.5?'  Having no idea what the chatty fellow is talking about, you just shrug.[or]'I could really go for some more soda,' he says, having just finished one off.[or]'I hope this all gets sorted out soon,' he says.  'My gaming night is on Fridays and we're just about to face the boss.'[or]'Reading comics help me remember who I was and how much I love them.'[or]'So, I was thinking you must be fourth or fifth level or something.  I'm guessing I'm at about level ten by now,' he says, flexing a little.[or]'So did you see that new superhero movie that came out this summer?' he asks.  Not even waiting for your response, he starts going on about his impressions of the film and its impact on the genre.[in random order]";
 
-instead of fucking the Frank:
+the fuckscene of Frank is "[sexwithFrank]".
+
+to say sexwithFrank:
 	follow the cock descr rule;
 	if skunkbeaststatus is 1:
 		[puts Skunkbeast Lord as lead monster for possible impregnation]

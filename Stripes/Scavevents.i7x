@@ -606,6 +606,7 @@ The placement of shoulder pad is "body".
 The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 
+the scent of shoulder pad is "The shoulder pad stinks of the '90s.".
 
 Section 14 - Hospital Scavenging
 

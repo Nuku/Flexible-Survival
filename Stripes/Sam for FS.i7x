@@ -42,7 +42,9 @@ Mini-Lab is a room. It is fasttravel. It is private.
 The description of Mini-Lab is "[minilabdesc]";
 The invent of Mini-Lab is { "cot" }.
 
-instead of sniffing Mini-Lab:
+the scent of Mini-Lab is "[minilabscent]".
+
+to say minilabscent:
 	if hp of Sam is not 100:
 		say "The basement housing the research station smells strongly of dust and mildew, as well as dying traces of older smells from when the local teens would come here to drink.";
 	otherwise:
@@ -487,7 +489,9 @@ Section 5 - Sexy Times Sam
 
 Part 1 - Basic System
 
-instead of fucking the Sam:
+the fuckscene of Sam is "[sexwithSam]".
+
+to say sexwithSam:
 	if hp of Sam >= 1 and hp of Sam <= 4:
 		say "     'While it might be nice to do it with someone I know for a change, I get more than enough of that out in the city.  As it is, I need to save up my strength for the next time I go out.  How about a rain check on that?  When my pick up comes to get me out of here, you can come along and we can celebrate together.'";
 	otherwise if lastfuck of Sam - turns < 6:

@@ -15,11 +15,7 @@ to say roddesc:
 	otherwise:
 		say "     Rod has become a sexy slut rat.  She has curvy hips, a tight waist and large bosom.  She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch.  She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her.  She has black fur and a long, naked rat tail.  She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
 
-instead of sniffing Rod:
-	if hp of Ronda is not 100:
-		say "Rod smells of rats and his mall home.";
-	otherwise:
-		say "Rod smells of slutty rats and sex.  Lots of sex.";
+the scent of Rod is "[if hp of Ronda is not 100]Rod smells of rats and his mall home.[otherwise]Rod smells of slutty rats and sex.  Lots of sex.[end if]";
 
 instead of conversing Rod Mallrat:
 	if tmapfound is 1:		[***needs Slut Rat version?]
@@ -60,7 +56,9 @@ instead of conversing Rod Mallrat:
 	otherwise:
 		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Sup?'[at random]";
 
-instead of fucking Rod Mallrat:
+the fuckscene of Rod Mallrat is "[sexwithRod]".
+
+to say sexwithRod:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -122,11 +120,7 @@ to say rondadesc:
 	otherwise:
 		say "ERROR-Ronda-[hp of Ronda]L: You should not be able to converse with Ronda at this point.";
 
-instead of sniffing Ronda:
-	if hp of Ronda is not 100:
-		say "Ronda smells of cheap perfume, rats and her mall home.";
-	otherwise:
-		say "Ronda smells of slutty rats, cheap perfume and lots of sex.";
+the scent of Ronda is "[if hp of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home.[otherwise]Ronda smells of slutty rats, cheap perfume and lots of sex.[end if]".
 
 instead of conversing Ronda Mallrat:
 	if hp of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
@@ -142,7 +136,9 @@ instead of conversing Ronda Mallrat:
 	otherwise if hp of Ronda is 100:
 		say "[one of]'I feel so much better now that I have my sweet Rod to play with.'[or]'Feel free to play with Rod whenever I'm not using her.'[or]'I love living here with my slutty Rob and all my sexy friends.  This is paradise.'[or]'Thanks again for your help with Rod.  Having her here makes everything so much better.'[or]'Rod's such a good slut.  Knows her place.'[at random]";
 
-instead of fucking Ronda Mallrat:
+the fuckscene of Ronda Mallrat is "[sexwithRonda]".
+
+to say sexwithRonda:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -231,6 +227,8 @@ lizard juice is a grab object.  It is part of the player.  It is not temporary.
 
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
+
+the scent of lizard juice is "The creamy white fluid has a thick, musky scent.".
 
 
 Chapter 2 - The Art Collector Event

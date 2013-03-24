@@ -14,12 +14,12 @@ when play begins:
 
 Instead of Resolving a Gourmet Treats:
 	if hp of Karen is 1:
-		say "     While traveling through the high rise district you come across what you can only assume is the strange bakery Karen mentioned. While the boarded up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. Eager too follow through with your plan too free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building, noticing some movement and groaning near the back counter you pause for a moment before steeling yourself and swinging the door open.";
+		say "     While traveling through the high rise district you come across what you can only assume is the strange bakery Karen mentioned. While the boarded up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. Eager to follow through with your plan to free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building, noticing some movement and groaning near the back counter you pause for a moment before steeling yourself and swinging the door open.";
 	otherwise:
 		say "     While traveling through the high rise district you come across a rather unusual looking building. While the boarded up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded up windows the exterior of the building appears relatively undamaged, thinking there may still be some useful supplies within you decide to step inside.";
 	attempttowait;
 	let T be a random number between 1 and 4;
-	say "     A bell above the door jingles loudly as you step inside, [if hp of Karen is 1]and the creatures in the back quickly turn their attention too the unexpected intruder[otherwise]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene you quickly realize you've walked in on [if T is 1] a small pack of huskies[otherwise if T is 2] a group of german shepherds[otherwise if T is 3] a small pack of Chocolate Labs[otherwise if T is 4] a pair of Retrievers[end if] who have captured another creature, and are having some fun with their prize in the secluded bakery. As the canines move towards you there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here then you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[otherwise if T is 2]german shepherds[otherwise if T is 3]Labs[otherwise if T is 4]Retrievers[end if].";
+	say "     A bell above the door jingles loudly as you step inside, [if hp of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[otherwise]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene you quickly realize you've walked in on [if T is 1] a small pack of huskies[otherwise if T is 2] a group of german shepherds[otherwise if T is 3] a small pack of Chocolate Labs[otherwise if T is 4] a pair of Retrievers[end if] who have captured another creature, and are having some fun with their prize in the secluded bakery. As the canines move towards you there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here then you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[otherwise if T is 2]german shepherds[otherwise if T is 3]Labs[otherwise if T is 4]Retrievers[end if].";
 	attempttowait;
 	if T is 1:
 		say "[BakeryHusky]";
@@ -47,7 +47,7 @@ Instead of Resolving a Gourmet Treats:
 		move player to Bone-Appetit;
 		now battleground is "void";
 	otherwise:
-		say "     Unwilling or unable too continue fighting you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers' path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping too catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
+		say "     Unwilling or unable to continue fighting you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers' path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping to catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
 		now Gourmet Treats is resolved;
 [	RETURNING AFTER FLEEING
 		say "     While traveling through the high rise district you end up back at the pet bakery you fled from previously. You reach for the door handle. Slowly pushing the door open a crack, you peer inside the building again. Not seeing anyone inside you push the door the rest of the way open. Stepping inside the first thing you notice is that the air is thick with the scent of canine sex, but there are no other signs of the bakery's previous occupants, neither mutant or their survivor prisoner.";
@@ -57,7 +57,7 @@ Instead of Resolving a Gourmet Treats:
 to say BakeryHusky:
 	challenge "Female Husky";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		say "     After dealing with the first husky you turn your attention too the other two, the large alpha gives you a smug smirk as he swats the ass of the female beside him, sending her running towards you, barking eagerly.";
+		say "     After dealing with the first husky you turn your attention to the other two, the large alpha gives you a smug smirk as he swats the ass of the female beside him, sending her running towards you, barking eagerly.";
 		challenge "Female Husky";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn";
@@ -69,9 +69,9 @@ to say BakeryHusky:
 			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			attempttowait;
 			if bonus + dice is greater than 15:
-				say "     You narrowly manage too avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises too his feet, shaking his head clear before turning to face you.";
+				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
 			otherwise:
-				say "      The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs, the large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body, fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head You push the stunned canine off you, scrambling too your feet as he shakes his head clear before turning too face you.(15 dmg taken)[line break]";
+				say "      The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs, the large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body, fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head You push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you.(15 dmg taken)[line break]";
 				decrease hp of player by 15;
 			challenge "Alpha Husky";
 
@@ -83,7 +83,7 @@ to say BakeryGShep:
 			if name entry is "German Shepherd":
 				now monster is y;
 				break;
-		say "     With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
+		say "     With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize to late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
 		let escape be 0;
 		let playernum be a random number between 1 and strength of player;
 		let shepnum be a random number between 1 and str entry;
@@ -93,7 +93,7 @@ to say BakeryGShep:
 		otherwise:
 			say ", but the shepherd simply chuckles at your effort, twisting your arm painfully as he tightens his grip.";
 		attempttowait;
-		say "     Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina";
+		say "     Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate to break free, but the effort of your continued struggles begins to weigh on your stamina";
 		let playernum be a random number between 1 and (strength of player + stamina of player);
 		let shepnum be a random number between 1 and (str entry + sta entry);
 		if playernum > shepnum:
@@ -103,37 +103,37 @@ to say BakeryGShep:
 			say ", unfortunately the same is not true of your enemy, despite your best efforts you make no headway.";
 		attempttowait;
 		if escape < 2:
-			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
+			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins to build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance to escape.";
 			let playernum be a random number between 1 and (100 - libido of player);
 			let shepnum be a random number between 30 and 100;
 			if playernum > shepnum:
 				increase escape by 1;
 		if escape is 2:
-			say "     Gathering all your strength, you manage too break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn too face the remaining two canines and ready yourself for your next opponent.";
+			say "     Gathering all your strength, you manage to break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn to face the remaining two canines and ready yourself for your next opponent.";
 		otherwise:
-			say "     Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
+			say "     Unfortunately your lust addled mind is unable to hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins to sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
 			infect "German Shepherd";
 			attempttowait;
 			now fightoutcome is 21;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "German Shepherd";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "   With another shepherd beaten you bring your attention too the final hound.";
+			say "     With another shepherd beaten you bring your attention to the final hound.";
 			challenge "German Shepherd";
 
 to say BakeryChocLab:
 	challenge "Chocolate Lab";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		say "   With the first confectionery canine beaten, you turn your attention to the next chocolate hound.";
+		say "     With the first confectionery canine beaten, you turn your attention to the next chocolate hound.";
 		challenge "Chocolate Lab";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "   Having dealt with your second opponent, you quickly scan the room for the third and final lab.";
+			say "     Having dealt with your second opponent, you quickly scan the room for the third and final lab.";
 			challenge "Chocolate Lab";
 
 	to say BakeryRetriever:
 	   challenge "Retriever";
 	   if fightoutcome >= 10 and fightoutcome <= 19:
-		  say "   With the first of the two golden furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
+		  say "     With the first of the two golden furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
 		  challenge "Retriever";
 
 Section 2 - Location
@@ -168,10 +168,10 @@ to say Françoisdesc:
 
 Instead of conversing the François:
 	if hp of Karen is 2:
-		say "	Realizing François and his bakery must be the place Karen mentioned, you decide to explain your situation to François, recounting the entire story that lead you to your position with Rex and your plot to escape."; 
-		say "	'Mon Dieu, poor Karen' François replies solemnly after hearing your tale, 'But at least it is not too late [if libido of François >= 3]for you, mon petit chou [otherwise]to repay mon héro[end if].";
-		say "	Without another word François gets too work, gathering a few supplies before . Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if bodyname of player is not listed in the infections of Caninelist and facename of player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
-		say "     Eventually François finishes his work, and returns with a small paper bag filled with fresh treats. [if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist or hunger of player > 60] The enticing scent wafting from the bag in your hands proves too be too much, and you eagerly fish a treat out, François simple grins at you as he watches you enjoy a sample of his work.  Still licking the last few crumbs of your snack from your lips, you[otherwise] You[end if] stow the bag away in your pack and give François your regards before deciding on your next move.";
+		say "     Realizing François and his bakery must be the place Karen mentioned, you decide to explain your situation to François, recounting the entire story that lead you to your position with Rex and your plot to escape."; 
+		say "     'Mon Dieu, poor Karen' François replies solemnly after hearing your tale, 'But at least it is not to late [if libido of François >= 3]for you, mon petit chou[otherwise]to repay mon héro[end if].";
+		say "     Without another word François gets to work, gathering a few supplies before starting in earnest.  Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if bodyname of player is not listed in the infections of Caninelist and facename of player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
+		say "     Eventually François finishes his work, and returns with a small paper bag filled with fresh treats. [if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist or hunger of player > 60] The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out, François simple grins at you as he watches you enjoy a sample of his work.  Still licking the last few crumbs of your snack from your lips, you[otherwise] You[end if] stow the bag away in your pack and give François your regards before deciding on your next move.";
 		now hp of Karen is 3;
 		now carried of Dog Treats is 1;
 	otherwise if libido of François >= 3 and Françoistalk1 is false and a random chance of 2 in 5 succeeds:
@@ -179,7 +179,7 @@ Instead of conversing the François:
 		say "      'Even from the girls.  I tried to refused them, but would they listen?  Non!  They would get what they wanted in the end, but it was always so hollow.  I am sad for them[if cocks of player > 0].  But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[otherwise if cunts of player > 0].  But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[otherwise].  But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Françoistalk1 is true;
 	otherwise if a random chance of 1 in 3 succeeds:
-		say "      [if daytimer is day]Boujour[otherwise]Bonsoir[end if], [one of]mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][or]my friend[at random].  [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
+		say "     [if daytimer is day]Boujour[otherwise]Bonsoir[end if], [one of]mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][or]my friend[at random].  [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
 	otherwise:
 		say "     [one of]Perhaps I should try to get back into business, I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find myself a sexy stud[or]Thanks again for the help, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][at random]."
 
