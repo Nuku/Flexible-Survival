@@ -1150,8 +1150,11 @@ To reciting2:
 						now ForcedAdoption is resolved;
 			-- 123:	[Karen]
 				if the player's command matches "[number]":
-[					now hp of Karen is the number understood;	]
-					let y be 0;
+					now hp of Karen is the number understood;
+					if hp of Karen >= 5:
+						now Retriever Girl is tamed;
+					otherwise:
+						now Retriever Girl is not tamed;
 			-- 124:	[François]
 				if the player's command matches "[number]":
 					now hp of François is the number understood;
