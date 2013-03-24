@@ -31,8 +31,7 @@ Lucy is a woman.
 The description of Lucy is "[lucydesc]";
 The conversation of Lucy is { "Hey baby!" }.
 
-instead of sniffing the Lucy:
-	say "The rat girl smells of perfume and nail polish.";
+the scent of Lucy is "The rat girl smells of perfume and nail polish.";
 
 to say lucydesc:
 	let dayturn be turns divided by 8;
@@ -54,7 +53,9 @@ Instead of conversing the Lucy:
 
 Section 3 - Sexy Times
 
-instead of fucking the Lucy:
+the fuckscene of Lucy is "[sexwithLucy]".
+
+to say sexwithLucy:
 	if lastfuck of Lucy - turns < 6:
 		say "     'We just had some fun a little while ago.  I know you can't keep your paws off your sexy girl, but [one of]I've other commitments, sweetums.'[or]I promised I'd... help Ronda with her nails.'[or]one of the cute guys broke up with his girl again and I want to see if I can console him,' she says with a wink.[purely at random]";
 	otherwise if cocks of player is 0 and cunts of player is 0:

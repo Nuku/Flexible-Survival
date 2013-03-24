@@ -7,8 +7,7 @@ Section 1 - Paleontology Office
 Paleontology Office is a room. It is fasttravel. It is private.
 The description of Paleontology Office is "[paleodesc]";
 
-instead of sniffing Paleontology Office:
-	say "The office smells of old books and older bones, but also of the wereraptor occupying it.";
+the scent of Paleontology Office is "The office smells of old books and older bones, but also of the wereraptor occupying it.";
 
 to say paleodesc:
 	if girl is not banned:
@@ -23,8 +22,7 @@ Doctor Utah is a person.  Doctor Utah is in Paleontology Office.
 The description of Doctor Utah is "[utahdesc]";
 The conversation of Doctor Utah is { "Hiss!" }.
 
-instead of sniffing the Doctor Utah:
-	say "[if daytimer is day]Dr. Utah smells faintly of hidden lust and power, revealing his wereraptor nature to you[otherwise]Dr. Utah smells of wereraptor lust and power.  It is quite exciting[end if].";
+the scent of Doctor Utah is "[if daytimer is day]Dr. Utah smells faintly of hidden lust and power, revealing his wereraptor nature to you[otherwise]Dr. Utah smells of wereraptor lust and power.  It is quite exciting[end if].";
 
 to say utahdesc:
 	if girl is not banned:
@@ -58,8 +56,9 @@ Instead of conversing the Doctor Utah:
 	otherwise:
 		say "     [one of]'It is... refreshing... to be in my true form.'[or]'I think I shall head out soon and find some... meat.'[or]'Perhaps I'll head out shortly to enjoy one of the new converts out there.'[or]Dr. Utah gives a hiss of lust and flicks [if girl is banned]his[otherwise]her[end if] claws while watching someone running through the courtyard behind the building.[or]'Our numbers grow slowly, but steadily.'[or]'I think I shall stalk a new [if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] to satisfy my desires.  They may even make a suitable convert.'[or]'We shall prevail thanks to the power of our gifts.  While the others can breed and transform faster, the wereraptors will always remain so.  Over time, the mammals shall join our numbers or become our prey.'[at random]";
 
+the fuckscene of Doctor Utah is "[sexwithDrUtah]".
 
-instead of fucking the Doctor Utah:
+to say sexwithDrUtah:
 	if nightmaretf > 0 or HellHoundlevel > 0 or wrcursestatus is 100:
 		say "     Dr. Utah sniffs and growls at you.  'You fool!  You wretch!  I can smell that... that... tainted essense within you.  You have given up the wonderful gift I have bestowed upon you.  Begone!' [if girl is not banned]she[otherwise]he[end if] snarls as he slashes at you, driving you from [if girl is not banned]his[otherwise]her[end if] office before slamming the door on you.  It seems you're no longer welcome here.";
 		now wrcursestatus is 100;

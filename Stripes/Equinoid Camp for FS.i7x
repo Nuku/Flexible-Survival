@@ -26,8 +26,7 @@ Section 2 - Equinoid Camp
 Equinoid Camp is a room. It is fasttravel. It is private.
 The description of Equinoid Camp is "[equicampdesc]";
 
-instead of sniffing Equinoid Camp:
-	say "***";
+the scent of Equinoid Camp is "The equinoid came smells strongly of the horse people living there.".
 
 
 instead of navigating Equinoid Camp while equinoidstatus is 10:
@@ -131,8 +130,7 @@ to say lilianaattack:
 to say lilianadesc:
 	say "     This black equinoid may look a little younger than the others, but she's as much a warrior as the rest of her tribe.  Liliana has a tall, imposing figure with strong muscles and a glossy coat of black hair.  She has bright, hazel eyes and a pretty smile with white, flat teeth.  She's dressed in a simple robe that only covers but does not truly hide the shape of her muscled bosom or equine cock.";
 
-instead of sniffing the equinoid warrior:
-	say "Liliana smells of the equinoids, reminding you of the herd.";
+the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.";
 
 
 An everyturn rule:

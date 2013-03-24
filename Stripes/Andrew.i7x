@@ -8,8 +8,7 @@ Section 1 - Private Booths
 
 Private Booths is a room.  Private Booths is east of PALOMINO.  The description of Private Booths is "     Looking around the shadowy, semi-private booths in this corner of the club, you spot several signs of patrons having used them for some fun.  Many of the vinyl padded seats of the booths, and even some of the round tables, have large splatters of cum on them.  While the booths themselves look rather new, it's clear that they've suffered a lot of wear recently, with fresh claw marks in the wood and cushions alike from mutated patrons in the throws of lustful passion.".
 
-instead of sniffing Private Booths:
-	say "The booths smell strongly of male lust of numerous varieties, though wolf is definitely omnipresent in the air in this area.";
+the scent of Private Booths is "The booths smell strongly of male lust of numerous varieties, though wolf is definitely omnipresent in the air in this area.".
 
 
 Section 2 - Andrew
@@ -18,8 +17,7 @@ Andrew is a man.  Andrew is in Private Booths.
 The description of Andrew is "     [one of]S[or]Adjusting the sizable bulge in his pants while s[or]Watching the guys on the dance floor while s[or]Sipping idly at a drink while s[or]Rubbing the large bulge in his black cargo pants as a particularly sex ass walks past him while he's s[or]S[as decreasingly likely outcomes]itting in the cornermost booth, this black furred wolf bobs his head to the beat.  The fellow is of average height and build, but has a considerably lupine body.  His arms end in pawlike hands and his legs have become digitigrade, though his wolf tail seems longer than those of others you've seen.  He's going topless, wearing only a pair of black cargo pants held up by a rainbow belt.  Below that brightly coloured belt is a very sizable bulge that draws your eyes before you notice your staring and look back up at his face.  Having noticed your glance, his mischevious violet eyes look you over through his shaggy headfur as his ears perk in your direction and he gives you a lupine smile while twirling a fingertip in one of the messy splatters of white goo on the table at this particularly sticky booth.".
 The conversation of Andrew is { "Sex?" }
 
-instead of sniffing the Andrew:
-	say "Andrew is saturated with the scent of male lust, both his and that of many others.";
+the scent of Andrew is "Andrew is saturated with the scent of male lust, both his and that of many others.";
 
 Instead of conversing the Andrew:
 	if hp of Andrew is 0:
@@ -37,7 +35,9 @@ Instead of conversing the Andrew:
 
 Section 3 - Sexy Times
 
-instead of fucking the Andrew:
+the fuckscene of Andrew is "[sexwithAndrew]".
+
+to say sexwithAndrew:
 	[puts Black Wolf as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;

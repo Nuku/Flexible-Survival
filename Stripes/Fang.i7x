@@ -15,11 +15,7 @@ FangWS is a number that varies.
 FangToy is a truth state that varies.  FangToy is usually false.
 [See Feral Wolf file for collecting Fang.]
 
-instead of sniffing the Fang:
-	if hp of Fang is 3 or hp of Fang is 4:
-		say "The scent of your alpha wolf is strong and exciting.";
-	otherwise:
-		say "The scarred wolf has an arousing male scent.";
+the scent of the Fang is "[if hp of Fang is 3 or hp of Fang is 4]The scent of your alpha wolf is strong and exciting.[otherwise]The scarred wolf has an arousing male scent.[end if]";
 
 to say fangdesc:
 	if hp of Fang is 3 or hp of Fang is 4:
@@ -36,7 +32,9 @@ Instead of conversing the Fang:
 
 Section 2 - Sexxxings
 
-instead of fucking the Fang:
+the fuckscene of Fang is "[sexwithFang]";
+
+to say sexwithFang:
 	[puts Feral Wolf as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;

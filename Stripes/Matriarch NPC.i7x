@@ -9,7 +9,9 @@ Matriarch is a person.
 The description of Matriarch is "[matriarchdesc]";
 The conversation of Matriarch is { "Good girl!" }.
 
-instead of sniffing the Matriarch:
+the scent of the Matriarch is "[matriarchscent]".
+
+to say matriarchscent:
 	say "The powerful scent of the matriarch makes you feel aroused and submissive.";
 	if lust of Matriarch - turns >= 8:
 		increase libido of player by 5 + hp of Matriarch;
@@ -32,7 +34,9 @@ to say randomhyenatreat:
 
 Section 2 - Sexxxings
 
-instead of fucking the Matriarch:
+the fuckscene of the Matriarch is "[sexwithMatriarch]".
+
+to say sexwithMatriarch:
 	if bodyname of player is not "Herm Hyena":
 		say "     The hyena matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over.  'Someone deal with that unhyena bitch and make her more pleasing to me,' she growls.  You're dragged off and presented to the hyena gang members, who are more than happy to have a plaything presented to them by the matriarch.";
 		attempttowait;

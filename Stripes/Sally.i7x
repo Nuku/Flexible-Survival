@@ -8,8 +8,7 @@ The description of Sally is "[sallydesc]";
 The conversation of Sally is { "Fuck me!" }.
 lastSallyfucked is a number that varies.  lastSallyfucked is normally 555.
 
-instead of sniffing the Sally:
-	say "The cute, little huskybunny herm smells of arousal and sex.";
+the scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.";
 
 to say sallydesc:
 	say "     This creature, once the intellectual Dr Matt, is now nothing more than a horny slut and your personal toy.  The mouse's injection has left him a mindless, lustful creature eager for sex.  Sally, as you've decided to call her, is a cute and sexy huskybunny herm with no desires greater than satisfying her physical desires and yours.  The slutty hybrid has fluffy fur with husky markings and tail, but a bunny muzzle and ears.  Her body is something between the two, a sensual mix of canine and lapine, with lovely curves and big, rabbit footpaws.  As a herm, she has six large, perky breasts, with the upper pair being above-average in size and shrinking slightly for the subsequent two rows.  Her nine inch cock is almost constantly hard and both it and her wet pussy dribble with arousal.";
@@ -19,7 +18,9 @@ Instead of conversing the Sally:
 
 Section 2 - Sexxxings
 
-instead of fucking the Sally:
+the fuckscene of Sally is "[sexwithSally]".
+
+to say sexwithSally:
 	if lastSallyfucked - turns is less than 6:
 		say "     You consider playing with Sally again, but you did so fairly recently.  While tempting, you decide to wait, wanting to draw out your enjoyment of your slut's new form.";
 	otherwise:

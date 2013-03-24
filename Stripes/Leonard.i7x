@@ -25,8 +25,7 @@ Instead of resolving a Feline Friend:
 Lion's Den is a room. It is fasttravel. It is private.
 The description of Lion's Den is "[lionsdendesc]";
 
-instead of sniffing Lion's Den:
-	say "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.";
+the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.";
 
 to say lionsdendesc:
 	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
@@ -46,8 +45,7 @@ violinfound is a number that varies.
 leonardtimer is a number that varies.  leonardtimer is normally 255.
 feline_pride_defeat is a truth state that varies.  feline_pride_defeat is normally false.
 
-instead of sniffing the Leonard:
-	say "The feline smells strong and manly.";
+the scent of Leonard is "The feline smells strong and manly.";
 
 to say Leonarddesc:
 	say "     Leonard is a lion-man like those you've seen in the park, but well-groomed and well-mannered.  He has a strong, manly chest, which he loosely covers with his suit coat.  While it could probably close, it certainly seems more comfortable open.  He is covered in tawny fur and has a large, russet mane.  His lower body is unclothed, leaving his sheath and plump balls exposed.";
@@ -182,7 +180,9 @@ Section 3 - Sexy Times
 
 Part 1 - Basic Sex
 
-instead of fucking the Leonard:
+the fuckscene of Leonard is "[sexwithLeonard]".
+
+to say sexwithLeonard:
 	follow the cock descr rule;
 	[puts Feline as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -673,8 +673,7 @@ It is not temporary.
 instead of using violin:
 	say "     You don't know how to play.  Besides, you don't want to risk damaging your gift for your lion lover.";
 
-instead of sniffing the violin:
-	say "     The violin smells of polished wood.";
+the scent of the violin is "     The violin smells of polished wood.";
 
 
 Section 5 - Hunting Prides

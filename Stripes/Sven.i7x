@@ -24,8 +24,7 @@ Instead of resolving a Hidden Kitty:
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[svenplacedesc]";
 
-instead of sniffing Sven's Place:
-	say "The small basement apartment smells faintly of mold and snow leopard from its [if hp of Sven > 3]former [end if]occupant[if hp of Sven is 99].  The scent of snow leopard sex from the cum is strong[end if].";
+the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if hp of Sven > 3]former [end if]occupant[if hp of Sven is 99].  The scent of snow leopard sex from the cum is strong[end if].";
 
 to say svenplacedesc:
 	if hp of Sven < 4:
@@ -46,7 +45,9 @@ The conversation of Sven is { "Mew!" }.
 lastSvenfucked is a number that varies.  lastSvenfucked is normally 555.
 lastSvendrink is a number that varies.  lastSvendrink is normally 555.
 
-instead of sniffing Sven:
+the scent of Sven is "[svenscent]".
+
+to say svenscent:
 	if hp of Sven < 5 or hp of Sven is 50:
 		say "Sven smells faintly of male snow leopard and growing arousal.";
 	otherwise if hp of Sven < 8:
@@ -242,7 +243,9 @@ after of going to Bunker while hp of Sven is 9:
 
 Section 3 - Sven the Fucktoy
 
-Instead of fucking the Sven:
+the fuckscene of Sven is "[sexwithSven]".
+
+to say sexwithSven:
 	[puts Snow Leopard as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -473,8 +476,7 @@ Svetlana is a woman.  The description of Svetlana is "[svetlanadesc]".
 The conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
-instead of sniffing the svetlana:
-	say "Svetlana smells of aroused female snow leopard.  Lisa's scent clings to her as well.";
+the scent of the svetlana is "Svetlana smells of aroused female snow leopard.  Lisa's scent clings to her as well.";
 
 to say svetlanadesc:
 	if hp of Sven < 53:
@@ -493,7 +495,9 @@ instead of conversing the svetlana:
 		say "     [one of]The pink snowmeow strokes her fluffy tail, purring softly.[or]'I am very grateful for bringing me to my mistress.  I do not know what would have happened if you had not come along.  You're so brave, strong and sexy.'  She blushes and hides behind her tail after admitting that aloud.[or]'I want to thank you for helping me get here.  I hope you'll let me show you how much I appreciate it again soon,' she says softly while stroking a finger over her damp crotch, remembering her fun with you earlier.[or]'I never thought it would be so hot in this country when I accepted the scholarship.  I'm glad my mistress has so much milk for her kitty.'[or]'How long do you think we will have together here before someone comes to rescue us?'[or]'Do you think they will let stay this way?  My body feels so much nicer now.'[or]Svetlana fidgets with her fluffy tail while you speak to her.  She doesn't seem to pay much attention, her eyes having fallen on a large dildo on display.  You spot her subconsciously slip a paw to her crotch, fingering her covered pussy and getting herself damp again down there.[or]Svetlana looks at you with admiration and longing as you chat with her for a bit.[or]Svetlana licks her lips and comments about how she's starting to feel thirsty while eying your crotch.  She gives you a little wink, then playfully hides behind her tail.[or]Svetlana takes a seat on a soft mat Lisa's put out for her.  She stretches her feline body and starts licking and grooming her fluffy fur, smiling shyly at you as she does.  Her flexible body lets her lick herself all over, giving you a good view of her legs, thighs, ass and more.  Knowing you're watching, she blushes but makes a show of it, taking long, slow licks while showing off her body in her skimpy swimsuit.[or]Svetlana flips through the DVD collection, looking for one to watch with her mistress later.[or]'I really hope you'll let me [']repay['] you again soon,' she purrs with a wink before hiding behind her tail.[or]'Mistress Lisa found this lovely collar for me,' she purrs, flicking the bell to hear it ring.[or]Svetlana snuggles up beside you, stroking your side lightly.  'I'm so glad that you like the new me.  I... I hope you'll play with me again soon.'[in random order]";
 
 
-Instead of fucking the Svetlana:
+the fuckscene of Svetlana is "[sexwithSvetlana]".
+
+to say sexwithSvetlana:
 	if hp of Sven < 53:
 		say "ERROR-Svetlana-52F - You should not be able to fuck me yet.";
 	if hp of Sven is 53:

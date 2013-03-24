@@ -115,7 +115,9 @@ Skyscrapers2 is a door.  "Leaving here to the east heads back into the High Rise
 Skyscrapers2 is west of Financial Sector and east of Flower Garden.  It is dangerous.
 the marea of Skyscrapers2 is "High";
 
-instead of sniffing Flower Garden:
+the scent of Flower Garden is "[flowergardenscent]".
+
+to say flowergardenscent:
 	say "The flower garden smells wonderful, with an array of beautiful fragrances in the air, much nicer than the smell of the city surrounding it";
 	if morale of player < level of player and lastflowersmell - turns < 8:
 		say ".";
@@ -136,7 +138,9 @@ lastjoannajuice is a number that varies.  lastjoannajuice is normally 555.
 joannatalk is a number that varies.
 joannaoffernum is a number that varies.
 
-instead of sniffing the Joanna:
+the scent of the Joanna is "[joannascent]".
+
+to say joannascent:
 	if hp of Joanna is not 0 and hp of Joanna < 90:
 		say "Moving up close to her, you stroke Joanna's hair and bring one of the blossoms to your nose.  It has a lovely fragrance, uniquely lovely and perhaps the best flower you've ever smelled";
 		if morale of player > level of player or lastflowersmell - turns < 6:
@@ -259,7 +263,9 @@ to say joannaseeded:
 
 Section 4 - Joanna Sex
 
-instead of fucking the Joanna:
+the fuckscene of Joanna is "[sexwithJoanna]".
+
+to say sexwithJoanna:
 	if lastfuck of joanna - turns < 8 and hp of Joanna < 5 and hp of Joanna is not 0:
 		say "     Having played with Joanna recently, perhaps you should wait a bit before having another romp with her.  She could use a little more time in the sun to recharge and refill on her sweet juices.";
 	otherwise if lastfuck of joanna - turns < 5 and hp of Joanna >= 5 and hp of Joanna < 90:

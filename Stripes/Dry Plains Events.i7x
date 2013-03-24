@@ -86,8 +86,7 @@ name	desc	weight	object
 
 spiked club is an armament. It is part of the player. It has a weapon "[one of]your spiked club[or]your pointed club[or]your improvised weapon[or]your large club[or]your spiked club with a heavy thump[or]your nail board[or]your spiked club, driving one of the nails into them[at random]". The weapon damage of spiked club is 6. The weapon type of spiked club is "Melee". It is not temporary. the objsize of spiked club is 4. the hitbonus of spiked club is -1.
 
-instead of sniffing the spiked club:
-	say "The heavy club smells of blood, sweat and anger... so much anger.";
+the scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.";
 
 
 Section 6- Hunting Party

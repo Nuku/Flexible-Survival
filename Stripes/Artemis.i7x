@@ -61,8 +61,7 @@ to say artemisdesc:
 	otherwise:
 		say "     While your compantion, the loyal rubber tigress borrow your body while you rest.  This will keep you safe from interruption and put you in a sleepwalking state full of kinky dreams while you rest and enjoy the pleasure of the fun she's having as she gets her much-needed relief.";
 
-instead of sniffing the rubber tigress:
-	say "The rubber tigress smells faintly of rubber in a pleasant way.";
+the scent of the rubber tigress is "The rubber tigress smells faintly of rubber in a pleasant way.";
 
 
 Section 3 - Sexxxings and Playtime

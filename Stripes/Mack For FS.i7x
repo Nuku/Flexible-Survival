@@ -141,7 +141,9 @@ Instead of conversing the Macadamia:
 
 Section 5 - Getting your Mack on with Mack
 
-instead of fucking the Macadamia:
+the fuckscene of Macadamia is "[sexwithMacadamia]".
+
+to say sexwithMacadamia:
 	if hp of Macadamia is 3 or hp of Macadamia is 10:
 		say "     You should check in with him and see how things are going first.";
 	otherwise if lastfuck of Macadamia - turns < 6:
