@@ -175,7 +175,9 @@ To say jazzfriends:
 		say "     The cute little fox you found seems to like the jazz music as it comes over to yip at the jam box while cocking its head from side to side in wonder whose making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as the other is just having too much fun to disturb right now, especially as it starts to roll around while yipping adorably in front of the boom box.";
 	if Elijah is in the Bunker:
 		If hp of Elijah is 3 or hp of Elijah is 4:
-			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closesly, Elijah's humming almost sounds...otherworldly.";
+			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closesly, Elijah's humming almost sounds... otherworldly.";
+	if Alexandra is in the library:
+		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens.  She sticks around, listening to the alternatively soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
 
@@ -192,6 +194,8 @@ to say tangofriends:
 		 say "     Your felinoid companion seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this you try not to laugh as you find yourself dancing around your felinoid companion. Quickly the rhythm your feet make you move to has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before the felinoid soon tires and then goes off to rest.";
 	if Candy is in the bunker:
 		say "     Candy seems to enjoy the tango music and soon begins to bounce around the bunker like a rubber ball, despite the melody not having the right rhythm for such energetic movements. This however does not stop Candy from doing as he wishes, especially when you join in with him, though more for trying to calm him down than anything else.";
+	if Alexandra is booked:
+		say "     Coming in to investigate the noise, Alexandra pokes her head inside, growls softly to herself and heads back out, clearly uninterested in what's playing.";
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
 	increase libido of player by 2;
@@ -229,6 +233,9 @@ to say R&Bfriends:
 	if Elijah is in the Bunker:
 		If hp of Elijah is 3 or hp of Elijah is 4:
 			say "     Your white winged angel seems to find mild amusement in the soft croons playing on the boombox as he comes over to sit beside you while encircling one of his wings around your [bodyname of player] form.";
+	if Alexandra is booked:
+		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens.  She sticks around, listening to the music for a time.  When one song takes on a more mournful tone, she seems to get sad, and then - having gotten sad - she gets angry and storms out.";
+		now lastfuck of Alexandra is turns + 8;
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
 
@@ -245,6 +252,9 @@ to say RockandRollfriends:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this, after all a win is a win in your book by any accounts.";
 		otherwise:
 			say "Fang doesn't seem to care for this particular type of music as he pops his head into the Bunker and then pops himself back out to return to his post.";
+	if Alexandra is booked:
+		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside.  Hearing the energetic, frenetic rock and roll music, the throws herself into dancing.  Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion.  It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
+		now lastfuck of Alexandra is turns + 8;
 	if Sven is in the bunker:
 		say "     You pull Sven up from his seat to get him to join in for a while.  He's a little shy about it, but dances very well, moving with feline grace.  Soon he's rocking his hips, swaying his tail and dancing up a storm.  In the excitement, he reaches over and gives your rump a pinch.  Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail.  But despite that, you can tell he's had a really fun time.";
 	if Candy is in the bunker:
@@ -292,6 +302,9 @@ to say Oceanfriends:
 	if Elijah is in the Bunker:
 		If hp of Elijah is 3 or hp of Elijah is 4:
 			say "     Elijah moves over by your side and snuggles up to you as best he can.  His large and fluffy wings prove to be very nice comforters for your head to rest on.";
+	if Alexandra is booked:
+		say "     Noticing that Fang's not at the door, Alexandra pokes her head inside to see if anything's up.  Noticing the soft music and beach sounds, rolls her eyes with a huff and heads back out to stand watch.";
+		now lastfuck of Alexandra is lastfuck of Alexandra - 2;
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
 	decrease libido of player by 18;
