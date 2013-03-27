@@ -2763,14 +2763,18 @@ carry out trixiecheating:
 		say "[line break]";
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](8) Set anal play content level[as]8[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
+		if "Vore Predator" is listed in feats of player:
+			say "[link](9) Access the vore menu[as]9[end link] -  Currently: [bold type][if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type][line break]";
+		otherwise:
+			say "(9) This option is not currently available to your character.[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-8)> [run paragraph on]";
+			say "Choice? (0-9)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 8:
+			if calcnumber >= 0 and calcnumber <= 9:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 8.";
+				say "Invalid choice.  Pick from 0 to 9.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -2862,6 +2866,8 @@ carry out trixiecheating:
 				say "Invalid choice - returning to menu.";
 		otherwise if calcnumber is 8:
 			try analadjusting;
+		otherwise if calcnumber is 9:
+			try voremenuing;
 		otherwise if calcnumber is 0:
 			say "Exiting menu.";
 			now trixieexit is 1;
