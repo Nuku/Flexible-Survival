@@ -1,14 +1,15 @@
 Version 1 of Alt Vore by Stripes begins here.
-[Version 0.2 - Rudimentary Vore System]
+[Version 1.1 - Safe Appetite feat and Vore Menu (adjusting vore choice)]
 
 Section 0 - Variables
 
 vorecount is a number that varies.
+vorechoice is a number that varies.
 
 
 Section 1 - Event
 
-Inner Predator is a scavevent.
+Inner Predator is a scavevent.  The level of Inner Predator is 4.
 The sarea of Inner Predator is "Allzones";
 when play begins:
 	add Inner Predator to badspots of furry;
@@ -32,8 +33,10 @@ Instead of resolving a Inner Predator:
 		if girl is not banned:
 			say "     As you're turning to leave, a female husky, looking rather worse for wear, spots you and charges in to attack.  Already weakened, a quick blow sends her tumbling and a few more put her to the ground for good.  It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger.  You look down upon your beaten foe as a new, predatory instinct arises in your mind.  Before you can even think about it, you kneel next to the husky, hands reaching out for its exhausted body.  She lifts her head to look at you, fearful about what you intend to do, but a swift strike from your palm to her head renders her unconscious.  Now, practically unable to control your own body, you are forced to watch what unfolds.";
+			attempttowait;
 			say "     Kneeling by the head of the female husky, you reach down and pull her muzzle up to your face, until it meets your mouth.  You give her snout and face a few licks, before without warning, you open your jaws wide and take her in!  A sense of panic grips your mind, but your body is no longer yours to control.  You feel her snout touch the back of your throat, and then you swallow, pulling the husky's head in deeper to your hungry maw.  A slight pop is heard as your jaw dislocates, and your mouth stretches even wider, taking in the entire head of the dog.  Your skin stretches as if it were rubber, feeling no pain from it, but still able to feel the sensations nonetheless.  You are unsure if you'd not be able to do this were you not gorging as you are.";
 			say "     With another possessive swallow, the head of the female husky disappears down your throat, your mouth now stretched impossibly wide to accommodate her shoulders as you continue to devour your prey.  Your neck begins to bulge out with the form of your unwilling meal, but the altered nanites inside you keep adjusting your body to take in your new prey.  Another swallow, and the shoulders of the beast enter your throat, your tongue now rubbing over her furred chest, giving you the full taste of your canine prey.  In your mind, you are reeling with the impossibility of it all, and yet, you cannot help but continue you perverse feast.";
+			attempttowait;
 			say "     Several more swallows and gulps, and more of the female husky disappears into your greedy maw, nearly half the creature already making its way to your stomach.  Gulp... and her hips pass over your tongue to begin sliding down your gullet, leaving only her legs and tail sticking out of your mouth.  Her form is clearly bulging out your frame, your neck and now your belly stretching around the large meal you are ingesting.  Leaning back, you lift your head skyward to let gravity assist you in the final stages, and you feel the husky slide down a little easier.  Another few swallows, and her legs vanish into your lips, leaving only her bushy tail.  With a slurp, your tongue sucks it in and the last trace of the dog woman disappears inside you.";
 			say "     Sitting back, dazed, you feel the form of the husky sliding into your gut, your belly now bulging out as if you were massively pregnant.  With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive.  Various gurgles can be heard as the once bulky canine is turned into a nutrient rich liquid for your predator body.  Within minutes, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly.  You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body.  Plus, you shouldn't have to worry about food for a while.  Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
@@ -50,8 +53,10 @@ Instead of resolving a Inner Predator:
 		otherwise:
 			say "     As you're turning to leave, a latex fox, looking rather worse for wear, spots you and charges in to attack.  Already weakened, a quick blow sends him tumbling and a few more put him to the ground for good.  It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger.  You look down upon your beaten foe as a new, predatory instinct arises in your mind.  Before you can even think about it, you kneel next to the latex fox, hands reaching out for its exhausted body.  He lifts his head to look at you, fearful about what you intend to do, but a swift strike from your palm to his head renders him unconscious.  Now, practically unable to control your own body, you are forced to watch what unfolds.";
+			attempttowait;
 			say "     Kneeling by the head of the fox, you reach down and pull his muzzle up to your face, until it meets your mouth.  You give his snout and face a few licks, before without warning, you open your jaws wide and take him in!  A sense of panic grips your mind, but your body is no longer yours to control.  You feel his snout touch the back of your throat, and then you swallow, pulling the fox's head in deeper to your hungry maw.  A slight pop is heard as your jaw dislocates, and your mouth stretches even wider, taking in the entire head of the fox.  Your skin stretches as if it were rubber, feeling no pain from it, but still able to feel the sensations nonetheless.  You are unsure if you'd not be able to do this were you not gorging as you are.";
 			say "     With another possessive swallow, the vulpine's head disappears down your throat, your mouth now stretched impossibly wide to accommodate his shoulders as you continue to devour your prey.  Compressed by your throat, his body and tail are puffed out further, but your need to feed pushes to squeeze him back in.  Your neck begins to bulge out with the form of your unwilling meal, but the altered nanites inside you keep adjusting your body to take in your new prey.  Another swallow, and the shoulders of the beast enter your throat, your tongue now rubbing over his smooth chest, giving you the full taste of your vulpine prey.  In your mind, you are reeling with the impossibility of it all, and yet, you cannot help but continue your perverse feast.";
+			attempttowait;
 			say "     Several more swallows and gulps, and more of the latex fox disappears into your greedy maw, nearly half the creature already making its way to your stomach. Gulp...and his hips pass over your tongue to begin sliding down your gullet, leaving only his legs and tail sticking out of your mouth. His form is clearly bulging out your frame, your neck and now your belly stretching around the large meal you are ingesting.  Leaning back, you lift your head skyward to let gravity assist you in the final stages, and you feel the fox slide down a little easier.  Another few swallows, and his legs vanish into your lips, leaving only his bushy tail. With a slurp, your tongue sucks it in and the last trace of the latex fox disappears inside you.";
 			say "     Sitting back, dazed, you feel the form of the fox sliding into your gut, your belly now bulging out as if you were massively pregnant. With an audible rumble, your stomach starts to churn and you feel the body of your foe begin to melt away, the nanites in your body throwing your digestive processes into overdrive.  Various gurgles can be heard as the once bulky latex fox is turned into a nutrient rich liquid for your predator body.  Within minutes and with a large belch, your belly has shrunk to a mere paunch as you feel the rush of the digested creature wash through your body.";
 			say "     A smile crosses your face as you pat your shrinking belly.  You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body.  Plus, you shouldn't have to worry about food for a while.  Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
@@ -115,16 +120,19 @@ to vorebyplayer:
 	decrease hunger of player by ( 4 * scale entry ) + a random number between 8 and 16;
 	if hunger of player < 0, now hunger of player is 0;
 	decrease humanity of player by 3;
-	now researchbypass is 1;
-	infect;
-	now researchbypass is 0;
+	if "Safe Appetite" is not listed in feats of player:
+		now researchbypass is 1;
+		infect;
+		now researchbypass is 0;
 	increase vorecount by 1;
 
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena Matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "Peacock", "Dracovixentaur", "Dragontaur", "Vixentaur", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Hippo Strongman", "Mammoth", "Albino Mouse", "Xeno", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Tentacle Horror", "Bear", "sewer gator", "Dragon", "sea otter", "Slut Rat", "Sprite", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Wolfman", "Werewolf Costume", "Reindeer", "Triceratops" } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena Matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "Peacock", "Dracovixentaur", "Dragontaur", "Vixentaur", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Hippo Strongman", "Mammoth", "Albino Mouse", "Xeno", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Tentacle Horror", "Bear", "sewer gator", "Dragon", "sea otter", "Slut Rat", "Sprite", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Werewolf Costume", "Reindeer", "Triceratops", "Feline", "Butterfly", "German Shepherd",  } to infections of VoreExclusion;
 
+
+Chapter 3 - Vore Scenes
 
 to say vorebyplayer00:	[master list to decide scenes]
 	if vorecount is even:
@@ -147,14 +155,54 @@ to say vorebyplayer02:
 	say "     In no time, your massively distended belly shrinks down, the prey inside being reduced into fuel for your body.  The rush of the consumed creature flashes through your body, giving you a feeling of strength and pride.  Gathering your things, you give your slightly rounded stomach a pat, thanking your foe for their contribution to your survival, and you head out into the city once again.";
 
 
+Chapter 4 - Vore Settings Menu
+
+
+voremenuing is an action applying to nothing.
+
+understand "voremenu" as voremenuing.
+understand "vore menu" as voremenuing.
+
+check voremenuing:
+	if "Vore Predator" is not listed in feats of player, say "Your character is currently incapable of such actions.";
+
+carry out voremenuing:
+	say "     You have accessed the [bold type]vore menu[roman type].  It is here that you may adjust some settings related to vore content in the game.";
+	say "     At present, there is only one feature open for adjustment.  [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse.  This selection process will cycle through the options.";
+	let voreexit be 0;
+	while voreexit is 0:
+		say "[bold type]Vore Settings:[roman type][line break]";
+		if "Vore Predator" is listed in feats of player:
+			say "[link](1) Choice to vore[as]1[end link] - [if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][line break]";
+		otherwise:
+			say "Vore by player - Inactive.";
+		say "[link](0) Abort[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-1)> [run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 1:
+				break;
+			otherwise:
+				say "Invalid choice.  Pick from 0 to 1.";
+		if calcnumber is 1:
+			if vorechoice < 2:
+				increase vorechoice by 1;
+				say "The option to use of your voring ability has been set to '[if vorechoice is 1]Automatic vore[otherwise]Never vore[end if]'.";
+			otherwise:
+				now vorechoice is 0;
+				say "The option to use of your voring ability has been reset to 'Player choice'.";
+		otherwise if calcnumber is 0:
+			say "Exiting menu.";
+			now voreexit is 1;
+
 
 [
 Notes:
-feat first
+feet first
 post-vore
-always eat toggle
+always eat toggle - done
 review exclusions
-non-inf vore feat
+non-inf vore feat - done
 review balance
 ]
 
