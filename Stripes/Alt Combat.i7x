@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.5 - Updated version number for d50 and bonus system]
+[Version 2.5.1 - Vore by player added w/optional settings]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -1036,7 +1036,7 @@ to win:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	let ok be 1;
-	if "Vore Predator" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10:
+	if "Vore Predator" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
 		let vorechance be 25 + ( hunger of player * 2 );
 		if "Automatic Survival" is listed in feats of player, now vorechance is 75;
 		if vorecount > 20:
@@ -1047,15 +1047,22 @@ to win:
 		increase vorechance by ( scalevalue of player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds:					[chance for vore]
 			if name entry is not listed in infections of VoreExclusion:
-				say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
-				if the player consents:
+				if vorechoice is 0:
+					say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
+					if the player consents:
+						now ok is 0;
+						vorebyplayer;		[See Alt Vore file]
+						now fightoutcome is 13;	[player vored foe]
+						attempttowait;
+					otherwise:
+						now ok is 1;
+				otherwise if vorechoice is 1:
+					say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
 					now ok is 0;
 					vorebyplayer;		[See Alt Vore file]
 					now fightoutcome is 13;	[player vored foe]
 					attempttowait;
-				otherwise:
-					now ok is 1;
-	if "Control Freak" is listed in feats of player:
+	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
 			now ok is 1;
