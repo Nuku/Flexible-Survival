@@ -5853,6 +5853,7 @@ Include Goat Janitor by McRabid.
 Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
+Include Fire Sprite by  AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
