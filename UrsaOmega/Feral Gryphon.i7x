@@ -24,22 +24,23 @@ to say losetoGryphon:
 			say "     The gryphon's barbs are having a strange effect on your body; an unusual warmth forms in your womb and you find yourself clenching down his cock and pushing back into his thrusts. Thoughts of your belly swelling with the male's clutch cross your mind unbidden; you moan as you imagine laying the eggs, stretching you as you push them out one by one.";
 		if waiterhater is 0, wait for any key;
 		say "[line break]";
-		 say "     He breeds you roughly, his cock pistoning in and out of your [if cunts of player > 0]cunt[otherwise]back passage[end if] with an animalistic ferocity.[if cocks of player > 0] You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receving; it dribbles precum over the ground as the gryphon's huge ballsack smacks against your own on each thrust.[end if] The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if cunts of player > 0]vagina[otherwise]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
+		 say "     He breeds you roughly, his cock pistoning in and out of your [if cunts of player > 0]cunt[otherwise]back passage[end if] with an animalistic ferocity.[if cocks of player > 0] You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ballsack smacks against your own on each thrust.[end if] The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if cunts of player > 0]vagina[otherwise]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
 		if (cunts of player > 0 and cunt width of player < 7) or scalevalue of player < 3:
 			say " He grinds it against your [if cunts of player > 0]cuntlips[otherwise]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
 		otherwise:
-			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if cunts of player > 0]netherlips[otherwise]tailhole[end if] uncomfortably; one the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
-		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum pool splash inside you. [if cocks of player > 0]You reach your own climax, your [cockdesc of player] cock[smn] shooting your own cum over the ground.[end if]The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up [impregchance].";
+			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if cunts of player > 0]nether-lips[otherwise]tailhole[end if] uncomfortably; one the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
+		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you. [if cocks of player > 0]You reach your own climax, your [cockdesc of player] cock[smn] shooting your own cum over the ground.[end if]The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up [impregchance].";
 	otherwise:     [oral]
-		say "     The gryphon moves his bulk over you until his cock moves in front of your [facename of player] face. You can see it has fully extended from his sheath now; it has a thick base that tapers dramatically to a pointy tip; the glans of his cock seems to be covered in rough barbs, betraying his leonine heritage. The gyphon presses his back half against your upper body, pinning you while his erection rubs against your cheeks, searching for your mouth.";
+		say "     The gryphon moves his bulk over you until his cock moves in front of your [facename of player] face. You can see it has fully extended from his sheath now; it has a thick base that tapers dramatically to a pointy tip; the glans of his cock seems to be covered in rough barbs, betraying his leonine heritage. The gryphon presses his back half against your upper body, pinning you while his erection rubs against your cheeks, searching for your mouth.";
 		if waiterhater is 0, wait for any key;
 		say "[line break]";
-		say "     Realizing there is only one way out of this situation, you reach up and grab the probing gryphonhood, guiding it to your puckered lips. You slip your mouth over his length, but you can only fit the upper part of his length in your mouth; however, this seems to be satisfactory for the gryphon, who starts thrusting his cock in and out of you. It's obvious he wants to slip down your throat, but from this angle it's impossible. You settle for suckling on his length as he trys to face-fuck you, your mouth quickly filling with his precum. You swallow as much as you can, but some of it drips messily down your chin.";
+		say "     Realizing there is only one way out of this situation, you reach up and grab the probing gryphon-hood, guiding it to your puckered lips. You slip your mouth over his length, but you can only fit the upper part of his length in your mouth; however, this seems to be satisfactory for the gryphon, who starts thrusting his cock in and out of you. It's obvious he wants to slip down your throat, but from this angle it's impossible. You settle for suckling on his length as he tries to face-fuck you, your mouth quickly filling with his precum. You swallow as much as you can, but some of it drips messily down your chin.";
 		if waiterhater is 0, wait for any key;
 		say "[line break]";
 		say "     The gryphon is taking his sweet time in reaching his climax - perhaps he's not getting enough stimulation? Your eyes fix on the now-bulging knot at the base of his penis; eager to end this, you reach up and clamp your hand behind it. This simulated tie sends the gryphon over the edge almost immediately; you feel his cock twitch in your mouth as he unloads the first spurt of thick gryphon cum into your mouth. You try to swallow as much of his load as possible, but the copious volume causes you to choke at pull back off his maleness; this in turn causes his last few ropes of seed to paint your face white.";
 		say "[line break]";
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
+
 to say beattheGryphon:	[Player victory scenes to come]
 	say "    The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Before you can do anything else with him, he takes off, limping his way into the air to nurse his wounds.";
 
@@ -52,7 +53,6 @@ Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Feral Gryphon";		[The creature's name as displayed and used in naming descriptions]
@@ -66,45 +66,42 @@ When Play begins:
 	now tail entry is "You have a long, leonine tail hanging over your rear.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]knotted[or]leonine[or]tapered[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it pushes outwards, hardening into a predatory beak. Your ears retreat into your body, becoming simple openings as your head becomes that of an eagle";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "twists and shifts into your new leonine form, bones cracking as they reform into a quadrupedal stance";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "it twists and shifts into your new leonine form, bones cracking as they reform into a quadrupedal stance";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "golden lion fur covers your body, while avian feathers sprout from your head and neck";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "A golden lion tail sprouts from above your ass";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes tapered, with a slight bulge appearing at the base of it. Your cockhead feels strange as it grows barbs, giving it a rough texture";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 24;			[ These are now the creature's stats... ]
-	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 20;			[ These values may be used as part of alternate combat.]
+	now str entry is 24;           [ These are now the creature's stats... ]
+	now dex entry is 18;           [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20;           [ These values may be used as part of alternate combat.]
 	now per entry is 18;
 	now int entry is 14;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 90;			[ The monster's starting hit points. ]
-	now lev entry is 10;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 24;			[ Monster's average damage when attacking. ]
-	now area entry is "Museum";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now sex entry is "Male";           [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 90;                [ The monster's starting hit points. ]
+	now lev entry is 10;               [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 24;              [ Monster's average damage when attacking. ]
+	now area entry is "Museum";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 8;         [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 40;            [ Target libido the infection will rise towards. ]
+	now loot entry is "";              [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]leonine[or]strong[or]predatory[or]powerful[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "hybrid";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
+	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]leonine[or]strong[or]predatory[or]powerful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "hybrid";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;          [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;      [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 
@@ -121,5 +118,4 @@ when play ends:
 		otherwise:
 			say "     When the military finds you, they aren't sure what to do with a seemingly intelligent feral gryphon. You're held in a facility for a while, where scientists poke and test you for some time, even taking humiliating samples of 'genetic material' a few times. You put up with their ministrations for now; luckily, they deem you noninfectious before you lose your patience. You are fitted with a tracking bracelet and released into a nature preserve with other gryphons, with whom you form a healthy colony. Settling down with a life-mate, you spend of your time making little gryphlets and playing with enterprising hikers.";
 
-[ Edit this to have the correct creature name as well]
 Feral Gryphon ends here.
