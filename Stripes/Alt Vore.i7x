@@ -129,7 +129,7 @@ to vorebyplayer:
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena Matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "Peacock", "Dracovixentaur", "Dragontaur", "Vixentaur", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Hippo Strongman", "Mammoth", "Albino Mouse", "Xeno", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Tentacle Horror", "Bear", "sewer gator", "Dragon", "sea otter", "Slut Rat", "Sprite", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Werewolf Costume", "Reindeer", "Triceratops", "Feline", "Butterfly", "German Shepherd",  } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena Matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "Peacock", "Dracovixentaur", "Dragontaur", "Vixentaur", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Hippo Strongman", "Mammoth", "Albino Mouse", "Xeno", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Tentacle Horror", "Bear", "sewer gator", "Dragon", "sea otter", "Slut Rat", "Sprite", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Werewolf Costume", "Reindeer", "Triceratops", "Feline", "Butterfly", "German Shepherd"  } to infections of VoreExclusion;
 
 
 Chapter 3 - Vore Scenes
