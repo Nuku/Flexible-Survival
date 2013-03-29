@@ -438,31 +438,58 @@ to say alexandrafang3:
 	say "     When you're done cumming and she's been pounded into a stupor, you grip the base of the nightstick and pop the handle out of you with a wet slurp before quickly yanking it out of her thoroughly abused hole.  As you wipe it across her chest, she looks up at you with increased submission and loyalty from the rough and public claiming of her.  Feeling satisfied, you march back to the library doors and pull them open.  Turning to her, you whistle and tell her to come back inside, calling her like a dog.  She responds obediently, staggering to her feet and walks back in - naked and with her juices running down her thighs, wagging her tail as she goes.  Once she's in, you step back out, grab Fang by the scruff of the neck, run the nightstick meaningfully across his ass as a warning and drag him back in as well.  You're quite confident that they both now know she belongs to you exclusively.";
 
 
-Part 4 - Everyturn Rule (pregnancy and Fang)
+Section 4 - Sarah and Alexandra
+
+to say alexandrasarah0:
+	say "     Looking over, you happen to notice Alexandra and Sarah together at the husky girl's cot.  You discretely move a little closer in case the Doberman bad girl is looking for a fight as she'd hinted.  When you do, you're pleased to see them talking amiably enough.  Your husky pet giggles happily as she pets one of her puppies, in one of her rare, talkative moods instead of wallowing fully in her canine slut nature as she's wont to do.";
+	say "     '...can be a bit of a pawful at times, but any trouble they give is more than worth it.  Still, I get tired at times and it'd be nice if there was someone else to keep them occupied while Master and I are having sex.";
+	say "     'Yeah, at least mine mostly hang out in the side rooms together when they're not getting into trouble outside.'  Sarah seems concerned at this, probably because of what almost happened to her out in the city, but Alexandra just grins proudly and continues on.  'They're a tough lot, so it's alright.  Let the little punks have their fun, I say.  I already warned them that I'd beat the lot of them black and blue if they ever brought anything back or get followed back here.'";
+	say "     The husky girl, as if not exactly sure how she feels about this statement, muses aloud.  'Well, what if we let my pups play with yours sometimes.  That might keep them from risking going outside as much and give me a break sometimes as well.'";
+	say "     Rubbing her muzzle, the Doberwoman looks at the nearby pups.  Like their mother, they're cute huskies, but a little younger.  'I dunno, they don't look like they can stand up to my lot.  My kids play rough.  They'd probably want to take advantage of your pups, especially your girls.'";
+	say "     Sarah just smiles and giggles at this.  'Oh, that's fine.  I've been training them to be good, subby pets.  Having some dominant playmates will be good for them.  It'll be a much safer way for your pups to burn off some of that extra energy they have.'";
+	say "     'Well, maybe,' she replies with a sly grin and a rub on the husky's head.  'How about you show me a little of what you've been teaching them?'  Alexandra sits down on Sarah's cot, scooting in close to her and runs her paws over your husky slut's body, sending shivers of pleasure through her.";
+	say "     Clearly excited, she can't help but respond and reach out for the Doberman's sexy body.  'Mmm... that sounds like fun, but I don't know.  I belong to Master.  Would Master be okay with us playing together?'";
+	say "     Alexandra sinks a pair of fingers into the husky's pussy while turning her head in your direction with the other paw.  'The boss's been watching us for a while.  Wanting to see if we'll make out, I expect.  What do you say, boss?  You want your bitch sluts to put on a show for you?'";
+	if the player consents:
+		say "     Having been spotted, you move to an open bunk in clear view of them.  With a grin and a little wave, you motion for them to resume their fun, which they do enthusiastically.  Alexandra pushes Sarah onto her back with a firm shove and, while fingering the husky's sopping pussy, she kisses her new friend.  Sarah moans and barks, descending into her slutty pet role as the more aggressive female manhandles her.  Alexandra squeezes the horny husky's large breasts, causing some milk to leak out as she whimpers.  Seeing this, she grins and presses her muzzle to the leaking nipple, taking a sample of your pet's milk.";
+		say "     During this rough groping and molestation by the Doberman, the husky girl strips the clothes off her fellow bitch while panting and moaning in enjoyment like the horny, submissive pet she is.  And once nude, Alexandra sits up and grabs the husky's head, pressing her muzzle between her thighs to the Doberwoman's juicy muff.  'Mmm... get licking, honey.  I'm top bitch around here and you need to show me what you've been teaching those pups of yours.'";
+		say "     The husky girl's tail wags excitedly and she gives right in, her canine tongue slathering across Alexandra's juicy pussy in long, slow licks before diving deep into her.  As you watch, she does her best to please her new tough friend and fellow bitch fucktoy, tongue agily pleasuring the horny canine's cunt and even diving back to lick across her asshole a few times.  She tries her best to ensure you have a good view of the action, but at times, her enthusiasm for it gets the better of her.  But even though you can't always see it, you can tell she's giving it her all and the Doberwoman responds loudly and lustfully as she's eaten out by the horny slut, cumming several times.";
+		say "     After a particularly powerful orgasm that leaves her panting and dripping, she grabs the husky girl and yanks her up into her lap.  With Sarah sitting on one of Alexadra's strong thighs with her legs spread, you're given a fine view of both the canine pussies you've been fucking and filling with pups.  As they kiss muzzle to muzzle with canine tongues entwined, the Doberman bitch spreads the husky's folds and sinks a few fingers into her again while groping her breasts roughly, all in a wanton display for you.  She gropes and finger-fucks the husky to a few orgasms of her own before they're both sated and collapse onto the bunk, panting in post-orgasmic bliss.  Looking down at them, you can't help but smile at how the two are getting along.";
+		now lastfuck of Alexandra is turns + 2;
+		now lastsarahfucked is turns + 2;
+	otherwise:
+		say "     Alexandra and Sarah are clearly disappointed when you tell them to break it up, but they do so.  Alexandra whispers to Sarah to send over her pups whenever she wants them to play with hers.";
+
+
+Part 5 - Everyturn Rule (pregnancy and Fang)
 
 an everyturn rule:
-	if lust of Alexandra > 0:
-		increase lust of Alexandra by 1;
-		if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1;
-		if lust of Alexandra >= 24 and skipturnblocker is 0:
-			say "Your thoughts wander back to Alexandra and you feel a need to go check in on her.";
-			if libido of Alexandra is 0:
-				now libido of Alexandra is a random number between 2 and 4;
-			otherwise:
-				increase libido of Alexandra by a random number between 1 and 4;
-				if level of Alexandra is 1 or level of Alexandra is 2, increase libido of Alexandra by a random number between 0 and 1;
-			now lust of Alexandra is 0;
-			now hp of Alexandra is 4;
-	otherwise if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
-		if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
-		if level of Alexandra is 0:
-			if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
-				say "[alexandrafang0]";
-		otherwise if level of Alexandra is 1 and hp of Fang is 3 or hp of Fang is 4:
-			if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
-				say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
-				say "     What's yours is yours, but what's yours is his, it seems.";
-				say "[alexandrafang1]";
+	if Alexandra is booked:
+		if lust of Alexandra > 0:
+			increase lust of Alexandra by 1;
+			if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1;
+			if lust of Alexandra >= 24 and skipturnblocker is 0:
+				say "Your thoughts wander back to Alexandra and you feel a need to go check in on her.";
+				if libido of Alexandra is 0:
+					now libido of Alexandra is a random number between 2 and 4;
+				otherwise:
+					increase libido of Alexandra by a random number between 1 and 4;
+					if level of Alexandra is 1 or level of Alexandra is 2, increase libido of Alexandra by a random number between 0 and 1;
+				now lust of Alexandra is 0;
+				now hp of Alexandra is 4;
+		otherwise if Fang is booked and Alexandra is booked and player is in Grey Abbey Library:
+			if xp of Alexandra is 0, now xp of Alexandra is turns;	[starts counter on any turn (except turn 0, which will start next turn)]
+			if level of Alexandra is 0:
+				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+					say "[alexandrafang0]";
+			otherwise if level of Alexandra is 1 and hp of Fang is 3 or hp of Fang is 4:
+				if lastFangfucked - turns >= 8 and lastfuck of Alexandra - turns >= 6 and xp of Alexandra - turns >= 16:
+					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from the door.  Heading over, you notice that Fang's sniffing around Alexandra again.  She's lightly trying to push him away at first, but soon relents and is squirming out of her jeans.  This rankles you a little after having gone through the trouble to stake your claim on her earlier, but with Fang as your alpha, you're no longer in a position to keep her exclusively to yourself.  Soon enough, she's dropped onto all fours and is mounted by the big, strong wolf.  Seeing you there, he growls 'watch' at you before turning his attention back to her.  It seems like you'll have to witness Fang using your prize bitch and accept him using her whenever he wants to lay claim to her.";
+					say "     What's yours is yours, but what's yours is his, it seems.";
+					say "[alexandrafang1]";
+		otherwise if A_Sarah is true and A_Sarah2 is false and sarahpups > 3 and libido of Alexandra > 3 and the player is in Bunker and lastfuck of Alexandra is not turns and lastsarahfucked is not turns and a random chance of 1 in 6 succeeds:
+			say "[alexandrasarah0]";
+			now A_Sarah2 is true;
 	if level of Alexandra is 2 and a random chance of 1 in 12 succeeds:
 		now lastdobiemess is 99;
 
@@ -507,7 +534,7 @@ an everyturn rule:
 [ 99 = Fang ]
 
 
-Section 4 - Conversation on other NPCs
+Section 6 - Conversation on other NPCs
 
 [
 Thoughts on others:
@@ -528,6 +555,7 @@ A_Snow is a truth state that varies.  A_Snow is false.
 A_Sandra is a truth state that varies.  A_Sandra is false.
 A_Sally is a truth state that varies.  A_Sally is false.
 A_Sarah is a truth state that varies.  A_Sarah is false.
+A_Sarah2 is a truth state that varies.  A_Sarah2 is false.
 A_Coleen is a truth state that varies.  A_Coleen is false.
 A_Solstice is a truth state that varies.  A_Solstice is false.
 A_David is a truth state that varies.  A_David is false.
