@@ -1,5 +1,5 @@
 Version 5 of Slutrat by Nuku Valente begins here.
-[ Version 5 Ronda completed ]
+[ Version 5.1 - Fights flagged as situations ]
 
 Section 0 - Slut Rat Monster
 
@@ -162,7 +162,9 @@ To Say slutratdenscene:
 	if visittimes of SlutRat Den is 0:
 		say "     You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.[line break]     Heart pounding, you start to run down the tunnel, skidding on the slimy floor and almost falling as you turn sharply, and half dive into the den. The rats are there, and look up at you with clear surprise.";
 		say "     'Fresh bitch just can[']t wait for more', says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I[']ll show her how things work around here...' She advances towards you with a leer.";
+		now inasituation is true;
 		Challenge "Slut Rat";
+		now inasituation is false;
 		If lost is 1:
 			move player to Mall FoodCourt;
 			continue the action;
@@ -219,7 +221,9 @@ To Say ratslutwelcome:
 					infect "Slut Rat";
 			otherwise:
 				say "     'Bad bitch!' she hisses, 'If you won[']t learn your place, we[']ll just have to do it the hard way.";
-				challenge "Slut Rat";
+				now inasituation is true;
+				Challenge "Slut Rat";
+				now inasituation is false;
 				if lost is 0:
 					if slutratsub is greater than 5:
 						say "     You feel more confident about your dealings with the rat after that little battle.";
@@ -235,7 +239,9 @@ To Say ratslutwelcome:
 				infect "Slut Rat";
 			otherwise:
 				say "     'Bad bitch!' she hisses, 'If you won[']t learn your place, we[']ll just have to do it the hard way.";
-				challenge "Slut Rat";
+				now inasituation is true;
+				Challenge "Slut Rat";
+				now inasituation is false;
 				if lost is 0:
 					if slutratsub is greater than 5:
 						say "You feel more confident about your dealings with the rat after that little battle.";
@@ -324,7 +330,9 @@ check ratdarts:
 		say "Continue?";
 		if the player consents:
 			say "One of the rats hops to her feet and rushes at you angrily.";
-			challenge "Slut Rat";
+			now inasituation is true;
+			Challenge "Slut Rat";
+			now inasituation is false;
 			if lost is 1:
 				move the player to Mall Foodcourt;
 				stop the action;
@@ -364,7 +372,9 @@ Carry out ratdarts:
 					if slutratsub > 10, now slutratsub is 10;
 					say "[slutratsubsex]";
 				otherwise:
-					challenge "Slut Rat";
+					now inasituation is true;
+					Challenge "Slut Rat";
+					now inasituation is false;
 					if lost is 1:
 						move player to Mall Foodcourt;
 			-- 1:
@@ -467,6 +477,7 @@ to say ratstopoolhall:
 		say "     Returning to the den, you try to get the rats interested in going after the pool hall, but they don't really listen to you much.  You'll need a more ratty body to excite their attention long enough to listen to you.";
 
 to say poolhallattack:
+	now inasituation is true;
 	say "     Travelling through the sewers and subways, the you and a band of the strongest rats emerge near the pool hall.  With such a large force, you encounter no trouble along the way, everything fleeing from the rat patrol.  You take a moment to coordinate with the other rats and then charge in en mass, taking the pumas by surprise.  The rats spread out, fights breaking out everywhere as one of the cougars charges to take you down.";
 	now cougarfight is 3;
 	challenge "Cougar";
@@ -488,6 +499,7 @@ to say poolhallattack:
 		say "[poolhalldefeat]";
 	if cougarfight is 3:
 		say "[poolhallflee]";
+	now inasituation is false;
 
 
 to say poolhallvictoryorgy:

@@ -1,5 +1,5 @@
 Version 3 of Tiger Cop For FS by Stripes begins here.
-[Version 3.2 - New TC victory scenes]
+[Version 3.3 - Fights flagged as situations]
 
 Section 1 - Key Hunt Quest
 
@@ -197,7 +197,9 @@ to say motelquest:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to hir, then engage hir in combat.  While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
 		say "[line break]";
 		now mqfightresult is 3;		[set to fled by default]
+		now inasituation is true;
 		challenge "Tigress Hooker";
+		now inasituation is false;
 		if mqfightresult is 3:
 			say "[mqranaway]";
 			stop the action;
@@ -210,7 +212,9 @@ to say motelquest:
 	say "     At the third, your luck runs out.  There is a tigress sprawled across the bed, pumping a large dildo shi[apostrophe]s picked up somewhere while working a paw over hir thick, feline cock.  With hir filled, stuffed pussy facing right at you, you are stopped short in shock.  Seeing you at the door, shi glances from you to the sextoy a few times, then yanks the plastic thing out, eyeing the live toy that[apostrophe]s come to play.";
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
+	now inasituation is true;
 	challenge "Tigress Hooker";
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
@@ -223,7 +227,9 @@ to say motelquest:
 	say "     The tigress growls at the interruption, pulling hir cock from the striped mouse[apostrophe]s muzzle, then pushes hir back as shi climbs off the bed to deal with you for interrupting hir playtime.  The hybrid on the bed only mewls and squeaks, reaching out imploringly from the end of hir leash to either of you in lustful need, fingering hirself as you both fight.";
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
+	now inasituation is true;
 	challenge "Tigress Hooker";
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
@@ -240,7 +246,9 @@ to say motelquest:
 	now mqstatus is 6;
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
+	now inasituation is true;
 	challenge "Tigress Hooker";		[mqstatus 6 will adjust stats to Matron level]
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
@@ -504,7 +512,7 @@ to say losetotigercop:
 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 	otherwise:
 		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or "Less Anal" is not listed in feats of player ):
-			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble.  'Punks like you are nothin['] but trouble.  Should've gotten a good, hard spankin['] from dad to beat some respect into you.'  With you pinned down, the tiger holds you down witj one paw and bares your ass with the other.";
+			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble.  'Punks like you are nothin['] but trouble.  Should've gotten a good, hard spankin['] from your dad to beat some respect into you.'  With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if cunts of player > 0:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain.  After another stinging slap, he runs his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver.  He works it across your folds, sliding it back and forth, getting you wet despite yourself.  Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion.  The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum.  Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
 				say "     Wiping the slick rod across your ass, he gives you another hard swat, making you cry out.  'Get your dumb ass out of here.  I might not go so easy on you next time,' he growls.";

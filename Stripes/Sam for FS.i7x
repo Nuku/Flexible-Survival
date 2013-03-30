@@ -1,5 +1,5 @@
 Version 2 of Sam for FS by Stripes begins here.
-[Version 2.2 - Direct-H path & Dracovixentaur tie-in]
+[Version 2.3 - Fights flagged as a situation]
 "Adds a fellow Researcher named Sam to the Flexible Survival game"
 
 Section 1 - Event
@@ -177,7 +177,9 @@ Instead of conversing the Sam:
 			say "     You pour the vial into an empty water bottle and head over to Sam.  Saying it's a drink you picked up, you offer him a taste of the last bit of it.  He looks up from what appears to be a list of sexual conquests to take the drink.  For a moment, you're hopeful he'll try it, but he stops and looks the pale rose liquid over and gives it a sniff.";
 			say "     'What is this?  What're you trying to slip me?' he asks, getting upset.  'This is from a nanite vial, isn't it?' he growls.  Afraid he'll throw it away and you'll lose your chance, you grab the bottle from him.  You try to force it to his mouth, insisting it's for his own good, but he growls and pushes you away[if the number of bunkered people > 2].  The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[otherwise if the number of bunkered people is 2].  The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if].  You cap the bottle just in time before the enraged dragontaur charges.";
 			say "[line break]";
+			now inasituation is true;
 			challenge "Dragontaur";
+			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Your fight with the powerful male over, you pry open his draconic muzzle and pour the vial down his throat, repeating to him that it's for his own good.  He coughs and sputters a little, but swallows it down.  He moans as a flash of pink washes over his eyes, soon his dark scales are turning from blue to purple as the hardened plates at his chest begin to fade.  You stroke his head soothingly as his muzzle narrows and becomes more feminine with softly lines and smaller horns.  Lilac hair grows from his head, flowing back from behind the horns and down his back as it glows to a long and luxurious length.";
 				say "     Sam's armoured body continues to change.  What was once hard plates at his chest and underbelly become plush with lilac fur and small breasts begin to swell up with hard lavender nipples, the same shade that the changing dragontaur's scales have become.  As Sam's gender begins to change, gaining a damp pussy behind her furred sheath and ballsac.  She moans and moves her hands to the bosom at her chest and rubs them tentatively at first, but with growing enthusiasm.";
@@ -239,7 +241,9 @@ Instead of conversing the Sam:
 			say "     You pour the vial into an empty water bottle and head over to Sam.  Saying it's a drink you picked up, you offer her a taste of the last bit of it.  She looks up from what appears to be a list of sexual conquests to take the drink.  For a moment, you're hopeful she'll try it, but she stops and looks the blue liquid over and gives it a sniff.";
 			say "     'What is this?  What're you trying to slip me?' she asks, getting suspicious.  'This is from a nanite vial, isn't it?' she yips.  Afraid she'll throw it away and you'll lose your chance, you grab the bottle from her.  You try to force it to her mouth, insisting it's for her own good, but she growls and pushes you away[if the number of bunkered people > 2].  The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[otherwise if the number of bunkered people is 2].  The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if].  You cap the bottle just in time before the enraged vixentaur charges.";
 			say "[line break]";
+			now inasituation is true;
 			challenge "Vixentaur";
+			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Your fight with the alluring female over, you pry open her vulpine muzzle and pour the vial down her throat, repeating to her that it's for her own good.  She coughs and sputters a little, but swallows it down.  She moans as a flash of blue washes over her eyes, soon her fluffy fur turning from pink to purple as the fluffy coat on her back begins to recede.  You stroke her head soothingly as her muzzle becomes a little broader and becomes more draconic in appearance and small horns grow from the back of her head.  Her hair fades to a more lilac colour, but retains its long and luxurious length.";
 				say "     Samantha's sleek body continues to change.  The fur at her back and on her limbs disappears entirely, being replaced with smooth, lavender scales, the same colour as the hard nipples.  Her breasts are a little smaller than before, but are still quite generous and are covered in the soft, lilac fur that covers her chest and underbelly.  Looking down there, you can see Samantha's gender changing again, growing a furry sheath and ballsac.  The cock throbs and spurts precum as a pair of draconic wings burst forth suddenly from bumps on her back.  They, like her scales, are a soft purple colour.";
@@ -322,7 +326,9 @@ to assaultonminilab:
 	if calcnumber is 1:
 		say "     You grab the tigertaur and struggle to pull her away from Sam.  She growls in frustration and turns to confront you before getting her true prize.";
 		now minilabfight is 1;
+		now inasituation is true;
 		challenge "tigertaur";
+		now inasituation is false;
 		now minilabfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			minilabvictory;

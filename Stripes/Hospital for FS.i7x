@@ -1,5 +1,5 @@
 Version 4 of Hospital for FS by Stripes begins here.
-[Version 4.1 - Bonesaw tweak]
+[Version 4.2 - Flagged final fights as a situation]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -890,7 +890,9 @@ hospfight is a number that varies.
 to say hospbigfight1:
 	now hospfight is 1;
 	now fightstatus is 3;	[set to run away by default]
+	now inasituation is true;
 	challenge "Jaguar";
+	now inasituation is false;
 	if fightstatus is 3:
 		now fightstatus is 0;
 		say "[hospranaway]";
@@ -901,7 +903,9 @@ to say hospbigfight1:
 		stop the action;
 	now fightstatus is 3;
 	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
+	now inasituation is true;
 	challenge "Jaguar";
+	now inasituation is false;
 	if fightstatus is 3:	[reset to run away by default]
 		now fightstatus is 0;
 		say "[hospranaway]";
@@ -916,7 +920,9 @@ to say hospbigfight1:
 to say hospbigfight2:
 	now hospfight is 1;
 	now fightstatus is 3;	[set to run away by default]
+	now inasituation is true;
 	challenge "Albino Mouse";
+	now inasituation is false;
 	if fightstatus is 3:
 		now fightstatus is 0;
 		say "[hospranaway]";
@@ -936,7 +942,9 @@ to say hospbigfight2:
 	say "     He chuckles madly as he looks himself over, clearly pleased with the results.  'I am going to enjoy showing you how disappointed I am with you.  In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
 	now hospfight is 2;
 	now fightstatus is 3;	[set to run away by default]
+	now inasituation is true;
 	challenge "Albino Mouse";
+	now inasituation is false;
 	if fightstatus is 3:
 		now fightstatus is 0;
 		say "[hospranaway]";
@@ -1189,7 +1197,9 @@ to say tlabsbigfight:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as Orthas shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
 	now fightstatus is 3;
+	now inasituation is true;
 	challenge "Dragon";
+	now inasituation is false;
 	if fightstatus is 3:
 		now fightstatus is 0;
 		say "[tlranaway]";
