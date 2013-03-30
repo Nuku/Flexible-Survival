@@ -7,7 +7,7 @@ Use memory economy.
 Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 510000.
-use MAX_STATIC_DATA of 2400000.
+use MAX_STATIC_DATA of 1300000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
@@ -5853,7 +5853,7 @@ Include Goat Janitor by McRabid.
 Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
-Include Fire Sprite by  AGentlemanCalledB.
+Include Fire Sprite by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.

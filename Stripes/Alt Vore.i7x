@@ -1,10 +1,11 @@
 Version 1 of Alt Vore by Stripes begins here.
-[Version 1.1 - Safe Appetite feat and Vore Menu (adjusting vore choice)]
+[Version 1.2 - More vore scene variation and exclusion list adjustments]
 
 Section 0 - Variables
 
 vorecount is a number that varies.
 vorechoice is a number that varies.
+vorespecial1 is a truth state that varies.  vorespecial1 is usually false.
 
 
 Section 1 - Event
@@ -129,13 +130,20 @@ to vorebyplayer:
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena Matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "Peacock", "Dracovixentaur", "Dragontaur", "Vixentaur", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Hippo Strongman", "Mammoth", "Albino Mouse", "Xeno", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Tentacle Horror", "Bear", "sewer gator", "Dragon", "sea otter", "Slut Rat", "Sprite", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Werewolf Costume", "Reindeer", "Triceratops", "Feline", "Butterfly", "German Shepherd"  } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo Strongman", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Bear", "sewer gator", "Dragon", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "city sprite", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Mammoth", "Xeno" } to infections of VoreExclusion;
 
 
 Chapter 3 - Vore Scenes
 
 to say vorebyplayer00:	[master list to decide scenes]
-	if vorecount is even:
+	choose row monster from the table of random critters;
+	if vorecount >= 5 and name entry is not "Mannequin" and name entry is not "Snake" and name entry is not "Naga" and vorespecial1 is false:
+		say "[vorebyplayer03]";
+	otherwise if vorespecial1 is true and (the remainder after dividing vorecount by 5 is 0) and name entry is not "Snake" and name entry is not "Naga":
+		say "[vorebyplayer04]";
+	otherwise if vorecount > 6 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
+		say "[vorebyplayer05]";
+	otherwise if vorecount is even:
 		say "[vorebyplayer01]";
 	otherwise if vorecount is odd:
 		say "[vorebyplayer02]";
@@ -146,7 +154,6 @@ to say vorebyplayer01:
 	say "     Following the dark impulses coming from your roiling stomach, you jump upon your fallen foe and pin them down.  Too weak to put up much of a fight, you are able to restrain the [name entry].  At first, expecting sex, they don't fully resist when you manhandle them roughly[if scalevalue of player > (scale entry + 1)].  Being much smaller than you, it's easy enough to get a tight grip on them and pull them towards your lips[otherwise if scalevalue of player > scale entry].  Being a little smaller than you, it doesn't take you long to get a tight grip on them and pull them towards your lips[otherwise].  Being about as big as you, it takes a little while before you're satisfied that you've got a tight grip on them before pulling them towards your lips[end if].  Expecting a kiss at first, they prepare for this, only to have your mouth open very wide, unhinging or stretching as necessary as you stuff their head into your mouth.";
 	say "    As you push the struggling [name entry] into your throat, you moan in delight, your perverse hunger taking pleasure in feeling their struggles.  They squirm delightfully as they're pulled inexorably down your throat as you push more and more of the [type entry] creature into your gaping maw.  Your tongue laps over them, tasting the treat you're stuffing yourself with, teasing and tantalizing them with your licks to give them a final thrill before they are gone.  Your belly [if scalevalue of player is scale entry]hugely[otherwise if scalevalue of player is (scale entry + 1)]considerably[otherwise]outwards[end if] with your rapidly consumed foe.  You need to take a moment, rubbing your tummy as you feel your opponent's struggles weaken before stopping entirely.  Soon afterwards, your belly starts to go down as you consume their body to satisfy your unnatural hunger.";
 
-
 to say vorebyplayer02:
 	choose row monster from the table of random critters;
 	say "     Your foe crumples at your feet, defeated and immobile. From within you, you can feel that familiar predatory instinct arising, and without pause, you commit yourself to the act.  Kneeling next to the beaten [name entry], you quickly check to make sure they won't be fighting back, and lick your lips in anticipation.  Bringing them forward, you lick their face and head, before your jaws yawn widely and you pull their head inside. As soon as you feel their head touch your throat, you swallow, pulling them along with it.  As they're pulled in, your mouth begins to stretch even wider, eagerly opening up for the form of your prey.";
@@ -154,9 +161,31 @@ to say vorebyplayer02:
 	say "     It only take a few minutes of hard swallowing before less and less of the defeated [name entry] remains outside your gaping maw.  Their legs slowly slide in and followed lastly bye their feet, your tongue licking at them as they disappear between your lips.  Your neck and stomach bulge obscenely, showing off the size of the meal you've just eaten, as your throat muscles work to get all of them into your eager belly.  The gurgles begin, and you feel the rapid progress of digestion starting up, your predatory nanites helping your body's natural processes greatly.";
 	say "     In no time, your massively distended belly shrinks down, the prey inside being reduced into fuel for your body.  The rush of the consumed creature flashes through your body, giving you a feeling of strength and pride.  Gathering your things, you give your slightly rounded stomach a pat, thanking your foe for their contribution to your survival, and you head out into the city once again.";
 
+to say vorebyplayer03:
+	choose row monster from the table of random critters;
+	say "     With that increasingly familiar dark impulse building in your roiling stomach, you lick you lips and grab them by the legs.  Having been successful in your consumption several times before, you've become emboldened and decide to go at this one from the other end.  You move in quickly while your foe is too weak to put up much of a fight, grabbing them by the legs even as your jaw unhinges and begins to stretch.  By the time the [name entry] starts to realize what's happening, you've already got their feet past your tongue and sliding down your throat with your hands on their thighs to send them in after.  With your hands on their hips, you pull them in another few inches while crawling forward.";
+	say "     With your warm, wet throat sliding up their legs, you can't help but moan a little, becoming somewhat aroused and excited by your success and upcoming meal, a sound they echo in response despite their dire situation.  It seems your prey is actually getting turned on by this, which makes you grin broadly.  With your lips having reached their hips, you pause in your eating to rub your hands over your meal's body while your tongue licks across their crotch, exciting them further.  You go for another few inches and press the base of your tongue against their loins.  This has them so aroused now that they only put up some token resistance when your hands grab their wrists and press them to their sides.  It's like the [name entry] is more struggling to drag out the consumption longer than actually trying to get away.";
+	say "     But your hunger won't be delayed much longer and with a big gulp, you yank them further in, getting a start on their upper limbs and hampering their ability to hold you back.  As you lift yourself to your knees and sit upright so the rest of your meal can slide your squirming, moaning meal more easily the rest of the way down.  Having particularly enjoyed this meal, you rub your hands and tongue over their body, continuing to pleasure the kinky [name entry] so they might at least enjoy their final moments.  Certainly their cries of pleasure grow louder and you feel them slide more easily down your throat as their orgasm lubricates their inexorable descent into you.  With their shoulders stretching your throat wide to fit them, you rub your hand over their head, caressing this surprisingly special meal, knowing its one you'll both remember fondly for as long as you live - not that that will be very long for one of you.";
+	say "     With a few last swallows, their upper body slides down to join the rest of them bundled up in your distended stomach.  Your belly bulges large with your [if scale entry >= scalevalue of player]huge[otherwise if scale entry is scalevalue of player + 1]large[otherwise]sizeable[end if] meal inside it.  They squirm around inside you, perhaps thinking you'll be releasing them or maybe just getting into a more comfortable position for pleasuring themselves to orgasm one last time[if cocks of player > 0 or cunts of player > 0].  Reaching around your bloated belly, you masturbate quickly to a powerful climax as well, the thoughts of what's occurred having turned you on greatly[end if].  After a short time, some fresh moans come from your belly and they orgasm again.  You give a belch, expelling most of their air supply, leaving them to pass out shortly afterwards.  Sensing the [name entry] inside you is unconscious, you rub your belly and smile as your stomach gurgles and their digestion begins.";
+	say "     As quickly as ever, your massively distended belly shrinks down, the playful prey inside being reduced into fuel for your body.  The rush of the consumed creature flashes through your body, giving you a feeling of strength and pride.  As you pat your shrinking tummy, you can't help but smile happily, thanking your foe for both their contribution to your survival and for the unexpectedly pleasurable mealtime fun.  Having tarried longer than expected after all this, you head out into the city once again.";
+	now libido of player is ( ( libido entry * 3 ) + libido of player ) / 4;
+	now vorespecial1 is true;
+
+to say vorebyplayer04:
+	choose row monster from the table of random critters;
+	say "     With that familiar dark impulse building in your roiling stomach, you lick you lips and grab them by the legs.  Wanting to consume this one bottom up, you stuff their feet into your mouth and quickly take those into your stretching throat with a wet gulp.  You move quickly up their legs, getting as much in as you can before they quite realize their predicamment.  Getting more adept at this, you're almost to their knees before they quite realize what's going on and you've already got a firm grip on their hips.  With a cry of surprise, they try to pull themselves out.  Failing that, the [name entry] starts to claw at the ground, trying to drag themselves free, but with little success.";
+	say "     As you're maw stretches wider and you're getting ready to take in their hips, they give up at pulling away and instead try to strike at you with their forelimbs.  To weak from the fight, they aren't able to do much damage and only end up giving you a chance to grab their upper limbs and [one of]pin them to their side[or]pull them across their chest[at random].  This both cuts off their ability to fight back and gets them ready to go down.  After a few playful licks across their loins so you might enjoy the taste of your pinned meal, you pull their waist into your mouth while sliding their thighs down your throat.";
+	say "     Keeping their limbs pinned down, you pull them in further, forcing your throat to stretch around their hips as they're pulled own.  Sitting upright to add gravity in your favour, a few more swallows has their wrists snugly trapped by your constricting esophagus.  No longer needing your hands to hold the [name entry][']s limbs, you place a hand over their mouth to silence their cries as they try to call out.  With the other on their shoulder, you pull them relentlessly downwards into your gaping maw as they struggle and shake their head, going inch by inch further towards their fate as your next meal.  Already your stomach's gurgling in anticipation, eager to digest the struggling foe.  After popping their shoulders in with a muffled grunt, you shove their head into your mouth and close it behind them.  They squirm delightfully the whole time they're pulled down into you, pressing their hands, feet and face against your stretched belly as they struggle to push free as you feel the rapid progress of digestion starting up, quickly putting an end to their struggles.";
+	say "     In no time, your massively distended belly shrinks down, the prey inside being reduced into fuel for your body.  The rush of the consumed creature flashes through your body, giving you a feeling of strength and pride.  Gathering your things, you give your slightly rounded stomach a pat, thanking your foe for their contribution to your survival, and you head out into the city once again.";
+
+to say vorebyplayer05:
+	choose row monster from the table of random critters;
+	say "     Looking over your much smaller foe, you lick your lips and give into that dark hunger growing inside you.  Weakened by your attacks and at a disadvantage due to your larger size, they are easily detained.  With a strong grip on them, you lift your smaller foe up and bring their face to yours.  They suck in a breath to give a cry of fear, but you open wide and stuff their head and shoulders into your open maw in one go.  The [name entry] kicks and struggles in vain, your predatory body easily able to deal with your tinier opponent.  Your throat stretches and bulges as you push them steadily into your hungry mouth, tongue running over their body as you taste this little morsel.";
+	say "     With your considerable practice, eating this one down is fairly easy, letting you better focus on savouring this one than dealing with the difficulties of eating something much larger.  With a hand firmly around each leg, you pause with their hips inside your mouth and let your tongue lash across their groin[if anallevel is 3] and pucker[end if], working to tease and taunt your foe with sensual licks.  The [name entry] squirms and struggles even as they moan as well, soon adding their hot juices to the flavour of your meal.  While they're still dazed from their involuntary orgasm, you push them the rest of the way into your mouth, soon closing your lips as they slide down your throat and start to slip into your belly just as it's starting to gurgle again, ready to start digesting this fun tidbit you've caught.";
+	say "     Quickly enough, your distended belly shrinks down, the prey inside being reduced into fuel for your body.  A rush of strength and renewed energy flows into you even as you gather your things.  Already feeling a little hungry again after your light meal's gotten you excited for live prey, you rub your belly as it smoothes back down to its normal size and head back out into the city.";
+
 
 Chapter 4 - Vore Settings Menu
-
 
 voremenuing is an action applying to nothing.
 
@@ -198,12 +227,15 @@ carry out voremenuing:
 
 [
 Notes:
-feet first
+feet first - done
 post-vore
 always eat toggle - done
 review exclusions
 non-inf vore feat - done
 review balance
+option to expel
+play along + escape
+belly/desc/delay/tf reset
 ]
 
 Alt Vore ends here.
