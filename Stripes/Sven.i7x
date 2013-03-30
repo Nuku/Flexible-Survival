@@ -1,5 +1,5 @@
 Version 4 of Sven by Stripes begins here.
-[Version 4 - Endings at last!]
+[Version 4.1 - Flagged fight as a situation]
 "Adds an NPC named Sven/Svetlana to the Flexible Survival game"
 
 Section 1 - Event and Hideaway
@@ -130,7 +130,9 @@ instead of conversing the Sven:
 		say "     As you sit with Sven, watching him stroke his tail and nibble at its tip nervously.  'I... umm... do you have any more water I could get?  I do not really have anything I can give you for it, but I guess I could... you know...'  He squirms in his seat and you spot a bulge in his shorts that he's trying to hide with his tail.  You smile politely, trying not to grin and let on you know what's coming when there is a loud growl outside followed by banging at the door that interrupts your conversation.";
 		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it.  The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in.  Through the breaks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent.  The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
 		now snowmeowfight is 0;
+		now inasituation is true;
 		challenge "Snow Leopard";
+		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     After your victory against the intruder, you look around quickly to make sure there aren't any infected coming, then head back to the house to check on Sven.  You find him huddled in the stairwell with his head just poking over edge, clearly having crept out to watch the fight from there.  He has one hand nervously playing with his tail while the other has slipped into his shorts.  He does not appear to be aware he's doing the latter, looking up at you with admiration at your defeat of the beast.  As he starts to get up, he notices where his hand has gotten and quickly whips it out, blushing behind his tail.";
 			if Porn Store is known:

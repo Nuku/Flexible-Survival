@@ -1,5 +1,5 @@
 Version 1 of RodAndRonda by Stripes begins here.
-[ Version 1.2 - Consolidating conversation elements ]
+[ Version 1.3 - Flagging fight w/Slut Rat as a situation]
 
 Section 1 - Rod
 
@@ -375,7 +375,9 @@ to say helpingrod:
 	say "     You start to tell her that's Rod's waiting for her to come back to the Mall.  As you try to explain that you've found a way to change her back, she shakes her head at that and grinds her hard cock against you harder.  'Change?  Why would I want to change?  We're the sexiest beasts on the planet.  Mmm... enough talking.  Let's fuck, sweet stuff,' she rumbles, grinding her hard cock against you.  You'll have to fight her before you can get her to take it.";
 	say "[line break]";
 	now rondafight is 3;
+	now inasituation is true;
 	challenge "Slut Rat";
+	now inasituation is false;
 	if rondafight is 3:
 		say "     As you make an attempt to flee from the slut rat, your hand gets knocked by hers, sending the vial tumbling to the ground and breaking.  Its contents spill out onto the dirty floor, ending any hope of saving her.  Ronda follows you briefly before heading back to the main group, what brief moment of clarity she had is gone forever.  Having successfully gotten away from her, all you can do is make your way back up to the mall food court.";
 		move player to Mall Foodcourt;

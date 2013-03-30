@@ -1,5 +1,5 @@
 Version 3 of Leonard by Stripes begins here.
-[Version 3.2 - New matron sex scenes]
+[Version 3.3 - Fight flagged as a situation]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -804,7 +804,9 @@ to say leonardrivalfight:
 	say "     It is during this brief moment of indecision that you notice something the others have missed - another male.  This male, a darker-maned lion with golden coat, is hiding among the rocks on the hillside as he moves closer to the fight.  And suddenly it all comes together in your head.  This final rival, knowing he could not beat your wonderful master in a fair fight, tricked or goaded the other two after Leonard.  With the three of them all fighting for supremacy, they would go all out.  And he waits in the shadows, lurking to take down the exhausted victor, whomever he may be, by surprise to claim all the spoils.";
 	say "     Feeling a rush of rage at this underhanded deception, you growl in your throat and weave your way quickly between the clusters of felines.  Some of the groups still fighting try to engage with you, but you stay focused on your goal and reach the rocky hillside and start to scale it.  Intent on seizing his moment when it opens, this interloper doesn't notice you until you're almost upon him.  You charge at him, attacking this powerful creature in the hopes of saving both your handsome master and your loving pride from his evil machinations.";
 	now Feline_type is 4;
+	now inasituation is true;
 	challenge "Feline";
+	now inasituation is false;
 	now Feline_type is 1;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		now hp of Leonard is 15;
