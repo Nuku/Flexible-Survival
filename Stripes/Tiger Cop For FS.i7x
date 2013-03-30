@@ -197,9 +197,9 @@ to say motelquest:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to hir, then engage hir in combat.  While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
 		say "[line break]";
 		now mqfightresult is 3;		[set to fled by default]
-		inasituation is true;
+		now inasituation is true;
 		challenge "Tigress Hooker";
-		inasituation is false;
+		now inasituation is false;
 		if mqfightresult is 3:
 			say "[mqranaway]";
 			stop the action;
@@ -212,9 +212,9 @@ to say motelquest:
 	say "     At the third, your luck runs out.  There is a tigress sprawled across the bed, pumping a large dildo shi[apostrophe]s picked up somewhere while working a paw over hir thick, feline cock.  With hir filled, stuffed pussy facing right at you, you are stopped short in shock.  Seeing you at the door, shi glances from you to the sextoy a few times, then yanks the plastic thing out, eyeing the live toy that[apostrophe]s come to play.";
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
-	inasituation is true;
+	now inasituation is true;
 	challenge "Tigress Hooker";
-	inasituation is false;
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
@@ -227,9 +227,9 @@ to say motelquest:
 	say "     The tigress growls at the interruption, pulling hir cock from the striped mouse[apostrophe]s muzzle, then pushes hir back as shi climbs off the bed to deal with you for interrupting hir playtime.  The hybrid on the bed only mewls and squeaks, reaching out imploringly from the end of hir leash to either of you in lustful need, fingering hirself as you both fight.";
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
-	inasituation is true;
+	now inasituation is true;
 	challenge "Tigress Hooker";
-	inasituation is false;
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
@@ -246,9 +246,9 @@ to say motelquest:
 	now mqstatus is 6;
 	say "[line break]";
 	now mqfightresult is 3;			[set to fled by default]
-	inasituation is true;
+	now inasituation is true;
 	challenge "Tigress Hooker";		[mqstatus 6 will adjust stats to Matron level]
-	inasituation is false;
+	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
 		stop the action;
