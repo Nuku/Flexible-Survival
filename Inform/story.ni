@@ -7,7 +7,7 @@ Use memory economy.
 Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 510000.
-use MAX_STATIC_DATA of 1300000.
+use MAX_STATIC_DATA of 2400000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
@@ -5840,6 +5840,7 @@ Include Fire Elemental for FS by Stripes.
 Include Corota for FS by Stripes.
 Include Ocelot for FS by Stripes.
 Include Blue Chaffinch for FS by Stripes.
+Include Friendship Pony for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.

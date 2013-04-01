@@ -1036,8 +1036,8 @@ To reciting2:
 					otherwise:
 						remove Sam from play;
 					if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
-					if hp of Sam is 36 or hp of Sam is 93, vixentaur_active;
-					if hp of Sam is 56, tripletaur_active;
+					if hp of Sam is 36 or hp of Sam is 99, vixentaur_active;
+					if hp of Sam is 55 or hp of Sam is 56, tripletaur_active;
 			-- 115:	[Wereraptor curse]
 				if the player's command matches "[number]":
 					now wrcursestatus is the number understood;
@@ -2364,7 +2364,7 @@ Carry out reciting:
 						remove Sam from play;
 					if hp of Sam is 16 or hp of Sam is 98, dragontaur_active;
 					if hp of Sam is 36 or hp of Sam is 93, vixentaur_active;
-					if hp of Sam is 56, tripletaur_active;
+					if hp of Sam is 55 or hp of Sam is 56, tripletaur_active;
 			-- 115:	[Wereraptor curse]
 				if the player's command matches "[number]":
 					now wrcursestatus is the number understood;
