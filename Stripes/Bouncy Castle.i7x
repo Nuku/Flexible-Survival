@@ -1289,7 +1289,7 @@ to say dolcheckE:		[vixen]
 	say "     'Mmm... Can we play now?  No!  Ah!  Get me out of this silly thing!' she yips with a definite squeak to her voice.  You inform her that you're trying to free her, but that you want something in return.  'Oh!  That'd be fun!' she giggles.  'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan.  After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious.  'No prob.  We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her.  With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
 	attempttowait;
 	say "     Now that you've found the vixen and have managed to get her free, you still need to escape with her.  Looking around the room, you know you've only got the two options, to head to either of the slides.  Shall you attempt to make your escape to the [link]east (y)[as]y[end link] or to the [link]west (n)[as]n[end link]?";
-	say "[NOTE: Western path is not yet completed.  Shunting automatically to the eastern one...]
+	say "((NOTE: Western path is not yet completed.  Shunting automatically to the eastern one...))";
 	attempttowait;
 	if 1 is 1:
 		say "     Deciding to try your luck to the east, you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide.  Your path to the slide gets cut off by ";
