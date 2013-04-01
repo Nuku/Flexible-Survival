@@ -883,10 +883,10 @@ Section 8 - UpperFirePole
 The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].";
 
 check firepolesliding:
-	if location of player is not Sleeping Quarters and location of player is not Slide Room:
+	if location of player is not Sleeping Quarters and location of player is not Eastern Parapets and location of player is not Western Parapets:
 		say "There is no slide here." instead;
-	otherwise if location of player is Slide Room:		[Bouncy Castle slide]
-		try sliding instead;
+	otherwise if location of player is Eastern Parapets or location of player is Western Parapets:		[Bouncy Castle slide]
+		try bcsliding instead;
 
 Instead of sniffing UpperFirepole:
 	say "The fire pole smells of sleepy times, panic, courage, musk and undeniable valor.";
