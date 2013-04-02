@@ -171,7 +171,7 @@ The Western Parapets is a room.  The Western Parapets is east from Upper Hall.
 The description of Western Parapets is "[bcwestparapets]".
 
 The Eastern Parapets is a room.  The Eastern Parapets is west from Upper Hall.
-The description of Eastern Parapets is "[bcwestparapets]".
+The description of Eastern Parapets is "[bceastparapets]".
 
 The Throne Room is a room.  The Throne Room is northeast of Western Parapets.  The Throne Room is northwest of Eastern Parapets.
 The description of Throne Room is "[bcthroneroom]".
