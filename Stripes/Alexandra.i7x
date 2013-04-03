@@ -57,7 +57,7 @@ Instead of conversing the Alexandra:
 		now Alexandrastory3 is true;
 		now lastfuck of Alexandra is turns + 8;
 		try fucking Alexandra;
-	otherwise if hp of Alexandra > 2 and no_AlexandraNPC - turns < 3 and a random chance of 1 in 3 succeeds:
+	otherwise if hp of Alexandra > 2 and no_AlexandraNPC - turns > 3 and a random chance of 1 in 3 succeeds:
 		AlexandraNPCChat;
 	otherwise:
 		say "[alexandratalk]";		[access regular conversation content]
@@ -545,25 +545,25 @@ Icarus -
 ...
 ]
 
-A_Candy is a truth state that varies.  A_Candy is false.
-A_Sven is a truth state that varies.  A_Sven is false.
-A_Fang is a truth state that varies.  A_Fang is false.
-A_Philip is a truth state that varies.  A_Philip is false.
-A_Mack is a truth state that varies.  A_Mack is false.
-A_Sam is a truth state that varies.  A_Sam is false.
-A_Snow is a truth state that varies.  A_Snow is false.
-A_Sandra is a truth state that varies.  A_Sandra is false.
-A_Sally is a truth state that varies.  A_Sally is false.
-A_Sarah is a truth state that varies.  A_Sarah is false.
-A_Sarah2 is a truth state that varies.  A_Sarah2 is false.
-A_Coleen is a truth state that varies.  A_Coleen is false.
-A_Solstice is a truth state that varies.  A_Solstice is false.
-A_David is a truth state that varies.  A_David is false.
-A_Elijah is a truth state that varies.  A_Elijah is false.
-A_Onyx is a truth state that varies.  A_Onyx is false.
-A_Helen is a truth state that varies.  A_Helen is false.
-A_Xerxes is a truth state that varies.  A_Xerxes is false.
-A_Icarus is a truth state that varies.  A_Icarus is false.
+A_Candy is a truth state that varies.  A_Candy is usually false.
+A_Sven is a truth state that varies.  A_Sven is usually false.
+A_Fang is a truth state that varies.  A_Fang is usually false.
+A_Philip is a truth state that varies.  A_Philip is usually false.
+A_Mack is a truth state that varies.  A_Mack is usually false.
+A_Sam is a truth state that varies.  A_Sam is usually false.
+A_Snow is a truth state that varies.  A_Snow is usually false.
+A_Sandra is a truth state that varies.  A_Sandra is usually false.
+A_Sally is a truth state that varies.  A_Sally is usually false.
+A_Sarah is a truth state that varies.  A_Sarah is usually false.
+A_Sarah2 is a truth state that varies.  A_Sarah2 is usually false.
+A_Coleen is a truth state that varies.  A_Coleen is usually false.
+A_Solstice is a truth state that varies.  A_Solstice is usually false.
+A_David is a truth state that varies.  A_David is usually false.
+A_Elijah is a truth state that varies.  A_Elijah is usually false.
+A_Onyx is a truth state that varies.  A_Onyx is usually false.
+A_Helen is a truth state that varies.  A_Helen is usually false.
+A_Xerxes is a truth state that varies.  A_Xerxes is usually false.
+A_Icarus is a truth state that varies.  A_Icarus is usually false.
 no_AlexandraNPC is a number that varies.  no_AlexandraNPC is usually 255.
 
 to AlexandraNPCChat:
