@@ -5723,6 +5723,7 @@ Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
 Include Slutrat by Nuku Valente.
 Include Cute Chinchilla Girl For FS by Trav.
+Include Feline Gymnast by SomeFur.
 Include Ewe by Sarokcat.
 Include Ram by Sarokcat.
 Include Teddy Bear by Sarokcat.
