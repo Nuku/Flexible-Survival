@@ -179,6 +179,7 @@ instead of addfeating the fun feats:
 		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
 	if "They Have Your Eyes" is not listed in feats of player and "Sterile" is not listed in feats of player:
 		addfeat "Breeding True" with "All new children you have will resemble their father.";
+	if "Sterile" is not listed in feats of player, addfeat "Wild Womb" with "The infection is especially concentrated in your womb, causing your children to be born feral.";
 	if "Sterile" is not listed in feats of player:
 		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
@@ -338,5 +339,7 @@ This is the gainfeat rule:
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command.  It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]).  It is used for adjusting vore-related game settings.";
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
+
+FeralBirths is a number that varies. FeralBirths is usually 0.
 
 Feats ends here.
