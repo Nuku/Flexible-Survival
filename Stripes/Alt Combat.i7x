@@ -92,6 +92,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	if weapon object of player is bo staff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
+	if weapon object of player is chair and name entry is "Wrestling Wolf":
+		increase plhitbonus by 2;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
