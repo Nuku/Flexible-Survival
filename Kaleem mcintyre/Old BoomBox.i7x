@@ -303,7 +303,7 @@ to say Oceanfriends:
 		If hp of Elijah is 3 or hp of Elijah is 4:
 			say "     Elijah moves over by your side and snuggles up to you as best he can.  His large and fluffy wings prove to be very nice comforters for your head to rest on.";
 	if Alexandra is booked:
-		say "     Noticing that Fang's not at the door, Alexandra pokes her head inside to see if anything's up.  Noticing the soft music and beach sounds, rolls her eyes with a huff and heads back out to stand watch.";
+		say "     Noticing [if fang is booked]that Fang's not at the door[otherwise]that the lack of activitiy[end if], Alexandra pokes her head inside to see if anything's up.  Noticing the soft music and beach sounds, rolls her eyes with a huff and heads back out to stand watch.";
 		now lastfuck of Alexandra is lastfuck of Alexandra - 2;
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;
