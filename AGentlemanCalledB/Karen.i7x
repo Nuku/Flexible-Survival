@@ -5,6 +5,7 @@ Section 1 - Karen
 Karen is a woman.
 The description of Karen is "[Karendescribing]";
 The conversation of Karen is { "Karentalk" }.
+KarenTimer is a number that Varies.
 
 the linkaction of Karen is "Possible Actions: [link]talk[as]talk Karen[end link], [link]smell[as]smell Karen[end link], [link]fuck[as]fuck karen[end link][line break]";
 
@@ -27,7 +28,11 @@ carry out KarenTalking:
 		otherwise:
 			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and your pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eat from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 	otherwise if companion of player is Retriever Girl:
-		say " 	 [one of]Thanks again for bringing me with you, I feel so much safer with you around.[or]It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life[or]I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied[or]I still feel that need welling up inside me occasionally...promise me you won't let me give in to it again, ok?[at random].";
+		if hp of Karen is 5 and ( KarenTimer - turns > 8 ):
+			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are.' she says, clearly struggling to keep her emotions in check. Recalling that François seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion 'Really? Do you think he would help? I suppose it couldn't hurt.' she replies with a weak smile, 'It'll be nice too see another friendly face, at least.'";
+			now HP of Karen is 6;
+		otherwise:
+			say " 	 [one of]Thanks again for bringing me with you, I feel so much safer with you around.[or]It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life[or]I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied[or]I still feel that need welling up inside me occasionally...promise me you won't let me give in to it again, ok?[at random].";
 	otherwise:
 		if hp of Karen > 4:
 			say " 	 Karen is not currently your active companion, you should call her over first.";
@@ -68,6 +73,20 @@ to say RetrieverGirldesc:
 
 the scent of Retriever Girl is "     Karen has a light scent of an aroused female canine.";
 
+Section 3- Karen Quest
+
+Forgotten Past is a situation. Forgotten Past is Resolved.
+The sarea of Forgotten Past is "Campus";
+
+Instead of resolving a Forgotten Past:
+	if HP of Karen is 7:
+		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up, 'I know this place' she says, lifting her nose to the air and taking a few sniffs 'I can smell...me' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still sealed locker. 'This one, it's this one. This was my locker' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
+		say "     A short while later you finally manage to [if intelligence of player > strength of player]open the lock with a makeshift shim[otherwise]break the door off it's hinges with a liberal application of brute force[end if]. stepping aside, you let Karen open the door and peer inside, the locker is filled mostly with textbooks pertaining primarily to animal medicine, it seems she was studying for a veterinary degree at the campus. 'I was going to be a vet...and now here I am, a dog' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker, While most of the locker's contents prove unhelpful she does find a large book bag, which will hold significantly more the the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom' she says looking the timetable over, 'maybe we could stop by there next?'";
+		say "     As you leave the row of locker and head back towards safer grounds you can't help but notice Karen's head held a little higher, and an ever-so slight spring in her step.";
+		now HP of Karen is 8;
+		increase carried of water bottle by 1;
+		now  Forgotten Past is resolved;
+
 [  hp of Rex   ]
 [ 0 = not met        ]
 [ 1 = done event once, received bone]
@@ -86,6 +105,11 @@ the scent of Retriever Girl is "     Karen has a light scent of an aroused femal
 [ 3 = Spoke to Francois, got cookies ]
 [ 4 = Trigger Fight against Rex ]
 [ 5 = Defeated Rex, default Pet Karen Value ]
+[ 6 = Agreed to see Francois ]
+[ 7 = Met Francois, locker event opened ]
+[ 8 = Completed locker event]
+
+[]
 
 
 Karen ends here.
