@@ -167,7 +167,14 @@ to say Françoisdesc:
 	say "     François, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short stocky canine body and face are covered with a thick mottled coat of fur made up of several different colours and patterns, there even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency, while still allowing his long tail to flit about unhindered.";
 
 Instead of conversing the François:
-	if hp of Karen is 2:
+	if hp of Karen is 6:
+		say "     François greets you with a smile as you approach 'Ah, mon ami[if cocks of player is 0 and cunts of player > 0]e[end if], good too see you again! and who is this you've brought with you?'";
+		say "     'It's me, Karen' she responds, 'We were hoping you could help me out with --'[line break]";
+		say "     'Karen! Mon Dieu, I had feared the worst mon amie' François interupts, stepping around the counter placing a small kiss on each side of her muzzle before pulling her into a hug. Breaking off the hug François motions towards one of the tables near the front of the store, the three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks the him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared intrest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
+		say "     'Well, it's more than I knew before' Karen responds, 'Thank you, François, for everything. I might not even be here if not for you helping our friend here Escape from Rex' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and karen gather your things and prepare to head back out into the city as François returns to his work behind the counter.";
+		now hp of Karen is 7;
+		now Forgotten Past is unresolved;
+	otherwise if hp of Karen is 2:
 		say "     Realizing François and his bakery must be the place Karen mentioned, you decide to explain your situation to François, recounting the entire story that lead you to your position with Rex and your plot to escape."; 
 		say "     'Mon Dieu, poor Karen' François replies solemnly after hearing your tale, 'But at least it is not to late [if libido of François >= 3]for you, mon petit chou[otherwise]to repay mon héro[end if].";
 		say "     Without another word François gets to work, gathering a few supplies before starting in earnest.  Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if bodyname of player is not listed in the infections of Caninelist and facename of player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
