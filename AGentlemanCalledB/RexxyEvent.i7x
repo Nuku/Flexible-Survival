@@ -189,6 +189,7 @@ instead of conversing the Rex:
 				now Retriever Girl is tamed;
 				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
+				now KarenTimer is turns;
 				now hp of Rex is 50;
 				now HP of Karen is 5;
 				now Rex's Place is unknown;
