@@ -278,7 +278,7 @@ to say Oceanfriends:
 		otherwise:
 			say "     Fang sleepy pads himself over to you and then curls up to go to sleep.  No muss, no fuss.  Just a large bundle of sleepy wolf curling himself up next to your head.";
 	If Coleen is in the bunker:
-		say "     Coleen makes her way over to where Sarah is and then proceeds to snuggle up with the other husky woman.";
+		say "     Coleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[otherwise]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
 		say "     The small feline you rescued earlier meows as it moves into your lap to curl up.";
 	if bee girl is tamed:

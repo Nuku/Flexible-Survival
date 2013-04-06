@@ -125,7 +125,7 @@ The assault of equinoid warrior is "[lilianaattack]";
 understand "Liliana" as equinoid warrior.
 
 to say lilianaattack:
-	say "[one of]The equinoid warrior slams your opponent with one of her great hoof hands.[or]Liliana throws out a fast, sharp kick with one of her hooves to your foe's midsection.[or]The equinoid warrior growls and unleashes a fluffy of fast blows.[or]Liliana clocks your opponent with the shaft of her spear.[or]Your equinoid companion strikes with her spear.[at random]";
+	say "[one of]The equinoid warrior slams your opponent with one of her great hoof hands.[or]Liliana throws out a fast, sharp kick with one of her hooves to your foe's midsection.[or]The equinoid warrior growls and unleashes a flurry of fast blows.[or]Liliana clocks your opponent with the shaft of her spear.[or]Your equinoid companion strikes with her spear.[at random]";
 
 to say lilianadesc:
 	say "     This black equinoid may look a little younger than the others, but she's as much a warrior as the rest of her tribe.  Liliana has a tall, imposing figure with strong muscles and a glossy coat of black hair.  She has bright, hazel eyes and a pretty smile with white, flat teeth.  She's dressed in a simple robe that only covers but does not truly hide the shape of her muscled bosom or equine cock.";
