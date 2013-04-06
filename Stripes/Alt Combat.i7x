@@ -1055,7 +1055,6 @@ to win:
 						now ok is 0;
 						vorebyplayer;		[See Alt Vore file]
 						now fightoutcome is 13;	[player vored foe]
-						attempttowait;
 					otherwise:
 						now ok is 1;
 				otherwise if vorechoice is 1:
@@ -1063,7 +1062,6 @@ to win:
 					now ok is 0;
 					vorebyplayer;		[See Alt Vore file]
 					now fightoutcome is 13;	[player vored foe]
-					attempttowait;
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:
@@ -1102,7 +1100,7 @@ to win:
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
 	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
-	if ok is 1, AttemptToWaitBeforeClear; [wait for any key;]
+	AttemptToWaitBeforeClear; [wait for any key;]
 	[clear the screen and hyperlink list;]
 	AttemptToClearHyper;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
