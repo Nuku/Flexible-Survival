@@ -1512,7 +1512,7 @@ carry out hunting:
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
-		if area entry is "Everywhere":		[***]
+[		if area entry is "Everywhere":		[***]
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
 			if name entry matches the text topic understood, case insensitively:
@@ -1543,7 +1543,7 @@ carry out hunting:
 				if facename of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if skinname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
 				if tailname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
-				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;
+				if cockname of player is name entry and a random chance of 1 in 2 succeeds, add x to q;	]
 		if area entry matches the text battleground, case insensitively:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
@@ -3763,10 +3763,10 @@ To fight:
 		otherwise:
 			next;
 		if there is no area entry, next;
-		if area entry is "Everywhere":		[***]
+[		if area entry is "Everywhere":		[***]
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-			add x to q;
+			add x to q;		]
 		if area entry matches the text battleground:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
@@ -4671,7 +4671,7 @@ This is the self examine rule:
 			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
 		otherwise:
 			if breasts of player is greater than 2:
-				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
 				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			otherwise:
 				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
