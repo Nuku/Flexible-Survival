@@ -135,8 +135,7 @@ The Dexterity of pink raccoon is 14;
 The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close.  He churrs happily, ready and eager to obey.";
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them.  He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]";
 
-instead of sniffing the pink raccoon:
-	say "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.";
+the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.";
 
 An everyturn rule:
 	if companion of player is pink raccoon:
@@ -279,8 +278,7 @@ lastCandyfucked is a number that varies.  lastCandyfucked is normally 555.
 coonsex is a number that varies.
 [ lust of Candy controls his interaction w/Fang]
 
-instead of sniffing the Candy:
-	say "The candy coon smell of cotton candy, male arousal and sex.";
+the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex.";
 
 to say coondesc:
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if hp of Sven is 10]coaxes your feline pet into some more playtime[otherwise]masturbates furiously until the room smells of cotton candy from his sweet cum[end if].  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";
@@ -307,7 +305,9 @@ instead of conversing the Candy:
 		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand.  'Don't worry about Sven, sweety.  I know he's yours.  I'm just... helping him get some experience.'[or]Candy grins.  'I'll keep a close eye on your kitty while your out, sweety.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk.  'I've got him all warmed up for you, hon,' he churrs, licking his lips.  'Have fun!'[at random]";
 
 
-Instead of fucking the Candy:
+the fuckscene of Candy is "[sexwithCandy]".
+
+to say sexwithCandy:
 	if lastCandyfucked - turns is less than 8:
 		say "     The coon smiles and kisses your cheek.  'I'm sorry, sweety.  I need a little time to recover.  I want to make the most of our playtime.'";
 	otherwise:

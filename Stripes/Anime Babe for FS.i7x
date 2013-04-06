@@ -9,12 +9,19 @@ when play begins:
 
 noanimebabesex is a number that varies.
 
+Definition: a person is animebabebodied:
+	if the bodyname of the player is "Anime Babe", yes;
+	no;
+
 to say losetoanimebabe:
 	now noanimebabesex is 0;
 	if hp of player > 0:
 		say "     Unwilling to continue to fight the cute girl, you let her push you to the ground at her feet";
 	otherwise:
 		say "     Beaten by the anime babe, she giggles happily and pushes you to the ground";
+[	if animeclubfight is true:
+		say ".  Grabbing you by the shoulder, she pulls you fully into the room forces you down in front of the television set.";
+	otherwise if cocks of player > 0 and cockname of player is "Parasitic Plant":		]
 	if cocks of player > 0 and cockname of player is "Parasitic Plant":
 		say ".  As she stands over you, you are given a good view of her [one of]pink[or]white[or]blue[or]kitty[at random]panties.  This causes your plant-like cock to stir to life.  Compelled by the great, universal attraction between anime babes and tentacles, your vine-like cock extends in length and lunges up into her, tearing her panties and thrusting into her, causing her giggles to turn to a surprised moan.  Her hips tremble as she squirms in mid-air as your tentacle cock thrusts and pounds at her.";
 		say "     Getting weak in the knees, she falls atop you, making it all the easier for you to fuck your would-be assailant[if anallevel > 1 and cocks of player > 2].  Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[otherwise if cocks of player > 2].  Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[otherwise if anallevel > 1 and cocks of player is 2 and a random chance of 2 in 5 succeeds].  Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole[otherwise if cocks of player is 2].  Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[end if].  Your body, lost in the lust of fucking such a prize catch so suitable for your altered penis, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random][if cocks of player > 1].  Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[otherwise].  Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if].  Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there leaking your plant-like cum from her well-used body.";
@@ -63,7 +70,9 @@ to say losetoanimebabe:
 
 to say beattheanimebabe:
 	say "     Having defeated the anime babe, you knock her to the ground and consider your next course of action";
-	if cocks of player > 0 and cockname of player is "Parasitic Plant":
+	if animeclubfight is true:
+		say " as you turn your attention towards the tentacled young man in the video room.";
+	otherwise if cocks of player > 0 and cockname of player is "Parasitic Plant":
 		now noanimebabesex is 0;
 		say ".  The choice is taken out of your hands as your plant cock reacts to the anime girl's presence, rising and squirming with building arousal.  Unable to control yourself, you flip up her skirt and pull down her [one of]pink[or]white[or]blue[or]kitty[at random] panties, uncovering her juicy little cunt.  Clean and hairless, it seems to call to your tentacle cock as if she was made to be fucked by tentacles.";
 		say "     She squeals and squirms as your vine-like cock pushes into her juicy cunt, moaning loudly in obvious pleasure despite her struggles.  Pinning her down by her shoulders, you let your tentacle cock do its thing, sliding in and out of her, pounding into the horny girl beneath you[if anallevel > 1 and cocks of player > 2].  Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[otherwise if cocks of player > 2].  Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[otherwise if anallevel > 1 and cocks of player is 2 and a random chance of 2 in 5 succeeds].  Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole[otherwise if cocks of player is 2].  Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[end if][if cocks of player > 1].  Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[otherwise].  Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if].  You leave her lying there, sticky with your plant cum as she lies there moaning in delight.";
@@ -134,7 +143,7 @@ to say beattheanimebabe:
 
 
 to say animebabedesc:
-	say "     You find yourself facing off with a cartoonishly proportioned woman.  Her body is covered in shiny, perfectly smooth, tan skin, looking exactly the same in any light.  Her head is fairly large in proportion to her body and has long, blue hair.  Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive.  Her body is rail thin without any visible body fat or apparent room for most of her vital organs.  When at rest, no part of her seems to move at all.  Her arms are exceptionally scrawny, almost skeletal.  Her elbows are extremely angular, and her hands are quite dainty.  Her legs are disproportionately lengthy, making up a full two thirds of her height.  Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
+	say "     You find yourself facing off with a cartoonishly proportioned woman.  Her body is covered in shiny, perfectly smooth, pink skin, looking exactly the same in any light.  Her head is fairly large in proportion to her body and has long, blue hair.  Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive.  Her body is rail thin without any visible body fat or apparent room for most of her vital organs.  When at rest, no part of her seems to move at all.  Her arms are exceptionally scrawny, almost skeletal.  Her elbows are extremely angular, and her hands are quite dainty.  Her legs are disproportionately lengthy, making up a full two thirds of her height.  Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
 	say "    The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit.  This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts.  To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
 	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'.  She runs towards you, breasts swaying as holds her arms up at her sides";
 	if ( cocks of player > 0 and ( cockname of player is "Tentacle Horror" or cockname of player is "Parasitic Plant" or cockname of player is "Squid" or tailname of player is "Cerberus" ) ) or bodyname of player is "Squid":
@@ -161,12 +170,12 @@ When Play begins:
 	now desc entry is "[animebabedesc]";
 	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes.";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs.  When at rest, no part of you seems to move at all, saving on animation.  Your arms are exceptionally scrawny, almost skeletal.  Your elbows are extremely angular, and your hands are quite dainty.  Your legs are disproportionately lengthy, making up a full two thirds of your height.  Each is extremely slender, tapering down to feet so small it's a wonder they can stand.  Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
-	now skin entry is "smooth, tan";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "smooth, pink";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
 	now cock entry is "[one of]idealized[or]smooth[or]vienless[or]hairless[at random]";
 	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes.  Blinking suddenly seems to take far more effort.";
 	now body change entry is "your body thins out, becoming extremely thin and androgynous.  You suddenly feel as if you should be wearing a midriff-baring schoolgirl outfit.  Your arms lose all trace of hair, fat, and muscle tone.  In shock, you grab the back of your neck and start to sweat.  Your legs begin to stretch and thin, each becoming twice the length of your torso.  Even as your legs stretch, the rest of your body seems to shrink, leaving you a few inches shorter than you began when all is said and done.";
-	now skin change entry is "your skin becomes uniformly tan and hairless with gleaming white glares in bright light and oddly flat shadows in dim conditions.";
+	now skin change entry is "your skin becomes uniformly pink and hairless with gleaming white glares in bright light and oddly flat shadows in dim conditions.";
 	now ass change entry is "your ass firms and tightens, forming a pair of cute panties that you feel compelled to show off to others";
 	now cock change entry is "you feel a tightening in your groin as your erection becomes unnaturally smooth and idealized.  Your balls lose all hair, becoming smooth like your cock";
 	now str entry is 12;
