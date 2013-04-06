@@ -5847,6 +5847,7 @@ Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Anime Babe for FS by Stripes.
+Include Hentai Fan for FS by Stripes.
 Include Amazonian for FS by Stripes.
 Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
