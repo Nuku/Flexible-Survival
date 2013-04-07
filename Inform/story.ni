@@ -3766,7 +3766,13 @@ To fight:
 [		if area entry is "Everywhere":		[***]
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-			add x to q;		]
+			add x to q;
+			if "Like Attracts Like" is listed in the feats of the player:
+				if bodyname of player is name entry, add x to q;
+				if facename of player is name entry, add x to q;
+				if skinname of player is name entry, add x to q;
+				if tailname of player is name entry, add x to q;
+				if cockname of player is name entry, add x to q;	]
 		if area entry matches the text battleground:
 			if there is a nocturnal in row X of table of random critters:
 				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
@@ -3778,12 +3784,12 @@ To fight:
 					break;
 			if skipit is 1, next;
 			add x to q;
-		if "Like Attracts Like" is listed in the feats of the player:
-			if bodyname of player is name entry, add x to q;
-			if facename of player is name entry, add x to q;
-			if skinname of player is name entry, add x to q;
-			if tailname of player is name entry, add x to q;
-			if cockname of player is name entry, add x to q;
+			if "Like Attracts Like" is listed in the feats of the player:
+				if bodyname of player is name entry, add x to q;
+				if facename of player is name entry, add x to q;
+				if skinname of player is name entry, add x to q;
+				if tailname of player is name entry, add x to q;
+				if cockname of player is name entry, add x to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
 		repeat with Z running through q:
