@@ -1,6 +1,7 @@
 Version 2 of Zephyr Inc by Nuku Valente begins here.
+[Version 2.1 - tentative price drop]
 
-"It[']s about time for Zephyr to show up around here."
+"It's about time for Zephyr to show up around here."
 
 Section 1 - Zephyr Office
 
@@ -123,7 +124,7 @@ Carry out zephbuying:
 	if name entry is "nanite collector", now nanitemeter is 1;
 	if name entry is "pepperspray", increase pepped by 1;
 	decrease freecred by price entry;
-	decrease score by price entry divided by 5;
+[	decrease score by price entry divided by 5;	]
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -139,11 +140,11 @@ The descmod of it is " A great contraption rests across your back, with many val
 
 Table of Zephyr Goods
 name	price	object	allowed
-"nanite collector"	400	nanite collector	noresearch rule
-"medkit"	300	medkit	true rule
-"pistol"	600	pistol	true rule
-"pepperspray"	350	pepperspray	pepper rule
-"water bottle"		120	water bottle	true rule
+"nanite collector"	360	nanite collector	noresearch rule
+"medkit"	275	medkit	true rule
+"pistol"	550	pistol	true rule
+"pepperspray"	320	pepperspray	pepper rule
+"water bottle"		100	water bottle	true rule
 
 nanitemeter is a number that varies.  nanitemeter is normally 0.	[marks if player bought a nanite collector]
 pepped is a number that varies.  pepped is normally 0.	[marks how many pepperspray a player's bought]

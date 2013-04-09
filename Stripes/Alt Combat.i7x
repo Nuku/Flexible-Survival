@@ -1098,6 +1098,7 @@ to win:
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
 	if lev entry > 8, increase reward by ( lev entry / 3 );
+	if reward > 50, now reward is 50;
 	increase freecred by reward;
 	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
 	AttemptToWaitBeforeClear; [wait for any key;]
