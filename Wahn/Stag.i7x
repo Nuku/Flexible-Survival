@@ -1,5 +1,5 @@
 Version 5 of Stag by Wahn begins here.
-[Version 5.2 - More sex tweaks for Awesome Helen/Xerxes]
+[Version 5.3 - 69 for Awesome Helen/Xerxes]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -469,6 +469,15 @@ instead of conversing Lea:
 
 Section 5 - Xerxes
 
+Chapter 1 - Xerxes Basics
+
+Xerxes is a man.
+The description of Xerxes is "[xerxesdesc]";
+The conversation of Xerxes is { "Woof." };
+lastfuck of Xerxes is usually 555.
+lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
+hp of Xerxes is usually 0.
+
 [ hp states of Xerxes                              ]
 [   0: hasn't been brought to the bunker yet       ]
 [   1: no sex with either Fang or the Felinoid     ]
@@ -484,16 +493,6 @@ Section 5 - Xerxes
 [   5: awesome sex continues                       ]
 [   6: offer for tattoo                            ]
 [   7: tattoo received                             ]
-
-
-Chapter 1 - Xerxes Basics
-
-Xerxes is a man. 
-The description of Xerxes is "[xerxesdesc]";
-The conversation of Xerxes is { "Woof." };
-lastfuck of Xerxes is usually 555.
-lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
-hp of Xerxes is usually 0.
 
 to say xerxesdesc:
 	if lust of Xerxes < 3:
@@ -548,44 +547,49 @@ Instead of fucking Xerxes:
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
+		if (cocks of player > 0 or cunts of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "69 with Xerxes";
+			now sortorder entry is 3;
+			now description entry is "Share oral pleasures with your human dog pet.";
 		if (cunts of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Let Xerxes fuck your pussy";
-			now sortorder entry is 3;
+			now sortorder entry is 4;
 			now description entry is "Let the human dog breed you.";
 		choose a blank row in table of fucking options;
 		now title entry is "Let Xerxes fuck your ass";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "Let the human dog fill your ass with his seed.";
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Xerxes's ass";
-			now sortorder entry is 5;
+			now sortorder entry is 6;
 			now description entry is "Fill the human dog's ass with your cock.";
 		if (cocks of player > 0 and Felinoid Companion is tamed and (hp of Xerxes is 11 or hp of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Felinoid";
-			now sortorder entry is 6;
+			now sortorder entry is 7;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
 		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
-			now sortorder entry is 7;
+			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
 		if (cunts of player > 0 and Felinoid Companion is tamed and (hp of Xerxes is 11 or hp of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Felinoid";
-			now sortorder entry is 8;
+			now sortorder entry is 9;
 			now description entry is "Hot sex with the felinoid fucking Xerxes.";
 		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (hp of Xerxes is 10 or hp of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
-			now sortorder entry is 9;
+			now sortorder entry is 10;
 			now description entry is "Hot sex with Fang fucking Xerxes.";     
 		if (cocks of player > 0 or cunts of player > 0) and lust of Xerxes is 6 and karatalk > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Xerxes a tattoo";
-			now sortorder entry is 10;
+			now sortorder entry is 11;
 			now description entry is "Bring Xerxes to Kara to get a tattoo.";     
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
@@ -607,6 +611,8 @@ Instead of fucking Xerxes:
 						say "[XerxesSex1]";
 					otherwise if (nam is "Have him suck your cock"):
 						say "[XerxesSex2]";
+					otherwise if (nam is "69 with Xerxes"):
+						say "[XerxesSex10]";
 					otherwise if (nam is "Let Xerxes fuck your pussy"):
 						say "[XerxesSex3]";
 					otherwise if (nam is "Let Xerxes fuck your ass"):
@@ -898,6 +904,17 @@ to say XerxesSex9:                        [Female Player with Fang & Xerxes]
 			if hp of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Xerxes a calculating look. Seems almost like he's up to something - mounting Xerxes ass again to make him his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 
+to say XerxesSex10:                       [69 with Xerxes]
+	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention[if lust of xerxes >= 4 and a random chance of 2 in 5 succeeds].  'Master play?' he says with a wide grin[end if].";
+	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his [if lust of xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
+	say "     [WaitLineBreak]";
+	say "     Moving onto the cot alongside him, you get him to raise his thigh and give you clear access to his ready erection.  Smiling, you run your fingers lightly across his pulsing shaft, causing him to shiver and yip in pleasure.  Seeing more precum leaking from her stiff rod, you dive onto it, sliding your lips over his erect member and running your tongue along it.  He pulses and throbs with excitement, his enlarged shaft wonderfully responsive to your oral attentions.  You tease [if anallevel is 3 and a random chance of 3 in 5 succeeds]a lubed finger across his anus before sliding it into him, drawing a low moan of pleasure from the young man[otherwise]your fingertips across his ballsac before cupping his heavy orbs and rubbing them firm[end if].";
+	if cocks of player > 0:
+		say "     With your erect shaft in front of his face, he knows what to do and sets himself to licking and kissing at it.  His soft lips and playful tongue are a delight across your sensitive manhood, quickly coaxing dribbles of precum from it.  Seeing this, he plunges his mouth over your shaft and sucks greedily at your cock, his well-tranined mouth working hard to please his loving master.  His hands [if lust of Helen >= 7]glide across[otherwise]grope at[end if] your thighs and ballsac, [if lust of Helen >= 7]pawing at[otherwise]rubbing[end if] your orbs as they prepare to give him the tasty treat he so desires.";
+	otherwise:
+		say "     With your wet pussy in front of his face, he knows what to do and sets himself to licking and kissing at it.  His soft lips and playful tongue are a delight across your sensitive folds, quickly getting you wet and dripping as well.  Seeing this, he plunges his tongue into your cunt and laps away, his well-trained mouth working hard to please his loving master.  His hands [if lust of Helen >= 7]glide across[otherwise]grope at[end if] your thighs and stroke your folds, finding your clit and [if lust of Helen >= 7]returning[otherwise]trying his best to return[end if] the pleasure you're giving him in kind.";
+	say "     With your human doggy pleasuring you orally while you're enjoying that thick, pulsing rod in your mouth, it is not too long before you feel your excitement building out of control.  You cum with a loud groan and suck down hard onto him, lapping across his shaft and glans as he orgasms in response[if cocks of player > 0].  You pump your [cum load size of player] load into the young man's mouth, feeding your seed to him[otherwise].  Your sweet waters soak his face, which he laps up and drinks down with lustful eagerness[end if].  When you're both done cumming, he turns around on the cot, snuggles up with you.  He licks and kisses at your face, sharing your taste with his.  'Mmm... tasty Master.  Xerxes love.'";
+
 
 Chapter 4 - Xerxes + Fang/Felinoid
 
@@ -1020,6 +1037,19 @@ to say awesomexerxessex2:
 	increase lust of Xerxes by 1;
 	follow the turnpass rule;
 
+
+Section 6 - Helen
+
+Chapter 1 - Helen Basics
+
+Helen is a woman.
+The description of Helen is "[helendesc]";
+The conversation of Helen is { "Woof." };
+lastfuck of Helen is usually 555.
+lasthelentalk is a number that varies.  lasthelentalk is usually 555.
+hp of Helen is usually 0.
+HelenPregnant is a number that varies.
+
 [ hp states of Helen						]
 [   0: hasn't been brought to the bunker yet		]
 [   1: no sex with either Fang or the Felinoid		]
@@ -1046,18 +1076,6 @@ to say awesomexerxessex2:
 [   6: offer for tattoo						]
 [   7: tattoo received						]
 [ HelenPregnant - timer since impregnation		]
-
-Section 6 - Helen
-
-Chapter 1 - Helen Basics
-
-Helen is a woman.
-The description of Helen is "[helendesc]";
-The conversation of Helen is { "Woof." };
-lastfuck of Helen is usually 555.
-lasthelentalk is a number that varies.  lasthelentalk is usually 555.
-hp of Helen is usually 0.
-HelenPregnant is a number that varies.
 
 to say helendesc:
 	if lust of helen < 3:
@@ -1111,30 +1129,35 @@ Instead of fucking Helen:
 			now title entry is "Have her suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job.";
+		if (cocks of player > 0 or cunts of player > 0) and lust of Helen >= 4:
+			choose a blank row in table of fucking options;
+			now title entry is "69 with Helen";
+			now sortorder entry is 3;
+			now description entry is "Share oral pleasures with your human dog pet.";
 		if (cocks of player > 0):
 			choose a blank row in table of fucking options;
 			now title entry is "Take Helen's pussy";
-			now sortorder entry is 3;
+			now sortorder entry is 4;
 			now description entry is "Fill the human dog's pussy with your cock.";
 		if (cocks of player > 0 and Felinoid Companion is tamed and (hp of Helen is 11 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Felinoid";
-			now sortorder entry is 4;
+			now sortorder entry is 5;
 			now description entry is "Hot sex with the felinoid fucking Helen.";
 		if (cocks of player > 0 and Fang is in the Grey Abbey Library and (hp of Helen is 10 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
-			now sortorder entry is 5;
+			now sortorder entry is 6;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		if (cunts of player > 0 and Felinoid Companion is tamed and (hp of Helen is 11 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Felinoid";
-			now sortorder entry is 6;
+			now sortorder entry is 7;
 			now description entry is "Hot sex with the felinoid fucking Helen.";
 		if (cunts of player > 0 and Fang is in the Grey Abbey Library and (hp of Helen is 10 or hp of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
-			now sortorder entry is 7;
+			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		if (cocks of player > 0 or cunts of player > 0) and lust of Helen is 6 and karatalk > 0:
 			choose a blank row in table of fucking options;
@@ -1161,6 +1184,8 @@ Instead of fucking Helen:
 						say "[HelenSex1]";
 					otherwise if (nam is "Have her suck your cock"):
 						say "[HelenSex2]";
+					otherwise if (nam is "69 with Helen"):
+						say "[HelenSex8]";
 					otherwise if (nam is "Take Helen's pussy"):
 						say "[HelenSex3]";
 					otherwise if (nam is "Male threesome with Helen & Felinoid"):
@@ -1170,7 +1195,7 @@ Instead of fucking Helen:
 					otherwise if (nam is "Female threesome with Helen & Felinoid"):
 						say "[HelenSex6]";
 					otherwise if (nam is "Female threesome with Helen & Fang"):
-						say "[HelenSex7]";            
+						say "[HelenSex7]";
 					otherwise if (nam is "Get Helen a tattoo"):
 						say "[awesomerhelensex2]";
 		if lust of Helen is 0:
@@ -1411,6 +1436,17 @@ to say HelenSex7:                       [Female Player with Fang & Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Helen a calculating look. Seems almost like he's up to something - taking Helen away from Fang and mounting her himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 			if hp of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Helen a calculating look. Seems almost like he's up to something - mounting Helen again to make her his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
+
+to say HelenSex8:                       [69 with Helen]
+	say "     You step besides the cot you put in here for her and whistle to call Helen.  The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library.  She comes to stand beside you, looking happy at getting her master's attention[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds].  'Master play?' she says with a wide grin[end if].";
+	say "     'Good dog' you say as you crouch down beside her, patting her head and stroking over her shoulders.  Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them before moving on to her moist pussy.  Helen gives you a pleased yip, dripping female juices over your fingers as you spread her lips.  Patting the cot, you tell her 'Up here, girl' and reward her with some more stroking as she obeys.";
+	say "     [WaitLineBreak]";
+	say "     Moving onto the cot alongside her, you get her to raise her thigh and expose her ready pussy to you.  Smiling, you brush your fingers lightly across her folds, causing her to shiver and yip in pleasure.  Seeing more juices leaking from her ready cunt, you dive in, pressing your lips to her netherlips and pushing your tongue into her.  She tastes delightfully juicy, her feminine cum rich and flavourful with a pleasant sweetness to it, making you eager for more.  You tease a finger across her clit and work your tongue to please your good girl.";
+	if cocks of player > 0:
+		say "     With your erect shaft in front of her face, she knows what to do and sets herself to licking and kissing at it.  Her soft lips and playful tongue are a delight across your sensitive manhood, quickly coaxing dribbles of precum from it.  Seeing this, she plunges her mouth over your shaft and sucks greedily at your cock, her well-tranined mouth working hard to please her loving master.  Her hands [if lust of Helen >= 7]glide across[otherwise]grope at[end if] your thighs and ballsac, [if lust of Helen >= 7]pawing at[otherwise]rubbing[end if] your orbs as they prepare to give her the tasty treat she so desires.";
+	otherwise:
+		say "     With your wet pussy in front of her face, she knows what to do and sets herself to licking and kissing at it.  Her soft lips and playful tongue are a delight across your sensitive folds, quickly getting you wet and dripping as well.  Seeing this, she plunges her tongue into your cunt and laps away, her well-trained mouth working hard to please her loving master.  Her hands [if lust of Helen >= 7]glide across[otherwise]grope at[end if] your thighs and stroke your folds, finding your clit and [if lust of Helen >= 7]returning[otherwise]trying her best to return[end if] the attention you're giving hers.";
+	say "     With your human doggy pleasuring you orally while you're enjoying that sweet, delicious taste of her cunt, it is not too long before you feel your excitement building out of control.  You cum with a loud groan and dive your tongue deep into her, lapping up her juices as she orgasms in response[if cocks of player > 0].  You pump your [cum load size of player] load into the young woman's mouth, feeding your seed to her[otherwise].  Your sweet waters soak her face, which she laps up and drinks down with lustful eagerness[end if].  When you're both done cumming, she turns around on the cot, snuggles up with you.  She licks and kisses at your face, sharing your taste with hers.  'Mmm... tasty Master.  Helen love.'";
 
 
 Chapter 4 - Helen + Fang/Felinoid
