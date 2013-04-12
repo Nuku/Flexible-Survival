@@ -557,7 +557,7 @@ to say BoysenberryBlossomGet:
 	say "	'Ah! Oui! These will do wonderfully!' François says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small small dish of fruity smelling pastries, 'I will call them Boysenberry Blossoms' François says with obvious excitement, 'Please, be the first to taste one, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]!' Would you like to taste it right now? (Y/N)";
 	if the player consents:
 		say "[Boysenberry Blossom Use]";
-		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 			say "     When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		otherwise:
 			say "	François licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect, I cannot wait to start selling these.'";
@@ -569,7 +569,7 @@ to say MuffinMuffinGet:
 	say "	'What a lovely combination of flavors' François says as he tastes the  pink gel and Awesomer Fruit, 'I must test their potential further!' after collecting a few other things from behind the counter François quickly heads to his kitchen to get started. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
 	if the player consents:
 		say "[Muffin Muffin Use]";
-		if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+		if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cocks of player > 0 ):
 			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		otherwise:
 			say "	'Not my first choice, but an interesting result nonetheless' François says, as he watches your hand drift down towards your groin.  'I am certain it will be popular.'";
@@ -581,7 +581,7 @@ to say BleuettonneGet:
 	say "	After tasting the blue gel François takes it and the chocolate chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates, 'A simple but effective technique, you must try one' François says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
 	if the player consents:
 		say "[Bleuettonne Use]";
-		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		otherwise:
 			say "	'Oh my, what a magnifique result' François says with a grin as he watches your groin change.";
@@ -604,24 +604,29 @@ to say CrèmeAbondanteGet:
 to say LollicockGet:
 	say "	'What an unusual herb' François says as he picks up the Musky Cock Flower, taking a deep sniff of it's musty scent. 'Hmm...perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock shaped lollipops and a silly grin on his face 'What do you think, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
 	if the player consents:
+		let LollicockCheck be 0;
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down it's length, savoring it's sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]"; 
-		if "Female Preferred" is not listed in feats of player:
+		if a random chance of 1 in 4 succeeds:
+			now LollicockCheck is 1;
+		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			now LollicockCheck is 0;
+		if LollicockCheck is 1:
 			if cocks of player is 0:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place .";
 				now cocks of player is 1;
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "red canine hard candy";
+				now cock of player is "red hard candy canine";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "red canine hard candy";
+				now cock of player is "red hard candy canine";
 		otherwise:
 			say "a rumbling builds in your belly, clearly your body doesn't agree with something about the treat.";
 		decrease hunger of player by 5;
 		if hunger of player < 0, now hunger of player is 0;
-		if "Female Preferred" is listed in feats of player:
+		if LollicockCheck is 0:
 			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		otherwise:
 			say "'Mon dieu! What an unexpected result!' François says, licking his lips as he eyes up your new candy member, 'I certainly would like to give that a taste' he says with a naughty smirk.";
@@ -645,7 +650,7 @@ the scent of Boysenberry Blossom is "The small pastry has a wonderful fruity sme
 
 to say Boysenberry Blossom Use:
 	say "Biting into the Boysenberry Blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
-	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 		say " you savor the fruity pastry, it tastes great but gives you a belly ache, clearly your body doesn't agree with something about the treat.";
 	otherwise if cocks of player is 0:
 		now cocks of player is 1;
@@ -666,7 +671,7 @@ the scent of Bleuettonne is "The small candy carries the deep, rich scent of cho
 
 to say Bleuettonne Use:
 	say "     You bite into the Bleuettonne, and find your mouth filled with a burst of  blueberry jelly, more then you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
-	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	otherwise if cocks of player is 0:
 		now cocks of player is 1;
@@ -713,7 +718,7 @@ the scent of Muffin Muffin is "The pink muffin carries a fruity aroma that seems
 
 to say Muffin Muffin Use:
 	say "     Biting into the muffin you find a sweet pink jelly fruit filling hidden inside, working your tongue into the opening, you lick the sweet treat out of the depths of the muffin before finishing it[run paragraph on]";
-	if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player:
+	if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cocks of player > 0 ):
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	otherwise if cunts of player is 0:
 		now cunts of player is 1;
@@ -743,8 +748,13 @@ to say Lollicock Use:
 			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with it's sweet and salty taste.";
 			now LollicockDildo is 1;
 	if lollicockDildo is not 1:
+		let LollicockCheck be 0;
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down it's length, savoring it's sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
-		if a random chance of 1 in 4 succeeds and cockname of player is not "candy cock"and "Female Preferred" is not listed in feats of player:
+		if a random chance of 1 in 4 succeeds:
+			now LollicockCheck is 1;
+		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			now LollicockCheck is 0;
+		if LollicockCheck is 1:
 			if cocks of player is 0:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place .";
 				now cocks of player is 1;
