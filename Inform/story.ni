@@ -4,17 +4,19 @@ Book 0 - Pre game prep stuff
 
 Release along with an interpreter.
 Use memory economy.
-Use slow route-finding.
+Use fast route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 510000.
-use MAX_STATIC_DATA of 2400000.
+Use MAX_PROP_TABLE_SIZE of 520000.
+use MAX_STATIC_DATA of 2500000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
+use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
-use ALLOC_CHUNK_SIZE of 145000.
+use ALLOC_CHUNK_SIZE of 150000.
+use SYMBOLS_CHUNK_SIZE of 15000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
+Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
