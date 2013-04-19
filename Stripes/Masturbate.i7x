@@ -66,7 +66,7 @@ instead of using porn collection:
 					decrease humanity by 1;
 					now researchbypass is 0;
 				now libido of player is ( 5 * libido of player ) / 6;
-			if there is a dangerous door in the location of the player or ( player is in Grey Abbey Library and hp of Fang is 0 ):
+			if there is a dangerous door in the location of the player or ( player is in Grey Abbey Library and hp of Fang is 0 and hp of Alexandra is 0 ):
 				while muskwave > 50:
 					if a random number between 1 and 200 < muskwave:
 						say "     As you're resting and recovering from your massive orgasm, a nearby creature is drawn in by the musky aroma of your sexual fluids before the scent can dissipate.";
@@ -81,7 +81,7 @@ instead of using porn collection:
 to say simplemast:
 	say "     You settle yourself down to [if cocks of player > 0 and cunts of player > 0]play around with your junk for a bit[otherwise if cocks of player > 0]jerk yourself off briefly[otherwise]give yourself a quick fingering[end if].  You grab one of the magazines, using it for added inspiration and get yourself off, relieving some of your excess arousal";
 	if the companion of player is mouse girl:
-		say ".  Partway into your masturbatory session, thoughts of sexy mice slip into your mind";
+		say ".  Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
 		decrease humanity of player by 1;
 		if a random chance of 1 in 2 succeeds:
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
@@ -89,7 +89,8 @@ to say simplemast:
 			decrease humanity by 1;
 			now researchbypass is 0;
 		now libido of player is ( 9 * libido of player ) / 10;
-	say ".";
+	otherwise:
+		say ".";
 	now libido of player is ( 4 * libido of player ) / 5;
 
 

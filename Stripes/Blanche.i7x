@@ -43,8 +43,7 @@ Section 2 - Office Den
 Office Den is a room. It is fasttravel. It is private.
 The description of Office Den is "[officedendesc]";
 
-instead of sniffing Office Den:
-	say "Unlike the air outside, it's mostly free of the smell of soot and ash.  There is a strong, lupine smell in the air from Blanche.";
+the scent of Office Den is "Unlike the air outside, it's mostly free of the smell of soot and ash.  There is a strong, lupine smell in the air from Blanche.";
 
 to say officedendesc:
 	say "     While the main floor is charred and ravaged, a service door leads to an undamaged basement office area.  While half of the basement holds the maintenance area for the small office building, the other half was converted into office space.  It looks like a couple of the desks and filing cabinets which were once here have been removed, making space for Blanche to set up her hidden living area.  There's some motivational posters and rather bland pieces of business art which the white wolf hasn't bothered to remove, or has left in an attempt to keep her spirits up.  She's set up a small mat she's found as her bed and stored her few supplies on a shelf.  While somewhat modest, at least it's secure and well camouflaged.";
@@ -79,7 +78,9 @@ Instead of conversing the Blanche:
 		say "     [one of]'I was starting to get really lonely hiding here all alone.  I'm glad you're here to keep me company.'[or]'I tried to fix this place up as best I could now that it's become my wolf den.'[or]'I had to go out to gather some supplies, a place to sleep and a few other things.  After I came back from one of those trips, I started to feel funny.  It started slowly at first, but soon I was a wolf.  I was a little scared before, but I'm not really sure why.  I think my new body's much prettier.'[or]She slides up beside you.  'It felt so nice to finally have someone fuck me properly.  You should breed me again soon,' she moans with longing in her voice.[or]'The power's gone out around here, but thankfully the lights have stayed on down here.'[at random]";
 
 
-instead of fucking the Blanche:
+the fuckscene of Blanche is "[sexwithBlanche]".
+
+to say sexwithBlanche:
 	if hp of Blanche is 1:
 		say "     That's awfully forward of you.  Perhaps you should talk to her a little first.";
 	otherwise if lastfuck of Blanche - turns < 6:
