@@ -5703,6 +5703,7 @@ Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
 Include Endings by Darthan.
+Include Underground Events by Wahn.
 
 
 [Monsters/Infections]
@@ -5959,6 +5960,7 @@ Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Francois by AGentlemanCalledB.
 Include Karen by AGentlemanCalledB.
+Include Felix by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
