@@ -6,13 +6,12 @@ Version 2 of Kara by Sarokcat begins here.
 section 1- Kara
 
 Karatalk is a number that varies.
-karaaroused is a number that varies.
 LastKarafucked is a number that varies. LastKarafucked is usually 250.
 Karafucked is a number that varies. Karafucked is usually 0.
 karahbtalk is a truth state that varies.  karahbtalk is normally false.
 
 Kara is a woman.[or woman]
-The description of Kara is "The sexy looking hyena herm you rescued seems to have found a jacpair ket somewhere, and a leather of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..";
+The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..";
 The conversation of Kara is { "Yip!" }.
 
 instead of sniffing Kara:
@@ -28,8 +27,7 @@ instead of conversing the Kara:
 	otherwise if matriarchowned is 1:
 		if a random chance of 1 in 2 succeeds:
 			if bodyname of player is "Herm Hyena":
-				say "[one of]Kara looks up at you for a moment before blinking and bowing submissively to her matriarch.[or]'Ah Matriarch, what can I help you with mistress?' The peirced hyena says with a sly wink as she presents her obviously aroused body for your appraisal.[or]'Hello matriarch, have you come to get a piercing from your loyal subject?'[or]'I almost didn[']t recognize you matriarch, What brings you here?'[or]'Wow, something about you just seems so... masterful, it makes me feel so very... slutty....'[or]'Oh! Good to see you Matriarch, come for a tattoo? I have several fun ones.'[or]
-'Have you talked to Harold lately? He could be a useful source of information for the gang if used properly.'[or]'Be careful in this corner of the city sexy one, the rest of the gang hasn[']t managed to get much of a foothold in this district yet.'[at random]";
+				say "[one of]Kara looks up at you for a moment before blinking and bowing submissively to her matriarch.[or]'Ah Matriarch, what can I help you with mistress?' The pierced hyena says with a sly wink as she presents her obviously aroused body for your appraisal.[or]'Hello matriarch, have you come to get a piercing from your loyal subject?'[or]'I almost didn[']t recognize you matriarch, What brings you here?'[or]'Wow, something about you just seems so... masterful, it makes me feel so very... slutty....'[or]'Oh! Good to see you Matriarch, come for a tattoo? I have several fun ones.'[or]'Have you talked to Harold lately? He could be a useful source of information for the gang if used properly.'[or]'Be careful in this corner of the city sexy one, the rest of the gang hasn[']t managed to get much of a foothold in this district yet.'[at random]";
 			otherwise:
 				say "[one of]Kara seems dismayed at your current appearance.  'Oh, my matriarch!  You should take care of that sexy hyena body of yours better[if tatsave is not 1].  Perhaps you'd allow me the honour of providing you with a suitable tattoo to help with that[end if].'[or]'Oh, Matriarch!  It is such a joy to have you here, but I'm sad to not see your great hyena beauty.'[or]'May I perhaps supply you with some piercings to enhance this less than ideal form you currently wear?' she asks with a mix of eagerness and trepidation.[or]'Have you talked to Harold lately? He could be a useful source of information for the gang if used properly.'[or]'Be careful in this corner of the city sexy one, the rest of the gang hasn[']t managed to get much of a foothold in this district yet.'[at random]";
 		otherwise:
@@ -72,15 +70,12 @@ to say karagentalk:	[generalized conversation stuff]
 	say "[one of]'You know, I think I am gonna like this whole hyena thing.'[or]'Never belonged to a gang before, this one just... seems right though.'[or]'I saw a lot of crazy stuff while I was out there getting supplies, I feel pretty lucky that I ran across those bikers when I did, it could have been a lot worse.... and they give an awesome ride too' Kara says with a lewd grin and wink.[or]'I swear I saw a wandering cock out there... just a giant cock. Creepiest thing ever... well except maybe politics...'[or]'Seen any sexy bikers lately? Be sure to invite them to stop by if you do!'[or]'How's Harold doing now?'[or]'I think I am comfortable staying at the shop, besides you never know when some hyenas might stop by for some fun...' She says with a soft hyena laugh as she rubs her new body happily.[or]'Never really thought of hyenas as sexy before, but damn I rock this look.'[or]'If you need a tattoo I might be able to help you out with that a bit later. Piercings are a bit trickier though.'[or]'Sorry about the mess in the shop, not really set up to help anyone out yet, though maybe I will be able to soon.'[or]'You should invite Harold to stop by sometime and maybe bring some friends.  I can invite some gang members... and we could have a LOT of fun, you know?'[at random]";
 
 
-
-
 Instead of fucking the Kara:
-	if lastKarafucked - turns is less than 6:
+	if karatalk is 0:
+		say "You might want to talk to her before rushing into that.";
+	otherwise if lastKarafucked - turns is less than 6:
 		say "'Hey I can only do so much so fast, if you are that eager maybe you should invite some of the other gang members over and we could have some real fun, or stop by the hideout to visit them.' Kara says with a smile as she rubs her clawed hand over your [skin of player] skin teasingly, her touch making you shudder with arousal as your mind fills with images of sexy slutty hyena sex.";
-	otherwise if Karaaroused is greater than 0:
-		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastKarafucked is turns;
-	otherwise if matriarchowned is 1:
+[	otherwise if matriarchowned is 1:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
 		now lastkarafucked is turns;
 	otherwise if matriarchdefeated is 1:
@@ -88,17 +83,26 @@ Instead of fucking the Kara:
 		now lastkarafucked is turns;
 	otherwise if matriarchdefeated is 2:
 		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastkarafucked is turns;
+		now lastkarafucked is turns;									]
 	otherwise if bodyname of player is "Herm Hyena":
-		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		now lastkarafucked is turns;
-	otherwise if "Submissive" is listed in feats of the player:
-		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
-		infect "Herm Hyena";
+		say "[karasex1]";
 		infect "Herm Hyena";
 		now lastkarafucked is turns;
+[	otherwise if "Submissive" is listed in feats of the player:
+		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
+		infect "Herm Hyena";
+		now lastkarafucked is turns;									]
 	otherwise:
 		say "'Sorry, but I kind of was hoping for another hyena, if you know what I mean,' Kara says with a feral grin as she sizes you up. 'Ever since those wonderful sexy bikers, I haven't been able to think about much else.  Especially so since I am part of the 'gang' now too,' she says with a shake of her head, 'Though if you were to join the gang as well... well just think how much fun we could have...' the slutty hyena herm says teasingly.  She runs her clawed hand over your body and then plants a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink, 'Think about it anyways...' she says as she goes back to what she was doing."; 
+
+to say karasex1:
+	setmonster "Hyena Herm";
+	if cocks of player > 0:
+		say "     Putting a paw on the hyena girl's hip, you pull her close.  With a soft growl of lust, you grab her breast and kiss her.  She moans at this rough treatment and spreads her lips, inviting your tongue into her muzzle.  Your tongue wrestles with hers even as you pull her leather jacket off her shoulders and push her down onto the padded table while grabbing her ass firmly.  You spread her legs and take hold of her piercing-studded cock with one hand and her pussy with the other, pumping at her shaft and sinking a pair of fingers into her cunt.  You moans and yips with lustful need, her black cock dribbling precum and her pussy sopping wet.";
+		say "     Feeling that she's ready to go now, you get your cock lined up with her hot, wet hole and thrust into her hard.  She grips the edge of the padded seat and arches her back, crying out for you to fuck her hard.  Grinning, you do just that, thrusting hard enough to make the heavy table scrape a few inches back over the course of the pounding you give her.  As you feel yourself about to cum, [one of]you grab her cock again and pump at it wildly, getting her to spray her seed across her face and tits as you fill her with your [cum load size of player] load[or]you grab her head roughly and push her muzzle down over her own cock, making her suck herself off as you fill her with your [cum load size of player] load[or]you pull out suddenly, making her whimper in disappointment.  She begs for you to finish her off and you relent, thrust hard back into her so you can fill her with your [cum load size of player] load[or]you pull out suddenly, making her whimper in disappointment.  You press your cock, slick with her juices against her own and start pumping the both of them together.  You end up sending your [cum load size of player] load as well as hers to leave a sticky mess all across her face and breasts[at random].  When you're done, you wipe your cock against her thigh and leave her there, sticky and reeking of sex.";
+	otherwise:
+		say "     Putting a paw on the hyena girl's hip, you pull her close.  With a soft growl of lust, you grab her breast and kiss her.  She moans at this rough treatment and spreads her lips, inviting your tongue into her muzzle.  Your tongue wrestles with hers even as you pull her leather jacket off her shoulders and push her down onto the tattooing chair.  You grab her black cock and, while plunging a pair of fingers into her pussy, pump at her pre-dribbling shaft.";
+		say "     Feeling that she's ready to go now, you climb into the chair atop her, lining up your pussy with her pulsing cock and sinking down onto it.  She moans and yips with lustful need, rocking her hips up to thrust into you even as you ride her hard and fast.  You grope and squeeze her breasts, pinching her pierced nipples[if breasts of player > 0 and breast size of player > 0] while her studded tongue laps across yours[end if].  Her pulsing, piercing-studded rod feels wonderful inside you, adding extra stimulation to the already wonderful pleasure a hyena cock can bring.  It's good to have a sexy, submissive hyena to use as you'd like - a welcome change from her much more arrogant brethren.  Pushing down hard, you force her knot into you [if cunt width of player < 4]with some discomfort[otherwise if cunt width of player < 7]with a little difficulty[otherwise]easily enough[end if] and clamp down tightly around it.  This is enough to send Kara over the edge, pumping her hot load into you and you ride her until she's drained.  Once her knot's gone down enough, you pull free and leave her there, panting and reeking of sex.[impregchance]";
 
 
 Tattooplayer is an action applying to nothing.

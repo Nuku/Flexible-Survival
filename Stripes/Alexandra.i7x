@@ -664,11 +664,11 @@ to say A_NPC13:	[David]
 	now A_David is true;
 
 to say A_NPC16:	[Helen]
-	say "     Alexandra scritches her chin as she watches Helen running around on all fours after a ball the Doberwoman's just tossed to her.  'I gotta know, boss.  What'd you do to her to make her like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  I'll be sure to back you up on it, boss.'";
+	say "     Alexandra scritches her chin as she watches Helen running around on all fours after a ball the Doberwoman's just tossed to her.  'I gotta know, boss.  What'd you do to her to make her like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  Whatever it is, I'll be sure to back you up on it, boss.'";
 	now A_Helen is true;
 
 to say A_NPC17:	[Xerxes]
-	say "     Alexandra scritches her chin as she watches Xerxes running around on all fours after a ball the Doberwoman's just tossed to him.  'I gotta know, boss.  What'd you do to him to make him like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  I'll be sure to back you up on it, boss.'";
+	say "     Alexandra scritches her chin as she watches Xerxes running around on all fours after a ball the Doberwoman's just tossed to him.  'I gotta know, boss.  What'd you do to him to make him like that?' she asks, sounding a little impressed.  You try to explain the situation to her, but she just nods and winks.  'Whatever you say, but I'd recommend you come up with a better story for the military if they ever turn up.  Whatever it is, I'll be sure to back you up on it, boss.'";
 	now A_Xerxes is true;
 
 

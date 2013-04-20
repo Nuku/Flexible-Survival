@@ -6,8 +6,8 @@ Release along with an interpreter.
 Use memory economy.
 Use fast route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 520000.
-use MAX_STATIC_DATA of 2500000.
+Use MAX_PROP_TABLE_SIZE of 600000.
+use MAX_STATIC_DATA of 2400000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
@@ -251,6 +251,7 @@ Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
+showlocale is a truth state that varies.  showlocale is usually true.
 Child is a person.
 Child has a number called Gestation.
 Child can be born. Child is not born.
@@ -1453,6 +1454,10 @@ Latexlist is a marker.	[list of infections w/latex/rubber/plastic skin]
 when play begins:
 	add { "Latex Wolf", "Latex Fox", "hermaphrodite latex vixen", "Rubber tigress", "Bottlenose Toy", "Latex Mistress" } to infections of Latexlist;
 
+Internallist is a marker.	[list of infections w/internal balls]
+when play begins:
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness" } to infections of Internallist;
+
 
 Part 2 - Rules
 
@@ -2529,7 +2534,13 @@ To process (X - a grab object):
 			now weapon type of player is weapon type of x;
 			if x is ranged:
 				now weapon type of player is "Ranged";
-			say "You ready your [x].";
+			say "You ready your [x]";
+			if x is unwieldy:
+				if scalevalue of player > objsize of x:
+					say ".  Your [if scalevalue of player is 3]normal-size[otherwise if scalevalue of player is 4]large[otherwise]massive[end if] [bodyname of player] hand dwarfs the [x], making it [if scalevalue of player - objsize of x > 3]very[otherwise if scalevalue of player - objsize of x is 3]rather[otherwise]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+				otherwise:
+					say ".  Your [if scalevalue of player is 3]normal-size[otherwise if scalevalue of player is 2]small[otherwise]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[otherwise if objsize of x - scalevalue of player is 3]quite[otherwise]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+			say ".";
 	if x is equipment:
 		if x is equipped:		[unequip]
 			say "You stop using the [x].";
@@ -3068,7 +3079,7 @@ This is the sex change rule:
 			now cock width of player is 4;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, your flesh growing taught with the expansion, leaving you with [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3079,7 +3090,7 @@ This is the sex change rule:
 			now cock width of player is 4;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your impressive [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
 	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
@@ -3120,7 +3131,7 @@ This is the sex change rule:
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
@@ -4081,6 +4092,7 @@ This is the turnpass rule:
 	follow the breast descr rule;
 	now fightstatus is 0;
 	now ishunting is false;
+	now showlocale is true;
 	if hp of Velos > 2:
 		if Velos is not in the location of the player:		[travelling w/player]
 			Now Velos is in the location of the player;
@@ -4627,9 +4639,9 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  Underneath them hang [ball size]. ";
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  Underneath it hang [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:

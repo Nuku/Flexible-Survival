@@ -55,8 +55,7 @@ South of Campus Grounds is Exploring the Campus.
 
 The marea of Campus Grounds is "Campus".
 
-instead of sniffing College Campus:
-	say "[one of]You catch a whiff of sweat and arousal.[or]You notice the strong scent of rabbits.[or]Like elsewhere in the city, the scent of sex lingers in the air.[at random]";
+the scent of College Campus is "[one of]You catch a whiff of sweat and arousal.[or]You notice the strong scent of rabbits.[or]Like elsewhere in the city, the scent of sex lingers in the air.[at random]";
 
 
 Campus for FS ends here.

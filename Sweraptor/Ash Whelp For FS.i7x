@@ -73,7 +73,7 @@ When Play begins:
 	now cunt width entry is 10;
 	now libido entry is 20;
 	now lootchance entry is 10;		[ Chance of loot dropping 0-100 ]
-	now loot entry is "Ash Dragon Heart";
+	now loot entry is "ash dragon heart";
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";

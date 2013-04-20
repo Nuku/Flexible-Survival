@@ -71,7 +71,7 @@ When Play begins:
 	now cunt width entry is 17;
 	now libido entry is 40;
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
-	now loot entry is "Ash Dragon Heart";
+	now loot entry is "ash dragon heart";
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";
@@ -96,14 +96,14 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Ash Dragon Heart"	"Hot to the touch, and still simmering. You have to pay top dollar for hearts like these."	1	Ash Dragon Heart
+"ash dragon heart"	"Hot to the touch, and still simmering. You have to pay top dollar for hearts like these."	1	ash dragon heart
 
-Ash Dragon Heart is a grab object.
-Ash Dragon Heart is infectious. The strain of Ash Dragon Heart is "Ash Dragator".
-the usedesc of Ash Dragon Heart is "With some trepidation you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
-The purified of Ash Dragon Heart is "food".
+ash dragon heart is a grab object.
+ash dragon heart is infectious. The strain of ash dragon heart is "Ash Dragator".
+the usedesc of ash dragon heart is "With some trepidation you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
+The purified of ash dragon heart is "food".
 
-instead of sniffing Ash Dragon Heart:
+instead of sniffing ash dragon heart:
 	say "The meaty heart smells of bloody meat, soot and volcanic ash.";
 
 Ash Dragator For FS ends here.
