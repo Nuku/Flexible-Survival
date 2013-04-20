@@ -164,8 +164,8 @@ Instead of resolving a Mindshield Storage:
 		now Mindshield Storage is resolved;
 		
 Table of Game Objects (continued)
-name   desc   weight   object
-"mindshield helmet"   "A shiny silver helmet. It's too light to have its primary use being deflecting blows - but maybe the mesh on the inside could ward of other, less physical, attacks."   1   mindshield helmet
+name	desc	weight	object
+"mindshield helmet"	"A shiny silver helmet. It's too light to have its primary use being deflecting blows - but maybe the mesh on the inside could ward of other, less physical, attacks."	1	mindshield helmet
 		
 mindshield helmet is equipment.
 It is not temporary.
