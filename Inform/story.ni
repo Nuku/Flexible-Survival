@@ -941,6 +941,8 @@ before examining the grab object(called x):
 	if x is present, now good is 1;
 	if good is 0, say "I don't see any [x] around here..." instead;
 
+[ ]
+
 Book 5 - Tables
 
 Table of Game Objects
