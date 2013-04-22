@@ -211,8 +211,8 @@ When Play begins:
 	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 60;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "cheese";			[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 24;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
@@ -287,7 +287,31 @@ An everyturn rule:
 				if libido of player < 60, increase libido of player by 3;
 
 
-Section 5 - Endings
+Section 5 - Cheese
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheese"	"A wedge of tasty cheese stamped with a mouse on the rind."	1	cheese
+
+cheese is a grab object. It is a part of the player. cheese is infectious. The strain of cheese is "Mental Mouse".
+
+The usedesc of cheese is "[eatcheese]";
+
+to say eatcheese:
+	say "     You pull out the wedge of cheese and, after double-checking its continued freshness, you take a small nibble of it.  That nibble becomes a bite, and then another and another until it's completely gone before you know it.";
+	decrease hunger of player by 9;
+	if hunger of player < 0, now hunger of player is 0;
+	if morale of player < 0:
+		increase morale of player by 20;
+		if morale of player > 0, now morale of player is 0;
+	if facename of player is "Mental Mouse" or bodyname of player is "Mental Mouse":
+		increase morale of player by 1;
+		decrease morale of player by 3;
+
+the scent of cheese is "The cheese smells quite delicious.";
+
+
+Section 6 - Endings
 
 when play ends:
 	if bodyname of player is "Mental Mouse" or ( bodyname of player is "Albino Mouse" and mouse girl is tamed ):

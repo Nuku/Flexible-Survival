@@ -102,8 +102,8 @@ When Play begins:
 	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Fish";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "pixie dust";			[ Loot monster drops, ]
+	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elfin[or]petite[or]winged[at random]";
@@ -113,6 +113,26 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Pixie Dust
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"pixie dust"	"A sweet smelling powder that glistens in the light."	0	pixie dust
+
+pixie dust is a grab object. It is a part of the player. pixie dust is infectious. The strain of pixie dust is "city sprite".
+
+The usedesc of pixie dust is "[tastepixiedust]";
+
+to say tastepixiedust:
+	say "     Looking at the sparkling powder, you dab your finger into it and give it a taste.  It is quite sweet on your tongue, though it also carries a faintly feminine flavour as well.  As you sample more of it, there's a growing tingling sensation on your tongue and you feel a little lighter on your feet.";
+	increase libido of player by 8;
+
+the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.";
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "city sprite":
