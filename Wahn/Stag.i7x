@@ -1203,8 +1203,8 @@ Instead of fucking Helen:
 		otherwise if lust of Helen is 1:
 			say "     Looking over the doggishly loyal young woman, you can't help but smile, quite pleased with how good a pet she is.  Now, perhaps there's a way to make her even awesomer...";
 			now lust of Helen is 2;
-		otherwise if lust of Xerxes is 4:
-			increase lust of Xerxes by 1;
+		otherwise if lust of Helen is 4:
+			increase lust of Helen by 1;
 		now lastfuck of Helen is turns;
 
 
