@@ -4,17 +4,19 @@ Book 0 - Pre game prep stuff
 
 Release along with an interpreter.
 Use memory economy.
-Use slow route-finding.
+Use fast route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 600000.
-use MAX_STATIC_DATA of 2400000.
+use MAX_STATIC_DATA of 2500000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
+use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
-use ALLOC_CHUNK_SIZE of 145000.
+use ALLOC_CHUNK_SIZE of 150000.
+use SYMBOLS_CHUNK_SIZE of 15000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
+Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
@@ -939,6 +941,8 @@ before examining the grab object(called x):
 	if x is present, now good is 1;
 	if good is 0, say "I don't see any [x] around here..." instead;
 
+[ ]
+
 Book 5 - Tables
 
 Table of Game Objects
@@ -1362,9 +1366,9 @@ To say level up needed:
 
 Table of Fancy Status
 left	central	right
-"Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
+"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
 "Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
+"Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"XP:[xp of player]/[level up needed] [if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 
@@ -5701,6 +5705,7 @@ Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
 Include Endings by Darthan.
+Include Underground Events by Wahn.
 
 
 [Monsters/Infections]
@@ -5957,6 +5962,7 @@ Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 Include Francois by AGentlemanCalledB.
 Include Karen by AGentlemanCalledB.
+Include Felix by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

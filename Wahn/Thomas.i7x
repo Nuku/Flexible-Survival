@@ -12,7 +12,7 @@ Version 1 of Thomas by Wahn begins here.
 [   5: visibly pregnant by the player                                ]
 [  51: doesn't know he's got a pussy										             ] 
 [  52: has become just a regular stallion								             ] 
-[ 100: avoids the player for the future (removed from game)          ] 
+[ 100: (removed from game)                                           ] 
 
 [ ThomasPregnancy - timer since impregnation                         ]			
 	
@@ -139,7 +139,8 @@ The description of Thomas is "[ThomasDesc]";
 The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies.  lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 ThomasSaved is a number that varies.  ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]
-SandySaved is a number that varies.  SandySaved is usually 555.						[saved to put in a delay of at least 10 turns before Jill shows up]
+SandySaved is a number that varies.  SandySaved is usually 555.           [saved to put in a delay of at least 10 turns before Jill shows up]
+FelixSaved is a number that varies.  FelixSaved is usually 555.           [saved to put in a delay of at least 8 turns before Felix quest starts]
 ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
 ThomasPregnancy is a number that varies. 																	[pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 
@@ -163,8 +164,12 @@ to say ThomasDesc:
 	otherwise: 
 		say "     Thomas is a good-looking black man with a muscular chest - which leads over to a strong equine body below his belly button. His lower half has a beautiful black coat shining in the [if daytimer is day]sunlight[otherwise]moonlight[end if], while his goatee and the shoulder-long dreadlocks on his head are blond - as well as is his tail. [if hp of Thomas is 52][otherwise]Below which, as you know, lies a mare's pussy in addition to his stallion cock and balls.[end if] [if hp of Thomas is 5]The belly of his equine body seems a bit fuller than before. He's carrying a foal.[end if]";
 		if libido of Thomas > 0 and libido of Thomas is not 20:
-			say "     [line break]";
-			say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 10 or libido of Thomas is 21)]another centaur[otherwise if (libido of Thomas is 2 or libido of Thomas is 11 or libido of Thomas is 22)]two more centaurs[otherwise if libido of Thomas is 12]three centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
+			if hp of Felix is 0:	[Felix among the additional centaurs]
+				say "     [line break]";
+				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 10 or libido of Thomas is 21)]another centaur[otherwise if (libido of Thomas is 2 or libido of Thomas is 11 or libido of Thomas is 22)]two more centaurs[otherwise if libido of Thomas is 12]three centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
+			otherwise if libido of Thomas is not 10:		[Felix standing in the room as an npc]
+				say "     [line break]";
+				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 21)]another centaur[otherwise if (libido of Thomas is 2 or libido of Thomas is 12 or libido of Thomas is 22)]two more centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";				
 
 instead of conversing the Thomas:
 	if (hp of Thomas is 0):      					[not yet met]
@@ -421,6 +426,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
 			say "     Having beaten the behemoth, you look around and see Thomas and the young centaur a small distance away. They wave for you to follow, then gallop off, most likely to get out of here before the behemoth decides it wants another round. Hurrying after them, you soon find yourself at the usual meeting spot with Thomas, where the two centaurs await your arrival.  Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and blond hair.";
 		increase libido of Thomas by 10;
+		now FelixSaved is turns;
 		say "     [line break]";
 		say "     Shaking your hand, Felix smiles and says 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up besides him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
 	otherwise:
@@ -472,6 +478,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 	otherwise:
 		say "     Apologizing and saying it's not your fight, you run away. Somehow you doubt that they'll be able to make a stand without you... so you likely won't see Thomas anymore.";
 		remove Thomas from play;
+		now hp of Thomas is 100;
 		
 to say LoseToCentaurs2:
 	say "     Badly beaten, you fall to the ground and can't do anything but watch as the stallions subdue Thomas and Jill. [if hp of Thomas < 51]When someone notices that Thomas is a herm, many of the guys spring instant erections and start fucking him in a not at all gentle gangbang.[otherwise]With several guys holding Thomas down, he's mounted by one of the stallions, who just rams his whole horsecock in his ass. After he fills your friend with his load, another takes his place, then another.[end if] Before long, load after load of cum dumped into his body start to show their impact. Thomas features become rounder, his chest bulges outward to form big breasts and his cock shrinks until it's gone completely. He soon stops struggling and only moans as the next centaur thrusts into his pussy, now completely reduced to a needy mare in heat.";
@@ -480,10 +487,12 @@ to say LoseToCentaurs2:
 	say "     [line break]";
 	say "     After the gangbang around Thomas runs its course and Jill gets fucked again several times by the bearded centaur, the hunting party moves back out into the plains, taking their thoroughly fucked mares with them.";
 	remove Thomas from play;
+	now hp of Thomas is 100;	
 	
 to say RunFromCentaurs2:
 	say "     Deciding that this is a lost fight, you run like hell, getting yourself to safety. You don't know what exactly happened to Thomas and Jill after that, but a good guess is that they were taken away with the hunting party nd both used as breeding mares...";
 	remove Thomas from play;	
+	now hp of Thomas is 100;	
 	
 Section 3 - Fucking Thomas
 
@@ -684,7 +693,7 @@ when play ends:
 		say "    After getting out of the city, you see Thomas again a while later and he invites you out to a farming community in the countryside where many non-humanoid infectees settled. Many of the buildings look rather strange, from a human perspective, being very open for large forms or arching high without any stairs since the inhabitants have wings. The black centaur is one of the leaders of the settlement, standing at the head of the herd of centaurs making up about a third of the population. [if hp of Thomas is 51 or hp of Thomas is 52]Most of them are females, their equine bellies bulging with proof of the potency of the black stallion's seed. They seem quite happy, talking and laughing with each other - kinda like a large polygamous family.[otherwise]They're more or less evenly split between males and females, with several recognizable couples and the rest enamored to the black centaur herm. Seems like a happy and content group, talking and laughing with each other - kinda like a large polygamous family.[end if]";
 		if hp of Thomas is 4 or hp of Thomas is 5:								[player knocked him up]
 			say "    Calling a young filly out to meet you, Thomas introduces her to you as Ellen, and you to her as her father. The product of your coupling in the city, the little girl is very nice and chipper, happily chatting to get to know you and showing you around in the herd. Later, after she's gone off to play with other foals, Thomas invites you to his hut to rekindle your relationship and you end up fucking like sex-starved bunnies all night. You come back to visit him quite often after that, both to get it on as well as to see your growing brood of kids with him that results from your couplings.";
-		otherwise if libido of Thomas is 10 or libido of Thomas is 11 or libido of Thomas is 12:        [Felix available]	
+		otherwise if libido of Thomas is 10 or libido of Thomas is 11 or libido of Thomas is 12 and hp of Felix is not 2:        [Felix available]	
 			if hp of Thomas is 1:																		[player didn't try to have mare sex with Thomas]
 				say "    Calling a young colt out to meet you, Thomas introduces him to you as Kurt, his son with Felix. Being the result of you saving his father, the chipper little boy is very eager to have you tell him all about it, getting pretty big eyes as you recount the size of the beast after Felix and your role in getting the centaur away from it. Later, after he's gone off to amaze his friends with the story, Thomas and Felix invite you to their hut and you have a long talk about the time in the city and what happened since.";
 				say "    As the evening progresses and more racy topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your herm friend's pussy. It's quite a night to remember after that. Having had a ringside seat for the conception of their second child, you end up becoming the new colt's godparent and often come back to visit the centaurs.";

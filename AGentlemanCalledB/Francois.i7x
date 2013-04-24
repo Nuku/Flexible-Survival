@@ -147,7 +147,6 @@ instead of sniffing Bone-Appetit:
 to say BoneAppetitdesc:
 	if hp of François is 0:
 		say "     Now that the coast is clear You have a chance to look over the damaged bakery François is calling home, clearly the place has seen better days.It looks like the bakery may have been an early target for infected, with a lot of torn and stained clothing scraps strewn throughout the debris. Most of the furniture is flipped or damage, the display cases and shelves are barren and many are smeared with dried fluids, apparently the creatures where here to sate more then just their mundane appetites.";
-		now hp of François is 1;
 	otherwise if hp of François > 0:
 		say "     The small bakery looks has been cleaned up considerably since the first time you were here. Though the windows are still boarded up, François has cleaned most of the clutter and debris out of the front room and arranged the remaining tables and chairs neatly around the space. The counters and displays are all bare, but clean and he has even [if daytimer is day]opened a skylight[otherwise]gathered some candles[end if] to light the space.";
 
@@ -160,8 +159,9 @@ understand "Francis" as François.
 understand "Francois" as François.
 Françoistalk1 is a truth state that varies.  Françoistalk1 is normally false.
 
-instead of sniffing the François:
-	say "     François has a light male musk,  difficult to catch over the smells pervading the bakery.";
+the linkaction of François is "Possible Actions: [link]talk[as]talk François[end link], [link]smell[as]smell François[end link], [link]fuck[as]fuck François[end link], [link]Bake[as]Bake François[end link][line break]";
+
+the scent of François is "     François has a light male musk,  difficult to catch over the smells pervading the bakery.";
 
 to say Françoisdesc:
 	say "     François, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short stocky canine body and face are covered with a thick mottled coat of fur made up of several different colours and patterns, there even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency, while still allowing his long tail to flit about unhindered.";
@@ -181,17 +181,25 @@ Instead of conversing the François:
 		say "     Eventually François finishes his work, and returns with a small paper bag filled with fresh treats. [if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist or hunger of player > 60] The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out, François simple grins at you as he watches you enjoy a sample of his work.  Still licking the last few crumbs of your snack from your lips, you[otherwise] You[end if] stow the bag away in your pack and give François your regards before deciding on your next move.";
 		now hp of Karen is 3;
 		now carried of Dog Treats is 1;
+	otherwise if hp of François is 0:
+		say "     'I must thank you again, mon ami[if cocks of player is 0 and cunts of player > 0]e[end if]' François says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if cocks of player is 0 and cunts of player > 0]héroïne[otherwise]héro[end if], seem more then capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you [if cocks of player > 0]and perhaps I could 'reward' you in other ways as well' he says, licking his lips as his eyes stray to your groin[end if]. Just bring back anything you find and let me know you would like me to [link]bake[as]bake François[end link] for you.";
+		now hp of François is 1;
+		now libido of François is 1;
+		say "[FrançoisListCompile]";
 	otherwise if libido of François >= 3 and Françoistalk1 is false and a random chance of 2 in 5 succeeds:
 		say "      'I was having such difficulty before you came along.  I don't know if your coming around is scaring them off now, but I was having no end of trouble before.  These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now.  'Zut alors!  How most of them were rude lovers!  No passion, no care for their lover, just raw lust.";
 		say "      'Even from the girls.  I tried to refused them, but would they listen?  Non!  They would get what they wanted in the end, but it was always so hollow.  I am sad for them[if cocks of player > 0].  But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[otherwise if cunts of player > 0].  But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[otherwise].  But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Françoistalk1 is true;
+	otherwise if a random chance of 1 in 4 succeeds and Francois_Undiscovered is not empty:
+		say "[FrançoisHint]";
 	otherwise if a random chance of 1 in 3 succeeds:
 		say "     [if daytimer is day]Boujour[otherwise]Bonsoir[end if], [one of]mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][or]my friend[at random].  [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
 	otherwise:
 		say "     [one of]Perhaps I should try to get back into business, I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find myself a sexy stud[or]Thanks again for the help, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][at random]."
 
 instead of fucking the François:
-	if libido of François is 0, now libido of François is 1;
+	if libido of François is 0:
+		say "     Perhaps you should talk to the friendly mutt first?";
 	if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	otherwise if cocks of player is 0:
@@ -330,13 +338,463 @@ to say françoissex3:		[player performs oral]
 to say françoissex4:		[player performs oral]
 	say "...";
 
+Section 4 - Baking
+
+françoisbaking is an action applying to nothing.
+Understand "bake with françois" as françoisbaking.
+Understand "bake françois" as françoisbaking.
+Understand "cook françois" as françoisbaking.
+Understand "cook with françois" as françoisbaking.
+Understand "bake with francois" as françoisbaking.
+Understand "bake francois" as françoisbaking.
+Understand "cook francois" as françoisbaking.
+Understand "cook with francois" as françoisbaking.
+Understand "bake with francis" as françoisbaking.
+Understand "bake francis" as françoisbaking.
+Understand "cook francis" as françoisbaking.
+Understand "cook with francis" as françoisbaking.
+Francois_Undiscovered is a list of numbers that varies.
+Francois_Discovered is a list of numbers that varies.
+
+to say FrançoisListCompile:
+	if girl is not banned:
+		add 1 to Francois_Undiscovered;	[Crème Abondante - distilled milk + pink gel]
+	if guy is not banned and hermaphrodite is not banned:
+		add 2 to Francois_Undiscovered;	[Bleuettonne - chocolate milk + blue gel]
+	if guy is not banned:
+		add 3 to Francois_Undiscovered;	[Boysenberry Blossom - Awesome Fruit + blue gel]
+	if girl is not banned:
+		add 4 to Francois_Undiscovered;	[Muffin muffin - Awesomer Fruit + pink gel]
+	if hermaphrodite is not banned:
+		add 5 to Francois_Undiscovered;	[Lollicock - Musky Cock Flower + honeycomb]
+
+check françoisbaking:
+	If françois is not visible, say "You should see François for that." instead;
+
+carry out françoisbaking:
+	let françoisbaked be 0;
+	If françois is not visible:
+		say "You should see François for that.";
+	otherwise if Francois_Undiscovered is not empty:
+		say "     Emptying out the contents of your bag on the counter, François looks each over individually, smelling or even tasting many of them as he considers their culinary potential.";
+		if blue gel is owned and Awesome Fruit is owned and 3 is listed in Francois_Undiscovered:
+			say "[BoysenberryBlossomGet]";
+			remove 3 from Francois_Undiscovered;
+			add 3 to Francois_Discovered;
+			decrease carried of blue gel by 1;
+			decrease carried of Awesome Fruit by 1;
+			now françoisbaked is 1;
+		otherwise if pink gel is owned and Awesomer Fruit is owned and 4 is listed in Francois_Undiscovered:
+			say "[MuffinMuffinGet]";
+			remove 4 from Francois_Undiscovered;
+			add 4 to Francois_Discovered;
+			decrease carried of pink gel by 1;
+			decrease carried of Awesomer Fruit by 1;
+			now françoisbaked is 1;
+		otherwise if blue gel is owned and chocolate milk is owned and 2 is listed in Francois_Undiscovered:
+			say "[BleuettonneGet]";
+			remove 2 from Francois_Undiscovered;
+			add 2 to Francois_Discovered;
+			decrease carried of blue gel by 1;
+			decrease carried of chocolate milk by 1;
+			now françoisbaked is 1;
+		otherwise if pink gel is owned and distilled milk is owned and 1 is listed in Francois_Undiscovered:
+			say "[CrèmeAbondanteGet]";
+			remove 1 from Francois_Undiscovered;
+			add 1 to Francois_Discovered;
+			decrease carried of pink gel by 1;
+			decrease carried of distilled milk by 1;
+			now françoisbaked is 1;
+		otherwise if Musky Cock Flower is owned and honeycomb is owned and 5 is listed in Francois_Undiscovered:
+			say "[LollicockGet]";
+			remove 5 from Francois_Undiscovered;
+			add 5 to Francois_Discovered;
+			decrease carried of honeycomb by 1;
+			decrease carried of Musky Cock flower by 1;
+			now françoisbaked is 1;
+		if françoisbaked is not 1:
+			say "     After looking over everything you've brought him, François decides none of your potential combinations of ingredients would make a good dish.";
+	if françoisbaked is not 1 and Francois_Discovered is not empty:
+		say "	Would you like to have François bake a dish you've already discovered? (Y/N)";
+		if the player consents:
+			say "[FrançoisBakingMenu]";
+
+to say FrançoisBakingMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if 1 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Crème Abondante";
+		now sortorder entry is 1;
+		now description entry is "have François bake a Crème Abondante";
+	if 2 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Bleuettonne";
+		now sortorder entry is 2;
+		now description entry is "have François bake a Bleuettonne";
+	if 3 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Boysenberry Blossom";
+		now sortorder entry is 3;
+		now description entry is "have François bake a Boysenberry Blossom";
+	if 4 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Muffin muffin";
+		now sortorder entry is 4;
+		now description entry is "have François bake a Muffin muffin";
+	if 5 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Lollicock";
+		now sortorder entry is 5;
+		now description entry is "have François bake a Lollicock";
+	choose a blank row in table of fucking options;
+	now title entry is "Abort";
+	now sortorder entry is 6;
+	now description entry is "Abort";
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			choose row calcnumber in table of fucking options;
+			say "Confirmation: Would you like to [description entry]?";
+			if player consents:
+				if title entry is "Crème Abondante":
+					if pink gel is owned and distilled milk is owned:
+						now sextablerun is 1;
+						say "     François takes the pink gel and distilled milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of creamy pastries, offering one to you as he places the rest into one of his displays.";
+						decrease carried of pink gel by 1;
+						decrease carried of distilled milk by 1;
+						increase carried of  Crème Abondante by 1;
+					otherwise:
+						say "You do not have the required ingredients. pink gel and distilled milk.";
+				otherwise if title entry is "Bleuettonne":
+					if blue gel is owned and chocolate milk is owned:
+						now sextablerun is 1;
+						say "     François takes the blue gel and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates, offering one to you as he places the rest into one of his displays.";
+						decrease carried of blue gel by 1;
+						decrease carried of chocolate milk by 1;
+						increase carried of  Bleuettonne by 1;
+					otherwise:
+						say "You do not have the required ingredients. blue gel and chocolate milk.";
+				otherwise if title entry is "Boysenberry Blossom":
+					if blue gel is owned and Awesome Fruit is owned:
+						now sextablerun is 1;
+						say "	 François takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of fruit filled pastries, offering one to you as he places the rest into one of his displays.";
+						decrease carried of blue gel by 1;
+						decrease carried of Awesome Fruit by 1;
+						increase carried of  Boysenberry Blossom by 1;
+					otherwise:
+						say "You do not have the required ingredients. blue gel and Awesomer Fruit.";
+				otherwise if title entry is "Muffin muffin":
+					if pink gel is owned and Awesomer Fruit is owned:
+						now sextablerun is 1;
+						say "	 François takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
+						decrease carried of pink gel by 1;
+						decrease carried of Awesomer Fruit by 1;
+						increase carried of  Muffin muffin by 1;
+					otherwise:
+						say "You do not have the required ingredients. pink gel and Awesome Fruit.";
+				otherwise if title entry is "Lollicock":
+					if honeycomb is owned and Musky Cock Flower is owned:
+						now sextablerun is 1;
+						say "	 François takes the honeycomb and Musky Cock Flower from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of red candy cocks, offering one to you as he places the rest into one of his displays.";
+						decrease carried of honeycomb by 1;
+						decrease carried of Musky Cock Flower by 1;
+						increase carried of  Lollicock by 1;
+					otherwise:
+						say "You do not have the required ingredients. honeycomb and Musky Cock Flower.";
+				otherwise if title entry is "Abort":
+					say "You decide not to have François bake anything.";
+					now sextablerun is 1;
+		otherwise:
+			say "Invalid Option.";
+
+to say FrançoisHint:
+	sort Francois_Undiscovered in random order;
+	let T be a random number between 1 and 3;
+	if entry 1 of Francois_Undiscovered is 1:	[Crème Abondante - distilled milk + pink gel]
+		if T is 1:
+			say "     Crème à la fraise, strawberry cream, is always a popular ingredient, perhaps we could find a way to make our own out in the city?";
+		if T is 2:
+			say "     It's a shame I was out of milk when all this started, strangely most of my other stock seems to have stayed fresh.";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
+	if entry 1 of Francois_Undiscovered is 2:	[Bleuettonne - chocolate milk + blue gel]
+		if T is 1:
+			say "     Le chocolat et les fruits frais are always a good combination.";
+		if T is 2:
+			say "     I have seen the most unusual chiens running around outside, they appear to be made entirely of chocolat.";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
+	if entry 1 of Francois_Undiscovered is 3:	[Boysenberry Blossom - Awesome Fruit + blue gel]
+		if T is 1:
+			say "     A simple fruit pastry is a staple of a good menu.";
+		if T is 2:
+			say "     There was a bizarre tree outside the store earlier, it had such lovely fruit hanging from it's branches. I was going to go out and pick some, but i turned around for a moment and it was suddenly gone.";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
+	if entry 1 of Francois_Undiscovered is 4:	[Muffin muffin - Awesomer Fruit + pink gel]
+		if T is 1:
+			say "     Gelée de fruit is always an interesting way to enrich a simple treat.";
+		if T is 2:
+			say "     There was a bizarre tree outside the store earlier, it had such lovely fruit hanging from it's branches. I was going to go out and pick some, but i turned around for a moment and it was suddenly gone. ";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
+	if entry 1 of Francois_Undiscovered is 5:	[Lollicock - Musky Cock Flower + honeycomb]
+		if T is 1:
+			say "     Surely there must be many interesting new flavors to discover out in the city park now.";
+		if T is 2:
+			say "     I used to collect fresh herbs from the forest surrounding the city park before all this began, I wonder what strange plants must be out there now?";
+		if T is 3:
+			say "     Fresh honey was always one of my favorite ingredients...I wonder how this strange maladie has affected the honeybees...";
+
+
+to say BoysenberryBlossomGet:
+	say "	'Ah! Oui! These will do wonderfully!' François says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small small dish of fruity smelling pastries, 'I will call them Boysenberry Blossoms' François says with obvious excitement, 'Please, be the first to taste one, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]!' Would you like to taste it right now? (Y/N)";
+	if the player consents:
+		say "[Boysenberry Blossom Use]";
+		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			say "     When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		otherwise:
+			say "	François licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect, I cannot wait to start selling these.'";
+	otherwise:
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		increase carried of Boysenberry Blossom by 1;
+
+to say MuffinMuffinGet:
+	say "	'What a lovely combination of flavors' François says as he tastes the  pink gel and Awesomer Fruit, 'I must test their potential further!' after collecting a few other things from behind the counter François quickly heads to his kitchen to get started. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
+	if the player consents:
+		say "[Muffin Muffin Use]";
+		if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cocks of player > 0 ):
+			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		otherwise:
+			say "	'Not my first choice, but an interesting result nonetheless' François says, as he watches your hand drift down towards your groin.  'I am certain it will be popular.'";
+	otherwise:
+		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		increase carried of Muffin Muffin by 1;
+
+to say BleuettonneGet:
+	say "	After tasting the blue gel François takes it and the chocolate chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates, 'A simple but effective technique, you must try one' François says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
+	if the player consents:
+		say "[Bleuettonne Use]";
+		if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		otherwise:
+			say "	'Oh my, what a magnifique result' François says with a grin as he watches your groin change.";
+	otherwise:
+		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		increase carried of Bleuettonne by 1;
+
+to say CrèmeAbondanteGet:
+	say "	After tasting the pink gel and distilled milk, François quickly pours both into an empty bowl and starts mixing, before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this' you hear him say to himself as you watch his tail disappear around the corner. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
+	if the player consents:
+		say "[Crème Abondante Use]";
+		if "Male Preferred" is listed in feats of player or "Passing Grade Chest" is listed in feats of player or "One Pair" is listed in feats of player:
+			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		otherwise:
+			say "     François cocks his head to the side as he watches you chest swell, 'I have a feeling this will be a popular dish among les femmes' He says while eying your growing mammaries 'I am glad I was not the first to test it though.'";
+	otherwise:
+		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		increase carried of Crème Abondante by 1;
+
+to say LollicockGet:
+	say "	'What an unusual herb' François says as he picks up the Musky Cock Flower, taking a deep sniff of it's musty scent. 'Hmm...perhaps...' François trails off as he spots the honeycomb, before inspiration strikes. François quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually François returns with a small tray of cock shaped lollipops and a silly grin on his face 'What do you think, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
+	if the player consents:
+		let LollicockCheck be 0;
+		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down it's length, savoring it's sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]"; 
+		if a random chance of 1 in 4 succeeds:
+			now LollicockCheck is 1;
+		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			now LollicockCheck is 0;
+		if LollicockCheck is 1:
+			if cocks of player is 0:
+				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place .";
+				now cocks of player is 1;
+				now cock length of player is 5;
+				now cock width of player is 4;
+				now cockname of player is "candy cock";
+				now cock of player is "red hard candy canine";
+			otherwise:
+				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
+				now cockname of player is "candy cock";
+				now cock of player is "red hard candy canine";
+		otherwise:
+			say "a rumbling builds in your belly, clearly your body doesn't agree with something about the treat.";
+		decrease hunger of player by 5;
+		if hunger of player < 0, now hunger of player is 0;
+		if LollicockCheck is 0:
+			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		otherwise:
+			say "'Mon dieu! What an unexpected result!' François says, licking his lips as he eyes up your new candy member, 'I certainly would like to give that a taste' he says with a naughty smirk.";
+	otherwise:
+		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		increase carried of Lollicock by 1;
+
+Section 5 - Baked Goods
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Boysenberry Blossom"	"A fruit filled flaky flower shaped pastry."	1	Boysenberry Blossom
+"Bleuettonne"	"A dark chocolate ball with a syrupy blueberry center."	1	Bleuettonne
+"Crème Abondante"	"A delicate pink pastry topped with a breast shaped mound of creme, complete with a small sugary nipple."	1	Crème Abondante
+"Muffin Muffin"	"A soft pink muffin with a gooey fruit center."	1	Muffin Muffin
+"Lollicock"	"A big red hard candy shaped like a canine cock."	1	Lollicock
+
+Boysenberry Blossom is a grab object. It is a part of the player.
+Boysenberry Blossom has a usedesc "[Boysenberry Blossom Use]";
+the scent of Boysenberry Blossom is "The small pastry has a wonderful fruity smell you can't quite put your finger on.";
+
+to say Boysenberry Blossom Use:
+	say "Biting into the Boysenberry Blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
+	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+		say " you savor the fruity pastry, it tastes great but gives you a belly ache, clearly your body doesn't agree with something about the treat.";
+	otherwise if cocks of player is 0:
+		now cocks of player is 1;
+		now cock length of player is 5;
+		now cock width of player is 4;
+		Follow the cock descr rule;
+		say " you savor the fruity pastry as a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [cock of player] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
+	otherwise:
+		increase cock length of player by a random number from 1 to 2;
+		Follow the cock descr rule;
+		say " you savor the fruity pastry as a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as it gains in length, becoming [descr]";
+	decrease hunger of player by 5;
+	if hunger of player < 0, now hunger of player is 0;
+
+Bleuettonne is a grab object. It is a part of the player.
+Bleuettonne has a usedesc "[Bleuettonne Use]";
+the scent of Bleuettonne is "The small candy carries the deep, rich scent of chocolate.";
+
+to say Bleuettonne Use:
+	say "     You bite into the Bleuettonne, and find your mouth filled with a burst of  blueberry jelly, more then you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
+	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
+	otherwise if cocks of player is 0:
+		now cocks of player is 1;
+		now cock length of player is 5;
+		now cock width of player is 4;
+		Follow the cock descr rule;
+		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [cock of player] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
+	otherwise:
+		increase cock width of player by a random number from 1 to 2;
+		Follow the cock descr rule;
+		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, your flesh growing taught with the expansion, leaving you with [ball size]";
+	decrease hunger of player by 5;
+	if hunger of player < 0, now hunger of player is 0;
+
+Crème Abondante is a grab object. It is a part of the player.
+Crème Abondante has a usedesc "[Crème Abondante Use]";
+the scent of Crème Abondante is "The pink pastry smells of fresh strawberry and rich creme.";
+understand "Creme Abondante" as Crème Abondante.
+
+to say Crème Abondante Use:
+	say "     Biting into the Crème Abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat and several slow deliberate bites[run paragraph on]";
+	if "Male Preferred" is listed in feats of player or "Passing Grade Chest" is listed in feats of player or "One Pair" is listed in feats of player:
+		say ". After finishing the last bite of your snack, a rumbling builds in your belly, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
+	otherwise:
+		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your chest[run paragraph on]";
+		if breasts of player < 8:
+			say "as it increases in intensity, the tingling centers on two new sensitive points, which quickly swell into two new [descr] breasts, pressing out of your [skin of player] hide[run paragraph on]";
+			increase breasts of player by 2;
+		if breast size of player < 26:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "and you [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 2;
+			if breast size of player > 26, now breast size of player is 26;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]";
+		say ".";
+	decrease hunger of player by 5;
+	if hunger of player < 0, now hunger of player is 0;
+
+Muffin Muffin is a grab object. It is a part of the player.
+Muffin Muffin has a usedesc "[Muffin Muffin Use]";
+the scent of Muffin Muffin is "The pink muffin carries a fruity aroma that seems to change with each breath.";
+
+to say Muffin Muffin Use:
+	say "     Biting into the muffin you find a sweet pink jelly fruit filling hidden inside, working your tongue into the opening, you lick the sweet treat out of the depths of the muffin before finishing it[run paragraph on]";
+	if "Male Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cocks of player > 0 ):
+		say ". After finishing the last bite of your snack, a rumbling builds in your belly, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
+	otherwise if cunts of player is 0:
+		now cunts of player is 1;
+		now cunt length of player is 5;
+		now cunt width of player is 4;
+		follow the cunt descr rule;
+		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms.";
+	otherwise:
+		increase cunt length of player by 1;
+		if remainder after dividing cunt length of player by  3 is 0:
+			increase cunt width of player by 1;
+		Follow the cunt descr rule;
+		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as it grows, becoming [descr].";
+	decrease hunger of player by 5;
+	if hunger of player < 0, now hunger of player is 0;
+
+Lollicock is a grab object. It is a part of the player.
+Lollicock has a usedesc "[Lollicock Use]";
+the scent of Lollicock is "The Lollicock has a sweet aroma with a hint of male arousal.";
+
+to say Lollicock Use:
+	let LollicockDildo be 0;
+	if cunts of player > 0:
+		say "     Eying up the cute cock shaped treat, you are just about to wrap your lips around it before another, naughtier idea pops into your head. Would you like to 'play' with your food before enjoying the snack? (Y/N)";
+		if the player consents:
+			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting it's surface while you begin teasing you womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
+			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with it's sweet and salty taste.";
+			now LollicockDildo is 1;
+	if lollicockDildo is not 1:
+		let LollicockCheck be 0;
+		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down it's length, savoring it's sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
+		if a random chance of 1 in 4 succeeds:
+			now LollicockCheck is 1;
+		if cockname of player is "candy cock" or "Female Preferred" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
+			now LollicockCheck is 0;
+		if LollicockCheck is 1:
+			if cocks of player is 0:
+				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place .";
+				now cocks of player is 1;
+				now cock length of player is 5;
+				now cock width of player is 4;
+				now cockname of player is "candy cock";
+				now cock of player is "red hard candy canine";
+			otherwise:
+				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
+				now cockname of player is "candy cock";
+				now cock of player is "red hard candy canine";
+		otherwise:
+			say "you are filled with a pleasant warmth, a subtle afterglow filling your body after the tasty treat.";
+	decrease hunger of player by 5;
+	if hunger of player < 0, now hunger of player is 0;
+
+[Recipies				]
+[Crème Abondante				1]
+[Bleuettonne				2]
+[Boysenberry Blossom				3]
+[Muffin muffin				4]
+[Lollicock				5]
+
+[Ingredients				]
+[Awesome Fruit -Male				30]
+[Awesomer Fruit -Female				31]
+[pink gel				32]
+[blue gel				33]
+[distilled milk				34]
+[chocolate milk				35]
+[Musky Cock Flower				36]
+[honeycomb				37]
+
 [  hp of François   ]
 [ 0 = not met        ]
-[ 1 = met/cleaned up ]
+[ 1 = met/cleaned up/introduced baking ]
 
 [ libido of François  ]
 [ 0 = not met          ]
-[ 1 = <skipped>        ]
+[ 1 = introduced baking        ]
 [ 2 = received oral    ]
 [ 3 = mounted him      ]
 
@@ -357,7 +815,6 @@ to francoisinfect:
 		let xform be "a";
 		now xform is entry 1 of infections of Francoismix;
 		infect xform;
-
 
 [ délicieux, délictueux, savoureux, excitant, intense, agréable, exotique, intéressant, séduisant, exquis, délice, héro, ravissant, enchantant ]
 [ je t'adore, je t'aime, je te veux, tu es le meilleur, je veux te faire un peq, mon chéri, mon chiot, mon chou, mon adorable, mon animal ]

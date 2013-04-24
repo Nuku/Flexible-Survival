@@ -1213,6 +1213,7 @@ To reciting2:
 					now Libido of Thomas is the number understood;
 					now ThomasSaved is turns;
 					now SandySaved is turns;
+					now FelixSaved is turns;	[for Felix stalker quest]
 					if hp of Thomas is 0, now libido of Thomas is 0;
 			-- 129:   [Thomas Lust]
 				if the player's command matches "[number]":
