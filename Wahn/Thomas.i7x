@@ -140,7 +140,7 @@ The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies.  lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 ThomasSaved is a number that varies.  ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]
 SandySaved is a number that varies.  SandySaved is usually 555.						[saved to put in a delay of at least 10 turns before Jill shows up]
-FelixSaved is a number that varies.  SandySaved is usually 555.						[saved to put in a delay of at least 8 turns before Felix quest starts]
+FelixSaved is a number that varies.  FelixSaved is usually 555.						[saved to put in a delay of at least 8 turns before Felix quest starts]
 ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
 ThomasPregnancy is a number that varies. 																	[pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 
