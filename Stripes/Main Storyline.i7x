@@ -103,8 +103,8 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.'";
 		if deerconsent is 1:
-			say "'And she[apostrophe]s taken a fancy to you. This is good.";
-		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?";
+			say "'And she[apostrophe]s taken a fancy to you. This is good.'";
+		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?'";
 		now hp of doctor matt is 7;
 		increase score by 20;
 		extend game by 24;
@@ -115,7 +115,7 @@ Instead of conversing the doctor matt:
 			say "'Excellent work. I will observe. You can proceed at whatever rate is comfortable. You are doing a great service for science,' says Matt as he raises a finger towards the sky.";
 			now deerhappy is 2;
 		otherwise:
-			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.";
+			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.'";
 			now deerhappy is 1;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;

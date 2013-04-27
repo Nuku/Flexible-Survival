@@ -52,7 +52,7 @@ to say beatthecandycoon:
 	otherwise if libido of player < 20:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	otherwise:
-		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you.  You licks your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
+		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you.  You lick your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
 		if the player consents:
 			now nocandycoonsex is 0;
 			If cocks of player > 0:
