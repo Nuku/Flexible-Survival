@@ -1,6 +1,6 @@
 Version 1 of Velos by Blue Bishop begins here.
 [Writing by Blue Bishop, coding and writing assistance by Stripes]
-"Adds a opiniated serpent to the Flexible Survival game"
+"Adds a opinionated serpent to the Flexible Survival game"
 
 Section 1 - Event
 
