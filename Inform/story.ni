@@ -1456,7 +1456,7 @@ Latexlist is a marker.	[list of infections w/latex/rubber/plastic skin]
 when play begins:
 	add { "Latex Wolf", "Latex Fox", "hermaphrodite latex vixen", "Rubber tigress", "Bottlenose Toy", "Latex Mistress" } to infections of Latexlist;
 
-Internallist is a marker.	[list of infections w/internal balls]
+Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness" } to infections of Internallist;
 
@@ -3377,7 +3377,7 @@ To Infect:
 	if x is 4:
 		follow the breast change rule;
 		if bodyname of player is not name entry:
-			say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
 		attributeinfect;			[sets the new attributes]
@@ -4156,18 +4156,35 @@ This is the turnpass rule:
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
 		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
-	if cock width of player >= 32 and balloversize is 0 and cockname of player is not "Tanuki":	[super-sized balls]
-		decrease Dexterity of player by 1 + (dexterity of player / 10 );
-		now balloversize is 1 + (dexterity of player / 10 );
-		say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
-	if balloversize > 0 and cock width of player < 32:
-		increase dexterity of player by balloversize;
-		now balloversize is 0;
-		say "     Your balls, having shrunk down somewhat, no longer hinder you.  Your legs definitely feel better for not having to drag them around anymore.";
-	otherwise if balloversize > 0 and cockname of player is "Tanuki":
-		increase dexterity of player by balloversize;
-		now balloversize is 0;
-		say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
+	if balloversize is 0:
+		if ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player >= 25:
+			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+				decrease Dexterity of player by 1 + (dexterity of player / 10 );
+				now balloversize is 1 + (dexterity of player / 10 );
+				say "     Your balls, so huge when compared to your [body size of player] frame, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
+		otherwise if ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player >= 32:
+			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+				decrease Dexterity of player by 1 + (dexterity of player / 10 );
+				now balloversize is 1 + (dexterity of player / 10 );
+				say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
+		otherwise if cock width of player >= 40:
+			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:
+				decrease Dexterity of player by 1 + (dexterity of player / 10 );
+				now balloversize is 1 + (dexterity of player / 10 );
+				say "     Your balls, so huge even when compared to your huge frame, are so massive and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
+	otherwise:
+		if ( ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player < 25 ) or ( ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player < 32 ) or ( cock width of player < 40 ):
+			increase dexterity of player by balloversize;
+			now balloversize is 0;
+			say "     Your balls, no longer quite so huge compared to your [if scalevalue of player is not 3][body size of player] [end if]body, no longer hinder you.  Your legs definitely feel better for not having to drag them around anymore.";
+		otherwise if cockname of player is "Tanuki":
+			increase dexterity of player by balloversize;
+			now balloversize is 0;
+			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
+		otherwise if cockname of player is listed in infections of Internallist:
+			increase dexterity of player by balloversize;
+			now balloversize is 0;
+			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much.  You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
 	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
