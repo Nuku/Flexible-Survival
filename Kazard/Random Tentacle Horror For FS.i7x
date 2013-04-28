@@ -235,7 +235,7 @@ to say horror description:
 			otherwise if lasttentaclebattleoutcome is 5:
 				say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...";
 	if bodyname of player is "Anime Babe":
-		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the horrors tendrils.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
+		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the horror's tendrils.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
@@ -306,7 +306,7 @@ When Play begins:
 basement portal is a door. basement portal is dangerous.
 Down of Trevor Labs Lobby is basement portal.
 Down of basement portal is dark basement.
-The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot think steel door that looks like it was designed more to keep something in, than anything else... "; understand "basement" and "portal" as the basement portal.
+The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... "; understand "basement" and "portal" as the basement portal.
 
 
 [Edit this to have the correct Name as wall]
