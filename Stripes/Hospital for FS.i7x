@@ -1328,17 +1328,47 @@ to say tlvictory:
 	say "[posttlscene]";
 
 
+altsealedentrance is a truth state that varies.
+
 instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable after attacking Dr Matt/stealing feat machine]
-	if hp of doctor matt is 101:
-		say "     After having fled the wrath of Orthas, you dare not try to enter again and risk facing her fiery breath.";
-	otherwise if hp of doctor matt is 102:
-		say "     Having picked up Orthas and the transformed Dr Matt from the lab, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
-	otherwise if hp of doctor matt is 103:
-		say "     The self-destruct charges have done their job and much of the inside of the building has collapsed.  It is no longer accessible, not that anything of value could have survived.";
-	otherwise if hp of doctor matt is 104:
-		say "     Having searched the facility and being unable to locate Dr Matt, and possibly even running afoul of a corrupted, lustful dragoness, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
+	if hp of doctor matt > 100:
+		if altsealedentrance is false:
+			if hp of doctor matt is 101:
+				say "     After having fled the wrath of Orthas, you dare not try to enter again and risk facing her fiery breath.";
+			otherwise if hp of doctor matt is 102:
+				say "     Having picked up Orthas and the transformed Dr Matt from the lab, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
+			otherwise if hp of doctor matt is 103:
+				say "     The self-destruct charges have done their job and much of the inside of the building has collapsed.  It is no longer accessible, not that anything of value could have survived.";
+			otherwise if hp of doctor matt is 104:
+				say "     Having searched the facility and being unable to locate Dr Matt, and possibly even running afoul of a corrupted, lustful dragoness, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
+			say "     Not wanting to give up entirely, you search around the area, heading down the hillside behind the building.  After a little looking, you find what you're looking for - a hidden loading dock for that underground area beneath Trevor Labs.  The security gate leading to the loading dock has been knocked down, pushed down by some great force from the inside - you hope just a fleeing truck - and the guardhouse is empty save for some torn clothes and messy stains.";
+			say "     Cautiously, you head into the loading dock to look around.  There's a few more clothes and stains scattered around as well as several heavy loading doors leading deeper into the underground complex.  Careful examination of the clothing finds what you need, a keycard which is able to open the personnel door leading to an access stairwell, should you dare to enter the sealed area.";
+			now altsealedentrance is true;
+			increase score by 1;
+			move player to Loading Dock;
+		otherwise:
+			move player to Loading Dock;
 	otherwise:
 		now the player is in Trevor Labs Lobby;
+
+
+Loading Dock is a room.
+The description of Loading Dock is "This loading dock is discretely placed behind and down the hill from Trevor Labs.  The security gate outside it has been broken open.  From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed.  Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like.  Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.";
+
+undergroundlab is a door. undergroundlab is dangerous.
+Down of Loading Dock is undergroundlab.
+Down of undergroundlab is darkbasement2.
+The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armoured and sealed.  Thankfully, the security card you found opens it.";
+
+the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time."; 
+
+aroundthehill is a door.  east from Loading Dock is aroundthehill.
+east of aroundthehill is darkbasement2.
+
+instead of going east from Loading Dock:
+	move player to Outside Trevor Labs;
+
+darkbasement2 is a room.  [placeholder room for the doors]
 
 
 to say posttlscene:

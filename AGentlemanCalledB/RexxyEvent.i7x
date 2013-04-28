@@ -47,7 +47,7 @@ name	desc	weight	object
 
 Dog Treats is a grab object. It is not temporary.
 Dog Treats has a usedesc "[GourmetDogTreatsUse]";
-the scent of Gourmet Dog Treats is "	The Gourmet Treats have a rich, meaty aroma.";
+the scent of Dog Treats is "	The Gourmet Treats have a rich, meaty aroma.";
 
 To say GourmetDogTreatsUse:
 	say "     Peering into the bag you hungerly eye up the wonderful smelling treats, but keeping your plan to escape Rex in mind you quickly close up the bag again and stow it in your pack before your hunger gets the better of you.";
