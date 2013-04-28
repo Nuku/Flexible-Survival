@@ -113,7 +113,8 @@ to say WYVVIC:
 			say "     In due time you're rewarded by the beast's loud roars, beleaguered face drenched in her tainted honey, [if scalevalue of player is 5]forced to consume the flood lest it coat the rest of you[otherwise]quickly followed by the rest of your torso[end if]. Satisfied, she eventually does pull herself free of you, not giving you much regard beyond her need before taking flight once more. You eventually manage to free yourself of the goop bindings, though handling your [if scalevalue of player < 5]fluid-soaked form and [end if]lust-addled mind is another matter altogether.";
 		otherwise:
 			say "     She advances upon your vulnerable frame, looking down upon you with a briefly curious expression. She would inflict this ritual of sizing you up before she starts making a more substantive hacking sound, followed by a flood of the strange fluid escaping from her lips, onto you.";
-			say "     [if hp of player < 1 and player is not submissive]Purely by instinct, you try to pull yourself free and liberate you from this twisted fate, acrid substance clinging to your every inch; however, it is for naught, as this too soon hardens around you[otherwise]Against what better judgment you might of had, you let the acrid substance wash over you, it's thick, slimy consistency caressing every inch of your exposed for until it hardens around you[end if], encasing you entirely. Your confines are quickly pulled from the ground and tussled around a bit, as if by inspection, before the wyvern relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[otherwise]night's lights[end if] are eclipsed by utter blackness, an overwhelming heat enveloping you before your consciousness fades entirely";
+			say "     [if hp of player < 1 and player is not submissive]Purely by instinct, you try to pull yourself free and liberate you from this twisted fate, acrid substance clinging to your every inch; however, it is for naught, as this too soon hardens around you[otherwise]Against what better judgment you might of had, you let the acrid substance wash over you, it's thick, slimy consistency caressing every inch of your exposed for until it hardens around you[end if], encasing you entirely. Your confines are quickly pulled from the ground and tussled around a bit, as if by inspection, before the wyvern relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[otherwise]night's lights[end if] are eclipsed by utter blackness, an overwhelming heat enveloping you before your consciousness fades entirely.";
+			infect;
 			if waiterhater is 0, wait for any key;
 			say "     You eventually come to, still encased in the all-too-familiar prison of times prior. Made brittle through exposure, it takes little effort to break free of these twisted confines, exposing you to the open air once more. Observing your surroundings, you can find your prior captor off in the distance, compelled to watch on as she would confine a similar victim, egg-shaped capsule positioned between the beast's powerful thighs before slowly disappearing within the depths of her bestial vent.";
 			say "     [if hp of player < 1 and player is not submissive]You shudder to think of the poor fellow who must now share your fate before you quickly retreat, lest you find yourself at the beast's mercy once more[otherwise]You're forced to ponder these implications, the infectious influence of this twisted matron perhaps getting the better of you, before you decide to depart[end if].";
@@ -217,7 +218,7 @@ When Play begins:
 	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Wyvern Goop";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bulky[or]draconic[or]winged[at random]";
@@ -274,18 +275,21 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Wyvern Goop"	"Thick, white and yellow, you've kept the stuff wrapped up so that it doesn't completely harden."	1	wyvern goop
+"Wyvern Goop"	"Thick, white and yellow, you've kept the stuff wrapped up so that it doesn't completely harden."	1	Wyvern Goop
 
-the scent of wyvern goop is "The sticky gel has an acrid, spicy scent.";
+the scent of Wyvern Goop is "The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use: [Note, requires full reassement]
 	say "Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";
 	decrease hunger of player by 3;
+	if hunger of player < 0:
+		now hunger of player is 0;
 	decrease thirst of player by 5;
+	if thirst of player < 0;
+		now thirst of player is 0:
 	decrease humanity of player by 5;
-	[infect]
 	
-Wyvern Goop is a grab object;
+Wyvern Goop is a grab object. Wyvern Goop is infectious. The strain of Wyvern is "Wyvern";
 Wyvern Goop has a usedesc "[wyvern goop use]";
 
 [ +++++ ]	
