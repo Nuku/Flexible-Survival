@@ -285,8 +285,8 @@ To say wyvern goop use: [Note, requires full reassement]
 	if hunger of player < 0:
 		now hunger of player is 0;
 	decrease thirst of player by 5;
-	if thirst of player < 0;
-		now thirst of player is 0:
+	if thirst of player < 0:
+		now thirst of player is 0;
 	decrease humanity of player by 5;
 	
 Wyvern Goop is a grab object. Wyvern Goop is infectious. The strain of Wyvern is "Wyvern";
