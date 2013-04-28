@@ -5847,6 +5847,7 @@ Include Dragontaur for FS by Stripes.
 Include Vixentaur for FS by Stripes.
 Include Dracovixentaur for FS by Stripes.
 Include Flesh Blob for FS by Stripes.
+Include Corrupted Spawner for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
