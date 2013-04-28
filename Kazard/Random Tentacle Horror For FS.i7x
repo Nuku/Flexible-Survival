@@ -1,5 +1,5 @@
 Version 9 of Random Tentacle Horror For FS by Kazard begins here.
-[ Version 9.3 - Tweaked Anime Babe vulnerability]
+[ Version 9.4 - Temporary promotion to level 8]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -272,13 +272,13 @@ When Play begins:
 	now cock change entry is "it grows erect. You reach for it, and before your hand reaches it, your cock moves up into your hand. You wipe your hand on your sleeve as your cock has now started a slow, constant leak of unidentifiable goo. Your arm underneath your sleeve tingles and you make a mental note not to wipe the goo on your clothing again..."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 20;
-	now sta entry is 20;					
+	now sta entry is 20;
 	now per entry is 30;
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Both"; 		[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 200;		[ How many HP has the monster got? ]
-	now lev entry is 3;		[ Level of the Monster ] 
+	now lev entry is 8;		[ Level of the Monster ]
 	now wdam entry is 12;		[Amount of Damage monster Does when attacking.]
 	now area entry is "Sealed";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;		[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
