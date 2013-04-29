@@ -310,7 +310,24 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		say "You are [descr].";
 		attempttowait;
 
-Section 4 - Endings
+Section 4 - Glowing Ember
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
+
+glowing ember is a grab object. It is a part of the player. glowing ember is infectious. The strain of glowing ember is "Fire Sprite".
+
+The usedesc of glowing ember is "[glowingemberuse]";
+
+to say glowingemberuse:
+	say "     Rolling the small warm ember between your fingers you begin to find it difficult to focus on anything but it's warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
+	attempttowait;
+	say "     You come to your senses some time later, glancing around you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
+
+the scent of glowing ember is "The small ember spells faintly smoky.";
+
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Fire Sprite":

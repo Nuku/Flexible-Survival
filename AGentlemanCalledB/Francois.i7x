@@ -190,7 +190,7 @@ Instead of conversing the François:
 		say "      'I was having such difficulty before you came along.  I don't know if your coming around is scaring them off now, but I was having no end of trouble before.  These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now.  'Zut alors!  How most of them were rude lovers!  No passion, no care for their lover, just raw lust.";
 		say "      'Even from the girls.  I tried to refused them, but would they listen?  Non!  They would get what they wanted in the end, but it was always so hollow.  I am sad for them[if cocks of player > 0].  But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[otherwise if cunts of player > 0].  But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[otherwise].  But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Françoistalk1 is true;
-	otherwise if a random chance of 1 in 4 succeeds and Francois_Undiscovered is not empty:
+	otherwise if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
 		say "[FrançoisHint]";
 	otherwise if a random chance of 1 in 3 succeeds:
 		say "     [if daytimer is day]Boujour[otherwise]Bonsoir[end if], [one of]mon ami[if cunts of player > 0 and cocks of player is 0]e[end if][or]my friend[at random].  [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
