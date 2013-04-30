@@ -78,6 +78,7 @@ to say Yamato Dragon attack:
 			if MYDAM is 0:
 				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and dripping down to the earth below in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and dripping down to the earth below in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] dripping down across your crotch and to the earth below in the wake of his release[otherwise]your weakened protests left disregarded[end if]. His sexual fluids quickly begin to sputter from your excessively stuffed hole, drenching your immensely sore backside until he finally subsides.";
 				say "     His cock gradually softening, clearly sated, he pulls you free of his dick, the wet sound of his organ escaping you filling the [if daytimer is night]night [end if]sky before he descends and drops you onto the ground, audibly landing in a pool of the dragon's seed below, its depth exacerbated by your leaking hole. Your assailant can't help but laugh at you in your pitiful state before he flies off. It takes you a long time to regain your mental faculties--let alone walk--and gather your things, departing from this exhausting circumstance.[mimpregchance]";
+				if MYDGM is 0, now MYDGM is 1;	[now familiar w/Yamato's impressive size]
 			otherwise if MYDAM is 1:
 				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and dripping down to the earth below in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and dripping down to the earth below in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] dripping down across your crotch and to the earth below in the wake of his release[otherwise]your weakened protests left disregarded[end if]. His sexual fluids eventually begin to sputter from your excessive stuffed hole, drenching your sore backside until he finally subsides.";
 				say "     His cock gradually softening, clearly sated, he pulls you free of his dick, the wet sound of his organ escaping you filling the [if daytimer is night]night [end if]sky before he descends and drops you onto the ground, audibly landing in a pool of the dragon's seed below, its depth exacerbated by your leaking hole. Your assailant can't help but laugh at you in your pitiful state before he flies off. You don't nearly take as long to recover this time--though you'll still be walking funny for a while--and gather your things, departing from this tiring circumstance.[mimpregchance]";
@@ -101,7 +102,7 @@ to say Yamato Dragon attack:
 			say "     His flesh quickly descending further upon your depths, it goes on seemingly without end";
 			if MYDGM is 0:
 				say ". It would appear he commands some otherworld attribute, able to submerge his organ in spite your [if cunt width of player < 10]very apparent[otherwise]prior[end if] limitations[if cunt width of player < 20], splitting your vulnerable cunt to extents beyond any prior comprehension[end if]";
-				let MYDGM be 1;
+				now MYDGM is 1;
 			otherwise:
 				say ", each ridge grinding across your [if cunt width of player < 20]quickly [end if]stuffed cunt with an aching excess";
 			say ". Soon enough you can see the outline of his massive organ bulging through your beleaguered frame, it's demented apparency exacerbating your already overloaded senses.";
@@ -144,6 +145,7 @@ to say Yamato Dragon attack:
 				say ". [if scalevalue of player > 4]Impressive in size as you are, the serpent is a fair measure larger than even you, making you unsure of how he'll even be able to fit his massive dick inside you[otherwise if scalevalue of player is 4]Fairly large as you are, the serpent is substantially larger, making you unsure of how he'll even be able to fit his massive dick inside you[otherwise]His dick is absolutely massive! There's no way that thing will fit inside you without splitting you in half[end if]; regardless, he seems unphased by the potential limitations of this prospect, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 				say "     Deep rumbles of tainted reverence emerging from your assailant, he sinks each progressive inch with at an ominously persistent pace, even when it [if scalevalue of player is 3]quickly[otherwise]eventually[end if] reaches your perceived limitations, the overwhelming sensation of such an intense violation rising at a seemingly endless pace until you[if scalevalue of player is 3], somehow,[end if] abide his cock's head.";
 				say "     Pulling you back, against his coarse frame, you're forced to watch yourself as he thrusts ever-deeper, belly [if scalevalue of player is 3]already[otherwise]quickly[end if] bulging with his overwhelming intrusion. It is clear now that he commands some otherworldly talent, allowing him to twist what prior laws of limitations you might have wielded, though this doesn't spare you of it's sheer intensity, making it a fight to merely stay conscious.";
+				if MYDGM is 0, now MYDGM is 1;	[now familiar w/Yamato's impressive size]
 			otherwise if MYDAM is 1:
 				say ". With an audible gulp[if hp of player > 0 or player is submissive], and even though you'd normally be a bit more complicit to these circumstances[end if], you can't help but feel ill-at-ease for what is about to transpire; regardless, he would show little care for your present anxiety, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 				say "     Deep rumbles of tainted reverence emerging from your assailant, he sinks each progressive inch with at an foreboding diligence, the overwhelming sensation of such an intense violation rising at a seemingly endless pace until you abide his cock's head. What small mercy you might garner from these circumstances, it's that you're getting slightly better as his undersized cocksleeve.";
@@ -183,7 +185,7 @@ to say Yamato Dragon attack:
 			say "     His flesh slowly descending further upon your depths, it goes on seemingly without end";
 			if MYDGM is 0:
 				say ". It would appear he commands some otherworld attribute, able to plunge his organ through in spite your [if cunt width of player < 10]very apparent[end if] limitations[if cunt width of player < 20], splitting your vulnerable cunt to extents beyond any prior comprehension[end if]";
-				let MYDGM be 1;
+				now MYDGM is 1;
 			otherwise:
 				say ", each ridge grinding across your [if cunt width of player < 20]quickly [end if]stuffed cunt with an aching excess";
 			say ". [if scalevalue of player < 5]Almost immediately[otherwise]Soon enough[end if] you can see the outline of his massive organ bulging through your beleaguered frame, it's demented apparency exacerbating your already overloaded senses.";
@@ -214,7 +216,7 @@ to say Yamato Dragon attack:
 				say ", forcing you to abide his bawdy fury as you're beleaguered frame is doused by his sexual fluids";
 			say ". It takes but a moment of recovery for him to finally relinquish you of your imposed contract, pulling you free and setting off into the sky once more, leaving you to clean yourself off and gather your things.";
 	if YDSF is 0:
-		let YDSF be 1;
+		now YDSF is 1;
 	otherwise:
 		if YDSF > 1:
 			decrease YDSF by 1;
@@ -362,11 +364,11 @@ when play ends:
 		if humanity of player < 10:
 			if YDSF is 0:
 				if girl is banned:
-					let YDSF be 1;
+					now YDSF is 1;
 				otherwise if guy is banned:
-					let YDSF be 4;
+					now YDSF is 4;
 				otherwise:
-					let YDSF be a random number between 2 and 3;
+					now YDSF is a random number between 2 and 3;
     			if YDSF is 1:
 	  			say "     Driven by an overriding need to be reunited with your potential master, you find yourself wandering back to the park, crying out until you find him once more. More than glad to have you in his fold, along with his many other male consorts. Many nights follow; an endless, blurred string of frequently being filled by with his virile seed. [if player is submissive]So submissive, as you are, you're quickly relegated as the fold's eager cum dumpster, often filled by his other consorts when they aren't afforded the master's affection. You're rather fond of this setup, though it's quite a chore to keep afloat when heavy with the seed of so many[otherwise]When you aren't afforded the master's attention, you find plenty of entertainment with his other consorts; entwined affections, you would sate your rampant lust with them.";
 			otherwise if YDSF is 2:
