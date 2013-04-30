@@ -32,7 +32,7 @@ to say Yamato Dragoness attack:
 			say ". Rolling her rear half against the earth as to uncover her draconic vent, already made slick through blatant arousal, before you are carried over to it and lowered towards the foreboding portal rear-first.";
 			say "     Demented desire made known, [if hp of player < 1 and player is not submissive]you immediately try to prevent it from coming to pass, feet planted firmly against the hard-scaled lips of her hungering cunt. You only briefly inconvenience the dragoness before you slip on her sexual fluids, quickly plummeting into her depths[otherwise]you can't help but be a little troubled by ominous fate, not that she has much regard for your well-being by this point, quickly plunging you into her depths[end if].";
 			say "     Slippery, supple flesh rapidly embracing your [bodydesc of player] form, you're quickly exposed to her oppressive tightness, hugging against you as she stuffs you ever-deeper into this abyss. Notably, [if scalevalue of player > 4]she seems to have little difficulty in handling your massive body[otherwise if scalevalue of player is 4]she seems to have little difficulty in handling your rather large body[otherwise]she would appear innately adept at handling these tainted circumstances, much to your expense[end if]; however, she would not engulf you entirely yet, instead intent on using you for her sexual gratification first.";
-			let FYDTBMM be 1;
+			now FYDTBMM is 1;
 		otherwise:
 			say "     The way she looks as you, it's made very clear what twisted fate this massive beast has planned for you. [if hp of player < 1 and player is not submissive]Not wanting to subject yourself to that torment again, you try to get up and run, but you're too weak to flee her and, doubtlessly amused by your struggle, follows you along[otherwise]Tainted hunger in her emergent grin, you feel somewhat sheepish regarding the dragoness's devious intent, who is doubtlessly quite excited for it to go underway[end if].";
 			say "     '[one of]Yes, yes[or]Oh, yes[or]Good[at random], [one of]ALL of you will be mine[or]you will suffice[or]you're all mine now[or]I beg you to squirm, whelp[or]there is no escape now[at random]!' Wanton need streaked with an insane desperation, she plucks you from the ground,";
@@ -175,7 +175,7 @@ to say Yamato Dragoness attack:
 					say "[if cocks of player > 2]one of your numerous cocks[otherwise if cocks of player is 2]one of your twin cocks[otherwise]your cock[end if]";
 				say " into her folds. Hardened, yellow scales parting way for soft flesh.";
 				say "     The dragoness's snatch is unbelievably tight[if cock length of player < 20], a feat seeming otherworldly given your organ's relative size[end if], twisted passage throbbing across every aching inch you offer her. Massive frame pinning you to the earth, you are forced to abide this beast riding you.";
-				let FYDM be 1;
+				now FYDM is 1;
 			otherwise:
 				say ". Familiar, foreboding portal before you, she would exploit her twisted property upon your comparatively diminutive self. You are forced to watch on as she carefully sinks";
 				if cock length of player < 25:
@@ -197,7 +197,7 @@ to say Yamato Dragoness attack:
 			say "     '[one of]Get to work[or]Hurry up[or]Don't waste my time[at random], [one of]I have little patience for stalling[or]whelp[or]you wouldn't want to test my patience[at random]!' [if hp of player < 1 and player is not submissive]Reluctantly[otherwise]Obligingly[end if]";
 			if FYDM is 0:
 				say ", you use your hand to test her impressive portal. Surprisingly enough, as you expose yourself to the soft flesh beneath, you find her twisted passage extremely tight in spite its expansive size, almost as though to challenge your intrusion. Empowered with this knowledge, your endeavours become increasingly deliberate in their intent to satisfy this beast.";
-				let FYDM be 1;
+				now FYDM is 1;
 			otherwise:
 				say ", you use your hand to probe her impressive portal. Tough scales parting to expose soft flesh, she would offer up no relent in how tight her twisted passage is, gradually building up a rhythm of fingering this beast.";
 			say "     Deep, approving moans elicited from your captor, a clear indication of progress, your hands are drenched with her arousal, olfactories flooded with the scent of her wanton sex. Perverse circumstance as this is, [if cocks of player > 0]you are driven erect[otherwise if cunts of player > 0]you are made blatantly aroused[otherwise]you find yourself tormented by an insatiable need[end if], overwhelming heat wafting from her needy cunt. It becomes unbearable, driving you to grind your [if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]own cunt[sfn][otherwise]genital-less crotch[end if] against her coarse scales, slicked by her sexual fluids, and the dragoness's lascivious fervor rising in turn.";
@@ -208,7 +208,7 @@ to say Yamato Dragoness attack:
 				say ", forcing you to abide her bawdy fury as you're beleaguered frame is doused by her bestial honey";
 			say ". It takes but a moment of recovery for her to finally relinquish you of your imposed contract, pulling you free and setting off into the sky once more, leaving you to clean yourself off and gather your things.";
 	if YDSF is 0:
-		let YDSF be 4;
+		now YDSF is 4;
 	otherwise:
 		if YDSF < 4, increase YDSF by 1;
 
