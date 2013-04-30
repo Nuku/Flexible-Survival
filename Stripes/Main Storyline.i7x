@@ -101,10 +101,10 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 6 and unusual creature is unresolved:
 		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
 	otherwise if hp of doctor matt is 6:
-		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.'";
+		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.";
 		if deerconsent is 1:
-			say "'And she[apostrophe]s taken a fancy to you. This is good.'";
-		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?'";
+			say "'And she[apostrophe]s taken a fancy to you. This is good.";
+		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?' he adds.";
 		now hp of doctor matt is 7;
 		increase score by 20;
 		extend game by 24;
