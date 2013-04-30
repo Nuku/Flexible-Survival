@@ -223,6 +223,20 @@ to say Yamato Dragon attack:
 
 to say yamato dragon desc:
 	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0 and cunts of player > 0:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0:
+		now sex entry is "Male";
+	otherwise if cunts of player > 0:
+		now sex entry is "Female";
+	otherwise:
+		now sex entry is "nochange";
 	now firebreathcount is 0;
 	now firebreathready is false;
 	say "     [if showlocale is true]Travelling through the park[otherwise]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[otherwise]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
@@ -299,11 +313,49 @@ name	desc	weight	object
 
 dragon scale is a grab object. It is a part of the player. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
 the scent of dragon scale is "The yellow scale smells strange and otherworldly.";
-The usedesc of dragon scale is "     Following the strange urge you have, press the large scale to your chest.  As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
+The usedesc of dragon scale is "[usedragonscale]";
+
+to say usedragonscale:		[only alters sizes, not gender]
+	choose row monster from table of random critters;
+	setmonster "Yamato Dragon";
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0 and cunts of player > 0:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0:
+		now sex entry is "Male";
+	otherwise if cunts of player > 0:
+		now sex entry is "Female";
+	otherwise:
+		now sex entry is "nochange";
+	say "     Following the strange urge you have, press the large scale to your chest.  As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
 dragon hair is a grab object. It is a part of the player. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.";
-The usedesc of dragon hair is "Following the strange urge you have, brush the hairs to your face, enjoying the feel of them against your cheek.  As you continue brushing, the hairs grow gradually shorter, sinking into your face and hand before disappearing entirely.";
+The usedesc of dragon hair is "[usedragonhair]";
+
+to say usedragonhair:
+	choose row monster from table of random critters;
+	setmonster "Yamato Dragoness";		[only alters sizes, not gender]
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0 and cunts of player > 0:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0:
+		now sex entry is "Male";
+	otherwise if cunts of player > 0:
+		now sex entry is "Female";
+	otherwise:
+		now sex entry is "nochange";
+	say "     Following the strange urge you have, brush the hairs to your face, enjoying the feel of them against your cheek.  As you continue brushing, the hairs grow gradually shorter, sinking into your face and hand before disappearing entirely.";
 
 Section 4 - Endings
 

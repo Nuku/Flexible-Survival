@@ -214,6 +214,20 @@ to say Yamato Dragoness attack:
 
 to say yamato dragoness desc:
 	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0 and cunts of player > 0:
+		now sex entry is "Both";
+	otherwise if cocks of player > 0:
+		now sex entry is "Male";
+	otherwise if cunts of player > 0:
+		now sex entry is "Female";
+	otherwise:
+		now sex entry is "nochange";
 	now firebreathcount is 0;
 	now firebreathready is false;
 	say "     [if showlocale is true]Travelling through the park[otherwise]Suddenly[end if], you find yourself beset by a dragoness of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, her [one of]red[or]blue[or]green[at random] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[otherwise]sunlight[end if]. You instinctively attempt to find cover, but this only encourages her to pursue you on ground, a lascivious hunger agleam in her eyes.";
