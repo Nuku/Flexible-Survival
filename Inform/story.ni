@@ -232,6 +232,7 @@ Equipment has a text called slot. The slot of equipment is usually "";
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
 Equipment has a number called dodgebonus.  The dodgebonus of equipment is usually 0.	[Rare, usually magic]
+Equipment has a number called damagebonus.  The damagebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called fleebonus.  The fleebonus of equipment is usually 0.		[Usually a penalty]
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
