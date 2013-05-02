@@ -250,5 +250,24 @@ carry out bfanditesting5:
 	say "[bold type]Knotlist:[roman type] ([special-style-1][number of entries in infections of Knotlist][roman type]) [infections of Knotlist].";
 	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
 
+[------------------------------------------------------------]
+[Listing items, and all critters who drop items as well as their drop chance. ]
+
+bfanditesting6 is an action applying to one topic.
+understand "bfandi6" as bfanditesting6.
+
+carry out bfanditesting6:
+	say "Listing all entries in table of game objects.";
+	sort Table of Game Objects in object order;
+	repeat with y running from 1 to number of filled rows in Table of Game Objects:
+		choose row y in Table of Game Objects;
+		say "[name entry][line break]";
+	attempttowait;
+	say "Listing all entries in table of random critters with loot entries, their loot, and loot chance.";
+	sort table of random critters in lev order;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if loot entry is not "":
+			say "[name entry], [loot entry], [lootchance entry]%[line break]";
 
 BFandI ends here.

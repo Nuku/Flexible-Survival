@@ -28,6 +28,7 @@ velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute s
 velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
 plhitbonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
 pldodgebonus is a number that varies.	[ Used to total the player's special dodge bonuses. ]
+pldamagebonus is a number that varies.	[ Used to total the player's special damage bonuses. ]
 plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
 plmindbonus is a number that varies.	[ Used to total the player's special mental/will bonuses. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
@@ -75,6 +76,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	now lost is 0;
 	now plhitbonus is 0;
 	now pldodgebonus is 0;
+	now pldamagebonus is 0;
 	now plfleebonus is 0;
 	now plmindbonus is 0;
 	now pethitbonus is 0;
@@ -87,6 +89,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		increase plhitbonus by hitbonus of weapon object of player;
 	repeat with x running through equipped equipment:
 		increase pldodgebonus by dodgebonus of x;
+		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player);
 	if weapon object of player is bo staff:
@@ -350,6 +353,7 @@ This is the player attack rule:
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
+			increase dam by pldamagebonus;
 		if weapon type of player is "Ranged":
 			increase dam by (( the Perception of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
@@ -518,14 +522,21 @@ this is the combat item process rule:
 	decrease the menu depth by 1;
 	choose row Current Menu Selection in table of itemselection;
 	process object entry;
-	if battleitem is 0 and monsterhp is greater than 0:
-		wait for any key;
-		choose row monstercom from table of Critter Combat;
-		if playerpoison > 0, follow the playerpoisoned rule;
-		if there is a continuous in row monstercom of the table of Critter Combat:
-			follow the continuous entry;
-		if combat abort is 0, follow the combat entry;
-
+	if combat abort is 0 and battleitem is 0:
+		if monsterhp < 1:
+			now fightoutcome is 10;
+			win;
+		otherwise if hp of player < 1 or libido of player > 109:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			lose;
+		otherwise:
+			wait for any key;
+			choose row monstercom from table of Critter Combat;
+			if playerpoison > 0, follow the playerpoisoned rule;
+			if there is a continuous in row monstercom of the table of Critter Combat:
+				follow the continuous entry;
+			if combat abort is 0, follow the combat entry;
 
 Table of itemselection
 object	holding (number)	objname (indexed text)	description (indexed text)
