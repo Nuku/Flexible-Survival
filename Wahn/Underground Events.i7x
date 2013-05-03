@@ -127,7 +127,7 @@ Instead of resolving a Hidden Sublevel:
 	now Hidden Sublevel is resolved;
 	now Failed Experiments is unresolved;
 	now Mindshield Storage is unresolved;
-	[now Holding Cell Four is unresolved;]
+	now Holding Cell Four is unresolved;
 	
 Failed Experiments is a situation. Failed Experiments is resolved.
 The sarea of Failed Experiments is "Sealed";
@@ -146,7 +146,7 @@ Instead of resolving a Mindshield Storage:
 		say "     In the depths of the hidden section in this underground complex, you find a storage room room with rows of shelves. They hold quite a few boxes, all of them with printed labels saying 'Mindshield 2.361'. Opening one up, you see there's a helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside. Do you want to take one of them with you?";
 		if player consents:
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of Mindshield Helmet by 1;			
+			increase carried of mindshield helmet by 1;			
 		otherwise:
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always go back here if you ever need one.";
 		increase MSStorageVisited by 1;
@@ -154,13 +154,13 @@ Instead of resolving a Mindshield Storage:
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room room. As before, rows of shelves hold many boxes of extra helmets. Opening one up, you have a look at the helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside. Do you want to take one of them with you?";
 		if player consents:
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of Mindshield Helmet by 1;			
+			increase carried of mindshield helmet by 1;			
 		otherwise:
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always go back here if you ever need one.";		
 		increase MSStorageVisited by 1;			
 	otherwise if MSStorageVisited is 2:	
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room room. But this time - it's a chaotic mess. All around you, there are fallen shelves and cracked, splintered helmets, out of their packages. Seems like something else found this room, which didn't like the protective mindshields lying around. Digging through the chaos, you find a helmet that seems undamaged. This'll be the last one you get, though, with all the others destroyed.";
-		increase carried of Mindshield Helmet by 1;
+		increase carried of mindshield helmet by 1;
 		now Mindshield Storage is resolved;
 		
 Table of Game Objects (continued)
@@ -175,13 +175,179 @@ The placement of mindshield helmet is "face".
 The descmod of mindshield helmet is "A shiny silver helmet rests atop them.".
 The slot of mindshield helmet is "head". 		
 		
-[		
+
 Holding Cell Four is a situation. Holding Cell Four is resolved.
 The sarea of Holding Cell Four is "Sealed";
 
-Instead of resolving a Holding Cell Four:
-	say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.'.";
-	say "     <cell where the thought eater creature was held, now with a dominated scientist in a labcoat inside. maybe a preggers female, or possibly a male.>";
-]
+Instead of resolving a Holding Cell Four:		[repeatable event]
+	say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
+	if carried of mindshield helmet is 0:
+		say "     That warning doesn't sound too good - and you do not have such a protective helmet. Do you really want to go in there?";
+		if player consents:
+			say "     Fate favors the brave... so you boldly stride ahead and pull open the cell door and step inside.";
+			say "     [line break]";
+			say "     [Inside Cell Four]";
+		otherwise:
+			say "     Better safe than sorry... who knows what might be lurking in that cell. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
+	otherwise:
+		say "     Following the warning, you make sure that you have your protective helmet on your head before pulling open the cell door and stepping inside.";
+		say "     [line break]";
+		say "     [Inside Cell Four]";
+
+to say Inside Cell Four:
+	say "     What you find behind the door is a moderately sized room holding a table, chairs, a bookshelf and a cot in the far corner. Torn-up paper is scattered about, intermixed with shreds of clothing and the broken shards of what appears to have been a shining silver helmet. While you are still busy taking in the scene around you, the blanket on the cot gets pulled aside, revealing the naked body of a person who stands up and takes a few steps towards you. It's a man with a slender build, mid-length blond hair and a rather handsome face.";
+	say "     [line break]";
+	say "     'Have you seen the master? Will he come soon? I've been waiting for his return, as ordered.' you hear the lightly bearded man say, a somewhat dazed look in his eyes. Letting your looks wander lower, you see that he's not... just a man anymore. Under a half-hard erection, there's an additional pussy between his legs - and a fully functional one, judging from the noticeable bulge of the hermaphrodite man's stomach. He's been impregnated with... something. Coming to stand before you, oblivious to his own nakedness, the man stares blankly, waiting for your answer.";
+	say "     Err - what now?";
+	wait for any key;
+	say "     [CellFourSex]";
+	
+to say CellFourSex:
+	setmonster "Herm Human";	
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Ask what's going on here";
+	now sortorder entry is 1;
+	now description entry is "Get some info's.";
+	now toggle entry is Cell4 rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Search the room";
+	now sortorder entry is 2;
+	now description entry is "Have a look at all the stuff on the ground.";
+	now toggle entry is Cell4 rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Get the man out of there";
+	now sortorder entry is 3;
+	now description entry is "Take the herm up to the surface.";
+	now toggle entry is Cell4 rule;
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Get his cock in your pussy";
+		now sortorder entry is 4;
+		now description entry is "Order him to fuck you.";
+		now toggle entry is Cell4 rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Get his cock in your ass";
+	now sortorder entry is 5;
+	now description entry is "Order him to fuck you anally.";
+	now toggle entry is Cell4 rule;		
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck his pussy";
+		now sortorder entry is 6;
+		now description entry is "Fuck the herm guy's pussy.";
+		now toggle entry is Cell4 rule;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck his ass";
+		now sortorder entry is 7;
+		now description entry is "Fuck the herm guy's ass.";
+		now toggle entry is Cell4 rule;
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the Cell4 rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want?";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if nam is "Ask what's going on here":
+			say "[CellFour1]";
+		otherwise if nam is "Search the room":
+			say "[CellFour2]";
+		otherwise if nam is "Get the man out of there":
+			say "[CellFour3]";
+		otherwise if nam is "Get his cock in your pussy":
+			say "[CellFour4]";
+		otherwise if nam is "Get his cock in your ass":
+			say "[CellFour5]";
+		otherwise if nam is "Fuck his pussy":
+			say "[CellFour6]";		
+		otherwise if nam is "Fuck his ass":
+			say "[CellFour7]";					
+		wait for any key;	
 		
+To say CellFour1:
+	say "     'We made the master - he was our best success. His mind was strong, so strong. We thought we could control him, but then things started happening in the city and... he showed me the error of our ways. You can't believe the ecstasy of feeling him inside my mind, and also my body.' With that, the herm man's hands rise to his stomach, caressing the bulge of his pregnant belly, then slide lower to touch his cock and pussy. As he starts stroking himself, moaning in arousal, he continues with 'I carry his glorious seed now, waiting to give birth to my master's children.'";
+	if carried of mindshield helmet is 0:	
+		say "     ...and that's the last coherent sentence you get out of the guy. Getting into masturbating in earnest, all the while moaning about his master, the man goes back to the cot, laying down on it as he jerks his cock and fondles his pussy. You're drawn into watching him for a while, with his hands moving over his hermaphrodite body and soft tingles of arousal flooding through you at the same time. Only when he finally cums long streaks of cum all over himself and starts rubbing it into his skin do you manage to snap out of it.";
+		say "     [line break]";
+		say "     It was almost - as if a little voice was telling you to stay and just give yourself to the feelings and forget everything else. Maybe there's some of the creature that did this in its victims mind, trying to lull you in too? With a shudder, you decide to get out of there and run away and up through the dark corridors...";
+	otherwise: 
+		say "     ...and that's the last coherent sentence you get out of the guy. Getting into masturbating in earnest, all the while moaning about his master, the man goes back to the cot, laying down on it as he jerks his cock and fondles his pussy. You're drawn into watching him for a while, with his hands moving over his hermaphrodite body, then shake your starting arousal off. Staying here until whatever made that guy into this obedient slave doesn't sound like a good idea, so you leave and make your way back to the surface.";
+
+To say CellFour2:
+	say "     Ignoring the man for the moment, you turn your attention to the trash and shreds lying on the ground. There's lots of pieces that seem to have been the herm man's clothing - jeans and a ragged lab-coat, and also many many paper bits with writing on them. Looks like there was the Trevor Labs logo in the upper left corner of all the pages and many of them seem to be just a lot of numbers and jumbled collections of letters - maybe it's genetic code or something. With a bit of patience, you can piece together some interesting bits from among the rest: '...ubject X31, hum...' '...us hybrid, telepathic abilities present.' '...ile the subject is a complete success in regards to...' '...controlling it remains a pr...' 'Implantation of a control device might be the only option, if those prove themselves in the tests with the new infiltratio...'";
+	say "     [line break]";
+	if carried of mindshield helmet is 0:	
+		say "     Your concentration for further puzzling is broken when the herm man on the cot suddenly gasps in lust, fingering his pussy while shouting 'Master! I can feel your presence and wait to pleasure you. And there is a visitor too...' Eeep. You don't know what range the abilities of the creature have that made this man its slave, but it's clearly time to go. Rushing to the door, you leave the cell and run, only stopping when you reach the surface and feel a bit safer than in the dark depths of the underground.";
+	otherwise: 
+		say "     Your concentration for further puzzling is broken when the herm man on the cot suddenly gasps in lust, fingering his pussy while shouting 'Master! I can feel your presence and wait to pleasure you. And there is a visitor too...' Eeep. Even though you got a protective helmet against the creature's influence, confronting it right in its lair might not be the best idea. It'd surely use its slave against you in a fight too. You don't know what range the abilities of the creature have that made this man its slave, but it's clearly time to go. Rushing to the door, you leave the cell and run, only stopping when you reach the surface and feel a bit safer than in the dark depths of the underground.";		
+
+To say CellFour3:
+	say "     You step forward and take the man by his arm, trying to guide him to the door and to safety while saying 'Let's get you out of here away from the monstrous creatures infesting these halls.' For a moment, conflicting thoughts seem to be clashing against each other behind the herm man's eyes, then one side wins out against the other and he pulls away from the entrance again and winds his arm out of your grip. 'How can you say such things about the master! He is beautiful - his hairless body and tentacles are perfection. Something to worshipped and loved. I - I have to wait here for him. Please him. Bear his children.' One hand protectively on his bulging stomach, the man walks back towards the cot in the far corner of the room.";
+	say "     Doesn't look like you can get him out of here willingly. And dragging a kicking and screaming person with you who attracts all kinds of critters isn't an option either. Oh well, with as found up as the guy is right now, there's nothing else to be done - he won't listen to anything you say at the moment. For now, you have to leave him where he is and hope he calms down until you come here next time. Leaving the cell behind, you make your way back up to the surface through the dark underground corridors."; 
+		
+To say CellFour4:		
+	say "     'I'm a... friend of your master. He said I could have some fun with you.' Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark 'And you're well trained for this, aren't you? Come on, show me how you would please your master.' The brainwashed man moans as you stroke him, a drop of precum forming at the tip of his cock. 'Of... *Gasp* course, anything for *moan* the master and his friends. What do you want me to do?' comes his answer to your request.";
+	say "     [line break]";	
+	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you lie down on it and spread your legs and pussy lips. Accompanied by a pushing two fingers into your cunt, then licking your female juices off them, you tell him 'Fuck me - hard.' From the excited look on his face and the quickness with which he moves over to you, you don't think he got to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
+	say "     Then you get distracted by the feeling of two hands on your legs, holding them apart as a bearded face rubs against your skin. Your herm partner runs his tongue along the inside of one leg, then the other, before moving on to your pussy and licking your sensitive nether lips. Your eager partner licks and fingers you a while, then he moves up to kneel between your legs. His erect shaft rests hotly against your pubic mound for a moment, then he takes it into his hand and guides it between your folds, sliding into you. Your passage stretches around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your own as he whispers 'Is this okay?', to which you answer 'Yes. Now fuck me already!'";
+	say "     [WaitLineBreak]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with women and men that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if cocks of player > 0]With your partner's shaft deep inside your pussy as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum all over your chest every time he thrusts in.[otherwise if cunts of player > 0]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[end if]";
+	say "     [line break]";
+	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his fertile seed spurting deep into your womb.[fimpregchance]";
+	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call onto me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";
+	
+To say CellFour5:	
+	say "     'I'm a... friend of your master. He said I could have some fun with you.' Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark 'And you're well trained for this, aren't you? Come on, show me how you would please your master.' The brainwashed man moans as you stroke him, a drop of precum forming at the tip of his cock. 'Of... *Gasp* course, anything for *moan* the master and his friends. What do you want me to do?' comes his answer to your request.";
+	say "     [line break]";
+	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you get on it on all fours and look back at the herm guy over your shoulder. Accompanied by a little shake of your ass, you tell him 'Fuck me - hard.' From the excited look on his face and the quickness with which he moves over to you, you don't think he got to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
+	say "     Then you get distracted by the feeling of two hands pulling your cheeks apart, followed by a tongue licking your crack and poking against your pucker. Your eager partner licks and fingers you a while, then you feel him move around behind you and something else touches your rear entrance. After rubbing his hard shaft up and down between your cheeks a moment, the man pushes in against your pucker, slowly but steadily spreading it with his cockhead. Soon your passage is stretched around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your back as he whispers 'Is this okay?', to which you answer 'Yes. Now fuck me already!'";
+	say "     [WaitLineBreak]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with women and men that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if cocks of player > 0]With your partner's shaft deep inside your ass as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum onto the sheets every time he thrusts in.[otherwise if cunts of player > 0]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[otherwise]With your partner's shaft deep inside your ass as he hammers against you, a shudder of satisfaction runs through your body, reaching every fiber of you.[end if]";
+	say "     [line break]";
+	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his seed spurting deep into your rear passage.[mimpregchance]";
+	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call onto me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";
+
+To say CellFour6:
+	say "     'I'm a... friend of your master. He said I could have some fun with you.' Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, then moving lower to stroke his pussy lips, you remark 'And you're well trained for this, aren't you? Come on, show me how you would please your master.' The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *Gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
+	say "     [line break]";
+	say "     Do you want to take him on the bed (Y), or rather against a wall from behind (N)?";
+	if player consents:
+		say "     Two fingers stroking the herm guy's dripping folds and dipping into his swollen pussy, you slowly walk him backwards to the bed in the far corner, then give him a slight push to fall back on it. With his naked form lying before you, legs spread invitingly, you hastily strip off your clothes and free your raging hardon. Getting on the bed, you rub your cock against his for a moment and stroke them together, then aim at the ready opening below. With a quick thrust of your hips, you bury your shaft all the way in the herm's vagina, then start fucking in and out, filling the room with lustful grunts and moans.";
+		say "     Going hard and deep, the tip of your cock bumps into something inside your partner's belly, and after a few more thrusts something bumps back. As horny and concentrated on fucking as you are, you don't give it much attention - until suddenly you feel something (small tentacles?!) wrap around your shaft and strokes it. The thought 'Wow, this feels amazing.' goes through your head and you speed up your thrusts even more, your orgasm quickly approaching as you get jerked off while fucking. Then finally, as the man under you gasps as he reaches his own climax, with his pussy trembling around your manhood and his legs wrapping around you to hold you close, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's, hands digging into the sheets and mattress as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's womb while he squirts his load over himself.";
+		say "     [WaitLineBreak]";
+		say "     After your orgasm winds down, you feel the being inside milk the last spurts out of your softening erection. As you pull out and go to grab your clothes and gear, the herm guy just lies on his back, breathing hard, and wipes the sweat off his brow. Then his hands move down to his bulging belly, rubbing the cum on his chest into the skin and caressing it. 'The master's child tells me he likes your taste. He'll remember it and asks that you come visit him again soon.' After that, the man falls asleep, satisfied and exhausted.";
+		say "     You're left standing before the bed, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while - or partners, as you look at his bulging belly again - then you shake out of it and get dressed. This might get rather strange and interesting before it's over. With that thought in mind, you leave the cell and make your way back up to the surface through the dark corridors of the underground.";
+	otherwise:
+		say "     Two fingers stroking the herm guy's dripping folds and dipping into his swollen pussy, you slowly walk him over to the nearest wall, then tell him to bend over and stand against it. With his naked form before you, ass presented as he stands with his hands against the wall and his legs spread to invitingly show the pussy between them, you hastily strip off your clothes and free your raging hardon. Stepping up behind him, you rub your cock up and down between his cheeks and playfully push against his pucker a moment before moving on to the ready opening further down. With a quick thrust of your hips, you bury your shaft all the way in the herm's vagina, then start fucking in and out, filling the room with lustful grunts and moans.";
+		say "     Going hard and deep, the tip of your cock bumps into something inside your partner's belly, and after a few more thrusts something bumps back. As horny and concentrated on fucking as you are, you don't give it much attention - until suddenly you feel something (small tentacles?!) wrap around your shaft and strokes it. The thought 'Wow, this feels amazing.' goes through your head and you speed up your thrusts even more, your orgasm quickly approaching as you get jerked off while fucking. Then finally, as the man you're fucking gasps when he reaches his own climax, with his pussy trembling around your manhood, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's ass, gripping his hips tightly as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's womb while he squirts his load onto the wall and the floor.";
+		say "     [WaitLineBreak]";
+		say "     After your orgasm winds down, you feel the being inside milk the last spurts out of your softening erection. As you pull out and go to grab your clothes and gear, the herm keeps leaning against the wall for a moment, breathing hard, then wipes the sweat off his brow and goes to lie on the bed. With his hands moving down to his bulging belly, caressing it, he says 'The master's child tells me he likes your taste. He'll remember it and asks that you come visit him again soon.' After that, the man falls asleep, satisfied and exhausted.";
+		say "     You're left standing alone, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while - or partners, as you look at his bulging belly again - then you shake out of it and get dressed. This might get rather strange and interesting before it's over. With that thought in mind, you leave the cell and make your way back up to the surface through the dark corridors of the underground.";	
+	
+To say CellFour7:
+	say "     'I'm a... friend of your master. He said I could have some fun with you.' Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, then moving lower to stroke his pussy lips, you remark 'And you're well trained for this, aren't you? Come on, show me how you would please your master.' The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *Gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
+	say "     [line break]";
+	say "     Do you want to take him on the bed (Y), or rather against a wall from behind (N)?";
+	if player consents:
+		say "     Two fingers stroking the herm guy's dripping folds and dipping into his swollen pussy, you turn him around after getting them good and wet and start fingering his ass. Smiling at the moans you get out of him as you push first one, then two digits into him, you slowly walk him towards the bed in the far corner, then give him a slight push to fall forward on it. Prepared for what's coming for him, the man gets on all fours, arching his back to present his firm butt. Getting hard from this inviting spectacle, you hastily strip off your clothes and stroke your manhood in anticipation. Getting on the bed, you rub your cock up and down between the man's cheeks for a moment, then aim at the tight opening between them. With a quick thrust of your hips, you bury your shaft all the way in the herm guy's rear passage, then start fucking in and out, filling the room with lustful grunts and moans.";
+		say "     Going hard and deep, the tip of your cock bumps into something, and after a few more thrusts something bumps back from inside his womb through the herm's inner walls. As horny and concentrated on fucking as you are, you don't give it much attention - it's just a bit of interesting extra stimulation. The thought 'Wow, this feels amazing.' goes through your head and you speed up your thrusts even more, your orgasm quickly approaching. Then finally, as the man under you gasps as he reaches his own climax, with his anal muscles twitching around your manhood and one hand reaching back to hold you against him, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's, hands gripping his hips tightly as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's rear passage while he squirts his load all over the sheets.";
+		say "     [WaitLineBreak]";
+		say "     As your orgasm winds down, you feel the being inside your partner still push and rub your softening erection through his inner walls. As you pull out and go to grab your clothes and gear, the herm guy moves to lie on his back, breathing hard, and wipes the sweat off his brow. Then his hands move down to his bulging belly, caressing it. 'The master's child tells me he likes playing with you. He'll remember it and asks that you come visit him again soon. Maybe more directly too...' With that, he strokes his pussy demonstratively for a moment, then falls asleep, satisfied and exhausted.";
+		say "     You're left standing before the bed, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while - or partners, as you look at his bulging belly again - then you shake out of it and get dressed. This might get rather strange and interesting before it's over. With that thought in mind, you leave the cell and make your way back up to the surface through the dark corridors of the underground.";
+	otherwise:
+		say "     Two fingers stroking the herm guy's dripping folds and dipping into his swollen pussy, you turn him around after getting them good and wet and start fingering his ass. Smiling at the moans you get out of him as you push first one, then two digits into him, you slowly walk him over to the nearest wall, then tell him to bend over and stand against it. With his naked form before you, ass presented as he stands with his hands against the wall, you hastily strip off your clothes and free your raging hardon. Stepping up behind him, you rub your cock up and down between his cheeks and playfully push against his pucker a moment before telling him to relax and get ready. With a quick thrust of your hips, you bury your shaft all the way in the herm guy's rear passage, then start fucking in and out, filling the room with lustful grunts and moans.";
+		say "     Going hard and deep, the tip of your cock bumps into something, and after a few more thrusts something bumps back from inside his womb through the herm's inner walls. As horny and concentrated on fucking as you are, you don't give it much attention - it's just a bit of interesting extra stimulation. The thought 'Wow, this feels amazing.' goes through your head and you speed up your thrusts even more, your orgasm quickly approaching. Then finally, as the man under you gasps as he reaches his own climax, with his anal muscles twitching around your manhood and one hand reaching back to hold you against him, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's, hands gripping his hips tightly as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's rear passage while he squirts his load all over the wall and floor.";
+		say "     [WaitLineBreak]";
+		say "     As your orgasm winds down, you feel the being inside your partner still push and rub your softening erection through his inner walls. As you pull out and go to grab your clothes and gear, the herm guy leans against the wall for a moment, breathing hard, then wipes the sweat off his brow and goes to lie on the bed. His hands move down to his bulging belly, caressing it. 'The master's child tells me he likes playing with you. He'll remember it and asks that you come visit him again soon. Maybe more directly too...' With that, he strokes his pussy demonstratively for a moment, then falls asleep, satisfied and exhausted.";
+		say "     You're left standing before the bed, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while - or partners, as you look at his bulging belly again - then you shake out of it and get dressed. This might get rather strange and interesting before it's over. With that thought in mind, you leave the cell and make your way back up to the surface through the dark corridors of the underground.";
+	
+
 Underground Events ends here.
