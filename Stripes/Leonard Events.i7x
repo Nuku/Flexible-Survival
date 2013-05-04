@@ -1,8 +1,53 @@
-Version 1 of Leonard Events by Stripes begins here.
-[version 1.4 - 2 new random events]
+Version 2 of Leonard Events by Stripes begins here.
+[version 2 - Setting up events at the Lion's Den]
 
-"Adds a batch of random encounters with Leonard's Pride to Flexible Survival scattered around the city."
+"Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
+
+Section 0 - Den Events
+
+lastdenevent is a number that varies.  lastdenevent is usually 255;
+
+after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
+	if hp of Leonard is 16:
+		say "     When you enter Leonard's home, you find your mate relaxing in his chair with the three maids lavishing attention upon him.  A wave of his paw has the one brushing his beautiful mane step back, allowing him to turn his head and smile at you.  'Ah, my dear mate.  You look weary from your travels.  Take a seat and enjoy a relaxing foot rub.'  As you continue further into the cave, you can see that the regal lion is receiving a foot rub and tongue grooming from one maid on the floor while the last of them is sucking him off.";
+		say "     With the arousing scent of the male in the air and the sexy sight of his humbled rivals serving him, you share in Leonard's smile and sit down, raising one of your feet.  The feline with the brush, already moving towards you as you moved to take a seat, kneels in front of you and runs her paws over your leg as she nuzzles your foot.  She purrs happily, kissing and licking at your foot before beginning the massage.";
+		if the player is not felinebodied:
+			say "     The rubbing and licking quickly starts to have an effect on you.  With each lick, your foot shifts and changes a little more, soon returning to a leonine paw.  As this change starts to creep up your leg, she turns her attention to your other foot, soon remaking it into a lion's paw as well.  The transformation progresses up your legs, across your hips and through the rest of your body, restoring much of your matronly form.";
+		say "     The obedient maid is thorough in her attention, rubbing at your feline paws to soothe the aches of walking all around the city.  You'd come to ignore them, but having them massaged away while the servile girl licks and kisses your foot is both soothing and arousing.  The brush of her rough tongue grooming the underside of your foot and between your feline toes is a delight.  She seems pleased as well with her task, purring happily at her opportunity to bestow attention upon her loving matron.";
+		say "     While you've been enjoying your foot rub, Leonard's has come to an end, the black-haired maid having sucked him off, freeing his cock for the other girl to climb into his lap.  As the lion's paws opens the front of her French maid's dress so he can grope her breast, she flips up her skirt and gives you a lovely view of her juicy pussy as it sinks down onto your lover's rod.  Watching as his throbbing, leonine cock sinks into her quivering hole, you lick your lips and smile, spreading your legs for the black-haired maid who's now free to service you as well.";
+		if cocks of player > 0:
+			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your erection.  Her tongue slides over your balls and up your pulsing rod, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she lowers her muzzle down onto your shaft and sucks hard, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice sucking off her new master.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cock, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
+		otherwise if cunts of player > 0:
+			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your damp thighs.  Her tongue slides over your dripping folds and across your pulsing clit, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she slides her raspy tongue into your cunt, sending shivers of delight through you, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice with her fellow servants.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cunny, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
+		otherwise:
+			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your bare groin.  She mewls sadly at the disappointing sight of your featureless crotch, but continues to lavish attention upon you, running her raspy tongue across your pubis before drifting upwards.  Her paws roam over your leonine body as she licks, nips and kisses at any sensitive spot she can find, doing her best to please her matron.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and body, it is a wonderfully pleasurable experience that is capped off by your lover filling the third maid with his cum until it overflows from her stuffed cunt.";
+		say "     Their duty done, the trio kiss and caress you both before heading off to snuggle together.  The pair who'd been serving you take considerable pleasure in licking the lion's cum from the third girl.  Feeling much relaxed and pleased after your enjoyable welcome, you muse that you should consider making use of the servants more often as a means to unwind.  But for the moment, you let them go and turn your attention back to your mate, smiling at him and trying to restore your thoughts to the reason you came to see him.";
+		if player is felinebodied:
+			infect "Feline";
+		otherwise:
+			felinebodyshift;
+		increase morale of player by 1;
+		increase libido of player by 5;
+		decrease humanity of player by 5;
+		if libido of player > 100, now libido of player is 100;
+[opens foot rub w/maids and fucking maids (if M)]
+		now hp of Leonard is 17;
+		now lastdenevent is turns;
+[	otherwise if leodenlist is not empty and a random chance of 2 in 5 succeeds:
+		sort leodenlist in random order;
+		if entry 1 of leodenlist is 1:
+			say "[leodenscene1]";
+		otherwise if entry 1 of leodenlist is 2:
+			say "[leodenscene2]";
+		otherwise if entry 1 of leodenlist is 3:
+			say "[leodenscene3]";
+		otherwise if entry 1 of leodenlist is 4:
+			say "[leodenscene4]";					]
+
+[maids / delivery (supplies) / deliver (luxury) / work group / moment w/Raven / ...]
+
+
 
 Section 1 - Park
 
@@ -326,7 +371,7 @@ to say leoparkscene9:
 	if player is not felinebodied:
 		felinebodyshift;
 		now tempnum is 1;
-	say "     'Master Leonard had mentioned that a writing desk would be handy for writing letters and about his life.  Since it was a big job, he entrusted it to us,' Jasmine says with obvious pride.  'It took us a while to find a really good one, but Raven talked to a pretty butterfly girl who told us where to find this one.  It's just been a lot of work to bring it all this way and we're getting pretty tired.'";
+	say "     'Master Leonard had mentioned that a writing desk would be handy for writing letters and about his life.  Since it was a big job, he entrusted it to us,' Jasmine says with obvious pride.  'It took us a while to find a really good one, but Raven talked to a pretty butterfly girl who told us where to find this one.  It's just been a lot of work to bring it all this way and we're getting really tired.'";
 	say "     'But we're almost there,' Raven adds with a smile, her mood much improved after her refreshing drink of matron milk.";
 	say "     When you offer to help them take it the rest of the way, you are immediately buried underneath a pile of grateful kitties.  They kiss, snuggle and grope you lovingly for several minutes, during which they all get to take a drink of your milk, before it's decided to get back to work.  The writing desk is quite large and is considerably taller than the girls trying to carry it.  It's an older style with the narrow build and a door that lowers to become the writing area as well as a shelving section above it.  While not as ostentacious as big office desks can be, it will fit much better into the limited space of Leonard's cave.  And while you may not be that knowledgeable of such things, it certainly looks like a well-made and older collector's piece.  It is made of solid wood and is quite heavy, making it clear how much work the girls have been putting into this gift for their leonine mate and master.";
 	attempttowait;
@@ -334,7 +379,7 @@ to say leoparkscene9:
 	say "     'Argh!' Raven growls from the front and the girl on your right laughs merrily.  Dahlia (to your left) explains that she's been asking that riddle about a dozen times since they started.  They're clearly just having some teasing fun and even the black-haired lioness has a bit of a smile.";
 	say "     'Well, do you know why a raven is like writing desk?' the girl asks again.";
 	say "     Deciding to turn the tables on her, you smile and nod.  'I do, my sweet kitty.  A raven is like a writing desk because they'll both hurt really, really hard when they hit you upside the head and I'm pretty sure one of them will really soon if you don't stop teasing poor Raven - though I can't be sure which it'll be.'  The others start giggling, which breaks out into full laughter as Raven gives Yarrow a dark, toothy grin.";
-	say "     Your added help and companionship keep the girls in good spirits and help them get the writing desk back to the tunnel den without the need for another break.  Leonard happily greets you all, having heard your laughing as you approached.  He's quite pleased with the great find, being very complimentary of its craftsmanship and at the amount of work the girls clearly went through to bring it to him.  He gives all the girls hugs and kisses while the maids get it put into place.  It fitted nicely to one side of the tunnel and, with some proper propping up, is made to sit level.  The Chippendale chair is placed in front of it, giving Leonard a proper writing space.";
+	say "     Your added help and companionship keep the girls in good spirits and help them get the writing desk back to the tunnel den without the need for another break.  Leonard happily greets you all, having heard your laughing as you approached.  He's quite pleased with the great find, being very complimentary of its craftsmanship and at the amount of work the girls clearly went through to bring it to him.  He gives all the girls hugs and kisses while the maids get it put into place.  It gets fitted nicely to one side of the tunnel and, with some proper propping up, is made to sit level.  The Chippendale chair is placed in front of it, giving Leonard a proper writing space.";
 	attempttowait;
 	say "     You let the girls snuggle up to Leonard during the installation, but follow along with Leonard afterwards as he escorts them towards the plush bed.  It seems Leonard would enjoy your assistance in ensuring all four girls are properly rewarded for their efforts, something you're more than happy to help him with.  With Jasmine and Dahlia in your arms, you watch as Raven and Yarrow lick and kiss at the lion's cock.  There's no sign of discord despite the earlier teasing, showing how close they've all become.  The dark-haired girl even moves back to lick at her friend's pussy while Yarrow sucks the lion off.";
 	if cocks of player > 0 and cunts of player > 0:
@@ -354,6 +399,7 @@ to say leoparkscene9:
 	remove 9 from leoparklist;
 	now leonardwrdesk is true;
 	move player to Lion's Den;
+
 
 
 

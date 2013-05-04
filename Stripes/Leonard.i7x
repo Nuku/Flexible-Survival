@@ -1,5 +1,5 @@
-Version 3 of Leonard by Stripes begins here.
-[Version 3.3 - Fight flagged as a situation]
+Version 4 of Leonard by Stripes begins here.
+[Version 4.0 - Maid sex]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -31,7 +31,7 @@ to say lionsdendesc:
 	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
 	say "     There are several paintings attached to the walls.  These seem quite old and possibly quite expensive.  They have been tastefully chosen, all going well together despite being from different styles and artists.  While not depicting anything overtly erotic, you can't help but feel the paintings have a primal, sexual quality to them.";
 	if hp of Leonard >= 16:
-		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere.  They are happily [one of]cleaning the cave[or]lovingling grooming their handsome master's mane[or]changing the sheets on the bed[or]preparing some food for their master[or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or]snuggled up together, their paws caressing one another[or]snuggling up to you, showing their love for their pride mother[in random order].  They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
+		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere.  They are happily [one of]cleaning the cave[or]and lovingling grooming their handsome master's mane[or]changing the sheets on the bed[or]preparing some food for their master[or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or]snuggled up together, their paws caressing one another[or]snuggling up to you, showing their love for their pride mother[in random order].  They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
 
 
 Section 2 - Leonard the Lion
@@ -169,7 +169,7 @@ Instead of conversing the Leonard:
 		now Hunting Prides is unresolved;
 	otherwise if ( hp of Leonard >= 10 and hp of Leonard <= 15 ) or hp of Leonard is 100:
 		say "ERROR-Leonard-[hp of Leonard]C: You should not be able to talk to me!";
-	otherwise if hp of Leonard is 16:
+	otherwise if hp of Leonard >= 16:
 		if a random chance of 3 in 5 succeeds:
 			say "     The handsome lion [one of]gives your ass a firm squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of][if cunts of player > 0].  'Your sexy pussy's wet for your lion mate, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion mate to mount you so you can maybe get your juicy pussy back, aren't you?' he purrs in your ear as he grabs your ass firmly[end if][or].  'Please don't forget your promise to help those other wayward girls find their way here,' he rumbles as he runs a finger down your side[or].  'Please bring me a few more lost feline girls, my dear.  We'll have such a pleasant time welcoming them into the pride together,' he purrs softly as he licks the edge of your ear, making you tremble in delight[or].  'With those prides broken up, there's probably quite a few feline girls in need of a new home.  I look forward to you helping more of them find their way back here,' he rumbles as he fondles you[or].  'I'm very pleased with my lovely new servants.  It was a very clever of you to find such a suitable place for them,' he rumbles with an amused grin before giving you a kiss[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as you long to have your handsome mate inside you again soon.";
 		otherwise:
@@ -390,6 +390,16 @@ to leonardmatesex:
 		now title entry is "Doggy-style";
 		now sortorder entry is 5;
 		now description entry is "have the lion mount you like a beast";
+		if ( cunts of player > 0 or cocks of player > 0 ) and hp of Leonard >= 17:
+			choose a blank row in table of fucking options;
+			now title entry is "Maid foot rub";
+			now sortorder entry is 6;
+			now description entry is "have the maids lick your feet (and more)";
+		if cocks of player > 0 and hp of Leonard >= 17:
+			choose a blank row in table of fucking options;
+			now title entry is "Maid fuck";
+			now sortorder entry is 7;
+			now description entry is "fuck one of the maids";
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -413,6 +423,10 @@ to leonardmatesex:
 						say "[leonardmatesex4]";
 					otherwise if title entry is "Titty Fuck":
 						say "[leonardmatesex5]";
+					otherwise if title entry is "Maid foot rub":
+						say "[leonardmaidsex1]";
+					otherwise if title entry is "Maid sex":
+						say "[leonardmaidsex2]";
 			otherwise:
 				say "Invalid Option.";
 
@@ -523,6 +537,52 @@ to say leonardmatesex5:
 	increase libido of player by 6;
 	if libido of player > 100, now libido of player is 100;
 	increase feline_meow by 1;
+
+
+to say leonardmaidsex1:
+	let T be a random number between 1 and 3;	[black-haired maid's position = oral/Leonard/player]
+	let TT be a random number between 1 and 2;	[Leonard enjoys foot rub / fucks maid]
+	say "     Feeling rather road-weary from trekking all around the city, you decide you'd like to share in one of those special foot rubs with your gentlemanly mate.  Running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] over his body, you get him to sit down and call over the maids.  Even as you stroke the male to full erection, you tell the servant girls that you'd like for them to groom your footpaws and service you both.";
+	say "     They move swiftly forward, obediently moving in to tend to their leonine master.  You relinquish his erect cock to the first of the maids to reach it, smiling as she starts to lick and kiss at it.  After watching [if T is 1]the black-haired girl[otherwise]her[end if] lower her muzzle overtop of it, you take your own seat.  Leonard's right foot is already being tended to as well, [if T is 2]the black-haired kitty[otherwise]a maid[end if] running her tongue slowly along its underside.  Sharing a grin with him at how you've managed to humble his rivals, you raise your foot into the waiting paws of another maid girl[if T is 3], the black-haired one[end if], so she can massage it.  With a smile and a purr at the opportunity to serve you, she nuzzles your foot and tends to your needs with gentle paws and licking tongue.";
+	if the player is not felinebodied:
+		say "     The rubbing and licking quickly starts to have an effect on you.  With each lick, your foot shifts and changes a little more, soon returning to a leonine paw.  As this change starts to creep up your leg, she turns her attention to your other foot, soon remaking it into a lion's paw as well.  The transformation progresses up your legs, across your hips and through the rest of your body, restoring much of your matronly form.";
+	say "     The obedient maid is thorough in her attention, rubbing at your feline paws to soothe the aches of walking all around the city.  You smile a toothy grin as the servile girl licks and kisses your foot, the massage both soothing and arousing.  The brush of her rough tongue grooming the underside of your foot and between your feline toes is a delight.  She seems pleased as well with her task, purring happily at her opportunity to bestow attention upon her loving matron.  She takes particular pleasure at sucking on your toes, fellating them with her tongue as she does.";
+	say "     While you've been enjoying your foot rub, Leonard's blow job has come to an end, the [if T is 1]black-haired [end if]maid having sucked him off.  She gives his cock a parting lick and moves to you, dribbles of his cum still on her muzzle";
+	if TT is 1:
+		say ".  Leonard leaves the other girl to continue tending his feet, having moved on to massaging and grooming his left one now while he leans back to enjoy the show of you being pleasured by the other two lovely servants.";
+	otherwise:
+		say ".  Leonard, clearly in the mood for more fun, motions for the other girl to climb into his lap.  As the lion's paws opens the front of her French maid's dress so he can grope her breast, [if T is 2]the black-haired kitty[otherwise]she[end if] flips up her skirt and gives you a lovely view of her juicy pussy as it sinks down onto your lover's rod.  Watching as his throbbing, leonine cock sinks into her quivering hole, you lick your lips and smile, spreading your legs for the [if T is 1]black-haired [end if]maid who's now free to service you as well.";
+		increase feline_meow by 1;
+	if cocks of player > 0:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  They share a brief moment of affection before returning their attention upon you.  The maid takes her place between your legs and nuzzles at your erection.  Her tongue slides over your balls and up your pulsing rod, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she lowers her muzzle down onto your shaft and sucks hard, you moan softly and run your fingers through her [if T is 1]dark [end if]hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice sucking off her new master.  Between [if TT is 1]watching one of his ex-rivals licking Leonard's paws[otherwise]the sexy show of Leonard fucking one of his ex-rivals[end if] while the other two fawn upon your feet and cock, it is not long before you cum with a loud rumble of delight[if TT is 1], a sound that brings a happy smile to your lover's muzzle[otherwise], a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt[end if].";
+	otherwise if cunts of player > 0:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  They share a brief moment of affection before returning their attention upon you.  The maid takes her place between your legs and nuzzles at your damp thighs.  Her tongue slides over your dripping folds and across your pulsing clit, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she slides her raspy tongue into your cunt, sending shivers of delight through you, you moan softly and run your fingers through her [if T is 1]dark [end if]hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice with her fellow servants.  Between [if TT is 1]watching one of his ex-rivals licking Leonard's paws[otherwise]the sexy show of Leonard fucking one of his ex-rivals[end if] while the other two fawn upon your feet and cunny, it is not long before you cum with a loud rumble of delight[if TT is 1], a sound that brings a happy smile to your lover's muzzle[otherwise], a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt[end if].";
+	otherwise:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  They share a brief moment of affection before returning their attention upon you.  The maid takes her place between your legs and nuzzles at your groin.  She mewls sadly at the disappointing sight of your featureless crotch, but continues to lavish attention upon you, running her raspy tongue across your pubis before drifting upwards.  Her paws roam over your leonine body as she licks, nips and kisses at any sensitive spot she can find, doing her best to please her matron.  Between [if TT is 1]watching one of his ex-rivals licking Leonard's paws[otherwise]the sexy show of Leonard fucking one of his ex-rivals[end if] while the other two fawn upon your feet and body, it is a wonderfully pleasurable experience that is capped off by [if TT is 1]the happy smile shared with your sexy lover[otherwise]your lover filling the third maid with his cum until it overflows from her stuffed cunt[end if].";
+		say "     Their duty done, the trio kiss and caress you both before heading off to snuggle together[if TT is 2].  The pair who'd been serving you take considerable pleasure in licking the lion's cum from the third girl[end if].  Feeling much relaxed and pleased after your enjoyable paw massage, you return to Leonard's side and snuggle up with him in his chair, enjoying his gentle caresses as you kiss one another.";
+	infect "Feline";
+	increase libido of player by 8;
+	if libido of player > 100, now libido of player is 100;
+	decrease humanity of player by 4;
+
+
+to say leonardmaidsex2:
+	let T be a random number between 1 and 3;	[black-haired maid's position = oral/Leonard/player]
+	say "     In the mood for something a little different, you glance over at the maids and suggest to Leonard that you both partake in fucking the help.  This brings a grin to the lion's muzzle and he gives your ass a squeeze.  '[one of]Certainly, my dear.  They do so enjoy being shown their place[or]That is a wonderful idea, my dear.  They've been such obedient servants - they deserve a good fucking[or]They do make such a tempting sight, don't they, my dear?  Let's do that then[or]Of course, my dear.  They are here for your pleasure as well as mine[at random].'  Keeping his paw on your ass, you both head towards the bed, motioning for the maids to follow you as you walk past them.  They quickly follow with hushed giggles of anticipation, eager for the rare opportunity to be in their master's bed.";
+	say "     You share several kisses with your leonine lover as the maids run their paws over your bodies, sliding off your clothing and gear.  It gets folded and set aside with care by the pretty maid girls, who take every opportunity to bend over and raises their tails, lifting the back of their short skirts to show off their cute asses and juicy muffs.  It is a sight that makes your lick your lips and gets your cock throbbing - which does not go unnoticed.";
+	say "     As the other maids are tucking away the last few items, [if T is 1]the black-haired girl[otherwise]one of them[end if] kneels down and strokes your manhood and Leonard's with her paws.  She licks slowly across the lion's cock and then yours, alternating back and forth.  At first, it is just her raspy tongue playing across the throbbing manmeat, but soon she's sliding her muzzle down overtop of them, sucking with soft moans of pleasure.  You both allow her to lick and suck at your shafts for a time, but stop her before things can go too far, wanting to save it for the main event.";
+	say "     The other two girls, already on the bed and waiting on all fours, have the backs of their black, frilly outfits raised and their rears offered up to their masters.  You [one of]opt to tease your chosen playmate for a while, fingering her cunny before mounting her.  Leonard, meanwhile, jump right into it, driving his throbbing cock into the horny, mewling maid[or]jump right into it, driving your [cock of player] cock into your chosen playmate.  Leonard, meanwhile, opts to take his time, fingering her cunny and teasing her before mounting her[or]both opt to tease your chosen playmate for a while, fingering their cunnies before mounting the horny, mewling maids[or]both jump right into it, driving your throbbing cocks into the horny, mewling maids[at random].  You share another long, passionate kiss with the sexy lion before you set yourselves to pounding the cute kitties, eager to stuff them full of your seed[if T is 2].  Leonard's ended up overtop of the dark-haired one and seems to be taking particular enjoyment in fucking her, whispering to her what a good, docile, obedient servant she is[otherwise if T is 3].  Having the dark-haired one beneath you, you take particular enjoyment in fucking her, whispering to her what a good, docile, obedient servant she is[end if].";
+	say "     While you both fuck a pair of the maids, the last girl is on her back between the others, making show of groping her half-clothed body.  As [if T is 1]the black-haired girl's[otherwise]she's[end if] doing this, her fellow maids are licking her cunt and fingering her pussy[if anallevel is 3] and asshole[end if] in a wanton display, further fueling the arousal of their studs.  As you fuck them, you manhandle the lustful females, pulling open their dresses and groping their breasts, loving how they squirm and mewl as you pinch their nipples.";
+	say "     Once you and Leonard have cum with roars of climax and the two are left creamy and overflowing with seed, you turn your attention upon the last maid.  You pin her down and drive your sticky cock into her juicy cunt with a single thrust, loving her long, loud mewl of delight as you fill her.  As you start pounding into her, you wiggle your rear and grin at your mate even as he's moving into position behind you.  After nibbling at your neck, he gets his stiffening rod lined up with your [if cunts of player > 0]needy cunt[otherwise]tight anus[end if] and sinks it into you.  The sensation of him slowly filling you sends shivers of delight through your body and makes your [cock size desc of player] [cock of player] penis pulse inside the horny maid pinned beneath her two lustful masters.";
+	say "     Having already cum once shortly before, you have a little more endurance, but having Leonard fuck you as you take [if T is 1]the black-haired maid[otherwise]one of the maids[end if] makes it hard to hold out long.  When you catch sight of the two cream-filled kitties eating each other out, feasting on the cum leaking from the other's dripping snatch, you groan loudly and drive hard into the maid.  You pump your [cum load size of player] load into her, soon feeling a pleasant hot fullness of your own as Leonard blasts his sticky semen into your [if cunts of player > 0]womb[otherwise]bowels[end if].[impregchance]";
+	say "     After the lion dismounts from you and you pull out of the satiated maid girl, you all snuggle happily on the bed.  The maid outfits are quite dishevelled and breasts hang out freely, but the girls are in no rush to straighten up, instead happily licking and sucking on the exposed nipples or licking the sticky cocks which so recently filled them.  As they groom your shafts clean, you and Leonard purr softly about what good kitties they've been and, if they continue to be loyal, obedient and submissive servants, their master will be sure to reward them by fucking them often.  They mewl and lavish you both with even more attention, promising to be good servants and repeating often how much their love their sexy master and matron as they lick you both to climax, getting you to cum across their bodies and dresses, marking them as belonging to the pride's leaders.  Truly spent now, you all snuggle up together for a quick catnap.";
+	infect "Feline";
+	infect "Feline";
+	rest;
+	now feline_meow is feline_meow / 2;
+	decrease libido of player by libido of player / 4;
+	decrease humanity of player by 8;
+	follow the turnpass rule;
 
 
 Section 4 - Finding a Violin
@@ -872,6 +932,7 @@ to say leonardrivalfight:
 			now hp of Leonard is 16;
 			now feline_attached is 0;
 			now PridePark is unresolved;
+			now lastdenevent is turns;
 			move the player to Lion's Den;
 			follow the turnpass rule;
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -883,6 +944,7 @@ to say leonardrivalfight:
 		say "     As this lustful display is going on, the dark-haired feline giggles happily as she caresses and teases you.  She tells you how she and her clever master have been looking forward to welcoming you to their pride and how much fun she's going to have with you.  Other lionesses from her pride move up to join her and you are kissed, licked and petted by the cute felines.  As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return.  You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission.";
 		say "     Looking over, you see the clever lion busily tending to the three increasingly female lioness girls in his company.  You feel a small attachment to the particularly pretty one he's currently fucking and are pleased that she'll be joining the pride alongside you, though you can't really remember why you feel this way about her.  Soon you forget entirely about ever fighting with them in the first place, eventually becoming another cute feline girl like them.  After much playful teasing and fun, you mewl happily as the sexy male comes over to mount your needy body, properly welcoming you into his new and powerful pride.";
 	if fightoutcome >= 20:			[defeated/fled]
+		now lastdenevent is turns;
 		now humanity of player is 0;
 		now hp of Leonard is 100;
 		[puts Feline as lead monster for infection and impregnation]
@@ -950,6 +1012,7 @@ to say leonardrivalfight:
 [ 15 = succumbed as matron				]
 [ 16 = matron player					]
 [ 100 = lost/fled lion fight				]
+
 
 Section 8 - Definitions
 
