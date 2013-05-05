@@ -5903,6 +5903,7 @@ Include Blue Chaffinch for FS by Stripes.
 Include Friendship Pony for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
+Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
 Include Pegasus by Kaleem mcintyre.
 Include Gargoyle by Kaleem mcintyre.
