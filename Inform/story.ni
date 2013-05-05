@@ -5623,6 +5623,7 @@ Include High Rise District by Batroo.
 Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
+Include Shadow Beast by UrsaOmega.
 Include Stables by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include Hyena Hideout by Sarokcat.
