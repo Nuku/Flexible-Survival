@@ -76,7 +76,7 @@ to say WYVVIC:
 			increase hunger of player by 7;
 			increase thirst of player by 5;
 	otherwise:
-		if "Touched by Madness" is listed in feats of player and ((scalevalue of player is 3 and "Twisted Capacity" is listed in feats of player) or scalevalue of player < 3) and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 4 succeeds)):
+		if "Touched by Madness" is listed in feats of player and ((scalevalue of player is 3 and "Twisted Capacity" is listed in feats of player) or scalevalue of player > 3) and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 4 succeeds)):
 			say "     As she would advance upon you, the beast would behave somewhat oddly, as if compelled by an otherworldly force. Her approach reveals she is already heavy with eggs, making you wonder [if scalevalue of player is 3]how she'd exactly intends to fit you in there[otherwise]why she'd bother dealing with you in the first place[end if]. [if scalevalue of player is 3]Moving over[otherwise]Climbing on top of[end if] you, Bestial vent poised against [if cunts of player > 1 and cunt length of player > 14 and anallevel is not 3]one of your exposed cunts[otherwise if cunts of player > 0 and cunt length of player > 14 and anallevel is not 3]your exposed cunt[otherwise]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
 			if cunts of player > 0 and cunt length of player > 14 and "More Anal" is not listed in feats of player:
 				say "     Hardened surface of her emergent shell pushing against the [cunt size desc of player] hole, you find yourself quickly strained to abide to rapidly growing intrusion as it's slowly plunged into your depths. Scaled, rough frame trembling against yours, the wyvern is very intent on forcing you to abide every rough bump and imperfection of the makeshift prison she would have you carry.";
@@ -235,17 +235,17 @@ when play ends:
 		if humanity of player < 10:
 			if WYVSF is 0:
 				if guy is banned:
-					let WYVSF be 3;
+					now WYVSF is 3;
 				otherwise if girl is banned:
-					let WYVSF be 1;
+					now WYVSF is 1;
 				otherwise:
-					let WYVSF be 2;
+					now WYVSF is 2;
 			if WYVSF is 2:
 				let tempnum be a random number between 1 and 2;
 				if tempnum is 1:
-					let WYVSF be 1;
+					now WYVSF is 1;
 				otherwise if tempnum is 2:
-					let WYVSF be 3;
+					now WYVSF is 3;
 			say "     Your feral urges overtake you, compelled to take to the sky with now fully-formed wings, seeking out the first wyvern you might find";
 			if WYVSF is 1:
 				say ". You happen upon a male wyvern, no doubt requiring a moment to understand your pleas to be its mate. More than eager to oblige";

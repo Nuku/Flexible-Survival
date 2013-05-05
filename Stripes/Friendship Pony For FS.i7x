@@ -1,5 +1,5 @@
-Version 1 of Friendship Pony For FS by Stripes begins here.
-[Version 1.0 - April Fool's 2013]
+Version 2 of Friendship Pony For FS by Stripes begins here.
+[Version 2.0 - decrease memory needs]
 
 "Adds a Friendship Pony creature to Flexible Survivals Wandering Monsters table"
 
@@ -10,7 +10,18 @@ rfponycolour1 is a text that varies.  rfponycolour1 is normally "pink".
 rfponycolour2 is a text that varies.  rfponycolour2 is normally "lavender".
 rfponybm is a text that varies.  rfponybm is normally "a cock".
 nofponysex is a number that varies.
+rfpc1 is a number that varies.	[colour 1]
+rfpc2 is a number that varies.	[colour 2]
+rfpbm is a number that varies.	[booty mark]
 
+pfpbmlist is a list of numbers that varies.
+
+[	rfponytype	]
+[ 1 = earth pony	]
+[ 2 = pegasus	]
+[ 3 = unicorn	]
+
+[  -- simplified to decrease strain on memory --
 [ colour list 1: body ]
 rfpclist1 is a list of text that varies.  rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "grey", "cream" }.
 
@@ -19,13 +30,7 @@ rfpclist2 is a list of text that varies.  rfpclist2 is usually { "blue", "cobalt
 
 [ booty mark list ]
 rfpbmlist is a list of text that varies.  rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
-
-pfpbmlist is a list of text that varies.
-
-[	rfponytype	]
-[ 1 = earth pony	]
-[ 2 = pegasus	]
-[ 3 = unicorn	]
+]
 
 
 when play begins:
@@ -47,14 +52,218 @@ to say fponydesc:
 		now sex entry is "nochange";
 	now rfponytype is a random number between 1 and 3;
 	if a random chance of 1 in 4 succeeds, now rfponytype is 1;	[basic pony is most common, 50% chance]
-	rotate rfpclist1;
+	setrfpdesc;
+[	rotate rfpclist1;
 	rotate rfpclist2;
 	rotate rfpbmlist;
 	now rfponycolour1 is "[entry 1 in rfpclist1]";
 	now rfponycolour2 is "[entry 1 in rfpclist2]";
-	now rfponybm is "[entry 1 in rfpbmlist]";
+	now rfponybm is "[entry 1 in rfpbmlist]";		]
 	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance.  Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if].  The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs.  Its overall look is quite smooth and plasticky, having a [rfponycolour1] colour to its body.  Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze.  Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolour2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3].  There is a short horn poking out the front of her hair[end if].";
 	say "     '[if player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark!  Let's be friends[otherwise if player is fponybodied]Come, cutie!  Let's see if we can't earn you a booty mark[otherwise if player is fponyskinned]Oh! I love your booty mark!  Now lets see if we can't get you looking like a proper little pony[otherwise]Do you like my booty mark?  Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail.  She gives her rear a shake before coming towards you at a trot.  'Oh, we'll have so much fun together, my new friend,' she says with a grin.  Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
+
+to setrfpdesc:
+	if rfpc1 is 0, now rfpc1 is a random number between 1 and 31;
+	if rfpc2 is 0, now rfpc2 is a random number between 1 and 26;
+	if rfpbm is 0, now rfpbm is a random number between 1 and 34;
+	let oldrfpc1 be rfpc1;
+	let oldrfpc2 be rfpc2;
+	let oldrfpbm be rfpbm;
+	now rfpc1 is a random number between 1 and 31;
+	if rfpc1 is oldrfpc1, increase rfpc1 by a random number between 1 and 30;
+	if rfpc1 > 31, decrease rfpc1 by 31;
+	now rfpc2 is a random number between 1 and 26;
+	if rfpc2 is oldrfpc2, increase rfpc2 by a random number between 1 and 25;
+	if rfpc2 > 26, decrease rfpc2 by 26;
+	now rfpbm is a random number between 1 and 34;
+	if rfpbm is oldrfpbm, increase rfpbm by a random number between 1 and 33;
+	if rfpbm > 34, now rfpbm is 1;
+	if rfpc1 is:
+		-- 1:
+			now rfponycolour1 is "sky blue";
+		-- 2:
+			now rfponycolour1 is "sapphire blue";
+		-- 3:
+			now rfponycolour1 is "powder blue";
+		-- 4:
+			now rfponycolour1 is "periwinkle";
+		-- 5:
+			now rfponycolour1 is "light yellow";
+		-- 6:
+			now rfponycolour1 is "jasmine";
+		-- 7:
+			now rfponycolour1 is "citrine";
+		-- 8:
+			now rfponycolour1 is "teal";
+		-- 9:
+			now rfponycolour1 is "soft pink";
+		-- 10:
+			now rfponycolour1 is "salmon";
+		-- 11:
+			now rfponycolour1 is "fuchsia";
+		-- 12:
+			now rfponycolour1 is "light green";
+		-- 13:
+			now rfponycolour1 is "honeydew";
+		-- 14:
+			now rfponycolour1 is "forest green";
+		-- 15:
+			now rfponycolour1 is "grass green";
+		-- 16:
+			now rfponycolour1 is "celadon";
+		-- 17:
+			now rfponycolour1 is "orange";
+		-- 18:
+			now rfponycolour1 is "pumpkin";
+		-- 19:
+			now rfponycolour1 is "light brown";
+		-- 20:
+			now rfponycolour1 is "tan";
+		-- 21:
+			now rfponycolour1 is "brown";
+		-- 22:
+			now rfponycolour1 is "lilac";
+		-- 23:
+			now rfponycolour1 is "amethyst";
+		-- 24:
+			now rfponycolour1 is "thistle";
+		-- 25:
+			now rfponycolour1 is "red";
+		-- 26:
+			now rfponycolour1 is "russet";
+		-- 27:
+			now rfponycolour1 is "ruby red";
+		-- 28:
+			now rfponycolour1 is "burgundy";
+		-- 29:
+			now rfponycolour1 is "white";
+		-- 30:
+			now rfponycolour1 is "grey";
+		-- 31:
+			now rfponycolour1 is "cream";
+	if rfpc2 is:
+		-- 1:
+			now rfponycolour2 is "blue";
+		-- 2:
+			now rfponycolour2 is "cobalt blue";
+		-- 3:
+			now rfponycolour2 is "cyan";
+		-- 4:
+			now rfponycolour2 is "azure";
+		-- 5:
+			now rfponycolour2 is "turquoise";
+		-- 6:
+			now rfponycolour2 is "black";
+		-- 7:
+			now rfponycolour2 is "golden yellow";
+		-- 8:
+			now rfponycolour2 is "neon yellow";
+		-- 9:
+			now rfponycolour2 is "sunglow";
+		-- 10:
+			now rfponycolour2 is "maroon";
+		-- 11:
+			now rfponycolour2 is "pink";
+		-- 12:
+			now rfponycolour2 is "hot pink";
+		-- 13:
+			now rfponycolour2 is "carnation";
+		-- 14:
+			now rfponycolour2 is "cerise";
+		-- 15:
+			now rfponycolour2 is "green";
+		-- 16:
+			now rfponycolour2 is "emerald green";
+		-- 17:
+			now rfponycolour2 is "light orange";
+		-- 18:
+			now rfponycolour2 is "apricot";
+		-- 19:
+			now rfponycolour2 is "peach";
+		-- 20:
+			now rfponycolour2 is "royal purple";
+		-- 21:
+			now rfponycolour2 is "deep purple";
+		-- 22:
+			now rfponycolour2 is "indigo";
+		-- 23:
+			now rfponycolour2 is "carmine";
+		-- 24:
+			now rfponycolour2 is "flame red";
+		-- 25:
+			now rfponycolour2 is "candy apple red";
+		-- 26:
+			now rfponycolour2 is "neon green";
+	if rfpbm is:
+		-- 1:
+			now rfponybm is "a dildo";
+		-- 2:
+			now rfponybm is "a vibrator";
+		-- 3:
+			now rfponybm is "an egg vibrator";
+		-- 4:
+			now rfponybm is "a horsecock";
+		-- 5:
+			now rfponybm is "a mare's pussy";
+		-- 6:
+			now rfponybm is "a horsecock being licked";
+		-- 7:
+			now rfponybm is "a pussy being licked";
+		-- 8:
+			now rfponybm is "a cum-slick cock";
+		-- 9:
+			now rfponybm is "an overflowing pussy";
+		-- 10:
+			now rfponybm is "an ejaculating cock";
+		-- 11:
+			now rfponybm is "a cock stuffing an anus";
+		-- 12:
+			now rfponybm is "two dogs humping";
+		-- 13:
+			now rfponybm is "a necklace of pearls";
+		-- 14:
+			now rfponybm is "a pair of tits";
+		-- 15:
+			now rfponybm is "a pair of cum-coated tits";
+		-- 16:
+			now rfponybm is "a pony head sucking cock";
+		-- 17:
+			now rfponybm is "a swallow";
+		-- 18:
+			now rfponybm is "a raised tail";
+		-- 19:
+			now rfponybm is "a leather whip";
+		-- 20:
+			now rfponybm is "a broken bed";
+		-- 21:
+			now rfponybm is "a set of furred handcuffs";
+		-- 22:
+			now rfponybm is "a pair of cocks rubbing together";
+		-- 23:
+			now rfponybm is "an extra-thick dildo";
+		-- 24:
+			now rfponybm is "a pair of nipple clamps";
+		-- 25:
+			now rfponybm is "a burst condom";
+		-- 26:
+			now rfponybm is "a strap-on";
+		-- 27:
+			now rfponybm is "a gimp mask";
+		-- 28:
+			now rfponybm is "a leather harness";
+		-- 29:
+			now rfponybm is "anal beads";
+		-- 30:
+			now rfponybm is "the shocker handsign";
+		-- 31:
+			now rfponybm is "a finger-stuffed pussy";
+		-- 32:
+			now rfponybm is "a butt plug";
+		-- 33:
+			now rfponybm is "a ball gag";
+		-- 34:
+			now rfponybm is "a dripping candle";
+
 
 to say fpattack:
 	if rfponytype is 1:
@@ -122,10 +331,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	sort rfpclist1 in random order;
-	sort rfpclist2 in random order;
+[	sort rfpclist1 in random order;
+	sort rfpclist2 in random order;	]
 	sort pfpclist in random order;
-	sort rfpbmlist in random order;
+[	sort rfpbmlist in random order;	]
 	now name entry is "Friendship Pony";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[fpattack]";
 	now defeated entry is "[beatthefpony]";				[ Text when monster loses.  Change 'fpony' as above. ]
@@ -140,7 +349,7 @@ When Play begins:
 	now body change entry is "[fponybodychange]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "[fpskinchange]";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "[fptailchange]";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it takes on a new, kinky form";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it becomes equine in shape with a medial ring and a flared glans.  But despite its somewhat plasticky look, it seems quite functional with fresh precum dribbling from it in anticipation of being used";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12;			[ These values may be used as part of alternate combat.]
@@ -274,6 +483,119 @@ to ponystatuscheck:
 
 to selectbootymark:
 	now pfpbmlist is {};
+	add {1, 2, 3, 4} to pfpbmlist;
+	if "Junk Food Junky" is listed in feats of player, add 5 to pfpbmlist;
+	if "Male Preferred" is listed in feats of player, add 6 to pfpbmlist;
+	if "Female Preferred" is listed in feats of player, add 7 to pfpbmlist;
+	if "Herm Preferred" is listed in feats of player, add 8 to pfpbmlist;
+	if "Submissive" is listed in feats of player, add 9 to pfpbmlist;
+	if "Cold Fish" is listed in feats of player, add 10 to pfpbmlist;
+	if "Physical Booster" is listed in feats of player, add 11 to pfpbmlist;
+	if "Mental Booster" is listed in feats of player, add 12 to pfpbmlist;
+	if "Cuckold" is listed in feats of player, add 13 to pfpbmlist;
+	if "Top Dog" is listed in feats of player, add 14 to pfpbmlist;
+	if "Proud Parent" is listed in feats of player, add 15 to pfpbmlist;
+	if "Black Belt" is listed in feats of player, add 16 to pfpbmlist;
+	if "One Way" is listed in feats of player, add 17 to pfpbmlist;
+	if "More Anal" is listed in feats of player, add 18 to pfpbmlist;
+	if "Kinky" is listed in feats of player, add 19 to pfpbmlist;
+	if "Wary Watcher" is listed in feats of player, add 20 to pfpbmlist;
+	if "MPreg" is listed in feats of player, add 21 to pfpbmlist;
+	if "Sterile" is not listed in feats of player:
+		if "Litter Bearer" is listed in feats of player:
+			add 22 to pfpbmlist;
+		otherwise if "Fertile" is listed in feats of player:
+			add 23 to pfpbmlist;
+	if "Roughing It" is listed in feats of player, add 24 to pfpbmlist;
+	if "Breasts" is listed in feats of player, add 25 to pfpbmlist;
+	if "Bad Luck" is listed in feats of player, add 26 to pfpbmlist;
+	if "Curious" is listed in feats of player, add 27 to pfpbmlist;
+	if "City Map" is listed in feats of player or "Open World" is listed in feats of player, add 28 to pfpbmlist;
+	if "Sterile" is listed in feats of player, add 29 to pfpbmlist;
+	if "Expert Medic" is listed in feats of player, add 30 to pfpbmlist;
+	if "Cock Slap" is listed in feats of player, add 31 to pfpbmlist;
+	if "Ball Crush" is listed in feats of player, add 32 to pfpbmlist;
+	if "Boob Smother" is listed in feats of player, add 33 to pfpbmlist;
+	if "Microwaved" is listed in feats of player, add 34 to pfpbmlist;
+	if lust of Sven is 2 or FangWS is 1, add 35 to pfpbmlist;
+	add 36 to pfpbmlist;
+	sort pfpbmlist in random order;
+	if entry 1 in pfpbmlist is:
+		-- 1:
+			now pfpbootymark is "a black dildo";
+		-- 2:
+			now pfpbootymark is "a red vibrator";
+		-- 3:
+			now pfpbootymark is "a slice of cream pie";
+		-- 4:
+			now pfpbootymark is "a jar of cum";
+		-- 5:
+			now pfpbootymark is "a soda can";
+		-- 6:
+			now pfpbootymark is "a blue male symbol";
+		-- 7:
+			now pfpbootymark is "a pink female symbol";
+		-- 8:
+			now pfpbootymark is "a purple herm symbol";
+		-- 9:
+			now pfpbootymark is "a leather collar";
+		-- 10:
+			now pfpbootymark is "a fish packed in ice";
+		-- 11:
+			now pfpbootymark is "a muscly arm";
+		-- 12:
+			now pfpbootymark is "a throbbing brain";
+		-- 13:
+			now pfpbootymark is "a cuckoo chick in a nest";
+		-- 14:
+			now pfpbootymark is "an alert doberman with a blue ribbon";
+		-- 15:
+			now pfpbootymark is "a collection of puppies";
+		-- 16:
+			now pfpbootymark is "a gi and black belt";
+		-- 17:
+			now pfpbootymark is "a one-way street sign";
+		-- 18:
+			now pfpbootymark is "a bottle of lube";
+		-- 19:
+			now pfpbootymark is "a whip and chains";
+		-- 20:
+			now pfpbootymark is "the all-seeing eye";
+		-- 21:
+			now pfpbootymark is "an egg stamped with the male symbol";
+		-- 22:
+			now pfpbootymark is "several egg cells surrounded by sperm";
+		-- 23:
+			now pfpbootymark is "an egg cell surrounded by sperm";
+		-- 24:
+			now pfpbootymark is "a bedroll";
+		-- 25:
+			now pfpbootymark is "a pair of coconuts";
+		-- 26:
+			now pfpbootymark is "a broken mirror";
+		-- 27:
+			now pfpbootymark is "a magnifying glass examining a sticky cumstain";
+		-- 28:
+			now pfpbootymark is "a map with pushpins in it";
+		-- 29:
+			now pfpbootymark is "a tied-off used condom";
+		-- 30:
+			now pfpbootymark is "a caduceus";
+		-- 31:
+			now pfpbootymark is "a meaty cock hitting something";
+		-- 32:
+			now pfpbootymark is "a hefty set of balls cracking the ground";
+		-- 33:
+			now pfpbootymark is "a giant set of tits around the silhouette of a head";
+		-- 34:
+			now pfpbootymark is "a microwave oven";
+		-- 35:
+			now pfpbootymark is "a pissing horsecock";
+		-- 36:
+			now pfpbootymark is "a slice of cherry cheesecake";
+
+[
+	now pfpbmlist is {};
 	add { "a black dildo", "a red vibrator", "a slice of cream pie", "a jar of cum" } to pfpbmlist;
 	if "Junk Food Junky" is listed in feats of player, add "a soda can" to pfpbmlist;
 	if "Male Preferred" is listed in feats of player, add "a blue male symbol" to pfpbmlist;
@@ -310,8 +632,8 @@ to selectbootymark:
 	if "Microwaved" is listed in feats of player, add "a microwave oven" to pfpbmlist;
 	if lust of Sven is 2 or FangWS is 1, add "a pissing horsecock" to pfpbmlist;
 	sort pfpbmlist in random order;
-	now pfpbootymark is "[entry 1 in pfpbmlist]";
-
+	now pfpbootymark is entry 1 in pfpbmlist;
+]
 
 Section 5 - Pony Cider
 
