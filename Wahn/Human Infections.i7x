@@ -9,7 +9,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Human";
+	now name entry is "human";
 	now attack entry is "[one of]The human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
