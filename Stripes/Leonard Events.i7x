@@ -1,5 +1,5 @@
 Version 2 of Leonard Events by Stripes begins here.
-[version 2 - Setting up events at the Lion's Den]
+[version 2.1 - Den event #2]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
@@ -9,7 +9,7 @@ Section 0 - Den Events
 lastdenevent is a number that varies.  lastdenevent is usually 255;
 
 after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
-	if hp of Leonard is 16:
+	if hp of Leonard is 16:	[maids]
 		say "     When you enter Leonard's home, you find your mate relaxing in his chair with the three maids lavishing attention upon him.  A wave of his paw has the one brushing his beautiful mane step back, allowing him to turn his head and smile at you.  'Ah, my dear mate.  You look weary from your travels.  Take a seat and enjoy a relaxing foot rub.'  As you continue further into the cave, you can see that the regal lion is receiving a foot rub and tongue grooming from one maid on the floor while the last of them is sucking him off.";
 		say "     With the arousing scent of the male in the air and the sexy sight of his humbled rivals serving him, you share in Leonard's smile and sit down, raising one of your feet.  The feline with the brush, already moving towards you as you moved to take a seat, kneels in front of you and runs her paws over your leg as she nuzzles your foot.  She purrs happily, kissing and licking at your foot before beginning the massage.";
 		if the player is not felinebodied:
@@ -31,10 +31,44 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		increase libido of player by 5;
 		decrease humanity of player by 5;
 		if libido of player > 100, now libido of player is 100;
-[opens foot rub w/maids and fucking maids (if M)]
 		now hp of Leonard is 17;
 		now lastdenevent is turns;
-[	otherwise if leodenlist is not empty and a random chance of 2 in 5 succeeds:
+	otherwise if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
+		say "     Your approach to Leonard's cave den is pleasantly interrupted by an encounter with your work group.  They are in a cheerful mood and welcome you with many hugs, kisses and caresses[if player is not felinebodied].  Their kneading paws and licking tongues soon prompt your body to change, restoring your matronly figure[end if].  As you approach the den, you ask them what's got them in such a good mood.";
+		say "     'Oh, Master Leonard asked us a while ago to keep an eye out for more sheet music.  You see, we were told to try looking around the...' she starts to say, but is interrupted by Raven gently bopping her on top of the head with the leather satchel she's carrying.";
+		say "     'If you tell her, you'll go on forever about it,' she cuts in.  'While we were out looking for some furniture,' she goes on to say while smiling at the others, 'we managed to get our paws on this.'  The dark-haired kitty pats the satchel and shows you a sheet of violin music from the very full case.  From the way the other three are whispering excitely, you're certain they're looking forward to presenting their find to the lion.";
+		say "     'And now we've run into you on our way back,' Jasmine adds excitedly.  'Will you be staying for a while?'";
+		say "     You respond that you're only stopping by for a little while as always, but add that you can stay and help Leonard thank them for their diligence, if they'd like.  They're all quite pleased with this and snuggle in close as you continue along the path together.  You change the subject to them, asking if they're run into any trouble or if anything in the city's been giving them trouble.";
+		attempttowait;
+		say "     'Nothing we can't handle, matron.  We've been paying attention to your advice about moving around in the city.  We're smaller than most, so it's easier for us the sneak around when we have to.  Dahlia's really good at spotting trouble, so we manage to avoid a lot of it.'  The other girl, who's been pretty quiet up to now, smiles and nods.";
+		say "     Yarrow giggles and hugs her compatriot.  'Yeah, she's smart enough to keep quiet.  Not like me,' she adds, laughing.  'There was this one time when this big wolf heard me joking (keeping everyone's spirits up).  He was such a big, mean looking guy.  Really well hung though - might've been worth the fleas to get a ride on that meat of his.'  She even adds some exaggerated itch-scratching.";
+		say "     As the girls all laugh at her antics, she's poked in the ribs by Dahlia and Jasmine takes the opportunity to continue.  'Well, Raven managed to get us out of that one.'";
+		say "     'All I did was spot a hole that was too big for him to follow us through.'";
+		say "     'Well, you kept your head while the rest of us were crapping our pants (or drooling over his cock - Yarrow pipes in) and so you made sure we all got out of there safe,' Jasmine concludes.  Listening and watching them, you can't help but smile proudly, very pleased with how they've come together as a team.  And with the den coming into view, you let them go on in ahead of you so they can present their gift to the lion without you distracting him right away.";
+		attempttowait;
+		say "     When you do enter, Leonard smiles and welcomes you.  He passes off the satchel to one of the maids, instructing her to put it away somewhere safe.  Putting his arm around you, resting on your rear, he has many kind words for the work group as he leads you and them off to his bed.  Eager Jasmine is quick to offer herself up to Leonard and mewls in delight as he mounts her with Yarrow snuggled in close beside, fondling them both as they mate.  You snuggle up with Raven and Dahlia, licking and caressing one another as each waits their turn with the gentlemanly male.";
+		say "     The six of you make passionate love, the lion making sure to tend to the needs of all four of the hard working girls, giving each of them some personal attention.  You make sure to do the same as well, fingering them to keep them aroused and eager while waiting their turn or allowing them to take pleasure in lavishing attention upon your body.  This feline orgy goes on for quite some time, but eventually the satiated felines are all snuggled up together on the bed.";
+		attempttowait;
+		say "     With everyone else napping, you're about to drift off as well, but are roused briefly by quiet Dahlia caressing your cheek.  'I wanted to thank you, matron, for saving us,' she whispers softly to you.  'The others don't remember much from before they joined the pride, but I do.  It was a very hard and lonely time on my own.  The other males were mean or rough, mistreating the girls they came across, not like our mate Leonard.";
+		say "     'You found us, were kind to us and brought us here to be with him.  We are so much better off together, with our pride family,' she says, smiling as she looks over to the others slumbering happily.  'Remember that when you have doubts and,' she clutches you tightly, 'remember that when you wonder where you belong.  You belong here.  With us.'  She kisses your cheek and rests her head on your chest.  Having said so much, the normally quiet and thoughtful girl falls silent again, and you both lay there in each others arms, saying nothing and simply enjoying being close.  You drift off into slumber with the others, resting peacefully with your feline family.";
+		if player is felinebodied:
+			infect "Feline";
+		otherwise:
+			felinebodyshift;
+		infect "Feline";
+		increase morale of player by 3;
+		decrease libido of player by 10;
+		decrease humanity of player by 5;
+		if libido of player < 0, now libido of player is 0;
+		now hp of Leonard is 18;
+		now lastdenevent is turns;
+		rest;
+[	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
+
+
+
+
+	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
 			say "[leodenscene1]";
@@ -43,10 +77,10 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		otherwise if entry 1 of leodenlist is 3:
 			say "[leodenscene3]";
 		otherwise if entry 1 of leodenlist is 4:
-			say "[leodenscene4]";					]
+			say "[leodenscene4]";					
 
-[maids / delivery (supplies) / deliver (luxury) / work group / moment w/Raven / ...]
-
+	otherwise if a random chance of 1 in 4 succeeds:	[repeatable]
+]
 
 
 Section 1 - Park
