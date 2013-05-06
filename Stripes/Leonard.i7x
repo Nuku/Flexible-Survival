@@ -1011,6 +1011,8 @@ to say leonardrivalfight:
 [ 14 = beat 3rd pride - needed at Lion's Den	]
 [ 15 = succumbed as matron				]
 [ 16 = matron player					]
+[ 17 = had maid scene					]
+[ 18 = had work group scene			]
 [ 100 = lost/fled lion fight				]
 
 
