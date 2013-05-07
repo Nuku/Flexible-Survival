@@ -1,4 +1,4 @@
-Version 1 of Francois by AGentlemanCalledB begins here.
+﻿Version 1 of Francois by AGentlemanCalledB begins here.
 [Version 1.4 - M/M oral 2 (player giving)]
 "Adds a Male mutt NPC named François to the Flexible Survival game"
 
@@ -367,6 +367,12 @@ to say FrançoisListCompile:
 		add 4 to Francois_Undiscovered;	[Muffin muffin - Awesomer Fruit + pink gel]
 	if hermaphrodite is not banned:
 		add 5 to Francois_Undiscovered;	[Lollicock - Musky Cock Flower + honeycomb]
+	if humorous is not banned and furry is not banned and hermaphrodite is not banned:
+		add 6 to Francois_Undiscovered;	[dragon moelleux - dragon heart + glowing ember + chocolate milk]
+	if furry is not banned and humorous is not banned and girl is not banned:
+		add 7 to Francois_Undiscovered;	[fizz-aux-Pommes - pony cider + soda + crushed candies]
+	if girl is not banned and furry is not banned and guy is not banned:
+		add 8 to Francois_Undiscovered;	[vin-coeur - crushed candies+ Satyr wine + wyvern goop]
 
 check françoisbaking:
 	If françois is not visible, say "You should see François for that." instead;
@@ -375,6 +381,8 @@ carry out françoisbaking:
 	let françoisbaked be 0;
 	If françois is not visible:
 		say "You should see François for that.";
+	otherwise if hp of  françois is 0:
+		say "     Perhaps you should talk to the friendly mutt first?";
 	otherwise if Francois_Undiscovered is not empty:
 		say "     Emptying out the contents of your bag on the counter, François looks each over individually, smelling or even tasting many of them as he considers their culinary potential.";
 		if blue gel is owned and Awesome Fruit is owned and 3 is listed in Francois_Undiscovered:
@@ -412,6 +420,33 @@ carry out françoisbaking:
 			decrease carried of honeycomb by 1;
 			decrease carried of Musky Cock flower by 1;
 			now françoisbaked is 1;
+		otherwise if ash dragon heart is owned and glowing ember is owned and chocolate milk is owned and 6 is listed in Francois_Undiscovered:
+			say "[dragonmoelleuxGet]";
+			remove 6 from Francois_Undiscovered;
+			add 6 to Francois_Discovered;
+			decrease carried of ash dragon heart by 1;
+			decrease carried of glowing ember by 1;
+			decrease carried of chocolate milk by 1;
+			increase carried of dragon moelleux by 1;
+			now françoisbaked is 1;
+		otherwise if soda is owned and pony cider is owned and crushed candies is owned and 7 is listed in Francois_Undiscovered:
+			say "[fizz-aux-pommesGet]";
+			remove 7 from Francois_Undiscovered;
+			add 7 to Francois_Discovered;
+			decrease carried of soda by 1;
+			decrease carried of pony cider by 1;
+			decrease carried of crushed candies by 1;
+			increase carried of fizz-aux-pommes by 1;
+			now françoisbaked is 1;
+		otherwise if Satyr wine is owned and wyvern goop is owned and crushed candies is owned and 8 is listed in Francois_Undiscovered:
+			say "[vin-coeurGet]";
+			remove 8 from Francois_Undiscovered;
+			add 8 to Francois_Discovered;
+			decrease carried of Satyr wine by 1;
+			decrease carried of wyvern goop by 1;
+			decrease carried of crushed candies by 1;
+			increase carried of vin-coeur by 1;
+			now françoisbaked is 1;
 		if françoisbaked is not 1:
 			say "     After looking over everything you've brought him, François decides none of your potential combinations of ingredients would make a good dish.";
 	if françoisbaked is not 1 and Francois_Discovered is not empty:
@@ -447,9 +482,24 @@ to say FrançoisBakingMenu:
 		now title entry is "Lollicock";
 		now sortorder entry is 5;
 		now description entry is "have François bake a Lollicock";
+	if 6 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "dragon moelleux";
+		now sortorder entry is 6;
+		now description entry is "have François bake a dragon moelleux";
+	if 7 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "fizz-aux-Pommes";
+		now sortorder entry is 7;
+		now description entry is "have François bake a fizz-aux-Pommes";
+	if 8 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "vin-coeur";
+		now sortorder entry is 8;
+		now description entry is "have François bake a vin-coeur";
 	choose a blank row in table of fucking options;
 	now title entry is "Abort";
-	now sortorder entry is 6;
+	now sortorder entry is 9;
 	now description entry is "Abort";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -507,6 +557,36 @@ to say FrançoisBakingMenu:
 						increase carried of  Lollicock by 1;
 					otherwise:
 						say "You do not have the required ingredients. honeycomb and Musky Cock Flower.";
+				otherwise if title entry is "dragon moelleux":
+					if ash dragon heart is owned and glowing ember is owned and chocolate milk is owned:
+						now sextablerun is 1;
+						say "	 François takes the ash dragon heart, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
+						decrease carried of ash dragon heart by 1;
+						decrease carried of glowing ember by 1;
+						decrease carried of chocolate milk by 1;
+						increase carried of  dragon moelleux by 1;
+					otherwise:
+						say "You do not have the required ingredients. ash dragon heart, glowing ember and chocolate milk.";
+				otherwise if title entry is "fizz-aux-pommes":
+					if pony cider is owned and soda is owned and crushed candies is owned:
+						now sextablerun is 1;
+						say "	 François takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						decrease carried of pony cider by 1;
+						decrease carried of soda by 1;
+						decrease carried of crushed candies by 1;
+						increase carried of  fizz-aux-pommes by 1;
+					otherwise:
+						say "You do not have the required ingredients. pony cider, soda and crushed candies.";
+				otherwise if title entry is "vin-coeur":
+					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
+						now sextablerun is 1;
+						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						decrease carried of wyvern goop by 1;
+						decrease carried of soda by 1;
+						decrease carried of Satyr wine by 1;
+						increase carried of  vin-coeur by 1;
+					otherwise:
+						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
 				otherwise if title entry is "Abort":
 					say "You decide not to have François bake anything.";
 					now sextablerun is 1;
@@ -551,6 +631,27 @@ to say FrançoisHint:
 			say "     I used to collect fresh herbs from the forest surrounding the city park before all this began, I wonder what strange plants must be out there now?";
 		if T is 3:
 			say "     Fresh honey was always one of my favorite ingredients...I wonder how this strange maladie has affected the honeybees...";
+	if entry 1 of Francois_Undiscovered is 6: [6 - dragon moelleux - dragon heart + glowing ember + chocolate milk]
+		if T is 1:
+			say "     I have seen a lot of smoke over the skyline from the capitol district, I wonder what is happening over there?";
+		if T is 2:
+			say "     I have seen a lot of smoke over the skyline from the capitol district, I wonder what is happening over there?";
+		if T is 3:
+			say "     I have seen the most unusual chiens running around outside, they appear to be made entirely of chocolat.";
+	if entry 1 of Francois_Undiscovered is 7: [7 - fizz-aux-Pommes - pony cider + soda + crushed candies]
+		if T is 1:
+			say "     I used to keep a small amount of soda around for my customers, and it made an interesting addition to some dishes as well.";
+		if T is 2:
+			say "     A splash of fresh cider is a wonderful addition to most any dish.";
+		if T is 3:
+			say "     I used to get such wonderful fresh candy from the fair, they add a certain je ne sais quoi to several of my recipes.";
+	if entry 1 of Francois_Undiscovered is 8: [8 - vin-coeur - crushed candies+ Satyr wine + wyvern goop]
+		if T is 1:
+			say "     A small amount of wine is wonderful for rich cakes.";
+		if T is 2:
+			say "     I have seen incredible beasts flying above the rooftops, one of them left an egg just outside, but I didn't dare approach it.";
+		if T is 3:
+			say "     I used to get such wonderful fresh candy from the fair, they add a certain je ne sais quoi to several of my recipes.";
 
 
 to say BoysenberryBlossomGet:
@@ -634,6 +735,20 @@ to say LollicockGet:
 		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of Lollicock by 1;
 
+to say dragonmoelleuxGet:
+	say "     'I have a good feeling about this, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if], François says, taking the ash dragon heart, glowing ember and chocolate milk and heading to his kitchen. A rich chocolaty scent fills the bakery as he works, making your mouth water in anticipation as you wait.";
+	say "     François returns a short time later, carrying a small dish of bite sized chocolate cakes, insisting you try one while they're still fresh. When you bite into the cake, it's warm liquid chocolate center fills your mouth, you savor the taste for a short time before swallowing the satisfying treat. François looks at you expectantly, eagerly waiting to hear what you think of his newest dish, and just as you are about to speak a rumbling builds in your belly. An intense heat wells up inside you, and in a few short moments you are unable to hold it in any longer. François drives under the counter just before you release a large gout of flame into the air, incinerating everything on the counter in front of you.";
+	say "     'Mon dieu!' François exclaims, peeking up over the counter 'that was unexpected. 'Are you alright, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]?' After catching your breath, you assure the french mutt that you're fine, save for a little heart burn. With a smile François pushes the one cake that survived the blast towards you before setting about cleaning up your mess. Perhaps this unintended side effect might be useful in dealing with the mutants out in the city?";
+
+to say fizz-aux-pommesGet:
+	say "     François scratches his chin as he muses, setting the soda, pony cider and crushed candies aside. After gathering a couple other things from behind the counter, François gathers the ingredients and heads to his kitchen, promising to return shortly. Rather then the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. A few minutes later, François returns with a pitcher full of a fizzing amber liquid and a few glasses.";
+	say "     Motioning towards a nearby table, François takes a set with you and pours two glasses on the bubbling drink. With a toast you both empty your glasses, savoring the sweet apple taste. Soon after you are both unable to stay seated any longer, hit with a sudden burst of energy from the sugary drink. Eager to make use of this energy François sets about cleaning the bakery and organizing his displays, leaving you to your business. Perhaps this unusual side effect could be useful in dealing with the creatures out in the city?";
+
+to say vin-coeurGet:
+	say "     François scoops up your wyvern goop, sytar wine and crushed candies with a smile, 'I know just what to do with these, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]. After collecting a few other things from under the front counter François returns to his kitchen. A rich peppermint scent fills the bakery as François begins his work, making your mouth water in anticipation as you wait.";
+	say "     Eventually François returns with a a large cake and several dishes. After portioning out a couple pieces for you, François insists you try one right away, placing one in front of you before wrapping up another and slipping it into you bag. Biting into the rich wine cake, you are hit with the powerful peppermint taste. After several more bites the cake is finished, and you are left feeling quite full.";
+	say "     Feeling strangely heavy, you give François your thoughts on the new dish before pushing yourself away from the counter to stand. François['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather then pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
+
 Section 5 - Baked Goods
 
 Table of Game Objects (continued)
@@ -643,6 +758,11 @@ name	desc	weight	object
 "Crème Abondante"	"A delicate pink pastry topped with a breast shaped mound of creme, complete with a small sugary nipple."	1	Crème Abondante
 "Muffin Muffin"	"A soft pink muffin with a gooey fruit center."	1	Muffin Muffin
 "Lollicock"	"A big red hard candy shaped like a canine cock."	1	Lollicock
+"dragon moelleux"	"A small chocolate cake, it seems to stay perpetually warm and glows ever so slightly from the small cracks in it's surface."	1	dragon moelleux
+"fizz-aux-pommes"	"A fizzing, amber colored beverege."	1	fizz-aux-pommes
+"vin-coeur"	"A slice of cake with a rich wine and peppermint glaze and filling"	1	vin-coeur
+["gingerbread"	"Tempdesc"	1	gingerbread
+"cheesecake"	"TempDesc"	1	cheesecake]
 
 Boysenberry Blossom is a grab object. It is a part of the player.
 Boysenberry Blossom has a usedesc "[Boysenberry Blossom Use]";
@@ -771,22 +891,108 @@ to say Lollicock Use:
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 
-[Recipies				]
-[Crème Abondante				1]
-[Bleuettonne				2]
-[Boysenberry Blossom				3]
-[Muffin muffin				4]
-[Lollicock				5]
+dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
+The usedesc of dragon moelleux is "[dragonmoelleuxuse]";
+the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.";
 
-[Ingredients				]
-[Awesome Fruit -Male				30]
-[Awesomer Fruit -Female				31]
-[pink gel				32]
-[blue gel				33]
-[distilled milk				34]
-[chocolate milk				35]
-[Musky Cock Flower				36]
-[honeycomb				37]
+to say dragonmoelleuxuse:
+	if inafight is 1:
+		choose row monster from the table of random critters;
+		let dam be a random number between 80 and ( 120 + level of player );   [base between 8-12+ after later division by 10]
+		increase dam by ( level of player * 8 ) + ( a random number between 2 and level of player * 2 );   [+0.8-1.0/lvl after div by 10]
+		let playerfireresist be 0;
+		if "Natural Armaments" is listed in feats of player:            [+10%]
+			increase dam by ( dam / 10 );
+		if bodyname of player is listed in infections of Firebreathlist:   [+12.5%]
+			increase dam by ( dam / 8 );
+			increase playerfireresist by 1;
+		if facename of player is listed in infections of Firebreathlist:   [+12.5%]
+			increase dam by ( dam / 8 );
+			increase playerfireresist by 1;
+		let playerdam be dam;						[grabbing dam value before adjusting for target resistance]
+		if name entry is listed in infections of Firebreathlist:         [-20% against fire breathers]
+			decrease dam by ( dam / 5 );
+		now dam is dam / 10;                              [division by 10 to normalize]
+		increase dam by ( stamina of player - 10 ) / 2;   [stamina boosted damage]
+		say "     Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly, soon you can hold it in no longer, and unleash a powerful gout of flame at the [name entry]! Burning them for [dam] damage!";
+		decrease monsterhp by dam;
+		now playerdam is ( playerdam / 3) / 10;
+		if playerfireresist is 1:
+			now playerdam is ( playerdam / 2 );
+		if playerfireresist is 2:
+			now playerdam is 0;
+		if playerdam > 0:
+			say "     However, the flame does not leave you unscathed, you suffer [playerdam] damage!";
+			decrease hp of player by playerdam;
+		decrease carried of dragon moelleux by 1;
+	otherwise:
+		say "     That's probably not a good idea right now.";
+
+fizz-aux-pommes is a grab object. It is a part of the player. it is not temporary. it is fast.
+The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]";
+the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.";
+
+to say fizz-aux-pommesuse:
+	if inafight is 1:
+		say "     Slamming back the bubbling drink, you feel a rush of energy surge though you, making you light on your feet, and slightly aroused.";
+		say "+3 dodge bonus, +3 hit bonus, +15 libido! ";
+		increase plhitbonus by 3;
+		increase pldodgebonus by 3;
+		increase libido of player by 15;
+		decrease carried of fizz-aux-pommes by 1;
+		follow the player attack rule;
+	otherwise:
+		say "That's probably not a good idea right now.";
+		
+vin-coeur is a grab object. It is a part of the player. it is not temporary. it is fast.
+The usedesc of vin-coeur is "[vin-coeuruse]";
+the scent of vin-coeur is "     rich and heavy (temporary desc!)";
+
+to say vin-coeuruse:
+	if inafight is 1:
+		say "You quickly eat the rich, heavy cake and your entire body feel heavier almost instantly, adding weight to your blows, but slowing you movement.";
+		say "+2 damage bonus, -1 dodge bonus, -1 hit bonus!";
+		increase pldamagebonus by 2;
+		decrease pldodgebonus by 1;
+		decrease pldodgebonus by 1;
+		decrease carried of vin-coeur by 1;
+		follow the player attack rule;
+	otherwise:
+		say "That's probably not a good idea right now.";
+
+[Recipies	]
+[Crème Abondante	1]
+[Bleuettonne	2]
+[Boysenberry Blossom	3]
+[Muffin muffin	4]
+[Lollicock	5]
+[dragon moelleux	6]
+[fizz-aux-pommes	7]
+[vin-coeur	8]
+[gingerbread	9]
+[cheesecake	10]
+
+[Ingredients	]
+[Awesome Fruit -Male	30]
+[Awesomer Fruit -Female	31]
+[pink gel	32]
+[blue gel	33]
+[distilled milk	34]
+[chocolate milk	35]
+[Musky Cock Flower	36]
+[honeycomb	37]
+[dragon heart	38]
+[glowing ember	39]
+[soda	40]
+[pony cider	41]
+[crushed candies	42]
+[Satyr wine	43]
+[wyvern goop	44]
+[cow milk	45]
+[egg nog	46]
+[fairy dust	47]
+[cheese	48]
+
 
 [  hp of François   ]
 [ 0 = not met        ]
@@ -802,6 +1008,10 @@ Francoismixcleaned is a truth state that varies.  Francoismixcleaned is usually 
 Francoismix is a marker.
 when play begins:
 	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Female Husky", "German Shepherd", "Pit bull", "Retriever", "Shemale Smooth Collie", "Ashen Breeder", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
+
+Firebreathlist is a marker. [List of fire breathing creatures, move to story.ni later]
+when play begins:
+	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
 
 to francoisinfect:
 	if Francoismixcleaned is false:
