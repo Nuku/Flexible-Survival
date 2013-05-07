@@ -65,7 +65,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Herm Human";
+	now name entry is "herm human";
 	now attack entry is "[one of]The hermaphrodite human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
