@@ -81,7 +81,7 @@ When Play begins:
 	now defeated entry is "[beattheSugarGlider]";				[ Text when monster loses.  Change 'Sugar Glider' as above. ]
 	now victory entry is "[losetoSugarGlider]";					[ Text when monster wins.  Change 'Sugar Glider' as above. ]
 	now desc entry is "[SugarGliderdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "cute and rodent like, with large eyes and swiveling ears [if player is sugarskinned and cocks of player > 0], there is a pink stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[otherwise if player is sugarskinned], there is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";		[ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "cute and rodent like, with large eyes and swiveling ears [if player is SugarGliderskinned and cocks of player > 0], there is a pink stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[otherwise if player is SugarGliderskinned], there is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "slender and light, yet strangely soft and malleable like taffy[if cunts of player > 0], with a large pouch on your belly[end if]. Your arms and legs end in small dexterous paws with short claws, built for climbing. The most striking feature of your form is the large thin membrane stretched between your hands and feet";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "a short coat of sugary cotton candy like fur, it is [if cocks of player > 0]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[otherwise]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a long thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if cocks of player > 0]blue[otherwise]pink[end if] cotton candy fur.";	[ Tail desc., written as a full sentence or left blank for none. ] 
@@ -124,7 +124,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-Definition: a person is sugarskinned:
+Definition: a person is SugarGliderskinned:
 	if the skinname of the player is "Sugar Glider", yes;
 	no;
 
