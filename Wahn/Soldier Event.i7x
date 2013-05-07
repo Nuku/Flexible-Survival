@@ -535,17 +535,12 @@ to say DavidPatrolAnal:
 		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 to say DavidPatrolVaginal:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	setmonster "human";	
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you.";
 	say "     [WaitLineBreak]";
 	say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
 	say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "human";
-		now bodyname of child is "human";
-		now skinname of child is "human";
 	say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... oh no, I just cheated on my girlfriend. What will she say when I get back home. I - you...'";
 	say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
@@ -821,8 +816,7 @@ to say DavidSex2:							[he sucks the player]
 	now lust of David is 2;
 
 to say DavidSex3:												[player pussy fucked]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	setmonster "human";	
 	if thirst of David is 0:							[first time]
 		if David is in Parade Ground:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
@@ -833,10 +827,6 @@ to say DavidSex3:												[player pussy fucked]
 		say "     [WaitLineBreak]";
 		say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
 		say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "human";
-			now bodyname of child is "human";
-			now skinname of child is "human";
 		say "     [line break]";
 		say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... oh no, I just cheated on my girlfriend. What will she say when I get back home. I - you...'";
 		say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
@@ -850,10 +840,6 @@ to say DavidSex3:												[player pussy fucked]
 		say "     [WaitLineBreak]";
 		say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
 		say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "human";
-			now bodyname of child is "human";
-			now skinname of child is "human";
 		say "     [line break]";		
 		if thirst of David is 10:  						[fuck buddy]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
@@ -863,8 +849,7 @@ to say DavidSex3:												[player pussy fucked]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
 
 to say DavidSex4:												[player ass fucked]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	setmonster "human";	
 	if David is in Parade Ground:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 	otherwise:
@@ -875,10 +860,6 @@ to say DavidSex4:												[player ass fucked]
 	say "     Reaching back to hold his hard cock up, you push it against your hole, then slowly sink your ass down, impaling yourself on his manhood. David moans 'So tight.' as his shaft goes deeper into your tightly gripping asshole, his hands holding on to and stroking your hips. Then he bottoms out in you and you can feel a pleasant fullness and the warmth of his crotch against your buns. You stay still for a moment to revel in the feeling, then start sliding up and down on the hard shaft.";
 	say "     Fucking yourself on his cock, you make David moan and gasp under you, holding on tight to sides of the bunk. Then, after a while, you pull off him with a slight *plop* and say 'Your turn on top - fuck me hard and deep.' Laying down next to him, you give him a quick kiss, then spread your legs and wiggle your ass invitingly.";
 	say "     Without hesitation, he moves to kneel behind you, then sets the tip of his hard cock against your pucker and plunges in. The young soldier fucks you hard and fast, grinding his hips against your ass and moaning into your ear with his arms around your chest. With each frenzied thrust you move closer to orgasm, and soon you're pushed over the brink, spraying your seed into the bedsheets below you. Your anal muscles twitching and tightening around his cock with each burst of your cum, David joins you in orgasm, flooding your insides with his human seed.[mimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "human";
-		now bodyname of child is "human";
-		now skinname of child is "human";
 	say "     [line break]";
 	if thirst of David is 10:  						[fuck buddy]
 		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Nice ass, it's really tight' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
@@ -1013,14 +994,63 @@ Instead of sniffing Camp Bravo Entrance:
 
 Private Cooper is a man. Private Cooper is in Camp Bravo Entrance.
 The description of Private Cooper  is "     Private Cooper is a bulky man with a grim look on his face most of the time. He constantly scans for approaching intruders coming too close to the Camp Entrance.";
-The conversation of Private Cooper  is { "With an annoyed look he says 'Don't distract me. Who knows what might rush us any minute now.'" };
+
+instead of conversing the Private Cooper:
+	if MovingOrwell is 1:
+		say "     You step up to Private Cooper and say 'Soldier! Why are you two over here together? Can't you see that enemies might sneak close concealed by that rubble over there?' He replies 'Err, yes - but... I was just making sure that Orwell doesn't -' he looks over towards the parade ground in the north '-he's not supposed to go - to do - you know... I bet he'd like to sneak off to get a ride from the beast, the little fagg-' 'Let me stop you right there - enough! Even if your ridiculous idea was right, he'd still have to pass by you here, wouldn't he? So let's stop this nonsense.'";
+		say "     Raising your voice, you order Cooper to stay where he is, while telling Orwell to move quite a bit down the barricade of wrecked cars. Going with him, you have him take position behind a large car with tinted windows. It's quite nice to watch the man's ass as he leans over the car's hood, setting up his rifle to rest on it. Reluctantly taking your eyes off his bubble butt, you look back towards where Private Cooper still holds guard - perfect, with the car as concealment, he won't be able to see anything but Orwell's rifle and head. The young man seems delighted with his new post, smiling as he tells you 'Thanks for getting some distance between that ass and me. Oh, and by the way - please call me Marc.'";
+		now MovingOrwell is 2;
+	otherwise:
+		say "     With an annoyed look he says 'Don't distract me. Who knows what might rush us any minute now.'";
+
+MovingOrwell is a number that varies. MovingOrwell usually is 0.
+
+[MovingOrwell - micro-quest variable for Pvt. Orwell     ]
+[ 0 - Starting State                                     ]
+[ 1 - Tried fucking Pvt. Orwell                          ]
+[ 2 - Moved him to a spot more or less out of sight      ]
+[ 3 - Had sex (oral/anal) with Marc Orwell               ]
 
 Private Orwell is a man. Private Orwell is in Camp Bravo Entrance.
-The description of Private Orwell is "     Private Orwell is an attractive and fit male, bearing the tattoo of a merman on his left shoulder. He's leaning comfortably against one of the wrecked cars, but still has his rifle at hand.";
-The conversation of Private Orwell is { "With a sigh, Private Orwell says 'Man, this sucks - I only stumbled that one time in the mess tent and hit the Major with a mug of coffee and now I'm on perpetual guard duty and can't join in for the fun in there.'" };
+The description of Private Orwell is " [OrwellDesc]";
+
+to say OrwellDesc:
+	if MovingOrwell < 2:
+		say "     Private Orwell is an attractive and fit male, bearing the tattoo of a merman on his left shoulder. He's leaning comfortably against one of the wrecked cars, but still has his rifle at hand.";
+	otherwise:
+		say "     Private Marc Orwell is an attractive and fit male, bearing the tattoo of a merman on his left shoulder. He's leaning over the hood of one of the wrecked cars, resting his ellbows on it and his rifle set up to cover the approach to the camp. That stance shows off a well-rounded bubble butt in his pants.";
+	
+instead of conversing the Private Orwell:
+	say "     [one of]With a sigh, Private Orwell says 'Man, this sucks - I only stumbled that one time in the mess tent and hit the Major with a mug of coffee and now I'm on perpetual guard duty and can't join in for the fun in there.'[or]Letting his gaze wander over the approach to the military camp, Private Orwell remarks 'Some of the infected are downright freaky - and I don't just mean their shapes, but how they think... if they still think.'[or]Letting his gaze wander over the approach to the military camp, Private Orwell remarks 'It's strange that you never can quite know what to expect from infected. A few days ago, this big guy came along - fur all over, wolf's head with lots of teeth... honestly, I thought he'd be all werewolf and attack. But he just said hello and offered me a tryout for his football team and then left. Interesting times, hm?'[or]A boyish smile comes to Private Orwell's face as you approach him. 'Hey there, thanks for talking to me.' He continues in a whisper 'You won't believe how boring guard duty is with just grumpypants over there as company. Well, him and the mostly sex-crazed infected out there...'[at random]";
 
 instead of fucking Private Orwell:
-	say "     He sighs, 'Oh, how I'd love to take you up on that. But I just can't leave my post, as Grumpy over there would go ape if I tried.'";
+	if MovingOrwell is 0:
+		say "     He sighs, 'Oh, how I'd love to take you up on that. But I just can't leave my post, as Grumpy over there would go ape if I tried.' Looking over to Private Cooper, you have an idea... you should try talking to him.";
+		now MovingOrwell is 1;
+	otherwise if MovingOrwell is 1:
+		say "     There might be a way to get it on with him, try talking to Private Cooper...";
+	otherwise if MovingOrwell is 2 or MovingOrwell is 3:
+		say "     Stepping up behind Private Orwell, you give his ass a squeeze. Surprised, he looks back over his shoulder, then smiles as he sees you. 'Hey there, hot stuff. Thanks for getting me a bit of distance to Grumpy. I assume you want to have some fun now?' Nodding to the tinted windows of the car, he continues 'Great idea with that - he can't see much more than my head and rifle from over there. And... I can keep quiet pretty well. Lots of experience from after light-out in the barracks, you know.' He gives you a wink.";
+		if cocks of player > 0:
+			say "     What would you prefer to do with the handsome soldier now? Fuck him (Y) or maybe just blow him off (N)?";
+			if player consents:
+				say "     Grinding your hardening bulge against his ass in anticipation, you reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Quickly throwing off your own clothes, you step up close behind him and rub your [cock of player] cock up and down between his firm cheeks. Then you position its head at his hole, pushing forward against his well-trained pucker that easily lets you slide in while still gripping your shaft tightly. Your soldier boy gives a soft moan as you bottom out inside him, then says under his breath 'Yeah, that feels great. Now fuck me.'";
+				say "     Eager to follow Marc's request, you pull back a bit, then thrust back in and continue fucking him with deep strokes. It's amazing how tight and gripping his muscles are around your erection, his years of training as a bottom paying off handsomely. Almost losing yourself in a haze of lust, you shaft his ass, slamming forward until your hips hit his cheeks with slapping noises. Then suddenly, your soldier boy reaches back to grip your ass, holding you tight against him. 'Whoah Tiger' he says after another stifled moan and a little laugh. 'You rocked the whole car with that last one. Not that I mind a good hard fuck, but we do have an audience who would love to make trouble if we get too obvious...'";
+				say "     [WaitLineBreak]";
+				say "     Whispering an apology, you start up fucking him again, though with a bit less intense strokes. Even though you ache to just take him hard against the hood of the car, this slower rythm still feels amazing. You almost have to laugh out loud as you see Marc nod over to the other soldier, giving the 'no enemy in sight' handsign nonchalantly as if he wasn't being fucked right at that very moment. Your semi-public coupling gives having sex with this handsome and athletic man a delicious extra thrill, and it doesn't take much longer until your raging libido demands its due. With a satisfied grunt, you grind your hips against Private Orwell's butt, holding him tight as your balls start unloading their fertile load. Feeling the first spurt of your cum splash against his inner walls, Marc gives a satisfied moan, his hand moving down to stroke his own cock. After just a few jerks, he joins you in orgasm, long strings of his sperm spurting all over the front wheel and side of the car.";
+				say "     After finishing with the last spurts inside the young soldier, you stay in him a while longer while moving your hands under his shirt, stroking and caressing his back and chest. As your cock starts getting soft, you slowly pull out of him, then move to collect your clothes and gear. While you do so, Marc gives you a pretty nice and distracting view - bent over the hood of the car, all business to an observer from the front with his rifle and uniform cap and shirt... while at the same time showing off his bare ass to you, pants pooled around his legs and combat boots, with a small trickle of cum dripping from his freshly fucked hole.";
+			otherwise:
+				say "     [OrwellBJ]";
+		otherwise:
+			say "     [OrwellBJ]";
+	  if MovingOrwell is 2:
+	  	now MovingOrwell is 3;
+		
+to say OrwellBJ:
+	say "     You reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Stroking his buttocks, firm under deliciously soft and hairless skin, you then kneel down and crawl between his legs. After a bit of manoevering, you come to sit between him and the car, your face just inches away from the young soldier's cock. It twitches in anticipation as Marc feels your breath against his skin. Not wanting to leave him waiting, you softly take it in your hand, stroking it, then hold it and slide your lips over the tip and further down his shaft. A stifled moan escaping your sexual partner's lips makes you stop for a moment to allow him to find his composure again. 'Go on, that feels great.' he whispers down to you.";
+	say "     Eager to give Marc pleasure, you pull back a bit, then start bobbing your head up and down on his cock and bring your hands up to fondle his balls. After weeks of constant guard duty with such a dour partner who made sure he never had time on his own to get off, they're heavy with pent-up cum. With him aching for release, it doesn't take too much longer until your efforts drive the young man over the edge and a not quite suppressed gasp heralds a flood of a load gushing into your mouth. Spurt after spurt coat your tongue and tonsils, and you swallow it all, not spilling anything.";
+	say "     [WaitLineBreak]";
+	say "     As you stand back up Private Orwell looks over his shoulder and says 'Thanks, I really really needed that!' 'Anytime.' you tell him, licking your lips. As you swallow the last drops of his cum, Marc gives you a pretty nice and distracting view - bent over the hood of the car, all business to an observer from the front with his rifle and uniform cap and shirt... while at the same time showing off his bare ass to you, pants pooled around his legs and combat boots, his now softening cock dangling between his legs.";
 
 North of Camp Bravo Entrance is Parade Ground.
 The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent and to the south is the entrance of the camp. In the middle of the camp is an mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.";
@@ -1617,16 +1647,11 @@ to say AlexanderFucking:
 		if (lastfuck of Alexander - turns < 12):
 			say "     As you approach Alexander, he immediately sees the lust-filled twinkle in your eyes. He gives you an apologetic shrug, saying 'Sorry, I got duties to perform. Can't fuck around all day, even though I'd like to...' He gives you a quick kiss, then goes to grab some more food for the minotaur.";
 		otherwise:
-			let baby be 0;
-			if child is born or gestation of child is not 0, now baby is 1;
+			setmonster "human";				
 			say "     'How could I say no to such an offer', he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss.";
 			say "     Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely tick piece of hard man-meat.";
 			say "     After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
 			say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his.[fimpregchance]";
-			if baby is 0 and gestation of child is not 0:
-				now facename of child is "human";
-				now bodyname of child is "human";
-				now skinname of child is "human";
 			say "     After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
 			now lastfuck of Alexander is turns;
 
