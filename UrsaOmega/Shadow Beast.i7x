@@ -108,6 +108,7 @@ When Play begins:
 	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Events
+
 [ Event by Wahn]
 Hunted Survivor is a situation.
 The sarea of Hunted Survivor is "Sealed";
