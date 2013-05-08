@@ -203,7 +203,7 @@ to say Inside Cell Four:
 	say "     [CellFourSex]";
 	
 to say CellFourSex:
-	setmonster "Herm Human";	
+	setmonster "herm human";	
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask what's going on here";
