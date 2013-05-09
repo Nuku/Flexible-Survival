@@ -1,86 +1,157 @@
 Version 2 of Leonard Events by Stripes begins here.
-[version 2.1 - Den event #2]
+[version 2.2 - Random den event #1]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
 
 Section 0 - Den Events
 
+Part 0 - Core Event
+
 lastdenevent is a number that varies.  lastdenevent is usually 255;
+leosupplies is a number that varies.
 
 after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
 	if hp of Leonard is 16:	[maids]
-		say "     When you enter Leonard's home, you find your mate relaxing in his chair with the three maids lavishing attention upon him.  A wave of his paw has the one brushing his beautiful mane step back, allowing him to turn his head and smile at you.  'Ah, my dear mate.  You look weary from your travels.  Take a seat and enjoy a relaxing foot rub.'  As you continue further into the cave, you can see that the regal lion is receiving a foot rub and tongue grooming from one maid on the floor while the last of them is sucking him off.";
-		say "     With the arousing scent of the male in the air and the sexy sight of his humbled rivals serving him, you share in Leonard's smile and sit down, raising one of your feet.  The feline with the brush, already moving towards you as you moved to take a seat, kneels in front of you and runs her paws over your leg as she nuzzles your foot.  She purrs happily, kissing and licking at your foot before beginning the massage.";
-		if the player is not felinebodied:
-			say "     The rubbing and licking quickly starts to have an effect on you.  With each lick, your foot shifts and changes a little more, soon returning to a leonine paw.  As this change starts to creep up your leg, she turns her attention to your other foot, soon remaking it into a lion's paw as well.  The transformation progresses up your legs, across your hips and through the rest of your body, restoring much of your matronly form.";
-		say "     The obedient maid is thorough in her attention, rubbing at your feline paws to soothe the aches of walking all around the city.  You'd come to ignore them, but having them massaged away while the servile girl licks and kisses your foot is both soothing and arousing.  The brush of her rough tongue grooming the underside of your foot and between your feline toes is a delight.  She seems pleased as well with her task, purring happily at her opportunity to bestow attention upon her loving matron.";
-		say "     While you've been enjoying your foot rub, Leonard's has come to an end, the black-haired maid having sucked him off, freeing his cock for the other girl to climb into his lap.  As the lion's paws opens the front of her French maid's dress so he can grope her breast, she flips up her skirt and gives you a lovely view of her juicy pussy as it sinks down onto your lover's rod.  Watching as his throbbing, leonine cock sinks into her quivering hole, you lick your lips and smile, spreading your legs for the black-haired maid who's now free to service you as well.";
-		if cocks of player > 0:
-			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your erection.  Her tongue slides over your balls and up your pulsing rod, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she lowers her muzzle down onto your shaft and sucks hard, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice sucking off her new master.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cock, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
-		otherwise if cunts of player > 0:
-			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your damp thighs.  Her tongue slides over your dripping folds and across your pulsing clit, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she slides her raspy tongue into your cunt, sending shivers of delight through you, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice with her fellow servants.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cunny, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
-		otherwise:
-			say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your bare groin.  She mewls sadly at the disappointing sight of your featureless crotch, but continues to lavish attention upon you, running her raspy tongue across your pubis before drifting upwards.  Her paws roam over your leonine body as she licks, nips and kisses at any sensitive spot she can find, doing her best to please her matron.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and body, it is a wonderfully pleasurable experience that is capped off by your lover filling the third maid with his cum until it overflows from her stuffed cunt.";
-		say "     Their duty done, the trio kiss and caress you both before heading off to snuggle together.  The pair who'd been serving you take considerable pleasure in licking the lion's cum from the third girl.  Feeling much relaxed and pleased after your enjoyable welcome, you muse that you should consider making use of the servants more often as a means to unwind.  But for the moment, you let them go and turn your attention back to your mate, smiling at him and trying to restore your thoughts to the reason you came to see him.";
-		if player is felinebodied:
-			infect "Feline";
-		otherwise:
-			felinebodyshift;
-		increase morale of player by 1;
-		increase libido of player by 5;
-		decrease humanity of player by 5;
-		if libido of player > 100, now libido of player is 100;
-		now hp of Leonard is 17;
-		now lastdenevent is turns;
+		say "[leodenscene1]";
 	otherwise if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
-		say "     Your approach to Leonard's cave den is pleasantly interrupted by an encounter with your work group.  They are in a cheerful mood and welcome you with many hugs, kisses and caresses[if player is not felinebodied].  Their kneading paws and licking tongues soon prompt your body to change, restoring your matronly figure[end if].  As you approach the den, you ask them what's got them in such a good mood.";
-		say "     'Oh, Master Leonard asked us a while ago to keep an eye out for more sheet music.  You see, we were told to try looking around the...' she starts to say, but is interrupted by Raven gently bopping her on top of the head with the leather satchel she's carrying.";
-		say "     'If you tell her, you'll go on forever about it,' she cuts in.  'While we were out looking for some furniture,' she goes on to say while smiling at the others, 'we managed to get our paws on this.'  The dark-haired kitty pats the satchel and shows you a sheet of violin music from the very full case.  From the way the other three are whispering excitely, you're certain they're looking forward to presenting their find to the lion.";
-		say "     'And now we've run into you on our way back,' Jasmine adds excitedly.  'Will you be staying for a while?'";
-		say "     You respond that you're only stopping by for a little while as always, but add that you can stay and help Leonard thank them for their diligence, if they'd like.  They're all quite pleased with this and snuggle in close as you continue along the path together.  You change the subject to them, asking if they're run into any trouble or if anything in the city's been giving them trouble.";
-		attempttowait;
-		say "     'Nothing we can't handle, matron.  We've been paying attention to your advice about moving around in the city.  We're smaller than most, so it's easier for us the sneak around when we have to.  Dahlia's really good at spotting trouble, so we manage to avoid a lot of it.'  The other girl, who's been pretty quiet up to now, smiles and nods.";
-		say "     Yarrow giggles and hugs her compatriot.  'Yeah, she's smart enough to keep quiet.  Not like me,' she adds, laughing.  'There was this one time when this big wolf heard me joking (keeping everyone's spirits up).  He was such a big, mean looking guy.  Really well hung though - might've been worth the fleas to get a ride on that meat of his.'  She even adds some exaggerated itch-scratching.";
-		say "     As the girls all laugh at her antics, she's poked in the ribs by Dahlia and Jasmine takes the opportunity to continue.  'Well, Raven managed to get us out of that one.'";
-		say "     'All I did was spot a hole that was too big for him to follow us through.'";
-		say "     'Well, you kept your head while the rest of us were crapping our pants (or drooling over his cock - Yarrow pipes in) and so you made sure we all got out of there safe,' Jasmine concludes.  Listening and watching them, you can't help but smile proudly, very pleased with how they've come together as a team.  And with the den coming into view, you let them go on in ahead of you so they can present their gift to the lion without you distracting him right away.";
-		attempttowait;
-		say "     When you do enter, Leonard smiles and welcomes you.  He passes off the satchel to one of the maids, instructing her to put it away somewhere safe.  Putting his arm around you, resting on your rear, he has many kind words for the work group as he leads you and them off to his bed.  Eager Jasmine is quick to offer herself up to Leonard and mewls in delight as he mounts her with Yarrow snuggled in close beside, fondling them both as they mate.  You snuggle up with Raven and Dahlia, licking and caressing one another as each waits their turn with the gentlemanly male.";
-		say "     The six of you make passionate love, the lion making sure to tend to the needs of all four of the hard working girls, giving each of them some personal attention.  You make sure to do the same as well, fingering them to keep them aroused and eager while waiting their turn or allowing them to take pleasure in lavishing attention upon your body.  This feline orgy goes on for quite some time, but eventually the satiated felines are all snuggled up together on the bed.";
-		attempttowait;
-		say "     With everyone else napping, you're about to drift off as well, but are roused briefly by quiet Dahlia caressing your cheek.  'I wanted to thank you, matron, for saving us,' she whispers softly to you.  'The others don't remember much from before they joined the pride, but I do.  It was a very hard and lonely time on my own.  The other males were mean or rough, mistreating the girls they came across, not like our mate Leonard.";
-		say "     'You found us, were kind to us and brought us here to be with him.  We are so much better off together, with our pride family,' she says, smiling as she looks over to the others slumbering happily.  'Remember that when you have doubts and,' she clutches you tightly, 'remember that when you wonder where you belong.  You belong here.  With us.'  She kisses your cheek and rests her head on your chest.  Having said so much, the normally quiet and thoughtful girl falls silent again, and you both lay there in each others arms, saying nothing and simply enjoying being close.  You drift off into slumber with the others, resting peacefully with your feline family.";
-		if player is felinebodied:
-			infect "Feline";
-		otherwise:
-			felinebodyshift;
-		infect "Feline";
-		increase morale of player by 3;
-		decrease libido of player by 10;
-		decrease humanity of player by 5;
-		if libido of player < 0, now libido of player is 0;
-		now hp of Leonard is 18;
-		now lastdenevent is turns;
-		rest;
+		say "[leodenscene2]";
 [	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
-
-
-
-
+		say "***";
 	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
-			say "[leodenscene1]";
+			say "[leodenspecial1]";
 		otherwise if entry 1 of leodenlist is 2:
-			say "[leodenscene2]";
+			say "[leodenspecial2]";
 		otherwise if entry 1 of leodenlist is 3:
-			say "[leodenscene3]";
+			say "[leodenspecial3]";
 		otherwise if entry 1 of leodenlist is 4:
-			say "[leodenscene4]";					
-
+			say "[leodenspecial4]";					]
 	otherwise if a random chance of 1 in 4 succeeds:	[repeatable]
-]
+		if 1 is 1:		[more variations coming]
+			say "[leosupplyscene]";
+
+Part 1 - Maid Scene
+
+to say leodenscene1:
+	say "     When you enter Leonard's home, you find your mate relaxing in his chair with the three maids lavishing attention upon him.  A wave of his paw has the one brushing his beautiful mane step back, allowing him to turn his head and smile at you.  'Ah, my dear mate.  You look weary from your travels.  Take a seat and enjoy a relaxing foot rub.'  As you continue further into the cave, you can see that the regal lion is receiving a foot rub and tongue grooming from one maid on the floor while the last of them is sucking him off.";
+	say "     With the arousing scent of the male in the air and the sexy sight of his humbled rivals serving him, you share in Leonard's smile and sit down, raising one of your feet.  The feline with the brush, already moving towards you as you moved to take a seat, kneels in front of you and runs her paws over your leg as she nuzzles your foot.  She purrs happily, kissing and licking at your foot before beginning the massage.";
+	if the player is not felinebodied:
+		say "     The rubbing and licking quickly starts to have an effect on you.  With each lick, your foot shifts and changes a little more, soon returning to a leonine paw.  As this change starts to creep up your leg, she turns her attention to your other foot, soon remaking it into a lion's paw as well.  The transformation progresses up your legs, across your hips and through the rest of your body, restoring much of your matronly form.";
+	say "     The obedient maid is thorough in her attention, rubbing at your feline paws to soothe the aches of walking all around the city.  You'd come to ignore them, but having them massaged away while the servile girl licks and kisses your foot is both soothing and arousing.  The brush of her rough tongue grooming the underside of your foot and between your feline toes is a delight.  She seems pleased as well with her task, purring happily at her opportunity to bestow attention upon her loving matron.";
+	say "     While you've been enjoying your foot rub, Leonard's has come to an end, the black-haired maid having sucked him off, freeing his cock for the other girl to climb into his lap.  As the lion's paws opens the front of her French maid's dress so he can grope her breast, she flips up her skirt and gives you a lovely view of her juicy pussy as it sinks down onto your lover's rod.  Watching as his throbbing, leonine cock sinks into her quivering hole, you lick your lips and smile, spreading your legs for the black-haired maid who's now free to service you as well.";
+	if cocks of player > 0:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your erection.  Her tongue slides over your balls and up your pulsing rod, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she lowers her muzzle down onto your shaft and sucks hard, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice sucking off her new master.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cock, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
+	otherwise if cunts of player > 0:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your damp thighs.  Her tongue slides over your dripping folds and across your pulsing clit, the subservient kitty being as thorough in licking your groin as the other is at licking your foot.  As she slides her raspy tongue into your cunt, sending shivers of delight through you, you moan softly and run your fingers through her dark hair.  Her oral attention is very enjoyable, clearly having gotten lots of practice with her fellow servants.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and cunny, it is not long before you cum with a loud rumble of delight, a sound echoed by your lover as he fills the third maid with his cum until it overflows from her stuffed cunt.";
+	otherwise:
+		say "     Still licking the remaining traces of Leonard's cum from her muzzle, she slips in beside her fellow maid.  She shares a brief kiss and fondling with her before sitting between your legs and nuzzling at your bare groin.  She mewls sadly at the disappointing sight of your featureless crotch, but continues to lavish attention upon you, running her raspy tongue across your pubis before drifting upwards.  Her paws roam over your leonine body as she licks, nips and kisses at any sensitive spot she can find, doing her best to please her matron.  Between the sexy show of Leonard fucking one of his ex-rivals while the other two fawn upon your feet and body, it is a wonderfully pleasurable experience that is capped off by your lover filling the third maid with his cum until it overflows from her stuffed cunt.";
+	say "     Their duty done, the trio kiss and caress you both before heading off to snuggle together.  The pair who'd been serving you take considerable pleasure in licking the lion's cum from the third girl.  Feeling much relaxed and pleased after your enjoyable welcome, you muse that you should consider making use of the servants more often as a means to unwind.  But for the moment, you let them go and turn your attention back to your mate, smiling at him and trying to restore your thoughts to the reason you came to see him.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	increase morale of player by 1;
+	increase libido of player by 5;
+	decrease humanity of player by 5;
+	if libido of player > 100, now libido of player is 100;
+	now hp of Leonard is 17;
+	now lastdenevent is turns;
+
+
+Part 2 - Work Group Scene
+
+to say leodenscene2:
+	say "     Your approach to Leonard's cave den is pleasantly interrupted by an encounter with your work group.  They are in a cheerful mood and welcome you with many hugs, kisses and caresses[if player is not felinebodied].  Their kneading paws and licking tongues soon prompt your body to change, restoring your matronly figure[end if].  As you approach the den, you ask them what's got them in such a good mood.";
+	say "     'Oh, Master Leonard asked us a while ago to keep an eye out for more sheet music.  You see, we were told to try looking around the...' she starts to say, but is interrupted by Raven gently bopping her on top of the head with the leather satchel she's carrying.";
+	say "     'If you tell her, you'll go on forever about it,' she cuts in.  'While we were out looking for some furniture,' she goes on to say while smiling at the others, 'we managed to get our paws on this.'  The dark-haired kitty pats the satchel and shows you a sheet of violin music from the very full case.  From the way the other three are whispering excitely, you're certain they're looking forward to presenting their find to the lion.";
+	say "     'And now we've run into you on our way back,' Jasmine adds excitedly.  'Will you be staying for a while?'";
+	say "     You respond that you're only stopping by for a little while as always, but add that you can stay and help Leonard thank them for their diligence, if they'd like.  They're all quite pleased with this and snuggle in close as you continue along the path together.  You change the subject to them, asking if they're run into any trouble or if anything in the city's been giving them trouble.";
+	attempttowait;
+	say "     'Nothing we can't handle, matron.  We've been paying attention to your advice about moving around in the city.  We're smaller than most, so it's easier for us the sneak around when we have to.  Dahlia's really good at spotting trouble, so we manage to avoid a lot of it.'  The other girl, who's been pretty quiet up to now, smiles and nods.";
+	say "     Yarrow giggles and hugs her compatriot.  'Yeah, she's smart enough to keep quiet.  Not like me,' she adds, laughing.  'There was this one time when this big wolf heard me joking (keeping everyone's spirits up).  He was such a big, mean looking guy.  Really well hung though - might've been worth the fleas to get a ride on that meat of his.'  She even adds some exaggerated itch-scratching.";
+	say "     As the girls all laugh at her antics, she's poked in the ribs by Dahlia and Jasmine takes the opportunity to continue.  'Well, Raven managed to get us out of that one.'";
+	say "     'All I did was spot a hole that was too big for him to follow us through.'";
+	say "     'Well, you kept your head while the rest of us were crapping our pants (or drooling over his cock - Yarrow pipes in) and so you made sure we all got out of there safe,' Jasmine concludes.  Listening and watching them, you can't help but smile proudly, very pleased with how they've come together as a team.  And with the den coming into view, you let them go on in ahead of you so they can present their gift to the lion without you distracting him right away.";
+	attempttowait;
+	say "     When you do enter, Leonard smiles and welcomes you.  He passes off the satchel to one of the maids, instructing her to put it away somewhere safe.  Putting his arm around you, resting on your rear, he has many kind words for the work group as he leads you and them off to his bed.  Eager Jasmine is quick to offer herself up to Leonard and mewls in delight as he mounts her with Yarrow snuggled in close beside, fondling them both as they mate.  You snuggle up with Raven and Dahlia, licking and caressing one another as each waits their turn with the gentlemanly male.";
+	say "     The six of you make passionate love, the lion making sure to tend to the needs of all four of the hard working girls, giving each of them some personal attention.  You make sure to do the same as well, fingering them to keep them aroused and eager while waiting their turn or allowing them to take pleasure in lavishing attention upon your body.  This feline orgy goes on for quite some time, but eventually the satiated felines are all snuggled up together on the bed.";
+	attempttowait;
+	say "     With everyone else napping, you're about to drift off as well, but are roused briefly by quiet Dahlia caressing your cheek.  'I wanted to thank you, matron, for saving us,' she whispers softly to you.  'The others don't remember much from before they joined the pride, but I do.  It was a very hard and lonely time on my own.  The other males were mean or rough, mistreating the girls they came across, not like our mate Leonard.";
+	say "     'You found us, were kind to us and brought us here to be with him.  We are so much better off together, with our pride family,' she says, smiling as she looks over to the others slumbering happily.  'Remember that when you have doubts and,' she clutches you tightly, 'remember that when you wonder where you belong.  You belong here.  With us.'  She kisses your cheek and rests her head on your chest.  Having said so much, the normally quiet and thoughtful girl falls silent again, and you both lay there in each others arms, saying nothing and simply enjoying being close.  You drift off into slumber with the others, resting peacefully with your feline family.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	infect "Feline";
+	increase morale of player by 3;
+	decrease libido of player by 10;
+	decrease humanity of player by 5;
+	if libido of player < 0, now libido of player is 0;
+	now hp of Leonard is 18;
+	now lastdenevent is turns;
+	rest;
+	follow the turnpass rule;
+
+
+Part 9 - Supply Delivery
+
+to say leosupplyscene:
+	if leosupplies is 0, let leosupplies be a random number between 1 and 2;
+	say "     After being welcomed by your mate, you [one of]settle in to take a short break before getting into the reason for your visit[or]enjoy a pleasant snuggling with the sexy lion[or]enjoy some relaxing attention from the cute maids[or]enjoy a pleasant chat with Leonard[cycling].  At this time, a heavily-laden lioness in a red cap arrives at the den.  One of the maids assists her in removing the heavy pack, full of [if leosupplies is 1]foodstuffs[otherwise]bottled water[end if], and carry it inside.  After a cursory examination by a pleased Leonard, he gives some to you before the pack is sent off to the pantry to be stocked.";
+	say "     You both thank the kitty for her efforts, the den being in need of more supplies due to the addition of the maids.  The little lioness purrs happily at the praise, especially when Leonard's paw drifts down to her rear.  With his gentle touch, he guides her ";
+	if leosupplies is 1:	[food]
+		say "towards his bed.  You follow them, eager to show your thanks as well.";
+		say "     After helping Leonard out of his suit and you've removed your gear, you lay back on the bed, pulling the cute kitty atop you.  She nuzzles at your chest and licks your nipples, her paws kneading softly.  You run your hands over her, reaching down to grab her ass as she offers it up to the lion's approaching cock.";
+		if the player is felinebodied:
+			say "     As she's being mounted, you can feel the familiar changes running through your body as the cute girl helps to restore your matronly figure.  She mewls in lustful need as the lion's sizable cock is pushed into her petite body, her paws gripping your shoulders as they those of a strong lioness.  You can't help but mewl yourself as she leans forward slowly and wraps her lips around your nipple.  Shivers of delight run through you as she nurses for your feline milk even while getting pounded by the sexy male.  You purr softly to her, telling her how pleased you both are with her and how much you appreciate the food she's brought for you and for the pride.";
+		otherwise:
+			say "     As she's being mounted, you can feel a rush of excitement running through your body as the cute girl rubs against you.  She mewls in lustful need and grips your strong shoulders tightly as the lion's sizable cock is pushed into her petite body, wrapping her lips around your nipple.  Shivers of delight run through you as she nurses for your matronly milk even while getting pounded by the sexy male.  You purr softly to her, telling her how pleased you both are with her and how much you appreciate the food she's brought for you and for the pride.";
+		say "     Still with your paws on her ass, you can feel it sway with each increasingly strong thrust by the virile male stuffing her.  You lick your lips, longing for your chance to be on the receiving end of him again, but knowing you should wait until the girl's been suitably rewarded.  From the amount of her juices dripping down onto your thigh as the lion pounds her, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.  But she shows her longing for you as well, [if cunts of player > 0]sliding a paw between your legs to finger your pussy[otherwise if cocks of player > 0]sliding a paw between your legs to stroke your manhood[otherwise]nursing for as much milk as your [breast size desc of player] breasts will give.";
+		say "     Things grow more heated when the lion leans overtop of her and takes her by the nape of her neck, growling softly as his hips slam hard against her cute bottom.  She mewls and moans with each thrust, cumming with a fresh flow of juices from her stuffed cunny.  This is soon followed by the lion's climax, the virile scent of his fresh seed being added to the arousing aroma of feline sex in the air.  He keeps thrusting and cumming until her womb is full of his hot load and she's left quite satiated.  Unlike the other kitties though, once the sex is done, she gives you each several hugs and kisses before climbing out of the bed.  She plucks her cap off the coat rack, adjusts her feline ears through it, grabs her empty pack and rushes back out with a quick wave, cum still running down her furry thighs.";
+		increase carried of food by 1;
+		increase score by 5;
+		now leosupplies is 2;
+	otherwise:		[water]
+		say "to his plush chair.  You follow them, eager to show your thanks as well.";
+		say "     After Leonard's taken his seat, you and he lift the eager little feline into his lap.  She mewls happily and grinds her cute ass down onto his stiffening cock, sharing kisses with both of you";
+		if scalevalue of player >= 3 and ( cocks of player > 0 or cunts of player > 0):
+			say ".  Given her position, you could either choose to be on the receiving end (Y) of the giving side (N) of some oral fun with the hard-working kitty.  Which would you prefer?";
+			if the player consents:
+				say "[leosupplyoral1]";
+			otherwise:
+				say "[leosupplyoral2]";
+		otherwise:
+			say ".  Given your [if scalevalue of player < 3]smaller size[otherwise]present lack of gender[end if], you decide to give the hard-working kitty some added oral attention.";
+			say "[leosupplyoral2]";
+		say "     As you're all basking in the afterglow, the satiated feline gives you both several hugs and kisses, mewing happily about how much she loves you both.  After she's had a chance to recover, she pulls herself off Leonard's lap and hops back on the floor.  She straightens her cap, grabs her empty pack and rushes back out with a quick wave, cum still running down her furry thighs.";
+		increase carried of water bottle by 1;
+		increase score by 5;
+		now leosupplies is 1;
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	increase libido of player by 10;
+	if libido of player > 100, now libido of player is 100;
+	increase feline_meow by 1;
+	now lastdenevent is turns;
+
+
+to say leosupplyoral1:
+	say "     Feeling that you could use some relief of your own, you stand beside the plush chair and place your [if bodyname of player is listed in infections of Felinelist]paw[otherwise]hand[end if] on her head, guiding it to your crotch.  Leonard boosts her rear up, getting his cock into position before lowering her down onto it just as you press her muzzle [if cocks of player > 0]over your throbbing shaft[otherwise]to your juicy folds[end if].  She smiles at the opportunity to please you as well as her leonine master, licking lustfully at her matron's loins while she's getting fucked.";
+	if cocks of player > 0:
+		say "     As she rides in Leonard's lap, she works her muzzle over your throbbing manhood with every bounce.  Her paws knead at your [if cockname of player is listed in infections of Internallist]ass[otherwise]balls[end if] while her lips and tongue do their best to pleasure you even as she's getting fucked.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.  Seeing the lion's thick cock pumping in and out of that tight hole makes you lick your lips and long to feel him inside you again soon.";
+		say "     Things grow more heated as everyone's lusts grow higher and higher.  Having a grip on her head already, you rub her ears (which poke through slits cut into her cap) and tell her what a fine, eager kitty she is and how pleased you both are with her hard work.  She seems to blush a little in her ears and sucks down on you all the harder, soon pushing you over the edge.  You pump your [cum load size of player] load down her throat, feeding her your seed.  With the kitty cumming at the taste of it, the lion is set off soon afterwards, filling her sopping cunt with his leonine cum until her womb it stuffed full of his virile output.";
+	otherwise:
+		say "     As she rides in Leonard's lap, she laps her tongue over your wet pussy with every bounce.  Her paws knead at your ass while her lips and tongue do their best to pleasure you even as she's getting fucked.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.  Seeing the lion's thick cock pumping in and out of that tight hole makes you lick your lips and long to feel him inside you again soon.";
+		say "     Things grow more heated as everyone's lusts grow higher and higher.  Having a grip on her head already, you rub her ears (which poke through slits cut into her cap) and tell her what a fine, eager kitty she is and how pleased you both are with her hard work.  She seems to blush a little in her ears and dives her tongue into you while her whiskered muzzle teases your clit, soon pushing you over the edge.  You cry out in delight, your juices soaking her muzzle only to be lapped up by her agile tongue.  With the kitty cumming at the taste of your honeyed waters, the lion is set off soon afterwards, filling her sopping cunt with his leonine cum until her womb it stuffed full of his virile output.";
+
+
+to say leosupplyoral2:
+	say "     You kneal down between Leonard's legs, running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] along his thighs.  You nuzzle at the cute kitty's belly and down to her juicy pussy, giving it a tender kiss.  As Leonard boosts her up briefly, you raise his shaft into position.  As she's lowered back down onto the lion's rod, you continually lick at her spread lips and at the cock sinking between them.  It is a lovely sight that gets you quite turned on and makes you long for your next chance to be in her position.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.";
+	say "     Things grow more heated as everyone's lusts grow higher and higher, your tonguework getting both felines quite worked up.  The kitty mewls and moans, rubbing her paws over your head, urging you to keep going.  Certainly, the copious juices of her arousal, coupled with the musky flavour of Leonard's cock, seems delicious to you and you lap up as much as you can get.  As Leonard is fucking her, he rumbles to her about how she's been such a diligent, hard-working girl in collecting supplies and how pleased you both are with her efforts.  Rubbing one [if bodyname of player is listed in infections of Felinelist]paw[otherwise]hand[end if] at the lion's balls while the other teases her folds, you suck down hard on her clit.  This sends the girl over the edge with a yowl of ecstasy and a fresh rush of her juices.  Her orgasm is soon followed by the pulsing of Leonard's shaft as he cums as well, filling her womb to the point that trickles of his cum overflow around his cock for you to lick up.  Having gotten them both to climax and tasted their mingled up is quite arousing for you and [if cocks of player > 0 or cunts of player > 0]pushes you to cum as well[otherwise]sends a rush of pleasure through you[end if].";
 
 
 Section 1 - Park

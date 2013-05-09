@@ -578,7 +578,7 @@ to say bunker desc:
 
 
 to say abbey desc:
-	say "     This converted abbey has been made into a small library and the architecture and design shows its origins despite the renovations made.  The simple columns, the wall sconces and several of the original features have been kept to give the library some 'character'.  The central room houses the stacks and a few desks, with side rooms set aside for reading and a couple of computers.  The computers would be more useful if there was power in the building.  You're still not entirely sure what knocked them out, but they're very out now.  You came here because you remembered there was a disused bunker in the basement.  It's kept you alive, so far.";
+	say "     This converted abbey has been made into a small library and the architecture and design shows its origins despite the renovations made.  The simple columns, the wall sconces and several of the original features have been kept to give the library some 'character'.  The central room houses the stacks and a few desks, with side rooms set aside for reading and a couple of computers[if computeron > 0].  Now that the building has power, the overhead lights flicker, but remain on.  The computers now have power as well and may be of some use eventually[otherwise].  The computers would be more useful if there was power in the building.  You're still not entirely sure what knocked them out, but they're very out now[end if].  You came here because you remembered there was a disused bunker in the basement.  It's kept you alive, so far.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if hp of Fang < 3:
