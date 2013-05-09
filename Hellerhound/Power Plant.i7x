@@ -119,6 +119,7 @@ carry out activating:
 		say "The power light for the library is still off.";
 	if findwires is 2 and fixedgens is 2:
 		say "The power light for the library is on! Yay! Maybe the computers work?";
+		activatecomputers;
 	otherwise if fixedgens is 0:
 		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
 	otherwise if fixedgens is 1:
@@ -155,7 +156,7 @@ carry out towerfixing:
 			say "The blinking light flashes a few times, then turns green, indicating power is up and running. Hooray!";
 			increase score by 200;
 			now findwires is 2;
-		activatecomputers;
+			activatecomputers;
 
 computeron is a number that varies.
 
@@ -178,13 +179,13 @@ The success of rudimentary passcode is "The password field vanishes, and an erro
 
 to activatecomputers:
 	now computeron is 1;
-	now the description of Grey Abbey Library is "Books, and a computer or two. The power on in the building. The overhead lights flicker, but are on. You're still not entirely sure what knocked the power out, but it's on now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.";
+[	now the description of Grey Abbey Library is "Books, and a computer or two. The power on in the building. The overhead lights flicker, but are on. You're still not entirely sure what knocked the power out, but it's on now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.";	]
 
 	
 
-
+[
 use MAX_SYMBOLS of 22000.
-
+]
 
 
 
