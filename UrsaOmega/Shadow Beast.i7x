@@ -41,6 +41,7 @@ to say sbdoggystyle:
 ShadowBeastEventState is a number that varies.
 	
 to say shadowbeastdesc:
+	increase mondodgebonus by 5;
 	if ShadowBeastEventState is 0:
 		say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws drawn!";
 	otherwise if ShadowBeastEventState is 1: [Hunted Survivor Event]
@@ -75,7 +76,7 @@ When Play begins:
 	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with";  [ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
-	now dex entry is 20;
+	now dex entry is 18;
 	now sta entry is 12;
 	now per entry is 15;
 	now int entry is 8;
