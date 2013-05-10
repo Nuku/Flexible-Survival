@@ -118,6 +118,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
 	if ducky swimring is equipped:
 		now duckyactive is true;
+	if mindshield helmet is equipped:
+		increase plmindbonus by 3;
 	now fightoutcome is 100;
 	say "You run into a [name entry].[line break][desc entry][line break]";
 
