@@ -63,7 +63,7 @@ to say SugarGliderdesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	say "     Before you is a peculiar looking rodent like creature, with large dark eyes, swiveling ears and a thick tail almost as long as she is tall. Her brightly colored fur is primarily pink, with a light blue belly and chest, as well as a blue stripe from the tip of her nose down her back and tail. Even from a distance you can smell the sugary sweetness of her cotton candy like hide.";
+	say "     Before you is a peculiar looking rodent-like creature, with large dark eyes, swiveling ears and a thick tail almost as long as she is tall. Her brightly colored fur is primarily pink, with a light blue belly and chest, as well as a blue stripe from the tip of her nose down her back and tail. Even from a distance you can smell the sugary sweetness of her cotton-candy-like hide.";
 	say "     Giggling happily as she spots you, she [one of]pulls the lollipop she's sucking on from her mouth and[or]pulls the jawbreaker shes sucking on from her mouth and[or]blows a large bubble with the gum she's chewing on then[at random] tucks it into the pouch on her belly before bounding towards you. Her large breasts bounce distractingly as she runs, and her open arms draw attention the large wing like flaps of flesh between her arms and legs, stretching like taffy as she rushes towards you. It appears you're facing a literal sugar glider.";
 
 
@@ -101,7 +101,7 @@ When Play begins:
 	now hp entry is 31;			[ The monster's starting hit points. ]
 	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Midway";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 2;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
