@@ -1,5 +1,5 @@
-﻿Version 1 of Francois by AGentlemanCalledB begins here.
-[Version 1.4 - M/M oral 2 (player giving)]
+Version 2 of Francois by AGentlemanCalledB begins here.
+[Version 2.1 - More baking items]
 "Adds a Male mutt NPC named François to the Flexible Survival game"
 
 Section 1 - Event
@@ -381,7 +381,7 @@ carry out françoisbaking:
 	let françoisbaked be 0;
 	If françois is not visible:
 		say "You should see François for that.";
-	otherwise if hp of  françois is 0:
+	otherwise if hp of françois is 0:
 		say "     Perhaps you should talk to the friendly mutt first?";
 	otherwise if Francois_Undiscovered is not empty:
 		say "     Emptying out the contents of your bag on the counter, François looks each over individually, smelling or even tasting many of them as he considers their culinary potential.";
@@ -518,7 +518,7 @@ to say FrançoisBakingMenu:
 						say "     François takes the pink gel and distilled milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of creamy pastries, offering one to you as he places the rest into one of his displays.";
 						decrease carried of pink gel by 1;
 						decrease carried of distilled milk by 1;
-						increase carried of  Crème Abondante by 1;
+						increase carried of Crème Abondante by 1;
 					otherwise:
 						say "You do not have the required ingredients. pink gel and distilled milk.";
 				otherwise if title entry is "Bleuettonne":
@@ -527,7 +527,7 @@ to say FrançoisBakingMenu:
 						say "     François takes the blue gel and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of chocolates, offering one to you as he places the rest into one of his displays.";
 						decrease carried of blue gel by 1;
 						decrease carried of chocolate milk by 1;
-						increase carried of  Bleuettonne by 1;
+						increase carried of Bleuettonne by 1;
 					otherwise:
 						say "You do not have the required ingredients. blue gel and chocolate milk.";
 				otherwise if title entry is "Boysenberry Blossom":
@@ -536,7 +536,7 @@ to say FrançoisBakingMenu:
 						say "	 François takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of fruit filled pastries, offering one to you as he places the rest into one of his displays.";
 						decrease carried of blue gel by 1;
 						decrease carried of Awesome Fruit by 1;
-						increase carried of  Boysenberry Blossom by 1;
+						increase carried of Boysenberry Blossom by 1;
 					otherwise:
 						say "You do not have the required ingredients. blue gel and Awesomer Fruit.";
 				otherwise if title entry is "Muffin muffin":
@@ -545,7 +545,7 @@ to say FrançoisBakingMenu:
 						say "	 François takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
 						decrease carried of pink gel by 1;
 						decrease carried of Awesomer Fruit by 1;
-						increase carried of  Muffin muffin by 1;
+						increase carried of Muffin muffin by 1;
 					otherwise:
 						say "You do not have the required ingredients. pink gel and Awesome Fruit.";
 				otherwise if title entry is "Lollicock":
@@ -554,7 +554,7 @@ to say FrançoisBakingMenu:
 						say "	 François takes the honeycomb and Musky Cock Flower from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a small tray of red candy cocks, offering one to you as he places the rest into one of his displays.";
 						decrease carried of honeycomb by 1;
 						decrease carried of Musky Cock Flower by 1;
-						increase carried of  Lollicock by 1;
+						increase carried of Lollicock by 1;
 					otherwise:
 						say "You do not have the required ingredients. honeycomb and Musky Cock Flower.";
 				otherwise if title entry is "dragon moelleux":
@@ -564,7 +564,7 @@ to say FrançoisBakingMenu:
 						decrease carried of ash dragon heart by 1;
 						decrease carried of glowing ember by 1;
 						decrease carried of chocolate milk by 1;
-						increase carried of  dragon moelleux by 1;
+						increase carried of dragon moelleux by 1;
 					otherwise:
 						say "You do not have the required ingredients. ash dragon heart, glowing ember and chocolate milk.";
 				otherwise if title entry is "fizz-aux-pommes":
@@ -574,7 +574,7 @@ to say FrançoisBakingMenu:
 						decrease carried of pony cider by 1;
 						decrease carried of soda by 1;
 						decrease carried of crushed candies by 1;
-						increase carried of  fizz-aux-pommes by 1;
+						increase carried of fizz-aux-pommes by 1;
 					otherwise:
 						say "You do not have the required ingredients. pony cider, soda and crushed candies.";
 				otherwise if title entry is "vin-coeur":
@@ -584,7 +584,7 @@ to say FrançoisBakingMenu:
 						decrease carried of wyvern goop by 1;
 						decrease carried of soda by 1;
 						decrease carried of Satyr wine by 1;
-						increase carried of  vin-coeur by 1;
+						increase carried of vin-coeur by 1;
 					otherwise:
 						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
 				otherwise if title entry is "Abort":
@@ -758,9 +758,9 @@ name	desc	weight	object
 "Crème Abondante"	"A delicate pink pastry topped with a breast shaped mound of creme, complete with a small sugary nipple."	1	Crème Abondante
 "Muffin Muffin"	"A soft pink muffin with a gooey fruit center."	1	Muffin Muffin
 "Lollicock"	"A big red hard candy shaped like a canine cock."	1	Lollicock
-"dragon moelleux"	"A small chocolate cake, it seems to stay perpetually warm and glows ever so slightly from the small cracks in it's surface."	1	dragon moelleux
-"fizz-aux-pommes"	"A fizzing, amber colored beverege."	1	fizz-aux-pommes
-"vin-coeur"	"A slice of cake with a rich wine and peppermint glaze and filling"	1	vin-coeur
+"dragon moelleux"	"A small chocolate cake, it seems to stay perpetually warm and glows ever so slightly from the small cracks in its surface."	1	dragon moelleux
+"fizz-aux-pommes"	"A fizzing, amber colored beverage."	1	fizz-aux-pommes
+"vin-coeur"	"A slice of cake with a rich wine and peppermint glaze and filling."	1	vin-coeur
 ["gingerbread"	"Tempdesc"	1	gingerbread
 "cheesecake"	"TempDesc"	1	cheesecake]
 
@@ -771,7 +771,7 @@ the scent of Boysenberry Blossom is "The small pastry has a wonderful fruity sme
 to say Boysenberry Blossom Use:
 	say "Biting into the Boysenberry Blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
 	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
-		say " you savor the fruity pastry, it tastes great but gives you a belly ache, clearly your body doesn't agree with something about the treat.";
+		say " you savor the fruity pastry.  It tastes great but gives you a belly ache, clearly your body doesn't agree with something about the treat.";
 	otherwise if cocks of player is 0:
 		now cocks of player is 1;
 		now cock length of player is 5;
@@ -848,7 +848,7 @@ to say Muffin Muffin Use:
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms.";
 	otherwise:
 		increase cunt length of player by 1;
-		if remainder after dividing cunt length of player by  3 is 0:
+		if remainder after dividing cunt length of player by 3 is 0:
 			increase cunt width of player by 1;
 		Follow the cunt descr rule;
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as it grows, becoming [descr].";
@@ -876,12 +876,12 @@ to say Lollicock Use:
 			now LollicockCheck is 0;
 		if LollicockCheck is 1:
 			if cocks of player is 0:
-				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place .";
+				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
 				now cocks of player is 1;
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "red hard candy canine";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
