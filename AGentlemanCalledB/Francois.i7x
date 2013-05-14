@@ -718,7 +718,7 @@ to say LollicockGet:
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "red hard candy canine";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
@@ -885,7 +885,7 @@ to say Lollicock Use:
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "red hard candy canine";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "you are filled with a pleasant warmth, a subtle afterglow filling your body after the tasty treat.";
 	decrease hunger of player by 5;
