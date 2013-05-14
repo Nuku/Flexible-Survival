@@ -317,10 +317,11 @@ Larissa has a list of text called possible_forms_hellspawn.		[Infections contain
 Larissa has a list of text called possible_forms_humorous.		[Infections contained within the 'humorous' flag]
 
 when play begins:
-	add { "panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth" } to possible_forms_furry of Larissa;
-	add { "panda", "Teddy Bear", "Latex Mistress" } to possible_forms_girl of Larissa;
-	add { "Alpha Husky", "German Shepherd", "Naga" } to possible_forms_guy of Larissa;
-	add { "Tigress Hooker", "Mammoth" } to possible_forms_girl of Larissa;
+	add { "panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "red kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
+	add { "panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl" } to possible_forms_girl of Larissa;
+	add { "Alpha Husky", "German Shepherd", "Naga", "Bald Eagle" } to possible_forms_guy of Larissa;
+	add { "Tigress Hooker", "Mammoth", "Panther Taur", "Dark Elf" } to possible_forms_girl of Larissa;
+	add { "Succubus" } to possible_forms_hellspawn of Larissa;
 
 this is the larissa_tfoption rule:
 	if furry is not banned, add possible_forms_furry of Larissa to possible_forms of Larissa, if absent;
@@ -389,6 +390,18 @@ carry out Larissatfing:
 			say "[Larissaisnow-naga]";
 		otherwise if entry calcnumber in possible_forms of Larissa is "Mammoth":
 			say "[Larissaisnow-mammoth]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "red kangaroo":
+			say "[Larissaisnow-redkangaroo]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Panther Taur":
+			say "[Larissaisnow-panthertaur]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Bald Eagle":
+			say "[Larissaisnow-baldeagle]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Dark Elf":
+			say "[Larissaisnow-darkelf]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Succubus":
+			say "[Larissaisnow-succubus]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Goo Girl":
+			say "[Larissaisnow-googirl]";
 	otherwise if calcnumber is 0:
 		say "You decide against trying to transform Larissa at this time.";
 
@@ -829,6 +842,248 @@ to say Larissaisnow-mammoth:
 			now tftext of Larissa is "becomes quite large and stocky, strong enough to carry [possadj of larissa] swelling endowments";
 			now generallook of Larissa is "[one of]impressive[or]powerful[or]imposing[or]primitive[or]mighty[or]massive[at random]";
 			now bodycat of Larissa is 0;
+			now hp of Larissa is 4;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-redkangaroo:
+	let goahead be 1;
+	if infname of Larissa is "red kangaroo":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "red kangaroo" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "red kangaroo";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "red kangaroo";
+			now form of Larissa is "kangaroo";
+			now infname of Larissa is "red kangaroo";
+			now handform of Larissa is "small paw";
+			now footform of Larissa is "elongated foot";
+			now skin of Larissa is "russet fur";
+			now tail of Larissa is "thick, meaty tail";
+			now tailed of Larissa is true;
+			now winged of Larissa is false;
+			now face of Larissa is "[']roo";
+			now mouth of Larissa is "muzzle";
+			now body of Larissa is "a wide-hipped kangaroo";
+			now tftext of Larissa is "gains wide, muscled hips and legs along with a marsupial pouch";
+			now generallook of Larissa is "[one of]sexy[or]impressive[or]bouncy[at random]";
+			now bodycat of Larissa is 0;
+			now hp of Larissa is 4;
+			now cocks of Larissa is 0;
+			now cock length of Larissa is 0;
+			now cock width of Larissa is 0;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-panthertaur:
+	let goahead be 1;
+	if infname of Larissa is "Panther Taur":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Panther Taur" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Panther Taur";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Panther Taur";
+			now form of Larissa is "panther";
+			now infname of Larissa is "Panther Taur";
+			now handform of Larissa is "clawed paw";
+			now footform of Larissa is "padded paw";
+			now skin of Larissa is "midnight black fur";
+			now tail of Larissa is "feline tail";
+			now tailed of Larissa is true;
+			now winged of Larissa is false;
+			now face of Larissa is "feline";
+			now mouth of Larissa is "muzzle";
+			now body of Larissa is "a tauric panther";
+			now tftext of Larissa is "gains four feline paws to support [possadj of larissa] tauric body and impressive endowments";
+			now generallook of Larissa is "[one of]alluring[or]imposing[or]powerful[or]graceful[or]sexy[at random]";
+			now bodycat of Larissa is 2;
+			now hp of Larissa is 4;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-baldeagle:
+	let goahead be 1;
+	if infname of Larissa is "Bald Eagle":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Bald Eagle" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Bald Eagle";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Bald Eagle";
+			now form of Larissa is "eagle";
+			now infname of Larissa is "Bald Eagle";
+			now handform of Larissa is "small talon";
+			now footform of Larissa is "sharp talon";
+			now skin of Larissa is "brown feathers";
+			now tail of Larissa is "feathered tail";
+			now tailed of Larissa is true;
+			now winged of Larissa is true;
+			now face of Larissa is "avian";
+			now mouth of Larissa is "beak";
+			now body of Larissa is "a humanoid eagle";
+			now tftext of Larissa is "becomes partially avian with winged arms and taloned feat";
+			now generallook of Larissa is "[one of]powerful[or]impressive[or]noble[or]graceful[at random]";
+			now bodycat of Larissa is 0;
+			now hp of Larissa is 4;
+			now cunts of Larissa is 0;
+			now cunt length of Larissa is 0;
+			now cunt width of Larissa is 0;
+			now breasts of Larissa is 0;
+			now breast size of Larissa is 0;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-darkelf:
+	let goahead be 1;
+	if infname of Larissa is "Dark Elf":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Dark Elf" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Dark Elf";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Dark Elf";
+			now form of Larissa is "elf";
+			now infname of Larissa is "Dark Elf";
+			now handform of Larissa is "nimble hand";
+			now footform of Larissa is "petite foot";
+			now skin of Larissa is "black skin";
+			now tail of Larissa is "";
+			now tailed of Larissa is false;
+			now winged of Larissa is false;
+			now face of Larissa is "elfin";
+			now mouth of Larissa is "mouth";
+			now body of Larissa is "a drow elf";
+			now tftext of Larissa is "becomes human-like, but shorter, more slender and sexier";
+			now generallook of Larissa is "[one of]sexy[or]alluring[or]exotic[or]sultry[or]hot[at random]";
+			now bodycat of Larissa is 0;
+			now hp of Larissa is 4;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-succubus:
+	let goahead be 1;
+	if infname of Larissa is "Succubus":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Succubus" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Succubus";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Succubus";
+			now form of Larissa is "succubus";
+			now infname of Larissa is "Succubus";
+			now handform of Larissa is "long-nailed hand";
+			now footform of Larissa is "dainty foot";
+			now skin of Larissa is "flawless skin";
+			now tail of Larissa is "";
+			now tailed of Larissa is false;
+			now winged of Larissa is true;
+			now face of Larissa is "horned human";
+			now mouth of Larissa is "mouth";
+			now body of Larissa is "a tempting succubus";
+			now tftext of Larissa is "grows a pair of bat-like wings as [subjpro of Larissa] becomes a sexier version of [possadj of Larissa] human self";
+			now generallook of Larissa is "[one of]tempting[or]sultry[or]naughty[or]sexy[at random]";
+			now bodycat of Larissa is 0;
+			now hp of Larissa is 4;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
+
+
+to say Larissaisnow-googirl:
+	let goahead be 1;
+	if infname of Larissa is "Goo Girl":
+		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Succubus" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Goo Girl";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Goo Girl";
+			now form of Larissa is "slime girl";
+			now infname of Larissa is "Goo Girl";
+			now handform of Larissa is "flexible hand";
+			now footform of Larissa is "column of goo";
+			now skin of Larissa is "transluscent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
+			now tail of Larissa is "";
+			now tailed of Larissa is false;
+			now winged of Larissa is false;
+			now face of Larissa is "smiling girly";
+			now mouth of Larissa is "mouth";
+			now body of Larissa is "a girl made of colourful goo";
+			now tftext of Larissa is "loses her legs as they fuse into a shifting column of slime";
+			now generallook of Larissa is "[one of]gooey[or]cute[or]jiggly[or]pretty[or]sexy[at random]";
+			now bodycat of Larissa is 3;
 			now hp of Larissa is 4;
 			follow the Larissa breastdesc rule;
 			follow the Larissa cockdesc rule;
