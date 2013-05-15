@@ -230,11 +230,11 @@ to say françoissexmenu:
 	now title entry is "Mount him";
 	now sortorder entry is 1;
 	now description entry is "Ask François to bend over for you.";
-[	otherwise if libido of François >= 4:
+	otherwise if libido of François >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Get mounted";
 		now sortorder entry is 2;
-		now description entry is "Give François a turn riding you.";	]
+		now description entry is "Give François a turn riding you.";
 	choose a blank row in table of fucking options;
 	now title entry is "Get a blow job";
 	now sortorder entry is 3;
@@ -335,8 +335,17 @@ to say françoissex3:		[player performs oral]
 	if libido of François is 3, increase libido of François by 1;
 
 
-to say françoissex4:		[player performs oral]
-	say "...";
+to say françoissex4:		[player receives anal]
+	if libido of François is 4:
+		say "     Eager to give the your French lover a turn mounting you, you slide your hand under his apron and start groping him while leaning in for a kiss.  His canine tongue slips into your mouth, sliding across yours as you get his manhood to rise fully from its sheath.  Once he's good and ready, you turn around and bend over, leaning on one of the tables as you raise your ass invitingly.  With your tight hole on display, he can't help up lick his lips as his cock twitches under his apron.  He places his paws on your rear and nuzzles between your cheeks, letting that slippery tongue of his glide across your flesh and slather across your proffered anus, getting you slick and ready[if anallevel is 3].  The hybrid's tongue even worms its way into you, licking into your hole to prepare you fully for mounting[end if].";
+		say "     After some very enjoyable licking, he decides you're ready and pulls his muzzle back, moving in to mount you.  As his hybrid cock moves into position, he pauses for a moment, as if unsure about mounting you with his animalistic penis.  Knowing what you want and being familiar with the strange cocks out there these days, you have no such misgivings and push your hips back, sighing in pleasure as his glans pushes into your anus.  His moment of uncertainty past, the mongrel pants in pleasure at the feel of your ass around his cock and glides a few more inches into you.  He mounts you slowly, running his paws over your [bodydesc of player] body, making his first time topping you a slow, sensual experience.  With his shaft pulsing inside you, he nuzzles at your neck and licks you, sounds like a mix between a rumble and a purr coming from him as he starts thrusting.";
+	otherwise:
+		say "     Eager to have the mongrel's hybrid penis inside you again, you slip a hand under his apron to get good and hard while kissing him.  As your tongue dances with his in your mouth, you pump at his feline-shaped shaft, coaxing it fully from its sheath and getting it dripping with precum.  With your lover ready to ride, you turn around and bend over one of the tables, offering your ass to him again.  He licks his muzzle at the sight of it and dives in to lick along your crack.  He slathers over your anus, tongue working over[if anallevel is 3] and into[end if] that tight ring of sensitive flesh.  As eager as he is, he takes his time getting you ready, clearly enjoying this bit of preparation as well.";
+		say "     Upon completing the rimming to his satisfaction (and certainly yours as well), he pulls his muzzle back and moves in to mount you.  With his hybrid cock in position, he teases it lightly against your hole and then starts easing his hard rod into you.  The feel of his unusual manhood is very enjoyable, the feline shape plunging into you and the growing, canine knot knocking at your anus send shivers of pleasure through you.  His animalistic cock rubs and presses at your prostate with every thrust of your foreign lover.  He starts slowly, letting himself sink into you gradually as your rectum adjusts to accommodate the enlarged shaft inside you.  His paws glide over you, running over your  [cock size desc of player] [cock of player] shaft[smn] and across your [bodydesc of player] body, making for a very sensual experience as his pace quickens.";
+	say "     You rock your hips and squeeze your hole down around him as he fucks you with increasing zeal.  His sensual touches and caresses don't stop even as his pace builds until his cock is fucking you like an animal even if his paws are those of a tender lover.  You hang on tight and moan in pleasure, loving the mix of sensuality and raw sex that your experienced lover's body can provide.  His feathered fur brushes lightly across your back and his furry balls slap against your thighs.  Feeling his knot swelling up, you do your best to relax and press your hips back, needing it inside you by this point, lusting to be tied to the sexy mongrel, an action his mutated form is certainly eager to complete as well.";
+	say "     'Ah, que je te veux!   Le noeud est... presque... là...' he pants, grinding the meaty base of his cock against your tight ring.  Your hole stretches further, opening a little more with each thrust.  François holds your hip firmly with one paw while the other furiously pumps at your [cock of player] manhood, not neglecting his lover even as he tries hard to finish the tie.  As your anal ring complies and allows the growing knot to pop inside, you both groan in lustful pleasure.  His knot swells further, locking his shaft inside you.  'Ahh... je vais te remplir, mon ami.  Je jouis.  Je jouis!' he cries out in French moments before he cums hard, pumping his hot load into your bowels[if libido of François is 4] for the first time[end if].  This pushes you over the edge and your rod pulses in his paw, spraying your [cum load size of player] load across the floor.  The horny hybrid keeps thrusting even as he cums, stimulating your prostate to keep your orgasm going as well until eventually you both are drained and sag down atop the table, spent and sated.";
+	say "     As you're waiting for his knot to go down, François snuggles you, running his paws along your [bodytype of player] body while whispering sweet nothings in a mix of English and French to you.  Between these, he often licks and nibbles your ears or kisses your neck and shoulders, enjoying the sensual closeness with you after your lovemaking.  It is some time before the hybrid's knot goes down and his cock can slip free.  Only a little of the milky white semen leaks out, much of his cum having been absorbed into you during the interim while tied.";
+
 
 Section 4 - Baking
 
