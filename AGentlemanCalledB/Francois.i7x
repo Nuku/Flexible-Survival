@@ -230,7 +230,7 @@ to say françoissexmenu:
 	now title entry is "Mount him";
 	now sortorder entry is 1;
 	now description entry is "Ask François to bend over for you.";
-	otherwise if libido of François >= 4:
+	if libido of François > 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Get mounted";
 		now sortorder entry is 2;
