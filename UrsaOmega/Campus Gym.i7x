@@ -183,9 +183,9 @@ to say strtraining:
 to say dextraining:
 	say "     You hand over the freecreds and Randy leads you over to an area with padded yoga mats and mirrors.  He positions you on one mat, then takes his position facing you. He leads you through a number of different motions, beginning with some simple warmups and moving into increasingly complex movements.[if dexterity of player > 25]      You follow Randy's movements easily, the two of you moving in perfect synch. You handle even the most difficult positions effortlessly, your body moving like flowing water.[otherwise if dexterity of player > 18]      You follow along just fine, but some of the more complex movements make you stumble. Randy helps you through them, and soon you're moving along with him easily.[otherwise if dexterity of player > 13]      You struggle to follow even the most basic movements, your inflexible and uncoordinated body rebelling against you. Thankfully, Randy is patient with you, helping you through some simple motions.[otherwise]     You trip over yourself just trying to get into the first position. Thankfully, Randy is patient with you, and you pick up the techniques quickly.[end if]";
 	decrease freecred by workoutprice;
-	if strength of player < 18:
+	if dexterity of player < 18:
 		say "     After the session, you feel much more flexible than when you started... Not to mention much more relaxed.";
-		say "[bold type]Your strength has increased by 1![roman type]";
+		say "[bold type]Your dexterity has increased by 1![roman type]";
 		increase dexterity of player by 1;
 		increase workoutprice by 35;
 		follow the turnpass rule;
