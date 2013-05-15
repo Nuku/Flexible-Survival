@@ -13,7 +13,7 @@ use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "
 use MAX_NUM_STATIC_STRINGS of 67500.
 use ALLOC_CHUNK_SIZE of 150000.
 use SYMBOLS_CHUNK_SIZE of 15000.
-use MAX_OBJECTS of 1100.
+use MAX_OBJECTS of 1150.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
 Use MAX_ZCODE_SIZE of 1000000.
