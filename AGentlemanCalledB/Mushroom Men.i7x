@@ -24,7 +24,7 @@ to say beattheMushroomMen:
 
 to say MushroomMendesc:
 	now SporeCloud is 0;
-	say "     while walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of][']Hey toots!['][or][']Hey hot stuff!['][or][']Hey cutie!['][or]a sharp wolf whistle[at random] [one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree.Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
+	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of][']Hey toots!['][or][']Hey hot stuff!['][or][']Hey cutie!['][or]a sharp wolf whistle[at random] [one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
 	say "     The mushroom men come in significant variety, with several distinct shapes and colors, the most concerning among those being the group of strangely phallic looking ones. While most of them are roughly a foot tall there are a coupler larger fungi among them, peaking at nearly two feet. While lacking any visible gender they all seem to carry a distinctly male presence, they begin shouting and cheering crudely as they move towards you.";
 
 to say MushroomMenFaceTF:
