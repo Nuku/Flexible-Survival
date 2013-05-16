@@ -1193,11 +1193,11 @@ To reciting2:
 						remove "Top Dog" from feats of player, if present;
 						remove "Cuckold" from feats of player, if present;
 					otherwise if level of Alexandra is 1:
-						remove "Top Dog" from feats of player, if present;
-						add "Cuckold" to feats of player, if absent;
-					otherwise if level of Alexandra is 2:
-						add "Top Dog" to feats of player, if absent;
 						remove "Cuckold" from feats of player, if present;
+						add "Top Dog" to feats of player, if absent;
+					otherwise if level of Alexandra is 2:
+						add "Cuckold" to feats of player, if absent;
+						remove "Top Dog" from feats of player, if present;
 			-- 127:   [Thomas HP]
 				if the player's command matches "[number]":
 					now hp of Thomas is the number understood;
@@ -1255,6 +1255,7 @@ To reciting2:
 							now Wolfman Lair is known;
 						if hp of Septus is 7 or hp of Septus is 99:
 							setmonster "Football Wolfman";
+							choose row monster from the table of random critters;
 							now area entry is "nowhere";
 			-- 133:   [Awesome Xerxes]
 				if the player's command matches "[number]":
@@ -1284,6 +1285,7 @@ To reciting2:
 							now hp of Icarus is 0;
 						otherwise:
 							setmonster "Blue Chaffinch";
+							choose row monster from the table of random critters;
 							now area entry is "nowhere";
 							now Icarus is in Grey Abbey Library;
 					if hp of Icarus is 5 or hp of Icarus is 6:
@@ -2538,11 +2540,11 @@ Carry out reciting:
 						remove "Top Dog" from feats of player, if present;
 						remove "Cuckold" from feats of player, if present;
 					otherwise if level of Alexandra is 1:
-						remove "Top Dog" from feats of player, if present;
-						add "Cuckold" to feats of player, if absent;
-					otherwise if level of Alexandra is 2:
-						add "Top Dog" to feats of player, if absent;
 						remove "Cuckold" from feats of player, if present;
+						add "Top Dog" to feats of player, if absent;
+					otherwise if level of Alexandra is 2:
+						add "Cuckold" to feats of player, if absent;
+						remove "Top Dog" from feats of player, if present;
 			-- 127:   [Thomas HP]
 				if the player's command matches "[number]":
 					now hp of Thomas is the number understood;
@@ -2599,6 +2601,7 @@ Carry out reciting:
 							now Wolfman Lair is known;
 						if hp of Septus is 7 or hp of Septus is 99:
 							setmonster "Football Wolfman";
+							choose row monster from the table of random critters;
 							now area entry is "nowhere";
 			-- 133:   [Awesome Xerxes]
 				if the player's command matches "[number]":
@@ -2628,6 +2631,7 @@ Carry out reciting:
 							now hp of Icarus is 0;
 						otherwise:
 							setmonster "Blue Chaffinch";
+							choose row monster from the table of random critters;
 							now area entry is "nowhere";
 							now Icarus is in Grey Abbey Library;
 					if hp of Icarus is 5 or hp of Icarus is 6:
