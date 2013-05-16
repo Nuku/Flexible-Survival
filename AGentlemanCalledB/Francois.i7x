@@ -200,7 +200,7 @@ Instead of conversing the François:
 instead of fucking the François:
 	if libido of François is 0:
 		say "     Perhaps you should talk to the friendly mutt first?";
-	if cocks of player is 0 and cunts of player is 0:
+	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	otherwise if cocks of player is 0:
 		say "     'Ah désolé, mon amie.  I have never had much interest in what you English call the fairer sex.  Ah, but if only you were a man...' he sighs wistfully.";
