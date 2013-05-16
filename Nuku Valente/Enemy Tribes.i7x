@@ -114,7 +114,6 @@ An everyturn rule(This is the Enemy Expanding rule):
 		increase x by perception of enemy / 5;
 		increase x by foragers;
 		if x > 80:
-			say "Scouts report that an enemy tribe is conquering wild territory!";
 			let enemies be a random number from 1 to 3;
 			increase enemies by a random number from 1 to 3;
 			increase enemies by a random number from 1 to 3;
@@ -126,8 +125,12 @@ An everyturn rule(This is the Enemy Expanding rule):
 			let enum be enemies;
 			now enemies is ( enemies * 100 ) / stamina of enemy;
 			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			if estimate is greater than population of enemy:
+				continue the action;
+			otherwise:
+				say "Scouts report that an enemy tribe is conquering wild territory, ";
 			if enemies is 0:
-				say " You manage to claim it and defeat the native mutants without losing a single soul. Hurray!";
+				say " They manage to claim it and defeat the native mutants without losing a single soul.";
 			otherwise:
 				if enemies > 0:
 					if enemies > population of enemy:
@@ -141,6 +144,50 @@ An everyturn rule(This is the Enemy Expanding rule):
 						if population of enemy is less than 5, now population of enemy is 5;
 			increase territory of enemy by 1;
 			decrease openland by 1;
+
+
+An everyturn rule(This is the Enemy Attacking rule):
+	repeat with enemy running through active species:
+		if population of enemy is 0, next;
+		if openland > 0, next;
+		let foragers be population of enemy;
+		let x be a random number from 80 to 120;
+		increase x by perception of enemy / 5;
+		increase x by foragers;
+		if x > 80:
+			say "Scouts report that an enemy tribe is approaching!";
+			let enemies be workers of warrior;
+			if turns < 100:
+				now foragers is ( foragers * 120 ) / 100;
+			if turns < 50:
+				now foragers is ( foragers * 60 ) / 100;
+			if foragers < 1, now foragers is 1;
+			let enum be enemies;
+			now enemies is ( enemies * might of tribe of player   ) / stamina of enemy;
+			let backlash be ( foragers * might of enemy   ) / stamina of tribe of player;
+			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			if enemies is 0:
+				say " They manage to claim land and defeat us without losing a single soul.";
+			otherwise:
+				if enemies > backlash:
+					say "They fail to conquer any territory, !";
+					decrease population of enemy by enemies;
+					if population of enemy is less than 5, now population of enemy is 5;
+					next;
+				otherwise:
+					say " They claim some land in a bloody conflict!";
+					decrease population of enemy by enemies;
+					if population of enemy is less than 5, now population of enemy is 5;
+			if backlash > 0:
+				say "We lose [backlash] people.";
+				decrease population of tribe of player by backlash;
+				decrease workers of warrior by backlash;
+				if workers of warrior < 0:
+					let overflow be 0 - workers of warrior;
+					now workers of warrior is 0;
+					say "[overflow] of them were non combatants!";
+			increase territory of enemy by 1;
+			decrease territory of tribe of player by 1;
 
 
 		
