@@ -1,7 +1,10 @@
 Version 2 of Spartan by Wahn begins here.
-[Version 2 - Further detailed endings]
+[Version 2.1 - Flags, Capitalization fix]
 
 "Adds a Male Spartan to Flexible Survivals Wandering Monsters table, with impreg chance"
+
+when play begins:
+	add { "Spartan" } to infections of guy;
 
 Section 1 - Monster Responses
 
