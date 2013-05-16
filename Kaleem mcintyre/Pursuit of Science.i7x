@@ -90,7 +90,7 @@ to say omioquest2:
 			now gatherwolfcum is 1;
 	if gatherdemonseed is 0:	
 		if carried of demon seed >= 4:
-			decrease carried of wolf cum by 4;
+			decrease carried of demon seed by 4;
 			say "I appreciate all of your efforts in working with me on this. I-I honestly didn't think you would go through such an endeavor for me.' Omio seems to choke up somewhat and from what you can see the red head is sincere in her sorrow. 'Oh well, thank you for your troubles.' Omio walks over to hug you and then place a gentle peck on your [facename of player] head.";
 			now gatherdemonseed is 1;
 	if gatherdogmilk is 0:
