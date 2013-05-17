@@ -1174,7 +1174,6 @@ To reciting2:
 						now hp of François is 0;
 					if hp of François is 0:
 						now Bone-Appetit is unknown;
-						now libido of François is 0;
 					otherwise:
 						now Gourmet Treats is resolved;
 						now Bone-Appetit is known;
