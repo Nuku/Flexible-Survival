@@ -9,8 +9,7 @@ Master's Office is a room. It is fasttravel. It is private.
 The description of Master's Office is "This large and rather spacious room was once the 'office' of the owner of the Stables, however now it is your new room and the centerpiece of your new kingdom.  The room itself was obviously once a suite for VIPs and dignitaries and is quite well furnished, though the previous Stablemaster obviously did plenty of redecorating during his time here. There are now several large mattresses and piles of cushions around the area, as well as a number of rather nice paintings and hangings adorning the walls, and thick plush carpeting covers the floor which actually makes things quite comfortable for your hooved feet.  Several new furnishings also are now in the public side of the large room however, a functional new desk with an in-box for reports that affect the Stables, as well as several overstuffed chairs sized for your new equine staff when you decide to meet them here. Although perhaps your favorite new furnishing is the former Stablemaster herself, the lovely little black equine looking especially fetching in her new sexy slave collar as she kneels off to the side of the room.";
 Slutslave is in Master's Office.
 
-instead of linkactioning Slutslave:
-	say "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";
+the linkaction of Slutslave is "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";
 
 the scent of Master's Office is "The Master's Office, your office, smells of equines and sex.";
 
@@ -19,9 +18,7 @@ the scent of Slutslave is "Your slutslave smells of horses, lust and sex.";
 The invent of Master's Office is { "chips" , "soda", "cot", "medkit" };
 
 
-
-
-section 2- Slutslave 
+Section 2- Slutslave 
 
 Slutslavetalk is a number that varies.
 LastSlutslavefucked is a number that varies. LastSlutslavefucked is usually 250.
@@ -37,7 +34,9 @@ instead of conversing the Slutslave:
 		say "[one of]'Welcome back master!'[or]'You make such a handsome owner.'[or]'I don[']t know how a little slut like me could have ever thought to challenge someone as masterful as you...'[or]'Has master decided on a name for his slut yet?'[or]'Your slave never knew how wonderful being a pet could be before, thank you so much for showing me!'[or]'I love my new collar so much...' She moans happily.[or]Your slave just stares up at you adoringly from her kneeling position.[or]'Would master like to hear about some of the things there slave has learned when she was free?'[at random]";
 
 
-Instead of fucking the Slutslave:
+the fuckscene of Slutslave is "[sexwithslutslave]";
+
+to say sexwithslutslave:
 	if lastSlutslavefucked - turns is less than 2:
 		say "'Sorry, master.' Your new slave pants out breathlessly as she kneels helplessly in front of you, 'But your new slave just can[']t keep up with your incredible stamina.' She says in an apologetic tone as she prostrates herself before you. 'Perhaps master should come back soon and train their new slave again?' She says with a rather lustful tone in her voice, which causes you to grin at how far the formerly dominant stallion has fallen.";
 	otherwise:

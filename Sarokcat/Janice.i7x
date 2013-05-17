@@ -15,11 +15,16 @@ Janice is a woman.
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
 The conversation of Janice is { "Foxy!" }.
 
-instead of sniffing Janice:
-	say "Janice smells of vixen and lust, perfume and sex, longing and regret.";
+the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.";
 
-instead of linkactioning Janice when janicetalk is 4:
-	say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link], [link]pose[as]pose for Janice[end link][line break]";
+the linkaction of Janice is "[janicelinkaction]".
+
+to say janicelinkaction:
+	if janicetalk is 4:
+		say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link], [link]pose[as]pose for Janice[end link][line break]";
+	otherwise:
+		say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link][line break]";
+
 
 instead of conversing the Janice:
 	if Janicetalk is 0:[first time you encounter the npc text]
@@ -85,7 +90,9 @@ instead of conversing the Janice:
 
 
 
-Instead of fucking the Janice:
+the fuckscene of Janice is "[sexwithjanice]".
+
+to say sexwithjanice:
 	if lastJanicefucked - turns is less than 6:
 		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven[apostrophe]t you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
 		stop the action;
@@ -180,8 +187,7 @@ Janice is in Private club room.
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 SouthEast of Private club room is PALOMINO.
 
-instead of sniffing Private club room:
-	say "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.";
+the scent of Private club room is "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.";
 
 
 Janice ends here.

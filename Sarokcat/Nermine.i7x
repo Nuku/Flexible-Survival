@@ -14,8 +14,7 @@ The description of The Mysterious Shop is "Bells jingle softly as you enter this
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
 
-instead of sniffing Mysterious Shop:
-	say "The mysterious shop smells of scented candles and ancient secrets.";
+the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.";
 
 section 2- Nermine
 
@@ -37,11 +36,15 @@ Nermine is a woman.
 The description of Nermine is "[Nerminedescribing]";
 The conversation of Nermine is { "Mysteeerious!" }.
 
-instead of linkactioning Nermine when nerminetalk > 0 and rarequesting is 0:
-	say "Possible Actions: [link]talk[as]talk Nermine[end link], [link]smell[as]smell Nermine[end link], [link]fuck[as]fuck Nermine[end link], [link]help[as]help Nermine[end link][line break]";
+the linkaction of Nermine is "[nerminelinkaction]".
 
-instead of sniffing Nermine:
-	say "Nermine smells like a female jackal.  Her scent is subtle and alluring.";
+to say nerminelinkaction:
+	if nerminetalk > 0 and rarequesting is 0:
+		say "Possible Actions: [link]talk[as]talk Nermine[end link], [link]smell[as]smell Nermine[end link], [link]fuck[as]fuck Nermine[end link], [link]help[as]help Nermine[end link][line break]";
+	otherwise:
+		say "Possible Actions: [link]talk[as]talk Nermine[end link], [link]smell[as]smell Nermine[end link], [link]fuck[as]fuck Nermine[end link][line break]";
+
+the scent of Nermine is "Nermine smells like a female jackal.  Her scent is subtle and alluring.";
 
 to say Nerminedescribing:
 	if rarequesting is 13:
@@ -150,7 +153,9 @@ instead of conversing the Nermine:
 		say "'Ah Nermine is happy to be addressed by her handsome master,' The naked Jackal woman says as she saunters over eagerly, 'What can Nermine help her master with?' She says as she poses slightly for your pleasure, stroking one of her clawed hands down her furred side teasingly. 'Sadly Nermine can not merely give her master items from the shop, everything must be bought or traded for as part of old agreement,' The jackal woman says with a soft sigh, before perking up slightly, 'Still! Nermine can give her amazingly handsome jackal master herself, whenever or wherever they decide they want to use her.' Nermine says with a happy grin as she licks her lips at the very arousing thought, obviously hoping you will decide to 'use' her often.";
 
 
-Instead of fucking the Nermine:
+the fuckscene of nermine is "[sexwithnermine]".
+
+to say sexwithnermine:
 	if lastNerminefucked - turns is less than 6:
 		say "'Sorry, I know you want to have more fun with me, and I certainly wouldn[apostrophe]t mind having some more fun with you,' The jackaless says with a soft wink, 'But Nermine does have a store to run here sadly, and even if I don[apostrophe]t have many customers to take care of, and definitely no customers as nice and fun to play with as you, who knows what trouble the stock would get up to if I wasn[apostrophe]t here to keep an eye on things most of the time.' She says as she gestures with one of her black furred hands at the shelves full of odd items packing the store. 'Don[apostrophe]t worry though, we should be able to have a little time to ourselves again as soon as I have taken care of things here, do come back and see me then!' Nermine says, a small grin pulling at the edges of her black muzzle as she stares at you with lust filled eyes.";
 		stop the action;
@@ -372,11 +377,9 @@ when play begins:
 Bargain Bin is a man.
 The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren[apostrophe]t exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?";
 
-instead of linkactioning Bargain Bin:
-	say "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
+the linkaction of Bargain Bin is "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
 
-instead of sniffing bargain bin:
-	say "The bargain bin smells like omens and mysteries... at a discount price.";
+the scent of bargain bin is "The bargain bin smells like omens and mysteries... at a discount price.";
 
 strangebottledrink is a number that varies.
 bargainbinusagetotal is a number that varies.
@@ -790,8 +793,7 @@ name	desc	weight	object
 
 Jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as Jackal totem. 
 
-instead of sniffing jackal totem:
-	say "The totem smells like hot sand.";
+the scent of jackal totem is "The totem smells like hot sand.";
 
 The usedesc of Jackal totem is "[jackaltotemmagic].";
 
@@ -1199,8 +1201,7 @@ The description of Rare Counter is "This Glass counter seems to hold several of 
 The conversation of Rare Counter is { "Treasure!" }.
 Rare Counter is in The Mysterious Shop.
 
-instead of sniffing Rare Counter:
-	say "You smell the items on the counter and a shiver runs down your spine.  There is something strange and mysterious to these items and they should be handled with care.";
+the scent of Rare Counter is "You smell the items on the counter and a shiver runs down your spine.  There is something strange and mysterious to these items and they should be handled with care.";
 
 Rarequesting is a number that varies.
 
@@ -1287,10 +1288,9 @@ instead of conversing the rare counter:
 			say "Deciding any item that Nermine is unable to acquire herself, is certainly going to be far to difficult for you to acquire, you decide to not say anything right now, and just watch as she admires her already fine collection."; 
 
 
+the fuckscene of Rare Counter is "[sexwithrarecounter]".
 
-
-
-Instead of fucking the Rare Counter:
+to say sexwithrarecounter:
 	If jackalmantf is 4 and rarequesting is 13:
 		if cocks of player is greater than 0:
 			say "An evil grin comes over your muzzle as you eye the nice clean glass countertop containing all the rare items you hunted down, and you decide to enjoy yourself for a minute. Making sure to catch Nermine[apostrophe]s eye, you slowly stroke your cock several times in the direction of the counter, you enjoy the way the Jackal woman's eyes are locked on your canine cock as you pump yourself to orgasm. The female jackal moans in desire, her mouth open as she pants in need while she watches you shoot your seed all over her nice counter, of course the cleanly shopkeeper can[apostrophe]t leave a mess like that on her counter for long, and Nermine quickly hurries over to clean your mess off of her counter..... with her tongue.";
@@ -1323,8 +1323,7 @@ strange ankh is a grab object. It is part of the player. Understand "ankh" and "
 
 The usedesc of strange ankh is "[jackalankhmagic].";
 
-instead of sniffing strange ankh:
-	say "The golden ankh smells faintly of desert sand and masculine musk.";
+the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.";
 
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
@@ -1434,8 +1433,7 @@ The assault of strange doll is "[one of]The strange doll picks up something from
 
 dollfound is a number that varies.
 
-instead of sniffing jackal totem:
-	say "The strange doll smells strangely like you.";
+the scent of strange doll is "The strange doll smells strangely like you.";
 
 when play ends:
 	if strange doll is tamed:

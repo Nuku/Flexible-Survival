@@ -33,8 +33,7 @@ The description of Boris the lion is "Standing over by the side of the deserted 
 The conversation of Boris is { "Welcome!" }.
 Boris the lion is in State Fair.
 
-instead of sniffing Boris:
-	say "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
+the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
 instead of conversing the Boris:
 	[puts Plush lion as lead monster in case of impregnation]

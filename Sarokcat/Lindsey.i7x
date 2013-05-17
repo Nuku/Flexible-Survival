@@ -15,8 +15,7 @@ The description of Lindsey is "There is a large wolftaur examining itself in the
 The conversation of Lindsey is { "Suck it!" }.
 Lindsey is in Bathrooms;
 
-instead of sniffing Lindsey:
-	say "Lindsey has a strong, masculine scent.  It is powerful and arousing, making you long to submit to this beast[if Lindseyaroused > 5].  As you should, for you are his bitch to use[end if].";
+the scent of Lindsey is "Lindsey has a strong, masculine scent.  It is powerful and arousing, making you long to submit to this beast[if Lindseyaroused > 5].  As you should, for you are his bitch to use[end if].";
 
 instead of conversing the Lindsey:
 	if Lindseytalk is 0:[first time you encounter the npc text]
@@ -26,10 +25,9 @@ instead of conversing the Lindsey:
 		say "[one of]'So are you ready to be my bitch?'[or]'My former boyfriend is back at the den, I could take you to meet her sometime, if you were a proper bitch...'[or]'I am so glad we came to the zoo that night.'[or]'The whole wolf thing was a bit scary at first, but now it is downright amazing.'[or]'It would be nice to have a pack, don[apostrophe]t you think?'[or]'I think you would make a fine addition to my pack.'[or]'I wish I knew who caused whatever this is to happen, so I could thank them!'[or]'Have you seen those Tigertaurs out there? If they weren[apostrophe]t so feline they could be fun to fuck...'[or]'I love having a cock, I never realized how much fun they were before.'[or]'Don[apostrophe]t you want to pet my soft fur?' Lindsey says with a teasing look In his eyes.[or]The wolftaur just stares at you with his bright yellow eyes as you try to talk to him, unable to meet that intent gaze, you quickly find yourself lowering your eyes, as the wolftaur chuckles, his dominance established.[or]'Wolves have all the fun, I should know.'[or]'Wouldn[apostrophe]t you feel better on all four paws?'[or]'It[apostrophe]s good to be the alpha.'[at random]";
 
 
+the fuckscene of Lindsey is "[sexwithLindsey]".
 
-
-
-Instead of fucking the Lindsey:
+to say sexwithLindsey:
 	[puts Wolftaur as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;

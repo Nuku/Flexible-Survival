@@ -16,8 +16,7 @@ The description of Brian is "You see an exceptionally large and well built Rhino
 The conversation of Brian is { "Ouch!" }.
 Brian is in Border Wall.
 
-instead of sniffing Brian:
-	say "Brian smells like a male rhino, covered in sweat.";
+the scent of Brian is "Brian smells like a male rhino, covered in sweat.";
 
 Instead of conversing the Brian:
 	if Briantalk is 0:
@@ -27,14 +26,13 @@ Instead of conversing the Brian:
 		say "[one of]'One more should do it!' He says as he charges the wall[or]'I[apostrophe]ll have us out of here in no time!'[or]Brian is too busy holding his head from his last run at the wall to talk to you right now[or]'Watch this one!' He says as he charges.[or]'Woah' Brian mutters as he reels back from the wall, 'I can hear magenta..' he mutters, and you decide it might be best trying to talk to him later...[or]'Chaaaaarge!'[or]'Hey, haven[apostrophe]t I seen you somewhere before?' Brian asks blearily, his large eyes unfocused as he tries to think.[or]'For the Horde!' Brian shouts, as he leads a particularly vigorous charge at the wall. Sadly the wall seems unimpressed at this passioned cry, as it remains standing, although Brian doesn't as he lands hard on his ass.[or]'If ya are just gonna stand there and watch, ya could like do some cheering or something' Brian says as he eyes the wall again.[or]' Eat this wallface!'[or]'Dude, you don[apostrophe]t think all this headbanging is gonna hurt my brain any do yas?'[or]'Die concrete!'[or]'Woah, I can still hear my brain ringing from that last hit...'[at random]";
 
 
+the fuckscene of Brian is "[attemptsexwithbrian]".
 
-Instead of fucking the Brian:
+to say attemptsexwithbrian:
 	if cunts of the player is greater than 0:
 		say "'[one of]Once we get out of here, I[apostrophe]ll be happy to fuck you up on that...[or]'Yeah sure,' he says absently, 'Just as soon as I finish up here.[or]Maybe when my head stops spinning...[or]That sounds nice dear.[or]Fucking you up against the wall?' He says in a puzzled tone, 'That doesn[apostrophe]t sound like it would do much damage to the wall...[or]huh?[or]Fucking? Yeah I think I like fucking..[or]Are you kidding? Have you SEEN how fucking large my cock is now? I mean I could use it as a battering ram!  Hey wait, that[apostrophe]s an idea...[or]I dunno, maybe later?[at random]' Brian says as he looks at you for a minute, before refocusing his attention on the wall.";
 	otherwise:
 		say "'Sorry dude, but I only like the ladies, I think anyways, it can be hard to remember sometimes' Brian says in an absentminded manner as he stares at the wall."; 
-
-
 
 
 
@@ -55,11 +53,15 @@ The description of Diego is "[Diegodescribed]";
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 
-instead of linkactioning Diego when diegotalk > 0:
-	say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
+the linkaction of Diego is "[diegolinkaction]".
 
-instead of sniffing Diego:
-	say "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.";
+to say diegolinkaction:
+	if diegotalk is 0:
+		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link][line break]";
+	otherwise:
+		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
+
+the scent of Diego is "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.";
 
 To say diegodescribed:
 	if diegochanged is 2:
@@ -143,7 +145,9 @@ carry out Diegotricking:
 		decrease humanity of player by 10;
 
 
-Instead of fucking the Diego:
+the fuckscene of diego is "[sexwithdiego]".
+
+to say sexwithdiego:
 	[puts Coyote as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
