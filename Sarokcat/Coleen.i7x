@@ -46,11 +46,18 @@ Coleenspray is a number that varies.
 Coleen is a woman.
 The description of Coleen is "[Collenstatus]";
 The conversation of Coleen is { "Woof!" }.
+the linkaction of Coleen is "[coleenlinkaction]".
 
-instead of linkactioning Coleen when coleentalk > 0:
-	say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link], [link]spray[as]spray coleen[end link][line break]";
+to say coleenlinkaction:
+	if coleentalk > 0:
+		say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link], [link]spray[as]spray coleen[end link][line break]";
+	otherwise:
+		say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link][line break]";
 
-instead of sniffing Coleen:
+
+the scent of Coleen is "[coleenscent]".
+
+to say coleenscent:
 	if coleenalpha > 0:
 		say "Coleen smells of aroused female husky.  The scents of her roaming the city for sex linger on her.  Something in her scent makes you consider submitting to the lustful husky.";
 	otherwise if coleenslut is 1:
@@ -272,7 +279,9 @@ carry out Coleenspraying:
 LastColeenfucked is a number that varies. LastColeenfucked is usually 250.
 
 
-Instead of fucking the Coleen:
+the fuckscene of coleen is "[sexwithcoleen]".
+
+to say sexwithcoleen:
 	if lastColeenfucked - turns is less than 4:
 		if coleenalpha is greater than 0:
 			say "'Sorry, I know you want to hurry up and be a lovely little husky bitch just like me and your pet there,' Coleen says with a soft smile on her muzzle, 'But you look like you still need some time to recover, and I still have some things in the city to do...' She says as she gives you a soft lick on the cheek, before heading out into the city, her tail wagging behind her eagerly.";

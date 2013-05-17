@@ -9,9 +9,7 @@ Tiger den is a room. It is fasttravel. It is private
 
 The description of Tiger den is "Sparsely furnished, this large concrete basement bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it.  Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they seem to have placed in the empty building above, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid to cause trouble.";
 
-instead of sniffing Tiger den:
-	say "The enclosed basement hideout smells strongly of tigers.";
-
+the scent of Tiger den is "The enclosed basement hideout smells strongly of tigers.";
 
 
 
@@ -25,8 +23,7 @@ The description of Chase is "The large striped tiger man you helped out earlier 
 The conversation of Chase is { "Mrowl, baby!" }.
 Chase is in Tiger den.
 
-instead of sniffing Chase:
-	say "The tigerman smells strongly of male tiger[if cunts of player > 0 or lust of Chase > 0] and arousal[end if].";
+the scent of Chase is "The tigerman smells strongly of male tiger[if cunts of player > 0 or lust of Chase > 0] and arousal[end if].";
 
 instead of conversing the Chase:
 	if Chasetalk is 0:
@@ -66,7 +63,9 @@ to say chasebasictalk:
 	say "[one of]'Hey good to see you came by again.'[or]'Hey I'm glad your back, I was starting to get worried about you out there.'[or]'I don't know why we seem to still be pretty much our normal selves, and the tigertaurs aren't.'[or]'I'm glad you came along when you did.  I may love being a tigerman, but I don't think I would enjoy being a tigertaur nearly as much.'[or]'After all this is over, what do you think will happen to those of us who can still think clearly?'[or]'I wonder if they will put us infected people in some kind of large infected zoo when they finally retake the city, spending all your time sleeping and eating and fucking for an audience might not be pretty fun, but I wonder if they will let us have internet connections...'[or]'I swear the zoo is a mess now, but it's still one of the safer places to forage it seems, there is some REALLY crazy stuff in other parts of the city that tries to grab ya.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water..'[or]'You should try sticking around down here with us until help arrives, sure you would probably end up a tiger like the rest of us, but that's kinda a good thing to my mind.'[or]'I always loved tigers before all this, now I find I REALLY love tigers, if you know what I mean.'[or]'While the tigertaurs can convert anyone it seems, us tigers seem especially vulnerable to them.'[or]'I used to be called Alex before all this, everyone just calls me Chase now though,' he says with a shrug.  'It seems more appropriate anyways.'[at random]";  
 
 
-instead of fucking Chase:
+the fuckscene of Chase is "[sexwithchase]";
+
+to say sexwithchase:
 	[puts Tiger as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;

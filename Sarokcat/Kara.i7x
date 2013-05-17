@@ -14,11 +14,10 @@ Kara is a woman.[or woman]
 The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..";
 The conversation of Kara is { "Yip!" }.
 
-instead of sniffing Kara:
-	say "Kara smells like an aroused hyena herm.";
+the scent of Kara is "Kara smells like an aroused hyena herm.";
 
-instead of linkactioning Kara when karatalk > 0:
-	say "Possible Actions: [link]talk[as]talk Kara[end link], [link]smell[as]smell Kara[end link], [link]fuck[as]fuck Kara[end link][if karatalk > 0], [link]tattoo me[end link], [link]pierce me[end link][end if][line break]";
+the linkaction of Kara is "Possible Actions: [link]talk[as]talk Kara[end link], [link]smell[as]smell Kara[end link], [link]fuck[as]fuck Kara[end link][if karatalk > 0], [link]tattoo me[end link], [link]pierce me[end link][end if][line break]";
+
 
 instead of conversing the Kara:
 	if Karatalk is 0:[first time you encounter the npc text]
@@ -70,7 +69,9 @@ to say karagentalk:	[generalized conversation stuff]
 	say "[one of]'You know, I think I am gonna like this whole hyena thing.'[or]'Never belonged to a gang before, this one just... seems right though.'[or]'I saw a lot of crazy stuff while I was out there getting supplies, I feel pretty lucky that I ran across those bikers when I did, it could have been a lot worse.... and they give an awesome ride too' Kara says with a lewd grin and wink.[or]'I swear I saw a wandering cock out there... just a giant cock. Creepiest thing ever... well except maybe politics...'[or]'Seen any sexy bikers lately? Be sure to invite them to stop by if you do!'[or]'How's Harold doing now?'[or]'I think I am comfortable staying at the shop, besides you never know when some hyenas might stop by for some fun...' She says with a soft hyena laugh as she rubs her new body happily.[or]'Never really thought of hyenas as sexy before, but damn I rock this look.'[or]'If you need a tattoo I might be able to help you out with that a bit later. Piercings are a bit trickier though.'[or]'Sorry about the mess in the shop, not really set up to help anyone out yet, though maybe I will be able to soon.'[or]'You should invite Harold to stop by sometime and maybe bring some friends.  I can invite some gang members... and we could have a LOT of fun, you know?'[at random]";
 
 
-Instead of fucking the Kara:
+the fuckscene of kara is "[sexwithkara]".
+
+to say sexwithkara:
 	if karatalk is 0:
 		say "You might want to talk to her before rushing into that.";
 	otherwise if lastKarafucked - turns is less than 6:
