@@ -73,7 +73,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Manticore"; [Name of your new Monster]
-	now attack entry is "[one of]Lashing out with its powerful tail the manticore strikes you dead on into the chest![or]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Manticore loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Manticore attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "The beat of red wings has you looking around and then up for danger. However, nothing can prepare you for what you find as a large black maned lion with rust red fur and a long scorpion tail drops down onto the ground in front of you. Larger than a normal lion while covered in a spiky crimson pelt the creature glares at you hotly while folding its large wings behind its back and then roars a challenge at you."; [Description of the creature when you encounter it.]
@@ -108,8 +108,8 @@ When Play begins:
 	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Awesome Fruit";			[ Loot monster drops, ]
-	now lootchance entry is 15;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "";			[ Loot monster drops, ]
+	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]quadrupedal[or]strong[or]powerful[at random]";
@@ -118,7 +118,38 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "manticore";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"manticore"	retaliation rule	--	--	tailstinger rule	20	--	--	--	--	--
+
+this is the tailstinger rule:
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 );	[+50% damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+	if playerpoison is 0:
+		increase playerpoison by 4 + ( lev entry / 5 );
+		decrease plhitbonus by 2;
+	otherwise:
+		increase playerpoison by 2 + ( lev entry / 10 );
+		if playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
+	say "The [one of]manticore[or]mythological monstrocity[or]hybrid monster[or]leonine creature[at random] lashes out at you with its powerful tail.  The large stinger drives into your [one of]thigh[or]arm[or]shoulder[or]chest[or]side[or]hip[at random] and releases its toxic venom.  As the poison courses through your system, the wound continues to hurt and you find yourself getting dizzy from its toxic effects.  Already, your nanites are attempting to clear it from your body, but it continues to harm you for the moment.  You take [special-style-2][dam][roman type] damage!";
+	now damagein is dam;
+	say "[bodyabsorbancy]";		[attack directed to body of player]
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+	choose row monstercom from the table of critter combat;
+
 
 when play ends:
 	if bodyname of player is "Manticore":

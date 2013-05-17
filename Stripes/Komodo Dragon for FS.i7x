@@ -1,7 +1,5 @@
 Version 1 of Komodo Dragon for FS by Stripes begins here.
 
-[4.75 hrs]
-
 "Adds a Komodo Dragon to Flexible Survival."
 
 Section 1 - Monster Responses

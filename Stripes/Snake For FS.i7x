@@ -91,9 +91,49 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "bearhugger";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "snakenaga";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-Section 3 - Endings
+
+Section 3 - Alt Combat
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"snakenaga"	retaliation rule	snakebiteinc rule	--	snakebite rule	20	bearhug rule	20	--	--	--
+
+this is the snakebiteinc rule:
+	choose row monstercom from the table of critter combat;
+	if playerpoison is 0 or a random chance of 2 in 3 succeeds:		[slower increase if already bitten]
+		increase alt1chance entry by a random number between 1 and 4;
+	if alt1chance entry > 40, now alt1chance entry is 40;
+
+this is the snakebite rule:
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 75 );	[+33% damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+	if playerpoison is 0:
+		increase playerpoison by 3 + ( lev entry / 5 );
+		decrease plhitbonus by 2;
+	otherwise:
+		increase playerpoison by 1 + ( lev entry / 10 );
+		if playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
+	say "The [one of][name entry][or]serpent[or]snake creature[or]monstrous snake[or]reptilian creature[as decreasingly likely outcomes] manages a solid bite on your [one of]arm[or]leg[or]side[or]thigh[or]hip[at random], sinking its fangs deeply into your flesh.  The wound burns with pain and your vision blurs, warning you of the venom coursing through your system.  You'll need to hope your nanites can purge the poison from your system or you're able to defeat your foe so you can treat the wound properly.  You take [special-style-2][dam][roman type] damage!";
+	now damagein is dam;
+	say "[bodyabsorbancy]";		[attack directed to body of player]
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+	choose row monstercom from the table of critter combat;
+	now alt1chance entry is 12;
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Snake":
