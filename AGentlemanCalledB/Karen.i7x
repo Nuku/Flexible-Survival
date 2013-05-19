@@ -7,6 +7,8 @@ The description of Karen is "[Karendescribing]";
 The conversation of Karen is { "Karentalk" }.
 KarenTimer is a number that Varies.
 
+understand "Karen" as retriever girl.
+
 the linkaction of Karen is "Possible Actions: [link]talk[as]talk Karen[end link], [link]smell[as]smell Karen[end link], [link]fuck[as]fuck karen[end link][line break]";
 
 to say Karendescribing:
