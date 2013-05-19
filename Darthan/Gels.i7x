@@ -131,7 +131,7 @@ to say beatthebluegel: [Victory over Blue Gel.]
 		increase libido of player by 5;
 
 to say bluegeldesc: [Blue Gel description]
-	say " A jiggling man of blue color. You can see through him, mostly, his gelatin like flesh tinting the area behind him with its lustrous shade. Her upper torso is well defined, with his muscled abs somehow jiggling just a little more than you would expect. Between his legs his footlong flaccid member sways back and forth as he moves. Noticing you he charges with arms outstretched. Apparently he is happy to see you.";
+	say " A jiggling man of blue color. You can see through him, mostly, his gelatin like flesh tinting the area behind him with its lustrous shade. His upper torso is well defined, with his muscled abs somehow jiggling just a little more than you would expect. Between his legs his footlong flaccid member sways back and forth as he moves. Noticing you he charges with arms outstretched. Apparently he is happy to see you.";
 
 
 to say losetopurplegel: [Loss to Purple Gel.]

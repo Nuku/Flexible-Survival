@@ -1369,7 +1369,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
 "Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"XP:[xp of player]/[level up needed] [if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
+"Sanity: [humanity of player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces is greater than 0]  Kids: [number of entries in childrenfaces][end if"	"XP:[xp of player]/[level up needed]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 

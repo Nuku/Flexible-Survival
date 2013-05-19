@@ -140,7 +140,7 @@ When Play begins:
 	now body change entry is "you can feel the tingling radiate outwards, muscles, bones and organs shifting and rearranging"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "a wave of scales of seemingly random colors pours over you. Yet as they thicken and interlock, you notice a strangely beautiful pattern emerge"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your cheeks are pulled in and tight.  A lizard tail grows out, strong and muscled, but shaped to nicely cover your tight bottom"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it feels wrong, as though She had meant it just as a means to an end"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it feels wrong, as though it is not meant to stay and is just a means to an end"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 10;						  
