@@ -34,8 +34,7 @@ to say corruptedvicdesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Female";
-	say "     Before you is a mostly human woman showing signs of corruption by the infection.  She's wearing [one of]a sticky labcoat[or]a torn business suit[or]scraps of clothes[or]a messy blouse that hangs open[at random], leaving much of her body exposed.
-Her sexy body has lovely curves, sexy legs and a grabbable bottom.  Her breasts are plump and beautiful.  Her tummy is somewhat rounded, showing she's pregnant with the spawn of some creature down here.";
+	say "     Before you is a mostly human woman showing signs of corruption by the infection.  She's wearing [one of]a sticky labcoat[or]a torn business suit[or]scraps of clothes[or]a messy blouse that hangs open[at random], leaving much of her body exposed.  Her sexy body has lovely curves, sexy legs and a grabbable bottom.  Her breasts are plump and beautiful.  Her tummy is somewhat rounded, showing she's pregnant with the spawn of some creature down here.";
 	say "     Her body is not untouched by the infection though, there being signs of non-human corruption to her body as well.  The most notably are ";
 	now corrvicchange1 is a random number between 1 and 20;
 	if corrvicchange1 is 1:
