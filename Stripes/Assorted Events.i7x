@@ -1,5 +1,5 @@
 Version 4 of Assorted Events by Stripes begins here.
-[version 4.2 - CatsAndDogs transfered to CEO1 document in Stripes's folder, B&R transfered here]
+[version 4.3 - Sugar Glider / Ferret events]
 
 "Adds a batch of random events to Flexible Survival scattered around the city."
 
@@ -542,6 +542,54 @@ when play ends:
 			otherwise:
 				say ".  The fel beasts breed you incessantly, filling your womb with litters of their spawn.  Regardless of your form, they are always pure hellspawn like their brethren.  They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time.";
 		stop the action;
+
+
+Sweet Exchange is a situation.
+The sarea of Sweet Exchange is "Midway";
+when play begins:
+	add Sweet Exchange to badspots of furry;
+	add Sweet Exchange to badspots of girl;
+	add Sweet Exchange to badspots of guy;
+	add Sweet Exchange to badspots of humorous;
+
+Instead of resolving a Sweet Exchange:
+	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out.  What you discover is a mob of pastel coloured ferrets poinging up and down in front of a stall.  Atop the stall are some sugar gliders covered in cotton candy fur.  Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
+	say "     'Fork it over, you cotton-brained thief!' one ferret yells.  'Yeah!'  'Sugar snatchers!'  'Give it.'  'PopPopPopPopPop!' the others babble excitedly, many of them making grabby paws in the air towards the bottles and cans of pop the pink marsupials are dangling tantalizingly out of reach.";
+	say "     'Pay up then, you soda jerks,' one sugar glider responds.  'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that.  'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
+	say "     'Candy ass!  The Sweet Tooth is our place.  We found the candy shop first, so the candy's ours too.  Find your own!' a pastel green ferret yells up.  'Yeah!'  'We want pop!'  'Hey, I'll fuck you for a can.'  'Sugar snatchers!' the business of colourful ferrets calls up, several of them making rude gestures all the while grinning happily.";
+	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola.  One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans.  As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
+	if bodyname of player is "Sugar Ferret" and player is pure:
+		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange.  Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front.  With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some.  A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away.  You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
+		increase carried of soda by 1;
+	otherwise if bodyname of player is "Sugar Glider" and player is pure:
+		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy.  Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials.  The giggling girls pass around the collected bags of candy, stuffing them into their pouches.  Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your pouch before making your escape before they catch on.";
+		increase carried of chips by 1;
+	otherwise:
+		say "     As the deal is coming to a close, the two sides start the actual exchange, insults and greedy demands for more next time flying between them even as they do.  Seeing as things are wrapping up, you decide it best to withdraw before the swap is complete and the two mobs disperse.  With that many sugar-crazed mutants around, you're not sure if you'd be able to remained unnoticed without putting some distance between you and them while you can.";
+	if CandyShop is not resolved:
+		say "     As you go, you ponder the strange negotiations between the two groups and wonder if you might try looking for that [bold type]candyshop[roman type] the excitable ferrets mentioned.";
+	now Sweet Exchange is resolved;
+
+
+Caught Glider is a situation.  Caught Glider is resolved.
+The sarea of Caught Glider is "Midway";
+when play begins:
+	add Caught Glider to badspots of furry;
+	add Caught Glider to badspots of girl;
+	add Caught Glider to badspots of guy;
+	add Caught Glider to badspots of humorous;
+
+Instead of resolving a Caught Glider:
+	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-coloured sugar gliders run across the laneway.  In hot pursuit of her are a pack of the colourful, sugar-crazed ferrets.  'Sugar thief!'  'Come back here!'  'Don't let her get away, guys!'  'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase.  Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";
+	say "     But when it looks like she's going to get away, she banks the wrong way and is jumped by several of the ferrets who doubled-back and were waiting atop the roof of one of the stalls.  The fluffy pink girl is pulled to the ground and pinned down by the excited ferrets.  'Let's show her what we do to sugar thieves,' one says with a wide, toothy grin.  'Yeah!'  'Do it!'  'Thieves get fucked!' the others cheer.";
+	say "     The sugar glider giggles at this and squirms playfully as the ferrets around her start groping her cute body.  'Oh, don't you dare, you soda jerks.  Don't you dare stuff my sweet, juicy cunts,' she says while parting her legs and spreading the wet lips of her two pussies.  'You're such naughty hobs for even suggesting it,' she sniffs hautily, grinning all the more even as she continues to frig herself.";
+	say "     Of course, with such tantalizing teasing, the ferrets eagerly pile atop her, two lucky males getting the chance to stuff her cunts.  A bright blue jill holds the sugar glider's head between her legs and from the moaning she's giving, the pink girl's long tongue is hard at work in the female ferret's cunt.  The other ferrets break into little groups and pass around some celebratory soda, an impromptu orgy breaking out as they celebrate their victory.  The manic tube rats change partners often and it's hard for you to keep your eyes on the sugar glider during it all, having several other sexy makeout sessions to watch.  The whole thing gets you quite worked up and soon you're [if cocks of player > 0 and cunts of player > 0]stroking your cock[smn] and fingering your puss[yfn] while watching the rampant sex[otherwise if cocks of player > 0]stroking your cock[smn] while watching the rampant sex[otherwise if cunts of player > 0]fingering your puss[yfn] while watching the rampant sex[otherwise]rubbing over your body and grinding your bare groin against the corner of the bench you're using as cover[end if][if cocks of player > 0 or cunts of player > 0].  You eventually masturbate yourself to orgasm while watching all the fucking going on[end if].";
+	say "     Eventually, the ferret orgy starts to break up when it's noticed that they're out of soda again.  As the business gets refocused on the pursuit of pop, they head off as an excited mob full of energetic poinging.  Looking around as they head off, you're unable to spot the sugar glider, though there seems to be a new, hot pink jill among the group of sugar-crazed ferrets.";
+	if lastcaffeine of Sweet Tooth - turns < 8:		[extend manic phase]
+		increase lastcaffeine of Sweet Tooth by 4;
+	otherwise:
+		now lastcaffeine of Sweet Tooth is turns + 4;
+	now Caught Glider is resolved;
 
 
 Section 6 - Beach Events
