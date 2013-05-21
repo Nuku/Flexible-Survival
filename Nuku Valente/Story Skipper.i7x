@@ -31,7 +31,7 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]";
+	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]";
 	say "[trixsavetext1]";
 	say "[trixsavetext2]";
 	replace the text " " in trixsavetext1 with "`";
@@ -1296,6 +1296,31 @@ To reciting2:
 						now tti_scene is 0;
 					if hp of Icarus is 9:
 						now hp of Icarus is 8;	[Icarus waiting for more]
+			-- 137:   [hp of Joanna]
+				if the player's command matches "[number]":
+					now hp of Joanna is the number understood;
+					move Joanna to Flower Garden;
+					now joannatalk is 0;
+					now joannaharoldtalk is 0;
+					now joannaoffernum is 0;
+					if hermaphrodite is banned:
+						now hp of Joanna is 0;
+					if hp of Joanna > 0 and hp of Joanna < 90:
+						now Overrun Garden is resolved;
+						now joannaharoldtalk is 1;
+					if hp of Joanna > 1 and hp of Joanna < 90:
+						now joannatalk is 1;
+					if hp of Joanna is 6:
+						now hp of Joanna is 5;
+					if hp of Joanna >= 90:
+						now PALOMINO is known;
+			-- 138:   [lust of Joanna]
+				if the player's command matches "[number]":
+					now lust of Joanna is the number understood;
+					if hp of Joanna <= 4 or hp of Joanna >= 90:
+						now lust of Joanna is 0;
+					if hp of Joanna >= 7 and hp of Joanna < 90:
+						if lust of Joanna < 3, now lust of Joanna is 3;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2642,6 +2667,31 @@ Carry out reciting:
 						now tti_scene is 0;
 					if hp of Icarus is 9:
 						now hp of Icarus is 8;	[Icarus waiting for more]
+			-- 137:   [hp of Joanna]
+				if the player's command matches "[number]":
+					now hp of Joanna is the number understood;
+					move Joanna to Flower Garden;
+					now joannatalk is 0;
+					now joannaharoldtalk is 0;
+					now joannaoffernum is 0;
+					if hermaphrodite is banned:
+						now hp of Joanna is 0;
+					if hp of Joanna > 0 and hp of Joanna < 90:
+						now Overrun Garden is resolved;
+						now joannaharoldtalk is 1;
+					if hp of Joanna > 1 and hp of Joanna < 90:
+						now joannatalk is 1;
+					if hp of Joanna is 6:
+						now hp of Joanna is 5;
+					if hp of Joanna >= 90:
+						now PALOMINO is known;
+			-- 138:   [lust of Joanna]
+				if the player's command matches "[number]":
+					now lust of Joanna is the number understood;
+					if hp of Joanna <= 4 or hp of Joanna >= 90:
+						now lust of Joanna is 0;
+					if hp of Joanna >= 7 and hp of Joanna < 90:
+						if lust of Joanna < 3, now lust of Joanna is 3;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;

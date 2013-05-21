@@ -565,10 +565,11 @@ an everyturn rule:
 		otherwise if Joanna is in the PALOMINO:
 			move Joanna to Flower Garden;
 
+[  -- moved to Harold's conversation tree --
 instead of conversing the Harold while level of player >= 9 and hp of Joanna is 92 and joannaharoldtalk is 0:
 	say "     Going over to Harold, you inquire about Joanna, whom you haven't seen around of late.  'It's been a while, hasn't it?' he says.  'I think she mentioned something about going downtown to check out some overgrown flower gardens she'd spotted.  I'm starting to get a little worried.  You might want to head down to the high rise district and see if she's in an [bold type]overrun garden[roman type] around there.  Just be careful if you do.";
 	now joannaharoldtalk is 1;
-
+]
 
 to say joannaclubsex:
 	say "     You wait for a moment when the kinkajou's not dancing to approach her.  Joanna blushes a little at your offer, but grins and takes your hand in hers.  'Sure, lets have a little fun.'  She guides you to one of the back rooms and kisses you as she closes the door.  You run your hands over her body, helping her out of her clothes while she strips you.";
@@ -603,6 +604,31 @@ Definition: a person is plantcocked:
 Definition: a person is planttailed:
 	if the tailname of the player is "Parasitic Plant", yes;
 	no;
+
+
+[
+[ hp of Joanna      ]
+[ 0 = never met     ]
+[ 1 = saved         ] = joannatalk = 0   //  joannaharoldtalk is 1   //  lust of joanna is 0
+[ 2 = had oral/handjob            ] = 2+ joannatalk = 1  //  lust of joanna is 0
+[ 3 = had sex                     ] lust = 0
+[ 4 = more sex                    ] lust = 0
+[ 5 = more sex                    ]
+[ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
+[ 7 = accepted her seed ]  =  lust of joanna is 3+
+
+[ 90 = helped w/dogs          ]  Dog Chase resolved, joannadogsaved is true, Palomino is known
+[ 91 = asked Harold about her ]
+[ 92 = chat w/Joanna          ]
+
+
+[ lust of Joanna     ]
+[ 0 = no plant exam  ]
+[ 1 = had plant exam ]
+[ 2 = drank Joanna's juice - transition ]
+[ 3 = drank Joanna's juice ]
+]
+
 
 
 Section 10 - Endings
