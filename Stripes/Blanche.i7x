@@ -5,7 +5,7 @@ Version 1 of Blanche by Stripes begins here.
 Section 1 - Event
 
 Wolfrape is a situation.  The level of Wolfrape is 16.
-The sarea of Wolfrape is "Capitol";		[move back to Capitol Bldg area once populated]
+The sarea of Wolfrape is "Capitol";
 when play begins:
 	add Wolfrape to badspots of hermaphrodite;
 	add Wolfrape to badspots of girl;
@@ -34,6 +34,7 @@ Instead of resolving Wolfrape:
 			say "     Unable to stand up to the powerful creature's assault, you turn and run away.  The angered Drakenoid sends a wave of fire after you, burning the stray trash in the alley before pouncing back on her original prey.  You can hear the sounds of lust.  The cries of pain start back up again, but they are quickly silenced, probably by a large, clawed hand around the wolf's muzzle.  The sounds fade away as you continue further away, though you do hear loud roar of the beast cumming into its prize.";
 	otherwise:
 		say "     Deciding not to intervene, you watch as the wolf moans pitifully, an expression of growing rapture on her face as the Drakenoid thrusting into her from behind.  The dragon growls and slams her prick home causing the wolf to yelp then struggle, then become very still.  The lizard cock glows from within the wolf's belly and soon you can tell the canine is being filled with molten sperm.  The white wolf's belly expands as it is filled, and glows red as its new cargo of life shine through her skin.  Once the wolf's been filled, the Drakenoid grabs her dragging her off somewhere.  As quietly as you can, you back away.";
+	now blanchefight is false;
 	now wolfrape is resolved;
 
 

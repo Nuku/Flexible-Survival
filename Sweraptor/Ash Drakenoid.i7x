@@ -4,7 +4,7 @@ Version 3 of Ash Drakenoid by Sweraptor begins here.
 "Adds an Ash Drakenoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [This will add the medium level Ash Dragon Mob. Acting as footsoldiers for the "Ash Gods" army]
 
-blanchefight is a truth state that varies.
+blanchefight is a truth state that varies.  blanchefight is usually false.
 
 Section 1 - Monster Responses
 
