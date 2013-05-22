@@ -5920,6 +5920,7 @@ Include Fire Sprite by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
 Include Sugar Glider by AGentlemanCalledB.
 Include Cum Girl by AGentlemanCalledB.
+Include Francois Infections by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
