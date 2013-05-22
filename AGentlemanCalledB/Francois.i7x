@@ -386,6 +386,10 @@ to say FrançoisListCompile:
 		add 7 to Francois_Undiscovered;	[fizz-aux-Pommes - pony cider + soda + crushed candies]
 	if girl is not banned and furry is not banned and guy is not banned:
 		add 8 to Francois_Undiscovered;	[vin-coeur - crushed candies+ Satyr wine + wyvern goop]
+	if girl is not banned and furry is not banned and guy is not banned:
+		add 9 to Francois_Undiscovered;	[Gingerbread - Egg nog + pixie dust + Blue gel]
+	if girl is not banned and furry is not banned and hermaphrodite is not banned:
+		add 10 to Francois_Undiscovered;	[Cheesecake - cheese + pixie dust + pink gel]
 
 check françoisbaking:
 	If françois is not visible, say "You should see François for that." instead;
@@ -460,6 +464,24 @@ carry out françoisbaking:
 			decrease carried of crushed candies by 1;
 			increase carried of vin-coeur by 1;
 			now françoisbaked is 1;
+		otherwise if egg nog is owned and pixie dust is owned and crushed candies is owned and 9 is listed in Francois_Undiscovered: [Gingerbread - egg nog + pixie dust + Blue gel]
+			say "[GingerbreadGet]";
+			remove 9 from Francois_Undiscovered;
+			add 9 to Francois_Discovered;
+			decrease carried of egg nog by 1;
+			decrease carried of pixie dust by 1;
+			decrease carried of blue gel by 1;
+			increase carried of Gingerbread by 1;
+			now françoisbaked is 1;
+		otherwise if cheese is owned and pixie dust is owned and pink gel is owned and 10 is listed in Francois_Undiscovered: [Cheesecake - cheese + pixie dust + pink gel]
+			say "[CheesecakeGet]";
+			remove 10 from Francois_Undiscovered;
+			add 10 to Francois_Discovered;
+			decrease carried of cheese by 1;
+			decrease carried of pixie dust by 1;
+			decrease carried of pink gel by 1;
+			increase carried of Cheesecake by 1;
+			now françoisbaked is 1;
 		if françoisbaked is not 1:
 			say "     After looking over everything you've brought him, François decides none of your potential combinations of ingredients would make a good dish.";
 	if françoisbaked is not 1 and Francois_Discovered is not empty:
@@ -510,6 +532,16 @@ to say FrançoisBakingMenu:
 		now title entry is "vin-coeur";
 		now sortorder entry is 8;
 		now description entry is "have François bake a vin-coeur";
+	if 9 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Gingerbread";
+		now sortorder entry is 9;
+		now description entry is "have François bake some Gingerbread";
+	if 10 is listed in Francois_Discovered:
+		choose a blank row in table of fucking options;
+		now title entry is "Cheesecake";
+		now sortorder entry is 10;
+		now description entry is "have François bake a Cheesecake";
 	choose a blank row in table of fucking options;
 	now title entry is "Abort";
 	now sortorder entry is 9;
@@ -583,7 +615,7 @@ to say FrançoisBakingMenu:
 				otherwise if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "	 François takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						say "	 François takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather then the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
 						decrease carried of pony cider by 1;
 						decrease carried of soda by 1;
 						decrease carried of crushed candies by 1;
@@ -593,13 +625,33 @@ to say FrançoisBakingMenu:
 				otherwise if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
 						decrease carried of wyvern goop by 1;
 						decrease carried of soda by 1;
 						decrease carried of Satyr wine by 1;
 						increase carried of vin-coeur by 1;
 					otherwise:
 						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
+				otherwise if title entry is "Gingerbread":  [Gingerbread - egg nog + pixie dust + blue gel]
+					if wyvern goop is owned and pixie dust is owned and crushed candies is owned:
+						now sextablerun is 1;
+						say "	 François takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a tray full of small colourful  gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
+						decrease carried of egg nog by 1;
+						decrease carried of pixie dust by 1;
+						decrease carried of blue gel by 1;
+						increase carried of Gingerbread by 2;
+					otherwise:
+						say "You do not have the required ingredients. egg nog, pixie dust and blue gel.";
+				otherwise if title entry is "Cheesecake": [Cheesecake - cheese + pixie dust + pink gel] 
+					if cheese is owned and pixie dust is owned and pink gel is owned:
+						now sextablerun is 1;
+						say "	 François takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
+						decrease carried of cheese by 1;
+						decrease carried of pixie dust by 1;
+						decrease carried of pink gel by 1;
+						increase carried of Cheesecake by 2;
+					otherwise:
+						say "You do not have the required ingredients. cheese, pixie dust and pink gel.";
 				otherwise if title entry is "Abort":
 					say "You decide not to have François bake anything.";
 					now sextablerun is 1;
@@ -665,6 +717,20 @@ to say FrançoisHint:
 			say "     I have seen incredible beasts flying above the rooftops, one of them left an egg just outside, but I didn't dare approach it.";
 		if T is 3:
 			say "     I used to get such wonderful fresh candy from the fair, they add a certain je ne sais quoi to several of my recipes.";
+	if entry 1 of Francois_Undiscovered is 9: [Gingerbread - egg nog + pixie dust + blue gel]
+		if T is 1:
+			say "     I could have swore I saw a reindeer fly past earlier, he is a little out of season, non?";
+		if T is 2:
+			say "     Something to add a little extra sweetness would be tres bon.";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
+	if entry 1 of Francois_Undiscovered is 10: [Cheesecake - cheese + pixie dust + pink gel] 
+		if T is 1:
+			say "     Le fromage seems hard to come by these days. Quel dommage.";
+		if T is 2:
+			say "     Something to add a little extra sweetness would be tres bon.";
+		if T is 3:
+			say "     Fresh fruit is rather hard to come by these days, I wonder if there is another source of such flavors out in the city now?";
 
 
 to say BoysenberryBlossomGet:
@@ -735,7 +801,7 @@ to say LollicockGet:
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "red hard candy canine";
+				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "a rumbling builds in your belly, clearly your body doesn't agree with something about the treat.";
 		decrease hunger of player by 5;
@@ -762,6 +828,26 @@ to say vin-coeurGet:
 	say "     Eventually François returns with a a large cake and several dishes. After portioning out a couple pieces for you, François insists you try one right away, placing one in front of you before wrapping up another and slipping it into you bag. Biting into the rich wine cake, you are hit with the powerful peppermint taste. After several more bites the cake is finished, and you are left feeling quite full.";
 	say "     Feeling strangely heavy, you give François your thoughts on the new dish before pushing yourself away from the counter to stand. François['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather then pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
 
+to say GingerbreadGet:
+	say "     After taking a quick shot of the egg nog, François scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the egg nog he eagerly rushes off to his kitchen to get started. The warm scent if ginger and cinnamon fills the bakery as François works, making your mouth water in anticipations until he returns with a try of small cookies. François places a couple of them on a dish in front of you with a smile, would you like to test them now? (Y/N)";
+	if the player consents:
+		say "[Gingerbread Use]";
+		say "'oh là' François exclaims as he watches your changes slow to and end.'I hope you're not still hungry' he says with a silly grin as he eyes your altered form.";
+	otherwise:
+		say "     Accepting the cookies from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		now carried of Gingerbread is 2;
+
+to say CheesecakeGet:
+	say "     François['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it.'This will do wonderfully, C'est magnifique!' François exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)";
+	if the player consents:
+		now carried of Cheesecake is 2;
+		say "[Cheesecake Use]";
+		now carried of cheesecake is 0;
+		say "'oh là' François says as he watches your changes slow to and end. 'I guess what they say is true, you really are what you eat' he says with a silly grin.";
+	otherwise:
+		say "     Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
+		now carried of Cheesecake is 2;
+
 Section 5 - Baked Goods
 
 Table of Game Objects (continued)
@@ -774,8 +860,8 @@ name	desc	weight	object
 "dragon moelleux"	"A small chocolate cake, it seems to stay perpetually warm and glows ever so slightly from the small cracks in its surface."	1	dragon moelleux
 "fizz-aux-pommes"	"A fizzing, amber colored beverage."	1	fizz-aux-pommes
 "vin-coeur"	"A slice of cake with a rich wine and peppermint glaze and filling."	1	vin-coeur
-["gingerbread"	"Tempdesc"	1	gingerbread
-"cheesecake"	"TempDesc"	1	cheesecake]
+"Gingerbread"	"A small gingerbread cookie shaped like a little man."	1	Gingerbread
+"Cheesecake"	"A wedge of rich strawberry cheesecake."	1	Cheesecake
 
 Boysenberry Blossom is a grab object. It is a part of the player.
 Boysenberry Blossom has a usedesc "[Boysenberry Blossom Use]";
@@ -973,7 +1059,70 @@ to say vin-coeuruse:
 	otherwise:
 		say "That's probably not a good idea right now.";
 
-[Recipies	]
+Gingerbread is a grab object. It is a part of the player.
+Gingerbread has a usedesc "[Gingerbread Use]";
+the scent of Gingerbread is "The gingerbread cookie smells like cinnimon and ginger.";
+
+to say Gingerbread Use:
+	say "You bite into the cookie with a satisfying crunch, devouring the small gingerbread man in a few quick bites.";
+	Gingerbreadinfect;
+	decrease hunger of player by 3;
+	if hunger of player < 0, now hunger of player is 0;
+
+to Gingerbreadinfect:
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Gingerbread":
+			now monster is y;
+			break;
+	now non-infectious entry is false;
+	infect "Gingerbread";
+	now non-infectious entry is true;
+
+Cheesecake is a grab object. It is a part of the player. it is not temporary.
+Cheesecake has a usedesc "[Cheesecake Use]";
+the scent of Cheesecake is "The cheesecake has a rich, sweet scent of strawberry.";
+
+to say Cheesecake Use:
+	if carried of cheesecake > 1:
+		say "     As you dig the cheesecake out of you bag, you notice the second slice stashed away next to the first and your tummy rumbles hungrily, will you indulge and eat both slices now?";
+		if the player consents:
+			say "     Pulling both slices of cheesecake from your bag you quickly unwrap both before gorging yourself with the rich strawberry cake.";
+			Cheesecakeinfect;
+			Cheesecakeinfect;
+			decrease carried of cheesecake by 2;
+			if cheesecakemode is 1 and player is cheesecakebodied:
+				say " After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
+			now cheesecakemode is 0;
+			decrease hunger of player by 3;
+		otherwise:
+			say "     Keeping your gluttony in check, you pull only one slice of the tempting cheesecake from your bag, carefully unwrapping it and savoring the rich strawberry flavour in a few small bites.";
+			Cheesecakeinfect;
+			decrease carried of cheesecake by 1;
+			if cheesecakemode is 0 and player is cheesecakebodied:
+				say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionery body slims down to become thin and sexy.";
+			now cheesecakemode is 1;
+	otherwise:
+		say "     Pulling the cheesecake from your bag you carefully unwrap before and savoring the rich strawberry flavour in a few small bites.";
+		Cheesecakeinfect;
+		decrease carried of cheesecake by 1;
+		if cheesecakemode is 0 and player is cheesecakebodied:
+			say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionery body slims down to become thin and sexy.";
+		now cheesecakemode is 1;
+	decrease hunger of player by 3;
+	if hunger of player < 0, now hunger of player is 0;
+
+to Cheesecakeinfect:
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Cheesecake":
+			now monster is y;
+			break;
+	now non-infectious entry is false;
+	infect "Cheesecake";
+	now non-infectious entry is true;
+
+[Recipes	]
 [Crème Abondante	1]
 [Bleuettonne	2]
 [Boysenberry Blossom	3]
@@ -1003,7 +1152,7 @@ to say vin-coeuruse:
 [wyvern goop	44]
 [cow milk	45]
 [egg nog	46]
-[fairy dust	47]
+[pixie dust	47]
 [cheese	48]
 
 
