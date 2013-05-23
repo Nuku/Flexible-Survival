@@ -223,6 +223,7 @@ instead of conversing the Elijah:
 						move player to bunker;
 						now lastElijahfucked is turns;
 						increase score by 20;
+			now Burned-Out Chapel is not known;						
 		otherwise:   [try it later, 32 turns time to save him]
 			say "     The demons might not be here right at this very moment, but they'd surely notice you making off with their prized catch. So you'll bide your time for the moment. Let's hope their captive will hold out a bit longer...";
 	otherwise if (hp of Elijah is 1):  [wounded + unconscious in the bunker - starting the revival quest]
@@ -345,6 +346,7 @@ An everyturn rule:
 	if (hp of Elijah is 0) and (Burned-Out Chapel is known) and (lastElijahfucked - turns > 32):  [time till demon orgy, after which Elijah will be dragged to hell]
 		now hp of Elijah is 100;
 		remove Elijah from play;
+		now Burned-Out Chapel is not known;						
 		say "Your mind wanders momentarily to the angel you once saw fighting those demons, but soon forget about him and return to your more immediate concerns.";
 	[NPC Interaction section - sorted by Elijah hp state and NPC/pet - see file header]
 	if (hp of Elijah is 1 or hp of Elijah is 2) and (NPCintCounter - turns > 2):
