@@ -6,7 +6,9 @@ Tribal Skirmish is a situation.
 Instead of resolving a tribal skirmish:
 	If population of tribe of player is greater than 20:
 		let T be a random number between one and 50;
-		let z be the printed name of a random active species;
+		let q be a random active species;
+		if q is nothing, continue the action;
+		let z be the printed name of q;
 		if z is "", now z is "mutant";
 		If T is greater than workers of warrior:
 			say "Your camp seems slightly emptier come morning, and you learn from several of your warriors that at some point last night, members of the [z] tribe managed to sneak into your encampment, and entice several of your people to slip away with them. You sigh as you look around your slightly smaller tribe, and resolve to make sure your sentries are keeping a better eye on things in the future.";
