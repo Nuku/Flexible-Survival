@@ -633,7 +633,7 @@ to say FrançoisBakingMenu:
 					otherwise:
 						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
 				otherwise if title entry is "Gingerbread":  [Gingerbread - egg nog + pixie dust + blue gel]
-					if wyvern goop is owned and pixie dust is owned and crushed candies is owned:
+					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
 						say "	 François takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a tray full of small colourful  gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
 						decrease carried of egg nog by 1;
