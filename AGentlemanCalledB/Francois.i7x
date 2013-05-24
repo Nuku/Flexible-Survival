@@ -544,7 +544,7 @@ to say FrançoisBakingMenu:
 		now description entry is "have François bake a Cheesecake";
 	choose a blank row in table of fucking options;
 	now title entry is "Abort";
-	now sortorder entry is 9;
+	now sortorder entry is 11;
 	now description entry is "Abort";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -641,7 +641,7 @@ to say FrançoisBakingMenu:
 						decrease carried of blue gel by 1;
 						increase carried of Gingerbread by 2;
 					otherwise:
-						say "You do not have the required ingredients. egg nog, pixie dust and blue gel.";
+						say "You do not have the required ingredients, egg nog, pixie dust and blue gel.";
 				otherwise if title entry is "Cheesecake": [Cheesecake - cheese + pixie dust + pink gel] 
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
@@ -651,7 +651,7 @@ to say FrançoisBakingMenu:
 						decrease carried of pink gel by 1;
 						increase carried of Cheesecake by 2;
 					otherwise:
-						say "You do not have the required ingredients. cheese, pixie dust and pink gel.";
+						say "You do not have the required ingredients, cheese, pixie dust and pink gel.";
 				otherwise if title entry is "Abort":
 					say "You decide not to have François bake anything.";
 					now sextablerun is 1;
@@ -917,12 +917,12 @@ to say Crème Abondante Use:
 	otherwise:
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your chest[run paragraph on]";
 		if breasts of player < 8:
-			say "as it increases in intensity, the tingling centers on two new sensitive points, which quickly swell into two new [descr] breasts, pressing out of your [skin of player] hide[run paragraph on]";
+			say " as it increases in intensity, the tingling centers on two new sensitive points, which quickly swell into two new [descr] breasts, pressing out of your [skin of player] hide[run paragraph on]";
 			increase breasts of player by 2;
 		if breast size of player < 26:
 			follow the breast descr rule;
 			let oldbreast be descr;
-			say "and you [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			say " and you [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 			increase breast size of player by 2;
 			if breast size of player > 26, now breast size of player is 26;
 			follow the breast descr rule;
