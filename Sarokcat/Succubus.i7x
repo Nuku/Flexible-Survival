@@ -28,6 +28,7 @@ to say Succubus attack:
 		infect "Succubus";
 
 To say Succubus loss:
+	if lisaartemiscount1 > 0 and lisaartemiscount1 < 5, increase lisaartemiscount1 by 1;
 	if cocks of player is greater than 0:
 		if bodyname of player is "Incubus":
 			say "'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender.  'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be.' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";

@@ -22,6 +22,7 @@ to say kangaroo attack:
 
 
 To say kangaroo loss:
+	if lisaartemiscount2 > 0 and lisaartemiscount2 < 5, increase lisaartemiscount2 by 1;
 	say "Whimpering she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you.";
 	attempttowait;
 	if cocks of player > 0 and cock length of player is greater than 10:
