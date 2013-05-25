@@ -74,7 +74,7 @@ When Play begins:
 	now face entry is "now that of a bald eagle, having a long, yellow beak and piercing eyes on a snow white head";
 	now body entry is "partially avian, with wings built into your arms and a light, powerful frame.  Your hands are small and taloned, placed at the midpoint of the leading edge of your wing, allowing them to be used by partially folding in the wing.  Your legs are like a bird's, ending in sharp talons on your four grasping toes";
 	now skin entry is "dark brown feathers across your body, covering your";
-	now tail entry is "You have a short, feathered tail that is dark brown at the back and white in front";
+	now tail entry is "You have a short, feathered tail that is dark brown at the back and white in front.";
 	now cock entry is "[one of]slick[or]avian[at random]";
 	now face change entry is "your mouth and nose stretch forward and harden into a sharp and pointed beak.  Your eyes move to the side as your head completes it transformation into an eagle's";
 	now body change entry is "you gain a light, powerful frame with strong shoulders.  These changes spread down your arms, forcing the bones to shift and grow long and thin.  As your hand bends and extends out, growing into a wing, a second, smaller hand with taloned claws forms at your wrist.  Your legs change into those of a bird with sharp talons on your four grasping toes.  You are left panting and sweating after such extensive changes, but get up feeling lighter after you recover";
