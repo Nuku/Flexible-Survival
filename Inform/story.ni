@@ -1840,7 +1840,6 @@ carry out vialing:
 		say "You don't seem to have any such vial.";
 		continue the action;
 	say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
-	[puts Herm Hyena as lead monster in case of impregnation]
 	now monster is 0;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -5954,6 +5953,7 @@ Include Sarah by Sarokcat&Hellerhound.
 Include Coleen by Sarokcat.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
+Include Angie by Sarokcat.
 Include Midnight by Sarokcat.
 Include Harold by Sarokcat.
 Include Kara by Sarokcat.
