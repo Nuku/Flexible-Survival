@@ -141,6 +141,7 @@ to say Sweet Tooth scene:
 		sfcaffeine;			[activates effects of Sugar Ferret caffeine high]
 		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement.  The place if filled with groups of vibrantly colourful ferrets licking, sucking and fucking one another wildly.  And you're at the center of this, jills and hobs lustfully welcoming you to their group[if cocks of player > 0 and cunts of player > 0].  You fuck and are fucked several times over the course of the orgiastic event[otherwise if cocks of player > 0].  You fuck several of the ferrets over the course of the orgiastic event[otherwise].  You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colours and sweet, sweet soda.  Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda.  Still having a little self-control, you bound away with a surplus of energy.[impregchance]";
 		infect "Sugar Ferret";
+		increase ferretvisit by 1;
 		if humorous is not banned, now Caught Glider is unresolved;
 	otherwise:
 		[puts Sugar Ferret as lead monster for impregnation]
@@ -239,7 +240,7 @@ to say Sweet Tooth scene:
 		if thirst of player < 0:
 			now thirst of player is 0;
 		say "[line break]";
-	increase ferretvisit by 1;
+		increase ferretvisit by 1;
 	say "     With your visit to the Sweet Tooth candy shop over, you head back to the entrance area to the State Fair to decide you next course of action.";
 	wait for any key;
 

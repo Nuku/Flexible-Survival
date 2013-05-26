@@ -1,6 +1,5 @@
-Version 4 of Doberman For FS by Stripes begins here.
-[Version 4.0 - NPC Doberman Ex-Cop]
-[This file is a co-product of Stripes and Kaleem.]
+Version 5 of Doberman For FS by Stripes begins here.
+[Version 5.0 - Friendly option started]
 
 "Adds a Doberman infection and creature.  This file pulls double-duty, with the creature/combat portions written by Stripes to run the Doberwoman Cop.  The infection and ending portions of this file were written by Kaleem to deal with the Doberman NPC for the Firehouse content."
 
@@ -26,12 +25,59 @@ to say losetoDoberman:
 to say losetodobie1:		[low-lust player loss]
 	choose row monster from the table of random critters;
 	if dobieresist is 0:
-		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out";
+		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it";
+		if dobielibido is 0:
+			say ".";
+			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?  If you'd like to try making friends with her, you should talk to her.  If you'd rather bide your time until you can deal with the Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.  Which will it be?";
+			if the player consents:
+				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let dice be a random number from 1 to 20;
+				say "You roll 1d20([dice])+[bonus]=[dice + bonus] vs 16:  ";
+				if dice + bonus >= 16:
+					say "Deciding to risk it, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her.  At first, she remains curt with you, but her loneliness in this situation wins out and she starts to open up.";
+					say "     'My name's Officer Friedrich, but I guess you can call me Alexandra.  It's good to run into someone who's sane and friendly.  All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes.  But I can't give up.  Just before communications went down entirely, the emergency reports said that the military would be sent in.  We've just got to hold out,' she says, a bit of desperation in her voice.  You both fall silent for a while.";
+					say "     She pours some water from a thermos into the lid and passes it to you.  'Don't worry, it's safe,' she says, drinking down the rest.  'Look, your the first stable person I've seen in days.  You try to keep it together, please.  When this is done, I want to know that I've gotten at least one person out of this mess.  I'm holed up in what's left of my station.  You should come by sometime.  I'd really appreciate the company.'";
+					say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance";
+					now dobielibido is -100;
+					now Police Station is known;
+					now hp of Alexandra is 50;
+					move Alexandra to Police Station;
+					now area entry is "nowhere";
+					increase score by 20;
+				otherwise:
+					say "Deciding to give it a shot, you try to strike up a conversation with her while responding to her questions.  You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding.  She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond"; 
+					now dobielibido is -1;
+			otherwise:
+				say "     Suspecting that the infection has affected her mind, given how she's transformed and acting, you respond calmly, but are careful not to divulge anything that might put you or the bunker at risk.  As your talking to her, your eyes wander from time to time to her bosom, catching a faint scent of arousal coming from it.  It seems she's feeling the effects of the infection as well.  Perhaps you can take advantage of that when you're better prepared to put her in her place.";
+				say "     'Eyes up here,' she growls, noticing your lecherous gaze";
+				now dobielibido is 1;
+		otherwise if dobielibido < 0:
+			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman again.  It takes her a few moments to recognize you, shaking her single-minded focus on her duty.  'I thought I told you to stay off the streets.  It's good to see you've still got some control in there, but it's not safe.  If you keep roaming around, something's going to get you eventually.  How are you holding up, citizen?  Do you still remember your name?  Where you lived and worked?'  She starts up with her basic set of questions again, wanting to make sure your mind stays together.";
+			let bonus be (( charisma of player minus 10 ) divided by 2);
+			let dice be a random number from 1 to 20;
+			say "You roll 1d20([dice])+[bonus]+[0 - dobielibido]=[dice + bonus - dobielibido] vs 16:  ";
+			if dice + bonus - dobielibido >= 16:
+				say "Again trying to reach her, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her.  At first, she remains curt with you, but this time you're able to get through to her as her loneliness in this situation wins out and she starts to open up.";
+				say "     'My name's Officer Friedrich, but I guess you can call me Alexandra.  It's good to run into someone who's sane and friendly.  All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes.  But I can't give up.  Just before communications went down entirely, the emergency reports said that the military would be sent in.  We've just got to hold out,' she says, a bit of desperation in her voice.  You both fall silent for a while.";
+				say "     She pours some water from a thermos into the lid and passes it to you.  'Don't worry, it's safe,' she says, drinking down the rest.  'Look, your the first stable person I've seen in days.  You try to keep it together, please.  When this is done, I want to know that I've gotten at least one person out of this mess.  I'm holed up in what's left of my station.  You should come by sometime.  I'd really appreciate the company.'";
+				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance";
+				now dobielibido is -100;
+				now Police Station is known;
+[				now hp of Alexandra is ***;	]
+				now area entry is "nowhere";
+				increase score by 20;
+			otherwise:
+				say "You attempt again to strike up a conversation with her while responding to her questions.  You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding.  She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond"; 
+				decrease dobielibido by 2;
+		otherwise:
+			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out";
+		say ".  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out";
 		say "[weaponconf]";
-		say ".'  And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
+		say ".'  And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2].  At least it seems you've made a new friend in this messed up world[end if].";
 		increase humanity of player by 12;
 		if humanity of player > 100, now humanity of player is 100;
 	otherwise if libido of player >= 110:
+		if dobielibido < 1, now dobielibido is 1;
 		say "***Not written yet, but may be needed in the future.  Player lost due to excess libido.";
 		let fine be 8 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
 		let timepenalty be 3;
@@ -41,6 +87,7 @@ to say losetodobie1:		[low-lust player loss]
 		increase humanity of player by 10;
 		extend game by ( 0 - timepenalty );
 	otherwise if hp of player > 0:
+		if dobielibido < 1, now dobielibido is 1;
 		let fine be 4 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
 		let timepenalty be 2;
 		if dobieresist > 4, increase timepenalty by 1;
@@ -52,6 +99,7 @@ to say losetodobie1:		[low-lust player loss]
 		increase humanity of player by 10;
 		extend game by ( 0 - timepenalty );
 	otherwise:
+		if dobielibido < 1, now dobielibido is 1;
 		let fine be 8 + ( dobieresist * 3 ) + ( hp entry - monsterhp );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
@@ -63,8 +111,9 @@ to say losetodobie1:		[low-lust player loss]
 		if freecred < 0, now freecred is 0;
 		increase humanity of player by 10;
 		extend game by ( 0 - timepenalty );
-	decrease dobielibido by 5;
-	if dobielibido < 0, now dobielibido is 0;
+	if dobielibido > 0:
+		decrease dobielibido by 5;
+		if dobielibido < 1, now dobielibido is 1;
 
 
 to say losttodobie2:		[mid-lust player loss]
@@ -105,7 +154,7 @@ to say losttodobie2:		[mid-lust player loss]
 	if freecred < 0, now freecred is 0;
 	extend game by ( 0 - timepenalty );
 	decrease dobielibido by 5;
-	if dobielibido < 0, now dobielibido is 0;
+	if dobielibido < 1, now dobielibido is 1;
 
 
 to say losetodobie3:		[high-lust player loss]
@@ -149,7 +198,7 @@ to say losetodobie3:		[high-lust player loss]
 	decrease freecred by fine;
 	if freecred < 0, now freecred is 0;
 	extend game by ( 0 - timepenalty );
-	decrease dobielibido by 10;
+	if dobielibido < 1, now dobielibido is 1;
 
 
 to say dobieride:
@@ -183,16 +232,22 @@ to say dobiensanal:
 to say weaponconf:
 	if dirty whip is owned or infected sword is owned:
 		say ".'";
-		if dobielibido >= 100 and inasituation is false:
+		if dobielibido is -100:
+			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, keeping you from going anywhere.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.'  A little reluctant to part with it, but not wanting to jeopardize the friendship you've just started to make with her, you give it up to her";
+		otherwise if dobielibido < 1:
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.'  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			increase dobielibido by 2;		[lose some ground in convincing her]
+			if dobielibido >= 0, now dobielibido is -1;
+		otherwise if dobielibido >= 100 and inasituation is false:
 			say "     The policewoman's canine nose twitches and she gives you another kick for good measure.  'That weapon you've got is infection and therefore contraband.  I can't let someone like you keep it.'  As you start to protest, pulling at your handcuffed arms, she grinds her heel into your face.  'Or what, scum?  Settle down, or I might even consider using them on you to see just what they do,' she growls as she reaches down and picks up your ";
 		otherwise if dobieresist is 0:					[did not resist]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.'  As you start to protest, she twists your arm harder and pushes you down with a growl";
 		otherwise if libido of player >= 110:		[lustfully submitted]
 			say "***Not written yet, but may be needed in the future.  Player lost due to excess libido.";
 		otherwise if hp of player > 0:			[resisted, then submitted]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.'  As you start to protest, she twists your arm harder and pushes you down with a growl";
 		otherwise:							[lost the fight]
-			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			say "     The policewoman's canine nose twitches and [if dobielibido < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.'  As you start to protest, she twists your arm harder and pushes you down with a growl";
 		if dirty whip is owned and infected sword is owned:
 			if dobielibido >= 100 and inasituation is false:
 				say "whip and sword, making sure to use an evidence bag to get them.  'I appreciate your cooperation in this matter,' she says, giving you a final kick.  'Don't get in my way again";
@@ -249,6 +304,7 @@ to say weaponconf:
 
 
 to say beattheDoberman:
+	if dobielibido < 1, now dobielibido is 1;
 	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down.  She releases a canine whimper that she quickly stifles as she fails to get back up";
 	if dobielibido < 50:			[low-lust cop]
 		say "[beatthedobie1]";
@@ -391,7 +447,10 @@ to say Dobermandesc:
 	now hp entry is 60 + ( debit * 4 );
 	now lev entry is 7 + debit;
 	now wdam entry is 10 + ( debit / 4 );
-	if dobielibido < 50:
+	if dobielibido < 0:
+		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched.  She strides over with confidence, a determined look upon her long muzzle.  It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
+		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
+	otherwise if dobielibido < 50:
 		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched.  In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker pants and a policeman's hat.  She has an average sized rack on her under her shirt.";
 		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
 			say "     [one of]'Halt, citizen[or]'Freeze!  Police[or]'Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
