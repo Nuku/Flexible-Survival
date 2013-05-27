@@ -95,7 +95,7 @@ to say beattheSugarGlider:
 					say "     Sated, the sugar glider's soft form goes limp, her long tail slips off your body as she basks in the afterglow of her climax. She pouts a little as you pull your still twitching members from her syrupy folds, but does little else to resist you leaving as you gather your things and depart, leaving the sugary marsupial to recover on her own.";
 			otherwise: [Female]
 				say "     With a cheer, she springs to her knees, nearly knocking you over with her enthusiasm as she buries her muzzle between your thighs. Carefully letting yourself fall to the ground, you lay on your back and spread your legs, allowing the excited marsupial easier access to your needy cunt.";
-				say "     Her long wet tongue makes several slow passes across your outer lips before she presses her snout against your cunts and delves deep into your womanly passage with her dexterous tongue. You moan in delight as she works deeper and deeper into your body Her nose rubbing delightfully against your clit as her talented tongue seems to stretch like taffy, pressing into your innermost depths. You cry out loud in delight as she rapidly drives you to climax, soaking your lovely companion's muzzle in your feminine nectar as you orgasm powerfully.";
+				say "     Her long wet tongue makes several slow passes across your outer lips before she presses her snout against your cunt and delves deep into your womanly passage with her dexterous tongue. You moan in delight as she works deeper and deeper into your body Her nose rubbing delightfully against your clit as her talented tongue seems to stretch like taffy, pressing into your innermost depths. You cry out loud in delight as she rapidly drives you to climax, soaking your lovely companion's muzzle in your feminine nectar as you orgasm powerfully.";
 				attempttowait;
 				say "     Even in the afterglow of your climax, you moan at the delightful shivers the sugar glider's tongue sends through your body as it slowly slides out of your depths, she pulls her muzzle from your cunt with a wet slurp, doing her best to clean your female juices from her matted pink fur as she move over your prone body. As her face reaches you own, the sugar glides presses her muzzle to your lips, her long tongue slipping into your mouth, filling it with the sugary taste of her own saliva mixed with your own musky fluids before she springs to her feet and [one of]skips off into the midway[or]scampers up a nearby light post and glides off over the stalls[or]climbs a nearby stall and bounds off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
 		otherwise:
@@ -173,8 +173,24 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-Definition: a person is SugarGliderskinned:
+Definition: a person is sugargliderskinned:
 	if the skinname of the player is "Sugar Glider", yes;
+	no;
+
+Definition: a person is sugargliderbodied:
+	if the bodyname of the player is "Sugar Glider", yes;
+	no;
+
+Definition: a person is sugarglidercocked:
+	if the cockname of the player is "Sugar Glider", yes;
+	no;
+
+Definition: a person is sugarglidertailed:
+	if the tailname of the player is "Sugar Glider", yes;
+	no;
+
+Definition: a person is sugargliderfaced:
+	if the facename of the player is "Sugar Glider", yes;
 	no;
 
 Section 3 - Crushed Candy
