@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Rimme begins here.
-[Version 2.1 - Additional Horsey-Steven sex (Sub/MPreg only)]
+[Version 2.2 - Human definitions expanded]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -30,6 +30,7 @@ Definition: a person is facially human:
 	if the facename of the player is "Amazonian", yes;
 	if the facename of the player is "Naiad", yes;
 	if the facename of the player is "Math Teacher", yes;
+	if the facename of the player is "Viking", yes;		
 	no;
 
 Definition: a person is skintone human:
@@ -50,6 +51,7 @@ Definition: a person is skintone human:
 	if the skinname of the player is "Naiad", yes;		
 	if the skinname of the player is "Caveman", yes;		
 	if the skinname of the player is "Math Teacher", yes;
+	if the skinname of the player is "Viking", yes;		
 	no;
 
 Definition: a person is bodily human:
@@ -64,6 +66,7 @@ Definition: a person is bodily human:
 	if the bodyname of the player is "Amazonian", yes;
 	if the bodyname of the player is "Naiad", yes;		
 	if the bodyname of the player is "Math Teacher", yes;
+	if the bodyname of the player is "Viking", yes;		
 	no;
 
 Instead of entering the Storage Room:

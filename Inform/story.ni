@@ -5928,7 +5928,7 @@ Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
 Include Caveman by TheRecipe.
-
+Include Viking by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
