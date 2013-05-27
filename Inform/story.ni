@@ -5724,6 +5724,7 @@ Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
 Include Endings by Darthan.
 Include Underground Events by Wahn.
+Include Sugar Feud by AGentlemanCalledB.
 
 
 [Monsters/Infections]
