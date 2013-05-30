@@ -1061,7 +1061,7 @@ to say Larissaisnow-googirl:
 		otherwise:
 			let goahead be 0;
 	if goahead is 1:
-		if "Succubus" is not listed in vials of player:
+		if "Goo Girl" is not listed in vials of player:
 			say "You don't have one of those vials to offer [objpro of Larissa].";
 		otherwise if freecred < lar_tfcost:
 			say "You don't have enough credits right now.";

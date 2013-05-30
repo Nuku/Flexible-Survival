@@ -174,7 +174,7 @@ instead of addfeating the fun feats:
 		addfeat "Cold Fish" with "Your libido will decrease over time.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
 	if "Sterile" is not listed in feats of player:
-		addfeat "MPreg" with "You can now be impregnated and give birth as a male/neuter (egg laying).";
+		addfeat "MPreg" with "You can now be impregnated and give birth as a male/neuter (egg laying).  It can occasionally open/alter sex scenes.";
 	if "Breeding True" is not listed in feats of player and "Sterile" is not listed in feats of player:
 		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
 	if "They Have Your Eyes" is not listed in feats of player and "Sterile" is not listed in feats of player:
@@ -186,9 +186,9 @@ instead of addfeating the fun feats:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
 [	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
-	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
-	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.";
-	if Strange Serpent is resolved or ( scenario is "Forgotten" or scenario is "Hard mode" ):
+	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.  It can occasionally open new, kinkier sex scenes.";
+	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.  It can occasionally open new, submissive scene variations.";
+	if Strange Serpent is resolved or ( scenario is "Forgotten" or hardmode is true ):
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
@@ -284,7 +284,7 @@ instead of addfeating the basic feats:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
 	if level of player is greater than 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
-	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
+[	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";	]
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
