@@ -5724,6 +5724,7 @@ Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
 Include Endings by Darthan.
 Include Underground Events by Wahn.
+Include Sugar Feud by AGentlemanCalledB.
 
 
 [Monsters/Infections]
@@ -5927,7 +5928,7 @@ Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
 Include Caveman by TheRecipe.
-
+Include Viking by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
