@@ -1316,6 +1316,7 @@ To reciting2:
 					if hp of Joanna > 0 and hp of Joanna < 90:
 						now Overrun Garden is resolved;
 						now joannaharoldtalk is 1;
+						now Flower Garden is known;
 					if hp of Joanna > 1 and hp of Joanna < 90:
 						now joannatalk is 1;
 					if hp of Joanna is 6:
@@ -2703,6 +2704,7 @@ Carry out reciting:
 					if hp of Joanna > 0 and hp of Joanna < 90:
 						now Overrun Garden is resolved;
 						now joannaharoldtalk is 1;
+						now Flower Garden is known;
 					if hp of Joanna > 1 and hp of Joanna < 90:
 						now joannatalk is 1;
 					if hp of Joanna is 6:

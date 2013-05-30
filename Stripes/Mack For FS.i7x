@@ -1,4 +1,4 @@
-Version 2 of Mack for FS by Stripes begins here.
+ Version 2 of Mack for FS by Stripes begins here.
 [Version 2 - Mack @ Bunker]
 
 "Adds a male Squirrel name Macadamia (Mack) to the Flexible Survival game"
@@ -243,8 +243,8 @@ to say eatroastednuts:
 	if "Junk Food Junky" is listed in feats of player:
 		if hunger of player > 14, increase score by 1;
 		decrease hunger of player by 3;
-	decrease hunger by 12;
-	increase thirst by 3;
+	decrease hunger of player by 12;
+	increase thirst of player by 3;
 	if hunger of player < 0, now hunger of player is 0;
 
 
