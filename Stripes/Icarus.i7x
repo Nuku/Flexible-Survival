@@ -1,20 +1,7 @@
-Version 2 of Icarus by Stripes begins here.
-[Version 2 - The dark deed is done]
+Version 3 of Icarus by Stripes begins here.
+[Version 3 - Dom-Icarus path]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
-
-[ hp of Icarus ]
-[ 0 = untamed  ]
-[ 1 = at bunker, no talk ]
-[ 2 = talked  ]
-[ 3 = taught to suck cock ]
-[ 4 = sucked cock of pred again ]
-[ 5 = rougher sex w/pred ]
-[ 6 = had attic sex, light version ]
-[ 7 = had attic sex, dark version ]
-[ 8 = back ]
-[ 9 = gone ]
-
 
 Section 1 - Icarus the Blue Chaffinch
 
@@ -29,17 +16,26 @@ icarussex6_variant is a number that varies.  icarussex6_variant is normally 1.
 
 [See Blue Chaffinch file for collecting Icarus.]
 
-the scent of Icarus is "[if facename of player is listed in infections of Avianpredlist]The blue songbird smells like prey.[otherwise]The blue songbird has a soft, pleasant scent.[end if]";
+the scent of Icarus is "[if hp of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused.[otherwise if facename of player is listed in infections of Avianpredlist]The blue songbird smells like prey.[otherwise]The blue songbird has a soft, pleasant scent.[end if]";
 
 
 to say Icarusdesc:
 	say "     This avian fellow is covered in bright blue plumage that is very even in colour across most of his body.  Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white.  He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers.  His head is rounded and shaped like that of a finch, though his beak is thicker.  Double-checking with one of the nature books in the library, you've confirmed that your assumption was right and that he's almost certainly been infected to resemble an exotic blue chaffinch.  His eyes are like black beads with a touch of white feathers just above and below.";
-	say "     Lacking a name of his own, you've decided to call him Icarus.  Once strong and arrogant, your repeated rough treatment of him as a predatory avian has affected the passerine to the point that he's accepted to become your songbird slut[if hp of Icarus > 7].  He's recovered from his wounds, as if they never were, ready for a fresh assault from his predatory hunter[end if].  He usually spends his daytime hours up in the rafters, singing softly[if the number of booked people > 2] for the others[end if].  He seems fairly happy here, as if accepting the spacious library as his birdcage.";
+	if hp of Icarus < 50:
+		say "     Lacking a name of his own, you've decided to call him Icarus.  Once strong and arrogant, your repeated rough treatment of him as a predatory avian has affected the passerine to the point that he's accepted to become your songbird slut[if hp of Icarus > 7].  He's recovered from his wounds, as if they never were, ready for a fresh assault from his predatory hunter[end if].  He usually spends his daytime hours up in the rafters, singing softly[if the number of booked people > 2] for the others[end if].  He seems fairly happy here, as if accepting the spacious library as his birdcage.";
+	otherwise:
+		say "     Lacking a name of his own, he's taken on the name of Icarus.  After you'd brought him back here, he ended up reverting to his stronger, more arrogant attitude and has asserted his dominance over you.  No longer satisfied with being neglected as your songbird slut, he's made you into his slut instead.  He usually spends his daytime hours up in the rafters, singing softly and strutting around as if he rules the roost.  He seems quite pleased with himself.  As you're watching him, the thought of letting the little guy dominate you again gets you a little excited.";
 
 Instead of conversing the Icarus:
 	if hp of Icarus is 0 or hp of Icarus is 7 or hp of Icarus is 9:
 		say "ERROR-Icarus-[hp of Icarus]L: You should not be able to find me!";
-	otherwise if hp of Icarus is 1:
+	otherwise if hp of Icarus < 50:
+		say "[icarustalk_sub]";
+	otherwise:
+		say "[icarustalk_dom]";
+
+to say icarustalk_sub:
+	if hp of Icarus is 1:
 		say "     He looks around the library in a very bird-like manner, his head twisting and turning as he looks.  This is a pretty nice place you've got in here.  Pretty spacious and the rafters make for a good perching spot.  It seems safe enough, too.  Good little cage for your caught birdie.'  Now that he's not trying to sound tough, you notice that he's got a soft, musical voice.";
 		say "     He fidgets around for a moment, his wings rustling a little.  'Look... I... can you play with me like that again soon?' he asks with a touch of nervous excitement in his voice.  'I'd never have gone for that before, with a guy, especially not on the bottom.  But... just... something about it - the terror, the pain, the viceral lust.  I've never been so turned on in my life and I want you to do it again.  You were so... powerful - your talons grabbing me, your beak flashing - my blood was pumping with fear and anticipation before you tore into me with that cock of yours.  Any time you feel like being the scary predator bird, I'll be your weak, delicious prey.'";
 		now hp of Icarus is 2;
@@ -55,10 +51,21 @@ Instead of conversing the Icarus:
 	otherwise:
 		say "     [one of]Icarus sings a melodious tune from the rafters while you listen for a spell.[or]Icarus gives his feathery rear a tantalizing shake.  'I've stored some of my birdseed up in the attic.  That way I'll have something to eat the next time I need to recover from a rough session with the wild predator,' he says with a grin.[or]'I won't tell others what happened up there.  That's just between us, my vicious predator,' he whispers, rubbing his feathered body against yours.[or]'I can hardly wait until the next time you feel like making me your prey and sinking your talons and cock into me.'[at random]";
 
+to say icarustalk_dom:
+	if hp of Icarus is 50:
+		say "     Icarus speaks with with a deeper tone, more like when you first met him, but his confidence sounding more genuine to you now.  'I think this'll work out much better for us.  You enjoy being the slut to the sexy bird much more.  I can tell,' he says with a firm squeeze of your ass and a grope at your crotch, drawing a moan from you.  'I should never have let you convince me to try being the bottom, you silly fucktoy.  But everything'll be right now that you know your place.'";
+		if cunts of player > 0:
+			say "     As he continues to manhandle you, he slips a pair of digits into your cunt and pumps them inside you roughly.  'Mmm... I'm really looking forward to breeding a few clutches of chicks in my horny slut.  Doesn't that sound nice?'  He gives your ass a swat and struts off, licking your juices from his fingers as he does.";
+		otherwise:
+			say "     As he continues to manhandle you, he pushes a pair of digits into your ass and pumps them inside you roughly.  'Mmm... I'm really looking forward to fucking you raw again and again to [']repay['] you for making me your bitch for a while.  Doesn't that sound nice?'  He gives your ass a swat and struts off, chuckling to himself.";
+		now hp of Icarus is 51;
+	otherwise:
+		say "     [one of]Icarus sings a melodious tune from the rafters while you listen for a spell.[or]'You must've managed to confuse me somehow, making me think I wanted to be a bottom bitch.  I've always been a big stud and no crazy infection's going to change that.  And I'm going to enjoy proving it to you over and over again, my slutty fucktoy.'[or]'I've got myself covered for food.  I was smart and snagged a bunch of birdseed from the zoo stores early on.'[or]'I'm already looking forward to my next chance to put you in your place,' he says, rubbing at his groin.  You feel a little weak in the knees as a rush of excitement runs through your loins at the thought of what he may intend for you next time.[or]Icarus runs his clawed hands across your body.  'Don't get any silly thoughts about getting uppity.  Your place is beneath me and you know it,' he says with confidence as he gropes you.  You can't help but moan, responding to the aggressive little bird's touch with a lustful desire for more.[at random]";
+
 
 Section 2 - Sexxxings
 
-Part 0 - Basic Sex Menu
+Part 0 - Basic Sex Menus
 
 the fuckscene of Icarus is "[sexwithIcarus]".
 
@@ -71,9 +78,21 @@ to say sexwithIcarus:
 		say "     Lacking any gender of your own, you feel there's little point in going to Icarus for sex.";
 	otherwise if lastfuck of Icarus - turns < 6:
 		say "     'Oh, I'm still worn out from the last time, but I [if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist]do so want to go again soon[otherwise]hope you'll consider being the scary predator next time[end if].'";
-	otherwise if hp of Icarus > 1:
+	otherwise if hp of Icarus < 50:
+		say "[icarussex_sub]";
+	otherwise:
+		say "[icarussex_dom]";
+		now lastfuck of Icarus is turns;
+
+to say icarussex_sub:
+	if hp of Icarus > 1:
 		if cocks of player is 0:
-			say "     The blue bird blushes a little and looks away, his wings fluttering.  'Look, before I might've, but... you see... to me you'll always be my fearsome, male hunter and it just wouldn't feel right.  If I wanted some pussy, I could just go out on the town and get it,' his old, macho voice coming back slightly for a bit before returning to normal.  'But for you, I just want to be your songbird slut and your prey, like you said.'  He shifts around eagerly on his taloned feat, clearly remembering the previous times you had your way with him.";
+			if hp of Icarus < 7 and lust of Icarus > 6 and lust of Icarus < 100:
+				say "[icarussex0_dom]";
+				now lastfuck of Icarus is turns;
+			otherwise:
+				say "     The blue bird blushes a little and looks away, his wings fluttering.  'Look, before I might've, but... you see... to me you'll always be my fearsome, male hunter and it just wouldn't feel right.  If I wanted some pussy, I could just go out on the town and get it,' his old, macho voice coming back slightly for a bit before returning to normal.  'But for you, I just want to be your songbird slut and your prey, like you said.'  He shifts around eagerly on his taloned feat, clearly remembering the previous times you had your way with him.";
+				if hp of Icarus < 7, increase lust of Icarus by 3;
 		otherwise if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			if hp of Icarus >= 8 and a random chance of 1 in 4 succeeds:
 				say "[icarussex6_ap]";
@@ -88,15 +107,21 @@ to say sexwithIcarus:
 			otherwise:
 				say "[icarussex2_ap]";
 			now lastfuck of Icarus is turns;
+			now lust of Icarus is 0;
 		otherwise:
-			if a random chance of 3 in 5 succeeds:
+			if hp of Icarus < 7 and lust of Icarus > 6 and lust of Icarus < 100:
+				say "[icarussex0_dom]";
+			otherwise if a random chance of 3 in 5 succeeds:
 				say "[icarussex3]";
 			otherwise if hp of Icarus is 2:
 				say "[icarussex1]";
 			otherwise:
 				say "[icarussex2]";
 			now lastfuck of Icarus is turns;
+			if hp of Icarus < 7, increase lust of Icarus by 2;
 
+
+Part 1 - Icarus Sub Sex
 
 to say icarussex1:		[first time - oral]
 	say "     In the mood for some fun with your little songbird, you call him down with the intent on training him to suck cock.  Once he's landed, you grab him and push his face to your crotch.  You grind your throbbing rod against his feathered face, telling him to get to work.  He gulps nervously, but you also see an eagerness in his eyes as he stares at your [cock size desc of player] [cock of player] penis[esmn].";
@@ -143,6 +168,9 @@ to say icarussex4_ap:		[rough avian sex]
 	say "     You take delight in his musical cries as you pound away at him, his hard cock slapping against his tummy and spurting precum across the floor.  The weaker bird's behaviour excites you greatly, your instincts getting stronger and weakening your restraint.  Your nips get harder, biting into his flesh hard enough to make him bleed while your claws dig into him.  The little birdie beneath you whimpers at the pain, but pushes himself back into your thrusts all the more for it.";
 	say "     A few last thrusts push you over the edge.  Biting hard as your talons dig in, you restraint the shuddering passarine, drive your cock deep inside him and unleash your hot load.  You pump your [cum load size of player] load into your prey with a triumphant cry that drowns out his own orgasmic cry of pain.  The blue bird cums messily, spraying shot after shot of stick avian cum onto the floor beneath him as the powerful predator tears into him and fills him[if cock width of player > 35].  Your [cum load size of player] output leaves the wounded songbird so bloated and full of your cum that some leaks out of his beak.  His body is left rounded like a feathery balloon from it all.  He can only give a weak chirp as you pull out and your hot cum pours of his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 25].  Your [cum load size of player] output leaves the wounded songbird rounded like a feathery balloon.  When you pull out, he gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 15].  Your [cum load size of player] output leaves the wounded songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed.  When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[otherwise].  The wounded songbird gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if].  You give him a final nip and lick at one of his bloodied wounds.  This sends a rush of dark excitement through you, the taste of the little bird wonderful to the avian hunter in you.  But having just gotten off, you rein it in, wipe your cock across his softly feathered ass and leave him laying there in a pool of his increasingly red-streaked semen with a smile on his exhausted face.";
 	if hp of Icarus is 4, now hp of Icarus is 5;
+
+
+Part 2 - Icarus Sub Sex - Extreme Content
 
 to say icarussex5_ap:		[uncontrolled avian sex]
 	say "     Wanting to play with your songbird prey, you call for him to come down.  He continues to sing his musical song as if not hearing you.  When you call out to him again, he glances at you with a slight grin, flutters his wings a little and sings on.  Frustrated and wanting the bird all the more, you call out to him again with an avian screech.  With that, he stops singing and starts to move, but rather than coming down to you, he instead retreats further into the rafters.";
@@ -219,6 +247,11 @@ to say icarussex6_ap:		[violent avian sex]
 	now hp of Icarus is 9;
 	now ttIcarus is turns;
 
+Part 3 - Icarus Dom Sex
+
+to say icarussex1_dom:
+	say "***";
+
 
 Section 3 - The Tell-Tale Icarus
 
@@ -270,5 +303,105 @@ an everyturn rule:
 				say "     You hear the pleasant birdsong of your blue passarine up in the rafters again, signalling that he's recovered and returned to his perch[if player is in grey abbey library].  When you look up at him, he grins and gives his rear a tantalizing shake, eager for more[end if].  Some dark part of you is excited at the prospect of running wild upon him again sometime soon.";
 				increase libido of player by libido of player / 5;
 				if libido of player > 100, now libido of player is 100;
+
+
+Section 4 - Icarus Dominance
+
+to say icarussex0_dom:
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	say "     Icarus seems to sigh when you signal for him to come down.  He's rather slow at coming down to join you, taking his time before flying down to the ground floor.  He preens one of his wings as he gives you a sidelong glance.";
+	say "     'I'm not quite sure what you had in mind, but you're not giving me what I thought was coming.  You get me all worked up to be the songbird pet to a big, strong, male predator and you go and change on me.  I might've been better off the way things were before,' he says to you, his demeanor and posture changing as his voice changes pitch towards the end, returning to his previous, tough-guy attitude.  Moving in closer, he runs his taloned hands over your body, gripping your shoulders quite firmly.  'Maybe you'd rather be on the bottom from now on,' he says, pushing you firmly back onto one of the tables.";
+	say "     The smaller bird's burst of frustration-driven dominance is exciting, tempting you into letting him fuck you.  Shall you let him (Y) or will you reassert your dominance (N)?";
+	if the player consents:
+		say "     Your lust getting the best of you, you don't resist as the aggressive little bird moves his throbbing cock into position.  Excited by his dominant attitude, you spread your legs for him, allowing the blue passarine to press his leaking glans against your [if cunts of player > 0]wet pussy[otherwise]tight anus[end if].  Chuckling, he digs his claws firmly into you and thrusts into you with a hard push of his hips.  You moan at the rough intrusion, but are aroused by it as well.";
+		say "     Pounding away at you now, the blue bird has a smug grin on his beak, clearly pleased at having turned the tables on you.  As his pulsing rod dives into your [if cunts of player > 0]wet[otherwise]tight[end if] hole again and again, Icarus chuckles and nips firmly at your shoulder with his beak.  Your arousal continues to climb as he works his cock with some skill and his hands run over your [bodytype of player] body.";
+		say "     'Mmm... that's right - moan you little chick.  You like it much better this way, don't you?' he says, [if cocks of player > 0]stroking your cock[otherwise]pinching your nipples[end if] as he does.  He pauses in his thrusting and even starts to pull out, causing you to whimper with need.  'Such a needy slut you are, moaning to get fucked by a little birdie.  Well, if you want me to finish fucking you, you'll be admitting you want to be my fucktoy from now on.'";
+		say "     You bite your lip and try to resist, but you're far too aroused.  The feel of his hard, throbbing cock with only its glans left inside you, about to be taken out of your needy hole, has you whimper again and relent.  Begging him to fuck you, to make you into his birdie fucktoy, you cry out in relief as his cock moves again, this time inward.  Quite pleased with himself, Icarus chirps as he nips at you, giving you the hard fucking your body's crying out for by this point.";
+		say "     Soon enough, you are pushed over the edge as the aggressive passarine [if cocks of player > 0]pumps firmly at your shaft[otherwise]pinches your clit[end if] and cry out in lustful ecstasy.  The feel of your [if cunts of player > 0]cunt[otherwise]ass[end if] squeezing down around his shaft as you orgasm is enough to put his arousal over the top and his cock pulses and throbs inside you, spurting shot after shot of avian cum into your [if cunts of player > 0]womb[otherwise]bowels[end if], cementing his claim upon you.  As he's finishing up, he pulls out and strokes his last few spurts onto your loins, further marking you as his plaything now.  As you sag back onto the table, panting after the rough fucking you got, the last of your thoughts of dominance over the chaffinch fade away completely and you're left as his fucktoy now.[impregchance]";
+		Icarusinfect;
+		now hp of Icarus is 50;
+	otherwise:
+		say "     You push aside the temptation to let him fuck you and grab the blue bird firmly by the shoulders.  Being small and light, you lift him easily and turn so he's the one pinned back on the table now.  Icarus tries to wrestle his way back on top, but you are, as proven in the past, much stronger than he is.  Squeezing down hard on his shoulders and slamming him back onto the table, you growl for him to remember his place.";
+		if cunts of player > 0 and cocks of player > 0:		[herm]
+			say "     Being partially male and partially female, you are presented with the option of riding the bird's cock (Y) or fucking him again (N).";
+			if the player consents:
+				say "[icarussex0_sub_f]";
+			otherwise:
+				say "[icarussex0_sub_m]";
+		otherwise if cunts of player > 0:	[female]
+			say "[icarussex0_sub_f]";
+		otherwise:		[male]
+			say "[icarussex0_sub_m]";
+
+to say icarussex_dom:
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
+	if a random chance of 2 in 5 succeeds:
+		say ".  The sight of it makes you lick your lips and when he lands, you're already on your knees and pressing your face into his groin to get at it.  He chuckles and grips your head firmly, [one of]slapping his cock against your cheek before letting you take it into your mouth[or]ramming his cock into your open mouth[or]grinding his hard shaft against your face before allowing you to suck on it[at random].";
+		say "     The taste of the bird's manhood excites you greatly, making you eager to suck of the dominant bird.  Your tongue plays across his firm, warm flesh and laps up the precum dribbling from it.  He keeps a firm grip on you, pumping his hips as he thrusts into your open mouth.  You can't help but feel aroused at the idea that you're submitting yourself to the small bird's control, allowing him to use you as he pleases.  The blue passarine certainly seems pleased as well, grinning as he enjoys his cocksucking fucktoy.";
+		say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  When his talons dig into your shoulder and his thrusting accelerates, you suck down on him all the harder, eager to please your diminutive master.  Your efforts are rewarded when you feel his cock pulsing in your mouth, sending his hot semen across your tongue and down your throat.  You swallow it all down dutifully, savouring the lingering taste of it on your palate.  He gives your ass a swat and flies back up into the rafters, chirping happily at his virility.";
+	otherwise if cunts of player > 0:	[female/herm]
+		say ".  Your eagerness for it has you bending over, your wet pussy already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]leans in and runs his tongue across your dripping folds[at random] before moving in to mount you.";
+		say "     After teasing you with a few brushes of his cock across your [cunt size desc of player] pussy, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
+		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your hot, needy womb.  You can feel his semen flowing into you, seeking to impregnate you.  Your pussy quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[fimpregchance]";
+	otherwise:
+		say ".  Your eagerness for it has you bending over, your ass already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]slides a pair of slick fingers into your butt[at random] before moving in to mount you.";
+		say "     After teasing you with a few brushes of his cock across your pucker, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
+		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your squeezing bowels.  You can feel his semen flowing into you as his glans batters your prostate.  Your anus quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[mimpregchance]";
+
+
+
+[
+	say "***";
+	say "not giving me what I promised... changed on me... I might've been better off the way I was before *voice changing, acting tough again*";
+	say "-- male pred bird -- too late now... it's your turn to my prey -- rougher w/avian player";	]
+
+to say icarussex0_sub_f:
+	say "     'So you're thinking that you can just take what you want if I'm not the big, bad birdie?  Is that it?' you growl, slamming him back onto the table again.  'Whether I'm a predatory bird right now or not, you're still my songbird slut and that's that.'";
+	say "     You climb atop him and grab his cock, which is rock hard from the rough treatment.  'Looking to get a little pussy, are you?  Well, I'll let you get some, but don't forget that I'm the one giving it to you.  You're not taking it.  And if you don't get any again for a while, I don't want to hear a peep out of you about it,' you add, squeezing his balls quite hard, making him release a pained cheep.";
+	say "[bracket]***Scene to be added later - Mgmt.[close bracket]";
+	now lust of Icarus is 101;
+
+to say icarussex0_sub_m:
+	say "     'So you're thinking that you can just take over as the big, bad birdie if I'm not being one?  Is that it?' you growl, slamming him back onto the table again.  'Whether I'm a predatory bird right now or not, you're still my songbird slut and that's that.'";
+	say "     You grab his little legs and lift them up, spreading them.  You can see that his cock has gotten rock hard from the rough treatment.  'It looks like you just need a reminder that I'm on top, not you.  So I set the rules.  And rule number one is [']Little upstart birdies get fucked.[']  And if you don't get any again for a while, I don't want to hear a peep out of you about it,' you add, squeezing his balls quite hard, making him release a pained cheep.";
+	say "[bracket]***Scene to be added later - Mgmt.[close bracket]";
+	now lust of Icarus is 100;
+
+
+to Icarusinfect:
+	setmonster "Blue Chaffinch";
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	infect;
+
+
+[ hp of Icarus ]
+[ 0 = untamed  ]
+[ 1 = at bunker, no talk ]
+[ 2 = talked  ]
+[ 3 = taught to suck cock ]
+[ 4 = sucked cock of pred again ]
+[ 5 = rougher sex w/pred ]
+[ 6 = had attic sex, light version ]
+[ 7 = had attic sex, dark version ]
+[ 8 = back ]
+[ 9 = gone ]
+[ 50 = dom ]
+[ 51 = dom - talked ]
+
+[ lust of Icarus ]
+[ 0 - 6 = building frustration ]
+[ 7+ = attempt to dom ]
+[ 100 = sub male-only ]
+[ 101 = sub m/f allowed ]
+
 
 Icarus ends here.
