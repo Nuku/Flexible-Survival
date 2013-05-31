@@ -1,5 +1,5 @@
 Version 3 of Icarus by Stripes begins here.
-[Version 3 - Dom-Icarus path]
+[Version 3.1 - More Dom-Icarus scenes]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
 
@@ -77,7 +77,10 @@ to say sexwithIcarus:
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking any gender of your own, you feel there's little point in going to Icarus for sex.";
 	otherwise if lastfuck of Icarus - turns < 6:
-		say "     'Oh, I'm still worn out from the last time, but I [if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist]do so want to go again soon[otherwise]hope you'll consider being the scary predator next time[end if].'";
+		if hp of Icarus < 50:
+			say "     'Oh, I'm still worn out from the last time, but I [if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist]do so want to go again soon[otherwise]hope you'll consider being the scary predator next time[end if].'";
+		otherwise:
+			say "     'It's nice to see you so eager to be my slut, but I think it's your turn to wait and go without for a little longer.'";
 	otherwise if hp of Icarus < 50:
 		say "[icarussex_sub]";
 	otherwise:
@@ -90,9 +93,11 @@ to say icarussex_sub:
 			if hp of Icarus < 7 and lust of Icarus > 6 and lust of Icarus < 100:
 				say "[icarussex0_dom]";
 				now lastfuck of Icarus is turns;
-			otherwise:
+			otherwise if lust of Icarus <= 100:
 				say "     The blue bird blushes a little and looks away, his wings fluttering.  'Look, before I might've, but... you see... to me you'll always be my fearsome, male hunter and it just wouldn't feel right.  If I wanted some pussy, I could just go out on the town and get it,' his old, macho voice coming back slightly for a bit before returning to normal.  'But for you, I just want to be your songbird slut and your prey, like you said.'  He shifts around eagerly on his taloned feat, clearly remembering the previous times you had your way with him.";
 				if hp of Icarus < 7, increase lust of Icarus by 3;
+			otherwise if lust of Icarus is > 100:
+				say "[bracket]***No M/F scenes available at present - Mgmt.[close bracket]";
 		otherwise if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			if hp of Icarus >= 8 and a random chance of 1 in 4 succeeds:
 				say "[icarussex6_ap]";
@@ -334,41 +339,69 @@ to say icarussex0_dom:
 		otherwise:		[male]
 			say "[icarussex0_sub_m]";
 
-to say icarussex_dom:
-	setmonster "Blue Chaffinch";
-	choose row monster from the table of random critters;
-	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
-	if a random chance of 2 in 5 succeeds:
-		say ".  The sight of it makes you lick your lips and when he lands, you're already on your knees and pressing your face into his groin to get at it.  He chuckles and grips your head firmly, [one of]slapping his cock against your cheek before letting you take it into your mouth[or]ramming his cock into your open mouth[or]grinding his hard shaft against your face before allowing you to suck on it[at random].";
-		say "     The taste of the bird's manhood excites you greatly, making you eager to suck of the dominant bird.  Your tongue plays across his firm, warm flesh and laps up the precum dribbling from it.  He keeps a firm grip on you, pumping his hips as he thrusts into your open mouth.  You can't help but feel aroused at the idea that you're submitting yourself to the small bird's control, allowing him to use you as he pleases.  The blue passarine certainly seems pleased as well, grinning as he enjoys his cocksucking fucktoy.";
-		say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  When his talons dig into your shoulder and his thrusting accelerates, you suck down on him all the harder, eager to please your diminutive master.  Your efforts are rewarded when you feel his cock pulsing in your mouth, sending his hot semen across your tongue and down your throat.  You swallow it all down dutifully, savouring the lingering taste of it on your palate.  He gives your ass a swat and flies back up into the rafters, chirping happily at his virility.";
-	otherwise if cunts of player > 0:	[female/herm]
-		say ".  Your eagerness for it has you bending over, your wet pussy already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]leans in and runs his tongue across your dripping folds[at random] before moving in to mount you.";
-		say "     After teasing you with a few brushes of his cock across your [cunt size desc of player] pussy, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
-		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your hot, needy womb.  You can feel his semen flowing into you, seeking to impregnate you.  Your pussy quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[fimpregchance]";
-	otherwise:
-		say ".  Your eagerness for it has you bending over, your ass already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]slides a pair of slick fingers into your butt[at random] before moving in to mount you.";
-		say "     After teasing you with a few brushes of his cock across your pucker, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
-		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your squeezing bowels.  You can feel his semen flowing into you as his glans batters your prostate.  Your anus quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[mimpregchance]";
-
-
-
-[
-	say "***";
-	say "not giving me what I promised... changed on me... I might've been better off the way I was before *voice changing, acting tough again*";
-	say "-- male pred bird -- too late now... it's your turn to my prey -- rougher w/avian player";	]
 
 to say icarussex0_sub_f:
 	say "     'So you're thinking that you can just take what you want if I'm not the big, bad birdie?  Is that it?' you growl, slamming him back onto the table again.  'Whether I'm a predatory bird right now or not, you're still my songbird slut and that's that.'";
 	say "     You climb atop him and grab his cock, which is rock hard from the rough treatment.  'Looking to get a little pussy, are you?  Well, I'll let you get some, but don't forget that I'm the one giving it to you.  You're not taking it.  And if you don't get any again for a while, I don't want to hear a peep out of you about it,' you add, squeezing his balls quite hard, making him release a pained cheep.";
-	say "[bracket]***Scene to be added later - Mgmt.[close bracket]";
+	say "     Feeling quite aroused by your dominance of the little upstart, you grind your hips over his, letting your juices wet his throbbing rod.  Giving his nuts another squeeze, you slam yourself down onto his shaft and start riding him vigorously.  The little fellow ends up getting shaken about roughly as you ride his seven inch cock for all its worth.  His cries are a mix of moans and chirps of pleasure despite (or perhaps even because of) some rather hard thumps onto the hardwood table.";
+	say "     Between his pent-up desires and the rough treatment, he doesn't end up holding out very long.  After a few minutes of the vigorous fucking, he digs in his talons, clawing at the wood as he thrusts up into you and cums with a musical cry of ecstasy.  Feeling his pulsing, spurting rod inside you, you moan and slam down onto his rod a few more times before cumming as well.  You only stop riding after your climax has passed, heedless of his squirming as his spent shaft becomes oversensitive after his own orgasm has ebbed.";
+	say "     Before you let your little birdie fly back up to the rafters, you grab his head roughly and pull him close.  'You're my songbird slut now, for me to use - or not use - as I see fit.  There's more going on around here than just you, little birdie.  Don't forget that again,' you say with a firm growl before pulling him off the table and onto the floor before walking away.";
 	now lust of Icarus is 101;
+
 
 to say icarussex0_sub_m:
 	say "     'So you're thinking that you can just take over as the big, bad birdie if I'm not being one?  Is that it?' you growl, slamming him back onto the table again.  'Whether I'm a predatory bird right now or not, you're still my songbird slut and that's that.'";
 	say "     You grab his little legs and lift them up, spreading them.  You can see that his cock has gotten rock hard from the rough treatment.  'It looks like you just need a reminder that I'm on top, not you.  So I set the rules.  And rule number one is [']Little upstart birdies get fucked.[']  And if you don't get any again for a while, I don't want to hear a peep out of you about it,' you add, squeezing his balls quite hard, making him release a pained cheep.";
-	say "[bracket]***Scene to be added later - Mgmt.[close bracket]";
+	say "     Feeling quite aroused by your dominance of the little upstart, you grind your [cock size desc of player] cock against his ass, making the little guy squirm a bit as part of him tries to resist.  But he also moans and his cock twitches, the passarine clearly turned on by the prospect of being violated by you again.  Not wanting to disappoint, you grab his little legs in a tight grip and slam your [cock of player] rod right into him.  He gives a loud, chirping cry of pain and pleasure at being so roughly taken, spurts of his precum splattering across his blue breast.  Once buried in the moaning bird's stretched anus, you pound his downy ass for all its worth.  His cries are a mix oof moans and chirps of pleasure despite (or perhaps even because of) some rather hard thumps onto the hardwood table.";
+	say "     Between his pent-up desires and the rough treatment, he doesn't end up holding out very long.  After a few minutes of the vigorous fucking, he digs in his talons, clawing at the wood as his stretched hole clenches down on you and he cums messily with a musical cry of ecstasy.  Watching his pulsing, spurting rod spraying its white load across his blue chest, , you moan and slam your rod into him a few more times before cumming as well, pumping your [cum load size of player] load into the thoroughly fucked bird.  You only stop riding after your climax has passed, heedless of his squirming as ass and prostate become oversensitive after his own orgasm has ebbed.";
+	say "     Before you let your little birdie fly back up to the rafters, you grab his head roughly and pull him close.  'You're my songbird slut now, for me to use - or not use - as I see fit.  There's more going on around here than just you, little birdie.  Don't forget that again,' you say with a firm growl before pulling him off the table and onto the floor before walking away.";
 	now lust of Icarus is 100;
+
+
+to say icarussex_dom:
+	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
+	if a random chance of 2 in 5 succeeds:
+		say "[icarussex1_dom]";	[oral]
+	otherwise if cunts of player > 0:
+		say "[icarussex2_dom]";	[m/f]
+	otherwise:
+		say "[icarussex3_dom]";	[m/m]
+	Icarusinfect;
+
+
+to say icarussex1_dom:
+	say ".  The sight of it makes you lick your lips and when he lands, you're already on your knees and pressing your face into his groin to get at it.  He chuckles and grips your head firmly, [one of]slapping his cock against your cheek before letting you take it into your mouth[or]ramming his cock into your open mouth[or]grinding his hard shaft against your face before allowing you to suck on it[at random].";
+	say "     The taste of the bird's manhood excites you greatly, making you eager to suck of the dominant bird.  Your tongue plays across his firm, warm flesh and laps up the precum dribbling from it.  He keeps a firm grip on you, pumping his hips as he thrusts into your open mouth.  You can't help but feel aroused at the idea that you're submitting yourself to the small bird's control, allowing him to use you as he pleases.  The blue passarine certainly seems pleased as well, grinning as he enjoys his cocksucking fucktoy.";
+	say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  When his talons dig into your shoulder and his thrusting accelerates, you suck down on him all the harder, eager to please your diminutive master.  Your efforts are rewarded when you feel his cock pulsing in your mouth, sending his hot semen across your tongue and down your throat.  You swallow it all down dutifully, savouring the lingering taste of it on your palate.  He gives your ass a swat and flies back up into the rafters, chirping happily at his virility.";
+
+to say icarussex2_dom:	[m/f]
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	if a random chance of 1 in 2 succeeds:
+		say ".  Your eagerness for it has you bending over, your wet pussy already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]leans in and runs his tongue across your dripping folds[at random] before moving in to mount you.";
+		say "     After teasing you with a few brushes of his cock across your [cunt size desc of player] pussy, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
+		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your hot, needy womb.  You can feel his semen flowing into you, seeking to impregnate you.  Your pussy quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[fimpregchance]";
+	otherwise:
+		say ".  Your arousal grows as you eye the stiffening object of your desires and strip down quickly.  You spread yourself on the floor and start fingering your pussy, longing to replace those digits with the aggressive passarine's manhood.  He struts around you, looking you over and pumping a few spurts of pre across your [bodytype of player] body.";
+		say "     Having feasted his eyes on his lustful slut's body, he moves atop your [bodydesc of player] form and lines up his cock.  Wasting little time, he thrusts confidently into you while his taloned hands grab your [if breast size of player > 0][breast size desc of player] breasts[otherwise]hips[end if].  His seven inch shaft pumps steadily into your wet, needy cunt as the chaffinch chuckles.";
+		say "     'Such a horny slut you make, spread and moaning for your birdie lover.  You look much better this way,' he says between thrusts, his hands running over your body.  His words and his touch make you feel both demeaned and sexy all at once, pleased to draw the confident avian's lecherous interest and lustful for more.  Your body responds to your growing arousal, causing you to pant and moan as your pleasure builds.";
+		say "     You moan and whimper beneath him as he grips your ass firmly, digging his claws in as he thrusts hard, jabbing his full length into you just as he starts to cum.  The pain of his talons gets muddled with the pleasure you feel from his pulsing rod and the hot spurts of semen coming from it.  You cry out in ecstasy, cunt spasming around his cock, drawing his avian seed into your womb.  You grip his hips, keeping him buried inside you, wanting to get every last drop.";
+		say "     'Such a good, needy hen.  Eager to get filled by your master's eggs, are you?' he says with a smirk on his beak.  He rubs his hand across your belly as he pulls out.  You sigh softly at his touch, enjoying the warm knowledge that his virile load's nestled deep inside you.  The thought of being knocked up by him, made into his breeding hen, is very exciting to you at this moment [if player is impreg_able]and you hope to have a clutch growing in you soon[otherwise if player is impreg_ok]and you long to get him to breed you again when you're ready[otherwise]and you find yourself longing to find a means to let that happen[end if].[fimpregchance]";
+
+
+to say icarussex3_dom:	[m/m]
+	setmonster "Blue Chaffinch";
+	choose row monster from the table of random critters;
+	if a random chance of 1 in 2 succeeds:
+		say ".  Your eagerness for it has you bending over, your ass already on display for him when he lands.  He [one of]leans in and nips firmly at your hip with his sharp beak[or]gives your rump a hard swat, making you moan[or]slides a pair of slick fingers into your butt[at random] before moving in to mount you.";
+		say "     After teasing you with a few brushes of his cock across your pucker, getting you to moan your need to be fucked again, he chirps his pleasure at your submission and thrusts into you hard.  He keeps a firm grip on your ass, claws digging in a little as he drives his seven inch shaft into you over and over again.  You push back into every thrust he makes, proving yourself to be the wanton slut for his cock that he reminds you again you are.  There's just something about giving up control to the aggressive little bird that really turns you on to the point that you can't resist.  His rough treatment of your body is exciting as well, his clear power over you arousing you both greatly.";
+		say "     You moan and whimper beneath him as he bites firmly onto your shoulder and grips your legs with his taloned feet, the pain only enhancing the pleasure running through you as he pounds harder and harder.  His wings flap frantically as he plows into you zealously, soon cumming as he sends shot after shot of his avian cum into your squeezing bowels.  You can feel his semen flowing into you as his glans batters your prostate.  Your anus quivers around the throbbing, pulsing rod, your own orgasm making you cry out.  When he's done, he dismounts from you and takes a moment to look over his handywork in the form of his load leaking from your well-fucked hole before flying back up to the rafters.[mimpregchance]";
+	otherwise:
+		say ".  Your arousal grows as you eye the stiffening object of your desires and strip down quickly.  You lay sideways on the floor, one thigh raised to give your avian stud a good view of your ready ass.  You run a finger between your cheeks and tease at your crinkled hole, longing to have that digit replaced with the aggressive passarine's manhood.  He struts around you, looking you over and pumping a few spurts of pre across your [bodytype of player] body.";
+		say "     Having feasted his eyes on his lustful slut's body, he moves into position and lines up his cock.  Wasting little time, he thrusts confidently into you while his taloned hands grab your raised leg.  He grips you tightly as he pumped his seven inch shaft steadily into your tight, needy asshole while the chaffinch chuckles.";
+		say "     'Such a horny slut you make, spread and moaning for your birdie lover.  You look much better this way,' he says between thrusts, his hands running over your [bodydesc of player] body.  His words and his touch make you feel both demeaned and sexy all at once, pleased to draw the confident avian's lecherous interest and lustful for more.  Your body responds to your growing arousal, causing you to pant and moan as your pleasure builds.";
+		say "     You moan and whimper beneath him as he grips your leg firmly, digging his claws in as he thrusts hard, jabbing his full length into you just as he starts to cum.  The pain of his talons gets muddled with the pleasure you feel from his pulsing rod and the hot spurts of semen coming from it.  You cry out in ecstasy, ass squeezing around his cock, milking him for as much avian seed as he'll give.  You grip his hips, keeping him buried inside you, wanting to get every last drop.";
+		say "     'Such a good, needy hen.  You're much better suited as the bottom in our relationship, aren't you?' he says with a smirk on his beak.  He gives your ass a squeeze as he pulls out.  You moan softly at his touch, enjoying the warm knowledge that his virile load's nestled deep inside you.  The thought that you're better off as the birdie's slutty bottom lingers in your mind, making you look forward to submitting to the confident male again soon.";
 
 
 to Icarusinfect:
