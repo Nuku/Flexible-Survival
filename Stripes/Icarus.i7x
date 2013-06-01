@@ -96,7 +96,7 @@ to say icarussex_sub:
 			otherwise if lust of Icarus <= 100:
 				say "     The blue bird blushes a little and looks away, his wings fluttering.  'Look, before I might've, but... you see... to me you'll always be my fearsome, male hunter and it just wouldn't feel right.  If I wanted some pussy, I could just go out on the town and get it,' his old, macho voice coming back slightly for a bit before returning to normal.  'But for you, I just want to be your songbird slut and your prey, like you said.'  He shifts around eagerly on his taloned feat, clearly remembering the previous times you had your way with him.";
 				if hp of Icarus < 7, increase lust of Icarus by 3;
-			otherwise if lust of Icarus is > 100:
+			otherwise if lust of Icarus > 100:
 				say "[bracket]***No M/F scenes available at present - Mgmt.[close bracket]";
 		otherwise if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
 			if hp of Icarus >= 8 and a random chance of 1 in 4 succeeds:
