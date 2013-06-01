@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4 - Good Girl Alexandra initiated]
+[Version 4.1 - Alexandra Tasks initiated]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -534,12 +534,25 @@ to say alexandratalk_gg:
 		now hp of Alexandra is 51;
 	if hp of Alexandra is 51:
 		say "     'It's good to see that you're still holding out.  It's been a while since I've met anyone as coherent as you, so I could really use the company.  Here, let me show you around,' she says, leading you around the station.";
-		say "     'As you can see, things got pretty bad here.  Like I'd mentioned, we were responding to calls as everything started to fall apart.  A lot of the officers simply never returned from those calls.  The few that did were either tainted by sexual fluids or had brought those they'd arrested, or both.  Things got out of hand quickly, the infection spreading through the office and through the lockout, building upon itself.'";
-		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
-		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm going to not go out on patrol as much for a while.'";
+		say "     'As you can see, things got pretty bad here.  Like I'd mentioned, we were responding to calls as everything started to fall apart.  A lot of the officers simply never returned from those calls.  The few that did either must have been tainted by sexual fluids or had brought those they'd arrested, or both.  Things got out of hand quickly, the infection spreading through the office and through the lockout, building upon itself.'";
+		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over completely, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
+		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
-	otherwise if hp of Alexandra is 52:
-		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[at random]";
+	otherwise if hp of Alexandra > 51 and a random chance of 1 in 3 succeeds and Alexandrastory is false:
+		say "     Alexandra leans back in her chair and rubs her brow.  'My parents were criminals, doing drugs and committing petty crimes to pay for the habit.  It wasn't a very good home to grow up in, so I was taken away by Child Services when they were finally caught.  That wasn't much better, but it let me learn that I didn't have to be like them.  When I grew up, I decided to become a police officer and tried my best to be an example to others,' she says, subconsciously sitting back up straighter.";
+		say "     'I told myself that my parents being criminals didn't matter and that I didn't need to end up like them.  I think that drive to be [']a good and moral person['] helped motivate me to stay sane.  At least for a while,' she adds, rubbing her brow.  'Things were starting to get rather confused towards the end.  Beating up the mutants.  Writing them tickets.  I was getting so worked up about trying to hold the city together that I was probably going to crack entirely soon.  So I'm really glad you came along when you did.  I really appreciate you talking some sense into me, that's for sure.  Uggh... I'm tired of talking about this stuff.  I'm going to do a quick walkaround to clear my head,' she says with a growl as she hops up out of her chair and heads off, a hint of canine arousal in the air in the wake of her departure.";
+		now Alexandrastory is true;
+	otherwise if hp of Alexandra > 51 and no_AlexandraTask - turns > 3 and a random chance of 1 in 3 succeeds:
+		AlexandraTaskChat;
+	otherwise:
+		say "[alexandratalk_gg1]";		[access regular conversation content]
+
+
+to say alexandratalk_gg1:
+	if hp of Alexandra is 52:
+		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
+	otherwise if hp of Alexandra is 53:
+		say "...";		[***]
 
 
 [ hp of Alexandra ]
@@ -722,7 +735,117 @@ to say A_NPC17:	[Xerxes]
 	now A_Xerxes is true;
 
 
-Section 10 - Endings
+Section 10 - Tasks and Hints
+
+AT_Matt is a truth state that varies.  AT_Matt is usually false.
+AT_Mouse is a truth state that varies.  AT_Mouse is usually false.
+AT_Sandra is a truth state that varies.  AT_Sandra is usually false.
+AT_Snow is a truth state that varies.  AT_Snow is usually false.
+AT_Philip is a truth state that varies.  AT_Philip is usually false.
+AT_RLD is a truth state that varies.  AT_RLD is usually false.
+AT_Sven is a truth state that varies.  AT_Sven is usually false.
+AT_Marks is a truth state that varies.  AT_Marks is usually false.
+AT_Lisa is a truth state that varies.  AT_Lisa is usually false.
+AT_Diego is a truth state that varies.  AT_Diego is usually false.
+AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
+AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
+no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
+
+
+to AlexandraTaskChat:
+	let AlexandraTask be a list of numbers;
+	if hp of doctor matt is 0 and AT_Matt is false, add 1 to AlexandraTask;
+	if hospquest is 1 and AT_Mouse is false, add 2 to AlexandraTask;
+	if Needy Rabbit Girl is unresolved and AT_Sandra is false, add 3 to AlexandraTask;
+	if Hyper Squirrel Girl is unresolved and AT_Snow is false, add 4 to AlexandraTask;
+	if Hungry Piggy is unresolved and AT_Philip is false, add 5 to AlexandraTask;
+	if AT_RLD is false, add 6 to AlexandraTask;
+	if Hidden Kitty is unresolved and AT_Sven is false and AT_RLD is true, add 7 to AlexandraTask;
+	if Policeman is unresolved and AT_Marks is false and AT_RLD is true, add 8 to AlexandraTask;
+	if Mouse Taur is unresolved and AT_Lisa is false and AT_RLD is true, add 9 to AlexandraTask;
+	if AT_Diego is false, add 10 to AlexandraTask;
+	if Gryphon Guard is unresolved and AT_Qytat is false, add 11 to AlexandraTask;
+	if Zoo Entrance is unknown, add 12 to AlexandraTask;
+	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
+	if AlexandraTask is empty:
+		now no_AlexandraTask is turns;
+		say "[alexandratalk_gg1]";
+	otherwise:
+		sort AlexandraTask in random order;
+		if entry 1 of AlexandraTask is 1, say "[A_Task01]";
+		if entry 1 of AlexandraTask is 2, say "[A_Task02]";
+		if entry 1 of AlexandraTask is 3, say "[A_Task03]";
+		if entry 1 of AlexandraTask is 4, say "[A_Task04]";
+		if entry 1 of AlexandraTask is 5, say "[A_Task05]";
+		if entry 1 of AlexandraTask is 6, say "[A_Task06]";
+		if entry 1 of AlexandraTask is 7, say "[A_Task07]";
+		if entry 1 of AlexandraTask is 8, say "[A_Task08]";
+		if entry 1 of AlexandraTask is 9, say "[A_Task09]";
+		if entry 1 of AlexandraTask is 10, say "[A_Task10]";
+		if entry 1 of AlexandraTask is 11, say "[A_Task11]";
+		if entry 1 of AlexandraTask is 12, say "[A_Task12]";
+		if entry 1 of AlexandraTask is 13, say "[A_Task13]";
+
+
+to say A_Task01:
+	say "     'There a lab in the city that seems to still be active.  They seem to know a fair bit about what's going on in the city, but they were really tight-lipped because I'm a cop.  You might have better luck finding out what's going on.  I'd like you to go there and check it out.  Whatever they're doing, they probably need some help.  You might be able to get some info if you go along with it.'";
+	if Outside Trevor Labs is unknown:
+		say "     She gives you some directions to the place, called Trevor Labs.  You vaguely remember hearing about the place before the outbreak, but they didn't seem to be very public with the type of work they were doing.  You'll have to remember to go check it out sometime.";
+		now Outside Trevor Labs is known;
+	now AT_Matt is true;
+
+to say A_Task02:
+	say "     'I spotted some activity on the upper level of the city hospital.  Something's definitely going on there, though I can't really get in to find out what.  I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked.  You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown].  Getting to the hospital can be a little tricky, but this path is fairly clear.  I'd recommend you go that way to get there[end if].'";
+	now City Hospital is known;
+	now AT_Mouse is true;
+
+to say A_Task03:
+	say "     'I spotted a [bold type]rabbit girl[roman type] in the city.  She didn't seem as far gone as some of the others, but when I tried to approach her, she ran off.  You might want to keep your eyes open for her.'";
+	now AT_Sandra is true;
+
+to say A_Task04:
+	say "     'While I was patrolling the city, I ended up getting followed around by a [bold type]squirrel girl[roman type] for a while.  She followed me and seemed to be trying to get me to chase her, but I never managed to get her.  You'll need to be fast and observant if you want to catch her.";
+	now AT_Snow is true;
+
+to say A_Task05:
+	say "     'It's really disgusting what this infection is doing to some people.  I came across a pig man wallowing in his own filth at one point.  He was a stupid, lazy slob and only wanted to eat and lay around doing nothing.  He reminded me father,' she says, a bit of a growl in her voice.";
+	now AT_Philip is true;
+
+to say A_Task06:
+	say "     'There's some really over-sexualized creatures out there, many of them concentrated in the seedier part of town.  Cock creatures, horny succubi, hookers, pimps and more.  If you approach [if Entrance to the Red Light District is unknown]the area around the strip clubs and sex shops around these streets,' she says, outlining the area she's talking about, '[otherwise]there, [end if]you need to be really careful or you could end up joining them as another sex slut roaming the red light district of town.'  There's the faint scent of canine arousal as Alexandra talks to you about what she saw out there.";
+	now Entrance to the Red Light District is known;
+	now AT_RLD is true;
+
+to say A_Task07:
+	say "     'Now, I've already warned you about the red light district of town, but I did spot someone who might still be a survivor at the edge of the area.  It looks like he had a bit of a run in with one of those snow leopards, but you should still keep your eyes open for that [bold type]hidden kitty[roman type] if you're poking around there.'";
+	now AT_Sven is true;
+
+to say A_Task08:
+	say "     'While I was searching around in the red light district, I ran into another cop.  At first, I was really hopeful that we'd be able to work together and do more to help out, but he had other plans.  I tried to restrain him, but we were pretty evenly matched and he eventually pulled out some tear gas.  If you run into a [bold type]policeman[roman type] down there, don't trust that tiger cop.  He may have been a cop once, but he certainly doesn't act that way anymore.'";
+	now AT_Marks is true;
+
+to say A_Task09:
+	say "     'I ran into the rather... friendly... [bold type]mouse taur[roman type] while in the red light district.  It seems she runs a [bold type]porn store[roman type] somewhere down there.  I didn't go there myself, not wanting to risk being tempted, but it's probably safe enough if you want to look into it.'";
+	now AT_Lisa is true;
+
+to say A_Task10:
+	say "     'As you might expect, there's quite a bit of activity at the city park with lots of animal infections cropping up.  If you go there, there's also a coyote hanging around.  He's quite the troublemaker and isn't to be trusted.  He was really closemouthed about what he's been doing, but it's pretty clear he's been up to no good.  I haven't caught him in the act yet, but I know he's harassing the soldiers and the other mutants, which is only going to make things worse for everyone in the long run.'";
+	now AT_Diego is true;
+
+to say A_Task11:
+	say "     'I spotted one of those herm gryphons flying around carrying a banner.  I'm not quite sure what that was all about, though I did notice her directing a few other gryphons to other spots.  Since they were up on the roof, I couldn't make out where they were going.  Just keep an eye out for a [bold type]guard gryphon[roman type] on top of buildings and see if you can find out what's going on with her.'";
+	now AT_Qytat is true;
+
+to say A_Task12:
+	say "     'The zoo's become... well, a zoo.  With all the wild animals that were there, we've got a lot of exotic and dangerous infections running around.  I saw cheetahs, rhinos, tiger and wolf taurs, and even a giant zookeeper roaming around there, just to name a few.  I expect our city's hyena problem started there as well.  Be careful if you go poking around there, or you might become just another wild animal person stalking around there.'";
+	now Zoo Entrance is known;
+
+to say A_Task13:
+	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type].  They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone.'";
+	now AT_Sarah is true;
+
+
+Section 11 - Endings
 
 when play ends:
 	if alexandra is booked and hp of Alexandra < 50:
