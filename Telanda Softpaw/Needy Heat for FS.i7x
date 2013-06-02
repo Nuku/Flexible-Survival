@@ -1,5 +1,5 @@
 Version 2 of Needy Heat for FS by Telanda Softpaw begins here.
-[ Version 2 - Heat repairs - Stripes ]
+[ Version 2.1 - Husky heat now scans current area - Stripes ]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -40,15 +40,28 @@ to say huskyheatend:
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
 	increase libido of player by 5;
 	if libido of player > 99, now libido of player is 99;
-	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
+	if (libido of player > 90) and (location of player is fasttravel or there is a dangerous door in location of player) and (slutfucked > 8):
 		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of the infected monster.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
-		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
+		let heatzone be "Outside";
+		let zz be a random visible dangerous door;
+		if zz is not nothing, now heatzone is the marea of zz;
+		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
 			choose row X from the table of random critters;
 			if there is no area entry, next;
-			if area entry is "Outside":
+			if area entry is heatzone:
 				add X to hmonlist;
+				if name entry is "Alpha Husky" or name entry is "Female Husky":		[Huskies are more likely]
+					add X to hmonlist;
+		if hmonlist is empty and heatzone is not "Outside":		[If none valid found, default back to Outside]
+			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
+				choose row X from the table of random critters;
+				if there is no area entry, next;
+				if area entry is "Outside":
+					add X to hmonlist;
+					if name entry is "Alpha Husky" or name entry is "Female Husky":		[Huskies are more likely]
+						add X to hmonlist;
 		sort hmonlist in random order;
 		now monster is entry 1 of hmonlist;
 		choose row monster from the table of random critters;
