@@ -41,7 +41,6 @@ to say losetodobie1:		[low-lust player loss]
 					now dobielibido is -100;
 					now Police Station is known;
 					now hp of Alexandra is 50;
-					move Alexandra to Police Station;
 					now area entry is "nowhere";
 					increase score by 20;
 				otherwise:

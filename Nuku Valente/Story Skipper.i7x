@@ -998,8 +998,8 @@ To reciting2:
 					now hp of Alexandra is the number understood;
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
+					move Alexandra to Police Station;
 					if hp of Alexandra > 0:
-						move Alexandra to Grey Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -1007,13 +1007,17 @@ To reciting2:
 								now monster is y;
 								now area entry is "nowhere";
 								break;
-					otherwise:
-						remove Alexandra from play;
+						if hp of Alexandra is 100:
+							now Police Station is unknown;
+						otherwise if hp of Alexandra >= 50:
+							now Police Station is known;
+						otherwise:
+							now Police Station is unknown;
+							move Alexandra to Grey Abbey Library;
 					if hp of Alexandra is 3 and hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
-					if hp of Alexandra > 5, now hp of Alexandra is 4;	[temporary reset]
 			-- 113:	[Larissa (Multiform NPC)]
 				if the player's command matches "[number]":
 					now hp of Larissa is the number understood;
@@ -1186,8 +1190,7 @@ To reciting2:
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
 					now xp of Alexandra is 0;
-					if hp of Alexandra is 0 or hp of Alexandra is 100:
-						now level of Alexandra is 0;
+					if hp of Alexandra is 0 or hp of Alexandra >= 50 or hp of Alexandra is 100:
 						now level of Alexandra is 0;
 					if level of Alexandra is 0:
 						remove "Top Dog" from feats of player, if present;
@@ -2388,8 +2391,8 @@ Carry out reciting:
 					now hp of Alexandra is the number understood;
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
+					move Alexandra to Police Station;
 					if hp of Alexandra > 0:
-						move Alexandra to Grey Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -2397,13 +2400,17 @@ Carry out reciting:
 								now monster is y;
 								now area entry is "nowhere";
 								break;
-					otherwise:
-						remove Alexandra from play;
+						if hp of Alexandra is 100:
+							now Police Station is unknown;
+						otherwise if hp of Alexandra >= 50:
+							now Police Station is known;
+						otherwise:
+							now Police Station is unknown;
+							move Alexandra to Grey Abbey Library;
 					if hp of Alexandra is 3 and hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
-					if hp of Alexandra > 5, now hp of Alexandra is 4;	[temporary reset]
 			-- 113:	[Larissa (Multiform NPC)]
 				if the player's command matches "[number]":
 					now hp of Larissa is the number understood;
@@ -2576,7 +2583,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now level of Alexandra is the number understood;
 					now xp of Alexandra is 0;
-					if hp of Alexandra is 0 or hp of Alexandra is 100:
+					if hp of Alexandra is 0 or hp of Alexandra >= 50 or hp of Alexandra is 100:
 						now level of Alexandra is 0;
 					if level of Alexandra is 0:
 						remove "Top Dog" from feats of player, if present;

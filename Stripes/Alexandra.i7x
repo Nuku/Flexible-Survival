@@ -5,7 +5,7 @@ Version 4 of Alexandra by Stripes begins here.
 
 Section 0 - Basic Structure
 
-Alexandra is a person.
+Alexandra is a person.  Alexandra is in Police Station.
 The description of Alexandra is "[if hp of Alexandra < 50][alexandradesc_bg][otherwise][alexandradesc_gg][end if]";
 The conversation of Alexandra is { "Yes Boss!" }.
 Alexandrastory is a truth state that varies.  Alexandrastory is usually false.
@@ -505,12 +505,16 @@ an everyturn rule:
 
 Section 6 - Police Station
 
-Police Station is a room. It is fasttravel. It is private.
+Police Station is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Police Station is "[policestationdesc]";
 the scent of Police Station is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
 PSdoor is a door.  North of Police Station is PSdoor.  PSdoor is dangerous.  North of PSdoor is Wandering the City.
 the marea of PSdoor is "Outside".
+
+Police Lockerroom is a room.  It is sleepsafe.  Police Lockerroom is east of Police Station.
+The description of Police Lockerroom is "[policelockerdesc]".
+The scent of Police Lockerroom is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
 to say policestationdesc:
 	if hp of Alexandra is 50:
@@ -519,6 +523,9 @@ to say policestationdesc:
 	say "     The police station itself is one of the newer, smaller sort.  It is only a few stories tall and many of its walls are mirrored glass above the first floor while the ground floor has a stone facade with reinforced windows and heavy doors.  It would be quite secure, had it not needed to contend with an outbreak of monsters.  Large sections of the upper floor windows have been shattered and the armoured doors don't look like they'll quite close properly anymore, they've been so warped and bent.  The parking lot is mostly empty of cars, though there are a few wrecked cruisers still stained inside with sexual fluids.";
 	say "     Inside, you find that the destruction is not just to the outside of the building, though Alexandra's made some effort to clean up, pushing aside or throwing out ruined desks and filing cabinets.  She's set up a cot for herself next to one of the intact desks.";
 	say "     [link]North[end link] leads out of the station and back into the city.";
+
+to say policelockerdesc:
+	say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
 
 
 Section 7 - Good Alexandra
@@ -841,7 +848,7 @@ to say A_Task12:
 	now Zoo Entrance is known;
 
 to say A_Task13:
-	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type].  They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone.'";
+	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type].  They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone.  Be on the lookout for them, but be ready for a fight.'";
 	now AT_Sarah is true;
 
 
@@ -869,6 +876,19 @@ Sgt Marks reference.
 
 Informing you that her name is Officer Friedrich, she explains how she's been trying to help around here as best she can by trying to keep those infected from slipping any further.  As you talk about what you've been seeing, she even shares some water with you.
 You talk to her a little about what you've seen as well.  
+
+other rooms:
+holding cells
+lockup/storage
+police lockerroom
+chief's office
+
+actual tasks:
+- supplies
+- help survivor(s)
+- defend police stn
+- track "criminal"
+
 
 ]
 
