@@ -173,9 +173,9 @@ When Play begins:
 	now skin entry is "smooth, pink";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
 	now cock entry is "[one of]idealized[or]smooth[or]vienless[or]hairless[at random]";
-	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes.  Blinking suddenly seems to take far more effort.";
-	now body change entry is "your body thins out, becoming extremely thin and androgynous.  You suddenly feel as if you should be wearing a midriff-baring schoolgirl outfit.  Your arms lose all trace of hair, fat, and muscle tone.  In shock, you grab the back of your neck and start to sweat.  Your legs begin to stretch and thin, each becoming twice the length of your torso.  Even as your legs stretch, the rest of your body seems to shrink, leaving you a few inches shorter than you began when all is said and done.";
-	now skin change entry is "your skin becomes uniformly pink and hairless with gleaming white glares in bright light and oddly flat shadows in dim conditions.";
+	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes.  Blinking suddenly seems to take far more effort";
+	now body change entry is "your body thins out, becoming extremely thin and androgynous.  You suddenly feel as if you should be wearing a midriff-baring schoolgirl outfit.  Your arms lose all trace of hair, fat, and muscle tone.  In shock, you grab the back of your neck and start to sweat.  Your legs begin to stretch and thin, each becoming twice the length of your torso.  Even as your legs stretch, the rest of your body seems to shrink, leaving you a few inches shorter than you began when all is said and done";
+	now skin change entry is "your skin becomes uniformly pink and hairless with gleaming white glares in bright light and oddly flat shadows in dim conditions";
 	now ass change entry is "your ass firms and tightens, forming a pair of cute panties that you feel compelled to show off to others";
 	now cock change entry is "you feel a tightening in your groin as your erection becomes unnaturally smooth and idealized.  Your balls lose all hair, becoming smooth like your cock";
 	now str entry is 12;

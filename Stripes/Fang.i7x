@@ -194,7 +194,7 @@ to say fangsandrasex:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if lust of Fang is 3 and hp of Fang is 1:			[3rd threesome w/Fang in this playthrough w/basic Fang]
-		say "     As Sandra strokes the wolf's cock, she spreads his precum over it, getting it nice and slick.  'Mmm... would you like a turn under this sexy beast.  I'd love to see you bent over for this big wolf[if cunts of player is 0] and taking it up the ass.  That'd be really hot,'[otherwise], getting bred as his bitch.   That'd be really sexy,'[end if] she moans, fingering herself.  Looking at that throbbing, red cock, you find yourself tempted by the idea of letting the wolf ravage you as he did with Sandra.  Fang, as if sensing your momentary lapse in control, moves up to you and begins trying to mount you.  Shall you let him (Y) or reassert your dominance (N) ?";
+		say "     As Sandra strokes the wolf's cock, she spreads his precum over it, getting it nice and slick.  'Mmm... would you like a turn under this sexy beast?  I'd love to see you bent over for this big wolf[if cunts of player is 0] and taking it up the ass.  That'd be really hot,'[otherwise], getting bred as his bitch.   That'd be really sexy,'[end if] she moans, fingering herself.  Looking at that throbbing, red cock, you find yourself tempted by the idea of letting the wolf ravage you as he did with Sandra.  Fang, as if sensing your momentary lapse in control, moves up to you and begins trying to mount you.  Shall you let him (Y) or reassert your dominance (N) ?";
 		if the player consents:
 			say "[fangsub]";
 			now hp of Fang is 3;			[Fang becomes alpha]
