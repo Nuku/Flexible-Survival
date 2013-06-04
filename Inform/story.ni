@@ -5986,6 +5986,7 @@ Include RexxyEvent by AGentlemanCalledB.
 Include Francois by AGentlemanCalledB.
 Include Karen by AGentlemanCalledB.
 Include Felix by Wahn.
+Include Lilith by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

@@ -1,13 +1,9 @@
-Version 2 of Succubus by Sarokcat begins here.
-[Version 2 - Libido mechanics added & coupling to Incubus]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+Version 3 of Succubus by Sarokcat begins here.
+[Version 3 - Tie-in for changing the demon brute pet & Lilith]
 
 "Adds a Succubus to Flexible Survivals Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
-
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say Succubus attack:
 	if cocks of player is greater than 0:
@@ -28,19 +24,42 @@ to say Succubus attack:
 		infect "Succubus";
 
 To say Succubus loss:
-	if cocks of player is greater than 0:
-		if bodyname of player is "Incubus":
-			say "'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender.  'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be.' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
-			infect "Incubus";
+	if companion of player is demon brute and hp of Lilith is 0 and inasituation is false:			
+		if cocks of player is greater than 0:
+			if bodyname of player is "Incubus":
+				say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
+				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
+				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
+				infect "Incubus";	
+			otherwise:
+				say "As the succubus staggers back under your assault, your captured demon brute gives a satisfied grunt and steps forward to throw her down and rape her. With a single command, you freeze him in his steps - you wouldn't want the creature to think it can decide anything on its own, now that you're its master. Finding her balance again, your infernal opponent gives you a surprised look, which gives way to a seductive smile. 'How interesting... how did you get him so - tame?'";
+				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
+				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";				
 		otherwise:
-			say "'Well that[apostrophe]s just too bad,' The succubus says as she staggers back under your assault, 'I could have shown you such an amazing time,' she sighs, as she turns and leaps into the sky, sending you a teasing wink over her shoulder as she vanishes.";
+			if bodyname of player is "Succubus":
+				say "     'Good fight, dark sister,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful succubus,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
+				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Show this big brute how it is to have a pussy. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
+				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
+				infect "Succubus";
+			otherwise:
+				say "As the succubus staggers back under your assault, your captured demon brute gives a satisfied grunt and steps forward to throw her down and rape her. With a single command, you freeze him in his steps - you wouldn't want the creature to think it can decide anything on its own, now that you're its master. Finding her balance again, your infernal opponent gives you a surprised look, which gives way to a seductive smile. 'How interesting... how did you get him so - tame?'";
+				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Show this big brute how it is to have a pussy. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
+				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";				
+		now Burned-Out Chapel is known;			
+		now hp of Lilith is 2;
 	otherwise:
-		if bodyname of player is "Succubus":
-			say "'Good fight, dark sister,' the succubus says with a smile as she raises her hands in surrender.  'You are definitely the more powerful succubus,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be,' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flies off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
-			infect "Succubus";
+		if cocks of player is greater than 0:
+			if bodyname of player is "Incubus":
+				say "'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender.  'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be.' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss.  Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
+				infect "Incubus";
+			otherwise:
+				say "'Well that[apostrophe]s just too bad,' The succubus says as she staggers back under your assault, 'I could have shown you such an amazing time,' she sighs, as she turns and leaps into the sky, sending you a teasing wink over her shoulder as she vanishes.";
 		otherwise:
-			say "'Oh, what a nice, strong woman.  Are you sure you don[apostrophe]t want to be a sexy little succubus like me?' The succubus says teasingly as she dances backwards from your last attack. 'You really don[apostrophe]t know what you are missing.... maybe next time you will let me show you just how to embrace your true, feminine power,' she says with a grin as she launches herself into the air and vanishes."
-
+			if bodyname of player is "Succubus":
+				say "'Good fight, dark sister,' the succubus says with a smile as she raises her hands in surrender.  'You are definitely the more powerful succubus,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be,' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flies off into the [if daytimer is day]shadows[otherwise]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
+				infect "Succubus";
+			otherwise:
+				say "'Oh, what a nice, strong woman.  Are you sure you don[apostrophe]t want to be a sexy little succubus like me?' The succubus says teasingly as she dances backwards from your last attack. 'You really don[apostrophe]t know what you are missing.... maybe next time you will let me show you just how to embrace your true, feminine power,' she says with a grin as she launches herself into the air and vanishes.";
 
 to say succubus fight:
 	say "[one of]The succubus strikes out at you with her surprisingly sharp nails.[or]The succubus's strange green eyes seem to glow, and you find yourself staring into their slit pupiled depths, and wondering whether it wouldn[apostrophe]t be a better idea just to submit to her desires.[or]She pauses to pose in front of you, and you find yourself unable to attack such a perfectly beautiful creature...[or]Darting forward, you are surprised when she presses her lips to your face and gives you a kiss, the feel of her soft lips rubbing up against you making you moan with increasing desire.[or]Slipping to the side as you try to strike at her, the succubus lashes out at you with one of her wings![or]The succubus sways her hips seductively as she stalks forward, distracting you enough that her fist connecting with your face comes as a complete surprise![at random]";
@@ -51,15 +70,12 @@ to say succubus fight:
 	if libido of player >= 110:
 		say "You find yourself too aroused to keep fighting the sexy seductress and drop to your knees.  Having fallen under the sway of this infernal temptress, you long for her to help relieve the heat in your loins.";
 
-
-
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Succubus"; [Name of your new Monster]
@@ -81,36 +97,36 @@ When Play begins:
 	now cock change entry is "it seems to grow partially erect and twitch eagerly, almost like it has a mind of it[apostrophe]s own, eagerly hunting for the next chance to be put to use"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 20;
-	now sta entry is 12;					
+	now sta entry is 12;
 	now per entry is 16;
 	now int entry is 10;
 	now cha entry is 25;
-	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 50;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 14;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Red";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 9;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 80;			[ Amount player Libido will go up if defeated ]
+	now sex entry is "Female";       [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 50;              [ How many HP has the monster got? ]
+	now lev entry is 6;              [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 14;            [Amount of Damage monster Does when attacking.]
+	now area entry is "Red";         [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;      [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;       [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;          [ Number of Breasts infection will give you. ]
+	now breast size entry is 9;      [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 12;     [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6;       [ Width of female sex  infection will try and give you ] 
+	now libido entry is 80;          [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 0;       [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cunts of player > 0]sultry[otherwise]handsome[end if][at random]";
-	now type entry is "demonic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now type entry is "demonic";     [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true;         [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Succubus":
@@ -130,5 +146,4 @@ when play ends:
 				say "Fighting off the building urges of your new body, you are relieved when the military finally arrives to rescue those of you who still are sane enough to want to be rescued. Going with them you find your new body to be almost a blessing as you see just how many other strange and unusual forms the people in the city ended up with. Looking relatively human turns out to be a good thing as you are released from military custody after only the most cursory of examinations, free to start a new life for yourself far away from the strangely seductive woman who changed your body and gave you a pair of wings to match her own.  Making your way in the world after your life changing ordeal is hard, but you find yourself relishing the challenge, the work taking your mind off your ever present sexual urges, and your near inexhaustible energy helps you to excel at most everything you set your hands to. Soon you are living an increasingly comfortable life, as the money and promotions roll in steadily, and before too long you have an increasing number of women throwing themselves at you.";
 				say "[one of]Never one to turn down an opportunity for fun, you enjoy indulging yourself with the women at every turn, acquiring quite a reputation as both a ladykiller, and as a mind blowingly amazing lover. Still despite all your conquests in the bedroom, something still seems to be missing, both in the bed and in your life, the women you sleep with never able to quite sate your lusts, or bring you to the level of pleasure you somehow know is just out of reach.  Your life goes on like this for quite a while, others growing older and weaker while you never seem to age a day, until eventually one day you have a strange visitor.  When she throws back her cloak to reveal herself as the succubus from the city, you find your mind filling with lustful joy at the sight, and your cock growing incredibly hard as you realize every woman you have fucked up until this point was all in preparation for this moment. Welcoming it into your house eagerly, she soon makes it her own, as it should be, your well trained body making you the perfect little pet for her and her sisters. Surrendering to the passionate nature of your succubus mistress, you realize that you have finally found the meaning in life you were waiting for, as a powerful sexual pet and tool made for serving your mistress, as she expands her control throughout the outside world one new pet at a time....[or]While you are always horny, and increasingly interested in the array of women, something holds you back from indulging yourself, as you look at them and realize just how pale and lifeless they seem beside the woman you met in the city. Your playing hard to get only intrigues the women further and helps boost your success, but you still find yourself holding back and waiting for something you can[apostrophe]t quite define. Eventually many years later, still young and strong while others around you have grown old, you have a strange visitor arrive at your door one night, and as she throws off her disguise and you stare at the mesmerizingly beautiful succubus once again, and you realize that what you have been waiting for has finally arrived. Welcoming her into your house and your bed, you learn that the years of saving up your energy and building up your willpower have made you powerful internally as well as externally, and you are finally a match for the amazingly talented succubus. Your willpower and resilience having built up to the level where you can meet her as an equal in bed as well as out of it, surprising and pleasing her greatly. Intrigued she decides to stay with you this time, and together the two of you become a very powerful force behinds the scenes in the world of human business, helping to steer the world into one more suitable for both of you to enjoy over your long long lives....[at random]";
 
-[ Edit this to have the correct Name as wall]
 Succubus ends here.

@@ -96,6 +96,7 @@ Instead of resolving a Angel vs Demons:
 	say "     When you finally manage to get free a bit later, you're alone between the burning buildings. The flaming sword still sizzling in the flesh of the dead hellhound sadly isn't something you could use - it's all flame, even the grip. Looking down the street where the demons went, you see the [bold type]Burned-Out Chapel[roman type] they went into. You could follow them, if you think you're strong enough. But don't wait too long... who knows what they'll do to him.";
 	wait for any key;
 	now Burned-Out Chapel is known;
+	move Elijah to Burned-Out Chapel;
 	now lastElijahfucked is turns;    [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
 	now NPCintCounter is turns;
 	now npcEint is "0000000000000N";
@@ -122,19 +123,23 @@ instead of sniffing Burned-Out Chapel:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if hp of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
 
 to say chapelplacedesc:
-	if (hp of Elijah is 0):   [Starting state - Elijah chained up]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. A winged humanoid is chained to the wooden cross standing behind a cracked altar. Surprisingly, there are no demons in sight.";
-	if (hp of Elijah > 0) and (hp of Elijah < 100):   [Elijah rescued]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, you see a wooden cross with chains dangling down from it.";
-	if (hp of Elijah is 100):   [after the demons had an orgy there]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, there is a horrible sticky mess of ash and demonic cum.";
+	if (Elijah is not in Burned-Out Chapel and hp of Elijah is 0):   [if the player got here before Elijah was captured]
+		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. The altar is cracked, and the wooden cross behind it has had manacles added to it. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
+	otherwise if (hp of Elijah is 0):   [Starting state - Elijah chained up]
+		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. A winged humanoid is chained to the wooden cross standing behind a cracked altar. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
+	otherwise if (hp of Elijah > 0) and (hp of Elijah < 100):   [Elijah rescued]
+		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, you see a wooden cross with manacles dangling down from it. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
+	otherwise if (hp of Elijah is 100):   [after the demons had an orgy there]
+		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, there is a horrible sticky mess of ash and demonic cum. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
 
+Northeast of Burned-Out Chapel is Sacristy.
+The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles besides it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...";
 
 Section 2 - Elijah the Seraphim
 
 [Smells, Description, Conversation]
 
-Elijah is a man.  Elijah is in Burned-Out Chapel.  The hp of Elijah is normally 0.
+Elijah is a man. The hp of Elijah is normally 0.
 The description of Elijah is "[Elijahdesc]";
 The conversation of Elijah is { "Mew!" }.
 lastElijahfucked is a number that varies.  lastElijahfucked is normally 555.
@@ -187,6 +192,7 @@ instead of conversing the Elijah:
 		if the player consents:   [freeing him - should lead to a demon orgy scene (see section 4) if you get beaten]
 			say "     The chains are too sturdy for you to break or damage, but luckily you find the key for the manacles not too far away - lying in a puddle of caustic hellhound urine. Dragging it out with a piece of wood (that immediately starts smoking), you wipe it off with a shred of the altar-cloth and take it. Then you unlock the shackles holding the angel, carefully supporting him so he doesn't fall down.";
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
+			now inasituation is true;			
 			if girl is banned:
 				say "     Leading the mob of demons rushing at you is a incubus.  Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out.  'That's our prize, you thieving mortal.  When I'm done with you, you'll be begging for the hellhounds to take you!";
 				challenge "Incubus";
@@ -222,8 +228,8 @@ instead of conversing the Elijah:
 						move Elijah to bunker;
 						move player to bunker;
 						now lastElijahfucked is turns;
-						increase score by 20;
-			now Burned-Out Chapel is not known;						
+						increase score by 20;				
+			now inasituation is false;										
 		otherwise:   [try it later, 32 turns time to save him]
 			say "     The demons might not be here right at this very moment, but they'd surely notice you making off with their prized catch. So you'll bide your time for the moment. Let's hope their captive will hold out a bit longer...";
 	otherwise if (hp of Elijah is 1):  [wounded + unconscious in the bunker - starting the revival quest]
@@ -343,10 +349,9 @@ Instead of resolving a Examination Room:
 Section 4 - NPC Interactions
 
 An everyturn rule:
-	if (hp of Elijah is 0) and (Burned-Out Chapel is known) and (lastElijahfucked - turns > 32):  [time till demon orgy, after which Elijah will be dragged to hell]
+	if (hp of Elijah is 0) and (Angel vs Demons is resolved) and (lastElijahfucked - turns > 32):  [time till demon orgy, after which Elijah will be dragged to hell]
 		now hp of Elijah is 100;
 		remove Elijah from play;
-		now Burned-Out Chapel is not known;						
 		say "Your mind wanders momentarily to the angel you once saw fighting those demons, but soon forget about him and return to your more immediate concerns.";
 	[NPC Interaction section - sorted by Elijah hp state and NPC/pet - see file header]
 	if (hp of Elijah is 1 or hp of Elijah is 2) and (NPCintCounter - turns > 2):
