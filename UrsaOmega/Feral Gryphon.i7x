@@ -8,7 +8,7 @@ when play begins:
 	add { "Feral Gryphon" } to infections of guy;
 	add { "Feral Gryphon" } to infections of furry;
 	add { "Feral Gryphon" } to infections of Avianlist;		[list of avian/bird infections]
-	add { "Feral Gryphon" } to infections of Avianprelist;	[list of predatory avian/bird infections]
+	add { "Feral Gryphon" } to infections of Avianpredlist;	[list of predatory avian/bird infections]
 	add { "Feral Gryphon" } to infections of Knotlist;		[list of cock infections with a knot]
 
 to say losetoGryphon:
