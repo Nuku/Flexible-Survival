@@ -1,5 +1,5 @@
 Version 1 of Feral Gryphon by UrsaOmega begins here.
-[Version 1.0 - First release]
+[Version 1.1 - Added to avian pred list]
 "Adds a Feral Gryphon creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
@@ -8,6 +8,7 @@ when play begins:
 	add { "Feral Gryphon" } to infections of guy;
 	add { "Feral Gryphon" } to infections of furry;
 	add { "Feral Gryphon" } to infections of Avianlist;		[list of avian/bird infections]
+	add { "Feral Gryphon" } to infections of Avianprelist;	[list of predatory avian/bird infections]
 	add { "Feral Gryphon" } to infections of Knotlist;		[list of cock infections with a knot]
 
 to say losetoGryphon:
