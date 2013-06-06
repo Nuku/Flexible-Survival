@@ -5990,6 +5990,7 @@ Include Francois by AGentlemanCalledB.
 Include Karen by AGentlemanCalledB.
 Include Felix by Wahn.
 Include Campus Gym by UrsaOmega.
+Include Lilith by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
