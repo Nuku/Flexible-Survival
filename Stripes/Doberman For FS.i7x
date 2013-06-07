@@ -28,7 +28,7 @@ to say losetodobie1:		[low-lust player loss]
 		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it";
 		if dobielibido is 0:
 			say ".";
-			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?  If you'd like to try making friends with her, you should talk to her.  If you'd rather bide your time until you can deal with the Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.  Which will it be?";
+			say "     Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?  If you'd like to try making friends with her, you should talk to her.  If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.  Which will it be?";
 			if the player consents:
 				let bonus be (( charisma of player minus 10 ) divided by 2);
 				let dice be a random number from 1 to 20;
@@ -62,7 +62,7 @@ to say losetodobie1:		[low-lust player loss]
 				say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance";
 				now dobielibido is -100;
 				now Police Station is known;
-[				now hp of Alexandra is ***;	]
+				now hp of Alexandra is 50;
 				now area entry is "nowhere";
 				increase score by 20;
 			otherwise:

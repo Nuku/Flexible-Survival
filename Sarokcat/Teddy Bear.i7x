@@ -16,6 +16,7 @@ when play begins:
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say teddy bear attack:
+	choose row monster from the table of random critters;
 	if scalevalue of player <= 3 and a random chance of 1 in 3 succeeds:
 		if hp of player > 0:
 			say "     You are grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you";
@@ -41,10 +42,6 @@ to say teddy bear attack:
 			now teddyvored is -100;
 			now xp of player is 0;				[prevents accidental level up]
 			if the player is not lonely, now xp of companion of player is 0;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Teddy Bear":
-					break;
 			now non-infectious entry is true;			[prevents regular teddy bear infection from occurring]
 			now tailname of player is "Teddy Bear";
 			now facename of player is "Teddy Bear";
