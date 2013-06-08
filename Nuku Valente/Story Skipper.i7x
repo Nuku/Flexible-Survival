@@ -9,7 +9,7 @@ trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "".
 To savetrix:
 	 write "[trixsavetext1]" to the File of Trixsave;
 	 write "[trixsavetext2]" to the File of Trixsave2;
-	 
+
 Trixie is a person. Trixie is in Grey Abbey Library.
 
 The scent of trixis is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
@@ -1339,6 +1339,45 @@ To reciting2:
 					if angiearoused >= 3:
 						now FindingMidnight is resolved;
 						move Midnight to Zoo Giftshop;
+			-- 140:	[demon brute pet]
+				if the player's command matches "[number]":
+					now DBCaptureQuestVar is the number understood;
+					if DBCaptureQuestVar is 5:
+						now demon brute is tamed;
+					otherwise:
+						now demon brute is not tamed;
+			-- 141:	[demon brute pet - gender]
+				if the player's command matches "[number]":
+					now DemonBruteStatus is the number understood;
+			-- 142:	[Lilith - hp]
+				if the player's command matches "[number]":
+					now hp of Lilith is the number understood;
+			-- 143:	[Lilith - incubus offspring]
+				if the player's command matches "[number]":
+					now LilithKidCounter is the number understood;
+			-- 144:	[Felix - hp]
+				if the player's command matches "[number]":
+					now hp of Felix is the number understood;
+					if hp of Felix > 0 and hp of Felix < 100:
+						move Felix to Dry Plains;
+					otherwise:
+						remove Felix from play;
+					if hp of Felix is 2:
+						move Andre to Dry Plains;
+					otherwise:
+						remove Andre from play;
+			-- 145:	[Felix - libido]
+				if the player's command matches "[number]":
+					now libido of Felix is the number understood;
+			-- 146:	[relationship progress with Sonya the Viking]
+				if the player's command matches "[number]":
+					now VikingRelationship is the number understood;
+			-- 147:	[number of kids with Sonya the Viking]
+				if the player's command matches "[number]":
+					now VikingKidCounter is the number understood;
+			-- 148:	[MovingOrwell - mini quest var for fucking Orwell]
+				if the player's command matches "[number]":
+					now MovingOrwell is the number understood;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2736,39 +2775,39 @@ Carry out reciting:
 					if DBCaptureQuestVar is 5:
 						now demon brute is tamed;
 					otherwise:
-						now demon brute is not tamed;						
+						now demon brute is not tamed;
 			-- 141:	[demon brute pet - gender]
 				if the player's command matches "[number]":
 					now DemonBruteStatus is the number understood;
 			-- 142:	[Lilith - hp]
 				if the player's command matches "[number]":
-					now hp of Lilith is the number understood;					
+					now hp of Lilith is the number understood;
 			-- 143:	[Lilith - incubus offspring]
 				if the player's command matches "[number]":
-					now LilithKidCounter is the number understood;						
+					now LilithKidCounter is the number understood;
 			-- 144:	[Felix - hp]
 				if the player's command matches "[number]":
-					now hp of Felix is the number understood;				
+					now hp of Felix is the number understood;
 					if hp of Felix > 0 and hp of Felix < 100:
 						move Felix to Dry Plains;
 					otherwise:
 						remove Felix from play;
 					if hp of Felix is 2:
-						move Andre to Dry Plains;			
+						move Andre to Dry Plains;
 					otherwise:
-						remove Andre from play;				
+						remove Andre from play;
 			-- 145:	[Felix - libido]
 				if the player's command matches "[number]":
-					now libido of Felix is the number understood;							
+					now libido of Felix is the number understood;
 			-- 146:	[relationship progress with Sonya the Viking]
 				if the player's command matches "[number]":
-					now VikingRelationship is the number understood;						
+					now VikingRelationship is the number understood;
 			-- 147:	[number of kids with Sonya the Viking]
 				if the player's command matches "[number]":
-					now VikingKidCounter is the number understood;						
+					now VikingKidCounter is the number understood;
 			-- 148:	[MovingOrwell - mini quest var for fucking Orwell]
 				if the player's command matches "[number]":
-					now MovingOrwell is the number understood;												
+					now MovingOrwell is the number understood;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
