@@ -68,6 +68,15 @@ instead of conversing the Janice:
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 25;
+		otherwise if bodyname of player is "Fennec":
+			say "     'Oh my, that's certainly a cute little fox form you've managed to find for yourself,' Janice says with obvious interest as she looks over your vulpine body.  'Just a touch of the exotic";
+			if facename of player is "Fennec":
+				say ".  And those ears - I just want to nibble on them";
+				increase score by 5;
+			say ",' she muses as she runs her eyes up and down you several times, taking in your slender form.  'A bit on the small size though.  How about you come over here and we'll see about getting the little boytoy to grow into a sexy man?'  She gives a swish of her fluffy tail and runs her tongue along her shapely muzzle, putting her sexy body into an alluring pose.";
+			now janicetalk is 4;
+			now janicearoused is 1;
+			increase score by 15;
 		otherwise if bodyname of player is "Clockwork Fox":
 			say "     'Well, you certainly have a managed to find quite the unusual fox form to pique my interest.  That certainly shows some willingness to try to please me... which is always something I appreciate,' she says with a swish of her fluffy tail.  'How about you come here and we'll see if we can slip you into something a little more comfortable before you start leaking oil all over the floor?' she purrs with a decidedly vulpine grin and a slow paw along her sexy body, making no attempt to mask her interest or arousal.";
 			now janicetalk is 4;
