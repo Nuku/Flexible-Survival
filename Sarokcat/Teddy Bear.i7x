@@ -128,7 +128,7 @@ When Play begins:
 	now altcombat entry is "bearhugger";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "teddy bear":
+	if bodyname of player is "Teddy Bear":
 		if humanity of player is less than 10:
 			if teddyvored is -100:
 				say "     You stay together in the state fair with your plushie friend, feeling very happy together.  You snuggle and play together often[if cocks of player > 0], fucking her with your plush cock[otherwise if cunts of player > 0], licking each other with your velvety tongues[otherwise], licking her with your velvety tongue[end if] and roaming the midway in search of others to cuddle with.  From time to time you stumble across other teddy bears like yourselves and have a grand old time together, but other times you're even luckier and find a human.  Having been shown how to do it by your pink friend, you really enjoy swallowing them down to give them an extra-special belly hug, helping them to become more happy teddy bears to wander around the fair.  You always have a particularly good time meeting up with them again as bears and enjoying soft, plush sex with those you've changed in this manner.";
