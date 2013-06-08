@@ -1229,27 +1229,26 @@ To reciting2:
 			-- 131:   [Artemis]
 				if the player's command matches "[number]":
 					now hp of rubber tigress is the number understood;
-					if hp of rubber tigress is 2:
-						now Poor Kitty is resolved;
-					otherwise if girl is banned or furry is banned:
+					now Poor Kitty is unresolved;
+					if girl is banned or furry is banned:
 						now hp of rubber tigress is 0;
 						now Poor Kitty is resolved;
-					otherwise if hp of rubber tigress is 0 or hp of rubber tigress is 1:
-						now Poor Kitty is unresolved;
-					otherwise if hp of rubber tigress is 3:
+					if hp of rubber tigress >= 2:
 						now Poor Kitty is resolved;
+					if hp of rubber tigress >= 3:
 						now rubber tigress is tamed;
 						now libido of rubber tigress is 30;
 						now carried of cup stack is 1;
-					if hp of rubber tigress < 3:
+					otherwise:
 						if companion of player is rubber tigress, now companion of player is nullpet;
 						now rubber tigress is not tamed;
+						now carried of cup stack is 0;
+					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
 					if hp of rubber tigress is 11:
 						now hp of rubber tigress is 10;
 						say "     There is a wet, popping sound as Artemis's sex toys detach themselves, ready to be installed again.";
 					now lust of rubber tigress is 0;
 					now thirst of rubber tigress is 0;
-					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
 					now lisaartemiscount1 is 0;
 					now lisaartemiscount2 is 0;
 			-- 132:   [Septus/Football Wolfman]
@@ -2621,27 +2620,26 @@ Carry out reciting:
 			-- 131:   [Artemis]
 				if the player's command matches "[number]":
 					now hp of rubber tigress is the number understood;
-					if hp of rubber tigress is 2:
-						now Poor Kitty is resolved;
-					otherwise if girl is banned or furry is banned:
+					now Poor Kitty is unresolved;
+					if girl is banned or furry is banned:
 						now hp of rubber tigress is 0;
 						now Poor Kitty is resolved;
-					otherwise if hp of rubber tigress is 0 or hp of rubber tigress is 1:
-						now Poor Kitty is unresolved;
-					otherwise if hp of rubber tigress is 3:
+					if hp of rubber tigress >= 2:
 						now Poor Kitty is resolved;
+					if hp of rubber tigress >= 3:
 						now rubber tigress is tamed;
 						now libido of rubber tigress is 30;
 						now carried of cup stack is 1;
-					if hp of rubber tigress < 3:
+					otherwise:
 						if companion of player is rubber tigress, now companion of player is nullpet;
 						now rubber tigress is not tamed;
+						now carried of cup stack is 0;
+					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
 					if hp of rubber tigress is 11:
 						now hp of rubber tigress is 10;
 						say "     There is a wet, popping sound as Artemis's sex toys detach themselves, ready to be installed again.";
 					now lust of rubber tigress is 0;
 					now thirst of rubber tigress is 0;
-					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
 					now lisaartemiscount1 is 0;
 					now lisaartemiscount2 is 0;
 			-- 132:   [Septus/Football Wolfman]
