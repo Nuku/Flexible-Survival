@@ -139,7 +139,7 @@ When Play begins:
 	now face entry is "quite vulpine in appearance with a narrow muzzle, dark eyes and large, bat-like ears";
 	now body entry is "short and slender, only a little over five feet tall.  At first, you might think it belongs to an adolescent, but you are quite mature, just short.  Your hands and feet are now paws with digits ending in small claws";
 	now skin entry is "light tan fur across your";
-	now tail entry is "Your is thick and fluffy like a fox's.";
+	now tail entry is "Your tan tail is thick and fluffy like a fox's.";
 	now cock entry is "[one of]vulpine[or]knotted[at random]";
 	now face change entry is "your vision goes blurry for a moment.  You feel your head shift and small sounds growing extemely loud.  By the time the changes pass, your head has become quite vulpine in shape, but with much larger ears than those of a normal fox";
 	now body change entry is "your body becomes small and slender, leaving you a little over five feet tall by the time it's done.  While mostly human in structure, your limbs end in paw-like hands and feet";
