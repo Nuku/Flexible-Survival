@@ -41,6 +41,11 @@ Instead of resolving a Poor Kitty:
 			say "     Continuing to walk along, you turn around the next corner and, once out of sight, run around the stand.  You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of player is not journal].  You pull out your weapon and charge at her[otherwise].  You raise your fists and charge at her[end if].  She gives a shrill shriek of surprise and scrambles away.  You don't expect that thing will be bothering you again.";
 			now hp of rubber tigress is 2;
 			now Poor Kitty is resolved;
+	otherwise:
+		say "ERROR-Artemis-[hp of rubber tigress]PK: HP outside of range for the event!";
+		increase carried of cup stack by 1;
+		now rubber tigress is tamed;
+		now Poor Kitty is resolved;
 
 
 Section 2 - Artemis
