@@ -67,8 +67,12 @@ to say artemisdesc:
 	if hp of rubber tigress < 11:
 		say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if hp of rubber tigress >= 6].  As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if].  Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
 	otherwise:
-		if lust of rubber tigress is 1 and thirst of rubber tigress is 0:
-			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that.  Under her tail now rests a puffy, rubbery cunt that is eager to be filled.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly licking her pussy while eying your reaction[at random].";
+		if lust of rubber tigress is 1 and thirst of rubber tigress is 1:
+			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that.  Having now gained both a puffy, rubbery cunt under her tail and a sheath-bound cock at her hindquarters, she struts around now with greater confidence and seems much more pleased with herself.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly licking her pussy while eying your reaction[or]makes a show of slowly running her tongue across her cock while eying your reaction[at random].";
+		otherwise if lust of rubber tigress is 1 and thirst of rubber tigress is 0:
+			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that.  Under her tail now rests a puffy, rubbery cunt that is eager to be filled and that she seems quite happy to display.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly licking her pussy while eying your reaction[at random].";
+		otherwise if lust of rubber tigress is 0 and thirst of rubber tigress is 1:
+			say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and was even lacking any gender until you changed that.  Having now gained a sheath-bound cock at her hindquarters that often pokes free, displaying its sextoy nature, she struts around now with greater confidence.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[or]makes a show of slowly running her tongue across her cock while eying your reaction[at random].";
 		otherwise:
 			say "***";
 	if hp of rubber tigress < 6:
@@ -126,13 +130,16 @@ An everyturn rule:
 					if lust of rubber tigress is 1:
 						if cocks of player > 0:
 							add 10 to artemissex;						[vagina]
-							add 10 to artemissex;						[vagina]
+						add 10 to artemissex;							[vagina]
+						add 10 to artemissex;							[vagina]
 					otherwise:
-						if cocks of player > 0 and "More Anal" is listed in feats of player:
+						if cocks of player > 0 and anallevel is 3:
 							add 1 to artemissex;						[anal]
 					if thirst of rubber tigress is 1:
-						add 11 to artemissex;							[***]
-						add 11 to artemissex;							[***]
+						if cunts of player > 0 or anallevel is 3:
+							add 11 to artemissex;						[cock]
+						add 11 to artemissex;							[cock]
+						add 11 to artemissex;							[cock]
 					if lust of rubber tigress is 2:
 						add 12 to artemissex;							[***]
 					otherwise if thirst of rubber tigress is 2:
@@ -657,9 +664,9 @@ to artemismodding:
 
 
 to say artemistoydesc:
-	if lust of rubber tigress is 0:
-		say "     You look over the dildo you've obtained for Artemis.  The toy itself has a definite feline shape and is about 9 inches in length.  It is made of red-tinted latex, though darkens to nearly black at the base.  As stated on the packaging, it possesses what it describes as 'rubbery pleasure barbs', which are soft, barb-like stimulators a few millimeters in size.  Clearly another factor as part of its clearly feline design, you rub them with a fingertip and can't help but wonder how they'd feel.";
 	if thirst of rubber tigress is 0:
+		say "     You look over the dildo you've obtained for Artemis.  The toy itself has a definite feline shape and is about 9 inches in length.  It is made of red-tinted latex, though darkens to nearly black at the base.  As stated on the packaging, it possesses what it describes as 'rubbery pleasure barbs', which are soft, barb-like stimulators a few millimeters in size.  Clearly another factor as part of its clearly feline design, you rub them with a fingertip and can't help but wonder how they'd feel.";
+	if lust of rubber tigress is 0:
 		say "     Examining the vaginal sleeve you got from Lisa, you rub it gently in your hands.  The gel-like material is clear in colour and surprisingly stretchable.  While only the width of your palm when laid flat and about six inches in length, it seems to be able to stretch much further.  Given the ridged passage running along its interior, it's clear you're meant to slide it over your penis and stroke yourself off with it.  The soft, gel-like plastic its made from feels rather pleasant to the touch, making you wonder for a moment how such a thing would feel around [if cocks of player > 0]your[otherwise]a[end if]cock.";
 
 to say artemismod1:
