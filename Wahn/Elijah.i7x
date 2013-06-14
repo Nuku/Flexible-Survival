@@ -116,7 +116,7 @@ Instead of resolving a Angel vs Demons:
 	increase score by 15;
 	Now Angel vs Demons is resolved;
 
-Burned-Out Chapel is a room. It is fasttravel. It is private. 
+Burned-Out Chapel is a room. It is fasttravel.
 The description of Burned-Out Chapel is "[chapelplacedesc]";
 
 instead of sniffing Burned-Out Chapel:
