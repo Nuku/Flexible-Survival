@@ -464,7 +464,7 @@ carry out françoisbaking:
 			decrease carried of crushed candies by 1;
 			increase carried of vin-coeur by 1;
 			now françoisbaked is 1;
-		otherwise if egg nog is owned and pixie dust is owned and crushed candies is owned and 9 is listed in Francois_Undiscovered: [Gingerbread - egg nog + pixie dust + Blue gel]
+		otherwise if egg nog is owned and pixie dust is owned and blue gel is owned and 9 is listed in Francois_Undiscovered: [Gingerbread - egg nog + pixie dust + Blue gel]
 			say "[GingerbreadGet]";
 			remove 9 from Francois_Undiscovered;
 			add 9 to Francois_Discovered;
