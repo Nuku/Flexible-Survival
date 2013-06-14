@@ -116,7 +116,7 @@ Instead of resolving a Angel vs Demons:
 	increase score by 15;
 	Now Angel vs Demons is resolved;
 
-Burned-Out Chapel is a room. It is fasttravel.
+Burned-Out Chapel is a room. It is fasttravel. It is private. 
 The description of Burned-Out Chapel is "[chapelplacedesc]";
 
 instead of sniffing Burned-Out Chapel:
@@ -596,8 +596,12 @@ To npcEintAlter (N - number) with (L - text):
 Section 5 - Fucking Elijah
 
 Instead of fucking the Elijah:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	[puts Seraphim as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Seraphim":
+			now monster is y;
+			break;	
 	if (hp of Elijah is 0): [in the chapel, losing him to the demons]	[***]
 		say "     The poor angel is hurt and chained up, with an unknown number of demons surely not too far away. Are you sure you want to do this right now?[line break]";
 		if player consents:
@@ -632,6 +636,7 @@ Instead of fucking the Elijah:
 						say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 						say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
 						say "     He must never have felt something like this before, as all too soon, a shiver runs through the angel's body and long streaks of white cum blast from his perfect cock so splat down on his chest. The spasms of his insides with each shot grip your shaft tight as a vice, driving you over the edge in short order too and you deposit spurt after spurt of demonic cum deep inside your little angel.";
+						say "     [WaitLineBreak]";
 						say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now hp of Elijah is 99;
@@ -640,10 +645,7 @@ Instead of fucking the Elijah:
 						say "     When his manhood is good and ready, standing proudly erect like a flagpole, you climb up on the bunk yourself. At first you rub the head of his perfect shaft slowly over the lips of your cunt, but then your need to get him inside the dripping and ready cave quickly overwhelms your restraint. Guiding his cock with one hand, you lower yourself down onto it, panting and moaning as it slides into your body. As you sink in deeper and deeper, the angel starts groaning silently in his sleep, gasping when you take him all the way and your hips touch his balls.";
 						say "     You start moving up and down on the shaft of your defenseless partner, delighted how each movement makes him gasp and moan, and run your hands over his tightly muscled chest. The feelings his cock wakes in you are just heavenly, rubbing against all the right spots. You could go on like this forever, your mind in a pleasant buzz of lust and satisfaction.";
 						say "     Sadly, he must never have felt something like your pussy before, as all too soon, a shiver runs through the angel's body and long streaks of fertile seed blast upwards into your womb. As you feel his cock pulse and the cum fill you up, your body replies in kind, secreting a large amount of demonically infused female juices.[impregchance]";
-						if baby is 0 and gestation of child is not 0:
-							now facename of child is "Seraphim";
-							now bodyname of child is "Seraphim";
-							now skinname of child is "Seraphim";
+						say "     [WaitLineBreak]";						
 						say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now hp of Elijah is 99;
@@ -652,6 +654,7 @@ Instead of fucking the Elijah:
 					say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 					say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
 					say "     He must never have felt something like this before, as all too soon, a shiver runs through the angel's body and long streaks of white cum blast from his perfect cock so splat down on his chest. The spasms of his insides with each shot grip your shaft tight as a vice, driving you over the edge in short order too and you deposit spurt after spurt of demonic cum deep inside your little angel.";
+					say "     [WaitLineBreak]";										
 					say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now hp of Elijah is 99;
@@ -660,10 +663,7 @@ Instead of fucking the Elijah:
 					say "     When his manhood is good and ready, standing proudly erect like a flagpole, you climb up on the bunk yourself. At first you rub the head of his perfect shaft slowly over the lips of your cunt, but then your need to get him inside the dripping and ready cave quickly overwhelms your restraint. Guiding his cock with one hand, you lower yourself down onto it, panting and moaning as it slides into your body. As you sink in deeper and deeper, the angel starts groaning silently in his sleep, gasping when you take him all the way and your hips touch his balls.";
 					say "     You start moving up and down on the shaft of your defenseless partner, delighted how each movement makes him gasp and moan, and run your hands over his tightly muscled chest. The feelings his cock wakes in you are just heavenly, rubbing against all the right spots. You could go on like this forever, your mind in a pleasant buzz of lust and satisfaction.";
 					say "     Sadly, he must never have felt something like your pussy before, as all too soon, a shiver runs through the angel's body and long streaks of fertile seed blast upwards into your womb. As you feel his cock pulse and the cum fill you up, your body replies in kind, secreting a large amount of demonically infused female juices.[impregchance]";
-					if baby is 0 and gestation of child is not 0:
-						now facename of child is "Seraphim";
-						now bodyname of child is "Seraphim";
-						now skinname of child is "Seraphim";
+					say "     [WaitLineBreak]";					
 					say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now hp of Elijah is 99;
@@ -837,8 +837,6 @@ to say ElijahSex2:    [cock sucked by Elijah]
 		say "     Although you'd wish Elijah would go on forever, all too soon your body tingles with an approaching orgasm. You slide out a bit until just the tip is inside Elijah's mouth, then blast your cum onto his tongue. He just keeps on sucking, milking you for all you're able to give and swallowing it down greedily. With a satisfied grin, he pulls off, remarking how tasty your cum is.";
 
 to say ElijahSex3:    [fucked by Elijah - ass or pussy]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [good guy]
 		say "     Preparing to give your angel something he won't forget anytime soon, you slip out of your clothing then walks slowly towards him, making sure to show off all of your naked [bodytype of player] body. You give Elijah a soft kiss on the lips, looking deep into his eyes as your hands move to undo the zipper of his pants. Then, taking hold of his hardening manhood you pull him towards the next bunk.";
 		say "     Arriving at the bed you give him another longing kiss on the lips, then push softly against his chest, making him lie down on it. Putting a line of feather-light kisses down his chest, you work your way to his proudly standing erection, just barely touching it with your lips and making Elijah quiver in need. Then, you pull off his boots and slide down the jeans over his long legs until he's fully naked, lying there ready for you to take.";
@@ -882,15 +880,8 @@ to say ElijahSex3:    [fucked by Elijah - ass or pussy]
 			say "     Elijah indulges his lusts with your body for a long time, keeping you in a pleasant lustful buzz, but at some point his self-control is at an end. With a final satisfied moan, he drives his cock into your ass as deep as he can and starts shooting spurt after spurt of his fertile seed. As close as you're to the edge yourself, the pulsing of his hard shaft inside you is enough to make you come too, shooting cum all over yourself, one shot even hitting your own chin.[mimpregchance]";
 			say "     [line break]";
 			say "     After resting with you on the bunk for a moment, Elijah pulls out with a plop. He says, 'Nice tight ass, can't wait for the next time.', then saunters off to the bathroom to clean himself up.";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Seraphim";
-		now bodyname of child is "Seraphim";
-		now skinname of child is "Seraphim";
-
 
 to say ElijahSex4:    [assfuck Elijah]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [good guy]
 		say "     You take Elijah to his bunk bed and strip him naked, then instruct him to get on it on all fours. With such a handsome man smiling at you, just waiting for you to take him your cock springs to full hardness almost instantly. You rapidly strip your clothes off, flinging them away aimlessly and climb on the bunk behind Elijah.";
 		say "     He wiggles his perfectly rounded ass at you invitingly, making you grab him eagerly and stroke the smooth skin of his buns with both hands. You move forward a bit, sliding cour cock up and down the crack between his cheeks, then aim its head at his tight pucker. Pushing forward, you pop into him and slide into Elijah's ass, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, Elijah starts moaning with lust, gasping when you drive in the last few inches and your balls touch his buns.";
@@ -929,27 +920,21 @@ to say ElijahSex5:    [assfuck Elijah + Sven]
 		say "     With his needs satisfied, Elijah pulls out and gives Sven's ass a last quick squeeze, then walks off towards the bathroom. You're left with a rather sticky bunk from Sven cumming all over it while being fucked so you pull some blankets from several others nearby and throw them on the floor to make a comfy pile. Then you lie down on them and cuddle a bit with Sven.";
 
 to say ElijahSex6:    [Take Elijah and Sven in your pussy]
-	[puts Snow Leopard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Snow Leopard":
-			now monster is y;
-			break;
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [good guy]
 		say "     Feeling a bit adventurous, you strip completely naked and lie on your bunk, then call over Sven and Elijah. As they come to stand before you, eyes roaming over your bare [bodytype of player] body, their arousal quickly mounts up, with Sven's cock filling out in plain view while Elijah shows a growing bulge in his jeans. You smile at your eager boys, then order Sven to strip Elijah and give him a blowjob. As your faithful sexpet opens up the button and zipper and gets to work on Elijah's revealed manhood, you move a hand down to your pussy, stroking its lips and pushing two fingers inside.";
 		say "     You watch for a while as Sven licks and sucks Elijah's cock, causing your handsome angel to moan in lust. Then you decide it's about time to put his angelic spear to some use yourself and tell them to come over to you. Sven pulls off Elijah's boots and helps him step out of his pants, then follows him to the side of your bunk. You open your legs, fingers spreading open the wet lips of your cunt and moan 'Fuck me, Elijah.'";
 		say "     [WaitLineBreak]";
 		say "     He readily complies, aligning his long shaft with your pussy, then sinks himself deep into your folds and starts to thrust in and out. Sven seems to be content just watching your coupling, but you decide to give your pet a treat and reach out for his dick. You stroke your snowmeow, then pull him closer and take his feline shaft in your mouth, sucking on it and playing with it with your tongue.";
 		say "     Your mind goes into a kind of lustful haze as your angelic friend fucks you with swift and deep strokes and you're making your soft-furred pet gasp and moan with your mouth and tongue. You can't really say how long the amazing fucking session lasts, but you orgasm several times in its course, your pussy getting drippingly wet around Elijah's thrusting cock[if cocks of player is 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[otherwise if cocks of player > 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[end if]. Then at some point, Elijah's willpower is finally worn out and he can't hold back any longer, grinding his hips against yours to get as deep inside you as possible and burying his hands in the bunk's blanket. You feel his shaft pulse against the inner walls of your pussy as spurt after spurt of fertile seed gets deposited right in your womb.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Seraphim";
-			now bodyname of child is "Seraphim";
-			now skinname of child is "Seraphim";
 		say "     [line break]";
 		say "     After the last blast of cum, Elijah sinks down on top of you, taking a deep breath and then giving you a long kiss. You let him rest against you for a moment, then push him softly to the side to lie on your bunk. Time to give your faithful pet his release too - Sven's still standing next to the bunk, a hopeful expression on his face and his feline cock ready to go. Do you want to let him finish in your pussy, or rather suck him off? (Y for pussy, N for sucking)[line break]";
 		if player consents:
+			[puts Snow Leopard as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Snow Leopard":
+					now monster is y;
+					break;			
 			say "     You tell Sven to fuck you, spreading your legs for him. Your snowmeow pet eagerly sinks his feline cock into your pussy's depths, finding it very well lubricated with Elijah's massive load and your own juices. You pull him down on you as he thrusts rapidly in and out with his hips, giving him a kiss on the muzzle. It's amazing how nice his soft fur feels against the insides of your legs and your chest. You wrap your arms and legs around him, pulling him tightly against you to make him rub against your skin as he fucks you. All too soon, you feel him stiffen against you, gasping in satisfaction as his cock twitches and fills you with his seed, mingling inside your womb with Elijah's earlier deposition.[fimpregchance]";
 			say "     [line break]";
 			say "     As exhaustion claims Sven and you, you shift a bit on the bunk to make room for the three of you, softly pushing the snowmeow off your body to rest between yourself and Elijah. Like that, you three fall asleep, resting together in a slightly sweaty and sticky, but very satisfied group on the bunk.";
@@ -963,15 +948,17 @@ to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 		say "     [WaitLineBreak]";
 		say "     He readily complies, aligning his long shaft with your pussy, then sinks himself deep into your folds and starts to thrust in and out. Sven seems to be content just watching your coupling, but you decide to give your pet a treat and reach out for his dick. You stroke your snowmeow, then pull him closer and take his feline shaft in your mouth, sucking on it and playing with it with your tongue.";
 		say "     Your mind goes into a kind of lustful haze as the fallen angel fucks you with swift and deep strokes and you're making your soft-furred pet gasp and moan with your mouth and tongue. You can't really say how long the amazing fucking session lasts, but you orgasm several times in its course, your pussy getting drippingly wet around Elijah's thrusting cock[if cocks of player is 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[otherwise if cocks of player > 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[end if]. Then at some point, Elijah's willpower is finally worn out and he can't hold back any longer, grinding his hips against yours to get as deep inside you as possible and burying his hands in the bunk's blanket. You feel his shaft pulse against the inner walls of your pussy as spurt after spurt of fertile seed gets deposited right in your womb.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Seraphim";
-			now bodyname of child is "Seraphim";
-			now skinname of child is "Seraphim";
 		say "     [line break]";
 		say "     After the last blast of cum, Elijah sinks down on top of you, taking a deep breath and giving your pussy a few more short thrusts to make his cum slosh around a bit and revel in having filled you with his fertile seed. Then he pulls out, grinning down at you in satisfaction, ogling your naked body and giving Sven a quick slap on the ass before he walks off to his bunk.";
 		say "     [line break]";
 		say "     Time to give your faithful pet his release too - Sven's still standing next to the bunk, a hopeful expression on his face and his feline cock ready to go. Do you want to let him finish in your pussy, or rather suck him off? (Y for pussy, N for sucking)[line break]";
 		if player consents:
+			[puts Snow Leopard as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Snow Leopard":
+					now monster is y;
+					break;			
 			say "     You tell Sven to fuck you, spreading your legs for him. Your snowmeow pet eagerly sinks his feline cock into your pussy's depths, finding it very well lubricated with Elijah's massive load and your own juices. You pull him down on you as he thrusts rapidly in and out with his hips, giving him a kiss on the muzzle. It's amazing how nice his soft fur feels against the insides of your legs and your chest. You wrap your arms and legs around him, pulling him tightly against you to make him rub against your skin as he fucks you. All too soon, you feel him stiffen against you, gasping in satisfaction as his cock twitches and fills you with his seed, mingling inside your womb with Elijah's earlier deposition.[fimpregchance]";
 			say "     [line break]";
 			say "     As exhaustion claims Sven and you, you shift a bit on the bunk to make room for him, softly pushing the snowmeow off your body to lie beside you. Like that, you fall asleep, resting together in a slightly sweaty and sticky, but very satisfied couple on the bunk.";
@@ -1022,14 +1009,6 @@ to say ElijahSex7:    [assfuck Elijah+Felinoid]
 			say "     After resting there for a moment, you take a deep breath and pull out with a small plop, standing up on a bit shaky legs. Elijah follows suit, climbing off the felinoid and rubbing his cock against the sticky patch where he shot a load while you were fucking him. Then the dark angel steps around to the felinoid's front and presents his cock to be licked clean. Grinning at you while his manhood is licked by your felinoid companion, he then saunters off to his bunk and lies down to rest.";
 
 to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same time]
-	[puts Felinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Felinoid":
-			now monster is y;
-			break;
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [good guy]
 		say "     When your felinoid companion comes over to you and rubs his shoulder against your hips, you decide to have a bit of fun today. You call over Elijah, who looks from the felinoid to you, then starts smiling as he sees the lustful glint in your eyes. He lets himself be led to a nearby bunk, where you quickly strip off his boots and clothes, followed by your own. You have him sit on the end of the bunk, then bend over and take his rapidly hardening cock into your mouth. Running your tongue over its warm skin as you bob your head up and down. From behind you, you hear an approving growl, followed by the felinoid's large, rough tongue licking over your exposed pussy.";
 		say "     You blow Elijah's cock until it's good and wet - and your handsome angel is moaning in lust - then softly push against his chest for him to lie back and climb on the bunk with him. Kneeling over him, your legs to both sides of his hips, you then lower yourself on his erect, proudly standing maleness. Both of you moan and groan in lust as the tip of his cock pierces your folds and the sides of his shaft rub your insides. When your hips finally touch, you lean down and give Elijah a deep kiss, then look behind you and give the felinoid a meaningful glance as you wiggle your ass at him.";
@@ -1040,11 +1019,19 @@ to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same 
 		if cunt length of player < 12:
 			increase cunt width of player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch. [if cocks of player is 1]And your own cock spasms and shoots long strands of cum all over Elijah's muscular chest.[otherwise if cocks of player > 1]And your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest.[end if]";
+		[puts Seraphim as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Seraphim":
+				now monster is y;
+				break;
 		say "     Soon it's Elijah's turn to cum, driven over the edge by your tightness and the felinoid's hard shaft rubbing against his own. He gasps, pulling you down for a deep kiss as his balls pulse with spurt after spurt of fertile seed that erupts into your womb.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Seraphim";
-			now bodyname of child is "Seraphim";
-			now skinname of child is "Seraphim";
+		[puts Felinoid as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Felinoid":
+				now monster is y;
+				break;
 		say "     The felinoid redoubles his fucking speed as he feels Elijah's angelic cum around his feline cock, trying to get his own sperm into the race for your eggs as fast as possible. After several more deep thrusts, he gives a satisfied roar and you feel forceful blasts of fertile felinoid seed fill your womb, mingling with Elijah's cum.[fimpregchance]";
 		say "     [line break]";
 		say "     Waiting until the last spurt of cum has leaked from his feline cock, the felinoid stays on top of you a moment longer. Then you feel the soft touch of his fur lift from your back, followed by the bunk shaking a bit as the large feline sprawls out against it on the floor. Elijah meanwhile holds you against his chest, softly stroking your body in post-coital bliss. 'That was amazing.' he sighs, and gives you a soft kiss on the lips. Content to lie in the arms of your angel lover, the bunk vibrating slightly with the purrs of the felinoid sprawled against it on the floor, you rest there peacefully for a while.";
@@ -1058,11 +1045,19 @@ to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same 
 		if cunt length of player < 12:
 			increase cunt width of player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch. [if cocks of player is 1]And your own cock spasms and shoots long strands of cum all over Elijah's muscular chest.[otherwise if cocks of player > 1]And your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest.[end if]";
+		[puts Seraphim as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Seraphim":
+				now monster is y;
+				break;			
 		say "     Soon it's Elijah's turn to cum, driven over the edge by your tightness and the felinoid's hard shaft rubbing against his own. He gasps, grabbing your hips tightly and grinding his crotch up against you as his balls pulse with spurt after spurt of fertile seed that erupts into your womb.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Seraphim";
-			now bodyname of child is "Seraphim";
-			now skinname of child is "Seraphim";
+		[puts Felinoid as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Felinoid":
+				now monster is y;
+				break;		
 		say "     The felinoid redoubles his fucking speed as he feels Elijah's angelic cum around his feline cock, trying to get his own sperm into the race for your eggs as fast as possible. After several more deep thrusts, he gives a satisfied roar and you feel forceful blasts of fertile felinoid seed fill your womb, mingling with Elijah's cum.[fimpregchance]";
 		say "     [line break]";
 		say "     Waiting until the last spurt of cum has leaked from his feline cock, the felinoid stays on top of you a moment longer. Then you feel the soft touch of his fur lift from your back, followed by the bunk shaking a bit as the large feline sprawls out against it on the floor. Elijah meanwhile gives your ass a slight squeeze, then holds you tightly as he rolls over, leaving you to lie on your back on the bunk. He pulls out of your body, smiling at the cum still dripping from his shaft, then stands up. Looking down on the felinoid, he says 'Not bad fucking, you big furball. But don't think I won't be back to fuck your ass only because we were in a pussy together.' He leans down and shoves three fingers in the feline's asshole a few times, then laughs to himself and walks off to his own bunk. You're left lying there alone, your womb filled with cum. Then you feel a vibration going through you, coming from the felinoid's purring as he lies against the bunk on the floor. With how exhausted you are and the soothing purr suffusing your body, you soon fall asleep, giving you some much needed rest.";
@@ -1111,71 +1106,79 @@ to say ElijahSex10:    [Let Fuck Elijah you as he's being shafted by Candy]
 		say "     [line break]";
 		say "     His own lusts satisfied, Elijah pulls out of you a bit unceremoniously. He pushes a finger inside your pussy, grinning broadly as it comes out wet with his own cum and a small runnel of seed starts to seep out. Then he walks off, back to his own bunk.";
 
+to say ElijahFangDoubleImpreg:
+	if a random chance of 1 in 2 succeeds:		[50/50 which sperm gets there first]
+		[puts Seraphim as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Seraphim":
+				now monster is y;
+				break;			
+		say "[impregchance]";
+		[puts Feral Wolf as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Feral Wolf":
+				now monster is y;
+				break;
+		say "[impregchance]";
+	otherwise:
+		[puts Feral Wolf as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Feral Wolf":
+				now monster is y;
+				break;
+		say "[impregchance]";			
+		[puts Seraphim as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Seraphim":
+				now monster is y;
+				break;			
+		say "[impregchance]";		
+
 to say ElijahSex11:    [Get fucked by both Elijah and Fang at once]
-	[puts Feral Wolf as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Feral Wolf":
-			now monster is y;
-			break;
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [Good Elijah]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking.  Heading over to Elijah, you whisper your plan to him and he agrees, clearly seeing how much your body is craving it.  You and he head into the library, approaching your alpha wolf.  Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, laying back and welcoming you into his arms.  Taking his cock in hand, you guide yourself down onto it with a lustful moan, which is echoed as Fang climbs atop you, sinking his hard rod into [if cunts of player > 2]another[otherwise]your other[end if] wet pussy.  You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		say "     [WaitLineBreak]";
 		say "     As the two horny males pound into you, your hot juices flow, your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once.  The fact that one is a hot guy and the other is a wild beast makes it all the better.  Elijah's hands run over your body, working to pleasure you even further.  You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder.  You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
-		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss.  Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[impregchance][impregchance]";
+		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss.  Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[ElijahFangDoubleImpreg]";	
 	otherwise:			[Evil Elijah]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking.  Heading over to Elijah, you whisper your plan to him and he laughs and gives your ass a swat.  'You're such a horny slut.  Let's go for it, honey,' he chuckles, pleased to indulge your lustful body's cravings.  You and he head into the library, approaching your alpha wolf.  Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, pulling you down into his arms as he lays back.  Grabbing your hips, he thrusts onto it, making you release a lustful moan.  This is echoed as Fang climbs atop you, sinking his hard rod into [if cunts of player > 2]another[otherwise]your other[end if] wet pussy.  You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		say "     [WaitLineBreak]";
 		say "     As the two horny males pound into you, your hot juices flow, your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once.  The fact that one is a hot guy and the other is a wild beast makes it all the better.  As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy.  In the throws of your submissive urges, his words turn you on all the more, echoing how you feel and loving it.  You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder.  You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
-		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss.  Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[impregchance][impregchance]";
+		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss.  Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[ElijahFangDoubleImpreg]";
 		decrease humanity of player by 3;		[Additional humanity decrease from evil Elijah]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
 			say "     After Fang and Elijah have pulled out, the wolf raises his hind leg with his dangling cock pointed at you.  You moan softly as your alpha's hot urine starts to spray down onto you.  His piss sprays across your [bodytype of player] body and across your face.  You open your mouth to catch some, enjoying being covered in your alpha's scent.  Hearing Elijah chuckle, you look up see him start to piss over you as well.  'You are such a dirty slut sometimes', he laughs as he sprays you down.  Once they've drained their bladders over you, Elijah gives Fang's ears a scritch, telling the wolf that he's got a fine bitch there.  Awash in the strong scent of the two males who just fucked you, you are pleased by he words, loving your place as a submissive slut.";
 			increase libido of player by 16;	[This will be 8 once halved below]
 			decrease humanity of player by 5;
-	if baby is 0 and gestation of child is not 0 and a random chance of 1 in 2 succeeds:	[50-50 Elijah or Fang's offspring]
-		now facename of child is "Seraphim";
-		now bodyname of child is "Seraphim";
-		now skinname of child is "Seraphim";
 	infect "Feral Wolf";
 	now libido of player is ( libido of player / 2 );
 	decrease humanity of player by 3;
 
 
 to say ElijahSex12:	[Double-penetration by Elijah and Fang]
-	[puts Feral Wolf as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Feral Wolf":
-			now monster is y;
-			break;
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	if (hp of Elijah < 99): [Good Elijah]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking.  Heading over to Elijah, you whisper your plan to him and he agrees, clearly seeing how much your body is craving it.  You and he head into the library, approaching your alpha wolf.  Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, laying back and welcoming you into his arms.  Taking his cock in hand, you guide yourself down onto it with a lustful moan.  You ride up and down on it while sharing some slobbery kisses with Fang, the wolf's long tongue sliding along yours.  Once your [if cunts of player > 0]wet cunny[otherwise]back door[end if] has had a chance to relax a little, you lean forward and pause in the fucking to let Fang mount you.  You groan softly as you feel his pointed glans slide between your cheeks[if cunts of player > 0].  Wanting to make sure it finds the intended hole[otherwise].  Eager to get him inside you[end if], you reach back and get it lined up.  You cry out as Fang thrusts into you, pushing his lupine cock into your [if cunts of player > 0]vagina[otherwise]anus[end if] atop Elijah's, stretching your [if cunts of player > 0]cunt[otherwise]asshole[end if] wide to take them both.  Once in, Fang wastes no time and starts pounding into you right away.  You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		say "     [WaitLineBreak]";
 		say "     As the two horny males pound into you, [if cunts of player > 0]your hot juices flow[otherwise]you do your best to ignore the initial discomfort and focus on the pleasure[end if], your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once in the same hole.  The fact that one is a hot guy and the other is a wild beast makes it all the better.  Elijah's hands run over your body, working to arouse you even further.  You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder.  You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
-		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if] clamping down around the pair of cocks stuffed inside you, squeezing their cocks firmly against one another.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss as their combined load fills your [if cunts of player > 0]womb[otherwise]bowels[end if].  Once you finally come down, you are left panting[if cunts of player > 0], soaked in feminine juices[end if] and leaking semen from your well-stuffed hole.[impregchance][impregchance]";
+		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if] clamping down around the pair of cocks stuffed inside you, squeezing their cocks firmly against one another.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss as their combined load fills your [if cunts of player > 0]womb[otherwise]bowels[end if].  Once you finally come down, you are left panting[if cunts of player > 0], soaked in feminine juices[end if] and leaking semen from your well-stuffed hole.[ElijahFangDoubleImpreg]";
 	otherwise:			[Evil Elijah]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking.  Heading over to Elijah, you whisper your plan to him and he laughs and gives your ass a swat.  'You're such a horny slut.  Let's go for it, honey,' he chuckles, pleased to indulge your lustful body's cravings.  You and he head into the library, approaching your alpha wolf.  Fang, as if smelling your need, accompanies you both into one of the side rooms.";
 		say "     Once you're undressed, Elijah gets into position on the floor, pulling you down into his arms as he lays back.  Grabbing your hips, he thrusts onto it, making you release a lustful moan.  You bounce up and down in his lap as he pounds into you while you share some slobbery kisses with Fang, the wolf's long tongue sliding along yours.  Once he's satisfied your [if cunts of player > 0]wet cunny[otherwise]back door[end if] has had a chance to relax a little, he pulls you forward and pauses in the fucking to let Fang mount you.  You groan softly as you feel his pointed glans slide between your cheeks[if cunts of player > 0].  Wanting to make sure it finds the intended hole[otherwise].  Eager to get him inside you[end if], you reach back and get it lined up.  You cry out as Fang thrusts into you, pushing his lupine cock into your [if cunts of player > 0]vagina[otherwise]anus[end if] atop Elijah's, stretching your [if cunts of player > 0]cunt[otherwise]asshole[end if] wide to take them both.  Once in, Fang wastes no time and starts pounding into you right away.  You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		say "     [WaitLineBreak]";
 		say "     As the two horny males pound into you, [if cunts of player > 0]your hot juices flow[otherwise]you do your best to ignore the initial discomfort and focus on the pleasure[end if], your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once in the same hole.  The fact that one is a hot guy and the other is a wild beast makes it all the better.  As you're being stuffed, Elijah talks dirty to you about how sexy you look and what a slut you are for being Fang's fucktoy.  In the throws of your submissive urges, his words turn you on all the more, echoing how you feel and loving it.  You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder.  You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah.";
-		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if] clamping down around the pair of cocks stuffed inside you, squeezing their cocks firmly against one another.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss as their combined load fills your [if cunts of player > 0]womb[otherwise]bowels[end if].  Once you finally come down, you are left panting[if cunts of player > 0], soaked in feminine juices[end if] and leaking semen from your well-stuffed hole.[impregchance][impregchance]";
+		say "     Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if] clamping down around the pair of cocks stuffed inside you, squeezing their cocks firmly against one another.  The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[otherwise], first Fang and then Elijah[end if].  The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss as their combined load fills your [if cunts of player > 0]womb[otherwise]bowels[end if].  Once you finally come down, you are left panting[if cunts of player > 0], soaked in feminine juices[end if] and leaking semen from your well-stuffed hole.[ElijahFangDoubleImpreg]";
 		decrease humanity of player by 3;		[Additional humanity decrease from evil Elijah]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
 			say "     After Fang and Elijah have pulled out, the wolf raises his hind leg with his dangling cock pointed at you.  You moan softly as your alpha's hot urine starts to spray down onto you.  His piss sprays across your [bodytype of player] body and across your face.  You open your mouth to catch some, enjoying being covered in your alpha's scent.  Hearing Elijah chuckle, you look up see him start to piss over you as well.  'You are such a dirty slut sometimes', he laughs as he sprays you down.  Once they've drained their bladders over you, Elijah gives Fang's ears a scritch, telling the wolf that he's got a fine bitch there.  Awash in the strong scent of the two males who just fucked you, you are pleased by he words, loving your place as a submissive slut.";
 			increase libido of player by 16;	[This will be 8 once halved below]
 			decrease humanity of player by 5;
-	if baby is 0 and gestation of child is not 0 and a random chance of 1 in 2 succeeds:	[50-50 Elijah or Fang's offspring]
-		now facename of child is "Seraphim";
-		now bodyname of child is "Seraphim";
-		now skinname of child is "Seraphim";
 	infect "Feral Wolf";
 	now libido of player is ( libido of player / 2 );
 	decrease humanity of player by 3;
