@@ -587,7 +587,6 @@ To reciting2:
 				if the player's command matches "[number]":
 					now hp of Elijah is the number understood;
 					now NPCintCounter is turns;
-					move Elijah to Burned-Out Chapel;
 					now Angel vs Demons is unresolved;
 					now Burned-Out Chapel is unknown;
 					if hp of Elijah > 0:
@@ -1352,6 +1351,8 @@ To reciting2:
 			-- 142:	[Lilith - hp]
 				if the player's command matches "[number]":
 					now hp of Lilith is the number understood;
+					if hp of Lilith > 0:
+						now Burned-Out Chapel is known;
 			-- 143:	[Lilith - incubus offspring]
 				if the player's command matches "[number]":
 					now LilithKidCounter is the number understood;
@@ -2018,7 +2019,6 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now hp of Elijah is the number understood;
 					now NPCintCounter is turns;
-					move Elijah to Burned-Out Chapel;
 					now Angel vs Demons is unresolved;
 					now Burned-Out Chapel is unknown;
 					if hp of Elijah > 0:
@@ -2782,6 +2782,8 @@ Carry out reciting:
 			-- 142:	[Lilith - hp]
 				if the player's command matches "[number]":
 					now hp of Lilith is the number understood;
+					if hp of Lilith > 0:
+						now Burned-Out Chapel is known;
 			-- 143:	[Lilith - incubus offspring]
 				if the player's command matches "[number]":
 					now LilithKidCounter is the number understood;
