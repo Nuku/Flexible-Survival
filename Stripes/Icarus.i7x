@@ -1,5 +1,5 @@
 Version 3 of Icarus by Stripes begins here.
-[Version 3.5 - More dom-Icarus scenes]
+[Version 3.6 - Footplay and rimming dom-Icarus scenes]
 
 "Adds Icarus the Blue Chaffinch as an NPC to the Flexible Survival game."
 
@@ -187,7 +187,11 @@ to say icarussex_sub:
 
 to say icarussex_dom:
 	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body.  Seeing your wanton display, he gives a pleased chirp and flies down to join you.  As he nears the ground, you can see his cock already starting to poke from his feathery crotch";
-	if a random chance of 1 in 3 succeeds:
+	if anallevel is 3 and (hp of Icarus is 54 or (hp of Icarus >= 55 and a random chance of 1 in 4 succeeds)):
+		say "[icarussex5_dom]";	[rimming]
+	otherwise if hp of Icarus is 52 or (hp of Icarus >= 53 and a random chance of 1 in 4 succeeds):
+		say "[icarussex4_dom]";	[footplay]
+	otherwise if a random chance of 1 in 3 succeeds:
 		say "[icarussex1_dom]";	[oral]
 	otherwise if cunts of player > 0:
 		say "[icarussex2_dom]";	[m/f]
@@ -375,7 +379,11 @@ Part 3 - Icarus Dom Sex
 to say icarussex1_dom:
 	say ".  The sight of it makes you lick your lips and when he lands, you're already on your knees and pressing your face into his groin to get at it.  He chuckles and grips your head firmly, [one of]slapping his cock against your cheek before letting you take it into your mouth[or]ramming his cock into your open mouth[or]grinding his hard shaft against your face before allowing you to suck on it[at random].";
 	say "     The taste of the bird's manhood excites you greatly, making you eager to suck of the dominant bird.  Your tongue plays across his firm, warm flesh and laps up the precum dribbling from it.  He keeps a firm grip on you, pumping his hips as he thrusts into your open mouth.  You can't help but feel aroused at the idea that you're submitting yourself to the small bird's control, allowing him to use you as he pleases.  The blue passarine certainly seems pleased as well, grinning as he enjoys his cocksucking fucktoy.";
-	say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  When his talons dig into your shoulder and his thrusting accelerates, you suck down on him all the harder, eager to please your diminutive master.  Your efforts are rewarded when you feel his cock pulsing in your mouth, sending his hot semen across your tongue and down your throat.  You swallow it all down dutifully, savouring the lingering taste of it on your palate.  He gives your ass a swat and flies back up into the rafters, chirping happily at his virility.";
+	if a random chance of 3 in 4 succeeds:
+		say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  When his talons dig into your shoulder and his thrusting accelerates, you suck down on him all the harder, eager to please your diminutive master.  Your efforts are rewarded when you feel his cock pulsing in your mouth, sending his hot semen across your tongue and down your throat.  You swallow it all down dutifully, savouring the lingering taste of it on your palate.  He gives your ass a swat and flies back up into the rafters, chirping happily at his virility.";
+	otherwise:
+		say "     You run your hands through his soft feathers, caressing the soft, downy feathers covering his ballsac.  Feeling his approaching climax, you suck down on him all the harder, eager to please your diminutive master, but he roughly pushes your face away.  You barely stiffle a moan of disappointment as his cock is pulled from yoour mouth and he starts pumping it hard and fast with one hand while the other holds you in place.  He gives a rough groan and digs his talons into your shoulder as he cums.  Shot after shot of his sticky semen is splattered across your face.  When he's done, he chuckles and wipes his cock across your cheek, telling you that you now look like the horny slut that you are.  Your only response, with your confident master's cum on your face, is to start lapping it up with happy moans.";
+
 
 to say icarussex2_dom:	[m/f]
 	setmonster "Blue Chaffinch";
@@ -394,7 +402,8 @@ to say icarussex2_dom:	[m/f]
 		say "     'Such a horny slut you make, spread and moaning for your birdie lover.  You look much better this way,' he says between thrusts, his hands running over your body.  His words and his touch make you feel both demeaned and sexy all at once, pleased to draw the confident avian's lecherous interest and lustful for more.  Your body responds to your growing arousal, causing you to pant and moan as your pleasure builds.";
 		say "     You moan and whimper beneath him as he grips your ass firmly, digging his claws in as he thrusts hard, jabbing his full length into you just as he starts to cum.  The pain of his talons gets muddled with the pleasure you feel from his pulsing rod and the hot spurts of semen coming from it.  You cry out in ecstasy, cunt spasming around his cock, drawing his avian seed into your womb.  You grip his hips, keeping him buried inside you, wanting to get every last drop.";
 		say "     'Such a good, needy hen.  Eager to get filled by your master's eggs, are you?' he says with a smirk on his beak.  He rubs his hand across your belly as he pulls out.  You sigh softly at his touch, enjoying the warm knowledge that his virile load's nestled deep inside you.  The thought of being knocked up by him, made into his breeding hen, is very exciting to you at this moment [if player is impreg_able]and you hope to have a clutch growing in you soon[otherwise if player is impreg_ok]and you long to get him to breed you again when you're ready[otherwise]and you find yourself longing to find a means to let that happen[end if].[fimpregchance]";
-
+	if hp of Icarus is 51, now hp of Icarus is 52;
+	if hp of Icarus is 53, now hp of Icarus is 54;
 
 to say icarussex3_dom:	[m/m]
 	setmonster "Blue Chaffinch";
@@ -413,6 +422,35 @@ to say icarussex3_dom:	[m/m]
 		say "     'Such a horny slut you make, spread and moaning for your birdie lover.  You look much better this way,' he says between thrusts, his hands running over your [bodydesc of player] body.  His words and his touch make you feel both demeaned and sexy all at once, pleased to draw the confident avian's lecherous interest and lustful for more.  Your body responds to your growing arousal, causing you to pant and moan as your pleasure builds.";
 		say "     You moan and whimper beneath him as he grips your leg firmly, digging his claws in as he thrusts hard, jabbing his full length into you just as he starts to cum.  The pain of his talons gets muddled with the pleasure you feel from his pulsing rod and the hot spurts of semen coming from it.  You cry out in ecstasy, ass squeezing around his cock, milking him for as much avian seed as he'll give.  You grip his hips, keeping him buried inside you, wanting to get every last drop.";
 		say "     'Such a good, needy hen.  You're much better suited as the bottom in our relationship, aren't you?' he says with a smirk on his beak.  He gives your ass a squeeze as he pulls out.  You moan softly at his touch, enjoying the warm knowledge that his virile load's nestled deep inside you.  The thought that you're better off as the birdie's slutty bottom lingers in your mind, making you look forward to submitting to the confident male again soon.";
+	if hp of Icarus is 51, now hp of Icarus is 52;
+	if hp of Icarus is 53, now hp of Icarus is 54;
+
+
+
+
+to say icarussex4_dom:	[footplay]
+	say ".  You move to present yourself on all fours for him, but he lands beside you, one taloned foot digging into your side.  Those sharp talons poke painfully into you before he gives you a hard push, shoving you over onto your back.";
+	if hp of Icarus is 52:
+		say "     For a moment, you're unsure what your master wants, but he then presses that foot down onto your face.  'Show your master some respect and start licking, you little slut,' he says, grinding his bird-like foot across your face.  You";
+	otherwise:
+		say "     Knowing what your master wants of you, you";
+	say " nuzzle at it and run your tongue across his long, scaled toes.  The taste is a little strong, but you keep licking in your eagerness to please him, feeling a little embarassed at being made to it so easily.  But rather than upsetting you, this only turns you on all the more, the small passarine's aggressive confidence only making you more lustful for him.  And seeing this reaction, he chuckles louder.";
+	say "     You keep licking and sucking on his toes, smiling as you watch him start to stroke his stiff member.  When your attention starts to wander from your task too much, he [one of]gives you a hard poke with his footclaws[or]digs his talons into you roughly[or]grinds his foot down harder[or]shifts his foot down to give your neck a harsh squeeze[at random], returning your focus to the task at hand.  You rub your hands over his foot as well, caressing and massaging it as you tonguebathe across its scaley hide.  Eventually, he pulls his foot away and aims his pulsing, spurting cock at you.  Splatter after splatter of avian seed splashes onto you, further marking you as his slutty plaything.  You lay there for a while, sticky with bird semen and smelling of your strong, avian lover.";
+	if hp of Icarus is 52, now hp of Icarus is 53;
+
+to say icarussex5_dom:	[rimming]
+	say ".  You move to present yourself on all fours for him, but he lands in front of you, facing away.  Reaching back, he grabs your head roughly as he raises his tail and pulls your face under it.";
+	say "     [if hp of Icarus is 54]With your face mashed in his ass, you are momentarily uncertain what is wanted of you and start to move back.  Icarus gives you a hard poke with his talons and pushes you back under.  'I know you're a dirty perv, so show everyone and eat out my ass, my horny slut,' he orders, pressing his pucker to your mouth.  You hesitate for a moment, then take a slow lick across his crinkled hole, and then another.  Soon enough, you're[otherwise]Knowing your master wants you to rim him again, you start[end if] lapping across his anus and pushing to work it open with your tongue.  His tight back passage soon relaxes, letting you push your tongue in further.";
+	say "     As you rim the blue passarine, you can't help but feel like the dirty slut that he teasingly calls you even as he compliments you for doing such a fine job of it.  It's clear from his delightful, musical birdsong that your hardworking tongue is pleasing the sexy bird.  Your hands caress and knead his softly feathered ass while the songbird casually strokes himself while he enjoys the rimjob by his obedient fucktoy.";
+	say "     After having your tongue delving deep into his ass for a good, long time, he roughly pushes you back, popping your tongue free with a wet slurp.  Turning around, he ";
+	if cunts of player > 0 and a random chance of 3 in 5 succeeds:
+		say "manhandles you onto all fours and drives his stiff, leaking rod into your pussy with little preamble.  The earlier humiliating act had gotten you quite aroused and wet, so it is an easy penetration, though rather unfulfilling as he pounds away at you.  But it's clear he's not caring about your release as he thrusts into you a handful of times before driving in deeply and groaning as he cums, shooting his virile load into your womb.  Once done, he pulls out just as quickly and shoves you to the ground.  You are left feeling more like a used thing, discarded after your job is done.  For some reason, thinking of yourself as nothing but an object for his sexual pleasure turns you on.[fimpregchance]";
+	otherwise if cunts of player is 0 and a random chance of 2 in 5 succeeds:
+		say "manhandles you onto all fours and drives his stiff, leaking rod into your ass with little preamble.  The earlier humiliating act had gotten you quite aroused, but it is still rough and uncomfortable as he pounds away at you.  And just as you're starting to enjoy it, it turns out to be rather unfulfilling.  He only thrusts into you a handful of times before driving in deeply and groaning as he cums, shooting his virile load into your stinging ass.  Once done, he pulls out just as quickly and shoves you to the ground.  You are left feeling more like a used thing, discarded after your job is done.  For some reason, thinking of yourself as nothing but an object for his sexual pleasure turns you on.[mimpregchance]";
+	otherwise:
+		say "grabs your head again, this time pushing your face into his crotch.  He thrusts his stiff cock into your mouth, fucking the face which was so recently buried under his tail and licking his ass.  Aroused by the prospect of enjoying sucking off the horny bird, you set your tongue and lips to work, but it turns out to be fast and unfulfilling for you.  It only takes a few thrusts into your mouth before he groans and cums, shooting his rich load down your throat.  Once done, he pulls out just as quickly and shoves you to the ground.  You are left feeling more like a used thing, discarded after your job is done.  For some reason, thinking of yourself as nothing but an object for his sexual pleasure turns you on.";
+	if hp of Icarus is 54, now hp of Icarus is 55;
+
 
 
 Section 3 - The Tell-Tale Icarus
@@ -543,6 +581,10 @@ to Icarusinfect:
 [ 10 = back again ]
 [ 50 = dom ]
 [ 51 = dom - talked ]
+[ 52 = sex again ]
+[ 53 = did footplay scene ]
+[ 54 = sex again ]
+[ 55 = did rimming scene ]
 
 [ lust of Icarus ]
 [ 0 - 6 = building frustration ]
