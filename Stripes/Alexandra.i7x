@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4.1 - Alexandra Tasks initiated]
+[Version 4.2 - Lockerroom added]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 

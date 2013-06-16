@@ -1,7 +1,7 @@
 Version 2 of Andrew by Stripes begins here.
-[Added scene by Gyrgon]
+[Version 2.1 - Demon pet show]
 
-"Adds a primarily M/M Wolf NPC named Andrew to the Flexible Survival game"
+"Adds a primarily M/M Wolf NPC named Andrew to the Flexible Survival game."
 
 
 Section 1 - Private Booths
@@ -25,6 +25,10 @@ Instead of conversing the Andrew:
 		say "     The wolf's tail swishes slowly as he smiles up at you.  'Well, hey there[if cocks of player > 0 and cunts of player is 0], cute stuff[otherwise if cocks of player > 0], sweetie[end if],' he says with a slightly effeminate voice.  'I don't think we've had a chance to talk yet.  I'm Andrew,' he says, offering you his paw.  Deciding to be polite, you give it a quick shake.  'I kinda work here.  Strictly volunteer, you see, helping to keep everyone's morale up in these troubled times.  There are so many poor guys out there with strange changes.  Powerful, new urges they can't cope with.  And so here I am, ready and willing to help,' he chuckles in his soft voice while spreading his arms wide, almost knocking over the last of his black beer.  'Eep!  Almost lost my fine brew there,' he says, finishing it off.";
 		if cocks of player > 0:
 			say "     'So, care to join me in seeking a little relief from the stresses of this crazy city of ours?' he says, eyeing your crotch as he slides his long tongue along the inside of his glass to get the last few drops.  He smiles mischievously as his violet eyes watch your reaction to his teasing tonguework.";
+	otherwise if lust of Andrew is 2:
+		say "     The black wolf stretches, running his paws over his body.  'Oh man, that thing we did with your demon was great.  Got a little out of hand there, but it was so much fun.  Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar.  'Uhh... I mean, we probably shouldn't do it again though.  Several people went feral during the show and had to be thrown out.'  He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
+		say "     'Grumpy over there says he'll cut me off permanently if we try that again.  Can you believe him?  No more beer!  Speaking of...' he adds, reaching for a half-full stein and draining it.  'Seriously though, as fun as that was, I've gotten plenty more requests for my [']personal services['] since the show.  Nothing like being the center of an orgy to boost one's popularity,' he says with a happy giggle.";
+		now lust of Andrew is 3;
 	otherwise if cocks of player > 0:
 		say "[randombodypart]";
 		say "     [one of]'Are you having a good time?'[or]'Grab a drink from the bar and let's chat.'[or]'Looking for a little fun, sweetie?' he asks softly.[or]'Looking to snuggle with this big, bad wolf,' he teases, rubbing his crotch.[or]'Need a little stress relief, honey.'[or]'I've been hanging out at this club since before the outbreak and I like it even better now.'  He leans a little closer.  'Being able to fuck here in my booth is much more fun.'[or]'Mmm... what's say you snuggle up in here beside me,' he says with his vaguely feminine voice while sliding a finger slowly through one of the sticky puddles of cum on the table before licking it away from his fingertip.[or]'Have you tried the [']Black Wolf Beer[']?  I help Harold make it,' he says, rubbing his bulging crotch.  'I highly recommend it.'[or]'Look at the set of buns on that one,' he giggles.  'Mm-Mm-Mmmm...'[or]'So what have you b...' he starts to ask, but trails off as a sexy [bodyselector] with a big cock walks into view.[or]You and the wolf chat, but it constantly devolves into him commenting on the sexual prowess of the various guys around the club as he spots them and waves.  Noticing your frustration at his constant distraction, he gives you a hug and a grope.  'I'm sorry, hon.  It's just tough being popular sometimes,' he says with an exaggerated sigh, before giving a girlish giggle and nipping you playfully.  He becomes more attentive, at least long enough to finish your conversation.[in random order]";
@@ -34,6 +38,12 @@ Instead of conversing the Andrew:
 
 
 Section 3 - Sexy Times
+
+[
+demon notes:
+DBCaptureQuestVar is 5
+DemonBruteStatus is 0 or 1
+]
 
 the fuckscene of Andrew is "[sexwithAndrew]".
 
@@ -58,6 +68,14 @@ to say sexwithAndrew:
 		now lastfuck of Andrew is turns;
 		andrewinfect;
 		now hp of Andrew is 2;
+	otherwise if hp of Andrew >= 4 and DBCaptureQuestVar >= 5 and DBCaptureQuestVar < 90 and DemonBruteStatus is 0 or DemonBruteStatus is 1 and lust of Andrew is 0 and companion of player is demon brute:
+		say "     Andrew smiles as the topic of sex comes up, but his attention wanders over to your enslaved demon, which has been standing imposingly behind you.  Noting his interest, you ask him what he thinks of your bodyguard.  'Mmm... I think he's quite the impressive slab of meat.  And I don't just mean those big muscles of his, sweetie.  Would you be willing to... loan him to me for a bit?  I could give him a bit of a... workout.  I'm sure we could give everyone a show they won't soon forget,' he says with a grin as his eyes run over the demon's cock.  The demon remains as stoic and scowly as ever, though you can see his cock stiffening and swelling at the prospect of getting some sexual relief.";
+		say "     Shall you order your demon slave to fuck Andrew?";
+		if the player consents:
+			say "[andrewdemonshow]";
+		otherwise:
+			say "     Deciding it'd probably not be a good idea, you tell Andrew that so, adding that [if cocks of player > 0]you'd be more than happy to have some fun with the wolf if he's up for it.  'Oh, I see how it is.  You're just looking to get some of this,' he says, rubbing if large, firm package[otherwise]he should probably stick to the playing with the regular club patrons for his fun.  He sighs, but nods in agreement[end if].";
+			now lust of Andrew is 1;
 	otherwise if hp of Andrew is 4 or ( hp of Andrew > 4 and a random chance of 1 in 5 succeeds):	[special - give oral]
 		say "     Andrew grins at your offer and runs a paw down to the bulge in his pants.  'Mmm... How does a tasty treat sound, hot stuff?  I've got something nice and sticky for you all saved up,' he says while hopping up to sit at the edge of the table.  He unzips his fly and pulls out his swelling cock, running his fingers fingers over the throbbing, lupine cock.  A little precum dribbles down his pointed shaft as he slips his pants down completely.  The scent of aroused wolf grows stronger and you lick your lips, longing to get a taste of that thick meat.";
 		say "     Unable to resist the tantalizing offer, you bring your lips to his thick shaft and start licking and kissing at it.  He moans softly and rubs his hands over your head, gently coaxing you to take it into your mouth.  As he stuffs your mouth with his cock and starts thrusting into it, you work your tongue over him, excited by the taste of his precum and musky meat.  You grope his heavy, enlarged balls with one hand, longing to taste their contents soon.  'Mmm... good work.  Keep that up,' he says in his soft, girlish voice.  'You love this, don't you?  Putting on a show for everyone with how much you love cock?'";
@@ -151,6 +169,59 @@ to say sexwithAndrew:
 			andrewinfect;
 
 
+Chapter 2 - Demon Show
+
+to say andrewdemonshow:
+	say "     Deciding that the wolf's idea could be a lot of fun, you both conspire together on the details before he dashes off to make the arrangements.  After a chat with the DJ and the dancers, the stage is cleared and the black wolf comes out for a sexy striptease show.  While this gets some attention, it is not until you lead the demon on stage by a leash while heavy metal music plays that the audience truly becomes interested.";
+	say "     Having found a leather belt to use as a collar, you pull on the chain attached to it and bring him center stage, tying him to one of the poles as you quietly ordering him to obey the wolf, fuck the wolf hard but not to harm him.  When you step back, Andrew grabs the demon's hefty orbs and rubs them in his paws before moving to stroke his stiffening rod.  His tongue plays across it, licking its ridged, bumped surface before leaning in and sucking lustfully on it.  Ever the exhibitionist, the wolf makes sure to position himself so his audience gets a good view of his tonguework and the oversized phallus he's worshipping.  Copious amounts of pre leak from the dark, pulsing shaft which either gets lapped up or spread across the rod to get it slick.";
+	say "     After getting the demon's pole well lubed up, Andrew stretches out on a raised platform and orders the demon to fuck him.  The monstrous demon, aroused and eager after the oral preparation, lunges atop the wolf, pinning him to the platform and driving his infernal rod into Andrew.  The wolf howls in lustful pleasure as the demon takes him hard, driving most of his cock into that sexy ass in one go and driving the rest in on the second thrust.  The black wolf's ebon cock throbs and pulses, spurting precum across himself as he's pounded into by your demon slave while a techno remix of Night on Bald Mountain plays.";
+	say "     As the show goes on, the crowd becomes more and more worked up by the powerful display of raw sex.  Pockets of sex start to break out, rapidly expanding into a full-on orgy with the wolf and the demon as the focus.  You spot an opportunity to join in the fun and head over to one guy as he finishes sucking off another's cock.";	[***]
+[ .  You spot an opening near you if you want to join in on the orgiastic revelry.";
+	if the player consents:	]
+	if 1 is 1:
+		say "[randomdesc]";		[yields 'slutname' - male 1]
+		let male1type be slutname;
+		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		while bodyselector is slutname:
+			say "[randombodypart]";
+		let male2type be bodyselector;
+		let randomcolourchoice be "grey ";
+		let male1c be "";
+		let male2c be "";
+		sort randomcolourlist in random order;	[fresh randomized set]
+		if a random chance of 1 in 5 succeeds:
+			now male1c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male2c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+[		say "TEST:[line break]";
+		say "male1c: [male1c] / male1type: [male1type][line break]";
+		say "male2c: [male2c] / male2type: [male2type][line break][line break]";	]
+		say "     The [male1c][male1type] you approach pulls you into his arms, giving you a wet, sticky kiss that's heavily flavoured by the cum of the guy he just finished blowing.  You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours.  He wraps his hand around your [cock of player] shaft, stroking it as he pulls you into his lap.  Caught up in the rush of the orgy, you eagerly lower yourself onto his prick, moaning in pleasure as it spreads your [if cunts of player > 0]pussy[otherwise]ass[end if] open  He's rough and eager in his thrusting, pounding you hard and deep before finally cumming, filling you with his thick load.  You push off him quickly and reach over for the pulsing [male2c]cock of a nearby [male2type].  Soon you're sucking him off while another unseen male mounts you and fucks your [if cunts of player is 0]creamy [end if]asshole.";
+		say "     It continues like this for quite some time, the wild orgy growing more and more heated as the demon fucks the moaning, lustful wolf over and over again in numerous positions.  Not that there's much opportunity for you or anyone to watch during the debauchery, but the wolf is dripping with demon seed after having his mouth and ass filled several times.  While another pair of males take turns fucking your cum-slick ass, you do get a delightful view of the wolf being held up, legs raised and spread by the upright demon as he plows into Andrew's stretched anus for anyone to see.  You are passed around through several partners, fucked by [if cocks of player > 0]or fucking [end if]whomever is available, heedless of the consequences.[randomimpreg][randomimpreg]";
+		randominfect;
+		randominfect;
+		randominfect;
+		randominfect;
+		decrease humanity of player by 25;
+		if "Pure" is listed in feats of player, increase humanity of player by 5;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+		now libido of player is libido of player / 2;
+		if humanity of player >= 10:
+			say "     The orgy is called to a halt as Harold strides up to you, horn aglow with white light, and shakes you roughly until you come to your senses enough to order the demon away.  Andrew, having passed out some time ago, is a mess of sticky cum and reaks of male sex, though has an grin of blissful pleasure on his muzzle.  The debauchery comes to an end fairly quickly once the demon is gone, though several patrons have to be ousted by the bouncers when they won't settle down on their own.  After he's wiped down, Andrew's slowly nursed back to his senses by several pints of his favourite black beer.";
+			now lust of Andrew is 2;
+		otherwise:
+			say "     As the orgy continues unabated, Harold strides up to you, his horn aglow with white light.  He shakes you roughly, trying to pull you to your senses, but you only see him as another male you can have sex with.  Pushing him to the ground, you bear him down beneath you and pull out his cock.  He tries to resist you, but as you sink yourself down onto his cock, the light of his horn wavers and soon fades.  Soon he's fucking you with wild abandon like the others around you in this orgy of demonic-fueled lust while Tristian takes the stage and gets fucked by the demon in the stead of the unconscious wolf.  It goes on and on, well past the point when everyone should have been exhausted.  The unchecked infections run rampant through the club, infecting everyone present until they lose any remaining vestiges of humanity and self-control.";
+			now humanity of player is 0;
+			now DBCaptureQuestVar is 0;
+			now demon brute is not tamed;
+			now lust of Andrew is 100;
+			if libido of player < 90, now libido of player is 90;
+			end the game saying "You lose your mind to the infernal orgy you foolishly instigated.";
+
+
+
 [	hp of Andrew		]
 [ 0 = Nothing			]
 [ 1 = Talked w/him		]
@@ -160,6 +231,16 @@ to say sexwithAndrew:
 [ 5 = Gave oral			]
 [ 6 = Had sex again		]
 [ 7 = Covered in wolf cum	]
+[ 8 = Had sex again		]
+[ 9 = Bukkake special		]
+
+[	lust of Andrew		]
+[ Andrew + Demon Brute pet	]
+[ 0 = no interaction		]
+[ 1 = plan rejected		]
+[ 2 = demon sex show		]
+[ 3 = post demon-show talk	]
+[ 100 = demon show ending	]
 
 
 to andrewinfect:
@@ -236,7 +317,8 @@ carry out andrewtesting:
 		say "male3c: [male3c][line break]";
 		say "male4c: [male4c][line break][line break]";
 
-
-
+when play ends:
+	if lust of Andrew is 100:
+		say "     The wild debauchery at the Palomino goes on and on, the safe haven falling into a den for the demonic orgy.  It becomes a nexus of infection that spreads out and corrupts the surrounding area.  During the wild sex, the demon takes the amulet from you and drapes it around Andrew's neck with a sinister grin.  Your last order to the demon had been to obey Andrew, to fuck him hard and to not harm him, all of which he's done, in a dark and twisted way.  Having screwed the wolf into a wild lust, Andrew is no more than a puppet for the demon, his only desire now is for the demon to keep fucking him.  And remaining unharmed by the harsh pounding, the demon can screw the wolf for hours on end before he passes out.  Whenever the wolf is unconscious, the demon simply switches to fucking a few of the horny supplicants in the crowd to keep the scent of infernal lust heavy in the air so the orgy never ends.  The Palomino Club, briefly a safe haven from the menace of feral mutants, has become a source of them that cannot be stopped.";
 
 Andrew ends here.
