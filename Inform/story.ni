@@ -3948,6 +3948,8 @@ check resting:
 		say "You rest on the cot.";
 	otherwise if the player is in the bunker:
 		say "You rest on one of the cots available.";
+	otherwise if silk hammock is owned or silk hammock is present:
+		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";				
 	otherwise if "Roughing It" is listed in feats of player:
 		say "You hunker down somewhere secluded for a quick nap.";
 		now roughing is true;
@@ -4010,7 +4012,7 @@ carry out resting:
 To Rest:
 	let num1 be maxhp of the player divided by 4;
 	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
-	if cot is owned or cot is present or the player is in the Bunker:
+	if cot is owned or cot is present or the player is in the Bunker or silk hammock is owned or silk hammock is present:
 		if num1 >= num2, increase hp of player by num1;		[best value chosen]
 		if num2 > num1, increase hp of player by num2;
 	otherwise if "Roughing It" is listed in feats of player:
