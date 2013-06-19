@@ -502,7 +502,7 @@ to say icarussex4_dom:	[footplay]
 to say icarussex4_dom_ap:	[footplay - avian pred version]
 	say ".  You move to present yourself on all fours for him, but he lands beside you, one taloned foot digging roughly into your side.  Those sharp talons leave red scratches before he gives you a hard push, shoving you over onto your back.";
 	if hp of Icarus is 52:
-		say "     For a moment, you're unsure what your master wants, but he then presses that foot down onto your face, grabbing you head with clawed toes.  'Show your master some respect and start licking, you little slut,' he says, grinding his bird-like foot across your face.  You";
+		say "     For a moment, you're unsure what your master wants, but he then presses that foot down onto your face, grabbing you head with clawed toes.  'You're such a pathetic predator - you deserve to be under my heel.  You even want to be, don't you, you slut?' he asks, grinding his bird-like foot across your face.  You";
 	otherwise:
 		say "     Knowing what your master wants of you, you";
 	say " nuzzle at it and run your tongue across his long, scaled toes.  The taste is a little strong, but you keep licking in your eagerness to please him, feeling a little embarassed at being made to do it so easily.  But despite being a powerful bird of prey and this upsetting you, it turns you on all the more, the small passarine's aggressive confidence only making you more lustful for him.  And seeing this reaction, he chuckles louder.";
