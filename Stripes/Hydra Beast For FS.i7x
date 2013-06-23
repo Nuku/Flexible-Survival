@@ -1,4 +1,4 @@
-Version 1 of Hydra Beast For FS by Stripes begins here.+
+Version 1 of Hydra Beast For FS by Stripes begins here.
 
 "Adds a Hydra Beast creature to Flexible Survivals Wandering Monsters table"
 
@@ -11,9 +11,9 @@ when play begins:
 	add { "Hydra Beast" } to infections of VoreExclusion;	[list of critters not to be vored]
 
 hydraheadcount is a number that varies.  hydraheadcount is normally 6.
-hydraheadcheck1 is a truth state that varies.  hydraheadcount1 is normally false.
-hydraheadcheck2 is a truth state that varies.  hydraheadcount2 is normally false.
-hydraheadcheck3 is a truth state that varies.  hydraheadcount3 is normally false.
+hydraheadcheck1 is a truth state that varies.  hydraheadcheck1 is normally false.
+hydraheadcheck2 is a truth state that varies.  hydraheadcheck2 is normally false.
+hydraheadcheck3 is a truth state that varies.  hydraheadcheck3 is normally false.
 hydraheadregrowth is a truth state that varies.  hydraheadregrowth is normally true.
 hydramaulcount is a number that varies.
 
