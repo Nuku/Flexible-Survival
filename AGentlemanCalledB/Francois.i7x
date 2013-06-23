@@ -1013,7 +1013,7 @@ to say dragonmoelleuxuse:
 			decrease dam by ( dam / 5 );
 		now dam is dam / 10;                              [division by 10 to normalize]
 		increase dam by ( stamina of player - 10 ) / 2;   [stamina boosted damage]
-		say "     Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly, soon you can hold it in no longer, and unleash a powerful gout of flame at the [name entry]! Burning them for [dam] damage!";
+		say "     Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly, soon you can hold it in no longer, and unleash a powerful gout of flame at the [name entry]! Burning them for [dam] damage![hydraharming]";
 		decrease monsterhp by dam;
 		now playerdam is ( playerdam / 3) / 10;
 		if playerfireresist is 1:
