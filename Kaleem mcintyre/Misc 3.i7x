@@ -1,19 +1,12 @@
 Misc 3 by Kaleem mcintyre begins here.
-[Several events transfered to CEO1 document in Stripes's folder.]
+[Several events transfered to CEOutside and CEPark documents in Stripes's folder.]
 
 "Adds a series of random events to Flexible Survival."
 
 Section 1- Mysterious Girl
 
-Mysterious Girl is a situation.
-The sarea of Mysterious Girl is "Park";
-when play begins:
-	add Mysterious Girl to badspots of furry;
+[Moved to CEPark file.]
 
-Instead of resolving Mysterious Girl:
-	say "While taking a quick break in the park you find yourself stumbling over a peculiar looking sight. Not exactly sure of what you're seeing, you find yourself gazing up the image of a young girl lying down in slumber beside a large pine tree. This in itself wouldn't have been so mysterious were it not in fact that the female in question was surrounded by several feral wolves, all of whom were now looking at you with evil intent in their darkened eyes. Not exactly sure of what's going on, you take several tentative steps back from the assembled pack of wolves just in time to hear the girl mewl and then sneeze somewhat softly in her sleep. Most of the wolves turn to ignore you at this as they flip their heads around to look at the, probably seventeen year old human female, though you do notice that many of their pointed ears are flipped around into your direction. The young woman, who you just now happen to really get a better look at as you lift confused eyes from the lupines onto her, seems to be almost completely human in form and shape save for a few key features. With a slightly pale complexion, thin limbs for arms and legs, a pair of furry wolf ears placed neatly up onto her head, and a gothic looking dress on you have to wonder just what's up with this bizarre girl that she's not being instantly violated by the feral creatures sitting around her.";
-	say "Interestingly enough your answer comes when one of the wolves, a shaggy brown furred thing that looks as though it hadn't seen water in days, shuffles itself up and over so that it can dip its snout under one of the female's prone hands. Said hand slowly starts to pet the beast's snout and you feel as though there's something very [italic type]off[roman type] about this kid. When bleary eyes open with several sleepy blinks you feel your blood freeze as crimson eyes turn to regard you with a somewhat confused look. There's just too much age and wisdom in those orbs for the girl to be human and quickly you feel like you need to leave, and leave now! Swallowing thickly you nod to the teenager, who stares at you impassively, and then back yourself away so that you can turn and run. Moving on fast feet away from that area of the park all you can do is wonder who or what that young girl was, her red eyes haunting your mind for several hours afterwards.";
-	now Mysterious Girl is resolved;
 
 Section 2 - Jam Session
 

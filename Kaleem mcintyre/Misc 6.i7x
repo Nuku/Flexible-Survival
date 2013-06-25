@@ -1,5 +1,5 @@
 Misc 6 by Kaleem mcintyre begins here.
-[Several events transfered to CEO1 document in Stripes's folder.]
+[Several events transfered to CEOutside document in Stripes's folder.]
 
 "Miscellaneous events to be added to Flexible survival."
 
@@ -30,7 +30,7 @@ Instead of resolving a Guess that Character One:
 
 Section 3 - Guess that Character Two
 
-[Moved to CEO1 file.]
+[Moved to CEOutside file.]
 
 
 Section 4 - Guess that Character Three

@@ -1,4 +1,5 @@
 Misc 8 by Kaleem mcintyre begins here.
+[Several events transfered to CEOutside and CEPark documents in Stripes's folder.]
 
 Section 1 - An Old Tale 
 
@@ -66,13 +67,7 @@ Instead of resolving a Cosplay:
 
 Section 5 - Fox hunt
 
-Fox hunt is a situation.
-The sarea of Fox hunt is "Park".
-
-Instead of resolving a Fox hunt:
-	say "While leisurely walking through the park you happen to hear the sounds of baying hounds howling off in the distance. Not really understanding what's going on you have just enough time to blink in surprise when a large latex fox runs straight pass you as though running for its life. Cocking your head to the side in wonder you have just enough time to jump out of the ways as several hound-like mutants dart pass you on the trail of the rubbery vulpine. When a powerful anthro mustang clomps his way after the hounds you can only gape like a fish at the incredulity of what you had just seen.";
-	increase score by 1;
-	now Fox hunt is resolved;
+[Moved to CEPark file.]
 
 
 Section 6 - Fantasy
