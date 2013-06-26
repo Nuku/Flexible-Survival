@@ -75,7 +75,7 @@ to say LilithTalkMenu:
 		now description entry is "Inquire about the captured angel.";
 		now toggle entry is LilithTalk rule;	
 	if companion of player is demon brute:
- 		choose a blank row in table of fucking options;
+		choose a blank row in table of fucking options;
 		now title entry is "Let her change your demon brute pet";
 		now sortorder entry is 3;
 		now description entry is "Make him herm if male, or fully female if herm.";
@@ -114,21 +114,31 @@ to say LilithTalk2:
 	if hp of Elijah is 0:
 		say "     'Oh, him? Nice catch by the others, but I didn't bother to reserve a place in line.' She shrugs and runs a finger down over her breasts and to her pussy, drawing your looks with it. 'Been there, done that, you know. Other than all these new converts, I was there at the beginning and had lots of fun with the winged boys after I broke up with my ex. They're cute and all, but how good in bed can a man be if he's only had his cock for a few hours or days?'";
 	otherwise if hp of Elijah > 0 and hp of Elijah < 99:
-		say "     'Everyone is still winging about losing the angel. I don't really care - it's their own fault, if they couldn't even fight you off. All of them against one of you - they came at you one after another, didn't they? Amateurs.' She shrugs, then starts running her finger around one of her nipples. 'If they had done it right and properly seduced him, he wouldn't even have wanted to go. Who needs chains if you can control lust.' With a seductive wink, she saunters over to the bed and fingers her pussy, sitting in a position in which you can see everythings.";
+		say "     'Everyone is still winging about losing the angel. I don't really care - it's their own fault, if they couldn't even fight you off. All of them against one of you - they came at you one after another, didn't they? Amateurs.' She shrugs, then starts running her finger around one of her nipples. 'If they had done it right and properly seduced him, he wouldn't even have wanted to go. Who needs chains if you can control lust.' With a seductive wink, she saunters over to the bed and fingers her pussy, sitting in a position in which you can see everything.";
 	otherwise if hp of Elijah is 99:
 		say "     'Good work in making something out of the kid... he's come visiting a few times now. Not bad at all between the sheets, and black really is his color.'";		
 	otherwise if hp of Elijah is 100:
 		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is out infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";		
 
 to say LilithTalk3:
-	if DemonBruteStatus is 0:
-		say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";	
-		say "     [LilithPregCheck]";	
-	otherwise if DemonBruteStatus is 1:
-		say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
-		say "     [LilithPregCheck]";
-	otherwise if DemonBruteStatus is 2:
-		say "     She looks a bit surprised and says 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";	
+	if DBCaptureQuestVar is 5:	
+		if DemonBruteStatus is 0:
+			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";	
+			say "     [LilithPregCheck]";	
+		otherwise if DemonBruteStatus is 1:
+			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
+			say "     [LilithPregCheck]";
+		otherwise if DemonBruteStatus is 2:
+			say "     She looks a bit surprised and says 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";	
+	otherwise if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:			
+		if DemonBruteStatus is 0:
+			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Brutus ignores her, just giving you a small bow of his head.";	
+			say "     [LilithPregCheck]";	
+		otherwise if DemonBruteStatus is 1:
+			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Brutus ignores her, just giving you a small bow of his head.";	
+			say "     [LilithPregCheck]";
+		otherwise if DemonBruteStatus is 2:
+			say "     She looks a bit surprised and says 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";	
 				
 to say LilithPregCheck:
 	if LilithPregnancy is 0 or LilithPregnancy is 4:
@@ -147,26 +157,93 @@ to say LilithPregCheck:
 		say "     After stroking over her strongly bulging stomach, the succubus moves a hand up to her breast, slightly squeezing it, which results in a small trickle of milk from her nipple. 'Yes, now we're ready.' she says with a grin. 'Could you give me that?' Following her pointing finger, you pick up a, somewhat dented and sticky with cum, golden chalice from the ground and hand it over. She proceeds to milk her own breasts into it, filling the thoroughly desecrated vessel with her milk. Holding it out to you, she continues 'Now just add a drop of blood and dip the amulet in it.'";
 		say "     Your blood in another ritual - do you really want to go through with this? ";
 		if player consents:
-			say "     Taking the demontooth amulet from around your neck, you prick your finger with its sharp point and squeeze out a drop of blood into the chalice. Then you dip the amulet itself into the while liquid with its swirl of red and listen to Lilith chant something in a long forgotten language. 'There.' she finally says after a while, then nods towards your captive demon brute. You pull the amulet back out and put it around your neck and take the chalice from her. Walking to the demon, careful not to spill anything, you command the creature to open up and pour the liquid down his throat.";
-			if DemonBruteStatus is 0:
-				say "     A growl rumbles in your demon companion's throat as he fights the change, his whole body trembling. To no avail - falling to his knees, then sinking down to the ground, you see and hear a pussy wetly form between his legs, right under his somewhat reduced cock and balls.";
-			otherwise if DemonBruteStatus is 1:
-				say "     A growl rumbles in your demon companion's throat as he fights the change, his whole body trembling. To no avail - falling to his knees, then sinking down to the ground, you see his cock and balls shrink further and further and his pussy move up a bit until he finally is a full female.";		
-			increase DemonBruteStatus by 1;
+			if DBCaptureQuestVar is 5:
+				say "     Taking the demontooth amulet from around your neck, you prick your finger with its sharp point and squeeze out a drop of blood into the chalice. Then you dip the amulet itself into the while liquid with its swirl of red and listen to Lilith chant something in a long forgotten language. 'There.' she finally says after a while, then nods towards your captive demon brute. You pull the amulet back out and put it around your neck, then take the chalice from her. Walking to the demon, careful not to spill anything, you command the creature to open up and pour the liquid down his throat.";
+				if DemonBruteStatus is 0:
+					say "     A growl rumbles in your demon companion's throat as he fights the change, his whole body trembling. To no avail - falling to his knees, then sinking down to the ground, you see and hear a pussy wetly form between his legs, right under his somewhat reduced cock and balls.";
+				otherwise if DemonBruteStatus is 1:
+					say "     A growl rumbles in your demon companion's throat as he fights the change, his whole body trembling. To no avail - falling to his knees, then sinking down to the ground, you see his cock and balls shrink further and further and his pussy move up a bit until he finally only has female parts, any trace of his manhood gone from his crotch.";			
+				increase DemonBruteStatus by 1;
+			otherwise if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:
+				say "     Taking the demontooth amulet from around your neck, you prick your finger with its sharp point and squeeze out a drop of blood into the chalice. Then you dip the amulet itself into the while liquid with its swirl of red and listen to Lilith chant something in a long forgotten language. 'There.' she finally says after a while, then nods towards your demon brute. You pull the amulet back out and put it around your neck, then take the chalice from her. Walking to the demon, careful not to spill anything, you ask Brutus to open up and pour the liquid down his throat.";
+				if DemonBruteStatus is 0:
+					say "     A curious grunt comes from your demon companion's throat as he feels himself start to change, then his whole body starts to tremble. The large demon falling to his knees, then sinking down to the ground, you see and hear a pussy wetly form between his legs, right under his somewhat reduced cock and balls.";
+				otherwise if DemonBruteStatus is 1:
+					say "     A curious grunt comes from your demon companion's throat as he feels himself start to change, then his whole body starts to tremble. The large demon falling to his knees, then sinking down to the ground, you see his cock and balls shrink further and further and his pussy move up a bit until he finally only has female parts, any trace of his manhood gone from his crotch.";		
+				increase DemonBruteStatus by 1;				
+				say "     [line break]";
+				say "     Putting a hand on Brutus shoulder, you ask if he's alright. He stands up, gingerly touching his changed crotch, then nods to you 'Yes, master.'";
 		otherwise:
 			say "     'Getting cold feet? Now, of all times?' Lilith sighs, then drains the chalice, licking the last of the milk off her lips. 'Not very reliable, my mortal lover. Well, at least you came through for me - or rather into me - when it did count.' She rubs her stomach, bulging with your child, and lies on the bed to stroke her pussy a bit.";
 			
-instead of going northeast from Burned-Out Chapel while hp of Lilith is 0:
+instead of going northeast from Burned-Out Chapel while hp of Lilith is 0:	[first meeting]
 	move player to Sacristy;
 	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveller. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
 	now hp of Lilith is 1;   [has met the player, not the demon brute yet]
 								
-instead of going northeast from Burned-Out Chapel while hp of Lilith is 1 and companion of player is demon brute:
-	move player to Sacristy;
-	say "     Lilith looks very interested as the captured demon brute follows you into the sacristy. 'A very nice pet... how did you get him so - tame?'";
-	say "     She saunters over to your demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too...'";
-	now hp of Lilith is 2;   [met the demon brute pet]
+instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not the first meeting]
+	if hp of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
+		move player to Sacristy;
+		if DBCaptureQuestVar is 5:
+			say "     Lilith looks very interested as the captured demon brute follows you into the sacristy. 'A very nice pet... how did you get him so - tame?'";
+			say "     She saunters over to your demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too...'";
+		otherwise if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:
+			say "     Lilith looks very interested as the captured demon brute follows you into the sacristy. 'A very nice pet... how did you get him so - tame?'";
+			say "     She saunters over to your demon brute, stroking her hand over his muscled form and grabbing his balls. Brutus stands there, calmly accepting her touching him, only giving a small whimper as the succubus squeezes him a bit too tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too...'";
+			say "     [line break]";
+			say "     Telling the succubus you'll have to think about it, you go back to the main chapel itself, followed by your demon companion. When you're far enough away from Lilith's room to be out of earshot, you ask Brutus what he thinks about her offer. The demon hesitates just a second, then bows his horned head to you. 'Anything for you, master. If you want to change me for your pleasure, do so.'";			
+		now hp of Lilith is 2;   [met the demon brute pet]	
+	[
+	otherwise if hp of Elijah is 99 and lastElijahfucked - turns > 12 and a random chance of 1 in 10 succeeds:	[Evil Elijah is horny (hasn't had sex that day) and visits her for a fuck]
+		move player to Sacristy;
+		say "     As you walk in the sacristy...";
+		say "     <find Lilith and evil Elijah in bed>";
+		if player consents:
+			say "     <join in>";
+			move player to Sacristy;			
+		otherwise:
+			if player consents:
+				say "     <watch>";
+				move player to Sacristy;			
+			otherwise:
+				say "     <leave>";		
+	otherwise if LilithKidCounter > 0 and lastfuck of Lilith - turns > 12 and a random chance of 1 in 10 succeeds:	[she's horny (hasn't had sex that day) and her firstborn Incubus son comes for a visit] 
+		move player to Sacristy;	
+		say "     As you walk in the sacristy...";
+		say "     <find Lilith and an incubus in bed>";
+		if player consents:
+			say "     <join in>";
+			move player to Sacristy;			
+		otherwise:
+			if player consents:
+				say "     <watch>";
+				move player to Sacristy;	
+			otherwise:
+				say "     <leave>";			
+	otherwise if LilithKidCounter > 0 and a random chance of 1 in 10 succeeds:	[Lilith is out when the player comes, though her firstborn Incubus son is there...] 
+		say "     As you walk into the sacristy, you're treated with the sight of a young and handsome incubus waiting for you on the bed. He's lying half on his side, propping up his upper body with an ellbow on the bed, grinning as he gives you a suggestive wink. Posing like that, he's showing off all of his naked glory, and you can't stop your eyes from wandering over bis slender but beautifully muscled body. Bathed in the light of the many candles, his tan skin shines, dark and perfect. Your gaze catches on his shapely and erect manhood, only moving on after a moment of reluctance, then comes to rest on his face - his very familiar looking face, with a close resemblance to your own.";
+		say "     'Welcome' he says, in a honeyed voice that makes you all tingly inside. 'Mother isn't here right now, as you can see.' His free arm moves to sensously stroke his chest. 'It'll be a while till she's back. How about we... have some fun in the meantime?'";
+		say "     [line break]";
+		say "     Do you take him up on that offer? ";
+		if player consents:
+			say "     The urge to be with this young, adonis-like demon has you walking almost in a trance towards the bed.";
+		otherwise:
+			say "     <waiting and seduction attempts>";
+		move player to Sacristy;	
+	]
+	otherwise if lastfuck of Lilith - turns > 6 and a random chance of 1 in 5 succeeds:
+		move player to Sacristy;		
+		say "     You enter the sachristy and are presented with the sight of a great feral gryphon, struggling against bonds of jet-black leather. Its bright red cock is fully erect and dripping precum - and has been for a while, judging the by the puddle forming underneath it. His captor steps out from behind him, tracing lines in the gryphon's leonine fur with a slender finger. The creature writhes and bucks, trying to get to the sultry seductress, but his bonds stop him short. 'You want me, don't you?' she coos, her finger tracing down the gryphon's flank. 'I like it when males know what they want and won't stop at anything to get it...' Her hand strokes the swollen knot of the gryphon's cock, causing a strangled cry from the overstimulated beast. '...Especially when they have something impressive to give.' She steps away from the bound gryphon, moving around to its front. Turning to give the gryphon a good view of her shapely rear, she gets on her hands and knees, gives the gryphon one last sultry look over her shoulder, and snaps her fingers.";
+		say "     [WaitLineBreak]";
+		say "     The black leather straps holding the gryphon dissolve, leaving a large and very aroused creature standing the middle of the sacristy. His beady, avian eyes fix on the prostrated succubus before him and he pounces, pinning Lilith underneath him. Humping wildly, he presses her torso to the ground with one firm paw while the other holds her hips steady. She puts on a good show of writhing and moaning under the powerful male, but they both know what they want.";
+		say "     Reaching back, Lilith guides the barbed tip of the gryphon's cock to her hungry snatch; feeling the wet heat, the gryphon thrusts forward violently, impaling the succubus on his swollen shaft in one motion. The beast begins to piston his sizable maleness in and out of her cunt, taking her as fiercely as he would a feral gryphoness. From your position you have a clear view of the succubus' netherlips stretching and straining around the gryphon's girth each time he pushes it back in. Judging by the moaning that accompanies each thrust, Lilith seems to be enjoying this rough treatment.";
+		say "     The feral gryphon begins to speed up the pace, slamming its overly swollen knot against Lilith's labia with its powerful thrusts. She begins to scream with pleasure as the knot begins to spread her wide; with jackhammer thrusts the gryphon hammers the knot in to its widest point. With a wet popping sound, it slips inside. The thrusts become erratic and finally the wild beast gives a triumphant screech as it pushes itself deep inside the succubus and then stills. The beast's copious ejaculate quickly fills her vagina and squirts out around the thick knot plugging it, dripping lewd milky-white drops down her legs and pooling on the floor.";
+		say "     [WaitLineBreak]";
+		say "     Panting, Lilith pulls herself off the gryphon's knot with surprising ease, freeing with it a backwash of thick gryphon cum.  Turning towards the wild creature, she leans in close and whispers something in its ear, then gives it a peck on the beak. As if programmed, the gryphon launches itself directly into the air and out a broken stained glass window. Her 'business' done, she turns and notices you - or perhaps she always knew you were there? 'Ah, pardon me. I was just...' - she moans as she starts to finger her well-bred pussy, giving you a good view of the oozing load the gryphon just left - '...Entertaining a guest. What brings you around?'";
+		now lastfuck of Lilith is turns;
+	otherwise:
+		move player to Sacristy;
 								
 instead of going northeast from Burned-Out Chapel while LilithPregnancy is 4:
 	move player to Sacristy;
