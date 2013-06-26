@@ -56,14 +56,14 @@ When Play begins:
 	now ass change entry is "you nearly fall backward from the muscles shifting around at your backside as a large bovine tail sprouts above your now well-toned glutes";
 	now cock change entry is "you grunt from an intense wave of pleasure as your cock pulses, swelling as numerous veins surge their way onto the surface of your prick";
 	now str entry is 20;
-	now dex entry is 15;
+	now dex entry is 16;
 	now sta entry is 16;
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 8;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 90;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now hp entry is 95;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 15;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
