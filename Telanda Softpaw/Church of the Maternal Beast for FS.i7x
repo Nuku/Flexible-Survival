@@ -132,6 +132,7 @@ title	subtable	description	toggle
 "What is this place?"	--	""	church description rule
 "Confess about the sexual need that tries to overwhelm you."	--	""	lustconfession rule
 "Leave the confessional."	--	""	leaveconfession Rule
+--	--	--	--  [extra line for adding the demon brute cleansing question]
 
 instead of examining the confession booth:
 	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
