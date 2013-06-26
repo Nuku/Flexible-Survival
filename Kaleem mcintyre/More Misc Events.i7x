@@ -1,4 +1,5 @@
 More Misc Events by Kaleem mcintyre begins here.
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 "Adds a series of random events to Flexible Survival."
 

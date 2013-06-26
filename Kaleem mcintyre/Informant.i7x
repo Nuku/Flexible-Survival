@@ -251,4 +251,3 @@ to say findfirefighter6:
 
 
 Informant ends here.
-
