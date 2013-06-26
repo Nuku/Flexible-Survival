@@ -536,6 +536,7 @@ to say DavidPatrolAnal:
 
 to say DavidPatrolVaginal:
 	setmonster "human";	
+	choose row monster from the table of random critters;	
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you.";
 	say "     [WaitLineBreak]";
@@ -543,7 +544,6 @@ to say DavidPatrolVaginal:
 	say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
 	say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... oh no, I just cheated on my girlfriend. What will she say when I get back home. I - you...'";
 	say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
-	choose row monster from the table of random critters;	
 
 to say DavidPatrolRubbing:
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the something more.";
@@ -554,23 +554,32 @@ to say DavidPatrolRubbing:
 	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 [ David, the npc:																												]
-[ thirst states of David                                             		]
+[ thirst states of David - Relationship with the Player              		]
 [   0: had no sex of any kind with the player                        		]
 [   1: had some sort of intimate contact with the player - once      		]
 [   2: had some sort of intimate contact with the player - often     		]
 [   5: the point at which he'll ask the player to be his girl/boyfriend ]
 [  10: is the player's fuck-buddy                                   		]
 [  20: player is his girl/boyfriend                           					]
-[ lust states of David                                          		    ]
+[ lust states of David - Gay Sex Variable                       		    ]
 [   0: anal virgin                                              		    ]
 [   1: got fucked in the ass                                    		    ]
 [   2: got fucked in the ass + sucked player cock               		    ]
-[ hp states of David                                            		    ]
+[ libido states of David - Demon Brute Pet Interaction                  ]
+[   0: hasn't seen the player with Brutus yet                    		    ]
+[   1: got frightened as he saw Brutus, no special sex prepped   		    ]
+[  50: talked to a 'cleansed' Brutus                                    ]
+[  89: revenge fuck option enabled when talking to him                  ]
+[  90: fucked the demon, lost his fear                                  ]
+[  99: player agreed to have the demon brute fuck him                   ]
+[ 100: got fucked & enslaved by the demon brute                         ]
+[ hp states of David - Location                                 		    ]
 [   0: on patrol                                                		    ]
 [   1: got called in to Camp Bravo                               			  ]
 [   2: met the player in Camp Bravo                              			  ]
 [   3: liaison to the player - in Camp Bravo                     		  	]
 [   4: liaison to the player - in the Bunker                    		    ]
+[ 100: demon brute pet's slave - in the amulet                          ]
 
 David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
@@ -742,12 +751,53 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 	say "     [line break]";
 	say "			[DavidEricTalk]";
-	
+
 An everyturn rule:			[you can just wait for them to talk too]
 	if player is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		say "     [line break]";
 		say "			[DavidEricTalk]";
+	
+after of going to Bunker while hp of David is 4 and libido of David is 0 and companion of player is demon brute:  [David gets a shock when the player comes in with the demon brute pet]
+	if DBCaptureQuestVar is 5: [original, evil Brutus]
+		say "     As you enter the bunker with your demon brute pet in tow and David spots it, he jumps up from where he was sitting on one of the many cots and shouts 'Watch out, there's a dem...', then suddenly falls silent as he realizes the big creature is following you and controlled. 'What the fuck?' he says, still a bit shocked and wide-eyed. Explaining that you've got him tightly controlled and the demon can't hurt him, you assure David that he can calm down. The young soldier accepts your word on it, but still moves to distance himself from the demon brute as far as possible.";	
+		if (DemonBruteStatus is 0 or DemonBruteStatus is 1):  [male/herm]
+			say "     Watching David move to the far side of the underground room, you notice feeling some heat against your arm that wasn't there before. Turning, you see the massive cock of the demon brute besides you, hanging down between his legs fully engorged, radiating a fair amount of warmth as it pulses in anticipation. Your pet's eyes follow David and he sniffs the air through his slit-like nostrils, a pleased rumble going through his chest. Quite a reaction... curious what prompted it so instantly, you ask the brute to explain himself.";
+			say "     Looking over to you, the demon gives an evil grin. 'That one has felt the tough of the infernal legion - I can smell is fear.' At that, he pulls in another lungful of air through his nose and precum starts dripping from his erection. He moves his claws over his chest, at the approimate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'Give him to me and I won't rip your arms off when I finally get free.'";
+			say "     [line break]";
+			say "     Chuckling at the demon brute making demands even though he's yours to command, you grasp your demontooth amulet and whisper the command word, banishing him inside. Enough of this, for now.";  
+			now libido of David is 1;   [first-time fright scene resolved]		
+			[
+			say "			The things you had to do to survive in this city certainly has some effect on your morality - or is it the ritual with which you bound the demon to you causing some of his evil to leak into you? No matter what, you imagine seeing your demon brute pet shoving his thick shaft into David's ass for a second, a hot flash of lust running through you at the same time.";
+			say "     Shaking your head softly to shake off the vision, your answer to the demon brute is...";		
+			if player consents:	[let's be evil]
+				say "     Willing to indulge your pet, you tell him he'll get to mount the soldier - but not here in the bunker. An alley out in the city seems much more appropriate, and you can arrange David being out there alone when you send him towards Camp Bravo again...";
+				now libido of David is 99;	[open up the 'lure out and fuck' in David's code]
+			otherwise:  [nope, David won't be raped by the demon in an alley]
+				say "     Chuckling at the demon brute making demands even though he's yours to command, you grasp your demontooth amulet and whisper the command word, banishing him inside. Enough of this, for now.";  
+				now libido of David is 1;   [first-time fright scene resolved]
+			]
+		otherwise if DemonBruteStatus is 2:  [cuntboy demon brute]
+			say "     Watching David move to the far side of the underground room, you notice the demon brute fidgeting besides you. Turning, you see the pussy between his legs, its lips open and swollen in arousal, moisture glistening on them. Your pet's eyes follow David and he sniffs the air through his slit-like nostrils, a pleased rumble going through his chest. His left hand moves to his crotch as if to grab his nonexistent cock and he snarls as he is reminded of you modifying his body. Quite a reaction... curious what prompted it so instantly, you ask the brute to explain himself.";
+			say "     Looking over to you, the demon grumbles. 'That one has felt the tough of the infernal legion - I can smell is fear.' At that, he pulls in another lungful of air through his nose and you can see droplets of female juices drip out of his pussy - much to the demon's chagrin as he looks down at his crotch. He moves his claws over his chest, at the approimate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'I'll flay you alive for gelding me and taking this chance away when I finally get free.'";
+			say "     [line break]";
+			say "     Chuckling at the demon brute making threats even though he's yours to command, you grasp your demontooth amulet and whisper the command word, banishing him inside. Enough of this, for now."; 
+			now libido of David is 1;  [first-time fright scene resolved]	
+			[ 
+			Revenge fuck path: 
+			"- though a new image appears before your mental eye... seeing your demon brute pet on the ground, David pounding into his pussy in a revenge-fuck. That would surely show the demon his place and get David over his fear.";
+			say "     Shaking your head softly to shake off the vision, you wonder if that's really such a good idea.";				
+			if player consents:	[prep the revenge fuck by David]
+				say "     Well, the demon brute certainly deserves it. You decide to bring it up with David later when you talk to him again.";
+				now libido of David is 89;	[open up the 'revenge fuck' in David's code]
+			otherwise:  [nope]
+				say "     Better not - who knows how David would react if you suggested this to him.";
+				now libido of David is 1;   [first-time fright scene resolved]		
+			]
+	[
+	otherwise if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:
+		say "     <scene with cleansed Brutus + David>";
+	]
 
 to say DavidEricTalk:
 	if hp of Eric is 1 or hp of Eric is 20:		[gender not addressed yet, or Eric waiting for a cure]
@@ -818,6 +868,7 @@ to say DavidSex2:							[he sucks the player]
 
 to say DavidSex3:												[player pussy fucked]
 	setmonster "human";	
+	choose row monster from the table of random critters;	
 	if thirst of David is 0:							[first time]
 		if David is in Parade Ground:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
@@ -848,10 +899,10 @@ to say DavidSex3:												[player pussy fucked]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[otherwise]girlfriend[end if]. You're just amazing.' he says and gives you another deep kiss.";
 		otherwise:    												[worrying about cheating on his girlfriend]
 			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
-	choose row monster from the table of random critters;	
 
 to say DavidSex4:												[player ass fucked]
 	setmonster "human";	
+	choose row monster from the table of random critters;	
 	if David is in Parade Ground:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 	otherwise:
@@ -869,7 +920,6 @@ to say DavidSex4:												[player ass fucked]
 		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[otherwise]girlfriend[end if]. You're just amazing.' he says and slides over to lie beside you, giving you another deep kiss.";
 	otherwise:    												[worrying about cheating on his girlfriend]
 		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
-	choose row monster from the table of random critters;	
 
 to say DavidSex5:												[David ass fucked]
 	if thirst of David is 0:							[first time]
@@ -1653,14 +1703,14 @@ to say AlexanderFucking:
 			say "     As you approach Alexander, he immediately sees the lust-filled twinkle in your eyes. He gives you an apologetic shrug, saying 'Sorry, I got duties to perform. Can't fuck around all day, even though I'd like to...' He gives you a quick kiss, then goes to grab some more food for the minotaur.";
 		otherwise:
 			setmonster "human";				
+			choose row monster from the table of random critters;	
 			say "     'How could I say no to such an offer', he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss.";
 			say "     Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely thick piece of hard man-meat.";
 			say "     After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
 			say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his.[fimpregchance]";
 			say "     After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
 			now lastfuck of Alexander is turns;
-			choose row monster from the table of random critters;	
-		
+
 Tiny Tim is a man.
 The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground besides the hitching post used in couplings with him. He's a magnificently well-build creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner.";
 Tiny Tim is in Parade Ground.

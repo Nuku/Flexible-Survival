@@ -1341,10 +1341,15 @@ To reciting2:
 			-- 140:	[demon brute pet]
 				if the player's command matches "[number]":
 					now DBCaptureQuestVar is the number understood;
-					if DBCaptureQuestVar is 5:
+					if DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99:
 						now demon brute is tamed;
 					otherwise:
 						now demon brute is not tamed;
+					if DBCaptureQuestVar is 5:
+						choose blank row from Table of confession entries;
+						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
+						now description entry is "";
+						now toggle entry is demoncleansing rule;
 			-- 141:	[demon brute pet - gender]
 				if the player's command matches "[number]":
 					now DemonBruteStatus is the number understood;
@@ -2772,10 +2777,15 @@ Carry out reciting:
 			-- 140:	[demon brute pet]
 				if the player's command matches "[number]":
 					now DBCaptureQuestVar is the number understood;
-					if DBCaptureQuestVar is 5:
+					if DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99:
 						now demon brute is tamed;
 					otherwise:
 						now demon brute is not tamed;
+					if DBCaptureQuestVar is 5:
+						choose blank row from Table of confession entries;
+						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
+						now description entry is "";
+						now toggle entry is demoncleansing rule;
 			-- 141:	[demon brute pet - gender]
 				if the player's command matches "[number]":
 					now DemonBruteStatus is the number understood;
