@@ -5926,6 +5926,7 @@ Include Sugar Glider by AGentlemanCalledB.
 Include Cum Girl by AGentlemanCalledB.
 Include Francois Infections by AGentlemanCalledB.
 Include Jaguar Warrior by AGentlemanCalledB.
+Include Pink Poodle by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
