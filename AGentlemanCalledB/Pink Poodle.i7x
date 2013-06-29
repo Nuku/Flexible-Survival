@@ -1,0 +1,254 @@
+Pink Poodle by AGentlemanCalledB begins here.
+"Adds a Pink Poodle creature to Flexible Survivals Wandering Monsters table"
+
+Section 1 - Monster Responses
+
+when play begins:
+	add { "Pink Poodle" } to infections of girl;
+	add { "Pink Poodle" } to infections of furry;
+	add { "Pink Poodle" } to infections of Caninelist;		[list of canine infections]
+	add { "Pink Poodle" } to infections of Knotlist;		[list of cock infections with a knot]
+
+HeatedPoodle is a number that varies.
+nopoodlesex is a number that varies.
+poodleapproved is a number that varies.
+
+to say losetoPinkPoodle:
+	if poodleapproved is 0:
+		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Eithier come back as a proper pooch, or don't come back at all' she says in her heavy french accent, giving you one last firm kick before turning and striding away.";
+	otherwise:
+		if hp of player > 0:
+			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. 'I knew you would come around, darling, now let's get down to business she says in her refined french accent as she gently pushes you to the ground.";
+			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+				say "[pinkpoodledefeatsex]";
+			otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+				say "[pinkpoodledefeat69]";
+			otherwise:
+				say "[pinkpoodledefeatoral]";
+		otherwise:
+			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. 'Mmm, so you like to play ruff? Usually that costs extra darling, but I suppose you could make up for it some other way' she says in her refined french accent as she steps over your supine form.";
+			if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+				say "[pinkpoodledefeatsex]";
+			otherwise:
+				say "[pinkpoodledefeatoral]";
+
+to say pinkpoodledefeatsex:
+	say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down the attractive canine kneels down between your legs, taking your [cock size desc of player] [cock of player] member in one paw as her other gently cups your [ball size] balls. With an expert touch she teases your shaft to attention before she leans forward and wraps her muzzle around your shaft, gently sucking as her tongue plays along your length. Combined with her paw still massaging your testes the effect is quite arousing, but the obviously well practiced canine call girl is careful to not left you reach climax too soon.";
+	say "     Releasing your shaft with one final kiss she raises herself up off her knees, positioning her wet canine spade over your [cock of player] cock before lowering herself down onto you. The feeling of her slick doggy cunt enveloping your flesh is delightful and even as she bounces up and down your shaft, she reaches beneath herself to resume fondling your aching balls. The pleasure seems to go on forever as the canine call girl pushes you towards climax again and again, but each letting off just before you peak to draw you the experience as long as possible. Eventually you can take no more, and as is sensing your orgasm the poodle girl makes one final thrust [if cockname of player is listed in infections of Knotlist]forcing your swollen knot into her body with a howl of pleasure[otherwise]hilting your entire length in herself with a howl of pleasure[end if] as you climax powerfully, blasting your [cum load size of player] load into her as your own howling joins hers.";
+	say "     The pink poodle collapses atop you, panting happily as [if cockname of player is listed in infections of Knotlist]she waits for your knot to go down[otherwise]as her feminine juices leak out around your still pulsing shaft[end if], she cuddles up against your exhausted form for some time, whispering sweet french nothings in your ear as you both recover for the intense lovemaking. When she is finally able to the poodle pulls herself off you with a wet slurp, giving you a quick kiss on the cheek and telling you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+
+to say pinkpoodledefeat69:
+	say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear After stripping you down the attractive canine steps over you, positioning her her wet canine spade above your head. As she kneels down over you her paws and tongue tease your body, stroking and fondling you as she descends down your form towards your [cunt size desc of player] pussy. You gasp as her cool wet nose presses into your womanly folds, leading the way for her long canine tongue. As she works her muzzle and tongue, she lowers her own dripping cunt to your face, grinding it against you nose as you moan in delight. Soon you are licking and sucking at the pink poodle's cunt in return, trying your best to mimic her talented tonguework as she pushes you towards climax again and again, but each letting off just before you peak to draw you the experience as long as possible. Eventually you can take no more and you howl in pleasure as your crashing orgasm hits you, soaking the pink poodle's muzzle as she continues her work to draw out your climax as long as possible.";
+	say "     When your orgasm finally comes to an end the pink poodle lifts herself up and turns to face you, sitting squarely on your chest with her legs on either side of your head. As you lay there, basking in your afterglow she begins working a pair of fingers into her own drooling pussy to finish the job you started, frigging herself to a powerful climax that soaks you in her nectars. Satisfied with a job well down, the canine call girl gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+
+to say pinkpoodledefeatoral:
+	say "     The poodle girl smiles down at you as she positions herself above your face, panting eagerly as she lowers her wet canine cunt to your face. Her thighs grip tightly around your head as she presses her pussy to your lips, the musky fluids leaking into your mouth as she strokes and teases her clit with one padded paw. With your head awash in her arousing scent and taste, it's not long before you're digging into the to delightful canine folds before you, working your tongue as best you can from your confined position. The poodle girl moans happily, one paw still working her clit while the other rubs your head gently, occasionally slipping into her cunt alongside your tongue to further stimulate her before returning to petting you, smearing her delectable fluids across your face.";
+	say "     The pink poodle draws it out as long as she can, but your combined efforts soon push her to her limits, and she howls in pleasure as she orgasms above you, soaking you in her nectars as her cunt spasms around your tongue. Sated, the canine rolls off you slowly, panting happily as she lays on the ground next to you. Eventually she recover enough from her powerful climax to climb to her feet, she gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+
+To say beatthePinkPoodle:
+	if nopoodlesex > 2:
+		say "     Defeated, the [if poodleapproved is 1]alluring[otherwise]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but decide to leave he be as you have with her kind in the past.";
+	otherwise if cocks of player > 0 or cunts of player > 0:
+		say "     Defeated, the [if poodleapproved is 1]alluring[otherwise]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
+		if cocks of player > 0:
+			say "     Would you like to [link]fuck the pink poodle (1)[as]1[end link], [link]have her suck you off (2)[as]2[end link] or [link]leave her be (0)[as]0[end link]?";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-2)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				say "[pinkpoodlesex]";
+			otherwise if calcnumber is 2:
+				say "[pinkpoodleoral]";
+			otherwise if calcnumber is 0:
+				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
+				increase nopoodlesex by 1;
+		otherwise:
+			say "     Would you like to have her eat you out (y) or [link]leave her be (n)[as]n[end link]?";
+			if the player consents:
+				say "[pinkpoodleoral]";
+			otherwise:
+				say "	 Deciding against taking advantage of the whining poodle, you leave her where she is.";
+				increase nopoodlesex by 1;
+	otherwise:
+		say "     Defeated, the [if poodleapproved is 1]alluring[otherwise]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but since you lack and gender of your own, you leave her be and continue on your way.";
+	now poodleapproved is 0;
+
+to say pinkpoodlesex:
+	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her you grip on the poodle's ample, shaved hips, causing her tail to wag softly as you caressing them.  You can't help but grin as you watch the large pink pompon swaying back and forth before you as you align your [cock size desc of player] [cock of player] cock her her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
+	say "     As [if cockname of player is listed in infections of Knotlist]your knot begins rubbing against the pink girl's outer folds[otherwise]you hilt your entire length in the pink girl's needy cunt[end if] she moans in pleasure beneath you, pressing her bottom back against you, nearly knocking you over as you lean forwards onto her back. Locking your arms around her torso and resting your head on the thick pink fur covering her shoulders you begin humping the canine in earnest, quickly building to an energetic rhythm as you fuck her like an animal.";
+	say "     The pink poodle barks and yips beneath you, pressing her body back against you [if cockname of player is listed in infections of Knotlist]trying to force your knot into her body with each thrust[otherwise] and squeezing her cunt tightly around your shaft[end if].  As your combined arousal begin to peak, you make one final powerful thrust driving your [if cockname of player is listed in infections of Knotlist]knot[otherwise]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [cum load size of player] load[if cockname of player is listed in infections of Knotlist], none of which escapes thanks to her tight grip around your knot[otherwise] even as her own juices leak out around your shaft[end if].";
+	if cockname of player is listed in infections of Knotlist:
+		say "     As you lay atop her, the well fuck poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. [run paragraph on]";
+	say "When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
+
+to say pinkpoodleoral:
+	say "     Since she's already on her knees, you decide to have the beaten canine help you blow off some steam. Dropping you gear as you approach her, you grip her thickly furred shoulder gently and  push her to a kneeling position. With your [if cocks of player > 0][cock size desc of player] [cock of player] cock[smn][otherwise if cunts of player > 0]juicy puss[yfn][end if] on display before her, she looks up at you tentatively and licks her lips. When you finally give her permission, she dives in eagerly, [if cocks of player > 0]wrapping her muzzle around your shaft[otherwise]pressing her muzzle into your needy cunt[end if].";
+	say "     [if cocks of player > 0]Her long canine tongue teases along your length, sending shivers of delight through you while sucks and slurps pleasantly[otherwise]Her long canine tongue send shivers of delight through you as it presses into your tender folds, eagerly lapping across and into your netherlips as her paw slips up to rub and tease your clit[end if]. The combined effect is quite arousing, but the obviously well practiced canine call girl is careful to not left you reach climax too soon, teasing you through a roller coaster of pleasure as she alternates between bouts of intense stimulation and gentle massaging.";
+	say "     Eventually it all becomes to much, and you climax powerfully [if cocks of player > 0]blasting your [cum load size of player] load into her muzzle[otherwise]soaking her muzzle in your feminine juices[end if] as orgasm wracks your body. Steadying yourself with a hand on the panting canine's shoulder, you gently stroke her softly furred head with your free hand while you bask in the afterglow of the poodle's expert handiwork. When you've finally recovered enough to gather your things and continue on your way, the pink poodle rises to her feet, giving you a quick [if poodleapproved is 1]kiss on the cheek[otherwise]scowl[end if] before heading in the opposite direction.";
+
+to say PinkPoodledesc:
+	if bodyname of player is listed in infections of Caninelist or facename of player is listed in infections of Caninelist or skinname of player is listed in infections of Caninelist or cockname of player is listed in infections of Caninelist or tailname of player is listed in infections of Caninelist:
+		now poodleapproved is 1;
+	otherwise:
+		now poodleapproved is 0;
+	say "     As you wander through the high rise district a figure steps out of [one of]a designer clothing store[or]a high end shop[or]a salon[at random] into view just ahead of you. She is an elegant looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompons covering your forearms and calves as well as the tip of her tail.[run paragraph on]";
+	if poodleapproved is 1:
+		say "As she returns your inspection a sultry smile creeps across her muzzle [one of]Your place or mine? How about right here?[or]Hey honey, looking for some company?[or]You look like you could use some company.[at random] [run paragraph on]";
+	otherwise:
+		say "As she returns your inspection she scoffs, turning up her nose at you '[one of]Such riff-raff you find around here these days[or]Another uncouth beast[or]Such a boorish creature[at random], I suppose I shall have to deal with you before you put my clients off' [run paragraph on]";
+	say "she says with a refined french accent, before striding forward confidently.";
+
+
+Section 2 - Monster Insertion
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of random critters;
+	now name entry is "Pink Poodle";		[The creature's name as displayed and used in naming descriptions]
+	now attack entry is "The pink poodle [one of]strikes you sharply across the face with an open paw[or]squeezes her large breasts together tantalizingly, distracting you just long enough to get in a quick hit[or]scratches you with her well manicured claws[or]teases you playfully as she strikes a sultry pose[at random]!";	[Text used when the monster succeeds on an attack]
+	now defeated entry is "[beatthePinkPoodle]";				[ Text when monster loses.  Change 'Pink Poodle' as above. ]
+	now victory entry is "[losetoPinkPoodle]";					[ Text when monster wins.  Change 'Pink Poodle' as above. ]
+	now desc entry is "[PinkPoodledesc]";						[ Description of the creature when you encounter it. ]
+	now face entry is "a slim and attractive canine muzzle, tipped with a bright pink nose but the most striking feature is the puffy pink bouffant atop your canine head, which blends into you long fluffy poodle ears.";		[ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "elegant and well proportioned, with an attractive canine figure and sharp features. Your paw-like hands and feet are accentuated by pink paw pads and short matching claws.";	[ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "thick curly pink fur, styled neatly around your shoulders and chest, as well as large fluffy pompons on your forearms and lower legs that create an appearance not unlike thick furred high fashion boots and arm warmers. The rest of your body is almost hairless as if recently shaven, exposing your pale";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "You have a thin shaven poodle tail, with a large pink pompon at it's tip.";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now cock entry is "[one of]bright pink[or]knotted[or]canine[or]pointed[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "a bout of dizziness comes over you. You try to shake your head clear but quickly stop when something pink and fluffy strikes you in the face. As you gently stroke you new pink poodle ears you watch a slim canine muzzle form before your eyes, while the thick pink fur spreads from your ears up your head, forming a large bouffant hairstyle";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "changes begin to roll through you. You watch with fascination as you hand shifts to a dainty paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you an elegant and well proportioned canine figure.";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "your chest grows tight, a thick coat of curly pink fur forms over your shoulders and chest, forming a large puff ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, laving you with large fashionable pompons covering your forearms and calves";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at it's tip";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 12;			[ These are now the creature's stats... ]
+	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 13;			[ These values may be used as part of alternate combat.]
+	now per entry is 13;
+	now int entry is 12;
+	now cha entry is 17;
+	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 60;			[ The monster's starting hit points. ]
+	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 8;			[ Monster's average damage when attacking. ]
+	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 10;		[ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
+	now breast size entry is 7;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 10;		[ Depth in inches of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
+	now libido entry is 80;			[ Target libido the infection will rise towards. ]
+	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slim[or]elegant[or]well proportioned[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+Section 3 - Heat Table
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "Pink Poodle";
+	now heat cycle entry is 15;
+	now heat duration entry is 10;
+	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs.  Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat fueled need for a canine companion clear.";
+	now description text entry is "";
+	now heat start entry is "[pinkpoodleheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[pinkpoodleheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[pinkpoodleheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+
+to say pinkpoodleheatstart:
+	now HeatedPoodle is 0;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Pink Poodle":
+			now monster is y;
+			break;
+	increase cunt width of player by 1;
+	increase cunt length of player by 1;
+	if cunt width of player < cunt width entry, increase cunt width of player by 1;
+	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+
+to say pinkpoodleheatend:
+	if HeatedPoodle is 0 and player is impreg_able:
+		say "[PoodleHeatSuccumb]";
+	say "     As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Pink Poodle":
+			now monster is y;
+			break;
+	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 4, now slutfucked is 4;
+
+to say pinkpoodleheat:
+	increase libido of player by 5;
+	if libido of player > 99, now libido of player is 99;
+	if (libido of player > 90) and (location of player is fasttravel or there is a dangerous door in location of player) and (slutfucked > 5):
+		say "[PoodleHeatSuccumb]";
+	else if libido of player is greater than 90:
+		increase slutfucked by 1;
+
+to say PoodleHeatSuccumb:
+	now HeatedPoodle is 1;
+	say "     Unable to resist the lustful urges of your poodle infection, you lose yourself in need for canine companionship and bound off into the city in search of a mate.";
+	now slutfucked is 0;
+	let hmonlist be a list of numbers;
+	let heatzone be "Outside";
+	let zz be a random visible dangerous door;
+	if zz is not nothing, now heatzone is the marea of zz;
+	repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
+		choose row X from the table of random critters;
+		if there is no area entry, next;
+		if area entry is heatzone and name entry is listed in infections of Caninelist:
+			add X to hmonlist;
+	if hmonlist is empty and heatzone is not "Outside":		[If none valid found, default back to Outside]
+		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
+			choose row X from the table of random critters;
+			if there is no area entry, next;
+			if area entry is "Outside" and name entry is listed in infections of Caninelist:
+				add X to hmonlist;
+	sort hmonlist in random order;
+	now monster is entry 1 of hmonlist;
+	choose row monster from the table of random critters;
+	say "     Your lust fueled search eventually leads you an attractive [name entry], who you immediately submit to, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
+	wait for any key;
+	follow the cock descr rule;
+	follow the cunt descr rule;
+	follow the breast descr rule;
+	say "[victory entry]";
+	infect "Pink Poodle";
+	decrease the score by 5;
+	decrease the morale of the player by 3;
+	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+
+Section 4 - Endings
+
+when play ends:
+	if bodyname of player is "Pink Poodle":
+		if humanity of player is less than 10:
+			say "     As you begin to lose yourself to the pink poodle infection, you find yourself drawn back to the high rise district and all it's high class stores - and denizens. Soon you are working the districts streets as another high class call girl, servicing only the highest class of creatures roaming the district.";
+		otherwise:
+			say "     When the military arrives to start evacuating survivors from the city, you are among the first to be rescued. You are processed through the quarantine relatively quickly, alongside many of the other common domestic infections so the military forces can focus their efforts on the more dangerous creatures. Life outside the city is difficult at first, but you soon find that even the infected still want to look good, and you discover you have quite a knack for helping them with that. Soon you're operating a very successful salon just outside the city, helping those who are so inclined to look their best in exchange for the day to day supplies you need.";
+
+
+Pink Poodle ends here.
