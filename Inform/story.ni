@@ -594,6 +594,13 @@ to say abbey desc:
 	otherwise if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
+Grey Abbey Library is below Grey Abbey 2F.
+Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]";
+the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty oder is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
+
+to say abbey 2F desc:
+	say "     The spacious second story of the library opens up to a balcony overlooking to lobby below, there a few cushioned chairs and a small sofa near the railing. Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
+
 
 [
 Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
