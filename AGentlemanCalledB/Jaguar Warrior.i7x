@@ -102,6 +102,9 @@ to say TameTehuantl:
 	move Tehuantl to Grey Abbey 2F;
 	now hp of Tehuantl is 10;
 	move player to Grey Abbey 2F;
+	setmonster "Jaguar Warrior";
+	choose row monster from the table of random critters;
+	now area entry is "nowhere";
 
 Section 2 - Monster Insertion
 
