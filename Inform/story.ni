@@ -596,10 +596,10 @@ to say abbey desc:
 
 Grey Abbey Library is below Grey Abbey 2F.
 Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]";
-the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty oder is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
+the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
 
 to say abbey 2F desc:
-	say "     The spacious second story of the library opens up to a balcony overlooking to lobby below, there a few cushioned chairs and a small sofa near the railing. Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
+	say "     The spacious second story of the library opens up to a balcony overlooking to lobby below, there a few cushioned chairs and a small sofa near the railing.  Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
 
 
 [
