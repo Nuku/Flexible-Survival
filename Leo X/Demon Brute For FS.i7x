@@ -188,7 +188,7 @@ The description of demon brute is "[DemonBrutePetDesc]";
 The weapon damage of demon brute is 8;
 The level of demon brute is 4;
 The Dexterity of demon brute is 8;
-The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. You tell him 'I want you to help me when I get into fights, understand?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice, the demon answers 'Yes... master.'";
+The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[otherwise]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, ok?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice, the demon answers 'Yes... master.'";
 The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]";
 
 to say DemonBrutePetDesc:
@@ -227,7 +227,10 @@ instead of fucking the demon brute:
 	
 to say demon brute summoning:
 	if companion of player is demon brute:		[already summoned]	
-		say "Holding your demontooth amulet tightly in your fist, you call over your controlled demon. As he hulking beast comes to stand before you, he says with a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice 'Yes... master?'";		
+		if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7:  [cleansed version]		
+			say "You call your demon companion to you. As he hulking beast comes to stand before you, he says with a deep voice 'Yes... master?'";		
+		otherwise:  [standard evil version]
+			say "Holding your demontooth amulet tightly in your fist, you call over your controlled demon. As he hulking beast comes to stand before you, he says with a growling voice 'Yes... master?'";							
 	otherwise:
 		if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7:  [cleansed version]
 			say "Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute. Brutus is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has purple skin, a frightening face with slits for nostrils, azure blue slitted irises, and sharp, intimidating teeth. [if DemonBruteStatus is 0]Between the enlarged and well-toned thighs of Brutus hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum.[otherwise if DemonBruteStatus is 1]Between the enlarged and well-toned thighs of Brutus hangs a thick veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum, and you know for a fact that there's a pussy right under those balls between his legs.[otherwise if DemonBruteStatus is 2]Between his legs, you see a female's pussy, looking quite inviting.[end if] He also has a long, spade-tipped tail protruding from his body somewhere behind, lazily flicking through the air from time to time. He wears nothing, unashamedly standing before you in his nakedness. With a deep voice, you hear the demon say 'Yes... master?'";			
@@ -242,30 +245,71 @@ to say demon brute talk:
 		say "     Well, that was certainly an intense answer. And after all the time Brutus spent in hell, he deserves some good treatment now - even though he is still your slave.";
 		now DBCaptureQuestVar is 7;
 	otherwise if DBCaptureQuestVar is 7:   [cleansed Brutus, had a talk with him]
-		say "     [line break]";		
-		say "     So what do you want to do now? You could chat with him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], or just banish him back into the amulet [link](3)[as]3[end link]?";		
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to chat with him, [link]2[end link] to have sex [link]3[end link] to banish him again.";
-		if calcnumber is 1:               [chat]
-			say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
-			say "     He can't remember who - or what - he was before, only that he earned a place in the infernal legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
-			if companion of player is not demon brute:
-				say "      With a sigh, you murmur the magic words Nermine told you, sending him back into the amulet for now.";
-		otherwise if calcnumber is 2:     [sex]
-			say "[DemonBruteSexMenu]";
-	[	otherwise if calcnumber is 3:			[make him work - there could be some situations where a strong pet is useful]
-			say "     You say 'I got a task for you, my pet...'";
-			say "[DemonBruteWorkMenu]";																	]
-		otherwise:                        [banish]	
-			say "     You say 'I changed my mind. Go back into the amulet and rest, demon.' and dangle the amulet in front of his face and murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-			if companion of player is demon brute:
-				now companion of player is nullpet;					
+		if libido of David > 49 and libido of David < 80:	[relationship range]
+			say "     [line break]";		
+			say "     So what do you want to do now? You could chat with him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], talk to him about David [link](3)[as]3[end link], or just banish him back into the amulet [link](4)[as]4[end link]?";		
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 4:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+					break;
+				otherwise:
+					say "Invalid choice.  Type [link]1[end link] to chat with him, [link]2[end link] to have sex, [link]3[end link] to talk about David and [link](4)[as]4[end link] to banish him again.";
+			if calcnumber is 1:               [chat]
+				say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
+				say "     He can't remember who - or what - he was before, only that he earned a place in the infernal legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
+				if companion of player is not demon brute:
+					say "      With a sigh, you murmur the magic words Nermine told you, sending him back into the amulet for now.";
+			otherwise if calcnumber is 2:     [sex]
+				say "[DemonBruteSexMenu]";
+			otherwise if calcnumber is 3:			[talk about David]
+				if libido of David is 50:
+					say "     Taking Brutus aside so you can talk privately, you ask him what is up between him and David. He lowers his head dejectedly and replies 'Master, I feel an urge near him - to throw him down and... do what I used to do. I haven't felt like that since you helped me, but now I bring shame to you.' That last sentence is spoken with an underlying tone of despair. 'And he fears me - I can smell it on him. That... excited me before, but now I hate it. He fears me a lot. Why? I didn't hurt him.' Trying to explain why David is justifiably afraid of demons, you tell Brutus the story about your first meeting with the young soldier.";
+					say "     Brutus azure blue eyes widen as you tell him about the fight. 'He was marked by that demon?' he asks, raising a clawed finger and miming it slawhing. Remembering the bloody streaks on David's chest from when his clothes were ripped off, you nod. An alert and excited tone enters Brutus voice as he says 'I must see his scars, please Master. There could be a danger for him, a possibility that his attacker has put the seal of enslavement on his body.' Looking down again, he continues silently '...and that's the possibility that I'm not shaming my Master after all.'";
+					say "     [line break]";
+					say "     He certainly sounds determined about checking up on David. Maybe you should talk to the young soldier, though getting him to agree to strip before the demon likely won't be too easy...";			
+					now libido of David is 51;
+				otherwise if libido of David is 51:
+					say "     Taking Brutus aside so you can talk privately, you ask him to repeat what he said about David. The demon looks down with a shamed expression, saying 'I feel like I have to... rape him. But at the same time, I don't want to and hate him smelling of fear of me.' His eyes blaze as he continues with a bit of urgency 'With another demon having hurt him, there is the possibility that he's bearing the seal of enslavement. If he has it, he's prepared to become bound to a demon, any demon that finishes the spell by taking him. Taking him hard, making him bleed. He is not safe, if that is so. I have to see his scars, please.' The next bit he murmurs dejectedly 'It might be pulling me to him too, making me feel... bad things. Making me be a disappointment for my Master.'";
+					say "     [line break]";
+					say "     He certainly sounds determined about checking up on David. Maybe you should talk to the young soldier, though getting him to agree to strip before the demon likely won't be too easy...";			
+				otherwise if libido of David is 52:
+					say "     Taking Brutus aside so you can talk privately, you ask him about David and what he did to him. Why he just did it, even if it could hurt - did hurt - him. The demon replies 'I'm sorry master, I should have asked. It is just - I saw him tremble in fear, from my presence, felt the seal drawing me to... do things. That made me remember all those hurt by me, again and again. I just had to stop him from getting hurt.' He flexes his healed hand a bit. 'Now there is no more evil around him. Nothing calling to me. I can look at his body without... bad thoughts. Serve you better.'";
+				otherwise if libido of David is 53:
+					say "     Taking Brutus aside so you can talk privately, you ask him what he thinks about David. The demon replies 'He is my friend', his lips drawing upward to show one of his happy tooth-filled smiles. He gets a glum expression on his face for a second as he adds 'My first friend, ever', then shakes his head, throwing off of the unhappy mood. 'I'm very happy to know David - he's nice, friendly and doesn't fear me.' The demon waves his hand in the air as he says 'He looks nice, maybe a bit small - I could just pick him up. But sometimes that can be good too, when you...' A somewhat vacant look comes into his eyes as he imagines something, his large hands moving into position in front of him as if they were holding someone.";
+					say "     One look at his [if DemonBruteStatus is 0 or DemonBruteStatus is 1]quickly hardening cock[otherwise]soon drippingly wet pussy[end if] and the reflexive tensing of his hip muscles makes obvious to you where Brutus mind just went. Clearing your throat, you bring the demon back to reality. He drops his hands to his sides, saying 'Err.. sorry, master. As I was saying, David is a nice friend. Really nice.'";
+				otherwise if libido of David is 54:
+					say "     <talk after he had sex with David - to be written later>";
+			otherwise:                        [banish]	
+				say "     You say 'I changed my mind. Go back into the amulet and rest, Brutus.' and murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
+				if companion of player is demon brute:
+					now companion of player is nullpet;				
+		otherwise:			
+			say "     [line break]";		
+			say "     So what do you want to do now? You could chat with him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], or just banish him back into the amulet [link](3)[as]3[end link]?";		
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				otherwise:
+					say "Invalid choice.  Type [link]1[end link] to chat with him, [link]2[end link] to have sex [link]3[end link] to banish him again.";
+			if calcnumber is 1:               [chat]
+				say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
+				say "     He can't remember who - or what - he was before, only that he earned a place in the infernal legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
+				if companion of player is not demon brute:
+					say "      With a sigh, you murmur the magic words Nermine told you, sending him back into the amulet for now.";
+			otherwise if calcnumber is 2:     [sex]
+				say "[DemonBruteSexMenu]";
+		[	otherwise if calcnumber is 3:			[make him work - there could be some situations where a strong pet is useful]
+				say "     You say 'I got a task for you, my pet...'";
+				say "[DemonBruteWorkMenu]";																	]
+			otherwise:                        [banish]	
+				say "     You say 'I changed my mind. Go back into the amulet and rest, demon.' and dangle the amulet in front of his face and murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
+				if companion of player is demon brute:
+					now companion of player is nullpet;					
 	otherwise:	[original, evil Brutus]
 		say "     So what do you want to do now? You could mock him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], or just banish him back into the amulet [link](3)[as]3[end link]?";		
 		now calcnumber is 0;
