@@ -26,9 +26,9 @@ Instead of resolving a Garage Demon:
 		say "Choice? (1-3)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1:
-			say "[haleventtalk];
+			say "[haleventtalk]";
 		otherwise if calcnumber is 2:
-			say "[haleventfight];
+			say "[haleventfight]";
 		otherwise if calcnumber is 3:
 			say "     Deciding that it is not worth the risk of getting too close to his massive club, you slip away quietly.  You make a mental note to give the area around here plenty of clearance to avoid accidentally running into him.";
 			now Garage Demon is resolved;
