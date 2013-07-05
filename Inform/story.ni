@@ -5984,6 +5984,7 @@ Include Frank by Stripes.
 Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Icarus by Stripes.
+Include Hayato by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Blanche by Stripes.
