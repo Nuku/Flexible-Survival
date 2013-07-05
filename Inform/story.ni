@@ -5,15 +5,15 @@ Book 0 - Pre game prep stuff
 Release along with an interpreter.
 Use memory economy.
 Use fast route-finding.
-Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 600000.
+Use MAX_INDIV_PROP_TABLE_SIZE of 550000.
+Use MAX_PROP_TABLE_SIZE of 650000.
 use MAX_STATIC_DATA of 2500000.
-Use MAX_OBJ_PROP_COUNT of 128.
+Use MAX_OBJ_PROP_COUNT of 155.
 use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
-use ALLOC_CHUNK_SIZE of 155000.
+use ALLOC_CHUNK_SIZE of 160000.
 use SYMBOLS_CHUNK_SIZE of 15000.
-use MAX_OBJECTS of 1150.
+use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
 Use MAX_ZCODE_SIZE of 1000000.
