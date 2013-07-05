@@ -882,7 +882,8 @@ An everyturn rule:			[you can just wait for them to talk too]
 		say "     [line break]";
 		say "			[DavidEricTalk]";
 	
-after of going to Bunker while hp of David is 4 and companion of player is demon brute:  [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while hp of David is 4 and companion of player is demon brute:  [David reacts when the player comes in with the demon brute pet]
+	move player to Bunker;
 	if libido of David is 0:  [first time David sees the player with a demon brute]
 		if DBCaptureQuestVar is 5: [original, evil Brutus]
 			say "     As you enter the bunker with your demon brute pet in tow and David spots it, he jumps up from where he was sitting on one of the many cots and shouts 'Watch out, there's a dem...', then suddenly falls silent as he realizes the big creature is following you and controlled. 'What the fuck?' he says, still a bit shocked and wide-eyed. Explaining that you've got him tightly controlled and the demon can't hurt him, you assure David that he can calm down. The young soldier accepts your word on it, but still moves to distance himself from the demon brute as far as possible.";	
