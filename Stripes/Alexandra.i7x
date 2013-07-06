@@ -521,11 +521,17 @@ to say policestationdesc:
 		say "     The directions from Alexandra lead you down a side street just off from a major intersection.  While there's some mutant activity along those streets, the side street is thankfully bare of trouble.  Clearly the policewoman's presence has at least driven off the feral creatures right around the station for the moment.";
 		now hp of Alexandra is 51;
 	say "     The police station itself is one of the newer, smaller sort.  It is only a few stories tall and many of its walls are mirrored glass above the first floor while the ground floor has a stone facade with reinforced windows and heavy doors.  It would be quite secure, had it not needed to contend with an outbreak of monsters.  Large sections of the upper floor windows have been shattered and the armoured doors don't look like they'll quite close properly anymore, they've been so warped and bent.  The parking lot is mostly empty of cars, though there are a few wrecked cruisers still stained inside with sexual fluids.";
-	say "     Inside, you find that the destruction is not just to the outside of the building, though Alexandra's made some effort to clean up, pushing aside or throwing out ruined desks and filing cabinets.  She's set up a cot for herself next to one of the intact desks.";
-	say "     [link]North[end link] leads out of the station and back into the city.";
+	if hp of Alexandra < 57:
+		say "     Inside, you find that the destruction is not just to the outside of the building, though Alexandra's made some effort to clean up, pushing aside or throwing out ruined desks and filing cabinets.  She's set up a cot for herself next to one of the intact desks.";
+	otherwise:
+		say "     Some of the destruction inside has been cleaned up by this point, with most of the ruined furniture removed.  The walls and floors have been cleaned by Jimmy's enthusiastic helpfulness.  Alexandra has a cot for herself set up next to one of the intact desks.";
+	say "     [link]North[end link] leads out of the station and back into the city while [link]east[end link] heads into the locker rooms.";
 
 to say policelockerdesc:
-	say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
+	if hp of Alexandra < 57:
+		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
+	otherwise:
+		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
 
 
 Section 7 - Good Alexandra
@@ -545,6 +551,8 @@ to say alexandratalk_gg:
 		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over completely, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
+	otherwise if hp of Alexandra < 56 and a random chance of 1 in 3 succeeds:
+		say "[alexandra_supplies]";
 	otherwise if hp of Alexandra > 51 and a random chance of 1 in 3 succeeds and Alexandrastory is false:
 		say "     Alexandra leans back in her chair and rubs her brow.  'My parents were criminals, doing drugs and committing petty crimes to pay for the habit.  It wasn't a very good home to grow up in, so I was taken away by Child Services when they were finally caught.  That wasn't much better, but it let me learn that I didn't have to be like them.  When I grew up, I decided to become a police officer and tried my best to be an example to others,' she says, subconsciously sitting back up straighter.";
 		say "     'I told myself that my parents being criminals didn't matter and that I didn't need to end up like them.  I think that drive to be [']a good and moral person['] helped motivate me to stay sane.  At least for a while,' she adds, rubbing her brow.  'Things were starting to get rather confused towards the end.  Beating up the mutants.  Writing them tickets.  I was getting so worked up about trying to hold the city together that I was probably going to crack entirely soon.  So I'm really glad you came along when you did.  I really appreciate you talking some sense into me, that's for sure.  Uggh... I'm tired of talking about this stuff.  I'm going to do a quick walkaround to clear my head,' she says with a growl as she hops up out of her chair and heads off, a hint of canine arousal in the air in the wake of her departure.";
@@ -556,10 +564,110 @@ to say alexandratalk_gg:
 
 
 to say alexandratalk_gg1:
-	if hp of Alexandra is 52:
+	if hp of Alexandra < 56:
 		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
-	otherwise if hp of Alexandra is 53:
-		say "...";		[***]
+	otherwise if hp of Alexandra is 56:
+		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Thanks again for those supplies.  It should make things a lot easier once people start taking shelter here.'[at random]";
+	otherwise:
+		say "     [one of]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for all your help around here.  I don't think I'd have been able to pull this off alone.  You've been a good friend,' she says with a smile and a funny look before turning her attention to some of her notes.[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Good work finding survivors.  If you locate others, don't forget that this is a safe place for them.  We'd be happy for more company here,' she says with a grin.[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
+[		say "***";		]
+
+to say alexandra_supplies:
+	if hp of Alexandra is 52:
+		say "     'I've started turning the police station into a defended shelter for those who need it, but we'll need some supplies for those too weak or scared to forage.  Also, if we've already got a good stockpile, it'll be easier to convince people to come here.  I'm sorry to trouble you with this, but I'd really appreciate it if you could scavenge some extra supplies for me.  I've already started, but another six meals and six days worth of fresh water would really help.'";
+		if carried of food >= 6 and carried of water bottle >= 6:
+			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.'  She gives you a quick kiss on the cheek, then realizes what she's done.  'Ah... umm...'  She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
+				decrease carried of food by 6;
+				decrease carried of water bottle by 6;
+				increase score by 25;
+				now hp of Alexandra is 56;
+			otherwise:
+				say "     Not wanting to part with your much-needed supplies, you politely tell her you'll be on the lookout for additional supplies.  If you get enough for your own needs, perhaps you can help her out then.";
+				now hp of Alexandra is 53;
+		otherwise if carried of food >= 6:
+			say "     Having the food supplies she needs already in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
+				decrease carried of food by 6;
+				increase score by 10;
+				now hp of Alexandra is 54;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+				now hp of Alexandra is 53;
+		otherwise if carried of water bottle >= 6:
+			say "     Having the water supplies she needs already in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
+				decrease carried of water bottle by 6;
+				increase score by 10;
+				now hp of Alexandra is 55;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+				now hp of Alexandra is 53;
+		otherwise:
+			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0 or carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
+			now hp of Alexandra is 53;
+	otherwise if hp of Alexandra is 53:	[gave neither yet]
+		say "     'I was wondering if you'd had any luck finding those supplies we'll need here.  Like I said, I could use another 6 food and 6 water rations to improve the stockpiles I've got.  Did you manage to find what I need?'";
+		if carried of food >= 6 and carried of water bottle >= 6:
+			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.'  She gives you a quick kiss on the cheek, then realizes what she's done.  'Ah... umm...'  She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
+				decrease carried of food by 6;
+				decrease carried of water bottle by 6;
+				increase score by 25;
+				now hp of Alexandra is 56;
+			otherwise:
+				say "     Not wanting to part with your much-needed supplies, you politely tell her you'll be on the lookout for additional supplies.  If you get enough for your own needs, perhaps you can help her out then.";
+		otherwise if carried of food >= 6:
+			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
+				decrease carried of food by 6;
+				increase score by 10;
+				now hp of Alexandra is 54;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+		otherwise if carried of water bottle >= 6:
+			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.";
+				decrease carried of water bottle by 6;
+				increase score by 10;
+				now hp of Alexandra is 55;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+		otherwise:
+			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0 or carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
+	otherwise if hp of Alexandra is 54:	[already gave food]
+		say "     'I was wondering if you'd had any luck finding those supplies we'll need here.  Thanks again for the food you brought, but like I said, I could use another 6 water rations to improve the stockpiles I've got.  Did you manage to find what I need?'";
+		if carried of water bottle >= 6:
+			say "     Having the water supplies she needs in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
+				decrease carried of water bottle by 6;
+				increase score by 10;
+				now hp of Alexandra is 56;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+		otherwise:
+			say "     Lacking the necessary supplies she needs at the moment, you [if carried of water bottle > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
+	otherwise if hp of Alexandra is 55:	[already gave water]
+		say "     'I was wondering if you'd had any luck finding those supplies we'll need here.  Thanks again for the water you brought, but like I said, I could use another 6 food rations to improve the stockpiles I've got.  Did you manage to find what I need?'";
+		if carried of food >= 6:
+			say "     Having the food supplies she needs in your pack, shall you give them over to her?";
+			if the player consents:
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.  Ah... umm...'  She blushes at her ears and takes the supplies, hurrying off towards the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
+				decrease carried of food by 6;
+				increase score by 10;
+				now hp of Alexandra is 56;
+			otherwise:
+				say "     Not wanting to part with your own supplies, you politely tell her you'll be on the lookout for some.  If you get enough for your own needs, perhaps you can help her out then.";
+		otherwise:
+			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
+
 
 
 [ hp of Alexandra ]
@@ -571,6 +679,14 @@ to say alexandratalk_gg1:
 [ 4 = Gave birth ]
 [ 5 = Preggers again ]
 [ 50+ = Good Alexandra ]
+[ 50 = At police station, no visit ]
+[ 51 = Been to police station ]
+[ 52 = Talked ]
+[ 53 = Supply request: food/water needed ]
+[ 54 = Food given/water needed ]
+[ 55 = Water given/food needed ]
+[ 56 = Both given ]
+[ 57 = Brought in a survivor ]
 
 [ lust of Alexandra ]
 [ 0 = not preggers ]
@@ -744,6 +860,8 @@ to say A_NPC17:	[Xerxes]
 
 Section 10 - Tasks and Hints
 
+Part 0 - Setup
+
 AT_Matt is a truth state that varies.  AT_Matt is usually false.
 AT_Mouse is a truth state that varies.  AT_Mouse is usually false.
 AT_Sandra is a truth state that varies.  AT_Sandra is usually false.
@@ -756,6 +874,7 @@ AT_Lisa is a truth state that varies.  AT_Lisa is usually false.
 AT_Diego is a truth state that varies.  AT_Diego is usually false.
 AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
 AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
+AT_Jimmy is a truth state that varies.  AT_Jimmy is usually false.
 no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
 
 
@@ -768,12 +887,17 @@ to AlexandraTaskChat:
 	if Hungry Piggy is unresolved and AT_Philip is false, add 5 to AlexandraTask;
 	if AT_RLD is false, add 6 to AlexandraTask;
 	if Hidden Kitty is unresolved and AT_Sven is false and AT_RLD is true, add 7 to AlexandraTask;
-	if Policeman is unresolved and AT_Marks is false and AT_RLD is true, add 8 to AlexandraTask;
+	if Policeman is unresolved and AT_Marks is false and AT_RLD is true, add 8 to AlexandraTask;	[***]
 	if Mouse Taur is unresolved and AT_Lisa is false and AT_RLD is true, add 9 to AlexandraTask;
 	if AT_Diego is false, add 10 to AlexandraTask;
 	if Gryphon Guard is unresolved and AT_Qytat is false, add 11 to AlexandraTask;
 	if Zoo Entrance is unknown, add 12 to AlexandraTask;
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
+	if AT_Jimmy is false and guy is not banned and hp of Alexandra >= 56:
+		if hp of Jimmy is 0:
+			add { 50, 50, 50 } to AlexandraTask;
+		otherwise:
+			add 50 to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
@@ -792,7 +916,10 @@ to AlexandraTaskChat:
 		if entry 1 of AlexandraTask is 11, say "[A_Task11]";
 		if entry 1 of AlexandraTask is 12, say "[A_Task12]";
 		if entry 1 of AlexandraTask is 13, say "[A_Task13]";
+		if entry 1 of AlexandraTask is 50, say "[A_Task50]";
 
+
+Part 1 - Hints (<50)
 
 to say A_Task01:
 	say "     'There a lab in the city that seems to still be active.  They seem to know a fair bit about what's going on in the city, but they were really tight-lipped because I'm a cop.  You might have better luck finding out what's going on.  I'd like you to go there and check it out.  Whatever they're doing, they probably need some help.  You might be able to get some info if you go along with it.'";
@@ -828,7 +955,7 @@ to say A_Task07:
 	now AT_Sven is true;
 
 to say A_Task08:
-	say "     'While I was searching around in the red light district, I ran into another cop.  At first, I was really hopeful that we'd be able to work together and do more to help out, but he had other plans.  I tried to restrain him, but we were pretty evenly matched and he eventually pulled out some tear gas.  If you run into a [bold type]policeman[roman type] down there, don't trust that tiger cop.  He may have been a cop once, but he certainly doesn't act that way anymore.'";
+	say "     'While I was searching around in the high rise district, I ran into another cop.  At first, I was really hopeful that we'd be able to work together and do more to help out, but he had other plans.  I tried to restrain him, but we were pretty evenly matched and he eventually pulled out some tear gas.  If you run into a [bold type]policeman[roman type] down there, don't trust that tiger cop.  He may have been a cop once, but he certainly doesn't act that way anymore.'";
 	now AT_Marks is true;
 
 to say A_Task09:
@@ -850,6 +977,25 @@ to say A_Task12:
 to say A_Task13:
 	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type].  They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone.  Be on the lookout for them, but be ready for a fight.'";
 	now AT_Sarah is true;
+
+
+Part 2 - Tasks (50+)
+
+to say A_Task50:	[See Jimmy.i7x for event and NPC content]
+	if hp of Jimmy is 0:
+		say "     'Earlier, I'd tried tracking down some help from the government, but the area around the capitol building has been destroyed.  We'd gotten a sketchy report that night of a volcanic eruption near the State Capitol Building, but we could hardly believe it.  But when I went there looking for help after the outbreak, it turned out to be true.  Thankfully, it wasn't large eruption, but it was enough to burn down much of the immediate area.  Strangely, the soot and ash in the air still lingers around that part of the city, but hasn't drifted elsewhere.'  [if Approaching the Capitol Building is unknown]She informs you of a fairly safe route you can take to get into the area[otherwise]She pauses for a moment, thinking about the odd behaviour of the ash cloud there[end if].";
+		say "     'Much of the remaining population in the area has been turned into automatons, metal-skinned people without minds or emotions past their programmed lusts.  I wasn't able to discover much more before leaving the area, but I'd like you to go check it out and see if you can look into the [bold type]automaton activity[roman type] there.  They seem to be up to something, but I wasn't able to figure it out.  But be careful, the creatures in that part of the city are particularly strange and dangerous.'";
+		now Approaching the Capitol Building is known;
+		now Government Assistance is resolved;
+		now Automaton Activity is unresolved;
+		now hp of Jimmy is 1;
+	otherwise if hp of Jimmy is 1:
+		say "     'Have you had a chance to look into the [bold type]automaton activity[roman type] around the Capitol Building?  Hopefully you'll have better luck at it than I did.  I can smell that they're up to something,' adds says, tapping her muzzle.";
+	otherwise if hp of Jimmy is 2:
+		say "     Having told Alexandra about what happened with the automatons and the corgi, she's concerned for the little fellow.  'A small guy like that won't be able to stand up to the monsters roaming around there.  You should go back there and look for him as soon as you get the chance.'";
+	otherwise:
+		say "     'Good work rescuing Jimmy from those automatons.  He wouldn't have been able to get out of that situation without your timely assistance.  He's great to have around; really helps with morale and keeping this place clean.  He's always so helpful.";
+		now AT_Jimmy is true;
 
 
 Section 11 - Endings
