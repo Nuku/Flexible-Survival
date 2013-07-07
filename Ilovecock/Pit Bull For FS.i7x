@@ -128,6 +128,141 @@ to say losetopitbull_m:
 
 
 To say beatthepitbull:
+	now sextablerun is 0;
+	let randompitbullchoice be a list of numbers;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Receive fellatio";
+		now sortorder entry is 1;
+		add 1 to randompitbullchoice;
+		if cock length of player < 18:
+			if pitbullgender is 1:
+				choose a blank row in table of fucking options;
+				now title entry is "Give vaginal";
+				now sortorder entry is 3;
+				add 3 to randompitbullchoice;
+			choose a blank row in table of fucking options;
+			now title entry is "Give anal";
+			now sortorder entry is 4;
+			if anallevel is not 1, add 4 to randompitbullchoice;
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Receive cunnilingus";
+		now sortorder entry is 2;
+		add 2 to randompitbullchoice;
+		if pitbullgender is 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Receive vaginal";
+			now sortorder entry is 6;
+			add 6 to randompitbullchoice;
+		if cocks of player is 0 and pitbullgender is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Scissoring";
+			now sortorder entry is 5;
+			add 5 to randompitbullchoice;
+	if pitbullgender is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Receive anal";
+		if anallevel is not 1, now sortorder entry is 7;
+		add 7 to randompitbullchoice;
+	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess";
+	if ( humanity of player - libido of player ) < 0 and (cocks of player > 0 or cocks of player > 0):
+		say ". Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe.  You immediately remove what attire might obstruct your tainted endeavour and advance upon them.";
+		sort randompitbullchoice in random order;
+		if entry 1 of randompitbullchoice is 1, say "[pitbull_vsex1]";
+		if entry 1 of randompitbullchoice is 2, say "[pitbull_vsex2]";
+		if entry 1 of randompitbullchoice is 3, say "[pitbull_vsex3]";
+		if entry 1 of randompitbullchoice is 4, say "[pitbull_vsex4]";
+		if entry 1 of randompitbullchoice is 5, say "[pitbull_vsex5]";
+		if entry 1 of randompitbullchoice is 6, say "[pitbull_vsex6]";
+		if entry 1 of randompitbullchoice is 7, say "[pitbull_vsex7]";
+	otherwise if libido of player >= 30 and (cocks of player > 0 or cocks of player > 0):
+		say ". As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun.";
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Pass on sex[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber is 0:
+				now sextablerun is 1;
+				say "Reining in your lust, you decide against such an act and depart from the beast, returning from whence you came.";
+			otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: Is this what you want?";
+				if player consents:
+					let tempnum be sortorder entry;
+					now sextablerun is 1;
+					if tempnum is 1:
+						say "[pitbull_vsex1]";
+					otherwise if tempnum is 2:
+						say "[pitbull_vsex2]";
+					otherwise if tempnum is 3:
+						say "[pitbull_vsex3]";
+					otherwise if tempnum is 4:
+						say "[pitbull_vsex4]";
+					otherwise if tempnum is 5:
+						say "[pitbull_vsex5]";
+					otherwise if tempnum is 6:
+						say "[pitbull_vsex6]";
+					otherwise if tempnum is 7:
+						say "[pitbull_vsex7]";
+	otherwise:
+		say ". Satisfied with your victory, and feeling that you might not require anything from them further, you depart from the beast.";
+
+
+to say pitbull_vsex1:		[receive fellatio]
+	say "     Pulling the pit bull upright, you offer [if cocks of player > 1]one of [end if]your exposed, [cock of player] dick[smn] to them. [if pitbullgender is 2]His expression one of ill-regard to this prospect, your compelled to grind the hardening, [cock size desc of player] organ against his face until he obliges you[otherwise]A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of player] thing until she'll reluctantly oblige[end if]. [if cock length of player > 18]Much too massive to abide, the beast is relegated to offering a tongue's lone, imposed affection[otherwise]Tongue's imposed affection offered against it's length, the beast follows up with their lip's embrace[end if], organ now slick with a mix of saliva and pre.";
+	say "     [if pitbullgender is 2]Prior restraint slowly dissolved in the wake of his own, rising need, he offers up tainted moans as he[otherwise]Not particularly happy with this arrangement, though too weak to offer up any real protest, she growls as she[end if] tastes your emergent fluids, [if pitbullgender is 2]his[otherwise]her[end if] audible regard vibrating against your length. [if pitbullgender is 2]Stroking himself as he[otherwise]Perpetual grimace her regard as she[end if] attends your needs, [if pitbullgender is 2]it's not long before[otherwise]it takes some time until[end if] you reach your bliss, [if cock length of player > 18]dousing the canine with your [cum load size of player] payload[otherwise]forcing the canine to swallow your [cum load size of player] payload[end if].";
+	say "     [if pitbullgender is 2]Furiously stroking himself in the wake of this, he spends himself all over the ground soon thereafter, left in a lustful haze as you inevitably [otherwise]Disdainfully spitting out your seed, you let the grumpy creature[end if] depart, tainted need satisfied.";
+
+to say pitbull_vsex2:		[receive cunnilingus]
+	say "     Pulling the pit bull upright, you offer [if cunts of player > 1]one of [end if]your exposed, [bodytype of player] cunt[sfn] to them. [if pitbullgender is 2]His[otherwise]Her[end if] expression one of ill-regard to this prospect, your compelled to grind the dripping, [cunt size desc of player] portal against [if pitbullgender is 2]his[otherwise]her[end if] face until [if pitbullgender is 2]he[otherwise]she[end if] obliges you. Tongue's imposed affection offered against it's supple lips, it inevitably descends upon its depths, portal now slick with a mix of saliva and sexual fluids[if cocks of player > 2], your exposed dicks driven hard for wont of attention, forcing your hands to occupy two of them[otherwise if cocks of player is 2]your exposed dicks driven hard for wont of attention, forcing your hands to occupy both of them[otherwise if cocks of player is 1]your exposed dick driven hard for wont of attention, forcing one of your hands to occupy it[end if].";
+	say "      Prior restraint slowly dissolved in the wake of [if pitbullgender is 2]his[otherwise]her[end if] own, rising need, [if pitbullgender is 2]he[otherwise]she[end if] offers up tainted moans as [if pitbullgender is 2]he[otherwise]she[end if] tastes your wanton honey, [if pitbullgender is 2]his[otherwise]her[end if] audible regard vibrating against this yielding hole. Stroking [if pitbullgender is 2]him[otherwise]her[end if]self as [if pitbullgender is 2]he[otherwise]she[end if] attends your needs, it's not long before you reach your bliss, [if cocks of player > 0]cock[smn] exploding with gouts of cum, painting the canine[otherwise]dousing the canine's face[end if] with your release.";
+	say "     Furiously [if pitbullgender is 2]strok[otherwise]fondl[end if]ing [if pitbullgender is 2]him[otherwise]her[end if]self in the wake of this, [if pitbullgender is 2]he[otherwise]she[end if] spends [if pitbullgender is 2]him[otherwise]her[end if]self all over the ground soon thereafter, left in a lustful haze as you inevitably depart, tainted need satisfied.";
+
+to say pitbull_vsex3:		[give vaginal]
+	say "     Pulling the pit bull upright, you offer [if cocks of player > 1]one of [end if]your exposed, [cock of player] dick[smn] to her. A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of player] thing until she'll reluctantly oblige. Tongue's imposed affection offered against its length, the beast follows up with their lip's embrace, organ now slick with a mix of saliva and pre.";
+	say "     Satisfied with her work, you pull yourself free of the canine before pushing her into her back. Adjusting her positioning until you might mount her proper, [if cock length of player > 11]she's not particularly happy about the prospect of being impaled by the impressive tool[otherwise]low growl her regard to the plans you have in store for her[end if], not that she has any say in the matter. Slowly, you sink your [cock of player] dick into the folds of her supple flesh, frame tense with ill-regard for this intrusion, it takes [if cock length of player >= 12]some time until she's properly loosened up for[otherwise]but a moment before her flesh yields to[end if] your endeavours.";
+	say "     [if scalevalue of player > 3]Larger frame eclipsing her own, she rocks[otherwise]Rocking[end if] to-and-fro under your weight as you fuck her proper, [if scalevalue of player > 3]remaining unrelenting[otherwise]she remains unrelenting[end if] in her audible disdain for your abuse, even as her stuffed hole slickens with tainted approval in the wake of your rising fervor. Firmly pinned to the ground, your grip gradually tightens until the ponderous weight of your imminent bliss, sweat-slicked form ill-abiding embrace for the canine, it's not long before your cry out, [if cockname of player is listed in infections of knotlist]tying the beast as your [cum load size of player] load floods her depths[otherwise][cum load size of player] load flooding her depths[end if][if cocks of player > 2], your exposed members staining her fur[otherwise if cocks of player is 2], your exposed member staining her fur[end if].";
+	say "     [if cock length of player > 11 or cockname of player is listed in infections of knotlist]Wrenching[otherwise]Pulling[end if] yourself free of her hole, you let the grumpy canine crawl off as you clean yourself up, now satisfied.";
+
+to say pitbull_vsex4:		[give anal]
+	say "     The pit bull regards you with a beleaguered growl as you pull [if pitbullgender is 2]his[otherwise]her[end if] weakened frame to expose [if pitbullgender is 2]his[otherwise]her[end if] taut and muscled ass before you";
+	if pitbullgender is 2 and cock length of player > 11:
+		say ". Growls diminished into whimpers as you grind [if cocks of player > 1]one of [end if]your [cock size desc of player], hardening dick[smn] between his exposed cheeks, no doubt intimidated by your impressive size";
+	otherwise if pitbullgender is 1 and cock length of player > 11:
+		say ". Growls growing louder as you grind [if cocks of player > 1]one of [end if]your [cock size desc of player], hardening dick[smn] between her exposed cheeks, no doubt she challenges the prospect of being impaled by such an impressive thing";
+	otherwise:
+		say ". Grinding [if cocks of player > 1]one of [end if]your [cock size desc of player], hardening dick[smn] against these exposed cheeks you elucidate upon your tainted plans for the beast, much to their ill-regard to the prospect";
+	say ". Readied, you thrust the tip of your [cock of player] cock into [if pitbullgender is 2]his[otherwise]her[end if] [if cock length of player > 11]ill-abiding [end if] pucker. Strained grunts escaping your lips, it takes a measure of work until the tight hole will yield to such an irreverent intrusion, the canine groaning against your tainted endeavour.";
+	say "     [if scalevalue of player > 3]Ground against the earth under your weight[otherwise]Rocking against the earth[end if], you thrust upon the beast with a rising fervor, alight with this twisted compulsion. Lingering [if pitbullgender is 2]whimpers his[otherwise]growls her[end if] regard, [if pitbullgender is 2]he[otherwise]she[end if] can't help but be influenced by your endeavours, [if pitbullgender is 2]his unattended dick grinding against the ground[otherwise]her unattended cunt staining the ground with its honey[end if]. Pounding [if pitbullgender is 2]his[otherwise]her[end if] ass for a fair measure of time before you find your bliss, [if cockname of player is listed in infections of knotlist]tying your knotted[otherwise]hilting your[end if] organ within [if pitbullgender is 2]his[otherwise]her[end if] bowels[if cock length of player > 11], their cries its punctuation when forced to abide the whole of the impressive thing[end if] as you flood [if pitbullgender is 2]his[otherwise]her[end if] depths with your [cum load size of player] load.";
+	say "     You require a moment to recover before you audibly pull your rod from the canine's hole, letting [if pitbullgender is 2]him[otherwise]her[end if] off, still [if pitbullgender is 2]whimpering as he[otherwise]grumbling as she[end if] nurses [if pitbullgender is 2]his[otherwise]her[end if] [if cock length of player > 11]very [end if]sore and cum-stained ass before you yourself head on your merry way.";
+
+to say pitbull_vsex5:		[scissoring]
+	say "     Pulling the pit bull upright, you offer [if cocks of player > 1]one of [end if]your exposed, [bodytype of player] cunt[sfn] to them. Her expression one of ill-regard to this prospect, your compelled to grind the dripping, [cunt size desc of player] portal against her face until she obliges you. Tongue's imposed affection offered against it's supple lips, it inevitably descends upon its depths, portal now slick with a mix of saliva and sexual fluids.";
+	say "     Not to be too quickly taken over by your wanton need, you free yourself of the canine's slick influence, pushing her onto her back and readjusting your position over the beast, coarse-furred leg pulled entwined with your own[if scalevalue of player > 4], massive[otherwise if scalevalue of player is 4], larger[otherwise if scalevalue of player < 3], smaller[end if] form. Kept in place with one hand, the other assuages your companion, caress of her toned frame and firm breast's inciting moans to escape her muzzle in tainted approval.";
+	say "     Slowly, you start to grind the two of your exposed cunts together, made slick by a mix of saliva and shared sexual fluids, this slick attention intent on fueling this twisted, heated fervor further. Growls of immense pleasure her regard for your endeavours, cementing your lascivious dominion over the beast, though you cannot help but moan in the wake of such sensory delight. [if scalevalue of player > 3]Ponderous w[otherwise]W[end if]eight of your lust bearing down on her, your rising, shared heat radiates out into the [if daytimer is day]day[otherwise]night[end if] sky, the loud, irreverent sounds of your sex its companion.";
+	say "     It's not long before the two of you reach the ultimate consummation of your writhing, sweat-slicked endeavours, wracking the two of you with the throes of sapphic bliss. [If scalevalue of player > 3]Larger form c[otherwise]C[end if]rumpling under the weight of exhaustion[if scalevalue of player > 4], you take some care as to not crush her under your weight[end if], eventually recovering enough to pull yourself free. The canine appears to still be too battered and tired to go anywhere, so you choose to leave her to her own business, gathering what you might have put aside and departing.";
+
+to say pitbull_vsex6:		[receive vaginal]
+	say "     Exposing the pit bull's crotch to the open air, you offer a hand in twisted affection, stroking his sheathed tool until it exposes itself before you. Whimpering moans the beast's regard for this treatment, his prior aggression melting away under the weight of your tainted endeavour. Sufficiently hard, you position your [if scalevalue of player > 3]larger [end if]form over him before slowly lowering the knotted dick on [if cunts of player > 1]one of [end if]your cunt[sfn], [if cunt length of player < 8]strained grunts escaping your lips in the wake of this fairly sizeable intrusion[otherwise]wanton moans your regard for this intrusion[end if].";
+	say "     Organ enveloped within the folds of your [if cunt length of player < 8]tight[otherwise]supple[end if] flesh, you build a gradually rising pace of rocking against his cock, beast [if scalevalue of player > 3]grunting loudly with each descent as he's forced to abide your ponderous weight[otherwise]groaning audibly in the wake of his own growing desire[end if]. [if cocks of player > 0]As you continue, you busy yourself by stroking your own, hardening dick[smn] before your captive audience[otherwise]Gripping him firmly, you continue to writhe against the intrusion offered up by your captive audience[end if], your bliss rapidly on the approach.";
+	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervour reaches its wanton punctuation, impaling yourself upon his knot, your [if cocks of player > 0]dick[smn] painting the canine's form with your [cum load size of player] load[otherwise]grip tightening against the canine[end if] as your needy hole works to milk him dry with a tainted determination. Soon thereafter your endeavours are richly reward, the beast howling under the strain of your climax as he floods the depths of your womb with his thick, virile seed.";
+	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking portal, departing from him as he lays there, a dazed and exhausted mess of a dog.";
+
+to say pitbull_vsex7:		[receive anal]
+	say "     Exposing the pit bull's crotch to the open air, you offer a hand in twisted affection, stroking his sheathed tool until it exposes itself before you. Whimpering moans the beast's regard for this treatment, his prior aggression melting away under the weight of your tainted endeavour. Sufficiently hard, you position your [if scalevalue of player > 3]larger [end if]form over him before slowly your asshole onto the knotted dick, [if scalevalue of player < 3 and player is not twistcapped]strained grunts escaping your lips in the wake of this fairly sizeable intrusion[otherwise]wanton moans your regard for this intrusion[end if].";
+	say "     Organ enveloped within [if scalevalue of player < 3 and player is not twistcapped]tight[otherwise]yielding[end if] flesh of your bowels, you build a gradually rising pace of rocking against his cock, beast [if scalevalue of player > 3]grunting loudly with each descent as he's forced to abide your ponderous weight[otherwise]groaning audibly in the wake of his own growing desire[end if]. [if cocks of player > 0]As you continue, you busy yourself by stroking your own, hardening dick[smn] before your captive audience[otherwise]Gripping him firmly, you continue to writhe against the intrusion offered up by your captive audience[end if], your bliss rapidly on the approach.";
+	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervour reaches its wanton punctuation, impaling yourself upon his knot, your [if cocks of player > 0]dick[smn] painting the canine's form with your [cum load size of player] load[otherwise]grip tightening against the canine[end if] as your needy pucker works to milk him dry with a tainted determination. Soon thereafter your endeavours are richly reward, the beast howling under the strain of your climax as he floods the depths of your bowels with his thick, virile seed.";
+	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking tailpipe, departing from him as he lays there, a dazed and exhausted mess of a dog.";
+
+
+
+[
 	if pitbullgender is 1:
 		if libido of player <= 50:
 			Say "Having taken one too many blows the monster signals her submission and begins to back away.";
@@ -139,8 +274,9 @@ To say beatthepitbull:
 			Say "As she falls you walk up to her squeezing your [breast size desc of player] breasts. She begins to drool at the sight of you and happily obliges you as you remove your pants. She laps heartily at your moist cunt. A few minutes of this and you gently push her over and start to rub your pussy against hers. The feeling is great and after 9 minutes of this you both cry out in orgasm. You help her to her feet and both of you head on your ways.";
 	otherwise:
 		Say "Having taken one too many blows, the monster signals his submission and begins to back away.";
+]
 
-
+[
 To say pit bull attack:
 	if cunts of player > 0 and cocks of player is 0:
 		Say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of player] form. Looking at your crotch she seems pleased with it and drops down and begins to lick. Her rough tongue feels great, for a moment you forget that she just kicked the shit out of you. After a while she stops and throws you onto your back and begins to remove her clothes. She then begins to grind her crotch into yours starting slowly building up to frantically mashing them together like she was trying to start a fire. After a few minutes of this both you and she climax. Leaving you in a puddle of sex while she looks through your clothes for anything of use.";	
@@ -150,6 +286,7 @@ To say pit bull attack:
 		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes. Looking at your crotch she seems disappointed. She gets you up on your knees and pushes you forward and grasps your [cock size desc of player] [cock of player] cock firmly. She begins to pump on it up and down slapping your balls with her palm all the while. Suddenly you feel a sharp sensation in your ass and look back. SHE IS FISTING YOU! It feels like she's using you as a hand puppet. Your eyes roll back in your head in pleasure as you cum. She pulls her hand out in a *POP* and begins to look through your stuff, finding nothing of value";
 	if cocks of player is 0 and cunts of player is 0:
 		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of player] form. Looking at your crotch she beholds absolutely nothing. She looks surprised and thinks for a moment, and then walks off, seeing nothing she likes.";
+]
 
 to say pitbulldesc:
 	choose row monster from the table of random critters;
