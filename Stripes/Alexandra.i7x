@@ -524,7 +524,7 @@ to say policestationdesc:
 	if hp of Alexandra < 57:
 		say "     Inside, you find that the destruction is not just to the outside of the building, though Alexandra's made some effort to clean up, pushing aside or throwing out ruined desks and filing cabinets.  She's set up a cot for herself next to one of the intact desks.";
 	otherwise:
-		say "     Some of the destruction inside has been cleaned up by this point, with most of the ruined furniture removed.  The walls and floors have been cleaned by Jimmy's enthusiastic helpfulness.  Alexandra has a cot for herself set up next to one of the intact desks.";
+		say "     Some of the destruction inside has been cleaned up by this point, with the worst of the ruined furniture removed.  The walls and floors have been cleaned by Jimmy's enthusiastic helpfulness, though marks from many of the stains remain.  Alexandra has a cot for herself set up next to one of the intact desks.";
 	say "     [link]North[end link] leads out of the station and back into the city while [link]east[end link] heads into the locker rooms.";
 
 to say policelockerdesc:
@@ -532,6 +532,21 @@ to say policelockerdesc:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
 	otherwise:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
+
+
+A person can be policed. A person can be lockered. A person is usually not policed. A person is usually not lockered.
+
+Definition: A person(Called X) is policed:
+	If x is the player, no;
+	if x is Velos, no;
+	if the location of x is Police Station, yes;
+	no;
+
+Definition: A person(Called X) is lockered:
+	If x is the player, no;
+	if x is Velos, no;
+	if the location of x is Police Lockerroom, yes;
+	no;
 
 
 Section 7 - Good Alexandra
@@ -895,9 +910,9 @@ to AlexandraTaskChat:
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
 	if AT_Jimmy is false and guy is not banned and hp of Alexandra >= 56:
 		if hp of Jimmy is 0:
-			add { 50, 50, 50 } to AlexandraTask;
+			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
 		otherwise:
-			add 50 to AlexandraTask;
+			add { 50, 50 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
