@@ -1171,10 +1171,6 @@ Francoismix is a marker.
 when play begins:
 	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Female Husky", "German Shepherd", "Pit bull", "Retriever", "Shemale Smooth Collie", "Ashen Breeder", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
 
-Firebreathlist is a marker. [List of fire breathing creatures, move to story.ni later]
-when play begins:
-	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
-
 to francoisinfect:
 	if Francoismixcleaned is false:
 		if hermaphrodite is banned:

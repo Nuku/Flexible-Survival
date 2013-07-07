@@ -31,6 +31,9 @@ when play begins:
 	add { "Template" } to infections of Taurlist;		[list of tauric infections]
 	add { "Template" } to infections of Knotlist;		[list of cock infections with a knot]
 	add { "Template" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
+	add { "Template" } to infections of Internallist;	[list of infections w/internal male genitals]
+	add { "Template" } to infections of BarbedCocklist;	[List of creatures with a barbed cock]
+	add { "Template" } to infections of Firebreathlist;	[List of fire breathing creatures]
 
 [Sample loss and victory text templates.]
 [Numerous other variations can be found in existing creature files.]

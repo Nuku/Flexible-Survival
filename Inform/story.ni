@@ -1468,6 +1468,14 @@ Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness" } to infections of Internallist;
 
+BarbedCocklist is a marker. [List of creatures with a barbed cock]
+when play begins:
+	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ash Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ash Drakenoid", "sphinx", "Ash Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Cheetah" } to infections of BarbedCocklist; ["Ocelot", "Feline", "Flaming Lynx", "Jaguar", "Snow Leopard", "Felinoid", "Siamese Cat"]
+
+Firebreathlist is a marker. [List of fire breathing creatures]
+when play begins:
+	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
+
 
 Part 2 - Rules
 
