@@ -39,6 +39,7 @@ to say losetodobie1:		[low-lust player loss]
 					say "     She pours some water from a thermos into the lid and passes it to you.  'Don't worry, it's safe,' she says, drinking down the rest.  'Look, your the first stable person I've seen in days.  You try to keep it together, please.  When this is done, I want to know that I've gotten at least one person out of this mess.  I'm holed up in what's left of my station.  You should come by sometime.  I'd really appreciate the company.'";
 					say "     She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance";
 					now dobielibido is -100;
+					now fightoutcome is 19;
 					now Police Station is known;
 					now hp of Alexandra is 50;
 					now area entry is "nowhere";
@@ -47,7 +48,7 @@ to say losetodobie1:		[low-lust player loss]
 					say "Deciding to give it a shot, you try to strike up a conversation with her while responding to her questions.  You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding.  She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond"; 
 					now dobielibido is -1;
 			otherwise:
-				say "     Suspecting that the infection has affected her mind, given how she's transformed and acting, you respond calmly, but are careful not to divulge anything that might put you or the bunker at risk.  As your talking to her, your eyes wander from time to time to her bosom, catching a faint scent of arousal coming from it.  It seems she's feeling the effects of the infection as well.  Perhaps you can take advantage of that when you're better prepared to put her in her place.";
+				say "     Suspecting that the infection has affected her mind, given how she's transformed and acting, you respond calmly, but are careful not to divulge anything that might put you or the bunker at risk.  As your talking to her, your eyes wander from time to time to her bosom, catching a faint scent of arousal coming from her.  It seems she's feeling the effects of the infection as well.  Perhaps you can take advantage of that when you're better prepared to put her in her place.";
 				say "     'Eyes up here,' she growls, noticing your lecherous gaze";
 				now dobielibido is 1;
 		otherwise if dobielibido < 0:
