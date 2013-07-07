@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4.2 - Lockerroom added]
+[Version 4.3 - Starting Tasks added]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -524,7 +524,7 @@ to say policestationdesc:
 	if hp of Alexandra < 57:
 		say "     Inside, you find that the destruction is not just to the outside of the building, though Alexandra's made some effort to clean up, pushing aside or throwing out ruined desks and filing cabinets.  She's set up a cot for herself next to one of the intact desks.";
 	otherwise:
-		say "     Some of the destruction inside has been cleaned up by this point, with most of the ruined furniture removed.  The walls and floors have been cleaned by Jimmy's enthusiastic helpfulness.  Alexandra has a cot for herself set up next to one of the intact desks.";
+		say "     Some of the destruction inside has been cleaned up by this point, with the worst of the ruined furniture removed.  The walls and floors have been cleaned by Jimmy's enthusiastic helpfulness, though marks from many of the stains remain.  Alexandra has a cot for herself set up next to one of the intact desks.";
 	say "     [link]North[end link] leads out of the station and back into the city while [link]east[end link] heads into the locker rooms.";
 
 to say policelockerdesc:
@@ -532,6 +532,21 @@ to say policelockerdesc:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
 	otherwise:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
+
+
+A person can be policed. A person can be lockered. A person is usually not policed. A person is usually not lockered.
+
+Definition: A person(Called X) is policed:
+	If x is the player, no;
+	if x is Velos, no;
+	if the location of x is Police Station, yes;
+	no;
+
+Definition: A person(Called X) is lockered:
+	If x is the player, no;
+	if x is Velos, no;
+	if the location of x is Police Lockerroom, yes;
+	no;
 
 
 Section 7 - Good Alexandra
@@ -557,6 +572,17 @@ to say alexandratalk_gg:
 		say "     Alexandra leans back in her chair and rubs her brow.  'My parents were criminals, doing drugs and committing petty crimes to pay for the habit.  It wasn't a very good home to grow up in, so I was taken away by Child Services when they were finally caught.  That wasn't much better, but it let me learn that I didn't have to be like them.  When I grew up, I decided to become a police officer and tried my best to be an example to others,' she says, subconsciously sitting back up straighter.";
 		say "     'I told myself that my parents being criminals didn't matter and that I didn't need to end up like them.  I think that drive to be [']a good and moral person['] helped motivate me to stay sane.  At least for a while,' she adds, rubbing her brow.  'Things were starting to get rather confused towards the end.  Beating up the mutants.  Writing them tickets.  I was getting so worked up about trying to hold the city together that I was probably going to crack entirely soon.  So I'm really glad you came along when you did.  I really appreciate you talking some sense into me, that's for sure.  Uggh... I'm tired of talking about this stuff.  I'm going to do a quick walkaround to clear my head,' she says with a growl as she hops up out of her chair and heads off, a hint of canine arousal in the air in the wake of her departure.";
 		now Alexandrastory is true;
+	otherwise if hp of Alexandra >= 57 and a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is true:
+		say "     Alexandra leans back in her chair and rubs her brow.  'Things were pretty hard for a while after I was taken away from my neglectful parents.  I had a tough time fitting in, feeling that everyone was judging me, so I did my best to be a good person and prove that I was better than my folks.  I was probably really just trying to prove it to myself.  So when things collapsed during the outbreak, I guess my infected mind started obsessing over that more and more,' she says shaking her head.";
+		say "     'I just kept trying to prove myself and do my best to be a good cop.  But I was getting more and more confused on what that meant in this crazy, over-sexed city.  I'm glad you came along and talked some sense into me before I became another sex-crazy monster.  I've been transformed into a dog woman and I need to learn how to deal with that.  There's nothing to be gained from pretending this crisis will go away if I keep acting like a police officer.  I need to try helping people get through this mess instead of trying to act like the city hasn't fallen completely apart";
+		say ".'";
+		now Alexandrastory2 is true;
+[***		if hp of Alexandra > xxx:
+			say ".'  Alexandra gets out of her chair and grabs you by the wrist, pulling you in close.  'Enough talk for now though.  Those 'dog woman urges' could use some relief.'";
+			attempttowait;
+			now Alexandrastory2 is true;
+			now lastfuck of Alexandra is turns + 8;
+			try fucking Alexandra;				]
 	otherwise if hp of Alexandra > 51 and no_AlexandraTask - turns > 3 and a random chance of 1 in 3 succeeds:
 		AlexandraTaskChat;
 	otherwise:
@@ -895,9 +921,9 @@ to AlexandraTaskChat:
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
 	if AT_Jimmy is false and guy is not banned and hp of Alexandra >= 56:
 		if hp of Jimmy is 0:
-			add { 50, 50, 50 } to AlexandraTask;
+			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
 		otherwise:
-			add 50 to AlexandraTask;
+			add { 50, 50 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
