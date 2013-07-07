@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4.2 - Lockerroom added]
+[Version 4.3 - Starting Tasks added]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -572,6 +572,17 @@ to say alexandratalk_gg:
 		say "     Alexandra leans back in her chair and rubs her brow.  'My parents were criminals, doing drugs and committing petty crimes to pay for the habit.  It wasn't a very good home to grow up in, so I was taken away by Child Services when they were finally caught.  That wasn't much better, but it let me learn that I didn't have to be like them.  When I grew up, I decided to become a police officer and tried my best to be an example to others,' she says, subconsciously sitting back up straighter.";
 		say "     'I told myself that my parents being criminals didn't matter and that I didn't need to end up like them.  I think that drive to be [']a good and moral person['] helped motivate me to stay sane.  At least for a while,' she adds, rubbing her brow.  'Things were starting to get rather confused towards the end.  Beating up the mutants.  Writing them tickets.  I was getting so worked up about trying to hold the city together that I was probably going to crack entirely soon.  So I'm really glad you came along when you did.  I really appreciate you talking some sense into me, that's for sure.  Uggh... I'm tired of talking about this stuff.  I'm going to do a quick walkaround to clear my head,' she says with a growl as she hops up out of her chair and heads off, a hint of canine arousal in the air in the wake of her departure.";
 		now Alexandrastory is true;
+	otherwise if hp of Alexandra >= 57 and a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is true:
+		say "     Alexandra leans back in her chair and rubs her brow.  'Things were pretty hard for a while after I was taken away from my neglectful parents.  I had a tough time fitting in, feeling that everyone was judging me, so I did my best to be a good person and prove that I was better than my folks.  I was probably really just trying to prove it to myself.  So when things collapsed during the outbreak, I guess my infected mind started obsessing over that more and more,' she says shaking her head.";
+		say "     'I just kept trying to prove myself and do my best to be a good cop.  But I was getting more and more confused on what that meant in this crazy, over-sexed city.  I'm glad you came along and talked some sense into me before I became another sex-crazy monster.  I've been transformed into a dog woman and I need to learn how to deal with that.  There's nothing to be gained from pretending this crisis will go away if I keep acting like a police officer.  I need to try helping people get through this mess instead of trying to act like the city hasn't fallen completely apart";
+		say ".'";
+		now Alexandrastory2 is true;
+[***		if hp of Alexandra > xxx:
+			say ".'  Alexandra gets out of her chair and grabs you by the wrist, pulling you in close.  'Enough talk for now though.  Those 'dog woman urges' could use some relief.'";
+			attempttowait;
+			now Alexandrastory2 is true;
+			now lastfuck of Alexandra is turns + 8;
+			try fucking Alexandra;				]
 	otherwise if hp of Alexandra > 51 and no_AlexandraTask - turns > 3 and a random chance of 1 in 3 succeeds:
 		AlexandraTaskChat;
 	otherwise:
