@@ -79,7 +79,7 @@ to say JaguarWarriorCaptured:
 	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case, Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard earned prize.";
 	if cocks of player > 0:
 		say "     You knock the jaguar's arm away from the display case he's supporting himself with, and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Taking hold of his spotted tail, you pull it towards his hip, exposing his tight ass to you. Even as you release it to grip his body, his tail stays cocked to the side, and you relish in the submissive gesture.";
-		say "     The jaguar makes no attempt to resist as you position your [cock size desc of player] [cock of player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly. You roar in pleasure as you rapidly push yourself to climax holding the jaguar's ass tightly to your body as you unleash your [cum load size of player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside you pull yourself from the jaguar's tight ass and allow him to fall to the floor.";
+		say "     The jaguar makes no attempt to resist as you position your [cock size desc of player] [cock of player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if cockname of player is listed in infections of BarbedCocklist], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax holding the jaguar's ass tightly to your body as you unleash your [cum load size of player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if cockname of player is listed in infections of BarbedCocklist]the jaguar releases one last weak whimper as pull yourself from the his tight ass, your barbs scraping along his inner walls one last time before you allow him to fall to the floor.[otherwise]you pull yourself from the jaguar's tight ass and allow him to fall to the floor.[end if]";
 		say "     You watch with curious interest as the shivering feline rolls to his back, his thick white seed still spilling from his spasming shaft. His cock is now noticeably smaller than it was when you held it in your hand. As the final spurts of his male cum drip from its tip, you watch his once virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
 		say "     Eager to make use of this inviting new opening you lower yourself over the whimpering kitty, aligning your shaft with her new cunt and driving into her before her last orgasm has even subsided. You rumble happily as you pound into the newly minted female feline, taking it slowly this time as you watch the changes ripple outwards from her crotch. Her hips and ass plump out to an attractive new shape, clearly built for childbirth. Her form becomes slim and delicate as the masculine features seem to melt away, extra mass rolling up and across her body to gather at her chest. You tweak and tease her swollen puffy nipples as they swell outward, into large sumptuous breasts. The jaguar mewls up at you plaintively as the changes shift to her face, the once strong masculine features becoming gentle and feminine while long locks of dark hair flow from her head. As the changes come to their end the jaguar yowls out in ecstasy beneath you, her cunt clamping around you tightly as she reaches orgasm once again, driving you to mark her new womb with another powerful climax.";
 		say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
@@ -226,9 +226,81 @@ Instead of conversing the Tehuantl:
 		say "[one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I server, or service, you master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
 
 to say Tehuantlsex:
-	say "Sorry - I don't have proper sex scenes yet! Would you like too see the TG scene again instead?";
-	if the player consents:
-		say "[JaguarWarriorCaptured]";
+	if cocks of player < 1 and cunts of player < 1:
+		say "    As eager as you are to have some fun with your feline pet, you find yourself ill equipped to have any fun with her at the moment. ";
+	otherwise if lastfuck of Tehuantl - turns < 6:
+		say "     'Mmm, as much as I would love my big warrior to make use of [if cocks of player > 0]his[otherwise if cunts of player > 0]her[end if] pussycat again, I think it would be nicer for both of us if we took a break.";
+	otherwise:
+		say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random] you consider having some fun with her.";
+		say "[TehuantlSexMenu]";
+		now lastfuck of Tehuantl is turns;
+
+to say TehuantlSexMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her";
+		now sortorder entry is 1;
+		now description entry is "Make use of your pussy's pussy";
+[	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Anal";
+		now sortorder entry is 2;
+		now description entry is "Use Tehuantl's lovely bottom";
+	if cocks of player > 0::
+		choose a blank row in table of fucking options;
+		now title entry is "Blow Job";
+		now sortorder entry is 3;
+		now description entry is "Have Tehuantl suck your cock";]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Cunnilingus";
+		now sortorder entry is 4;
+		now description entry is "Put your kitty's rough tongue to use";
+[	if cunts of player > 0 or cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "69";
+		now sortorder entry is 5;
+		now description entry is "share in some mutual pleasure with Tehuantl";]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			choose row calcnumber in table of fucking options;
+			say "Confirmation: Would you like to [description entry]?";
+			if player consents:
+				now sextablerun is 1;
+				if title entry is "Fuck her":
+					say "[TehuantlSex_vag]";
+[				otherwise if title entry is "Anal":
+					say "[TehuantlSex_anal]";
+				otherwise if title entry is "Blow Job":
+					say "[TehuantlSex_BJ]";]
+				otherwise if title entry is "Cunnilingus":
+					say "[TehuantlSex_cunni]";
+[				otherwise if title entry is "69":
+					say "[TehuantlSex_69]";]
+		otherwise:
+			say "Invalid Option.";
+
+to say TehuantlSex_vag:
+	say "     Deciding to make use of your pussy's enticing pussy, you drop your gear and approach Tehuantl. She mrowls lustfully as you move closer[if cockname of player is listed in infections of BarbedCocklist], licking her lips as she eyes your barbed cock[end if] before taking your hand as you lead her off to a secluded corner of the loft. Tehuantl moans teasingly as you push her to the floor, her tail flicking with excitement as she rolls onto her back and spreads her legs before you. 'Mmm, my big strong warrior, here to put me in my place again,' she rumbles as her paws drift down her body, caressing her delicate form as they move towards her spread thighs. With the feline's needy cunt on display for you, you waste no more time with foreplay, and pounce on your eager plaything, pinning her to the ground as you aligning your [cock size desc of player] [cock of player] cock with her wet folds.";
+	if cockname of player is listed in infections of BarbedCocklist:
+		say "     Tehuantl moans in pleasure as you begin sinking your barbed shaft into her, obviously delighting in the pleasant sensation of your spines scrape softly along her inner walls. She bites her lip in anticipation as your forward movement slows to a stop, and you feel her entire form tense up slightly as you prepare to withdraw your length. Tehuantl yowls in ecstasy as you begin to pull back, her entire form shivering beneath you as your pointed barbs scrape and tear at her tender flesh, driving her to her first climax before you've ever pulled back completely. Tehuantl's moaning and yowling continues as you pound away at the needy kitty, the feeling of her tight cunt gripping your member so she can be further stimulated by your feline barbs only intensifying your own pleasure with each thrust. You roar in orgasm as your climax strikes, driving your length into her as you grip her body tightly, ensuring she stays firmly impaled by your shaft as you blast shot after shot of your [cum load size of player] load into her spasming cunt.";
+		say     "Spent, you roll off your well fucked kitty, eliciting one more groan from her as your barbs pull out of her body one final time. As you lay there basking in your afterglow Tehuantl snuggles up beside you, resting her head on your chest as she pulls your arm around herself, rumbling happily as she nuzzles against you.";
+	otherwise:
+		say "     Tehuantl rumbles happily as you begin sinking your member into her, her tight cunt grips your shaft delightfully, squeezing your cock even as you begin slowly pulling back. She mewls lustfully as you begin pounding into her eager body, her paws drift up to tease her firm nipples as the rough fucking continues. Soon the pleasant sensations of her tight, squeezing tunnel begin to overwhelm you, and you roar in orgasm as your climax strikes, driving your length into her as you grip her body tightly, ensuring she stays firmly impaled by your shaft as you blast shot after shot of your [cum load size of player] load into her spasming cunt.";
+		say "     Spent, you roll off your well fucked kitty, panting happily as you stretch out on the floor beside her. As you lay there basking in your afterglow Tehuantl snuggles up to you, resting her head on your chest as she pulls your arm around herself, rumbling happily as she nuzzles against you.";
+
+to say TehuantlSex_cunni:
+	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down between your things. She mrowls lustfully as you approach, licking her lips as she watches your fingers slowly part your pussy lips. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl as she approaches on her hands and knees.";
+	say "     Her padded paws tease your inner thighs gently as she positions herself between them, rumbling happily as she begins teasing your glistening folds. You run your hands through her long dark hair as the feeling of her rough tongue making long slow passes across your outer lips sends shivers of delight run through you. Tehuantl's paws drift closer to your drooling pussy as her tongue begins pressing further into you, her soft paw pads rubbing your clit delightfully as her other paw spreads your cunt apart to give her further access to your needy depths. Soon you are moaning in pleasure as your thirsty feline pet pushes her master to a powerful climax, drinking up every drop of your feminine fluids as her talented tongue and paws draw out your orgasm as long as they can.";
+	say "     After lapping up all the sweet juices she can Tehuantl lays back on the floor before you, her paws tenderly playing down her body towards her own dripping snatch. She puts on quite a show for you, mrowling lustfully as she works her fingers into her wet cunt while teasing her nipples and groping her breasts with her free paw, driving herself to several yowling climaxes as you recover from your own.";
 
 [Section 5 - Endings
 
@@ -244,6 +316,13 @@ when play ends:
 				say "     Additional text for a female survivor who can become preggers.";
 			otherwise:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
+
+
+TehuantlCheating is an action applying to one topic.
+understand "TehuantlTest" as TehuantlCheating.
+
+carry out TehuantlCheating:
+	say "[TameTehuantl]";
 ]
 
 Jaguar Warrior ends here.
