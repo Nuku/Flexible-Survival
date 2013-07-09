@@ -247,12 +247,12 @@ to say TehuantlSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "Use Tehuantl's lovely bottom";
-	if cocks of player > 0::
+		now description entry is "Use Tehuantl's lovely bottom";]
+	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow Job";
 		now sortorder entry is 3;
-		now description entry is "Have Tehuantl suck your cock";]
+		now description entry is "Have Tehuantl suck your cock";
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
@@ -278,9 +278,9 @@ to say TehuantlSexMenu:
 				if title entry is "Fuck her":
 					say "[TehuantlSex_vag]";
 [				otherwise if title entry is "Anal":
-					say "[TehuantlSex_anal]";
+					say "[TehuantlSex_anal]";]
 				otherwise if title entry is "Blow Job":
-					say "[TehuantlSex_BJ]";]
+					say "[TehuantlSex_BJ]";
 				otherwise if title entry is "Cunnilingus":
 					say "[TehuantlSex_cunni]";
 [				otherwise if title entry is "69":
@@ -301,6 +301,12 @@ to say TehuantlSex_cunni:
 	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down between your things. She mrowls lustfully as you approach, licking her lips as she watches your fingers slowly part your pussy lips. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl as she approaches on her hands and knees.";
 	say "     Her padded paws tease your inner thighs gently as she positions herself between them, rumbling happily as she begins teasing your glistening folds. You run your hands through her long dark hair as the feeling of her rough tongue making long slow passes across your outer lips sends shivers of delight run through you. Tehuantl's paws drift closer to your drooling pussy as her tongue begins pressing further into you, her soft paw pads rubbing your clit delightfully as her other paw spreads your cunt apart to give her further access to your needy depths. Soon you are moaning in pleasure as your thirsty feline pet pushes her master to a powerful climax, drinking up every drop of your feminine fluids as her talented tongue and paws draw out your orgasm as long as they can.";
 	say "     After lapping up all the sweet juices she can Tehuantl lays back on the floor before you, her paws tenderly playing down her body towards her own dripping snatch. She puts on quite a show for you, mrowling lustfully as she works her fingers into her wet cunt while teasing her nipples and groping her breasts with her free paw, driving herself to several yowling climaxes as you recover from your own.";
+
+to say TehuantlSex_BJ:
+	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down to stroke your [cock size desc of player] [cock of player] cock. She mrowls lustfully as you approach, licking her lips as she watches your pre drip from the tip of your shaft. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl, still stroking yourself as she approaches on her hands and knees.";
+	say "     Tehuantl rumbles eagerly as she takes hold of your cock with one paw, her soft pads gripping your tightly as her other paw moves to fondle your [ball size]. With a smile she leans forward, her feline tongue slipping from her mouth to slowly lick across your glans, [if cockname of player is listed in infections of BarbedCocklist]it's rough surface catching slightly on your pointed barbs [end if]sending shivers of pleasure through your body. Slowly her muzzle descends down your length, her tongue licking and teasing you the entire time as she wraps her lips around your cock.";
+	say "     Tehuantl's eager rumbling only intensifies as she begins bobbing her head up and down your cock[if cockname of player is listed in infections of BarbedCocklist], even as she moans somewhere between pleasure and pain as your barbed shaft scrapes and tears at her soft flesh[end if]. Between her her tight oral grip or your cock, her hungry sucking and the pleasant sensation of her rough tongue sliding across your length Tehuantl quickly pushes you towards your peak. You grip her head tightly as you make a few firm thrusts into her mouth before your entire form tenses up and you blast your think [cum load size of player] load down her throat with a roar of pleasure.";
+	say "     As you slump back in your seat Tehuantl slowly releases your spent shaft, cleaning up the last few stray drops of cum before kissing your glans tenderly and laying back on the floor before you. Her paws drifting down her body towards her own dripping snatch. She puts on quite a show for you, mrowling lustfully as she works her fingers into her wet cunt while teasing her nipples and groping her breasts with her free paw, driving herself to several yowling climaxes as you recover from your own.";
 
 [Section 5 - Endings
 
