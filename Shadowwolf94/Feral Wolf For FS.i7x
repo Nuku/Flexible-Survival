@@ -6,8 +6,6 @@ Version 4 of Feral Wolf For FS by Shadowwolf94 begins here.
 
 Section 1 - Monster Responses
 
-wslevel is a number that varies.  wslevel is usually 2.
-
 fangcount is a number that varies.
 
 FeralWolfdefeat is a number that varies.

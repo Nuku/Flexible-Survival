@@ -88,9 +88,9 @@ to say skunk_attack:
 		now wdam entry is 0;
 		now libido of player is 110;
 	otherwise if Skunk_type is 1:
-		say "[one of]Runs up, bringing her feet forward in a flying kick.[or]Leaps in and bites at your arm.[or]Claws at you with her slender paws.[at random]";
+		say "The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
 	otherwise:
-		say "[one of]Leaps, batting you aside.[or]Leaps in and bites at your arm.[or]Claws at you viciously.[at random]";
+		say "The [one of]giant skunk[or]black and white beast[or]beastial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
 
 to say sblvictorysex:
 	now fightoutcome is 11;
