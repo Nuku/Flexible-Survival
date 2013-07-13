@@ -2996,6 +2996,7 @@ trixiecheating is an action applying to nothing.
 
 understand "trixiecheat" as trixiecheating.
 understand "iwannacheat" as trixiecheating.
+understand "i wanna cheat" as trixiecheating.
 
 check trixiecheating:
 	if Trixie is not visible, say "Only Trixie can help you with that." instead;
@@ -3024,14 +3025,16 @@ carry out trixiecheating:
 			say "[link](9) Access the vore menu[as]9[end link] -  Currently: [bold type][if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type][line break]";
 		otherwise:
 			say "(9) This option is not currently available to your character.[line break]";
+		say "[link](10) Set watersports (WS) content level[as]10[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
+		say "[link](11) Adjust flags[as]11[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-9)> [run paragraph on]";
+			say "Choice? (0-11)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 9:
+			if calcnumber >= 0 and calcnumber <= 11:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 9.";
+				say "Invalid choice.  Pick from 0 to 11.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -3125,6 +3128,10 @@ carry out trixiecheating:
 			try analadjusting;
 		otherwise if calcnumber is 9:
 			try voremenuing;
+		otherwise if calcnumber is 10:
+			try WSadjusting;
+		otherwise if calcnumber is 11:
+			try Flagadjusting;
 		otherwise if calcnumber is 0:
 			say "Exiting menu.";
 			now trixieexit is 1;
@@ -3143,12 +3150,12 @@ understand "anal adjust" as analadjusting.
 understand "analadjust" as analadjusting.
 
 carry out analadjusting:
-	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will have little to no effect during most of game play.  Expect to see it come into use gradually and predominantly in newer content.";
-	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  Please no complaints/whining/requests about these mechanics not being added to any given scene/creature/NPC.  The game comprises about [special-style-1]24 MB[roman type] (and growing) of existing text and code, so we state that you simply have to accept the adjustments when and where they come.  As a note, [bold type]paid requests[roman type] to make these adjustments can be taken on through the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
+	say "[special-style-2]NOTICE[roman type]: This mechanic is a newer addition than most of the content in the game, and so is not in effect everywhere.  While some older content has been adjusted to include checks/adjustments based on it, it is more frequent on newer content.";
+	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  In some cases it will adjust the frequency with which anal scenes will occur for a given encounter.  As a note, [bold type]paid requests[roman type] to make these adjustments to a given character or creature not currently using them can be taken on through the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
 	say "     With that said, choosing:[line break]";
 	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
 	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
-	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
+	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the base scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
 	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -3172,6 +3179,88 @@ carry out analadjusting:
 	otherwise if calcnumber is 4:
 		say "Exiting menu.";
 		say "[line break]";
+
+[-----]
+
+WSlevel is a number that varies.  WSlevel is usually 2.		[normal]
+
+WSadjusting is an action applying to nothing.
+
+understand "adjust WS" as WSadjusting.
+understand "adjustWS" as WSadjusting.
+understand "WS adjust" as WSadjusting.
+understand "WSadjust" as WSadjusting.
+
+carry out WSadjusting:
+	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will have little to no effect during most of game play.  While there is currently little WS content in the game, this mechanic will eventually be tied into them to allow players to adjust its inclusion to their comfort level.  Expect to see it come into use gradually and predominantly in newer content.";
+	say "     This option will allow you to adjust your desired level for watersports (piss play) in the game.  On the whole, such scenes are currently uncommon in the game, but having access to this toggle will allow creators to make its appearance function based on your current setting for it.  This choice will simply be a means of telling specific scenes to provide alternate versions or add/remove portions involving WS content if they have been set to detect it.  In some cases, it will adjust the frequency with which WS scenes will occur for a given encounter.  While most content in the game will not involve WS play, [bold type]paid requests[roman type] can be taken to add these adjustments to a given creature/NPC using the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
+	say "     With that said, choosing:[line break]";
+	say "- [link](1) No WS[as]1[end link] will indicate that you're looking to not see any WS in your game.  This will either skip that portion of the content or pick one of the other available scenes.  Keep in mind that there may be a few scenes where you are asked if you want to be involved in WS and those prompts (and their associated scenes) may still be active, but you can pick the non-activation option for them at that time.  Should you have this setting active and get a WS scene in the game, do prompt us via the forums or blog so we might check on the issue as well - we are still implementing this mechanic.";
+	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with a low level of WS content, should it happen to come up.  Only some creatures/NPCs are active about including WS in their actions, so having this setting will keep their use of it infrequent.";
+	say "- [link](3) Full WS[as]3[end link] will indicate that you're open to view WS more often.  Some WS content may only be accessible via this setting, while in other cases it will raise the frequency of WS being shown.  Similarly, more detail might be thrown into a scene at this level.  Again, the amount of WS content presently in the game is rare, but setting yourself to this level will get the most out of it.";
+	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]No WS[otherwise if anallevel is 2]Standard (Low WS)[otherwise]Full WS[end if][roman type].";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+	if calcnumber is 1:
+		say "You are now set to receive No WS.";
+		now WSlevel is 1;
+	otherwise if calcnumber is 2:
+		say "You are now set to receive the Standard (low) amount of WS content.";
+		now WSlevel is 2;
+	otherwise if calcnumber is 3:
+		say "You are now set to receive Full WS.";
+		now WSlevel is 3;
+	otherwise if calcnumber is 4:
+		say "Exiting menu.";
+		say "[line break]";
+
+[-----]
+
+Flagadjusting is an action applying to nothing.
+
+understand "adjust flags" as Flagadjusting.
+understand "adjustflags" as Flagadjusting.
+understand "flagsadjust" as Flagadjusting.
+understand "flags adjust" as Flagadjusting.
+understand "adjust flag" as Flagadjusting.
+understand "adjustflag" as Flagadjusting.
+understand "flagadjust" as Flagadjusting.
+understand "flag adjust" as Flagadjusting.
+
+carry out Flagadjusting:
+	say "     This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started.  Warded content will not appear unless it is specifically hunted for or is called upon by events or quests.  If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags.  Now that the game has started, you cannot change whether something is banned outright.";
+	let flagexit be 0;
+	while flagexit is 0:
+		let x be 0;
+		repeat with Q running through flags:
+			if Q is warded:
+				increase x by 1;
+				say "- [link]([x]) [Q][as][x][end link]: [special-style-1]WARDED[roman type][line break]";
+			otherwise if Q is banned:
+				say "- [Q]: [special-style-2]BANNED[roman type][line break]";
+			otherwise:
+				increase x by 1;
+				say "- [link]([x]) [Q][as][x][end link]: [bold type]ACTIVE[roman type][line break]";
+		say "- [link](0) Exit menu[as]0[end link][line break]";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > x:
+			say "Choice? (0-[x])>[run paragraph on]";
+			get a number;
+		if calcnumber is 0:
+			now flagexit is 1;
+		otherwise:
+			let y be 0;
+			repeat with Q running through not banned flags:
+				increase y by 1;
+				if y is calcnumber:
+					if Q is warded:
+						now Q is not warded;
+					otherwise if Q is banned:
+						say "Error occurred, choice [printed name of Q] is banned.";
+					otherwise:
+						now Q is warded;
 
 [-----]
 
