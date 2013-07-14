@@ -8,6 +8,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Hyperskunk" } to infections of hermaphrodite;
 	add { "Hyperskunk" } to infections of furry;
+	add { "Hyperskunk" } to infections of Tailweapon;
 
 to say losetohyperskunk:
 	say "No combat.";
