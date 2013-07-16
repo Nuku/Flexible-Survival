@@ -144,7 +144,7 @@ to say sexwithHayato:
 			now hp of Hayato is 10;
 		otherwise:
 			say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [targetnum]: ";
-			say "You try to be subtle in your approach, wanting to get the red oni turned on without him becoming suspicious.  At first, it seems to be working, but either you move to quickly or say something too obvious and he notices you reaching out to grope him.  He pushes you back firmly, knocking you on your ass.  'You should leave now,' he growls.  'Return when you're able to control yourself better.'";
+			say "You try to be subtle in your approach, wanting to get the red oni turned on without him becoming suspicious.  At first, it seems to be working, but either you move too quickly or say something too obvious and he notices you reaching out to grope him.  He pushes you back firmly, knocking you on your ass.  'You should leave now,' he growls.  'Return when you're able to control yourself better.'";
 			say "     Given his mood, you decide to head off for now, planning to return later.  Part of you feels sorry for trying to get him worked up, but the larger part of you hopes you'll be successful next time.  Certainly, he was getting turned on.  Perhaps you'll be able to convince him next time.";
 			move player to Rusty Walkways;
 	otherwise if hp of Hayato is 10:
