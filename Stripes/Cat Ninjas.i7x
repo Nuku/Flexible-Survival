@@ -67,14 +67,20 @@ to say ninjadesc:
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
 	if dice + bonus + featbonus is greater than 12 + ( ( dex entry - 10 ) / 2 ):
-		say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly.  You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+		if hp of Hayato is 12:	[in Noh Mask fights]
+			say "     As the ninja feline spins to face you, you catch sight of a glint of metal in his paws moments before they're thrown.  Dodging swiftly, you are able to evade the trio of flying shuriken.  They embed themselves into the wall behind you.  When you turn to face the feline, he's already upon you, having pulled an oriental weapon from his black outfit and swinging to strike.";
+		otherwise:
+			say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly.  You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	otherwise:
 		let dammy be 8;
 		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease hp of player by dammy;
 		increase libido of player by 10;
 		if libido of player > 100, now libido of player is 100;
-		say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage.  This is quickly replaced by a warm rush of lustful excitement.  You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+		if hp of Hayato is 12:	[in Noh Mask fights]
+			say "     When the ninja feline spins to face you, his paw makes a fast motion.  Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage.  The pain is quickly replaced by a warm rush of lustful excitement.  Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you.  He pulls an oriental weapon from his black outfit and swings to strike.";
+		otherwise:
+			say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage.  This is quickly replaced by a warm rush of lustful excitement.  You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 
 
 Section 2 - Monster Insertion

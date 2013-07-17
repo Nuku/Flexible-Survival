@@ -391,6 +391,7 @@ Definition: A person(Called X) is booked:
 	If x is Trixie, no;
 	if x is Velos, no;
 	if the location of x is Grey Abbey Library, yes;
+	if the location of x is Grey Abbey 2F, yes;
 	no;
 
 Definition: A person(Called X) is bunkered:
@@ -1401,6 +1402,7 @@ Girl is a flag.
 Humorous is a flag.
 Hermaphrodite is a flag.
 Hellspawn is a flag.
+[Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
