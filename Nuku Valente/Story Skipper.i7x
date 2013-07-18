@@ -1331,6 +1331,7 @@ To reciting2:
 						now lust of Joanna is 0;
 					if hp of Joanna >= 7 and hp of Joanna < 90:
 						if lust of Joanna < 3, now lust of Joanna is 3;
+						now plantdefeat is 1;
 			-- 139:   [Angie]
 				if the player's command matches "[number]":
 					now angiearoused is the number understood;

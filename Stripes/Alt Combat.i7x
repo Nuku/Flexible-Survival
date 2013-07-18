@@ -575,12 +575,12 @@ This is the flee rule:
 	let the attack bonus be dexterity of player + intelligence of player + ( level of player * 2 ) + plfleebonus - 20;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
-	if "Gas Cloud" is listed in feats of player and gascloud is 0 and peppereyes > 0:
-		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur":
+	if "Gas Cloud" is listed in feats of player and gascloud is 0 and peppereyes is 0:
+		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur" or tailname of player is "Hyperskunk":
 			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 			increase gascloud by 5;
 		otherwise if tailname of player is "Squid":
-			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
+			say "Turning around, you spray an inky cloud towards your enemy before trying to escape.";
 			increase gascloud by 5;
 		otherwise if bodyname of player is "Corota":
 			say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
@@ -588,7 +588,7 @@ This is the flee rule:
 		otherwise:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
-		increase combat bonus by gascloud * 2;
+	increase combat bonus by gascloud * 2;
 	if hp of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
 		say "The added weight and discomfort of the heavy serpent inside your [body size of player] body does make it a little harder to get away.";
 		now velosfleepenalty is true;

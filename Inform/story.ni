@@ -4165,7 +4165,7 @@ This is the turnpass rule:
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y from the table of random critters;
 				if name entry is bodyname of player:
-					if there is no resbypass in row monster of table of random critters or resbypass entry is false:
+					if ( there is no resbypass in row monster of table of random critters or resbypass entry is false ) and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
 						now monster is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 						now researchbypass is 1;
@@ -5923,6 +5923,7 @@ Include Blue Chaffinch for FS by Stripes.
 Include Friendship Pony for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Hydra Beast for FS by Stripes.
+Include Red Oni for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
