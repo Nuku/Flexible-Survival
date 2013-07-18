@@ -70,19 +70,6 @@ to say beatthelatexermine:
 			increase nolatexerminesex by 1;
 			say "     Resisting her charms, you tell her to leave.  She pouts that you're just being a grump and gets up, heading on her way.";
 
-[
-	say "     You were victorious over the creature.";
-	if libido of player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?";
-		if the player consents:
-			say "     The player agreed to sex.  Fun times begin.";
-			if cunts of player > 0:
-				say "     The player is female/herm, so sex goes like this for her.";
-			otherwise:
-				say "     The player must be male, so sex goes like this for him.";
-		otherwise:
-			say "     Awww!  The player refused the sex.  Party pooper.";
-]
 
 to say latexerminedesc:
 	choose row monster from table of random critters;

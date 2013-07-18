@@ -5923,6 +5923,7 @@ Include Blue Chaffinch for FS by Stripes.
 Include Friendship Pony for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Hydra Beast for FS by Stripes.
+Include Red Oni for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
