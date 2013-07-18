@@ -168,6 +168,7 @@ This is the demoncleansing rule:
 			say "     Hey, looks like it worked. Asking the demon what he'd like to do to you if he were free, you get a puzzled expression and a shrug as an answer. Definitively a step forward from threats of dismemberment. With this hopefully leading to a bit nicer a relationship, having a name to talk to him seems appropriate too, so you ask him about it. As it turns out, your captive demon has the unpronounceable name Ba'haz-eu'nizaal't'chha. You decide to just call him [bold type]'Brutus'[roman type], a name he accepts without complaint.";
 			say "     For now, you banish the demon brute back into your amulet with a magical command. Turning towards the door, you see Aaron standing there, smiling as he gives you a thumbs up. Thanking the fox, you follow him as he leads you back out to the main room of the chapel.";
 			now DBCaptureQuestVar is 6;
+			decrease carried of water bottle by 8;
 			choose the row with a title of "Ask about the possibility of freeing a demon of his inner evil" from Table of confession entries;
 			blank out the whole row;			
 			wait for any key;
@@ -250,7 +251,7 @@ to say demon brute talk:
 			say "     So what do you want to do now? You could chat with him a bit [link](1)[as]1[end link], have sex with the demon [link](2)[as]2[end link], talk to him about David [link](3)[as]3[end link], or just banish him back into the amulet [link](4)[as]4[end link]?";		
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 4:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-4)>[run paragraph on]";
 				get a number;
 				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 					break;
@@ -258,7 +259,7 @@ to say demon brute talk:
 					say "Invalid choice.  Type [link]1[end link] to chat with him, [link]2[end link] to have sex, [link]3[end link] to talk about David and [link](4)[as]4[end link] to banish him again.";
 			if calcnumber is 1:               [chat]
 				say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
-				say "     He can't remember who - or what - he was before, only that he earned a place in the infernal legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
+				say "     He can't remember who - or what - he was before, only that he earned a place in the Infernal Legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
 				if companion of player is not demon brute:
 					say "      With a sigh, you murmur the magic words Nermine told you, sending him back into the amulet for now.";
 			otherwise if calcnumber is 2:     [sex]
@@ -298,7 +299,7 @@ to say demon brute talk:
 					say "Invalid choice.  Type [link]1[end link] to chat with him, [link]2[end link] to have sex [link]3[end link] to banish him again.";
 			if calcnumber is 1:               [chat]
 				say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
-				say "     He can't remember who - or what - he was before, only that he earned a place in the infernal legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
+				say "     He can't remember who - or what - he was before, only that he earned a place in the Infernal Legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone wold do something like that. Help another.";
 				if companion of player is not demon brute:
 					say "      With a sigh, you murmur the magic words Nermine told you, sending him back into the amulet for now.";
 			otherwise if calcnumber is 2:     [sex]
