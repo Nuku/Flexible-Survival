@@ -722,6 +722,7 @@ Instead of attacking the Cola Vending machine:
 		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
 		remove Cola Vending machine from play;
 
+[
 Chapter - Nanofab
 
 [Nanofabricator: fabbing, consuming, stats, etc]
@@ -930,6 +931,7 @@ Carry out Nanofeeding something(called x):
 		delete x;
 		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
 	say "It's work completed, the nanofabricator shuts down."; [message to confirm all done]
+]
 
 Book 3 - Definitions
 
@@ -971,9 +973,11 @@ name	desc	weight	object	sortname (indexed text)
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
 "face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
+[
 "heuristic processor"	"A small electronic circuit.  You've been told it's amazingly adaptive and can learn anything.  Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites.  It's too bulky, and doesn't have the processing capacity to be of any use in the field.  Perhaps you could find a way around those limitations?"	13	reprogramming device
 "infection scanner"	"Upgraded Infection Monitor.  Or it would have been, it's clearly not finished.  It's missing any sort of display to show what it finds.  Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
+]
 
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
