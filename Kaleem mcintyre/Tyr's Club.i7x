@@ -15,6 +15,8 @@ Instead of sniffing Tyr's Club:
 
 Section 2 - Tyr
 
+Part 1 - Setup and Dialog
+
 Tyrtalk is a number that varies.
 tyrdefeated is a number that varies.
 tyrtraining is a truth state that varies.  tyrtraining is usually false.
@@ -43,6 +45,9 @@ Instead of conversing the Tyr:
 		now Tyrtalk is 1;
 	if Tyrtalk is 1:
 		say "[one of]'Good to see you today. You looking to train?'[or]Tyr nods to you before turning to survey his club again.[or]Barking at two Danes going at it too ferociously Tyr runs over into the Pit to break them up.[or]'I wonder what that scallywag Homaru is up to? Maybe I should go by and ruffle his feathers.' Tyr chuckles while rubbing a hand underneath his chin.[or]What's you name again? I keep forgetting.'[or]'I hope those military assholes get off their tails do something about this place.'[or]Tyr seems to be contemplating something and isn't paying you much attention.[or]Tyr busies himself with looking up at the ceiling, seemingly deep in thought.[or]'Do you think that you ever might want to join up with the military after this? You'd make a pretty good leader in my opinion.'[or]'That Omio chick, is she still working on her [italic type]research[roman type] out in the plains? I thought she'd have given up by now.'[or]I so want to get up out of here and get back to Asg...ugh...never mind.'[or]'I wonder if the others have desce...ugh...come down this way yet.' Tyr chuckles while turning his head to the side.[or]'Just who are you?' Tyr looks to you with a curious glare covering his toughened features. 'You do not have the feeling of being a normal m...person.'[or]'I wish I had some honeyed wine right about now.' Tyr grunts as he rubs across his belly.[at random]";
+
+
+Part 2 - Sex Match with Tyr
 
 Instead of fucking the Tyr:
 	setmonster "Doberman";
@@ -101,42 +106,58 @@ to tyrsexmenu:
 	say "Having beaten Tyr consistently, you've learned his technique and are able to beat him... if you want.  Will you put the Doberman down and take your prize again, or will you ease up and let him pin you down?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Win: Receive Anal";
+	now sortorder entry is 3;
+	now description entry is "beat him and take it in the ass.";
+	choose a blank row in table of fucking options;
+	now title entry is "Win: Give Fellatio";
+	now sortorder entry is 6;
+	now description entry is "beat him and suck him off.";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Fuck him";
 		now sortorder entry is 1;
 		now description entry is "beat him and fuck his ass.";
+[		choose a blank row in table of fucking options;
+		now title entry is "Win: Receive Fellatio";
+		now sortorder entry is 4;
+		now description entry is "beat him and get a blow job.";	]
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Vaginal";
 		now sortorder entry is 2;
 		now description entry is "beat him and ask to get fucked.";
+[		choose a blank row in table of fucking options;
+		now title entry is "Win: Receive Cunnilingus";
+		now sortorder entry is 5;
+		now description entry is "beat him and have him eat you out.";	]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Vaginal";
-		now sortorder entry is 4;
+		now sortorder entry is 11;
 		now description entry is "let him win and fuck you.";
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Cunnilingus";
-		now sortorder entry is 5;
+		now sortorder entry is 12;
 		now description entry is "let him win and eat you out.";
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Training massage";
-		now sortorder entry is 6;
+		now sortorder entry is 13;
 		now description entry is "let him win and do some training.";
 	if cocks of player > 0 and cunts of player is 0 and anallevel is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Anal play + hand job";
-		now sortorder entry is 7;
+		now sortorder entry is 14;
 		now description entry is "let him win and jerk you off.";
 	if cocks of player is 0 and cunts of player is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Neuter player";
-		now sortorder entry is 3;
+		now sortorder entry is 10;
 		now description entry is "beat him and leave it at that.";
 	if cunts of player is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: no sex";
-		now sortorder entry is 8;
+		now sortorder entry is 18;
 		now description entry is "let him win and leave it at that.";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -160,6 +181,14 @@ to tyrsexmenu:
 				otherwise if nam is "Win: Neuter player":
 					say "Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to reveal in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.[line break]";
 					say "[TyrLost_Neuter]";
+				otherwise if nam is "Win: Receive Anal":
+					say "[TyrLost_GetAnal]";
+				otherwise if nam is "Win: Give Fellatio":
+					say "[TyrLost_GiveOral]";
+				otherwise if nam is "Win: Receive Fellatio":
+					say "[TyrLost_GetFellatio]";
+				otherwise if nam is "Win: Receive Cunnilingus":
+					say "[TyrLost_GetCunnilingus]";
 				otherwise if nam is "Lose: Vaginal":
 					say "[TyrWon_Vaginal]";
 				otherwise if nam is "Lose: Cunnilingus":
@@ -175,6 +204,8 @@ to tyrsexmenu:
 	wait for any key;
 	clear the screen and hyperlink list;
 
+
+Part 3 - Player Win Scenes
 
 to say TyrLost_Vaginal:
 	choose row monster from the table of random critters;
@@ -207,6 +238,37 @@ to say TyrLost_Neuter:
 	say "Without either masculine or feminine bits you let Tyr know that you just came to test his strength out against yours. At this the Doberman thrown back his head and then laughs himself into an uproar. 'Well, I didn't think that you'd be so interested in me. Perhaps, you're the kind of person I'm in need of to help straighten those [']slackers['].' Going over to wrap his arm around you, you take a moment to try and figure out who those slackers are before gasping when Tyr's fangs dig deep into your shoulder. Gasping from the sudden pain you find yourself shivering as your body suddenly becomes electrified with new pleasure as Tyr's saliva flows into your bloodstream.";
 	say "'Sorry about that, but I didn't want to take a chance that you'd refuse my offer to become a Doberman.' The Dobie shrugs at you somewhat helplessly before licking his fangs free of your metallic tasting life fluids. 'Don't worry though, I know you'll come around and make an excellent Doberman. But hey, if you chose not to, then that's fine by me.' Tyr nods to you and then watches as the bite he inflicted hastily begins to seal itself.";
 
+to say TyrLost_GetAnal:	[only available through multiple victory menu]
+	choose row monster from the table of random critters;
+	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to reveal in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
+	say "     Telling him that you want his cock in your ass, he seems somewhat surprised and put off, but then sighs when you return his disapproving look.  '[if cunts of player > 0]But you've got a perfectly fine pu... [end if]Fine, whatever you want I guess.  It's not my thing, but a bet's a bet.'  And with that said, he stretches slowly, showing off his muscular, black and brown furred body before moving his paws to slip down his shorts.  He rubs a paw over his impressively large sheath and rising piece of meat.  Despite his reluctance for the act, he certainly seems to be rising to the occasion quickly.  The sight of that Doberman cock which will be soon stuffed inside you sends a rush of excitement through you.";
+	say "     Moving onto all fours, you raise your ass to the muscled Doberman and give it a little wave.  He tries to act like he's not inticed, but you can see his cock pulsing and dribbling with precum at the sight of your tight hole[if anallevel is 3].  Licking his muzzle, he moves in behind you and presses his cool nose between your cheeks.  His canine tongue slathers across your pucker several times before it presses further, burying itself inside your rectum as Tyr rims you.  The slick motion of the doggy's tongue gets you wet and ready, as well as all the more turned on.  After a couple of minutes, he pulls it free with a wet slurp[otherwise].  Taking a small bottle of lube from his shorts, he smears a hefty amount onto his large rod before spreading the rest between your cheeks and into your asshole.  With that preparation done, slips his slick digit free and gives your ass a playful spank[end if].";
+	say "     The Doberman's muscled form moves atop you, his thick canine rod finding its way quickly to your back entrance.  After taking a moment to get a deep breath, he pushes his manhood forward, spreading your anal ring open and letting the first couple of inches slide into you slowly.  He takes his time at first, letting you adjust to accepting the massive intrusion.  Despite the discomfort, the feel of that hot, pulsing, dribbling meat inside you is wonderfully exciting and you start panting and moaning for more.  And Tyr, getting more turned on, quickly loses his reluctance and starts humping away at you at a rapidly increasing pace.";
+	say "     By the time he's going at you hard and heavy, your [if cocks of player > 0]prostate[otherwise][bodytype of player] body[end if] feels awash in pleasure even as the buff dog's knot is knocking at your back door, seeking entrance into you.  He licks and nips at your shoulder and neck as he puts a muscular arm around your [bodydesc of player] body and holds you tightly as he grinds that meaty bulb hard against your anus, forcing it to spread even further.  A few hard grinds like that and your back door opens enough to accommodate the added thickness long enough for him to tie with you before locking tight around it.  The Doberman gives a growling gasp as your rectal walls clamp down hard around his knot, milking his cock all the more.  This sends him into a wild frenzy of humping like a true canine, each shallow thrust accompanied by a burst of near-orgasmic pleasure from your [if cocks of player > 0]prostate and [end if]well-stuffed ass until you can hold back no longer.";
+	say "     When your orgasm hits and [if cocks of player > 0]your hot seed splatters across the ground in white streaks[otherwise if cunts of player > 0]your pussy soaks your thighs with its juices[otherwise]shivers of unfocused delight rush through your genderless body[end if], Tyr soon follows.  Your asshole squeezes and milks his cock well past the point of orgasm and he releases a canine growl as he unleashes his first blast of cum.  Shot after thick shot of canine cum shoots into you, flooding your bowels with his virile load[if scalevalue of player < 3] to the point that it causes visible swelling[end if].  You can feel the hot stud's load and pulsing cock buried inside you, stuffing you so well as you both enjoy the tie.";
+	say "     Once his cock's done seeding you and his knot's gone down perhaps a half-hour later, he pulls free of your asshole.  This sends a gush of creamy cum pouring out of you and onto the floor.  Feeling weak in the knees, you collapse into it with a happy moan.  After wiping his canine shaft off on your rear, he reminds you that it's the winner who has to clean up the mess.  You consider [one of]growling at him that it's mostly his mess[or]getting up and dealing with it[or]asking for another go[at random], but decide to just lay there longer, content for now in the growing pool of dog cum leaking from your well-fucked ass.";
+
+to say TyrLost_GiveOral:	[only available through multiple victory menu]
+	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to reveal in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
+	say "     Having decided what you want, you stride over to Tyr and pull the muscular stud into a hug.  He runs his strong hands over your [bodydesc of player] form as you kiss one another, tongue diving into his mouth.  After some playful tongue-fencing, you break the kiss and drop to your knees in front of him, pulling down his shorts as you do.  Finding him already half-hard after the kiss, you put a hand around his stiffening shaft and pop his cock directly into your mouth.  He releases a deep moan and looks down at you with surprise on his muzzled face.  'I'd have thought you'd want to... ahhh... take something... ohh...' he groans as you suck down on his swelling rod.  Pulling your mouth free momentarily, you reply that that is exactly what you intend to do, rubbing his hefty, cum-filled balls with your free hand.  That said, you plunge your mouth right back onto his shaft before it can grow any further and becomes more difficult to stuff into your hungry maw.";
+	say "     Tyr rubs his paws over your head and shoulders, panting loudly as his excitement builds.  His canine rod pulses and throbs in your mouth and throat, dribbling copious amounts of musky pre.  As his rod swells to its full size, your mouth is stretched wide around it, squeezing tightly around that throbbing meat.  Your tongue, palate and throat work over the manly spire while your hands knead at his large orbs, eager for their contents.  The muscular dog-man rocks his hips slowly, thrusting into your mouth as you suck him off.  As the Doberman's excitement nears its peak, you consider whether to [link]keeps blowing him (Y)[as]y[end link] and swallowing down that load or [link]pulling off (N)[as]n[end link] and letting him coat you in it.  Which would you prefer?";
+	if the player consents:
+		say "     Gripping his knot firmly in one hand, you rub and squeeze it while sucking down firmly on his manhood.  His canine instincts, feeling the [']tie['], drive him to hump your face in short, fast thrusts.  He cums with a howl of pleasure soon after, the first of several powerful blasts of cum shooting down your throat and into your belly.  As he continues to cum, you're belly is filled with his seed and his semen overflows from your mouth as you can't swallow it down fast enough.  The taste is strong, musky and distinctly canine - and quite delicious to your sex-addled mind.  Wanting more and more of it, you keep nursing at his cock and rubbing his ballsac until the last dribbles of cum finally end.";
+		say "     Once his cock's done feeding you its seed, you ease it from your lips.  You lick and kiss along that impressive rod, getting the last dregs of that tasty load from it.  With his cock cleaned, Tyr chuckles and rubs your head, thanking you for remembering to do the clean-up.  You get back on your feet, wipe the overflowed cum from your face and suck it from your fingers in a teasing show, grinning at the lustful look the big dog gives you.";
+	otherwise:
+		say "     You ease your mouth from his throat-stuffing cock with some effort, licking over every inch as you do.  When you pull the last of it free, you squeeze down firmly on his knot in imitation of a tie with a bitch.  This is enough to push to muscular canine over the edge and his cock throbs in your hand, blasting large globs of thick, creamy seed onto your face.  Opening your mouth, you catch several mouthfuls to swallow down before aiming his shaft lower and letting his semen splatter across your [bodytype of player] body.  Soon much of your front is covered in the virile male's load, flooding your nose with his scent as you are covered in his essence.";
+		say "     When the cum flow slows to a trickle, you return his penis to your mouth, licking and sucking on the glans until his flow finally ends.  Sticky with his seed, you flop down on the ground, running your hands over your [bodydesc of player] body, enjoying the feel of it clinging to you.  You'll eventually need to clean up the mess you've made, but you're quite happy to stay and wallow in it for some time before doing so.";
+
+to say TyrLost_GetFellatio:	[only available through multiple victory menu]
+	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to reveal in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
+	say "***";
+
+to say TyrLost_GetCunnilingus:	[only available through multiple victory menu]
+	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to reveal in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
+	say "***";
+
+
+Part 4 - Player Loss Scenes
 
 to say TyrWon_Vaginal:
 	choose row monster from the table of random critters;
