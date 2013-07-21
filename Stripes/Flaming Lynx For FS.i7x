@@ -199,15 +199,20 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Flaming Lynx":
 		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
+			if cocks of player > 0:
+				say "     As your mind falls into a constant cycle of depravity, you find yourself eagerly returning to the sewers where you faintly recall another flaming kitty waiting for you.  Happily pouncing on the other fiery feline, once you find the beacon of his shimmering form glowing hot within the darkness of the underground passageways, you spend the next several hours reacquainting yourself with the flaming feline - nuzzling, licking, grooming and passionately fucking the other, allowing yourself to be mounted in turn once your low hanging orbs have become empty, before settling down to take a pleasant catnap next to your new companion[if cunts of player > 0].  In the days to come you find yourself ignoring your feline twat, as your new companion seems to almost completely disregard that part of you[end if].";
+				say "     You and your companion subsist on the lingering natural gas in the city's pipes for your flames, though your passions for male sex also fuels your fiery pelts.  When the soldiers comes in to clean up the city, you and your companion use the sewer system to circumvent most of them.  Once at the edge of the city, you blaze through the military's blockades, literally setting many of the barriers on fire, before you and your new friend head out into the bright unknown world together.";
+			otherwise if cunts of player > 0:
+				say "     As your mind falls into a constant cycle of depravity, you find yourself unsure of where to go next.  With your feline twat nestled deep between your legs, you instinctively know that you would not be welcomed among your new flaming feline family.  Lacking any proper direction of your own, you find yourself settling into hiding out at a gas station with a few motorized mutants.  In trade for your companionship, you share in their supply of gasoline to [if player is fireskinned]fuel your fiery hide[otherwise]stoke your inner fires[end if].  By the time the military forces come through the city, you've descended fully into your role as the animal pet for the others living there - going around on all fours, guarding their territory around the gas station and getting fucked by their pistoning rods.";
 		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
+			if the player is fireskinned:
+				say "     Having retained your sense of identity until the military arrives, you find yourself being quarantined by your rescuers.  As scientist from all over try to figure out how you're able to constantly retain the flames along your body within being burned or burning everything around you, you are subjected to a battery of tests.  Finding yourself bored with being poked and prodded, you spend your time teasing some of the military men who have been giving you several questioning looks.";
+				say "     The most eager of the soldiers on duty find a way to 'help' you relieve some of the stress of being confined inside of the quarantine facility by showing you to the staff room when no one is on duty.  Least to say, military boys definitely know how to throw a good fuck around[if cunts of player > 0 and cocks of player > 0].  Your dual gendered body seems draws forth a lot of excitement from the military men, and women, as both sexes find pleasure in your flaming feline form[end if].";
+				say "     Once you're been given an anti-infection injection, you are cleared to leave and happily make your way out of the stuffy facility, but not before being given several numbers to call for work in the military's R&D program.  It seems that RSX is quite eager to try and find a new, reusable form of energy to help society get back on its feet.  You debate with yourself for a while before you decide what to do with the numbers.";
+			otherwise:
+				say "     Having retained your sense of identity until the military arrives, you find yourself detained like so many others while the survivors are processed.  It seems your form is unique among those rescued from the city and so is subject to additional testing.  You are questioned about the creature that infected you, though you can give little in the way of answers.  Eventually, you are released and left to find a place for yourself in this new world.  Able to endure heat better than most, you get employment in a foundry which works to recycle the large amounts of metal trash left behind into fresh materials for reconstruction.";
+				if cocks of player > 0 or cunts of player > 0 and charisma of player > 14:
+					say "     You become quite popular among the staff, taking on the unofficial role of company mascot.  Breaktime often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok].  You bear many offspring from your coworkers, often having no idea whose child you're having at any given time.  Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
+
 
 Flaming Lynx For FS ends here.
