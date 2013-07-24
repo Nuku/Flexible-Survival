@@ -1,5 +1,5 @@
 Version 3 of Pepperspray by Stripes begins here.
-[version 3.3 - Updated: colourized damage]
+[version 3.4 - Bug fix?]
 
 
 battleitem is a number that varies.
@@ -55,15 +55,22 @@ this is the peppersprayattack rule:
 	say "[pepperspraydrain]";
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
-	decrease monhitbonus by 5;
+	decrease monmindbonus by 5;
+	now skipretaliate is true;		[monster to be denied retaliation on first attack]
 	follow the player attack rule;
 	if monsterhp is greater than 0 and combat abort is 0:
 		follow the player attack rule;
+	now skipretaliate is false;	[monster now able to retaliate once again]
+	now battleitem is 1;
 	if gascloud > 0:
 		decrease gascloud by 1;
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
-		follow the retaliation rule;
+		choose row monstercom from table of Critter Combat;
+		if playerpoison > 0, follow the playerpoisoned rule;
+		if there is a continuous in row monstercom of the table of Critter Combat:
+			follow the continuous entry;
+		if combat abort is 0 and skipretaliate is false, follow the combat entry;
 	otherwise:
 		now fightoutcome is 10;
 		win;
