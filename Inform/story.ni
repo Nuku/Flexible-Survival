@@ -5681,6 +5681,7 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 Include Dog House by Kaleem mcintyre.
 Include Tyr's Club by Kaleem mcintyre.
+Include Farm by Wahn.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
@@ -5968,6 +5969,7 @@ Include Tenrec by StripeGuy.
 Include Caveman by TheRecipe.
 Include Viking by Wahn.
 Include Seraphim by Wahn.
+Include Cowboy Cuntboy by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
