@@ -6011,6 +6011,7 @@ Include Alexandra by Stripes.
 Include Jimmy by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
+Include Zigor by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Blanche by Stripes.

@@ -1,24 +1,12 @@
 Version 2 of Red Events by Stripes begins here.
-[version 2.2 - Aussie Pub moved to Down Under Pub file]
+[version 2.3 - Leather Wolves unlocks new location]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
 
 Section 1 - Leather Wolves
 
-Leather Wolves is a situation.
-The sarea of Leather Wolves is "Red";
-when play begins:
-	add Leather Wolves to badspots of girl;
-	add Leather Wolves to badspots of guy;
-	add Leather Wolves to badspots of furry;
-
-Instead of resolving a Leather Wolves:
-	say "     Some noise up ahead attracts your attention and you creep closer.  Hunkering down behind a pair of cars, you look at the small pack of wolfmen gathered in front of a leather store.  At some point, several of the mannequins have been stripped of their outfits and the wolves seem to be wearing them.  Somehow they leather gear is shaped to cover large parts of their lupine faces and transformed bodies.  A pair of them are indulging in sex on the leather harness they[']ve hung from a building-side flagpole.  Others are stroking themselves off or fingering their pussies while they watch.  As you study the pack more closely, you come to realize that they are not merely wearing the leather, but that it is part of them at the same time.";
-	say "     With this pack established here, there[']s clearly no safe way to search the immediate area further and you quietly backtrack.";
-	increase score by 1;
-	Now Leather Wolves is resolved;
-
+[Moved to Zigor file]
 
 Section 2 - Fetish Store
 
