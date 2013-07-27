@@ -72,7 +72,7 @@ to say svendesc:
 	otherwise if hp of Sven is 8:
 		say "     Sven is fully covered in a soft pelt of snow leopard fur.  He's gotten much shorter than when you first met him, now only about five feet tall.  His head is fully feline, but still has his long, blonde hair and baby blue eyes.  Despite his feline muzzle, the snowmeow still speaks in a soft, shy voice with a Scandinavian accent.  Now your sexy fucktoy, he is no longer wearing clothes at all and runs his paws over his sensually soft coat of fur.  He grooms it often, keeping it soft and beautiful.  He makes little effort to cover himself with his tail when you're looking, giving you peeks at his erect cock or sexy ass from behind it.  You smile to yourself, very pleased at how your pet has turned out and you look forward to the next time you have a moment to show him how much you enjoy your feline fucktoy.";
 	if hp of Sven is 9:
-		say "ERROR-Sven-9L: You should not be able to find me!";
+		say "ERROR-Sven-9L: You should not be able to find me!  Exiting and re-entering the bunker should resolve this.";
 	if hp of Sven is 10:
 		say "     Sven is fully covered in a soft pelt of snow leopard fur, though his markings are [if lust of Sven is 1]baby blue in colour[otherwise if lust of Sven is 2]a golden yellow[end if], as is his long, flowing hair.  He's gotten much shorter than when you first met him, now only about five feet tall.  His head is fully feline now, that of a snowmeow with baby blue eyes.  He feline ears poke from his [if lust of Sven is 1]light blue[otherwise if lust of Sven is 2]golden[end if] hair.  Despite his feline muzzle, the snowmeow still speaks in a soft, shy voice with a Scandinavian accent.  Now your sexy fucktoy, he is no longer wearing clothes at all and runs his paws over his sensually soft coat of fur.  He grooms it often, keeping it soft and beautiful.  He makes little effort to cover himself with his tail when you're looking, giving you peeks at his erect cock or sexy ass from behind it.  His penis has changed colour as well to match his brighter markings.  You smile to yourself, very pleased at how your pet has turned out and you look forward to the next time you have a moment to show him how much you enjoy your feline fucktoy.  He and Candy snuggle and play around from time to time, making quite a show of it if you're there to watch.";
 	[Sven at Porn Store]
@@ -92,6 +92,7 @@ instead of conversing the Sven:
 				say "     You pull out a bottle of water and give it to the poor fellow.  He tries his best to drink it down slowly, but soon finishes it off.  He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
 				now hp of Sven is 2;
+				decrease carried of water bottle by 1;
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again.  I do not really want to leave here again.'  You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously.  He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
 			otherwise:
@@ -106,6 +107,7 @@ instead of conversing the Sven:
 			say "     Do you give the thirsty fellow a drink from your water supply?";
 			if the player consents:
 				say "     You pull out a bottle of water and give it to the poor fellow.  He is very grateful as he shyly takes it from you.  He tries his best to drink it down slowly, but soon finishes it off.  He seems much better having gotten a much-needed drink.";
+				decrease carried of water bottle by 1;
 				now lastSvendrink is turns;
 				now hp of Sven is 2;
 				increase score by 5;
@@ -118,6 +120,7 @@ instead of conversing the Sven:
 			say "     Do you give the thirsty fellow a drink from your water supply?";
 			if the player consents:
 				say "     You pull out a bottle of water and give it to the poor fellow.  He is very grateful as he shyly takes it from you.  He tries his best to drink it down slowly, but soon finishes it off.  He seems much better having gotten a much-needed drink.";
+				decrease carried of water bottle by 1;
 				now lastSvendrink is turns;
 				now hp of Sven is 3;
 				increase score by 5;
@@ -183,7 +186,7 @@ instead of conversing the Sven:
 		otherwise:
 			say "     [one of]The cute snowmeow strokes his fluffy tail with one paw as the other fondles his heavy balls.[or]'I am very grateful for your help, mistress.  I'm glad someone so brave, strong and sexy was there to take me as her pet.'  He smiles coyly from behind his tail and runs a paw slowly along his feline body.[or]'I really appreciate all you've done for me, mistress.'[or]'I really hope you'll let me [']repay['] you again soon,' he purrs with a wink before hiding behind his tail.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have alone before someone comes to rescue us?'[or]'I can't wait to show everyone what a pretty kitty I've become,' he purrs, stroking a paw over his chest while the other lightly caresses his half-hard cock.[or]Sven lickgrooms his tail while you speak to him.  He listens attentively as he runs a paw over his stiff cock while keeping it only half-hidden under his tail.  He grins when you notice what he's doing.[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eying your crotch.  He grins and brushes his fluffy tail against his cheek.[or]Your snowmeow pet purrs up at you as he lightly fingers his tailhole and fondles his cock and balls with his tail only partially hiding his actions.[or]Sven nuzzles against the cot, thick with the scent of sex, rumbling happily.[or]The sexy snow leopard cuddles the large catnip mouse you got him, nibbling it lightly and purrumbling loudly.[in random order]";
 	otherwise if hp of Sven is 9:
-		say "ERROR-Sven-9T: You should not be able to talk to me!";
+		say "ERROR-Sven-9T: You should not be able to talk to me!  Exiting and re-entering the bunker should resolve this.";
 	otherwise if hp of Sven is 10:
 		if cocks of player > 0:
 			say "     [one of]The cute snowmeow strokes his fluffy tail with one paw as the other fondles his heavy balls.[or]'I am very grateful for your help, master.  I'm glad someone so brave, strong and sexy was there to take me as his pet.'  He smiles coyly from behind his tail and runs a paw slowly along his feline body.[or]'I really appreciate all you've done for me, master.'[or]'I really hope you'll let me [']repay['] you again soon,' he purrs with a wink before hiding behind his colourful tail.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have alone before someone comes to rescue us?'[or]'I can't wait to show everyone what a pretty kitty I've become,' he purrs, stroking a paw over his chest while the other lightly caresses his half-hard cock.[or]'Candy admires you so much, just like I do.  And he's so confident and friendly, when we were talking and he was snuggling me, I just felt so close to him, like I do to you.'[or]Sven lickgrooms his tail while you speak to him.  He listens attentively as he runs a paw over his stiff cock while keeping it only half-hidden under his tail.  He grins when you notice what he's doing.[or]'Candy thinks the three of us should have some fun together sometime.  He... I'd really like that too.  We both care for you so much.'[or]Candy comes over as you're chatting to Sven and runs a paw over the kitty's body, then scritches his ear before walking away, swishing his tail teasingly and giving you both a view of his panties.[or]'Candy's such a talented coon.  He's showing me so much so I can please you better, master.'[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eying your crotch.  He grins and brushes his fluffy tail against his cheek.[or]Your snowmeow pet purrs up at you as he lightly fingers his tailhole and fondles his cock and balls with his tail only partially hiding his actions.[or]Sven nuzzles against the cot, thick with the scent of sex, rumbling happily.[or]The sexy snow leopard cuddles the large catnip mouse you got him, nibbling it lightly and purrumbling loudly.[in random order]";
@@ -328,6 +331,8 @@ to say sexwithSven:
 	otherwise if hp of Sven is 8:
 		now lastSvenfucked is turns;
 		say "[solosven]";
+	otherwise if hp of Sven is 9:
+		say "ERROR-Sven-9F: You should not be able to fuck me!  Exiting and re-entering the bunker should resolve this.";
 	otherwise if hp of Sven is 10:
 		now lastSvenfucked is turns;
 		if lastCandyfucked - turns > 5:

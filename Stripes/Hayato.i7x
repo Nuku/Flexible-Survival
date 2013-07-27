@@ -305,11 +305,11 @@ to say nohmaskninja:
 			say "     With the second feline dealt with, you press onwards.  The last of them is forced to release the anime hottie.  When he turns to face you and slips a paw into his robes, you expect another volley of shuriken to come, but what comes out instead is a smoke bomb.  Smashing it at the tabby's tabied feet, he is envelopped in a cloud of smoke and then is gone.  You spin around, making sure he isn't going to jump you from behind, but it's soon clear that you've driven them off.  You relax and move to the desk to help the poor woman.";
 			attempttowait;
 			say "     [bold type]SMACK![roman type]";
-			say "     To tumble comically into a corner of the room, sent for a loop by the woman you just [']rescued['] with a big paper fan.  'Baka!  You ruined my big scene.  Being raped by ninjas is really big this season.  And just when it was getting good too... though maybe we've got enough budget left for you and I to have some fun climax.'  And with that said, she rushes at you with giggling glee.";
+			say "     You tumble comically into a corner of the room, sent for a loop by the woman you just [']rescued['] with a big paper fan.  'Baka!  You ruined my big scene.  Being raped by ninjas is really big this season.  And just when it was getting good too... though maybe we've got enough budget left for you and I to have some fun climax.'  And with that said, she rushes at you with giggling glee.";
 			say "[nohmaskanimebabe]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After your defeat by the shadowy feline, you are driven from the office so they can focus on enjoying their main prize.  As you leave, you can hear the giggling cries of the the anime babe.  'Oh no!  Please don't touch me there.  Yes, just like that.'  You decide it would be best to try again later.";
-	otherwise:
+	otherwise if fightoutcome >= 30:
 		say "     Fleeing from the shadowy feline, you dash back down the hall.  As you run, you can hear the giggling cries of the anime babe.  'Oh no!  Please don't touch me there.  Yes, just like that.'  You decide it would be best to try again later.";
 
 

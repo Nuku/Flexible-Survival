@@ -750,7 +750,7 @@ to say artemispostmod:
 	if ( lust of rubber tigress is 1 and templust is not 1 ) and ( thirst of rubber tigress is 1 and tempthirst is not 1 ):	[gained both pussy and cock]
 		say ".  She gives her new cock a long, slow lick before doing the same to her new pussy, rumbling in pleasure as her tongue plays across her freshly bonded genitals.  Obviously delighted by having her own set of them, she gives them several more licks before getting back on her paws.  She struts around with her tail raised, prowling around you.  She's clearly looking to share her good fortune with you, mrowling softly as she nuzzles at your side firmly when you don't immediately comply";
 		if cocks of player > 0:
-			say ".  Would you prefer to partake in her [link]pussy (Y)[as]y[end link] or her [link]cock (Y)[as]y[end link]?";
+			say ".  Would you prefer to partake in her [link]pussy (Y)[as]y[end link] or her [link]cock (N)[as]n[end link]?";
 			if the player consents:
 				say "[artemis_pm1]";
 			otherwise:
