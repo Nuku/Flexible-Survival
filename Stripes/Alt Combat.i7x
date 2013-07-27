@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.5.1 - Vore by player added w/optional settings]
+[Version 2.6 - Improved? functionality w/pepperspray]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -11,6 +11,7 @@ combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will
 [ speciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]	]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
+skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
 avoidance is a number that varies.		[ Used to track if a player automatically avoids an attack. ]
 gascloud is a number that varies.		[ Tracks the ongoing strength of a player's ambient gas cloud. ]
 monsterhp is a number that varies.		[ Remaining monster hit points. ]
@@ -66,6 +67,7 @@ Section 1 - Prepping for Combat
 to prepforfight:		[Do all the pre-fight setup, reset values, and display the monster description]
 	choose row monster from table of random critters;
 	now combat abort is 0;
+	now skipretaliate is false;
 	if lev entry is less than level of player and hardmode is true:
 		hardmodeboost;
 	now peppereyes is 0;
@@ -482,7 +484,7 @@ This is the player attack rule:
 			if playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
-			if combat abort is 0, follow the combat entry;
+			if combat abort is 0 and skipretaliate is false, follow the combat entry;
 	otherwise:
 		now fightoutcome is 10;
 		win;

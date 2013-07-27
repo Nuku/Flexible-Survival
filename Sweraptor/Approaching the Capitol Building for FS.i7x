@@ -1,6 +1,6 @@
 Version 2 of Approaching the Capitol Building for FS by Sweraptor begins here.
 
-[Version 2 - Hunting Area added.  Roaming monsters as planned by original creator.]
+[Version 2.1 - Event duplicated by finding initial room.]
 
 "This is an area which begins the player approach to the Capitol building. A skyscraper overrun with the Ash Brood, and the supposed nesting grounds for the largest dragons and the Ash God. Can you tell me how to make it so the monsters will appear randomly when the areas are explored?"
 
@@ -19,8 +19,18 @@ Instead of Resolving the Government Assistance:
 
 Section 2 - Rooms
 
-Approaching the Capitol Building is a Room. "     The air here has grown thick with smoke and dust, kicked up by the constant scuffles and the fires.  Along the street are the skeletal hulls of cars and many other vehicles which have been burnt out.  The structures of the area are all partially collapsed and broken buildings.  They look like giants have fought amidst them.  To the north, you can see the Capitol Building itself in the distance.  It standing amidst the wreckage of surrounding skyscrapers, the lower half lit up by the surrounding flames.  The whole structure is blackened and wreathed in smoke.  Either some miracle or dark force has kept the broken building from falling.".
-The Approaching the Capitol Building is fasttravel.  The Approaching the Capitol Building is private.
+Approaching the Capitol Building is a Room.  The description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
+The Approaching the Capitol Building is fasttravel.
+[  The Approaching the Capitol Building is private.	]
+
+to say app_cap_bldg_desc:
+	if Government Assistance is unresolved:
+		say "     As you are travelling through the city, you recognize a couple of government buildings and offices, largely in ruin.  The air is heavy with smoke and soot, but you start to run regardless.  You recall that you're close to the State Capitol Building.  If there's anywhere they'll know what's going on and where you can get assistance, it'll be there.  You cough as you keep pushing through the smokey air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
+		say "     The devastation here is extensive, with burnt out and smashed buildings all around.  Several of the streets are cracked and broken, spewing flames.  It looks almost like some twisted war zone.  The creatures here must be particularly dangerous and devastating.  From the look of the destruction, these creatures are probably roaming around the whole area, making travelling here quite risky.  You'd best be extra cautious if you plan on looking around here.";
+		say "[line break]";
+		now Government Assistance is resolved;
+	say "     The air here has grown thick with smoke and dust, kicked up by the constant scuffles and the fires.  Along the street are the skeletal hulls of cars and many other vehicles which have been burnt out.  The structures of the area are all partially collapsed and broken buildings.  They look like giants have fought amidst them.  To the north, you can see the Capitol Building itself in the distance.  It standing amidst the wreckage of surrounding skyscrapers, the lower half lit up by the surrounding flames.  The whole structure is blackened and wreathed in smoke.  Either some miracle or dark force has kept the broken building from falling.";
+
 
 instead of sniffing Approaching the Capitol Building:
 	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
