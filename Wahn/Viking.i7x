@@ -52,7 +52,7 @@ An everyturn rule:
 			now VikingPregnancy is 2;   [visible pregnancy]
 			if VikingRelationship < 7:		[getting visibly pregnant will get Sonya's involvement with the player noticed]
 				now VikingRelationship is 7;
-		otherwise if VikingPregCounter is greater than 1:
+		if VikingPregCounter is greater than 1:
 			decrease VikingPregCounter by 1;
 	if VikingUltimatum is 1:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
