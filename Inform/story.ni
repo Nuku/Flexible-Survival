@@ -7,7 +7,7 @@ Use memory economy.
 Use fast route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 550000.
 Use MAX_PROP_TABLE_SIZE of 650000.
-use MAX_STATIC_DATA of 2500000.
+use MAX_STATIC_DATA of 2560000.
 Use MAX_OBJ_PROP_COUNT of 155.
 use MAX_SYMBOLS of 150000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
@@ -5681,6 +5681,7 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 Include Dog House by Kaleem mcintyre.
 Include Tyr's Club by Kaleem mcintyre.
+Include Farm by Wahn.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
@@ -5968,6 +5969,7 @@ Include Tenrec by StripeGuy.
 Include Caveman by TheRecipe.
 Include Viking by Wahn.
 Include Seraphim by Wahn.
+Include Cowboy Cuntboy by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
