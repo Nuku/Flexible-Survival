@@ -193,7 +193,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
-[
+
 Section 3 - Endings
 
 when play ends:
@@ -204,6 +204,8 @@ when play ends:
 				say "     You and your companion subsist on the lingering natural gas in the city's pipes for your flames, though your passions for male sex also fuels your fiery pelts.  When the soldiers comes in to clean up the city, you and your companion use the sewer system to circumvent most of them.  Once at the edge of the city, you blaze through the military's blockades, literally setting many of the barriers on fire, before you and your new friend head out into the bright unknown world together.";
 			otherwise if cunts of player > 0:
 				say "     As your mind falls into a constant cycle of depravity, you find yourself unsure of where to go next.  With your feline twat nestled deep between your legs, you instinctively know that you would not be welcomed among your new flaming feline family.  Lacking any proper direction of your own, you find yourself settling into hiding out at a gas station with a few motorized mutants.  In trade for your companionship, you share in their supply of gasoline to [if player is fireskinned]fuel your fiery hide[otherwise]stoke your inner fires[end if].  By the time the military forces come through the city, you've descended fully into your role as the animal pet for the others living there - going around on all fours, guarding their territory around the gas station and getting fucked by their pistoning rods.";
+			otherwise:
+				say "***Neuter ending needed.";
 		otherwise:
 			if the player is fireskinned:
 				say "     Having retained your sense of identity until the military arrives, you find yourself being quarantined by your rescuers.  As scientist from all over try to figure out how you're able to constantly retain the flames along your body within being burned or burning everything around you, you are subjected to a battery of tests.  Finding yourself bored with being poked and prodded, you spend your time teasing some of the military men who have been giving you several questioning looks.";
@@ -213,7 +215,6 @@ when play ends:
 				say "     Having retained your sense of identity until the military arrives, you find yourself detained like so many others while the survivors are processed.  It seems your form is unique among those rescued from the city and so is subject to additional testing.  You are questioned about the creature that infected you, though you can give little in the way of answers.  Eventually, you are released and left to find a place for yourself in this new world.  Able to endure heat better than most, you get employment in a foundry which works to recycle the large amounts of metal trash left behind into fresh materials for reconstruction.";
 				if cocks of player > 0 or cunts of player > 0 and charisma of player > 14:
 					say "     You become quite popular among the staff, taking on the unofficial role of company mascot.  Breaktime often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok].  You bear many offspring from your coworkers, often having no idea whose child you're having at any given time.  Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
-]
 
 
 Flaming Lynx For FS ends here.
