@@ -1,15 +1,17 @@
 Version 2 of Leonard Events by Stripes begins here.
-[version 2.2 - Random den event #1]
+[version 2.3 - Random den event #2, one-shot #1]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
 
 Section 0 - Den Events
 
-Part 0 - Core Event
+Part 0 - Core Event System
 
 lastdenevent is a number that varies.  lastdenevent is usually 255;
 leosupplies is a number that varies.
+leodenlist is a list of numbers that varies.  leodenlist is usually { 1 }.
+leodinner is a truth state that varies.  leodinner is usually false.
 
 after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
 	if hp of Leonard is 16:	[maids]
@@ -17,20 +19,24 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 	otherwise if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene2]";
 [	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
-		say "***";
+		say "***";		]
 	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
-			say "[leodenspecial1]";
-		otherwise if entry 1 of leodenlist is 2:
+			let xx be the remainder after dividing turns by 8;
+			if xx is 3 or xx is 2 or xx is -5 or xx is -6:		[evening or early night]
+				say "[leodenspecial1]";
+[		otherwise if entry 1 of leodenlist is 2:
 			say "[leodenspecial2]";
 		otherwise if entry 1 of leodenlist is 3:
 			say "[leodenspecial3]";
 		otherwise if entry 1 of leodenlist is 4:
-			say "[leodenspecial4]";					]
+			say "[leodenspecial4]";			]
 	otherwise if a random chance of 1 in 4 succeeds:	[repeatable]
-		if 1 is 1:		[more variations coming]
+		if a random chance of 2 in 3 succeeds:
 			say "[leosupplyscene]";
+		otherwise:
+			say "[leopracticesession]";
 
 Part 1 - Maid Scene
 
@@ -95,7 +101,30 @@ to say leodenscene2:
 	follow the turnpass rule;
 
 
-Part 9 - Supply Delivery
+Part 7 - Special Dinner
+
+to say leodenspecial1:
+	say "     While on the path towards the lion's den, you are met by a giggling pair of feline girls from the pride.  You greet them with hugs and kisses, as well as plenty of playful groping and fondling[if the player is not felinebodied].  Their playful attention helps to restore your matronly figure, allowing them to nurse some milk from you as well[otherwise].  You enjoy their playful attention as they nurse some milk from you[end if].";
+	say "     After the feeding, they continue talking and giggling about various inane things.  At first it's cute and amusing, but you'd much rather be on your way to see your mate.  Being kind to them and knowing they miss their wayward matron, you indulge them for a while, but just as you think you're going to have to be rude to get them to let you continue on you way, another lioness comes running up from the direction of the den.  She's got a red ballcap on her head and an empty pack on her back.  After giving you a quick hug, she tells the other girls that it's alright now and continues on her way.  The other two quickly say their goodbyes and run off, giggling loudly to each other.  Finding it all rather suspicious, you continue on your way as the sun starts to set.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	attempttowait;
+	say "     Arriving at the den, you are greated by the delicious scent of cooking food even before you step inside.  At the tunnel mouth sits Leonard at a wooden table set for two and several steaming dishes set out.  The maids are waiting behind him, smiling politely as they stand at the ready.  Seeing you, the gentlemanly lion rises.  'Welcome, my dearest mate.  I had heard through the grapevine that you were coming and thought you might want to sit and enjoy the sunset with me,' he says with a soft purr in his voice and a smile on his muzzle.  'I do hope those two chatterboxes didn't bore you too badly, but we needed a little extra time to prepare.'  He steps around the table to pull out your chair for you, giving you a loving kiss as you sit down.";
+	say "     You and Leonard have a lovely dinner together in the fading light, enjoying the beautiful sunset as your backdrop.  You discuss several pride matters as well as your recent adventures in the city.  You are served a five course meal by the maids, ending with dessert by candlelight.  You can tell as the evening wears on that Leonard's getting aroused by how often he's groping the cute maids and you can't help but give them a few teasing touches yourself.  By the time you're both finishing up dessert, there is a maid is beneath the table at both ends, [if cocks of player > 0]one sucking your cock and another dealing with Leonard's[otherwise if cunts of player > 0]one licking your pussy while another deals with Leonard's cock[otherwise]one licking and rubbing your bare groin while another deals with Leonard's cock[end if].";
+	say "     Once dessert is finished, you are Leonard can wait no longer.  Rather than go inside or even wait for the table to be cleared, he pushes you down overtop of it and starts riding you as you moan and mewl lustfully for more.  The maid girls smile and watch, clearing the dishes and the remains of dinner out of the way while the studly lion's hard thrusting threatens to tumble everything onto the ground.  Mindful of the antique table, you grab a handful of the tablecloth in both hands and dig your claws into that rather than the wood.  Your cries of lustful mating carry out into the night air, certainly not the only such cries around, but definitely the loudest tonight.  The fucks you and fills you twice on the tabletop before taking you inside onto the bed and mating you again there.  After the repeated matings, you both pass out for a catnap on the bed.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	now feline_meow is feline_meow / 2;
+	now lastdenevent is turns;
+	now lastfuck of Leonard is turns;
+	remove 1 from leodenlist;
+	now leodinner is true;
+
+Part 10 - Supply Delivery
 
 to say leosupplyscene:
 	if leosupplies is 0, let leosupplies be a random number between 1 and 2;
@@ -104,7 +133,7 @@ to say leosupplyscene:
 	if leosupplies is 1:	[food]
 		say "towards his bed.  You follow them, eager to show your thanks as well.";
 		say "     After helping Leonard out of his suit and you've removed your gear, you lay back on the bed, pulling the cute kitty atop you.  She nuzzles at your chest and licks your nipples, her paws kneading softly.  You run your hands over her, reaching down to grab her ass as she offers it up to the lion's approaching cock.";
-		if the player is felinebodied:
+		if the player is not felinebodied:
 			say "     As she's being mounted, you can feel the familiar changes running through your body as the cute girl helps to restore your matronly figure.  She mewls in lustful need as the lion's sizable cock is pushed into her petite body, her paws gripping your shoulders as they those of a strong lioness.  You can't help but mewl yourself as she leans forward slowly and wraps her lips around your nipple.  Shivers of delight run through you as she nurses for your feline milk even while getting pounded by the sexy male.  You purr softly to her, telling her how pleased you both are with her and how much you appreciate the food she's brought for you and for the pride.";
 		otherwise:
 			say "     As she's being mounted, you can feel a rush of excitement running through your body as the cute girl rubs against you.  She mewls in lustful need and grips your strong shoulders tightly as the lion's sizable cock is pushed into her petite body, wrapping her lips around your nipple.  Shivers of delight run through you as she nurses for your matronly milk even while getting pounded by the sexy male.  You purr softly to her, telling her how pleased you both are with her and how much you appreciate the food she's brought for you and for the pride.";
@@ -152,6 +181,55 @@ to say leosupplyoral1:
 to say leosupplyoral2:
 	say "     You kneal down between Leonard's legs, running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] along his thighs.  You nuzzle at the cute kitty's belly and down to her juicy pussy, giving it a tender kiss.  As Leonard boosts her up briefly, you raise his shaft into position.  As she's lowered back down onto the lion's rod, you continually lick at her spread lips and at the cock sinking between them.  It is a lovely sight that gets you quite turned on and makes you long for your next chance to be in her position.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.";
 	say "     Things grow more heated as everyone's lusts grow higher and higher, your tonguework getting both felines quite worked up.  The kitty mewls and moans, rubbing her paws over your head, urging you to keep going.  Certainly, the copious juices of her arousal, coupled with the musky flavour of Leonard's cock, seems delicious to you and you lap up as much as you can get.  As Leonard is fucking her, he rumbles to her about how she's been such a diligent, hard-working girl in collecting supplies and how pleased you both are with her efforts.  Rubbing one [if bodyname of player is listed in infections of Felinelist]paw[otherwise]hand[end if] at the lion's balls while the other teases her folds, you suck down hard on her clit.  This sends the girl over the edge with a yowl of ecstasy and a fresh rush of her juices.  Her orgasm is soon followed by the pulsing of Leonard's shaft as he cums as well, filling her womb to the point that trickles of his cum overflow around his cock for you to lick up.  Having gotten them both to climax and tasted their mingled up is quite arousing for you and [if cocks of player > 0 or cunts of player > 0]pushes you to cum as well[otherwise]sends a rush of pleasure through you[end if].";
+
+
+Part 11 - Practice Session
+
+to say leopracticesession:
+	say "     As you're approaching Leonard's den, you can hear the soft sounds of his violin being played.  Hearing it makes you smile and move more quickly towards your mate's home.  When you arrive, you find him attentively practicing while the maids listen happily as they snuggle together on a nearby rug.  Noticing you, he smiles and continues to play, though with added enthusiasm now.  You smile and take a seat in your soft chair, relaxing and enjoying the lovely music.";
+	if a random chance of 1 in 3 succeeds:
+		say "     While Leonard practices, you notice a [one of]shy[or]nervous[or]curious[or]eager[at random] feline girl poking her head around the edge of the tunnel.  You make a faint motion for Leonard, who nods and continues to play, switching from practicing to playing one of his more [one of]welcoming[or]exciting[or]alluring[or]sensual[at random] pieces.  As he plays, you can see it having an effect on the visitor, getting her to relax and move in a little further to hear better.  As Leonard starts up another song, you motion for her to come and sit with you and, captivated by the lovely music, she is easily coaxed into your lap.";
+		if the player is felinebodied:
+			say "     Now with her in your arms, you guide her muzzle to your chest and have her start nursing from your [breast size desc of player] breasts.  As she does, you slip your hand down between her legs, rubbing her pussy and slipping a finger into it.  You enjoy her soft moans of pleasure that seem to flow into the passionate, erotic melody Leonard's playing has transitioned into";
+		otherwise:
+			say "     Now with her in your arms, you snuggle her close and slip your hand down between her legs.  You rub across her wet pussy before slipping a finger into it.  You enjoy her soft moans of pleasure that seem to flow into the passionate, erotic melody Leonard's playing has transitioned into";
+		if cocks of player > 0:
+			say ".  After some teasing, you shift her over and slide her down over your stiff cock.  You nuzzle and purr softly to her as you fuck this newest member of your pride in welcome";
+		otherwise:
+			say ".  You nuzzle and kiss her as you finger her juicy cunny, eager to welcome this newest member of your pride in welcome";
+		say ".  As the song reaches its climactic apex, so does the sexy lioness's pleasure and she can't help but mrowl as she orgasms[if cocks of player > 0] as you fill her with your seed[end if].  After the song comes to an end, you all applaud the musical lion, who gives a regal bow before taking the newcomer up into his arms and escorting her to the bed.  While the maids store away the violin and stand, Leonard does his part for welcoming this new girl as well, with much lustful mrowling and purring before it's done.";
+		if player is felinebodied:
+			infect "Feline";
+		otherwise:
+			felinebodyshift;
+		decrease humanity of player by 5;
+		increase feline_meow by 1;
+	otherwise:
+		let T be a random number between 1 and 6;
+		say "    Leonard plays another two songs, repeating some sections a few times until he's satisfied with the results.  After your pleasant surprise of being serenaded, the music has left you feeling ";
+		if T is 1:
+			say "happier.  The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
+			if morale of player < -10:		[negative morale decreased by 20%]
+				now morale of player is ( 4 * morale of player ) / 5;
+			otherwise:
+				increase morale of player by 2;
+		otherwise if T is 2:
+			say "that some of your road weariness has lifted.  The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
+			increase hp of player by ( hp of player / 10 );
+			if hp of player > maxhp of player, now hp of player is maxhp of player;
+		otherwise if T is 3:
+			say "aroused and eager to be with your loving mate.  The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
+			increase libido of player by 5;
+			if libido of player > 100, now libido of player is 100;
+			increase feline_meow by 1;
+		otherwise if T is 4:
+			say "closer to your loving pride and longing to stay with them.  The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
+			decrease humanity of player by 5;
+		otherwise:
+			say "relaxed and content.  The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
+	now lastdenevent is turns;
+
+
 
 
 Section 1 - Park
