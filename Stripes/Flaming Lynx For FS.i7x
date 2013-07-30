@@ -215,7 +215,6 @@ when play ends:
 				say "     Having retained your sense of identity until the military arrives, you find yourself detained like so many others while the survivors are processed.  It seems your form is unique among those rescued from the city and so is subject to additional testing.  You are questioned about the creature that infected you, though you can give little in the way of answers.  Eventually, you are released and left to find a place for yourself in this new world.  Able to endure heat better than most, you get employment in a foundry which works to recycle the large amounts of metal trash left behind into fresh materials for reconstruction.";
 				if cocks of player > 0 or cunts of player > 0 and charisma of player > 14:
 					say "     You become quite popular among the staff, taking on the unofficial role of company mascot.  Breaktime often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok].  You bear many offspring from your coworkers, often having no idea whose child you're having at any given time.  Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
-]
 
 
 Flaming Lynx For FS ends here.
