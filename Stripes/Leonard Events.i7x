@@ -1,5 +1,5 @@
 Version 2 of Leonard Events by Stripes begins here.
-[version 2.3 - Random den event #2, one-shot #1]
+[version 2.4 - Sequential den event #3]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
@@ -18,8 +18,10 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		say "[leodenscene1]";
 	otherwise if hp of Leonard is 17 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene2]";
-[	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
-		say "***";		]
+	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene3]";
+[	otherwise if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene4]";		]
 	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
@@ -101,6 +103,35 @@ to say leodenscene2:
 	follow the turnpass rule;
 
 
+Part 3 - Kitty Rescue
+
+to say leodenscene3:
+	say "     You arrive to find Leonard not in the den, with there being a large number of the feline girls hiding in the cave.  The maids are doing their best to tend to the anxious crowd, but everyone is relieved to see you arrive.  There's a lot of chaotic mewling and so many voices you can't make out what's going on.  Thankfully, Raven is there to help fill you in while the others from the work group herd the lionesses back into the cave.";
+	say "     'Leonard's gone off to deal with some of those feral Felinoids.  We caught them trying to round up several of the pride girls for themselves,' Raven explains quickly.  'Our team can cope with one of them, maybe two, but that's it.  We tried, we really did, but we had to break it off before we were captured as well.  We wanted to go with him, but he ordered us to protect the others.  You have to go help him, matron,' she mewls, clutching your hand tightly.  You nod with determination, give her a reassuring hug and rush off.";
+	attempttowait;
+	say "     You head in the direction of Felinoid territory, Raven having given you a rough idea of where they'd encountered the rustling felinoids.  Aside from passing another lioness girl on the way, who you order back to the cave as you run past her, you're unharried by the other denizens of the park.  Perhaps they can tell something is going down or simply don't dare deal with someone with an angry, determined look such as yours.  Regardless, you're run through the part is uninterrupted.";
+	say "     As get closer, you can hear the roaring sounds of feline violence.  You spur yourself on, breaking into a clearing a minute later.  There you find Leonard deep in battle with some Felinoids.  Two of the quadrupedal cats have already be knocked out by the lion and another seems about to go down as he's struck by a powerful haymaker across the jaw.  And while Leonard seems to be winning, he is scratched up and his suit coat is a shambles.  Grabbing the dazed leonid in both paws, your mate tosses him fifteen feet against a tree, finishing that one off.";
+	say "     Catching sight of you after throwing his fallen opponent, he smiles with relief and leaps back into the fray with renewed vigour.  As he uppercuts another of the felinoids as it tries to pounce you, he calls out for you to help the others.  As much as you want to fight by his side, you nod and press forward, the need to help the captured girls more pressing.  You run around the edge of the glade and make for the path Leonard pointed out.  It is covered in recent pawprints, scattered fur and even a few spots of feline blood, probably from those who resisted too much, giving you a clear trail to follow.  Thankfully those making off with the girls didn't make it far with most of their numbers occupied by the raging lion.  With a roar of your own, you rush forward and attack the nearest of them.";
+	challenge "Felinoid";
+	let krsuccessrate be 0;
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		increase krsuccessrate by 1;
+		say "     Having dealt with one of the felinoids, you've slowed the group enough to advance upon another of them.";
+		challenge "Felinoid";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			increase krsuccessrate by 1;
+			say "     Your victories over the large felinoids are enough to destabilize the situation and when you charge at another one, they lose all control.  Unable to keep the lionesses corralled, they run off in all directions, though most head back towards the cave den.  The felinoids move in to attack you, but you've given Leonard enough time to arrive.  Together, you drive off the felinoids, rescuing the lionesses from their would-be captors.  While tempted to enjoy some sweet revenge on the fallen creatures, you both head back to the den to check on the pride.";
+			say "     As you walk back with Leonard, he pulls you close and rests a paw on your ass.  'Like everyone else, they seek mates of their own and the little lionesses are an obvious choice for them.  Such losses are bound to happen; it is the new natural order of things,' he says with a soft sigh before growing harder as he continues.  'But with this, they tried to steal many at once.  It did not matter to them whether the girls were part of our pride or not, only wanting as many as they could get.  And after such a loss as that, I don't think they'll try such a thing again.  They are not prone to such cooperation normally, desperation must have pushed them to it.'";
+			increase score by 25;
+	if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     While unable to completely stop them, the delay your fight and the ensuing sex causes does hamper the felinoids.  By the time Leonard arrives to assist you, he is still able to save some of the girls who were being captured.  Helping those who remain, you head back to the den to nurse your wounds and check on the pride.";
+		say "     As you walk hand in hand back with Leonard, he speaks softly to you.  'Like everyone else, they seek mates of their own and the little lionesses are an obvious choice for them.  Such losses are bound to happen; it is the new natural order of things,' he says with a soft sigh before growing harder as he continues.  'But with this, they tried to steal many at once.  It did not matter to them whether the girls were part of our pride or not, only wanting as many as they could get.  And given how much trouble and the losses they took, I don't think they'll try such a thing again even if they did get away with some girls.  They are not prone to such cooperation normally, desperation must have pushed them to it.'";
+	otherwise:
+		say "     While unable to completely stop them, the delay you cause by getting some of them to chase you does hamper the felinoids.  By the time Leonard arrives to assist you, he is still able to save some of the girls who were being captured.  Helping those who remain, you head back to the den to check on the pride.";
+		say "     As you walk hand in hand back with Leonard, he speaks softly to you.  'Like everyone else, they seek mates of their own and the little lionesses are an obvious choice for them.  Such losses are bound to happen; it is the new natural order of things,' he says with a soft sigh before growing harder as he continues.  'But with this, they tried to steal many at once.  It did not matter to them whether the girls were part of our pride or not, only wanting as many as they could get.  And given how much trouble and the losses they took, I don't think they'll try such a thing again even if they did get away with some girls.  They are not prone to such cooperation normally, desperation must have pushed them to it.'";
+	say "     Upon returning to the den, [if krsuccessrate > 0]you both are[otherwise]Leonard is[end if] given a hero's welcome by the pride[if krsuccessrate is 2].  Among the girls there are several new faces, dragged along by the others fleeing their captors.  From the looks of it, the pride has already begun welcoming them into joining.  You and Leonard make their indoctrination into the pride part of the celebration, adding to the festivities[otherwise if krsuccessrate is 1].  From what you can tell, there have been a few losses to the pride, but many of the kitty girls managed to get away during the confusion and make it back home[otherwise].  There's sadly been some losses to the pride, but the group as a whole has been protected and those responsible have been punished[end if].  It is some time before things settle down and the mob of girls finally disperses, the work group going along to provide protection for them.";
+	now hp of Leonard is 19;
+
 Part 7 - Special Dinner
 
 to say leodenspecial1:
@@ -122,6 +153,10 @@ to say leodenspecial1:
 	now lastdenevent is turns;
 	now lastfuck of Leonard is turns;
 	remove 1 from leodenlist;
+	decrease hunger of player by 30;
+	decrease thirst of player by 12;
+	if hunger of player < 0, now hunger of player is 0;
+	if thirst of player < 0, now thirst of player is 0;
 	now leodinner is true;
 
 Part 10 - Supply Delivery
