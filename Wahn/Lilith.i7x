@@ -30,10 +30,17 @@ LilithPregCounter is a number that varies.
 
 An everyturn rule:
 	if LilithPregCounter is 1:
-		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
 		increase LilithKidCounter by 1;
 		increase score by a random number between 5 and 10;
-		now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
+		if player is in Sacristy:
+			say "     Lilith suddenly says 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demon rapidly crowning, then slipping out of his mother as she orgasms. He looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on his back and the tail with its spaded tip.";
+			say "     [WaitLineBreak]";
+			say "     A satisfied grin on her face, Lilith takes the child and sets him agains her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
+			say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+			now LilithPregnancy is 0;					
+		otherwise:
+			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
+			now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
 		now LilithPregCounter is 0;
 	if LilithPregCounter is 12:
 		now LilithPregnancy is 3;   [very visible pregnancy]
@@ -183,7 +190,11 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith is 0:	[firs
 	now hp of Lilith is 1;   [has met the player, not the demon brute yet]
 								
 instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not the first meeting]
-	if hp of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
+	if LilithPregnancy is 4:
+		move player to Sacristy;
+		say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+		now LilithPregnancy is 0;	
+	otherwise if hp of Lilith is 1 and companion of player is demon brute:   [first time the player takes the demon brute pet where she can see him]
 		move player to Sacristy;
 		if DBCaptureQuestVar is 5:
 			say "     Lilith looks very interested as the captured demon brute follows you into the sacristy. 'A very nice pet... how did you get him so - tame?'";
@@ -245,11 +256,6 @@ instead of going northeast from Burned-Out Chapel while hp of Lilith > 0:   [not
 	otherwise:
 		move player to Sacristy;
 								
-instead of going northeast from Burned-Out Chapel while LilithPregnancy is 4:
-	move player to Sacristy;
-	say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
-	now LilithPregnancy is 0;
-
 Section 2 - Fucking Lilith
 
 Instead of fucking the Lilith:
