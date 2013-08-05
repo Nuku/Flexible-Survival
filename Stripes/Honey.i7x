@@ -150,9 +150,9 @@ the scent of the bee girl is "Honey, unsurprisingly, smells of honey.";
 Section 3 - Sexxxings
 
 An everyturn rule:
-	if companion of player is bee girl:
-		increase libido of player by 5;
-		let diceroll be a random number from 45 to 200;			[lust check vs 200, player libido 45 or less auto-wins]
+	if companion of player is bee girl and lastfuck of bee girl - turns >= 4:
+		increase libido of player by 6;
+		let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
 		if diceroll < libido of player:
 			let T be a random number between 1 and 5;
 			if cocks of player > 0:
@@ -170,6 +170,8 @@ An everyturn rule:
 				if T is 5:
 					say "[beesexhoneypot]";
 			if hp of bee girl >= 5, infect "Queen Bee";
+			now lastfuck of bee girl is turns;
+
 
 to say beesexmale1:
 	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body.  She buzzes happily and hugs [if hp of bee girl >= 5]her queen[otherwise]you[end if] tightly.  Lifting her small body up into your arms, you slide your cock into her warm pussy.  Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of player] cock.  Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if hp of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
