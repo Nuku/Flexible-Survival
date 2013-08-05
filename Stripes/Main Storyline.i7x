@@ -579,7 +579,7 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you.  You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear.  His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your [if cocks of player > 1]shafts[otherwise]shaft[end if].  His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust.  You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you.  You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.";
 		otherwise:
 			say "     Lacking any sexual organs of your own, you drop to your knees in front of the red panda and stuff his cock into your mouth.  You tease your tongue across his leaking shaft and eagerly start sucking him off.  He rubs a paw over your head as the other covers his muzzle to muffle a wah of pleasure.  You work his penis with your mouth, tongue and lips until finally he can't take any more and Peter releases another muffled wah as he cums hard, flooding your mouth with his tasty load.";
-		say "     Your quick fun over, he gives you a kiss and nuzzles you before he leading you back down into the church.  As he descends, he tries his best to wipe his dusty robe clean.  Once downstairs, he gives you another quick kiss before dashing off to the confessional.";
+		say "     Your quick fun over, he gives you a kiss and nuzzles you before leading you back down into the church.  As he descends, he tries his best to wipe his dusty robe clean.  Once downstairs, he gives you another quick kiss before dashing off to the confessional.";
 	otherwise:
 		say "     You decide to just speak your thanks to the red panda and follow him back down the steps, pleased with yourself at your ingenuity in placing it here.";
 	remove "Beach" from ndmlist;
@@ -628,6 +628,7 @@ to say onelessndm:
 	if weight entry is 0:
 		say "     With the last device in place, you discard the empty carrying case.  You should report back to Zephyr now that your task is completed.";
 		increase score by 40;
+		now carried of nanite density monitor is 0;
 
 
 Main Storyline ends here.

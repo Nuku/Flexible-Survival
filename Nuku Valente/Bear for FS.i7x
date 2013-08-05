@@ -1,5 +1,5 @@
 Version 3 of Bear for FS by Nuku Valente begins here.
-[ Version 3 - Restructered player loss scenes and added missing features]
+[ Version 3.1 - Honey Quest version added]
 
 "Adds a Bear to Flexible Survivals Wandering Monsters table."
 [Description text for this Extension.]
@@ -15,7 +15,9 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 ursinedefeat is a number that varies.
 to say ursine attack:
-	if ursinedefeat is 0: [ first time losing to a bear ]
+	if hp of bee girl is 3:
+		say "     The large bear grabs you roughly and tosses you to the ground with an angry roar.  Hearing the bear roar terrifies poor Honey and she flees off into the trees to hide while the bear has her way with you.  By the time she's done with you, you're very tired and very stick with both honey and female juices.";
+	otherwise if ursinedefeat is 0: [ first time losing to a bear ]
 		say "You realise she has been holding back on you as she easily hefts you up towards her broad well padded chest, pressing your face into her coarse thick fur. The pressure of her huge furry grip engulfs you and you fear you are about to be crushed out of existence.  As your consciousness fades you realise it's not the worst way to go, and you feel oddly comfortable as the pressure decreases.  While you are wondering what next, you realise you are being rocked back and forth against the bear's increasingly hardening nipples.  She begins to rumble low in her throat with pleasure. 'No, Phyllis you mustn't...' she says to herself as she gets increasingly aroused. Her strong paws irresistibly rub you through the thick sweetly musky  fur covering her muscular body. 'Oh..feels so good...'You feel a heat and dampness covering your lower half.  The sweet smell of sex fills the air and with some small feeling of horror you realise she is masturbating herself with you.  The bear begins to talk to itself more as it gets more aroused  becoming increasingly incoherent and noisy as her orgasm approaches.  In the throes of her mighty roaring orgasm the pressure again increases and you pass out to awaken bruised, tingling and soaked in the juices of the bear's orgasm.";
 		now ursinedefeat is 1;
 	otherwise if ursinedefeat is 1 or a random chance of 1 in 4 succeeds:
@@ -58,6 +60,28 @@ to say ursine attack:
 		if hp of player > maxhp of player, now hp of player is maxhp of player;
 		if libido of player < 0, now libido of player is 0;
 
+
+to say ursine loses:
+	if hp of bee girl is 3:
+		say "     Your final blow makes the large bear lose her footing and she staggers back.";
+	otherwise:
+		say "     [one of]The beaten bear comes back to her senses. 'Oh.  That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
+
+
+to say ursine fighting:
+	if hp of bee girl is 3:
+		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into the underbrush.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]The bear snaps at you with its powerful teeth.[or]You are clubbed upside the head with a top pop-gun.[or]Your head is grabbed and your face is buried in her red-shirted bosom.  It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free.[at random]";
+	otherwise:
+		say "[one of]She slams you with one of her great clawed hands.  As you are sent flying, you wonder where she gets her red nail polish.[or]With terrifying ease, she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm, she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.'[or]As she flattens you again you wonder if your plan needs changing. [at random]";
+
+
+to say ursine desc:
+	if hp of bee girl is 3:
+		say "     You are faced with a towering figure.  While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey.  The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples.  She is no cute teddy bear though, her muzzle is filled with sharp teeth and her powerful limbs end in paws equipped with claws.  The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
+	otherwise:
+		say "     A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or] Are you stalking me?[at random]'";
+
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -68,10 +92,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bear"; [Name of your new Monster]
-	now attack entry is "[one of]She slams you with one of her great clawed hands. As you are sent flying you wonder where she gets her red nail polish.[or]With terrifying ease she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.'[or]As she flattens you again you wonder if your plan needs changing. [at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[one of]The beaten bear comes back to her senses. 'Oh.  That's better.' and then slumps over, apparently peacefully asleep.[or] You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]. "; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[ursine fighting]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[ursine loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[ursine attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or] Are you stalking me?[at random]'";[ Description of the creature when you encounter it.]
+	now desc entry is "[ursine desc]";[ Description of the creature when you encounter it.]
 	now face entry is "bearlike face, with an elongated snout and big bear teeth set in what is definitely not a teddy bear";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]shaggy furred[or]coarsely furred[or]honey-scented furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 

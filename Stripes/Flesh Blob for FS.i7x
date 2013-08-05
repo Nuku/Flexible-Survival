@@ -26,12 +26,16 @@ to say losetofleshblob:
 	now lev entry is 6;
 
 to say beatthefleshblob:
+	choose row monster from the table of random critters;
 	say "     Driven back by your blows, it emits moans and whimpers.  It backs off, clearly not wanting to continue to confront you at this time.  The blob of changing flesh withdraws, oozing down the shadowy halls until it's out of sight.";
+	now lev entry is 6;
 
 
 to say fleshblobdesc:
 	choose row monster from the table of random critters;
-	let qq be a random number between 5 and 10;
+	let qq be a random number between 5 and 8;		[full range 5-10]
+	if level of player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
+	if level of player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
 	if level of player < qq and level of player > 5, now qq is level of player + 1;
 	let zz be a random number between 1 and 12;
 	if hardmode is true and level of player > 8:		[Hard Mode Version!]
@@ -67,7 +71,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Flesh Blob";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The [one of]fleshy blob[or]strange creature[or]undulating mass[or]flesh monster[at random] [one of]claws at you with grabby hands rising from its pallid skin[or]pushes out a foot to kick your groin[or]latches onto you with one of its emerging hands, pulling you against its warm, fleshy body.  [if a random chance of 1 in 4 succeeds]Throbbing, leaking cocks form on its surface, rubbing firmly against you[otherwise if a random chance of 1 in 3 succeeds]Wet, juicy cunts form on its surface, quivering with need against you[otherwise if a random chance of 1 in 2 succeeds]Breasts form in various sizes on its surface, jiggling against you as they leak milk onto your skin[otherwise]A mix of breasts, cocks and cunts form on its surface to rub against your body as long as you're held[end if].  You find yourself excited despite yourself[or]punches you with a fist that pushes forth from its pale hide[or]grows forth a face and torso, pushing it swiftly to your lips and kissing you.  You can feel an rippling, fleshy tongue of cock throb in your mouth before you're able to push away, disturbed and aroused all at once[or]reaches out for you with a [if a random chance of 1 in 2 succeeds]manly[otherwise]feminine[end if] hand with [if a random chance of 1 in 3 succeeds]an eye on its palm, staring at you balefully[otherwise if a random chance of 1 in 3 succeeds]a dribbling cock on its palm, spurting musky precum onto you[otherwise if a random chance of 1 in 2 succeeds]a drooling pussy at its palm, leaking femcum onto you[otherwise]a slathering tongue emerging from its palm.  It licks along your cheek even as it tries to pull you down into it[end if][or]forms numerous eyes all over its body, staring at you.  Their gaze causes you to falter, allowing the creature to grab at your legs with groping hands[as decreasingly likely outcomes].";
+	now attack entry is "The [one of]fleshy blob[or]strange creature[or]undulating mass[or]flesh monster[at random] [one of]claws at you with grabby hands rising from its pallid skin[or]pushes out a foot to kick your groin[or]latches onto you with one of its emerging hands, pulling you against its warm, fleshy body.  [if a random chance of 1 in 4 succeeds]Throbbing, leaking cocks form on its surface, rubbing firmly against you[otherwise if a random chance of 1 in 3 succeeds]Wet, juicy cunts form on its surface, quivering with need against you[otherwise if a random chance of 1 in 2 succeeds]Breasts form in various sizes on its surface, jiggling against you as they leak milk onto your skin[otherwise]A mix of breasts, cocks and cunts form on its surface to rub against your body as long as you're held[end if].  You find yourself excited despite yourself[or]punches you with a fist that pushes forth from its pale hide[or]grows forth a face and armless torso, pushing it swiftly to your lips and kissing you.  You can feel an rippling, fleshy tongue of cock throb in your mouth before you're able to push away, disturbed and aroused all at once[or]reaches out for you with a [if a random chance of 1 in 2 succeeds]manly[otherwise]feminine[end if] hand with [if a random chance of 1 in 3 succeeds]an eye on its palm, staring at you balefully[otherwise if a random chance of 1 in 3 succeeds]a dribbling cock on its palm, spurting musky precum onto you[otherwise if a random chance of 1 in 2 succeeds]a drooling pussy at its palm, leaking femcum onto you[otherwise]a slathering tongue emerging from its palm.  It licks along your cheek even as it tries to pull you down into it[end if][or]forms numerous eyes all over its body, staring at you.  Their gaze causes you to falter, allowing the creature to grab at your legs with groping hands[as decreasingly likely outcomes].";
 	now defeated entry is "[beatthefleshblob]";
 	now victory entry is "[losetofleshblob]";
 	now desc entry is "[fleshblobdesc]";
