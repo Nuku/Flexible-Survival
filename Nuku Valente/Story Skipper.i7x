@@ -31,7 +31,7 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]";
+	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]";
 	say "[trixsavetext1]";
 	say "[trixsavetext2]";
 	replace the text " " in trixsavetext1 with "`";
@@ -1404,6 +1404,72 @@ To reciting2:
 			-- 150:	[David - libido (interaction with Brutus)]
 				if the player's command matches "[number]":
 					now libido of David is the number understood;					
+			-- 151: [hp of Amy]
+				if the player's command matches "[number]":
+					now hp of Amy is the number understood;
+					if hp of Amy > 0 and hp of Amy < 90:
+						move Amy to Grey Abbey Library;
+			-- 152: [libido of Amy - puppy counter]
+				if the player's command matches "[number]":
+					now libido of Amy is the number understood;
+			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
+				if the player's command matches "[number]":
+					now SquadEncounters is the number understood;			
+					if SquadEncounters is 5:
+						now Soldier Squad is resolved;
+			-- 154: [thirst of Corbin - location]
+				if the player's command matches "[number]":
+					now thirst of Corbin is the number understood;
+					if thirst of Corbin is 0:
+						remove Corbin from play;							
+						now Cow Hunting is unresolved;
+						now McDermott Farm Entrance is not known;   						
+					otherwise:
+						now Cow Hunting is resolved;
+						now McDermott Farm Entrance is known;   						
+						if thirst of Corbin is 1:
+							move Corbin to Worker Barracks;
+						otherwise if thirst of Corbin is 2:
+							move Corbin to Milking Shed; 
+			-- 155: [hp of Corbin]
+				if the player's command matches "[number]":
+					now hp of Corbin is the number understood;
+					if hp of Corbin is 100:
+						remove Corbin from play;							
+						setmonster "Cowboy Cuntboy";
+						choose row monster from the table of random critters;
+						now area entry is "Dry Plains";
+					otherwise:
+						setmonster "Cowboy Cuntboy";
+						choose row monster from the table of random critters;
+						now area entry is "Nowhere";		
+			-- 156: [CorbinKidCounter]
+				if the player's command matches "[number]":
+					now CorbinKidCounter is the number understood;			
+			-- 157: [hp of Anthony]
+				if the player's command matches "[number]":
+					now hp of Anthony is the number understood;
+					if hp of Anthony > 3:
+						now Missing Cow is resolved;							
+						move Wendy to McDermott Barn;
+					otherwise:
+						now Missing Cow is unresolved;
+						remove Wendy from play;
+			-- 158: [hp of Duke]
+				if the player's command matches "[number]":
+					now hp of Duke is the number understood;
+					if hp of Duke > 9:
+						move Shawn to Sheep Meadow SE;
+			-- 159: [thirst of Duke]
+				if the player's command matches "[number]":
+					now thirst of Duke is the number understood;
+					if thirst of Duke is 0:
+						remove Duke from play;							
+					otherwise:
+						if thirst of Duke is 1:
+							move Duke to Sheep Meadow SW;
+						otherwise if thirst of Duke is 2:
+							move Duke to Sheep Meadow SE; 			
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2858,7 +2924,73 @@ Carry out reciting:
 						move Jimmy to Police Lockerroom;
 			-- 150:	[David - libido (interaction with Brutus)]
 				if the player's command matches "[number]":
-					now libido of David is the number understood;						
+					now libido of David is the number understood;			
+			-- 151: [hp of Amy]
+				if the player's command matches "[number]":
+					now hp of Amy is the number understood;
+					if hp of Amy > 0 and hp of Amy < 90:
+						move Amy to Grey Abbey Library;
+			-- 152: [libido of Amy - puppy counter]
+				if the player's command matches "[number]":
+					now libido of Amy is the number understood;
+			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
+				if the player's command matches "[number]":
+					now SquadEncounters is the number understood;			
+					if SquadEncounters is 5:
+						now Soldier Squad is resolved;
+			-- 154: [thirst of Corbin - location]
+				if the player's command matches "[number]":
+					now thirst of Corbin is the number understood;
+					if thirst of Corbin is 0:
+						remove Corbin from play;							
+						now Cow Hunting is unresolved;
+						now McDermott Farm Entrance is not known;   						
+					otherwise:
+						now Cow Hunting is resolved;
+						now McDermott Farm Entrance is known;   						
+						if thirst of Corbin is 1:
+							move Corbin to Worker Barracks;
+						otherwise if thirst of Corbin is 2:
+							move Corbin to Milking Shed; 
+			-- 155: [hp of Corbin]
+				if the player's command matches "[number]":
+					now hp of Corbin is the number understood;
+					if hp of Corbin is 100:
+						remove Corbin from play;							
+						setmonster "Cowboy Cuntboy";
+						choose row monster from the table of random critters;
+						now area entry is "Dry Plains";
+					otherwise:
+						setmonster "Cowboy Cuntboy";
+						choose row monster from the table of random critters;
+						now area entry is "Nowhere";		
+			-- 156: [CorbinKidCounter]
+				if the player's command matches "[number]":
+					now CorbinKidCounter is the number understood;			
+			-- 157: [hp of Anthony]
+				if the player's command matches "[number]":
+					now hp of Anthony is the number understood;
+					if hp of Anthony > 3:
+						now Missing Cow is resolved;							
+						move Wendy to McDermott Barn;
+					otherwise:
+						now Missing Cow is unresolved;
+						remove Wendy from play;
+			-- 158: [hp of Duke]
+				if the player's command matches "[number]":
+					now hp of Duke is the number understood;
+					if hp of Duke > 9:
+						move Shawn to Sheep Meadow SE;
+			-- 159: [thirst of Duke]
+				if the player's command matches "[number]":
+					now thirst of Duke is the number understood;
+					if thirst of Duke is 0:
+						remove Duke from play;							
+					otherwise:
+						if thirst of Duke is 1:
+							move Duke to Sheep Meadow SW;
+						otherwise if thirst of Duke is 2:
+							move Duke to Sheep Meadow SE; 								
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
