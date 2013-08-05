@@ -556,7 +556,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Stimulate the herm centaur's ass with your hand.";
 		now toggle entry is ThomasSex rule;		
-	if (lust of Thomas > 1):
+	if (cocks of player > 0 and lust of Thomas > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Thomas ass";
 		now sortorder entry is 8;

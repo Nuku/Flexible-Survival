@@ -178,21 +178,33 @@ The slot of mindshield helmet is "head".
 
 Holding Cell Four is a situation. Holding Cell Four is resolved.
 The sarea of Holding Cell Four is "Sealed";
+CellFourVisits is a number that varies;
 
 Instead of resolving a Holding Cell Four:		[repeatable event]
-	say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
-	if carried of mindshield helmet is 0:
-		say "     That warning doesn't sound too good - and you do not have such a protective helmet. Do you really want to go in there?";
-		if player consents:
-			say "     Fate favors the brave... so you boldly stride ahead and pull open the cell door and step inside.";
+	if CellFourVisits is 3:  [the thought eater checks out who's been visiting his slave]
+		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
+		say "     [line break]";
+		setmonster "Thought Eater";
+		choose row monster from the table of random critters;
+		now area entry is "Sealed";			
+		challenge "Thought Eater";
+		increase CellFourVisits by 1;		
+	otherwise:
+		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
+		if carried of mindshield helmet is 0:
+			say "     That warning doesn't sound too good - and you do not have such a protective helmet. Do you really want to go in there?";
+			if player consents:
+				say "     Fate favors the brave... so you boldly stride ahead and pull open the cell door and step inside.";
+				say "     [line break]";
+				say "     [Inside Cell Four]";
+				increase CellFourVisits by 1;
+			otherwise:
+				say "     Better safe than sorry... who knows what might be lurking in that cell. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
+		otherwise:
+			say "     Following the warning, you make sure that you have your protective helmet on your head before pulling open the cell door and stepping inside.";
 			say "     [line break]";
 			say "     [Inside Cell Four]";
-		otherwise:
-			say "     Better safe than sorry... who knows what might be lurking in that cell. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
-	otherwise:
-		say "     Following the warning, you make sure that you have your protective helmet on your head before pulling open the cell door and stepping inside.";
-		say "     [line break]";
-		say "     [Inside Cell Four]";
+			increase CellFourVisits by 1;
 
 to say Inside Cell Four:
 	say "     What you find behind the door is a moderately sized room holding a table, chairs, a bookshelf and a cot in the far corner. Torn-up paper is scattered about, intermixed with shreds of clothing and the broken shards of what appears to have been a shining silver helmet. While you are still busy taking in the scene around you, the blanket on the cot gets pulled aside, revealing the naked body of a person who stands up and takes a few steps towards you. It's a man with a slender build, mid-length blond hair and a rather handsome face.";

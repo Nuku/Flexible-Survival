@@ -33,13 +33,13 @@ When Play begins:
 	now sex entry is "Nochange";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 25;                   [ How many HP has the monster got? ]
 	now lev entry is 1;                   [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;                  [Amount of Damage monster Does when attacking.]
+	now wdam entry is 5;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;           [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;            [ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;           [Size of breasts infection will try to attain ]
+	now breast size entry is 4;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;           [ Length of female sex  infection will attempt to give you. ]
@@ -70,16 +70,16 @@ When Play begins:
 	now defeated entry is " ";
 	now victory entry is " ";
 	now desc entry is "     This isn't supposed to be an actual infection, just a standin - please report how you saw this.";
-	now face entry is "charmingly human";
-	now body entry is "charmingly human";
-	now skin entry is "smooth";
-	now tail entry is "";
-	now cock entry is "human";
-	now face change entry is " ";
-	now body change entry is " ";
-	now skin change entry is " ";
-	now ass change entry is "";
-	now cock change entry is " ";
+	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "human";[ skin Description, format as the text "You have (your text) skin."] 
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "your hips seem to return to a normal human's figure"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -89,13 +89,13 @@ When Play begins:
 	now sex entry is "Both";              [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 25;                   [ How many HP has the monster got? ]
 	now lev entry is 1;                   [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;                  [Amount of Damage monster Does when attacking.]
+	now wdam entry is 5;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;           [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;            [ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;           [Size of breasts infection will try to attain ]
+	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;           [ Length of female sex  infection will attempt to give you. ]
@@ -109,10 +109,25 @@ When Play begins:
 	now type entry is "human";
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;     [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
-
+when play ends:
+	if bodyname of player is "herm human":
+		if humanity of player is less than 10:   [succumbed]
+			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled abberations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
+			if cunts of player > 0 and "Sterile" is not listed in feats of player:  [has a vag, not sterile]
+				say "     Serving your master in all his desires, your pussy getting bathed daily with his potent seed, it doesn't take long until your belly starts to swell with his child. Being part of his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're delirously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
+			otherwise if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player:  [mpreg-able, not sterile]
+				say "     Devoted to please your master, you tell him about your changed physiology. The thought eater is immensely satisfied in having something so extraordinary as a slave, immediately ordering you to bend over and get ready for him to fuck you. With his potent seed being shot into your womb several times a day, it's only a question of time until your belly starts to swell with his child. Being a special jewel in his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're delirously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
+			otherwise if cunts of player > 0:  [sterile women]
+				say "     With you being sterile and the thought eater preferring his harem of pregnant slaves, you're only seldom taken into his chamber, though he sometimes has you perform with others, male, female and herm, for his amusement. Mostly, you're just spending your days working, preparing food, sorting through loot and supplies geatherers bring from outside your dark underground home.";
+			otherwise if cocks of player > 0:  [non mpreg men]
+				say "     As a man, you're added to your master's guards, protecting the entrances to his underground home and escorting the groups he sends out to gather supplies and new slaves. Sometimes, you're also brought in to the inner chambers, with your master telling you to mount selected females as he tries to breed nicer-looking servants.";
+			otherwise:  [neuters]
+				say "     Being completely sexless, the thought eater has little interest in you yourself, so you just end up being used as a worker, preparing food, sorting through loot and supplies geatherers bring from outside your dark underground home.";				
+		otherwise:		[sane]
+			say "     When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a herm human form by the nanites, you have a lot less problems rejoining society than other, more bestial, infectees. That doesn't mean that your time in the dark hallways of the Trevor Labs sublevels didn't leave any traces though. Sometimes at night, you see the face of the thought eater in front of your mental eye, his tentacles spread and reaching for you. The words 'You will be mine, sooner or later' echo in your mind as you awake, bathed in sweat after the recurring nightmare.";
 
 Human Infections ends here.
