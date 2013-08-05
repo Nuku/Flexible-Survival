@@ -630,7 +630,6 @@ Definition: a person is planttailed:
 ]
 
 
-
 Section 10 - Endings
 
 when play ends:
