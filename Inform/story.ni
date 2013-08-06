@@ -5971,6 +5971,7 @@ Include Caveman by TheRecipe.
 Include Viking by Wahn.
 Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
+Include Thought Eater by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
