@@ -540,6 +540,10 @@ To reciting2:
 							now bee girl is tamed;
 						if hp of bee girl > 1:
 							now Smashed Hive is resolved;
+						if hp of bee girl >= 5:
+							setmonster "Queen Bee";
+							choose row monster from the table of random critters;
+							now non-infectious entry is false;
 			-- 81:	[house cat - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
@@ -2065,6 +2069,10 @@ Carry out reciting:
 							now bee girl is tamed;
 						if hp of bee girl > 1:
 							now Smashed Hive is resolved;
+						if hp of bee girl >= 5:
+							setmonster "Queen Bee";
+							choose row monster from the table of random critters;
+							now non-infectious entry is false;
 			-- 81:	[house cat - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
