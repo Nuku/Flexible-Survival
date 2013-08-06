@@ -259,11 +259,11 @@ to say TehuantlSexMenu:
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "Make use of your pussy's pussy";
-[	if cocks of player > 0:
+	if cocks of player > 0 and TehuantlStatus is 2:
 		choose a blank row in table of fucking options;
-		now title entry is "Anal";
+		now title entry is "Soothe her heat";
 		now sortorder entry is 2;
-		now description entry is "Use Tehuantl's lovely bottom";]
+		now description entry is "Give your heat stricken pet some special attention";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow Job";
@@ -293,8 +293,8 @@ to say TehuantlSexMenu:
 				now sextablerun is 1;
 				if title entry is "Fuck her":
 					say "[TehuantlSex_vag]";
-[				otherwise if title entry is "Anal":
-					say "[TehuantlSex_anal]";]
+				otherwise if title entry is "Soothe her heat":
+					say "[TehuantlSex_vag_Inheat]";
 				otherwise if title entry is "Blow Job":
 					say "[TehuantlSex_BJ]";
 				otherwise if title entry is "Cunnilingus":
@@ -312,6 +312,14 @@ to say TehuantlSex_vag:
 	otherwise:
 		say "     Tehuantl rumbles happily as you begin sinking your member into her, her tight cunt grips your shaft delightfully, squeezing your cock even as you begin slowly pulling back. She mewls lustfully as you begin pounding into her eager body, her paws drift up to tease her firm nipples as the rough fucking continues. Soon the pleasant sensations of her tight, squeezing tunnel begin to overwhelm you, and you roar in orgasm as your climax strikes, driving your length into her as you grip her body tightly, ensuring she stays firmly impaled by your shaft as you blast shot after shot of your [cum load size of player] load into her spasming cunt.";
 		say "     Spent, you roll off your well fucked kitty, panting happily as you stretch out on the floor beside her. As you lay there basking in your afterglow Tehuantl snuggles up to you, resting her head on your chest as she pulls your arm around herself, rumbling happily as she nuzzles against you.";
+
+to say TehuantlSex_vag_Inheat:
+	say "     With Tehuantl's powerful scent filling the air, you decide to try and give her a little something extra to help her take the edge off. She mewls needfully as you drop your gear and approach her, spreading her legs wide to put her needy pussy on display for you. You push Tehuantl back to lay on the couch and tease her wet pussy with a pair of fingers, stroking her outer folds and clit before pressing deeper into her body. Tehuantl moans in delight as you continue frigging her, groping her breasts and tweaking her nipples as you do.";
+	say "     The feline pussy grips your fingers tightly, already milking and squeezing your fingers like a cock if an effort to cool her heat. As your play continues, you spot one of the rubber sex toys your brought back for Tehuantl to help her with her heat, and reach for the bright pink cock. Toy in hand, you spread Tehuantl's netherlips apart with the fingers already inside her and begin pushing the tip of the toy into her. Tehuantl's moans of pleasure become more frequent and much louder as your drive the thick rubber cock into her, freeing your sticky fingers to softly massage her clit as well.";
+	say "     It doesn't take long for your efforts to pay off, and Tehuantl is soon yowling in release. Her musky waters gush out around the rubber toy and soak your hand. Leaving the toy buried in Tehuantl's cunt, you softly rub and scratch her belly, slowly working up towards her breasts as you lean closer to her. You eagerly climb on the couch over the shivering feline as your hand drifts over her breasts and caresses her muzzle, finally pulling the pink dildo from her cunt as you line up your own shaft with her well prepared opening.";
+	say "     You both groan in delight as you being sinking your [cock size desc of player] [cock of player] cock into her, and Tehuantl's insatiable body still grips your shaft tighwithdrawaltly despite her recent climax[if cockname of player is listed in infections of BarbedCocklist], pulling at your barbs delightfully[end if]. By the time you Tehuantl begin vigorously fucking the jaguar's needy body she's fully recovered from her first climax, and is bucking her hips enthusiastically in time with your thrusts. [if cockname of player is listed in infections of BarbedCocklist]With each withdrawal, your sharp barbs catch and pull at Tehuantl's soft inner flesh, adding extra stimulation for both of you before you drive your shaft back into her.[end if] Soon the wonderful feeling of her tight, squeezing tunnel gets to be too much, and with a few final powerful thrusts, you climax with a roar of ecstasy, gripping her tightly as you blast your [cum load size of player] load deep into her body. Tehuantl's feline yowl of release joins your own roar as you cum, signaling her own powerful climax.";
+	attempttowait;
+	say "     With your twitching member still buried in Tehuantl's quivering tunnel you lay atop her soft furred form, she rumbles happily as your fingers trace and tickle her delicate form. You lay together with Tehuantl cuddling for some time, simply enjoying your pet's company for a while before you finally lift yourself from the couch[if cockname of player is listed in infections of BarbedCocklist], sending one last ripple of pleasure through both of you as your barbs make one final rough withdrawal[end if].";
 
 to say TehuantlSex_cunni:
 	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down between your things. She mrowls lustfully as you approach, licking her lips as she watches your fingers slowly part your pussy lips. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl as she approaches on her hands and knees.";
@@ -336,7 +344,7 @@ to say TehuantlandSven:
 		say "     'I think I know just what you need; I happen to be looking for the same thing. I'm sure we can help each other out cutie.' Sven can only mewl sheepishly in response before Tehuantl gives him a light push, smirking mischievously as Sven stumbles backwards, tripping over his own tail and landing his back. Without hesitation Tehuantl steps over the supine snowmeow, she positions her dripping cunt over Sven's groin and pins his shoulders to the ground before lowering herself onto his shaft.";
 		attempttowait;
 		say "     Both felines groan in pleasure as Sven's shaft spreads Tehuantl's opening apart, pressing into her depths as she descends down his length. With a lustful growl, Tehuantl rides up and down Sven's [if hp of sven > 10 and lust of sven is 1]baby blue[otherwise if hp of sven > 10 and lust of sven is 2]yellow[otherwise]grey[end if] cock, yowling in pleasure as she drives him into her eager cunt and soon any show of resistance from Sven is gone as he thrusts his hips forward to match her descent. Tehuantl grabs the other kitty's paws and presses them to her breasts, prompting him to play with them. The bell on the jaguar's collar jingles merrily as she rides the snowmeow's shaft.";
-		say "     [if cocks of player > 0 or cunts of player > 0]As you watch the show, you can't help but let her own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long Tehuantl's rough fucking has her approaching a powerful climax and with a yowl of ecstasy she drives herself down Sven's length, soaking his fur with her juices as she orgasms. Meanwhile, Tehuantl's wild orgasm is enough to push Sven over the edge as well, and you watch as his entire body tenses up, knowing his seed is being unloaded deep inside Tehuantl's body.";
+		say "     [if cocks of player > 0 or cunts of player > 0]As you watch the show, you can't help but let your own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long Tehuantl's rough fucking has her approaching a powerful climax and with a yowl of ecstasy she drives herself down Sven's length, soaking his fur with her juices as she orgasms. Meanwhile, Tehuantl's wild orgasm is enough to push Sven over the edge as well, and you watch as his entire body tenses up, knowing his seed is being unloaded deep inside Tehuantl's body.";
 		say "     As the two begin to come down from their respective climaxes Tehuantl stares down at the exhausted snowmeow beneath her, licking her lips as she releases a shoulder to scratch his chin gently. Then, without another word she begins her motion again, clearly intent on riding the submissive snow leopard to another orgasm before she'll be satisfied. Sven is a far less active participant in this second fucking, struggling to keep in time with Tehuantl's eager bouncing. By the time Tehuantl reaches her second climax, Sven can do little more then moan beneath her. With another yowl Tehuantl soaks both their crotches in a fresh wave of her feminine juices, shivering in delight as orgasm rolls through her.";
 		say "     Finally sated, the lustful jaguar rolls off the exhausted snowmeow, licking and nuzzling his face as she lays beside him for a short time before getting to her feet and strutting back towards her favorite seat by the balcony, their combined juices dripping from her swollen cunt the entire way. As Sven begins stumbling to his unsteady feet, you decide it best to [if cocks of player > 0 or cunts of player > 0]clean up your own mess and[end if] slip back downstairs before you're seen.";
 	otherwise:
