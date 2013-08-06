@@ -199,7 +199,7 @@ to say haroldmalesex:
 				say "[dc_fuckHarold]";
 			otherwise:
 				say "     You and Harold start taking drinks together while balancing the shot glasses on the back of your hands.  It's a little tricky, but you manage to keep them steady.  As the contest progresses, it gets harder for you.  Even though the nanites help you deal with the alcohol, you're dumping a lot of it in quickly and you get you progressively unsteadier.  Your [bodyname of player] hand ends up wobbling too much as you try to bring it to your mouth and the small glass tumbles off.  With the drink spilled and Harold smiling at you with his gleaming equine teeth, you've lost and have ended up being the unicorn's ride again.";
-				say "[dc_fuckHarold]";
+				say "[dc_fuckedbyHarold]";
 		otherwise:
 			say "     He pulls some bottles from under the bar and starts pouring shots, setting them up in pairs in two long rows.  'Okay, so this is how we'll work it.  I'll flip the coin.  If it lands heads, you drink from the right glass; tails and it's the left.  Whoever drinks the right one first scores.  First to five wins.  Oh, and spilling a drink's the express to being this pony's ride.'  Understanding the rules, you nod to him and get ready to start, your competitive nature as well as the prize of hot unicorn ass urges you to win.";
 			let playernum be level of player + stamina of player + perception of player;
@@ -216,7 +216,7 @@ to say haroldmalesex:
 				say "[dc_fuckHarold]";
 			otherwise:
 				say "     You and Harold start the contest, the coin flipping high in the air.  You both follow it intently for which face it'll fall on, then grabbing for the appropriate shot glass.  You manage to win a couple, but the unicorn is the more consistent winner.  Falling behind and about to lose, you [one of]make a wild grab for a drink as the coin comes down, resulting in you guessing incorrectly[or]make a fumbling grab for the drink and end up knocking it over in your hurry[or]almost grab for the wrong drink, making you too slow[at random].  Slamming his empty shot glass on the table, he grins as you with his gleaming equine teeth.  It seems you've ended up being the unicorn's ride again.";
-				say "[dc_fuckHarold]";
+				say "[dc_fuckedbyHarold]";
 
 
 to say dc_fuckharold:
