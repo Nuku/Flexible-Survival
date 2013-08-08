@@ -14,6 +14,7 @@ when play begins:
 Instead of resolving a Leather Wolves:
 	say "     Some noise up ahead attracts your attention and you creep closer.  Hunkering down behind a pair of cars, you look at the small pack of wolfmen gathered in front of a leather store.  At some point, several of the mannequins have been stripped of their outfits and the wolves seem to be wearing them.  Somehow their leather gear is shaped to cover large parts of their lupine faces and transformed bodies.  A pair of them are indulging in sex on the leather harness they've hung from a building-side flagpole.  Others are stroking themselves off or fingering their pussies while they watch.  As you study the pack more closely, you come to realize that they are not merely wearing the leather, but that it is part of them at the same time.";
 	say "     While you might want to check out the leather goods store you've found, there's a bit too much activity here right now.  Perhaps you'll be able to check it out later once the wolves are done having their fun.  You make note of the place and consider stopping by again in the future.";
+	say "     (Now Cuero Lobo is known.)[line break]";
 	now Cuero Lobo is known;
 	increase score by 10;
 [	say "     With this pack established here, there[']s clearly no safe way to search the immediate area further and you quietly backtrack.";

@@ -152,13 +152,13 @@ To Combat Menu:
 			clear the screen and hyperlink list;]
 			AttemptToWaitAndClearHyper;
 			continue the action;
-		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
+[		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
 		[chance to submit in combat if you have the submissive feat, feel free to adjust odds]
 			say "[line break]Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			follow the submit rule;
-			next;
+			next;			]
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
@@ -565,7 +565,7 @@ This is the submit rule:
 	let temp be the hp of the player;
 	now fightoutcome is 22;
 	Lose;
-	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
+	if "Submissive" is listed in feats of the player, increase the XP of the player by ( 2 + lev entry / 5 );
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 
