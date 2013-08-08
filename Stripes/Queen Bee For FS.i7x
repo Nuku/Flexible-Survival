@@ -75,7 +75,7 @@ When Play begins:
 	now cock length entry is 8;		[ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now breast size entry is 6;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
