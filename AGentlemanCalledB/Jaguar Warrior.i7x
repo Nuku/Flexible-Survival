@@ -274,11 +274,11 @@ to say TehuantlSexMenu:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "Put your kitty's rough tongue to use";
-[	if cunts of player > 0 or cocks of player > 0:
+	if cunts of player > 0 and hp of Tehuantl > 14:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 5;
-		now description entry is "share in some mutual pleasure with Tehuantl";]
+		now description entry is "share in some mutual pleasure with Tehuantl";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -299,8 +299,8 @@ to say TehuantlSexMenu:
 					say "[TehuantlSex_BJ]";
 				otherwise if title entry is "Cunnilingus":
 					say "[TehuantlSex_cunni]";
-[				otherwise if title entry is "69":
-					say "[TehuantlSex_69]";]
+				otherwise if title entry is "69":
+					say "[TehuantlSex_69wtoy]";
 		otherwise:
 			say "Invalid Option.";
 
@@ -325,6 +325,14 @@ to say TehuantlSex_cunni:
 	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down between your things. She mrowls lustfully as you approach, licking her lips as she watches your fingers slowly part your pussy lips. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl as she approaches on her hands and knees.";
 	say "     Her padded paws tease your inner thighs gently as she positions herself between them, rumbling happily as she begins teasing your glistening folds. You run your hands through her long dark hair as the feeling of her rough tongue making long slow passes across your outer lips sends shivers of delight run through you. Tehuantl's paws drift closer to your drooling pussy as her tongue begins pressing further into you, her soft paw pads rubbing your clit delightfully as her other paw spreads your cunt apart to give her further access to your needy depths. Soon you are moaning in pleasure as your thirsty feline pet pushes her master to a powerful climax, drinking up every drop of your feminine fluids as her talented tongue and paws draw out your orgasm as long as they can.";
 	say "     After lapping up all the sweet juices she can Tehuantl lays back on the floor before you, her paws tenderly playing down her body towards her own dripping snatch. She puts on quite a show for you, mrowling lustfully as she works her fingers into her wet cunt while teasing her nipples and groping her breasts with her free paw, driving herself to several yowling climaxes as you recover from your own.";
+
+to say TehuantlSex_69wtoy:
+say "     With Tehuantl's powerful scent filling the air, you decide to try and give her a little something extra to help her take the edge off. She mewls needfully as you drop your gear and approach her, spreading her legs wide to put her needy pussy on display for you. You push Tehuantl back to lay on the couch and tease her wet pussy with a pair of fingers, stroking her outer folds and clit before pressing deeper into her body. Tehuantl moans in delight as you continue frigging her, groping her breasts and tweaking her nipples as you do.";
+say "     The feline pussy grips your fingers tightly, already milking and squeezing your fingers like a cock if an effort to cool her heat. As your play continues, you spot one of the rubber sex toys your brought back for Tehuantl to help her with her heat, and reach for the bright pink cock. Toy in hand, you spread Tehuantl's netherlips apart with the fingers already inside her and begin pushing the tip of the toy into her. Tehuantl's moans of pleasure become more frequent and much louder as your drive the thick rubber cock into her, freeing your sticky fingers to softly massage her clit as well. It doesn't take long for your efforts to pay off, and Tehuantl is soon yowling in release. Her musky waters gush out around the rubber toy and soak your hand. ";
+attempttowait;
+say "     With Tehuantl still shivering in delight after her climax, you climb up on the couch with her, positioning yourself above her in a 69 position. After pulling the slick pink dildo from Tehuantl's cunt, you begin lapping at her wet pussy with long, slow motions, meanwhile the rubbery sextoy has found it's way into Tehuantl's paws, and it is soon probing the outer folds of your own moist nethers. You can't help but moan out loud as Tehuantl sinks the toy into your body, momentarily distracting your from her wet pussy. The two of you go at it for what feels like hours, taking turns playing and teasing each other to near orgasm before backing off and letting the other take over, but eventually the delightful feeling becomes to much [one of]for Tehuantl, and she soaks your face in her her nectars with a yowl of release. Even in the throes of orgasm, the insatiable feline drives her rubber sex toy into you while massaging your clit with her padded paw to until you climax as well before she finally stops[or]for you, and you soak Tehuantl in your nectars with a cry of release. Despite the debilitation pleasure, you manage to focus enough to drive a pair of fingers into Tehuantl and frig her to orgasm as well before you finally let the bliss wash over you[at random].";
+attempttowait;
+say "     You lay together with Tehuantl cuddling for some time, simply enjoying your pet's company for a while before you finally lift yourself from the couch.";
 
 to say TehuantlSex_BJ:
 	say "     Deciding to put Tehuantl's rough feline tongue to use, you drop your gear and approach her slowly while letting one hand wander down to stroke your [cock size desc of player] [cock of player] cock. She mrowls lustfully as you approach, licking her lips as she watches your pre drip from the tip of your shaft. Taking a seat on one of the padded chairs, you spread your legs for Tehuantl, still stroking yourself as she approaches on her hands and knees.";
