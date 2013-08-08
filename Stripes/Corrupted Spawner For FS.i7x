@@ -123,7 +123,7 @@ to say corruptedvicdesc:
 
 [	corrvicchange1	]
 [ 1-5 tail			]
-[ 6-15 back			]
+[ 6-15 back		]
 [ 16-18 feet		]
 [ 18-19 hands		]
 [ 20 dick-nipples	]
@@ -131,7 +131,8 @@ to say corruptedvicdesc:
 [	corrvicchange2	]
 [ 1-5 shoulder		]
 [ 6-8 skin tone		]
-[ 9-18 head			]
+[ 9-18 head		]
+[ 19-20 thighs		]
 
 Section 2 - Monster Insertion
 
