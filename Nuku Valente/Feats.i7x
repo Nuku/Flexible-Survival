@@ -193,8 +193,8 @@ instead of addfeating the fun feats:
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale.";
-	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a weaker grip on your humanity.";
-	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "You have a stronger grip on your humanity.";
+	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "Having a higher mental succeptibility to corruption by the nanites, you have a weaker grip on your humanity.";
+	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your humanity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
 	if "Open World" is not listed in feats of player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
