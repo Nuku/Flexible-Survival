@@ -1,7 +1,8 @@
 Jaguar Warrior by AGentlemanCalledB begins here.
 
 "Adds a Jaguar Warrior creature to Flexible Survivals Wandering Monsters table"
-[Version 2 - Expansion to base NPC]
+[Version 2.2 - Base sex scenes, interaction with select bunker-able NPCs]
+[Tehuantl + Squirrels commission work, first scene + all code done/tested - 1h20m]
 
 Section 1 - Monster Responses
 
@@ -238,7 +239,6 @@ Instead of conversing the Tehuantl:
 	otherwise:
 		say "[one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I serve, or service, you master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
 
-
 to say Tehuantlsex:
 	if hp of Tehuantl is 11:
 		try conversing the Tehuantl;
@@ -358,10 +358,48 @@ to say TehuantlandSven:
 	otherwise:
 		say "     Deciding to leave your feline pets be, you try to put the thought out of your mind as Sven disappears upstairs. Soon after you hear the jingling of Tehuantl's belled collar and some hushed conversation upstairs before you turn your attention to other things.";
 
+to say TehuantlandSnow:
+	if TehuantlSnowStatus is 0:
+		say "     Once you finally arrive in the relative safety of the library you stop and relax for a moment, taking a short break from the trails of the city outside. From your seat at one of the library's large study tables, you notice some movement at the staircase leading up to the abbey's second floor. You watch with curious interest as Tehuantl stealthily descends from the upper floor, her tail flicking with excitement as she peers across the library in snow's direction.";
+		say "     Snow meanwhile seems to be unaware of the feline slinking towards her, distracted with some small project she's tinkering with at the table she's claimed as a workbench, though based on the way she's idly rubbing her groin with a free paw while she works, it seems the arousing scent of Tehuantl's feline heat filling the room is still having an effect on her.";
+		say "     As Tehuantl reaches the bottom of the stairs, she spots you looking at her and realizes she hasn't gone unnoticed. Glancing back at snow, then towards you once again, she waits patiently at base of the steps as if waiting for your reaction to her apparent interest. Will you let your feline pet try and entice the unsuspecting squirrel into some fun?";
+		if the player consents:
+			say "     With a knowing grin you nod at Tehuantl, who gives you a naughty smirk in return before resuming her silent approach. You settle down into your seat, getting comfortable for what promises to be quite a show as she stalks across the library towards Snow.";
+			say "     Even from across the room, you hear Snow chitter in surprise as the alluring jaguar taps her on the shoulder and she abruptly spins around to face the feline, revealing the painfully large erection straining her pants. Snow fidgets uncomfortably as she and Tehuantl make small talk for a while, obviously distracted by the pretty kitty's attractive assets and arousing scent. Tehuantl seems to take a perverse delight in watching the poor squirrel squirm, drawing out the awkward introduction for some time before she finally leans in close to the busty squirrel and whispers something in her ear. Snow's expression, lightens instantly and she quickly sets about clearing a space at her workbench.";
+			say "     Tehuantl Pulls snow into a tight embrace, pulling her  towards the now cleared table before slowly descending down her squirrine form towards her groin. Her deft paws work quickly to remove snow's tight pants, finally allowing her engorged pink member to spring free. Marveling at Snow's massive cock, Tehuantl takes a hold of it with one paw, stroking it gently as her rough tongue plays teasingly across her glans.";
+			attempttowait;
+			say "     When Tehuantl finally rises back to her feet, Snow eagerly grabs her her shoulders and pushes her back against the counter, stroking her impressive member across Tehuantl's moist nethers before pressing her hips forward, driving into the feline's needy body with a grunt. Snow's swollen breasts and nuts slap lewdly against Tehuantl's furred form with each thrust as the two settle into a steady rhythm, moaning lustfully as their paws roam across each other's form, adding to their building arousal.";
+			say "     With a screeching chitter and a feline yowl, the two finally reach mutual climax as Snow makes a final thrust home, pushing Tehuantl back to lay across the table as she puts all her weight into the final motion before emptying her grapefruit sized balls into the moaning feline.";
+			attempttowait;
+			say "     The two lay locked together on the table for a few moments before Tehuantl pushes the limp squirrel off onto the table beside her, pulling Snow's cock free with a noticeable pop. With Snow's ample load still leaking down her furred thigh, Tehuantl ascends back up to her favorite spot upstairs, only stopping momentarily at the bottom of the stairs to look back at you, winking playfully while spreading her stuffed pussy lips apart for you to see before continuing upstairs.";
+			[now TehuantlandSnow is 1;]
+		Otherwise:
+			say "     Deciding against letting the needy feline prey on the unsuspecting squirrel, you shake your head sternly at her, motioning her back upstairs. Clearly disappointed, the obedient kitty slowly turns, and makes her way back to to her favorite spot upstairs, only pausing at the top of the steps to look back at you one last time before moving out of sight.";
+			now TehuantlSnowStatus is 99;
+	[otherwise if TehuantlSnowStatus is 1:
+		if cocks of player > 0 or cunts of player > 0:
+			say "repeatable scene incoming! threesome?";
+			if the player consents:
+				if cocks of player > 0:
+					say "you could mount snow as she screws the kitty (Y), or get some attention from that rough tongue(N).";
+					if the player consents:
+						say "screw snow while she screws Tehuantl.";
+					otherwise:
+						say "Oral from Tehuantl.";
+				otherwise :
+					say "Oral from Tehuantl.";
+		otherwise:
+			say "since you have no bits, will you watch?";
+			if the player consents:
+				say "repeatable scene";
+			otherwise:
+				say "well, aren't you boring?";]
+
 Section 5 - Heat, pregnancy and assorted gimmicks
 
 TehuantlStatus is a number that varies. [1 normal, 2 in heat, 3 prgenant]
 TehuantlTimer is a number that varies.
+TehuantlSnowStatus is a number that varies.
 
 an everyturn rule:
 	if HP of Tehuantl > 14:
@@ -397,13 +435,25 @@ after navigating Grey Abbey Library:
 	otherwise if hp of Tehuantl > 14:
 		if TehuantlStatus is 2:
 			if a random chance of ( lastfuck of Tehuantl - turns ) in 20 succeeds:
-				if hp of Sven is 8 or (hp of Sven >= 10 and hp of Sven <= 49):
-					say "[TehuantlandSven]";
-					decrease lastfuck of Tehuantl by a random number between 1 and 4;
-				otherwise:
-					say "     The air is  thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat once again.";
+				say "[TehuantlBunkerScenes]";
 			otherwise:
 				say "     The air is  thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat once again.";
+
+to say TehuantlBunkerScenes:
+	let TehuantlList be a list of numbers;
+	if hp of Sven is 8 or (hp of Sven >= 10 and hp of Sven <= 49):
+		add 1 to TehuantlList;
+	if Snow is booked and TehuantlSnowStatus is not 99:
+		add 2 to TehuantlList;
+	sort TehuantlList in random order;
+	if entry one of TehuantlList is 1:
+		say "[TehuantlandSven]";
+		decrease lastfuck of Tehuantl by a random number between 1 and 4;
+	otherwise if entry one of TehuantlList is 2:
+		say "[TehuantlandSnow]";
+		decrease lastfuck of Tehuantl by a random number between 1 and 4;
+	otherwise if TehuantlList is empty:
+		say "     The air is  thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat once again.";
 
 to say TehuantlHeatIntro:
 	say "     Tehuantl is laying on the ground as you approach her, mrowling and mewling as she furiously works several fingers in and out of her swollen cunt. By the look of the large wet spot on the carpet below her, and overwhelming scent of her feminine juices, it seems she been at this for a while.";
