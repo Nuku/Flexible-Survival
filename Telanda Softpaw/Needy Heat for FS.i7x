@@ -89,6 +89,87 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
 
+
+This is the check heat rule:
+	if heat enabled is true:
+		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
+			if cunts of player is greater than 0 and (cockname of player is not "human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+				if animal heat is not True:	[ Check if it's just triggered]
+					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
+					now turns in heat is 0;
+					now animal heat is True;
+				now lastturn is turns;
+				increase turns in heat by 1;
+				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
+				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+					choose a row with a infect name of (cockname of player) in Table of infection heat;
+					if fheat entry is false:	[no female heat for that form]
+						choose row 1 in table of infection heat;
+				else: [No specific Data, use Generic entry.]
+					choose a row 1 in Table of infection heat;
+				if turns in heat is greater than (heat cycle entry times 8):
+					now turns in heat is 0;
+					[ say "reset!"; ]
+				if turns in heat < ( heat duration entry * 8 ) and inheat is not True:	[not yet in heat]
+					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
+					now heatform is 0;	[in female heat]
+					say "[trigger text entry]";
+					if there is heat start entry, say "[heat start entry]";	[Heat start Trigger]
+				else if turns in heat < ( heat duration entry * 8 ) and inheat is True:	[still in heat, previously triggered.]
+					if heatform is 1:		[last turn was mpreg heat]
+						say "That heated need that has been burning deep inside you spreads to encompass your new pussy.  Hot juices soak your thighs as your female sex goes into heat and you're left wanting to be mounted and bred.";
+						now heatform is 0;	[swap to female heat]
+					otherwise:
+						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
+				else if inheat is true:
+					say "Without any warning, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
+					now heatform is 0;	[ensuring treats as female heat for end]
+					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
+					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now inheat is False;
+			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+				if animal heat is not True:	[ Check if it's just triggered]
+					say "You feel a hot rush in your lower belly as some hidden part of your is affected by your tainted sexuality.";
+					now turns in heat is 0;
+					now animal heat is True;
+				now lastturn is turns;
+				increase turns in heat by 1;
+				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+					choose a row with a infect name of (cockname of player) in Table of infection heat; 
+					if mpregheat entry is false:	[no mpreg heat for that form]
+						choose row 1 in table of infection heat;
+				else: [No specific Data, use Generic entry.]
+					choose a row 1 in Table of infection heat;
+				if turns in heat is greater than (heat cycle entry times 8):
+					now turns in heat is 0;
+					[ say "reset!"; ]
+				if turns in heat < ( heat duration entry * 8 ) and inheat is not True:	[not yet in heat]
+					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
+					now heatform is 1;	[in mpreg-heat]
+					say "[mpregtrigger entry]";
+					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
+				else if turns in heat < ( heat duration entry * 8 ) and inheat is True:	[still in heat, previously triggered.]
+					if heatform is 0:		[last turn was female heat]
+						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly.  You are left still wanting to be mounted and filled despite being [if cocks of player > 0]male[otherwise]neuter[end if].";
+						now heatform is 1;	[swap to mpreg-heat]
+					otherwise:
+						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
+				else if inheat is true:
+					say "As swiftly as it came, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
+					now heatform is 1;	[ensuring treats as mpreg heat for end]
+					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
+					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now inheat is False;
+			else:
+				if animal heat is True:
+					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore.";
+					now turns in heat is 0;
+					now animal heat is False;
+					now inheat is False;
+
+
+
+[  - old version... buggy?
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
@@ -165,7 +246,7 @@ This is the check heat rule:
 					now turns in heat is 0;
 					now animal heat is False;
 					now inheat is False;
-
+]
 
 Book 3 - Debugging Commands - not for release
 
