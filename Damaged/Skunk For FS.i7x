@@ -1,5 +1,5 @@
 Version 10 of Skunk For FS by Damaged begins here.
-[ Version 10.1 - Alt Attack adjusted ]
+[ Version 10.2 - Updated to extended heat table - no MPreg heat yet - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
@@ -268,8 +268,8 @@ to skspray:						[ignores defences, requires no hit, hum/lib check instead to re
 Section 3 - Skunk heat and Skunk goo
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -280,6 +280,8 @@ When Play begins:
 	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[skunk in heat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now fheat entry is true;
+	now mpregheat entry is false;
 
 to say skunk heat start:
 	increase cunt width of player by 3;

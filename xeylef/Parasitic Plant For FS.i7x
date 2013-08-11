@@ -1,5 +1,5 @@
 Version 8 of Parasitic Plant For FS by xeylef begins here.
-[Version 8.3 - Alt attack and Anime Babe vulnerability tweaked]
+[Version 8.4 - Updated to extended heat table - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -85,16 +85,16 @@ to say plantorseed:
 		now wdam entry is 6 + ( debit / 3 );
 		if plantdefeat is 0: [encounter yet to fight it]
 			if cunts of player > 0:	[cunt yes, bush]
-				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
+				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
 			otherwise:	[cunt no, bush]
-				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
+				say "     You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
 		otherwise:[seed]
 			if cunts of player > 0:	[cunt yes, seed]
-				say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+				say "     A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 			otherwise:	[cunt no, seed]
-				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+				say "     A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 	if bodyname of player is "Anime Babe":
-		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
@@ -137,7 +137,7 @@ When Play begins:
 	now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is " a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 16;
@@ -273,30 +273,51 @@ keepcock is a number that varies. keepcock is usually 0.
 
 
 Table of infection heat(continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
-"Parasitic Plant"	400	400	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+"Parasitic Plant"	400	400	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"	true	true	"[parasiticluststart]"
 
 to say parasiticluststart:
 	if plantdefeat is 1:
-		say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
-		now addedlibido is 10;
-		if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
-		if cunts of player > 1:
-			say "Your vaginas begin to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
-			now addedlibido is addedlibido + 2 times ( cunts of player minus 1 );
-		if tailname of player is "Parasitic Plant":
-			say "The same sensation comes from your ass-cunt, which seems just as aroused.";
-			now addedlibido is addedlibido + 2;
-		if facename of player is "Parasitic Plant":
-			say "Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat. It tastes like pure sex, adding to your lust.";
-			 now addedlibido is addedlibido + 5;
+		say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.  ";
+		if heatform is 0:	[female heat]
+			increase addedlibido by 2;
+			if cunts of player is 1:
+				say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends![run paragraph on]";
+			otherwise if cunts of player > 1:
+				say "Your vaginas begin to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends![run paragraph on]";
+			if tailname of player is "Parasitic Plant":
+				say "  The same sensation comes from your ass-cunt, which seems just as aroused.[run paragraph on]";
+			if player is mpreg_able, increase addedlibido by 2;
+			if facename of player is "Parasitic Plant":
+				say "  Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat.  It tastes like pure sex, adding to your lust.[run paragraph on]";
+			say "[line break]";
+		otherwise:			[mpreg heat]
+			if tailname of player is "Parasitic Plant":
+				say "Your vaginal anus begins to drool juices abundantly, which start to run down your legs.  You try to relieve some sexual need with your hand, but you already know it's not going to be enough.  You need a cock in it.  Preferably one able to cum gallons.  Your eyes openwide as you realize this last thought wasn't yours!  It is using your body for its own ends![run paragraph on]";
+			otherwise:
+				say "Your anus begins to clench and quiver with a growing longing.  You try to relieve some sexual longing with your hand, but you already know it's not going to be enough.  You need a cock in it.  Preferably one able to cum gallons.  Your eyes openwide as you realize this last thought wasn't yours!  It is using your body for its own ends![run paragraph on]";
+			if facename of player is "Parasitic Plant":
+				say "  Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat.  It tastes like pure sex, adding to your lust.[run paragraph on]";
+			say "[line break]";
+		say "[calcpplibido]";
+
+to say calcpplibido:
+	now addedlibido is 6;
+	increase addedlibido by cunts of player * 2;
+	if player is planttailed, increase addedlibido by 2;
+	if player is mpreg_able, increase addedlibido by 2;
+	if player is plantfaced, increase addedlibido by 5;
 
 to say parasiticlust:
+	say "[calcpplibido]";
 	if plantdefeat is 1:
 		increase libido of player by addedlibido;
 		if libido of player > 99, now libido of player is 99;
 		if (libido of player is greater than 90) and (location of player is fasttravel) and (timetillrampage is greater than 3):
-			say "As you pant and feverishly massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
+			if heatform is 0:
+				say "As you pant and feverishly massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps.  You rush to its source and fuck it frantically, not caring about what or who the cock belongs to.  As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust.  You enter a sex rampage.";
+			otherwise:
+				say "As you pant and feverishly finger your [if player is planttailed]vaginal [end if]asshole, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps.  You rush to its source and fuck it frantically, not caring about what or who the cock belongs to.  As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust.  You enter a sex rampage.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if skinname of player is "Parasitic Plant", now keepskin is 1;
 			if facename of player is "Parasitic Plant", now keepface is 1;
@@ -321,13 +342,14 @@ to say parasiticlust:
 				say "[line break][line break]";
 				say "[one of]Your lustful urges lead you to a [name entry].  Immediately upon seeing the infected monster, you offer yourself to it in the hopes of satisfying some of your seed's hunger.[or]An enticing scent leads to a [name entry].  Hoping to slake your thirst for sexual juices, you immediately submit in the hopes of satisfying your body's carnal hungers.[or]A [name entry] encounters you while you wander in your lustful haze.  You submit to it with no reservations, needing to satisfy your deep, internal hunger.[or]A [name entry] crosses your wandering path as you seek out the scents to slake your inner needs.  You offer yourself to it, lustful for any sexual satisfaction you may get from it.[or]When your lustful meandering leads to a [name entry], you submit and offer yourself to it.[or]Wandering through the city with no aim greater than lustful self-satisfaction, you come across a [name entry] and give in to it immediately.[in random order]";
 				follow the cock descr rule;
+				follow the cunt descr rule;
 				follow the breast descr rule;
 				now didsubmit is 1;
 				say "[victory entry]";
 				infect;
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[line break][line break]";
-			say "The sex rampage finally ends and you regain control of your urges.  You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes.  You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired.  If seeps through your infected body, reclaiming your altered flesh and spreading further.[line break]";
+			say "The sex rampage finally ends and you regain control of your urges.  You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes.  You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired.  It seeps through your infected body, reclaiming your altered flesh and spreading further.[line break]";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Parasitic Plant":
@@ -357,7 +379,7 @@ to say parasiticlust:
 				decrease the morale of the player by a random number from 5 to 10;
 				now the libido of the player is 0;
 			otherwise:
-				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";				
+				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips.  Now that was a good fucking session!";				
 				increase the morale of the player by 5;	
 				now the libido of the player is (libido of player) / 2;
 		else if libido of player is greater than 90:

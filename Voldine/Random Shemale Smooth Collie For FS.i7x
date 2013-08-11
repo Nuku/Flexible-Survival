@@ -1,5 +1,5 @@
-Version 3 of Random Shemale Smooth Collie For FS by Voldine begins here. 
-[Version 3.1 - fixed up the victory sex over her to make it more readable and understandable - Wahn]
+Version 3 of Random Shemale Smooth Collie For FS by Voldine begins here.
+[Version 3.2 - Updated to extended heat table - Stripes]
 
 "Adds a Shemale Smooth Collie to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -165,8 +165,8 @@ This could be a good item to use to further progress the 'sister' plot-line with
 Section 3 - Heat Table
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -178,30 +178,38 @@ When Play begins:
 	now heat start entry is "[collieheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[collieheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[collieinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "A whimper of need escapes your lips as a rush of heat builds in your lower abdomen.  Tucked between your cheeks, your anal ring begins to puff up and swell, stretching and loosening for your desired mate.  The faint scent of arousing pheromones linger around you, making you smell like a bitch in heat.  As these sensations grow, your need to be bred increases.";
+
 
 to say collieheatstart:
-	[puts Shemale Smooth Collie as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Shemale Smooth Collie":
-			now monster is y;
-			break;
-	increase cunt width of player by 1;
-	increase cunt length of player by 1;
-	if cunt width of player < cunt width entry, increase cunt width of player by 1;
-	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+	if heatform is 0:
+		[puts Shemale Smooth Collie as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Shemale Smooth Collie":
+				now monster is y;
+				break;
+		increase cunt width of player by 1;
+		increase cunt length of player by 1;
+		if cunt width of player < cunt width entry, increase cunt width of player by 1;
+		if cunt length of player < cunt length entry, increase cunt length of player by 1;
 
 
 to say collieheatend:
-	say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
-	[puts Shemale Smooth Collie as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Shemale Smooth Collie":
-			now monster is y;
-			break;
-	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
-	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	if heatform is 0:
+		say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
+		[puts Shemale Smooth Collie as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Shemale Smooth Collie":
+				now monster is y;
+				break;
+		if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+		if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	otherwise:
+		say "As your heat passes, your needy asshole becomes less prominent and swollen.  There still a craving for something to fill it, but it is manageable now.";
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 4, now slutfucked is 4;
@@ -212,6 +220,9 @@ to say collieinheat:
 	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 6):
 		let colliechance be 25 + ( perception of player ) * 2;
 		if colliechance > 80, now colliechance is 80;
+		let zz be a random visible dangerous door;
+		if zz is not nothing:
+			if the marea of zz is not "Outside", now colliechance is colliechance / 2;
 		if a random chance of colliechance in 100 succeeds:
 			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of your body's desired mate's scent.";
 			now slutfucked is 0;

@@ -1,5 +1,5 @@
 Version 5 of Feral Sea Dragoness by Tunalord Sefont begins here.
-[Version 5 - TBM sex submitted by Blue Bishop, overseen by Stripes]
+[Version 5.1 - Updated to extended heat table - Stripes]
 
 "Adds a Feral Sea Dragoness to Flexible Survivals Wandering Monsters table"
 
@@ -238,34 +238,37 @@ When Play begins:
 Section 3 - Heat Table
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
-
-Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "feral sea dragoness";
 	now heat cycle entry is 7;
 	now heat duration entry is 3;
-	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  Your can feel your dripping lips becoming full and engorged in a wanton display of your bodies need to be bred.  With this realization, it is clear that you've gone into heat.";
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred.  With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
 	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need.  You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  You can feel your rhythmically clenching and relaxing as it becoming full and engorged in preparation for your body's need to be bred.  With this realization, it is clear that you've gone into some strange heat.";
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "feral sea dragon";
 	now heat cycle entry is 7;
 	now heat duration entry is 3;
-	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  Your can feel your dripping lips becoming full and engorged in a wanton display of your bodies need to be bred.  With this realization, it is clear that you've gone into heat.";
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred.  With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
 	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need.  You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  You can feel your rhythmically clenching and relaxing as it becoming full and engorged in preparation for your body's need to be bred.  With this realization, it is clear that you've gone into some strange heat.";
 
 
 to say fsdheatstart:

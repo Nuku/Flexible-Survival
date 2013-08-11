@@ -1,5 +1,5 @@
 Version 3 of Rabbit Pack For FS by Lago Moro begins here.
-[Version 3 - Heat repairs - Stripes]
+[Version 3.1 - Updated to extended heat table - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Rabbit Pack to Flexible Survivals Wandering Monsters table."
@@ -34,15 +34,15 @@ to say rabpackdesc:
 to say rabpackvictory:
 	if fightstatus is 3, now fightstatus is 2;
 	if bodyname of player is "rabbit pack":
-		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn[apostrophe]t wants unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
+		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn't want unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "It[apostrophe]s so slow...not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with...well...hir, and you find your consciousness passing from male to female in a pinkish blur...either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts[one of]massaged[or]milked[at random], asses[one of]groped[or]prodded[at random], cunts[one of]licked[or]fingered[or]filled[at random]...every often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
+		say "It's so slow...not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with...well...hir, and you find your consciousness passing from male to female in a pinkish blur...either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts[one of]massaged[or]milked[at random], asses[one of]groped[or]prodded[at random], cunts[one of]licked[or]fingered[or]filled[at random]...every often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
 		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.[impregchance]";
 		decrease libido of player by 50;
 	otherwise:
 		say "The rabbit creatures lift you in unison and transport you into a nearby abandoned building, before any unwanted guest shows up.[line break] They lay you gently on the ground and admire your body, obviously pleased by what they got; they crawl on you, caressing, licking gently...[line break][rabpacka][rabpackb][rabpackc]";
-		say "Your body can[apostrophe]t resist their attentions, and you orgasm, matting a few of them. This doesn[apostrophe] stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you is...[line break] When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
+		say "Your body can't resist their attentions, and you orgasm, matting a few of them. This doesn' stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you is...[line break] When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
 
 to say rabpacka:
 	if breast size of player > 6:
@@ -62,7 +62,7 @@ to say rabpackc:
 		if cunt width of player > 7:
 			say "At the same time you feel at least a pair of tongues licking your feminine folds. You can't see what exactly is going on, but the increasing moistness of your groin is a sure indication...";
 		otherwise:
-			say "At the same time you feel someone gently licking your feminine folds. It[apostrophe]s not invasive, but constant and agonizingly slow, just like everything else they are doing to you...";
+			say "At the same time you feel someone gently licking your feminine folds. It's not invasive, but constant and agonizingly slow, just like everything else they are doing to you...";
 
 
 to say rabpackbeaten:
@@ -139,20 +139,23 @@ when play ends:
 [ +++++ ]
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
-Choose a blank row from Table of infection heat;
-now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
-now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
-now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
-now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
-now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
+	now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
+	now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
+	now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "[rabpacktrigger]";
 
 to say rabpackinheat:
 	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
-		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
+		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can't go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can't help it: it's like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [']your body[']. You still want to cling to how much sanity you have left, though.[at random]";
 		increase libido of player by 1;
 		decrease humanity of player by 1;
 	otherwise:
@@ -162,7 +165,7 @@ to say rabpackinheat:
 
 to say rabpacktrigger:
 	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
-		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let[apostrophe]s see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
+		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let's see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
 	otherwise:
 		now turns in heat is 0;
 		now animal heat is False;
