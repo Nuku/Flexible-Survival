@@ -1,5 +1,5 @@
 Version 9 of Bovine For FS by Damaged begins here.
-[ Version 9 - Heat repairs - Stripes ]
+[ Version 9.1 - Heat updated to expanded heat system - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Bovine to Flexible Survivals Wandering Monsters table"
@@ -260,11 +260,11 @@ When Play begins:
 Section 3 - Monster Heat
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 to say bovineheat:	
-	say "You feel your throat go drier and drier, it seems only milk fresh from the cow will fill your growling stomach.";
+	say "You feel your throat go drier and drier.  It seems only milk fresh from the cow will fill your growling stomach.";
 	increase thirst of player by 6 minus (Mooing divided by 3);
 	if Mooing is greater than 0 and a random chance of 2 in 5 succeeds:
 		decrease Mooing by 1;
@@ -277,9 +277,12 @@ When Play begins:
 	now heat duration entry is 400;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
-	now heat end entry is "";		[this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
+	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat..]
+	now heat end entry is "";		[this is the same as heat start only it's for ending the cycle.]
 	now inheat entry is "[bovineheat]";
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "";
 
 Table of Game Objects(continued)
 name	desc	weight	object

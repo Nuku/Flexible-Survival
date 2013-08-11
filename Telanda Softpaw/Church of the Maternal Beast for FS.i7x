@@ -1,4 +1,5 @@
-Church of the Maternal Beast for FS by Telanda Softpaw begins here.
+Version 3 of Church of the Maternal Beast for FS by Telanda Softpaw begins here.
+[Version 3.1 - Updated to extended heat table - Stripes]
 
 "This is a Complete interaction scene, including monsters, Rooms, a few scripted encounters and maybe even an item or Two."
 [
@@ -515,17 +516,20 @@ every turn (This is the check Hellhound rule):
 
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Hellhound";
 	now heat cycle entry is 7;
 	now heat duration entry is 7;
-	now trigger text entry is "     [if cocks of player is 0]You feel pressure build between you legs then wet gush... you immediately loose control of your bladder as well, a fetid mix of piss and cum running down your legs, as you permanently enter a Hellhound's eternal heat.[else]Your shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn, in an infernal rut your member oozes cum constantly, driving you mad with the need to bury it in some one or something.[end if]"; 
+	now trigger text entry is "     You feel pressure build between you legs then wet gush... you immediately loose control of your bladder as well, a fetid mix of piss and cum running down your legs, as you permanently enter a Hellhound's eternal heat."; 
 	now description text entry is "[if cocks of player is 0]your sex is dirty and oozing, peeling, dried up seed coating the outer lips and matting up the coarse dirty fur that sprouts around it[else] the fur of your sheath if musky and dirty, no matter how much you try to clean it. a permanent sign of your infernal taint[end if]";
-	now inheat entry is "[hellhoundheat]";
+	now inheat entry is "[defaultheat]";
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "     [if cocks of player > 0]Your shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn in an infernal rut your member oozes cum constantly.  Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred.  These desires war inside you, driving you mad with the urge to bury your cock in someone or something, or to have your bowels bred full of some hellish spawn.[otherwise]Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred.  These infernal desires feel like they might overwhelm you, your tainted body longing to be bred full of some hellish spawn.[end if]";
 
 
 Book 4 - Return to the Church

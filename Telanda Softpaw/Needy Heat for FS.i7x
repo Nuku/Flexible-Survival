@@ -1,5 +1,5 @@
-Version 2 of Needy Heat for FS by Telanda Softpaw begins here.
-[ Version 2.1 - Husky heat now scans current area - Stripes ]
+Version 3 of Needy Heat for FS by Telanda Softpaw begins here.
+[ Version 3 - MPreg heats added by Stripes ]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -11,11 +11,18 @@ turns in heat is a number that varies. turns in heat is usually 0. [ Counter to 
 inheat is a truth state that varies. inheat is usually False. [ Variable for other mods to easily check if you are in heat right now.]
 slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
+heatform is a number that varies. [This is used to denote whether the player's last turn was spent in female heat or mpreg heat]
 
 Table of infection heat
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
-"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs,seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening, glancing down to see your sex become swollen and red as your body advertises it's fertility and readiness. [line break][line break] You are in heat."	--	--	--	"[defaultheat]"
-"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp,  as you struggle for breath through the fading pain you can feel a hot trickle from between your legs. looking down you watch in horrified fascination as your sex twists and warps into that of a bitches, then begins to swell and puff up rapidly. your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping Husky Bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening.  Glancing down to see your sex become swollen and red as your body advertises it's fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need.  Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
+"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp.  As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs.  Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp.  As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass.  Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if cocks of player > 0]male [end if]heat overtakes you."
+
+[  note -
+fheat entry - truth state states if there is a female heat
+mpregheat entry - truth state states if there is an mpreg heat
+mpregtrigger - trigger text for mpreg heat starting
+]
 
 Book 2 - Logic & Rules
 
@@ -25,19 +32,23 @@ to say defaultheat:
 	if libido of player > 100, now libido of player is 100;
 	
 to say huskyheatstart:
-	increase Cunt length of player by 2;
-	increase Cunt width of player by 1;
+	if heatform is 0:	[starting female heat]
+		increase Cunt length of player by 2;
+		increase Cunt width of player by 1;
+	otherwise:			[starting mpreg heat]
+		increase libido of player by 5;
 
 to say huskyheatend:
-	decrease Cunt width of player by 1;
-	if cunt width of player < 1, now cunt width of player is 1;
-	decrease Cunt length of player by 2;
-	if cunt length of player < 1, now cunt length of player is 1;
+	if cunts of player > 0:
+		decrease Cunt width of player by 1;
+		if cunt width of player < 1, now cunt width of player is 1;
+		decrease Cunt length of player by 2;
+		if cunt length of player < 1, now cunt length of player is 1;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 6, now slutfucked is 6;
 
-to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
+to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting event that can happen if he/she doesn't get any satisfaction]
 	increase libido of player by 5;
 	if libido of player > 99, now libido of player is 99;
 	if (libido of player > 90) and (location of player is fasttravel or there is a dangerous door in location of player) and (slutfucked > 8):
@@ -81,16 +92,18 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0 and larvaegg is not 2:	[Only run if female. and has groin infection]
+			if cunts of player is greater than 0 and (cockname of player is not "human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
-					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more Tainted Sexuality.";
+					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
-				now lastturn is turns;				
+				now lastturn is turns;
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
 				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
-					choose a row with a infect name of (cockname of player) in Table of infection heat; 
+					choose a row with a infect name of (cockname of player) in Table of infection heat;
+					if fheat entry is false:	[no female heat for that form]
+						choose row 1 in table of infection heat; 
 				else: [No specific Data, use Generic entry.]
 					choose a row 1 in Table of infection heat;
 				if turns in heat is greater than (heat cycle entry times 8):
@@ -98,12 +111,51 @@ This is the check heat rule:
 					[ say "reset!"; ]
 				if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
 					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
+					now heatform is 0;	[in female heat]
 					say "[trigger text entry]";
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
 				else if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
-					if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
+					if heatform is 1:		[last turn was mpreg heat]
+						say "That heated need that has been burning deep inside you spreads to encompass your new pussy.  Hot juices soak your thighs as your female sex goes into heat and you're left wanting to be mounted and bred.";
+						now heatform is 0;	[swap to female heat]
+					otherwise:
+						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 				else if inheat is true:
-					say "Without any warning the feral lust that had been growing inside you has faded, you are no longer in heat.";
+					say "Without any warning, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
+					now heatform is 0;	[ensuring treats as female heat for end]
+					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
+					now libido of player is libido of player divided by 2;	[Halve the players libido.]
+					now inheat is False;
+			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+				if animal heat is not True:	[ Check if it's just triggered]
+					say "You feel a hot rush in your lower belly as some hidden part of your is affected by your tainted sexuality.";
+					now turns in heat is 0;
+					now animal heat is True;
+				now lastturn is turns;
+				increase turns in heat by 1;
+				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+					choose a row with a infect name of (cockname of player) in Table of infection heat; 
+					if mpregheat entry is false:	[no mpreg heat for that form]
+						choose row 1 in table of infection heat; 
+				else: [No specific Data, use Generic entry.]
+					choose a row 1 in Table of infection heat;
+				if turns in heat is greater than (heat cycle entry times 8):
+					now turns in heat is 0;
+					[ say "reset!"; ]
+				if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
+					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
+					now heatform is 1;	[in mpreg-heat]
+					say "[mpregtrigger entry]";
+					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
+				else if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
+					if heatform is 0:		[last turn was female heat]
+						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly.  You are left still wanting to be mounted and filled despite being [if cocks of player > 0]male[otherwise]neuter[end if].";
+						now heatform is 1;	[swap to mpreg-heat]
+					otherwise:
+						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
+				else if inheat is true:
+					say "As swiftly as it came, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
+					now heatform is 1;	[ensuring treats as mpreg heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now libido of player is libido of player divided by 2;	[Halve the players libido.]
 					now inheat is False;
@@ -113,7 +165,8 @@ This is the check heat rule:
 					now turns in heat is 0;
 					now animal heat is False;
 					now inheat is False;
-				
+
+
 Book 3 - Debugging Commands - not for release
 
 showheat is an action applying to nothing.
@@ -127,6 +180,6 @@ understand "set heat [a number]" as setheat.
 
 carry out setheat:
 	now turns in heat is the number understood;
-	say "turns in heat set to [turns in heat]"
+	say "turns in heat set to [turns in heat].";
 
 Needy Heat for FS ends here.

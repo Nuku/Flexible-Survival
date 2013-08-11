@@ -1,5 +1,5 @@
 Version 4 of Stuck Dragon by hiccup begins here.
-[Version 4.1 - New scenes for post-caught sex - Stripes]
+[Version 4.2 - Updated to extended heat table - Stripes]
 
 Section 1 - Finding the Building
 
@@ -797,28 +797,10 @@ Section 10 - Guide to Christy Stats
 
 Section 11 - Heat Table
 
-to say sldrheatstart:
-	if libido of player < 25:
-		now libido of player is 25;
-	otherwise:
-		increase libido of player by 10;
-	increase cunt width of player by 1;
-	increase cunt length of player by 1;
-	if libido of player > 99, now libido of player is 99;
-
-to say sldrheatend:
-	say "You release a soft moan as your heat passes, the worst of your lustful urges fading for now.";
-	decrease cunt width of player by 1;
-	if cunt width of player is 0, now cunt width of player is 1;
-	decrease cunt length of player by 1;
-	if cunt length of player is 0, now cunt length of player is 1;
-	decrease slutfucked by 2;
-	if slutfucked < 0, now slutfucked is 0;
-	if slutfucked > 6, now slutfucked is 6;
-
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -830,6 +812,44 @@ When Play begins:
 	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[sldrheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[sldrheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "You release a moan that grows into a needy roar as your groin aches and your bowels quiver with a need to be filled.  A wave of growing lust threatens to engulf you as you go into a perverse[if cocks of player > 0], male[end if] heat.  If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body.  You long to have a nice big cock inside you to breed you full of dragon eggs.";
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "Horny Dragon";
+	now heat cycle entry is 400;
+	now heat duration entry is 400;
+	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices.  A wave of growing lust threatens to engulf you as you go into heat.  If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body.  You long to have a nice big cock inside you to breed you full of dragon eggs.";
+	now description text entry is "";
+	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[sldrheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "You release a moan that grows into a needy roar as your groin aches and your bowels quiver with a need to be filled.  A wave of growing lust threatens to engulf you as you go into a perverse[if cocks of player > 0], male[end if] heat.  If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body.  You long to have a nice big cock inside you to breed you full of dragon eggs.";
+
+to say sldrheatstart:
+	if libido of player < 25:
+		now libido of player is 25;
+	otherwise:
+		increase libido of player by 10;
+	if libido of player > 99, now libido of player is 99;
+	if heatform is 0:
+		increase cunt width of player by 1;
+		increase cunt length of player by 1;
+
+to say sldrheatend:
+	say "You release a soft moan as your heat passes, the worst of your lustful urges fading for now.";
+	if heatform is 0:
+		decrease cunt width of player by 1;
+		if cunt width of player is 0, now cunt width of player is 1;
+		decrease cunt length of player by 1;
+		if cunt length of player is 0, now cunt length of player is 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
 
 to say sldrheat:
 	increase libido of player by a random number between 2 and 6;
@@ -839,7 +859,7 @@ to say sldrheat:
 			if location of player is fasttravel:
 				now battleground is "Outside";
 			otherwise:
-				say "You groan with increasing need, your body urging you to go out and find some nice, big cock to stuff inside you.";
+				say "You groan with increasing need, your body urging you to go out and find some nice, big cock to stuff inside you, or at least some sex to briefly satisfy you.";
 				increase slutfucked by 1;
 				now battleground is "void";
 		otherwise:
@@ -870,14 +890,18 @@ to say sldrheat:
 				decrease morale of player by 3;
 				if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 			otherwise:
-				say "As your draconic heat courses through you, you call out your need with the roar of a dragoness looking to be bred, but the call goes unanswered.  Your heat-filled desires make you want to head elsewhere in the hopes of finding some dragon, or baring that, a powerful lizard or reptile, to breed you.";
+				say "As your draconic heat courses through you, you call out your need with the roar of a dragoness looking to be bred, but the call goes unanswered.  Your heat-filled desires make you want to head elsewhere in the hopes of finding some dragon, or barring that, a powerful lizard or reptile, to breed you.";
 				increase slutfucked by 1;
 	otherwise if libido of player > 90:
 		increase slutfucked by 1;
-		say "[one of]You moan loudly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your dragonic cunt wanting satisfaction[or]You bite your tongue to try and hold back a lustful roar as you stuff a few fingers into your cunt to try and give yourself a little relief[or]You moan and squeeze your thighs together as slutty thoughts run through your head[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some studly dragon and getting bred[or].  Thoughts of getting bred full of eggs run through your mind[or].  You want to head back out into the city right away and find some scaly beast to play with you[or].  Thoughts of bending over for the next scaled creature you see becomes increasingly tempting[or].  A daydream about yourself on all fours with a [randomdragoncolour] dragon atop you, breeding you long and hard until you're stuffed with eggs, leaves you horny and excited[purely at random].";
+		if heatform is 0:
+			say "[one of]You moan loudly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your draconic cunt wanting satisfaction[or]You bite your tongue to try and hold back a lustful roar as you stuff a few fingers into your cunt to try and give yourself a little relief[or]You moan and squeeze your thighs together as slutty thoughts run through your head[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some studly dragon and getting bred[or].  Thoughts of getting bred full of eggs run through your mind[or].  You want to head back out into the city right away and find some scaly beast to play with you[or].  Thoughts of bending over for the next scaled creature you see becomes increasingly tempting[or].  A daydream about yourself on all fours with a [randomdragoncolour] dragon atop you, breeding you long and hard until you're stuffed with eggs, leaves you horny and excited[purely at random].";
+		otherwise:
+			say "[one of]You moan loudly as your bowels and hidden womb clench with a fiery need[or]Stuffing some fingers into your asshole, you try in vain to relieve the aching void you feel there[or]You pant and moan as waves of need quiver through your ass, your draconic male womb wanting satisfaction[or]You bite your tongue to try and hold back a lustful roar as you stuff a few fingers into your back passage to try and give yourself a little relief[or]You moan and squeeze your thighs together as slutty thoughts run through your head[or]The waves of hot lust filling your ass make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some studly dragon and getting bred[or].  Thoughts of getting bred full of eggs run through your mind[or].  You want to head back out into the city right away and find some scaly beast to play with you[or].  Thoughts of bending over for the next scaled creature you see becomes increasingly tempting[or].  A daydream about yourself on all fours with a [randomdragoncolour] dragon atop you, breeding you long and hard until you're stuffed with eggs, leaves you horny and excited[purely at random].";
+
 
 to say randomdragoncolour:
-	say "[one of]black[or]blue[or]red[or]crimson[or]golden[or]white[or]azure[or]fiery[or]green[purely at random]";
+	say "[one of]black[or]blue[or]red[or]crimson[or]golden[or]white[or]azure[or]fiery[or]green[or]emerald[purely at random]";
 
 
 Section 12 - Endings
