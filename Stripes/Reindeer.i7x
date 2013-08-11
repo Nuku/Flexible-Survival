@@ -1,5 +1,5 @@
 Version 2 of Reindeer by Stripes begins here.
-[ Version 2 - Heat repairs - Stripes ]
+[ Version 2.1 - Updated to extended heat table - no MPreg heat yet - Stripes ]
 "Adds a Christmas-themed Reindeer creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
@@ -190,17 +190,18 @@ Section 4 - Holiday Madness
 heatturnskipper is a truth state that varies.  heatturnskipper is normally false.	[skips a second heat roll if the player loses a turn]
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 Choose a blank row from Table of infection heat;
-now infect name entry is "Reindeer"; [ This should be exactly the same as your monster name in the main table]
-now heat cycle entry is 15; [ Total cycle - from start to starting again.  Default is 7. ]
-now heat duration entry is 12; [ This is how many days of the cycle you are actually in heat. Default is 1, set it to the same as cycle for permanently in heat.]
-now trigger text entry is "Naughty, festive thoughts start to creep into your head.  Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer egg nog.  Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it.  You start humming The Twelve Days of... Uh oh."; [ This is the text that is written to the screen when the player comes into heat]
-now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
-
+	now infect name entry is "Reindeer"; [ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 15; [ Total cycle - from start to starting again.  Default is 7. ]
+	now heat duration entry is 12; [ This is how many days of the cycle you are actually in heat. Default is 1, set it to the same as cycle for permanently in heat.]
+	now trigger text entry is "Naughty, festive thoughts start to creep into your head.  Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer egg nog.  Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it.  You start humming The Twelve Days of... Uh oh."; [ This is the text that is written to the screen when the player comes into heat]
+	now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now fheat entry is true;
+	now mpregheat entry is false;	[no mpreg heat at present]
 
 to say reindeerheat:
 	let diceroll be ( libido of player plus a random number between 0 and 100 );

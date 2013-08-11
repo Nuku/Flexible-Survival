@@ -1,5 +1,5 @@
 Version 8 of Alien Felinoid For FS by Damaged begins here.
-[Version 8 - Submit scenes]
+[Version 8.1 - Updated to extended heat table - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Alien Felinoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -154,20 +154,21 @@ Section 3 - Monster Heat
 [ +++++ ]
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 to say felinoidheat:
-	say "Whining as you find yourself masturbating your feminine entrance slowly, you manage to snap out of the haze of need a moment, looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
+	if heatform is 0:
+		say "Whining as you find yourself masturbating your feminine entrance slowly, you manage to snap out of the haze of need a moment, looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
+	otherwise:
+		say "Whining as you find yourself masturbating your back entrance slowly, you manage to snap out of the haze of need a moment.  , looking down at your hand, covered in your fluids, you raise it tentatively.  Suddenly the scent of your body hits you, so like a wild cat in heat, can't help but push those fingers back in for a few more minutes before you're able to move on.";
 	infect "Felinoid";
 	increase libido of player by 15;
 
 to say felinoidheat end:
 	say "The pressing need to find a mate fades slowly, leaving you whimpering in relief.";
-	if libido of player > 39:
-		decrease libido of player by 40;
-	otherwise:
-		now libido of player is 0;
+	decrease libido of player by 40;
+	if libido of player < 0, now libido of player is 0;
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -176,8 +177,11 @@ When Play begins:
 	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "His hips connecting again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that kept replaying over and over. You lift your hand up to your nose and pull it away again quickly, your mind connecting that smell with one thing, 'I'm in heat...' you murmur under your breath and try to hold the images at bay.";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "Swollen and slowly dripping fluids, your entrance aches for a lion to fill it, you find yourself, nose in the air, slowly following a scent before you regain some control and stop.";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat end entry is "[felinoidheat end]";		
+	now heat end entry is "[felinoidheat end]";
 	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "His hips connecting again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later.  Gasping, you shake your head, trying to clear the mental images and scenes that kept replaying over and over.  Noticing you were stuffing your ass with a few fingers, you pull them free only to feel a needy quiver from your vacated hole.  It longs to be filled again, desiring a powerful felinoid inside it.  'I'm in heat...' you murmur under your breath as your mind tries to cope with the strange state of your [if cocks of player > 0]male[otherwise]neuter[end if] body while trying to keep those images at bay.";  
 
 
 

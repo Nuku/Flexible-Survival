@@ -1,5 +1,5 @@
 Version 1 of Fire Elemental for FS by Stripes begins here.
-[Version 1.1 - Promotion to lvl 15 and Fire Breath alt attack]
+[Version 1.2 - Updated to extended heat table - Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Fire Elemental to Flexible Survival."
@@ -141,28 +141,33 @@ Definition: a person is fireskinned:
 Section 3 - Heat Table
 
 to say fireelheatstart:
-	if cunt length of player < 12, increase cunt length of player by 1;
-	if cunt width of player < 8, increase cunt width of player by 1;
+	if heatform is 0:
+		if cunt length of player < 12, increase cunt length of player by 1;
+		if cunt width of player < 8, increase cunt width of player by 1;
 	if libido of player < 80, now libido of player is ( 80 + ( libido of player * 3 ) ) / 4;
 
 to say fireelheatend:
-	decrease libido of player by 20;
-	if libido of player < 0, now libido of player is 20;
+	if libido of player > 20:
+		decrease libido of player by 20;
+		if libido of player < 20, now libido of player is 20;
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Fire Elemental";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins.  This heat builds, growing to an inferno of lust and desire[if cunt width of player < 8 or cunt length of player < 12].  As this fire burns away at you, your pussy deepens, aching for something  to fill it and stoke its fires[end if].  You are in heat with an primal, elemental need."; 
+	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins.  This heat builds, growing to an inferno of lust and desire[if cunt width of player < 8 or cunt length of player < 12].  As this fire burns away at you, your pussy deepens, aching for something to fill it and stoke its fires[end if].  You are in heat with an primal, elemental need."; 
 	now description text entry is "pulsing, elemental furnace of lust ";
 	now heat start entry is "[fireelheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[fireelheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[defaultheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "     There is a sudden, pulsing heat inside you centered at your lower belly.  This heat builds, growing to an inferno of lust and desire.  As this fire burns away at you, your rectum grow heated as well, aching for something to fill it and to stoke its fires.  You are in heat with an primal, elemental need.";
 
 
 Section 4 - Endings

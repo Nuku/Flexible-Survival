@@ -1,5 +1,5 @@
 Version 5 of Feral Sea Dragon by Tunalord Sefont begins here.
-[Version 5 - TBM Scene additions by Blue Bishop, overseen by Stripes]
+[Version 5.1 - Updated to extended heat table - Stripes]
 
 "Adds a Feral Sea Dragon to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]

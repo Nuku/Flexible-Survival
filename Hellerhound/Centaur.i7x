@@ -1,5 +1,5 @@
 Version 2 of Centaur by Hellerhound begins here.
-[Version 2.2 - Alt Attack]
+[Version 2.3 - Updated to extended heat table - no MPreg heat - Stripes]
 
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
@@ -276,8 +276,8 @@ When Play begins:
 Section 6 - Centaur Heat
 	
 Table of infection heat(continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
-"Mutant Centaur"	7	10	"[centheat]"	"winking and dripping green cunt "	--	--	"[defaultheat]"
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+"Mutant Centaur"	10	7	"[centheat]"	"winking and dripping green cunt "	--	--	"[defaultheat]"	true	false	--
 
 to say centheat:
 	say "You gasp in lust, and then gasp at the suddenness of the feeling. You look down to see your green cunt begin to wink open and closed, light green juices running from it and down your legs.";

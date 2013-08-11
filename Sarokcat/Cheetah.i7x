@@ -1,5 +1,5 @@
 Version 2 of Cheetah by Sarokcat begins here.
-[ Version 2 - Cheetah Heat ]
+[ Version 2.1 - Updated to extended heat table - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a cheetah woman to Flexible Survivals Wandering Monsters table"
@@ -109,23 +109,9 @@ the scent of cheetah milk is "The milk has a strongly feline scent that's rather
 
 Section 3 - Heat Table
 
-to say cheetahwomanheatstart:
-	if libido of player < 30:
-		now libido of player is ( 60 + libido of player ) / 3;
-	otherwise:
-		increase libido of player by 6;
-
-to say cheetahwomanheatend:
-	say "You release a soft mrowl as your heat passes, the ache in your loins subsiding somewhat.";
-	now libido of player is ( libido of player * 9 ) / 10;
-	decrease slutfucked by 2;
-	if slutfucked < 0, now slutfucked is 0;
-	if slutfucked > 6, now slutfucked is 6;
-
-
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -137,7 +123,23 @@ When Play begins:
 	now heat start entry is "[cheetahwomanheatstart]";
 	now heat end entry is "[cheetahwomanheatend]";
 	now inheat entry is "[cheetahwomaninheat]";
-	
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "Feeling a needy throb deep in your abdomen as a quiver of excitement runs through your bowels, you grab your ass and squeeze it firmly.  You unleash a very feline yowl as your cheetah ass goes into heat.  Enticing pheromones fill the air as your back passage becomes heated.  Even the scent of them makes you more excited.  You find yourself thinking of the many sexy felines you've seen around, feeling an urge to play with them.";
+
+
+to say cheetahwomanheatstart:
+	if libido of player < 30:
+		now libido of player is ( 60 + libido of player ) / 3;
+	otherwise:
+		increase libido of player by 6;
+
+to say cheetahwomanheatend:
+	say "You release a soft mrowl as your heat passes, the ache in your [if cunts of player > 0]loins[otherwise]anus[end if] subsiding somewhat.";
+	now libido of player is ( libido of player * 9 ) / 10;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
 
 to say cheetahwomaninheat:
 	increase libido of player by 5;
@@ -184,7 +186,10 @@ to say cheetahwomaninheat:
 				increase slutfucked by 1;
 	otherwise if libido of player > 90:
 		increase slutfucked by 1;
-		say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or].  You sniff the air, hoping to find some kitty to play with[or].  You want to head back out into the city right away and find some kitty to scratch your special itch[or].  Thoughts of bending over for the next feline you see becomes increasingly tempting[or].  The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
+		if heatform is 0:
+			say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or].  You sniff the air, hoping to find some kitty to play with[or].  You want to head back out into the city right away and find some kitty to scratch your special itch[or].  Thoughts of bending over for the next feline you see becomes increasingly tempting[or].  The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
+		otherwise:
+			say "[one of]You mewl softly as a fresh wave of pheromones waft from your heated body[or]Stuffing some fingers between your cheeks, you try in vain to relieve the aching void you feel there[or]You pant and moan as wave of need quiver through your ass, your feline male womb wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your bowels makes you hornier and hornier[or]The waves of hot lust filling your ass make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or].  You sniff the air, hoping to find some kitty to play with[or].  You want to head back out into the city right away and find some kitty to scratch your special itch[or].  Thoughts of bending over for the next feline you see becomes increasingly tempting[or].  The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
 
 
 Section 4 - Endings

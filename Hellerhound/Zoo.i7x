@@ -1,5 +1,5 @@
 Version 2 of Zoo by Hellerhound begins here.
-[Version 2 - Moved Angie content to Angie file in Sarokcat folder]
+[Version 2.1 - Updated to extended heat table - Stripes]
 [extension 'the zoo' by hellerhound, created by similarly named story by nuku valente :)]
 
 The Bird Door is a door.
@@ -155,8 +155,8 @@ To say cheetah attack:
 
 
 Table of infection heat(continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
-"Cheetah"	8	8	"You gasp as pleasure overwhelms your sight and hearing, the smell of a female in heat becoming your only focus. As you slowly come out of it, you realize your cunt is dripping with readiness, and the smell is still there.[cheetahreset]"	"swollen and dripping Cheetah twat "	--	--	"[cheetahheat]"
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+"Cheetah"	8	8	"You gasp as pleasure overwhelms your sight and hearing, the smell of a female in heat becoming your only focus. As you slowly come out of it, you realize your cunt is dripping with readiness, and the smell is still there.[cheetahreset]"	"swollen and dripping Cheetah twat "	--	--	"[cheetahheat]"	true	true	"You gasp as pleasure overwhelms your sight and hearing, the scent of a female in heat becoming your only focus.  As you slowly come out of it, you realize that the scent is wafting from you despite being [if cocks of player > 0]male[otherwise]neuter[end if].  Your anus quivers and relaxes, readying itself for the mating your infected body desires.[cheetahreset]"
 
 lastcheetahturns is a number that varies.
 

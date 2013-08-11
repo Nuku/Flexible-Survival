@@ -1,4 +1,5 @@
-Pink Poodle by AGentlemanCalledB begins here.
+Version 1 of Pink Poodle by AGentlemanCalledB begins here.
+[Version 1.1 - Updated to extended heat table - Stripes]
 "Adds a Pink Poodle creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
@@ -90,15 +91,22 @@ to say pinkpoodleoral:
 	say "     Eventually it all becomes to much, and you climax powerfully [if cocks of player > 0]blasting your [cum load size of player] load into her muzzle[otherwise]soaking her muzzle in your feminine juices[end if] as orgasm wracks your body. Steadying yourself with a hand on the panting canine's shoulder, you gently stroke her softly furred head with your free hand while you bask in the afterglow of the poodle's expert handiwork. When you've finally recovered enough to gather your things and continue on your way, the pink poodle rises to her feet, giving you a quick [if poodleapproved is 1]kiss on the cheek[otherwise]scowl[end if] before heading in the opposite direction.";
 
 to say PinkPoodledesc:
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
 	if bodyname of player is listed in infections of Caninelist or facename of player is listed in infections of Caninelist or skinname of player is listed in infections of Caninelist or cockname of player is listed in infections of Caninelist or tailname of player is listed in infections of Caninelist:
 		now poodleapproved is 1;
 	otherwise:
 		now poodleapproved is 0;
 	say "     As you wander through the high rise district a figure steps out of [one of]a designer clothing store[or]a high end shop[or]a salon[at random] into view just ahead of you. She is an elegant-looking  poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompons covering your forearms and calves as well as the tip of her tail.[run paragraph on]";
 	if poodleapproved is 1:
-		say "As she returns your inspection a sultry smile creeps across her muzzle [one of]'Your place or mine?' she says with a refined French accent, before striding forward confidently 'How about right here?'[or]'Ah, mon cher,'she says with a refined French accent, before striding forward confidently 'looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent, before striding forward confidently, 'You look like you could use some company.'[at random]";
+		say "  As she returns your inspection a sultry smile creeps across her muzzle [one of]'Your place or mine?' she says with a refined French accent, before striding forward confidently 'How about right here?'[or]'Ah, mon cher,'she says with a refined French accent, before striding forward confidently 'looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent, before striding forward confidently, 'You look like you could use some company.'[at random]";
 	otherwise:
-		say "As she returns your inspection she scoffs, turning up her nose at you '[one of]'Such riff-raff you find around here these days!' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off. '[or]'Another uncouth beast,' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off.' [or]'Such a boorish creature!' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off.' [at random]";
+		say "  As she returns your inspection she scoffs, turning up her nose at you '[one of]'Such riff-raff you find around here these days!' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off. '[or]'Another uncouth beast,' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off.' [or]'Such a boorish creature!' she says with a refined French accent, before striding forward confidently, 'I suppose I shall have to deal with you before you put my clients off.' [at random]";
 
 
 Section 2 - Monster Insertion
@@ -123,7 +131,7 @@ When Play begins:
 	now body change entry is "changes begin to roll through you. You watch with fascination as you hand shifts to a dainty paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you an elegant and well proportioned canine figure.";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, laving you with large fashionable pompons covering your forearms and calves";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at it's tip";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue[ppheatreset]";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 13;			[ These values may be used as part of alternate combat.]
@@ -160,8 +168,8 @@ When Play begins:
 Section 3 - Heat Table
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--;
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -173,33 +181,42 @@ When Play begins:
 	now heat start entry is "[pinkpoodleheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[pinkpoodleheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[pinkpoodleheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+	now fheat entry is true;
+	now mpregheat entry is true;
+	now mpregtrigger entry is "     A subtle warmth fills your body as you get an empty feeling in the rear.  Your anus quivers and puffs out pinkly as the scent of heated pheromones drift from it.  You feel a growing want for canine companionship to fill that void inside you.";
+
+to say ppheatreset:
+	now HeatedPoodle is 0;
 
 to say pinkpoodleheatstart:
-	now HeatedPoodle is 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Pink Poodle":
-			now monster is y;
-			break;
-	increase cunt width of player by 1;
-	increase cunt length of player by 1;
-	if cunt width of player < cunt width entry, increase cunt width of player by 1;
-	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+	if heatform is 0:	[female heat has added effects]
+		now HeatedPoodle is 0;
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Pink Poodle":
+				now monster is y;
+				break;
+		increase cunt width of player by 1;
+		increase cunt length of player by 1;
+		if cunt width of player < cunt width entry, increase cunt width of player by 1;
+		if cunt length of player < cunt length entry, increase cunt length of player by 1;
 
 to say pinkpoodleheatend:
 	if HeatedPoodle is 0 and player is impreg_able:
 		say "[PoodleHeatSuccumb]";
 	say "     As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Pink Poodle":
-			now monster is y;
-			break;
-	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
-	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	if heatform is 0:	[restoration after female heat]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Pink Poodle":
+				now monster is y;
+				break;
+		if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+		if cunt length of player > cunt length entry, decrease cunt length of player by 1;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 4, now slutfucked is 4;
+	now HeatedPoodle is 0;
 
 to say pinkpoodleheat:
 	increase libido of player by 5;

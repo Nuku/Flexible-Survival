@@ -1,5 +1,5 @@
 Version 8 of Lizard Girl For FS by Damaged begins here.
-[ Version 8 - Victory Sex by Shadowwolf94 ]
+[ Version 8 - Updated to extended heat table - no MPreg heat - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 
@@ -177,8 +177,23 @@ When Play begins:
 
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "lizard girl";	
+	now heat cycle entry is 2;				
+	now heat duration entry is 2;					
+	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]"; 
+	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";	
+	now trigger text entry is "";
+	now description text entry is "";	
+	now inheat entry is "[liz impreg]";			[The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
+	now fheat entry is true;
+	now mpregheat entry is false;
+	now mpregtrigger entry is "";
+
 
 to say liz impreg:
 	repeat with Z running from 1 to number of rows in table of random critters:
@@ -194,19 +209,6 @@ to say liz impreg:
 to say toggle heat flag:
 	now lizgirlinheat is 1 minus lizgirlinheat;
 
-		
-When Play begins:
-	Choose a blank row from Table of infection heat;
-	now infect name entry is "lizard girl";	
-	now heat cycle entry is 2;				
-	now heat duration entry is 2;					
-	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]"; 
-	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";	
-	now trigger text entry is "";
-	now description text entry is "";	
-	now inheat entry is "[liz impreg]";			[The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
 
-
-	
 [ Edit this to have the correct Name as wall]
 Lizard Girl For FS ends here.

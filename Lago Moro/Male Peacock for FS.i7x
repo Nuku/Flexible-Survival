@@ -1,5 +1,5 @@
 Version 2 of Male Peacock For FS by Lago Moro begins here.
-[Version 2 - Peacock heat (mating call) - Stripes]
+[Version 2.1 - Updated to extended heat table - no Mpreg heat - Stripes]
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
 
@@ -139,8 +139,8 @@ this is the peacockhypno rule:
 Section 4 - Peacock Heat / Mating Call [by Stripes]
 
 Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
---	--	--	--	--	--	--	--
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
+--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -151,6 +151,9 @@ When Play begins:
 	now heat start entry is "[peacockheatstart]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[peacockheatend]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[peacockinheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+	now fheat entry is true;
+	now mpregheat entry is false;
+	now mpregtrigger entry is "";
 
 
 to say peacockheattrigger:
