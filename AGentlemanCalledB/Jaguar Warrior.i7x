@@ -274,7 +274,7 @@ to say TehuantlSexMenu:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "Put your kitty's rough tongue to use";
-	if cunts of player > 0 and hp of Tehuantl > 14:
+	if cunts of player > 0 and TehuantlStatus is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 5;
@@ -372,7 +372,7 @@ to say TehuantlandSnow:
 			say "     With a screeching chitter and a feline yowl, the two finally reach mutual climax as Snow makes a final thrust home, pushing Tehuantl back to lay across the table as she puts all her weight into the final motion before emptying her grapefruit sized balls into the moaning feline.";
 			attempttowait;
 			say "     The two lay locked together on the table for a few moments before Tehuantl pushes the limp squirrel off onto the table beside her, pulling Snow's cock free with a noticeable pop. With Snow's ample load still leaking down her furred thigh, Tehuantl ascends back up to her favorite spot upstairs, only stopping momentarily at the bottom of the stairs to look back at you, winking playfully while spreading her stuffed pussy lips apart for you to see before continuing upstairs.";
-			[now TehuantlandSnow is 1;]
+			[now TehuantlSnowStatus is 1;]
 		Otherwise:
 			say "     Deciding against letting the needy feline prey on the unsuspecting squirrel, you shake your head sternly at her, motioning her back upstairs. Clearly disappointed, the obedient kitty slowly turns, and makes her way back to to her favorite spot upstairs, only pausing at the top of the steps to look back at you one last time before moving out of sight.";
 			now TehuantlSnowStatus is 99;
