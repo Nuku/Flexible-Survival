@@ -1,5 +1,5 @@
 Version 2 of Honey by Stripes begins here.
-[Version 2 - Return to Hive]
+[Version 2.1 - Queen Bee specific scenes]
 
 "Adds a bee girl pet named Honey."
 
@@ -151,26 +151,29 @@ Section 3 - Sexxxings
 
 An everyturn rule:
 	if companion of player is bee girl and lastfuck of bee girl - turns >= 4:
-		increase libido of player by 6;
-		let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
-		if diceroll < libido of player:
-			let T be a random number between 1 and 5;
-			if cocks of player > 0:
-				if T is 1 or T is 2:
-					say "[beesexmale1]";
-				if T is 3 or T is 4:
-					say "[beesexmale2]";
-				if T is 5:
-					say "[beesexhoneypot]";
-			otherwise:
-				if T is 1 or T is 2:
-					say "[beesexfemale1]";
-				if T is 3 or T is 4:
-					say "[beesexfemale2]";
-				if T is 5:
-					say "[beesexhoneypot]";
-			if hp of bee girl >= 5, infect "Queen Bee";
-			now lastfuck of bee girl is turns;
+		if cocks of player > 0 or cunts of player > 0:
+			increase libido of player by 6;
+			let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
+			if diceroll < libido of player:
+				let T be a random number between 1 and 5;
+				if hp of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
+					say "[beesexqueen]";
+				otherwise if cocks of player > 0:
+					if T is 1 or T is 2:
+						say "[beesexmale1]";
+					if T is 3 or T is 4:
+						say "[beesexmale2]";
+					if T is 5:
+						say "[beesexhoneypot]";
+				otherwise:
+					if T is 1 or T is 2:
+						say "[beesexfemale1]";
+					if T is 3 or T is 4:
+						say "[beesexfemale2]";
+					if T is 5:
+						say "[beesexhoneypot]";
+				if hp of bee girl >= 5, infect "Queen Bee";
+				now lastfuck of bee girl is turns;
 
 
 to say beesexmale1:
@@ -195,6 +198,18 @@ to say beesexhoneypot:
 	decrease hunger of player by 6;
 	if hunger of player < 0, now hunger of player is 0;
 	increase thirst of player by 1;
+
+to say beesexqueen:
+	if cunts of player is 0 or a random chance of 2 in 3 succeeds:
+		if a random chance of 2 in 5 succeeds:
+			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz.  Hearing this, Honey smiles at you and comes over, putting her arms around you.  'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock.  She slides her long, thin tongue over your [cock of player] manhood before taking it into her mouth and sucking at it hungrily.  You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over.  Her hands caress your sexy body and rub your [ball size] as she pushes you to orgasm.  You drain your [cum load size of player] load down the horny girl's throat with thoughts of a hive full of such talented servants to tend to your needs.  Honey buzzes happily as she enjoys the tasty reward for her duty fulfilled.";
+		otherwise:
+			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz.  Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole.  'I am yours to claim, my queen,' she says with a playful smile.  Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body.  Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder.  The feel of that honeyed hole around your [cock of player] penis is great.  As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind.  After pumping your [cum load size of player] load into her, you pull out and share several kisses with her before continuing on your way.";
+	otherwise:
+		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz.  Hearing this, Honey smiles at you and comes over, putting her arms around you.  'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds.  Taking a seat, you spread your legs invitingly and have her move between them.  She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if player is queenbeecocked]honeyed [end if]juices like delicious nectar.  As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly.  Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
+	decrease humanity of player by 3;
+	if "Pure" is listed in feats of player, increase humanity of player by 1;
+	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
 [ hp of bee girl      ]
