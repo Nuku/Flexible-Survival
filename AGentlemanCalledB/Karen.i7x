@@ -70,6 +70,7 @@ The level of Retriever Girl is 5;
 The Dexterity of Retriever Girl is 18;
 The summondesc of Retriever Girl is "Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].";
+the fuckscene of retriever girl is "[sexwithpetkaren]";
 
 the linkaction of Retriever Girl is "Possible Actions: [link]talk[as]talk karen[end link], [link]smell[as]smell Retriever Girl[end link], [link]fuck[as]fuck karen[end link][line break]";
 
@@ -77,6 +78,9 @@ to say RetrieverGirldesc:
 	say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";
 
 the scent of Retriever Girl is "     Karen has a light scent of an aroused female canine.";
+
+to say sexwithpetkaren:
+	say "Karen's not quite ready for more sex yet after her experience as Rex's pet.";
 
 Section 3- Karen Quest
 
