@@ -307,4 +307,4 @@ carry out huntinglisting:
 			say "[link][name entry][as]hunt [name entry][end link][line break]";
 
 
-Setting Menus ends here.
+Settings Menus ends here.
