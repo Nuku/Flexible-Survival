@@ -1,5 +1,5 @@
 Version 2 of Gryphon companion by Sarokcat begins here.
-[Version 2 - Impregnating Denise]
+[Version 2.1 - 1/2 day delay for pet sex]
 
 
 "Adds a special event to Flexible Survival with a potential pet."
@@ -83,7 +83,7 @@ instead of sniffing Gryphoness:
 An everyturn rule:
 	if companion of player is Gryphoness:
 		now tempnum is the remainder after dividing libido of gryphoness by 4;
-		if a random number between one and 20 < ( 6 - tempnum ):
+		if a random number between one and 20 < ( 6 - tempnum ) and lastfuck of gryphoness - turns >= 4:
 			[puts Hermaphrodite Gryphon as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -133,6 +133,7 @@ An everyturn rule:
 			otherwise:
 				say "[one of]The scent of a gryphon in heat drifts over you, making you even hornier than before.[or]The Gryphoness comes up and wraps her arms around you and pulls you close to her, and you find yourself changing.[or]Denise lands near you, and the two of you take a few minutes to hug and grope each other, before you have to continue your trek through the city.[or]Denise lands nearby, and the gryphoness offers you a small drink of milk she obviously managed to find somewhere, with her looking at you so eagerly, you are unable to refuse and drink the surprisingly tasty milk while she watches happily.[or]Your gryphon companion lands nearby and is obviously to excited to think straight as she begins to rub her body up against you needily![or]Landing nearby, Denise is rubbing herself and moaning in need, her eyes fixed on you with a desperate need. You are unable to resist as the horny gryphoness pounces you eagerly, and you quickly lose all desire to resist as well, as the two of you begin to mate with ever increasing passion. Eventually you both manage to recover somewhat, and Denise kisses you in happy thanks as she takes off to watch over you from the skies again.[or]'Are you sure you don[apostrophe]t want to be a handsome gryphon for me?' Denise says teasingly as she rubs herself up against your body.[at random]";
 				infect "Hermaphrodite Gryphon":
+			now lastfuck of gryphoness is turns;.
 
 
 Section 2 - Pregnant Gryphon

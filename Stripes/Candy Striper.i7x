@@ -1,5 +1,5 @@
 Version 4 of Candy Striper by Stripes begins here.
-[Version 4 - Linked to Sven content]
+[Version 4.1 - 1/2 day delay for pet sex]
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Raccoon Candy Striper creature to Flexible Survivals Wandering Monsters table"
@@ -141,7 +141,7 @@ An everyturn rule:
 	if companion of player is pink raccoon:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
-		if diceroll < libido of player:
+		if diceroll < libido of player and lastfuck of pink raccoon - turns >= 4:
 			[puts Raccoon as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -191,6 +191,7 @@ An everyturn rule:
 				if T is 7:
 					say "[coonpetsex11]";
 			infect "Raccoon";
+			now lastfuck of pink raccoon is turns;
 
 
 to say coonpetsex1:		[fuck coon ass]
