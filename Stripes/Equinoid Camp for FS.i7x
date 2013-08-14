@@ -52,7 +52,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 		say "     Speaking softer to just you now, she adds.  'They are a good people though, and will accept you in time if you accept them.  I expect you will still have trouble with some outside the camp though.  Show them your strength and they will respect you in time.'";
 		say "     She raises her voice again, so all assembled may here.  'You will need to undergo the purification ritual to truly become one of us.  To accept to join us is to accept this.  Shall you do so?";
 		if the player consents:
-			say "     Speaking aloud for the others to hear, you tell her that you are ready to join the tribe and become one of them.  The reaction among the group is mixed, but it seems most are willing to accept this.  Some though, as you were warned, seem displeased by hold their tongues.  Amaryllis, for her part, is elated and grabs your hand, leading you through the gate as Bryony grudgingly opens it.  Amaryllis sticks her tongue out at her while the other black equinoid glares at her.";
+			say "     Speaking aloud for the others to hear, you tell her that you are ready to join the tribe and become one of them.  The reaction among the group is mixed, but it seems most are willing to accept this.  Some though, as you were warned, seem displeased but hold their tongues.  Amaryllis, for her part, is elated and grabs your hand, leading you through the gate as Bryony grudgingly opens it.  Amaryllis sticks her tongue out at her while the other black equinoid glares at her.";
 			say "     You are followed by several others through the trees and into the camp of the equinoids.  It's a rather primitive community, with wooden huts and barns that make little use of scavenged materials.  They clearly expect you to seem impressed by it, so you do your best to appear that way.  Amaryllis leads you to one of the larger halls and you enter with the others.  There, a scented bath is prepared as well as several of the equinoids.";
 			if cocks of player > 0:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you.  The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs.  As she strokes your cock to erection, several more equinoids enter, strong warriors these.  They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
@@ -181,6 +181,12 @@ to say eqwarsex3:
 to say eqwarsex4:
 	say ".  Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze.  Knowing what she needs of you, you move onto all fours and raise your tail.  She presses her cock to your tight pucker and pushes it into you with a soft nicker.  The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0].  You cannot help but cum in response, spraying your submissive seed onto the ground[end if].  After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
+
+
+Definition: a person is blequinoidbodied:
+	if the bodyname of the player is "black equinoid", yes;
+	no;
+
 
 
 Equinoid Camp for FS ends here.
