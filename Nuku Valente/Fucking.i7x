@@ -17,10 +17,18 @@ before fucking:
 
 check fucking:
 	if noun is not visible, say "Who?" instead;
+	if noun is a pet:
+		if noun is not tamed:
+			say "Who?" instead;
+		otherwise if noun is not companion of player:
+			say "I don't see them around right now.  You'll have to call them over first." instead;
 
 Carry out fucking:
 	if fuckscene of noun is "":
-		say "They don't seem very interested.";
+		if noun is a pet:
+			say "You cannot initiate sex with this companion.";
+		otherwise:
+			say "They don't seem very interested.";
 	otherwise:
 		say "[fuckscene of noun]";
 

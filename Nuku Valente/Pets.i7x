@@ -1,4 +1,5 @@
-Pets by Nuku Valente begins here.
+Version 2 of Pets by Nuku Valente begins here.
+[Version 2 - Initiating sex w/pets]
 
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
@@ -52,6 +53,7 @@ The level of cute crab is 1;
 The Dexterity of cute crab is 8;
 The summondesc of cute crab is "Bursting from the ground near you, your cute crab appears. It clacks its pincers together in an excited fashion like a castanet player.";
 The assault of cute crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]";
+the fuckscene of cute crab is "The crab is too small and too cute for that sort of thing - you perv.";
 
 instead of sniffing the Cute Crab:
 	say "The crab's smell is faintly reminiscent of the beach.";

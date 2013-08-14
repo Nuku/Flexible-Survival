@@ -1,5 +1,5 @@
 Version 1 of Rachel Mouse by Stripes begins here.
-[Version 1.1 - 1/2 day delay for pet sex]
+[Version 1.2 - Player initiated pet sex]
 
 "Adds a Mental Mouse 'companion' named Rachel."
 
@@ -102,7 +102,7 @@ to say mouseapts:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off.  She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet mouse girl[roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
+		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -135,6 +135,7 @@ The level of mouse girl is 3;
 The Dexterity of mouse girl is 15;
 The summondesc of mouse girl is "Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
 The assault of mouse girl is "[rachelattack]";
+the fuckscene of mouse girl is "[sexwithmousegirl]".
 rachelfuck is a number that varies.
 
 understand "Rachel" as mouse girl.
@@ -161,50 +162,58 @@ to say mousegirlscent:
 
 Section 3 - Sexxxings
 
+to say sexwithmousegirl:
+	if lastfuck of mouse girl - turns < 4:
+		say "     Drawn as you are to the mouse girl and her mental link to you, you're a little worried about losing yourself if you go at it too often.  You decide to hold off, at least for the moment.";
+	otherwise:
+		[puts Mental Mouse as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Mental Mouse":
+				now monster is y;
+				break;
+		if cocks of player > 0 and cunts of player > 0:
+			let T be a random number between 1 and 9;
+			if T is 1 or T is 2:
+				say "[rachelsexmale1]";
+			if T is 3 or T is 4:
+				say "[rachelsexmale2]";
+			if T is 5:
+				say "[racheloral]";
+			if T is 6 or T is 7:
+				say "[rachelsexfemale1]";
+			if T is 8 or T is 9:
+				say "[rachelsexfemale2]";
+		if cocks of player > 0:
+			let T be a random number between 1 and 5;
+			if T is 1 or T is 2:
+				say "[rachelsexmale1]";
+			if T is 3 or T is 4:
+				say "[rachelsexmale2]";
+			if T is 5:
+				say "[racheloral]";
+		otherwise:
+			let T be a random number between 1 and 5;
+			if T is 1 or T is 2:
+				say "[rachelsexfemale1]";
+			if T is 3 or T is 4:
+				say "[rachelsexfemale2]";
+			if T is 5:
+				say "[racheloral]";
+		now lastfuck of mouse girl is turns;
+		if a random chance of 1 in 2 succeeds, now researchbypass is 1;
+		infect "Mental Mouse";
+		now researchbypass is 0;
+		if mousecounter is even, increase mousecounter by 1;
+
+
 An everyturn rule:
 	if companion of player is mouse girl:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 200;			[lust check vs 200, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of mouse girl - turns >= 4:
-			[puts Mental Mouse as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Mental Mouse":
-					now monster is y;
-					break;
-			if cocks of player > 0 and cunts of player > 0:
-				let T be a random number between 1 and 9;
-				if T is 1 or T is 2:
-					say "[rachelsexmale1]";
-				if T is 3 or T is 4:
-					say "[rachelsexmale2]";
-				if T is 5:
-					say "[racheloral]";
-				if T is 6 or T is 7:
-					say "[rachelsexfemale1]";
-				if T is 8 or T is 9:
-					say "[rachelsexfemale2]";
-			if cocks of player > 0:
-				let T be a random number between 1 and 5;
-				if T is 1 or T is 2:
-					say "[rachelsexmale1]";
-				if T is 3 or T is 4:
-					say "[rachelsexmale2]";
-				if T is 5:
-					say "[racheloral]";
-			otherwise:
-				let T be a random number between 1 and 5;
-				if T is 1 or T is 2:
-					say "[rachelsexfemale1]";
-				if T is 3 or T is 4:
-					say "[rachelsexfemale2]";
-				if T is 5:
-					say "[racheloral]";
-			now lastfuck of mouse girl is turns;
-			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
-			infect "Mental Mouse";
-			now researchbypass is 0;
-			if mousecounter is even, increase mousecounter by 1;
+			say "[sexwithmousegirl]";
+
 
 to say rachelsexmale1:
 	say "     Sensing your growing arousal, Rachel runs her paws over your body, then down to your cock.  Your erection throbs in her paw and is soon in the cute mouse's mouth.  She licks and sucks on it briefly before moving onto all fours and raising her tail for you.  Seeing those wet folds waiting for you, you move atop her small body, lining up your erection before sinking it into her snug, squeezing grip.  She squeaks and moans beneath you as you thrust[if cock length of player > 18].  Your huge penis stretches her out considerably, but she takes it all, happy to share herself with you[otherwise if cock length of player > 12].  Your large penis bulges her slender waist as you fuck her, but she takes it all, happy to share herself with you[otherwise].  Your penis throbs inside her, taking it all and happy to share herself with you[end if].  You pound into your musine mate until you both cum together, sharing in the sensations of your lovemaking as your minds touch.";

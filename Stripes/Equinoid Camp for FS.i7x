@@ -1,5 +1,5 @@
 Version 1 of Equinoid Camp for FS by Stripes begins here.
-[Version 1.1 - Pet sex]
+[Version 1.2 - Player initiated pet sex]
 "Adds a camp for the Black Equinoids and a few NPCs to interact with."
 
 Section 1 - Contact
@@ -90,7 +90,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     'To protect and guide our newest member, we shall send one of our young warriors with you.  Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.'  The equinoid rises stiffly and walks to your side[if the player is not lonely], forcing your [companion of player] to step aside for her[end if].  Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely.  'We expect you to keep her with you.  This is to be a journey for her as well as protection for you.  We will not be pleased if you do not fulfill your duties in this regard.'  You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
 				now the companion of the player is equinoid warrior;
-				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
+				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type] and initiate sex with her while active by typing [bold type][link]fuck equinoid warrior[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
 				increase score by 25;
 				wait for any key;
 				move player to Equinoid Camp;
@@ -110,8 +110,6 @@ to say equicampdesc:
 		say "(***Equinoid camp to be added later.)[line break]";
 
 
-
-
 Section 2 - Equinoid Warrior Pet
 
 equinoid warrior is a pet.  equinoid warrior is a part of the player;
@@ -121,6 +119,7 @@ The level of equinoid warrior is 3;
 The Dexterity of equinoid warrior is 12;
 The summondesc of equinoid warrior is "Liliana strides up to your side with a determined look on her equine face.";
 The assault of equinoid warrior is "[lilianaattack]";
+the fuckscene of equinoid warrior is "[sexwithliliana]";
 
 understand "Liliana" as equinoid warrior.
 
@@ -132,12 +131,39 @@ to say lilianadesc:
 
 the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.";
 
+to say sexwithliliana:
+	if lastfuck of equinoid warrior - turns < 4:
+		say "You just had some fun with her recently.  Try checking back with her a little later.";
+	otherwise if bodyname of player is "black equinoid" and the player is pure:
+		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
+		let qq be { 1, 1 };				[oral]
+		if cunts of player > 0, add 2 to qq;	[fucked]
+		if cocks of player > 0, add 3 to qq;	[fuck her]
+		if cunts of player is 0 and ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and "Submissive" is listed in feats of player, add 4 to qq;	[anal]
+		sort qq in random order;
+		if entry 1 of qq is 1, say "[eqwarsex1]";
+		if entry 1 of qq is 2, say "[eqwarsex2]";
+		if entry 1 of qq is 3, say "[eqwarsex3]";
+		if entry 1 of qq is 4, say "[eqwarsex4]";
+		now libido of equinoid warrior is 0;
+		if libido of player < 30, now libido of player is 30;
+		infect "black equinoid";
+		now lastfuck of equinoid warrior is turns;
+	otherwise:
+		say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body.  'We need to get you looking like a proper equinoid again.'  She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you.  Precum leaves slick trails across your body as she does this";
+		if a random chance of 1 in 3 succeeds:
+			say ".  You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0].  She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1].  Her hands drift down to your cocks, taking one in each and stroking them[otherwise if cocks of player is 1].  Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0].  Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[otherwise if cunts of player > 0].  She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if].  You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body.  As the semen soaks into you, you feel more equinoid.";
+		otherwise:
+			say ".  You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your [facename of player] head.  You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load.  As your body absorbs the tasty treat, you feel more equinoid.";
+		infect "black equinoid";
+		now lastfuck of equinoid warrior is turns;
+
 
 An everyturn rule:
 	if companion of player is equinoid warrior:
 		if bodyname of player is "black equinoid" and the player is pure:
 			increase libido of equinoid warrior by 20;
-			if libido of equinoid warrior + libido of player > 200:
+			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:
 				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your body.  She gives a sexy sigh as she looks over your impressive, equinoid form before kissing you, inflaming your passions further";
 				let qq be { 1, 1 };				[oral]
 				if cunts of player > 0, add 2 to qq;	[fucked]
@@ -151,15 +177,15 @@ An everyturn rule:
 				now libido of equinoid warrior is 0;
 				if libido of player < 30, now libido of player is 30;
 				infect "black equinoid";
-		otherwise:
-			if turns is odd and a random chance of 2 in 5 succeeds:
-				say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body.  'We need to get you looking like a proper equinoid again.'  She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you.  Precum leaves slick trails across your body as she does this";
-				if a random chance of 1 in 3 succeeds:
-					say ".  You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0].  She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1].  Her hands drift down to your cocks, taking one in each and stroking them[otherwise if cocks of player is 1].  Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0].  Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[otherwise if cunts of player > 0].  She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if].  You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body.  As the semen soaks into you, you feel more equinoid.";
-				otherwise:
-					say ".  You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your [facename of player] head.  You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load.  As your body absorbs the tasty treat, you feel more equinoid.";
-				infect "black equinoid";
-
+				now lastfuck of equinoid warrior is turns;
+		otherwise if lastfuck of equinoid warrior - turns >= 4 and a random chance of 1 in 5 succeeds:
+			say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body.  'We need to get you looking like a proper equinoid again.'  She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you.  Precum leaves slick trails across your body as she does this";
+			if a random chance of 1 in 3 succeeds:
+				say ".  You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body[if breast size of player > 0].  She starts by rubbing over your bosom, playing with your breasts and teasing your nipples[end if][if cocks of player > 1].  Her hands drift down to your cocks, taking one in each and stroking them[otherwise if cocks of player is 1].  Her hands drift down to your cock and strokes it[end if][if cocks of player is 1 and cunts of player > 0].  Her free hand moves a little lower and slips a finger into your pussy, causing you to moan in response[otherwise if cunts of player > 0].  She rubs a hand between your legs and over your wet folds before slipping a finger into your pussy, causing you to moan in response[end if].  You continue stroking her as you enjoy this attention from her until she cums, blasting her seed across your body.  As the semen soaks into you, you feel more equinoid.";
+			otherwise:
+				say ".  You find yourself growing excited and lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your [facename of player] head.  You work the throbbing, dribbling meat with your tongue and mouth until she cums, feeding you her thick load.  As your body absorbs the tasty treat, you feel more equinoid.";
+			infect "black equinoid";
+			now lastfuck of equinoid warrior is turns;
 
 to say eqwarsex1:
 	say ".  You lower yourself so you can take her cock in hand and guide it to your mouth.  She moans softly and runs her hands over your equine head, rubbing your ears and nickering softly.  You work the throbbing, dribbling meat with your tongue and mouth, working the throbbing length in your long throat until she cums, feeding you her thick load, which you swallow down eagerly, pleased to have pleasured your tribal companion.";
@@ -179,6 +205,12 @@ to say eqwarsex3:
 	now libido of player is libido of player / 2;
 
 to say eqwarsex4:
+	[puts black equinoid as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "black equinoid":
+			now monster is y;
+			break;
 	say ".  Her hoofed hands slide over your body and grab your rear, giving it a firm squeeze.  Knowing what she needs of you, you move onto all fours and raise your tail.  She presses her cock to your tight pucker and pushes it into you with a soft nicker.  The youthful equinoid pounds into you with energetic zeal, cumming hard and sending her hot seed flowing into your bowels[if cocks of player > 0].  You cannot help but cum in response, spraying your submissive seed onto the ground[end if].  After some snuggling, you both get back up and prepare to continue your journey together.[mimpregchance]";
 	now libido of player is libido of player / 2;
 

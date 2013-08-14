@@ -1,5 +1,5 @@
 Version 4 of Candy Striper by Stripes begins here.
-[Version 4.1 - 1/2 day delay for pet sex]
+[Version 4.2 - Player initiated pet sex]
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Raccoon Candy Striper creature to Flexible Survivals Wandering Monsters table"
@@ -134,64 +134,72 @@ The level of pink raccoon is 2;
 The Dexterity of pink raccoon is 14;
 The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close.  He churrs happily, ready and eager to obey.";
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them.  He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]";
+the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]";
 
-the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.";
+the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that."; 
+
+to say sexwithpinkraccoonpet:
+	[puts Raccoon as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Raccoon":
+			now monster is y;
+			break;
+	if lastfuck of pink raccoon - turns < 4:
+		say "As eager as pink fucktoy pet is, you decide he might need a short break before going again.";
+	otherwise:
+		if cocks of player > 0 and cunts of player is 0:
+			let T be a random number between one and five;
+			if T is 1:
+				say "[coonpetsex1]";
+			if T is 2:
+				say "[coonpetsex2]";
+			if T is 3:
+				say "[coonpetsex3]";
+			if T is 4:
+				say "[coonpetsex4]";
+			if T is 5:
+				say "[coonpetsex5]";
+		otherwise if cunts of player > 0 and cocks of player is 0:
+			let T be a random number between one and six;
+			if T is 1:
+				say "[coonpetsex6]";
+			if T is 2:
+				say "[coonpetsex7]";
+			if T is 3:
+				say "[coonpetsex8]";
+			if T is 4:
+				say "[coonpetsex9]";
+			if T is 5:
+				say "[coonpetsex10]";
+			if T is 6:
+				say "[coonpetsex11]";
+		otherwise:
+			let T be a random number between one and seven;
+			if T is 1:
+				say "[coonpetsex1]";
+			if T is 2:
+				say "[coonpetsex2]";
+			if T is 3:
+				say "[coonpetsex3]";
+			if T is 4:
+				say "[coonpetsex4]";
+			if T is 5:
+				say "[coonpetsex5]";
+			if T is 6:
+				say "[coonpetsex6]";
+			if T is 7:
+				say "[coonpetsex11]";
+		infect "Raccoon";
+		now lastfuck of pink raccoon is turns;
+
 
 An everyturn rule:
 	if companion of player is pink raccoon:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of pink raccoon - turns >= 4:
-			[puts Raccoon as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Raccoon":
-					now monster is y;
-					break;
-			if cocks of player > 0 and cunts of player is 0:
-				let T be a random number between one and five;
-				if T is 1:
-					say "[coonpetsex1]";
-				if T is 2:
-					say "[coonpetsex2]";
-				if T is 3:
-					say "[coonpetsex3]";
-				if T is 4:
-					say "[coonpetsex4]";
-				if T is 5:
-					say "[coonpetsex5]";
-			otherwise if cunts of player > 0 and cocks of player is 0:
-				let T be a random number between one and six;
-				if T is 1:
-					say "[coonpetsex6]";
-				if T is 2:
-					say "[coonpetsex7]";
-				if T is 3:
-					say "[coonpetsex8]";
-				if T is 4:
-					say "[coonpetsex9]";
-				if T is 5:
-					say "[coonpetsex10]";
-				if T is 6:
-					say "[coonpetsex11]";
-			otherwise:
-				let T be a random number between one and seven;
-				if T is 1:
-					say "[coonpetsex1]";
-				if T is 2:
-					say "[coonpetsex2]";
-				if T is 3:
-					say "[coonpetsex3]";
-				if T is 4:
-					say "[coonpetsex4]";
-				if T is 5:
-					say "[coonpetsex5]";
-				if T is 6:
-					say "[coonpetsex6]";
-				if T is 7:
-					say "[coonpetsex11]";
-			infect "Raccoon";
-			now lastfuck of pink raccoon is turns;
+			say "[sexwithpinkraccoonpet]";
 
 
 to say coonpetsex1:		[fuck coon ass]
