@@ -1,4 +1,5 @@
 Version 1 of Rachel Mouse by Stripes begins here.
+[Version 1.1 - 1/2 day delay for pet sex]
 
 "Adds a Mental Mouse 'companion' named Rachel."
 
@@ -68,6 +69,7 @@ to say mouseapts:
 	say "     The lovemaking continues like this for a quite a while, with you both changing positions often while some of the other mice help out or join in.  You can feel you losing yourself in the maelstrom of united mouse minds.  But it is so overwhelming that you only find pleasure in this and continue fucking the beautiful creatures, longing more and more to be with fully one of them.  Eventually, the mice all get quite tired out and you start to drift off as well, snuggled up with your arms around your mate and many other lovely mice resting all around you.";
 	say "     Left in a haze after the orgy, you can feel the tingles of change coming from all the mousecum you've inundated with, turning you into a mouse like them.  As your bond with them grows, you can faintly sense their slumbering minds around you.";
 	now mousecurse is 1;
+	now lastfuck of mouse girl is turns;
 	decrease humanity of player by 20 + a random number between 1 and 10;
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 5;
@@ -163,7 +165,7 @@ An everyturn rule:
 	if companion of player is mouse girl:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 200;			[lust check vs 200, player libido 40 or less auto-wins]
-		if diceroll < libido of player:
+		if diceroll < libido of player and lastfuck of mouse girl - turns >= 4:
 			[puts Mental Mouse as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -198,6 +200,7 @@ An everyturn rule:
 					say "[rachelsexfemale2]";
 				if T is 5:
 					say "[racheloral]";
+			now lastfuck of mouse girl is turns;
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 			infect "Mental Mouse";
 			now researchbypass is 0;

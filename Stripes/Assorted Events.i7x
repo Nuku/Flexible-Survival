@@ -226,13 +226,15 @@ when play begins:
 	add Lovers Bench to badspots of guy;
 	add Lovers Bench to badspots of girl;
 
+lbcomplist is a list of pets that varies.
+
 Instead of resolving a Lovers Bench:
-	if loversbench is 0:
+	if loversbench is 0:				[first visit]
 		say "     While travelling through the park, you come across a pair making out lustfully on one of the benches.  The male atop is a anthro wolf with grey fur and a strong build.  The female stretched back on the bench is a spotted feline, perhaps an ocelot.  Their clothes are scattered around the bench and seem partially torn.  You hang back, wary to approach but unwilling to look away from the sight.  You watch as the wolf eases his thick cock into the smaller woman's pussy, making her yowl in delight.  She puts her arms around him and grabs his rear, pulling him into her with each thrust he makes.  The ocelot licks and kisses at the wolf's neck and he brings a paw to caress her breast while the other digs into the back of the wooden bench.  When the wolf finally drives his lupine knot into the feline's cunt, they growl passionately, cumming hard.  You do as well, having started playing with yourself at some point while peeping on the spectacle.  Finished, the wolf sags atop the feline as they start licking and kissing one another.  The ocelot's markings start to spread into the wolf's pelt while her fur takes on a more greyish tint overall.";
 		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumb too far to be safe to approach.  Even if currently sated, they are both equally infectious.  But at least they are a couple.";
 		increase score by 1;
 		increase loversbench by 1;
-	otherwise:
+	otherwise if loversbench is 1:		[second visit]
 		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain.  This helps confirm your earlier guess that they'd succumbed.  The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved graffiti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park.  Remembering the lovemaking you witnessed here, you start to get turned on.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
@@ -245,6 +247,10 @@ Instead of resolving a Lovers Bench:
 			increase carried of pocketknife by 1;
 			increase carried of pepperspray by 1;
 			increase score by 10;
+		increase loversbench by 1;
+	otherwise if loversbench is 2:		[third+ visit]
+		say "     Returning to the area around the lovers'['] bench, you decide to search around it again.  Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items.  Sadly, you are unable to locate anything new or of any use.";
+	if loversbench is 2 and companion of player is not listed in lbcomplist and (cocks of player > 0 or cunts of player > 0):
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -323,6 +329,8 @@ Instead of resolving a Lovers Bench:
 			otherwise:
 				say "     Honey lays back on the middle of the bench and motions for you to climb atop her.  Bringing your pussy to her lips, she starts licking and kissing at your sex, running her long proboscis over your wet folds before sliding it into you like a flower full of rich nectar.  Her talented tongue delves inside you again and again, licking and teasing at your sensitive inner walls as it slides to your very depths to please you.  You run your hand over her insect abdomen and she buzzes with delight.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans before diving her tongue into you again.  Her tongue is writhing inside you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
 				say "     After a powerfully long orgasm that soaks the cute bumblebee girl's face in your female nectar while her honeyed juices soak her crotch as her lower hands finger herself vigorously, you climb slowly off from overtop her.  Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
+			if hp of bee girl >= 5, infect "Queen Bee";
+			now lastfuck of bee girl is turns;
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
 			if "Pure" is listed in feats of player, increase humanity of player by 1;
@@ -337,7 +345,7 @@ Instead of resolving a Lovers Bench:
 				if name entry is "Mental Mouse":
 					now monster is y;
 					break;
-			say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of player] body and taking your hand in her little paws.  She smiles up at you, looking deep into your eyes.  'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers  you long to play with the sexy mousie on it.  'Just some persomal time for you and I, none of the others listening in this time.'  The idea to resist doesn't even pop into your mind and you [if scalevalue of player >= 3]scoop her up into your arms and onto[otherwise]rush her over to[end if] the bench.";
+			say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of player] body and taking your hand in her little paws.  She smiles up at you, looking deep into your eyes.  'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers make you long to play with the sexy mousie on it.  'Just some persomal time for you and I, none of the others listening in this time.'  The idea to resist doesn't even pop into your mind and you [if scalevalue of player >= 3]scoop her up into your arms and onto[otherwise]rush her over to[end if] the bench.";
 			if cocks of player > 0:
 				if scalevalue of player >= 3:
 					say "     You set Rachel down on the lovers bench and she stands on it with her hands gripping the back rest.  Now elevated for easier mounting, the small mouse raises her tail and wiggles her rear with a needy squeak.  Her exposed pussy is dripping wet and her musine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is.  You move in behind her and get your hard cock lined up with her wet cunt.  She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench.  Leaning overtop of the smaller mouse girl, you grab the back of the bench as well and give her ears a nibble as you start pounding into her.  She shivers in pleasure at the nibbles and slides her slender tail around your waist.";
@@ -357,9 +365,34 @@ Instead of resolving a Lovers Bench:
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
 			increase xp of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
+		otherwise if companion of player is equinoid warrior:
+			say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of player] body.  She smiles at you with a lustful hunger in her eyes[if player is blequinoidbodied].  'Come, join me over here and I will remind you of the warm embrace of the herd[otherwise].  'We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench.  Having gotten quite aroused by the scents of fulfilled lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
+			if ( cocks of player is 0 and cunts of player > 0 ) or ( cunts of player > 0 and "Submissive" is listed in feats of player ):
+				say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it.  Divesting each other of your gear, you take a moment to kiss passionately while groping one another.  One of her hands finds its way to your pussy and she plunges a pair of digits into you.  Your [if player is blequinoidbodied]knicker[otherwise]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
+				say "     Once her fingering has gotten you quite wet, she slips her fingers out and holds your pussy spread open for her equinoid cock to fill.  With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat.  Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion.  The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts.  Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
+				say "     She pounds into you with such energy, but is loving about it as well, as something about the bench makes this more like lovemaking than raw sex.  'Mmm... you're so strong, but also wonderfully eager to be ridden.  When our journey's done, perhaps you'd enjoy being the first of my mares,' the sexy warrior says with a blush.  'You'd breed such mighty colts.'  She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed into you, flooding your womb with her virile load.  You cry out in climax as well, clenching your vagina down around that equine log to milk as much as your loving companion can give.[impregchance]";
+				say "     By the time your long orgasms are done, she's pumped an impressive load of her equinoid seed into your pussy.  A mix of her juices and yours leak out onto the bench to join the others, adding to the arousing scent that clings here.  With another kiss, she eases her spent shaft from you.  After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips.  Returning this affection in kind, you feel that you've grown closer to her.";
+			otherwise:
+				say "     The young warrior allows you to push her down onto the bench, giving a soft nicker as you do.  She spreads her legs and raises her equine cock and ballsac to show you her dripping snatch.  After divesting each other of your gear, you are pulled into a passionate kiss by the eager herm during which she fondles your cock and gets it aimed at that juicy pussy she was showing off earlier.  With an excited [if player is blequinoidbodied]whinny[otherwise]groan[end if], you thrust into her, running your hands over her sexy black body as you ease your meat into her wanton hole.  Her tongue dives into your mouth as you moan, sliding against yours as you start mating the lovely equinoid.";
+				say "     Her pussy is hot and juicy, feeling wonderful around your cock, and feeling her own dribbling shaft pressed between you both only adds to the excitement.  From the way its pulsing and drooling pre, you can tell she's really enjoying being ridden.  As you pick up the pace, she grips the wood of the bench hard, digging her hoof-like fingers into it, adding fresh marks to the many others already there from the others who've used it.";
+				say "     You pound away at her zealously, working hard equally for both her pleasure as for your own.  Something about the bench makes this more like lovemaking than raw sex.  'Mmmm... you're so strong and so passionate.  When our journey's over, I might even be willing to accept being one of your mares,' the sexy warrior says with a bright blush.  'You'd give me such mighty colts.'  She ends up neighing out the last word as her pussy clamps down around you and her cock slaps across her chest, cum spurting in a fountain from it.  The sight, scent and sensation of her cumming are enough to push you to orgasm as well.  You hold one another tightly while you pump your [cum load size of player] load into her dark-lipped cunt.";
+				say "     By the time your long orgasms are done, she's splattered you both thoroughly with an impressive load of equinoid semen.  A mix of her juices and yours leak out onto the bench to join the others, adding to the arousing scent that clings here.  With another kiss, you ease your spent shaft from you.  After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she fawns over you.  Returning this affection in kind, you feel that you've grown closer to her.";
+			infect "black equinoid";
+			now libido of player is libido of player / 2;
+			now libido of equinoid warrior is 0;
+			decrease humanity of player by 5;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			increase xp of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
+			increase score by 20;
 		otherwise:
 			increase libido of player by ( 100 - libido of player ) / 4;
+			say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench.  You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
+		add companion of player to lbcomplist;
+
+[
 		now Lovers Bench is resolved;
+]
 
 [functional pets]
 [ pink raccoon ]
@@ -367,10 +400,10 @@ Instead of resolving a Lovers Bench:
 [ felinoid ]
 [ bee girl - needs queen bee touch-ups]
 [ mouse girl ]
+[ equinoid warrior ]
 
 [ pets needing scenes ]
 [ demon brute ]
-[ equinoid warrior ]
 [ rubber tigress ]
 
 

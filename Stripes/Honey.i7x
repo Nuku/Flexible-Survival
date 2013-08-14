@@ -101,6 +101,7 @@ Instead of resolving a Smashed Hive:
 						decrease hunger of player by 25;
 						if hunger of player < 0, now hunger of player is 0;
 						increase thirst of player by 4;
+						now lastfuck of bee girl is turns;
 					otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 						say "     Having lost and been used by the large bruin, you stagger back into the woods.  Honey rejoins you, taking your hand and helping you back to the old hive.  'I'm glad you were stood up to the bear for me, but I'm just happy you're back safe and sound.'  You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now hp of bee girl is 4;
@@ -150,11 +151,11 @@ the scent of the bee girl is "Honey, unsurprisingly, smells of honey.";
 Section 3 - Sexxxings
 
 An everyturn rule:
-	if companion of player is bee girl and lastfuck of bee girl - turns >= 4:
+	if companion of player is bee girl:
 		if cocks of player > 0 or cunts of player > 0:
 			increase libido of player by 6;
 			let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
-			if diceroll < libido of player:
+			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
 				let T be a random number between 1 and 5;
 				if hp of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
 					say "[beesexqueen]";

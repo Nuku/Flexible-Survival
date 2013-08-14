@@ -5740,6 +5740,7 @@ Include Addiction by Hellerhound.
 Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Story Skipper by Nuku Valente.
+Include Settings Menu by Stripes.
 [Include items by Zero.]
 Include Central Library by Stripes.
 Include Smith Haven Mall by Anon E Mouse.

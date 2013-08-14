@@ -1,5 +1,5 @@
 Version 2 of Felinoid companion by Sarokcat begins here.
-[ Version 2.2 - Felinoid+Fang specific endings ]
+[ Version 2.3 - 1/2 day delay for pet set]
 
 "Adds a special event to Flexible Survival with a potential pet."
 
@@ -19,7 +19,7 @@ Section 2 - Felinoid companion sex
 
 An everyturn rule:
 	if companion of player is Felinoid companion and skipturnblocker is 0:
-		if a random number between one and 20 < 6:
+		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 4:
 			[puts Felinoid as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
@@ -98,6 +98,7 @@ An everyturn rule:
 				infect "Felinoid";
 				increase libido of player by 8;
 				if libido of player > 100, now libido of player is 100;
+			now lastfuck of felinoid companion is turns;
 
 
 to say felinoidpet_puref:
