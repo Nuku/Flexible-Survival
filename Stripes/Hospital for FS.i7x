@@ -408,6 +408,7 @@ The level of helper dog is 5;
 The Dexterity of helper dog is 15;
 The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.";
 The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
+the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
 the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
 
@@ -783,7 +784,7 @@ to say hospquestpt9:
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it while his fingers caress your pussy.  His pink cock is quite hard, leaking pre onto the floor.  Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer.  Your cock throbs and your hot seed shoots into his waiting muzzle while your pussy soaks his paw in your juices.  He swallows it all down and licks you clean like a good little pet, churring happily.";
 			now pink raccoon is tamed;
-			say "     (The pink raccoon is now tamed! You can make it your active pet by typing [bold type][link]pet pink raccoon[as]pet pink raccoon[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+			say "     (The pink raccoon is now tamed! You can make it your active pet by typing [bold type][link]pet pink raccoon[as]pet pink raccoon[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 		otherwise:
 			increase score by 20;
 			now coonstatus is 1;

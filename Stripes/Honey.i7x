@@ -1,5 +1,5 @@
 Version 2 of Honey by Stripes begins here.
-[Version 2.1 - Queen Bee specific scenes]
+[Version 2.2 - Player initiated pet sex]
 
 "Adds a bee girl pet named Honey."
 
@@ -132,7 +132,7 @@ to say beegirlsaved:
 	increase score by 20;
 	now bee girl is tamed;
 	now hp of bee girl is 1;
-	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command.  Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap.  Want to get rid of a pet?  Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
 Section 2 - Bee Girl Pet
@@ -156,25 +156,33 @@ An everyturn rule:
 			increase libido of player by 6;
 			let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
 			if diceroll < libido of player and lastfuck of bee girl - turns >= 4:
-				let T be a random number between 1 and 5;
-				if hp of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
-					say "[beesexqueen]";
-				otherwise if cocks of player > 0:
-					if T is 1 or T is 2:
-						say "[beesexmale1]";
-					if T is 3 or T is 4:
-						say "[beesexmale2]";
-					if T is 5:
-						say "[beesexhoneypot]";
-				otherwise:
-					if T is 1 or T is 2:
-						say "[beesexfemale1]";
-					if T is 3 or T is 4:
-						say "[beesexfemale2]";
-					if T is 5:
-						say "[beesexhoneypot]";
-				if hp of bee girl >= 5, infect "Queen Bee";
-				now lastfuck of bee girl is turns;
+				say "[fuckscene of bee girl]";
+
+the fuckscene of bee girl is "[sexwithhoney]".
+
+to say sexwithhoney:
+	if lastfuck of bee girl - turns < 4:
+		say "     You've had some fun with the bee girl quite recently.  Perhaps you should give her a break for a little longer?";
+	otherwise:
+		let T be a random number between 1 and 5;
+		if hp of bee girl >= 5 and bodyname of player is "Queen Bee" and a random chance of 1 in 3 succeeds:
+			say "[beesexqueen]";
+		otherwise if cocks of player > 0:
+			if T is 1 or T is 2:
+				say "[beesexmale1]";
+			if T is 3 or T is 4:
+				say "[beesexmale2]";
+			if T is 5:
+				say "[beesexhoneypot]";
+		otherwise:
+			if T is 1 or T is 2:
+				say "[beesexfemale1]";
+			if T is 3 or T is 4:
+				say "[beesexfemale2]";
+			if T is 5:
+				say "[beesexhoneypot]";
+		if hp of bee girl >= 5, infect "Queen Bee";
+		now lastfuck of bee girl is turns;
 
 
 to say beesexmale1:
