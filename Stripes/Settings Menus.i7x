@@ -40,12 +40,12 @@ carry out trixiecheating:
 		say "[link](12) Adjust flags[as]11[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-11)> [run paragraph on]";
+			say "Choice? (0-12)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 11:
+			if calcnumber >= 0 and calcnumber <= 12:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 11.";
+				say "Invalid choice.  Pick from 0 to 12.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
