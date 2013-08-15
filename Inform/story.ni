@@ -5295,7 +5295,6 @@ Carry out tablelisting:
 					say "[infect name entry]: [heat cycle entry],[heat duration entry], F: [if there is a fheat entry and fheat entry is true]Yes[otherwise]No[end if], MPreg: [if there is a mpregheat entry and mpregheat entry is true]Yes[otherwise]No[end if][line break]";
 				otherwise:
 					say "[infect name entry]: [heat cycle entry],[heat duration entry] - not updated to F/MPreg[line break]";
-
 		say "End of list of heat.";
 		stop the action;
 	otherwise if t in lower case is "zephyr":
