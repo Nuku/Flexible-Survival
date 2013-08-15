@@ -10,6 +10,7 @@ The level of Exotic Bird is 1;
 The Dexterity of Exotic Bird is 15;
 The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.";
 The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversary's face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]";
+The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.";
 
 instead of sniffing Exotic Bird:
 	say "It smells like an exotic bird with a faint, tropical scent to it.";
