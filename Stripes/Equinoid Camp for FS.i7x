@@ -160,7 +160,7 @@ to say sexwithliliana:
 
 
 An everyturn rule:
-	if companion of player is equinoid warrior:
+	if companion of player is equinoid warrior and skipturnblocker is 0:
 		if bodyname of player is "black equinoid" and the player is pure:
 			increase libido of equinoid warrior by 20;
 			if libido of equinoid warrior + libido of player > 200 and lastfuck of equinoid warrior - turns >= 4:

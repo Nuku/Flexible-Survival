@@ -82,7 +82,7 @@ instead of sniffing Gryphoness:
 
 
 An everyturn rule:
-	if companion of player is Gryphoness:
+	if companion of player is Gryphoness and skipturnblocker is 0:
 		now tempnum is the remainder after dividing libido of gryphoness by 4;
 		if a random number between one and 20 < ( 6 - tempnum ) and lastfuck of gryphoness - turns >= 4:
 			say "[sexwithgryphoness]";
