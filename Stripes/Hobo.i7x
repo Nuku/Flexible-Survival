@@ -98,7 +98,7 @@ hobo-libidosupp is a truth state that varies.  hobo-libidosupp is usually false.
 hobo-medical is a number that varies.  hobo-medical is usually 255.
 hobo-medical-gift is a number that varies.
 hobo-grmilk is a truth state that varies.  hobo-grmilk is usually false.
-hobo-grmilkhelp is a truth state that varies.  hobo-grmilkhelp is usually -50000.
+hobo-grmilkhelp is a number that varies.  hobo-grmilkhelp is usually -50000.
 
 to say hoboreset:
 	now lastfuck of helper dog is turns;
