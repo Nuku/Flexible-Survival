@@ -54,6 +54,7 @@ Instead of conversing the doctor matt:
 		say "You get the idea you[apostrophe]ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
 		now hp of doctor matt is 2;
 		now level of doctor matt is 0;
+		now hobo-grmilkhelp is turns;
 	if hp of doctor matt is 2:
 		let milkfound be the carried of gryphon milk;
 		let goofound be the carried of glob of goo;
