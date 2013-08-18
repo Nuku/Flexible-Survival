@@ -208,7 +208,7 @@ to say sexwithmousegirl:
 
 
 An everyturn rule:
-	if companion of player is mouse girl:
+	if companion of player is mouse girl and skipturnblocker is 0:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 200;			[lust check vs 200, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of mouse girl - turns >= 4:

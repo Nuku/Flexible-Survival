@@ -151,7 +151,7 @@ the scent of the bee girl is "Honey, unsurprisingly, smells of honey.";
 Section 3 - Sexxxings
 
 An everyturn rule:
-	if companion of player is bee girl:
+	if companion of player is bee girl and skipturnblocker is 0:
 		if cocks of player > 0 or cunts of player > 0:
 			increase libido of player by 6;
 			let diceroll be a random number from 35 to 200;			[lust check vs 200, player libido 35 or less auto-wins]
