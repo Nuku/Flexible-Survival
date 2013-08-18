@@ -198,7 +198,6 @@ to say beatdoran:
 	choose row monster from the table of random critters;
 	now the rocky outcropping is known;
 	now area entry is "nowhere";
-	[POINT OUT LOCATION, SET SECTION 3 IN MOTION, REMOVE MONSTER FROM PLAINS]
 	
 to say dorandesc:
 	now dorfedtype is a random number between 1 and 2;
