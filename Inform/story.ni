@@ -5979,6 +5979,7 @@ Include Thought Eater by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
+Include Doran by Blue Bishop.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
