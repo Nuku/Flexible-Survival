@@ -10,7 +10,7 @@ when play begins:
 	add { "Peculiar Dragon" } to infections of furry;
 
 dorgr is text that varies; [A DORGER IS YOU]
-dorlastfed is a number that varies. dorlastfed is usually 555; [Doren Last Fed Timer]
+dorlastfed is a number that varies. dorlastfed is usually 555; [Doran Last Fed Timer]
 dorgenreg is a truth state that varies; [Doran Gender Regard. Boolean, false = male, true = female]
 dorrolereg is a number that varies. dorrolereg is usually 2; [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
 dorlastsex is a number that varies. dorlastsex is usually 555; [Sex timer]
@@ -458,7 +458,7 @@ to say doransex:
 				say "[dordom_3]"; [oral sex scene]
 		otherwise: [Sub sex pool]
 			now calcnumber is -1;
-			say "     Upon requesting for a bit of action, Doren gets up and moves over to you.";
+			say "     Upon requesting for a bit of action, Doran gets up and moves over to you.";
 			say "     '[one of]Yes[or]Certainly[or]Of course[at random], [dorgr]. [one of]What is their wish[or]How would they have me[or]How may I service them[at random]?' At present, you can ";
 			if cunts of player > 0:
 				if cocks of player > 0 and cunt length of player > 7:
@@ -767,13 +767,13 @@ to say dordom_3: [Dom Doram oral sex]
 			say ". Detecting your need, the dragon grants himself this opportunity to reciprocate, head moving to offer his tongue's affection in return, slick appendage caressing [if cocks of player > 1]one of them[otherwise if cocks of player > 0]it[otherwise if cunts of player > 1]them[otherwise]it[end if]; however, his endeavours are somewhat reserved, clearly meant to tease you rather than offer any proper compensation.";
 		otherwise:
 			say ". Detecting your need, the dragon grants himself this opportunity to reciprocate, head moving to offer his tongue's affection in return, scaled [if cocks of player > 1]maw enveloping one of them[otherwise if cocks of player > 0]maw enveloping it[otherwise if cunts of player > 1]lips embracing one of them[otherwise]lips embracing it[end if].";
-		say "     'M-[dorgr]...!' Doren[if dorroleint is not 0]'s remark muffled against your flesh as you[otherwise]mutters under his breath before your affections[end if] are richly rewarded, the creature suddenly going rigid as your maw is flooded with surge after successive, voluminous surge of the beast's carnal batter, [if dorroleint is 0]driven by your overwhelming need to consume as much as you can, the dragon's persistent teasing eventually enough[otherwise]the dragon's reciprocation more than enough[end if] to drive you to bliss, [if dorroleint is 0]sexual fluids left as a puddle on the floor[otherwise]eagerly consuming your emergent sexual fluids[end if].";
+		say "     'M-[dorgr]...!' Doran[if dorroleint is not 0]'s remark muffled against your flesh as you[otherwise]mutters under his breath before your affections[end if] are richly rewarded, the creature suddenly going rigid as your maw is flooded with surge after successive, voluminous surge of the beast's carnal batter, [if dorroleint is 0]driven by your overwhelming need to consume as much as you can, the dragon's persistent teasing eventually enough[otherwise]the dragon's reciprocation more than enough[end if] to drive you to bliss, [if dorroleint is 0]sexual fluids left as a puddle on the floor[otherwise]eagerly consuming your emergent sexual fluids[end if].";
 	otherwise:
 		if dorroleint is 0:
 			say "; however, intent on giving the beast your undivided attention, you continue to eagerly jerk him at the expense of your own, overwhelming need.";
 		otherwise:
 			say ". Succumbing to your own, overwhelming need you relinquish one of your hands to desperately [if cocks of player > 0]jerk yourself off[otherwise]fondle yourself[end if], attention now split between your own need and continuing to pump the dragon's tool.";
-		say "     'M-[dorgr]...!' Doren mutters under his breath before your affections are richly rewarded, the creature suddenly going rigid as you're painted with surge after successive, voluminous surge of the beast's carnal batter. [if dorroleint is 0]Driven by your voracious need to consume as much as you can, you are made dizzy by the overwhelming amount of seed he offers you, quickly outpacing your ability, sputtering out of your mouth and down your [bodytype of player] frame[otherwise]This particularly lewd circumstance more than enough to drive you to bliss, though the overwhelming amount of seed he offers quickly overwhelms you, sputtering out of your mouth and down your frame, mixing with your own sexual fluids[end if].";
+		say "     'M-[dorgr]...!' Doran mutters under his breath before your affections are richly rewarded, the creature suddenly going rigid as you're painted with surge after successive, voluminous surge of the beast's carnal batter. [if dorroleint is 0]Driven by your voracious need to consume as much as you can, you are made dizzy by the overwhelming amount of seed he offers you, quickly outpacing your ability, sputtering out of your mouth and down your [bodytype of player] frame[otherwise]This particularly lewd circumstance more than enough to drive you to bliss, though the overwhelming amount of seed he offers quickly overwhelms you, sputtering out of your mouth and down your frame, mixing with your own sexual fluids[end if].";
 	if dorroleint is 0:
 		say "     [if scalevalue of player > 3]It takes awhile for both of you to recover. You pull free of the softening tool, but the dragon isn't done with you yet, prodding it[otherwise]Taking awhile for both of you to recover, the dragon isn't done with you yet, prodding the softened tool[end if] against your face with a rather bold lack of reverence.";
 		say "     '[one of]Oh[or]Hm[or]Now then[at random], my [dorgr], [one of]it'd be improper to not clean up after your mess[or]a good toy finishes the job[or]your dragon won't let you go until you lick him clean[at random].' Still dazed by the prior experience, you need a second before your wanton submission compels you to oblige, tongue caressing along the length of the sated, dripping dick";
@@ -1009,7 +1009,7 @@ carry out dorreq:
 			say "(2) [link]Gender Regard[as]2[end link] - Doran's gender association: [bold type][if dorgenreg is true]Female[otherwise]Male[end if][roman type].";	
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
-			say "(3) [link]Scavenge[as]3[end link] - Request Doren's aid.";
+			say "(3) [link]Scavenge[as]3[end link] - Request Doran's aid.";
 			say "[line break]";
 			say "(0) [link]Exit[as]0[end link][line break]";	
 			while 1 is 1:
