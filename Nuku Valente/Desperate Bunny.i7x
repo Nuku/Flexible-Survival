@@ -125,6 +125,7 @@ To rabbitfuck:
 						move player to bunker;
 						now hp of Sandra is 1;
 						if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
+						now lust of Philip is turns;	[starts availability counter on Philip + Sandra]
 						say "'Thank you!' she cries, pressing her abundant front into your side, clinging warmly as she follows you back to the bunker, tail wagging the entire way. When you arrive, you see that she somehow trailed a suitcase of belongings, and she makes herself at home quickly. She even adds two bottles of water to your bunker supplies and a small package of dried meat.";
 						increase score by 5;
 						now the rabbit den is not known;
@@ -190,6 +191,7 @@ To rabbitfuck:
 				move player to bunker;
 				now hp of Sandra is 1;
 				if coleenalpha  > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
+				now lust of philip is turns;	[starts availability counter on Philip + Sandra]
 				now the rabbit den is not known;
 				follow turnpass rule;
 			otherwise:
