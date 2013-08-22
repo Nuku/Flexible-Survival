@@ -1,5 +1,5 @@
 Version 1 of Doran by Blue Bishop begins here.
-[ Implementation ]
+[ Version 1.1 - Impregnation fix ]
 
 "Adds Doran to Flexible Survivals Wandering Monsters table"
 
@@ -446,6 +446,8 @@ to say doransex:
 			say "     'Oh, my [dorgr] is interested in another go, so soon? I'm afraid I'm still too tired from the last bout. I'll be more than eager to have my fun with them when I'm up to it.'";
 		otherwise:
 			say "     'Again, [dorgr]? Oh, they must forgive me, I'm still absolutely exhausted! I don't mean to turn tail, I just wouldn't be any good at pleasing them, I'm sorry.'";
+		setmonster "Peculiar Dragon";
+		choose row monster from the table of random critters;
 	otherwise:
 		if dorrolereg is 0: [Dom sex pool]
 			if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and ((cunts of player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (cunts of player > 0 and a random chance of 1 in 3 succeeds)) and (scalevalue of player > 1 or player is twistcapped):
