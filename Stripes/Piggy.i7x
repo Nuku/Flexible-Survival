@@ -1,4 +1,4 @@
-Version 1 of Piggy For FS by Stripes begins here.
+Version 1 of Piggy by Stripes begins here.
 
 "Adds a Piggy creature to Flexible Survivals Wandering Monsters table"
 
@@ -108,4 +108,4 @@ when play ends:
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 
-Piggy For FS ends here.
+Piggy ends here.
