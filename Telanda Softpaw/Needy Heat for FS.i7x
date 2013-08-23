@@ -1,5 +1,5 @@
 Version 3 of Needy Heat for FS by Telanda Softpaw begins here.
-[ Version 3 - MPreg heats added by Stripes ]
+[ Version 3.2 - Heat control via Dr. Medea ]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -12,6 +12,7 @@ inheat is a truth state that varies. inheat is usually False. [ Variable for oth
 slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
 heatform is a number that varies. [This is used to denote whether the player's last turn was spent in female heat or mpreg heat]
+heatlevel is a number that varies. [This is used to denote the intensity of player heat (1=off / 2=normal / 3=intense)]
 
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -29,6 +30,8 @@ Book 2 - Logic & Rules
 to say defaultheat:
 	[say "You shift uncomfortably. still being driven by the swollen needy heat between your legs.";]
 	increase libido of player by 5;
+	if heatlevel is 3:
+		increase libido of player by 2;
 	if libido of player > 100, now libido of player is 100;
 	
 to say huskyheatstart:
@@ -88,10 +91,13 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 		if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
+		if heatlevel is 3:
+			increase libido of player by 2;
+			if a random chance of 1 in 4 succeeds, increase slutfucked by 1;
 
 
 This is the check heat rule:
-	if heat enabled is true:
+	if heat enabled is true and heatlevel is not 1:
 		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
 			if cunts of player is greater than 0 and (cockname of player is not "human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[ Check if it's just triggered]
@@ -110,23 +116,28 @@ This is the check heat rule:
 				if turns in heat is greater than (heat cycle entry times 8):
 					now turns in heat is 0;
 					[ say "reset!"; ]
-				if turns in heat < ( heat duration entry * 8 ) and inheat is not True:	[not yet in heat]
+				if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is not true:		[time to enter heat]
 					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 					now heatform is 0;	[in female heat]
 					say "[trigger text entry]";
 					if there is heat start entry, say "[heat start entry]";	[Heat start Trigger]
-				else if turns in heat < ( heat duration entry * 8 ) and inheat is True:	[still in heat, previously triggered.]
+				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 1:		[last turn was mpreg heat]
 						say "That heated need that has been burning deep inside you spreads to encompass your new pussy.  Hot juices soak your thighs as your female sex goes into heat and you're left wanting to be mounted and bred.";
 						now heatform is 0;	[swap to female heat]
 					otherwise:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
-				else if inheat is true:
+						if heatlevel is 3 and a random chance of 1 in 5 succeeds:
+							decrease turns in heat by 1;	[25% duration of heated period due to compounding rollback]
+				else if inheat is true:	[heat period over]
 					say "Without any warning, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
 					now heatform is 0;	[ensuring treats as female heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now libido of player is libido of player divided by 2;	[Halve the players libido.]
 					now inheat is False;
+				else:		[not in heat period]
+					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
+						increase turns in heat by 1;	[20% duration of non-heated period lost]
 			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of your is affected by your tainted sexuality.";
@@ -143,23 +154,28 @@ This is the check heat rule:
 				if turns in heat is greater than (heat cycle entry times 8):
 					now turns in heat is 0;
 					[ say "reset!"; ]
-				if turns in heat < ( heat duration entry * 8 ) and inheat is not True:	[not yet in heat]
+				if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is not True:	[not yet in heat]
 					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 					now heatform is 1;	[in mpreg-heat]
 					say "[mpregtrigger entry]";
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
-				else if turns in heat < ( heat duration entry * 8 ) and inheat is True:	[still in heat, previously triggered.]
+				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
 						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly.  You are left still wanting to be mounted and filled despite being [if cocks of player > 0]male[otherwise]neuter[end if].";
 						now heatform is 1;	[swap to mpreg-heat]
 					otherwise:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
+						if heatlevel is 3 and a random chance of 1 in 5 succeeds:
+							decrease turns in heat by 1;	[25% duration of heated period due to compounding rollback]
 				else if inheat is true:
 					say "As swiftly as it came, the feral lust that had been growing inside you has faded.  You are no longer in heat.";
 					now heatform is 1;	[ensuring treats as mpreg heat for end]
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now libido of player is libido of player divided by 2;	[Halve the players libido.]
 					now inheat is False;
+				else:		[not in heat period]
+					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
+						increase turns in heat by 1;	[20% duration of non-heated period lost]
 			else:
 				if animal heat is True:
 					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore.";

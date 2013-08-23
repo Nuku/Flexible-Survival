@@ -193,6 +193,7 @@ The child has a text called tailname. Tailname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
+The player has text called Short Breast Size Desc.
 The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 The player has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
@@ -1390,7 +1391,6 @@ to say exitlist:
 		say "[link][printed name of nam][end link] ";
 
 
-
 Book 6 - Rules, Obey them!
 
 Part 1 - Flags
@@ -1491,6 +1491,7 @@ First for constructing the status line (this is the bypass status line map rule)
 
 d18 is a number that varies.
 descr is text that varies.
+sh-descr is text that varies.
 cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 battleground is a text that varies.
 Lusting is a text that varies.
@@ -2335,8 +2336,6 @@ To say short time of day:
 	if remainder after dividing turns by 8 is -8:
 		say "morning";
 
-[Seems to be working now]
-
 daytimer is a thing.
 daytimer can be day or night.  [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
 
@@ -2351,7 +2350,31 @@ definition: Daytimer is night:
 		no;
 	otherwise:
 		yes;
-		
+
+to guestimate time at (x - a number):
+	if x < 0:
+		say "ERROR: Negative time period.";
+	otherwise if x is 0:
+		say "under three hour";
+	otherwise if x <= 10:
+		say "[x * 3] hours";	[up to 30 hrs]
+	otherwise if x <= 14:
+		say "a day and a half or so";	[up to 42 hrs]
+	otherwise if x <= 18:
+		say "two days or so";		[up to 54 hrs]
+	otherwise if x <= 22:
+		say "two and a half days or so";	[up to 66 hrs]
+	otherwise if x <= 28:
+		say "three days or so";	[up to 84 hrs]
+	otherwise:
+		say "[( x / 8 )] days";
+
+
+To Extend game by (x - a number):
+	decrease targetturns by x;
+	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
+
+
 To process (X - a grab object):
 	if x is temporary and x is owned:
 		say "You eagerly use up the [x]! ";
@@ -4518,19 +4541,33 @@ This is the brain descr rule:
 This is the breast descr rule:
 	if breast size of player is less than 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
+		now sh-descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
 	otherwise if breast size of player is less than 3:
 		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random]";
+	otherwise if breast size of player is 3:
+		now descr is "[character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]reasonably-sized[or]average[or]moderate[at random]";
+	otherwise if breast size of player is 4:
+		now descr is "[character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]eye-catching[or]substantive[or]shapely[at random]";
 	otherwise if breast size of player is less than 5:
 		now descr is "[character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[or][character number breast size of player in cupsize] cup[at random]";
 	otherwise if breast size of player is less than 7:
 		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random]";
 	otherwise if breast size of player is less than 9:
 		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]massive[or]huge[or]heavy[at random]";
 	otherwise if breast size of player is less than 12:
 		now descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random]";
 	otherwise:
 		now descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of player in cupsize] cup";
+		now sh-descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random]";
 	now breast size desc of player is descr;
+	now short breast size desc of player is sh-descr;
 	rule succeeds;
 
 This is the cock descr rule:
@@ -5490,10 +5527,6 @@ Book 8 - People
 
 [Rod and Ronda Mallrat have been moved to the RodAndRonda file]
 
-To Extend game by (x - a number):
-	decrease targetturns by x;
-	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
-	
 When play ends:
 	say "----------";
 	say "I hope you enjoyed playing that as much as I enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";

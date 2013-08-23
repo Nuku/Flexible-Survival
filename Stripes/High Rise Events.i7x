@@ -30,23 +30,23 @@ when play begins:
 	add Pigging Out to badspots of furry;
 
 Instead of resolving a Pigging Out:
-	say "     You come to a very exclusive restaurant.  While you[apostrophe]ve never been there, you[apostrophe]ve heard that reservations are required months in advance and that the cuisine is both wonderful and expensive.  With the fall of the city, you know you won[apostrophe]t be able to order a meal there, but you may be able to get some fine food from the cold locker.  As you get closer, you hear some noise coming from the restaurant and approach more cautiously.  Glancing through one of the large windows, you see a large sow inside, making a mess of the place.  It looks like she has been eating and masturbating all over the place.  One hand holds a fistful of food while the other fingers her dripping pussy.";
+	say "     You come to a very exclusive restaurant.  While you've never been there, you've heard that reservations are required months in advance and that the cuisine is both wonderful and expensive.  With the fall of the city, you know you won't be able to order a meal there, but you may be able to get some fine food from the cold locker.  As you get closer, you hear some noise coming from the restaurant and approach more cautiously.  Glancing through one of the large windows, you see a large sow inside, making a mess of the place.  It looks like she has been eating and masturbating all over the place.  One hand holds a fistful of food while the other fingers her dripping pussy.";
 	say "[piggycheck]";
 	if tempnum is 1:
-		say "     Eyeing both her and the food, you lick your lips hungrily.  You feel the urge to join her in the restaurant.  Besides, wouldn[apostrophe]t the experience of eating at the best restaurant in town be better with an attractive date?";
+		say "     Eyeing both her and the food, you lick your lips hungrily.  You feel the urge to join her in the restaurant.  Besides, wouldn't the experience of eating at the best restaurant in town be better with an attractive date?";
 		if the player consents:
-			say "     When you first step in, the pig is somewhat startled by your presence.  Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude.  With a grin, she picks up a handful of food from the floor with her left hand, the one she[apostrophe]d had in her pussy.  As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more.  You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
+			say "     When you first step in, the pig is somewhat startled by your presence.  Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude.  With a grin, she picks up a handful of food from the floor with her left hand, the one she'd had in her pussy.  As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more.  You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
 			say "     As you eat, she helps you out of your clothes, tossing them onto a knocked over table.  With you now naked, she runs her messy hands over your body as she pulls you into her arms.  She grabs another of the scattered pastries from the floor and stuffs it into her mouth before sloppily kissing you, smearing the creamy filling into your mouth with her tongue.";
 			if cocks of player > 0:
 				say "     You place your hands on her sow tits, making her squeal in pleasure.  She lays herself back on the floor, squishing some of the expensive food beneath her bulk.  You bury your face in her teats, licking and suckling at them playfully.  She oinks and moans in pleasure between mouthfuls.  You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beckons to you.";
 				say "     You grab a nearby bottle of maple syrup and tear off the top, pouring it right onto those wet lips before you bury your face between her large thighs.  You lick all over her messy pussy, the maple sweetness tasting wonderful with her porcine juices.  You stuff your tongue into her, delving deeper for more of her sweet honey until she finally orgasms and soaks your face with it.";
 				say "     You smile up at her, licking your chops as she motions for you to climb atop her.  You do so eagerly, bringing your hard cock into position at her pussy before burying it in her ample folds.  With your face pressed to her piggish snout, she snuffles at your face and licks away the sticky syrup and her own juices with squeals of pleasure as you fuck her.";
-				say "     When she[apostrophe]s finished cleaning your face, you stuff another large pastry into her mouth and share it with her while kissing.  Her plump body ripples with each hard thrust you make into her.  You pound into her again and again until finally you climax, shooting your hot seed into her womb, making her squeal again.";
+				say "     When she's finished cleaning your face, you stuff another large pastry into her mouth and share it with her while kissing.  Her plump body ripples with each hard thrust you make into her.  You pound into her again and again until finally you climax, shooting your hot seed into her womb, making her squeal again.";
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways.";
 			otherwise:
 				say "     She presses you down to the floor, flattening several soft pastries beneath you.  She moves her heavy bulk atop you, bringing her wet and dripping pussy over you face.  You moan softly as she presses it to your mouth, smearing her juices onto you, which you quickly start lapping up from her pussy.";
 				say "     With her atop you, you barely catch sight of her grabbing a bottle of maple syrup.  A few moments later, you feel the cool, sticky fluid flowing down between your legs.  She spreads your petals and pours more over them before burying her snout between your thighs and licking hungrily at your sticky puss.  You both moan and squeal in pleasure until you climax, adding more hot juices to the sticky mess.";
-				say "     She pauses to stuff several more pastries into her mouth, gobbling them down.  She ends up dropping crumbs onto your sticky groin where they cling to the syrupy, slobbery film of your juices.  After her quick gorging, she climbs off of you and goes to the back and into the food locker.  At first you think she[apostrophe]s going to come out with more food for you both, but when she comes out with only a cucumber and a grin, you realize she has something else in mind.";
+				say "     She pauses to stuff several more pastries into her mouth, gobbling them down.  She ends up dropping crumbs onto your sticky groin where they cling to the syrupy, slobbery film of your juices.  After her quick gorging, she climbs off of you and goes to the back and into the food locker.  At first you think she's going to come out with more food for you both, but when she comes out with only a cucumber and a grin, you realize she has something else in mind.";
 				say "     She plops herself down onto the messy floor, seating herself between your legs.  Stroking your thigh, she moves her piggy hand up to your wet, messy cunny and spreads your lips.  With a grin, she sinks the long, slender cucumber into you, making you squeal.  She works the vegetable in and out several times before she lays back, one leg over yours and the other under.  With considerable labour, she moves her heavy bulk closer, taking the other half of the cuke into her pussy.";
 				say "     With a little careful practice, you both set up a nice rhythm where you rock back and forth, pushing the cuke into each other over and over again.  You both fondle your breasts and stuff more of the scattered desserts into your hungry mouths.  A wet puddle of juices pool beneath it as your pleasure builds and builds until you finally crash over the edge and she follows a few breaths later.  You both writhe in orgasm, eventually snapping the green vegetable in half as you squeal loudly.";
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways, with you munching on your half of the sticky cucumber and she doing the same with hers.";
@@ -64,7 +64,7 @@ Instead of resolving a Pigging Out:
 			if the player consents:
 				challenge "Messy Pig";
 				if lost is 1:
-					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she[apostrophe]s satisfied that you[apostrophe]re properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
+					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
 					infect "Messy Pig";    [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
@@ -75,14 +75,14 @@ Instead of resolving a Pigging Out:
 					increase carried of cleaver by 1;
 					increase score by 5;
 			otherwise:
-				say "     Looking around the messy restaurant and the scattered food around the pig, you[apostrophe]re not so sure they[apostrophe]ll be anything salvageable left and decide it may not be worth the risk to try.";
+				say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 				increase score by 1;
 	otherwise:
-		say "     You look at the disgusting mess that she[apostrophe]s already made of the place and feel your hopes of some fine dining dashed.  You would still like to opportunity to search the place for supplies.  Shall you enter the restaurant and confront her before she eats it all?";
+		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed.  You would still like to opportunity to search the place for supplies.  Shall you enter the restaurant and confront her before she eats it all?";
 		if the player consents:
 			challenge "Messy Pig";
 			if lost is 1:
-				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she[apostrophe]s satisfied that you[apostrophe]re properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
+				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
 				infect "Messy Pig";    [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
@@ -93,7 +93,7 @@ Instead of resolving a Pigging Out:
 				increase carried of cleaver by 1;
 				increase score by 5;
 		otherwise:
-			say "     Looking around the messy restaurant and the scattered food around the pig, you[apostrophe]re not so sure they[apostrophe]ll be anything salvageable left and decide it may not be worth the risk to try.";
+			say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 			increase score by 1;
 	Now Pigging Out is resolved;
 
@@ -128,7 +128,7 @@ when play begins:
 	add Small Park to badspots of humorous;
 
 Instead of resolving a Small Park:
-	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)[line break]";
+	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don't spot any danger at the moment, so perhaps it's safe.  Shall you enter the park and investigate further? (Y/N)[line break]";
 	if player consents:
 		say "[dogparksearch]";
 	otherwise:
@@ -140,7 +140,7 @@ Instead of resolving a Small Park:
 to say dogparksearch:
 	let T be a random number between one and twelve;
 	if T is 1:
-		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky while searching around what appears to be a jogger[apostrophe]s outfit, finding an unopened bottle of water that rolled partway under a bush.";
+		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky while searching around what appears to be a jogger's outfit, finding an unopened bottle of water that rolled partway under a bush.";
 		say "     Added a water bottle to your supply.";
 		increase carried of water bottle by 1;
 		increase score by 1;
@@ -172,7 +172,7 @@ to say dogparksearch:
 	if T is 9:
 		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here.  It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes.  Despite its origins, the scent is very attractive, drawing you in.  Do you want to examine it more closely? (Y/N)";
 		if player consents:
-			say "     You move in closer to the tree and start to sniff around it.  The heady scent of dogs, both males and females, fill your nostrils.  You pant a little, tasting the scent of heat as well from many of them.  Your mind grows hazy and you roll on the ground in front of the tree, through several cum puddles, letting their scent get on you.  Getting up, you shamelessly add your scent to the base of the tree before heading off, leaving the dog park now that you[apostrophe]ve marked that you[apostrophe]ve been there.";
+			say "     You move in closer to the tree and start to sniff around it.  The heady scent of dogs, both males and females, fill your nostrils.  You pant a little, tasting the scent of heat as well from many of them.  Your mind grows hazy and you roll on the ground in front of the tree, through several cum puddles, letting their scent get on you.  Getting up, you shamelessly add your scent to the base of the tree before heading off, leaving the dog park now that you've marked that you've been there.";
 			[triple random canine infection]
 			say "[doggyinfect]";
 			say "[doggyinfect]";
@@ -186,13 +186,13 @@ to say dogparksearch:
 			say "     You resist the urge to give in to those cloying scents and move away.  You try to continue searching, but find yourself drift back to the tree several times and finally decide to abandon the dog park entirely.";
 			increase score by 1;
 	if T is 10:
-		say "     You start to look around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach another section of the park, you hear rough panting and growling coming from the other side of a hedge.  Creeping forward, you see a very large dog, possibly some form of labrador, pounding into an increasingly canine woman.  She[apostrophe]s already largely transformed and seems as lost in her animal lusts as the dog atop her.  Sensing that it[apostrophe]s already too late to save her, you decide not to pick a fight with the big dog (and possibly his new mate as well) and sneak out of the park and put some distance between you and them.";
+		say "     You start to look around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach another section of the park, you hear rough panting and growling coming from the other side of a hedge.  Creeping forward, you see a very large dog, possibly some form of labrador, pounding into an increasingly canine woman.  She's already largely transformed and seems as lost in her animal lusts as the dog atop her.  Sensing that it's already too late to save her, you decide not to pick a fight with the big dog (and possibly his new mate as well) and sneak out of the park and put some distance between you and them.";
 		increase score by 1;
 	if T is 11:
-		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While searching, you come across what to be a jogger[apostrophe]s gear.  The discarded shorts are torn at the front, either ripped open from massive internal growth or an overeager monster seeking the goods within - it[apostrophe]s hard to be certain.  The jogger[apostrophe]s step counter and wrist bands are also scattered among the clothes, but you[apostrophe]re unable to find anything that could be useful to you.";
+		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While searching, you come across what to be a jogger's gear.  The discarded shorts are torn at the front, either ripped open from massive internal growth or an overeager monster seeking the goods within - it's hard to be certain.  The jogger's step counter and wrist bands are also scattered among the clothes, but you're unable to find anything that could be useful to you.";
 		increase score by 1;
 	if T is 12:
-		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While searching, you focus on one pile of what appear to have once been rather expensive clothes.  The short skirt and woman[apostrophe]s blazer would be very fashionable if not thoroughly soaked in cum.  The nearby purse and high heels are both designer brand names - expensive French ones.  A broken collar and leash, and a torn remains of a cute dog outfit lead you to suspect that this woman[apostrophe]s little dog become more than she could handle.  Sifting through the items with the help of a stick, you[apostrophe]re unable to find anything that could be useful to you.";
+		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While searching, you focus on one pile of what appear to have once been rather expensive clothes.  The short skirt and woman's blazer would be very fashionable if not thoroughly soaked in cum.  The nearby purse and high heels are both designer brand names - expensive French ones.  A broken collar and leash, and a torn remains of a cute dog outfit lead you to suspect that this woman's little dog become more than she could handle.  Sifting through the items with the help of a stick, you're unable to find anything that could be useful to you.";
 		increase score by 1;
 
 
@@ -246,12 +246,58 @@ when play begins:
 	add Veterinary Hospital to badspots of furry;
 
 Instead of resolving a Veterinary Hospital:
-	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)[line break]";
-	if player consents:
-		say "[vetsearch]";
+	if lust of Medea is 1:
+		say "     You come across a veterinary hospital at the ground level of one of the high rises.  Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if cunts of player > 0]infected[otherwise]male[end if] womb's heat cycle, you take a moment to listen for monsters inside.  You don't hear any, but it is an animal hospital, so it still seems somewhat risky.  Deciding to take the risk, you venture inside.";
+		attempttowait;
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, you do your best to remain focused by repeatedly looking at the list you were given as a reminder of what you need to find.  As you're nearing the end, it is becoming quite difficult, all those intense, sexual, animal scents have you panting with lust.  A large part of you just wants to give up on humanity, find some beast and let it have its way with you as long and as often as it likes.  Knowing you can't tarry any longer, you pack up what you've found and make for the exit";
+		if furry is not banned and hermaphrodite is not banned:
+			say ".";
+			say "     And that's when you turn around to find your path back to the lobby barred by one of those large panther taurs.  She's wearing the remains of a doctor's coat over her upper body.  She moves in on you, growling lustfully as she advances.";
+			now libido of player is ( 100 + libido of player + libido of player ) / 3;
+			decrease humanity of player by 5;
+			challenge "Panther Taur";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm.  Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests.  It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger.  Once outside, you breathe in the (relatively) fresher air outside to try and clear your hear.  Trying to recover your self-control, you leave the immediate area and ponder your next course of action.  Despite the close call, finding a sexy beast to fuck you remains high on your list.";
+				now lust of medea is 2;
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home.  Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you.  You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
+				setmonster "Panther Taur";
+				choose row monster from the table of random critters;
+				now humanity of player is 0;
+				if libido of player < 90, now libido of player is 90;
+				now tailname of player is "Panther Taur";
+				now facename of player is "Panther Taur";
+				now skinname of player is "Panther Taur";
+				now bodyname of player is "Panther Taur";
+				now cockname of player is "Panther Taur";
+				now body of player is body entry;
+				now face of player is face entry;
+				now tail of player is tail entry;
+				now skin of player is skin entry;
+				now cock of player is cock entry;
+				attributeinfect;
+				follow the sex change rule;
+				follow the sex change rule;
+				attempttowait;
+				end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+				now battleground is "void";
+				wait for any key;
+				follow the turnpass rule;
+				stop the action;
+			otherwise:
+				say "     Not feeling it would be wise to stay and fight given the circumstances, you clutch your pack full of stolen veterinary supplies all the tighter and dodge your way past the big feline.  Still running to put some distance between her in case she chooses to pursue you, you breathe in the (relatively) fresher air outside to try and clear your hear.  Trying to recover your self-control, you leave the immediate area and ponder your next course of action.  Despite the close call, finding a sexy beast to fuck you remains high on your list.";
+		otherwise:
+			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head.  Trying to recover your self-control, you leave the immediate area and ponder your next course of action.  Finding a sexy beast to fuck you remains high on your list.";
+			now libido of player is ( 100 + libido of player + libido of player ) / 3;
+			decrease humanity of player by 5;
+		now lust of Medea is 2;
 	otherwise:
-		say "     You go off, deciding to find a safer place to search.";
-		increase score by 1;
+		say "     You find a veterinary hospital at the ground level of one of the high rises.  You don't hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)[line break]";
+		if player consents:
+			say "[vetsearch]";
+		otherwise:
+			say "     You go off, deciding to find a safer place to search.";
+			increase score by 1;
 	Now Veterinary Hospital is resolved;
 
 
@@ -259,12 +305,12 @@ to say vetsearch:
 	let T be a random number between one and twelve;
 	decrease humanity of player by 3;
 	if T is 1:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs.  You tuck it under one arm and quickly head out to get some fresh air.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs.  You tuck it under one arm and quickly head out to get some fresh air.";
 		increase carried of medkit by 1;
 		say "     Medkit obtained.";
 		increase score by 3;
 	if T is 2:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, you scout around and come across some sample cans of pet food.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, you scout around and come across some sample cans of pet food.";
 		say "[doggycheck][kittycheck]";
 		if doggyness is 1:
 			if kittyness is 1:		[both doggy and kitty]
@@ -288,29 +334,29 @@ to say vetsearch:
 			increase carried of food by 1;
 			increase score by 1;
 		otherwise:							[not a kitty or doggy, nor starving]
-			say "     You look at the cans of pet food briefly, then turn and continue searching.  You haven[apostrophe]t sunk that low yet.  A quick look around the rest of the room finds nothing else of interest.  Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
+			say "     You look at the cans of pet food briefly, then turn and continue searching.  You haven't sunk that low yet.  A quick look around the rest of the room finds nothing else of interest.  Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			increase score by 1;
 	if T is 3 or T is 4 or T is 5 or T is 6 or T is 7:		[high chance of random 'pet' fight]
-		say "      You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
+		say "      You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
 		say "[randomvetfight]";
-		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet[apostrophe]s office are getting to you and you leave before you succumb entirely.";
+		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet's office are getting to you and you leave before you succumb entirely.";
 	if T is 8:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, you move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [apostrophe]symptoms[apostrophe].  You open up the medical cabinet to look through it, but accidentally place your hand in a sticky puddle of something.  Your hand starts to tingle and you can feel the infection trying to take hold.  The scents all around you become more attractive. You feel a strong urge to give in and roll around in them, and even lap them up.  You manage to suppress it long enough to run out of the place, panting in the fresh air to clear your head.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, you move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [']symptoms['].  You open up the medical cabinet to look through it, but accidentally place your hand in a sticky puddle of something.  Your hand starts to tingle and you can feel the infection trying to take hold.  The scents all around you become more attractive. You feel a strong urge to give in and roll around in them, and even lap them up.  You manage to suppress it long enough to run out of the place, panting in the fresh air to clear your head.";
 		infect "Female Husky";
 	if T is 9:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [apostrophe]symptoms[apostrophe].";
-		say "     As you start to open up the medical cabinet to look for supplies, you feel a cold, sticky splash against your back.  Splatters of thick, cool cum splash past you and onto cabinet[apostrophe]s contents.  You turn around quickly to see one of the large panther taurs in the doorway behind you, wearing the remains of a doctor[apostrophe]s coat over her upper body.  In her paw she has another large, clear balloon filled with what must be her cum.  And that[apostrophe]s when you realize its not a balloon, but an overinflated condom.  As the tingles of transformation run through you, you have to dodge to the side to avoid the second one before closing in to fight her.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [']symptoms['].";
+		say "     As you start to open up the medical cabinet to look for supplies, you feel a cold, sticky splash against your back.  Splatters of thick, cool cum splash past you and onto cabinet's contents.  You turn around quickly to see one of the large panther taurs in the doorway behind you, wearing the remains of a doctor's coat over her upper body.  In her paw she has another large, clear balloon filled with what must be her cum.  And that's when you realize its not a balloon, but an overinflated condom.  As the tingles of transformation run through you, you have to dodge to the side to avoid the second one before closing in to fight her.";
 		infect "Panther Taur";
 		challenge "Panther Taur";
-		say "     Once the panther creature has left, you return to quickly inspect the medical cabinet, but find that the contents have been thoroughly soaked in the feline[apostrophe]s cum.  The scent of it and of all the other creatures is quickly getting to be too much.  You barely resist giving in and lapping up the growing puddle of cool cum that[apostrophe]s flowing out of the cabinet before running out into the fresh air to clear your head.";
+		say "     Once the panther creature has left, you return to quickly inspect the medical cabinet, but find that the contents have been thoroughly soaked in the feline's cum.  The scent of it and of all the other creatures is quickly getting to be too much.  You barely resist giving in and lapping up the growing puddle of cool cum that's flowing out of the cabinet before running out into the fresh air to clear your head.";
 	if T is 10:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You end up making your way into the staff break room and find that the animalistic sex spread into here as well.  From the clawmarks on the table and the large cum stain in the middle, some big male or herm got a thorough fucking while bent over it.  You quickly search around the room for usable supplies, but it seems the few lunches that were brought in have already been consumed by the newly transformed creatures.  The scents filling the place start to get to you and you eventually have to leave empty handed to resist giving in to them fully.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You end up making your way into the staff break room and find that the animalistic sex spread into here as well.  From the clawmarks on the table and the large cum stain in the middle, some big male or herm got a thorough fucking while bent over it.  You quickly search around the room for usable supplies, but it seems the few lunches that were brought in have already been consumed by the newly transformed creatures.  The scents filling the place start to get to you and you eventually have to leave empty handed to resist giving in to them fully.";
 		increase score by 1;
 	if T is 11:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You search around the waiting area, where many of the chairs have been overturned and several broken pet carriers remain.  There are piles of clothes and numerous patches of cum.  It seems the waiting area turned into an orgy of pets and owners.  You try to sift through the messy piles, but have no luck finding anything before the scents become too much and you have to abandon searching entirely.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You search around the waiting area, where many of the chairs have been overturned and several broken pet carriers remain.  There are piles of clothes and numerous patches of cum.  It seems the waiting area turned into an orgy of pets and owners.  You try to sift through the messy piles, but have no luck finding anything before the scents become too much and you have to abandon searching entirely.";
 		increase score by 1;
 	if T is 12:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You start by looking around the reception desk and find the secretary[apostrophe]s discarded panties at the foot of the chair.  Drawn by a scent, you kneel down and find a large cumstain against the wall of the desk.  It looks like the secretary had started to grow a cock and had jerked herself off, probably while still greeting incoming owners.  The scents all around you get to be too strong for you.  You can barely resist licking at that large stain, so you get up and rush out quickly.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  You start by looking around the reception desk and find the secretary's discarded panties at the foot of the chair.  Drawn by a scent, you kneel down and find a large cumstain against the wall of the desk.  It looks like the secretary had started to grow a cock and had jerked herself off, probably while still greeting incoming owners.  The scents all around you get to be too strong for you.  You can barely resist licking at that large stain, so you get up and rush out quickly.";
 		increase score by 1;
 
 
@@ -359,7 +405,7 @@ when play begins:
 	add Golf Store to badspots of furry;
 
 Instead of resolving a Golf Store:
-	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again.  As the sound draws closer, you look around for a place to hide and duck into a small golf store.  Peering from behind a display case, you see a small herd of horsemen clomping through the street.  They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout.  Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd.  You continue to watch from the shadow until they[apostrophe]re gone.  As they march out of earshot, you relax and take a moment to look around the golf store you[apostrophe]d hidden in.  You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
+	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again.  As the sound draws closer, you look around for a place to hide and duck into a small golf store.  Peering from behind a display case, you see a small herd of horsemen clomping through the street.  They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout.  Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd.  You continue to watch from the shadow until they're gone.  As they march out of earshot, you relax and take a moment to look around the golf store you'd hidden in.  You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
 	say "     Golf club obtained.";
 	increase carried of golf club by 1;
 	increase score by 5;
@@ -382,7 +428,7 @@ when play begins:
 	add Small Park to badspots of humorous;
 
 Instead of resolving a Electronics Store:
-	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings.  They are a duo of strange, cybernetic people with vacant, luminescent eyes.  Unlike any of the others you[apostrophe]ve seen in the city, you are drawn to investigate.  From behind a car, you watch them as they eat the electronic hardware from the displays.  One is a glossy white with blue highlights and a smooth, dome head.  He is dressed in loose-fitting, slacker wear.  The other has a matte black finish where he[apostrophe]s not flesh and wearing a grey suit and charcoal tie.";
+	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings.  They are a duo of strange, cybernetic people with vacant, luminescent eyes.  Unlike any of the others you've seen in the city, you are drawn to investigate.  From behind a car, you watch them as they eat the electronic hardware from the displays.  One is a glossy white with blue highlights and a smooth, dome head.  He is dressed in loose-fitting, slacker wear.  The other has a matte black finish where he's not flesh and wearing a grey suit and charcoal tie.";
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful.  His eyes blink, then turn a solid blue.  He smacks his chest a few times to reboot himself.  Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
