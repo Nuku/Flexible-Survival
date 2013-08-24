@@ -1482,8 +1482,11 @@ To reciting2:
 					now hp of Zigor is the number understood;
 					if hp of Zigor > 0:
 						now Cuero Lobo is known;
+						now Leather Wolves is resolved;
 					otherwise:
 						now Cuero Lobo is unknown;
+						if guy is not bannd and girl is not banned and furry is not banned:
+							now Leather Wolves is unresolved;
 					if hp of Zigor >= 8:
 						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
 	if hospquest is 3, now hospquest is 2;
@@ -3019,8 +3022,11 @@ Carry out reciting:
 					now hp of Zigor is the number understood;
 					if hp of Zigor > 0:
 						now Cuero Lobo is known;
+						now Leather Wolves is resolved;
 					otherwise:
 						now Cuero Lobo is unknown;
+						if guy is not bannd and girl is not banned and furry is not banned:
+							now Leather Wolves is unresolved;
 					if hp of Zigor >= 8:
 						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
 		if upit is 1, decrease z by 58;
