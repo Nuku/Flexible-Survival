@@ -4235,7 +4235,7 @@ This is the turnpass rule:
 	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		now libido of player is 75;
 		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
 		if "Cold Fish" is listed in feats of player, now libido of player is 60;
@@ -4344,10 +4344,10 @@ This is the turnpass rule:
 	if the tailname of the player is not "human", increase corruption by a random number from 0 to 1;
 	if the facename of the player is not "human", increase corruption by a random number from 0 to 1;
 	if corruption is greater than 0:
-		if "Corrupt" is listed in feats of player:
+		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
 			increase corruption by a random number from 0 to 1;
-		if "Pure" is listed in feats of player:
+		if "Strong Psyche" is listed in feats of player:
 			decrease corruption by a random number from 0 to 2;
 		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
 		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
