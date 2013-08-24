@@ -14,11 +14,11 @@ Section 1 - Monster Responses
 
 To say latex wolf defeat:
 	if libido of player <= 50:
-		Say "The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
+		Say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
 	if libido of player > 50 and cocks of player is greater than 0:
-		Say "The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
+		Say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
-		Say "The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
+		Say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
 
 To say latex wolf attack:
 	if ( a random chance of 1 in 4 succeeds or ( "Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
@@ -124,8 +124,8 @@ an every turn rule:
 			say "[one of]You feel a strange churning in your latex body and you can feel the metamorphosis spread further[or]You find yourself munching on some rather tasty plastic you found lying around[or][lwmast1][or][lwmast2][or]You eye your supplies, thirsty not for the water, but hungry for the plastic bottle[or]Your contort your flexible, latex body and start licking your groin, enjoying the latex taste of your leaking fluids and lapping it all up as you climax, spraying into your mouth[in random order]";
 			say ".  You feel yourself slip a little further into the bizarre infection.";
 			decrease humanity of player by a random number from 3 to 8;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 			increase libido of player by a random number from 3 to 8;
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 1;

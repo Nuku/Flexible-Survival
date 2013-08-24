@@ -18,8 +18,8 @@ to say Moth attack:
 		say "     The Mothgirl, grinning at it's newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, she thusly exploiting your vulnerable state to grind her breasts against [if breasts of player > 0]your own [breast size desc of player] curvature[otherwise][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter.  She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
 		increase libido of player by 5;
 		decrease humanity of player by 3;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		now Mothdefeat is 1;
 	otherwise:
 		if a random chance of 2 in 3 succeeds and cunts of player > 0:	[Prefer male action]
@@ -40,8 +40,8 @@ to say Moth attack:
 		increase libido of player by 8;
 		if libido of player > 100, now libido of player is 100;
 		decrease humanity of player by 3;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
 to say mothgirl defeat:

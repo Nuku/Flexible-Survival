@@ -331,8 +331,8 @@ to sfcaffeine:
 	if libido of player < 66, now libido of player is 66;
 	if libido of player > 100, now libido of player is 100;
 	decrease humanity of player by 15;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 1 and 5;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 5;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
 	increase morale of player by 5;
 	say "     As the soda rushes through your system, the sugar and caffeine gets your body all worked up.  You body seems to have increased endurance and boundless energy to keep you going from the rush.  Even your mind seems sharper and more alert.  But this comes at a cost as well, as you can't seem to keep still or focused and the excess twitchiness is affecting your dexterity as well.  The rush of arousal that comes with this [if cocks of player > 0 and cunts of player > 0]gets you hard and wet[otherwise if cocks of player > 0]gets you hard[otherwise if cunts of player > 0]gets you wet[otherwise]excites you greatly[end if] and further erodes your grip on your mind.";
 	say "     (You have received a significant stamina and hp boost (+ [special-style-1][2 + ( 2 * level of player)][roman type] max hp), an intelligence boost and a dexterity drop, all of which will last as long as your caffeine high remains in effect.  But be careful, you're filled with manic energy now and will have trouble sitting still.)[line break]";
@@ -340,8 +340,8 @@ to sfcaffeine:
 to sfcaffeineboost:
 	increase caffeinehigh of player by a random number between 3 and 5;
 	decrease humanity of player by 8;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 	increase libido of player by 8;
 	if libido of player < 66, now libido of player is 66;
 	if libido of player > 100, now libido of player is 100;
@@ -356,8 +356,8 @@ to sfcaffeineboost:
 an everyturn rule:
 	if caffeinehigh of player is not 0:
 		decrease caffeinehigh of player by 1;
-		if "Pure" is not listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 2;
-		if "Corrupt" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 1;
+		if "Strong Psyche" is not listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 2;
+		if "Weak Psyche" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 1;
 		if caffeinehigh of player <= 0 or bodyname of player is not "Sugar Ferret":
 			say "     You moan and shiver for a moment as the wild rush of energy that's filled you recently suddenly and burns out.  The manic excitement and unbridled stamina seems to leave you all at once[if player is sugarbodied].  The oversized claws on your hands retract, leaving you with cute little paws[end if][if player is sugarfaced].  Your eyes refocus as they return to their soft, indigo tone.  Your pointed teeth and the manic grin soon fade away as well[end if][if player is sugarskinned].  As you start to calm down, your fur loses its vibrant tone and befores a soft, pastel purple[end if].  As your twitchiness does away and you settle back down, you are left tired and longing to feel the rush of more caffeine.";
 			say "     (With the caffeine buzz worn off, your stats have returned to normal, though you do feel weakened and tired.)[line break]";

@@ -40,8 +40,8 @@ to say beatthecentaurstallion:
 			decrease thirst of player by 6;
 			if thirst of player < 0, now thirst of player is 0;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 2;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
 				infect "Centaur Mare";
 			otherwise:

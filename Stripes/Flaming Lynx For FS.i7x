@@ -20,7 +20,7 @@ to say losetoflaminglynx:
 		say "     The flaming lynx sniffs down your [bodydesc of player] body before growling in disdain upon noticing your cunt moments later.  He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you.  The fire seems to sink into your [bodytype of player] body, seeking to burn away that which is unwanted.";
 		decrease hp of player by wdam entry;
 		decrease humanity of player by a random number between 2 and 4;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	otherwise if cocks of player > 0 and cunts of player > 0:		[Herm - fellatio/unwanted]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body [if cocks of player > 0]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later";
@@ -37,7 +37,7 @@ to say losetoflaminglynx:
 			say ".  He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you.  The fire seems to sink into your [bodytype of player] body, seeking to burn away that which is unwanted.";
 			decrease hp of player by wdam entry;
 			decrease humanity of player by a random number between 2 and 4;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	otherwise if cocks of player > 0:						[Male]
 		say "     The flaming lynx sniffs down your [bodydesc of player] body and purrs in pleasure as he finds your cock.  Another wave of colours washing across his fiery back";
@@ -65,8 +65,8 @@ to say losetoflaminglynx:
 			say ".  He gives you a final, heavy smack with his paw before his flames surge up again, washing all over you.  The fire seems to sink into your [bodytype of player] body, seeking to fill the void and make you more amenable to his tastes.";
 			decrease hp of player by wdam entry;
 			decrease humanity of player by a random number between 2 and 4;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if lynxfun is 1:				[anal selected]
 		say ".  He paws at your clothes and gear, forcing you to divest yourself of them lest they be damaged by his claws.  The large feline then pounces atop you, grinding his stiff cock against you ass and leaking hot slick precum between your cheeks.  [if cunts of player > 0]Ignoring your available pussy, he[otherwise]He[end if] shifts his weight and presses his shaft against your anal sphinter before pushing the slick rod into your tight bottom.  You moan as the pleasant warmth of his body that you've been enjoying atop you can now be felt warming your insides as well, filling you with greater pleasure and arousing you greatly.";
 		say "     The feline purrs and rumbles as he buggers you with obvious delight and your body can't help but respond in kind, finding the perverse animal mating to be extremely pleasant.  His feline shaft with its stimulating barbs feel delightful along your sensitive anal passage[if cocks of player > 0] and the press of his thrusts against your prostate make your cock twitch[end if].  The feline keeps a large paw on your shoulders, keeping your front end presses to the ground as he rides your tight ass until he cums.  As his deliciously hot seed surges into you, a rush of sexual excitement fills you as well[if cocks of player > 0] and you cum hard, blasting your load across the ground beneath you[end if].  Once he's finished, he pulls out carefully from your freshly creamed bottom and pads around to nuzzle you with a purr before padding off.  Still awash in pleasure from your encounter, it takes you a moment to realize you're still kneeling there with your ass in the air.[mimpregchance]";

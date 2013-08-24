@@ -82,8 +82,8 @@ Instead of resolving a Skunkbeast Battle:
 					break;
 			now non-infectious entry is false;		[Skunkbeast Lord infection now open]
 			decrease humanity of player by 25;
-			if "Pure" is listed in feats of player, increase humanity of player by 5;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
 			now tailname of player is "Skunkbeast Lord";
 			now facename of player is "Skunkbeast Lord";
 			now skinname of player is "Skunkbeast Lord";

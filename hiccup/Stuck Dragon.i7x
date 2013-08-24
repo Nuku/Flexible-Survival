@@ -324,8 +324,8 @@ to say dragonchange:
 			now dragontype is 1;
 		otherwise if tempnum is 1:	[re-UB]
 			decrease humanity of player by 10;
-			if "Pure" is listed in feats of player, increase humanity of player by 2;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 2;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg.  It takes you a few moments to break free and emerge as a slutty dragoness much like the one you were recently inside";
 			now dragontype is 1;
 			if cunts of player is 0:
@@ -337,8 +337,8 @@ to say dragonchange:
 				say ".";
 		otherwise if tempnum is 2:	[captured-UB]
 			decrease humanity of player by 10;
-			if "Pure" is listed in feats of player, increase humanity of player by 2;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 2;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 			say "     You're uncertain how long you've been asleep, but eventually you wake up in the warm enclosure of an egg.  It takes you a few moments to break free and emerge as a slutty dragoness much like the one you were recently inside";
 			now dragontype is 1;
 			if cunts of player is 0:

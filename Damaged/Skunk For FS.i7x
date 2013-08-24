@@ -14,17 +14,17 @@ skunkfight is a number that varies;
 to say skunk vict:
 	if skunkready > 2:
 		if cunt length of player > 5:
-			say "The large skunk snuffles at the air for something, deciding you're what he's looking for it seems.  A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down.  The large skunkbeast climbs over your [bodydesc of player] body and makes a few attempts to line up his throbbing cock with your hot hole.  The thick shaft parts your new black-furred slit, and pounds you wildly!";
-			say "The wild beast uses you for his own pleasure.  As your body betrays you, a low groan rising in your throat and you submit to his animalistic mating.  You find yourself pushing back and panting, lusting to be taken by this wild creature.  You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more.  Your womb is plump and warm with his ample load.[impregchance]";
+			say "     The large skunk snuffles at the air for something, deciding you're what he's looking for it seems.  A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down.  The large skunkbeast climbs over your [bodydesc of player] body and makes a few attempts to line up his throbbing cock with your hot hole.  The thick shaft parts your new black-furred slit, and pounds you wildly!";
+			say "     The wild beast uses you for his own pleasure.  As your body betrays you, a low groan rising in your throat and you submit to his animalistic mating.  You find yourself pushing back and panting, lusting to be taken by this wild creature.  You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more.  Your womb is plump and warm with his ample load.[impregchance]";
 			increase skunkready by 1;
 		otherwise if cunts of player > 0:
-			say "The large skunk snuffles at the air for something and nuzzles at your crotch.  As if deciding you're not quite ready yet, he lets his black, gooey tongue slide over your pussy, then push into it, making you moan in pleasure.  The powerful beast dives his tongue into you repeatedly, lapping up your juices and sliding his thick, gooey drool into your pussy until you cum hard.  You grip his head and stroke his ears, loving the attention this beast is giving you despite yourself and find yourself longing to be ready for him someday soon.";
+			say "     The large skunk snuffles at the air for something and nuzzles at your crotch.  As if deciding you're not quite ready yet, he lets his black, gooey tongue slide over your pussy, then push into it, making you moan in pleasure.  The powerful beast dives his tongue into you repeatedly, lapping up your juices and sliding his thick, gooey drool into your pussy until you cum hard.  You grip his head and stroke his ears, loving the attention this beast is giving you despite yourself and find yourself longing to be ready for him someday soon.";
 			follow the sex change rule;
 		otherwise:
-			say "The massive skunk sprays thick, oily musk everywhere!  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+			say "     The massive skunk sprays thick, oily musk everywhere!  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 		increase skunkready by 1;
 	otherwise:
-		say "The massive skunk sprays thick, oily musk everywhere!  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		say "     The massive skunk sprays thick, oily musk everywhere!  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 		infect;
 		increase skunkready by 1;
 
@@ -32,13 +32,13 @@ to say skunk defeat:
 	if skunkready > 3: [been sprayed or mated a lot]
 		let tempnum be a random number between 1 and 10;
 		if cunt length of player > 5 and skunkready > tempnum: [ready to take him, chance for final fuck]
-			say "With one last feat of strength, the beast grabs you, lifting itself onto your rear, thrusting madly.  You whimper as you find yourself unable to resist as his final rutting brings you to your limit.  As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time.[impregchance]"; [rawr final mating]
+			say "     With one last feat of strength, the beast grabs you, lifting itself onto your rear, thrusting madly.  You whimper as you find yourself unable to resist as his final rutting brings you to your limit.  As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time.[impregchance]"; [rawr final mating]
 			increase skunkready by 1;
 			infect;
 		otherwise:
-			say "The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
+			say "     The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
 	otherwise:
-		say "The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
+		say "     The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
 
 to say skunk bodyshift:
 	if cunts of player > 1:
@@ -51,7 +51,7 @@ to say skunkg vict:
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	otherwise if cocks of player > 0 and skunkready > 2:
-		say "Victorious, the female skunk grabs your [cock size desc of player] cock and starts pumping at it vigorously.  With your [cock of player] meat hard in her paw, she sinks her muzzle down overtop of it.  She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle.  She licks her lips and swallows your semen down.  She grins as the stick, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
+		say "     Victorious, the female skunk grabs your [cock size desc of player] cock and starts pumping at it vigorously.  With your [cock of player] meat hard in her paw, she sinks her muzzle down overtop of it.  She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle.  She licks her lips and swallows your semen down.  She grins as the stick, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
 		follow the sex change rule;
 	otherwise:
 		say "The female skunk turns, spraying thick, oily musk everywhere!  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
@@ -62,9 +62,9 @@ to say skunkg defeat:
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	otherwise if a random number from 1 to 100 is greater than 2:
-		say "The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
+		say "     The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	otherwise:
-		say "The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realise your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		say "     The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realise your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 		infect "Skunk";
 
 to say skunk_defeat:
@@ -88,9 +88,9 @@ to say skunk_attack:
 		now wdam entry is 0;
 		now libido of player is 110;
 	otherwise if Skunk_type is 1:
-		say "The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
+		say "     The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
 	otherwise:
-		say "The [one of]giant skunk[or]black and white beast[or]beastial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
+		say "     The [one of]giant skunk[or]black and white beast[or]beastial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
 
 to say sblvictorysex:
 	now fightoutcome is 11;
@@ -252,8 +252,8 @@ to skspray:						[ignores defences, requires no hit, hum/lib check instead to re
 		decrease hp of player by dam;
 		increase libido of player by a random number between 3 and libdam;
 		decrease humanity of player by a random number between 2 and ( ( libdam + 1 ) / 2 );
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 	now peppereyes is 0;										[pepperspray wears off]
 	if libido of player >= 110 or hp of player <= 0 or humanity of player < 10:
 		if hp of player <= 0, now fightoutcome is 20;

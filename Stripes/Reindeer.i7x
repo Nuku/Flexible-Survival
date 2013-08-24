@@ -24,9 +24,9 @@ to say losetoreindeer:
 	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.[impregchance]";
 	increase morale of player by a random number from 2 to 4;
 	decrease humanity of player by a random number from 2 to 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	now libido of player is ( libido of player * 3 ) divided by 4;
 	increase hp of player by ( maxhp of player / 5 );
 	if hp of player > maxhp of player, now hp of player is maxhp of player;
@@ -156,9 +156,9 @@ to say nogging:
 	increase morale of player by a random number from 0 to 1;
 	increase morale of player by a random number from 0 to 1;
 	decrease humanity of player by a random number from 3 to 8;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	increase libido of player by a random number from 3 to 8;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;

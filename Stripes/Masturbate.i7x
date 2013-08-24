@@ -55,11 +55,11 @@ instead of using porn collection:
 			let muskwave be ( libido of player + ( cock width of player * 3 ) + ( cunt width of player * 5 ) );
 			now libido of player is libido of player / 4;
 			decrease humanity of player by a random number between 2 and 5;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			if the companion of player is mouse girl:
 				decrease humanity of player by 2;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 				if a random chance of 2 in 3 succeeds:
 					if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 					infect "Mental Mouse";

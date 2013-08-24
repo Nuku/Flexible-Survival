@@ -199,8 +199,8 @@ to say icarussex_dom:
 		otherwise:
 			say "[icarussex3_dom_ap]";		[m/m]
 		decrease humanity of player by a random number between 2 and 5;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 		[humanity loss instead of infection]
 	otherwise:
 		if anallevel is 3 and (hp of Icarus is 54 or (hp of Icarus >= 55 and a random chance of 1 in 4 succeeds)):

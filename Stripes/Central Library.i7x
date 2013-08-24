@@ -272,7 +272,7 @@ to say libguard4:
 		say "[impregchance]";
 		infect "Wolverine Guard";
 		decrease humanity of player by 20;
-		if "Pure" is listed in feats of player, increase humanity of player by 5;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
 		if humanity of player < 10:
 			now tailname of player is "Wolverine Guard";
 			now facename of player is "Wolverine Guard";
@@ -543,8 +543,8 @@ instead of using Wild Animals:
 	say "     You pull out the book and flip through it, letting yourself become excited by the photos and scenes of wild, animal sex described within.  You feel hornier after reading it, but also a little less human, having sunk further into the infection's untamed desires.";
 	increase libido of player by 12;
 	decrease humanity of player by a random number between 2 and 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 

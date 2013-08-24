@@ -32,8 +32,8 @@ to say losetopsychoweasel:
 	otherwise:
 		say "     When his balls are drained, he withdraws from you and stumbles off down the halls, [one of]whistling tunelessly[or]mumbling to himself[or]chewing at the arm of his straightjacket[or]babbling incoherently[or]waving his arms around to listen to the buckles[or]making up perverted versions of nursery rhymes as he heads off[at random].  Your mind feels rather foggy and confused as you try to collect yourself and move on.";
 	decrease humanity of player by a random number between 2 and 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
 to say beatthepsychoweasel:
