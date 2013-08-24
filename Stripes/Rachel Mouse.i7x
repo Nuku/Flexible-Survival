@@ -71,8 +71,8 @@ to say mouseapts:
 	now mousecurse is 1;
 	now lastfuck of mouse girl is turns;
 	decrease humanity of player by 20 + a random number between 1 and 10;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 5;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 5;
 	if bodyname of player is not "Mental Mouse", now mousecounter is 0;
 	say "[fullmousification]";
 	if hellHoundLevel is 0:
@@ -220,37 +220,37 @@ to say rachelsexmale1:
 	increase rachelfuck by 1;
 	now libido of player is ( libido of player + 1 ) / 3;
 	decrease humanity of player by a random number between 1 and 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say rachelsexmale2:
 	say "     Feeling turned on, your eyes drift over to the mouse girl accompanying you.  She grins and slips off her dress as she senses your intent, climbing into your arms.  You cuddle the small mouse to you, cuddling her in your arms as she grips her arms and legs around you tightly.  You help her settle into position on your throbbing cock, fucking her while standing.  [if cock length of player > 18].  Your huge penis stretches her out considerably, but she takes it all for you[otherwise if cock length of player > 12].  Your large penis bulges her slender waist as you fuck her, but she manages to take it all[otherwise].  Your penis throbs inside her, stuffed fully inside her[end if].  Hugging her tightly, you thrust up into her, loving her squeaks of pleasure she gives.  As you make love to the beautiful mouse, you share the sensations of sex with her, feeling her pleasure as well.  You cum together, filling her with your seed as she sprays her load across your body.";
 	increase rachelfuck by 1;
 	now libido of player is ( libido of player + 1 ) / 3;
 	decrease humanity of player by a random number between 1 and 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say rachelsexfemale1:
 	say "     Sensing your arousal, Rachel snuggles up to you and nuzzles you crotch.  Her small tongue slides out to tease at your wet pussy.  Pressing her lips to your dripping folds, she teases her tongue across your clit and nibbles lightly at your sensitive petals, making you moan in delight.  You run your fingers over her head, stroking her sensitive ears and through her soft hair.  With her mind touching yours, she is able to sense exactly what brings you the most pleasure and soon brings you to a crashing orgasm that makes you weak in the knees.  Kneeling in front of her, the small mouse wraps her arms around you, giving you a kiss wet with your own juices.";
 	now libido of player is ( libido of player + 1 ) / 2;
 	decrease humanity of player by a random number between 1 and 3;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say rachelsexfemale2:
 	say "     The cute mouse girl takes your hand in hers and smiles up at you coquettishly.  Her free hand moves along your hip, then finds its way between your legs to tease your wet pussy.  Moaning softly at her touch, you find yourself unable to resist an urge to mate with this lovely mouse girl.  Finding a comfortable spot, you stretch out on your back, legs spread and welcome her into your arms.  She lines her cock up with your pussy and sinks slowly into you.  You give a squeak of pleasure as she fucks you, pumping her mousemeat into you.  Without a word, she adjusts her thrusts to best please you, slow or fast, hard or soft, from moment to moment until finally, minds touching, you both orgasm together.  You can't help but think how wonderful it would be like this with her all the time, to be her mousey lover and joined with the rest of those sexy mice.[impregchance]";
 	now libido of player is ( libido of player + 1 ) / 3;
 	decrease humanity of player by a random number between 1 and 5;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say racheloral:
 	say "     The mouse girl's ears twitch as a lustful urge fills you, sensing you a moment before you pounce her into a hug.  Squeaking playfully, you roll her onto her back and bury your face between her legs.  You lick and kiss at her throbbing cock, running your tongue over its pink flesh.  Human in form and sheathless, her erection is about eight inches of throbbing mousehood.  She strokes her fingers over your head, moaning in pleasure as you lick and suck at her cock until she cums hard.  Sharing in her pleasure, you cum as well, feeling her orgasm as well as your own.  You gulp down her creamy cum, then nuzzle up lick her nipples before kissing her.";
 	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
 	decrease humanity of player by a random number between 1 and 4;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
 Section 4 - Endings

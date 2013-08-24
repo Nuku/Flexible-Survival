@@ -148,10 +148,10 @@ carry out browsebooks:
 			Now fsnovel is 1;
 			Follow the turnpass rule;
 	otherwise If X is 6:
-		If "Corrupt" is listed in feats of player:
+		If "Weak Psyche" is listed in feats of player:
 			say "     You come across a self-esteem book whilst browsing a shelf. Your curiosity getting the best of you, you pull it out and scan through it real quick before putting it back, deciding that it won't help you the way you are now and don't need any advice the book might give.";
 			Stop the action;
-		If "Pure" is listed in feats of player:
+		If "Strong Psyche" is listed in feats of player:
 			If purfeat is 1:
 				say "     While browsing through the self-improvement shelves for any other books that might help, you happen across [bold type]Maintaining your Self-esteem[roman type]. Feeling that you've gotten as much advice as you could out of it, you continue to look over the titles of the other books.";
 			Otherwise:
@@ -245,7 +245,7 @@ To say myse:
 	Otherwise:
 		If purfeat is 1:
 			say "     You head back to the self-improvement section to pull the self-help book off the shelf, find an unoccupied chair to sit in, and pick up where you left off. Only when Beverly comes over to check on you do you look up. After blinking a couple times, you chuckle quietly and tell her you're ok. Spending a little more time with the book, you gleam as much info as you can from it until you feel that you have more of a mental grip of your current situation.";
-			Add "Pure" to feats of the player;
+			Add "Strong Psyche" to feats of the player;
 			Follow the turnpass rule;
 		Otherwise:
 			say "     You wander the store for a few minutes until you come across the self-improvement section. Shrugging your shoulders, you peruse the titles until one seems promising, simply titled [bold type]Maintaining your Self-esteem[roman type]. Pulling it off the shelf, you begin to leaf through it, and though informative, find it quickly getting dull. Putting it back on the shelf, you promise to yourself that you'll make an effort to finish it.";

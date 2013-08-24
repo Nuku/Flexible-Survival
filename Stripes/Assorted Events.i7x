@@ -270,8 +270,8 @@ Instead of resolving a Lovers Bench:
 			infect "Raccoon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Gryphoness:
@@ -293,8 +293,8 @@ Instead of resolving a Lovers Bench:
 			infect "Hermaphrodite Gryphon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Felinoid companion:
@@ -317,8 +317,8 @@ Instead of resolving a Lovers Bench:
 			infect "Felinoid";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is bee girl:
@@ -335,8 +335,8 @@ Instead of resolving a Lovers Bench:
 			if hp of bee girl >= 5, infect "Queen Bee";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is mouse girl:
@@ -364,8 +364,8 @@ Instead of resolving a Lovers Bench:
 			infect "Mental Mouse";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 20;
-			if "Pure" is listed in feats of player, increase humanity of player by 5;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
 			increase xp of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is equinoid warrior:
@@ -385,8 +385,8 @@ Instead of resolving a Lovers Bench:
 			now libido of player is libido of player / 2;
 			now libido of equinoid warrior is 0;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is demon brute and DBCaptureQuestVar > 5:
@@ -423,8 +423,8 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of demon brute is turns;
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of demon brute by ( level of demon brute + 1 ) * 3;
 			increase score by 20;			
 		otherwise:
@@ -593,8 +593,8 @@ Instead of resolving a Concession Stand:
 			increase carried of chips by 1;
 			increase carried of soda by 1;
 			decrease humanity of player by a random number between 8 and 6;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
 			increase foodvendor by 1;
 		otherwise:
 			say "     Shaking your head and looking away from him, you try to refocus you mind.  Wary of the strangely hypnotic figure, you move away, taking care not to look at him.  You resolve not to return, lest your mind be ensnared again.";
@@ -610,8 +610,8 @@ Instead of resolving a Concession Stand:
 				increase carried of chips by 1;
 				increase carried of soda by 1;
 				decrease humanity of player by a random number between 10 and 20;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 3 and 6;
-				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 3 and 6;
+				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
 				increase foodvendor by 1;
 			otherwise if foodvendor is 2:
 				say "     Knowing what is coming, you help the gentleman open his bright green pants when he moves over the counter.  Pulling out his cock, you stuff it into your mouth with a soft moan, taking delight at having it in your mouth again.  You love how it keeps changing for you, giving you a myriad of delightful tastes and sensations.  He rubs your head and moans softly as you bob over it, running your tongue over it.  You plunge it down your throat as it becomes thick and donkey-like, then suck firmly at it becomes small and lapine.  Its draconic knobs and ridges stimulate your throat as he switches to thrusting into your mouth.  'Oh, you're so good at this,' he moans.  'You should come back again.  Since you're my favorite customer, I'll give you something really special.'";
@@ -621,8 +621,8 @@ Instead of resolving a Concession Stand:
 				increase carried of chips by 1;
 				increase carried of soda by 1;
 				decrease humanity of player by a random number between 12 and 24;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
-				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 3 and 6;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
+				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 3 and 6;
 				increase foodvendor by 1;
 			otherwise if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again.  He doesn't bother to put out any food this time and hops fully over the counter.  Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly.  Feeling him move to grope your ass, you moan softly and get your clothes and gear off.  He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";

@@ -149,8 +149,8 @@ Instead of conversing the Leonard:
 		now feline_meow is feline_meow / 2;
 		now libido of player is ( libido of player + libido of player + 60 ) / 3;
 		decrease humanity of player by 25;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		now hp of Leonard is 9;
 		now leonardtimer is turns;
 		now lastfuck of Leonard is turns;

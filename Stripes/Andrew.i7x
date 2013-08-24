@@ -205,8 +205,8 @@ to say andrewdemonshow:
 		randominfect;
 		randominfect;
 		decrease humanity of player by 25;
-		if "Pure" is listed in feats of player, increase humanity of player by 5;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
 		now libido of player is libido of player / 2;
 		if humanity of player >= 10:
 			say "     The orgy is called to a halt as Harold strides up to you, horn aglow with white light, and shakes you roughly until you come to your senses enough to order the demon away.  Andrew, having passed out some time ago, is a mess of sticky cum and reaks of male sex, though has an grin of blissful pleasure on his muzzle.  The debauchery comes to an end fairly quickly once the demon is gone, though several patrons have to be ousted by the bouncers when they won't settle down on their own.  After he's wiped down, Andrew's slowly nursed back to his senses by several pints of his favourite black beer.";

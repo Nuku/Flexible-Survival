@@ -19,8 +19,8 @@ to say losetohippo:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 4;
 	if libido of player > 100, now libido of player is 100;
 	decrease humanity of player by a random number from 1 to 3;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say beatthehippo:
 	say "     Your last blow sends the big hippo staggering back.  'Impossible!  None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them.  'You've not seen the last of me!' he yells.  Wait... didn't he have a different name earlier?";

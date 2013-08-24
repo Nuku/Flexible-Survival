@@ -505,14 +505,14 @@ Instead of resolving a Cameo:
 			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors.  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.  You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
 			decrease humanity of player by a random number between 25 and 35;
 			increase hunger of player by 12;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		otherwise:
 			say ".  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.";
 			decrease humanity of player by a random number between 20 and 30;
 			increase hunger of player by 12;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;

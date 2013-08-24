@@ -353,16 +353,16 @@ instead of resolving Obstetrics Department:
 				now hp of doctor medea is 4;
 				now Obstetrics Department is resolved;
 				decrease humanity of player by 6;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
-				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 3;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
+				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 3;
 				increase libido of player by 15;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 3;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten by the creature, you are forced to leave the room once the creature's satisfied itself.  You are forced to leave the equipment you were searching for and will have to try returning at some other point.  As it stands, you can still hear the creature inside, growing increasingly loud and lustful as its arousal skyrockets.  You rush back to the entrance, trying to get as far from the noisy creature before it draws others for an orgy that will only add their musky juices to the scents pervading the area.  As it is, having been in there for so long has left you increasingly aroused and longing to breed.";
 				decrease humanity of player by 12;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
-				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
+				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
 				increase libido of player by 25;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 5;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 5;
@@ -371,8 +371,8 @@ instead of resolving Obstetrics Department:
 	otherwise:
 		say "You attempt to search the ward, but the scents filling the place become too much.  You are forced to leave before you can accomplish your goal or risk succumbing to your lusts completely.  As it stands, you are left aroused and confused, with thoughts of sex and breeding filling your mind.";
 		decrease humanity of player by 12;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
 		increase libido of player by 25;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 5;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 5;

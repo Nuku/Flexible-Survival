@@ -93,8 +93,8 @@ to teddybearvored:
 	now fightoutcome is 23;
 	increase teddyvored by 1;
 	decrease humanity of player by 6;
-	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 	attempttowait;
 	if humanity of player >= 10 or inasituation is true:
 		say "     When you come to, you are [one of]behind the counter of one of the carnival stands[or]resting in an out of the way corner[or]resting against a waste bin[or]behind one of the prize booths[at random] with little tufts of polyfill still clinging to you.  As you try to brush them off, these little bits of fluff sink into you.";

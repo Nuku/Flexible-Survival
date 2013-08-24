@@ -168,9 +168,9 @@ When Play begins:
 An everyturn rule:
 	if facename of player is "Snow Bat" and a random chance of 1 in 2 succeeds:
 		increase thirst of player by a random number between 0 and 1;
-		if "Pure" is listed in feats of player and a random chance of 1 in 2 succeeds:
+		if "Strong Psyche" is listed in feats of player and a random chance of 1 in 2 succeeds:
 			decrease humanity of player by a random number between 0 and 1;
-		otherwise if "Corrupt" is listed in feats of player:
+		otherwise if "Weak Psyche" is listed in feats of player:
 			decrease humanity of player by a random number between 0 and 1;
 			decrease humanity of player by a random number between 0 and 1;
 		otherwise:

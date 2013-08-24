@@ -187,8 +187,8 @@ this is the pigpussy rule:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if messypigcaught is 1:															[still caught, aroused]
 		decrease humanity of player by a random number between 1 and 3;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		increase libido of player by a random number between 6 and 9;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 2;
@@ -210,8 +210,8 @@ this is the pigpussy rule:
 		say ".";
 	if messypigcaught is 1:															[completely caught, infected]
 		decrease humanity of player by a random number between 2 and 5;
-		if "Pure" is listed in feats of player, increase humanity of player by 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		increase libido of player by a random number between 8 and 12;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;

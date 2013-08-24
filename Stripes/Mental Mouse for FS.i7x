@@ -42,18 +42,18 @@ to say losetomouse:
 			say "     Rachel is once again at your side, accompanying you through the city as your companion and you feel yourself becoming closer to her and the mouse collective.";
 		if mouse girl is tamed:
 			decrease humanity of player by a random number between 1 and 5;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			now libido of player is ( libido of player + 1 ) / 3;
 		decrease humanity of player by a random number between 1 and 4;
 		if hp of player is 0, decrease humanity of player by a random number between 1 and 2;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	otherwise:
 		say "     When this is all over, the mice back off, stroking your exhausted body.  'We look forward to you coming and joining with us permanently.  Be a mouse with us, of one mind, of one pleasure.  You will not regret it, we promise,' they say softly.  'We will come find you again,' they add ominously before heading off, confident that you'll be among their number soon enough.  You do feel a pull to pursue them, to give into mousedom along with them and to enjoy their shapely bodies again and it takes you some effort to clear your head and move on.";
 		decrease humanity of player by a random number between 1 and 2;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 
 to say beatthemouse:
@@ -94,8 +94,8 @@ to say mouseyvicsex:
 			otherwise:
 				say "     Your pleasure increases as you continue fucking her, starting to share in her pleasure.  You look over her lovely, musine body, finding it increasingly beautiful.  Realizing her mind is touching yours, you are too excited to turn back and continue to pound into her until finally you groan and cum loudly.  She squeaks in pleasure and sprays her own seed across herself even as you fill her, sharing in her orgasm as well.  You withdraw slowly, looking down at this lovely mouse and feel a longing to stay with her, to be like her, to give yourself up to her kind.  Realizing that she's even now trying to convert you, you withdraw and quickly move away.  Still too weak to pursue you, the mouse squeaks in disappointment.";
 			decrease humanity of player by a random number between 1 and 2;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		otherwise:
 			say ".  Your glans presses at her smaller entrance and spreads her open.  She squeaks softly as meat is stuffed into her.  You run your hands over her soft bellyfur before continuing on to her large breasts.  You fondle her lovely tits and tease her nipples while thrusting into her eagerly.  The mouse beneath you moans in pleasure and runs her small paws over your hips, then move to start stroking herself.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -106,8 +106,8 @@ to say mouseyvicsex:
 			otherwise:
 				say "     Your pleasure increases as you continue fucking her, starting to share in her pleasure.  You look over her lovely, musine body, finding it increasingly beautiful.  Realizing her mind is touching yours, you are too excited to turn back and continue to pound into her until finally you groan and cum loudly.  She squeaks in pleasure and sprays her own seed across herself even as you fill her, sharing in her orgasm as well.  You withdraw slowly, looking down at this lovely mouse and feel a longing to stay with her, to be like her, to give yourself up to her kind.  Realizing that she's even now trying to convert you, you quickly move away.  Still too weak to pursue you, the mouse squeaks in disappointment.";
 			decrease humanity of player by a random number between 1 and 2;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	otherwise:
 		say "     You move up to the defeated mouse and run your fingers over her semi-hard cock.  It is sheathless and human-like in form.  While only somewhat larger than average in size, that seems quite large on her three foot tall body.  As you stroke it to full hardness, the dazed mouse moans softly, her paws drifting to her breasts to fondle them.  You moan in delight as you ease yourself down onto it, then start riding that throbbing cock.  The small mouse squeaks in pleasure, starting to thrust up into you as well.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -119,12 +119,12 @@ to say mouseyvicsex:
 			say "     Your pleasure increases as you continue to ride her, starting to share in her pleasure.  You look over her lovely, musine body, finding it increasingly beautiful.  Realizing her mind is touching yours, you are too excited to turn back and continue to bounce in her lap until finally you groan and cum loudly.  She squeaks in pleasure and grips your hips, pumping her seed deep inside you, filling you with a rush of warmth.  There is a shadowy sensation of a throbbing cock, a tight hole, a blast of release as you share in her orgasm as well.  You slide off her cock slowly, looking down at this lovely mouse and feel a longing to stay with her, to be like her, to give yourself up to her kind.  Realizing that she's even now trying to convert you, you quickly move away.  Still too weak to pursue you, the mouse squeaks in disappointment.";
 		say "[impregchance]";
 		decrease humanity of player by a random number between 1 and 2;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		if mouse girl is companion of player:
 			decrease humanity of player by a random number between 1 and 4;
-			if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 			now libido of player is ( libido of player + 1 ) / 3;
 
 
@@ -282,8 +282,8 @@ An everyturn rule:
 			if mousecounter is odd:
 				decrease humanity of player by a random number between 1 and 2;
 				decrease humanity of player by a random number between 1 and 2;
-				if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 				if libido of player < 60, increase libido of player by 3;
 
 
