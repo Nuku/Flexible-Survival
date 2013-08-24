@@ -195,7 +195,7 @@ to say sexwithpinkraccoonpet:
 
 
 An everyturn rule:
-	if companion of player is pink raccoon:
+	if companion of player is pink raccoon and skipturnblocker is 0:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < libido of player and lastfuck of pink raccoon - turns >= 4:
