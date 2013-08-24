@@ -130,7 +130,7 @@ to vorebyplayer:
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo Strongman", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Bear", "sewer gator", "Dragon", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "city sprite", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Mammoth", "Xeno" } to infections of VoreExclusion;
+	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo Strongman", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cats", "Bear", "sewer gator", "Dragon", "cheetah", "Badger", "Opossum Sailor", "hermaphrodite latex vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Mental Mouse", "Mushroom Men", "Sugar Ferret", "Rabbit Pack", "city sprite", "sea otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "feral sea dragon", "feral sea dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Mammoth", "Xeno", "Peculiar Dragon", "Sea Horror" } to infections of VoreExclusion;
 
 
 Chapter 3 - Vore Scenes

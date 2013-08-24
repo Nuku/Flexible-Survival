@@ -112,7 +112,11 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if facename of player is name entry, increase mmb by 1;
 		if cockname of player is name entry, increase mmb by 2;
 		if mmb > 2, now mmb is 2;
-		increase monmindbonus by mmb;		[increased vulnerability to mental/allure attacks]
+		decrease plmindbonus by mmb;		[increased vulnerability to mental/allure attacks]
+	if "Weak Psyche" is listed in feats of player:
+		decrease plmindbonus by 1;
+	otherwise if "Strong Psyche" is listed in feats of player:
+		increase plmindbonus by 1;
 	if companion of player is mouse girl:
 		increase plmindbonus by 2;
 		if name entry is "Mental Mouse", decrease plmindbonus by 1;
@@ -152,13 +156,13 @@ To Combat Menu:
 			clear the screen and hyperlink list;]
 			AttemptToWaitAndClearHyper;
 			continue the action;
-[		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
-		[chance to submit in combat if you have the submissive feat, feel free to adjust odds]
-			say "[line break]Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
+		if weakwilled is true and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
+			[chance to submit in combat if you have the Weak-Willed flaw, feel free to adjust odds]
+			say "[line break]Your [one of]weak-willed[or]submissive[or]easily-influenced[as decreasingly likely outcomes] nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			follow the submit rule;
-			next;			]
+			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
