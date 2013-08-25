@@ -12,7 +12,7 @@ inheat is a truth state that varies. inheat is usually False. [ Variable for oth
 slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
 heatform is a number that varies. [This is used to denote whether the player's last turn was spent in female heat or mpreg heat]
-heatlevel is a number that varies. [This is used to denote the intensity of player heat (1=off / 2=normal / 3=intense)]
+heatlevel is a number that varies. heatlevel is usually 2.  [This is used to denote the intensity of player heat (1=off / 2=normal / 3=intense)]
 
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
