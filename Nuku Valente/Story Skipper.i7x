@@ -1485,7 +1485,7 @@ To reciting2:
 						now Leather Wolves is resolved;
 					otherwise:
 						now Cuero Lobo is unknown;
-						if guy is not bannd and girl is not banned and furry is not banned:
+						if guy is not banned and girl is not banned and furry is not banned:
 							now Leather Wolves is unresolved;
 					if hp of Zigor >= 8:
 						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
@@ -3025,7 +3025,7 @@ Carry out reciting:
 						now Leather Wolves is resolved;
 					otherwise:
 						now Cuero Lobo is unknown;
-						if guy is not bannd and girl is not banned and furry is not banned:
+						if guy is not banned and girl is not banned and furry is not banned:
 							now Leather Wolves is unresolved;
 					if hp of Zigor >= 8:
 						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
