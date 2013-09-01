@@ -90,6 +90,7 @@ to say sexwithZigor:
 		otherwise:		[hp of 3 - oral]
 			say "[zigor_S1_01_MM]";
 		if hp of Zigor < 7, increase hp of Zigor by 1;
+		now lastfuck of Zigor is turns;
 	otherwise:
 		say "     After flipping the store sign to [']closed['] and calling for [randomwolfgimp] to come to the front, you are brought down into your dominator's private dungeon.  With the silent, masked wolf there to [one of]stand guard[or]mind the store[or]keep an eye on things[at random], you know you will neither be disturbed nor be saved from Zigor's painful dominance.  And still you descend, a thrill of excitement and anticipation already running through you, already getting hard at the thought of it.";
 		if hp of Zigor is 8:		[intro to second level - suspended and whipped]
@@ -118,7 +119,7 @@ to say sexwithZigor:
 				[whipped again for not accepting the training enough]
 				say "***";
 				now hp of Zigor is 9;		[reset cycle]
-	now lastfuck of Zigor is turns;
+		now lastfuck of Zigor is turns;
 
 
 to say zigor_S1_00_MM:	[stage 1 intro - MM]
