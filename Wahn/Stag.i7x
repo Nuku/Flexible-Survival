@@ -217,20 +217,20 @@ When Play begins:
 
 Section 4 - Mike and Lea
 
-[ hp states of Mike							]
-[   0: before the first meeting					]
-[   1: met once (peacefully, or talked after fight)		]
-[   2: met twice								]
-[   3: helped in the fight against the leopardmen		]
-[   4: player got the quest to get a medkit			]
-[   5: Lea got patched up						]
-[   6: player got their own human doggie as reward		]
-[  98: first friendly meeting after after player attack	]
-[  99: hostile after player attack 					]
-[ 100: lost to the leopardman gang 					]
+[ hp states of Mike                                       ]
+[   0: before the first meeting                           ]
+[   1: met once (peacefully, or talked after fight)       ]
+[   2: met twice                                          ]
+[   3: helped in the fight against the leopardmen         ]
+[   4: player got the quest to get a medkit               ]
+[   5: Lea got patched up                                 ]
+[   6: player got their own human doggie as reward        ]
+[  98: first friendly meeting after after player attack   ]
+[  99: hostile after player attack                        ]
+[ 100: lost to the leopardman gang                        ]
 
 Mike is a man. Mike is in Mike's Office.
-The description of Mike is "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful..";
+The description of Mike is "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 The conversation of Mike is { "Oh, hello." };
 lastfuck of Mike is usually 555.
 
@@ -530,7 +530,7 @@ Chapter 2 - Xerxes Sex Menu
 
 Instead of fucking Xerxes:
 	if(lastfuck of Xerxes - turns < 5):
-		say "     Xerxes still seems a bit worn out from your last fun-time. Let him rest a bit more...";
+		say "     Xerxes still seems a bit worn out from the last fun-time. Let him rest a bit more...";
 	otherwise if lust of Xerxes is 3:
 		say "[awesomexerxessex0]";
 	otherwise if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
@@ -1028,32 +1028,32 @@ lasthelentalk is a number that varies.  lasthelentalk is usually 555.
 hp of Helen is usually 0.
 HelenPregnant is a number that varies.
 
-[ hp states of Helen						]
-[   0: hasn't been brought to the bunker yet		]
-[   1: no sex with either Fang or the Felinoid		]
-[  10: got fucked only by Fang				]
-[  11: got fucked only by the Felinoid			]
-[  12: got fucked by both Fang and the Felinoid		]
-[ thirst states of Helen					]
-[   0: Starting State - not pregnant			]
-[   1: invisibly pregnant by the player			]
-[   2: visibly pregnant by the player			]
-[	libido states of Helen					]
-[   0: Starting State - not pregnant			]
-[   1: pregnant by the player					]
-[   2: pregnant by Fang						]
-[   3: pregnant by the Felinoid				]
-[   4: pregnant by Kara						]
-[ lust of Helen							]
-[   0: hasn't had sex with the player			]
-[   1: had sex with the player once				]
-[   2: awesomeness message					]
-[   3: awesomer upgrade						]
-[   4: awesomer sex						]
-[   5: awesomer sex continues                         ]
-[   6: offer for tattoo						]
-[   7: tattoo received						]
-[ HelenPregnant - timer since impregnation		]
+[ hp states of Helen                                             ]
+[   0: hasn't been brought to the bunker yet                     ]
+[   1: no sex with either Fang or the Felinoid                   ]
+[  10: got fucked only by Fang                                   ]
+[  11: got fucked only by the Felinoid                           ]
+[  12: got fucked by both Fang and the Felinoid                  ]
+[ thirst states of Helen                                         ]
+[   0: Starting State - not pregnant                             ]
+[   1: invisibly pregnant by the player                          ]
+[   2: visibly pregnant by the player                            ]
+[ libido states of Helen                                         ]
+[   0: Starting State - not pregnant                             ]
+[   1: pregnant by the player                                    ]
+[   2: pregnant by Fang                                          ]
+[   3: pregnant by the Felinoid                                  ]
+[   4: pregnant by Kara                                          ]
+[ lust of Helen                                                  ]
+[   0: hasn't had sex with the player                            ]
+[   1: had sex with the player once                              ]
+[   2: awesomeness message                                       ]
+[   3: awesomer upgrade                                          ]
+[   4: awesomer sex                                              ]
+[   5: awesomer sex continues                                    ]
+[   6: offer for tattoo                                          ]
+[   7: tattoo received                                           ]
+[ HelenPregnant - timer since impregnation                       ]
 
 to say helendesc:
 	if lust of helen < 3:
@@ -1090,7 +1090,7 @@ Chapter 2 - Helen Sex Menu
 
 Instead of fucking Helen:
 	if(lastfuck of Helen - turns < 5):
-		say "     Helen still seems a bit worn out from your last fun-time. Let her rest a bit more...";
+		say "     Helen still seems a bit worn out from the last fun-time. Let her rest a bit more...";
 	otherwise if lust of Helen is 3:
 		say "[awesomerhelensex0]";
 	otherwise if lust of Helen is 5 and a random chance of 3 in 5 succeeds and (cocks of player > 0 or cunts of player > 0):
