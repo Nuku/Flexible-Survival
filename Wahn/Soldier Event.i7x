@@ -201,7 +201,10 @@ Instead of resolving a Soldier Squad:
 [                                                                       ]
 [ Libido of Amy (puppy counter)                                         ]
 [                                                                       ]
-
+[ Thirst of Amy (relationship with Xerxes)                              ]
+[   0: nothing happened                                                 ]
+[   1: Xerxes fucked her                                                ]
+[  99: player forbade Xerxes to get close to Amy                        ]
 
 Amy is a woman. The hp of Amy is usually 0.
 The description of Amy is "[AmyDesc]";
@@ -294,7 +297,7 @@ instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) a
 		say "     As you come out of the bunker, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";		
 	otherwise:
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
-	
+		
 instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
 	now lastfuck of Amy is turns + 4;
@@ -302,8 +305,42 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.'";
 		say "     The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
 		now hp of Amy is 10;
-	otherwise if hp of Amy is 10:
-		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";		
+	otherwise if hp of Amy is 10:		[mature virgin, told the player she's horny]
+		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
+	otherwise if hp of Amy > 10 and Xerxes is in Grey Abbey Library and thirst of Amy is 0:	[first interest of Xerxes in her]
+		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... you can see Xerxes standing on all fours not too far from the young husky, his eyes riveted on her naked form. The erection visible under his toned body shows that he's very interested indeed. Nevertheless, your well-behaved and trained dog doesn't act on his desires, just watching her intently.";
+		say "     As you walk up besides him, the human dog gives you an exhuberant greeting and licks your hand, then gives a little pleading whine[if lust of Xerxes > 2] followed by the question 'Master's Friend - Sex?'[end if] and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
+		say "     [line break]";
+		say "Do you allow it and go ask Amy if she'd like to spend some time with your pet (Y), or forbid Xerxes to get close to her (N)?";
+		if player consents:		[Amy+Xerxes Sex]
+			say "     [line break]";
+			say "     Walking towards Amy, she finally notices you when you're just a few steps away. She gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' Smiling, you tell her you understand that she has these urges, then explain that she doesn't have to deal with them on her own if she'd rather have company. With a whistle, you call Xerxes, the human dog immediately appearing at your side, looking attentively from you to Amy. The young husky's eyes are immediately drawn to his hard cock and her libido flares up again. She gives you a beaming smile and a nod, then rolls over and gets on all fours, spreading her legs a bit as she presents herself to the transformed dog.";
+			if lust of Xerxes >= 4:		[awesome/intelligent Xerxes]
+				say "     You pat Xerxes shoulder and say 'Go for it' with a grin. Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut you hard and fast for a while, taking the time to run his hands over Amy's back and female curves first. He leans close against her back to cup two of the husky's breasts with his hands while moving his hips to position his shaft at her opening. Then, with a quick thrust accompanied by two persons very satisfied moans, he sinks his manhood into her drippingly moist pussy. Xerxes takes slower thrusts at first, enjoying the feel of Amy's hot, wet hole around his pulsing shaft. His hands roam over her[if lust of xerxes < 7] almost as if he were petting Amy[otherwise], stroking and caressing Amy's body with growing adeptness[end if].  He nuzzles at the back of the young husky's neck, panting with a growing excitement that has his pace quicken in response.";
+				say "     Xerxes fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure. This soon drives Amy's arousal to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
+			otherwise:	[basic Xerxes]
+				say "     Almost before you're finished saying 'Go for it, boy', Xerxes is on top of Amy, his muscular chest against her back as he hugs her tightly and grinds his crotch against her body. Being a natural in the typical 'doggie-style', his shaft quickly finds her dripping opening and plunges deep into the husky's body. Xerxes fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure. This soon drives Amy's arousal to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
+			say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
+			if Lust of Amy is 0:
+				let AmyPregchance be a random number from 1 to 20;  	
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;		
+			now lastfuck of Amy is turns;
+			now lastfuck of Xerxes is turns;
+			now thirst of Amy is 1;
+		otherwise:		[Xerxes forbidden]
+			say "     [line break]";
+			say "     Shaking your head to the dog in the body of a human teenager, you take Xerxes to his cot, some distance away from Amy. After having him sit on it, you continue to tell him that he should stay away from Amy. Your pet gives a somewhat sad yip as he looks over at the naked husky again, then accepts his master's orders and lies down.";
+			now thirst of Amy is 99;  [Xerxes/Amy sex forbidden]
+	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1:
+		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed."; 
+		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";		
+		if Lust of Amy is 0:
+			let AmyPregchance be a random number from 1 to 20;  	
+			if AmyPregchance > 13:
+				now Lust of Amy is 24;		
+		now lastfuck of Amy is turns;
+		now lastfuck of Xerxes is turns;
 	otherwise:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
