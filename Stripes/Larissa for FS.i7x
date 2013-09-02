@@ -7,6 +7,25 @@ Section 1 - Basic Larissa
 Larissa is a woman. "[larissaview]". She is in Zephyr Lobby.
 The conversation of Larissa is { "$$$$$$$$!" }.
 
+To say Larissaballs:
+	if cock width of Larissa is less than 3:
+		say "[one of]marble-sized[or]tiny[or]very small[at random]";
+	otherwise if cock width of Larissa is less than 6:
+		say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
+	otherwise if cock width of Larissa is less than 12:
+		say "[one of]lemon-sized[or]large[at random]";
+	otherwise if cock width of Larissa is less than 16:
+		say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
+	otherwise if cock width of Larissa is less than 20:
+		say "[one of]grapefruit-sized[or]massive[at random]";
+	otherwise if cock width of Larissa is less than 25:
+		say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
+	otherwise if cock width of Larissa is less than 32:
+		say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
+	otherwise:
+		say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
+	say " [one of]balls[or]testicles[or]gonads[at random]";
+
 to say larissaview:
 	if hp of Larissa <= 2:
 		say "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.";
@@ -117,7 +136,7 @@ to say sexwithLarissa:
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to consider fooling around with [objpro of Larissa] at the moment.";
 	otherwise if hp of Larissa is 0:
-		say "Larissa pulls a spritz bottle out of the a drawer under the counter, spraying you with diluted vinegar.  You are driven back.  'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
+		say "     Larissa pulls a spritz bottle out of the a drawer under the counter, spraying you with diluted vinegar.  You are driven back.  'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
 	otherwise if hp of Larissa is 1 or hp of Larissa is 2:	[unchanged human form]
 		now lastfuck of Larissa is turns;
 		say "     Larissa grins at your offer to have a little fun and, after getting someone to take over at her desk for a little while, she leads you into the back.  She takes you to the break room and flips a little sign on the door.  The room itself is rather sparse but does have a small cot available.  Pulling off her lab coat, she stretches out, showing off her lovely human form, seemingly pure and unaffected by the nanite infection all around.  She toss the coat and her other clothes over one of the chairs and pulls you into her arms, kissing you firmly while your hands run over each others['] bodies.";
@@ -150,7 +169,9 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if player is herm and Larissa is herm:			[H/H]
+	if ( cocks of player > 0 and cunts of Larissa > 0 ) or ( cunts of player > 0 and cocks of Larissa > 0 ) and a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist and bodycat of Larissa is 2:
+		say "[Larissasex_taurfun]";
+	otherwise if player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
 			say "[Larissasex_MF]";				[player tops]
 		otherwise:
@@ -207,12 +228,12 @@ to say Larissasex_FM:
 	say "     The [if cunts of Larissa > 0]herm[otherwise]male[end if] [form of Larissa] guides you down onto the cot.  [subjpro_cap of larissa] smiles down at you as [subjpro of larissa] spreads your legs.  'I'm looking forward to being on top for a change,' [subjpro of larissa] says, running a [handform of Larissa] over [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] manhood.  It dribbles some precum down onto your waiting crotch while [subjpro of Larissa] rubs [possadj of Larissa] [bodydesc of Larissa] body against yours[if breast size of Larissa > 0], pressing [possadj of Larissa] [breast size desc of larissa] bosom down onto you[end if].  Getting increasingly excited, you slide your hands [if cocks of player > 0]past your own maleness [end if]between your thighs and spread your pussy in open invitation to that sexy cock and its now [if cock length of Larissa > 24]hugely[otherwise if cock length of larissa > 12]largely[otherwise if cock length of Larissa > 7]sizably[otherwise]modestly[end if]-hung owner.";
 	if cock length of Larissa > ( ( cunt length of player * 2 ) + cunt width of player + 2 ):			[super-big]
 		say "     [possadj_cap of Larissa] [cock size desc of Larissa] [cock of Larissa] penis is too large [if cunt length of player >= 12]even [end if]for your [cunt size desc of player] pussy, so [subjpro of Larissa] satisfies [objpro of Larissa]self by rubbing [possadj of Larissa] maleness down against you, grinding it across your juicy folds[if cocks of player > 0] and throbbing shaft[end if][if breast size of Larissa > 0].  You move your hands up to [possadj of Larissa] lovely [breast size desc of Larissa] breasts, caressing them and teasing [possadj of Larissa] nipples[otherwise].  You move your hands up to [possadj of Larissa] lovely [bodytype of Larissa] body, caressing [possadj of Larissa] [bodytype of Larissa] form[end if].  Pressing [possadj of Larissa] [mouth of Larissa] to your lips, [subjpro of Larissa] kisses you with a soft moan of pleasure.  When your hands slide further to caress [possadj of Larissa] [cock of Larissa] shaft and [Larissaballs], [subjpro of Larissa] spurts precum across your [bodydesc of player] body and kisses you all the more excitedly.";
-		say "     	With [possadj of Larissa] orgasm approaching, you press [possadj of Larissa] glans to your pussy and grind hard against it.  [subjpro_cap of Larissa] cums with a load moan of release.  While much of [possadj of Larissa] seed soaks your crotch, some blasts shoot into you[if cock width of Larissa >= 40].  This results in still a sizable amount of semen squirted into you[otherwise if cock width of player >= 20].  This results in quite a bit of semen still getting squirted into you[end if].  Feeling these spurts of [possadj of Larissa] hot semen splashing onto and into your cunt pushes you over the edge into orgasm as well[if cocks of player > 0]spraying your seed across your [bodytype of player] body and [end if]adding your feminine juices to the sticky mess at your crotch.  You both snuggled together while recovering from the powerful climax and, after a little more fun while cleaning each other up, head back out front.[if cock width of Larissa >= 20 or a random chance of 1 in 2 succeeds][impregchance][end if]";
+		say "     	With [possadj of Larissa] orgasm approaching, you press [possadj of Larissa] glans to your pussy and grind hard against it.  [subjpro_cap of Larissa] cums with a loud moan of release.  While much of [possadj of Larissa] seed soaks your crotch, some blasts shoot into you[if cock width of Larissa >= 40].  This results in still a sizable amount of semen squirted into you[otherwise if cock width of player >= 20].  This results in quite a bit of semen still getting squirted into you[end if].  Feeling these spurts of [possadj of Larissa] hot semen splashing onto and into your cunt pushes you over the edge into orgasm as well[if cocks of player > 0]spraying your seed across your [bodytype of player] body and [end if]adding your feminine juices to the sticky mess at your crotch.  You both snuggle together while recovering from the powerful climax and, after a little more fun while cleaning each other up, head back out front.[if cock width of Larissa >= 20 or a random chance of 1 in 2 succeeds][impregchance][end if]";
 	otherwise if cock length of larissa > ( cunt length of player + cunt width of player + 2 ):			[large]
 		say "     [possadj_cap of Larissa] [cock size desc of Larissa] [cock of Larissa] penis is quite large compared to your [cunt size desc of player] pussy, necessitating that [subjpro of Larissa] start slowly as [subjpro of Larissa] thrusts into those wet folds of yours, making a visible bump in your belly from having [possadj of larissa] [cock size desc of Larissa] rod stuffed in you[if breast size of Larissa > 0].  You move your hands up to [possadj of Larissa] lovely [breast size desc of Larissa] breasts, caressing them and teasing [possadj of Larissa] nipples[otherwise].  You move your hands up to [possadj of Larissa] lovely [bodytype of Larissa] body, caressing [possadj of Larissa] [bodytype of Larissa] form[end if].  Pressing [possadj of Larissa] [mouth of Larissa] to your lips, [subjpro of Larissa] kisses you with a soft moan of pleasure.  Once you've loosened up enough, you slide a hand down to rub [possadj of larissa] [Larissaballs] and urge [objpro of larissa] to fuck you faster and harder between kisses.";
 		say "     With [possadj of Larissa] orgasm approaching, you knead [possadj of larissa] balls and squeeze your inner walls around [possadj of larissa] maleness.  [subjpro_cap of larissa] pushes as deep as [subjpro of larissa] can into you, bulging your belly with [possadj of larissa] cock as [subjpro of larissa] unleashes [possadj of larissa] hot load[if cock width of Larissa >= ( ( scalevalue of player + 1 ) * 10 )].  [possadj_cap of larissa] enormous output causes your [bodytype of player] belly to swell greatly, becoming bloated with [possadj of larissa] seed.  You are left full and leaking [possadj of larissa] cum for quite some time after [subjpro of larissa][']s done.  When you finally drain or absorb enough to stagger out to the front lobby, you find [objpro of larissa] sitting at [possadj of larissa] desk with a smug look on [possadj of larissa] [face of Larissa] face[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  [possadj_cap of larissa] heavy output causes your [bodytype of player] belly to swell further, leaving you with a prominent bulge of cum when you stagger back to the front lobby[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  [possadj_cap of larissa] large output leaves your [bodytype of player] belly full and leaking [possadj of larissa] cum when you head back to the front lobby[otherwise].  After [subjpro of larissa][']s done, Larissa heads back to [possadj of larissa] desk with a contented smile on [possadj of larissa] [face of larissa] face[end if].[impregchance][if cock width of Larissa >= 20 and a random chance of 1 in 2 succeeds][impregchance][end if]";
 	otherwise if cock length of Larissa < ( ( cunt length of player + cunt width of player + 1 ) / 3 ):		[small]
-		say "     [possadj_cap of larissa] [cock size desc of Larissa] [cock of Larissa] is quite small compared to [possadj of larissa] [cunt size desc of player] pussy, letting [objpro of larissa] thrust into you easily, but provides limited stimulation for you.  To make up for this, [subjpro of larissa] rubs and teases at your wet folds and clit with one [handform of larissa], making you quiver in delight[if breast size of Larissa > 0].  You move your hands up to [possadj of Larissa] lovely [breast size desc of Larissa] breasts, caressing them and teasing [possadj of Larissa] nipples[otherwise].  You move your hands up to [possadj of Larissa] lovely [bodytype of Larissa] body, caressing [possadj of Larissa] [bodytype of Larissa] form[end if].  Pressing [possadj of Larissa] [mouth of Larissa] to your lips, [subjpro of Larissa] kisses you with a soft moan of pleasure.  As [subjpro of Larissa] fucks you, you slide a hand down to rub [possadj of larissa] [Larissaballs] and urge [objpro of larissa] to fuck you faster and harder between kisses.";
+		say "     [possadj_cap of larissa] [cock size desc of Larissa] [cock of Larissa] is quite small compared to your [cunt size desc of player] pussy, letting [objpro of larissa] thrust into you easily, but provides limited stimulation for you.  To make up for this, [subjpro of larissa] rubs and teases at your wet folds and clit with one [handform of larissa], making you quiver in delight[if breast size of Larissa > 0].  You move your hands up to [possadj of Larissa] lovely [breast size desc of Larissa] breasts, caressing them and teasing [possadj of Larissa] nipples[otherwise].  You move your hands up to [possadj of Larissa] lovely [bodytype of Larissa] body, caressing [possadj of Larissa] [bodytype of Larissa] form[end if].  Pressing [possadj of Larissa] [mouth of Larissa] to your lips, [subjpro of Larissa] kisses you with a soft moan of pleasure.  As [subjpro of Larissa] fucks you, you slide a hand down to rub [possadj of larissa] [Larissaballs] and urge [objpro of larissa] to fuck you faster and harder between kisses.";
 		say "     With [possadj of Larissa] orgasm approaching, you knead [possadj of Larissa] balls and squeeze your inner walls around [possadj of Larissa] maleness.  [subjpro_cap of Larissa] pushes fully into you and unleashes [possadj of Larissa] hot load[if cock width of Larissa >= ( ( scalevalue of player + 1 ) * 10 )].  [possadj_cap of Larissa] enormous output causes your [bodytype of player] belly to swell greatly, becoming bloated with [possadj of Larissa] seed.  You are left full and leaking [possadj of Larissa] cum for quite some time after [subjpro of larissa][']s done.  When you finally drain or absorb enough to stagger out to the front lobby, you find [objpro of Larissa] sitting at [possadj of Larissa] desk with a smug look on [possadj of Larissa] [face of Larissa] face[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  [possadj_cap of Larissa] heavy output causes your [bodytype of player] belly to swell, leaving you with a prominent bulge of cum when you stagger back to the front lobby[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  [possadj_cap of Larissa] large output leaves your [bodytype of player] belly full and leaking [possadj of Larissa] cum when you head back to the front lobby[otherwise].  After [subjpro of larissa][']s done, Larissa heads back to [possadj of Larissa] desk with a contented smile on [possadj of Larissa] [face of larissa] face[end if].[impregchance][if cock width of Larissa >= 20 and a random chance of 1 in 2 succeeds][impregchance][end if]";
 	otherwise:		[compatible size - normal]
 		say "     [subjpro_cap of larissa] slides [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] penis into your [cunt size desc of player] pussy, enjoying the wonderful sensation of you squeezing down around [possadj of Larissa] maleness[if breast size of Larissa > 0].  You move your hands up to [possadj of Larissa] lovely [breast size desc of Larissa] breasts, caressing them and teasing [possadj of Larissa] nipples[otherwise].  You move your hands up to [possadj of Larissa] lovely [bodytype of Larissa] body, caressing [possadj of Larissa] [bodytype of Larissa] form[end if].  Pressing [possadj of Larissa] [mouth of Larissa] to your lips, [subjpro of Larissa] kisses you with a soft moan of pleasure.  As [subjpro of Larissa] fucks you, you slide a hand down to rub [possadj of larissa] [Larissaballs] and urge [objpro of larissa] to fuck you faster and harder between kisses.";
@@ -253,6 +274,64 @@ to say Larissasex_MM:
 
 to say Larissasex_FF:
 	say "     The female [form of Larissa] pushes you down onto the cot and snuggles up beside you on it, running her [handform of Larissa] over your [bodydesc of player] body as she does.  You pull her into a kiss and slide a hand between her legs, sliding your fingers over her [cunt size desc of larissa] [bodytype of larissa] pussy.  This draws a moan from her and she gives your ass a firm squeeze, kissing you even harder before moving her [handform of Larissa] to your dripping folds.  Soon you're fingering one another frantically, rubbing over those wet lips, sensitive clits and clenching inner walls[if breast size of larissa > 0].  You move your mouth to her [breast size desc of Larissa] breasts, kissing at them and sucking on her hard nipples.  She gives delightful cries and her pussy quivers when you nibble on them.  You continue to lavish attention upon one another until finally you both have cum several times, ending with a final powerful orgasm that leaves you both panting on the bed in each others['] arms.  When you've had a chance to recover and clean up, you both head back out and the [form of Larissa] returns to her desk with a contented smile on her face.".;
+
+
+to say Larissasex_taurfun:
+	if player is herm and Larissa is herm:			[H/H]
+		if a random chance of 1 in 2 succeeds:
+			say "[Larissasex_taurMF]";				[player tops]
+		otherwise:
+			say "[Larissasex_taurFM]";				[Larissa tops]
+	otherwise if cocks of player > 0 and cunts of Larissa > 0:
+		say "[Larissasex_taurMF]";				[player tops]
+	otherwise:
+		say "[Larissasex_taurFM]";				[Larissa tops]
+
+
+to say Larissasex_taurMF:
+	say "     You guide the [if cocks of Larissa > 0]herm[otherwise]female[end if] [form of Larissa] to the open area beside the cot and move in behind her.  Grinning at your plan[if tailed of larissa is true] and flagging her [tail of larissa][end if], she braces her legs and wiggles her rear end tantalizingly.  The [skin of Larissa] covering her [bodytype of Larissa] body is quite lovely, making you pause to take in her [generallook of larissa] form.  As lovely as the sight is, you can't wait any longer to admire it and mount her tauric form with your own.  With your forelimbs at her sides and your arms around her chest, you move into position[if breast size of Larissa > 0].  You run your hands over her chest, cupping her breasts and playing with her nipples while kissing and nibbling along the back of her neck[otherwise].  You run your hands over her chest while kissing and nibbling along the back of her neck[end if], much to her delight.";
+	if cock length of player > ( ( cunt length of larissa * 2 ) + cunt width of larissa + 2 ):			[super-big]
+		say "     Your [cock size desc of player] [cock of player] penis is too large [if cunt length of Larissa >= 12]even [end if]for her [cunt size desc of Larissa] pussy, so you satisfy yourself by grinding your maleness against her juicy folds and tauric backside.  She moans and presses back against your [bodydesc of player] form, reaching back for a time to rub her [handform of larissa] over your [cock size desc of player] shaft.  Licks and kisses are given as well, gradually getting you worked up to the point where you're about to blow.";
+		say "     Sensing your orgasm coming, you shift your position enough to press your glans to her pussy and grind hard against it.  You cum with a loud moan.  While much of your seed soaks her crotch and your underbelly, some blasts shoot into her[if cock width of player >= 40].  This results in still a sizable amount of semen squirted into the transformed woman[otherwise if cock width of player >= 20].  This results in quite a bit of semen still getting squirted into the transformed woman[end if].  The pleasure of you cumming onto and into her pushes her over the edge into orgasm as well, [if cocks of larissa > 0]spraying her seed across the floor and [end if]adding her pussy juices to the sticky mess as her crotch.  You both snuggle together while recovering from powerful climax and, after a little more fun while cleaning each other up, head back out front.";
+	otherwise if cock length of player > ( cunt length of larissa + cunt width of larissa + 2 ):			[large]
+		say "     Your [cock size desc of player] [cock of player] penis is quite large compared to her [cunt size desc of Larissa] pussy, necessitating that you start slow as you thrust into those wet folds of hers.  She moans and presses back against your [bodydesc of player] form as you slowly sink your cock into her [bodytype of Larissa] body, making a visible bump in her belly from having your [cock size desc of player] rod stuffed in her.  She moans and wraps her arms around yours, hugging them to her [if breast size of Larissa > 0][breast size desc of Larissa] breasts[otherwise]chest[end if] while you lick and kiss one another, pressing your lips to her [mouth of Larissa].  Your tauric form grips hers as you rut her like a beast, much to your mutual delight.";
+		say "     Sensing your orgasm coming, she braces herself with all her legs and pushes back firmly to help you drive as deep as you can go into her, bulging her belly with your cock as you unleash your hot load[if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 10 )].  Your enormous output causes the [form of Larissa][']s belly to swell greatly, becoming bloated with your seed.  She is left full and leaking your cum for quite some time after you're done before she's able to get up and return to her desk[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  Your heavy output causes the [form of Larissa][']s belly to swell further, leaving her with a prominent bulge of cum when she heads back to her desk[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  Your large output leaves the [form of Larissa] full and leaking your cum when she heads back to her desk[otherwise].  After you're done, Larissa heads back to her desk with a contented smile on her face[end if].";
+	otherwise if cock length of player < ( ( cunt length of Larissa + cunt width of Larissa + 1 ) / 3 ):		[small]
+		say "     Your [cock size desc of player] [cock of player] penis is quite small compared to her [cunt size desc of Larissa] pussy, letting you thrust into her easily, but provided limited stimulation for her.  To alleviate this, you ride her all the harder while manhandling her humanoid upper body, drawing sounds of pleasure from her.  She moans and wraps her arms around yours, hugging them to her [if breast size of Larissa > 0][breast size desc of Larissa] breasts[otherwise]chest[end if] while you lick and kiss one another, pressing your lips to her [mouth of Larissa].  Your tauric form grips hers as you rut her like a beast, much to your mutual delight.";
+		say "     Sensing your orgasm coming, she braces herself with all her legs and pushes back firmly while urging you to ride her even harder.  You pound away at her like with your [cock of player] manhood before driving it fully into her and unleash your hot load[if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 10 )].  Your enormous output causes the [form of Larissa][']s belly to swell greatly, becoming bloated with your seed.  She is left full and leaking your cum for quite some time after you're done before she's able to get up and return to her desk[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  Your heavy output causes the [form of Larissa][']s belly to swell, leaving her with a prominent bulge of cum when she heads back to her desk[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  Your large output leaves the [form of Larissa] full and leaking your cum when she heads back to her desk[otherwise].  After you're done, Larissa heads back to her desk with a contented smile on her face[end if].";
+	otherwise:		[compatible size - normal]
+		say "     You slide your [cock size desc of player] [cock of player] penis into her [cunt size desc of Larissa] pussy, enjoying the wonderful sensation of her squeezing around your maleness.  She and wraps her arms around yours, hugging them to her [if breast size of Larissa > 0][breast size desc of Larissa] breasts[otherwise]chest[end if] while you lick and kiss one another, pressing your lips to her [mouth of Larissa].  Your tauric form grips hers as you rut her like a beast, much to your mutual delight.";
+		say "     Sensing your orgasm coming, she braces herself with all her legs and pushes back firmly while urging you to ride her even harder.  You pound away at her like with your [cock of player] manhood before driving it fully into her and unleash your hot load[if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 10 )].  Your enormous output causes the [form of Larissa][']s belly to swell greatly, becoming bloated with your seed.  She is left full and leaking your cum for quite some time after you're done before she's able to get up and return to her desk[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  Your heavy output causes the [form of Larissa][']s belly to swell, leaving her with a prominent bulge of cum when she heads back to her desk[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  Your large output leaves the [form of Larissa] full and leaking your cum when she heads back to her desk[otherwise].  After you're done, Larissa heads back to her desk with a contented smile on her face[end if].";
+
+
+to say Larissasex_taurFM:
+	let larfound be 0;
+	[puts Larissa's form as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is infname of Larissa:
+			now monster is y;
+			now larfound is 1;
+			break;
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     The [if cunts of Larissa > 0]herm[otherwise]male[end if] [form of Larissa] guides you to the open area beside the cot and moves in behind you.  [subjpro_cap of larissa] grins as you brace your legs and wiggle your rear end tantalizingly at [objpro of Larissa].  'I'm looking forward to mounting that sexy taur body of yours,' [subjpro of larissa] says, running a [handform of Larissa] across your ass.  [subjpro_cap of larissa] doesn't tary, moving [possadj of larissa] [bodydesc of Larissa] body over yours.  She grips you with [possadj of larissa] forelegs and puts [possadj of larissa] arms around your humanoid upper body as [subjpro of larissa] brings [possadj of Larissa] [cock size desc of Larissa] [cock of larissa] into position[if breast size of larissa > 0].  Even as [subjpro of larissa] grinds [possadj of Larissa] cock against your cunny, you can feel [possadj of Larissa] [breast size desc of larissa] breasts pressed against your back[end if].  You moan at this and holds your hips steady with your pussy in invitation of that sexy cock and its now [if cock length of Larissa > 24]hugely[otherwise if cock length of larissa > 12]largely[otherwise if cock length of Larissa > 7]sizably[otherwise]modestly[end if]-hung owner to take you.";
+	if cock length of Larissa > ( ( cunt length of player * 2 ) + cunt width of player + 2 ):			[super-big]
+		say "     [possadj_cap of Larissa] [cock size desc of Larissa] [cock of Larissa] penis is too large [if cunt length of player >= 12]even [end if]for your [cunt size desc of player] pussy, so [subjpro of Larissa] satisfies [objpro of Larissa]self by rubbing [possadj of Larissa] maleness down against you, grinding it across your juicy folds[if cocks of player > 0], throbbing shaft[smn] and tauric backside[otherwise] and tauric backside[end if][if breast size of player > 0].  [subjpro_cap of Larissa] moves [possadj of Larissa] hands to your breasts, cupping your [short breast size desc of player] bosom, caressing and teasing your breasts and nipples[end if].  Turning your head to the side, you press your lips to [posspro of larissa] in a kiss while moaning in pleasure while [subjpro of larissa] works that [cock of Larissa] manhood against you.  You feel spurts of [possadj of Larissa] precum leak out onto you and kiss [objpro of Larissa] all the more excitedly.";
+		say "     	With [possadj of Larissa] orgasm approaching, [subjpro of larissa] presses [possadj of Larissa] glans to your pussy and grinds hard against it, causing you to moan.  [subjpro_cap of Larissa] cums with a loud moan of release as [possadj of Larissa] [Larissaballs] send out their payload.  While much of [possadj of Larissa] seed soaks your crotch, some blasts shoot into you[if cock width of Larissa >= 40].  This results in still a sizable amount of semen squirted into you[otherwise if cock width of player >= 20].  This results in quite a bit of semen still getting squirted into you[end if].  Feeling these spurts of [possadj of Larissa] hot semen splashing onto and into your cunt pushes you over the edge into orgasm as well[if cocks of player > 0]spraying your seed across the floor and [end if]adding your feminine juices to the sticky mess at your crotch.  You both snuggle together while recovering from the powerful climax and, after a little more fun while cleaning each other up, head back out front.[if cock width of Larissa >= 20 or a random chance of 1 in 2 succeeds][impregchance][end if]";
+	otherwise if cock length of larissa > ( cunt length of player + cunt width of player + 2 ):			[large]
+		say "     [possadj_cap of Larissa] [cock size desc of Larissa] [cock of Larissa] penis is quite large compared to your [cunt size desc of player] pussy, necessitating that [subjpro of Larissa] start slowly as [subjpro of Larissa] thrusts into those wet folds of yours, making a visible bump in your underbelly from having [possadj of larissa] [cock size desc of Larissa] rod stuffed in you[if breast size of player > 0].  [subjpro_cap of Larissa] moves [possadj of Larissa] hands to your breasts, cupping your [short breast size desc of player] bosom, caressing and teasing your breasts and nipples[end if].  Turning your head to the side, you press your lips to [posspro of larissa] in a kiss while moaning in pleasure while [subjpro of larissa] works that [cock of Larissa] manhood further into you.  Once you've loosened up enough, you push back into her thrusts and urge [objpro of larissa] to fuck you faster and harder between kisses.";
+		say "     With [possadj of Larissa] orgasm approaching, [subjpro of larissa] picks up the pace and pounds away at you with increasing zeal, [possadj of larissa] [Larissaballs] slapping against you as you're pounded by the lustful taur.  [subjpro_cap of larissa] pushes as deep as [subjpro of larissa] can into you, bulging your belly with [possadj of larissa] cock as [subjpro of larissa] unleashes [possadj of larissa] hot load[if cock width of Larissa >= ( ( scalevalue of player + 1 ) * 10 )].  [possadj_cap of larissa] enormous output causes your [bodytype of player] belly to swell greatly, becoming bloated with [possadj of larissa] seed.  You are left full and leaking [possadj of larissa] cum for quite some time after [subjpro of larissa][']s done.  When you finally drain or absorb enough to stagger out to the front lobby, you find [objpro of larissa] sitting at [possadj of larissa] desk with a smug look on [possadj of larissa] [face of Larissa] face[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  [possadj_cap of larissa] heavy output causes your [bodytype of player] belly to swell further, leaving you with a prominent bulge of cum when you stagger back to the front lobby[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  [possadj_cap of larissa] large output leaves your [bodytype of player] belly full and leaking [possadj of larissa] cum when you head back to the front lobby[otherwise].  After [subjpro of larissa][']s done, Larissa heads back to [possadj of larissa] desk with a contented smile on [possadj of larissa] [face of larissa] face[end if].[impregchance][if cock width of Larissa >= 20 and a random chance of 1 in 2 succeeds][impregchance][end if]";
+	otherwise if cock length of Larissa < ( ( cunt length of player + cunt width of player + 1 ) / 3 ):		[small]
+		say "     [possadj_cap of larissa] [cock size desc of Larissa] [cock of Larissa] is quite small compared to your [cunt size desc of player] pussy, letting [objpro of larissa] thrust into you easily, but provides limited stimulation for you.  To alleviate this, [subjpro of larissa] rides you all the harder while manhandling your upper body, getting you to moan in pleasure[if breast size of player > 0].  [subjpro_cap of Larissa] moves [possadj of Larissa] [handform of larissa]s to your breasts, cupping your [short breast size desc of player] bosom, caressing and teasing your breasts and nipples[end if].  You put your arms around [posspro of larissa] and tilt your head back to kiss her lustfully on the [mouth of larissa].  As [subjpro of Larissa] fucks you, you push back into her thrusts and urge [objpro of larissa] to fuck you faster and harder between kisses.";
+		say "     With [possadj of Larissa] orgasm approaching, [subjpro of larissa] picks up the pace and pounds away at you with increasing zeal, [possadj of larissa] [Larissaballs] slapping against you as you're pounded by the lustful taur.  [subjpro_cap of larissa] pushes [possadj of larissa] [cock of larissa] cock fully into you and unleashes [possadj of larissa] hot load[if cock width of Larissa >= ( ( scalevalue of player + 1 ) * 10 )].  [possadj_cap of larissa] enormous output causes your [bodytype of player] belly to swell greatly, becoming bloated with [possadj of larissa] seed.  You are left full and leaking [possadj of larissa] cum for quite some time after [subjpro of larissa][']s done.  When you finally drain or absorb enough to stagger out to the front lobby, you find [objpro of larissa] sitting at [possadj of larissa] desk with a smug look on [possadj of larissa] [face of Larissa] face[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  [possadj_cap of larissa] heavy output causes your [bodytype of player] belly to swell further, leaving you with a prominent bulge of cum when you stagger back to the front lobby[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  [possadj_cap of larissa] large output leaves your [bodytype of player] belly full and leaking [possadj of larissa] cum when you head back to the front lobby[otherwise].  After [subjpro of larissa][']s done, Larissa heads back to [possadj of larissa] desk with a contented smile on [possadj of larissa] [face of larissa] face[end if].[impregchance][if cock width of Larissa >= 20 and a random chance of 1 in 2 succeeds][impregchance][end if]";
+	otherwise:		[compatible size - normal]
+		say "     [subjpro_cap of larissa] slides [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] penis into your [cunt size desc of player] pussy, enjoying the wonderful sensation of you squeezing down around [possadj of Larissa] maleness[if breast size of player > 0].  [subjpro_cap of Larissa] moves [possadj of Larissa] [handform of larissa]s to your breasts, cupping your [short breast size desc of player] bosom, caressing and teasing your breasts and nipples[end if].  You put your arms around [posspro of larissa] and tilt your head back to kiss her lustfully on the [mouth of larissa].  As [subjpro of Larissa] fucks you, you push back into her thrusts and urge [objpro of larissa] to fuck you faster and harder between kisses.";
+		say "     With [possadj of Larissa] orgasm approaching, [subjpro of larissa] picks up the pace and pounds away at you with increasing zeal, [possadj of larissa] [Larissaballs] slapping against you as you're pounded by the lustful taur.  [subjpro_cap of larissa] pushes [possadj of larissa] [cock of larissa] cock fully into you and unleashes [possadj of larissa] hot load[if cock width of Larissa >= ( ( scalevalue of player + 1 ) * 10 )].  [possadj_cap of larissa] enormous output causes your [bodytype of player] belly to swell greatly, becoming bloated with [possadj of larissa] seed.  You are left full and leaking [possadj of larissa] cum for quite some time after [subjpro of larissa][']s done.  When you finally drain or absorb enough to stagger out to the front lobby, you find [objpro of larissa] sitting at [possadj of larissa] desk with a smug look on [possadj of larissa] [face of Larissa] face[otherwise if cock width of player >= ( ( scalevalue of Larissa + 1 ) * 5 )].  [possadj_cap of larissa] heavy output causes your [bodytype of player] belly to swell further, leaving you with a prominent bulge of cum when you stagger back to the front lobby[otherwise if cock width of player >= ( ( ( scalevalue of Larissa + 1 ) * 5 ) / 2 )].  [possadj_cap of larissa] large output leaves your [bodytype of player] belly full and leaking [possadj of larissa] cum when you head back to the front lobby[otherwise].  After [subjpro of larissa][']s done, Larissa heads back to [possadj of larissa] desk with a contented smile on [possadj of larissa] [face of larissa] face[end if].[impregchance][if cock width of Larissa >= 20 and a random chance of 1 in 2 succeeds][impregchance][end if]";
+	if baby is 0 and gestation of child is not 0 and Larfound is 0:
+		now facename of child is infname of Larissa;
+		now bodyname of child is infname of Larissa;
+		now skinname of child is infname of Larissa;
 
 
 [-----------------------------------------------------------------------------------------------------]
@@ -318,7 +397,7 @@ Larissa has a list of text called possible_forms_humorous.		[Infections containe
 
 when play begins:
 	add { "panda", "Alpha Husky", "German Shepherd", "Tigress Hooker", "Teddy Bear", "Mammoth", "red kangaroo", "Panther Taur", "Bald Eagle" } to possible_forms_furry of Larissa;
-	add { "panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl" } to possible_forms_girl of Larissa;
+	add { "panda", "Teddy Bear", "Latex Mistress", "red kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to possible_forms_girl of Larissa;
 	add { "Alpha Husky", "German Shepherd", "Naga", "Bald Eagle" } to possible_forms_guy of Larissa;
 	add { "Tigress Hooker", "Mammoth", "Panther Taur", "Dark Elf" } to possible_forms_girl of Larissa;
 	add { "Succubus" } to possible_forms_hellspawn of Larissa;
@@ -402,6 +481,8 @@ carry out Larissatfing:
 			say "[Larissaisnow-succubus]";
 		otherwise if entry calcnumber in possible_forms of Larissa is "Goo Girl":
 			say "[Larissaisnow-googirl]";
+		otherwise if entry calcnumber in possible_forms of Larissa is "Centaur Mare":
+			say "[Larissaisnow-centaurmare]";
 	otherwise if calcnumber is 0:
 		say "You decide against trying to transform Larissa at this time.";
 
@@ -443,11 +524,11 @@ to say Larissa post-tf:
 	otherwise:
 		say "     You get [objpro of Larissa] to lie back on the cot while you run your hands over [possadj of Larissa] new [form of Larissa] body.  Still very aroused from her transformation, [subjpro of Larissa][']s soon moaning in pleasure as you help acquaint [objpro of Larissa] with [possadj of Larissa] body's changes[if breast size of Larissa > 0 and breasts of Larissa > 2].  You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] numerous breasts and sucking on [possadj of Larissa] nipples[otherwise if breast size of Larissa > 0].  You bring your lips to [possadj of Larissa] bosom and start kissing [possadj of Larissa] breasts and sucking on [possadj of Larissa] nipples[otherwise].  You bring your lips to [possadj of Larissa] [mouth of Larissa] and kiss [objpro of Larissa] , welcoming [possadj of Larissa] [form of Larissa] tongue into your mouth.";
 		if cunts of larissa > 0 and cocks of Larissa > 0:	[herm]
-			say "     Meanwhile, your hands have made their way down to [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] cock and [cunt size desc of Larissa] pussy.  You slide your fingers over them both, stroking, pumping and fingering until she cums with a load moan of delight[if cock width of Larissa >= 40].  [possadj_cap of Larissa] excessive load makes a considerable[otherwise if cock width of Larissa >= 20].  Her large load makes a big[otherwise].  [possadj_cap of Larissa] spurting shaft makes a sticky[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
+			say "     Meanwhile, your hands have made their way down to [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] cock and [cunt size desc of Larissa] pussy.  You slide your fingers over them both, stroking, pumping and fingering until she cums with a loud moan of delight[if cock width of Larissa >= 40].  [possadj_cap of Larissa] excessive load makes a considerable[otherwise if cock width of Larissa >= 20].  Her large load makes a big[otherwise].  [possadj_cap of Larissa] spurting shaft makes a sticky[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
 		otherwise if cunts of Larissa > 0:				[female]
-			say "     Meanwhile, your hand make their way down to [possadj of Larissa] [cunt size desc of Larissa] [bodytype of Larissa] pussy.  You slide your fingers over dripping folds, pumping into them and fingering [objpro of Larissa] until [subjpro of Larissa] cums with a load moan of delight[if cunt length of Larissa + cunt width of Larissa >= 40].  [possadj_cap of Larissa] gushing juices soak both of your lower bodies in a tasty[otherwise if cunt length of Larissa + cunt width of Larissa >= 20].  [possadj_cap of Larissa] flowing juices soak [possadj of Larissa] crotch and your arm in a tasty[otherwise].  [possadj_cap of Larissa] hot juices soak [possadj of Larissa] crotch as your hand in a tasty[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
+			say "     Meanwhile, your hand make their way down to [possadj of Larissa] [cunt size desc of Larissa] [bodytype of Larissa] pussy.  You slide your fingers over dripping folds, pumping into them and fingering [objpro of Larissa] until [subjpro of Larissa] cums with a loud moan of delight[if cunt length of Larissa + cunt width of Larissa >= 40].  [possadj_cap of Larissa] gushing juices soak both of your lower bodies in a tasty[otherwise if cunt length of Larissa + cunt width of Larissa >= 20].  [possadj_cap of Larissa] flowing juices soak [possadj of Larissa] crotch and your arm in a tasty[otherwise].  [possadj_cap of Larissa] hot juices soak [possadj of Larissa] crotch as your hand in a tasty[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
 		otherwise if cocks of Larissa > 0:				[male]
-			say "     Meanwhile, your hands have made their way down to [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] cock.  You slide your fingers over it, stroking and pumping until [subjpro of Larissa] cums with a load moan of delight[if cock width of Larissa >= 40].  [possadj_cap of Larissa] excessive load makes a considerable[otherwise if cock width of Larissa >= 20].  [possadj_cap of Larissa] large load makes a big[otherwise].  [possadj_cap of Larissa] spurting shaft makes a sticky[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
+			say "     Meanwhile, your hands have made their way down to [possadj of Larissa] [cock size desc of Larissa] [cock of Larissa] cock.  You slide your fingers over it, stroking and pumping until [subjpro of Larissa] cums with a loud moan of delight[if cock width of Larissa >= 40].  [possadj_cap of Larissa] excessive load makes a considerable[otherwise if cock width of Larissa >= 20].  [possadj_cap of Larissa] large load makes a big[otherwise].  [possadj_cap of Larissa] spurting shaft makes a sticky[end if] mess which you both have fun cleaning up before [subjpro of Larissa] heads back out front to show off [possadj of Larissa] new body to [possadj of Larissa] coworkers before returning to [possadj of Larissa] desk.";
 		otherwise:								[neuter]
 			say "***Neuter Larissa - no content.";
 
@@ -529,7 +610,7 @@ to Larissadata (x - text):
 to say Larissaisnow-panda:
 	let goahead be 1;
 	if infname of Larissa is "panda":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -568,7 +649,7 @@ to say Larissaisnow-panda:
 to say Larissaisnow-alphahusky:
 	let goahead be 1;
 	if infname of Larissa is "Alpha Husky":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -613,7 +694,7 @@ to say Larissaisnow-alphahusky:
 to say Larissaisnow-GSDmale:
 	let goahead be 1;
 	if infname of Larissa is "German Shepherd":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -657,7 +738,7 @@ to say Larissaisnow-GSDmale:
 to say Larissaisnow-tighooker:
 	let goahead be 1;
 	if infname of Larissa is "Tigress Hooker":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -696,7 +777,7 @@ to say Larissaisnow-tighooker:
 to say Larissaisnow-teddybear:
 	let goahead be 1;
 	if infname of Larissa is "Teddy Bear":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -735,7 +816,7 @@ to say Larissaisnow-teddybear:
 to say Larissaisnow-latexmistress:
 	let goahead be 1;
 	if infname of Larissa is "Latex Mistress":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -774,7 +855,7 @@ to say Larissaisnow-latexmistress:
 to say Larissaisnow-naga:
 	let goahead be 1;
 	if infname of Larissa is "Naga":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -813,7 +894,7 @@ to say Larissaisnow-naga:
 to say Larissaisnow-mammoth:
 	let goahead be 1;
 	if infname of Larissa is "Mammoth":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -852,7 +933,7 @@ to say Larissaisnow-mammoth:
 to say Larissaisnow-redkangaroo:
 	let goahead be 1;
 	if infname of Larissa is "red kangaroo":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -894,7 +975,7 @@ to say Larissaisnow-redkangaroo:
 to say Larissaisnow-panthertaur:
 	let goahead be 1;
 	if infname of Larissa is "Panther Taur":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -933,7 +1014,7 @@ to say Larissaisnow-panthertaur:
 to say Larissaisnow-baldeagle:
 	let goahead be 1;
 	if infname of Larissa is "Bald Eagle":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -977,7 +1058,7 @@ to say Larissaisnow-baldeagle:
 to say Larissaisnow-darkelf:
 	let goahead be 1;
 	if infname of Larissa is "Dark Elf":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -1016,7 +1097,7 @@ to say Larissaisnow-darkelf:
 to say Larissaisnow-succubus:
 	let goahead be 1;
 	if infname of Larissa is "Succubus":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -1055,7 +1136,7 @@ to say Larissaisnow-succubus:
 to say Larissaisnow-googirl:
 	let goahead be 1;
 	if infname of Larissa is "Goo Girl":
-		say "[subjpro_cap of Larissa]'s already a got that infection.  Do you wish to continue anyhow?";
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
 		if the player consents:
 			let goahead be 1;
 		otherwise:
@@ -1091,6 +1172,43 @@ to say Larissaisnow-googirl:
 			say "[Larissa post-tf]";
 
 
+to say Larissaisnow-centaurmare:
+	let goahead be 1;
+	if infname of Larissa is "Centaur Mare":
+		say "[subjpro_cap of Larissa]'s already got that infection.  Do you wish to continue anyhow?";
+		if the player consents:
+			let goahead be 1;
+		otherwise:
+			let goahead be 0;
+	if goahead is 1:
+		if "Centaur Mare" is not listed in vials of player:
+			say "You don't have one of those vials to offer [objpro of Larissa].";
+		otherwise if freecred < lar_tfcost:
+			say "You don't have enough credits right now.";
+		otherwise:
+			deletevial "Centaur Mare";
+			decrease freecred by lar_tfcost;
+			say "[Larissa pre-tf]";
+			Larissadata "Centaur Mare";
+			now form of Larissa is "centaur";
+			now infname of Larissa is "Centaur Mare";
+			now handform of Larissa is "hand";
+			now footform of Larissa is "hoof";
+			now skin of Larissa is "tan skin and a brown coat";
+			now tail of Larissa is "equine tail";
+			now tailed of Larissa is true;
+			now winged of Larissa is false;
+			now face of Larissa is "[one of]centaur[or]human-like[or]pointy-eared human[at random]";
+			now mouth of Larissa is "mouth";
+			now body of Larissa is "a strong, female centaur";
+			now tftext of Larissa is "has her lower body shift and stretch until she has an equine body below her waist";
+			now generallook of Larissa is "[one of]athletic[or]sexy[or]pretty[or]exotic[at random]";
+			now bodycat of Larissa is 2;
+			now hp of Larissa is 4;
+			follow the Larissa breastdesc rule;
+			follow the Larissa cockdesc rule;
+			follow the Larissa cuntdesc rule;
+			say "[Larissa post-tf]";
 
 
 [	hp of Larissa	]
@@ -1147,25 +1265,6 @@ This is the Larissa cockdesc rule:
 		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[at random]";
 	now cock size desc of Larissa is descr;
 	rule succeeds;
-
-To say Larissaballs:
-	if cock width of Larissa is less than 3:
-		say "[one of]marble-sized[or]tiny[or]very small[at random]";
-	otherwise if cock width of Larissa is less than 6:
-		say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
-	otherwise if cock width of Larissa is less than 12:
-		say "[one of]lemon-sized[or]large[at random]";
-	otherwise if cock width of Larissa is less than 16:
-		say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
-	otherwise if cock width of Larissa is less than 20:
-		say "[one of]grapefruit-sized[or]massive[at random]";
-	otherwise if cock width of Larissa is less than 25:
-		say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
-	otherwise if cock width of Larissa is less than 32:
-		say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
-	otherwise:
-		say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
-	say " [one of]balls[or]testicles[or]gonads[at random]";
 
 This is the Larissa cuntdesc rule:
 	if cunt length of Larissa is less than 3:
