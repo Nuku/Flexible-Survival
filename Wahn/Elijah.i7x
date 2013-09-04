@@ -349,7 +349,7 @@ Instead of resolving a Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and thirst of Elijah is 0 and "Submissive" is listed in feats of player and lastElijahfucked - turns > 6):
+instead of going inside from the Grey Abbey Library while (Elijah is in the Bunker and hp of Elijah is 99 and thirst of Elijah is 0 and "Submissive" is listed in feats of player and lastElijahfucked - turns > 6):
 	move player to Bunker;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
 	say "     [line break]";
