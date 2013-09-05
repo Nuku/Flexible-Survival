@@ -1,5 +1,5 @@
 Version 1 of Doran by Blue Bishop begins here.
-[ Version 1.1 - Impregnation fix ]
+[ Version 1.2 - Expansion Patch; Two Discussion scenes, One Dominant Doran scene added ]
 
 "Adds Doran to Flexible Survivals Wandering Monsters table"
 
@@ -382,7 +382,7 @@ Section 3.0 - Doran NPC
 Rocky Outcropping is a room. It is fasttravel. It is private.
 the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
 Doran is a man. Doran is in Rocky Outcropping.
-the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link][line break]";
+the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]";
 the description of Doran is "[doranlook]";
 the fuckscene of Doran is "[doransex]";
 instead of sniffing Rocky Outcropping:
@@ -461,16 +461,18 @@ to say dorsexprot: [Doran Sex Protocol]
 	choose row monster from the table of random critters;
 	if dorrolereg is 0: [Dom sex pool]
 		if anallevel is 3 and dorroleint is 0 and (("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)) and dorrjd is false:
-			say "[dordom_6]"; [NEW! rimjob scene]
+			say "[dordom_6]"; [rimjob scene]
 		otherwise if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and ((cunts of player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (cunts of player > 0 and a random chance of 1 in 4 succeeds)) and (scalevalue of player > 1 or player is twistcapped):
 			say "[dordom_1]"; [anal sex scene]
 		otherwise if cunts of player > 0 and cunt length of player > 7 and a random chance of 1 in 3 succeeds:
 			say "[dordom_2]"; [cunt sex scene]
-		otherwise if a random chance of 1 in 2 succeeds: [NEW! Dominant Doran Handjob Scenes]
+		otherwise if a random chance of 1 in 2 succeeds: [Dominant Doran Handjob Scenes]
 			if (cocks of player > 0 and cunts of player is 0) or (cocks of player > 0 and cunts of player > 0 and a random chance of 1 in 2 succeeds):
 				say "[dordom_4]"; [Cock-Focused Iteration]
 			otherwise:
 				say "[dordom_5]"; [Cunt-Focused Iteration]
+		otherwise if cocks of player > 0 and cock length of player > 18 and a random chance of 1 in 2 succeeds:
+			say "[dordom_7]"; [NEW! Riding scene]
 		otherwise:
 			say "[dordom_3]"; [oral sex scene]
 	otherwise: [Sub sex pool]
@@ -1022,7 +1024,7 @@ to say dorsub_3: [Sub Doran cunt oral]
 
 to say dorsub_4: [Sub Doran cunt sex]
 	say "     Decidedly, you [if dorroleint is 4]command[otherwise]ask[end if] the dragon to roll on his back and expose his dick for you. Instinctively, he complies, laying on the ground once more before his legs are spread, exposing himself fully before you. The mere implication of your command is enough to arouse him slightly, flared cockhead peeking from its scaled sheath.";
-	say "     '[dorgr], [if dorroleint is 4][one of]I'm honoured by such a prospect[or]I long to be relegated as a mere toy for their pleasure[or]I am theirs to do with as they please[at random][otherwise][one of]don't hold back[or]I'm eager to be riden[or]I'm excited by the prospect[at random][end if]";
+	say "     '[dorgr], [if dorroleint is 4][one of]I'm honoured by such a prospect[or]I long to be relegated as a mere toy for their pleasure[or]I am theirs to do with as they please[at random][otherwise][one of]don't hold back[or]I'm eager to be ridden[or]I'm excited by the prospect[at random][end if]";
 	if dorroleint is 4:
 		say ".' Feeling a little impish, however, you think you could command the dragon to suck himself off in order to spare yourself the matter of preparing him yourself. Shall you? Lest you resolve this matter for him.";
 		if player consents:
@@ -1053,7 +1055,7 @@ to say dorsub_4: [Sub Doran cunt sex]
 
 to say dorsub_5: [Sub Doran anal sex]
 	say "     Decidedly, you [if dorroleint is 4]command[otherwise]ask[end if] the dragon to roll on his back and expose his dick for you. Instinctively, he complies, laying on the ground once more before his legs are spread, exposing himself fully before you The mere implication of your command is enough to arouse him slightly, flared cockhead peeking from its scaled sheath.";
-	say "     '[dorgr], [if dorroleint is 4][one of]I'm honoured by such a prospect[or]I long to be relegated as a mere toy for their pleasure[or]I am theirs to do with as they please[at random][otherwise][one of]don't hold back[or]I'm eager to be riden[or]I'm excited by the prospect[at random][end if]";
+	say "     '[dorgr], [if dorroleint is 4][one of]I'm honoured by such a prospect[or]I long to be relegated as a mere toy for their pleasure[or]I am theirs to do with as they please[at random][otherwise][one of]don't hold back[or]I'm eager to be ridden[or]I'm excited by the prospect[at random][end if]";
 	if dorroleint is 4:
 		say ".' Feeling a little impish, however, you think you could command the dragon to suck himself off in order to spare yourself the matter of preparing him yourself. Shall you? Lest you deal with this matter for him.";
 		if player consents:
@@ -1132,10 +1134,10 @@ to say dordom_4: [Dom Doran cock-focused handjob]
 			say ", each gout of jizz strained and prolonged by his intrusive talon's expert milking of your [if cunts of player > 0]stuffed portal[otherwise]beleaguered prostate[end if]";
 		say ". Slowly pulling his talons free of you, you're given some opportunity to survey [if dorroleint is 0]the devastation[otherwise]what[end if] he has wrought, yourself a worn out and[if cock width of player > 24] massively[end if] cum-stained mess";
 		if dorroleint is 0:
-			say ". He doesn't quite seem done with you just yet, however, as you’re held down a second time, talons moving to caress along your sullied, [bodydesc of player] form before they are brought to your face, slick with your heady sexual fluids.";
+			say ". He doesn't quite seem done with you just yet, however, as you're held down a second time, talons moving to caress along your sullied, [bodydesc of player] form before they are brought to your face, slick with your heady sexual fluids.";
 			say "     '[if cock width of player > 24][one of]Such a messy [dorgr][or]My [dorgr], look at all this mess[at random][otherwise][one of]Tsk[or]Hmph[at random][end if], [one of]start licking[or]be good and clean this up[or]I won't let them leave until they take care of this[at random]!' Intent on having you attend to this matter, you're forced to lick clean the beast's talons of your own thick, virile cum, tongue caressing along the curvature of his scaled digits";
 			if cock width of player < 7 or scalevalue of player > 3:
-				say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3 and cock width of player > 24]your large scale granting you a fair measure of expedience in spite your sizeable load[otherwise if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you’ve made of yourself not being particularly substantive[end if], finally freeing you from his grip.";
+				say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3 and cock width of player > 24]your large scale granting you a fair measure of expedience in spite your sizeable load[otherwise if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you've made of yourself not being particularly substantive[end if], finally freeing you from his grip.";
 			otherwise if cock width of player < 25:
 				say ". This ritual persists for some measure of time, Doran frequently taking a recently-cleaned talon to sully it again with your spent seed, given the fairly substantive mess you've made, before finally freeing you from his grip.";
 			otherwise:
@@ -1185,17 +1187,17 @@ to say dordom_5: [Dom Doran cunt-focused handjob]
 			say " and[if cock width of player > 24] massively[end if] cum-stained";
 		say " mess";
 		if dorroleint is 0:
-			say ". He doesn't quite seem done with you just yet, however, as you’re held down a second time, talons moving to caress along your sullied, [bodydesc of player] form before they are brought to your face, slick with your heady sexual fluids.";
+			say ". He doesn't quite seem done with you just yet, however, as you're held down a second time, talons moving to caress along your sullied, [bodydesc of player] form before they are brought to your face, slick with your heady sexual fluids.";
 			say "     '[if cock width of player > 24 and cocks of player > 0][one of]Such a messy [dorgr][or]My [dorgr], look at all this mess[at random][otherwise][one of]Tsk[or]Hmph[at random][end if], [one of]start licking[or]be good and clean this up[or]I won't let them leave until they take care of this[at random]!' Intent on having you attend to this matter, you're forced to lick clean the beast's talons of your own [if cocks of player > 0]thick, virile cum[otherwise]honey[end if], tongue caressing along the curvature of his scaled digits";
 			if cocks of player > 0:
 				if cock width of player < 7 or scalevalue of player > 3:
-					say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3 and cock width of player > 24]your large scale granting you a fair measure of expedience in spite your sizeable load[otherwise if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you’ve made of yourself not being particularly substantive[end if], finally freeing you from his grip.";
+					say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3 and cock width of player > 24]your large scale granting you a fair measure of expedience in spite your sizeable load[otherwise if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you've made of yourself not being particularly substantive[end if], finally freeing you from his grip.";
 				otherwise if cock width of player < 25:
 					say ". This ritual persists for some measure of time, Doran frequently taking a recently-cleaned talon to sully it again with your spent seed, given the fairly substantive mess you've made, before finally freeing you from his grip.";
 				otherwise: 
 					say ". So massive the mess you've created, it becomes increasingly clear that this ritual is insufficient in cleaning you in any timely manner. As such, the now-impatient Doran's head descends upon you once again, tongue licking clean the mess you've made before he would force his scaled lips upon your own. Comparatively smaller frame barely able to handle his tongue's rough probing, he forces upon you an dizzying cocktail of his saliva and your spunk, doing this over and over again until you're finally clean--and no doubt reeling a little from all the cum you've been rapidly forced to ingest. Now satisfied, he lets you go.";
 			otherwise:
-				say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you’ve made of yourself not being particularly substantive[end if].";
+				say ". This ritual persists for only a brief moment before he's satisfied, [if scalevalue of player > 3]your large scale granting you a fair measure of expedience[otherwise]the mess you've made of yourself not being particularly substantive[end if].";
 		otherwise:
 			say ".";
 			say "     Giving you a moment to rest, his maw descends upon you a second time, meeting you with his thick tongue's caress as he endeavours to clean you up in silence. [if cock width of player > 24]This ritual persists for a fair amount of time, considering the substantial mess you've made[otherwise]His work need only take a moment before he's complete[end if], leaving you with only a thin veneer of saliva.";
@@ -1214,7 +1216,7 @@ to say dordom_6: [Dom Doran rimjob]
 	otherwise:
 		say "caress your [cunt size desc of player] portal, making a deliberately slow effort to descend a talon within its depths, along with [if cunts of player > 2]one of its sisters[otherwise if cunts of player is 2]its sister[otherwise]your own, exposed tailpipe[end if].";
 	if scalevalue of player < 4:
-		say "     '[one of][dorgr] is such an obedient little toy[or]That's a good little [dorgr][or]Keep going, little [dorgr][at random]...' The dragon's dick oozing pre upon your exposed, [bodytype of player] torso, it's certainly clear your endeavour arouses him, though your diminutive form can only do so much compared to the overwhelming influence of his touch. Deliberately, painstakingly drawn out in his pace, it compels a considerable expedience in your tongue’s reciprocation, your increasingly sore jaw numbed by your overwhelming, wanton need, soon made slick against him with sweat.";
+		say "     '[one of][dorgr] is such an obedient little toy[or]That's a good little [dorgr][or]Keep going, little [dorgr][at random]...' The dragon's dick oozing pre upon your exposed, [bodytype of player] torso, it's certainly clear your endeavour arouses him, though your diminutive form can only do so much compared to the overwhelming influence of his touch. Deliberately, painstakingly drawn out in his pace, it compels a considerable expedience in your tongue's reciprocation, your increasingly sore jaw numbed by your overwhelming, wanton need, soon made slick against him with sweat.";
 		say "     Drawing you out for a long as possible, it's inevitable that you cry out, muffled by the beast's flesh, [if cocks of player > 0]thick spunk spurting all over yourself and the beast[otherwise if cunts of player > 0]gushing portal[sfn] staining the dragon's talons with your honey[end if]. This doesn't appear to satisfy him, however, leaning back to subject you to his ass even further in attendance of his own pleasure, the weight he carefully forces you to abide exacerbated as he jerks himself off.";
 		say "     You continue to service his anal ring in the hopes of expedite his endeavour, the sounds of his final groans muffled by your confines, his supple ring throbbing against your tongue, [bodydesc of player] form soon flooded with the warmth of his virile cum as it oozes over you. Satisfied though he may be, he seems intent to remain on top of you for but a moment longer, licking both him and yourself clean of the mess he's made before finally getting off.";
 	otherwise:
@@ -1222,7 +1224,42 @@ to say dordom_6: [Dom Doran rimjob]
 		say "     The wet sounds of your continued endeavours fill the air for but a moment longer until both of you meet bliss, your own cries muffled by the beast's flesh. [if cocks of player > 0]Thick, [cum load size of player] spunk spurting all over yourself and the beast, mixing with his own[otherwise if cunts of player > 0]Gushing portal[sfn] staining the dragon's talons with your honey, his spunk making a mess of the two of you[end if] as his hole throbs around your tongue. He takes a considerable amount of time to recover and even longer to lick both him and yourself clean of the mess he's made, forcing you to abide being under his ass for a fair while longer, yourself also exhausted, before finally getting off you.";
 	say "     '[one of]Oh, I nearly forgot my [dorgr] was under there, silly me[or]The way my [dorgr] attends me, I'd think they prefer being down there[or]If I could, I'd keep my [dorgr] under me like that[at random]!' He teases you once your free, no doubt finding yourself a fair bit sore from the whole ordeal. He's intent to look you over a bit before contentedly moving back to where he was resting prior, no doubt satisfied with himself.";
 
-
+to say dordom_7: [Dom Doram Riding]
+	if dorauto is true:
+		say "     The dragon capitalizes on the very instant he's within your sights, glaring irritatedly as he approaches before forcing you onto your back. [if scalevalue of player < 4]Pulling your smaller, [bodytype of player] form closer[otherwise]Adjusting your [bodytype of player] form before him[end if], he reveals your [cock size desc of player] dick[smn] before prying eyes.";
+		say "     '[one of]Hmpf[or]Tsk[at random], [one of]my [dorgr] is much too negligent[or]for too long has my [dorgr] left me be[or]I've been waiting too long for my [dorgr][at random]...' Stern expression shifting to a grin, an increasingly greedy look about him as his talons move to stroke [if cocks of player > 2]two of your impressive tools[otherwise if cocks of player is 2]both of your impressive tools[otherwise]your impressive tool[end if], '[one of]They clearly need to be used by their dragon[or]Oh, and they desperately need to be used[or]And they deserve to be exploited like the toy they are[at random]";
+	otherwise:
+		say "     The dragon appears particularly generous in the wake of your countenance, grinning as he [if dorroleint is 0]pushes[otherwise]sets[end if] you on your back, [if scalevalue of player < 4]pulling your smaller, [bodytype of player] form closer[otherwise]adjusting your [bodytype of player] form before him[end if], revealing your [cock size desc of player] dick[smn] before prying eyes.";
+		say "     '[one of]Heh[or]Ooh[or]Yes[at random], [if scalevalue of player < 4][one of]my [dorgr] is so very big for someone so very small[or]thank goodness my [dorgr] is willing to overlook the inconvenience of being so well-endowed[or]my little [dorgr] is full of such big surprises[at random][otherwise][one of]my [dorgr] is so very big, in more ways than one[or]no doubt my [dorgr] is quite proud of their equipment[or]I never cease to be impressed by my [dorgr][at random][end if]...' He continues to grin, a greedy look about him as his talons move to stroke [if cocks of player > 2]two of your impressive tools[otherwise if cocks of player is 2]both of your impressive tools[otherwise]your impressive tool[end if], '[if dorroleint is  0][one of]I think they'd like to be used by their dragon[or]Oh, and they're so eager to be used[or]And always eager to be exploited like the toy they are[at random][otherwise][one of]I'd be remiss not to make use of them[or]I'm certain they wouldn't mind if I take a ride[or]Just relax, I'll take it from here[at random][end if]";
+	say ".' Tongue descending you caress your voluminous flesh, until your mighty organ[if cocks of player > 1]s are[otherwise] is[end if] rendered hard before his affection.";
+	if dorroleint is 0 and ((dorauto is false and a random chance of 1 in 3 succeeds) or (dorauto is true and a random chance of 2 in 3 succeeds)):
+		say "     Suddenly, he rises to [if scalevalue of player > 3]tower[otherwise]climb[end if] over you, aiming[if cocks of player > 1] one of[end if] your cock[smn] towards his scaled ass before quickly descending upon it, feeling particularly inclined to have a go with you sans any lubricant.";
+		say "     Strained grunts escaping his lips, he shows almost no restraint in forcing it within his fleshy depths, eager to exploit you for his own personal pleasure. [if scalevalue of player < 4]You're forced to abide more and more of the dragon's ponderous weight, eager to push you to the limits of what you can take[otherwise]The dragon keeps the full of his weight on you, pinning you firmly to the ground[end if] as he shares his tongue's firm affection across your [bodydesc of player] frame[if scalevalue of player < 4], a feat not particularly easy for someone of your size[end if].";
+		say "     '[one of]Nfm[or]Mmf[or]Urgh[at random], [one of]my M-[dorgr] likes being used as a slutty[or]m-my [dorgr] is such a challenging[or]my [dorgr] m-makes for such a good[at random][if scalevalue of player < 4] little[end if] t-toy.' [if cockname of player is listed in infections of knotlist]It takes the dragon a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[otherwise]Several prolonged minutes filled with the sound his grunting the dragon eventually manages to engulf your dick in its entirety[end if]; however, shows little interest in trying to acclimate to your size before he begins bouncing against you, this rough treatment doubtlessly a bit of a strain on you.";
+	otherwise:
+		say "     His sleek appendage takes a fair bit of care to fondle along[if cocks of player > 1] one of[end if] your cock's length, this patient reverence causing a moan to escape your lips, your emergent pre mixing with his saliva. Eventually satisfied in his preparation, Doran rises to [if scalevalue of player > 3]tower[otherwise]climb[end if] over you, aiming your dripping member towards his scaled ass. The beast takes some time to tease you, grinding it between his substantive, scaled cheeks before he finally attempting to push it through his tight ring.";
+		say "     Brief, strained grunts illustrative of his endeavours, he shows [if dorroleint is 0]almost no[otherwise]some[end if] restraint in forcing the organ within his fleshy confines, [if dorroleint is 0]eager to exploit you for his own personal pleasure[otherwise]his prior lubrication diminishing some of the strain his work puts on you[end if]";
+		if dorroleint is 0:
+			say ". [if scalevalue of player < 4]You're forced to abide more and more of the dragon's ponderous weight, eager to push you to the limits of what you can take[otherwise]The dragon keeps the full of his weight on you, pinning you firmly to the ground[end if]";
+		otherwise:
+			say ". [if scalevalue of player < 4]The dragon takes some care not to crush you under his weight, an endeavour quickly becoming difficult for him to maintain[otherwise]The dragon keeps you gently pinned under his weight[end if]";
+		say " as he shares his tongue's[if dorroleint is 0] firm[end if] affection across your [bodydesc of player] frame[if scalevalue of player < 4], a feat not particularly easy for someone of your size[end if].";
+		say "     '[one of]Mm[or]Ah[or]Oh[at random], ";
+		if dorroleint is 0:
+			say "my [dorgr] [one of]likes being used as a slutty[or] is such a challenging[or]makes for such a good[at random][if scalevalue of player < 4] little[end if] toy";
+		otherwise:
+			say "[one of]I can see my [dorgr] enjoying being ridden[or]my [dorgr] is so very challenging[or]don't worry, my [dorgr], their dragon will be gentle[at random]";
+		say ".' [if cockname of player is listed in infections of knotlist]It takes the dragon a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[otherwise]Several prolonged minutes filled with the sound his grunting the dragon eventually manages to engulf your dick in its entirety[end if]. [if dorroleint is 0]Takes some time[otherwise]Shows little interest in trying to acclimate[end if] to your size before he begins bouncing against you, his prior lubrication [if dorroleint is 0]at least a slight balm to his rough treatment[otherwise]making the whole affair a lot easier on you[end if].";
+	say "     His own dick slapping against you with an audible lack of reverence, strings of pre spurt from it to stain you[if scalevalue of player < 4] and your face[end if], [if dorroleint is 0]any affection you might be inclined to reciprocated prevented against by his hold, intent to let the thing bounce free before you[otherwise]inclined to reciprocate by reaching out to stroke the thing as well, much to his approval[end if]. He chooses to [if cocks of player > 2]move a free talon to one of your unengulfed dicks, offering a casual, passing affection to it in order to exacerbate[otherwise if cocks of player is 2]move a free talon to your unengulfed dick, offering a casual, passing affection to it in order to exacerbate[otherwise if cunts of player > 1]lean back, stroking one of your, previously neglected, [cunt size desc of player] cunts, offering a casual, passing affection to it in order to exacerbate[otherwise if cunts of player is 1]leans back to stroke your, previously neglected, [cunt size desc of player] cunt, offering a casual, passing affection to it in order to exacerbate[otherwise if anallevel is 3]lean back, forcing a digit past your, previously neglected, anal ring, that he might accellerate[otherwise]continue with his tongue's attention, body smeared with pre and saliva as you are awash in his heated, panthing breath, clearly eager for[end if] your imminent bliss. Loudly panting, his endeavours are relentless, compelled by an overwhelming, wanton need, with [if dorroleint is 0]little regard to the strain it puts[otherwise]an increasing strain[end if] on you.";
+	say "     '[one of]A-ah[or]A-ang[or]N-nn[at random]... [one of]F-fuck[or]M-more[or]I'm g-gonna[at random]";
+	if dorroleint is 0 and ((dorauto is false and a random chance of 1 in 5 succeeds) or (dorauto is true and a random chance of 2 in 3 succeeds)):
+		say "...!' Just about to break, he pulls himself free of your [cock size desc of player] dick, frotting with it[if cocks of player > 2] and one of its brothers[otherwise if cocks of player is 2]and its brother[end if] until the both of you cry out, your [cum load size of player] load mixing with his own to stain your exhausted form, a weakened laugh escaping the dragon's lips as each gout paints you white with cum[if cock width of player > 24], making a massive mess of yourself from your release[end if].";
+		say "     '[one of]Heh[or]Ha[or]Hm[at random], [one of]my [dorgr] looks good this way[or]I got my [dorgr] good[or]I think my [dorgr] prefers being a messy cum slut[at random]!' Grinning to you as he slowly recovers, he chooses to leave you to clean yourself up[if cock width of player > 24]--an endeavour that will doubtlessly take you some time--[otherwise] [end if]before departing once more to his place of rest.";
+	otherwise:
+		say "…!' With one final, firm descent upon your tool, this concluding [if dorroleint is 0]command[otherwise]endeavour[end if] is more than enough to make you both cry out, your own [cum load size of player] load rapidly pumping into his depths, his own cum [if dorroleint is 0]aimed to paint you with a lewd lack of restraint[otherwise]firing wildly into the open air[end if]. [if cock width of player > 24]Forcibly, he pulls your hands against his belly, having you feel his form as it visibly bloats to contain your load[otherwise if cockname of player is listed in infections of knotlist]Moaning loudly, he remains tied to you[otherwise]Moaning loudly, he keep your tool enveloped entirely within his depths[end if], eager to contain every last drop of your seed.";
+		say "     '[one of]Whew[or]Heavens[or]Goodness[at random], [if dorroleint is 0][one of]I'm rather fond of using my [dorgr] like that[or]no doubt my [dorgr] is happy to be so rewarded with this opportunity[or]my [dorgr] is such a slutty little toy[at random][otherwise][one of]I think my [dorgr] enjoyed that[or]I like taking my [dorgr] out for a ride[or]I must thank my [dorgr] for this opportunity[at random][end if]!' Taking some time to rest, he eventually does free you of his[if scalevalue of player < 4] cumbersome[end if] weight, [if cock width of player > 24]groaning slightly as his overstuffed hole leaks some of your voluminous jizz when he pulls[otherwise]pulling[end if] himself of your now-softening dick before [if dorroleint is 0]slowly departing back to his place of rest, leaving you to clean yourself off[otherwise]taking a brief moment to clean you, departing back to his place of rest once he's satisfied[end if].";
+	
+		
 Section 3.2 - Doran Request Tree
 
 understand "request doran" as dorreq.
@@ -1241,52 +1278,41 @@ carry out dorreq:
 		let trixieexit be 0;
 		while trixieexit is 0:
 			say "[bold type]Options:[roman type][line break]";
-			say "(1) [link]Sexual position[as]1[end link] - Doran's demeanour: [bold type][if dorrolereg is 0]Dominant[otherwise if dorrolereg is 2]Submissive[otherwise]Neutral[end if][roman type].";
-			say "(2) [link]Gender Regard[as]2[end link] - Doran's gender association: [bold type][if dorgenreg is true]Female[otherwise]Male[end if][roman type].";	
+			say "(1) [link]Sexual position[as]1[end link] - [bold type][if dorrolereg is 0]Dominant[otherwise if dorrolereg is 2]Submissive[otherwise]Neutral[end if][roman type][line break]";
+			say "(2) [link]Gender Regard[as]2[end link] - [bold type][if dorgenreg is true]Female[otherwise]Male[end if][roman type][line break]";	
+			say "(3) [if dorroleint is not 0]Interaction Locked - Requires Max Domination[otherwise][link]Sex Auto-fire[as]3[end link] - [end if][bold type][if dorautint is 1 and dorroleint is 0]Strict[otherwise if dorautint is 2 and dorroleint is 0]Loose[otherwise if dorroleint is 0]Off[end if][roman type][line break]";
+			say "(4) [italic type][bracket]Not Yet Implemented[close bracket][roman type][line break]";
 			say "[line break]";
 			say "[bold type]Requests:[roman type][line break]";
-			say "(3) [link]Scavenge[as]3[end link] - Request Doran's aid.";
+			say "(5) [link]Scavenge[as]3[end link] - Request Doran's aid[line break]";
+			say "(6) [italic type][bracket]Not Yet Implemented[close bracket][roman type][line break]";
 			say "[line break]";
-			if dorroleint is not 0:
-				say "[italic type]Hidden Interaction[roman type][line break]";
-				say "(0) [link]Exit[as]0[end link][line break]";	
-				while 1 is 1:
-					say "Choice? (0-3)>[run paragraph on]";
-					get a number;
-					if calcnumber >= 0 and calcnumber <= 3:
-						break;
-					otherwise:
-						say "'I'm sorry, could [dorgr] repeat that?'";
-				if calcnumber is 1:
-					say "[doropt_1]"; [Demeanour Option]
-				otherwise if calcnumber is 2:
-					say "[doropt_2]"; [Gender Option]
-				otherwise if calcnumber is 3:
-					say "[dorreq_1]"; [Food Requisition]
+			say "(0) [link]Exit[as]0[end link][line break]";
+			while 1 is 1:
+				say "Choice? (0-6)>[run paragraph on]";
+				get a number;
+				if calcnumber >= 0 and calcnumber <= 6:
+					break;
 				otherwise:
-					say "[doropt_0]"; [End]
-					now trixieexit is 1;
-			otherwise:
-				say "(4) [link]Sex Auto-fire[as]4[end link]: [bold type][if dorautint is 1]Strict[otherwise if dorautint is 2]Loose[otherwise]Off[end if][roman type].";
-				say "(0) [link]Exit[as]0[end link][line break]";	
-				while 1 is 1:
-					say "Choice? (0-4)>[run paragraph on]";
-					get a number;
-					if calcnumber >= 0 and calcnumber <= 4:
-						break;
-					otherwise:
-						say "'I'm sorry, could [dorgr] repeat that?'";
-				if calcnumber is 1:
-					say "[doropt_1]"; [Demeanour Option]
-				otherwise if calcnumber is 2:
-					say "[doropt_2]"; [Gender Option]
-				otherwise if calcnumber is 3:
-					say "[dorreq_1]"; [Food Requisition]
-				otherwise if calcnumber is 4:
+					say "'I'm sorry, could [dorgr] repeat that?'";
+			if calcnumber is 1:
+				say "[doropt_1]"; [Demeanour Option]
+			otherwise if calcnumber is 2:
+				say "[doropt_2]"; [Gender Option]
+			otherwise if calcnumber is 3:
+				if dorrolereg is 0 and dorroleint is 0:
 					say "[doropt_3]"; [Sex Auto-fire]
 				otherwise:
-					say "[doropt_0]"; [End]
-					now trixieexit is 1;
+					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+			otherwise if calcnumber is 4:
+				say "[bracket]Invalid interaction: Feature not implemented[close bracket][line break]";
+			otherwise if calcnumber is 5:
+				say "[dorreq_1]"; [Food Requisition]
+			otherwise if calcnumber is 6:
+				say "[bracket]Invalid interaction: Feature not implemented[close bracket][line break]";
+			otherwise:
+				say "[doropt_0]"; [End]
+				now trixieexit is 1;
 					
 Section 3.3 - Doran Request Pool
 
@@ -1413,5 +1439,359 @@ to say doropt_3: [Doran Auto-Fire]
 
 to say doropt_0: [End]
 	say "     '[one of]Don't be afraid to ask me of anything[or]I'll be here[or]Come again[at random], [dorgr].'";
+	
+Chapter 3.3 - Doran Discussion Tree
+
+dorlastcuss is a number that varies. dorlastcuss is usually 555; [Doran Last Discussion]
+dorcusprog is a number that varies. dorcusprog is usually 0; [Doran Discussion Progression]
+dorcusexit is a number that varies. dorcusexit is usually 0; [Additional exit value for nested multiple-choice]
+dorcusexit2 is a number that varies. dorcusexit2 is usually 0; [Additional exit value for nested multiple-choice]
+dorcustv_1 is a number that varies. dorcustv_1 is usually 0; [Doran Discussion Temporary Number 1]
+[dorcustv_2 is a number that varies. dorcustv_2 is usually 0; [Doran Discussion Temporary Number 2]]
+[dorcustv_3 is a number that varies. dorcustv_3 is usually 0; [Doran Discussion Temporary Number 3]]
+dorcus is an action applying to nothing.
+dorrprr is a truth state that varies. dorrprr is usually false; [Doran RP Reveal Regard. Affected by player interaction in discussion]
+
+understand "discuss doran" as dorcus.
+understand "discuss with doran" as dorcus.
+
+check dorcus:
+	if Doran is not visible, say "That's not a verb I recognise." instead;
+	
+carry out dorcus:
+	now dorcustv_1 is 0;
+	if dorfirsttalk is false:
+		say "     You should probably go through introductions before you move onto any larger discourse.";
+	otherwise if dorlastcuss - turns <= 4:
+		say "     'I'm sorry, [dorgr], I'd love to chat but there are some things I need attending to. Perhaps in a few hours?'";
+	otherwise if dorcusprog is 0: 	
+		say "[dorcus_1]"; [Of One's Past]
+		now dorlastcuss is turns;
+		now dorcusprog is 1;
+	otherwise if dorcusprog is 1: 
+		say "[dorcus_2]"; [Of Hobbies and Imagination]
+		now dorlastcuss is turns;
+		now dorcusprog is 2;
+	otherwise:
+		say "     'I'd like to talk more, but there's nothing I can think of off the top of my head that would be interesting to discuss. My apologies.'";
+
+Chapter 3.3.1 - Doran Dicussion Pool
+		
+to say dorcus_1: [Of One's Past]
+	say "     You decide to strike up a more substantive conversation with Doran. Sitting down next to [if daytimer is night]roaring[otherwise]spent[end if] campfire. You decide to keep things fairly basic and inquire of his past and how he got the way he did. Raising this topic forces him to ponder for a moment.";
+	say "     '...Such as is the way with this blight, I believe most people one'll find will have little memory of their past. Of course, I say this as assurance to [dorgr] that this is not the case for me. I recall perfectly where I came from; however, I'm afraid that is something I'm not willing to share";
+	if “Curious” is listed in feats of player:
+		say ".' Ever-curious as you are";
+	otherwise:
+		say ".' Instinctively";
+	say ", you ask him why.";
+	say "     'My past is entirely unimportant, and one wouldn't benefit from its knowledge; quite the contrary, it'd be more of a hinderance--[dorgr], do they know of context";
+	if intelligence of player > 14:
+		say "?' Though you're smart enough to be familiar with the term itself, you're not exactly sure as to his usage of it. It's clear the question is rhetorical for the purpose of a digression, so";
+	otherwise:
+		say "?' You're not quite sure what he's getting at, but";
+	say " you humour him by saying no.";
+	say "     'Of all the things I could be, they are not what I am now to [dorgr]. I could have been an individual of great fame or fortune, or perhaps I was a helpless cog in some corporate machine. Perhaps I am but a wandering spirit. Perhaps I am the cause of this blight--or perhaps I am but a figment of [dorgr]'s increasingly deranged mind.' He grins, somewhat amused by the notion, before continuing.";
+	say "     'What matters is that any one of these changes your perception of me, and I don't want such a perception to be anything beyond being [dorgr]'s dragon.'";
+	now calcnumber is -1;	
+	let trixieexit be 0;
+	while trixieexit is 0:
+		say "[bold type][link]1) 'You don't trust me?'[as]1[end link][roman type]";
+		say "[bold type][link]2) 'Why does this matter?'[as]2[end link][roman type]";
+		say "[bold type][link]3) 'As your [dorgr] I could order you to tell me.'[as]3[end link][roman type][line break]";
+		if dorcustv_1 is 0:
+			say "[bold type][link]4) 'Very well, I'll honour your insistence on this subject.' (Exit)[as]4[end link][roman type][line break]";
+		otherwise:
+			say "[bold type][link]4) 'Alright, I won't argue with you about it any further.' (Exit)[as]4[end link][roman type][line break]";
+		while 1 is 1:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 1 and calcnumber <= 4:
+				break;
+			otherwise:
+				say "'I'm sorry, could [dorgr] repeat that?'";
+		if calcnumber is 1:
+			now dorcustv_1 is 1;
+			say "     'Ah… Trust. There isn't a thing I find more valuable...' He seems to reminisce over this notion for a moment before returning to the topic at hand, '[dorgr], be assured that, if I was lacking for care in trust, I would have lied. I feel blatant obfuscation is a kinder disservice than true deception, and better that I wound one's pride than plant any seed of distrust.'";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'Trust works both ways; why should I trust you if you won't trust me with this?'[as]1[end link]";	
+				if charisma of player > 14:
+					say "[bold type][link]2) (Charisma: [charisma of player]/15) 'And yet, you could argue that this blatant obfuscation inspires less trust than a good deception.'[as]2[end link]";
+				otherwise:
+					say "2) (Charisma: [charisma of player]/15) (Insufficient charisma!)[line break]";
+				say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'My decision to not explain my past isn't a trust issue. If I didn't trust [dorgr] then I wouldn't be so inclined to make them so";
+					if charisma of player > 14:
+						say ".' He's clearly trying to misdirect you. You imagine that he only makes this claim because the arrangement remains convenient for him; you're not the one making him your property here. You could press him on this, but you doubt you'll get anywhere with it, so you leave it at that for now.";
+					otherwise:
+						say ".' You're not exactly sure about this claim, but you decide to leave it at that.";
+				otherwise if calcnumber is 2:
+					if charisma of player < 15:
+						say "     (Invalid interaction: You don't have enough Charisma.)[line break]";
+					otherwise:
+						say "     'Such a deception that I would have to live with--assuming it even worked...' He grimaces slightly in illustration of the notion before continuing.";
+						say "     '[dorgr] is quick-tongued. Let's skip theatrics and get to the point: Though I claim assurance that this secret isn't important, I will make no effort to offer any compensation if said assurance is insufficient. This is the price of admission I have imposed, the only price I have put up since their claim over me, but I will hold no ill-will towards [dorgr] if they find that price too expensive for their tastes.' He is exceedingly straightforward in this expression when explaining this to you, which makes him very difficult to read.";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 3:
+					now calcnumber is -1;	
+					now dorcusexit is 1;
+		otherwise if calcnumber is 2:
+			now dorcustv_1 is 1;
+			say "     'The answer to that question is fairly straightforward: We benefit from a simplistic relationship. You use me[if dorrolereg is 0]--On top though I may be--[otherwise] [end if]and that brings me a joy. Anything else would get in the way of that.'";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'Perhaps I wish for our relationship to be deeper?'[as]1[end link][roman type]";
+				say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-2)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 2:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'And [dorgr] flatters me with such a proposal, but I'm not the dragon one takes home to their parents… Also, I'm certain being called [dorgr] day in and day out, in the context of a closer relationship, would grate considerably.'";
+					now calcnumber is -1;
+					let dorcusexit2 be 0;
+					while dorcusexit2 is 0:
+						say "[bold type][link]1) 'Then don't call me [dorgr].'[as]1[end link][roman type]";
+						say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
+						while 1 is 1:
+							say "Choice? (1-2)>[run paragraph on]";
+							get a number;
+							if calcnumber >= 1 and calcnumber <= 2:
+								break;
+							otherwise:
+								say "'I'm sorry, could [dorgr] repeat that?'";
+						if calcnumber is 1:
+							say "     '--Oh, but why wouldn't I call my [dorgr] by their proper title? That's unfitting of my station!' Grinning a little, it's clear he won't budge on the matter.";
+							now calcnumber is -1;	
+						otherwise if calcnumber is 2:
+							now calcnumber is -1;	
+							now dorcusexit2 is 1;
+							now dorcusexit is 1;
+		otherwise if calcnumber is 3:
+			now dorcustv_1 is 1;
+			say "     'Oh, [dorgr], such disdain pains me greatly. Every ounce of my will for life leave me, were I to suffer such disappointment. But alas, naught shall escape these twisted lips.' He chuckles a bit, no doubt amused by this bout of melodramatics."; 
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'I'm getting the impression you don't take my role seriously.'[as]1[end link][roman type]";
+				say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-2)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 2:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'That isn't necessarily my intent, but there are limits to my ability--Ah, one wouldn't, say, aggres a mere toaster for its inability to tell the time.'";
+					now calcnumber is -1;
+					let dorcusexit2 be 0;
+					while dorcusexit2 is 0:
+						if intelligence of player > 14:
+							say "[bold type][link]1) (Intelligence: [intelligence of player]/15) 'A toaster's limitation is intrinsic, this is self-imposed.'[as]1[end link][roman type]”;
+						otherwise:
+							say "1) (Intelligence: [intelligence of player]/15) (Insufficient intelligence!)[line break]";
+						say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
+						while 1 is 1:
+							say "Choice? (1-2)>[run paragraph on]";
+							get a number;
+							if calcnumber >= 1 and calcnumber <= 2:
+								break;
+							otherwise:
+								say "'I'm sorry, could [dorgr] repeat that?'";
+						if calcnumber is 1:
+							if intelligence of player < 15:
+								say "     (Invalid interaction: You don't have enough Intelligence)[line break]";
+							otherwise:
+								say "     'Hm, [dorgr] is quite the relentless one… This falls back into the subject of context. If I didn't want my [dorgr] as such then I wouldn't have brought it up. I guess that is an admission that said context is the one thing I serve above them.'";
+							now calcnumber is -1;	
+						otherwise if calcnumber is 2:
+							now calcnumber is -1;	
+							now dorcusexit2 is 1;
+							now dorcusexit is 1;
+		otherwise if calcnumber is 4:
+			say "     'Understand that I garner no joy from keeping secrets, but I do ask that [dorgr] gain some solace in the assurance that I will never lie to them, and that my past is not of some signifcance that their lack of knowledge would harm them down the line.' He decides to conclude the topic at that, leaving you to go about your business[if charisma of player > 14], though you remain a fair bit unsure as to his assurance of honesty[end if].";
+			now trixieexit is 1;
+
+to say dorcus_2: [Of Hobbies and Imagination]
+	say "     You approach Doran, who--oddly enough--seems to be huddled in one of the cave's corners, facing away from you, all the while distracted with something. Quietly, you approach the dragon, who appears to be muttering something to himself, before tapping him on the side. He's set off with a right jolt and you see what he's been doing.";
+	say "     'A-ah, [dorgr], I didn't hear them come in. Um, er...' Apparently he managed to find a number of childrens toys and he's been playing with them. Embarrassment streaks his face, red hot with the reveal of this peculiar pastime.";
+	say "     'I should, well, uh...' He scuttles about to clean up the toys, no doubt a fair bit shamed by their presence, '...They never say how boring the post-apocalyptic scene can be, and I'm never short on free time.'";
+	now calcnumber is -1;	
+	let trixieexit be 0;
+	while trixieexit is 0:
+		say "[bold type][link]1) 'Shouldn't you be out scavenging, or something?' I assume something of your size would have to eat a lot.[as]1[end link][roman type]";
+		say "[bold type][link]2) 'Alright, but why dolls?'[as]2[end link][roman type]";
+		say "[bold type][link]3) 'You worry too much about what I think of your pastime.'[as]3[end link][roman type]";
+		say "[bold type][link]4) 'Perhaps you could move over and have me join you?'[as]4[end link][roman type][line break]";
+		if dorcustv_1 is 0:
+			say "[bold type][link]5) 'Well, alright then… I'll be over here.' (Exit)[as]5[end link][roman type][line break]";
+		otherwise:
+			say "[bold type][link]5) 'I'm certain you'd like some time alone, then?' (Exit)[as]5[end link][roman type][line break]";
+		while 1 is 1:
+			say "Choice? (1-5)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 1 and calcnumber <= 5:
+				break;
+			otherwise:
+				say "'I'm sorry, could [dorgr] repeat that?'";
+		if calcnumber is 1:
+			say "     'Collecting food and water to feed myself is quite easy, actually. And I'm not finding any shortage of wood.' You invite him to elaborate, to which he's somewhat reluctant to do, 'I'm not really influenced by the infectious nature of the surroundings, which takes a lot of the risk out of getting what I need.'";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				if "Curious" is listed in feats of player:
+					say "[bold type][link]1) (Curious:) 'How?'[as]1[end link]”;
+				otherwise:
+					say "1) (Unavailable: Requires Curious Feat)[line break]";
+				if intelligence of player > 15:
+					say "[bold type][link]2) (Intelligence: [intelligence of player]/16) 'That's extremely unlikely save for something exceedingly powerful.'[as]2[end link]”;
+				otherwise:
+					say "2) (Intelligence: [intelligence of player]/16) (Insufficient intelligence!)[line break]";
+				say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					if "Curious" is not listed in feats of player:
+						say "     (Invalid interaction: You don't have that feat.)[line break]";
+					otherwise:
+						say "     He seems ill-inclined to explain further, but with some prodding he manages to budge.";
+						say "     'Does [dorgr] remember our discussion on context? Talking about this particular matter would alter that.' That seems to be all you can squeeze out of him.";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 2:
+					if intelligence of player < 16:
+						say "     (Invalid interaction: You don't have enough Intelligence.)[line break]";
+					otherwise:
+						say "     'That might be one angle, but if I was so powerful, how could [dorgr] defeat me? And I'm certain weaker creatures can find a way to deal with it.' He grimaces slightly following this remark, [if perception of player > 15]an obvious tell, no doubt he's trying to misdirect you in this moment of weakness[otherwise]perhaps dissatisfied with this answer[end if].'";
+						now calcnumber is -1;
+						let dorcusexit2 be 0;
+						while dorcusexit2 is 0:
+							if perception of player > 15:
+								say "[bold type][link]1) (Perception: [perception of player]/16) 'I got the impression you were holding back by a fair amount when we fought.'[as]1[end link][roman type]”;
+							otherwise:
+								say "1) (Perception: [perception of player]/16) (Insufficient perception!)[line break]";
+							say "[bold type][link]2) 'That doesn't really explain your immunity.'[as]2[end link][roman type]"; 
+							say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
+							while 1 is 1:
+								say "Choice? (1-3)>[run paragraph on]";
+								get a number;
+								if calcnumber >= 1 and calcnumber <= 3:
+									break;
+								otherwise:
+									say "'I'm sorry, could [dorgr] repeat that?'";
+							if calcnumber is 1:
+								if perception of player < 15:
+									say "     (Invalid interaction: You don't have enough Perception.)[line break]";
+								otherwise:
+									say "     He appears caught in a corner here, taking a prolonged length of time to determine an answer, seems to eventually make an appeal to emotion.";
+									say "     'I beg of them, [dorgr], their dragon is being crushed under the weight of this excessive scrutiny.' He does seem genuinely distressed, and you get the impression that he might flee outright rather than continue, so you leave it at that.";
+								now calcnumber is -1;	
+							otherwise if calcnumber is 2:
+								say "     'I like to think I'm a bit smarter than what's out there. I could easily circumnavigate anything I couldn't handle.' He grimaces a bit at this answer, as well.";
+								now calcnumber is -1;	
+							otherwise if calcnumber is 3:
+								now calcnumber is -1;	
+								now dorcusexit2 is 1;
+								now dorcusexit is 1;
+					now calcnumber is -1;	
+				otherwise if calcnumber is 3:
+					now calcnumber is -1;	
+					now dorcusexit is 1;		
+		otherwise if calcnumber is 2:
+			say "     'Oh, [dorgr], they sting me when they call them dolls… Grant me a measure of patience to wax sentimental, I think one's imagination is perhaps the greatest ability anyone has. There's a certain freedom in one's mind that is without comparison in the world as a whole, though I find that it can still be a bit restrictive in a vacuum… However, that's another topic altogether.' He begins to ponder a bit in lieu of his digression. He seems rather fond of this subject.";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'How often do you spend playing like this?'[as]1[end link]”;
+				say "[bold type][link]2) 'Where did you get them?'[as]2[end link]”;
+				say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'Uh… Whenever I have some free time and [dorgr] isn't around, I suppose.' He blushes a visible measure more in response to this particular query.";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 2:
+					say "     'I manage to recover some, on occasion. Apparently, certain strains of this blight are receptive to this kind of stuff, so they're quite difficult to find these days.'";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 3:
+					now calcnumber is -1;	
+					now dorcusexit is 1;	
+		otherwise if calcnumber is 3:
+			now dorcustv_1 is 1;
+			say "     'My thanks, I perhaps worry too much over my image. What is the right way for something like me to act? Me playing with toys doesn't quite give the impression of a big, strong dragon. I worry most of all that this harms the image I provide to you.' He still seems a bit morose, though your regard has cheered him up a little bit, at least.";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'I don't care about how you present yourself to me.'[as]1[end link]”;
+				say "[bold type][link]2) (Return to the main topic)[as]2[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-2)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 2:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'Again, I thank [dorgr] for trying to calm me, but I do care a lot on how I present myself. The fact that they are here now shows that I've done something right with you, I can only assume it's that image.'";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 2:
+					now calcnumber is -1;	
+					now dorcusexit is 1;	
+		otherwise if calcnumber is 4:
+			now dorcustv_1 is 1;
+			say "     'Oh, [dorgr], I'm flattered by the attempt to make me feel better, but this isn't quite something I think they'd be all that into.' His mood does appear to have brightened up, at least. '...Though, give me some time, I might think of something more appropriate for them.'";
+			now calcnumber is -1;	
+			let dorcusexit be 0;
+			while dorcusexit is 0:
+				say "[bold type][link]1) 'What did you have in mind?'[as]1[end link]”;
+				say "[bold type][link]2) 'But I assure you, I would enjoy joining you!'[as]2[end link]”;
+				say "[bold type][link]3) (Return to the main topic)[as]3[end link][roman type][line break]";
+				while 1 is 1:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "'I'm sorry, could [dorgr] repeat that?'";
+				if calcnumber is 1:
+					say "     'Well, I'm certain we can find a way to 'play' with each other that might be more in line with your interests. Get back to me on it.'";
+					now calcnumber is -1;	
+				otherwise if calcnumber is 2:
+					say "     'Oh, [dorgr]...' He grins a little, chuckling at your remark. 'I think we can all say here that playing with toys isn't the reason they hang around my little abode. You're very sweet, though.'";
+					now calcnumber is -1;		
+				otherwise if calcnumber is 3:
+					now calcnumber is -1;	
+					now dorcusexit is 1;
+		otherwise if calcnumber is 5:
+			if dorcustv_1 is 1:
+				say "     'Yeah… And thanks. I revel in play; the assertion of roles and facsimiles for the sake of imagination, it offers a certain… Freedom, that I can't be without. I hope [dorgr] understands.' He lets you off, returning to his toys to stow them away once more.";
+				now dorrprr is true;
+			otherwise:
+				say "     'Yeah… Please forgive me, I never intended to harm your impression of me. I would ask that you try to overlook this irregularity.' He lets you off, quickly scurrying back to stow away his toys.";
+			now trixieexit is 1;
 
 Doran ends here.
