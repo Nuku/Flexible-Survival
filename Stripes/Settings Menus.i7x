@@ -161,7 +161,7 @@ carry out trixiecheating:
 
 [-----]
 
-anallevel is a number that varies.  anallevel is usually 2.		[normal]
+[anallevel is a number that varies.  anallevel is usually 2.]		[normal]
 
 analadjusting is an action applying to nothing.
 
@@ -203,7 +203,7 @@ carry out analadjusting:
 
 [-----]
 
-WSlevel is a number that varies.  WSlevel is usually 2.		[normal]
+[WSlevel is a number that varies.  WSlevel is usually 2.]		[normal]
 
 WSadjusting is an action applying to nothing.
 
