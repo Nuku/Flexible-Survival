@@ -9,7 +9,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 550000.
 Use MAX_PROP_TABLE_SIZE of 650000.
 use MAX_STATIC_DATA of 2560000.
 Use MAX_OBJ_PROP_COUNT of 155.
-use MAX_SYMBOLS of 154000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
+use MAX_SYMBOLS of 250000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
 use ALLOC_CHUNK_SIZE of 168000.
 use SYMBOLS_CHUNK_SIZE of 15000.
@@ -549,13 +549,24 @@ Section Starting Variables
 
 [ See the Default Settings/Presets.i7x file for personalizing your defaults. ]
 
+[
 startgenderchoice is a number that varies.
 startstatbonus is a number that varies.
 startscenariochoice is a number that varies.
 freefeatgeneral is a text that varies.
 freefeatfun is a text that varies.
 hypernull is a number that varies. 
-
+]
+gsms is a number that varies.			[main stat]
+gspg is a number that varies.			[player gender]
+gsgt is a number that varies.			[game type]
+gshm is a truth state that varies.		[hard mode on/off]
+gsexit is a number that varies. gsexit is usually 0;
+freefeatgeneral is a text that varies.
+freefeatfun is a text that varies.
+hypernull is a number that varies. 
+anallevel is a number that varies.
+WSlevel is a number that varies.
 
 Book 2 - Places
 
@@ -3770,6 +3781,55 @@ To level up:
 		increase xp of player by ( level of player times 2 );
 	say "You have gained level [level of player]! Congratulations!";
 	if remainder after dividing level of player by 2 is 0:
+		say "Current stats:[line break]";
+		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Perception: [perception of player], Intelligence: [intelligence of player].";
+		say "Pick a stat to increase.";
+		say "[link]1 - Strength[as]1[end link][line break]";
+		say "[link]2 - Dexterity[as]2[end link][line break]";
+		say "[link]3 - Stamina[as]3[end link][line break]";
+		say "[link]4 - Charisma[as]4[end link][line break]";
+		say "[link]5 - Perception[as]5[end link][line break]";
+		say "[link]6 - Intelligence[as]6[end link][line break]";
+		say "[link]7 - Random[as]7[end link][line break]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 7:
+			say "Choice? (1-7)>[run paragraph on]";
+			get a number;
+		if calcnumber is 7:
+			now calcnumber is a random number between 1 and 6;
+		if calcnumber is 1:
+			increase strength of player by 1;
+			increase capacity of player by 5;
+			say "Your strength grows.";
+		otherwise if calcnumber is 2:
+			increase dexterity of player by 1;
+			say "Your dexterity grows.";
+		otherwise if calcnumber is 3:
+			increase Stamina of player by 1;
+			say "Your stamina grows.";
+		otherwise if calcnumber is 4:
+			increase charisma of player by 1;
+			say "Your charisma grows.";
+		otherwise if calcnumber is 5:
+			increase perception of player by 1;
+			say "Your perception grows.";
+		otherwise if calcnumber is 6:
+			increase intelligence of player by 1;
+			say "Your intelligence grows.";
+	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
+	increase maxhp of player by 2;
+	now hp of player is maxhp of player;
+	if the remainder after dividing level of the player by 5 is 0:
+		funfeatget;
+	increase score by level of the player times level of the player;
+
+[To level up: [-CUT-]
+	increase level of player by 1;
+	decrease xp of player by level of player times 10;
+	if "Fast Learner" is listed in feats of player:
+		increase xp of player by ( level of player times 2 );
+	say "You have gained level [level of player]! Congratulations!";
+	if remainder after dividing level of player by 2 is 0:
 		say "Pick a stat to increase.";
 		wait for any key;
 		change the current menu to Table of Start Game;
@@ -3780,7 +3840,7 @@ To level up:
 	now hp of player is maxhp of player;
 	if the remainder after dividing level of the player by 5 is 0:
 		funfeatget;
-	increase score by level of the player times level of the player;
+	increase score by level of the player times level of the player;]
 	
 Before combat is a number that varies.
 
@@ -4347,7 +4407,7 @@ This is the turnpass rule:
 		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
 			increase corruption by a random number from 0 to 1;
-		if "Strong Psyche" is listed in feats of player:
+		if "Pure" is listed in feats of player:
 			decrease corruption by a random number from 0 to 2;
 		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
 		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
@@ -6033,7 +6093,6 @@ Include Daisy by Sarokcat n Verath.
 Include Onyx by Sarokcat n Verath.
 Include Zoo People by Sarokcat.
 Include Sarah by Sarokcat&Hellerhound.
-Include Coleen by Sarokcat.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
 Include Angie by Sarokcat.
@@ -6065,7 +6124,6 @@ Include Athanasia by Stripes.
 Include Andrew by Stripes.
 Include Sam for FS by Stripes.
 Include Mack for FS by Stripes.
-Include Vanessa by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
@@ -6077,6 +6135,8 @@ Include Karen by AGentlemanCalledB.
 Include Felix by Wahn.
 Include Campus Gym by UrsaOmega.
 Include Lilith by Wahn.
+Include Coleen by Sarokcat.
+Include Vanessa by Stripes.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6110,6 +6170,8 @@ instead of going through a dangerous door(called X):
 	[try looking.]
 
 
+[-CUT-]
+[
 Part Game Options
 
 Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
@@ -6123,6 +6185,7 @@ Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstat
 Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
 Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
 Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] will start play, using current settings.";
+
 
 Section Option Says
 
@@ -6163,6 +6226,8 @@ To say startfeatsoptions:
 
 To say startbannedstatus:
 	say "The following creatures types are currently banned: [startbannedflags]";
+]
+
 To say startbannedflags:
 	blank out the whole of table of combat items;
 	let X be 1;
@@ -6174,9 +6239,12 @@ To say startbannedflags:
 			say title entry;
 			say "  ";
 		now toggle entry is flag ban rule;
+
 To say startbannedoptions:
 	say "[line break]Type [bold type][link]set Banned Creatures to configure[end link][roman type]";
 
+[-CUT-]
+[
 Section Setting Options
 
 Understand "set [something] to [text]" as setting it to.
@@ -6210,9 +6278,10 @@ Instead of setting Waits to "Off": WaitHateFunction;
 Instead of setting Clears to "On": ClearMoreFunction;
 Instead of setting Clears to "Off": ClearLessFunction;
 
+
 Section Alternate Start
 
-To prealternatestartstats: [set any stats that need to be set to keep the player's time in the options room working]
+To prealternatestartstats: [set any stats that need to be set to keep the player's time in the options room working] [-CUT-]
 	now the strength of the player is 12;		[sets all to 12, then applies selected bonus]
 	now the Dexterity of the player is 12;
 	now the Stamina of the player is 12;
@@ -6221,9 +6290,9 @@ To prealternatestartstats: [set any stats that need to be set to keep the player
 	now the Intelligence of the player is 12;
 	now the humanity of the player is 100;		[prevents endgame from sanity before game starts]
 	startstatbonus;						[applies the current, pre-selected stat boost]
+]
 
-
-To startFeatget: [alternate featget used for start]
+To startFeatget: [alternate featget used for start] [Checkpoint-]
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -6275,6 +6344,8 @@ To startFunFeatget: [alternate funfeatget used for start]
 			otherwise:
 				say "Invalid Feat.";
 
+[-CUT-]
+[
 To start button: [options are set, begin game]
 	now started is 1; [make start as being done.  makes leveling/etc work right]
 	follow the random stats rule; [set stats to base for game]
@@ -6308,6 +6379,7 @@ To startstatbonus: [apply stat bonus]
 		randomstatstart;
 	if started is 1, say "[line break]You have decided your physical talents.";
 [	follow the prerestore the game rule;] [for loading?]
+]
 
 to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	now the strength of the player is 10;
@@ -6378,7 +6450,8 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 				now intelligence of player is 18;
 				increase tempnum by 1;
 
-
+[-CUT-]
+[
 To startgender: [apply gender stats]
 	if startgenderchoice is 0:
 		now the cocks of the player is 1;
@@ -6419,6 +6492,7 @@ To startscenario: [sets scenario for use in introstorytext]
 	otherwise:
 		say "Invalid scenario choice, defaulting to [']Bunker['][line break]";
 		now scenario is "Bunker";
+]
 
 To startfreefeats: [gives free feats]
 	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
@@ -6483,29 +6557,226 @@ To startcreatureban: [bans creatures, as requested]
 	say "Sorting creatures...";
 	sort table of random critters in lev order;
 
+
 Section Story Start Text
 
-To introstorytext: [plays intro text and starts game.  also applies most (all?) of the scenario relayed settings]
+To regularstart: [normal start method]
+	follow the random stats rule;
+	now calcnumber is -1;
+	let trixieexit be 0;
+	while trixieexit is 0:
+		clear the screen;
+		say "[bold type]Character Creation:[roman type][line break]";
+		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[otherwise if gsms is 2]Dexterity[otherwise if gsms is 3]Stamina[otherwise if gsms is 4]Charisma[otherwise if gsms is 5]Perception[otherwise if gsms is 6]Intelligence[otherwise]Random[end if][roman type][line break]";
+		say "(2) [link]Player Gender[as]2[end link] - [bold type][if gspg is 1]Male[otherwise]Female[end if][roman type][line break]";
+		say "(3) [link]Game Type[as]3[end link] - [bold type][scenario][roman type][line break]";	
+		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";
+		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
+		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";		
+		say "[line break]";
+		say "[bold type]Options:[roman type][line break]";
+		say "(7) [link]Banned Types[as]7[end link] - [bold type][startbannedflags][roman type][line break]";
+		say "(8) [link]Anal Content[as]8[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
+		say "(9) [link]WS Content[as]9[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
+		say "(10) [link]Hyperlinks[as]10[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
+		say "(11) [link]Waiting for Input[as]11[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(12) [link]Screen Clearing[as]12[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "[line break]";
+		say "(0) [link]Start Game[as]0[end link][line break]";
+		while 1 is 1:
+			say "(0-12)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 12:
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is 1:
+			say "[gsopt_1]"; 
+		otherwise if calcnumber is 2:
+			say "[gsopt_2]";
+		otherwise if calcnumber is 3:
+			say "[gsopt_3]";
+		otherwise if calcnumber is 4:
+			say "[gsopt_4]";
+		otherwise if calcnumber is 5:
+			startFeatget;
+		otherwise if calcnumber is 6:
+			startFunFeatget;
+		otherwise if calcnumber is 7:
+			ban menu;
+		otherwise if calcnumber is 8:
+			try analadjusting;
+		otherwise if calcnumber is 9:
+			try WSadjusting;
+		otherwise if calcnumber is 10:
+			if hypernull is 0:
+				say "Turn off Hyperlinks?";
+				if player consents:
+					now hypernull is 1;
+			otherwise:
+				say "Turn on Hyperlinks?";
+				if player consents:
+					now hypernull is 0;
+		otherwise if calcnumber is 11:
+			if waiterhater is 0:
+				say "Turn off delays?";
+				if player consents:
+					now waiterhater is 1;
+			otherwise:
+				say "Turn on delays?";
+				if player consents:
+					now waiterhater is 0;
+		otherwise if calcnumber is 12:
+			if clearnomore is 0:
+				say "Turn off Screen Clearing?";
+				if player consents:
+					now clearnomore is 1;
+			otherwise:
+				say "Turn on Screen Clearing?";
+				if player consents:
+					now clearnomore is 0;
+		otherwise if calcnumber is 0:
+			say "Confirm game start?";
+			if player consents:
+				say "[gsopt_start]";
+				now trixieexit is 1;
+
+to say gsopt_1:	
+	now calcnumber is -1;
+	let gsexit be 0;
+	while gsexit is 0:
+		say "[bold type]Select your main stat:[roman type][line break]";
+		say "(1) [link]Strength[as]1[end link]: Represents your raw physical might and your ability to deal damage. [bold type][if gsms is 1]-Set[end if][roman type][line break]";
+		say "(2) [link]Dexterity[as]2[end link]: Affects your likelihood to hit and dodge. [bold type][if gsms is 2]-Set[end if][roman type][line break]";
+		say "(3) [link]Stamina[as]3[end link]: Increases your total health pool and your overall endurance. [bold type][if gsms is 3]-Set[end if][roman type][line break]";
+		say "(4) [link]Charisma[as]4[end link]: Deals with social interactions with NPCs and your pets, and affects your morale. [bold type][if gsms is 4]-Set[end if][roman type][line break]";
+		say "(5) [link]Perception[as]5[end link]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale. [bold type][if gsms is 5]-Set[end if][roman type][line break]";
+		say "(6) [link]Intelligence[as]6[end link]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping. [bold type][if gsms is 6]-Set[end if][roman type][line break]";
+		say "(7) [link]Random[as]7[end link]: Randomize your stat points[bold type][if gsms < 1 or gsms > 6]-Set[end if][roman type][line break]";
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";	
+		while 1 is 1:
+			say "Choice? (0-7)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 7:
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is not 0:
+			now gsms is calcnumber;
+			now gsexit is 1;
+		otherwise:
+			now gsexit is 1;
+
+	
+to say gsopt_2:
+	if gspg is 1:
+		now gspg is 2;
+	otherwise:
+		now gspg is 1;
+
+
+to say gsopt_3:
+	now calcnumber is -1;
+	let gsexit be 0;
+	while gsexit is 0:
+		say "[bold type]Game Type:[roman type][line break]";
+		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.[bold type][if gsgt is 1]-Set[end if][roman type][line break]";
+		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet).[bold type][if gsgt is 2]-Set[end if][roman type][line break]";
+		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive (Start with no supplies, an iron man mode, can you survive?)![bold type][if gsgt is 3]-Set[end if][roman type][line break]";
+		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![bold type][if gsgt is 4]-Set[end if][roman type][line break]";
+		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if gsgt is 5]-Set[end if][roman type][line break]";
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";	
+		while 1 is 1:
+			say "Choice? (0-5)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 5:
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is 1:
+			now scenario is "Bunker";
+			now gsgt is 1;
+			now gsexit is 1;
+		otherwise if calcnumber is 2:
+			now scenario is "Caught Outside";
+			now gsgt is 2;
+			now gsexit is 1;
+		otherwise if calcnumber is 3:
+			now scenario is "Rescuer Stranded";
+			now gsgt is 3;
+			now gsexit is 1;
+		otherwise if calcnumber is 4:
+			now scenario is "Forgotten";
+			now gsgt is 4;
+			now gsexit is 1;
+		otherwise if calcnumber is 5:
+			now scenario is "Researcher";
+			now gsgt is 5;
+			now gsexit is 1;
+		otherwise:
+			now gsexit is 1;
+
+to say gsopt_4:
+	if gshm is false:
+		say "Turn on Hard Mode? Hard Mode causes the powerful monsters to be randomly roaming, limits your use of the journal and adds other difficulties to further challenge you.";
+		if player consents:
+			now gshm is true;
+	otherwise:
+		say "Turn off Hard Mode?";
+		if player consents:
+			now gshm is false;
+
+
+to say gsopt_start:
+	if gspg is 1:	[male]
+		now the cocks of the player is 1;
+		now the cock length of the player is 6;
+		now the cock width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 0;
+	otherwise:		[defaults to female]
+		now the cunts of the player is 1;
+		now the cunt length of the player is 6;
+		now the cunt width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 2;
+	if gsms is 1:
+		increase strength of player by 5;
+	otherwise if gsms is 2:
+		increase dexterity of player by 5;
+	otherwise if gsms is 3:
+		increase stamina of player by 5;
+	otherwise if gsms is 4:
+		increase charisma of player by 5;
+	otherwise if gsms is 5:
+		increase perception of player by 5;
+	otherwise if gsms is 6:
+		increase intelligence of player by 5;
+	otherwise:
+		randomstatstart;		
+	now the morale of the player is the charisma of the player plus the perception of the player;
+	now the HP of the player is the stamina of the player times two;
+	increase the HP of the player by 5;
+	now the maxhp of the player is the hp of the player;
+	now the capacity of the player is five times the strength of the player;
+	now humanity of player is 100;
+	startfreefeats; 
+	now started is 1;
+	startcreatureban;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	sort table of random critters in lev order;	
 	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
 		randominfect;
 		randominfect;
 		randominfect;
 		randominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	if scenario is "Bunker":
-		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
-	otherwise if scenario is "Caught Outside":
-		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
-	otherwise if scenario is "Rescuer Stranded":
-		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
-	otherwise if scenario is "Forgotten":
-		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
-	otherwise if scenario is "Hard mode":
-		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
-	otherwise if scenario is "Researcher":
-		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
+	say "Want more details on the game and updates? ----- [bold type]http://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if scenario is not "Bunker":
-		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of player;
 		if scenario is "Rescuer Stranded":
@@ -6522,128 +6793,36 @@ To introstorytext: [plays intro text and starts game.  also applies most (all?) 
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;
-		if scenario is "Hard mode":
-			now invent of bunker is { };
-			add "cot" to invent of bunker;
-			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
-			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the hp of doctor matt is 100;
-			remove orthas from play;
-			increase score by 900;
-			extend game by 240;
-			now hardmode is true;
-			now levelwindow is 99999;
-	if scenario is "Rescuer Stranded":
-		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
+	if gshm is true: [Hard mode alteration]
+		increase score by 300;
+		now hardmode is true;
+		now levelwindow is 99999;
+	if scenario is "Bunker":
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		say "You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
+	otherwise if scenario is "Caught Outside":
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. Some fought back. You tried to resist, but did not escape unscathed.  In the end, you managed to get to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		say "You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
+	otherwise if scenario is "Rescuer Stranded":
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.  You were sent in with little preparation and no idea at all of what you were truly in for.";
 		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
+		say "You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack and your watch.";
 		say "Heaven only knows what awaits you outside but, you have to find a way back.";
-		say "Taking a deep breath you open the door to your sanctuary...";
-	otherwise:
-		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
+	otherwise if scenario is "Forgotten":
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		say "Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able.  While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire.  Fearing to exit, you remained in the safety of the bunker until it was peaceful again.  You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type].";
+		say "Still... how bad could it be?";
+	otherwise if scenario is "Researcher":
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordonned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	if scenario is "Researcher":
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.[line break][line break]";
-	otherwise:
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and prepare to set out.[line break][line break]";
-	try looking;
+	say "[line break]";
+	say "Welcome to...";
 	zephyrad rule in 1 turn from now;
 
-To regularstart: [normal start method]
-	follow the random stats rule;
-	increase the score by 10;
-[	follow the finish stats rule;]
-	while 1 is 1:
-		repeat with y running from 1 to number of filled rows in table of start game:
-			choose row y from the table of start game;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "Type the number corresponding to the stat you want +5 in> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= 6:
-			now current menu selection is calcnumber;
-			follow the finish stats rule;
-			if rule succeeded:
-				break;
-			otherwise:
-				if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-		otherwise if calcnumber is 8:
-			follow the prerestore the game rule;
-			break;
-		otherwise:
-			say "Invalid Selection.";
-	repeat with x running through featsets:
-		now x is a part of the player;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	say "Select your first two, free, feats, by clicking one of the below:[line break]";
-	featget;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	say "And now the second.";
-	funfeatget;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
-	if the player consents:
-		ban menu;
-	repeat through the table of random critters:
-		let bad be 0;
-		repeat with n running through all banned flags:
-			if name entry is listed in infections of n:
-				now bad is 1;
-		if bad is 1:
-			blank out the whole row;
-	repeat with n running through situations:
-		let bad be 0;
-		repeat with q running through all banned flags:
-			if n is listed in badspots of q:
-				say "[n] removed due to [q].";
-				now bad is 1;
-		if bad is 1:
-			now n is resolved;
-	sort table of random critters in lev order;
-	if scenario is "Caught Outside":
-		randominfect;
-		randominfect;
-		randominfect;
-		randominfect;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------[line break][line break]";[moved to after start questions and before ingame text]
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	if scenario is "Rescuer Stranded":
-		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
-		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
-		say "Heaven only knows what awaits you outside but, you have to find a way back.";
-		say "Taking a deep breath you open the door to your sanctuary...";
-	otherwise:
-		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	if scenario is "Researcher":
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	otherwise:
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and prepare to set out.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "[line break]Welcome to...";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	zephyrad rule in 1 turn from now;
 
 Book 10 - Let the Games Begin
 
@@ -6709,14 +6888,13 @@ When play begins:
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
 	change the right hand status line to "[list of valid directions]";
-	say "Some questions before getting into the game...";[warn the player what to expect next]
-	say "Do you want hyperlinks? (Y/n)";
+	say "Before the game begins...";[warn the player what to expect next]
+	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
 		let x be 0;
 	otherwise:
 		now hypernull is 1;
-		say "Hyperlinks disabled.";
-	say "Do you want to use the alternate (experimental) start method? (y/n)";
+	[say "Do you want to use the alternate (experimental) start method? (y/n)";
 	if player consents:
 		increase the score by 10;
 		repeat with x running through featsets:
@@ -6725,5 +6903,23 @@ When play begins:
 		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 		say "[line break]Welcome to...";
 		move the player to Game Options, without printing a room description; [puts player in room for options, prevents displaying of look text?]
+	otherwise:]
+	repeat with x running through featsets:
+		now x is a part of the player;
+	if gsgt is 1:		[sets name of scenario for menu based on preset]
+		now scenario is "Bunker";
+	otherwise if gsgt is 2:
+		now scenario is "Caught Outside";
+	otherwise if gsgt is 3:
+		now scenario is "Rescuer Stranded";
+	otherwise if gsgt is 4:
+		now scenario is "Forgotten";
+	otherwise if gsgt is 5:
+		now scenario is "Researcher";
 	otherwise:
-		regularstart; [original start method.  easier to move everything then leave here]
+		now gsgt is 1;
+		now scenario is "Bunker";
+	if anallevel < 1 or anallevel > 3, now anallevel is 2;
+	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
+	increase the score by 10;
+	regularstart; [original start method.  easier to move everything then leave here]
