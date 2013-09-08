@@ -6293,6 +6293,7 @@ To prealternatestartstats: [set any stats that need to be set to keep the player
 ]
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
+	say "Select a basic feat.  This represents a skill or innate ability you have.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -6309,8 +6310,11 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
-				now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
-				now featqualified is 0;
+				say "[title entry]: [description entry][line break]";
+				say "Is this what you want?";
+				if the player consents:
+					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
+					now featqualified is 0;
 				break; [if featqualified is 0, ]
 			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
@@ -6319,6 +6323,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				say "Invalid Feat.";
 
 To startFunFeatget: [alternate funfeatget used for start]
+	say "Select a fun feat.  This represents some strange quirk or effect induced by the nanites.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
 		try addfeating x;
@@ -6335,8 +6340,12 @@ To startFunFeatget: [alternate funfeatget used for start]
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
-				now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
-				now featqualified is 0;
+				choose row current menu selection from the table of gainable feats;
+				say "[title entry]: [description entry][line break]";
+				say "Is this what you want?";
+				if the player consents:
+					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
+					now featqualified is 0;
 				break; [if featqualified is 0, ]
 			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
@@ -6641,18 +6650,18 @@ To regularstart: [normal start method]
 				say "[gsopt_start]";
 				now trixieexit is 1;
 
-to say gsopt_1:	
+to say gsopt_1:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Select your main stat:[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link]: Represents your raw physical might and your ability to deal damage. [bold type][if gsms is 1]-Set[end if][roman type][line break]";
-		say "(2) [link]Dexterity[as]2[end link]: Affects your likelihood to hit and dodge. [bold type][if gsms is 2]-Set[end if][roman type][line break]";
-		say "(3) [link]Stamina[as]3[end link]: Increases your total health pool and your overall endurance. [bold type][if gsms is 3]-Set[end if][roman type][line break]";
-		say "(4) [link]Charisma[as]4[end link]: Deals with social interactions with NPCs and your pets, and affects your morale. [bold type][if gsms is 4]-Set[end if][roman type][line break]";
-		say "(5) [link]Perception[as]5[end link]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale. [bold type][if gsms is 5]-Set[end if][roman type][line break]";
-		say "(6) [link]Intelligence[as]6[end link]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping. [bold type][if gsms is 6]-Set[end if][roman type][line break]";
-		say "(7) [link]Random[as]7[end link]: Randomize your stat points[bold type][if gsms < 1 or gsms > 6]-Set[end if][roman type][line break]";
+		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
+		say "(1) [link]Strength[as]1[end link] = [if gsms is 1][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link] = [if gsms is 2][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link] = [if gsms is 3][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link] = [if gsms is 4][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Perception[as]5[end link] = [if gsms is 5][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
+		say "(6) [link]Intelligence[as]6[end link] = [if gsms is 6][bold type]17[roman type][otherwise if gsms is 7]??[run paragraph on][otherwise]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(7) [link]Random[as]7[end link]: Randomize your stat points upon creation.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";	
 		while 1 is 1:
@@ -6664,9 +6673,31 @@ to say gsopt_1:
 				say "Invalid Entry";
 		if calcnumber is not 0:
 			now gsms is calcnumber;
+			gs_stats;
 			now gsexit is 1;
 		otherwise:
 			now gsexit is 1;
+
+
+To gs_stats: [apply stat bonus]
+	follow the random stats rule;	[resets all to 12]
+	if gsms is 1:
+		increase strength of player by 5;
+	otherwise if gsms is 2:
+		increase dexterity of player by 5;
+	otherwise if gsms is 3:
+		increase stamina of player by 5;
+	otherwise if gsms is 4:
+		increase charisma of player by 5;
+	otherwise if gsms is 5:
+		increase perception of player by 5;
+	otherwise if gsms is 6:
+		increase intelligence of player by 5;
+	otherwise if gsms is 7 and started is 1:
+		randomstatstart;
+	otherwise if started is 1:
+		say "Invalid stat choice - defaulting to random.";
+		randomstatstart;
 
 	
 to say gsopt_2:
@@ -6730,6 +6761,7 @@ to say gsopt_4:
 
 
 to say gsopt_start:
+	now started is 1;
 	if gspg is 1:	[male]
 		now the cocks of the player is 1;
 		now the cock length of the player is 6;
@@ -6742,20 +6774,7 @@ to say gsopt_start:
 		now the cunt width of the player is 4;
 		now the breasts of the player is 2;
 		now the breast size of the player is 2;
-	if gsms is 1:
-		increase strength of player by 5;
-	otherwise if gsms is 2:
-		increase dexterity of player by 5;
-	otherwise if gsms is 3:
-		increase stamina of player by 5;
-	otherwise if gsms is 4:
-		increase charisma of player by 5;
-	otherwise if gsms is 5:
-		increase perception of player by 5;
-	otherwise if gsms is 6:
-		increase intelligence of player by 5;
-	otherwise:
-		randomstatstart;		
+	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
 	increase the HP of the player by 5;
@@ -6763,7 +6782,6 @@ to say gsopt_start:
 	now the capacity of the player is five times the strength of the player;
 	now humanity of player is 100;
 	startfreefeats; 
-	now started is 1;
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	sort table of random critters in lev order;	
