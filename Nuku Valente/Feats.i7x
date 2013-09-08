@@ -300,7 +300,9 @@ instead of addfeating the basic feats:
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
-	if autofeatloading is false, say "Are you sure you want '[title entry]': [description entry][line break]?";
+	if autofeatloading is false:
+		say "You've chosen '[title entry]': [description entry][line break]";
+		say "Is this what you want?";
 	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
