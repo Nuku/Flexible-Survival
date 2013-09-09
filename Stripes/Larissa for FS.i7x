@@ -169,7 +169,7 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if ( cocks of player > 0 and cunts of Larissa > 0 ) or ( cunts of player > 0 and cocks of Larissa > 0 ) and a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist and bodycat of Larissa is 2:
+	if ( ( cocks of player > 0 and cunts of Larissa > 0 ) or ( cunts of player > 0 and cocks of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist and bodycat of Larissa is 2:
 		say "[Larissasex_taurfun]";
 	otherwise if player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
