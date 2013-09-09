@@ -6310,6 +6310,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
+				choose row current menu selection from the table of gainable feats;
 				say "[title entry]: [description entry][line break]";
 				say "Is this what you want?";
 				if the player consents:
@@ -6591,11 +6592,12 @@ To regularstart: [normal start method]
 		say "(11) [link]Waiting for Input[as]11[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(12) [link]Screen Clearing[as]12[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "[line break]";
+		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-12)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 12:
+			if ( calcnumber >= 0 and calcnumber <= 12 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6644,6 +6646,12 @@ To regularstart: [normal start method]
 				say "Turn on Screen Clearing?";
 				if player consents:
 					now clearnomore is 0;
+		otherwise if calcnumber is 99:
+			now trixieexit is 1;
+			try restoring the game;
+			if maxhp of player is 0:
+				now trixieexit is 0;
+				try restarting the game;
 		otherwise if calcnumber is 0:
 			say "Confirm game start?";
 			if player consents:
