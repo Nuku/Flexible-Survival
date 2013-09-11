@@ -6621,31 +6621,43 @@ To regularstart: [normal start method]
 			try WSadjusting;
 		otherwise if calcnumber is 10:
 			if hypernull is 0:
+				now hypernull is 1;
+			otherwise:
+				now hypernull is 0;
+[			if hypernull is 0:
 				say "Turn off Hyperlinks?";
 				if player consents:
 					now hypernull is 1;
 			otherwise:
 				say "Turn on Hyperlinks?";
 				if player consents:
-					now hypernull is 0;
+					now hypernull is 0;		]
 		otherwise if calcnumber is 11:
 			if waiterhater is 0:
+				now waiterhater is 1;
+			otherwise:
+				now waiterhater is 0;
+[			if waiterhater is 0:
 				say "Turn off delays?";
 				if player consents:
 					now waiterhater is 1;
 			otherwise:
 				say "Turn on delays?";
 				if player consents:
-					now waiterhater is 0;
+					now waiterhater is 0;		]
 		otherwise if calcnumber is 12:
 			if clearnomore is 0:
+				now clearnomore is 1;
+			otherwise:
+				now clearnomore is 0;
+[			if clearnomore is 0:
 				say "Turn off Screen Clearing?";
 				if player consents:
 					now clearnomore is 1;
 			otherwise:
 				say "Turn on Screen Clearing?";
 				if player consents:
-					now clearnomore is 0;
+					now clearnomore is 0;		]
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
