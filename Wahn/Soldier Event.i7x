@@ -205,6 +205,18 @@ Instead of resolving a Soldier Squad:
 [   0: nothing happened                                                 ]
 [   1: Xerxes fucked her                                                ]
 [  99: player forbade Xerxes to get close to Amy                        ]
+[                                                                       ]
+[ level of Amy (relationship with the Felinoid)                         ]
+[   0: nothing happened                                                 ]
+[   1: he fucked her                                                    ]
+[  99: player warned Amy about the felinoid's musk                      ]
+[                                                                       ]
+[ Xp of Amy (relationship with Fang)                                    ]
+[   0: nothing happened                                                 ]
+[   1: Fang fucked her                                                  ]
+[  99: player forbade Beta Fang to get close to Amy                     ]
+
+
 
 Amy is a woman. The hp of Amy is usually 0.
 The description of Amy is "[AmyDesc]";
@@ -252,7 +264,7 @@ An everyturn rule:
 			otherwise if AmyNewPuppies is 3:
 				say "     Soon, her contractions come quicker and quicker, and then a puppy slides out of her stretched vagina, quickly followed by another and another. They're rather large for newborn dogs, but then - Amy isn't a normal husky either. You quickly grab a towel and wipe the three down, then put them up against the husky woman's breasts to drink. Hungrily sucking up milk, the little ones quickly grow, arriving at early teen development before slowing down again.";
 		otherwise:
-			say "     You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should go check on Amy in the library...";
+			say "     You have a strange feeling in your body, as if you somehow just know that a new life has entered this world. Maybe you should go check on Amy in the library...";
 		increase Libido of Amy by AmyNewPuppies;
 		now AmyNewPuppies is 0;
 		now hp of Amy is 12;
@@ -284,8 +296,7 @@ instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotte
 	otherwise if AmyMaturityCounter > 8:
 		say "     As you enter the library, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";		
 	otherwise if AmyMaturityCounter > 1:
-		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";						
-				
+		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";										
 instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
 	now lastfuck of Amy is turns + 4;
@@ -332,7 +343,84 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			say "     [line break]";
 			say "     Shaking your head to the dog in the body of a human teenager, you take Xerxes to his cot, some distance away from Amy. After having him sit on it, you continue to tell him that he should stay away from Amy. Your pet gives a somewhat sad yip as he looks over at the naked husky again, then accepts his master's orders and lies down.";
 			now thirst of Amy is 99;  [Xerxes/Amy sex forbidden]
-	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1:
+	otherwise if hp of Amy > 10 and Felinoid Companion is tamed and level of Amy is 0:	[first interest of the Felinoid in her]			
+		say "     Entering the library, you see Amy walking towards her bedding with a book in hand, reading intently. Then suddenly, your felinoid companion moves into her way, giving a welcoming growl as he circles the young husky, rubbing his flank against her hips. Amy gives a pleased giggle at his presence and reaches down to pet him, rubbing behind his ears and down over his back, making the large feline purr almost as loud as an idling motor. He luxuriates in her touch, stretching so she can get to the best spots and brushing against her as often as he can. You can see Amy take a deep breath through her nose, giving a soft moan as she does so. Before long, the young husky is crouched down besides the big cat, her book lying forgotten on the ground while she strokes under his chin, her other hand on her crotch, caressing her open and quickly swelling pussy lips.";		
+		say "     [line break]";
+		say "     Having been close to the felinoid and been in the influence of his stimulating musk yourself, you can see where this is going from a mile away. Do you let Amy get her first sexual experience with the large cat, or should you move in and put a stop to this? (Y = allow it, N = stop this) ";
+		if player consents:  [felinoid fucks Amy]
+			say "     [line break]";
+			say "     Spellbound by the soothing purr, the soft touch of the felinoid's fur and his stimulating musk, Amy's arousal mounts higher and higher by the minute. It doesn't take much longer until she moves into position on all fours, her legs spread and tail held high to allow the felinoid access to her pussy. Giving a satisfied rumbling purr, the large cat moves to sniff Amy's pussy, then licks over her female parts with its wide tongue. Several licks later, he moves further up, running his tongue over the young husky's back fur and then her neck.";
+			say "     Now standing over the smaller shape of Amy, his belly-fur touching her back, the felinoid is in the perfect position to fuck her. Lowering his hind legs a bit, your feline companion rubs his spined cock up and down the inside of husky girl's legs until he soon finds Amy's tight opening and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking her with powerful and deep thrusts. Moans, barks and growls of lust fill the library and you move a bit closer to watch the show.";
+			say "     [WaitLineBreak]";
+			say "     After quite a while of hot and heavy fucking, Amy's moans and noises rise up to a loud pleased yip, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young husky's pussy and holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat pulls out and throws himself on the floor right at that spot to lounge in satisfaction. Amy kneels down beside him to lick his cock clean, then joins him on the floor, snuggling up against his warm furred shape.";
+			if Lust of Amy is 0:	[not pregnant]
+				let AmyPregchance be a random number from 1 to 20;  	
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;  [24 turns till birth]	
+			now lastfuck of Amy is turns;			
+			now level of Amy is 1;
+		otherwise:  [stop this]
+			say "     [line break]";
+			say "     Quickly walking over there, you take Amy softly be the arm, pulling her up and walking some distance away from the felinoid with her. As she stands there, no longer in the immediate influence of your feline companion, she starts to wind down again, though she is still breathing rather heavily and stroking over her breasts with her fingers as you go pick up her book. The felinoid purrs and rubs his shoulder against you as you do so, and knowing him, you just give him a quick pat on the head, holding your breath until you stand back up. 'Not her', you tell your companion, who gives a disappointed mew, then stalks off. As you're sure that he'll try again no matter what, you warn Amy not to get too close to him in the future when you give her the book back.";
+			now level of Amy is 99;
+	otherwise if hp of Amy > 10 and Fang is in Grey Abbey Library and XP of Amy is 0:	[first interest of Fang in her]			
+		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
+		if hp of Fang < 3:  [Beta Fang can be stopped]
+			say "     [line break]";
+			say "     Do you allow your pet wolf to fuck Amy, or do you want to put an end to this? (Y = let him, N = stop him) ";
+			if player consents:	[Fang gets to fuck her]
+				say "     [line break]";
+				say "     Walking up to them, you pat the wolf's back and lean down to rub his furry balls as he thrusts into her again and again, feeling them lie heavy in your hand, full of the load he's got prepared for Amy's womb. 'Mmm... yes,' the aroused husky girl cries out as the wolf keeps pounding into her like a wild animal, 'Harder! Faster!' You slip your fingers to Amy's wet folds, caressing them as Fang's hard canine cock slides in and out.";
+				if cocks of player > 0 and anallevel > 1:  [male/herm and anal sex allowed]
+					say "     Being so close to the hot action of their mating, your own lust rears its head, giving you an almost painfully hard cock tenting your pants. The urge to bury it into the gripping embrace of Fang's tight asshole rises inside you. Do you do so? ";
+					if player consents:  [player fucks Fang]
+						say "     [line break]";
+						say "     Quickly pulling off your clothes and moving in behind Fang, you get your throbbing cock lined up with his tailhole, then push it into his tight pucker. Fang releases a soft whimper, but takes your cock easily enough in his experienced hole and doesn't let up at with his own thrusts into the wet pussy under him. Amy, meanwhile, moans loudly as your pounding against Fang's ass presses the wolf's shaft even deeper into her body. She rubs her hand-paws over his neck and ears, pulling his head down to trade licks, muzzle to muzzle.";
+						say "     Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your pet wolf's seed. On his back-end, you feel the wolf's insides twitch around your manhood with each burst of his cum into Amy, quickly driving you towards your own orgasm. As his muscles almost jerk you off as he spurts another and another blast of his seed, you can hold back no longer and blow your load deep into the wolf's bowels, claiming him once more as your own.";
+					otherwise:  [just watch and touch]
+						say "     [line break]";
+						say "     Being content to just watch and touch them a bit for now, you stay right beside Fang and Amy on the mattress, caressing her breasts and body as well as his balls. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking his canine seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
+				otherwise:  [just watch and touch]
+					say "     Being content to just watch and touch them a bit for now, you stay right beside Fang and Amy on the mattress, caressing her breasts and body as well as his balls. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking his canine seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
+				if Lust of Amy is 0:	[not pregnant]
+					let AmyPregchance be a random number from 1 to 20;  	
+					if AmyPregchance > 13:
+						now Lust of Amy is 24;  [24 turns till birth]	
+				now lastfuck of Amy is turns;
+				now XP of Amy is 1;	 [he fucked her and may do it again]
+			otherwise:	[stop Fang]
+				say "     [line break]";
+				say "     Rushing forward, you grab Fang by the scruff of his neck and on his back, pulling him off the young husky under him and throwing him back from her. Snarling at being stopped from mounting a horny female, the black wolf shows his teeth for a second, then whines and tucks in his tail in submission a moment later as you give him your best domineering stare and remind him of his position as your Beta. Turning to Amy, you ask if she's okay, getting a moaned 'Yes, but I need someone to fuck me - now!' as an answer. Getting hammered by a randy wolf for a moment sent Amy's body into overdrive and she really needs someone to take up the slack, and quickly.";
+				if cocks of player > 0:
+					say "     [WaitLineBreak]";				
+					say "     Well, you can't just leave her hanging now, can you? Quickly sliding off your clothes, you step up and kneel between Amy's legs, then lean over her. As you start making out hungrily, your [cock of player] shaft comes to rest hotly against her pubic mound. Amy moans as you take hold of your cock, rubbing its head over her pussy lips, then put its tip between them. Sliding into her wet and tight vagina in one smooth move, you grunt deeply as you bottom out in her, your balls touching her soft crotch-fur. You stay like that for a moment, giving her the opportunity to get used to your member spreading her inner passage, meanwhile seeking out Fang with a hard stare and growling to him to show that Amy is yours. Then you start pulling out a bit and thrusting back in, fucking the young husky.";
+					say "     Amy is a very enthusiastic sex-partner, holding you close with her arms and making out as you pound into her. She even wraps her legs around your hips to pull your crotch down harder against her, moaning as your balls hit her buttcheeks when you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[otherwise].[end if] Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
+					say "     [line break]";
+					say "  	  Immensely satisfied, you stay like that on top of her for a while, then pull your softening cock out and lie down with Amy. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";		
+					if Lust of Amy is 0:	[not pregnant]
+						let AmyPregchance be a random number from 1 to 20;  	
+						if AmyPregchance > 13:
+							now Lust of Amy is 24;  [24 turns till birth]
+					now lastfuck of Amy is turns;
+					now XP of Amy is 99;  [no Amy-pussy for Fang]						
+				otherwise:
+					say "     [WaitLineBreak]";					
+					say "     Well, you can't just leave her hanging now, can you? Quickly sliding off your clothes, you step up and kneel between Amy's legs, then lean over her. As you start making out hungrily, you move your hand down her naked body, stroking over her breasts and soft-furred stomach to arrive at her crotch. Carefully spreading the husky's sensitive pussy lips with your fingers, you rub over her clit, making her moan in pleasure. While you proceed to push your fingers into her wet pussy, stroking the aroused husky's insides, you look over at Fang, still standing nearby in his submissive stance. 'Fetch' you call out to him, pointing at the dildo you keep on a nearby shelf for use on Amy. The black wolf complies, delivering the rubber sex toy to you, though not without a whine that it'll go where he's been forbidden.";
+					say "     Grinning, you hold out the dildo to Fang to have him lick it, then send him off to his usual spot with a wave of your hand. He's only a pet after all, something he clearly needs a reminder of. Bringing the dildo to Amy's crotch next, you rub its head over her pussy lips and push it in between them, going deeper and deeper. She moans loudly as you sink the whole rubber shaft into her, up till the balls as its base touch her crotch. Taking hold of the sex toy there, you pull it out halfway again, then thrust it back into her, fucking Amy with it and rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though a bit tiring for your arm, so you switch off your left and right hands as you take care of the insatiably horny husky. Accompanied by moans and gasps to go harder and faster, Amy's libido builds up higher and higher and her arousal finally culminates in a pretty noisy orgasm. Giving a lust-filled howl as she comes, Amy writhes on her mattress, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with.";
+					say "     [line break]";
+					say "  	  Satisfied in having taken care of her, you leave the dildo buried in her pussy and lie down with Amy on her mattress. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";							
+					now lastfuck of Amy is turns;
+					now XP of Amy is 99;  [no Amy-pussy for Fang]											
+		otherwise:  [Alpha Fang fucks her for sure]
+			say "     You stand there and watch as Fang mounts Amy, as is his right as Alpha over you - and now her as well. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your big alpha is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your master's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that she belongs to him now.";
+			if Lust of Amy is 0:	[not pregnant]
+				let AmyPregchance be a random number from 1 to 20;  	
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;  [24 turns till birth]
+			now lastfuck of Fang is turns;
+			now lastfuck of Amy is turns;
+			now XP of Amy is 1;			
+	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 3 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed."; 
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";		
 		if Lust of Amy is 0:
@@ -341,6 +429,26 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;		
 		now lastfuck of Amy is turns;
 		now lastfuck of Xerxes is turns;
+	otherwise if Felinoid Companion is tamed and (lastfuck of felinoid companion - turns) > 12 and level of Amy is 1 and a random chance of 1 in 3 succeeds:		
+		say "     Entering the library, you see Amy - on all fours on her bedding, with your felinoid companion standing over her, his legs bent a bit as he mounts her from behind. She's clearly under his influence again, all wound up and horny to be fucked hard. Mating her with powerful and deep thrusts, the felinoid doesn't hold back in any way. Moans, barks and growls of lust fill the library and you move a bit closer to watch the show.";
+		say "     After quite a while of hot and heavy fucking, Amy's moans and noises rise up to a loud pleased yip, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young husky's pussy and holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat pulls out and throws himself on her bedding to lounge in satisfaction. Amy kneels down beside him to lick his cock clean, then joins him on the mattress, snuggling up against his warm furred shape.";		
+		if Lust of Amy is 0:
+			let AmyPregchance be a random number from 1 to 20;  	
+			if AmyPregchance > 13:
+				now Lust of Amy is 24;		
+		now lastfuck of Amy is turns;
+		now lastfuck of felinoid companion is turns;		
+	otherwise if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 3 succeeds:
+		if hp of Fang < 3:  [Beta Fang]		
+			say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again and he was only too happy to fuck the horny husky. The black wolf pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your wolf's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
+		otherwise:  [Alpha Fang]
+			say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. As he should be - as Alpha, he's got the right to take any female - or male - he likes, whenever he wants. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your big alpha is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your master's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that she belongs to him.";
+		if Lust of Amy is 0:
+			let AmyPregchance be a random number from 1 to 20;  	
+			if AmyPregchance > 13:
+				now Lust of Amy is 24;		
+		now lastfuck of Amy is turns;
+		now lastfuck of Fang is turns;
 	otherwise:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
@@ -434,6 +542,18 @@ to say AmySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Have sex with both your human dog and horny husky.";
 		now toggle entry is AmySex rule;		
+	if (cocks of player > 0 and level of Amy is 1 and felinoid companion is tamed):
+		choose a blank row in table of fucking options;
+		now title entry is "Have a threesome with Amy and the Felinoid";
+		now sortorder entry is 7;
+		now description entry is "Have sex with both your felinoid companion and horny husky.";
+		now toggle entry is AmySex rule;			
+	if (cocks of player > 0 and XP of Amy is 1 and Fang is in the Grey Abbey Library):
+		choose a blank row in table of fucking options;
+		now title entry is "Have a threesome with Amy and Fang";
+		now sortorder entry is 8;
+		now description entry is "Have sex with both the black wolf and horny husky.";
+		now toggle entry is AmySex rule;			
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -459,6 +579,10 @@ This is the AmySex rule:
 			say "[AmySex5]";		
 		otherwise if (nam is "Have a threesome with Amy and Xerxes"):		
 			say "[AmySex6]";				
+		otherwise if (nam is "Have a threesome with Amy and the Felinoid"):		
+			say "[AmySex7]";					
+		otherwise if (nam is "Have a threesome with Amy and Fang"):		
+			say "[AmySex8]";					
 		wait for any key;
 		
 to say AmySex1:    [cock sucked by Amy]
@@ -551,8 +675,117 @@ to say AmySex6:    [Xerxes+Amy+Player Threesome]
 			now Lust of Amy is 24;	[someone has knocked her up - either the player or Xerxes]
 	now lastfuck of Amy is turns;
 	now lastfuck of Xerxes is turns;
-	now thirst of Amy is 1;
 
+to say AmySex7:    [Felinoid+Amy+Player Threesome]
+	say "     Accompanied by your felinoid companion, you walk over to the mattress you put up here in the library for Amy. The large cat sniffs the female husky's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'Yeah, lets have some fun with her.'";
+	say "     Soon after, Amy comes into sight from among the long bookshelves in the library, walking towards you slowly, the stack of books in her hands so high that she can't actually see what is in front of her. As she comes closer, you walk up to her and take more than half of the books from her. She says 'Thank you, that's very nice of you.' - then she notices the look of lust in your eyes and the felinoid's presence. 'Oh', she says in an amused tone and sets down her books on the ground, then continues with 'Were you boys waiting for me? I wonder why...' in a playfully innocent tone. A moment later, she betrays that she's no blushing virgin as she moves up close to you, her hand feeling up the tent in your pants. With a lustful wink, she then saunters over to her bedding, swishing her tail while demonstratively shaking her hips.";
+	say "     [WaitLineBreak]";
+	say "     Quickly adding the books in your hands to the pile on the floor, you follow her over to the mattress, pulling off your clothes and dropping them as you go along. Soon you're sitting beside her, as naked as she herself always is, with the felinoid standing right beside you. The large cat circles you both, giving a pleasantly rumbling purr and rubbing the side of his furred body against yours, his long tail lazily flicking through the air in front of your faces. The effects of his touch and heady musk take effect almost immediately, with both Amy's and your breathing becoming quicker as you start panting in rising lust. Her pussy gets moist and ready for sex, a fact easily visible as she spreads her nether lips with her fingers and starts rubbing them.";
+	say "     Suddenly stopping behind Amy, the felinoid puts his head over her shoulder, rubbing the side of his furry face against hers. Then he lifts a paw, softly pushing against her back while giving suggestive rumbles from his throat. Taking the hint, the young husky gets up from the mattress to move around on it and gets into a position on all fours, her legs spread a bit and tail raised high, presenting her ready and dripping pussy.";
+	say "     [WaitLineBreak]";
+	say "     After circling around you once more, the felinoid moves to Amy's backside, licking her crotch with his rough tongue a few times. Then he continues further up, licking over the arched back of the husky girl and continuing to her neck. Standing over the smaller shape of Amy, his belly-fur touching her back, the felinoid now is in the perfect position to fuck her. Lowering his hind legs a bit, the feline rubs his spined cock up and down the anthro husky's crotch until he soon finds Amy's swollen pussy lips and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library.";
+	say "     [line break]";
+	say "     What would you like to do now?  Do you let Amy blow you and feed her your load (Y), or do you want to fuck and come in the felinoid's ass (N)? ";   
+	if player consents:     [sucked by Amy]
+		say "     [line break]";
+		say "     Your own libido awakened by the images of the large cat on top of the human-like Amy, as well as the felinoid's touch and musk, you quickly decide that it's time to join in. Putting a hand on your raging [cock of player] hardon, you stroke it a few times before moving into position and holding it out for Amy. The young husky takes it in her muzzle, carefully keeping her teeth away as she starts bobbing up and down. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. While you're getting an amazing blowjob, the felinoid fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure.";
+		say "     Even though he is a quite virile male, everyone's stamina has its limits. When Amy suddenly gives a pleased yip and orgasms, her female juices dripping down to soak into her bedding, that gives large cat the last nudge too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Amy's womb with his seed.";
+		say "     [WaitLineBreak]";		
+		say "     After a moment of riding out her own orgasm, Amy continues the blowjob she was giving you and before too much longer, the husky girl's enthusiastic sucking drives your lust through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her a 'Good dog', tousling their hair, then pull Amy's head to yours and give her a deep kiss. Lying down on the mattress with your two friends after that, you enjoy each other's warmth and closeness for a while, accompanied by the felinoid's rumbling purr.";
+	otherwise:              [fucking the Felinoid]
+		say "     [line break]";
+		say "     Your own libido awakened by the images of the large cat on top of the human-like Amy, as well as the felinoid's touch and musk, you quickly decide that it's time to join in. Putting a hand on your raging [cock of player] hardon, you grab the bottle of lube you've got lying around not too far way. After spreading some of the slick substance on your shaft, you step up behind the large shape of the rutting felinoid. Running your hands up through the soft fur on his lower back, you grab the feline's hips tightly then slam forward, burying your cock to the hilt in his warm, tight cave. Roaring at the sudden anal intrusion, the felinoid stops thrusting into Amy for a moment, looking back over his shoulder with partly bared teeth. That doesn't last long, though - moving in and out of his hole, your shaft stimulates his sensitive prostrate, and soon your big cat is purring in satisfaction and fucking Amy again.";
+		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Amy suddenly gives a pleased yip and orgasms, her female juices dripping down to soak into her bedding, that gives large cat the last nudge too. A deep rumble of satisfaction vibrates in the felinoid's throat as he pushes his member as deep as it will go and fills Amy's womb with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
+		say "     [WaitLineBreak]";
+		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch the felinoid's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Amy's mattress. The big cat and husky girl separate from each other too, then lie down next to you, with Amy cuddling up to the felinoid's soft and warm belly fur. Purring as loud as a idling motor, the big cat starts licking her fur. Looks as if he wants to spread his scent over all of the husky's body.";
+	if Fang is in the Grey Abbey Library:
+		say "     [line break]";
+		if hp of Fang is 1 or hp of Fang is 2:  [Beta Fang]
+			if XP of Amy is 0:
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Amy a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
+			if XP of Amy is 1:
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Amy a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
+			if XP of Amy is 99:
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Amy a hostile stare. Seeing the other fuck someone he's been forbidden to mount doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";				
+		otherwise:            [Alpha Fang]
+			if XP of Amy is 0:
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Amy a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
+			if XP of Amy is 1:
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving the felinoid and Amy a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
+	if Lust of Amy is 0:  [not pregnant yet]
+		let AmyPregchance be a random number from 1 to 20;  	
+		if AmyPregchance > 13:
+			now Lust of Amy is 24;	[someone has knocked her up - either the player or the Felinoid]
+	now lastfuck of Amy is turns;
+	now lastfuck of Felinoid Companion is turns;
+	
+to say AmySex8:    [Fang+Amy+Player Threesome]
+	if (hp of Fang is 1 or hp of Fang is 2):    [Beta Fang] 
+		say "     Walking over to where Fang's leash is currently tied in the library, you kneel down beside your faithful guardian and stroke him between his ears and over his furred flank. Wagging his tail, he licks your hand, happy at getting attention from his Alpha. 'That's a good wolf. Come on, let's have some fun with Amy' you say and loosen Fang's leash from around his neck. Accompanied by your black wolf, you walk over to the mattress you put up here in the library for the husky girl.";
+		say "     Soon after, Amy comes into sight from among the long bookshelves in the library, walking towards you slowly, the stack of books in her hands so high that she can't actually see what is in front of her. As she comes closer, you walk up to her and take more than half of the books from her. She says 'Thank you, that's very nice of you.' - then she notices the look of lust in your eyes and Fang's presence. 'Oh', she says in an amused tone and sets down her books on the ground, then continues with 'Were you boys waiting for me? I wonder why...' in a playfully innocent tone. A moment later, she betrays that she's no blushing virgin as she moves up close to you, her hand feeling up the tent in your pants. With a lustful wink, she then saunters over to her bedding, swishing her tail while demonstratively shaking her hips.";
+		say "     [WaitLineBreak]";
+		say "     Quickly adding the books in your hands to the pile on the floor, you follow her over to the mattress, pulling off your clothes and dropping them as you go along. Soon you're sitting beside her, as naked as she herself always is, with the Fang standing right beside you. Smiling at Amy, you lean back, holding up your hard cock for her and she quickly gets into a kneeling position, leaning forward to blow you. As she does so, Fang moves up behind her and sniffs Amy's pussy, then looks up to you pleadingly. Seeing his canine cock dangling erect beneath his body, it's pretty obvious what he wants to do, and as you slide your shaft once again into Amy's throat you smile and nod to Fang to continue. Without delay, the wolf jumps up and mounts Amy's body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into Amy's pussy. Driven by his feral lust, Fang ruts the young woman mercilessly, growling and panting as he thrusts in and out.";
+		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back.  Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
+		say "     [line break]";
+		say "     What do you want to do now? Get blown by Amy and feed her your load (Y), or fuck and come in Fang's ass (N)? ";   
+		if player consents:     [sucking]
+			say "     [line break]";
+			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Amy immediately goes for it, taking your hard length into her mouth again and starts bobbing up and down on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. Running your hands through Amy's hair, you speed up face-fucking the husky girl as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
+			say "     Breathing heavily, you stand still as Amy softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to sit down at the end of the mattress and watch the rest of your pet's coupling with Amy.";
+			say "     [WaitLineBreak]";
+			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed.";
+			say "     That should satisfy even as horny a husky as Amy for a while. With both of them standing where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate, you lay back on the mattress and get comfortable.";	
+		otherwise:              [fucking Fang]
+			say "     [line break]";
+			say "     Your eyes searching out your goal - the tight hole under Fang's tail - you stroke your hard cock and step closer to Fang's rear end. Running your hands through the fur on his lower back, you grab hold of the wolf's hips and sink your [cock of player] shaft into him with one deep thrust. After giving a loud yelp at the sudden anal invasion, Fang stops for a second and looks back. Seeing it's you, he accepts being fucked as his due to the Alpha, even tightening his anal muscles around you as you move inside him. Then the hot threesome continues, all of you moving together to give each other as much pleasure as you can.";
+			say "     [WaitLineBreak]";
+			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed. That only leaves you, with Fang's anal muscles twitching and gripping your manhood tightly as you thrust in one last time. Filling the wolf's back passage with a huge load of your seed, you once again prove your dominance as Alpha over him.";
+			say "     Resting on Fang's furry back for a moment, you then pull your cock out of his cum-filled hole and sink down on Amy's mattress. Satisfied but exhausted after this session, you lie on it lengthwise and get comfortable. Both Amy and Fang still stand where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate.";
+		if felinoid companion is tamed:     [rivalry message - Beta Fang vs Felinoid]
+			say "     [line break]";
+			if level of Amy is 0:  [felinoid didn't fuck her yet]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Amy a calculating look. You see him pad closer and give a deep, rumbling growl. Fang growls in response, but slinks back to his post by the door as soon as his knot goes down, driven off by the dominant feline creature. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional glance of interest at the dog-person and glare at the wolf. In your sleepy haze, you almost think the feline's looking at you possessively as well, but that must be your imagination you tell yourself as you doze off...";
+			otherwise if level of Amy is 1:  [felinoid did fuck her]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Amy a calculating look. You see him pad closer and give a deep, rumbling growl. Fang growls in response, but slinks back to his post by the door as soon as his knot goes down, driven off by the dominant feline creature. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional possessive glance at the dog-person and glare at the wolf for touching what the Felinoid has claimed as his own. In your sleepy haze, you almost think the feline's looking at you possessively as well, but that must be your imagination you tell yourself as you doze off...";
+			otherwise if level of Amy is 99:  [felinoid forbidden to fuck her]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Amy a calculating look. You see him pad closer and give a low, frustrated growl. Fang growls in response, holding his own, seemingly aware that you stopped the felinoid from fucking Amy before, but allowed him to fuck and breed her. When his knot goes down enough so he can pull out, Fang and Amy lie down on the mattress to cuddle against you. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional glance at the three of you. In your sleepy haze, you almost think the feline's just biding his time before taking Amy and you as well, but that must be your imagination you tell yourself as you doze off...";					
+	otherwise if (hp of Fang is 3 or hp of Fang is 4):    [Alpha Fang]  
+		say "     Walking over to Fang, you crouch next to the big wolf and stroke him, rubbing his warm belly fur and his quickly hardening erection.  With your Alpha hot and ready to go, you and he walk over to the mattress you put up here in the library for the husky girl.";
+		say "     Soon after, Amy comes into sight from among the long bookshelves in the library, walking towards you slowly, the stack of books in her hands so high that she can't actually see what is in front of her. As she comes closer, you walk up to her and take more than half of the books from her. She says 'Thank you, that's very nice of you.' - then she notices the look of lust in your eyes and Fang's presence. 'Oh', she says in an amused tone and sets down her books on the ground, then continues with 'Were you boys waiting for me? I wonder why...' in a playfully innocent tone. A moment later, she betrays that she's no blushing virgin as she moves up close to you, her hand feeling up the tent in your pants. With a lustful wink, she then saunters over to her bedding, swishing her tail while demonstratively shaking her hips.";
+		say "     [WaitLineBreak]";
+		say "     Amy gets on all fours to sniff and be sniffed by Fang, softly panting in rising arousal. Already knowing what's expected of her, she then turns her backside to the wolf, taking a secure stance and spreads her legs a bit further. With a satisfied growl Fang moves up behind her and sniffs Amy crotch, then jumps up and mounts her more human-like body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into the husky's ready pussy. Driven by his feral lust, Fang ruts the young woman mercilessly, growling and panting as he thrusts in and out.";
+		say "     [WaitLineBreak]";		
+		say "     Seeing your Alpha penetrate Amy makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Amy eagerly licks your balls and cock a bit before taking it into her mouth. ";
+		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back.  Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
+		say "     [line break]";
+		say "     What do you want to do now?  Get blown by Amy and feed her your cum (Y), or wait your turn at filling her pussy (N)? ";    
+		if player consents:     [sucking]
+			say "     [line break]";
+			say "     Walking back around to the front of the rutting couple, you grab your erect member and stroke it demonstratively as you hold it out. Amy immediately goes for it, taking your hard length into her mouth again and starts bobbing up and down on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. Running your hands through Amy's hair, you speed up face-fucking the husky girl as you're getting close to an orgasm. Soon you can feel your load boiling up from your balls and with one last thrust you bury yourself all the way in her throat and shoot spurt after spurt of cum directly into her stomach.";
+			say "     Breathing heavily, you stand still as Amy softly sucks you until you stop coming, then pulls off and licks your balls. Satisfied and just a bit exhausted, you move over to sit down at the end of the mattress and watch the rest of your Alpha's coupling with Amy.";
+			say "     [WaitLineBreak]";
+			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed.";
+			say "     That should satisfy even as horny a husky as Amy for a while. With both of them standing where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate, you lay back on the mattress and get comfortable.";
+		otherwise:              [fucking Amy]
+			say "     [line break]";
+			say "     Deciding that you'll wait your turn, you move to sit on the other end of Amy's mattress, watching your Alpha rut the husky girl and jerk off a bit. After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed."; 
+			say "     [WaitLineBreak]";
+			say "     You move over to crouch beside them, fondling and stroking both their bodies as you wait for Fang's knot to go down. Some time later, the wolf pulls out of Amy's hole and sits down on the floor nearby, curling up to lick himself clean. With Amy's pussy still gaping a bit and dripping femcum and your Alpha's seed, you quickly get on top of her and ram your erection home. Even stretched by Fang's shaft, she's still nicely tight and feeling your strong Alpha wolf's cum filling her hole and squishing around your thrusting member is a definite plus. It doesn't take all that long until you feel a familiar tingling in your balls, and with one last thrust, you bottom out inside Amy and come, adding your seed to Fang's load.";
+			say "     Phew.  Satisfied and just a bit exhausted, you keep your slowly softening shaft in Amy's pussy, just lowering the two of you down to lie on her bedding together.";
+		if felinoid companion is tamed:     [rivalry message - Alpha Fang vs Felinoid]
+			say "     [line break]";
+			if level of Amy is 0:  [Felinoid hasn't fucked Amy yet]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Amy a calculating look. Seems almost like he's up to something - taking Amy away from Fang and mounting her himself most likely. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
+			otherwise if level of Amy is 1:  [Felinoid has fucked Amy]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Amy a calculating look. Seems almost like he's up to something - filling Amy again to make her his alone possibly.  Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
+			otherwise if level of Amy is 99:  [Felinoid forbidden to fuck her]
+				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving the Fang and Amy a calculating look. You see him pad closer and give a low, frustrated growl. Fang growls in response, holding his own. The felinoid then pads to lie down on the floor between you and the door, grooming himself with the occasional glance at the three of you. In your sleepy haze, you almost think the feline's just biding his time before taking Amy and you as well, but that must be your imagination you tell yourself as you doze off...";						
+	if Lust of Amy is 0:  [not pregnant yet]
+		let AmyPregchance be a random number from 1 to 20;  	
+		if AmyPregchance > 13:
+			now Lust of Amy is 24;	[someone has knocked her up - either the player or Fang]
+	now lastfuck of Amy is turns;
+	now lastfuck of Fang is turns;	
 
 Red Light Requisition is a situation.
 The sarea of Red Light Requisition is "Red";
@@ -668,9 +901,11 @@ Instead of resolving a Thankful Soldier:
 	otherwise:
 		if TSEventCounter is 0: [first meeting]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
-			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.'";
-			say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N) ";
+			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.' He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.'";
+			say "     [line break]";
+			say "     Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N) ";
 			if player consents:   [accept supplies]
+				say "     [line break]";
 				say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route. You memorize where the alley is in the city, hoping you can catch him on patrol again sometime later.";
 				say "     Food x3, Water x1 obtained.";
 				increase carried of food by 3;
