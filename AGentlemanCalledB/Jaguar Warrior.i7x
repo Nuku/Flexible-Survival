@@ -53,7 +53,7 @@ to say JaguarWarriordesc:
 	otherwise:
 		say "     You [run paragraph on]";
 	say "find yourself facing a powerful looking feline warrior, with the distinctive markings of a jaguar. He carriers an ornate feathered shield and a dangerous looking sword crafted from a stick with with several sharp looking black stones embedded in it. [if hp of Tehuantl < 4] Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
-	say "     As the jaguar readies his weapon and moves forward you see the barbed tip of his feline cock poking free of it's sheath, making his intent clear as he charges forward.";
+	say "     As the jaguar readies his weapon and moves forward you see the barbed tip of his feline cock poking free of its sheath, making his intent clear as he charges forward.";
 
 to say JagWarVic_Vag:
 	say "You groan as the powerful jungle cat pushes you to the ground roughly, leaving you staring up at the large cat and his thick feline member as he approaches your supine form. Unceremoniously he kicks your legs apart, exposing your damp [cunt size desc of player] cunt to him as he towers above you.";
