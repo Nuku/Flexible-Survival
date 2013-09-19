@@ -5812,6 +5812,7 @@ Include Mall Events by Sarokcat.
 Include Beach Events by Sarokcat.
 Include Park Events by Sarokcat.
 Include Museum Events by Sarokcat.
+Include Museum Rounds for FS by Stripes.
 Include Zoo Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
