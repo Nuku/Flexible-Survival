@@ -29,7 +29,8 @@ The conversation of Valerie is { "Riddle me this!" }.
 Valerie is in Museum Foyer.
 
 instead of linkactioning Valerie when valtalk > 0:
-	say "Possible Actions: [link]talk[as]talk Valerie[end link], [link]smell[as]smell Valerie[end link], [link]fuck[as]fuck Valerie[end link], [link]riddle[as]riddle Valerie[end link][line break]";
+	say "Possible Actions: [link]talk[as]talk Valerie[end link], [link]smell[as]smell Valerie[end link], [link]fuck[as]fuck Valerie[end link], [link]riddle[as]riddle Valerie[end link][if riddlewin > 2], [link]museum rounds[end link][end if]
+[line break]";
 
 instead of sniffing valerie:
 	say "She smells like a sphinx, inscrutable and cryptic.";
@@ -47,7 +48,6 @@ Riddlewin is a number that varies.
 Lastriddlesphinx is a number that varies. Lastriddlesphinx is usually 250.
 Lastsphinxfucked is a number that varies. Lastsphinxfucked is usually 250.
 riddlesphinx is a number that varies. riddlesphinx is usually 0.
-sphinxfucked is a number that varies. sphinxfucked is usually 0.
 
 riddlesphinxing is an action applying to nothing.
 
@@ -76,10 +76,12 @@ carry out riddlesphinxing:
 	if diceroll is greater than 15:	
 		say "'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess.  'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs.  'We should definitely do this again sometime soon.  Oh, and I did mention a prize, didn't I?  Here, I suppose you earned this...' she says as she pushes an item towards you.  'I found it lying around here somewhere.  Maybe you can make better use of it.  Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
+		if riddlewin > 2:
+			say "'I'll also be going around the museum to do some of my rounds soon.  I wouldn't mind a little companionship on these trips.  If you'd like to tag along, perhaps we might even find something interesting to do,' he says with an coy smile and a swish of her tail.";
 		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
 		choose row prizegift from the table of random critters;
 		if there is a loot entry:
-			if loot entry is not "":
+			if loot entry is not "" and loot entry is not " ":
 				add loot entry to invent of player;
 				say "You acquired 1 [loot entry].";
 			otherwise:
@@ -116,9 +118,9 @@ instead of fucking Valerie:
 					Infect "sphinx";
 		otherwise if cunts of player > 0:
 			now lastsphinxfucked is turns;
-			say "     'What an interesting offer.  And it's true that while we are both female, perhaps we can still help each other out a bit with our desires,' Valerie says, an interested look on her face as she eyes you speculatively.  After a long, lustful gaze over your [bodytype of player] body, she lowers herself off the counter, her soft wings flapping open at her sides for a moment as she prowls towards you.  'Yes, I think we creative types can have some fun with just the two of us,' the sphinx purrs as she reaches you, her hands reaching up to grip your hips, as she gently pushes you down onto your back.";
+			say "     'What an interesting offer.  And it's true that while we are both female, perhaps we can still help each other out a bit with our desires,' Valerie says, an interested look on her face as she eyes you speculatively.  After a long, lustful gaze over your [bodytype of player] body, she lowers herself off the counter, her soft wings flapping open at her sides for a moment as she prowls towards you.  'Yes, I think we creative types can have some fun with just the two of us,' the sphinx purrs as she reaches you, her forepaws reaching up to grip your hips, as she gently pushes you down onto your back.";
 			if a random chance of 3 in 5 succeeds:
-				say "     Once she has you on the ground, she lets out a rumbling purr as she stalks around you, seemingly contemplating her next action, before sprawling on the ground next to you, her r ear near your face as her feline hands rub along your legs.  She lowers her face to nuzzle your nether regions, causing you to gasp.  The amused sphinx looks back at you and then lifts one of her leonine legs up a bit, causing you to turn and look at her eagerly exposed sex, resting between those feline hind legs, its puffy lips obviously wet and needing your attention.  Having initiated the situation, you can hardly deny her needs, especially when she draws her slightly rough tongue across your already excited lips, and you find yourself cautiously moving between those strong feline legs to tease her feline opening with your hands and tongue.";
+				say "     Once she has you on the ground, she lets out a rumbling purr as she stalks around you, seemingly contemplating her next action, before sprawling on the ground next to you, her rear near your face as her feline hands rub along your legs.  She lowers her face to nuzzle your nether regions, causing you to gasp.  The amused sphinx looks back at you and then lifts one of her leonine legs up a bit, causing you to turn and look at her eagerly exposed sex, resting between those feline hind legs, its puffy lips obviously wet and needing your attention.  Having initiated the situation, you can hardly deny her needs, especially when she draws her slightly rough tongue across your already excited lips, and you find yourself cautiously moving between those strong feline legs to tease her feline opening with your hands and tongue.";
 				say "     Valerie moans needfully as you rub and lick her, her body obviously desperate for this kind of attention, her soft fur tickling your face as she rubs herself against you.  Then it is your turn to moan in pleasure as she applies her creative intellect to teasing and pleasuring your own female passage, tracing her soft claws around the sensitive edges, while she probes deeper into you with her slightly feline tongue.  Soon the two of you are both making rough, needy, beastial moans and panting as you pleasure each other on the floor of the museum, bringing each other to orgasm again and again in a contest of carnal creativity and stamina.  Eventually your exhausted body can take no more, and Valerie gives off her rumbling purr as she strokes her feline like hand along your inner thighs for a minute or two, before slowly hauling herself up, and jumping back up to the information desk for some rest of her own.";
 			otherwise:
 				say "     Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you.  She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if breast size of player > 0].  She runs her lightly raspy tongue across your nipples, much to your delight.  Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of player] breasts.  She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[otherwise].  She runs her lightly raspy tongue across your [skinname of player] skin as she licks your flat chest[end if].  As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
@@ -126,7 +128,6 @@ instead of fucking Valerie:
 			infect "sphinx";
 	otherwise:
 		say "'Sorry dear,' Valerie says with a sigh, 'I prefer my partners, a bit more... intellectually motivated if you know what I mean,' The sphinx says as she shakes her head sadly, 'I simply couldn't bring myself to submit to someone who hasn't bested me at riddles several times, maybe you should work on that first and get back to me?' Valerie says with a hopeful look.";
-
 
 
 Museum ends here.
