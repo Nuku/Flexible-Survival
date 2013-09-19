@@ -19,7 +19,7 @@ understand "museum round" as museumrounding.
 understand "valerie round" as museumrounding.
 
 check museumrounding:
-	if Valerie is not visible, say "You go around and around, but don't find who you're looking for."; instead;
+	if Valerie is not visible, say "You go around and around, but don't find who you're looking for." instead;
 
 carry out museumrounding:
 	if xp of Valerie is 0:
