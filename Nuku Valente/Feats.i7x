@@ -188,7 +188,7 @@ instead of addfeating the fun feats:
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.  It can occasionally open new, kinkier sex scenes.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.  It can occasionally open new, submissive scene variations.";
-	if Strange Serpent is resolved or ( scenario is "Forgotten" or hardmode is true ):
+	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
@@ -285,7 +285,7 @@ instead of addfeating the basic feats:
 	if level of player is greater than 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
 [	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";	]
-	if hp of doctor matt is greater than 4:
+	if hp of doctor matt is greater than 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
 		if "Mutable" is not listed in feats of player:
@@ -300,7 +300,9 @@ instead of addfeating the basic feats:
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
-	if autofeatloading is false, say "Are you sure you want '[title entry]': [description entry][line break]?";
+	if autofeatloading is false:
+		say "You've chosen '[title entry]': [description entry][line break]";
+		say "Is this what you want?";
 	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
