@@ -157,7 +157,7 @@ it is part of the player.
 It is temporary.
 
 to say centaurcumuse:
-	say "With a little shrug, you tilt your head back and slam down the centaur cum, letting the thick, gooey contents of the jar slide down your throat.  While it does slake your thirst a little, it also floods your body with infection.";
+	say "     With a little shrug, you tilt your head back and slam down the centaur cum, letting the thick, gooey contents of the jar slide down your throat.  While it does slake your thirst a little, it also floods your body with infection.";
 	decrease thirst of player by 6;
 	if thirst of player < 0, now thirst of player is 0;
 	if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
@@ -166,7 +166,7 @@ to say centaurcumuse:
 		infect "Centaur Stallion";
 
 to say centaurhairuse:
-	say "You take the long strands of thick horsehair and stare at them.  Feeling a growing compulsion, you place the roots of the tail at [one of]the base of your spine[or]at the back of your head[at random] and feel them start to grow into you.";
+	say "     You take the long strands of thick horsehair and stare at them.  Feeling a growing compulsion, you place the roots of the tail at [one of]the base of your spine[or]at the back of your head[at random] and feel them start to grow into you.";
 	if "Male Preferred" is listed in feats of player and guy is not banned:			[change target to Stallion for infection]
 		infect "Centaur Stallion";
 	otherwise:
