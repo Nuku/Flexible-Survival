@@ -199,8 +199,8 @@ When Play begins:
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "sticky sushi";			[ Loot monster drops, ]
+	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]thin[or]slim[at random]";
@@ -237,7 +237,23 @@ this is the animehammer rule:		[double-damage]
 	say "You are [descr].";
 
 
-Section 4 - Endings
+Section 4 - Drop Item - Sticky Sushi
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"sticky sushi"	"A small tray of rather suspect sushi."	1	sticky sushi
+
+sticky sushi is a grab object. It is a part of the player. sticky sushi is infectious. The strain of sticky sushi is "Anime Babe".
+
+The usedesc of sticky sushi is "[eatstickysushi]";
+
+to say eatstickysushi:
+	say "     Deciding to risk eating the sushi despite how old it probably is, you tentatively pop a piece into your mouth.  Finding it quite tasty, if having a somewhat odd flavour, you rapidly consume the rest of the tray.  It feels good to eat something, though there's an odd rumbling noise in your tummy that makes you giggle cutely.";
+	decrease hunger of player by 8;
+	if hunger of player < 0, now hunger of player is 0;
+
+
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Anime Babe":
