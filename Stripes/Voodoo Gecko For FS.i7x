@@ -8,7 +8,7 @@ vgeckoloss is a number that varies.		[fights lost]
 vgeckobeaten is a number that varies.		[fights won]
 
 when play begins:
-	add { "Voodoo Gecko" } to infections of hermaphrodite;
+	add { "Voodoo Gecko" } to infections of hermaphrodite;	[shemale]
 	add { "Voodoo Gecko" } to infections of furry;
 	add { "Voodoo Gecko" } to infections of Tailweapon;		[usable for Tail Strike feat]
 	add { "Voodoo Gecko" } to infections of Reptilelist;	[list of reptile infections]

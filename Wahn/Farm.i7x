@@ -16,7 +16,7 @@ when play begins:
 Section 1 - Events
 
 Cow Hunting is a situation. The level of Cow Hunting is 5.
-The sarea of Cow Hunting is "Dry Plains";
+The sarea of Cow Hunting is "Plains";
 when play begins:
 	add Cow Hunting to badspots of hermaphrodite;      [Cuntboy cowboy]
 
@@ -46,7 +46,7 @@ Instead of resolving a Cow Hunting:
 			choose row y in table of random critters;
 			if name entry is "Cowboy Cuntboy":
 				now monster is y;
-				now area entry is "Dry Plains";
+				now area entry is "Plains";
 				now non-infectious entry is false;
 				break;    
 		challenge "Cowboy Cuntboy";
@@ -60,7 +60,7 @@ Instead of resolving a Cow Hunting:
 	now Cow Hunting is resolved;     [event resolved, either peacefully or through combat]
 	
 Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
-The sarea of Missing Cow is "Dry Plains";
+The sarea of Missing Cow is "Plains";
 
 Instead of resolving a Missing Cow:
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she's minding getting fucked by him - in fact, the sounds she makes seem rather pleased.";
