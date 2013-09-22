@@ -42,7 +42,7 @@ Version 1 of Thomas by Wahn begins here.
 Section 1 - Meeting Event
 
 Centaur Gangbang is a situation. The level of Centaur Gangbang is 5.
-The sarea of Centaur Gangbang is "Dry Plains";
+The sarea of Centaur Gangbang is "Plains";
 when play begins:
 	add Centaur Gangbang to badspots of hermaphrodite;      [Thomas becomes a herm in/after this scene]
 	add Centaur Gangbang to badspots of guy;                [male centaurs]
