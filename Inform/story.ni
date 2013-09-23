@@ -6139,6 +6139,7 @@ Include Campus Gym by UrsaOmega.
 Include Lilith by Wahn.
 Include Coleen by Sarokcat.
 Include Vanessa by Stripes.
+Include Nadia by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
