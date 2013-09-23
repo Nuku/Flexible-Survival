@@ -9,7 +9,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 550000.
 Use MAX_PROP_TABLE_SIZE of 650000.
 use MAX_STATIC_DATA of 2560000.
 Use MAX_OBJ_PROP_COUNT of 155.
-use MAX_SYMBOLS of 250000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
+use MAX_SYMBOLS of 160000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 67500.
 use ALLOC_CHUNK_SIZE of 170000.
 use SYMBOLS_CHUNK_SIZE of 15000.
