@@ -17,7 +17,7 @@ use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
 Use MAX_ZCODE_SIZE of 1000000.
-Use maximum indexed text length of at least 4000.
+Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
@@ -6040,6 +6040,7 @@ Include Hydra Beast for FS by Stripes.
 Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
 [Include Voodoo Gecko for FS by Stripes.]
+Include Horny Doctor for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
