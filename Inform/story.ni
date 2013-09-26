@@ -6040,7 +6040,7 @@ Include Latex Ermine for FS by Stripes.
 Include Hydra Beast for FS by Stripes.
 Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
-[Include Voodoo Gecko for FS by Stripes.]
+Include Voodoo Gecko for FS by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
