@@ -355,9 +355,10 @@ instead of going inside from the Grey Abbey Library while (Elijah is in the Bunk
 	say "     [line break]";
 	say "     When Elijah takes direction towards the library entrance doors next, it becomes obvious that he wants to go somewhere out in the city. Do you really want to follow him?"; [last chance at breaking this off]
 	if player consents:	[now it's sure the player will get fucked]
-		now thirst of Elijah is 1;	[setting the flag as the player gets fucked either way]		
+		now thirst of Elijah is 1;	[setting the flag as the player gets fucked either way]
+		now Captured Soldier is unresolved;
 		setmonster "Spidertaur";
-		choose row monster from the table of random critters;		
+		choose row monster from the table of random critters;
 		say "     [line break]";
 		say "     Elijah leads you of of the library and towards a large townhouse several blocks over, giving you a grin as he ushers you inside, then pulls the door closed after entering himself. Following him further as he walks through the house, you soon find yourself stepping into a bedroom containing a large four-poster bed and lots of thick strands of spiders silk stretched from wall to wall. In the midst of that is a large spidertaur, just busy pulling things into their right place and handling a somewhat loose thread with three of his legs. The creature's black spider's body and legs show an intricate pattern of neon-green lines - seems someone, likely he himself, did some fine body-art with spray-paint.";
 		say "     After the silk line is securely anchored, giving the structure of webbing more stability, the spidertaur gives a satisfied nod and turns towards Elijah and you. 'I'm done, look...' - he scuttles over to the bed, pointing out web lines hanging loosely from the posts of it - '...soft but durable restraints, securely tied down, ...' - then he moves to the bowl-like silk shape hanging in the midst of many lines anchoring it to the walls and ceiling - '...and here's your very own sex sling. Everything as ordered - so let's get to my payment, will we?' The spidertaur eyes your body with unrestrained lust in his eyes. Elijah answers 'But of course, Zephias', then gives your ass a slight squeeze before pushing softly against your back to move you forward. 'Have fun.'";
