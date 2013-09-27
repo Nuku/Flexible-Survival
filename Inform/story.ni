@@ -6142,6 +6142,7 @@ Include Lilith by Wahn.
 Include Coleen by Sarokcat.
 Include Vanessa by Stripes.
 Include Nadia by Wahn.
+Include Zephias by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
