@@ -892,7 +892,6 @@ to postmuse (x - a number ):
 		remove 4 from velospostmusings;
 	otherwise if x is 10:		[Harold]
 		say "     'We should go to that bar more often! Though I hate to admit it, the music feels kinda nice from the inside...' You can see a slight tinge of embarrassment across the serpent's face when he asks that.";
-[NOTE: A nice, subtle mechanic would be to set a trigger when the player enters the bar after this line triggers, wherein the player receives a bonus, free point of favour. Little touches like that are really add a bit to the experience.]
 		remove 10 from velospostmusings;
 	otherwise if x is 11:		[Hadiya]
 		say "     'What was up with that cross-looking hyena-lady?  You keep some strange company...  I kinda like her.'";
@@ -915,6 +914,10 @@ to postmuse (x - a number ):
 	otherwise if x is 20:		[Nermine]
 		say "     'I'm sorry if I was grumpy when you were talking to that jackal-lady, and as much as I wish weren't this way there's no easy fix to my problem.  No book might contain what I've gone through...'";
 		remove 20 from velospostmusings;
+	otherwise if x is 24:		[Doran]
+		say "     Summoning Velos, you immediately query him regarding the instance with Doran.";
+		say "     'I... It's almost impossible to describe, what I saw--I'm surprised you can even look at it, I was almost completely overtaken by it.' Since you can't push him to describe any exact details, you at least ask if what he saw is dangerous, to which he scoffs, 'How do I explain it... Countless questions are invoked when one stares into the vastness of space, none of which relating to whether or not it means you harm--in any immediate sense, at least. The fact that you're still standing is indication enough that it doesn't intend any overt ill, but hell if I know what is going on in it.' Sadly, this seems like all you can get out of him.";
+		remove 24 from velospostmusings;
 
 
 [	hp of Velos			]
@@ -964,7 +967,7 @@ to postmuse (x - a number ):
 [ 22 - Boris			]
 [ 23 - Athanasia			]
 [ 24 - Dr. Matt			]
-[ 25 - xxx				]
+[ 25 - Doran				]
 [ 26 - xxx				]
 [ 27 - xxx				]
 [ 28 - xxx				]
