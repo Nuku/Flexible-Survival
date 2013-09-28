@@ -10,9 +10,9 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 67500.
-use ALLOC_CHUNK_SIZE of 1450000.
+use MAX_NUM_STATIC_STRINGS of 67500. [ You can increase the two below to help fix code 10s]
 use SYMBOLS_CHUNK_SIZE of 15000.
+use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 300.
