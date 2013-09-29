@@ -2178,6 +2178,7 @@ to say impregchance:		[to be used when either female or MPreg would work]
 			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
