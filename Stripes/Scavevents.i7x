@@ -608,6 +608,7 @@ The slot of shoulder pad is "body".
 
 the scent of shoulder pad is "The shoulder pad stinks of the '90s.".
 
+
 Section 14 - Hospital Scavenging
 
 Patient Rooms is a scavevent.
@@ -645,9 +646,9 @@ Instead of resolving a Patient Rooms:
 		now y is "libido suppressant";
 	if x is 12:
 		if a random chance of 1 in 2 succeeds:
-			now y is "Fertile Pill";
+			now y is "fertile pill";
 		otherwise:
-			now y is "Birth Control Pill";
+			now y is "birth control pill";
 	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
 			let lol be 1;
