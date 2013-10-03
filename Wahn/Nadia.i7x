@@ -411,7 +411,7 @@ Instead of resolving a Bird Troubles:
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
 		now hp of Nadia is 99;  [refused her]
 		remove Nadia from play;
-		
+	now Bird Troubles	is resolved;		
 				
 instead of trading the fertile pill when the current action involves the Nadia:   [giving her fertility pills]
 	say "     The moment you draw the fertile pill out of your pocket, Nadia perks up in her nest and looks around, her beak slightly open, her wings flapping slightly as she sniffs the air. At last, her eyes fall upon the pill in your palm and something in the back of her mind clicks, her gaze turning from searching to begging as she pants gently, inhaling deep of a scent only she can sense. 'Please...may I have it?' she croons.";
