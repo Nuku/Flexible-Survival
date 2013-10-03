@@ -379,7 +379,7 @@ Section 3 - Events
 Bird Troubles is a situation. The level of Bird Troubles is 5.   [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus";
 when play begins:
-	add Bird Troubles to badspots of girl;     
+	add Bird Troubles to badspots of girl;
 
 Instead of resolving a Bird Troubles:
 	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organisations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock.";
@@ -397,22 +397,22 @@ Instead of resolving a Bird Troubles:
 		say "     [line break]"; 
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
 		say "     'I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
-		say "     [WaitLineBreak]";		
+		say "     [WaitLineBreak]";
 		say "     'When all this started, I was passing by the science faculty on the way to class - most of the professors and my classmates had turned into horrid furry things and greeks or something, and while one of them took my clothes, they didn't manage to take me. After that, I didn't dare make a run for the dorms, nor did I dare shout for help, so I holed up in a cluster of the natural sciences labs. I didn't expect the door to get blocked like that while I was inside, I'd finished all the snacks the lab techs left in their offices, and I was so hungry, so...'";
 		say "     It's a while until she gets over her embarrassment. 'There were a couple of exotic birds on loan from the zoo, you see. They were too pretty for me to let them just die, and they were so friendly, never tried to bite or claw me or anything, unlike some of the other animals. There was a whole bunch of juicy fruit in one of the freezers for them, so I fed them and kept them alive while trapped in there. The fruit was clearly marked as not for people, but there wasn't anything left, so...' she ruffles her feathers. 'I ended up like this, and I keep on getting these strange urges, like I need to... um... anyways, I opened their cages shortly before you found me. The window was too small for me to fit through, but at least they're free now.'";
-		say "     [WaitLineBreak]";		
+		say "     [WaitLineBreak]";
 		say "     With that, Nadia finishes her story and looks about the library, her gaze falling on the staircase to the second floor. Drawn by some invisible force, she heads upstairs with you following, and after looking about the library's second floor, begins pulling cushions off the sofa and arranging them in a circular pattern on an empty spot on the floor. You watch her for a few moments before finally realising that she's building a nest thanks to her avian instincts, a suspicion that's confirmed by her flopping straight into the middle of the small pile and nestling down with no small satisfaction.";
 		say "     'Thank you for letting me stay here,' she chirps. 'It's the first time since this mess started that anything's happened to give me hope. I was watching, waiting for so long, afraid to call for help yet desperately hoping someone would come before I died... and you did. Again, thank you so much.'";
 		move Nadia to Grey Abbey 2F;
 		move player to Grey Abbey 2F;
 		now hp of Nadia is 1;
 	otherwise:
-		say "     [line break]";		
+		say "     [line break]";
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
 		now hp of Nadia is 99;  [refused her]
 		remove Nadia from play;
-	now Bird Troubles	is resolved;		
-				
+	now Bird Troubles is resolved;
+
 instead of trading the fertile pill when the current action involves the Nadia:   [giving her fertility pills]
 	say "     The moment you draw the fertile pill out of your pocket, Nadia perks up in her nest and looks around, her beak slightly open, her wings flapping slightly as she sniffs the air. At last, her eyes fall upon the pill in your palm and something in the back of her mind clicks, her gaze turning from searching to begging as she pants gently, inhaling deep of a scent only she can sense. 'Please...may I have it?' she croons.";
 	say "     [line break]";   
@@ -426,7 +426,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colours on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
 			increase NadiaFertilityCounter by 1;
 			if NadiaDescription < 5:             [she's not reached matriarch stage yet]
-				say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]						
+				say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
 		otherwise:                                      [pregnant]
 			if NadiaPregCounter2 > 0:
 				if NadiaPregCounter2 > 12:
