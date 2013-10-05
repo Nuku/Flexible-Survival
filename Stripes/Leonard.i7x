@@ -28,10 +28,10 @@ The description of Lion's Den is "[lionsdendesc]";
 the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.";
 
 to say lionsdendesc:
-	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
+	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if][if leonardcaraway is true] with Caraway working away happily in the kitchen[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
 	say "     There are several paintings attached to the walls.  These seem quite old and possibly quite expensive.  They have been tastefully chosen, all going well together despite being from different styles and artists.  While not depicting anything overtly erotic, you can't help but feel the paintings have a primal, sexual quality to them.";
 	if hp of Leonard >= 16:
-		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere.  They are happily [one of]cleaning the cave[or]and lovingling grooming their handsome master's mane[or]changing the sheets on the bed[or]preparing some food for their master[or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or]snuggled up together, their paws caressing one another[or]snuggling up to you, showing their love for their pride mother[in random order].  They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
+		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere.  They are happily [one of]cleaning the cave[or]and lovingling grooming their handsome master's mane[or]changing the sheets on the bed[or][if leonardcaraway is true]helping Caraway prepare some food in the kitchen[otherwise]preparing some food for their master[end if][or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or][if leonardcaraway is true and a random chance of 2 in 5 succeeds]snuggled up with Caraway, playfully cuddling with her as she watches the stove[otherwise]snuggled up together, their paws caressing one another[end if][or]snuggling up to you, showing their love for their pride mother[in random order].  They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
 
 
 Section 2 - Leonard the Lion
@@ -400,6 +400,11 @@ to leonardmatesex:
 			now title entry is "Maid fuck";
 			now sortorder entry is 7;
 			now description entry is "fuck one of the maids";
+[		if ( cunts of player > 0 or cocks of player > 0 ) and leonardcaraway is true:
+			choose a blank row in table of fucking options;
+			now title entry is "Sexy chef";
+			now sortorder entry is 8;
+			now description entry is "play around with Caraway";		]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -427,6 +432,8 @@ to leonardmatesex:
 						say "[leonardmaidsex1]";
 					otherwise if title entry is "Maid sex":
 						say "[leonardmaidsex2]";
+					otherwise if title entry is "Sexy chef":
+						say "[leonardcarawaysex1]";
 			otherwise:
 				say "Invalid Option.";
 
@@ -584,6 +591,9 @@ to say leonardmaidsex2:
 	decrease humanity of player by 8;
 	follow the turnpass rule;
 
+
+to say leonardcarawaysex1:
+	say "***";
 
 Section 4 - Finding a Violin
 
