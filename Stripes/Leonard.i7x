@@ -1,5 +1,5 @@
 Version 4 of Leonard by Stripes begins here.
-[Version 4.0 - Maid sex]
+[Version 4.1 - Caraway sex]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -400,11 +400,11 @@ to leonardmatesex:
 			now title entry is "Maid fuck";
 			now sortorder entry is 7;
 			now description entry is "fuck one of the maids";
-[		if ( cunts of player > 0 or cocks of player > 0 ) and leonardcaraway is true:
+		if ( cunts of player > 0 or cocks of player > 0 ) and leonardcaraway is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Sexy chef";
 			now sortorder entry is 8;
-			now description entry is "play around with Caraway";		]
+			now description entry is "play around with Caraway";
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -593,7 +593,25 @@ to say leonardmaidsex2:
 
 
 to say leonardcarawaysex1:
-	say "***";
+	say "     The lingering scent of Caraway's cooking in the air momentarily draws your attention as you look over at the cute chef tidying up her kitchen.  The sight of her in her cute apron and nothing else gets you turned on and you decide that you and Leonard should have some fun with her.  You turn back to your mate and make the suggestion to him.  '[one of]Certainly, my dear.  I'm sure she'd appreciate some special attention[or]That is a wonderful idea, my dear.  She's been such a diligent worker - she deserves a good fucking[or]She makes such a tempting sight in that apron of hers, doesn't she, my dear?  Let's do that then[or]Of course, my dear.  You brought her to me, so it is only fair that you might enjoy her company as well[or]Mmmm... she's such a sweet little treat, isn't she?  Very well, let's go kiss the cook[at random].'  Keeping his paw on your ass, you both head towards the kitchen, eyes locked on that sweet tush of hers.";
+	if cocks of player > 0 and a random chance of 2 in 5 succeeds:
+		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her.  She initially moves to bend over the counter, clearly having done so before for him.  Seeing you there as well, she hesistates momentarily, only to be gently guided to lean over anyhow while the lion grinds his cock against her rear.  'We shall simply share in this lovely meal,' he purrs with a grin, slipping his cock into her juicy pussy.  She gives a mrowl of pleasure in response and pushes backwards onto his impaling rod.  His impressive shaft spreads her wet petals and fills that cute cunny of hers nice and full.";
+		say "     Leonard runs his paws over her rear, taking several thrusts while you watch on eagerly, stroking your own shaft.  He doesn't go very long, just enough to get his wick wet and get the kitty worked up before he pulls out and moves aside, letting you have your turn.  Lining up with the slick portal he's vacated, you sink your [cock of player] cock into her, taking your turn with several thrusts into the moaning girl.  You and Leonard alternate, taking turns filling her hot pussy while the other watches on.  She releases a needy mewl each time the current cock is removed only to sigh in pleasure as she's filled by the other one.  Being shared like this gets her quite turned on, such hard proof that you both want her bringing such pleasure to her.";
+		say "     As your mate's arousal grows towards his peak, he remains mounted in her.  Pounding her hard and fast, he presses her down onto the counter as he takes the nape of her neck in his jaws.  He growls softly and buries his spurting rod deep inside her, filling the mrowling chef with his creamy load while you watch on.  After draining his load into her, he pulls out and makes room for you again";
+		if anallevel > 1 and a random chance of anallevel in 9 succeeds:
+			say ".  Deciding you're not in the mood for Leonard's sloppy seconds, you press your glans to the kitty's other entrance.  She gives a little mewl, but pushes back, allowing you entrance to her back door.  Already quite worked up, it is not long before fucking that tight asshole of hers has you cumming in her bottom while you finger her creamy cunt to another orgasm.  She's left in a happy daze when you pull out, leaking cum from both well-used holes and clearly loving it.";
+		otherwise:
+			say ".  Getting lined up once again, you slide your pulsing rod into her cum-slick cunt and take your turn finishing in her.  After the long session of taking turns, having her all to yourself lets you ride her to orgasm.  You pump a fresh load of hot semen into her already overflowing cunny, mixing your load with your mate's and stuffing her even more full.  She's left in a happy daze when you pull out, leaking copious amounts of cum from her thoroughly fucked hole and clearly loving it.";
+	otherwise if cocks of player > 0:
+		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her.  She initially moves to bend over the counter, clearly having done so before for him, but moves onto all fours when she sees you there as well.  Leonard, still at her rear, gets his cock lined up with her wet pussy and, after a little teasing grinding, sinks his manhood into her.  Meanwhile, you've taken her mouth, the cute kitty cook taking your [cock of player] rod into her muzzle and sucking it lustfully.";
+		say "     With the sexy little feline between you both, you and Leonard smile to one another and pound away at her.  Like all practiced lovers, you set up a good rhythm with your partner, rocking her back and forth between you so she's pushed onto Leonard's cock as you thrust and her muzzle's stuffed around your cock when he does.  You both run your paws over her, caressing the lustful feline while you purr to her about [one of]how happy you are to have her here[or]what a good kitty she is[or]what a fine addition to the den she's become[or]how her place is here[at random].  When you both finally cum, Caraway releases a muffled mewl of delight and gulps down your seed even as Leonard's fills her cunt.  By the time you're both drained into her, she's left stuffed full of hot semen and purrs happily as she lays on the floor, rubbing her warm tummy.";
+	otherwise:
+		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her.  She initially moves to bend over the counter, clearly having done so before for him, but moves onto all fours when she sees you there as well.  Leonard, still at her rear, gets his cock lined up with her wet pussy and, after a little teasing grinding, sinks his manhood into her.  Meanwhile, you've taken her mouth, the cute kitty cook lapping lustfully at your juicy folds and sensitive clit.";
+		say "     With the sexy little feline between you both, Leonard's thrusts presses her muzzle against your cunny as if encouraging her to lick deeper, which she does.  When not teasing your outer folds or sucking on your clit, her raspy tongue delves into your wet cunny, lapping up your juices.  You both run your paws over her, caressing the lustful feline while you purr to her about [one of]how happy you are to have her here[or]what a good kitty she is[or]what a fine addition to the den she's become[or]how her place is here[at random].  When you both finally cum, Caraway releases a muffled mewl of delight as your feminine cum soaks her muzzle even as Leonard's load fills her cunt.  By the time you're done, she's left wet and sticky at both ends as she purrs happily while laying on the floor rubbing her warm tummy.";
+	say "     A little later, you notice a small bundle of tasty treats sitting on your pack.  Glancing over to the kitchen, Caraway smiles back at you and gives you a wink[one of], turning to show you her bare bottom as she raises her tail teasingly[or] as she sinks a cucumber into her slick pussy[or] and raises the front of her apron, giving you a flash of her creamy pussy[or] as she slips a paw under her apron to play with her creamy pussy[or] as she wipes a glop of cum onto a cracker and eats it with obvious relish[at random].";
+	increase carried of chips by 1;
+	infect "Feline";
+
 
 Section 4 - Finding a Violin
 
