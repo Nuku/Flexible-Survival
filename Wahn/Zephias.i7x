@@ -55,7 +55,10 @@ Instead of resolving a Captured Soldier:
 				say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? She's so concerned about you that she offers himself in your place. How sweet.' He lowers the soldier to the ground, positioning him to sit against the building wall on one side of the alley, still wrapped tight in his silk bindings. 'There, you even get a ringside seat for the show.' Zephias says and chuckles. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says 'Okay Fucktoy, strip!'";
 				say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a cord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, Zephias human-like shaft is fully hard, jutting out from between protective chitinous plates.";				
 				say "     [WaitLineBreak]";
-				say "     [ZephiasAlleyFuck]";								
+				if a random chance of 1 in 2 succeeds:			
+					say "     [ZephiasAlleyFuck]";  [fuck on the ground]
+				otherwise:
+					say "     [ZephiasAlleyWallFuck]";	[fuck against the wall]						
 			otherwise:  [random selection if Zephias or the soldier fucks the player]
 				say "     [ZephiasJulioRandomSelection]";
 		otherwise:	[let Zephias carry the guy off]
