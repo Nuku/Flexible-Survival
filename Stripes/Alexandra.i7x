@@ -470,7 +470,7 @@ to say badAlexandraSarah0:
 		say "     Alexandra and Sarah are clearly disappointed when you tell them to break it up, but they do so.  Alexandra whispers to Sarah to send over her pups whenever she wants them to play with hers.";
 
 
-Part 5 - Everyturn Rule (pregnancy and Fang)
+Section 5 - Everyturn Rule (pregnancy and Fang)
 
 an everyturn rule:
 	if Alexandra is booked and hp of Alexandra < 50:
