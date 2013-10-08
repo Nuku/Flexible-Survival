@@ -80,13 +80,13 @@ instead of sniffing Sports Arena Lockerroom:
 
 to say lroomdesc:
 	if (hp of Eric is 0):                         [Starting state]
-		say "     This is the men's lockerroom of the sports arena in the Fairhaven campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and the row of lockers pulled in front of the door should keep out all but the most determined intruders.";
+		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and the row of lockers pulled in front of the door should keep out all but the most determined intruders.";
 		say "[line break]";
 		say "     Eric has sat down on one of the benches in the room and is looking over to you attentively.";
 	otherwise if (hp of Eric > 0) and (hp of Eric < 100):   [Eric was brought to the bunker after a quick stop here, something followed the scent]
-		say "     This is the men's lockerroom of the sports arena in the Fairhaven campus. Eric's former camp has been ransacked, the towels of the improvised bed strewn about among empty bottles, energy bar wrappers and ripped clothing. Looks like something followed the scent trail left when you brought Eric back from his encounter with Stacy and was a bit annoyed that he wasn't still here.";
+		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Eric's former camp has been ransacked, the towels of the improvised bed strewn about among empty bottles, energy bar wrappers and ripped clothing. Looks like something followed the scent trail left when you brought Eric back from his encounter with Stacy and was a bit annoyed that he wasn't still here.";
 	otherwise if (hp of Eric is 100):                       [Eric never came back from Stacy's dorm]
-		say "     This is the men's lockerroom of the sports arena in the Fairhaven campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
+		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
 instead of going inside from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Bunker;
@@ -123,7 +123,7 @@ to say ericdesc:
 	if (hp of Eric is 0):   [starting state]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
-		say "     At the moment, he's sitting on one of the benches of the lockerroom in the Fairhaven campus sports arena, watching you attentively. His gaze moves over to the barricaded door from time to time, just to check it's still secure.";
+		say "     At the moment, he's sitting on one of the benches of the lockerroom in the Tenvale campus sports arena, watching you attentively. His gaze moves over to the barricaded door from time to time, just to check it's still secure.";
 	otherwise if ((hp of Eric is 1) or (hp of Eric is 20)):   [pussy revealed, in the bunker, virgin]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
