@@ -652,6 +652,7 @@ Instead of resolving a Concession Stand:
 				end the game saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
 				now battleground is "void";
 				wait for any key;
+				now skipturnblocker is 1;
 				follow the turnpass rule;
 				stop the action;
 		otherwise:
@@ -788,6 +789,7 @@ Instead of resolving a Beach Party:
 			end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 			now battleground is "void";
 			wait for any key;
+			now skipturnblocker is 1;
 			follow the turnpass rule;
 			stop the action;
 		otherwise:
