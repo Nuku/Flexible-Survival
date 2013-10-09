@@ -2193,6 +2193,7 @@ to say mimpregchance:		[to be used when only MPreg would work]
 			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
@@ -2206,6 +2207,7 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
 		if a random chance of 2 in target succeeds, impregnate with x;
 		now the libido of the player is (the libido of the player) / 2;
  
@@ -2218,9 +2220,43 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
+
+to say selfimpregchance:
+	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 12;		[tougher check]
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if level of Velos > 0 and cunts of player is 0:
+			increase target by ( 3 - level of Velos );
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds, selfimpregnate;
+		now the libido of the player is (the libido of the player) / 2;
+
+to selfimpregnate:
+	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
+		stop the action;
+	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
+		stop the action;
+	if "Selective Mother" is listed in feats of player:
+		say "Do you wish to be self-impregnated?";
+		if the player consents:
+			let q be 1;
+		otherwise:
+			say "You choose not to accept the seed.";
+			stop the action;
+	now gestation of child is a random number from 24 to 48;
+	now skinname of child is skinname of player;
+	now bodyname of child is bodyname of player;
+	now tailname of child is tailname of player;
+	now facename of child is facename of player;
+	say "[line break]     There is an odd feeling of warmth inside you and you get the sense that some strange perversion's taken place.";
 
 
 instead of examining a watch:
