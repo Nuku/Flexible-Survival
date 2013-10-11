@@ -2256,7 +2256,7 @@ to selfimpregnate:
 	now bodyname of child is bodyname of player;
 	now tailname of child is tailname of player;
 	now facename of child is facename of player;
-	say "[line break]     There is an odd feeling of warmth inside you and you get the sense that some strange perversion's taken place.";
+	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
 
 
 instead of examining a watch:
@@ -6079,6 +6079,7 @@ Include Red Oni for FS by Stripes.
 Include Elk for FS by Stripes.
 Include Voodoo Gecko for FS by Stripes.
 Include Horny Doctor for FS by Stripes.
+Include Fruit Bat for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
