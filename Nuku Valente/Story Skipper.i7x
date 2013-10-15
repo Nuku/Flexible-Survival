@@ -2,13 +2,15 @@ Story Skipper by Nuku Valente begins here.
 
 The File of Trixsave is called "txsave".
 The File of Trixsave2 is called "txsave2".
+The File of Trixsave3 is called "txsave3".
 trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
 trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
-trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "".
+trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
 
 To savetrix:
 	 write "[trixsavetext1]" to the File of Trixsave;
 	 write "[trixsavetext2]" to the File of Trixsave2;
+	 write "[trixsavetext3]" to the File of Trixsave3;
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
@@ -31,18 +33,20 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	say "[trixsavetext1]";
-	say "[trixsavetext2]";
+	now trixsavetext2 is "chantpart2}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
+	now trixsavetext3 is "chantpart3}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[hp of Hayato]}[hp of Tehuantl]";
+	say "[trixsavetext1][line break]";
+	say "[trixsavetext2][line break]";
+	say "[trixsavetext3][line break]";
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the two parts on their own, one after the other, including the continuedchant part in the second.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	replace the text " " in trixsavetext3 with "`";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpart2 part in the second and chantpart3 in the third.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
 	savetrix;
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
 		wrcursesave;	[puts player back to complete wereraptor form]
-
 
 
 To reciting2:
@@ -137,7 +141,7 @@ To reciting2:
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
 							now monster is Y;
-							now body of player is body entry;				
+							now body of player is body entry;		
 							now bodyname of player is name entry;
 							attributeinfect;
 							break;
@@ -149,7 +153,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now face of player is face entry;				
+							now face of player is face entry;		
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
@@ -160,7 +164,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now skin of player is skin entry;				
+							now skin of player is skin entry;		
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
@@ -171,7 +175,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now tail of player is tail entry;				
+							now tail of player is tail entry;		
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
@@ -182,7 +186,7 @@ To reciting2:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now cock of player is cock entry;				
+							now cock of player is cock entry;		
 							now cockname of player is name entry;
 							break;
 			-- 17:	[Tanuki]
@@ -410,7 +414,7 @@ To reciting2:
 	repeat with z running from 1 to number of words in "[trixsavetext2]":
 		let b be ( word number z in "[trixsavetext2]" );
 		replace the text "`" in b with " ";
-		if "continuedchant" matches the text b:
+		if "chantpart2" matches the text b:
 			next;
 		change the text of the player's command to b;
 		let z2 be z + 58;
@@ -1386,6 +1390,10 @@ To reciting2:
 			-- 146:	[relationship progress with Sonya the Viking]
 				if the player's command matches "[number]":
 					now VikingRelationship is the number understood;
+					if VikingRelationship is 20:
+						now Viking Ship is known;
+					otherwise:
+						now Viking Ship is not known;
 			-- 147:	[number of kids with Sonya the Viking]
 				if the player's command matches "[number]":
 					now VikingKidCounter is the number understood;
@@ -1410,7 +1418,7 @@ To reciting2:
 						move Jimmy to Police Lockerroom;
 			-- 150:	[David - libido (interaction with Brutus)]
 				if the player's command matches "[number]":
-					now libido of David is the number understood;					
+					now libido of David is the number understood;
 			-- 151: [hp of Amy]
 				if the player's command matches "[number]":
 					now hp of Amy is the number understood;
@@ -1421,19 +1429,19 @@ To reciting2:
 					now libido of Amy is the number understood;
 			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
 				if the player's command matches "[number]":
-					now SquadEncounters is the number understood;			
+					now SquadEncounters is the number understood;
 					if SquadEncounters is 5:
 						now Soldier Squad is resolved;
 			-- 154: [thirst of Corbin - location]
 				if the player's command matches "[number]":
 					now thirst of Corbin is the number understood;
 					if thirst of Corbin is 0:
-						remove Corbin from play;							
+						remove Corbin from play;
 						now Cow Hunting is unresolved;
-						now McDermott Farm Entrance is not known;   						
+						now McDermott Farm Entrance is not known;
 					otherwise:
 						now Cow Hunting is resolved;
-						now McDermott Farm Entrance is known;   						
+						now McDermott Farm Entrance is known;
 						if thirst of Corbin is 1:
 							move Corbin to Worker Barracks;
 						otherwise if thirst of Corbin is 2:
@@ -1442,22 +1450,22 @@ To reciting2:
 				if the player's command matches "[number]":
 					now hp of Corbin is the number understood;
 					if hp of Corbin is 100:
-						remove Corbin from play;							
+						remove Corbin from play;
 						setmonster "Cowboy Cuntboy";
 						choose row monster from the table of random critters;
 						now area entry is "Dry Plains";
 					otherwise:
 						setmonster "Cowboy Cuntboy";
 						choose row monster from the table of random critters;
-						now area entry is "Nowhere";		
+						now area entry is "Nowhere";
 			-- 156: [CorbinKidCounter]
 				if the player's command matches "[number]":
-					now CorbinKidCounter is the number understood;			
+					now CorbinKidCounter is the number understood;
 			-- 157: [hp of Anthony]
 				if the player's command matches "[number]":
 					now hp of Anthony is the number understood;
 					if hp of Anthony > 3:
-						now Missing Cow is resolved;							
+						now Missing Cow is resolved;
 						move Wendy to McDermott Barn;
 					otherwise:
 						now Missing Cow is unresolved;
@@ -1471,12 +1479,12 @@ To reciting2:
 				if the player's command matches "[number]":
 					now thirst of Duke is the number understood;
 					if thirst of Duke is 0:
-						remove Duke from play;							
+						remove Duke from play;
 					otherwise:
 						if thirst of Duke is 1:
 							move Duke to Sheep Meadow SW;
 						otherwise if thirst of Duke is 2:
-							move Duke to Sheep Meadow SE; 			
+							move Duke to Sheep Meadow SE;
 			-- 160: [hp of Zigor]
 				if the player's command matches "[number]":
 					now hp of Zigor is the number understood;
@@ -1491,7 +1499,89 @@ To reciting2:
 						if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
 			-- 161: [thirst of Amy]
 				if the player's command matches "[number]":
-					now thirst of Amy is the number understood;						
+					now thirst of Amy is the number understood;
+[	say "One moment... processing stage 3...";	]
+[	say "Current restoration string: [trixsavetext3][line break]";	]
+	replace the text " " in trixsavetext3 with "`";
+[	say "Altered restoration string: [trixsavetext3][line break]";	]
+	repeat with z running from 1 to number of words in "[trixsavetext3]":
+		let b be ( word number z in "[trixsavetext3]" );
+		replace the text "`" in b with " ";
+		if "chantpart3" matches the text b:
+			next;
+		change the text of the player's command to b;
+		let z3 be z + 160;
+		if z3 is:
+			-- 162:	[hp of Nadia]
+				if the player's command matches "[number]":
+					now hp of Nadia is the number understood;
+					if hp of Nadia > 0 and hp of Nadia < 99:
+						move Nadia to Grey Abbey 2F;
+					if hp of Nadia is 5:
+						increase carried of feathered cloak by 1;
+			-- 163: [NadiaFertilityCounter]
+				if the player's command matches "[number]":
+					now NadiaFertilityCounter is the number understood;
+					say "[NadiaDescriptionUpdate]";
+			-- 164: [NadiaChickCounter]
+				if the player's command matches "[number]":
+					now NadiaChickCounter is the number understood;
+			-- 165:	[Nadia's interactions]
+				if the player's command matches "[number]":
+					now npcNadiaint is "[the player's command]";
+					npcNadiaint-Restore;
+			-- 166: [level of Amy]
+				if the player's command matches "[number]":
+					now level of Amy is the number understood;
+			-- 167: [Xp of Amy]
+				if the player's command matches "[number]":
+					now Xp of Amy is the number understood;
+			-- 168: [Dexterity of Amy]
+				if the player's command matches "[number]":
+					now Dexterity of Amy is the number understood;
+			-- 169: [SvenAmySex]
+				if the player's command matches "[number]":
+					now SvenAmySex is the number understood;
+			-- 170: [BrutusAmySex]
+				if the player's command matches "[number]":
+					now BrutusAmySex is the number understood;
+			-- 171: [lust of Zephias]
+				if the player's command matches "[number]":
+					now lust of Zephias is the number understood;
+			-- 172: [hp of Ares]
+				if the player's command matches "[number]":
+					now hp of Ares is the number understood;
+					if hp of Ares > 0:
+						move Ares to Dog Kennels;
+					otherwise:
+						remove Ares from play;
+			-- 173: [hp of Hayato]
+				if the player's command matches "[number]":
+					now hp of Hayato is the number understood;
+					if hp of Hayato > 15:
+						move Hayato to Grey Abbey 2F;
+					otherwise:
+						move Hayato to Disused Garage;
+					if hp of Hayato > 5:
+						now Garage Demon is resolved;
+					if hp of Hayato > 10 and hp of Hayato < 14:
+						now Noh Mask is unresolved;
+					otherwise:
+						now Noh Mask is resolved;
+			-- 174: [hp of Tehuantl]
+				if the player's command matches "[number]":
+					now hp of Tehuantl is the number understood;
+					if hp of Tehuantl > 9 and hp of Tehuantl < 255:
+						move Tehuantl to Grey Abbey 2F;
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "nowhere";
+						now TehuantlTimer is turns;						
+					otherwise:
+						remove Tehuantl from play;						
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "Museum";
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -1585,6 +1675,7 @@ Check savetrix2:
 Carry out savetrix2:
 	now trixsavetext1 is "[text of the File of Trixsave]" ;
 	now trixsavetext2 is "[text of the File of Trixsave2]" ;
+	now trixsavetext3 is "[text of the File of Trixsave3]" ;
 	reciting2;	
 
 [
@@ -1612,12 +1703,17 @@ Carry out reciting:
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
-		if "continuedchant" matches the text b:
+		if "chantpart2" matches the text b:
 			now upit is 1;
 			next;
+		if "chantpart3" matches the text b:
+			now upit is 2;
+			next;		
 		change the text of the player's command to b;
 		if upit is 1:
 			increase z by 58;
+		if upit is 2:
+			increase z by 160;  
 		if Z is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
@@ -1698,7 +1794,7 @@ Carry out reciting:
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
 							now monster is Y;
-							now body of player is body entry;				
+							now body of player is body entry;		
 							now bodyname of player is name entry;
 							attributeinfect;
 							break;
@@ -1709,7 +1805,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now face of player is face entry;				
+							now face of player is face entry;		
 							now facename of player is name entry;
 							break;
 			-- 14:	[Skin infection]
@@ -1719,7 +1815,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now skin of player is skin entry;				
+							now skin of player is skin entry;		
 							now skinname of player is name entry;
 							break;
 			-- 15:	[Tail infection]
@@ -1729,7 +1825,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now tail of player is tail entry;				
+							now tail of player is tail entry;		
 							now tailname of player is name entry;
 							break;
 			-- 16:	[Cock infection]
@@ -1739,7 +1835,7 @@ Carry out reciting:
 						let num1 be the number of characters in b;
 						let num2 be the number of characters in name entry;
 						if num1 is num2:
-							now cock of player is cock entry;				
+							now cock of player is cock entry;		
 							now cockname of player is name entry;
 							break;
 			-- 17:	[Tanuki]
@@ -2953,7 +3049,7 @@ Carry out reciting:
 						move Jimmy to Police Lockerroom;
 			-- 150:	[David - libido (interaction with Brutus)]
 				if the player's command matches "[number]":
-					now libido of David is the number understood;			
+					now libido of David is the number understood;
 			-- 151: [hp of Amy]
 				if the player's command matches "[number]":
 					now hp of Amy is the number understood;
@@ -2964,19 +3060,19 @@ Carry out reciting:
 					now libido of Amy is the number understood;
 			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
 				if the player's command matches "[number]":
-					now SquadEncounters is the number understood;			
+					now SquadEncounters is the number understood;
 					if SquadEncounters is 5:
 						now Soldier Squad is resolved;
 			-- 154: [thirst of Corbin - location]
 				if the player's command matches "[number]":
 					now thirst of Corbin is the number understood;
 					if thirst of Corbin is 0:
-						remove Corbin from play;							
+						remove Corbin from play;
 						now Cow Hunting is unresolved;
-						now McDermott Farm Entrance is not known;   						
+						now McDermott Farm Entrance is not known;	
 					otherwise:
 						now Cow Hunting is resolved;
-						now McDermott Farm Entrance is known;   						
+						now McDermott Farm Entrance is known;
 						if thirst of Corbin is 1:
 							move Corbin to Worker Barracks;
 						otherwise if thirst of Corbin is 2:
@@ -2985,22 +3081,22 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now hp of Corbin is the number understood;
 					if hp of Corbin is 100:
-						remove Corbin from play;							
+						remove Corbin from play;
 						setmonster "Cowboy Cuntboy";
 						choose row monster from the table of random critters;
 						now area entry is "Dry Plains";
 					otherwise:
 						setmonster "Cowboy Cuntboy";
 						choose row monster from the table of random critters;
-						now area entry is "Nowhere";		
+						now area entry is "Nowhere";
 			-- 156: [CorbinKidCounter]
 				if the player's command matches "[number]":
-					now CorbinKidCounter is the number understood;			
+					now CorbinKidCounter is the number understood;
 			-- 157: [hp of Anthony]
 				if the player's command matches "[number]":
 					now hp of Anthony is the number understood;
 					if hp of Anthony > 3:
-						now Missing Cow is resolved;							
+						now Missing Cow is resolved;
 						move Wendy to McDermott Barn;
 					otherwise:
 						now Missing Cow is unresolved;
@@ -3014,12 +3110,12 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now thirst of Duke is the number understood;
 					if thirst of Duke is 0:
-						remove Duke from play;							
+						remove Duke from play;
 					otherwise:
 						if thirst of Duke is 1:
 							move Duke to Sheep Meadow SW;
 						otherwise if thirst of Duke is 2:
-							move Duke to Sheep Meadow SE; 								
+							move Duke to Sheep Meadow SE; 
 			-- 160: [hp of Zigor]
 				if the player's command matches "[number]":
 					now hp of Zigor is the number understood;
@@ -3035,7 +3131,78 @@ Carry out reciting:
 			-- 161: [thirst of Amy]
 				if the player's command matches "[number]":
 					now thirst of Amy is the number understood;
+			-- 162:	[hp of Nadia]
+				if the player's command matches "[number]":
+					now hp of Nadia is the number understood;
+					if hp of Nadia > 0 and hp of Nadia < 99:
+						move Nadia to Grey Abbey 2F;
+					if hp of Nadia is 5:
+						increase carried of feathered cloak by 1;
+			-- 163: [NadiaFertilityCounter]
+				if the player's command matches "[number]":
+					now NadiaFertilityCounter is the number understood;
+					say "[NadiaDescriptionUpdate]";
+			-- 164: [NadiaChickCounter]
+				if the player's command matches "[number]":
+					now NadiaChickCounter is the number understood;
+			-- 165:	[Nadia's interactions]
+				if the player's command matches "[number]":
+					now npcNadiaint is "[the player's command]";
+					npcNadiaint-Restore;
+			-- 166: [level of Amy]
+				if the player's command matches "[number]":
+					now level of Amy is the number understood;
+			-- 167: [Xp of Amy]
+				if the player's command matches "[number]":
+					now Xp of Amy is the number understood;
+			-- 168: [Dexterity of Amy]
+				if the player's command matches "[number]":
+					now Dexterity of Amy is the number understood;
+			-- 169: [SvenAmySex]
+				if the player's command matches "[number]":
+					now SvenAmySex is the number understood;
+			-- 170: [BrutusAmySex]
+				if the player's command matches "[number]":
+					now BrutusAmySex  is the number understood;
+			-- 171: [lust of Zephias]
+				if the player's command matches "[number]":
+					now lust of Zephias is the number understood;
+			-- 172: [hp of Ares]
+				if the player's command matches "[number]":
+					now hp of Ares is the number understood;
+					if hp of Ares > 0:
+						move Ares to Dog Kennels;
+					otherwise:
+						remove Ares from play;
+			-- 173: [hp of Hayato]
+				if the player's command matches "[number]":
+					now hp of Hayato is the number understood;
+					if hp of Hayato > 15:
+						move Hayato to Grey Abbey 2F;
+					otherwise:
+						move Hayato to Disused Garage;
+					if hp of Hayato > 5:
+						now Garage Demon is resolved;
+					if hp of Hayato > 10 and hp of Hayato < 14:
+						now Noh Mask is unresolved;
+					otherwise:
+						now Noh Mask is resolved;
+			-- 174: [hp of Tehuantl]
+				if the player's command matches "[number]":
+					now hp of Tehuantl is the number understood;
+					if hp of Tehuantl > 9 and hp of Tehuantl < 255:
+						move Tehuantl to Grey Abbey 2F;
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "nowhere";
+						now TehuantlTimer is turns;						
+					otherwise:
+						remove Tehuantl from play;						
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "Museum";					
 		if upit is 1, decrease z by 58;
+		if upit is 2, decrease z by 160;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3160,6 +3327,47 @@ to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
 	if character number c in npcEint is "7", now restoreletter is "7";
 	if character number c in npcEint is "8", now restoreletter is "8";
 	if character number c in npcEint is "9", now restoreletter is "9";
+
+to npcNadiaint-Restore:
+	npcNadiaint-Read 1;
+	now Char-A of Nadia is restoreletter;
+	npcNadiaint-Read 2;
+	now Char-B of Nadia is restoreletter;
+	npcNadiaint-Read 3;
+	now Char-C of Nadia is restoreletter;
+	npcNadiaint-Read 4;
+	now Char-D of Nadia is restoreletter;
+	npcNadiaint-Read 5;
+	now Char-E of Nadia is restoreletter;
+	npcNadiaint-Read 6;
+	now Char-F of Nadia is restoreletter;
+	npcNadiaint-Read 7;
+	now Char-G of Nadia is restoreletter;
+	npcNadiaint-Read 8;
+	now Char-H of Nadia is restoreletter;
+	npcNadiaint-Read 9;
+	now Char-I of Nadia is restoreletter;
+	npcNadiaint-Read 10;
+	now Char-J of Nadia is restoreletter;
+	npcNadiaint-Read 11;
+	now Char-K of Nadia is restoreletter;
+	npcNadiaint-Read 12;
+	now Char-L of Nadia is restoreletter;
+	npcNadiaint-Read 13;
+	now Char-M of Nadia is restoreletter;
+
+to npcNadiaint-Read (c - a number):	[converts the indexed text back to regular text]
+	now restoreletter is "0";
+	if character number c in npcNadiaint is "0", now restoreletter is "0";
+	if character number c in npcNadiaint is "1", now restoreletter is "1";
+	if character number c in npcNadiaint is "2", now restoreletter is "2";
+	if character number c in npcNadiaint is "3", now restoreletter is "3";
+	if character number c in npcNadiaint is "4", now restoreletter is "4";
+	if character number c in npcNadiaint is "5", now restoreletter is "5";
+	if character number c in npcNadiaint is "6", now restoreletter is "6";
+	if character number c in npcNadiaint is "7", now restoreletter is "7";
+	if character number c in npcNadiaint is "8", now restoreletter is "8";
+	if character number c in npcNadiaint is "9", now restoreletter is "9";
 
 
 Section X - Debugging - Not for Release
