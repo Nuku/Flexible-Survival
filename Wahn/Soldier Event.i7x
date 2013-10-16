@@ -196,8 +196,8 @@ Instead of resolving a Soldier Squad:
 [                                                                       ]
 [ Lust of Amy (pregnancy timer)                                         ]
 [     0: not pregnant                                                   ]
-[  1-12: invisibly pregnant by the player                               ]
-[ 13-24: visibly pregnant by the player                                 ]
+[  1-12: visibly pregnant by the player                                 ]
+[ 13-24: invisibly pregnant by the player                               ]
 [                                                                       ]
 [ Libido of Amy (puppy counter)                                         ]
 [                                                                       ]
@@ -238,7 +238,7 @@ The description of Amy is "[AmyDesc]";
 The conversation of Amy is { "Woof." };
 lastfuck of Amy is usually 555.
 AmyNewPuppies is a number that varies. AmyNewPuppies is usually 0.
-lastAmySpotted is a number that varies. 
+lastAmySpotted is a number that varies. lastAmySpotted is usually 255.
 AmyMaturityCounter is a number that varies.
 SvenAmySex is a number that varies.
 BrutusAmySex is a number that varies.
@@ -327,13 +327,64 @@ instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) a
 	otherwise:
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 		
-instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 16 and libido of Amy > 3 and NadiaChickCounter > 3):
+instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 8 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
 	now lastAmySpotted is turns;
 	if Char-C of Nadia is "0":
 		now Char-C of Nadia is "1";
+		say "[npcNadiaintUpdate]";	
 	move player to Grey Abbey Library;
 	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colourful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
+			
+instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 8 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
+	now lastAmySpotted is turns;
+	move player to Grey Abbey Library;
+	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
+	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realise what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
+	say "     [WaitLineBreak]";
+	say "     'I'm sure mine's bigger than yours!' Amy says, before taking the tape from Nadia and returning the favour.";
+	say "     [line break]";
+	say "     'No, I'm sure mine's bigger than yours!' Nadia retorts, but practically preens in pleasure when Amy tells her how much her pregnancy's grown.";
+	say "     [line break]";
+	say "     The back-and-forth goes on for a little while, both ladies clearly proud of their coming children, although the entire argument is quite playful - they're obviously teasing each other. As you leave, though, you catch a few snippets of their conversation:[line break]";
+	let randomnumber be a random number from 1 to 6;
+	if randomnumber is:
+		-- 1:		
+			say "     'I'll be bigger than you are before the puppies are born!'";
+			say "     [line break]";
+			say "     'That's not fair, you can have a whole litter at a go while I only have one egg at a time!'";
+			say "     [line break]";
+			say "     Amy sticks out her tongue at Nadia. 'Well, you do get extra heavy and get a head start on the next one as well, so we'll call it even on that.'";
+		-- 2:		
+			say "     'I've been feeling really, really hungry of late,' Nadia says, fluffing her feathers. 'Anything the chicks bring back in from the city is gone before I know it.'";
+			say "     [line break]";
+			say "     'But your tummy aside, you don't seem to have put on much weight.'";
+			say "     [line break]";
+			say "     Nadia pats her pregnancy happily. 'What can I say? I suppose I don't waste anything when I go about turning tasty treats into children.'";
+		-- 3:		
+			say "     'Recently, I've had a strange desire to have ice-cream,' Amy tells Nadia. 'But I'm not sure if I could even recognise it if I saw some. I mean, I've only seen pictures and read about it in the library's books. It's supposed to be delicious.'";
+			say "     [line break]";
+			say "     'It is, and it's quite a pity. It's likely that any ice-cream still out there in the city will have melted by now. Maybe we can have some after we're rescued.'";
+			say "     [line break]";
+			say "     Amy looks a little upset by this news, but nods. 'It's just odd. I've never seen or even smelled it for real, but somehow I know what it is, and that I should have some...'";
+		-- 4:		
+			say "     'The puppies are really pushing down on me,' Amy says as she runs her paws over the swell of her pregnancy. 'How do you stand getting so big so often?'";
+			say "     [line break]";
+			say "     'I'm not quite sure myself, let alone if it's something that can be learned,' Nadia replies. 'My body just handles each chick easier than the last.'";
+			say "     [line break]";
+			say "     'I'm sort of jealous.'";
+		-- 5:		
+			say "     '...So, you learned everything you know just from reading the books in the library?'";
+			say "     [line break]";
+			say "     Amy looks confused at Nadia's question. 'Yes. Is that so surprising?'";
+			say "     [line break]";
+			say "     'My word. I-I'm not exactly sure how I should feel about this...'";
+		-- 6:		
+			say "     'Have you ever experienced...you know, when you're trying to sleep at night and the puppies just won't quiet down inside you?'";
+			say "     [line break]";
+			say "     'It doesn't bother me, really,' Nadia says happily. 'In fact, it's actually quite comforting and reassuring, especially when I close my eyes and feel my little ones snuggling up inside me. Maybe you just need to think of it in a new light.'";
+			say "     [line break]";
+			say "     'All right then, I'll give it a try.' Amy sounds pretty unsure, though.";	
 			
 instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
