@@ -33,15 +33,15 @@ To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
-	now trixsavetext2 is "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "ongoingchant}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[hp of Hayato]}[hp of Tehuantl]";
+	now trixsavetext2 is "chantpart2}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
+	now trixsavetext3 is "chantpart3}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[hp of Hayato]}[hp of Tehuantl]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
 	replace the text " " in trixsavetext1 with "`";
 	replace the text " " in trixsavetext2 with "`";
 	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the two parts on their own, one after the other, including the continuedchant part in the second.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
+	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpart2 part in the second and chantpart3 in the third.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.  And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word.  Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.";
 [	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]";	]
 	savetrix;
 	if wrcursestatus is 5:
@@ -414,7 +414,7 @@ To reciting2:
 	repeat with z running from 1 to number of words in "[trixsavetext2]":
 		let b be ( word number z in "[trixsavetext2]" );
 		replace the text "`" in b with " ";
-		if "continuedchant" matches the text b:
+		if "chantpart2" matches the text b:
 			next;
 		change the text of the player's command to b;
 		let z2 be z + 58;
@@ -1507,7 +1507,7 @@ To reciting2:
 	repeat with z running from 1 to number of words in "[trixsavetext3]":
 		let b be ( word number z in "[trixsavetext3]" );
 		replace the text "`" in b with " ";
-		if "ongoingchant" matches the text b:
+		if "chantpart3" matches the text b:
 			next;
 		change the text of the player's command to b;
 		let z3 be z + 160;
@@ -1562,13 +1562,26 @@ To reciting2:
 						move Hayato to Grey Abbey 2F;
 					otherwise:
 						move Hayato to Disused Garage;
+					if hp of Hayato > 5:
+						now Garage Demon is resolved;
+					if hp of Hayato > 10 and hp of Hayato < 14:
+						now Noh Mask is unresolved;
+					otherwise:
+						now Noh Mask is resolved;
 			-- 174: [hp of Tehuantl]
 				if the player's command matches "[number]":
 					now hp of Tehuantl is the number understood;
 					if hp of Tehuantl > 9 and hp of Tehuantl < 255:
 						move Tehuantl to Grey Abbey 2F;
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "nowhere";
+						now TehuantlTimer is turns;						
 					otherwise:
 						remove Tehuantl from play;						
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "Museum";
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -1690,10 +1703,10 @@ Carry out reciting:
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
-		if "continuedchant" matches the text b:
+		if "chantpart2" matches the text b:
 			now upit is 1;
 			next;
-		if "ongoingchant" matches the text b:
+		if "chantpart3" matches the text b:
 			now upit is 2;
 			next;		
 		change the text of the player's command to b;
@@ -3168,13 +3181,26 @@ Carry out reciting:
 						move Hayato to Grey Abbey 2F;
 					otherwise:
 						move Hayato to Disused Garage;
+					if hp of Hayato > 5:
+						now Garage Demon is resolved;
+					if hp of Hayato > 10 and hp of Hayato < 14:
+						now Noh Mask is unresolved;
+					otherwise:
+						now Noh Mask is resolved;
 			-- 174: [hp of Tehuantl]
 				if the player's command matches "[number]":
 					now hp of Tehuantl is the number understood;
 					if hp of Tehuantl > 9 and hp of Tehuantl < 255:
 						move Tehuantl to Grey Abbey 2F;
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "nowhere";
+						now TehuantlTimer is turns;						
 					otherwise:
-						remove Tehuantl from play;							
+						remove Tehuantl from play;						
+						setmonster "Jaguar Warrior";
+						choose row monster from the table of random critters;
+						now area entry is "Museum";					
 		if upit is 1, decrease z by 58;
 		if upit is 2, decrease z by 160;
 	if hospquest is 3, now hospquest is 2;
