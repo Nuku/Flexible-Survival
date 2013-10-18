@@ -414,6 +414,7 @@ To reciting2:
 	repeat with z running from 1 to number of words in "[trixsavetext2]":
 		let b be ( word number z in "[trixsavetext2]" );
 		replace the text "`" in b with " ";
+		replace the text "continuedchant" in b with "chantpart2";
 		if "chantpart2" matches the text b:
 			next;
 		change the text of the player's command to b;
@@ -1703,6 +1704,7 @@ Carry out reciting:
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
+		replace the text "continuedchant" in b with "chantpart2";
 		if "chantpart2" matches the text b:
 			now upit is 1;
 			next;
