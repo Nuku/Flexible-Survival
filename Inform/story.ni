@@ -1997,7 +1997,7 @@ carry out Inventorying:
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
-				if ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved and the number of smither in the location of the player is greater than 0:
+				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
 				say " [name entry]";
 				if object entry is wielded and object entry is armament:
@@ -2013,7 +2013,7 @@ carry out Inventorying:
 				say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
-	if scenario is "Researcher" or nanitemeter is 1:
+	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 
 Definition: A grab object (called D) is fiveowned:
@@ -2033,14 +2033,14 @@ understand "vial inv" as VialInventorying.
 
 carry out VialInventorying:
 	sort vials of player;
-	if scenario is not "Researcher" and nanitemeter is not 1:
+	if scenario is not "Researcher" and nanitemeter is 0:
 		say "You don't possess anything of that nature.";
 		continue the action;
 	if the number of entries in vials of player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of player is greater than 0:
 		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial";
-		if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
+		if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
 		say "Your infection vial collection consists of:[line break]";
@@ -2054,7 +2054,7 @@ carry out VialInventorying:
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
 			say "[link][bracket][bold type]DA[roman type][close bracket][as]vialalldrop [x][end link] ";
-			if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
+			if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [x][end link] ";
 			say "[X] x [count][line break]";
 
@@ -3688,7 +3688,14 @@ To Vialchance (x - a text):
 	if there is a resbypass in row monster of table of random critters and resbypass entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player ) + ( level of player / 2 );
-		if vialcollectible > 70, now vialcollectible is 70;
+		if nanitemeter is 1:
+			decrease vialcollectible by 10;
+			if vialcollectible > 65, now vialcollectible is 65;
+		otherwise if nanitemeter is 3:
+			increase vialcollectible by 10;
+			if vialcollectible > 75, now vialcollectible is 75;
+		otherwise:
+			if vialcollectible > 70, now vialcollectible is 70;
 		let vcoll be 0;
 		if a random number between 1 and 100 <= vialcollectible:
 			now vcoll is 1;
@@ -6933,7 +6940,7 @@ to say promptsay:
 	if humanity of player is less than 50:
 		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
 	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
-	if scenario is "Researcher" or nanitemeter is 1:
+	if scenario is "Researcher" or nanitemeter > 0:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
 	say "[link][bracket]Save[close bracket][as]saveword[end link] ";

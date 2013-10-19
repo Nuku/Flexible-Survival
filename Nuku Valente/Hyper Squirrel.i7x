@@ -95,17 +95,51 @@ Understand "upgrade [owned grab object]" as smithing.
 
 Check smithing:
 	if the noun is not owned, say "You can't offer what you don't have." instead;
+	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
 	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is nanite collector, continue the action;
 	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
 	if the noun is equipped, say "Stop wearing it first." instead;
-	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
 
 Carry out smithing:
 	say "You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
 	if the noun is armament, increase the weapon damage of the noun by 1;
-	if the noun is equipment:
+	if the noun is nanite collector:
+		if nanitemeter is 0:
+			say "     Where did you get one of these?  Did you swipe it?  Hey, I'm not going to get myself into trouble modifying stuff you've stolen.";
+		otherwise if nanitemeter is 1:
+			say "     Showing Snow the modified nanite collector, she gives it a once-over and a quick tune-up.  'I've still got those parts I took off, if you want me to restore it to how you got it.  Or I can even add on that extra pump and the bigger reservoir if you want me to soup it up some more.  Which would you like?";
+		otherwise if nanitemeter is 2:
+			say "     Showing Snow the nanite collector you've obtained, she checks it out with a critical eye.  'This is a pretty fancy piece of tech.  I don't quite understand how all of it works, but I certainly see a few ways to mod it.  Now, I can bypass a few systems and take them out to make it lighter, but it'll be a little less effective.  Otherwise, I can add an extra pump and larger reservoir.  That'll make it work a bit better, but it'll be a little heavier too.  Otherwise, I can just leave it alone.  Which would you like?'";
+		otherwise if nanitemeter is 3:
+			say "     Showing Snow the modified nanite collector, she gives it a once-over and a quick tune-up.  'How's that extra pump and bigger tank working out for you?  If it's too heavy, I can take them off and restore it to how you got it.  Or I can even strip it down some more and make it even lighter still.  Which would you like?";
+		say "     Modify it?  [link]Light (1)[as]1[end link], [link]Standard (2)[as]2[end link], Heavy (3)[as]3[end link] or [end link]No Change (0)[as]0[end link]?";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 3:
+			say "Choice? (0-4)>[run paragraph on]";
+			get a number;
+		if calcnumber is 1:
+			say "     Snow tinkers away at the nanite collector for a while.  She strips out a few parts, bypassing them with hoses and wires to make the bulky thing somewhat lighter.  By the time she's done, it is considerably lighter than when it started.";
+			now nanitemeter is 1;
+		otherwise if calcnumber is 2:
+			say "     Snow tinkers away at the nanite collector for a while, restoring it back to its original state and level of function.";
+			now nanitemeter is 2;
+		otherwise if calcnumber is 3:
+			say "     Snow tinkers away at the nanite collector for a while.  She strips out a few parts, bypassing them with hoses and wires to make the bulky thing somewhat lighter.  By the time she's done, it is considerably lighter than when it started.";
+			now nanitemeter is 1;
+		otherwise:
+			say "     You decide to not modify it, instead just sticking with just getting it cleaned and tuned up.";
+		if calcnumber > 0:
+			repeat with y running from 1 to number of filled rows in table of game objects:
+				choose row y in table of game objects;
+				if name entry is "nanite collector":
+					if nanitemeter is 1, now weight entry is 16;
+					if nanitemeter is 2, now weight entry is 25;
+					if nanitemeter is 3, now weight entry is 32;
+					break;
+	otherwise if the noun is equipment:
 		if the slot of noun is "shield":
 			let boost be ( AC of noun * 5 ) / 100;
 			if boost < 2, now boost is 2;
