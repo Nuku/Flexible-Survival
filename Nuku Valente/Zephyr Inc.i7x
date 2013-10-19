@@ -121,14 +121,14 @@ Carry out zephbuying:
 		continue the action;
 	say "You purchase [name entry] for [price entry] creds.";
 	add name entry to invent of player;
-	if name entry is "nanite collector", now nanitemeter is 1;
+	if name entry is "nanite collector", now nanitemeter is 2;
 	if name entry is "pepperspray", increase pepped by 1;
 	decrease freecred by price entry;
 [	decrease score by price entry divided by 5;	]
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"nanite collector"	"A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting."	25	nanite collector
+"nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but servicable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
 pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of pistol is 7. The objsize of pistol is 2.
@@ -137,6 +137,10 @@ pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[
 nanite collector is equipment. It is not temporary.
 The placement of it is "body".
 The descmod of it is " A great contraption rests across your back, with many valves and pipes.  It looks more like a steampunk jetpack than anything else.  Still, it has the Zephyr logo displayed boldly."
+
+to say nanitecolldesc:
+	say "A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1].  It has been modified to be lighter, somewhat dropping its effectiveness[otherwise if nanitemeter is 3].  It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if].";
+
 
 Table of Zephyr Goods
 name	price	object	allowed
@@ -153,7 +157,7 @@ This is the true rule:
 	rule succeeds;
 
 This is the noresearch rule:
-	if scenario is "Researcher" or nanitemeter is 1:
+	if scenario is "Researcher" or nanitemeter > 0:
 		rule fails;
 	rule succeeds;
 

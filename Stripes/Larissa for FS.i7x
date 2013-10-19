@@ -73,7 +73,7 @@ zephyrpests is a number that varies.
 
 instead of conversing Larissa:
 	let vialsnagging be false;
-	if scenario is "Researcher" or nanitemeter is 1, let vialsnagging be true;
+	if scenario is "Researcher" or nanitemeter > 0, let vialsnagging be true;
 	if hp of doctor matt is 16:
 		say "[zephyrmatt1]";	[start task]
 	otherwise if hp of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
@@ -426,10 +426,10 @@ carry out Larissatfing:
 	if hp of Larissa is 1:
 		say "     'I've been noticing all the interesting new creatures and forms out there that our various agents and researchers have been documenting.  It's had me wondering if I might want to try out a new look.  You know, a bit of a test drive before I settle on the new me,' she says quietly.  Liking where this is going, you lean in a little closer.  'While a lot of samples come through here, I can't really snag them for myself.  They're all logged in the inventory.  But you've proven to be quite helpful and I thought you might want help me out,' she says with a sexy smile.";
 		say "     'So to pull this off, I'd need you to snag some vial samples";
-		if scenario is not "Researcher" or nanitemeter is not 1:
+		if scenario is not "Researcher" and nanitemeter is 0:
 			say ", and for that you'll need to get one of the nanite collectors we have on sale here";
 		say ".  With a vial and some credits from you, I'll get a new bod.'  You must make a face at the mention of money as well.  'Oh, now don't be like that.  I'll need it to help with my expenses.  I'll need to pay for a new id card, pay someone to watch my shift, get some new clothes... lots of stuff so we can set this up.  You'll get to help me test drive it, so doesn't that sound worth it, hon";
-		if scenario is not "Researcher" or nanitemeter is not 1:
+		if scenario is not "Researcher" and nanitemeter is 0:
 			say "?'  She gives you a grin.  'I'll even arrange to give you a big discount on the nanite collector, letting you get it for the employee price.  Just don't tell anyone,' she adds with a wink.";
 			nanitecoll_discount;
 		otherwise:
@@ -441,7 +441,7 @@ carry out Larissatfing:
 		say "     'I'm still looking forward to changing into some sexy creatures so we can have even more fun together.  I'll need a vial for the creature and [lar_tfcost] credits to cover the various expenses and to make sure someone will cover my shift while we put the new me through the paces,' she says with a wink.";
 	otherwise:
 		say "     'I'm still interested in trying on some other forms.  Be on the lookout for interesting creatures and snag a vial from them";
-		if scenario is not "Researcher" or nanitemeter is not 1:
+		if scenario is not "Researcher" and nanitemeter is 0:
 			say ", and for that you'll need to get one of the nanite collectors we have on sale here";
 		say ".  With that and [lar_tfcost] credits to cover the expenses, we can have ourselves some fun,' she says with a wink.";
 	say "     'Now, I've been making a list of the ones that I've found that would be particularly interesting.  Just let me know if you'd like to have me give it a whirl,' [subjpro of Larissa] adds.";
@@ -488,7 +488,7 @@ carry out Larissatfing:
 
 
 to nanitecoll_discount:
-	if scenario is not "Researcher" or nanitemeter is not 1:
+	if scenario is not "Researcher" and nanitemeter is 0:
 		repeat with y running from 1 to number of filled rows in table of Zephyr Goods:
 			choose row y from table of Zephyr Goods;
 			if name entry is "nanite collector":
