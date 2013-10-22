@@ -180,6 +180,18 @@ Instead of resolving a Soldier Squad:
 			say "     With all of them now lying down together on the mattresses, exhausted, the thrilling show is over - for now. Time to get back to survival in the city, you tell yourself, making your way back to one of the larger streets and leaving Jimmy the alpha husky and his new pack behind.";
 		now SquadEncounters is 5;
 		Now Soldier Squad is resolved;  [for now]
+	otherwise if SquadEncounters is 999:
+		say "     Passing through the neighbourhood where you last saw Jimmy, the newly minted alpha husky and his bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
+		say "     [WaitLineBreak]";
+		say "     You make your way through the empty streets as unobtrusively as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you make your way in the direction of the house unnoticed by anyone or anything ready to pick a fight. Then, as you are still several streets away from your destination and hidden in a very narrow gap between two buildings, you suddenly hear barking and the scrape of canine claws running on asphalt, coming closer quickly. A voice that you recognize as Jimmy the alpha husky calls out 'Come back, you stupid mutt! You're mine!' Seconds later, an anthro husky in a ragged military uniform enters your field of vision, moving in a dash that slows down just a few steps past front of your hiding spot as he pants and desperatly looks around for a way to escape pursuit.";
+		say "     It's Carl, the man you saw Jimmy infect the last time you were here. He's panting heavily and looking in just the wrong direction to see your own good hiding spot, which makes you think that he'll be caught pretty soon. Do you want to take the risk to try to help him out, or just watch this unfold? (Y = help him, N = watch) ";
+		if player consents:
+			say "     [line break]";		
+			say "     ";
+		otherwise:
+			say "     [line break]";	
+			say "     ";	
+
 
 [ Amy, the husky                                                        ]
 [                                                                       ]
@@ -231,6 +243,11 @@ Instead of resolving a Soldier Squad:
 [   0: nothing happened                                                 ]
 [   1: cleansed Brutus fucked her                                       ]
 [  51: she got to use evil Brutus as a sex toy                          ]
+[                                                                       ]
+[ SnowAmySex (relationship with Brutus)                                 ]
+[   0: nothing happened                                                 ]
+[   1: Snow fucked her                                                  ]
+[  99: player stepped in before Snow could fuck Amy                     ]
 
 
 Amy is a woman. The hp of Amy is usually 0.
@@ -242,6 +259,7 @@ lastAmySpotted is a number that varies. lastAmySpotted is usually 255.
 AmyMaturityCounter is a number that varies.
 SvenAmySex is a number that varies.
 BrutusAmySex is a number that varies.
+SnowAmySex is a number that varies.
 
 instead of conversing the Amy:
 	if (hp of Amy is 1):   [child-like]
@@ -577,7 +595,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				say "     As she continues masturbating and gets drippingly wet down below, you guess that Amy is ready for the next step now and command the demon to lie down. The young husky can barely take her eyes off his thick pole standing erect above the humanoid beast's crotch. Though even with her being aroused as hell, she still is rather submissive in temperament, so it takes a suggestion from you before Amy makes the first step, reaching for the massive cock and jerking it a few times with both her hands on the shaft. The controlled demon twists and stretches on his back, fighting against the magic that keeps him from raping both you and her, then lies still as you command him, helpless against his master's wishes.";
 				say "     [WaitLineBreak]";
 				say "     Meanwhile, Amy moves to straddle him, getting in position over the hard rod. She lines up her opening with his cock, then slowly sinks herself down on top of it, gasping as the tip nudges apart her nether lips. It's big - very big, stretching her pussy lips wide around it, then sliding deeper and deeper into Amy's body, making the husky moan and gasp as the bumps on his shaft rub her inner walls. Even with her copious amount of female juices lubricating Amy, it's a lot to take, and she has to stop several times to get used to it before she can continue. Some time later, she finally takes all of it in her husky body, his two large cum-factories resting against her crotch. It's still a bit surprising to you that all of him actually fit inside her, and you can only guess how Amy must be feeling right now.";
-				say "     A few minutes of deep, relaxing breathing later, Amy starts to fuck herself on the thick cock - slowly. Riding it, sliding up and down on the long shaft, Amy takes her time to enjoy the demon to the fullest extent bringing herself to more than one orgasm in the long fuck session that follows. Your slave meanwhile isn't lucky enough to get off himself, as you tell him several times that he only may cum when you want him to. As Amy's fun with him goes on and on, the demon's angry grunts at your control first take on a pleading tone, then lead over into whimpers begging for release. You let this continue for another good little while, until the by then rather tired Amy reaches another orgasm. Finally relenting on the big brute, you allow the seriously blue-balled demon to come. And oh does he do it. His large balls visibly pulse as the demon's cock erupts, pumping Amy's insides full of his seed. With the head of his shaft pushing open her cervix, he easily fills your womb and vagina, with the remaining cum squirting out around the thick cock. When he finally finishes shooting and Amy pulls herself off his cock with a wet slurp, her stomach looks distended from the sheer amount of cum he has injected into her, with more of it leaking from her stretched hole to create a white-ish puddle on the ground below.";						
+				say "     A few minutes of deep, relaxing breathing later, Amy starts to fuck herself on the thick cock - slowly. Riding it, sliding up and down on the long shaft, Amy takes her time to enjoy the demon to the fullest extent bringing herself to more than one orgasm in the long fuck session that follows. Your slave meanwhile isn't lucky enough to get off himself, as you tell him several times that he only may cum when you want him to. As Amy's fun with him goes on and on, the demon's angry grunts at your control first take on a pleading tone, then lead over into whimpers begging for release. You let this continue for another good little while, until the by then rather tired Amy reaches another orgasm. Finally relenting on the big brute, you allow the seriously blue-balled demon to come. And oh does he do it. His large balls visibly pulse as the demon's cock erupts, pumping Amy's insides full of his seed. With the head of his shaft pushing open her cervix, he easily fills her womb and vagina, with the remaining cum squirting out around the thick cock. When he finally finishes shooting and Amy pulls herself off his cock with a wet slurp, her stomach looks distended from the sheer amount of cum he has injected into her, with more of it leaking from her stretched hole to create a white-ish puddle on the ground below.";						
 				if Lust of Amy is 0:
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
@@ -611,7 +629,31 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				say "     [line break]";
 				say "     Hm, perhaps better not. Brutus might just be a bit much to handle even for your horny husky friend...";
 				now BrutusAmySex is 99;
-	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 3 succeeds:
+	otherwise if (hp of Amy > 10 and Snow is in the Grey Abbey Library and SnowAmySex is 0):	[first interest of Snow in her]
+		say "     Entering the library, you see Amy on her bedding, sitting besides Snow and listening intently to the squirrel girl. Curious what Amy starts giggling about a moment later, you step a bit closer and overhear '...really, he was this long and...' followed by a detailed and intimate description of Snow's last encounter with a minotaur out in the city. As she continues with the raunchy tale, you see Amy spread her legs a bit, revealing an already a bit moist pussy that shows her obvious arousal.";
+		say "     [line break]";
+		say "Well, you can see where this is going from a mile away. As Snow moves her hand to rub the hard cock barely contained in her pants, you... (Y = stand back and watch your two friends fuck, N = walk up to them and interrupt) ";
+		if player consents:		[Amy+Snow Sex]
+			say "     [line break]";
+			say "     Snow leans over, running her hand up the inside of Amy's thigh until she gets to her crotch, then stroking a finger over the husky's sensitive pussy lips, making her moan loudly. 'You need it bad, don't you,' the squirrel herm says to Amy with a husky tone, then continues 'Let me take care of you' and pulls Amy's paw-hand over on the increasingly large and throbbing, bulge in her pants. The only answer from Amy is lustful panting as she caresses Snow's bulge with one hand, while the other moves in between her legs. The horny squirrel enjoys the hand on her package some moments longer, then pops open the button of her pants, followed by its zipper sliding down. That frees her massive cock from its confinement, to stand fully erect in front of a suddenly wide-eyed Amy.";
+			say "     Lightly turning Amy's muzzle to give her a kiss, Snow says softly 'Now don't you worry none. I'll be right gentle.' and squirms out of her pants. She puts her hand on the huge member, bulging with thick veins along its human shaped but inhumanly pink and massive, length. A noticeable trickle of precum runs down from the slit on its tip, towards her heavy, grapefruit sized, balls. Jerking herself a few times, the herm squirrel lubes her shaft with the precum, then moves over in front of Amy. After another hot bit of tongue-wrestling that leaves both of them a bit breathless, she softly pushes against the husky's chest, making her lie back on the mattress.";
+			say "     [WaitLineBreak]";
+			say "     Snow brushes the tip of the member against Amy's drippingly wet nethers, teasing her for a long moment before she eases into her, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into the young husky under her, '[one of]I cannot remember if I was a girl or a boy to start - but I sure love this[or]You feel amazing, baby[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips Amy's hips more firmly, starting to rock against her in deep, urgent, pushes, pistoning against the husky's wet sex as she leans in over her.";
+			say "     The big squirrel's breasts as absolutely huge, swaying in the air as she grinds against Amy and even rubbing the husky's smaller but more numerous breasts when Snow leans forward a bit more. Gasps of pleasure from Amy fill the library, combined with Snow's own moaning as her heavy balls slap against Amy's thighs with every rapid pierce into her antho canine body. Snow's hands eagerly caress her partner, exploring your every contour. Then, with a sudden lurch, she seals herself against Amy, holding her tight against herself as pulsing waves of rich squirrel seed erupt into the husky girl's body.";
+			say "     [WaitLineBreak]";			
+			say "     As she rides out her orgasm and with her member still pulsing with spurt after spurt of cum painting Amy's womb white, Snow rolls the two of them over to lie on their sides on the mattress. The squirrel and husky start making out and keep going for quite a while, their hands stroking and caressing each other while they kiss.";			
+			if Lust of Amy is 0:
+				let AmyPregchance be a random number from 1 to 20;
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;
+			now lastfuck of Amy is turns;
+			now lastfuck of Snow is turns;
+			now SnowAmySex is 1;
+		otherwise:
+			say "     [line break]";
+			say "     Moving over to the two of them, you greet Amy and Snow and chat a bit with them about mundane topics, breaking the mood building between them. After some minutes of talking, Snow gives Amy a friendly hug and excuses herself with wanting to get some fresh air outside. From the still pretty big bulge in her pants, you presume she'll go pick up one of the feral huskies out there and fuck the girl senseless.";
+			now SnowAmySex is 99;				
+	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
 		if Lust of Amy is 0:
@@ -620,7 +662,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Xerxes is turns;
-	otherwise if Felinoid Companion is tamed and (lastfuck of felinoid companion - turns) > 12 and level of Amy is 1 and a random chance of 1 in 3 succeeds:
+	otherwise if Felinoid Companion is tamed and (lastfuck of felinoid companion - turns) > 12 and level of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with your felinoid companion standing over her, his legs bent a bit as he mounts her from behind. She's clearly under his influence again, all wound up and horny to be fucked hard. Mating her with powerful and deep thrusts, the felinoid doesn't hold back in any way. Moans, barks and growls of lust fill the library and you move a bit closer to watch the show.";
 		say "     After quite a while of hot and heavy fucking, Amy's moans and noises rise up to a loud pleased yip, announcing her orgasm to anyone in hearing range. Visibly satisfied in making her come, the felinoid isn't far behind, burying his hard cock all the way in the young husky's pussy and holding still, only his balls pulsing as they fill her up with his seed. When he finishes cumming, the big cat pulls out and throws himself on her bedding to lounge in satisfaction. Amy kneels down beside him to lick his cock clean, then joins him on the mattress, snuggling up against his warm furred shape.";
 		if Lust of Amy is 0:
@@ -629,7 +671,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of felinoid companion is turns;
-	otherwise if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 3 succeeds:
+	otherwise if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 5 succeeds:
 		if hp of Fang < 3:  [Beta Fang]
 			say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again and he was only too happy to fuck the horny husky. The black wolf pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your wolf's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
 		otherwise:  [Alpha Fang]
@@ -640,7 +682,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Fang is turns;
-	otherwise if Elijah is bunkered and hp of Elijah > 3 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 3 succeeds:	[repeat sex between Elijah and Amy]
+	otherwise if Elijah is bunkered and hp of Elijah > 3 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 5 succeeds:	[repeat sex between Elijah and Amy]
 		if hp of Elijah is 99:  [evil Elijah]		
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Elijah thrusts his hard cock into her in a rapid pace. He's holding her legs spread apart, hands gripping her fur tightly as he really pounds her pussy, filling the library with slapping sounds of his hips hitting her crotch. Looks like the two of them have been going at it for a while now, judging from the cum-soaked spot on the mattress under Amy's hips and the wet squishing noises as Elijah slams into her, making one of his previous loads ooze out around his shaft. Wanting to get a closer look, you move in and watch from behind a nearby bookshelf, observing their movements against each other and listening to the pants and moans as they come quicker and quicker. It's obvious that Elijah is getting close to another climax quickly and he suddenly grips Amy by the hips, holding her tight against himself as his balls twitch again, sending pulse after pulse of his seed deep into the husky's womb. Amy writhes beneath him in ecstasy, cumming hard as well from taking even more of the dark angel's seed.";
 			say "     With a satisfied sigh, he pulls out of her and gets up, his fresh load trickling out of her stretched pussy to soak into her bedding. Not even looking back as he leaves her, the dark angel then picks up his pants and boots, grinning at you as he stands up, having obviously spotted you. He saunters over in absolutely shameless nakedness and says 'Nice pussy, can't wait for the next time. Oh, and you really should put a collar and leash on her... wouldn't want such a fine bitch to run off.' With that, he walks away to go clean himself up.";
@@ -652,7 +694,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Elijah is turns;
-	otherwise if Sven is bunkered and hp of Sven > 5 and hp of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 3 succeeds:	[repeat sex between Sven and Amy]		
+	otherwise if Sven is bunkered and hp of Sven > 5 and hp of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 5 succeeds:	[repeat sex between Sven and Amy]		
 		say "     Entering the library, you see Amy - with Sven under her on her mattress, both of them moaning as she fucks him in the cowgirl position. Looks like she decided to use your pet kitty for her own pleasure again. She rocks back and forth on his pole while caressing your snowmeow's ears and scratching his cheeks. Sven purrumbles in pleasure, bucking lightly up into Amy as she rides him, but letting her set the pace. From her moans and pants, it's quite obvious how much Amy likes his long, thick and hard cock inside her. And she doesn't hold back in telling him that either, saying that he's a good and sexy kitty.";
 		say "     Amy has a good, long fuck session with your fucktoy, reducing him to a mewling slut by the time her climax comes. Her pussy clamps down around his shaft, milking and tugging at it as her femcum soaks his crotch fur. The feel of a warm and wet cunt spasming around his throbbing rod is too much and Sven yowls in lust as he sprays his hot load into Amy moments later. The ample supply from his large balls flows up into her, causing the husky girl's tummy to swell as it fills her womb. Visibly pleased with the full feeling that gives her, Amy lies down on top of Sven, just keeping his cock inside her as she snuggles with him on her mattress. Only when his cock softens enough to plop out on its own does his load start leaking out of her, soaking into his fur and the bedding below the cuddling couple.";
 		if Lust of Amy is 0:
@@ -661,6 +703,16 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Sven is turns;
+	otherwise if Snow is in the Grey Abbey Library and SnowAmySex is 1 and a random chance of 1 in 5 succeeds:	[repeat sex between Snow and Amy]		
+		say "     Entering the library, you see Amy - gripping the sheets on her mattress tightly and moaning as Snow pounds away at her needy pussy. The squirrel herm's thick veiny member thrusts in and out of your husky friend, with Snow's heavy, grapefruit sized balls audibly smacking against Amy's hips each time. Snow pants '[one of]I cannot remember if I was a girl or a boy to start - but I sure love this[or]You feel amazing, baby[or]Will you bear my child? You would make an awesome mom, I bet[at random].'";
+		say "     The big squirrel's breasts as absolutely huge, swaying in the air as she grinds against Amy and even rubbing the husky's smaller but more numerous breasts when Snow leans forward a bit more. Gasps of pleasure from Amy fill the library, combined with Snow's own moaning as her heavy balls slap against Amy's thighs with every rapid pierce into her antho canine body. Then, with a sudden lurch, she seals herself against Amy, holding her tight against herself as pulsing waves of rich squirrel seed erupt into the husky girl's body.";
+		say "     As she rides out her orgasm and with her member still pulsing with spurt after spurt of cum painting Amy's womb white, Snow rolls the two of them over to lie on their sides on the mattress. The squirrel and husky start making out and keep going for quite a while, their hands stroking and caressing each other while they kiss.";
+		if Lust of Amy is 0:
+			let AmyPregchance be a random number from 1 to 20;
+			if AmyPregchance > 13:
+				now Lust of Amy is 24;
+		now lastfuck of Amy is turns;
+		now lastfuck of Snow is turns;
 	otherwise:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
