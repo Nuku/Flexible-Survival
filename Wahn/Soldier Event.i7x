@@ -260,6 +260,7 @@ AmyMaturityCounter is a number that varies.
 SvenAmySex is a number that varies.
 BrutusAmySex is a number that varies.
 SnowAmySex is a number that varies.
+IcarusAmySex is a number that varies.
 
 instead of conversing the Amy:
 	if (hp of Amy is 1):   [child-like]
@@ -653,6 +654,62 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 			say "     [line break]";
 			say "     Moving over to the two of them, you greet Amy and Snow and chat a bit with them about mundane topics, breaking the mood building between them. After some minutes of talking, Snow gives Amy a friendly hug and excuses herself with wanting to get some fresh air outside. From the still pretty big bulge in her pants, you presume she'll go pick up one of the feral huskies out there and fuck the girl senseless.";
 			now SnowAmySex is 99;				
+	otherwise if hp of Amy > 10 and Icarus is in the Grey Abbey Library and IcarusAmySex is 0:	[first interest of Icarus in her]
+		if hp of Icarus > 49:  [dom Icarus]
+			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The dominant blue chaffinch lands right next to you and gives Amy a hungry look. 'Horny little bitch you have there. I think I'll try her out and maybe make her mine instead.' Grabbing his balls suggestively while giving you an overbearing grin, Icarus then starts to strut towards the unsuspecting husky.";
+			say "     [line break]";
+			say "Do you want to watch as Icarus take Amy (Y), or would you rather turn away and not watch (N)? ";
+			if player consents:		[Amy+dom Icarus Sex]
+				say "     [line break]";
+				say "     With Amy totally concentrated on her fantasy and her eyes closed, she doesn't notice the anthro bird coming up to her and then kneel on the mattress. With little preamble, he gets his stiff cock lined up with her pussy and pulls the young husky's hand out of the way. His taloned hangs grip her hips tightly as she opens her eyes in surprise, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her first shocked yelp to run over into a moan of pleasure at getting fucked. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
+				say "     Amy grows increasingly aroused as the mating continues, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he thrusts into her. With her not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body, Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives you a smug nod as his hot seed pumps into Amy's cunt and flows into her womb.";
+				say "     When he's done, Icarus dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted and somewhat dazed by the avian male's sudden appearance and actions.";
+				if Lust of Amy is 0:
+					let AmyPregchance be a random number from 1 to 20;
+					if AmyPregchance > 13:
+						now Lust of Amy is 24;
+				now lastfuck of Amy is turns;
+				now lastfuck of Icarus is turns;
+				now IcarusAmySex is 50;  [dom Icarus + Amy sex will come up in the future]
+			otherwise:		[don't watch]
+				say "     [line break]";
+				say "     Being dominated by Icarus is one thing, watching him take Amy another, so you turn away and decide to stroll deeper into the library. As you pass row after row of shelves, the sounds of their coupling get a bit muffled, but even as you reach the back wall, still some of the moans and grunts reach you. In the end, you pick a book at random and read a bit of it to distract yourself before going back, where you find the freshly fucked Amy dozing on her mattress, with Icarus cum slowly leaking out of her pussy.";
+				now IcarusAmySex is 51;  [not watching Icarus/Amy sex in the future]
+		otherwise if hp of Icarus > 0 and hp of Icarus < 50:  [sub Icarus]
+			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride.' he chirps and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
+			say "     [line break]";
+			say "Do you want to allow Icarus to indulge in some of his old behaviour (Y), or do you send him off to await your pleasure when you want to make use of him (N)? ";
+			if player consents:		[Amy+sub Icarus Sex]
+				say "     [line break]";
+				say "     You tell Icarus Amy's name and give him your permission to fuck her - if she lets him. The horny chaffinch thanks you and hurries over to the husky before you can change your mind. Kneeling before her, he ruffles his feathers to look as impressive as possible, then chirps a nice and short little song at her. Until now totally concentrated on her fantasy, Amy opens her eyes with a suprised expression on her face, seeing the blue chaffinch in all his feathered glory kneeling between her legs. Before she can say anything, Icarus continues with 'Hello there, beautiful. Why dream about things when you can have me in reality?' while leaning over her to run his hands along her curves and cup her breasts. And it works - seems like her nipples were just the right buttons to caress, as the thoroughly aroused Amy just pants and lets her head sink back down, giving herself over to the anthro bird.";
+				say "     With a satisfied chirp, Icarus smoothly moves forward on top of Amy, lining his stiff cock up with her pussy. His taloned hangs grip her hips tightly, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her to moan loudly at being filled by his manhood. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
+				say "     [WaitLineBreak]";
+				if cocks of player > 0:
+					say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place. Do you do so? ";
+					if player consents:
+						say "     [line break]";
+						say "     Quickly dropping your gear and clothes on the ground as you go along, you're completely naked before you're more than halfway to the fucking couple. Pounding into the increasingly aroused and noisy Amy under him, Icarus doesn't notice you coming up behind him, erect cock leading the way. As you suddenly push up his tailfeathers and expose his white-feathered bottom, he lets out a surprised chirp, then moans as you rub your hard shaft against his crack and get your cock lined up with his pucker. Gripping him tightly around the hips, you push forward, forcing his tight hole to spread open for your [cock size desc of player] [cock of player] phallus.";
+						say "     As you start humping away, you push Icarus own cock deeper into Amy's pussy, making the passerine chirp in pure lust from the double sensations of fucking while being fucked. With the husky under him panting loudly and Icarus begging for more, you go faster and faster, pounding his ass hard and deep. Teasing him for being such a puny, little slut, - even while fucking a woman - you grin as he moans and nods in agreement, loving being a horny cock slut now.";
+						say "     You keep it up, something in the weak bird's behaviour egging you on to be rough with him. And certainly, he loves it as well. The gasps and chirps from him rising in pitch and the way his asshole tightens around you suddenly is all the warning you get before the stuffed bird cums hard, pumping his hot seed into Amy's cunt to flow into her womb. You cum a few moments later, claiming his ass once again[if cock width of player > 35]. Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak. His body is left rounded like a feathery balloon from it all. He can only give a weak chirp as you pull out and your hot cum pours of his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 25]. Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon. When you pull out, he gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[otherwise if cock width of player > 15]. Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed. When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[otherwise]. He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if].  While taking a moment to check that your birdie pet's still fine, you wipe your cock clean on his blue tailfeathers before heading off, leaving him and Amy there to eventually recover.";
+					otherwise:
+						say "     [line break]";
+						say "     Nah, you decide to let him have his fun for now and just watch them go at it.";	
+						say "     Amy grows increasingly aroused as the mating continues, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he thrusts into her. With her not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body, Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives a smug grin as his hot seed pumps into Amy's cunt and flows into her womb.";
+						say "     When he's done, the blue chaffinch rubs his feathered head against Amy's cheek, then dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted and somewhat dazed by the avian male's sudden appearance and actions.";
+				otherwise:
+					say "     Amy grows increasingly aroused as the mating continues, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he thrusts into her. With her not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body, Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives a smug grin as his hot seed pumps into Amy's cunt and flows into her womb.";
+					say "     When he's done, the blue chaffinch rubs his feathered head against Amy's cheek, then dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted and somewhat dazed by the avian male's sudden appearance and actions.";
+				if Lust of Amy is 0:
+					let AmyPregchance be a random number from 1 to 20;
+					if AmyPregchance > 13:
+						now Lust of Amy is 24;
+				now lastfuck of Amy is turns;
+				now lastfuck of Icarus is turns;
+				now IcarusAmySex is 1;  [sub Icarus + Amy sex will come up in the future]
+			otherwise:		[no sex for Icarus]
+				say "     [line break]";
+				say "     Gripping Icarus by the feathers on his head, you give him a strict look and tell him that he's yours and that you decide what he does or doesn't do. Then you tell him that he may - no he must - watch Amy play with herself and get fucked... and that he's forbidden from joining her or even masturbating. There, that should wind the little slut up some, making him especially needy for your touch. With a grin, you give his feathered butt a squeeze, then grab a chair from a nearby table and watch him a while, standing there to observe Amy and sometimes twitching a bit as he has to hold himself back from touching his increasingly aroused body.";
+				now IcarusAmySex is 99;  [Icarus/Amy sex forbidden]
 	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
@@ -683,7 +740,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		now lastfuck of Amy is turns;
 		now lastfuck of Fang is turns;
 	otherwise if Elijah is bunkered and hp of Elijah > 3 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 5 succeeds:	[repeat sex between Elijah and Amy]
-		if hp of Elijah is 99:  [evil Elijah]		
+		if hp of Elijah is 99:  [evil Elijah]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Elijah thrusts his hard cock into her in a rapid pace. He's holding her legs spread apart, hands gripping her fur tightly as he really pounds her pussy, filling the library with slapping sounds of his hips hitting her crotch. Looks like the two of them have been going at it for a while now, judging from the cum-soaked spot on the mattress under Amy's hips and the wet squishing noises as Elijah slams into her, making one of his previous loads ooze out around his shaft. Wanting to get a closer look, you move in and watch from behind a nearby bookshelf, observing their movements against each other and listening to the pants and moans as they come quicker and quicker. It's obvious that Elijah is getting close to another climax quickly and he suddenly grips Amy by the hips, holding her tight against himself as his balls twitch again, sending pulse after pulse of his seed deep into the husky's womb. Amy writhes beneath him in ecstasy, cumming hard as well from taking even more of the dark angel's seed.";
 			say "     With a satisfied sigh, he pulls out of her and gets up, his fresh load trickling out of her stretched pussy to soak into her bedding. Not even looking back as he leaves her, the dark angel then picks up his pants and boots, grinning at you as he stands up, having obviously spotted you. He saunters over in absolutely shameless nakedness and says 'Nice pussy, can't wait for the next time. Oh, and you really should put a collar and leash on her... wouldn't want such a fine bitch to run off.' With that, he walks away to go clean himself up.";
 		otherwise:
@@ -694,7 +751,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Elijah is turns;
-	otherwise if Sven is bunkered and hp of Sven > 5 and hp of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 5 succeeds:	[repeat sex between Sven and Amy]		
+	otherwise if Sven is bunkered and hp of Sven > 5 and hp of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 5 succeeds:	[repeat sex between Sven and Amy]
 		say "     Entering the library, you see Amy - with Sven under her on her mattress, both of them moaning as she fucks him in the cowgirl position. Looks like she decided to use your pet kitty for her own pleasure again. She rocks back and forth on his pole while caressing your snowmeow's ears and scratching his cheeks. Sven purrumbles in pleasure, bucking lightly up into Amy as she rides him, but letting her set the pace. From her moans and pants, it's quite obvious how much Amy likes his long, thick and hard cock inside her. And she doesn't hold back in telling him that either, saying that he's a good and sexy kitty.";
 		say "     Amy has a good, long fuck session with your fucktoy, reducing him to a mewling slut by the time her climax comes. Her pussy clamps down around his shaft, milking and tugging at it as her femcum soaks his crotch fur. The feel of a warm and wet cunt spasming around his throbbing rod is too much and Sven yowls in lust as he sprays his hot load into Amy moments later. The ample supply from his large balls flows up into her, causing the husky girl's tummy to swell as it fills her womb. Visibly pleased with the full feeling that gives her, Amy lies down on top of Sven, just keeping his cock inside her as she snuggles with him on her mattress. Only when his cock softens enough to plop out on its own does his load start leaking out of her, soaking into his fur and the bedding below the cuddling couple.";
 		if Lust of Amy is 0:
@@ -713,6 +770,27 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				now Lust of Amy is 24;
 		now lastfuck of Amy is turns;
 		now lastfuck of Snow is turns;
+	otherwise if hp of Amy > 10 and Icarus is in the Grey Abbey Library and IcarusAmySex > 0 and IcarusAmySex < 99 and a random chance of 1 in 5 succeeds:	[repeat sex between Icarus and Amy]
+		if IcarusAmySex is 50:  [dom Icarus]
+			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Icarus thrusts into her with his avian rod. The feathered fellow is drilling her hard with his tapered, slick cock, chirping occasionally as he does. With this having gone on for a while obviously, Amy is quite aroused by him mating her, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he fucks her. She's not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body and Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives you a smug nod as his hot seed pumps into Amy's cunt and flows into her womb.";
+			say "     When he's done, Icarus dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted by the hot fuck he just gave her.";
+			if Lust of Amy is 0:
+				let AmyPregchance be a random number from 1 to 20;
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;
+			now lastfuck of Amy is turns;
+			now lastfuck of Icarus is turns;			
+		otherwise if IcarusAmySex is 51:		[don't watch]
+			say "     Entering the library, you see Amy - lying on her bedding and panting loudly, with her fur a bit matted by sweat. The fur on her crotch looks wet and a trickle of white cum is leaking out between her nether lips to soak into the mattress. Clearly she's been well fucked and bred not too long ago, and a few small blue feathers on the mattress around her show who did it too. Icarus had some fun with her, filling the husky's womb with his seed.";
+		otherwise if IcarusAmySex is 1:    [sub Icarus + Amy]
+			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Icarus thrusts into her with his avian rod. The feathered fellow is drilling her hard with his tapered, slick cock, chirping occasionally as he does. With this having gone on for a while obviously, Amy is quite aroused by him mating her, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he fucks her. She's not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body and Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives a smug grin as his hot seed pumps into Amy's cunt and flows into her womb.";
+			say "     When he's done, the blue chaffinch rubs his feathered head against Amy's cheek, then dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted by the hot fuck he just gave her.";	
+			if Lust of Amy is 0:
+				let AmyPregchance be a random number from 1 to 20;
+				if AmyPregchance > 13:
+					now Lust of Amy is 24;
+			now lastfuck of Amy is turns;
+			now lastfuck of Icarus is turns;
 	otherwise:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
@@ -1291,6 +1369,7 @@ to say DavidPatrolRubbing:
 	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 [ David, the npc:                                                       ]
+[                                                                       ]
 [ thirst states of David - Relationship with the Player                 ]
 [   0: had no sex of any kind with the player                           ]
 [   1: had some sort of intimate contact with the player - once         ]
@@ -1298,11 +1377,13 @@ to say DavidPatrolRubbing:
 [   5: the point at which he'll ask the player to be his girl/boyfriend ]
 [  10: is the player's fuck-buddy                                       ]
 [  20: player is his girl/boyfriend                                     ]
+[                                                                       ]
 [ lust states of David - Gay Sex Variable                               ]
 [   0: anal virgin                                                      ]
 [   1: got fucked in the ass                                            ]
 [   2: got fucked in the ass + sucked player cock                       ]
 [  51: de-virginized by Brutus                                          ]
+[                                                                       ]
 [ libido states of David - Demon Brute Pet Interaction                  ]
 [   0: hasn't seen the player with Brutus yet                           ]
 [   1: got frightened as he saw evil Brutus, no special sex prepped     ]
@@ -1315,6 +1396,7 @@ to say DavidPatrolRubbing:
 [  90: fucked the demon, lost his fear                                  ]
 [  99: player agreed to have the demon brute fuck him                   ]
 [ 100: got fucked & enslaved by the demon brute                         ]
+[                                                                       ]
 [ hp states of David - Location                                         ]
 [   0: on patrol                                                        ]
 [   1: got called in to Camp Bravo                                      ]
