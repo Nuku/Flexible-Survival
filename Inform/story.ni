@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 67500. [ You can increase the two below to help fix code 10s]
+use MAX_NUM_STATIC_STRINGS of 70000. [ You can increase the two below to help fix code 10s]
 use SYMBOLS_CHUNK_SIZE of 15000.
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
@@ -2100,7 +2100,20 @@ To Birth:
 	otherwise:
 		now infection is facename of player;
 	now facename of child is infection;
-	if "Wild Womb" is listed in feats of player:
+	if playercanub is true and ubpreg is not "false":
+		let wwvar be 0;
+		if "Wild Womb" is listed in feats of player, let wwvar be 1;
+		if cunts of player > 0:
+			say "Your child suckles at your [breast size desc of player] breast, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+		otherwise if breasts of player > 0:
+			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+		otherwise:
+			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+		if wwvar is 1:
+			say "As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth.  A part of you worries about what your offspring may do... and yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
+		otherwise:
+			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
+	otherwise if "Wild Womb" is listed in feats of player:
 		if cunts of player > 0:
 			say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
@@ -2128,6 +2141,8 @@ To Birth:
 	increase score by 5;		[15 base +5/child]
 	now the child is not born;
 	now the gestation of child is 0;
+	now ubpreg is "false";
+
 
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
@@ -2179,6 +2194,7 @@ to say impregchance:		[to be used when either female or MPreg would work]
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
@@ -2194,6 +2210,7 @@ to say mimpregchance:		[to be used when only MPreg would work]
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
@@ -2208,6 +2225,7 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
 		if a random chance of 2 in target succeeds, impregnate with x;
 		now the libido of the player is (the libido of the player) / 2;
  
@@ -2221,6 +2239,7 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
@@ -2235,6 +2254,7 @@ to say selfimpregchance:
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
 		if a random chance of 2 in target succeeds, selfimpregnate;
 		now the libido of the player is (the libido of the player) / 2;
@@ -4511,7 +4531,11 @@ This is the turnpass rule:
 				say "There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 			follow cunt descr rule;
 			if cunts of player > 0:
-				if cunt width of player is greater than 10:
+				if playercanub is true and ubpreg is not "false":
+					say "Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb.  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace."; 
+				otherwise if playercanub is true:
+					say "Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you.  You simply recline and relax, letting your instincts take over, slipping the child easily free from your [bodytype of player] body.  They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+				otherwise if cunt width of player is greater than 10:
 					say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 					increase morale of player by 5;
 				otherwise if cunt width of player is greater than 3:
@@ -4522,17 +4546,19 @@ This is the turnpass rule:
 					now hp of player is 1;
 					decrease morale of player by 10;
 			otherwise if cunts of player is 0:
+				let ubpreggers be 0;
+				if playercanub is true and ubpreg is not "false", now ubpreggers is 1;
 				if mpregcount < 3:			[First few times, painful]
-					say "Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg.  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+					say "Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if].  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 					now hp of player is 1;
 					decrease morale of player by 10;
 					increase mpregcount by 1;
 				otherwise if mpregcount < 6:		[Next few times, struggle]
-					say "As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus.  It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process.  After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[otherwise]neuter[end if] body feels a rush of pride at having created a new life.  You hold the big egg in your arms, cradling it as the shell starts to crack.";
+					say "As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus.  It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process.  After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[otherwise]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[otherwise]created a new life[end if].  You hold the big egg in your arms, cradling it as the shell starts to crack.";
 					increase morale of player by 5;
 					increase mpregcount by 1;
 				otherwise:					[After that, easy]
-					say "Your well-practiced body has little trouble with the shifting and releasing of the egg within you.  You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus.  The egg pops free with some effort at the last step, but process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if].  As you pull the rocking, cracking egg into your arms, you can't help but feel considerable pride at what your [if cocks of player > 0]male[otherwise]neuter[end if] body has accomplished.";
+					say "Your well-practiced body has little trouble with the shifting and releasing of the egg within you.  You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus.  The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if].  As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[otherwise if cocks of player > 0]can't help but feel considerable pride at what your male body has accomplished[otherwise]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
 					increase morale of player by 5;
 					increase mpregcount by 1;
 			let z be 1;
@@ -4552,6 +4578,8 @@ This is the turnpass rule:
 			if a random chance of fer in 100 succeeds:
 				increase z by 1;
 			if z > 4, now z is 4;		[extra chance, still limited to 4]
+			if ubpreg is not "false":
+				now z is 1;
 			if z is 2:
 				say "Twins![line break]";
 			otherwise if z is 3:
