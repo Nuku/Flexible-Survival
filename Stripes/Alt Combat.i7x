@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.6 - Improved? functionality w/pepperspray]
+[Version 2.7 - Modified for updated Alt-Vore]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -47,6 +47,7 @@ monsterpoison is a number that varies.	[ Used to track how poisoned the monster 
 [ 10 *	victory				]
 [ 11		v. (submit to player master)	]
 [ 13		v. (player vores)			]
+[ 14		v. (player vores)			]
 [ 18		v. (monster flee)			]
 [ 19		neutral peace			]
 [							]
@@ -1057,7 +1058,9 @@ to win:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	let ok be 1;
-	if "Vore Predator" is listed in feats of player and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
+	let voreprompted be false;
+	let ubprompted be false;
+	if playercanvore is true and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
 		let vorechance be 25 + ( hunger of player * 2 );
 		if "Automatic Survival" is listed in feats of player, now vorechance is 75;
 		if vorecount > 20:
@@ -1068,19 +1071,92 @@ to win:
 		increase vorechance by ( scalevalue of player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds:					[chance for vore]
 			if name entry is not listed in infections of VoreExclusion:
-				if vorechoice is 0:
-					say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
-					if the player consents:
-						now ok is 0;
-						vorebyplayer;		[See Alt Vore file]
-						now fightoutcome is 13;	[player vored foe]
-					otherwise:
-						now ok is 1;
-				otherwise if vorechoice is 1:
-					say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
-					now ok is 0;
-					vorebyplayer;		[See Alt Vore file]
-					now fightoutcome is 13;	[player vored foe]
+				now voreprompted is true;			[player will be prompted for vore]
+	if playercanub is true and inasituation is false and scalevalue of player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of child is 0 and larvaegg is not 2 and cunts of player > 0:
+		let vorechance be 25 + ( cunt width of player * 5 );
+		if vorechance > 125, now vorechance is 125;
+		if "Fertile" is listed in feats of player, increase vorechance by 25;
+		if "Maternal" is listed in feats of player, increase vorechance by 15;
+		if "Sterile" is listed in feats of player, increase vorechance by 40;
+		if inheat is true, increase vorechance by 20;
+		if ubcount > 20:
+			increase vorechance by 40;
+		otherwise:
+			increase vorechance by ubcount * 2;
+		increase vorechance by ( 100 - humanity of player ) / 4;
+		increase vorechance by ( scalevalue of player - scale entry ) * 5;
+		if a random chance of vorechance in 300 succeeds:					[chance for ub]
+			if name entry is not listed in infections of VoreExclusion:
+				now ubprompted is true;			[player will be prompted for ub]
+	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
+		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]supress (0)[as]0[end link] the urge?";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-2)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				now ok is 0;
+				vorebyplayer;			[See Alt Vore file]
+				now fightoutcome is 13;	[player vored foe]
+			otherwise if calcnumber is 2:
+				now ok is 0;
+				ubbyplayer;			[See Alt Vore file]
+				now fightoutcome is 14;	[player ub'ed foe]
+			otherwise:
+				now ok is 1;
+		otherwise if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
+			now calcnumber is -1;
+			while calcnumber < 1 or calcnumber > 2:
+				say "Choice? (1 or 2)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				now ok is 0;
+				vorebyplayer;			[See Alt Vore file]
+				now fightoutcome is 13;	[player vored foe]
+			otherwise if calcnumber is 2:
+				now ok is 0;
+				ubbyplayer;			[See Alt Vore file]
+				now fightoutcome is 14;	[player ub'ed foe]
+		otherwise if vorechoice is 1 and ubchoice is 0:				[hunger overrides ub]
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the emptiness in your stomach that wins out and you don't hold it back.  You advancing on them with the intent to sate your stomach's call with the [name entry].";
+			now ok is 0;
+			vorebyplayer;			[See Alt Vore file]
+			now fightoutcome is 13;	[player vored foe]
+		otherwise if vorechoice is 0 and ubchoice is 1:				[ub overrides hunger]
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself.  In the end, it is the hollowness in your uterus that wins out and you don't hold it back.  You advancing on them with the intent to use the [name entry] to fill the emptiness you feel in your womb.";
+			now ok is 0;
+			ubbyplayer;			[See Alt Vore file]
+			now fightoutcome is 14;	[player ub'ed foe]
+	otherwise if voreprompted is true:
+		if vorechoice is 0:
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry].  Shall you give into this desire to [link]consume[as]y[end link] them?";
+			if the player consents:
+				now ok is 0;
+				vorebyplayer;		[See Alt Vore file]
+				now fightoutcome is 13;	[player vored foe]
+			otherwise:
+				now ok is 1;
+		otherwise if vorechoice is 1:
+			say "     As your battle is coming to a close, you feel that primal rumbling in your belly, your hunger welling up inside you.  Looking down at your fallen foe, you lick your lips and don't hold it back, advancing on them with the intent to sate your stomach's call with them.";
+			now ok is 0;
+			vorebyplayer;		[See Alt Vore file]
+			now fightoutcome is 13;	[player vored foe]
+	otherwise if ubprompted is true:
+		if ubchoice is 0:
+			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away.  Shall you give into this desire and [link]unbirth[as]y[end link] them?";
+			if the player consents:
+				now ok is 0;
+				ubbyplayer;		[See Alt Vore file]
+				now fightoutcome is 14;	[player ub'ed foe]
+			otherwise:
+				now ok is 1;
+		otherwise if ubchoice is 1:
+			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb.  Looking down at your foe, you finger yourself and don't hold it back, advancing on them with the intent to fill your uterus right away with them.";
+			now ok is 0;
+			ubbyplayer;		[See Alt Vore file]
+			now fightoutcome is 14;	[player ub'ed foe]
 	if ok is 1 and "Control Freak" is listed in feats of player:
 		say "Do you want to perform after combat scene?";
 		if the player consents:

@@ -32,8 +32,8 @@ carry out trixiecheating:
 		say "[line break]";
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](9) Set anal play content level[as]9[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
-		if "Vore Predator" is listed in feats of player:
-			say "[link](10) Access the vore menu[as]10[end link] -  Currently: [bold type][if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type][line break]";
+		if playercanvore is true:
+			say "[link](10) Access the vore menu[as]10[end link] -  Currently: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] and [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type][line break]";
 		otherwise:
 			say "(10) This option is not currently available to your character.[line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
