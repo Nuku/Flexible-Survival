@@ -1435,7 +1435,7 @@ when play begins:
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
-	add { "Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+	add { "Feral Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
 
 Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
@@ -1488,7 +1488,7 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ash Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ash Drakenoid", "sphinx", "Ash Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Cheetah", "Felinoid" } to infections of BarbedCocklist;
+	add { "Panther Taur", "Shadow Beast", "Ninja Cat", "cheetah woman", "Tigress Hooker", "Ashen Breeder", "Rubber tigress", "Cougar", "Tiger", "Margay", "Tiger Cop", "Plush lion", "Sabretooth", "Catgirl", "tigertaur", "Leopardman", "Wildcat", "Feral Gryphon", "Pantherherm", "Ash Dragator", "Manticore", "Feline Gymnast", "Jaguar Warrior", "Ash Drakenoid", "sphinx", "Ash Whelp", "Snow Bat", "Anthro Shaft Beast", "Corota", "Feral Shaft Beast", "Fire Elemental", "Feral Cheetah", "Felinoid" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:

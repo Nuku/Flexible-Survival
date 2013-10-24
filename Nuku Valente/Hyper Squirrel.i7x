@@ -118,7 +118,7 @@ Carry out smithing:
 		say "     Modify it?  [link]Light (1)[as]1[end link], [link]Standard (2)[as]2[end link], Heavy (3)[as]3[end link] or [end link]No Change (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
-			say "Choice? (0-4)>[run paragraph on]";
+			say "Choice? (0-3)>[run paragraph on]";
 			get a number;
 		if calcnumber is 1:
 			say "     Snow tinkers away at the nanite collector for a while.  She strips out a few parts, bypassing them with hoses and wires to make the bulky thing somewhat lighter.  By the time she's done, it is considerably lighter than when it started.";
@@ -127,8 +127,8 @@ Carry out smithing:
 			say "     Snow tinkers away at the nanite collector for a while, restoring it back to its original state and level of function.";
 			now nanitemeter is 2;
 		otherwise if calcnumber is 3:
-			say "     Snow tinkers away at the nanite collector for a while.  She strips out a few parts, bypassing them with hoses and wires to make the bulky thing somewhat lighter.  By the time she's done, it is considerably lighter than when it started.";
-			now nanitemeter is 1;
+			say "     Snow tinkers away at the nanite collector for a while.  She adds an additional pump and a larger tank to it, making it more powerful.  By the time she's done, it is notably heavier than when it started.";
+			now nanitemeter is 3;
 		otherwise:
 			say "     You decide to not modify it, instead just sticking with just getting it cleaned and tuned up.";
 		if calcnumber > 0:

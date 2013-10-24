@@ -88,7 +88,7 @@ to say birdrape:
 to say cheetahrape:
 	if a random chance of 1 in 3 succeeds and inafight is not 1:
 		say "You look behind you and freeze, a large spotted cat prowling towards you. You stand there frozen as it comes and walks up, placing its paws on your shoulders and rolling you over. You remember from TV that the best thing to do in this situation is to remain still and hope it leaves you alone. It doesn't work. [line break][line break]The cat nuzzles up to your sex, nuzzling it and lapping at it. You feel slightly more calm as it seems to be just playing with you.";
-		infect "Cheetah";
+		infect "Feral Cheetah";
 		follow the turnpass rule;
 	otherwise:
 		say "It is eerily quiet in here. You should probably leave now.";
@@ -108,12 +108,12 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 cheetahmate is a number that varies.
 
 when play begins:
-	add { "Cheetah" } to infections of guy;
-	add { "Cheetah" } to infections of furry;
+	add { "Feral Cheetah" } to infections of guy;
+	add { "Feral Cheetah" } to infections of furry;
 
 
 To say cheetah defeat:
-	if the facename of the player is not "Cheetah":
+	if the facename of the player is not "Feral Cheetah":
 		say "The cheetah collapses, and you move on.";
 	otherwise:
 		if cheetahmate is 0:
@@ -140,14 +140,13 @@ To say cheetah defeat:
 			say "You walk over to your mate, once again proving that you are stronger, and proceed to suck him off, the warm flesh of his cock filling your mouth as the little barbs run along your tongue. It doesn't take long for him to orgasm, and you swallow all of his wonderful seed.";
 			now cheetahmate is 2;
 		otherwise if cheetahmate is 2:
-			if the cockname of the player is "Cheetah":
-				say "You turn yourself over, showing your ready cunt to your mate, and he pounces, driving himself home in one quick, fluid motion. He pounds at you, his balls slapping your ass as you thrust back, trying to get him as deep as you can. A haze of pleasure begins to cloud your eyes, and by the time your climax comes, you are no longer in conscious control. The feeling of his warm seed filling your insides is welcome, and his little barbs tickle as his cock pulses. [impregchance]";
+			if the cockname of the player is "Feral Cheetah":
+				say "You turn yourself over, showing your ready cunt to your mate, and he pounces, driving himself home in one quick, fluid motion. He pounds at you, his balls slapping your ass as you thrust back, trying to get him as deep as you can. A haze of pleasure begins to cloud your eyes, and by the time your climax comes, you are no longer in conscious control. The feeling of his warm seed filling your insides is welcome, and his little barbs tickle as his cock pulses.[impregchance]";
 				say "His cock slides out with much pleasure and dripping of seed, and you lick-kiss him in the cheek for doing you suck a service.";
 			otherwise:
 				say "You kiss him, and he bends his head to your crotch, noting the abnormal features.";
 				say "He licks your crotch sadly, and you share his sadness, hoping that soon there will be something there to be remarked upon.";
-				infect "Cheetah";
-			infect "Cheetah";
+			infect "Feral Cheetah";
 
 To say cheetah attack:
 	say "The cheetah turns you over, and growls, raising the hairs on the back of your neck.";
@@ -156,7 +155,7 @@ To say cheetah attack:
 
 Table of infection heat(continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
-"Cheetah"	8	8	"You gasp as pleasure overwhelms your sight and hearing, the smell of a female in heat becoming your only focus. As you slowly come out of it, you realize your cunt is dripping with readiness, and the smell is still there.[cheetahreset]"	"swollen and dripping Cheetah twat "	--	--	"[cheetahheat]"	true	true	"You gasp as pleasure overwhelms your sight and hearing, the scent of a female in heat becoming your only focus.  As you slowly come out of it, you realize that the scent is wafting from you despite being [if cocks of player > 0]male[otherwise]neuter[end if].  Your anus quivers and relaxes, readying itself for the mating your infected body desires.[cheetahreset]"
+"Feral Cheetah"	8	8	"You gasp as pleasure overwhelms your sight and hearing, the smell of a female in heat becoming your only focus. As you slowly come out of it, you realize your cunt is dripping with readiness, and the smell is still there.[cheetahreset]"	"swollen and dripping Cheetah twat "	--	--	"[cheetahheat]"	true	true	"You gasp as pleasure overwhelms your sight and hearing, the scent of a female in heat becoming your only focus.  As you slowly come out of it, you realize that the scent is wafting from you despite being [if cocks of player > 0]male[otherwise]neuter[end if].  Your anus quivers and relaxes, readying itself for the mating your infected body desires.[cheetahreset]"
 
 lastcheetahturns is a number that varies.
 
@@ -191,7 +190,7 @@ to say cheetahheat:
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Cheetah"; [Name of your new Monster]
+	now name entry is "Feral Cheetah"; [Name of your new Monster]
 	now attack entry is "[one of]bites with sharp fangs, drawing blood[or]slashes at you, opening large wounds [or]leaps over you, slashing as it is flying[at random]!"; [Text used when the monster makes an Attack]
 	now defeated entry is "[cheetah defeat]";
 	 [ Text or say command used when Monster is defeated.]
@@ -241,7 +240,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if the bodyname of the player is "Cheetah":
+	if the bodyname of the player is "Feral Cheetah":
 		if cheetahmate is 0:
 			if the humanity of the player > 50:
 				if the cunts of the player > 0:
