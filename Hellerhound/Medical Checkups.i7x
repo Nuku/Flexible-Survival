@@ -1,5 +1,5 @@
 Version 3 of Medical Checkups by Hellerhound begins here.
-[ Version 3.1 - Adjusted heat control and preg-check optional by Stripes]
+[ Version 3.2 - UB activation for Alt Vore by Stripes]
 
 Section 1 - Pediatrics Office
 
@@ -29,6 +29,7 @@ Doctor Medea is in Doctors Office.
 the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.";
 
 medeaget is a number that varies.
+medeaub is a truth state that varies.  medeaub is usually false.
 
 
 The description of Doctor Medea is "[if medeaget is 0]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially[otherwise]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially.  There is now a darker line running down her skirt to where some whitish cum is dripping.  It looks like she came in herself, since the door was dust covered except for your marks[end if].";
@@ -120,6 +121,12 @@ to say medeaadjustments:
 		now medeaget is 3;
 	otherwise if medeaget is 3:
 		say "     'In thanks for your help, I can provide you with several services.  As before, I can determine if you're pregnant and provide some information on the fetus.  I can also adjust your degree of fertility [if lust of Medea >= 3]and your estrus cycle [end if]if you'd like.  Would you like me to do that?  I could make you extra fertile or even sterile if you'd like.'  While she seems rather eager about the first, she's clearly less enthused about the second.";
+	if medeaub is false and medeaget >= 3 and cunts of player > 0 and playercanvore is true:
+		say "     As you're listening to her, you feel that dark hunger inside you well up.  That heady scent of reptilian arousal starts to make your mouth water.  Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you.  'Hmmm... this is most interesting.  And you say that your body's become capable of ingesting prey nearly your own size whole?  Most intriguing.'";
+		attempttowait;
+		say "     She runs a few quick tests and poking your belly with some very long needles.  'This is by no means my field of expertise, so I can't really do anything to help you cope with this hunger.  But the effect it's had on your nanites and your body may be used in another manner.  Several unusual chemicals are being produced by the tissues of your digestive system to allow you to stretch and engulf your meals.  Were I to inject these chemicals into your reproductive system, I expect similar results would occur for it,' she says, her regular excitement returning.  'This would allow you take your intended victim into your uterus, essentially [']unbirthing['] them.  Imagine something like in vitro fertilization writ large, with it being a mature creature being used instead of a test-tube baby to become your fetus.  Similar behaviour's been observed among a few creatures in the city, but it is a rare ability.'  The more she talks about it, the more worked up she gets, this plan of hers clearly exciting both her scientific curiosity as well as her strange fascination with all things pregnancy-related.";
+		say "     'Now, this alteration would be a one-way procedure, though you should be able to resist the urge... if you're willing to try, that is.  I should expect you'd not want to,' she adds as she rubs her lower belly, pausing as she imagines what it would be like.  'I should mention that I won't risk the procedure should you already be pregnant.  You'll just have to come back at another time instead.'";
+		now medeaub is true;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Check for pregnancy";
@@ -185,6 +192,11 @@ to say medeaadjustments:
 				now title entry is "Restore normal heats";
 				now sortorder entry is 5;
 				now description entry is "reduce your heat level to normal.";
+		if medeaub is true and playercanub is false and gestation of child is 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Gain unbirthing ability";
+			now sortorder entry is 7;
+			now description entry is "allow you to unbirth your foes.";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -307,8 +319,52 @@ to say medeaadjustments:
 				otherwise if nam is "Restore normal heats":
 					say "     Dr. Medea seems a little disappointed by your choice, but performs the procedure, reducing the intensity of your heats to normal.  'There, your body's need to go into heat has been restored to its original level.  It is unfortunate, but I understand.  I'd have cranked mine up already, but it'd make focusing on my work too difficult right now,' she says, tidying up her instruments.";
 					now heatlevel is 2;
-
-
+				otherwise if nam is "Gain unbirthing ability":
+					choose row monster from the table of random critters;
+					say "     Dr. Medea gets a perverse grin on her reptilian face, clearly excited to undertake her twisted experiment.  She eagerly gets you up onto the examination table and does a cursory exam before getting started.  'I've prepared a dose of the chemicals, which are to be applied to your reproductive system, triggering the alterations in your digestive system to spread there as well.  I'm glad you're willing to go through with this procedure.  Unfortunately, while I don't believe this alone would be enough to induce the same results in others, it does provide a starting point to understanding this rare ability.  Well, enough waiting, let's get to it,' she says with glee.";
+					say "     Rather than provide you with a concoction to drink or an injection, she instead starts to smear some oily cream across your pussy.  She starts slow and keeps her touch professional at first, but as you start to feel a warm tingle at the mouth of your vagina and it begins to stretch, her fingers become more playful, teasing you to arousal.  She pauses from time to time to scoop up more of the cream and work it deeper into your cunny, getting it to spread further and wider as the lotion is absorbed into your vaginal walls.";
+					say "     Soon she's working her [if cunt length of player < 12]whole hand[otherwise if cunt length of player < 24]forearm[otherwise]whole arm[end if] into your squeezing, tugging cunt and smearing the slick goo at your very depths.  As your cervix starts to relax, she pushes another handful of the body-altering cream right into your womb.  It takes a lot of effort from her to be able to pull her arm free after that, grunting with the effort to resist the strong inward motion of your vaginal muscles.";
+					attempttowait;
+					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it.  Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step.  Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
+					if girl is not banned:
+						setmonster "Female Husky";
+						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a female husky.  That small part of you which is still able to reason can't help but think it appropriate.  Given how your first meal was also one of these cute girls, there is a certain symmetry to that.  She seems pleased to see you as well, smelling your arousal and sniffing her way towards your crotch.  Making no effort to dissuade her, you seem like a willing playmate and she approaches with eager caution.";
+						say "     When she brings her muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you.  You look down at the cute husky with new, maternally longing instincts, feeling that she'd be perfect to fill it.  Before you can even think about it, you grab the husky by the head and yank it forward, driving her muzzle into your hot, needy cunny.  Your pussy stretches as you continue to pull her in, stretching around her canine head with an orgasmic effort that has you moaning.  Your juices soak her head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
+						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need.  Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides.  There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
+						attempttowait;
+						say "     The canine girl tries to struggle, but she is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making her attempts unfocused and weak.  As you grip her arms to her sides to keep her pinned, you drop to your knees, forcing yourself down over her ample bosom and taking in most of her torso.  Your belly bulges as more squirming husky is squished into it with a deliciously juicy slurp.  With your cervix spread open and her partially inside your womb, your urge to have her inside you only grows rather than feeling sated in any way.";
+						say "     You undergo another moaning orgasm as your vaginal walls tug her even further into you.  With so much of her inside you, you can no longer see what's going on, but you can feel every delightful inch of her fluffy body being pulled into yours.  Giving another loud moan, you feel her hips making their way along your impossibly stretched vaginal tunnel.  With only her legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved.  Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it.  Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
+						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel a placenta form to connect you to your prey.  Soon enough, she's drifted off into slumber and you are in late-term pregnancy.  Crossing the placental barrier, you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+					otherwise:
+						setmonster "Latex Fox";
+						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox.  That small part of you which is still able to reason can't help but think it appropriate.  Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that.  He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch.  Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
+						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you.  You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it.  Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny.  Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning.  Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
+						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need.  Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides.  There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
+						attempttowait;
+						say "     The vulpine guy tries to struggle, but he is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making his attempts unfocused and weak.  As you grip his arms to his sides to keep him pinned, you drop to your knees, forcing yourself down over his chest and taking in most of his torso.  Your belly bulges as more squirming fox is squished into it with a deliciously juicy slurp.  With your cervix spread open and him partially inside your womb, your urge to have him inside you only grows rather than feeling sated in any way.";
+						say "     You undergo another moaning orgasm as your vaginal walls tug him even further into you.  With so much of him inside you, you can no longer see what's going on, but you can feel every delightful inch of his smooth body being pulled into yours.  Giving another loud moan, you feel his hips making their way along your impossibly stretched vaginal tunnel.  With only his legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved.  Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it.  Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
+						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where he struggles, paws pressing against your uterine walls as he seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel a placenta form to connect you to your prey.  Soon enough, he's drifted off into slumber and you are in late-term pregnancy.  Crossing the placental barrier, you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+					now playercanub is true;
+					add "UB Pred" to feats of player;
+					now ubcount is 1;
+					decrease humanity of player by 3;
+					say "     You have the [bold type]UB Predator[roman type] feat, granting you the ability to unbirth fallen foes.  If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb.  You may adjust some vore related settings via the [bold type]vore menu[roman type].";
+					now gestation of child is a random number between 8 and 16;
+					now ubpreg is name entry;
+					if "Safe Appetite" is not listed in feats of player:
+						now researchbypass is 1;
+						infect;
+						now researchbypass is 0;
+					if "They Have Your Eyes" is listed in feats of player:
+						now skinname of child is skinname of player;
+						now bodyname of child is bodyname of player;
+						now tailname of child is tailname of player;
+						now facename of child is facename of player;
+					otherwise:
+						now skinname of child is name entry;
+						now bodyname of child is name entry;
+						now tailname of child is name entry;
+						now facename of child is name entry;
 
 
 Section 4 - Events
