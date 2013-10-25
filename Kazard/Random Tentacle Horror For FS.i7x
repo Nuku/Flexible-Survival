@@ -1,9 +1,7 @@
-Version 9 of Random Tentacle Horror For FS by Kazard begins here.
-[ Version 9.4 - Temporary promotion to level 8]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+Version 10 of Random Tentacle Horror For FS by Kazard begins here.
+[ Version 10.0 - MPreg path & streamlining by Stripes]
 
 "Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
@@ -15,6 +13,8 @@ eggplanted is a number that varies.
 cuntsmall is a number that varies.
 hascunt is a number that varies.
 multicunt is a number that varies.
+thmpregdetect is a truth state that varies.  thmpregdetect is usually false;
+
 
 to say horror victory:
 	if hp of player > 0:
@@ -34,78 +34,212 @@ to say horror victory:
 		now cuntsmall is 1;
 	otherwise:
 		now cuntsmall is 0;
-	if "Male Preferred" is listed in feats of player:
+	let mpregpath be 0;
+	if cunts of player is 0 and "MPreg" is listed in feats of player, now mpregpath is 1;
+	if ( "Male Preferred" is listed in feats of player and mpregpath is 0) or "Sterile" is listed in feats of player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
-	otherwise if tentaclerape is 0:
-		if gestation of child is 0:
+	otherwise if gestation of child > 0:
+		if tentsubmit is 1:
+			say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparently sensing the new life growing inside of you the creature sets you down and leaves.";
+			now lasttentaclebattleoutcome is 4;
+		otherwise:
+			say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
+			now lasttentaclebattleoutcome is 5;
+	otherwise if cunts of player is 0 and "MPreg" is listed in feats of player:
+		if tentaclerape is 0:
 			if tentsubmit is 1:
-				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
-				if hascunt is 0:
-					say "A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach,";
+				say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so.  The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes over your body as the creature draws you closer.  As the tendril glides between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
 			otherwise:
-				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
-				if hascunt is 0:
-					say "A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach,";
-			if cunts of player is 0:
-				say " causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits,";
-			say "[if hascunt is 1]A[otherwise]a[end if] tentacle twice the size of the others forces it's way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider than your cunt could initially contain.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+				say "You've lost the will to continue your struggle against the horror.  Collapsing to your knees on the cold concrete floor, you start to tilt forward.  The creature catches you in its slime coated appendages before you hit the ground.  However you quickly realize this was not out of kindness.  Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes roughly over your body as the creature draws you closer.  As the tendril grinds between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
+			now thmpregdetect is true;
+			say "This tendril, having found a suitable target for the creature's desires in an unlikely location, switches from probing at your anus to pushing its way into it.  Lubricated by its slimy coating, the squirming flesh wriggles into your backside.  Finding the hidden back entrance to your womb, it smears a spurt of oily gunk across it.  As the hormones cause that hidden passage to gradually relax, the tendril withdraws from you, only to be replaced by one twice its size [if tentsubmit is 1]presses[otherwise]forces[end if] its way inside of you.  Filling [if player is twistcapped]your capacious rump with ease as your tight passage stretches and expands to provide a tight and enjoyable fit[otherwise if scalevalue of player > 4]your huge rump with ease as your tight passage is forced open by the determined tendril[otherwise if scalevalue of player > 2]your rump with some effort as your tight passage is forced to stretch uncomfortably wide by the determined tendril[otherwise]your rump with considerable effort as your [body size of player] passage is forced far beyond its capacity by the determined tendril[end if].  It pounds within you, battering at that secret passage to your hidden womb before finally gaining entrance.";
 			if cocks of player is 1:
 				say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
-			if cocks of player is greater than 1:
-				say "The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
-			say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, [if hascunt is 1]the secretions around the tentacle somehow[otherwise]the chemicals in your belly[end if] helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
-			say "As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as [if multicunt is 1]different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your battered pussies. [otherwise]a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your battered pussy. [end if]Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-			say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
-			if hascunt is 0:
-				now cunts of player is 1;
-				now thirst of player is 0; [all that liquid should quench your thirst ;) ]
-			if cuntsmall is 1:
-				now cunt length of player is 15;
-				now cunt width of player is 12;
+			otherwise if cocks of player > 1:
+				say "The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other.  The creature's appendages quickly jerks around your members for a few moments, then swaps to rubbing your cocks against one another, then returns to jerking your members off again.  The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor.  The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+			say "[line break]";
+			say "After countless [if cocks of player is 0]unsatisfying [end if]orgasms, your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure.  However your eyes go wide as you feel a watermelon-sized bulge traveling up the large tentacle wrapped around your leg and buried in your [if player is not twistcapped and scalevalue of player < 5]abused [end if]rectum.  The bulge reaches your already over-stretched anus and begins to stretch it even further beyond what should be possible[if player is not twistcapped], the secretions around the tentacle somehow helping your anal passage widen far more elastically than normal[end if].  There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you, coming to rest inside your battered womb.";
+			say "As the tentacle removes itself from your body, the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your gaping anus and plunges inside of you.  It is quickly joined by two others, and all three piston in and out of your ass for what feels like hours, hardly stretching your battered rectum.  Musky slime and sexual fluids ooze from around the thrusting tentacles down your legs, making an ever growing slick puddle on the floor beneath you.";
+			say "Much later, the puddle beneath you stretches out into the shadows.  The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
 			now tentaclerape is 1;
 			if tentsubmit is 1:
 				now lasttentaclebattleoutcome is 3;
 			otherwise:
 				now lasttentaclebattleoutcome is 2;
 			say "[horror impreg]";
-		otherwise:
-			if tentsubmit is 1:
-				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparently sensing the new life growing inside of you the creature sets you down and leaves";
-				now lasttentaclebattleoutcome is 4;
+		otherwise if eggplanted is 0:
+			if thmpregdetect is false:
+				if tentsubmit is 1:
+					say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so.  The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes over your body as the creature draws you closer.  As the tendril glides between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
+				otherwise:
+					say "You've lost the will to continue your struggle against the horror.  Collapsing to your knees on the cold concrete floor, you start to tilt forward.  The creature catches you in its slime coated appendages before you hit the ground.  However you quickly realize this was not out of kindness.  Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes roughly over your body as the creature draws you closer.  As the tendril grinds between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
 			otherwise:
-				say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
-				now lasttentaclebattleoutcome is 5;
+				if tentsubmit is 1:
+					say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so.  The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes over your body as the creature draws you closer.  The tendril once again glides between your ass cheeks, the tentacled monstrocity seeking out that fecund asshole of yours once again.";
+				otherwise:
+					say "You've lost the will to continue your struggle against the horror.  Collapsing to your knees on the cold concrete floor, you start to tilt forward.  The creature catches you in its slime coated appendages before you hit the ground.  However you quickly realize this was not out of kindness.  Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes roughly over your body as the creature draws you closer.  The tendril once again grinds between your ass cheeks, the tentacled monstrocity seeking out that fecund asshole of yours once again.";
+			now thmpregdetect is true;
+			say "This tendril, having found a suitable target for the creature's desires in an unlikely location, switches from probing at your anus to pushing its way into it.  Lubricated by its slimy coating, the squirming flesh wriggles into your backside.  Finding the hidden back entrance to your womb, it smears a spurt of oily gunk across it.  As the hormones cause that hidden passage to gradually relax, the tendril withdraws from you, only to be replaced by one twice its size [if tentsubmit is 1]presses[otherwise]forces[end if] its way inside of you.  Filling [if player is twistcapped]your capacious rump with ease as your tight passage stretches and expands to provide a tight and enjoyable fit[otherwise if scalevalue of player > 4]your huge rump with ease as your tight passage is forced open by the determined tendril[otherwise if scalevalue of player > 2]your rump with some effort as your tight passage is forced to stretch uncomfortably wide by the determined tendril[otherwise]your rump with considerable effort as your [body size of player] passage is forced far beyond its capacity by the determined tendril[end if].  It pounds within you, battering at that secret passage to your hidden womb before finally gaining entrance.";
+			if cocks of player is 1:
+				say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
+			otherwise if cocks of player > 1:
+				say "The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other.  The creature's appendages quickly jerks around your members for a few moments, then swaps to rubbing your cocks against one another, then returns to jerking your members off again.  The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor.  The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+			say "[line break]";
+			say "After countless [if cocks of player is 0]unsatisfying [end if]orgasms, your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure.  However your eyes go wide as you feel a watermelon-sized bulge traveling up the large tentacle wrapped around your leg and buried in your [if player is not twistcapped and scalevalue of player < 5]abused [end if]rectum.  The bulge reaches your already over-stretched anus and begins to stretch it even further beyond what should be possible[if player is not twistcapped], the secretions around the tentacle somehow helping your anal passage widen far more elastically than normal[end if].  There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you, coming to rest inside your battered womb.";
+			if a random chance of 95 in 100 succeeds: [The tentacles in the other cunt(s) might just explode!]
+				say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+				now eggplanted is 1;
+			otherwise:
+				say "As the creature starts removing the largest tentacle from you, [if tentsubmit is 1]you are saddened that the creature might not fertilize[otherwise]you believe it might let you go without fertilizing[end if] the egg this time.  But just as you think it's about to remove the other tentacles, you suddenly feel them shudder, widen, and paint your body with fertility cream while the large one inside you releases a torrent of its cum into your womb.  This pushes your tired body to the point of yet another orgasm.  Your belly swells to the point it looks about 4 months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before";
+				say "The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created, as you regain your strength you crawl back out of the basement.";
+				say "[horror impreg]";
+			if tentsubmit is 1:
+				now lasttentaclebattleoutcome is 3;
+			otherwise:
+				now lasttentaclebattleoutcome is 2;
+		otherwise:
+			if thmpregdetect is false:
+				if tentsubmit is 1:
+					say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so.  The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes over your body as the creature draws you closer.  As the tendril glides between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
+				otherwise:
+					say "You've lost the will to continue your struggle against the horror.  Collapsing to your knees on the cold concrete floor, you start to tilt forward.  The creature catches you in its slime coated appendages before you hit the ground.  However you quickly realize this was not out of kindness.  Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes roughly over your body as the creature draws you closer.  As the tendril grinds between your ass cheeks, the tentacled monstrocity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
+			otherwise:
+				if tentsubmit is 1:
+					say "As you lie down in a clear sign of submission, the creature excitedly approaches you, extending its many tentacles towards you as it does so.  The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes over your body as the creature draws you closer.  The tendril once again glides between your ass cheeks, the tentacled monstrocity seeking out that fecund asshole of yours once again.";
+				otherwise:
+					say "You've lost the will to continue your struggle against the horror.  Collapsing to your knees on the cold concrete floor, you start to tilt forward.  The creature catches you in its slime coated appendages before you hit the ground.  However you quickly realize this was not out of kindness.  Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body.  A slimy tentacle probes roughly over your body as the creature draws you closer.  The tendril once again grinds between your ass cheeks, the tentacled monstrocity seeking out that fecund asshole of yours once again.";
+			now thmpregdetect is true;
+			say "A trio of tentacles push their way into your bowels, one after the other until all three are squirming and writhing inside you, sending shivers of pleasure through you[if cocks of player > 0].  Your male genitalia are ignored, the creature intent only on seeding the egg it planted in you earlier[end if].  Those slimy tendrils piston in and out of your ass for what feels like hours, stretching your [if player is twistcapped]unnaturally flexible anus with ease as your tight passage expands to provide a tight and enjoyable fit around those raping tentacles[otherwise if scalevalue of player > 4]huge rump with ease as your tight passage is forced to endure the overzealous tentacle raping[otherwise if scalevalue of player > 2]your rump with some effort as your tight passage is forced to uncomfortably wide to endure the overzealous tentacle raping[otherwise]your rump with considerable effort as your [body size of player] passage is forced far beyond its capacity to deal with the overzealous tentacle raping[end if].  Musky slime and sexual fluids ooze from around the thrusting tentacles down your legs, making an ever growing slick puddle on the floor beneath you.";
+			say "Much later, the puddle beneath you stretches out into the shadows.  The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
+			if tentsubmit is 1:
+				now lasttentaclebattleoutcome is 3;
+			otherwise:
+				now lasttentaclebattleoutcome is 2;
+			now eggplanted is 0;
+			say "[horror impreg]";
+	otherwise if tentaclerape is 0:
+		if tentsubmit is 1:
+			say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+			if hascunt is 0:
+				say "A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach,";
+		otherwise:
+			say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+			if hascunt is 0:
+				say "A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach,";
+		if cunts of player is 0:
+			say " causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits,";
+		say "[if hascunt is 1]A[otherwise]a[end if] tentacle twice the size of the others forces its way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider than your cunt could initially contain.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+		if cocks of player is 1:
+			say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
+		if cocks of player is greater than 1:
+			say "The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other.  The creature's appendages quickly jerks around your members for a few moments, then swaps to rubbing your cocks against one another, then returns to jerking your members off again.  The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor.  The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+		say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, [if hascunt is 1]the secretions around the tentacle somehow[otherwise]the chemicals in your belly[end if] helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
+		say "As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as [if multicunt is 1]different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your battered pussies. [otherwise]a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your battered pussy. [end if]Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
+		say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
+		if hascunt is 0:
+			now cunts of player is 1;
+			now thirst of player is 0; [all that liquid should quench your thirst ;) ]
+		if cuntsmall is 1:
+			now cunt length of player is 15;
+			now cunt width of player is 12;
+		now tentaclerape is 1;
+		if tentsubmit is 1:
+			now lasttentaclebattleoutcome is 3;
+		otherwise:
+			now lasttentaclebattleoutcome is 2;
+		say "[horror impreg]";
 	otherwise:
-		if gestation of child is 0:
-			if eggplanted is 0:
+		if eggplanted is 0:
+			if tentsubmit is 1:
+				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break]";
+			otherwise:
+				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. ";
+			if cunts of player is 0:
+				say "It starts searching your body for certain characteristics... Rubbing across your groin and finding no useful genitals for it's purpose it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
 				if tentsubmit is 1:
-					say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break]";
+					now lasttentaclebattleoutcome is 4;
 				otherwise:
-					say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. ";
-				if cunts of player is 0:
-					say "It starts searching your body for certain characteristics... Rubbing across your groin and finding no useful genitals for it's purpose it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-					if tentsubmit is 1:
-						now lasttentaclebattleoutcome is 4;
+					now lasttentaclebattleoutcome is 5;
+				stop the action;
+			if tentsubmit is 1:
+				say "The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
+			otherwise:
+				say "However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
+			say "A tentacle twice the size of the others forces its way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider until it is once again the size it had after the last time the monster raped you.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+			if cocks of player is 1:
+				say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
+			if cocks of player is greater than 1:
+				say "The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other.  The creature's appendages quickly jerks around your members for a few moments, then swaps to rubbing your cocks against one another, then returns to jerking your members off again.  The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor.  The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+			say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
+			if a random chance of 95 in 100 succeeds or multicunt is 0: [The tentacles in the other cunt(s) might just explode!]
+				say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+				now eggplanted is 1;
+			otherwise:
+				say "As the creature starts removing the largest tentacle from you, [if tentsubmit is 1]you are saddened that the creature might not fertilize [otherwise]you believe it might let you go without fertilizing [end if]the egg this time. But just as you think it's about to remove the other tentacles you suddenly feel them shudder, widen, and paint your womb with fertility cream and pushing your tired body to the point of yet another orgasm. Your belly swelling to the point it looks about 4 months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before";
+				say "The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created, as you regain your strength you crawl back out of the basement.";
+				say "[horror impreg]";
+			if cuntsmall is 1:
+				now cunt length of player is 15;
+				now cunt width of player is 12;
+			if tentsubmit is 1:
+				now lasttentaclebattleoutcome is 3;
+			otherwise:
+				now lasttentaclebattleoutcome is 2;
+		otherwise:
+			if cunts of player is 0 and cocks of player is 0: [implanted and genderless!? ZOMG!]
+				if tentsubmit is 0: [did not submit]
+					say "The tentacles sense that you can't continue the struggle any longer and surge forward around you, slithering in and through your clothing, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. Having already attempted to lay it's offspring inside of you once, it sees no reason why it should attempt to stimulate you to a climax that would never come... All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
+					now lasttentaclebattleoutcome is 5;
+				otherwise: [did submit, choice time]
+					say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it extends a tentacle to your mouth gently prodding your lips.";
+					say "Do you let the tentacle in?";
+					if the player consents:
+						say "As you open your mouth the tentacle pushes itself into your throat, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits a tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
+						now cunts of player is 1;
+						now cunt length of player is 15;
+						now cunt width of player is 12;
+						now lasttentaclebattleoutcome is 3;
+						now eggplanted is 0;
+						now thirst of player is 0; [all that liquid should quench your thirst ;) ]
+						say "[horror impreg]";
 					otherwise:
-						now lasttentaclebattleoutcome is 5;
-					stop the action;
+						say "The monster drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
+						now lasttentaclebattleoutcome is 4;
+						stop the action;
+			otherwise:
 				if tentsubmit is 1:
-					say "The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
+					say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+					if hascunt is 0:
+						say "The beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+						say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+						say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand alarmingly as your intestines are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass";
+						now lasttentaclebattleoutcome is 3;
+						now thirst of player is 0;
+						stop the action;
+					say "[if multicunt is 1]Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]A tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
 				otherwise:
-					say "However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
-				say "A tentacle twice the size of the others forces it's way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider until it is once again the size it had after the last time the monster raped you.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
-				if cocks of player is 1:
-					say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across 	the floor below you.";
-				if cocks of player is greater than 1:
-					say "The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
-				say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
-				if a random chance of 95 in 100 succeeds or multicunt is 0: [The tentacles in the other cunt(s) might just explode!]
-					say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
-					now eggplanted is 1;
+					say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. [line break] [line break]";
+					if hascunt is 0:
+						say "Having already laid its egg within you, the beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+						say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+						say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand painfully as your intestines are filled to the brim with cream. The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass, the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
+						now lasttentaclebattleoutcome is 2;
+						now thirst of player is 0;
+						stop the action;
+					say "Ignoring your male genitalia [if multicunt is 1]tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]a tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
+				say "[if multicunt is 1]Each tentacle is[otherwise]It's[end if] quickly joined by 2 others, and all [if multicunt is 1]of the sets of three piston in and out of your pussies[otherwise]three piston in and out of your pussy[end if] for hours, [if cuntsmall is 1]stretching your cunt back to the size it was the last time the horror raped you[otherwise]hardly stretching your [cunt size desc of player] pussy[end if]. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
+				if a random chance of 40 in 100 succeeds: [random assrape! 40% chance]
+					if tentsubmit is 1:
+						say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+						say "The tentacle starts an in and out thrusting rhythm quickly building up speed to keep up with the other tentacles already in you. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+						say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your belly expand alarmingly as your insides are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies.[otherwise]pussy.[end if] As you stand up you feel the thick cream move around your insides, looking down you see that the sheer volume still in your intestines makes you look 5 months pregnant.";
+					otherwise:
+						say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+						say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+						say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your stomach expand painfully as your insides are filled to the brim with cream.";
+						say "The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if], the taste of it still heavy in your mouth. Your belly still swollen so that you look 9 months pregnant with triplets, the thick cream sloshing around your insides as you try to get up. The creature is nowhere to be seen.";
 				otherwise:
-					say "As the creature starts removing the largest tentacle from you, [if tentsubmit is 1]you are saddened that the creature might not fertilize [otherwise]you believe it might let you go without fertilizing [end if]the egg this time. But just as you think it's about to remove the other tentacles you suddenly feel them shudder, widen, and paint your womb with fertility cream and pushing your tired body to the point of yet another orgasm. Your belly swelling to the point it looks about 4 months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before";
-					say "The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created, as you regain your strength you crawl back out of the basement.";
-					say "[horror impreg]";
+					say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
 				if cuntsmall is 1:
 					now cunt length of player is 15;
 					now cunt width of player is 12;
@@ -113,77 +247,9 @@ to say horror victory:
 					now lasttentaclebattleoutcome is 3;
 				otherwise:
 					now lasttentaclebattleoutcome is 2;
-			otherwise:
-				if cunts of player is 0 and cocks of player is 0: [implanted and genderless!? ZOMG!]
-					if tentsubmit is 0: [did not submit]
-						say "The tentacles sense that you can't continue the struggle any longer and surge forward around you, slithering in and through your clothing, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. Having already attempted to lay it's offspring inside of you once, it sees no reason why it should attempt to stimulate you to a climax that would never come... All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-						now lasttentaclebattleoutcome is 5;
-					otherwise: [did submit, choice time]
-						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it extends a tentacle to your mouth gently prodding your lips.";
-						say "Do you let the tentacle in?";
-						if the player consents:
-							say "As you open your mouth the tentacle pushes itself into your throat, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits a tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-							now cunts of player is 1;
-							now cunt length of player is 15;
-							now cunt width of player is 12;
-							now lasttentaclebattleoutcome is 3;
-							now eggplanted is 0;
-							now thirst of player is 0; [all that liquid should quench your thirst ;) ]
-							say "[horror impreg]";
-						otherwise:
-							say "The monster drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-							now lasttentaclebattleoutcome is 4;
-							stop the action;
-				otherwise:
-					if tentsubmit is 1:
-						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
-						if hascunt is 0:
-							say "The beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
-							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
-							say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand alarmingly as your intestines are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass";
-							now lasttentaclebattleoutcome is 3;
-							now thirst of player is 0;
-							stop the action;
-						say "[if multicunt is 1]Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]A tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
-					otherwise:
-						say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. [line break] [line break]";
-						if hascunt is 0:
-							say "Having already laid its egg within you, the beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
-							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
-							say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand painfully as your intestines are filled to the brim with cream. The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass, the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
-							now lasttentaclebattleoutcome is 2;
-							now thirst of player is 0;
-							stop the action;
-						say "Ignoring your male genitalia [if multicunt is 1]tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]a tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
-					say "[if multicunt is 1]Each tentacle is[otherwise]It's[end if] quickly joined by 2 others, and all [if multicunt is 1]of the sets of three piston in and out of your pussies[otherwise]three piston in and out of your pussy[end if] for hours, [if cuntsmall is 1]stretching your cunt back to the size it was the last time the horror raped you[otherwise]hardly stretching your [cunt size desc of player] pussy[end if]. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
-					if a random chance of 40 in 100 succeeds: [random assrape! 40% chance]
-						if tentsubmit is 1:
-							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
-							say "The tentacle starts an in and out thrusting rhythm quickly building up speed to keep up with the other tentacles already in you. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
-							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your belly expand alarmingly as your insides are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies.[otherwise]pussy.[end if] As you stand up you feel the thick cream move around your insides, looking down you see that the sheer volume still in your intestines makes you look 5 months pregnant.";
-						otherwise:
-							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
-							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
-							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your stomach expand painfully as your insides are filled to the brim with cream.";
-							say "The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if], the taste of it still heavy in your mouth. Your belly still swollen so that you look 9 months pregnant with triplets, the thick cream sloshing around your insides as you try to get up. The creature is nowhere to be seen.";
-					otherwise:
-						say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
-					if cuntsmall is 1:
-						now cunt length of player is 15;
-						now cunt width of player is 12;
-					if tentsubmit is 1:
-						now lasttentaclebattleoutcome is 3;
-					otherwise:
-						now lasttentaclebattleoutcome is 2;
-					now eggplanted is 0;
-					say "[horror impreg]";
-		otherwise:
-			if tentsubmit is 1:
-				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparently sensing the new life growing inside of you the creature sets you down and leaves";
-				now lasttentaclebattleoutcome is 4;
-			otherwise:
-				say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
-				now lasttentaclebattleoutcome is 5;
+				now eggplanted is 0;
+				say "[horror impreg]";
+
 
 to say horror impreg:
 	Now gestation of child is a random number from 24 to 48;
