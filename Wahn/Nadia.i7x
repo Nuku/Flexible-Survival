@@ -793,7 +793,7 @@ The slot of feathered cloak is "body".
 Section 4 - Endings
 
 when play ends:
-	if hp of Nadia is 1:  [player brought her in]
+	if hp of Nadia > 0 and hp of Nadia < 99:  [player brought her in]
 		if humanity of player is less than 10:
 			say "     When you fail to return to the library, Nadia holds out hope until the very last, only deigning to leave with the military when they evacuate people from the city. Later, when the military is doing one final sweep of the city, a small troop of soldiers checks the now-empty library and bunker for any remaining evacuees.";
 			say "     They don't find anyone, but what they do find is Nadia's empty nest with a broad-leafed, tropical plant in a pot in its middle. The plant is still vibrant and blooming despite having been left indoors for some time now, displaying brilliant flowers in varying shades of red, orange and yellow, and a faint floral scent hangs in the air. The soldiers are strangely moved by the sight - enough that they take the plant along with them when they leave.";
