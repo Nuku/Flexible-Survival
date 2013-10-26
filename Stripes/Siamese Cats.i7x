@@ -96,38 +96,38 @@ to say losetosiamesecat:
 
 
 to say beatthesiamesecat:
-	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.  They mewl softly, beaten now.  Looking them over, you consider playing with one of them.  Do you want to have some fun with one of the Siamese twins? (Y/N)";
-	if the player consents:
-		decrease libido of player by 10;
-		say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.  Now which one would you like, the male or the female?  (Y-male, N-female)";
-		if the player consents:								[CHOSE MALE KITTY]
-			if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
-				say "[line break][siamsex1]";
-			otherwise if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
-				say "[line break][siamsex2]";
-			otherwise if cocks of player > 0 and cunts of player > 0:	[HERM PLAYER]
-				say "[line break]     Well, with your dual equipment, you find yourself with one last decision.  What to do with your feline plaything?  Would you like to ride the kitty's cock or fill that sweet ass of his? (Y-get fucked / N-fuck the kitty)[line break]";
-				if the player consents:
+	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well";
+	if libido of player > 29 and (cocks of player > 0 or cunts of player > 0):
+		say ".  They mewl softly, beaten now.  Looking them over, you consider playing with one of them.  Do you want to have some fun with one of the Siamese twins? (Y/N)";
+		if the player consents:
+			decrease libido of player by 10;
+			say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.  Now which one would you like, the male or the female?  (Y-male, N-female)";
+			if the player consents:								[CHOSE MALE KITTY]
+				if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
 					say "[line break][siamsex1]";
-				otherwise:
+				otherwise if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
 					say "[line break][siamsex2]";
-			otherwise:									[NEUTER]
-				say "[line break]     You are ill-equipped to play with the felines decide to leave them be.";
-		otherwise:										[CHOSE FEMALE KITTY]
-			if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
-				say "[line break][siamsex3]";
-			otherwise if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
-				say "[line break][siamsex4]";
-			otherwise if cocks of player > 0 and cunts of player > 0:	[HERM PLAYER]
-				say "[line break]     Well, with your dual equipment, you find yourself with one last decision.  What to do with your feline plaything?  Would you like to fill the kitty's hot pussy or have her eat you out? (Y-fuck the kitty / N-oral)";
-				if the player consents:
-					say "[line break][siamsex4]";
-				otherwise:
+				otherwise:	[HERM PLAYER]
+					say "[line break]     Well, with your dual equipment, you find yourself with one last decision.  What to do with your feline plaything?  Would you like to ride the kitty's cock or fill that sweet ass of his? (Y-get fucked / N-fuck the kitty)[line break]";
+					if the player consents:
+						say "[line break][siamsex1]";
+					otherwise:
+						say "[line break][siamsex2]";
+			otherwise:										[CHOSE FEMALE KITTY]
+				if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
 					say "[line break][siamsex3]";
-			otherwise:									[NEUTER]
-				say "[line break]     You are ill-equipped to play with the felines decide to leave them be.";
+				otherwise if cocks of player > 0 and cunts of player is 0:	[MALE PLAYER]
+					say "[line break][siamsex4]";
+				otherwise:	[HERM PLAYER]
+					say "[line break]     Well, with your dual equipment, you find yourself with one last decision.  What to do with your feline plaything?  Would you like to fill the kitty's hot pussy or have her eat you out? (Y-fuck the kitty / N-oral)";
+					if the player consents:
+						say "[line break][siamsex4]";
+					otherwise:
+						say "[line break][siamsex3]";
+		otherwise:
+			say "[line break]You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
 	otherwise:
-		say "[line break]You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
+		say ". You turn away to depart, leaving the kitties there.";
 
 
 to say siamsex1:	[ride cock]

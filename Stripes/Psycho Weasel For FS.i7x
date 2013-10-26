@@ -38,7 +38,7 @@ to say losetopsychoweasel:
 
 to say beatthepsychoweasel:
 	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [bodyname of player].  He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other";
-	if libido of player > 40:
+	if libido of player > 29:
 		say ".  You prepare to continue on your way, but your arousal stops you long enough to wonder if you might take advantage of the weasel to satisfy your needs.  Shall you sate your lusts?";
 		if the player consents:
 			say "     With your decision made, you move quickly up to the weasel and run your hands over his head, then down to his arms.  He whimpers a little, but seems to calm down as you start securing his straightjacket.  Restrained, he whimpers more, but now clearly at his inability to reach his throbbing cock, which has gotten even harder and is dripping with precum.  When you take his erection in hand and stroke it, he moans softly and settles down, mumbling about [one of]rainbows and pretty, horny fairies[or]sunrises and vixen nurses[or]sponge baths and happy pills[or]fluffy owl down pillows[in random order].";
