@@ -10,6 +10,7 @@ when play begins:
 
 nobirdofparadisesex is a number that varies.
 bopseen is a truth state that varies.  bopseen is normally false.
+bopdefeated is a number that varies.
 
 to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing.  The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining.  Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music.  Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that Bird of Paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, its everywhere, EVERYWHERE!";
