@@ -38,7 +38,7 @@ to say beatthejaguar:
 	if fightstatus is 3:
 		now fightstatus is 1;		[required for hospital fight]
 		say "     You manage to knock the muscled jaguar out, at least for the moment.";
-	otherwise if libido of player >= 50 or ( ( bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist ) and libido of player >= 25 ):
+	otherwise if libido of player >= 30 or ( ( bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist ) and libido of player >= 15 ):
 		say "     Looking over the powerful feline, you find yourself considering taking advantage of the situation to have some quick fun";
 		if cocks of player > 0:
 			say ".  Looking over the big male and the bulge in his crotch, you could either fuck him [link](1)[as]1[end link], get his cock inside you [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
@@ -57,7 +57,7 @@ to say beatthejaguar:
 			otherwise:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 		otherwise:
-			say ".  You consider getting a ride on that cock of hers (Y) or just letting her go (N).";
+			say ".  You consider getting a ride on that cock of his (Y) or just letting him go (N).";
 			if the player consents:
 				say "[jagride]";
 			otherwise:

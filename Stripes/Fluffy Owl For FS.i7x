@@ -24,13 +24,17 @@ to say losetofluffyowl:
 
 
 to say beatthefluffyowl:		[WIN]
-	say "     With the fluffy bird knocked down, you look over her shapely body, tempted by those huge breasts and that feather-padded bottom.  Shall you play with the captured birdy?";
-	if the player consents:
-		say "     Grabbing the owl's big hooters, you run your fingers through the soft down and squeeze the warm, soft flesh beneath.  She hoots softly in pleasure and gives into your manhandling readily.  It seems her enlarged breasts are quite sensitive.  Finding those hidden nipples, you start to squeeze and tease them, getting her all the more excited.";
-		if cocks of player > 0:
-			say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby bed.  You sit her in your lap with her back to you as you guide her down onto your hard cock.  Her cloacal vent spreads open for you easily and takes your cock in, gripping and twitching around it as you start fucking her while still playing with her large breasts.  Her bird-like pussy feels slightly different around your cock, squeezing and pulling in ways that are different, but equally enjoyable.  She hoots and moans in pleasure as you thrust into her again and again until you finally cum hard and shoot your hot seed into her, bathing her eggs in your semen.  Once your balls are drained, you continue to hold the soft bird against you and play with her sensitive breasts and nipples until you can get her to cum again before you release her and part ways.";
-		otherwise:
-			say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby examination table.  You sit her down on it, spreading her legs.  You slide one hand down between her legs while the other continues to fondle her oversized bosom.  Finding her wet slit under those soft feathers, you run your fingers over it before slipping them into her.  Her cloaca-like pussy is wet and shaped a little different from a normal cunt, but quivers with delight all the same as you drive a pair of fingers into her.  The way it feels and the way it grips around your fingers is a little different, but still quite enjoyable, especially as you watch the bird woman moan and squirm in ecstacy when she cums.  Her hot juices soak your fingers and you brush them off onto her fluffy breast before you part ways.";
+	say "     With the fluffy bird knocked down, ";
+	if libido of player > 29 or (bodyname of player is listed in infections of AvianList and libido of player > 14):
+		say "you look over her shapely body, tempted by those huge breasts and that feather-padded bottom.  Shall you play with the captured birdy?";
+		if the player consents:
+			say "     Grabbing the owl's big hooters, you run your fingers through the soft down and squeeze the warm, soft flesh beneath.  She hoots softly in pleasure and gives into your manhandling readily.  It seems her enlarged breasts are quite sensitive.  Finding those hidden nipples, you start to squeeze and tease them, getting her all the more excited.";
+			if cocks of player > 0:
+				say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby bed.  You sit her in your lap with her back to you as you guide her down onto your hard cock.  Her cloacal vent spreads open for you easily and takes your cock in, gripping and twitching around it as you start fucking her while still playing with her large breasts.  Her bird-like pussy feels slightly different around your cock, squeezing and pulling in ways that are different, but equally enjoyable.  She hoots and moans in pleasure as you thrust into her again and again until you finally cum hard and shoot your hot seed into her, bathing her eggs in your semen.  Once your balls are drained, you continue to hold the soft bird against you and play with her sensitive breasts and nipples until you can get her to cum again before you release her and part ways.";
+			otherwise:
+				say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby examination table.  You sit her down on it, spreading her legs.  You slide one hand down between her legs while the other continues to fondle her oversized bosom.  Finding her wet slit under those soft feathers, you run your fingers over it before slipping them into her.  Her cloaca-like pussy is wet and shaped a little different from a normal cunt, but quivers with delight all the same as you drive a pair of fingers into her.  The way it feels and the way it grips around your fingers is a little different, but still quite enjoyable, especially as you watch the bird woman moan and squirm in ecstacy when she cums.  Her hot juices soak your fingers and you brush them off onto her fluffy breast before you part ways.";
+	otherwise:
+		say "you choose to part ways before she recovers.";
 
 
 to say fluffyowldesc:
