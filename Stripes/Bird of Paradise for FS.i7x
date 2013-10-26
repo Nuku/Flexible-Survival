@@ -1,5 +1,5 @@
 Version 1 of Bird of Paradise for FS by Stripes begins here.
-[Version 1.1 - Alt combat tweaked]
+[Version 1.2 - M/F player victory]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Bird of Paradise to Flexible Survival."
@@ -13,13 +13,35 @@ bopseen is a truth state that varies.  bopseen is normally false.
 
 to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing.  The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining.  Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music.  Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that Bird of Paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, its everywhere, EVERYWHERE!";
-	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if cocks of player > 0]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if cunts of player > 1]cunts explode in oozing wetness and[otherwise if cunts of player is 1]cunt explode in oozing wetness and your[end if] spine tingles as shivers run down its length.  Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
+	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if cocks of player > 0]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if cunts of player > 1]cunts explode in oozing wetness and[otherwise if cunts of player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length.  Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
 	now libido of player is libido of player / 2;
 
 
 to say beatthebirdofparadise:
-	say "     Having beaten the colourful bird woman, she shrieks angrily and takes flight, leaving you in search of a more cooperative mate.  As the bird leaves, your arousal decreases a little once the temptation is out of sight.";
-	now libido of player is ( libido of player * 4 ) / 5;
+	if bopdefeated is 3 and cocks of player > 0:
+		increase bopdefeated by 1;
+		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others.  She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away.  Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her.  Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
+		if the player consents:
+			say "[bopvictorysex1]";
+		otherwise:
+			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent.  You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again.  Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
+	otherwise if bopdefeated > 3 and cocks of player > 0 and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
+		increase bopdefeated by 1;
+		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later.  She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release.  Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
+		if the player consents:
+			say "[bopvictorysex1]";
+		otherwise:
+			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent.  You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again.  Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
+	otherwise:
+		say "     Having beaten the colourful bird woman, she shrieks angrily and takes flight, leaving you in search of a more cooperative mate.  As the bird leaves, your arousal decreases a little once the temptation is out of sight.";
+		if bopdefeated < 3, increase bopdefeated by 1;
+		now libido of player is ( libido of player * 4 ) / 5;
+
+
+to say bopvictorysex1:
+	say "     With the colourful bird pinned beneath you, it is simply a matter of slipping out your cock with one hand while you hold her down with the other.  When you drive your [cock of player] cock into her, she sings musically in delight only to be cut off by your hand wrapping around her beak.  Not wanting her to captivating song to ensnare you, you keep her keep a firm grip on it while plowing into her.  All she can do is moan and whimper in pleasure as you keep driving yourself into the downy ass of hers, stuffing her cunt with your [cock size desc of player] manhood over and over again.";
+	say "     She stopped resisting long, but you keep that beak of hers shut as a precaution, though your other hand is freed to roam over her luscious body.  You grope her feathered breasts, slap her pretty ass and tease her clit, delighting in her muffled moans of pleasure as you have your way with her.  The bird, used to being in control and having her way the males she ensnares, is unprepared for being on the receiving end of such rough sex and finds herself cumming repeatedly.  After getting to cum several times, you drive your [cock of player] shaft [if cock length of player > 12]as deep as it'll go[otherwise]fully[end if] into her and drain your balls into her spasming cunt.  When you're done, you pull out, wipe your sticky shaft across her downy ass and leave her then in a sex-addled daze.";
+	now libido of player is ( libido of player * 2 ) / 5;
 
 
 to say birdofparadisedesc:
