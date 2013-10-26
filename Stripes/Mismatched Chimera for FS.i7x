@@ -1,5 +1,5 @@
 Version 2 of Mismatched Chimera for FS by Stripes begins here.
-[Version 2.2 - Random infection tweak]
+[Version 2.3 - Anal player loss scene]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -28,7 +28,7 @@ to say losetomischim:
 	choose row monster from the table of random critters;
 	now dex entry is 15;		[ reset dexterity for random infection ]
 	now lev entry is 6;		[ reset level for random encounter availability ]
-	if anallevel is not 0 and (cunts of player is 0 or anallevel is 2) and (a random chance of 1 in 3 succeeds or (anallevel is 2 and a random chance of 1 in 3 succeeds)):
+	if anallevel is not 1 and ( cunts of player is 0 or anallevel is 3 ) and ( a random chance of 1 in 3 succeeds or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) ):
 		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it.  With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr.  The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigour.  The chimera's heavy ballsac feels strange as it slaps against you again and again, quite full and heavy.";
 		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body.  This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you.  You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw.  The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you.  The idea of it changing you in random ways ";
 		if "MPreg" is listed in feats of player:
