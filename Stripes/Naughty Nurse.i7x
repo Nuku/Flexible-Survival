@@ -54,7 +54,7 @@ to say losetovixennurse:
 
 to say beatthevixennurse:
 	choose row monster from the table of random critters;
-	if libido of player > 33:
+	if libido of player > 29:
 		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying half-heartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
 		if the player consents:
 			if cocks of player > 0:

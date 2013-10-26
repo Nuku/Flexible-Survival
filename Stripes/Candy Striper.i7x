@@ -43,13 +43,13 @@ to say losetocandycoon:
 				if libido of player > 100, now libido of player is 100;
 	otherwise:
 		say "     The pink highlighted raccoon shoves you down to your knees in front of him.  With a flourish, he flips up his skirt to expose his hot pink six incher to you.  You resist the urge to make a comment about its size, given the size on most other creatures you've seen running around these days.  He pulls your head forward, sliding his cock into your mouth with a soft moan.  'You're no sexy boi, but you'll have to do.  Any port in a storm, as it were,' he giggles as he thrusts.  His hard shaft leaks cotton candy flavoured pre onto your tongue.  Its sweetness surprises you and makes you lick and suck more eagerly.  Glancing up, you can see he's closed his eyes, perhaps imagining a horny male in your place.";
-		say "     This upsets you a little and makes you try all the harder to please him, eager to get this gay boi to cum for you.  Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat.  He strokes your head and smiles down at you as he slips his cock from your lips.  You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps.  He grins down at you and dashes off, yelling 'Not bad... for a girl.'";
+		say "     This upsets you a little and makes you try all the harder to please him, eager to get this gay boi to cum for you.  Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat.  He strokes your head and smiles down at you as he slips his cock from your lips.  You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps.  He grins down at you and dashes off, yelling 'Not bad... for [if cunts of player > 0]a girl[otherwise]whatever you are[end if].'";
 
 
 to say beatthecandycoon:
 	if nocandycoonsex > 2:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts as you have in the past.";
-	otherwise if libido of player < 20:
+	otherwise if libido of player < 30:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	otherwise:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you.  You lick your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
