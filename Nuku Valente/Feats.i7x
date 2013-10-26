@@ -341,6 +341,7 @@ This is the gainfeat rule:
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		if nam is "Vore Predator":
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command.  It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]).  It is used for adjusting vore-related game settings.";
+			now playercanvore is true;
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
 
