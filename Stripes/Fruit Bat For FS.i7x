@@ -1,4 +1,5 @@
-Version 1 of Fruit Bat For FS by Stripes begins here.
+Version 2 of Fruit Bat For FS by Stripes begins here.
+[Version 2 - Player victory menu]
 
 "Adds a nocturnal Fruit Bat creature to Flexible Survivals Wandering Monsters table"
 
@@ -7,6 +8,8 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Fruit Bat" } to infections of guy;
 	add { "Fruit Bat" } to infections of furry;
+
+frbatbeaten is a number that varies.
 
 to say losetofruitbat:
 	if hp of player > 0:
@@ -28,7 +31,95 @@ to say losetofruitbat:
 
 
 to say beatthefruitbat:
-	say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun.  He moves away from you and flaps higher into the air.  '[one of]Oh, with an attitude like that, I'm sure you're sour[or]Hey, don't bruise the fruit[or]You are one bad apple[or]You're missing out on some really big, sweet plums[or]You must be rotten to the core to want to spoil my fun[at random],' he says in disgust before banking away and flying off.";
+	increase frbatbeaten by 1;
+	if frbatbeaten < 2 or ( cocks of player is 0 and cunts of player is 0 ):
+		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun.  He moves away from you and flaps higher into the air.  '[one of]Oh, with an attitude like that, I'm sure you're sour[or]Hey, don't bruise the fruit[or]You are one bad apple[or]You're missing out on some really big, sweet plums[or]You must be rotten to the core to want to spoil my fun[at random],' he says in disgust before banking away and flying off.";
+	otherwise:
+		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun.  But this time you're ready for him and tackle him as he starts to take to the air.  Unable to support the weight of both of you, he tumbles [if showlocale is true]onto the sandy beach[otherwise]to the ground[end if] and is pinned beneath you.  But you'd reacted without considering why, or even if, you want him at all.  Now that you've caught the bat, what shall you do?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck him";
+			now sortorder entry is 1;
+			now description entry is "pound that fruity ass of his";
+[			choose a blank row in table of fucking options;
+			now title entry is "69";
+			now sortorder entry is 4;
+			now description entry is "suck each other off";		]
+[			choose a blank row in table of fucking options;
+			now title entry is "Blow job";
+			now sortorder entry is 5;
+			now description entry is "make him suck you off";	]
+		if cunts of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride him (vaginal)";
+			now sortorder entry is 2;
+			now description entry is "ride the fruity bat's cock";
+[			choose a blank row in table of fucking options;
+			now title entry is "Cunnilingus";
+			now sortorder entry is 6;
+			now description entry is "make him eat your juicy peach";	]
+		choose a blank row in table of fucking options;
+		now title entry is "Ride him (anal)";
+		now sortorder entry is 3;
+		now description entry is "take the fruity bat's cock up the ass";
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Let him go[as][0][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber is 0:
+				say "     You give the bat a threatening growl and spank that speedo'd ass of his a few times as a warning not to cross you again.  The fruity boytoy gives a high pitched whimper and scrambles away a few feet once you let him go.  '[one of]You big sourpuss[or]You're no fun[or]Hey, don't bruise the fruit[or]You're a rotten winner[or]You're rotten to the core, you spoilsport[at random],' he grumbles, rubbing his sore behind with a winghand.  He takes to the air with an angry shriek and flies off in search of more agreable fun.";
+				now sextablerun is 1;
+			otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "Shall you [description entry]?";
+				if player consents:
+					let num be sortorder entry;
+					now sextablerun is 1;
+					if num is 1:
+						say "[frbatsex_01]";
+					otherwise if num is 2:
+						say "[frbatsex_02]";
+					otherwise if num is 3:
+						say "[frbatsex_03]";
+					otherwise if num is 4:
+						say "[frbatsex_04]";
+					otherwise if num is 5:
+						say "[frbatsex_05]";
+					otherwise if num is 6:
+						say "[frbatsex_06]";
+			otherwise:
+				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+
+
+to say frbatsex_01:
+	say "     Already having the bat pinned beneath you, it's easy enough to yank down the back of his speedo and get your cock lined up with his bubble butt.  His little hands dig at the [if showlocale is true]soft beach sand[otherwise]ground[end if] as he tries to pull away, though his rear automatically grinds back against your manhood in obvious invitation.  Knowing just what this fruity bat needs, you press your glans to his tailhole and [if cock length of player > 20]force your [cock size desc of player] cock into his sexy ass with a grunt of effort[otherwise if cock length of player > 12]drive your [cock size desc of player] cock into his sexy ass with a strong thrust[otherwise if cock length of player > 5]push your [cock size desc of player] cock into his sexy ass with a steady thrust[otherwise]ease your [cock size desc of player] cock into his sexy ass[end if].  His tight ring opens easily enough for you[if cock length of player > 12] despite your considerable size[end if], showing that the cute bat's no stranger to taking it up the ass.";
+	say "     With his hot rectum squeezing around your [cock of player] cock, you pound away at him with a grin on your face.  You reach into the front of his swimsuit and play with his junk, finding him rock hard.  You free his plump shaft and start stroking it, enjoying the soft moans of delight the bat gives.  Feeling more excited and playful as you screw him, you settle into a steady pace and take your time enjoying his sexy bod.";
+	say "     By the time you're ready to cum, you've gotten the poor bat quite worked up as well.  In the end, all it takes is for you to drive your shaft deep inside that sexy bottom of his and start pumping your [cum load size of player] load into him for him to cry out in ecstasy and cum as well.  A deliciously fruity scent wafts up from his splattered cum and you can't resist stealing a sample of it, enjoying its blueberry flavour.  When you're finished up, you pull your cock from his creamy ass, give it a swat and pull his speedo back up, leaving your messy load to pool around his ass and leak out around the edges even as the thoroughly fucked bat flies off now that he's had his fun.";
+
+to say frbatsex_02:
+	say "     Having the bat pinned beneath you, it's easy enough to force the worn boytoy into the position you want.  Groping that package of his, you find him still semi-hard and quickly get him back to full erection once you yank down that speedo and start stroking him.  You lower your juicy cunt down overtop of his large cock[if cunt length of player < 8], taking as much of his eight inches as you can get into your [cunt size desc of player] pussy[otherwise], taking the full length of his eight inchest into your [cunt size desc of player] pussy[end if] with a soft moan of delight.  He releases a pleasured cry as well and starts thrusting up into you even as you ride his pulsing pole.";
+	say "     As he gets into it, you don't have to worry about holding him down and can instead pull his little wing hands to your [if breast size of player > 0]breasts so they can be played with as well[otherwise][bodytype of player] chest so it can be caressed[end if][if cocks of player > 0].  He eyes your cock longingly, his long tongue licking across his rather vulpine muzzle, but you keep his hands at your chest[end if].  You have your way with the boytoy's cock, riding it for all its worth.  Being on top and in control, you adjust the pace and position as needed for your own pleasure, making the most out of the hot and juicy fucking.";
+	say "     When you climax and and your cunt clamps down around his shaft in spasms of ecstasy, the bat's not long to follow, spraying his own load into you.  You pull off of him even as he's still cumming and pump the last few shots of his berry-scented cum across your crotch and his belly.  Your fun over, you pull the colourful swimsuit back over his crotch with an elastic snap onto his oversensitive shaft, making him whimper cutely.  You give his ass a final swat and send him on his way.[fimpregchance]";
+
+to say frbatsex_03:
+	say "     Having the bat pinned beneath you, it's easy enough to force the worn boytoy into the position you want.  Groping that package of his, you find him still semi-hard and quickly get him back to full erection once you yank down that speedo and start stroking him.  You lower your crinkled hole down overtop of his large cock and he gives a high-pitched chirp of pleasure as his eight incher sinks into your [if scalevalue of player < 3]tight[otherwise if scalevalue of player is 3]sexy[otherwise]large[end if] ass.  You release a soft moan of delight as he starts thrusting up into you, meeting your downward pushes eagerly.";
+	say "     With him clearly getting into it, you don't have to worry about holding him down and can instead pull his little wing hands to your [if cocks of player > 0]throbbing cock[smn] for him to play with.  He works them over with an eagerness and familiarity of someone who's had plenty of experience pleasing other males[otherwise if breast size of player > 0]breasts for him to play with[otherwise][bodytype of player] chest so it can be caressed[end if][if cunts of player > 0].  You slip a hand between your thighs to play with your pussy while the bat's rod stuffs your asshole[end if].  You have your way with the boytoy's cock, riding it for all its worth.  Being on top and in control, you adjust the pace and position as needed for your own pleasure, making the most out of the hot, tight fucking[if cocks of player > 0] by ensuring it pounds right into your prostate[end if]";
+	say "     When you reach orgasm and and your rectum clamps down around his shaft in spasms of ecstasy, the bat's not long to follow.  He sprays his load onto your bowels even as you [if cocks of player > 0 and cunts of player > 0]coat his chest with your [cum load size of player] load and your feminine juices soak his crotch[otherwise if cocks of player > 0]coat his chest with your [cum load size of player] load[otherwise]soak his crotch with your feminine juices[end if].  You pull off of him even as he's still cumming and pump the last few shots of his berry-scented cum across your groin and his tummy[if cocks of player > 0], adding to your own mess[end if]  Your fun over, you pull the colourful swimsuit back over his crotch with an elastic snap onto his oversensitive shaft, making him whimper cutely.  You give his ass a final swat and send him on his way.[mimpregchance]";
+
+to say frbatsex_04:
+	say "***69";
+
+to say frbatsex_05:
+	say "***blow job";
+
+to say frbatsex_06:
+	say "***cunnilingus";
 
 
 to say fruitbatdesc:
