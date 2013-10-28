@@ -1,5 +1,5 @@
-Version 1 of Voodoo Gecko For FS by Stripes begins here.
-[Version 1.4 - Forced UB]
+Version 2 of Voodoo Gecko For FS by Stripes begins here.
+[Version 2 - Player victory sex menu]
 
 "Adds a Voodoo Gecko creature to Flexible Survivals Wandering Monsters table"
 
@@ -83,36 +83,72 @@ to say losetovoodoogecko:
 
 
 to say beatthevoodoogecko:
+	increase vgeckobeaten by 1;
 	if cocks of player is 0 and cunts of player is 0:
 		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground.  She groans weakly, too battered to pull herself back to her feet to continue fighting.  Giving her a hard boot in the rear, you send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
-	otherwise if vgeckoloss is 0 and cocks of player > 0:
-		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground.  She groans weakly, too battered to pull herself back to her feet to continue fighting.  With her unable to use the doll's power against you, you find yourself tempted to take advantage of the situation.  Shall you fuck this shemale gecko?";
-		if the player consents:
-			say "[vgeckosex_02]";
-		otherwise:
-			say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
-	otherwise if vgeckoloss > 0:
-		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground.  She groans weakly, too battered to pull herself back to her feet to continue fighting.  Looking at her voodoo doll and remembering what she did to you with it, you find yourself tempted to turn the tables on her a little.  Shall you give her a taste of her own dark medicine?";
-		if cocks of player > 0:
-			say "Options: 1> [link]Voodoo doll[as]1[end link] , 2> [link]Fuck her[as]2[end link] or 0> [link]Release her[as]0[end link].";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
-				get a number;
-			if calcnumber is 1:
-				say "[vgeckosex_01]";
-			otherwise if calcnumber is 2:
-				say "[vgeckosex_02]";
-			otherwise:
-				say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
-		otherwise:
-			if the player consents:
-				say "[vgeckosex_01]";
-			otherwise:
-				say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
 	otherwise:
-		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground.  She groans weakly, too battered to pull herself back to her feet to continue fighting.  Giving her a hard boot in the rear, you send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
-	increase vgeckobeaten by 1;
+		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground.  She groans weakly, too battered to pull herself back to her feet to continue fighting.  With her unable to use the doll's power against you, you find yourself tempted to take advantage of the situation and consider the various ways you could have fun with your fallen foe.";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		if cocks of player > 0 and vgeckoloss > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Voodoo doll";
+			now sortorder entry is 1;
+			now description entry is "give her a taste of her own dark medicine";
+		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck her";
+			now sortorder entry is 2;
+			now description entry is "fuck her shemale ass";
+[			choose a blank row in table of fucking options;
+			now title entry is "Blow job";
+			now sortorder entry is 5;
+			now description entry is "make her suck you off";	]
+		if cunts of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride her (vaginal)";
+			now sortorder entry is 3;
+			now description entry is "stuff your cunt with the shemale's cock";
+[			choose a blank row in table of fucking options;
+			now title entry is "Cunnilingus";
+			now sortorder entry is 6;
+			now description entry is "make her eat your pussy";	]
+		choose a blank row in table of fucking options;
+		now title entry is "Ride her (anal)";
+		now sortorder entry is 4;
+		now description entry is "stuff your ass with the shemale's cock";
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Let her go[as][0][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber is 0:
+				say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
+				now sextablerun is 1;
+			otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "Shall you [description entry]?";
+				if player consents:
+					let num be sortorder entry;
+					now sextablerun is 1;
+					if num is 1:
+						say "[vgeckosex_01]";
+					otherwise if num is 2:
+						say "[vgeckosex_02]";
+					otherwise if num is 3:
+						say "[vgeckosex_03]";
+					otherwise if num is 4:
+						say "[vgeckosex_04]";
+					otherwise if num is 5:
+						say "[vgeckosex_05]";
+					otherwise if num is 6:
+						say "[vgeckosex_06]";
+			otherwise:
+				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+
 
 to say vgeckosex_01:
 	say "     Stepping over her as she tries to crawl towards her doll, you snatch it up.  Pulling a few strands of her indigo hair from her head, you stuff them into the voodoo doll.  You then grab her tightly in one arm, groping one of those plump breasts of hers.  As you do so, you press the doll to her face and order her say the words.  She is reluctant at first, but when you manhandle her breast and tug on her nipple ring a few times, she moans and relents, chanting the incantation to bind her and the doll in a burst of purple smoke.  And with that done, now the fun can begin.";
@@ -128,6 +164,22 @@ to say vgeckosex_01:
 to say vgeckosex_02:
 	say "     Stepping over her as she tries to crawl towards her doll, you kick it away and yank her to her knees.  Holding the creature by her indigo hair in one hand and pulling up her tail with the other, you press your [cock size desc of player] [cock of player] cock to her crinkled, purple hole.  She groans and squirms as you push your way into her bowels with a sigh of pleasure.  Feeling that sexy ass around your shaft, you tighten your hold and start thrusting.  At first, she struggles to resist, but soon she's moaning and panting with lust as the runes on her cock glow with her growing arousal.";
 	say "     Once you're satisfied that she's too lost in her own lust to continue resisting, you release your grip on her and move your hands to grope those soccer ball tits of hers instead.  You fondle her shapely jugs, rubbing over their smoothly scaled flesh and playing with her nipple rings to hear her give moans and whimpers of delight.  Picking up the pace, you drive your [cock of player] cock harder and faster into her[if cock length of player > 30], stretching her ass to accept your [cock size desc of player] manhood with little effort[otherwise if cock length of player > 15], stuffing her pliant ass with your [cock size desc of player] manhood with surprising ease[otherwise], stuffing her pliant ass with your [cock size desc of player] manhood[end if].  With your cock buried in the lust-crazed lizard, it is only a matter of time before you cum, pumping your [cum load size of player] load into the shemale's asshole.  Her own orgasm soon follows, spraying purple-tainted semen onto the ground without even her cock being touched.  Once you've drained your balls into her, you pull out and push the gecko aside.  She whimpers, still cumming her last few spurts even as you give her a hard boot to the rear to send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape, your seed still leaking from her messy hole.";
+
+to say vgeckosex_03:		[vag]
+	say "     Stepping over her as she tries to crawl towards her doll, you kick it away and shove her onto her back.  While pressing a hand down on her chest, you grab her semi-turgid cock in the other and stroke it back to full erection.  You straddle the gecko and lower your juicy pussy down onto her throbbing erection with a sigh of delight.  Her eight inch rod feels [if cunt length of player < 6]quite big inside your [cunt size desc of player] cunt, causing you to whimper and [otherwise if cunt length of player < 12]quite satisfying inside your [cunt size desc of player] cunt, making you[otherwise]a bit small inside your [cunt size desc of player] cunt, but you[end if] moan in pleasure as you make sure it rubs all the right spots inside you.";
+	say "     By the time you've slid up and down her pole a few times she's stopped her struggles, so you're free to move your hands to her soccer-ball sized tits, manhandling them.  She whimpers and groans in pleasure as you tease her roughly, especially when tug at her nipple rings.  The sight of her squirming beneath you as you give them a hard twist [if cocks of player > 0]makes your cock throb and drool pre with excitement[otherwise if cunts of player > 0]gets you all the wetter[end if].";
+	say "     Sensing your approaching climax, you start riding her shemale rod all the harder and give those big breasts of hers a squeeze.  The gecko releases a hissing cry of orgasmic delight and cums hard, shooting her purple-stained cum into your womb.  Feeling those hot blasts inside you is enough to push you over the edge and you cry out as well, sent hurtling over the peaks of pleasure[if cocks of player > 0].  Your cock[smn] spray[smv] your semen across her body, painting her face and tits with your [cum load size of player] load[end if].  You ride her past the point she's stopped cumming and grind over her oversensitive shaft until your own orgasm is completely over.  Satisfied, you get off of her and give her a firm boot, forcing her up and sending her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.[fimpregchance]";
+
+to say vgeckosex_04:		[anal]
+	say "     Stepping over her as she tries to crawl towards her doll, you kick it away and shove her onto her back.  While pressing a hand down on her chest, you grab her semi-turgid cock in the other and stroke it back to full erection[if cunts of player > 0].  Forgoing your cunt in favour of an ass fucking, you[otherwise]You[end if] straddle the gecko and lower your tight anus down onto her throbbing erection with a sigh of delight.  Her eight inch rod [if scalevalue of player > 4 or the player is twistcapped]is taken into your [body size of player] ass with little difficulty, but you[otherwise if scalevalue of player > 2]feels quite satisfying inside your ass, making you[otherwise]feels quite big inside your [body size of player] ass, causing you to whimper and [end if] moan in pleasure as you make sure it rubs all the right spots inside you.";
+	say "     By the time you've slid up and down her pole a few times she's stopped her struggles, so you're free to move your hands to her soccer-ball sized tits, manhandling them.  She whimpers and groans in pleasure as you tease her roughly, especially when tug at her nipple rings.  The sight of her squirming beneath you as you give them a hard twist [if cocks of player > 0]makes your cock throb and drool pre with excitement[otherwise if cunts of player > 0]gets you all the wetter[end if].";
+	say "     Sensing your approaching climax, you start riding her shemale rod all the harder and give [if cocks of player > 0]those big breasts of hers a squeeze while her cock pounds against your prostate[otherwise]one of her big breasts a squeeze while frigging your puss[yfn] wildly with your other hand[end if].  The gecko releases a hissing cry of orgasmic delight and cums hard, shooting her purple-stained cum into your rectum.  Feeling those hot blasts inside you is enough to push you over the edge and you cry out as well, clenching your ass firmly around her rod for all it will give[if cocks of player > 0].  Your cock[smn] spray[smv] your semen across her body, painting her face and tits with your [cum load size of player] load[otherwise].  Your puss[yfn] quiver[sfv] in delight and your hot female juices run down your thighs to soak her crotch and further lube her spurting cock[end if].  You ride her past the point she's stopped cumming and grind over her oversensitive shaft until your own orgasm is completely over.  Satisfied, you get off of her and give her a firm boot, forcing her up and sending her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.[mimpregchance]";
+
+to say vgeckosex_05:		[oral - cock]
+	say "***tba";
+
+to say vgeckosex_06:		[oral - pussy]
+	say "***tba";
 
 
 to say voodoogeckodesc:
