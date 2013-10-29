@@ -309,6 +309,7 @@ instead of resolving Records Room:
 	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise.  As you make your way to the door, you spot a syringe of orange liquid on a desk.  It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
 	increase carried of libido suppressant by 1;
 	increase score by 5;
+	now Records Room is resolved;
 
 
 Surrounding Area is a situation.
@@ -347,7 +348,7 @@ An everyturn rule:
 			say "     You hear an unusual, loud noise and reflexively take cover, peeking out from a window.  As you watch, you can see some large jaguar men in hospital scrubs carrying an insensate husky girl.  They seem to be led by a silver-furred vixen in a nurse's uniform as she directs them to put her in the ambulance helicopter, the source of the unusual noise in the otherwise quiet city.  'Perhaps this bears looking into further,' you think as you watch it head off in the direction of the city hospital.";
 			extend game by 4;
 			increase score by 10;
-			wait for any key;
+			attempttowait;
 			now hospquest is 1;
 			now Finding a Way in is unresolved;
 
