@@ -1,5 +1,5 @@
 Version 1 of Vanessa by Stripes begins here.
-[Version 1.1 - Completed TF and sex]
+[Version 1.2 - Crossover dialog w/Meredith]
 
 "Adds a centaur-infected woman to Flexible Survival."
 
@@ -98,20 +98,7 @@ Instead of conversing the Vanessa:
 		otherwise:
 			say "     [one of]'Standing orders are for infected soldiers to hole up somewhere safe until the main recovery mission takes place.  This seems like a nice, safe place to enjoy some pleasant company while waiting for rescue,' she says with a naughty grin.[or]'Look, I can't tell you about our plans to help rescue the civilians since I'm not privy to them.  Rescue is coming, but the details are being kept from the soldiers so we can't divulge the info if we're corrupted.'[or]'I have a few supplies of my own and I've been going outside to find more now that I'm eating like a horse,' she laughs.[or]'Don't I look so much better now that I'm a proper mare?  And my pregnancy went so well.  It was one of the most erotic things I've ever experienced.  I'm really looking forward to doing it again soon.'[or]'I had my foal and he was a lovely little colt.  He's going to be quite the stud when he finishes growing up.  He's gone off to the plains to search for his father to learn to be a proper stallion from him.'  She seems a little sad that he's left, but also seems quite proud of him.[or]'Given how nice this has all felt, I think I'd like to start work on another foal right away[if cocks of player > 0].  Any volunteers,' she adds with a wink.[otherwise].'[end if][or]'I was never much of a girly girl growing up, but I always did love horses.  Now I'm looking to loving some horses again,' she says with a wink and a flick of her tail.[or]'Thanks for letting me stay here.  This place looks quite secure.  We'll have plenty of opportunity to enjoy ourselves without having to worry about the monsters out there interrupting us.'[at random]";
 	otherwise if hp of Vanessa >= 6 and xp of Vanessa > 1 and a random chance of 2 in 5 succeeds:
-		if hp of Meredith is 0:
-			say "[Meredith_rescue]";		[See Meredith file]
-		otherwise if hp of Meredith <= 3:
-			say "     [one of]'Thanks again for helping me go looking for Mere.  Those kangaroos would have got her for sure without your help.'[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, she was clever and was able to gather a lot of data while in hiding.  I can't follow much of it when she talks about her results, but she's clearly got a lot of data to analyze and can get more by running some tests on me and any others you can safely bring here.'[or]'It was tough work getting Mere ready for the drop.  She's such a klutz, but an adorable one, so we couldn't help but cheer her on until she was ready.  And then that stormfront blew everyone all over the city,' she says, growing despondent as she thinks about her lost teammates.[or]'Meredith quite interested in the changes I've undergone.  I know she's trying to be analytical, but she can't help blushing or getting turned on when I talk about how good it feels to be a sexy breeding mare.'[or]'It'd be nice to really show Mere how happy I am that she's safe, but she being a bit of a stick in the mud about remaining a scientific observer rather than getting some hands on experience.'[cycling]";
-		otherwise if hp of Meredith is 4:
-			say "***tf 1";
-		otherwise if hp of meredith is 5:
-			say "***tf 2";
-		otherwise if hp of meredith is 6:
-			say "***tf 3 - complete?";
-		otherwise if hp of meredith is 100:
-			say "ERROR-Vanessa-100M: You should not be able to discuss her with me.";
-			remove Meredith from play;
-			now hp of Meredith is 0;
+		say "[vanessa_meredith_msg]";
 	otherwise if hp of Vanessa is 6:
 		if a random chance of 3 in 10 succeeds:
 			say "     [one of][if coleen is bunkered]'I'm glad to know at least one of my squad is safe,' she says.  'Thanks for helping Coleen out.'[otherwise]'It'd be nice to know what happened to the rest of my squad,' she says with a sad sigh.[end if][or][if coleen is bunkered and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]'It's nice to know Coleen's safe and happy.  She makes such a cute, sexy husky, too,' she says while brushing her fingers across her nipples.[otherwise if coleen is bunkered and sarahslut > 0]'Coleen's doesn't seem to really mind those husky traits she's picked up.  Good for her, I say.  I'm sure she'd be even happier if you'd be able to help her change fully like you did for me,' she says while brushing her fingers across her nipples.[otherwise if coleen is bunkered]'Coleen's been lucky up to now to avoid infection.  I'm having her keep her distance from me to be on the safe side.  Though now that I've done it, I don't really see why I was so worried about avoiding it.'[otherwise]'Keep an eye out for another other soldiers in need of help.  Several of the scouting teams have run into trouble and they might need a safe place to stay.  I'm curious to see how sexy they've become.  Some from my squad ended up in the park for example, which is a very active zone.'[end if][cycling]";
@@ -128,6 +115,24 @@ Instead of conversing the Vanessa:
 			company bitch reporting for duty, sarge.
 			company stray reporting as ordered, sarge.
 ]
+
+to say vanessa_meredith_msg:
+	if hp of Meredith is 0:
+		say "[Meredith_rescue]";		[See Meredith file]
+	otherwise if hp of Meredith <= 3:
+		say "     [one of]'Thanks again for helping me go looking for Mere.  Those kangaroos would have got her for sure without your help.'[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, she was clever and was able to gather a lot of data while in hiding.  I can't follow much of it when she talks about her results, but she's clearly got a lot of data to analyze and can get more by running some tests on me and any others you can safely bring here.'[or]'It was tough work getting Mere ready for the drop.  She's such a klutz, but an adorable one, so we couldn't help but cheer her on until she was ready.  And then that stormfront blew everyone all over the city,' she says, growing despondent as she thinks about her lost teammates.[or]'Meredith quite interested in the changes I've undergone.  I know she's trying to be analytical, but she can't help blushing or getting turned on when I talk about how good it feels to be a sexy breeding mare.'[or]'It'd be nice to really show Mere how happy I am that she's safe, but she being a bit of a stick in the mud about remaining a scientific observer rather than getting some hands on experience.'[cycling]";
+	otherwise if hp of Meredith is 4:
+		say "     [one of]'Thanks again for helping me go looking for Mere.  She's much better off waiting for recovery here.'[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, she's clever and says she can continue her research here.  Not that I can follow what she's saying when she talks about her results, but it she seems pleased with her data.'[or]'It was tough work getting Mere ready for the drop.  She's such a klutz, but an adorable one, so we couldn't help but cheer her on until she was ready.  When that stormfront blew everyone all over the city, I didn't think I'd ever see her safe and sound again,' she says, growing despondent as she thinks about her lost teammates.[or]'I know Meredith getting infected was an accident, but I can't help but be pleased with it.  I know she'll be happy as a cute horsey.  I know she's trying to be analytical, but I can tell she's happy with it too.  She blushes so cutely when I talk to her about how good it feels to be a sexy breeding mare.'[or]'It'd be nice to really show Mere how happy I am that she's safe, but she's still being a bit of a stick in the mud about remaining a scientific observer rather than getting some hands on experience.  You should see if you can convince her to loosen up a bit[if cocks of player > 0].  The poor girl's a virgin and I know a good fucking will really help her loosen up[end if],' she adds with a playful smile.[cycling]";
+	otherwise if hp of meredith is 5:
+		say "     [one of]'Thanks again for helping me go looking for Mere.  She's much better off waiting for recovery here with us.'[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, she's clever and says she can continue her research here.  Not that I can follow what she's saying when she talks about her results, but it she seems pleased with her data, especially her recent hands-on data,' she adds with a wink to you.'[or]'It was tough work getting Mere ready for the drop.  She's such a klutz, but an adorable one, so we couldn't help but cheer her on until she was ready.  When that stormfront blew everyone all over the city, I didn't think I'd ever see her safe and sound again,' she says, growing despondent as she thinks about her lost teammates.[or]'I know Meredith getting infected was an accident, but I can't help but be pleased with how things are turning out.  I know she'll be happy as a cute mare.  I know she's trying to be analytical, but I can tell she's really enjoying it, especially the sex.'[or]'It'd be nice to really show Mere how happy I am that she's safe, but she's still being a bit of a stick in the mud about remaining a scientific observer rather than getting some hands on experience.  You should see if you can convince her to loosen up a bit more[if cocks of player > 0 and libido of Meredith is 0].  The poor girl's never been fucked and I know a good breeding will really help her loosen up[end if].'[cycling]";
+	otherwise if hp of meredith is 6:
+		say "     [one of]'Thanks again for helping me go looking for Meredith.  She's much better off here as my sweet Mare,' she says with a smile.[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, she's clever and says she can continue her research here.  Not that I can follow what she's saying when she talks about her results, but it's lots of fun to help my Mare gather more hands-on data,' she adds with a wink to you.'[or]'Mare's become less of a klutz now that she's a centaur.  Well, not really, but at least she's finding it a lot harder to trip now that she's on four legs.'[or]'I know Meredith getting infected was an accident, but we're both really happy with how things have turned out.  She's my cute Mare now and loving it[if cocks of player > 0 and libido of Meredith is 0].  And she should start having even more fun once you start breeding her like the horny mare she is[end if].'[or]'Meredith's even more adorable now that she's my pretty Mare.'[or][if coleen is bunkered and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]Vanessa and Meredith are kneeling down on a blanket side by side with Coleen behind them.  The transformed soldiers are snuggled up quite intimately with the smaller centaur.  Vanessa has her arms around Mare, lightly nibbling at her neck while playing with her breasts.  Coleen meanwhile is lapping away at Mare's juicy cunt while she moans and nickers in pleasure, loving the attention from her protectors.[otherwise]Vanessa and Meredith are kneeling down on a blanket side by side.  The transformed soldier is cuddling the smaller centaur in her arms, lightly nibbling at her neck while playing with her breasts.  Mare moans softly at this, loving the attention from her larger protector.[end if][cycling]";
+	otherwise if hp of meredith is 100:
+		say "ERROR-Vanessa-100M: You should not be able to discuss her with me.";
+		remove Meredith from play;
+		now hp of Meredith is 0;
+
+
 
 Section 3 - Sex with Vanessa
 
@@ -300,6 +305,8 @@ an everyturn rule:
 [ 5 = first foal       ]
 [ 6 = preg (again)     ]
 [ 7 = not preg         ]
+[ 50 = left on Plains  ]
+[ 51 = failed Meredith ]
 
 
 [  lust of Vanessa        ]
