@@ -374,6 +374,15 @@ Definition: A person(Called X) is pure:
 					yes;
 	no;
 
+Definition: A person (called x) is purehuman:
+	if bodyname of player is "human" or bodyname of player is "herm human":
+		if facename of player is "human" or facename of player is "herm human":
+			if tailname of player is "human" or tailname of player is "herm human":
+				if skinname of player is "human" or skinname of player is "herm human":
+					if cockname of player is "human" or cockname of player is "herm human":
+						yes;
+	no;
+
 Definition: A person(called X) is male:			[note: this is both male and herm]
 	if cocks of x is greater than 0, yes;
 

@@ -7,14 +7,14 @@ Section 1 Human Ending
 when play ends:
 	if bodyname of player is "human":
 		if the player is pure:
-			say "[purehuman]";
+			say "[purehumanend]";
 		otherwise if the player is facially human and the player is skintone human and the tail of the player is "" and breast size of player <= 6 and cock length of player <= 18 and cock width of player <= 12 and breasts of player <= 2:  [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
-			say "[passhuman]";
+			say "[passhumanend]";
 		otherwise:
-			say "[parthuman]";
+			say "[parthumanend]";
 
 
-to say purehuman: [Pure Human version]
+to say purehumanend: [Pure Human version]
 	if quitter is 1: [Prevents end now and givein from being used to see the ending.]
 		say "You must play through to see this ending, no cheating!";
 	otherwise if humanity of player < 10: [Succumb version]
@@ -63,7 +63,7 @@ to say purehuman: [Pure Human version]
 			say "The two of you eventually get married and have several children. You spend the rest of your life happily with your husband and kids. Whenever you can you provide assistance to those still suffering from the infection.";
 
 
-to say passhuman: [Passably Human version]
+to say passhumanend: [Passably Human version]
 	if humanity of player < 10:
 		if facename of player is "Awesome tree":
 			say "Succumbing to the infection that is spreading through your body, you wander the streets until you come across several tall trees with assorted fruits at their base. You instinctively begin eating the fruit at random as you body begins to become more and more human. After having your fill you look around and wonder at just how awesome this really is. After taking a few steps you are suddenly brought to a halt. Looking down it seems that you have gotten taller and that your feet seem to have taken root in the ground. You can't help but feel that you are slowly becoming more awesome as your skin starts to harden and take on a bark-like appearance.";
@@ -117,7 +117,7 @@ to say passhuman: [Passably Human version]
 		say "When the military makes it way into the city they are surprised when they find you believing that you have been unchanged. Happy with the changes to your body you are quick to point out that even though you appear quite human you have been changed. When you are taken to the military's outpost you happily help the doctors with there examinations pleased with the reactions you elicit from the doctors. When you are released you are quickly bombarded by requests from several different modeling agencies wanting to sign the beautiful new poster child of the nanite infection.";
 		say "More than happy to show off your new body you take an offer from one of the more well known companies and become a huge star in the modeling world. You eventually start your own modeling company picking your models from those that survived the nanite infection with their minds still intact. Your company becomes wildly popular with certain fan-bases and you make quite a living for your self.";
 
-to say parthuman: [Part Human version]
+to say parthumanend: [Part Human version]
 	if humanity of player < 10:
 		say "As your humanity fades you wander the streets of the city. Not drawn to any one place you come across many different infected that you dominate or happily submit to. When the military starts showing up you avoid them when in groups. The occasional lone soldiers always let their guard down seeing as your body is still human. This makes them easy prey and you dominate them, changing them into more part human infected. As you continue making your way through the city you see more and more part human infected. Soon the military gives up on trying to retake the city do to the massive numbers of their forces that are joining the infected. You live out the rest of your days wondering the streets of the city, enjoying sex with any of the infected you come across, happy that you are able to live this wonderful life.";
 	otherwise if cocks of player > 0:
