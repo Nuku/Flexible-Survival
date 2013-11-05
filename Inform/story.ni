@@ -6181,6 +6181,7 @@ Include Viking by Wahn.
 Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
+Include Batcubus for FS by Blaydrex.
 
 [NPCs]
 Include Velos by Blue Bishop.
