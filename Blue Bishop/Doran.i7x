@@ -2561,7 +2561,7 @@ to say dorrptk: [Doran RP: The Knight Query]
 			otherwise:
 				now dorrp_tv2 is 0;
 			if cunts of player > 0 and cunt length of player > 7 and anallevel is not 1:
-				say  E   '--Oh, would you prefer I take [dorgr] up the behind instead of the proper hole? Easy thing for me to do in this circumstance, so it's a choice I can freely provide.' E
+				say "'--Oh, would you prefer I take [dorgr] up the behind instead of the proper hole? Easy thing for me to do in this circumstance, so it's a choice I can freely provide.'";
 				if player consents:
 					now dorrp_tv3 is 1;
 					say "     'Got it.'";

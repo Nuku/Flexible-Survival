@@ -1,4 +1,5 @@
 Green Hydra.i7x by Auto Translator - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Green Hydra For Fs by Auto Translator')<br>
+Batcubus - non-folder found where author folders should be<br>
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Infection - title contains a full stop<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
