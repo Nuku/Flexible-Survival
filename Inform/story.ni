@@ -1493,7 +1493,7 @@ when play begins:
 
 Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness" } to infections of Internallist;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake", "Naga" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
@@ -2089,37 +2089,54 @@ To Birth:
 	let infection be "";
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is skinname of child;
+	if snakehijack is false or "They Have Your Eyes" is listed in feats of player:
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is skinname of child;
+		otherwise:
+			now infection is skinname of player;
+		now skinname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is bodyname of child;
+		otherwise:
+			now infection is bodyname of player;
+		now bodyname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is tailname of child;
+		otherwise:
+			now infection is tailname of player;
+		now tailname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is facename of child;
+		otherwise:
+			now infection is facename of player;
+		now facename of child is infection;
 	otherwise:
-		now infection is skinname of player;
-	now skinname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is bodyname of child;
-	otherwise:
-		now infection is bodyname of player;
-	now bodyname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is tailname of child;
-	otherwise:
-		now infection is tailname of player;
-	now tailname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is facename of child;
-	otherwise:
-		now infection is facename of player;
-	now facename of child is infection;
-	if playercanub is true and ubpreg is not "false":
+		let infection be "Snake";
+		now skinname of child is infection;
+		now bodyname of child is infection;
+		now tailname of child is infection;
+		now facename of child is infection;
+	if (playercanub is true and ubpreg is not "false") or snakehijack is true:
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
 		if cunts of player > 0:
-			say "Your child suckles at your [breast size desc of player] breast, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if].";
+			say "Your child suckles at your [breast size desc of player] breast, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise if breasts of player > 0:
-			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if].";
+			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise:
-			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if].";
+			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
+		if snakehijack is true and "They Have Your Eyes" is listed in feats of player:
+			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitmiate offspring.";
+		otherwise if snakehijack is true:
+			say ". It's apparent that its prior act has caused the serpent to assume itself as one of your legimate offspring, a twisted fate for such a creature.";
+		otherwise:
+			say ".";
 		if wwvar is 1:
-			say "As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth.  A part of you worries about what your offspring may do... and yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
+			if snakehijack is true:
+				say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
+			otherwise:
+				say "     As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth.  A part of you worries about what your offspring may do";
+			say "... And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 		otherwise:
 			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 	otherwise if "Wild Womb" is listed in feats of player:
@@ -4497,9 +4514,9 @@ This is the turnpass rule:
 		if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
 		if gestation of child is less than 5:
 			if cunts of player > 0:
-				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of some unborn being, waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			otherwise:				[MPreg]
-				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with growing life which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
 				increase breast size of player by 1;
 				follow breast descr rule;
@@ -4570,38 +4587,46 @@ This is the turnpass rule:
 					say "Your well-practiced body has little trouble with the shifting and releasing of the egg within you.  You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus.  The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if].  As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[otherwise if cocks of player > 0]can't help but feel considerable pride at what your male body has accomplished[otherwise]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
 					increase morale of player by 5;
 					increase mpregcount by 1;
-			let z be 1;
-			let fer be 0;
-			if "Fertile" is listed in feats of player:
-				increase fer by 3;
-			if "Litter Bearer" is listed in feats of player:
-				increase fer by 12;
-			if a random chance of (1 + fer) in 100 succeeds:
-				increase z by 1;
-			if a random chance of (3 + fer) in 100 succeeds:
-				increase z by 1;
-			if a random chance of (5 + fer) in 100 succeeds:
-				increase z by 1;
-			if a random chance of fer in 100 succeeds:
-				increase z by 1;
-			if a random chance of fer in 100 succeeds:
-				increase z by 1;
-			if z > 4, now z is 4;		[extra chance, still limited to 4]
-			if ubpreg is not "false":
-				now z is 1;
-			if z is 2:
-				say "Twins![line break]";
-			otherwise if z is 3:
-				say "Triplets![line break]";
-				if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
-			otherwise if z is 4:
-				say "Quadruplets![line break]";
-				if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
-			repeat with y running from 1 to z:
-				now child is born;
-				Birth;
-			increase score by 15;		[15 base +5/child]
-			extend game by 4;
+			if snakehijack is false:
+				let z be 1;
+				let fer be 0;
+				if "Fertile" is listed in feats of player:
+					increase fer by 3;
+				if "Litter Bearer" is listed in feats of player:
+					increase fer by 12;
+				if a random chance of (1 + fer) in 100 succeeds:
+					increase z by 1;
+				if a random chance of (3 + fer) in 100 succeeds:
+					increase z by 1;
+				if a random chance of (5 + fer) in 100 succeeds:
+					increase z by 1;
+				if a random chance of fer in 100 succeeds:
+					increase z by 1;
+				if a random chance of fer in 100 succeeds:
+					increase z by 1;
+				if z > 4, now z is 4;		[extra chance, still limited to 4]
+				if ubpreg is not "false":
+					now z is 1;
+				if z is 2:
+					say "Twins![line break]";
+				otherwise if z is 3:
+					say "Triplets![line break]";
+					if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
+				otherwise if z is 4:
+					say "Quadruplets![line break]";
+					if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
+				repeat with y running from 1 to z:
+					now child is born;
+					Birth;
+				increase score by 15;		[15 base +5/child]
+				extend game by 4;
+			otherwise:
+				repeat with y running from 1 to snakeocc:
+					now child is born;
+					Birth;
+				now snakehijack is false;
+				now snakeocc is 0;
+				now snakehijacktimer is turns;
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
 	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
