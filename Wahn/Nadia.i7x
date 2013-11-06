@@ -82,6 +82,7 @@ NadiaPregCounter3 is a number that varies.
 NadiaPregVisibility is a number that varies.
 GreenTumbTurn is a number that varies. 
 NadiaintCounter is a number that varies.
+lastNadiaSpotted is a number that varies. lastNadiaSpotted is normally 500.
 
 npcNadiaint is an indexed text that varies. npcNadiaint is normally "0000000000000B";	[SAVING]
 Nadia has a text called Char-A.  Char-A of Nadia is normally "0";	[Denise]
