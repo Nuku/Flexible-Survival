@@ -1,5 +1,6 @@
-Version 5 of Demon Brute For FS by Leo X begins here. [Expansion & Rewriting by Wahn]
-[Version 5 - gender-switched sex]
+Version 6 of Demon Brute For FS by Leo X begins here.
+[Expansion & Rewriting by Wahn]
+[Version 6 - Victory sex w/Brutus - Stripes]
 [Todo: Endings]
 
 "Adds a Monster name to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -77,7 +78,15 @@ to say demon brute loses:
 			increase carried of demon tooth by 1;
 	otherwise if DBCaptureQuestVar is 4:
 		say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to turn into a fine purple mist - but instead of dispersing in the air as before, it swirls around as one tight mass. The cloud of mist wavers as if it's fighting against some pull, then is drawn towards the pentagram in an elongated stream. Whirling around in an ever-tightening spiral, the purple mist finally is absorbed by the now blackened demon tooth in the brazier. As the last bit of it vanishes, the fire and surrounding candles are blown out by a sudden wind, silence falling over the room only disturbed by quiet ticking sounds of the slowly cooling brazier.";
-		now DBCaptureQuestVar is 5;		
+		now DBCaptureQuestVar is 5;
+	otherwise if companion of player is demon brute:
+		if inasituation is true or a random chance of 2 in 7 succeeds:
+			say "     With a rather loud thud, the demon brute collapses to the ground, defeated.  Brutus lunges forward to grab it, but your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] is moments too late - the last wisps of the purple cloud slipping through [if DemonBruteStatus is 0]his[otherwise]her[end if] clawed fingers.  A deep chuckle can be heard as a sudden wind blows the mist away and the demon escapes";
+			if a random chance of 3 in 5 succeeds:
+				say ".  All that is left behind is one of the demon's fangs, knocked out during the fight.  Seeing it, Brutus growls in frustration and crushes it to dust under [if DemonBruteStatus is 0]his[otherwise]her[end if] heel";
+			say ".";
+		otherwise:
+			say "[Brutus_DBCapture]";
 	otherwise if DBCaptureQuestVar > 2:
 		say "     As the demon crashes to the ground with a rather loud thud, you're prepared for what happens next. You might not be able to catch this one, but you can - and do - give him a good hard kick between the legs. This time, your demonic opponent vanishes with a whimper, the purple smoke he turns into a bit paler than before.";
 		if a random chance of 1 in 3 succeeds and inasituation is false:
@@ -86,15 +95,174 @@ to say demon brute loses:
 			otherwise if DBCaptureQuestVar is 5:
 				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Nermine said she doesn't have the supplies to capture another of these brutes, so you leave it where it is..."; 
 			otherwise if DBCaptureQuestVar is 99:
-				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Nermine said she only had the supplies for one try to capture one of these brutes, so you leave it where it is..."; 
-		
+				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Nermine said she only had the supplies for one try to capture one of these brutes, so you leave it where it is...";
+
+
+to say Brutus_DBCapture:
+	say "     With a rather loud thud, the demon brute collapses to the ground, defeated.  Immediately, Brutus lunges forward to grab it, your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] diving [if DemonBruteStatus is 0]his[otherwise]her[end if] clawed fingers into the purple could it has become.  With a growl, Brutus seems to grab onto something in that mist and pulls hard on seemingly nothing.  This tug of war against the smoke lasts a few seconds, [if DemonBruteStatus is 0]his[otherwise]her[end if] eyes aflame and a rumbling growl in [if DemonBruteStatus is 0]his[otherwise]her[end if] chest until the demon brute is pulled back into existence";
+	if DBCaptureQuestVar is 5:
+		say ".";
+		say "     Brutus slams it to the ground and tears in with [if DemonBruteStatus is 0]his[otherwise]her[end if] claws.  The demon growls threatening back, but ends up with bloody streaks across its chest before your enslaved pet pins it to the ground with [if DemonBruteStatus is 0]his[otherwise]her[end if] claws digging into its meaty shoulders";
+	say ".  Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements.  Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[otherwise]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[otherwise]carnal lust[end if].";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if demonbrutestatus < 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Brutus fucks";
+		now sortorder entry is 3;
+		now description entry is "watch while Brutus fucks the other demon";
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck it";
+		now sortorder entry is 1;
+		now description entry is "fuck the demon while Brutus holds it down";
+[		choose a blank row in table of fucking options;
+		if demonbrutestatus < 2:
+			now title entry is "Blow job while fucked";
+			now description entry is "make it suck you off while getting fucked";
+		otherwise:
+			now title entry is "Blow job";
+			now description entry is "make it suck you off";
+		now sortorder entry is 4;						]
+[	if cocks of player > 0 and demonbrutestatus < 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Spitroast";
+		now sortorder entry is 2;
+		now description entry is "fuck the demon while Brutus takes its mouth";	]
+	if cunts of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride it (vaginal)";
+		now sortorder entry is 6;
+		now description entry is "ride the captured demon's cock";
+[		choose a blank row in table of fucking options;
+		if demonbrutestatus < 2:
+			now title entry is "Cunnilingus while fucked";
+			now description entry is "make it eat out your pussy while getting fucked";
+		otherwise:
+			now title entry is "Cunnilingus";
+			now description entry is "make it eat out your pussy";
+		now sortorder entry is 5;						]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride it (anal)";
+	now sortorder entry is 7;
+	now description entry is "stuff your ass with the demon's cock";
+	if demonbrutestatus > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Brutus receives vaginal";
+		now sortorder entry is 8;
+		now description entry is "watch while Brutus rides the other demon's cock";
+	choose a blank row in table of fucking options;
+	now title entry is "Brutus receives anal";
+	now sortorder entry is 9;
+	now description entry is "watch while Brutus takes the other demon's cock up [if demonbrutestatus is 0]his[otherwise]her[end if] ass";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Let her go[as][0][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber is 0:
+			say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
+			now sextablerun is 1;
+		otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "Shall you [description entry]?";
+			if player consents:
+				let num be sortorder entry;
+				now sextablerun is 1;
+				if num is 1:
+					say "[dbcapturesex_01]";			[fuck it]
+				otherwise if num is 2:
+					say "[dbcapturesex_02]";			[spit roast]
+				otherwise if num is 3:
+					say "[dbcapturesex_03]";			[brutus fucks]
+				otherwise if num is 4:
+					if demonbrutestatus < 2:
+						say "[dbcapturesex_04_fuck]";	[bj w/fuck]
+					otherwise:
+						say "[dbcapturesex_04]";		[bj]
+				otherwise if num is 5:
+					if demonbrutestatus < 2:
+						say "[dbcapturesex_05_fuck]";	[cunn w/fuck]
+					otherwise:
+						say "[dbcapturesex_05]";		[cunn]
+				otherwise if num is 6:
+					say "[dbcapturesex_06]";			[vaginal]
+				otherwise if num is 7:
+					say "[dbcapturesex_07]";			[anal]
+				otherwise if num is 8:
+					say "[dbcapturesex_08]";			[brutus rides - vag]
+				otherwise if num is 8:
+					say "[dbcapturesex_09]";			[brutus rides - anal]
+		otherwise:
+			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+
+to say dbcapturesex_01:
+	say "     Deciding you want a go at the captured demon, you have Brutus hold it down.  Pulling out your [cock size desc of player] cock and stroking it to erection, you move to get your [cock of player] meat into position.  The defeated demon snarls and tries slap at you with its tail, but your [if DBCaptureQuestVar is 5]demonic slave[otherwise]demonic companion[end if] grabs at the willful appendage and yanks it up roughly[if DBCaptureQuestVar is 5] in a crushing grip[end if].  After all your frustration with the demons, you can't help but chuckle at how the tables have turned now that you have one of your own.  Eager to take advantage of it, you thrust hard into your captured foe and start pounding its muscular ass.";
+	say "     The demon's ass is hot and tight around your [cock of player] manhood, and the demon's attempts to resist only make it moreso[if cock length of player < 10].  The large creature's easily able to take your [cock size desc of player] cock, but remains deliciously snug due to its struggles[otherwise if cock length of player < 20].  The large creature takes your [cock size desc of player] cock with some difficulty, in part due to its struggles keeping it deliciously snug around you[otherwise].  The large creature has some difficulty taking your [cock size desc of player] cock, which is exacerbated by its struggles keeping it deliciously snug around you[end if].  You chuckle and slap its meaty rear end.  It growls and makes threats, but they prove to be empty ones as Brutus [if DBCaptureQuestVar is 5]grinds its face to the floor and claws into the creature all the harder[otherwise]keeps a tight grip on it[end if].";
+	say "     You fuck that muscled ass hard and fast, knowing the big guy can take it (and has no choice but to do so).  In the end, it is not long before you reach your peak and cum with a lustful cry.  The demon beneath you groans and ends up cumming as well[if DBCaptureQuestVar is 5], much to Brutus's twisted delight[otherwise]much to Brutus's amusement[end if].  Speaking of your demonic companion, [if DemonBruteStatus is 0]he grinds his throbbing erection against the pinned demon's face, splattering it with thick gobs of semen[otherwise if DemonBruteStatus is 1]she grinds her throbbing erection against the pinned demon's face, splattering it with thick gobs of semen[otherwise]she grinds her dripping pussy against the pinned demon's face, splattering it with a stream of female cum[end if].  After you've drained your [cum load size of player] load into the demon's ass, you pull your cock free and give it another slap on the rear.  Brutus tosses the messy, sex-stinking demon aside with a growl that it can now slink away to its hole.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+to say dbcapturesex_02:
+	say "***spit roast";
+
+to say dbcapturesex_03:
+	if DBCaptureQuestVar is 5:
+		say "     Deciding [if DemonBruteStatus is 0]he[otherwise]she[end if] deserves some relief, you tell Brutus to fuck the captured demon.  Brutus grins sinisterly and yanks it up roughly before plowing into its infernal brethren's ass.  The sight of that big cock driving into your fallen foe's muscular ass is very arousing and soon you're playing with yourself as you enjoy the show.  Your demonic slave, relishing the opportunity to be let loose, shows no mercy to [if DemonBruteStatus is 0]his[otherwise]her[end if] victim and pounds [if DemonBruteStatus is 0]his[otherwise]her[end if] pulsing rod into it.  The buggered demon makes threats and snarls, but [one of]Brutus just laughs that [if DemonBruteStatus is 0]he[otherwise]she[end if] is enslaved and must do as [if DemonBruteStatus is 0]his[otherwise]her[end if] master commands[or]Brutus gives an insincere apology that [if DemonBruteStatus is 0]he[otherwise]she[end if] must follow your orders[or]Brutus just digs [if DemonBruteStatus is 0]his[otherwise]her[end if] claws in deeper and pounds it all the harder[or]Brutus laughs off the threats and continues fucking the demon[or]Brutus responds with threats of [if DemonBruteStatus is 0]his[otherwise]her[end if] own to do even worse should the demon show itself again[at random].";
+		say "     Brutus snarls as [if DemonBruteStatus is 0]he[otherwise]she[end if] cums messily into the struggling demon.  It groans and ends up cumming as well, much to your pet's twisted delight[if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  After draining [if DemonBruteStatus is 0]his[otherwise]her[end if] balls into the demon's ass, Brutus yanks [if DemonBruteStatus is 0]his[otherwise]her[end if] bump-ridden cock free with a laugh.  The messy, sex-stinking demon is tossed aside with a growl that it can now slink away to its hole.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+	otherwise:
+		say "     Deciding [if DemonBruteStatus is 0]he[otherwise]she[end if] deserves some relief, you tell Brutus to fuck the captured demon.  Brutus grins lustfully and yanks it up roughly before sinking into its infernal brethren's ass.  Your demonic thrall, relishing the opportunity to let loose and knowing the infernal creature can take it, [if DemonBruteStatus is 0]he[otherwise]she[end if] shows little restraint, but does reach around to stroke its cock in return.  The buggered demon makes threats and snarls, but [one of]Brutus only tells him to relax and enjoy it[or]Brutus tells him to just let go of all that anger and hate[or]Brutus tells him to just accept that it feels good[or]Brutus gives its hard cock a squeeze and says he knows it's enjoying it[or]Brutus keeps a firm grip as he continues fucking its ass[or]Brutus just spanks his ass and tells him to take it like a good hell-bitch[or]Brutus reminds it that it was beaten soundly before and will be beaten again if it tries to make good on its threats[at random].";
+		say "     Brutus snarls as [if DemonBruteStatus is 0]he[otherwise]she[end if] cums messily into the struggling demon.  It groans and ends up cumming as well, painting a mess across the ground as the cleansed demon strokes it off[if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  After draining [if DemonBruteStatus is 0]his[otherwise]her[end if] balls into the demon's ass, Brutus slides [if DemonBruteStatus is 0]his[otherwise]her[end if] bump-ridden cock free and then wipes it on the other demon's ass.  The messy, sex-stinking demon is tossed aside with a growl that it's free to go now.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+to say dbcapturesex_04_fuck:
+	say "***bj w/fuck";
+
+to say dbcapturesex_04:
+	say "***bj";
+
+to say dbcapturesex_05_fuck:
+	say "***cunn w/fuck";
+
+to say dbcapturesex_05:
+	say "***cunnilingus";
+
+to say dbcapturesex_06:
+	say "     Wanting to enjoy the demon's cock, you order Brutus to keep it pinned while you do just that.  [if DemonBruteStatus is 0]He[otherwise]She[end if] chuckles at this and complies, starting by giving [if DemonBruteStatus is 0]his[otherwise]her[end if] fallen foe a knee in the gut before pushing it over onto its back.  Pinning it down, [if DemonBruteStatus is 0]he grinds his cock into[otherwise if DemonBruteStatus is 1]she grinds her cock into[otherwise]she grinds her pussy down onto[end if] the creature's face even as you move into position.  You slide your wet cunny across that pulsing rod, stiffening it to full erection.  As you lower yourself down onto that pillar of infernal meat, the demon tries to taunt you that [one of]it'll pound you until you're broken[or]you could have just bent over and taken it if you'd wanted it that badly[or]you can't resist its massive cock[or]you're nothing but another horny slut for it to breed[at random], but Brutus [if DBCaptureQuestVar is 5]grabs it by the throat, crushing its words into silence.  This proves again that you two have beaten it and will do as you please with it[otherwise if DemonBruteStatus is 0]presses his crotch back over its mouth to silence it and remind it who was the victor here[otherwise]presses her crotch back over its mouth to silence it and remind it who was the victor here[end if].  And what you want right now is that knobby rod stuffed inside you, and you [if cunt length of player < 10]work your [cunt size desc of player] cunt slowly down onto the massive thing[otherwise if cunt length of player < 20]lower your enlarged cunt down onto the very filling thing[otherwise]slide your spacious cunt down over it with no trouble[end if].";
+	say "     You take your time at first, allowing yourself to adjust to its impressive size as well as drawing out your own pleasure.  Your increasingly lustful opponent struggles, wanting to pin you down and take you violently, but Brutus is there to keep the other demon in its place[if DBCaptureQuestVar is 5], clawing and slashing at it further as[otherwise], grappling with it until[end if] [if DemonBruteStatus is 0]he[otherwise]she[end if] beats it back to the ground.  The violent struggle certainly makes the demon's cock throb and buck inside you, causing you to moan in pleasure.  You chuckle and knead its hefty ballsac even as it growls and makes threats before Brutus [if DemonBruteStatus < 2]stuffs its maw with infernal meat[otherwise]cuts it off with her dripping loins in its face[end if].";
+	say "     In time, you end up riding that pulsing pole hard and fast[if cunt length of player < 20] once you've adjusted to its huge size[end if].  And once you're going at it with reckless, lustful abandon, it is not long before the demon beneath you groans and cums hard, blasting his demonic load into your womb, only adding to the heat of your lust.  You cry out in orgasm and clamp down tightly around that spurting rod, milking it for all it'll give until your uterus is overflowing.  From the wet, messy pool of fluid at the junction between Brutus's crotch and the demon's mouth, you can tell [if DemonBruteStatus is 0]he's[otherwise]she's[end if] cummed as well.  Not even waiting to let it finish once you're filled up, you pull off the demon's cock and grind your foot down onto its balls as it finishes unloading onto its scaly chest.  Done now, Brutus tosses the messy, sex-stinking demon aside with a growl that it can now slink away to its hole.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+to say dbcapturesex_07:
+	say "     Wanting to enjoy the demon's cock, you order Brutus to keep it pinned while you do just that.  [if DemonBruteStatus is 0]He[otherwise]She[end if] chuckles at this and complies, starting by giving [if DemonBruteStatus is 0]his[otherwise]her[end if] fallen foe a knee in the gut before pushing it over onto its back.  Pinning it down, [if DemonBruteStatus is 0]he grinds his cock into[otherwise if DemonBruteStatus is 1]she grinds her cock into[otherwise]she grinds her pussy down onto[end if] the creature's face even as you move into position.  You slide your ass cheeks across that pulsing rod, stiffening it to full erection.  As you lower yourself down onto that pillar of infernal meat, the demon tries to taunt you that [one of]it'll pound you until you're broken[or]you could have just bent over and taken it if you'd wanted it that badly[or]you can't resist its massive cock[or]you're nothing but another [if cunts of player > 0]horny slut[otherwise]man-whore[end if] for it to rape[at random], but Brutus [if DBCaptureQuestVar is 5]grabs it by the throat, crushing its words into silence.  This proves again that you two have beaten it and will do as you please with it[otherwise if DemonBruteStatus is 0]presses his crotch back over its mouth to silence it and remind it who was the victor here[otherwise]presses her crotch back over its mouth to silence it and remind it who was the victor here[end if].  And what you want right now is that knobby rod stuffed inside you, and you [if player is twistcapped or scalevalue of player is 5]slide your spacious ass down over it with little trouble past some pleasant stretching[otherwise if scalevalue of player is 4]lower your enlarged ass down onto the very filling thing with only some passing discomfort[otherwise]work your tight asshole down over the massive thing with considerable effort and slowly fading discomfort[end if].";
+	say "     You take your time at first, allowing yourself to adjust to its impressive size as well as drawing out your own pleasure.  Your increasingly lustful opponent struggles, wanting to pin you down and take you violently, but Brutus is there to keep the other demon in its place[if DBCaptureQuestVar is 5], clawing and slashing at it further as[otherwise], grappling with it until[end if] [if DemonBruteStatus is 0]he[otherwise]she[end if] beats it back to the ground.  The violent struggle certainly makes the demon's cock throb and buck inside you, causing you to moan in pleasure.  You chuckle and knead its hefty ballsac even as it growls and makes threats before Brutus [if DemonBruteStatus < 2]stuffs its maw with infernal meat[otherwise]cuts it off with her dripping loins in its face[end if].";
+	say "     In time, you end up riding that pulsing pole hard and fast[if cunt length of player < 20] once you've adjusted to its huge size[end if].  And once you're going at it with reckless, lustful abandon, it is not long before the demon beneath you groans and cums hard, blasting his demonic load into your rectum, only adding to the heat of your lust[if cunts of player > 0 or cocks of player > 0].  You cry out in orgasm and clamp down tightly around that spurting rod, milking it for all it'll give until your bowels are overflowing[end if].  From the wet, messy pool of fluid at the junction between Brutus's crotch and the demon's mouth, you can tell [if DemonBruteStatus is 0]he's[otherwise]she's[end if] cummed as well.  Not even waiting to let it finish once you're filled up, you pull off the demon's cock and grind your foot down onto its balls as it finishes unloading onto its scaly chest.  Done now, Brutus tosses the messy, sex-stinking demon aside with a growl that it can now slink away to its hole.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+to say dbcapturesex_08:		[Brutus rides - vaginal]
+	if DBCaptureQuestVar is 5:
+		say "     Wanting to see Brutus get fucked by another demon, you tell her to ride the demon's cock.  [if DemonBruteStatus is 1]She growls at this, but obeys[otherwise]She grins lustfully at this and obeys[end if], kneeing the demon in the gut before pushing it over onto its back.  Pinning it down, she grinds her juicy cunt over his pulsing rod, stiffening it to full erection.  As Brutus lowers herself down onto that pillar of infernal meat, the demon taunts that she's become nothing but a slave, but she grabs it by the throat, crushing its words into silence, proving that she is still stronger than it and can take what she wants.  And what she wants, now that she's excited from roughing up her fallen foe, is that huge cock stuffed inside her.  She lowers herself down onto it with a snarl, splattering dark saliva across the other demon's chest.";
+		say "     Brutus rides the demonic cock slowly at first, more to torment her increasingly lustful opponent than for her own satisfaction.  The fallen demon struggles, not to break free, but to pin her down and take her violently.  Brutus is able to keep it pinned though, clawing and slashing at it further as she beats it back to the ground.  Aroused by the bloodlust, her pace soon quickens until she's bouncing up and down on the groaning demon's rod until they're both pushed to orgasm[if DemonBruteStatus is 1].  She paints the demon's scaly hide with her seed even as it fills her up with its infernal load[otherwise].  Your demonic companion's cunt clutches tightly around her foe's shaft, milking it for its infernal load[end if][if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  Once the demon's balls are drained, Brutus pulls off of its rod and makes it lick its own load from her snatch.  That done, the messy, sex-stinking demon is tossed aside with a growl that it's free to go now.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+	otherwise:
+		say "     Wanting to see Brutus get fucked by another demon, you tell her to ride the demon's cock.  [if DemonBruteStatus is 1]She seems momentarily disappointed, her cock twitching, but obeys[otherwise]She grins lustfully at this and obeys eagerly[end if], wrestling the demon onto its back.  Pinning it down, she grinds her juicy cunt over his pulsing rod, stiffening it to full erection.  As Brutus lowers herself down onto that pillar of infernal meat, the demon taunts that she's become nothing but a slut, but she slaps her spaded tail across its ballsac to cut its taunts short, proving that she's still stronger than it and will take what she wants.  And what she wants is clearly that huge cock stuffed inside her.  She lowers herself down onto it with a snarl, splattering dark saliva across the other demon's chest.";
+		say "     Brutus rides the demonic cock slowly at first, seeking to make the most of the opportunity.  The fallen demon struggles, not to break free, but to pin her down and take her violently.  Brutus is able to keep it pinned though, holding the weakened demon down with her great strength and the leverage of her position over it.  Not able to hold herself back for long, her pace soon quickens until she's bouncing up and down on the groaning demon's rod until they're both pushed to orgasm[if DemonBruteStatus is 1].  She paints the demon's scaly hide with her seed even as it fills her up with its infernal load[otherwise].  Your demonic companion's cunt clutches tightly around her foe's shaft, milking it for its infernal load[end if][if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  Once the demon's balls are drained, Brutus pulls off of its rod and offers for it to lick its own load from her snatch, which it does despite its obvious anger.  That done, the messy, sex-stinking demon is tossed aside with a growl that it's free to go now.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+
+to say dbcapturesex_09:		[Brutus rides - anal]
+	if DBCaptureQuestVar is 5:
+		if DemonBruteStatus is 0:
+			say "     Wanting to see Brutus get fucked by another demon, you tell him to take the demon's cock up his ass.  He growls at this, but obeys, kneeing the demon in the gut before pushing it over onto its back.  Pinning it down, he grinds his muscular ass over its pulsing rod, stiffening it to full erection.  As Brutus lowers himself down onto that pillar of infernal meat, the demon taunts that he's become nothing but a slave, but he grabs it by the throat, crushing its words into silence, proving that he is still stronger than it and can take what he wants.  And what he wants, now that he's overexcited from roughing up his fallen foe, is that huge cock stuffed inside him.  He lowers himself down onto it with a snarl, splattering dark saliva across the other demon's chest.";
+			say "     Brutus rides the demonic cock slowly at first, taking his time adjusting to the massive intruder.  The fallen demon struggles, not to break free, but to pin him down and take him violently.  Brutus is able to keep it pinned though, clawing and slashing at it further as he beats it back to the ground.  Aroused by the bloodlust, his pace soon quickens until he's bouncing up and down on the groaning demon's rod until they're both pushed to orgasm.  He paints the demon's scaly hide with his seed even as it fills her up with its infernal load[if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  Once the demon's balls are drained, Brutus pulls off of its rod and makes it lick its own load from his asshole.  That done, the messy, sex-stinking demon is tossed aside with a growl that it's free to go now.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+		otherwise:
+			say "     Wanting to see Brutus get fucked by another demon, you tell her to take the demon's cock up her ass.  She growls at this,  [if DemonBruteStatus is 1]her cock twitching[otherwise]her cunt dripping[end if], but obeys.  She knees the demon in the gut before pushing it over onto its back.  Pinning it down, she grinds her muscular ass over its pulsing rod, stiffening it to full erection.  As Brutus lowers herself down onto that pillar of infernal meat, the demon taunts that she's become nothing but a slave, but she grabs it by the throat, crushing its words into silence, proving that she is still stronger than it and can take what she wants.  And what she wants, now that she's overexcited from roughing up her fallen foe, is that huge cock stuffed inside her ass.  She lowers herself down onto it with a snarl, splattering dark saliva across the other demon's chest.";
+			say "     Brutus rides the demonic cock slowly at first, taking her time adjusting to the massive intruder.  The fallen demon struggles, not to break free, but to pin her down and take her violently.  Brutus is able to keep it pinned though, clawing and slashing at it further as she beats it back to the ground.  Aroused by the bloodlust, her pace soon quickens until she's bouncing up and down on the groaning demon's rod until they're both pushed to orgasm[if DemonBruteStatus is 1].  She paints the demon's scaly hide with her seed even as it fills her up with its infernal load[otherwise].  Your demonic companion's anus clutches tightly around her foe's shaft, milking it for its infernal load[end if][if cocks of player > 0 or cunts of player > 0].  The sight of this sends you into orgasm as well[end if].  Once the demon's balls are drained, Brutus pulls off of its rod and makes it lick its own load from her asshole.  That done, the messy, sex-stinking demon is tossed aside with a growl that it's free to go now.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
+
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "demon tooth"	"A pretty long, curved fang with a sharp tip. You knocked it out of a demon brute's mouth. Maybe you could find someone who has knowledge of the supernatural and show it to them - there might be something interesting to be done with it."	1	demon tooth
 
 demon tooth is a grab object. demon tooth is not temporary.
 the usedesc of demon tooth  is "And just what do you want to do with it? Maybe find someone who understands the supernatural and give it to them...";
-				
+
 instead of trading the demon tooth when the current action involves the Nermine:
 	if DBCaptureQuestVar is 2:
 		say "     Nermine takes a look at the fang, then says 'What you are showing here is a tooth of a demon soldier. How did you acquire it?'";
@@ -152,6 +320,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 		say "     The jackalwoman looks at the tooth, then says 'You want to catch another one? Nermine told you, she only had enough for one try at the ritual. There is nothing more to do without new rare supplies that are not in this city.'";			
 	otherwise if DBCaptureQuestVar is 99:
 		say "     The jackalwoman looks at the tooth, then says 'Nermine told you, she only had enough for one try at the ritual. There is nothing more to do without new rare supplies that are not in this city.'";			
+
 
 This is the demoncleansing rule:
 	say "     The priestess sighs, then answers 'With how deep in their innermost being it generally is anchored, that's usually very difficult. But tell me more...' You explain about the demon brute, how you captured him and bound him with the ritual, and Nermine drawing off his demonic powers. There is a pause as the priestess thinks about this, then she says 'With the beast weakened and you having bound it to yourself, I see a possibility. How about holy water? That is supposedly able to drive out evil in the Christian faith, and with your demon fitting the bill pretty well, it should work on him.' She hesitates again for a second, then continues 'We do have some here, the former Christian priest of this place blessed all the water bottles he had before he left and didn't return. But that's our emergency fresh water supply, with it in closed bottles and clean. While we're more than willing to help you with your plan, child, I sadly must ask that you [bold type]give us other clean water in exchange[roman type]. And with your companion so large, you will need at least [bold type]eight bottles[roman type] of holy water.'";
