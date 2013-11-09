@@ -1,6 +1,5 @@
-underwater zone for fs by Hellerhound begins here.
-
-
+Version 2 of underwater zone for fs by Hellerhound begins here.
+[Version 2 - Description adjustments, clearer movement commands]
 
 Section 1 - Gill Fruit Tree
 
@@ -34,7 +33,7 @@ to say gill fruit use:
 	if thirst of player < 0, now thirst of player is 0;
 	if hunger of player < 0, now hunger of player is 0;
 	increase score by 10;
-	say "Your neck feels odd as gills seem to sprout, tiny folds of skin flat in the air.";
+	say "Your neck feels odd as gills seem to sprout, tiny folds of skin that stay flat in the air.";
 	follow the turnpass rule;
 
 after examining the player:
@@ -56,16 +55,16 @@ understand "swim to [any room]" as swimtoing;
 [now battleground is "Sea";]
 
 check swimtoing:
-	if hasgills is not 1, say "You'll not be able to swim there without a way to breath underwater.  It's too far and too deep." instead;
+	if hasgills is not 1, say "You'll not be able to swim there without a way to breathe underwater. It's too far and too deep." instead;
 	if the noun is a direction, say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming towards the place itself." instead;
-	if the noun is not adjacent to the location of the player, say "That isn't nearby.  Make sure that you're swimming to a specific location nearby." instead;
+	if the noun is not adjacent to the location of the player, say "That isn't nearby. Make sure that you're swimming to a specific location nearby." instead;
 	if the location of the player is noun, say "You're already there." instead;
 
 carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
 		swimmingfight;
 	otherwise:
-		say "You travel to [the noun], avoiding trouble as best you can.";
+		say "You travel to [the noun], avoiding trouble as best you can. The gills on your neck prove their worth, gathering air for you underwater as you move beneath the waves.";		
 	move the player to the noun;
 	follow turnpass rule;
 
@@ -75,13 +74,13 @@ to swimmingfight:
 		if furry is banned or guy is banned:
 			increase T by 1;
 		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "feral sea dragon"; [duh case, all three ways]
 	if T is 2:
 		if furry is banned or girl is banned:
 			increase T by 1;
 		otherwise:
-			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "feral sea dragoness";
 	if T is 3:
 		if furry is banned or hermaphrodite is banned:
@@ -106,28 +105,20 @@ to swimmingfight:
 
 
 after looking when the player is in the public beach:
-	say "The rolling waves pass over the sandy shore, which slopes down into the ocean.  In the distance, past those sloping sands, the waves strike a rocky barrier.  To get past it, you would need to be able to [bold type]swim[roman type] along the coast.";
+	say "The rolling waves pass over the sandy shore, which slopes down into the ocean. In the distance, past those sloping sands, the waves strike a rocky barrier. It doesn't look like there is any chance of getting past it here, so there is not much use of swimming all the way out there from this part of the beach.";
 
-
-The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean.  From here, you have a better view of the rocky area with the crashing waves.  It looks like a rather unhealthy area to swim - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks.";
+The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean. From here, you have a better view of the rocky area with the crashing waves. It looks like a rather unhealthy area to get into the water - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could [bold type]swim[roman type] to the [bold type]coral ring[roman type]?";
 the Sloping Sand is southeast of public beach.
 
 the scent of Sloping Sand is "All you can smell out here is the strong scent of the ocean.";
 
-before swimtoing The Sloping sand:
-	if hasgills is not 1:
-		say "You are unable to go further south, the waves pounding against sharp rocks. You would have to go underwater. If only you had gills...";
-		stop the action;
-	otherwise:
-		say "The gills on your neck prove their worth, gathering air for you underwater as you walk beneath the waves. [line break]You will have to [bold type]swim[roman type] from now on. Since the water impedes any sense of direction, [bold type]you'll have to name where you are going.[roman type]";
-
 before going to the coral ring:
-	say "You can't just walk out into the ocean.  You'll have to swim into the deeper waters.";
+	say "You can't just walk around in the ocean. You'll have to [bold type]swim[roman type] to the [bold type]coral ring[roman type].";
 	stop the action;
 
 Coral Ring is south of the Sloping Sand.
 
-The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks.  By passing through here, you are able to move to and from the deeper reaches of the sea.  To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters.  It seems like a sunken ship, its broken mast helping you distinguish the shape.  It looks like there's a shipwreck to explore!".
+The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks. By passing through here, you are able to move to and from the deeper reaches of the sea. To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters. It seems like a sunken ship, its broken mast helping you distinguish the shape. There's a [bold type]shipwreck[roman type] to explore! Or you could just [bold type]swim[roman type] back to the [bold type]sloping sand[roman type] of the beach.".
 
 the scent of Coral Ring is "All you can smell out here is the strong scent of the ocean.";
 
@@ -136,13 +127,15 @@ after entering the coral ring:
 	increase score by 5;
 
 before going to the sunken ship:
-	say "You cannot do that, you'll get lost out here!";
+	say "You shouldn't just swim out into the open sea, you'll get lost out here! Maybe just [bold type]swim[roman type] to the [bold type]shipwreck[roman type] instead, that's close enough to find the way back.";
 	stop the action;
 
 Sunken Ship is south of Coral Ring.
 
 Sunken Ship is a room.
-The description of Sunken Ship is "A large ship lays sunken and rotting here.  From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago.  It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea.  There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast.  You'd best be careful.  From here, you can barely make out the lighter spot in the rocks that is the coral ring you passed through to get here.";
+understand "Shipwreck" as Sunken Ship.
+understand "Wreck" as Sunken Ship.
+The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. From here, you can barely make out the lighter spot in the rocks that is the [bold type]coral ring[roman type] you passed through to get here. You could [bold type]swim[roman type] to it if you want to get back to the beach.";
 
 The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" };
 
@@ -167,7 +160,7 @@ to say sea dragon cum use:
 			otherwise:
 				infect "feral sea dragoness";
 		otherwise:
-			say "You rub the thick stuff into your waiting cunt, massaging it in.  You moan in pleasure as you work the thick cum deep inside you.";
+			say "You rub the thick stuff into your waiting cunt, massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "feral sea dragon";
 			otherwise:
