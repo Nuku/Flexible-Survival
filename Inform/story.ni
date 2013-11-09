@@ -5845,6 +5845,7 @@ Include Pets by Nuku Valente.
 Include Computers by Hellerhound.
 Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
+Include E-shocker by Stripes.
 Include Masturbate by Stripes.
 Include Alt Combat by Stripes.
 Include Alt Vore by Stripes.

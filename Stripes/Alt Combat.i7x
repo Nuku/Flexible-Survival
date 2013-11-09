@@ -72,6 +72,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	if lev entry is less than level of player and hardmode is true:
 		hardmodeboost;
 	now peppereyes is 0;
+	now eprodused is false;
 	now monsterhp is hp entry;
 	now gascloud is 0;
 	now playerpoison is 0;
