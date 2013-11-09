@@ -1,20 +1,20 @@
-Version 4 of Eric by Wahn begins here.
-[Version 4: Threesomes with David - cuntboy, cuntboy sex slave, male (horse & satyr) completed]
+Version 5 of Eric by Wahn begins here.
+[Version 5: encounter with the felinoid]
 
 "Adds an NPC named Eric to the Flexible Survival game, with impreg chance"
 
 [ HP states of Eric                                                  ]
 [   0: Holed up in the lockerroom                                    ]
-[   1: Cuntboy virgin, in the Bunker                                 ] 
-[  10: Accepted being a cuntboy, in the Bunker                       ] 
-[  11: Accepted being a cuntboy, had sex with player, in the Bunker  ] 
-[  20: Hoping for a cure, virgin, in the Bunker                      ] 
-[  21: now with horsecock, virgin, in the Bunker                     ] 
-[  22: now with horsecock, had sex with player, in the Bunker        ] 
-[  31: now with satyrcock, virgin, in the Bunker                     ] 
-[  32: now with satyrcock, had sex with player, in the Bunker        ] 
-[  99: Taken advantage of -> submissive cuntboy, in the Bunker       ] 
-[ 100: Stacy's girlfriend now, pregnant (no longer available)        ] 
+[   1: Cuntboy virgin, in the Bunker                                 ]
+[  10: Accepted being a cuntboy, in the Bunker                       ]
+[  11: Accepted being a cuntboy, had sex with player, in the Bunker  ]
+[  20: Hoping for a cure, virgin, in the Bunker                      ]
+[  21: now with horsecock, virgin, in the Bunker                     ]
+[  22: now with horsecock, had sex with player, in the Bunker        ]
+[  31: now with satyrcock, virgin, in the Bunker                     ]
+[  32: now with satyrcock, had sex with player, in the Bunker        ]
+[  99: Taken advantage of -> submissive cuntboy, in the Bunker       ]
+[ 100: Stacy's girlfriend now, pregnant (no longer available)        ]
 
 [ Thirst states of Eric (for the smell)                              ]
 [   0: Smells male & something the player can't identify             ]
@@ -24,15 +24,22 @@ Version 4 of Eric by Wahn begins here.
 [  31: Smells male + satyr musk                                      ]
 
 [ Libido states of Eric (for reactions against a player furling)     ]
-[   0: Eric has never seen the player in Furling shape		           ]
+[   0: Eric has never seen the player in Furling shape               ]
 [   1: Eric has seen the player in Furling shape - is not frightened ]
 	
-[ Lust states of Eric (for sex with David) 												   ]
-[   0: starting state																			           ]
-[   1: talked with David about Eric       										 			 ]
-[   2: David talked with Eric / sub Eric's opinion doesn't matter		 ]
-[   3: ready for sex with David																			 ]
-[   4: had sex with David																						 ]
+[ Lust states of Eric (for sex with David)                           ]
+[   0: starting state                                                ]
+[   1: talked with David about Eric                                  ]
+[   2: David talked with Eric / sub Eric's opinion doesn't matter    ]
+[   3: ready for sex with David                                      ]
+[   4: had sex with David                                            ]
+		
+[ Level states of Eric (for sex with the Felinoid)                   ]
+[   0: starting state                                                ]
+[   1: Felinoid fucked him (unseen by the player)                    ]
+[   2: Felinoid fucked him (unseen by the player, but he told them)  ]
+[   3: Felinoid fucked him (seen by the player)                      ]
+[  99: the player stopped the Felinoid from fucked him               ]
 	
 to say WaitLineBreak:   [little bit of often used code]
 	if waiterhater is 0:
@@ -1105,7 +1112,89 @@ to say EricSex12_99_Fondling:	[sex slave Eric]
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. After he finishes cumming and has time to catch his breath, David stands up with his arms around Eric, his shaft still deep inside the cuntboy. He carries him over to his nearby bed where they lie down together.";
 
-Section 4 - Endings
+Section 4 - Events
+
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
+	move player to Grey Abbey Library;
+	if hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32:    [had sex with the player]
+		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
+		say "     [line break]";
+		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
+		if player consents:  [follow]
+			say "     [line break]";
+			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
+			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
+			say "     [line break]";
+			say "     Do you want to watch the felinoid mount Eric (Y) or will you step in and snap him out of the trance (N)?";
+			if player consents:
+				say "     [line break]";
+				if hp of Eric is 11:
+					say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the short's band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's open pussy lips. After a moment of making the cuntboy pant and moan, the felinoid then gives him a lick over the small of his back before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
+					say "     Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Eric's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking him with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
+					say "     [WaitLineBreak]";
+					say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
+				otherwise if hp of Eric is 22:
+					say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the short's band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's big equine balls. After a moment of making the young man pant and moan, the felinoid then moves on to lick over his pucker for a while before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
+					say "     Lowering his hips slightly and doing small probing thrusts, the felinoid soon locates Eric's pucker and presses in against it, entering without much problem as the human is pretty relaxed all over in his trance. With a satisfied roar, he sinks all of his manhood inside, then starts fucking Eric with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
+					say "     [WaitLineBreak]";
+					say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's asshole relentlessly, until finally the young athlete's moans and pants rise up to a climactic shout and his horsecock starts blasting heavy squirts of cum all over the floor under him. Visibly satisfied in making his partner come, the felinoid isn't far behind, burying his hard cock all the way in his human partner's butt and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
+				otherwise if hp of Eric is 32:
+					say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the short's band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's furry balls. After a moment of making the young man pant and moan, the felinoid then moves on to lick over his pucker for a while before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
+					say "     Lowering his hips slightly and doing small probing thrusts, the felinoid soon locates Eric's pucker and presses in against it, entering without much problem as the human is pretty relaxed all over in his trance. With a satisfied roar, he sinks all of his manhood inside, then starts fucking Eric with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
+					say "     [WaitLineBreak]";
+					say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's asshole relentlessly, until finally the young athlete's moans and pants rise up to a climactic shout and his satyr cock starts blasting heavy squirts of cum all over the floor under him. Visibly satisfied in making his partner come, the felinoid isn't far behind, burying his hard cock all the way in his human partner's butt and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
+				now level of Eric is 3;
+				now lastfuck of Eric is turns;
+			otherwise:
+				say "     [line break]";
+				say "     Deciding that this has gone far enough, you dash forward, grabbing Eric by the shoulder and pulling him up to stand. With your hand on the young man's arm, you walk him a few steps away from the musky cloud of scent around the felinoid and softly slap his cheeks several times as he breathes in fresh air. Finally shaking out of it, his eyes focus on you after the last slap and he says 'Hey, what are you doing? I was just... looking for books and... then... I -'";
+				say "     Eric's brows draw together as he mentally puzzles together the last five minues of time and turns in confusion to you. While you explain about the felinoid's charm and the effects of his musk, the two of you hear a disappointed growl from the large cat, who gives Eric a last look before stalking off, trying to act as if he hadn't planned to do anything with the human.";
+				now level of Eric is 99;
+		otherwise:   [leave it]
+			say "     [line break]";
+			say "     Oh well, what'll happen will happen. It's not like you've got the time to constantly watch over what the felinoid is doing anyways. Some short time later, you hear lust-filled growls and pants sound from somehwere between the bookshelves, culminating in a satisfied roar not long after.";
+			now level of Eric is 1;
+			now lastfuck of Eric is turns;
+	otherwise if hp of Eric is 99:    [sex slave cuntboy]
+		say "     As you enter the library, you see Eric walk in between two of the long shelves, furtively looking over his shoulder towards the bunker entrance without noticing you in the other direction. Now that you think of it, he seems to be up here quite a bit. You guess that he's trying to avoid getting noticed (and fucked) by you, reading in the quiet corners of the library instead.";		
+		say "     While you're still debating the thought of going after him and fucking him right now in your own mind, you you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
+		say "     [line break]";
+		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
+		if player consents:  [follow]
+			say "     [line break]";
+			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
+			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
+			say "     [line break]";
+			say "     Do you want to watch the felinoid mount Eric (Y) or will you step in before he makes his move (N)?";
+			if player consents:
+				say "     [line break]";
+				say "     With the young athlete just dazedly resting on all fours, the felinoid uses large paws to pat at his pants, soon managing to hook a paw under the short's band and pull it down, revealing that Eric went commando today. The large cat gives his entranced human a deep sniff, then starts to lick between the legs, lapping away at Eric's open pussy lips. After a moment of making the cuntboy pant and moan, the felinoid then gives him a lick over the small of his back before finally moving to stand completely over the smaller human, nuzzling at his neck while bumping against his butt with a hard and erect spined cock.";
+				say "     Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Eric's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking him with powerful and deep thrusts. Moans, pants and growls of lust fill the library and you move a bit closer to get a better view.";
+				say "     [WaitLineBreak]";
+				say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
+				now level of Eric is 3;
+				now lastfuck of Eric is turns;
+			otherwise:
+				say "     [line break]";
+				say "     Deciding that this has gone far enough, you dash forward, stepping between the felinoid and Eric, blocking the large cat's access to his new fucktoy. It takes some effort to shoo the insistent felinoid away, but you finally manage it after a while. With a disappointed growl, the large animal gives Eric a last look before stalking off, trying to act as if he hadn't planned to do anything with the human.";
+				now level of Eric is 99;
+				if cocks of player > 0:
+					say "     [line break]";
+					say "     You're left standing over a still pretty dazed Eric and the felinoid's pheromone-laden musk still hanging in the air here has you pretty wound up, your cock hard as rock. Do you want to take the opportunity of fucking the cuntboy yourself right now?";
+					if player consents:
+						say "     [line break]";
+						say "     Quickly stripping off your own clothing, you kneel behind him and pull down Eric's shorts. Ah, he went commando today - maybe some part of him is learning to keep himself ready and accessible for you. He just looks so delicious, on all fours before you with his athletic body and a moist and swollen pussy open to you. A thought of going slow quickly evaporates before your boiling lust, causing you to aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly spreads his pussy lips. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start thrusting, rubbing against his inner walls with your shaft.";
+						say "     You fuck the little cuntboy bitch for quite a while, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then rest on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - your stamina is spent and you pull your softening erection out with a wet slurp. While you move around to grab your clothes, Eric sinks to the ground, lying on his side with your cum oozing out of his pussy. He murmurs to himself 'I can't believe how much this gets me off. I should hate this - and him! Three times he's made me cum and filled me. What does he want to do - use me as a breeding bitch?' before dozing off. Not a bad idea, you think for yourself as you walk back out between the shelves.";
+						now lastfuck of Eric is turns;
+					otherwise:
+						say "     Nah, it's more fun to dominate the little bitch when he's not zonked out and realizes what's happening to him. You just walk off and leave him to recover on his own.";
+		otherwise:   [leave it]
+			say "     [line break]";
+			say "     Oh well, what'll happen will happen. Let the big kitty have some fun with your little cuntboy bitch too. Some short time later, you hear lust-filled growls and pants sound from somehwere between the bookshelves, culminating in a satisfied roar not long after.";
+			now level of Eric is 1;
+			now lastfuck of Eric is turns;
+
+Section 5 - Endings
 
 when play ends:
 	if (hp of Eric is 0) and Sports Arena Lockerroom is known:
