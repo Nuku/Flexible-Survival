@@ -170,12 +170,8 @@ to say prairiedogfight:
 		increase morale of player by 3;
 
 to say prairiedogsex:
-	[puts Prairie Dog as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Prairie Dog":
-			now monster is y;
-			break;
+	choose row monster in table of random critters;
+	setmonster "Prairie Dog";
 	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him.  He struggles a little, but superior numbers have him down soon enough.  Numerous little paws grab at his clothes and strip him bare.  The one prairie dog you spoke with motions for you to pick a spot to have a go at him";
 	if cocks of player > 0 and cunts of player > 0:
 		say ".  Shall you ride his cock or stuff his ass? (Y=cock, N=ass)";
@@ -208,21 +204,17 @@ when play begins:
 
 
 Instead of resolving a Watering Hole:
-	[puts Bald Eagle as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Bald Eagle":
-			now monster is y;
-			break;
+	choose row monster in table of random critters;
+	setmonster "Bald Eagle";
 	say "     In a depression in the grassy plains, you find a greener spot around a small pond.  But there is an eagle man bathing himself in the water and clearly enjoying it.  The avian creature strokes his hard cock, leaking precum into the water.  Focused on his own fun, he hasn't spotted you yet.  Shall you approach the bathing bird (Y) or take this opportunity to leave (N) while you still can?";
 	if the player consents:
 		say "     Deciding to approach, you move cautiously towards the bird.  It doesn't notice you until you get closer to the water.  When you're spotted, it squawks and flaps angrily in the water, startled by your arrival.  Thankfully, it does calm down a little when you don't attack right away.  You start telling him that you were just coming over to get some water, but he grins and waves off your comments.  'Oh, I know you were really coming over to join me in my bath.  No need to be coy about it, sexy.  Come on in and lets have a little romp?  You look like you could use some fine eagle cock stuffed inside you.'  Shall you take him up on his offer?";
 		if the player consents:
 			say "     The bird grins at the corners of his beak and takes your hand as he helps you into the pond.  Aside from a little sediment at the bottom of the pond, the water is rather clean and feels good after your long trek through the city and the dry plains.  The eagle runs his wet wings over your body as he moves in behind you, rubbing his throbbing cock against your ass.";
 			if cunts of player > 0:
-				say "     Lowering you onto all fours in the water, he lines up his cock with your wet pussy and slowly sinks his shaft into you.  You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath.  And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked.  The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you.  'Isn't that nice, my little chick?  A big eagle cock to fuck you right.  Breed you full of eaglets.'  You moan and nod, lost in the lustful mating.  When he finally cums, he blasts his thick load into you and you cum moments later.[impregchance]";
+				say "     Lowering you onto all fours in the water, he lines up his cock with your wet pussy and slowly sinks his shaft into you.  You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath.  And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked.  The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you.  'Isn't that nice, my little chick?  A big eagle cock to fuck you right.  Breed you full of eaglets.'  You moan and nod, lost in the lustful mating.  When he finally cums, he blasts his thick load into you and you cum moments later.[ovichance]";
 			otherwise:
-				say "     Lowering you onto all fours in the water, he lines up his cock with your waiting pucker and slowly sinks his shaft into you.  You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath.  And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked.  The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you.  'Isn't that nice, my little chick?  A big eagle cock to fuck you right.  Stuff that slutty ass of yours.'  You moan and nod, lost in the lustful mating.  When he finally cums, he blasts his thick load into you and you cum moments later.[impregchance]";
+				say "     Lowering you onto all fours in the water, he lines up his cock with your waiting pucker and slowly sinks his shaft into you.  You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath.  And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked.  The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you.  'Isn't that nice, my little chick?  A big eagle cock to fuck you right.  Stuff that slutty ass of yours.'  You moan and nod, lost in the lustful mating.  When he finally cums, he blasts his thick load into you and you cum moments later.[movichance]";
 			say "     Finished his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak.  As you prepare to go, he flies off.  Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot.  Both soaked and filled with eagle-tainted fluids, you quickly start to change, fully changing into an eagle creature like your lover.  Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
 			say "[eaglefulltf]";
 			increase morale of player by 3;
