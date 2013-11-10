@@ -1,6 +1,6 @@
 Version 2 of Sam for FS by Stripes begins here.
-[Version 2.4 - DVtaur: Sex menu and more sex]
-"Adds a fellow Researcher named Sam to the Flexible Survival game"
+[Version 2.5 - surrendering to Rick]
+"Adds a fellow Researcher named Sam to the Flexible Survival game."
 
 Section 1 - Event
 
@@ -307,6 +307,7 @@ instead of navigating Mini-Lab while hp of Sam is 4:
 	if carried of eagle feather >= 2:
 		now featherready is false;
 		assaultonminilab;
+		now battleground is "void";
 	otherwise:
 		move player to mini-lab;
 
@@ -370,35 +371,61 @@ to assaultonminilab:
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	otherwise if calcnumber is 2:
-		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted.  The tigertaur keeps Sam pinned down over the table as she starts looking over its contents.  'Ahh, here they are,' she purrs, grabbing several of the vials before tossing Sam down onto the floor.  He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
+		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted.  The tigertaur keeps Sam pinned down over the table as she starts looking over its contents.  'Ahh, here they are,' she purrs, grabbing a selection of the vials before tossing Sam down onto the floor.  He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
 		say "     With a few twitches of her hindquarters, she pounces atop of her human prey, pinning him face down to the ground.  She grinds her hard cock against his body, leaking precum over his smooth skin.  With a strong paw at his jaw, she tilts his head back and forces his mouth open.  'Oh, stop your fussing, you'll make such a pretty kitty breedslut,' Rick rumbles, pouring the contents of one vial after the other down her ex-partner's throat.";
 		attempttowait;
 		say "     As concentrated nanite infusions rush through his system, Sam begins to change.  First to show is a rush of cheetah spots as fur begins to cover his body.  Next comes a leonine tail.  As the changes continue to progress and Sam becomes more feline, he starts to moan and mewl with growing excitement.  With a loud mrowl, a feline muzzle grows from Sam's face and stripes start to mix into the spotted fur there.  And that's not all that's growing - a lovely pair of breasts start to form on his chest, soon followed by several other pairs.  Beside those lower breasts, two protrusions start to form out of his sides, soon pushing outwards to become another pair of feline legs.  Even as his hands and feet become paws, his body shifts further, becoming a feline taur like his ex-partner.  Sam's largest pair of breasts remain on his upper torso, while the rest shift down to hang from his taur body.";
 		say "     'Mmm... you're turning into such a lovely kitty, Sammie.  Let's show our guest what a nice feline slut you've become,' she purrs, raising Sam's leonine tail and grinning back at you.  With your clear view, you can see the juicy virgin pussy, swollen balls and furry sheath that Sam's gained.  The new kitty's cock is quite large and feline in shape, a throbbing black spire of arousal.  As Rick shows off her prize, she rubs a tiger paw against that damp slit while stroking a hand along that ebon shaft.  'And how does my kitty feel?  Ready for her first proper breeding?' she purrs.  Sam mrowls and nods, begging to be mounted as the arousal of all her changes overwhelms her.  'Sounds like you [italic type]really[roman type] want it.  Will you drink a few more vials from your mistress to earn it?' she purrs, offering several more doses of nanites as her paw teases Sam's needy pussy.";
 		attempttowait;
-		say "     'Oh, I need it so bad... I didn't know it would feel this good.  Yes, please, whatever you want, mistress.  Just do it and mount your kitty,' Sammie cries out, grinding back against Rick's touch, opening her mouth wide to receive the vials['] contents.  Rick laughs darkly and climbs atop her new slut and pours the vials down her throat even as she mounts her.  As Rick fucks her feline taur pet, the feline hybrid continues to change, gaining another pair of legs and more breasts.  Her coat continues to change, remaining cheetah spotted in her hindquarters, leopard rosetted at the midsection and gaining clouded leopard markings on her upper torso.";
+		say "     'Oh, I need it so bad... I didn't know it would feel this good.  Yes, please, whatever you want, mistress.  Just do it and mount your kitty,' Sammie cries out, grinding back against Rick's touch, opening her mouth wide to receive the vials['] contents.  Rick laughs darkly and climbs atop her new slut and pours the vials down her throat even as she mounts her.  As Rick fucks her feline taur pet, the feline hybrid continues to change, gaining another pair of legs, six in all, and more breasts.  Her coat continues to change, remaining cheetah spotted in her hindquarters, leopard rosetted at the midsection and gaining clouded leopard markings on her upper torso.";
 		say "     As you watch the two felines creatures breeding, the heavy scent of arousal hangs in the air.  You can't help but play with yourself, rubbing your hands over your [if breast size of player > 0]breasts and [otherwise if cocks of player > 0 and cunts of player > 0]aching loins[otherwise if cocks of player > 0]throbbing cock[otherwise if cunts of player > 0]dripping pussy[otherwise]barren crotch[end if], uncertain which of them you'd rather be right now.  When you see Rick shift her hips, readying to pound her new slut harder, you spot that Sammie's gained a second pussy and a second cock as part of her continued changes.  It takes considerable effort to stop yourself from going over and joining them, knowing the tigertaur would not let you go until you were nothing but another feline slut for her.  And as tempting as that seems right now, you keep your distance, though you don't look away from the show either.  Much of the floor beneath them has become damp with the hybrid's leaking milk, splattered seed and dripping juices as she's fucked and bred over and over again.";
 		attempttowait;
 		if cocks of player > 0 or cunts of player > 0:
-			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0].  You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [ball size] balls[end if][if cunts of player is 1].  With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[otherwise if cunts of player > 1].  With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if].  As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library feeling very sexually satisfied and with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
+			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0].  You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [ball size] balls[end if][if cunts of player is 1].  With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[otherwise if cunts of player > 1].  With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if].  As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
 		otherwise:
-			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
-		if "Kinky" is listed in feats of player:
-			say "quite pleased and aroused at having indulged your kinky urges";
-			increase morale of player by 3;
-			increase libido of player by 25;
+			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
+		let surrender be 0;
+		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+			say ".";
+			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress, you wonder if maybe you should give into the tigertaur and have her claim you as a pet as well? (Y=Surrender, N=Retreat)";
+			If player consents:
+				Say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italicize type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
+				now surrender is 1;
+				now humanity of player is 0;
+				now tailname of player is "Feline Hexataur";
+				now facename of player is "Feline Hexataur";
+				now skinname of player is "Feline Hexataur";
+				now bodyname of player is "Feline Hexataur";
+				now cockname of player is "Feline Hexataur";
+				now scalevalue of player is 5;
+				now bodydesc of player is "silky";
+				now bodytype of player is "feline";
+				now the daycycle of player is 0;
+				end the game saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
+				wait for any key;
+				now battleground is "void";
+				follow the turnpass rule;
+			otherwise:
+				Say "     Shaking your head as you wonder if you're losing your mind, which might very well have happened has you given in.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
 		otherwise:
-			say "a little bad about letting that happen, but also aroused by the scene you just witnessed";
-			increase libido of player by 10;
-			decrease morale of player by 3;
-		say ".  After what you've seen, part of you longs to just accept becoming a horny creature of lust like them.";
-		attempttowait;
-		decrease humanity of player by 20;
-		if libido of player > 100, now libido of player is 100;
-		now hp of Sam is 100;
-		remove Sam from play;
-		now Mini-Lab is unknown;
-		move player to Grey Abbey Library;
+			say "     Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
+		if surrender is 0:
+			if "Kinky" is listed in feats of player:
+				say "quite pleased and aroused at having indulged your kinky urges";
+				increase morale of player by 3;
+				increase libido of player by 25;
+			otherwise:
+				say "a little bad about letting that happen, but also aroused by the scene you just witnessed";
+				increase libido of player by 10;
+				decrease morale of player by 3;
+			say ".  After what you've seen, part of you longs to just accept becoming a horny creature of lust like them.";
+			attempttowait;
+			decrease humanity of player by 20;
+			if libido of player > 100, now libido of player is 100;
+			now hp of Sam is 100;
+			remove Sam from play;
+			now Mini-Lab is unknown;
+			move player to Grey Abbey Library;
 	otherwise if calcnumber is 3:
 		say "     Deciding it's every [if cunts of player > 0]woman for herself[otherwise]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it.  As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement.  Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		attempttowait;
@@ -972,7 +999,11 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 Section 7 - Endings
 
 when play ends:
-	if bodyname of player is not "Vixentaur" and bodyname of player is not "Dragontaur" and bodyname of player is not "Dracovixentaur":
+	if bodyname of player is "Feline Hexataur":		[special surrender ending]
+		say "     Having given yourself over to Rick, you and Sammie are made into love hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers['].  And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";  
+		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead both you, Sammie and your cubs through out of the city and into the rest of the world. F rom what little you remember of that time you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs and those who did manage to catch up to the lot of you... well currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you and Sammie and the pair of cubs the two of you are currently nursing.";
+		stop the action;
+	otherwise if bodyname of player is not "Vixentaur" and bodyname of player is not "Dragontaur" and bodyname of player is not "Dracovixentaur":
 		if humanity of player < 10:
 			if hp of Sam >= 10 and hp of Sam <= 29:
 				say "     After you succumb to the infection and do not return, Sam strikes back out on his own, heading into the city to enjoy the sexy creatures populating the fallen city.  He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.";
