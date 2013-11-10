@@ -74,6 +74,13 @@ WSlevel is usually 2.
 3 - Full WS
 NOTE: An invalid selection defaults to 'Standard'.]
 
+ovipreglevel is usually 2.
+[ovipreglevel - denotes whether you want to accept your player becoming egg-pregnant (ovi) or not.
+1 - No Ovi
+2 - Standard
+3 - [not available until unlocked in the game]
+NOTE: An invalid selection defaults to 'Standard'.]
+
 [
 *** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***
 ]

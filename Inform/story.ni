@@ -577,6 +577,9 @@ freefeatfun is a text that varies.
 hypernull is a number that varies. 
 anallevel is a number that varies.
 WSlevel is a number that varies.
+ovipreglevel is a number that varies.
+ovipregnant is a truth state that varies.  ovipregnant is usually false.		[marks if ovi-pregnant now]
+ovipregalways is a truth state that varies.  ovipregalways is usually false.	[marks if allowed to pick always ovi]
 
 Book 2 - Places
 
@@ -1138,7 +1141,7 @@ To say gryphon fuck:
 			say "[gryphonfuck7]";
 
 to say gryphonfuck1:
-	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cock size desc of player] [cock of player] shaft before moving on to your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [if breast size of player > 0][breast size desc of player][otherwise][bodytype of player][end if] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Her taloned hands grip your throbbing maleness and stroke it as she thrusts into you.  Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[impregchance]";
+	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cock size desc of player] [cock of player] shaft before moving on to your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [if breast size of player > 0][breast size desc of player][otherwise][bodytype of player][end if] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Her taloned hands grip your throbbing maleness and stroke it as she thrusts into you.  Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[ovichance]";
 
 to say gryphonfuck2:
 	say "     [one of]The gryphon shoves you to the ground roughly and seems disappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
@@ -1148,17 +1151,17 @@ to say gryphonfuck3:
 
 
 to say gryphonfuck4:
-	say "     The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[impregchance]";
+	say "     The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[ovichance]";
 	if "Female Preferred" is not listed in feats of player and "Modest Organs" is not listed in feats of player, increase cunt length of player by 1;
 
 to say gryphonfuck5:
-	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of player] [breast size desc of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[impregchance]";
+	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of player] [breast size desc of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.  You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[ovichance]";
 
 to say gryphonfuck6:
-	say "     The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched painfully by the large member as it forces its way into your bowels.  The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[mimpregchance]";
+	say "     The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched painfully by the large member as it forces its way into your bowels.  The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck7:
-	say "     The gryphon[if cocks of player is 0 and cunts of player is 0] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched [if scalevalue of the player < 4]painfully[end if] by the large member as it forces its way into your bowels[if cunts of player > 0].  Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of player] pussy she could instead be using[end if][if cocks of player > 0].  She takes a hold of your [cock size desc of player] [cock of player] shaft and pumps at it while thrusting into you[end if].  After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[mimpregchance]";
+	say "     The gryphon[if cocks of player is 0 and cunts of player is 0] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched [if scalevalue of the player < 4]painfully[end if] by the large member as it forces its way into your bowels[if cunts of player > 0].  Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of player] pussy she could instead be using[end if][if cocks of player > 0].  She takes a hold of your [cock size desc of player] [cock of player] shaft and pumps at it while thrusting into you[end if].  After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.  Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 		
 To say gootemp:
 	if a random number from 1 to 100 is less than the libido of the player:
@@ -1304,7 +1307,7 @@ To say gryphon lose:
 			say "'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the Gryphons throat. Not to be left out the Gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the Gryphon is done cumming you ease yourself forward and rest your head on one of her bountiful blue breasts.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. Once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.[impregchance]";
+			say "You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. Once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.[ovichance]";
 			decrease thirst of player by 5;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -1321,13 +1324,13 @@ To say gryphon lose:
 				say "It's no use, you are just too small to take it all in. The Gryphon chirps soothingly understanding your frustration. Suddenly you let out a startled yelp as you feel an electrifying tickling sensation on your clit, you look down to see the puffed end of a blue tail to be the cause.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-				say "'Perhaps this will help ease your suffering' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on the tasty milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[impregchance]";
+				say "'Perhaps this will help ease your suffering' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on the tasty milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 			otherwise:
 				say "Seeing what your are trying to do, your blue lover waits for the right moment and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you, your knees buckle and you collapse into the soft furry warmth of the Gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride.";
 				say "'It's alright baby, mama's here' the Gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling the Gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely notice as you achieve orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour) the Hermaphroditic Gryphon lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.[impregchance]";
+			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.[ovichance]";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
 		otherwise if cocks of player is greater than 0 and cunt length of player is less than 6:
@@ -1383,7 +1386,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 "Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
 "Panther Taur"	"[one of]She leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had.[or]She strikes at your with her clawed hands.[or]She lashes out with a powerful set of sharp claws.[or]She rushes right at you, forcing you to back against a wall.[at random]"	"[defeated_panthertaur]"	"[felitaur rape]"	"An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her pretty [one of]blue[or]brown[or]green[at random] slitted eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.[line break][line break]Commissioned by AsureaSkie"	"feline face, with blunt snout, wet black nose and pointed ears above your"	"is bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws.[if breasts of player is greater than 2] All your breasts except the first two rest on the chest of that lower torso, swaying with each step.[end if]"	"[one of]furry[or]black furred[at random]"	"You have a long, black, feline tail that likes to curl and uncurl at its own whim. "	"[one of]black sheathed[or]barbed[at random]"	"you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching"	"you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free[if breasts of player is greater than 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]"	"soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your [bodytype of player] body"	"you shake it, a new limb extending from it, becoming a long tail, clearly feline in build"	"your cock draws up against your belly as a sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner"	12	18	10	12	10	10	"Both"	20	3	6	"Outside"	1	14	15	6	8	0	1	14	8	90	--	0	4	"[one of]animalistic[or]exotic[or]tauric[at random]"	"[one of]feline[or]panthertaur[at random]"	false	false	false	--	"ftaurpounce"
 "Goo Girl"	"[one of][if cocks of player is greater than 0]With a swipe of a flexible hand she bypasses your clothes, slithering under them to grab at your [cock size desc of player] [cock of player] shaft and starts squeezing, causing pain and pleasure in equal parts.[otherwise if cunts of player is greater than 0 and cunt length of player is less than 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure.[otherwise if cunts of player is greater than 0 and cunt length of player is greater than 11]The goo girl grabs at your crotch, and suddenly seems to be shrinking. Your [cunt size desc of player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great warm rush of thick fluids.[otherwise]She swats at you with a flexible hand, bruising you between the legs.[end if][or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate they are not too hard.[at random]"	"[one of]The gooey girl falls back onto her bottom, panting, or just quivering, it's hard to tell. Her thighs are parted, exposing her gently undulating folds to your eyes. [gootemp][or]The girl loses cohesion with a gurgling cry of dismay, becoming a pool of unmoving ichor at your feet.[or]The goo girl suddenly dives for a nearby liquid and vanishes into it instantly, gone.[at random]"	"[one of]The girl laughs in soft bubbles at your defeat, but takes mercy on you, leaving you to peace.[or]The goo girl moves up to you and hugs you suddenly, drawing you into a firm embrace against her soft body. She shakes her head silently, then spreads her semi solid nethers before your eyes, leaning back and offering herself. [gootemp][or]Victorious, the goo creature lashes you a few times with a whip like hand for good measure, then loses interest.[at random]"	"A jiggling girl of [one of]blue[or]green[or]purple[at random] color. You can see through her, mostly, her gelatin like flesh tinting the area behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. She seems to notice you and turns to you. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile."	"curiously disquieting smile on a pretty human face"	"melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"	"[one of]jellied[or]gelatin like[or]translucent[at random] [one of]blue[or]red[or]purple[sticky random]"	""	"[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"	"you can feel your face reshaping into rather pretty proportions. An urge overtakes you and you smile, and never stop"	"you feel your feet drawn to one another as strange throbbing builds in your shins. Your lower legs flow into one another, creating a [skin of player] base of flesh that goes up to your lower thighs"	"a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh"	"you get an odd feeling, but see no change"	"your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"	8	10	10	10	10	5	"Both"	30	2	3	"Mall"	0	6	4	2	3	0	1	20	20	40	"glob of goo"	100	3	"[one of]mutated[or]flowing[or]altered[at random]"	"gelatinous"	false	false	false	--	"default"
-"Naga"	"[one of]The snake swipes at you with its pipe with alarming accuracy.[or]With a loud hiss, the snake lashes at you, sinking a few fangs painfully into your [bodydesc of player] body.[or]The snake lashes out with its tail, striking you solidly with the heavy mass.[at random]"	"[one of]The snake staggers from its many wounds and collapses to the ground, unmoving.[or]Your last blow draws a shuddering hiss before the snake falls to the ground and ceases fighting.[or]Detecting the fight lost, the snake suddenly flees on quick scales, abandoning the struggle.[at random]"	"[first time]The snake laughs, like a dry hiss, tongue flicking as it moves over your defeated form, 'You should go back to where you came from, human, your kind is finished in this city. Remember it or you will be punished fresh.'[only][one of]The snake prods you with its club to ensure the fight has left you before slithering off, seemingly satisfied with its victory.[or]The great naga throws its coils about you in a warm, soft, crushing embrace. Breathing becomes hard as it constricts. Consciousness fades to black. When you awaken, the snake man has departed.[or]With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to it. It coils about you, warm and trapping, as it becomes a he, twice so, two thick human-like shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort.[line break][line break]Your ass sends guilty pangs of pain and pleasure through you as the snake keeps your wriggling form under control, pounding eagerly at your [skin of player] flesh. The tool within you swells suddenly, then begins to explode, filling your bowels with thick gouts of snake seed. Satisfied, the snake rolls you off of himself to the ground, and slithers away.[mimpregchance][or]The serpentine creature entwines you in its coils, leaving only your head free to gasp for breath.  As its tail tightens around you, its scaley hide rubs across your [bodydesc of player] body.  The naga chuckles darkly at your feeble groaning and moves in closer, showing off its twin human-like cocks, erect and dripping with precum.  Seeing its intent, you close your mouth tightly, but another crushing constriction causes you to cry out, leaving your mouth wide to be stuffed by the twin erections.  The taste of its precum arouses you and you are soon licking and sucking on them despite yourself.  At first, this is rather reluctant, but soon you're going at it eagerly, even enthusiastically, your mouth watering at the taste of the cocks filling your senses.[line break]The throbbing shafts stuffing your mouth soon throb and pulse, releasing the creature's copious, runny semen, filling your mouth to overflowing, unable to swallow because of its crushing coils.  After chuckling at your plight, it relaxes its grip and you gasp for breath, gulping down its musky load.  Dropping you to the ground now that it's done with you, it slithers off, leaving you weak and coughing as you try to recover from the crushing blow job you've been made to endure.[at random]"	"Human and snake blended together in an intimidating mixture. It has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are its only limbs, if one discounts the great tail that makes up most of its body. Clenched in its right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, it also has great jaws that likely contain sharp, possible venomous, teeth. Its human torso is well muscled and sleek, well built all around and lacking in blemish. Its head and face is entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.[line break][line break][line break]Commissioned by AsureaSkie."	"a snake's head, with unblinking eyes and huge venomous fangs. Your [skinname of player] hide is sleek across your majestic hood, flaring wide when excited or worked up, framing your head from behind your face"	"extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake like body"	"[one of]scaly[or]softly scaled[or]scaled[at random]"	""	"[one of]human[or]normal[at random]"	"you feel your [skin of player] skin stretching out as your skull flattens out into a snake-like face. Your eyes blink for the last time before the lids become clear. You find you can now taste the air"	"your legs snap together, almost toppling you as they flow together quickly. Strange numbing pleasure radiates down along your torso as you can feel your spine extending down along your fused legs, then beyond, forming a powerful tube-like body that trails along behind you"	"soft [one of]brown and black[or]bright red and yellow[or]gray and tan[at random] scales begin to spread quickly from your palms. As they settle, soft itching warmth follows, then fades, leaving you with a new hide to admire"	"you feel something settle in your lower torso, but nothing physically changes that you can see"	"your cock becomes achingly erect for a moment before settling down, seemingly unchanged."	14	10	12	12	12	8	"Male"	25	3	6	"Mall"	2	16	9	0	0	0	0	0	0	20	--	0	3	"[one of]serpentine[or]legless[or]altered[at random]"	"serpentine"	false	false	false	--	"snakenaga"
+"Naga"	"[one of]The snake swipes at you with its pipe with alarming accuracy.[or]With a loud hiss, the snake lashes at you, sinking a few fangs painfully into your [bodydesc of player] body.[or]The snake lashes out with its tail, striking you solidly with the heavy mass.[at random]"	"[one of]The snake staggers from its many wounds and collapses to the ground, unmoving.[or]Your last blow draws a shuddering hiss before the snake falls to the ground and ceases fighting.[or]Detecting the fight lost, the snake suddenly flees on quick scales, abandoning the struggle.[at random]"	"[first time]The snake laughs, like a dry hiss, tongue flicking as it moves over your defeated form, 'You should go back to where you came from, human, your kind is finished in this city. Remember it or you will be punished fresh.'[only][one of]The snake prods you with its club to ensure the fight has left you before slithering off, seemingly satisfied with its victory.[or]The great naga throws its coils about you in a warm, soft, crushing embrace. Breathing becomes hard as it constricts. Consciousness fades to black. When you awaken, the snake man has departed.[or]With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to it. It coils about you, warm and trapping, as it becomes a he, twice so, two thick human-like shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort.[line break][line break]Your ass sends guilty pangs of pain and pleasure through you as the snake keeps your wriggling form under control, pounding eagerly at your [skin of player] flesh. The tool within you swells suddenly, then begins to explode, filling your bowels with thick gouts of snake seed. Satisfied, the snake rolls you off of himself to the ground, and slithers away.[movichance][or]The serpentine creature entwines you in its coils, leaving only your head free to gasp for breath.  As its tail tightens around you, its scaley hide rubs across your [bodydesc of player] body.  The naga chuckles darkly at your feeble groaning and moves in closer, showing off its twin human-like cocks, erect and dripping with precum.  Seeing its intent, you close your mouth tightly, but another crushing constriction causes you to cry out, leaving your mouth wide to be stuffed by the twin erections.  The taste of its precum arouses you and you are soon licking and sucking on them despite yourself.  At first, this is rather reluctant, but soon you're going at it eagerly, even enthusiastically, your mouth watering at the taste of the cocks filling your senses.[line break]The throbbing shafts stuffing your mouth soon throb and pulse, releasing the creature's copious, runny semen, filling your mouth to overflowing, unable to swallow because of its crushing coils.  After chuckling at your plight, it relaxes its grip and you gasp for breath, gulping down its musky load.  Dropping you to the ground now that it's done with you, it slithers off, leaving you weak and coughing as you try to recover from the crushing blow job you've been made to endure.[at random]"	"Human and snake blended together in an intimidating mixture. It has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are its only limbs, if one discounts the great tail that makes up most of its body. Clenched in its right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, it also has great jaws that likely contain sharp, possible venomous, teeth. Its human torso is well muscled and sleek, well built all around and lacking in blemish. Its head and face is entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.[line break][line break][line break]Commissioned by AsureaSkie."	"a snake's head, with unblinking eyes and huge venomous fangs. Your [skinname of player] hide is sleek across your majestic hood, flaring wide when excited or worked up, framing your head from behind your face"	"extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake like body"	"[one of]scaly[or]softly scaled[or]scaled[at random]"	""	"[one of]human[or]normal[at random]"	"you feel your [skin of player] skin stretching out as your skull flattens out into a snake-like face. Your eyes blink for the last time before the lids become clear. You find you can now taste the air"	"your legs snap together, almost toppling you as they flow together quickly. Strange numbing pleasure radiates down along your torso as you can feel your spine extending down along your fused legs, then beyond, forming a powerful tube-like body that trails along behind you"	"soft [one of]brown and black[or]bright red and yellow[or]gray and tan[at random] scales begin to spread quickly from your palms. As they settle, soft itching warmth follows, then fades, leaving you with a new hide to admire"	"you feel something settle in your lower torso, but nothing physically changes that you can see"	"your cock becomes achingly erect for a moment before settling down, seemingly unchanged."	14	10	12	12	12	8	"Male"	25	3	6	"Mall"	2	16	9	0	0	0	0	0	0	20	--	0	3	"[one of]serpentine[or]legless[or]altered[at random]"	"serpentine"	false	false	false	--	"snakenaga"
 "Hermaphrodite Gryphon"	"[one of]She throws her impressive, and somewhat jiggly, bulk against you.[or]She snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body.[or]She presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully.[or]She charges at you, wings pulling her free of the ground just moments before she crashes bodily into you.[at random]"	"[gryphon lose]"	"[gryphon fuck]"	"She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted, black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade, and sport huge wicked claws that clack on hard surfaces."	"powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered"	"dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"	"[one of]soft, blue, and furry[or]softly furred[at random]"	"You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."	"[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"	"your ears are drawn upwards to the top of your head and a wicked beak pushes forward"	"you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"	"a flush of arousal stirs through you as a dense carpet of blue fur engulfs you in its warm, encouraging, presence"	"you feel a new weight. A glance shows a long [skin of player] tube growing over your ass. The end blossoms out into a blue, furry, tuft. You have a tail"	"pleasure builds in your cock as it deepens to a midnight black, a large swollen knot forming towards the base and a [skin of player] sheath overtaking the very base of it"	12	10	12	14	10	12	"Both"	22	2	5	"Outside"	1	13	7	2	8	0	1	13	7	80	"gryphon milk"	50	3	"[one of]winged[or]alluring[or]curvaceous[at random]"	"[one of]gryphon[or]feline[or]hybrid[at random]"	false	false	false	--	"hump"
 "Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at your [bodydesc of player] body with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of your [bodytype of player] form with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[mimpregchance][end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous"	"red, black, and white latex covering your"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth."	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"a wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	""	0	3	"[one of]altered[or]animalistic[or]sexy[at random]"	"vulpine"	false	false	false	--	"hump"
 
@@ -2120,28 +2123,28 @@ To Birth:
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
 		if cunts of player > 0:
-			say "Your child suckles at your [breast size desc of player] breast, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		if snakehijack is true and "They Have Your Eyes" is listed in feats of player:
-			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitmiate offspring.";
+			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitmiate offspring.";
 		otherwise if snakehijack is true:
-			say ". It's apparent that its prior act has caused the serpent to assume itself as one of your legimate offspring, a twisted fate for such a creature.";
+			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legimate offspring, a twisted fate for such a creature.";
 		otherwise:
 			say ".";
 		if wwvar is 1:
 			if snakehijack is true:
-				say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
+				say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth.  At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
 			otherwise:
 				say "     As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth.  A part of you worries about what your offspring may do";
-			say "... And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
+			say "...  And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 		otherwise:
 			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 	otherwise if "Wild Womb" is listed in feats of player:
 		if cunts of player > 0:
-			say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise:
@@ -2149,7 +2152,7 @@ To Birth:
 		say "As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
 	otherwise:
 		if cunts of player > 0:
-			say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise:
@@ -2169,6 +2172,8 @@ To Birth:
 	now the gestation of child is 0;
 	now ubpreg is "false";
 
+
+Chapter I - Impregnation and Ovi-Impreg Subroutines
 
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
@@ -2211,7 +2216,9 @@ To impregnate with (x - text):
 
 
 to say impregchance:		[to be used when either female or MPreg would work]
-	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ovipreglevel is 3:
+		say "[ovichance]";
+	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -2222,12 +2229,15 @@ to say impregchance:		[to be used when either female or MPreg would work]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds, impregnate with name entry;
-		now the libido of the player is (the libido of the player) / 2;
-
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is false;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
 
 to say mimpregchance:		[to be used when only MPreg would work]
-	if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ovipreglevel is 3:
+		say "[movichance]";
+	otherwise if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -2238,25 +2248,15 @@ to say mimpregchance:		[to be used when only MPreg would work]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds, impregnate with name entry;
-		now the libido of the player is (the libido of the player) / 2;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is false;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
 
-to say mimpregchance with (x - text):		[to be used when only MPreg would work]
-	if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if level of Velos > 0:
-			increase target by ( 3 - level of Velos );
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
-		if inheat is true and heatlevel is 3, decrease target by 1;
-		if playercanub is true, increase target by 1;
-		if a random chance of 2 in target succeeds, impregnate with x;
-		now the libido of the player is (the libido of the player) / 2;
- 
- to say fimpregchance:		[to be used when only female pregnancy would work]
-	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
+to say fimpregchance:		[to be used when only female pregnancy would work]
+	if ovipreglevel is 3:
+		say "[fovichance]";
+	otherwise if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -2267,11 +2267,15 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds, impregnate with name entry;
-		now the libido of the player is (the libido of the player) / 2;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is false;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
 
 to say selfimpregchance:
-	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ovipreglevel is 3:
+		say "[selfovichance]";
+	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 12;		[tougher check]
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -2282,8 +2286,10 @@ to say selfimpregchance:
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
 		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds, selfimpregnate;
-		now the libido of the player is (the libido of the player) / 2;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is false;
+			selfimpregnate;
+			now the libido of the player is (the libido of the player) / 2;
 
 to selfimpregnate:
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
@@ -2304,6 +2310,156 @@ to selfimpregnate:
 	now facename of child is facename of player;
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
 
+to say randomimpreg:		[Use when either would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[impregchance]";
+
+to say randommimpreg:		[Use when only MPreg would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[mimpregchance]";
+
+to say randomfimpreg:		[Use when only female pregnancy would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[fimpregchance]";
+
+[***]
+to say ovichance:		[to be used when either female or MPreg would work]
+	if ovipreglevel is 1:
+		say "[impregchance]";
+	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if level of Velos > 0 and cunts of player is 0:
+			increase target by ( 3 - level of Velos );
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is true;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
+
+to say movichance:		[to be used when only MPreg would work]
+	if ovipreglevel is 1:
+		say "[mimpregchance]";
+	otherwise if "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if level of Velos > 0:
+			increase target by ( 3 - level of Velos );
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is true;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
+
+to say fovichance:		[to be used when only female pregnancy would work]
+	if ovipreglevel is 1:
+		say "[fimpregchance]";
+	otherwise if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if level of Velos > 0:
+			increase target by ( 3 - level of Velos );
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is true;
+			impregnate with name entry;
+			now the libido of the player is (the libido of the player) / 2;
+
+to say selfovichance:
+	if ovipreglevel is 1:
+		say "[selfimpregchance]";
+	otherwise if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 12;		[tougher check]
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if level of Velos > 0 and cunts of player is 0:
+			increase target by ( 3 - level of Velos );
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if inheat is true and heatlevel is 3, decrease target by 1;
+		if playercanub is true, increase target by 1;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds:
+			now ovipregnant is true;
+			selfimpregnate;
+			now the libido of the player is (the libido of the player) / 2;
+
+to say randomovi:		[random ovi-impregnation - use when either would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[ovichance]";
+
+to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[movichance]";
+
+to say randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "[fovichance]";
+
+[***]
 
 instead of examining a watch:
 	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, it is currently [time of day].";
@@ -4513,8 +4669,10 @@ This is the turnpass rule:
 		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
 		if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
 		if gestation of child is less than 5:
+			if ovipregnant is true and ovipreglevel is 1, now ovipregnant is false;
+			if ovipregnant is false and ovipreglevel is 3, now ovipregnant is true;
 			if cunts of player > 0:
-				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise if ovipregnant is true]the growing egg[otherwise]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			otherwise:				[MPreg]
 				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
@@ -4526,7 +4684,7 @@ This is the turnpass rule:
 					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of your oncoming pregnancy. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 			otherwise:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
@@ -4540,7 +4698,7 @@ This is the turnpass rule:
 		otherwise if gestation of child is less than 30:
 			if a random chance of 1 in 2 succeeds:
 				if cunts of player > 0:
-					say "Warm tingles gently run through your lower belly.";
+					say "Warm tingles gently run through your lower belly[if ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
 				otherwise:
 					say "You feel a soft shifting of something inside your lower belly.";
 			if a random chance of 1 in 30 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
@@ -4552,23 +4710,23 @@ This is the turnpass rule:
 					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts.";
 		if gestation of child is less than 1 and ( cunts of player is greater than 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
 			if cunts of player > 0:
-				say "With a sudden pouring of fluids, birth is upon you. You settle without much choice, breathing quickly as your body spasms in readiness. ";
+				say "With a sudden pouring of fluids, [if ovipregnant is true]egglaying[otherwise]birth[end if] is upon you.  You settle without much choice, breathing quickly as your body spasms in readiness.  ";
 			otherwise:
-				say "There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
+				say "There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.  ";
 			follow cunt descr rule;
 			if cunts of player > 0:
 				if playercanub is true and ubpreg is not "false":
-					say "Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb.  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace."; 
+					say "Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if].  You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it.  Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace."; 
 				otherwise if playercanub is true:
-					say "Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you.  You simply recline and relax, letting your instincts take over, slipping the child easily free from your [bodytype of player] body.  They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+					say "Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you.  You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[otherwise]child[end if] easily free from your [bodytype of player] body.  They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 				otherwise if cunt width of player is greater than 10:
-					say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+					say "Your [descr] sex almost laughs at the idea of birth.  You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[otherwise]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
 					increase morale of player by 5;
 				otherwise if cunt width of player is greater than 3:
-					say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the newborn from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the child is ready to be held by you. You feel tired, but whole, and satisfied.";
+					say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[otherwise]newborn[end if] from your [descr] birthing canal.  It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[otherwise]child[end if] is ready to be held by you.  You feel tired, but whole, and satisfied.";
 					increase morale of player by 5;
 				otherwise:
-					say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
+					say "Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[otherwise]child[end if] only after what feels like hours of struggle.  Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
 					now hp of player is 1;
 					decrease morale of player by 10;
 			otherwise if cunts of player is 0:
@@ -5344,44 +5502,6 @@ to weakrandominfect:			[does not bypass researcher protection]
 		break;
 	infect;
 
-
-to say randomimpreg:		[Use when either would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[Impregchance]";
-
-
-to say randommimpreg:		[Use when only MPreg would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[mimpregchance]";
-
-
-to say randomfimpreg:		[Use when only female pregnancy would work]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "[fimpregchance]";
 
 to setmonster ( x - text ):		[puts an infection (named x) as lead monster for later use]
 	let found be 0;
@@ -6710,16 +6830,17 @@ To regularstart: [normal start method]
 		say "(7) [link]Banned Types[as]7[end link] - [bold type][startbannedflags][roman type][line break]";
 		say "(8) [link]Anal Content[as]8[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(9) [link]WS Content[as]9[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(10) [link]Hyperlinks[as]10[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
-		say "(11) [link]Waiting for Input[as]11[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(12) [link]Screen Clearing[as]12[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(10) [link]Ovi Pregnancy[as]10[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
+		say "(11) [link]Hyperlinks[as]11[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
+		say "(12) [link]Waiting for Input[as]12[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(13) [link]Screen Clearing[as]13[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-12)>[run paragraph on]";
+			say "(0-13)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 12 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 13 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6742,6 +6863,8 @@ To regularstart: [normal start method]
 		otherwise if calcnumber is 9:
 			try WSadjusting;
 		otherwise if calcnumber is 10:
+			try oviadjusting;
+		otherwise if calcnumber is 11:
 			if hypernull is 0:
 				now hypernull is 1;
 			otherwise:
@@ -6754,7 +6877,7 @@ To regularstart: [normal start method]
 				say "Turn on Hyperlinks?";
 				if player consents:
 					now hypernull is 0;		]
-		otherwise if calcnumber is 11:
+		otherwise if calcnumber is 12:
 			if waiterhater is 0:
 				now waiterhater is 1;
 			otherwise:
@@ -6767,7 +6890,7 @@ To regularstart: [normal start method]
 				say "Turn on delays?";
 				if player consents:
 					now waiterhater is 0;		]
-		otherwise if calcnumber is 12:
+		otherwise if calcnumber is 13:
 			if clearnomore is 0:
 				now clearnomore is 1;
 			otherwise:
@@ -7081,5 +7204,6 @@ When play begins:
 		now scenario is "Bunker";
 	if anallevel < 1 or anallevel > 3, now anallevel is 2;
 	if WSlevel < 1 or WSlevel > 3, now WSlevel is 2;
+	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]

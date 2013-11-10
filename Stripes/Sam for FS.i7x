@@ -1,6 +1,6 @@
 Version 2 of Sam for FS by Stripes begins here.
-[Version 2.4 - DVtaur: Sex menu and more sex]
-"Adds a fellow Researcher named Sam to the Flexible Survival game"
+[Version 2.5 - surrendering to Rick]
+"Adds a fellow Researcher named Sam to the Flexible Survival game."
 
 Section 1 - Event
 
@@ -307,6 +307,7 @@ instead of navigating Mini-Lab while hp of Sam is 4:
 	if carried of eagle feather >= 2:
 		now featherready is false;
 		assaultonminilab;
+		now battleground is "void";
 	otherwise:
 		move player to mini-lab;
 
@@ -370,35 +371,61 @@ to assaultonminilab:
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	otherwise if calcnumber is 2:
-		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted.  The tigertaur keeps Sam pinned down over the table as she starts looking over its contents.  'Ahh, here they are,' she purrs, grabbing several of the vials before tossing Sam down onto the floor.  He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
+		say "     Not wanting to get involved, but certainly curious to watch the show, you take a few steps back, giving the two plenty of space to get reacquainted.  The tigertaur keeps Sam pinned down over the table as she starts looking over its contents.  'Ahh, here they are,' she purrs, grabbing a selection of the vials before tossing Sam down onto the floor.  He crawls backwards, begging alternatively for Rick not to do it and for you to help him, but neither of you heed his pleas, too aroused by what's to come.";
 		say "     With a few twitches of her hindquarters, she pounces atop of her human prey, pinning him face down to the ground.  She grinds her hard cock against his body, leaking precum over his smooth skin.  With a strong paw at his jaw, she tilts his head back and forces his mouth open.  'Oh, stop your fussing, you'll make such a pretty kitty breedslut,' Rick rumbles, pouring the contents of one vial after the other down her ex-partner's throat.";
 		attempttowait;
 		say "     As concentrated nanite infusions rush through his system, Sam begins to change.  First to show is a rush of cheetah spots as fur begins to cover his body.  Next comes a leonine tail.  As the changes continue to progress and Sam becomes more feline, he starts to moan and mewl with growing excitement.  With a loud mrowl, a feline muzzle grows from Sam's face and stripes start to mix into the spotted fur there.  And that's not all that's growing - a lovely pair of breasts start to form on his chest, soon followed by several other pairs.  Beside those lower breasts, two protrusions start to form out of his sides, soon pushing outwards to become another pair of feline legs.  Even as his hands and feet become paws, his body shifts further, becoming a feline taur like his ex-partner.  Sam's largest pair of breasts remain on his upper torso, while the rest shift down to hang from his taur body.";
 		say "     'Mmm... you're turning into such a lovely kitty, Sammie.  Let's show our guest what a nice feline slut you've become,' she purrs, raising Sam's leonine tail and grinning back at you.  With your clear view, you can see the juicy virgin pussy, swollen balls and furry sheath that Sam's gained.  The new kitty's cock is quite large and feline in shape, a throbbing black spire of arousal.  As Rick shows off her prize, she rubs a tiger paw against that damp slit while stroking a hand along that ebon shaft.  'And how does my kitty feel?  Ready for her first proper breeding?' she purrs.  Sam mrowls and nods, begging to be mounted as the arousal of all her changes overwhelms her.  'Sounds like you [italic type]really[roman type] want it.  Will you drink a few more vials from your mistress to earn it?' she purrs, offering several more doses of nanites as her paw teases Sam's needy pussy.";
 		attempttowait;
-		say "     'Oh, I need it so bad... I didn't know it would feel this good.  Yes, please, whatever you want, mistress.  Just do it and mount your kitty,' Sammie cries out, grinding back against Rick's touch, opening her mouth wide to receive the vials['] contents.  Rick laughs darkly and climbs atop her new slut and pours the vials down her throat even as she mounts her.  As Rick fucks her feline taur pet, the feline hybrid continues to change, gaining another pair of legs and more breasts.  Her coat continues to change, remaining cheetah spotted in her hindquarters, leopard rosetted at the midsection and gaining clouded leopard markings on her upper torso.";
+		say "     'Oh, I need it so bad... I didn't know it would feel this good.  Yes, please, whatever you want, mistress.  Just do it and mount your kitty,' Sammie cries out, grinding back against Rick's touch, opening her mouth wide to receive the vials['] contents.  Rick laughs darkly and climbs atop her new slut and pours the vials down her throat even as she mounts her.  As Rick fucks her feline taur pet, the feline hybrid continues to change, gaining another pair of legs, six in all, and more breasts.  Her coat continues to change, remaining cheetah spotted in her hindquarters, leopard rosetted at the midsection and gaining clouded leopard markings on her upper torso.";
 		say "     As you watch the two felines creatures breeding, the heavy scent of arousal hangs in the air.  You can't help but play with yourself, rubbing your hands over your [if breast size of player > 0]breasts and [otherwise if cocks of player > 0 and cunts of player > 0]aching loins[otherwise if cocks of player > 0]throbbing cock[otherwise if cunts of player > 0]dripping pussy[otherwise]barren crotch[end if], uncertain which of them you'd rather be right now.  When you see Rick shift her hips, readying to pound her new slut harder, you spot that Sammie's gained a second pussy and a second cock as part of her continued changes.  It takes considerable effort to stop yourself from going over and joining them, knowing the tigertaur would not let you go until you were nothing but another feline slut for her.  And as tempting as that seems right now, you keep your distance, though you don't look away from the show either.  Much of the floor beneath them has become damp with the hybrid's leaking milk, splattered seed and dripping juices as she's fucked and bred over and over again.";
 		attempttowait;
 		if cocks of player > 0 or cunts of player > 0:
-			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0].  You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [ball size] balls[end if][if cunts of player is 1].  With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[otherwise if cunts of player > 1].  With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if].  As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library feeling very sexually satisfied and with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
+			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if cocks of player > 0].  You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [ball size] balls[end if][if cunts of player is 1].  With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[otherwise if cunts of player > 1].  With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if].  As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
 		otherwise:
-			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
-		if "Kinky" is listed in feats of player:
-			say "quite pleased and aroused at having indulged your kinky urges";
-			increase morale of player by 3;
-			increase libido of player by 25;
+			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hypersexualized body rushes into action.  The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath";
+		let surrender be 0;
+		if humanity of player < 50 or libido of player > 50 or "Kinky" is listed in feats of player or "Submissive" is listed in feats of player:
+			say ".";
+			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress, you wonder if maybe you should give into the tigertaur and have her claim you as a pet as well? (Y=Surrender, N=Retreat)";
+			If player consents:
+				Say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italicize type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
+				now surrender is 1;
+				now humanity of player is 0;
+				now tailname of player is "Feline Hexataur";
+				now facename of player is "Feline Hexataur";
+				now skinname of player is "Feline Hexataur";
+				now bodyname of player is "Feline Hexataur";
+				now cockname of player is "Feline Hexataur";
+				now scalevalue of player is 5;
+				now bodydesc of player is "silky";
+				now bodytype of player is "feline";
+				now the daycycle of player is 0;
+				end the game saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
+				wait for any key;
+				now battleground is "void";
+				follow the turnpass rule;
+			otherwise:
+				Say "     Shaking your head as you wonder if you're losing your mind, which might very well have happened has you given in.  Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
 		otherwise:
-			say "a little bad about letting that happen, but also aroused by the scene you just witnessed";
-			increase libido of player by 10;
-			decrease morale of player by 3;
-		say ".  After what you've seen, part of you longs to just accept becoming a horny creature of lust like them.";
-		attempttowait;
-		decrease humanity of player by 20;
-		if libido of player > 100, now libido of player is 100;
-		now hp of Sam is 100;
-		remove Sam from play;
-		now Mini-Lab is unknown;
-		move player to Grey Abbey Library;
+			say "     Rather than waiting to give her a chance to do the same to you, you grab your gear and make a break for it, leaving the two horny felines to enjoy their new life together.  You make your way back to the library with your thoughts obsessing over the idea of becoming a horny sex monster like them.  The scene you've just witnessed has left you feeling ";
+		if surrender is 0:
+			if "Kinky" is listed in feats of player:
+				say "quite pleased and aroused at having indulged your kinky urges";
+				increase morale of player by 3;
+				increase libido of player by 25;
+			otherwise:
+				say "a little bad about letting that happen, but also aroused by the scene you just witnessed";
+				increase libido of player by 10;
+				decrease morale of player by 3;
+			say ".  After what you've seen, part of you longs to just accept becoming a horny creature of lust like them.";
+			attempttowait;
+			decrease humanity of player by 20;
+			if libido of player > 100, now libido of player is 100;
+			now hp of Sam is 100;
+			remove Sam from play;
+			now Mini-Lab is unknown;
+			move player to Grey Abbey Library;
 	otherwise if calcnumber is 3:
 		say "     Deciding it's every [if cunts of player > 0]woman for herself[otherwise]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it.  As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement.  Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		attempttowait;
@@ -679,7 +706,7 @@ to say samdragonfirsttime:
 	say "     Sam grins at your offer and takes a hold of you in his big, strong arms.  'Mmm... I've been looking forward to this since we got here.'  He kisses you as best he can with his draconic muzzle, letting his tongue play across your lips before diving into your mouth.  As his tongue explores your palate, he lowers you onto one of the cots.  His front dragonpaws knead over your chest as he moves to climb atop you, rumbling in pleasure as he breaks the kiss to move into position.  His large, draconic cock is ready and waiting, dribbling precum across your loins as he climbs onto the strained cot.  Placing his forepaws on your shoulders, he grips you firmly and lines his cock up before thrusting it slowly into you.";
 	say "     His slender, pointed tip slips into your [if cunts of player > 0]vagina[otherwise]anus[end if] easily, but his cock thickens as that delightlyfully ribbed shaft starts spreading you open.  You moan and pant beneath him as he grins down at you, pleased to see you squirming in delight beneath his powerful form.  'That's it... take that big dragon cock,' he rumbles, pounding you harder and faster as you stretch to accommodate the big taur's large shaft and loving every moment of it.";
 	attempttowait;
-	say "     His forepaws keep a firm grip on you, pinning you down onto the cot so he can drive his strong hips forward.  Again and again he thursts his large cock into you, fucking you like some wild beast.  The ridges along his shaft rub and stimulate your [if cunts of player > 0]vaginal walls, sliding against your clit[otherwise if cocks of player > 0]anal passage, pressing past your prostate[otherwise]anal passage[end if] to your continued delight[if cocks of player > 0].  Your own erection throbs against your belly, twitching with every thrust the dragontaur makes into you[end if].  Eventually the frantic fucking becomes too much for Sam and he drives hard into you one last time before unleashing his hot seed to flood your [if cunts of player > 0]womb[otherwise]belly[end if][if cunts of player > 0 or cocks of player > 0], driving you to orgasm as well[end if].  You roar together and grip your lover's lower body tightly, relishing the hot, creamy feeling of his virile load being pumped into you.[impregchance]";
+	say "     His forepaws keep a firm grip on you, pinning you down onto the cot so he can drive his strong hips forward.  Again and again he thursts his large cock into you, fucking you like some wild beast.  The ridges along his shaft rub and stimulate your [if cunts of player > 0]vaginal walls, sliding against your clit[otherwise if cocks of player > 0]anal passage, pressing past your prostate[otherwise]anal passage[end if] to your continued delight[if cocks of player > 0].  Your own erection throbs against your belly, twitching with every thrust the dragontaur makes into you[end if].  Eventually the frantic fucking becomes too much for Sam and he drives hard into you one last time before unleashing his hot seed to flood your [if cunts of player > 0]womb[otherwise]belly[end if][if cunts of player > 0 or cocks of player > 0], driving you to orgasm as well[end if].  You roar together and grip your lover's lower body tightly, relishing the hot, creamy feeling of his virile load being pumped into you.[ovichance]";
 	say "     Once he's finished up, he steps back and slides his cock free.  It twitches as it pops out, spraying a few last spurts onto your body.  'Mmm... If you ever want another go, I'll be happy to give you another dose of dragon cum.  Give you a proper fucking like only a dragon can provide,' he rumbles.  He slides his hands down your body as he looks over his handiwork before leaning forward and letting his long tongue slide slowly across your overflowing hole to get a quick taste.";
 
 to say samdragonoral:
@@ -698,7 +725,7 @@ to say samdragonfuck:
 			break;
 	say "     Sam rumbles lustfully and presses you down onto your back on one of the bunks, moving to climb atop you again.  'Rrr... back for more.  Best give that horny body of yours what it needs - a good fucking and a hot dose of dragon cum,' he rumbles with a grin.  His powerful body pins you down and grinds down against your [bodydesc of player] body, wedging his stiff meat [if cocks of player > 0]against your own[otherwise]between you both[end if].  Moving back, he gets his tapered glans lined up with your [if cunts of player > 0]wet vulva[otherwise]tight pucker[end if] and pushes it into you.  His cock, made for spreading open his lovers, dribbles precum along your passage as his muscled hips push forward, driving his increasingly thicker shaft into you.  You moan beneath him as each of those stimulating ridges pops into you.  Soon you're panting and squirming beneath him in ecstacy as he fucks you with that exquisite cock of his in strong, hard thrusts.";
 	attempttowait;
-	say "     You wrap your arms around his chest, pulling yourself down onto his cock again and again as he thrusts into you.  'Mmm... look at you... such a slut for a dragon cock.  Wanting a proper fucking until you're stuffed full of my hot seed[if cunts of player > 0] and bred full of my whelps[end if],' he rumbles with a chuckle.  You kiss and lick at his azure scales, lavishing attention on this sexy beast who's mating you.  Lost in a haze of arousal, you can't help but agree with the dragontaur, your body lusting for the wonderous pleasure that you feel only his draconic cock can bring[if cocks of player > 0 or cunts of player > 0].  Soon you're thrashing in orgasm beneath him, cumming over and over again as he drives his meat into you[otherwise].  Soon you're thrashing in delight beneath him, your body aching to feel his release since your genderless body cannot have one of its own[end if][if cocks of player > 0].  Your spurting cock rubs against his smooth, firm scales, loving the feel of them pressed against you as your seed soaks you both[end if][if cunts of player > 0].  Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[otherwise].  Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstacy[end if].  Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if cunts of player > 0]womb in an attempt to breed you[otherwise]bowels, bloating your belly with his virile load[end if].[impregchance]";
+	say "     You wrap your arms around his chest, pulling yourself down onto his cock again and again as he thrusts into you.  'Mmm... look at you... such a slut for a dragon cock.  Wanting a proper fucking until you're stuffed full of my hot seed[if cunts of player > 0] and bred full of my whelps[end if],' he rumbles with a chuckle.  You kiss and lick at his azure scales, lavishing attention on this sexy beast who's mating you.  Lost in a haze of arousal, you can't help but agree with the dragontaur, your body lusting for the wonderous pleasure that you feel only his draconic cock can bring[if cocks of player > 0 or cunts of player > 0].  Soon you're thrashing in orgasm beneath him, cumming over and over again as he drives his meat into you[otherwise].  Soon you're thrashing in delight beneath him, your body aching to feel his release since your genderless body cannot have one of its own[end if][if cocks of player > 0].  Your spurting cock rubs against his smooth, firm scales, loving the feel of them pressed against you as your seed soaks you both[end if][if cunts of player > 0].  Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[otherwise].  Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstacy[end if].  Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if cunts of player > 0]womb in an attempt to breed you[otherwise]bowels, bloating your belly with his virile load[end if].[ovichance]";
 	attempttowait;
 	say "     Once he's finished up, he steps back and slides his cock free.  It twitches as it pops out, spraying a few last spurts onto your body.  He steps further up onto the cot to bring his spurting shaft to your face, marking it with several streaks of semen.  You moan weakly and wrap your lips around his cock, sucking the last of his load from it before he pulls away.  'You look so sexy after you've been fucked senseless.'  He runs a hand over your [bodytype of player] body and licks your cheek.  'You make such a fine slut.  You should go out into the city and let some of the creatures out there mount you.  Then you can come back to me and I can fuck you in that new body of yours as well,' he rumbles while fingering your creamy hole, making you shiver in delight.  As you rest and recover from the wild romp, you find yourself thinking about finding some creatures to submit to out in the city.";
 	increase libido of player by 15;
@@ -714,7 +741,7 @@ to say samdragontaurfuck:
 	say "     Sam rumbles lustfully as he looks your [bodytype of player] over.  'Rrr... now this is a fine body you've got here.  A sexy taur just ripe for mounting,' he rumbles appreciatively.  'And now to give that hot [bodyname of player] body of yours what it needs - a good fucking and a hot dose of dragon cum.'  His powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast.  His stiff meat rubs against your rump, spitting precum onto you as it moves into position.  With his tapered glans lined up with your [if cunts of player > 0]wet cunt[otherwise]tight pucker[end if], he pushes himself further onto you, sinking it into you with a strong thrust.  His cock, made for spreading open his lovers, dribbles precum along your passage as his muscled hips push forward, driving his increasingly thicker shaft into you.  You moan beneath him in delight as each of those stimulating ridges pops into you.  Soon you're panting and squirming beneath him in ecstacy as he fucks you with that exquisite cock of his in strong, hard thrusts.";
 	attempttowait;
 	say "     With his tauric lower body atop yours, his humanoid top half presses against your back, letting him wrap his arms around you.  He hugs you like this and nips at your neck and shoulder he thrusts into you again and again.  'Mmm... you make for such a sexy taur slut.  That dragon cock stuffing you feels good, doesn't it?' he rumbles[if cunts of player > 0].  'Mmm... let's breed some whelps in that hot taur body of yours, my dear,' he adds[end if][if breast size of player > 1].  His hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
-	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of player] form lusting for the lustful pleasure of having the dragontaur mounting you like some beast[if cocks of player > 0 or cunts of player > 0].  Soon you're grinding your hindquarters back against him as your orgasm washes through you, cumming over and over again as he drives his meat into you[otherwise].  Soon you're grinding your hindquarters back against him in delight, your body aching to feel his release since your genderless body cannot have one of its own[end if][if cocks of player > 0].  Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if cunts of player > 0].  Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[otherwise].  Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstacy[end if].  Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if cunts of player > 0]womb in an attempt to breed you[otherwise]bowels, bloating your belly with his virile load[end if].[impregchance]";
+	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of player] form lusting for the lustful pleasure of having the dragontaur mounting you like some beast[if cocks of player > 0 or cunts of player > 0].  Soon you're grinding your hindquarters back against him as your orgasm washes through you, cumming over and over again as he drives his meat into you[otherwise].  Soon you're grinding your hindquarters back against him in delight, your body aching to feel his release since your genderless body cannot have one of its own[end if][if cocks of player > 0].  Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if cunts of player > 0].  Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[otherwise].  Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstacy[end if].  Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if cunts of player > 0]womb in an attempt to breed you[otherwise]bowels, bloating your belly with his virile load[end if].[ovichance]";
 	attempttowait;
 	say "     Once he's finished up, he steps back and slides his cock from your tauric body, sending echoes of delight through you as those ridges slip free one another another.  It twitches as it pops out, spraying a few last spurts across your hindquarters to mark you as bred by him.  Feeling sated for the moment, you slump to the floor and rest on your side, enjoying the warm, full feeling he's left inside your lower belly.  'You look so sexy as a well-fucked taur,' he rumbles with a grin as he runs a paw along your side.  'It is a nice look for you.  Maybe you should go out into the city and share it with others.  Find a few other taurs to mount you as well.  Then you can come back to me to have that new taur body mounted as well,' he rumbles while rubbing a forepaw at your creamy hole, making you shiver in delight.  As you rest and recover from the wild mating, you find yourself thinking about finding some taurs to submit to out in the city.";
 	increase libido of player by 20;
@@ -919,19 +946,27 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 			if name entry is "Vixentaur":
 				now monster is y;
 				break;
-	otherwise if Z is 2 and guy is not banned:	[puts Dragontaur as lead monster in case of impregnation]
+		say "[impregchance]";
+	otherwise if Z is 2 and guy is not banned:	[puts Dragontaur as lead monster in case of egg-pregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dragontaur":
 				now monster is y;
 				break;
+		say "[ovichance]";
 	otherwise:							[puts Dracovixentaur as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dracovixentaur":
 				now monster is y;
 				break;
-	say "[impregchance]";
+		say "[impregchance]";
+	otherwise:							[puts Dracovixentaur as lead monster in case of egg-pregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Dracovixentaur":
+				now monster is y;
+				break;
 	now monster is monstermemory;
 
 
@@ -972,7 +1007,11 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 Section 7 - Endings
 
 when play ends:
-	if bodyname of player is not "Vixentaur" and bodyname of player is not "Dragontaur" and bodyname of player is not "Dracovixentaur":
+	if bodyname of player is "Feline Hexataur":		[special surrender ending]
+		say "     Having given yourself over to Rick, you and Sammie are made into love hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers['].  And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";  
+		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead both you, Sammie and your cubs through out of the city and into the rest of the world. F rom what little you remember of that time you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs and those who did manage to catch up to the lot of you... well currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you and Sammie and the pair of cubs the two of you are currently nursing.";
+		stop the action;
+	otherwise if bodyname of player is not "Vixentaur" and bodyname of player is not "Dragontaur" and bodyname of player is not "Dracovixentaur":
 		if humanity of player < 10:
 			if hp of Sam >= 10 and hp of Sam <= 29:
 				say "     After you succumb to the infection and do not return, Sam strikes back out on his own, heading into the city to enjoy the sexy creatures populating the fallen city.  He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.";

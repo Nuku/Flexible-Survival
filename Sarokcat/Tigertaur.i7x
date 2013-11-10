@@ -1,5 +1,5 @@
 tigertaur by Sarokcat begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+[ Version 1.1 - Player victory nursing scene by a fan ]
 
 "Adds a tigertaur to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -23,7 +23,24 @@ to say tigertaur attack:
 	infect "tigertaur";
 
 To say tigertaur loss:
-	say "After a tough battle, you finally manage to drive back the lustful creature, its feline eyes staring at you reproachfully as it bunches its powerful muscles together and turns to flee.'";
+	If thirst of player > 30:
+		Say "     Defeated, the tigertaur growls in disbelief before turning tail to flee. Feeling your thirst start to overcome you, you think about how the tigertaur's rich and thick milk would satisfy you and you wonder if maybe you could try and stop the creature from leaving so you can get a quick drink. Is it worth the chance of infection though?";
+		If player consents:
+			Say "     Feeling bold, you quickly grab the stripped feline by the tail, halting hir from running off. Muscle tensing in aggravation, you watch nervously as the other swivels hir head around to glare at you warningly. Not wanting to get into another fight with the predatory feline, you reach a hand up to paw at the tigertaur's full breast to show hir your intention. Slowly the feline's glare shifts into a mask of [one of]confusion[or]bemusement[or]understanding[or]concern[at random] before it slips its tail from your grasp and turns it's tauric form towards you giving you complete access to her upper torso. [One of]Gently you[or]Cautiously you[or]Eagerly you[at random] continue to palm the same breast you had been playing with before, tugging at the nipple hidden beneath the tawny fur to help the feline's milk within flow outward, before you reach out to nuzzle your [facename of player] nose into the tiger herm's [one of]firm[or]muscular[or]deceptively soft[at random] abdomen.";
+			attempttowait;
+			Say "     A calm, yet demanding paw reaches out to grab the back of your head, forcing your face to ride up into the tigertaur's buxom chest. Without hesitation you latch your lips around her firm teat to begin nursing from the feline, your [facename of player] tongue stroking along the length of the firm mound of flesh to help the milk flow deep into your throat. A rumbling growl rents the air as the tigertaur pulls your head closer into her chest as the sensations of having her milk filled breast empty out into your mouth makes her tail lash wildly behind her. Stroking the feline's tit while at the same time nuzzling into her chest, you make a soft hum into the back of your throat which cause the muscles of the tigertaur's breast to dribble more and more creamy tiger milk down into your belly.";
+			attempttowait;
+			Say "     It doesn't take long for you to get your fill, the fatty fluids filling you up in a [one of]relaxing[or]disarming[or]mind numbing[at random] sort of way, and you have to force yourself to step away from the other before you can get [italicize type]too[roman type] comfortable. Pulling away from the tigertaur, you watch as the herm gives you a pleased chuff-like growl before shi turns to bound off deeper into the zoo.";
+			Decrease thirst of player by 12;
+			Decrease hunger of player by 3;
+			If hunger of player < 0, now hunger of player is 0;
+			If thirst of player < 0, now thirst of player is 0;
+			Decrease humanity of player by 5;
+			if "Iron Stomach" is not listed in feats of player, infect "tigertaur";
+		Otherwise:
+			Say "     Deciding not to bother, as you might risk being infected, you watch the striped feline dash off into the deeper part of the zoo.";
+	say "     After a tough battle, you finally manage to drive back the lustful creature, its feline eyes staring at you reproachfully as it bunches its powerful muscles together and turns to flee.";
+
 
 Section 2 - Monster Insertion
 

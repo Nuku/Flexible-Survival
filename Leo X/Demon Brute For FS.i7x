@@ -194,7 +194,7 @@ to say Brutus_DBCapture:
 					say "[dbcapturesex_07]";			[anal]
 				otherwise if num is 8:
 					say "[dbcapturesex_08]";			[brutus rides - vag]
-				otherwise if num is 8:
+				otherwise if num is 9:
 					say "[dbcapturesex_09]";			[brutus rides - anal]
 		otherwise:
 			say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";

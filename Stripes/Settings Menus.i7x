@@ -1,5 +1,5 @@
 Version 3 of Settings Menus by Stripes begins here.
-[Version 3 - Broken into separate file for easier processing]
+[Version 3.1 - Ovi-Preg option added]
 
 trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
@@ -37,15 +37,16 @@ carry out trixiecheating:
 		otherwise:
 			say "(10) This option is not currently available to your character.[line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](12) Adjust flags[as]12[end link] - View/change warding settings[line break]";
+		say "[link](12) Set egg-pregnancy (ovi) content level[as]12[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if WSlevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
+		say "[link](13) Adjust flags[as]13[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-12)> [run paragraph on]";
+			say "Choice? (0-13)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 12:
+			if calcnumber >= 0 and calcnumber <= 13:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 12.";
+				say "Invalid choice.  Pick from 0 to 13.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -152,6 +153,8 @@ carry out trixiecheating:
 		otherwise if calcnumber is 11:
 			try WSadjusting;
 		otherwise if calcnumber is 12:
+			try Oviadjusting;
+		otherwise if calcnumber is 13:
 			try Flagadjusting;
 		otherwise if calcnumber is 0:
 			say "Exiting menu.";
@@ -233,6 +236,45 @@ carry out WSadjusting:
 	otherwise if calcnumber is 3:
 		say "You are now set to receive Full WS.";
 		now WSlevel is 3;
+	otherwise if calcnumber is 4:
+		say "Exiting menu.";
+		say "[line break]";
+
+[-----]
+
+[ovipreglevel is a number that varies.  ovipreglevel is usually 2.]		[normal]
+
+oviadjusting is an action applying to nothing.
+
+understand "adjust ovi" as oviadjusting.
+understand "adjustovi" as oviadjusting.
+understand "ovi adjust" as oviadjusting.
+understand "oviadjust" as oviadjusting.
+
+carry out oviadjusting:
+	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will take a little time while scenes and creature and NPCs are changed over to impregnate the player with eggs as their default.";
+	say "     This option will allow you to adjust whether some of the creatures out there are able to impregnate your player with eggs instead of live young.  If you don't desire to have your player lay eggs, here's the place to adjust that.  Please keep in mind that this applies only to female births, as male birth will be via eggs regardless of this setting.";
+	say "     With that said, choosing:[line break]";
+	say "- [link](1) No Ovi[as]1[end link] will indicate that you're looking to not have your player possibly bearing eggs.  All female pregnancies will be live young and MPreg to FPreg swaps will be treated as live births as well.";
+	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with being impregnanted with eggs, if that's the creature's normal result.";
+	say "- [if ovipregalways is true][link](3) Always Ovi[as]3[end link] will indicate that you want all births to be eggs, regardless of their sire's normal result[otherwise](3) Always Ovi is not yet accessible to your character.  You'll need to find a way in the game to change yourself to always bear eggs before being able to choose this option[end if].";
+	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard (Some Ovi)[otherwise]Always Ovi[end if][roman type].";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+	if calcnumber is 1:
+		say "You are now set to not bear eggs.";
+		now ovipreglevel is 1;
+	otherwise if calcnumber is 2:
+		say "You are now set to bear eggs only when specifically prompted.";
+		now ovipreglevel is 2;
+	otherwise if calcnumber is 3:
+		if ovipregalways is true:
+			say "You are now set to bear eggs always.";
+			now ovipreglevel is 3;
+	 	otherwise:
+			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
 	otherwise if calcnumber is 4:
 		say "Exiting menu.";
 		say "[line break]";

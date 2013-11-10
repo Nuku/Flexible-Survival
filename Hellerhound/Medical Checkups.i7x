@@ -1,5 +1,5 @@
 Version 3 of Medical Checkups by Hellerhound begins here.
-[ Version 3.2 - UB activation for Alt Vore by Stripes]
+[ Version 3.3 - Ovi-birth activation by Stripes]
 
 Section 1 - Pediatrics Office
 
@@ -30,7 +30,7 @@ the scent of Doctor Medea is "The doctor smells of female lizard, though there's
 
 medeaget is a number that varies.
 medeaub is a truth state that varies.  medeaub is usually false.
-
+ovipregmedeatalk is a truth state that varies.  ovipregmedeatalk is usually false.
 
 The description of Doctor Medea is "[if medeaget is 0]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially[otherwise]Doctor Medea is a relatively human lizard, clothed, with multicolored scales.  You suspect she got caught in the park initially.  There is now a darker line running down her skirt to where some whitish cum is dripping.  It looks like she came in herself, since the door was dust covered except for your marks[end if].";
 The conversation of Doctor Medea is { "Babies!" }.
@@ -192,10 +192,15 @@ to say medeaadjustments:
 				now title entry is "Restore normal heats";
 				now sortorder entry is 5;
 				now description entry is "reduce your heat level to normal.";
+		if cunts of player > 0 and "Sterile" is not listed in feats of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Oviposition";
+			now sortorder entry is 7;
+			now description entry is "talk to you about egg-laying.";
 		if medeaub is true and playercanub is false and gestation of child is 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain unbirthing ability";
-			now sortorder entry is 7;
+			now sortorder entry is 8;
 			now description entry is "allow you to unbirth your foes.";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -319,6 +324,26 @@ to say medeaadjustments:
 				otherwise if nam is "Restore normal heats":
 					say "     Dr. Medea seems a little disappointed by your choice, but performs the procedure, reducing the intensity of your heats to normal.  'There, your body's need to go into heat has been restored to its original level.  It is unfortunate, but I understand.  I'd have cranked mine up already, but it'd make focusing on my work too difficult right now,' she says, tidying up her instruments.";
 					now heatlevel is 2;
+				otherwise if nam is "Oviposition":
+					if ovipregalways is false:
+						if ovipregmedeatalk is false:
+							say "     'Oh, have you witnessed or experienced that yet?  There are indeed several the creatures in the city which have responded to their transformation by becoming egg-layers or impregnating their lovers with eggs.  It is especially common in reptiles and birds,' the lizard doctor says with a smile, 'though I wouldn't be surprised to find a few others out there doing it.  I've had a few egg-laying patients and have had a chance to examine their alterations.  With my added equipment, if you'd like, I'd be able to alter your womb to be like theirs and bear eggs whenever you get pregnant.  Doesn't that sound delightful?' she says with an eager smile on her reptilian face.";
+							now ovipregmedeatalk is true;
+						otherwise:
+							say "     'Oh, have you reconsidered becoming an egg-bearer?  I could alter your womb so you lay eggs instead of live young.  Doesn't that sound delightful?' she asks with an eager smile on her reptilian face.";
+						if the player consents:
+							if gestation of child is 0:
+								say "     Dr. Medea seems particularly pleased with your decision and performs the procedure with pleasure.  Your womb is altered to form eggs when you become pregnant.  'I've made you into an egg-breeder, able to be filled with eggs from any and all creatures you mate with, regardless of their infection.  Now, should you get cold feet,' she adds, 'you should be able to curb your egg-laying abilities by concentrating upon it for a while.  I hope you have an enjoyable and productive time,' she adds, tidying up her instruments.";
+								say "     [bracket]Use the [bold type][link]adjust ovi[end link][roman type] command or Trixie's setting menu to adjust your preferences for oviposition.[close bracket]";
+								now ovipregalways is true;
+								now ovipreglevel is 3;
+							otherwise:
+								say "     Dr. Medea seems particularly pleased with your decision, but cannot perform the procedure while you're pregnant.  You'll need to ask her again after you've given birth.";
+						otherwise:
+							say "     She seems a little disappointed by your response.  'Well, do think about it.  I'll be available when you are willing to go through with it.'";
+					otherwise:
+						say "     'I hope you're enjoying the ability to lay eggs,' the lizard doctor says as she rubs over your tummy with a smile.  'Such a special way to have one's children, I think.  Remember, if you want to [if ovipreglevel is 3]curb your egg-laying and revert to live births[otherwise]get yourself laying more eggs[end if], concentrate and you should be able to take control of your change.'";
+						say "     [bracket]Use the [bold type][link]adjust ovi[end link][roman type] command or Trixie's setting menu to adjust your preferences for oviposition.[close bracket]";
 				otherwise if nam is "Gain unbirthing ability":
 					choose row monster from the table of random critters;
 					say "     Dr. Medea gets a perverse grin on her reptilian face, clearly excited to undertake her twisted experiment.  She eagerly gets you up onto the examination table and does a cursory exam before getting started.  'I've prepared a dose of the chemicals, which are to be applied to your reproductive system, triggering the alterations in your digestive system to spread there as well.  I'm glad you're willing to go through with this procedure.  Unfortunately, while I don't believe this alone would be enough to induce the same results in others, it does provide a starting point to understanding this rare ability.  Well, enough waiting, let's get to it,' she says with glee.";
@@ -334,7 +359,7 @@ to say medeaadjustments:
 						attempttowait;
 						say "     The canine girl tries to struggle, but she is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making her attempts unfocused and weak.  As you grip her arms to her sides to keep her pinned, you drop to your knees, forcing yourself down over her ample bosom and taking in most of her torso.  Your belly bulges as more squirming husky is squished into it with a deliciously juicy slurp.  With your cervix spread open and her partially inside your womb, your urge to have her inside you only grows rather than feeling sated in any way.";
 						say "     You undergo another moaning orgasm as your vaginal walls tug her even further into you.  With so much of her inside you, you can no longer see what's going on, but you can feel every delightful inch of her fluffy body being pulled into yours.  Giving another loud moan, you feel her hips making their way along your impossibly stretched vaginal tunnel.  With only her legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved.  Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it.  Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
-						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel a placenta form to connect you to your prey.  Soon enough, she's drifted off into slumber and you are in late-term pregnancy.  Crossing the placental barrier, you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[otherwise]a placenta form to connect you to your prey[end if].  Soon enough, she's drifted off into slumber and you are in late-term pregnancy.  Crossing the [if ovipreglevel is 3]egg membrane[otherwise]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
 					otherwise:
 						setmonster "Latex Fox";
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox.  That small part of you which is still able to reason can't help but think it appropriate.  Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that.  He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch.  Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
@@ -343,7 +368,7 @@ to say medeaadjustments:
 						attempttowait;
 						say "     The vulpine guy tries to struggle, but he is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making his attempts unfocused and weak.  As you grip his arms to his sides to keep him pinned, you drop to your knees, forcing yourself down over his chest and taking in most of his torso.  Your belly bulges as more squirming fox is squished into it with a deliciously juicy slurp.  With your cervix spread open and him partially inside your womb, your urge to have him inside you only grows rather than feeling sated in any way.";
 						say "     You undergo another moaning orgasm as your vaginal walls tug him even further into you.  With so much of him inside you, you can no longer see what's going on, but you can feel every delightful inch of his smooth body being pulled into yours.  Giving another loud moan, you feel his hips making their way along your impossibly stretched vaginal tunnel.  With only his legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved.  Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it.  Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
-						say "     Sitting back, dazed, you feel the form of the fox sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where he struggles, paws pressing against your uterine walls as he seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel a placenta form to connect you to your prey.  Soon enough, he's drifted off into slumber and you are in late-term pregnancy.  Crossing the placental barrier, you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+						say "     Sitting back, dazed, you feel the form of the fox sliding around inside your womb, your belly now bulging out with your massive pregnancy.  There is a brief period where he struggles, paws pressing against your uterine walls as he seeks exit before settling down.  With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive.  You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[otherwise]a placenta form to connect you to your prey[end if].  Soon enough, he's drifted off into slumber and you are in late-term pregnancy.  Crossing the [if ovipreglevel is 3]egg membrane[otherwise]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another.  You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body.  You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
 					now playercanub is true;
 					add "UB Pred" to feats of player;
 					now ubcount is 1;
