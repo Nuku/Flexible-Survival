@@ -1,5 +1,5 @@
 Version 2 of Plush lion by Sarokcat begins here.
-[ Version 2 - Sven specific endings added ]
+[ Version 2.1 - Plush Lion vore loss ]
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
@@ -9,6 +9,7 @@ Version 2 of Plush lion by Sarokcat begins here.
 Section 1 - Monster Responses
 
 plushleoloss is a number that varies.
+plionvored is a number that varies.
 
 when play begins:
 	add { "Plush lion" } to infections of guy;
@@ -16,7 +17,16 @@ when play begins:
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Plush lion attack:
-	If cunts of player is greater than 0:
+	if scalevalue of player <= 3 and a random chance of 1 in 4 succeeds:
+		if hp of player > 0:
+			say "     Giving into the plush feline, you allow it to push you to the ground with a padded pounce";
+		otherwise:
+			say "     You are knocked to the ground by a padded pounce from the plush feline";
+		say ".  With you on the ground, the stuffed lion runs its felt tongue across its muzzle in a slow lick.  Realizing too late that the hunger in its glassy eyes isn't a lustful one, it lunges forward and engulfs your head in its padded maw.  Feeling like an unlucky lion tamer, your head is stuck in the big cat's mouth while his soft tongue slides softly across your face.  Even as you try unsuccessfully to pull free, you are drawn steadily deeper into the plush predator.";
+		say "     As the soft lining of its throat rubs across your face and your body as you're pulled in, it feels strangely pleasant, even erotic.  That and the hot, steamy air makes you confused and lightheaded, dulling your urge to struggle against this potentially dire fate.  And when your crotch reaches the lion's muzzle and your hips are pulled in, your [if cocks of player > 0 and cunts of player > 0]cock[smn] and cunt[sfn] are[otherwise if cocks of player > 1]cocks are[otherwise if cocks of player is 1]cock is[otherwise if cunts of player > 1]cunts are[otherwise if cunts of player is 1]cunt is[otherwise]bare groin[end if] subject to the lion's velvety tongue, further adding to your pleasure and distracting you from escape.";
+		say "     After its naughty tonguework [if cocks of player > 0 or cunts of player > 0]gets you to cum, satisfying[otherwise]has satisfied[end if] its feline urge to play with its meal, you are swallows down in a few more large gulps.  You end up in the warm, padded softness of its belly, lightheaded and sleepy from lack of oxygen.  It squeezes down around you, wrapping you up snug and warm inside it as the lion lays down on its side, both of you drifting off into slumber.";
+		plushlionvored;
+	otherwise if cunts of player is greater than 0:
 		now plushleoloss is 0;
 		say "Defeated you stumble backwards, helpless before the onslaught of the mighty plush lion, before you can recover the beast has moved behind you, and you feel his paw on your back pressing you down. Unable to fight any longer, you allow yourself to be forced down onto all fours, as the lion lets out a rumbling purr as he prepares to claim you as his carnival prize. You gasp as the soft fabric fur of the beasts underbelly rubs against your back as he crawls on top of you, his soft fuzzy mane rubbing up against you erotically as he positions himself.  You can feel his rough tongue along your neck as he licks you several times, before gripping your neck in his mouth, his soft teeth holding you in place without breaking the skin, yet still enforcing his strong leonine dominance. You find yourself moaning subserviently like a good little lioness, as his thick cock slips up between your legs, its soft warm barbs rubbing up against the inside of your thighs, before it finds its way to your warm opening.[line break]";
 		say "He buries himself within you with a rough growl, the wonderful feeling of his warm living lion cock, causing you to moan wantonly as he thrusts into you roughly.  Mating you in short swift bursts of activity like he would any member of his pride, shooting his hot seed into your body again and again with only short pauses to readjust his position. You feel your mind fading with pleasure as you orgasm underneath him again and again, as he treats you like a lioness, making you moan in desire, in your mind you quickly find yourself reacting to him just like a lioness would, becoming a lioness, more importantly becoming HIS lioness. His to use, his to breed, his pet plush lioness to keep and own and fill full of his wonderful lion seed.  You roar along with him as your mind submits itself to his shaping, becoming little more then a pet to your pride leader as he uses your all to willing body again and again without stopping.  Eventually the mating ends far too soon for your lust addled mind, and he pulls himself out of your well used cunt, his barbs scraping pleasantly as they finally exit your body, the strong plush lion then pads away on his fluffy paws, leaving you lying there with his fertile seed still leaking out of your body, and a strong desire to follow him and beg him to take you again...[impregchance][impregchance]";
@@ -34,6 +44,45 @@ to say Plush lion attack:
 		say "Defeated you stumble backwards, helpless before the onslaught of the mighty plush lion, before you can recover the beast has moved behind you, and you feel his paw on your back pressing you down. Unable to fight any longer, you allow yourself to be forced down onto all fours, as the lion lets out a rumbling purr as he prepares to claim you as his carnival prize. The beast pauses as his cock traces up your body, then growls loudly when he finds you lack the appropriate entrance for him. You shudder underneath the beast as he roughly hauls himself off you, and then roars in your face, expressing his strong displeasure at another pure male in his territory.  You try to crawl away, only to find the beast in front of you, batting you around with his large paws as he scratches and claws at you, making you cringe and whimper.  The plush male lion slams you around several times, until it is sure that you have learned your place as subservient to its might, before leaving you lying there in the street, stalking away with its erection still swinging between its legs, obviously having decided you aren[apostrophe]t a worthy receptacle for its seed.  For some reason this makes you wish you had the proper equipment to convince the beast otherwise, so you could chase after it and beg the soft fabric covered beast to use you like the submissive toy it obviously wants you to be...";
 		now hp of player is ( hp of player * 3 ) / 4;
 		plushleoify;
+
+to plushlionvored:
+	choose row monster from the table of random critters;
+	now fightoutcome is 23;
+	increase plionvored by 1;
+	decrease humanity of player by 6;
+	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+	attempttowait;
+	if humanity of player >= 10 or inasituation is true:
+		say "     When you start to come to, you find yourself buried in a thick wad of plushy stuffing.  Pushing yourself free of it, you find that you've beed deposited [one of]behind the counter of one of the carnival stands[or]in an out of the way corner[or]against a waste bin[or]behind one of the prize booths[at random].  You feel a little weak and drained after your ordeal and it takes some effort to stand.  As you head back towards the relative safety of the entrance, you try to brush the clinging fiberfill from yourself, not noticing as some of the bits of fluff sink into you.";
+		infect;	[Added infection from being vored]
+		increase hunger of player by 4;
+		increase thirst of player by 2;
+	otherwise:
+		say "     As you slumber inside that soft belly, you dream of teddy bears and warm hugs.  These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains.  You come to shortly after being let out of the plush bear, rising up and giving her a soft, padded hug with your teddy bear body.  You, like her, are a living teddy bear creature, both in body and in mind.  After some playful, kinky cuddling together, you skip down the midway, padded paw in padded paw.";
+		now plionvored is -100;
+		now xp of player is 0;				[prevents accidental level up]
+		if the player is not lonely, now xp of companion of player is 0;
+		now non-infectious entry is true;			[prevents regular plush lion infection from occurring]
+		now tailname of player is "Plush Lion";
+		now facename of player is "Plush Lion";
+		now skinname of player is "Plush Lion";
+		now bodyname of player is "Plush Lion";
+		now cockname of player is "Plush Lion";
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		attributeinfect;
+		if libido of player < libido entry, now libido of player is libido entry;
+		now humanity of player is 0;
+		now battleground is "void";
+		now combat abort is 1;
+		attempttowait;
+		end the game saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
+		stop the action;
+
 
 To say Plush lion loss:
 	say "The strange plush lion is knocked back on its furry haunches by your attacks, before turning and sauntering off down the midway, pretending with feline arrogance that it was intending to leave anyways.  It hurries away before you can catch up though, its arrogant pretense somewhat spoiled by the small trail of stuffing it leaves behind it as it slips away.'";

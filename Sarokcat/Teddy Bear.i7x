@@ -19,9 +19,9 @@ to say teddy bear attack:
 	choose row monster from the table of random critters;
 	if scalevalue of player <= 3 and a random chance of 2 in 5 succeeds:
 		if hp of player > 0:
-			say "     You are grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you";
-		otherwise:
 			say "     You are pulled into a soft hug by the stuffed bear";
+		otherwise:
+			say "     You are grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you";
 		if teddyvored is even:
 			say ".  The pink bear smiles down at you, the smile growing wider and wider as it continues.  As the wide open smile gets closer, you start to struggle, but the bear keeps a firm grip on you.  With a happy giggle, the living plush bear lifts you up, stuffing your head into its open maw.  The soft, fabric mouth slides over you smoothly as you're pulled into her.";
 			say "     The teddy bear's smooth mouth and velvety tongue slide over your face as you're pulled in further.  The sensation is strangely pleasant, erotic even.  You moan softly as her muzzle slides over your shoulders and down your [bodytype of player] body as you're lifted up.  Her round, padded paws rub at your [if cocks of player > 0 and cunts of player > 0]cock[smn] and cunt[sfn][otherwise if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]cunt[sfn][otherwise]bare groin[end if], further adding to your pleasure and distracting you from the need to struggle.  You slip ever inwards, moving down her velvety throat and down into her warm, padded belly.";

@@ -201,7 +201,7 @@ Chapter 4 - UB by Player
 to ubbyplayer:
 	choose row monster from the table of random critters;
 	say "[ubbyplayer00]";		[Master ub scene]
-	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as they bond to your imprisoning womb via a rapidly forming placenta.  With the [name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now.  The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
+	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipreglevel is 3]even as they are being encased in a protective shell[otherwise]as they bond to your imprisoning womb via a rapidly forming placenta[end if].  With the [name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now.  The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
 	decrease humanity of player by 3;
 	now gestation of child is a random number between 8 and 16;
 	now ubpreg is name entry;
