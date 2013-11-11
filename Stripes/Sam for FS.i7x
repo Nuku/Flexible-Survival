@@ -389,7 +389,7 @@ to assaultonminilab:
 			say ".";
 			Say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress, you wonder if maybe you should give into the tigertaur and have her claim you as a pet as well? (Y=Surrender, N=Retreat)";
 			If player consents:
-				Say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italicize type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
+				Say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italic type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
 				now surrender is 1;
 				now humanity of player is 0;
 				now tailname of player is "Feline Hexataur";
@@ -961,12 +961,6 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 				now monster is y;
 				break;
 		say "[impregchance]";
-	otherwise:							[puts Dracovixentaur as lead monster in case of egg-pregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Dracovixentaur":
-				now monster is y;
-				break;
 	now monster is monstermemory;
 
 
