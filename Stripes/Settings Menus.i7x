@@ -37,7 +37,7 @@ carry out trixiecheating:
 		otherwise:
 			say "(10) This option is not currently available to your character.[line break]";
 		say "[link](11) Set watersports (WS) content level[as]11[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](12) Set egg-pregnancy (ovi) content level[as]12[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if WSlevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
+		say "[link](12) Set egg-pregnancy (ovi) content level[as]12[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
 		say "[link](13) Adjust flags[as]13[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:

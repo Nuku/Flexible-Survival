@@ -947,20 +947,27 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 				now monster is y;
 				break;
 		say "[impregchance]";
-	otherwise if Z is 2 and guy is not banned:	[puts Dragontaur as lead monster in case of egg-pregnation]
+	otherwise if Z is 2 and guy is not banned:		[puts Dragontaur as lead monster in case of egg-pregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dragontaur":
 				now monster is y;
 				break;
 		say "[ovichance]";
-	otherwise:							[puts Dracovixentaur as lead monster in case of impregnation]
+	otherwise if Z is 3:						[puts Dracovixentaur as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dracovixentaur":
 				now monster is y;
 				break;
 		say "[impregchance]";
+	otherwise:								[puts Dracovixentaur as lead monster in case of egg-pregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Dracovixentaur":
+				now monster is y;
+				break;
+		say "[ovichance]";
 	now monster is monstermemory;
 
 
