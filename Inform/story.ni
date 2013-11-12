@@ -5758,7 +5758,7 @@ Include Naga by Nuku Valente.
 Include Goo Girl by Nuku Valente.
 Include Latex Fox by Nuku Valente.
 Include Hermaphrodite Gryphon by Nuku Valente.
-[Include Drone Wasp by Nuku Valente.]
+Include Drone Wasp by Nuku Valente.
 Include Panther Taur by Nuku Valente.
 Include Blob by Kaleem Mcintyre.
 Include Great Dane Rouge by Kaleem Mcintyre.
