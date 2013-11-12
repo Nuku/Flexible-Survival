@@ -36,10 +36,10 @@ Boris the lion is in State Fair.
 the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
 instead of conversing the Boris:
-	[puts Plush lion as lead monster in case of impregnation]
+	[puts Plush Lion as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "Plush lion":
+		if name entry is "Plush Lion":
 			now monster is y;
 			break;
 	if boristalk is 0:
@@ -60,10 +60,10 @@ instead of conversing the Boris:
 the fuckscene of Boris is "[borisquestforcock]".
 
 to say borisquestforcock:
-	[puts Plush lion as lead monster in case of impregnation]
+	[puts Plush Lion as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "Plush lion":
+		if name entry is "Plush Lion":
 			now monster is y;
 			break;
 	if boristalk is 0:
