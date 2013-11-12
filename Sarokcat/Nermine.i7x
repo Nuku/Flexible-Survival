@@ -569,7 +569,7 @@ carry out bargainhunting:
 				increase carried of food by 2;
 				increase carried of water bottle by 2;
 		otherwise if Z is 20:
-			say "Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you, feeling vaguely worried, you begin to pull your hand out of the bin only to find it seems stuck on something, or more like something or someone is holding onto you and trying to drag you into the bin. The feeling is both strange and disturbing as you fight to free your hand from the bargain bin, and Nermine seems to notice your distress as you struggle, the jackal woman coming over to investigate the problem almost immediately. Just before she reaches you though, something seems to give in the bin, and you stagger backwards almost knocking the shopkeep over as you do so, the jackal woman just barely managing to catch you  before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber tigress[or]Ash drakenoid[or]Horseman[or]Leopardman[or]Felinoid[or]Plush lion[or]Tigress hooker[or]Satyr[at random] as it staggers unsteadily out of the bin, catching itself unsteadily before fixing its lust filled eyes on your body. You gape in surprise for a second, idly wondering just how the hell the creature fit into the bargain bin in the first place, before quickly preparing to fight as it steps towards you eagerly. The moment is broken by a sharp growl from over your shoulder, and the beast stops in its tracks and begins to back up in fear, and you glance over your shoulder to see Nermine fixing the creature with a deadly glare and a scowl on her muzzle. 'There is no fighting in Nermine's shop, this she will not tolerate!' She says with a sharp bark, and the beast quickly turns tail and runs out the door, leaving you both impressed and a little worried as the surprisingly intimidating jackal woman turns her gaze on you. You relax as she gives you a small peck on the cheek and a smile before wandering back to her side of the counter, 'Nermine must say, she is not sure how that got in there, but she would advise handsome customer to be more careful about the things they pick out of the bargain bin from now on.' She says with a teasing wink, and you curse slightly as you realize that technically you just purchased the creature that just ran off... maybe next time you should try looking for a collar and leash before it leaves? Or maybe you should just hope there isn't a next time...";
+			say "Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you, feeling vaguely worried, you begin to pull your hand out of the bin only to find it seems stuck on something, or more like something or someone is holding onto you and trying to drag you into the bin. The feeling is both strange and disturbing as you fight to free your hand from the bargain bin, and Nermine seems to notice your distress as you struggle, the jackal woman coming over to investigate the problem almost immediately. Just before she reaches you though, something seems to give in the bin, and you stagger backwards almost knocking the shopkeep over as you do so, the jackal woman just barely managing to catch you  before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber tigress[or]Ash drakenoid[or]Horseman[or]Leopardman[or]Felinoid[or]Plush Lion[or]Tigress hooker[or]Satyr[at random] as it staggers unsteadily out of the bin, catching itself unsteadily before fixing its lust filled eyes on your body. You gape in surprise for a second, idly wondering just how the hell the creature fit into the bargain bin in the first place, before quickly preparing to fight as it steps towards you eagerly. The moment is broken by a sharp growl from over your shoulder, and the beast stops in its tracks and begins to back up in fear, and you glance over your shoulder to see Nermine fixing the creature with a deadly glare and a scowl on her muzzle. 'There is no fighting in Nermine's shop, this she will not tolerate!' She says with a sharp bark, and the beast quickly turns tail and runs out the door, leaving you both impressed and a little worried as the surprisingly intimidating jackal woman turns her gaze on you. You relax as she gives you a small peck on the cheek and a smile before wandering back to her side of the counter, 'Nermine must say, she is not sure how that got in there, but she would advise handsome customer to be more careful about the things they pick out of the bargain bin from now on.' She says with a teasing wink, and you curse slightly as you realize that technically you just purchased the creature that just ran off... maybe next time you should try looking for a collar and leash before it leaves? Or maybe you should just hope there isn't a next time...";
 		otherwise if Z is 21:
 			if "City Map" is listed in feats of the player:
 				say "Looking through the strange bin of bargain items, you come across a strange rolled parchment, which seems slightly warm to the touch, curious, you pull the item out of the bin and unroll it to take a closer look at the item. Much to your surprise, the parchment seems to contain [one of]a recipe for chili con carne[or]a discourse on the proper way to amuse a dragon, with a side note at the bottom that failure to properly amuse said dragon may result in being tasty with barbecue sauce[or]a rather strange yet hauntingly pretty drawing of a feline headed woman[or]the secret to life... actually all the parchment has written on it is the number 42...[or]some rambling intellectual discourse on the nature of reality, and whether or not the writer was or was not in fact part of a computer game... quite boring really[or]some sort of plan for world domination, which apparently came up short in execution due to a lack of readily available 'flying attack porcupines.' Considering the state in which the city is in right now, you certainly hope that lack isn't going to be remedied anytime soon[or]a recipe for excellent sugar cookies, apparently the secret is a dash of orange peel and just the right mix of pure and brown sugar[or]a copy of The Declaration of Independence[']... no wait, apparently it is a copy of [']The Declaration of Enslavement['] instead... after reading a few of the strangely familiar yet altered statements contained within, you find yourself shuddering slightly[or]a rather steamy love letter (or perhaps lust letter) from one unnamed individual to another[or]A oddly scrawled message that says only, 'The cake is a lie! Trust in muffins instead!' Very odd indeed...[at random].  You stare at the contents for a minute, before rolling the parchment back up and carefully placing it down on the counter, sure that it will prove of little use to you now in the changed city.";
@@ -723,7 +723,7 @@ carry out bargainhunting:
 
 
 
-[ Plush lion / rubber tigress / chocolate lab in bin ]
+[ Plush Lion / rubber tigress / chocolate lab in bin ]
 to say plrtcl:
 	if humorous is banned or furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned):
 		say "As you start to dig in one corner of the bin, Nermine stops you.  'I can tell that you will not be wanting anything from that corner.  I am sorry, but the bargain bin is like that some times.  Here.  You can be taking these back and waiting a moment before trying again with fresh start.  But you should be thinking to not be so picky.  More fun is to be had that way,' she adds philosophically.";
@@ -731,7 +731,7 @@ to say plrtcl:
 		increase carried of water bottle by 1;
 	otherwise:
 		let Q be a list of numbers;
-		if guy is not banned, add 1 to Q;			[Plush lion]
+		if guy is not banned, add 1 to Q;			[Plush Lion]
 		if girl is not banned, add 2 to Q;			[Rubber tigress]
 		if hermaphrodite is not banned, add 3 to Q;	[Chocolate Lab]
 		sort Q in random order;
@@ -740,20 +740,20 @@ to say plrtcl:
 			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across some sort of strange little lion doll.  Pulling out the small, plush toy, you grin in amusement as you wonder just what a cute little thing like this was doing in such a strange place.  Suddenly you feel slightly dizzy, and the new doll seems to slip from your hands as you stagger slightly before bracing yourself on the counter. Looking down you realize that while you don't actually see the doll anymore, you see plenty of soft plush lion fur.  It's spreading all over your body!  Panicking slightly, you try to shake the stuff off of you.  As your head starts to fill with fluff, you blink as you realize that having such nice, soft, leonine fur could be a good thing.  Now, if only you could find another plush lion to play with you...";
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
-				if name entry is "Plush lion":
+				if name entry is "Plush Lion":
 					now monster is y;
 					break;
-			now skinname of player is "Plush lion";
-			now cockname of player is "Plush lion";
-			now bodyname of player is "Plush lion";
-			now facename of player is "Plush lion";
-			now tailname of player is "Plush lion";
+			now skinname of player is "Plush Lion";
+			now cockname of player is "Plush Lion";
+			now bodyname of player is "Plush Lion";
+			now facename of player is "Plush Lion";
+			now tailname of player is "Plush Lion";
 			now tail of player is the tail entry;
 			now face of player is the face entry;
 			now skin of player is the skin entry;
 			now body of player is the body entry;
 			now cock of player is the cock entry;
-			attributeinfect "Plush lion";
+			attributeinfect "Plush Lion";
 		otherwise if tempnum is 2:
 			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange, inflatable tiger.  Pulling out the small, rubber toy, you grin in bemusement at what a silly little thing like this was doing in such a strange place.  Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured.  You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise.  The popped balloon toy hangs limply in your hands... which start to tingle.  Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body!  Panicking slightly, you try to shake the stuff off of you.  As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.  Now, if only you could find another rubber kitty to play with you...";
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1449,7 +1449,7 @@ the scent of strange doll is "The strange doll smells strangely like you.";
 when play ends:
 	if strange doll is tamed:
 		if humanity of player is less than 10:
-			if bodyname of player is "Plush lion":
+			if bodyname of player is "Plush Lion":
 				say "The little plush doll you got at the shop seems as happy to be a plush lion creature as you are now, and you find your muzzle pulling back in a grin full of amusement as you look down at your little companion, an idea striking you. Soon with a little work and some extra stuffing your plush doll is of a much more appropriate size to be a proper companion to you, and you can't help but admire your handiwork as you stare at the newest lovely plush little lioness for the pride. Your former doll seems to approve of her newly altered body, purring and rubbing herself up against you, eager and happy to be a proper little member of your plush pride.";  
 			otherwise:
 				say "The strange doll from the shop stays with you, even as you surrender fully to the infection, following you around through the city and mimicking your actions as you settle into your new life. Eventually your lust clouded mind will begin to recognize that the strange doll you found is becoming more and just like you, as it grows in size daily, and seems to take on a more realistic appearance. You aren't able to figure out just when the little toy finishes changing, but before you know it, instead of being kept company by an animate toy, you have a perfect twin of your new self keeping you company instead. The two of you sharing your new life and fate together eagerly.";
