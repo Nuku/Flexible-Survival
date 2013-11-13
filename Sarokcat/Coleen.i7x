@@ -438,12 +438,14 @@ to say sexwithcoleen:
 				say "[coleen_pretfsex01]";
 			otherwise:
 				say "[coleen_pretfsex02]";
+			now lastcoleenfucked is turns;
 	otherwise if coleenspray is 99:
 		say "     Wanting another go at the human soldier, you approach her with an offer for sex.  She seems a little cautious as first, so you remind her that she can use the anything unwanted should start to come up.  What little reluctance she has fades as you run a hand along her side and whisper that it'll all turn out fine as you nibble her ear.  Soon you've got her naked again and on her cot in preparation of some fun.";
 		if cocks of player > 0:
 			say "[coleen_pretfsex01]";
 		otherwise:
 			say "[coleen_pretfsex02]";
+		now lastcoleenfucked is turns;
 	otherwise:
 		say "'Sorry, but that seems to be how the infection spreads the fastest, and while I know I probably won't get out of this place without some changes, I think i'd like to try to keep them to a minimum.' Coleen says with a wry shrug.";
 
