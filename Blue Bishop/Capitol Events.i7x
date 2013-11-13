@@ -32,7 +32,7 @@ Ashen Nest is a situation.  The level of Ashen Nest is 7.
 The sarea of Ashen Nest is "Capitol".
 
 Instead of resolving Ashen Nest:
-	say "     Upon your travels across this blasted parts of the city, you";
+	say "     Upon your travels across this blasted parts of the city, you ";
 	let bonus be ( perception of player - 10 ) / 2;
 	let target be 12;
 	if "Bad Luck" is listed in feats of player, increase target by 1;
