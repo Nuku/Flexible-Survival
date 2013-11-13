@@ -217,8 +217,7 @@ carry out Coleenspraying:
 		if Sarah is in the bunker:
 			if coleenalpha is greater than 0:
 				say "'Sorry there little one,' She says with mock sincerity, 'I got rid of that silly little canister a while ago, It's not like anyone here was going to be needing it after all.' Coleen says with a soft husky laugh as she rubs herself up against your body suggestively.";
-				stop the action;
-			if coleenslut is 1:
+			otherwise if coleenslut is 1:
 				say "'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Coleen says with a sad look on her husky face, 'Well ok, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay to much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
 				if player consents:
 					say "'Well ok, here goes nothing,' the husky slut says nervously as she uncaps the small spray bottle, being careful to make sure it is pointed well away from her, before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
@@ -234,11 +233,9 @@ carry out Coleenspraying:
 					now the daycycle of player is 0;
 					increase humanity of player by 20;
 					increase Coleenspray by 1;
-					stop the action;
 				otherwise:
 					say "'See isn't it just better to be like this!' Coleen says as she wags her tail happily at you. 'I'm so glad you agree with me!'";
-					stop the action;
-			if sarahslut is greater than 3:
+			otherwise if sarahslut is greater than 3:
 				say "'Well ok, I admit the spray might still work on you, but it certainly won't work on your little pet over there, and I definitely feel too good to want to use it on myself, so I can use it on you if you really want me to... But it seems so boring if you ask me...' Coleen says as she pants slightly, her tail wagging eagerly behind her, obviously enjoying her infection and probably hoping you do as well.  Do you ask her to spray you anyways?";
 				if player consents:
 					say "'Well ok, here goes nothing,' Coleen says with a drooping tail as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
@@ -257,7 +254,6 @@ carry out Coleenspraying:
 					stop the action;
 				otherwise:
 					say "'See!' Coleen says happily. 'I knew you would understand how much fun being like this is!' She says as she wags her naked body at you.'";
-					stop the action;
 			otherwise:
 				say "Well ok, The spray bottle is full so it should still work on you, and it might work to help Sarah overthere regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do.' Coleen says as she uncaps the small spray bottle and holds it up.  Do ask her to help Sarah?'";
 				if player consents:
@@ -265,7 +261,6 @@ carry out Coleenspraying:
 					now Pet Shop is not resolved;
 					now sarahslut is 0;
 					now coleenspray is 3;
-					stop the action;
 				otherwise:
 					say "'Well ok, your the boss, and it probably would have only been a temporary fix for her anyways, so here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 					now face of player is "human";
@@ -280,7 +275,6 @@ carry out Coleenspraying:
 					now the daycycle of player is 0;
 					increase humanity of player by 20;
 					increase Coleenspray by 1;
-					stop the action;				
 		otherwise:
 			say "'Well ok, here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 			now face of player is "human";
@@ -295,8 +289,7 @@ carry out Coleenspraying:
 			now the daycycle of player is 0;
 			increase humanity of player by 20;
 			increase Coleenspray by 1;
-			stop the action;
-	if Coleenspray is 1:
+	otherwise if Coleenspray is 1:
 		say "'Ok lets try that again! I only have about enough for one more dose after this,' Coleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time, perhaps the chemicals are losing their effectiveness?";
 		now body of player is "human";
 		now bodyname of player is "human";
@@ -306,12 +299,15 @@ carry out Coleenspraying:
 		now the daycycle of player is 0;
 		increase humanity of player by 20;
 		increase Coleenspray by 1;
-		stop the action;
-	if Coleenspray is 2:
+	otherwise if Coleenspray is 2:
 		say "'Well alright, it didn't seem to help as much last time though. And there isn't much left either.' Coleen says as she once again sprays that strange liquid on you, making your body tingle slightly, though you can't seem to notice any real changes, you still somehow feel slightly more human afterwards.";
 		increase humanity of player by 10;
 		increase Coleenspray by 1;
-		stop the action;
+	otherwise if coleenspray is 99 and Sarah is bunkered:
+		say "'Sorry, but I don't have any left.  I tried to use my spray to change back after these husky features started to appear, but it never seemed to last.  I ended up using it all to try and go back to normal, but it still came back after a little while.  This means we probably shouldn't have any more fun, even as great as it was.  If we go at it again, I might end up another slutty husky bitch.'  She tries to stay calm, but she's clearly upset that she's going to be stuck like this.  Though her tail wags happily at the mention of becoming a bitch, so it seems her body's interested even if her mind's not accepted it yet.";
+		now coleenspray is 100;
+	otherwise if coleenspray is 99:
+		say "'Sorry, but we'd already agreed to use it on me so we could have sex.  It's kind of late to back out now.'";
 	otherwise:
 		say "'Sorry, but that's it,' She says as she shakes the empty can helplessly, 'It's all gone now sadly, and I don't think it was working all that well there at the end anyways.' Coleen says with a sigh."; 
 
@@ -324,17 +320,18 @@ LastColeenfucked is a number that varies. LastColeenfucked is usually 250.
 the fuckscene of coleen is "[sexwithcoleen]".
 
 to say sexwithcoleen:
-	if lastColeenfucked - turns is less than 4:
+	if cocks of player is 0 and cunts of player is 0:
+		say "Now's not a good time to go looking for sex from Coleen, seeing how you're genderless at the moment.";
+	otherwise if lastColeenfucked - turns is less than 4:
 		if coleenalpha is greater than 0:
 			say "'Sorry, I know you want to hurry up and be a lovely little husky bitch just like me and your pet there,' Coleen says with a soft smile on her muzzle, 'But you look like you still need some time to recover, and I still have some things in the city to do...' She says as she gives you a soft lick on the cheek, before heading out into the city, her tail wagging behind her eagerly.";
-			stop the action;
-		if coleenslut is 1:
+		otherwise if coleenslut is 1:
 			say "'Ready again already?' Coleen says with a lusty look, before looking at you more closely and pouting, 'It doesn't look like you have recovered enough for another go yet... and you went and got me all excited too.' She pants out as she rubs her slutty body with her canine paws for a minute, before her eyes drift to the door... 'Maybe I'll go out for a bit to find some fun, I'll definitely be back to play with you when your ready to go again though!' She says as she saunters out of the bunker, her tail wagging as she goes out to find someone else to 'play' with.";
-			stop the action;
-		if coleencollared is 1:
+		otherwise if coleencollared is 1:
 			say "'Your bitch is very sorry master.' Coleen says with a sad look on her face as she looks at you with her bright blue husky eyes, 'But she was just playing with masters slut over there.' She says as she gestures at a very happy Sarah, 'And isn't ready for her master again yet... Bitch is very sorry.' She whines as she lowers her head,  so sad at disappointing you that you can't help but feel sorry for her and pet her on the head to let her know she is still a good bitch, and you decide you will just have to wait a little while before you can enjoy your newest pet after all.";
-			stop the action;
-	if Sarah is in the bunker:
+		otherwise if coleenspray is 99:
+			say "     'We should... probably take a break for a while.  I don't want to end up overdoing it.  I mean, I should still be careful,' Coleen says.";
+	otherwise if Sarah is in the bunker:
 		if coleencollared is 1:
 			if cocks of player is greater than 0:
 				say "'Master wants to play with his bitch?' the bitch formerly known as coleen asks eagerly, as she quickly spreads herself before you, panting as she stretches her legs apart to show you her damp and needy pussy, just waiting for you to fill it up with your cock. You grin at the sight as you stalk forward slowly, enjoying how wantonly this formerly strong willed woman submits herself to your every desire, happily becoming just another pet for you to use whenever you want. You decide to enjoy this situation to the fullest, as you gesture for your other pet to join the two of you as you slowly begin to crawl between the spread legs of your 'Bitch', as her collar proudly proclaims.  Your Slut crawls over to join the two of you eagerly, moving up behind Coleen even as you lift one of her legs up onto your shoulders, holding her slightly off the floor as your [cock of player] begins to rub up against her soft passage.  The newly collared husky bitch moans in pleasure, her head rolling back as she lets out a long lustful cry, as Sarah reaches around her body and begins playing with her soft breasts, pulling her back until Coleen is resting her back on Sarah's chest and soft full breasts.[line break]";
@@ -342,20 +339,17 @@ to say sexwithcoleen:
 				say "Her orgasm only serves to encourage you to go harder and faster, as her passage massages your cock with every thrust, as if begging you to spill your fertile seed deep into her body. Before long you are more then ready to do so, and with a soft grunt your body tenses as your cock fires its load deep into her slutty bitches womb, making her cry out as a second orgasm rushes through her body so soon after the first. A tired grin spreads across your face as you hold yourself inside her shaking body, the pleasure obviously more then Coleen can bear as she has her eyes closed and is panting harshly. You notice with approval that your other pet is taking this opportunity to whisper more lovely words into her ears, telling your newest pet all about the joys of being filled with your wonderful seed, and how much fun it would be to grow round and pregnant with their masters lovely puppies.... Maybe you should reward your other little pet with a good fuck of her own after all this, you think, as you eventually pull yourself out of your exhausted new bitch, and go to clean yourself up. Glancing back you can see that Sarah has taken it upon herself like a good little pet to lick your newest pet clean on her own, the sight of your two pets on the floor together making you smile at what a lucky master you are...";
 				now lastcoleenfucked is turns;
 				infect "Alpha Husky";
-				stop the action;
 			otherwise:
 				say "'Master wants to play with his bitch?' the bitch formerly known as coleen asks eagerly, as she looks up to see just how you want to play with her body today. Smiling at your eager little bitch, you decide it wouldn't be fair to just play with one of your pets, and gesture for your other pet to come over even as you gesture for Coleen to lie down on her back. Your happy bitch lies back eagerly, spreading her legs wide before you as she lies back down on the ground, her tail wagging along between her legs as you slowly move between them. The heat scent of her damp pussy calls to you, even as it leaks a soft trickle of eager juices out into her fur, you grin as you lower your face down to play with your pet, as you can see your other pet moving up to lick and suckle at your newest bitches breasts, making her gasp. Deciding to enjoy your play time properly, you slowly tease your bitch by running your hands through the fur of her inner thighs, watching her buck her hips helplessly as Sarah tugs and licks at her breasts. [line break]";
 				say "The sight of your newly collared bitch writhing underneath your soft touches makes your own pussy dampen in arousal, as you begin to tease her slit with your hands, occasionally leaning closer to run your tongue across them as she shudders in pleasure above you.  You can hear your first pet whispering soft words of encouragement to your newest acquisition, telling her all about the joys of being a lovely little slutty pet, with a kind and caring owner to take care of all your kinky husky needs.  The words make you smile even as Coleen moans in pleasure at the happy and slutty images your pet paints for her of life as a collared pet. You bask in pride at having trained your little slutty Sarah pet so well that she is eagerly helping you break in your newest of pets, and decide to give your newest bitch a treat to go along with her training.  Burying your face in your bitches crotch again, you begin to lick and tease her damp sex with vigor, your hands working her clit pleasurably, even as your tongue expertly probes her warm velvety depths.  You savor the lovely lusty taste of her husky juices on your tongue even as you probe into her deeper, using your fingers as well as your tongue now to tease and excite her body.  She obviously can't much of this treatment, or the soft whispers of your other pet, and soon fills the bunker with a loud howl of orgasm as her body spasms underneath you, and you lick your lips even as your hands and face are drenched in her soft juices.";
 				say "Even after your pet has had her own orgasm, you still need to enjoy your own. Gesturing for your other pet to back off slightly, you crawl up your pets shaking body, enjoying her look of submissive joy as you move all the way up her body, until you can position your own aroused sex in front of her husky muzzle. Coleen needs no further encouragement, and has her muzzle buried in your snatch like a good little pet as soon as you settle yourself above her.  You moan as she licks and teases your clit with her soft lips, before beginning to lap happily at your juices, her tongue probing your slit eagerly.  She gasps underneath you and begins to lick even more enthusiastically, making you shudder as you look back over your shoulder to see that your other pet has taken your place between her legs, and is licking at teasing at your bitches swollen heat filled sex even as your bitch lashes your own with her soft tongue. Enjoying this powerful moment with your two pets, and your body already hot and excited, it isn't long before your own orgasm wracks your body with pleasure, your newly collared bitches muzzle is coated in your juices even as she tries to eagerly swallow as much of it as she can.  Your legs unsteady with the intense pleasure, you manage to stagger to your feet, and look back even as your first pet brings your newest pet to another orgasm of her own with her talented husky tongue, and smile at what good little well trained pets you have.";
 				now lastcoleenfucked is turns;
 				infect "Alpha Husky";
-				stop the action;
-		if coleenslut is 1:
+		otherwise if coleenslut is 1:
 			if cocks of player is greater than 0:
 				say "'You want to play too?' The slutty little husky asks as you approach her, her eyes wandering over your male body with interest as her tail wags eagerly behind her, as she begins to crawl towards you on all fours. Her position makes her breasts seem even more prominent as they hang straight down from her chest, as she slowly stalks forward, her eyes fixed on your [cock of player] shaft. You can feel a grin tugging at your face as you watch the formerly strong military woman reduced to a panting bitch, begging and whining for a cock to fill her up. As she rubs her softly furred side up against you, you decide to take her up on her offer, and push her down to the ground as you move around behind her, deciding that if she really wants to play the role of a slutty little beast, you might as well take her like one.  You can hear her groan eagerly as you position yourself above her, her rear wagging at you eagerly as you ram your cock into her in one swift movement, making her howl out in pleasure.[line break]";
 				say "You grin and groan in pleasure as you reach forward and grip and massage her soft breasts where they hang down from her chest, using them as handholds as you lean forward over her back. Her tail wags against the side of your chest as she pushes herself back to meet your every thrust, obviously as eager and wanton a bitch now, as any you have ever seen. You enjoy the changes in her personality almost as much as you are enjoying the changes to her body, loving the way she yips and whines and begs underneath you as she submits just as willingly to you as you know she now would to anything with a cock, her mind truly matching her body now, a slutty bitch both inside and outside. Each thrust inside her hot tight form brings you closer and closer to completion, as you pant and play with her body eagerly, the pressure and pleasure building up ever higher until with one last thrust your cock explodes within her, sending your seed straight into her needy womb as she lets loose another long howl of pleasure as she orgasms as well. You lie there locked with your bitch for several minutes as you both recover, before pulling yourself out of her slutty form, letting her collapse to the ground helplessly as she pants from the sheer pleasure acting out her role as a husky slut brings her.";
 				now lastColeenfucked is turns;
-				stop the action;
 			otherwise:
 				say "'You want to play too?' The slutty little husky asks as you approach her, her eyes wandering over your female body with interest as her tail wags eagerly behind her, as she begins to crawl towards you on all fours. Her position makes you grin as you can feel your own body wanting to go down on all fours and join her down there to play.  Deciding to give into to the desire, you are soon on all fours just like Coleen, and you grin as she rubs her body up against your own, enjoying the play as you stroke and pet the stray bitch in return. Soon your soft touches have her so excited that she pounces on you eagerly, knocking you both to the ground as you roll around together on the floor touching and tickling each other as you play together on the ground like dogs. Given how needy Coleen is, it isn't any surprise to you when the play takes a more intimate turn, as you both kiss at each others faces, and your hands roam over each others bodies.  She licks and sucks at your soft breasts, even as you return the favor and lick and tease her own swollen husky teats. Eventually the two of you end up shuddering in orgasm together as you lie there on the floor, and she pulls you close and whispers into your ear softly, 'That was so fun, I almost thought I was playing with another husky bitch just like me, you responded so eagerly.  Maybe you want that? To be just another happy slutty husky like Coleen?' She asks you, panting in renewed arousal as she rubs herself up against your body, 'I found so many fun creatures and pleasures outside as a lovely little husky, so many lovely males ready and eager to mount my slutty little body, I could show them all to you and we could have such fun hunting and finding them together.. what do you say?' She moans as she asks you, and you have to admit, the offer does sound rather tempting... do you say yes to becoming a husky bitch like her?";
 				if player consents:
@@ -365,13 +359,11 @@ to say sexwithcoleen:
 					now sarahslut is 5;
 					increase coleenalpha by 1;
 					now coleenslut is 0;
-					stop the action;
 				otherwise:
 					say "'That's too bad,' Coleen pants as she lies back on the ground to recover from your rough lovemaking and play session, 'But maybe we can at least play like this again sometime soon.' She says hopefully, as you slowly get to your feet and begin to gather up your belongings to head out again.";
 					infect "Female Husky";
 					now lastcoleenfucked is turns;
-					stop the action;
-		if coleenalpha is greater than 0:
+		otherwise if coleenalpha is greater than 0:
 			if cocks of player is greater than 0:
 				say "'You will never become a happy slutty husky bitch like us with that!' Coleen says as she stares at your manhood, 'Though it does look very nice on you... Maybe I should help you out with your problems, and get a little treat at the same time..' The stray husky says as she grins at you for a minute, before dropping to all fours and burying her face in your crotch.  You groan in pleasure as the slutty husky takes charge of your body and wraps her muzzle around your new cock, licking and sucking eagerly even as she rubs your balls with her paws.  The pleasure builds quickly as her expert mouth works your shaft, and soon you are panting in pleasure as you shoot your seed into her eager mouth, her muzzle locking tight around your shaft as she suckles on it happily.  All too soon your powerful orgasm is spent, and while she massages your balls for minute longer as if trying to coax every drop of male seed out of you, she soon releases your shaft and sits back on her haunches happily, licking her lips.  As you recover from your orgasm, you realize your shaft almost seems to be shorter, and you shudder as your body starts to change.";
 				infect "Female Husky";
@@ -387,8 +379,7 @@ to say sexwithcoleen:
 				infect "Female Husky";
 				now lastColeenfucked is turns;
 				now coleenfound is 2;
-				stop the action;
-		if sarahslut is 4:
+		otherwise if sarahslut is 4:
 			say "'Sorry but.... no, I just can't lie, I want it so badly.' She says, her tongue hanging out of her mouth as she pants eagerly, before glancing at Sarah, 'Please! I just can't stop thinking about sex, and about how wonderful it would be to be just like her.' She says her changed body shuddering in desire, her tail lifting up instinctively. 'I know it will change me, and make me just another horny little husky just like your pet,' She says as she nods eagerly at Sarah. 'Just the very idea of being a horny husky pet, spreading my legs for dogs or beasts, being mounted like an animal, maybe even bearing them puppies.... God it makes me so hot,' Coleen moans as she rubs her naked fur covered body, her slit obviously wet and needy even as her soft heat scent fills the room. 'Please, I just have one request, just one thing I want you to do for me first....' She says pleadingly as she looks up at you with her husky eyes. 'Please make me your pet too, just like you did Sarah, take me and make me yours instead of just another stray bitch in the city.' Coleen says with a blush as she reaches over into a pile of books she has been reading, and pulls out a soft leather dog collar, a silver tag saying 'Bitch' in the shape of a dog bone hanging from the collar.  'I was feeling good enough to go out for a bit a little while ago... and I found one of those machines that let you make your own tag in a pet store...' She says as she lowers her head blushing, 'And I just couldn't resist.... Please won't you keep me?' She says as she looks up at you hopefully, the little husky you brought home earlier asking if she can stay with you forever... Do you keep her?";
 			if player consents:
 				if cocks of player is greater than 0:
@@ -396,13 +387,11 @@ to say sexwithcoleen:
 					Now coleencollared is 1;
 					now lastcoleenfucked is turns;
 					now coleenfound is 2;
-					stop the action;
 				otherwise:
 					say "Coleen's face brightens and her husky muzzle pulls back in a happy smile as you fix the collar around her throat, settling it securely so her new name tag can shine out proudly for all to see.  'Now Coleen's name is Bitch!' The newly collared Bitch proclaims proudly as she stares up at you in adoration. 'Thank you so much for taking me in mistress! Bitch will work hard to be a good bitch for her owner!' The formerly independent husky girl says even as she rubs herself up against your body eagerly.  'How would mistress like to use her new little bitch?' Your pet asks you as she looks up at you eagerly, her position in front of you giving you an idea of a better use to put her mouth to then talking. You lie back down on the ground, and slowly spread your legs before your newest pet, her eyes lock on your soft slit, as you whisper softly to her, 'Why don't you come have a taste of your new mistress?' You ask her teasingly, her face lighting up happily at your suggestion as she crawls over to you on all fours, quickly lowering her head to stick her muzzle into your damp crotch. Deciding to have some fun involving your other pet in this, you quickly gesture to your Sarah slut to join the fun, even as Coleen runs her tongue across your soft pussy lips.  The feeling makes you gasp and pet your newest bitches head in encouragement, as she begins to lick and nip at your outer lips eagerly, her tongue starting to tease its way inside your body with every pass. You groan as your new pet gasps and pushes her tongue into you even further, and you smile as you see your other pet has her own husky muzzle buried in Coleen's new bitch crotch as well.  Your new bitch renews her assault on your sex even as her own is being licked and teased, the sensations making you moan in pleasure as you rock your hips upward with each probing stroke of her tongue. Your new pets slutty husky instincts come to the fore as she whines and pants eagerly as she slurps and laps at your pussy, savoring every taste of your body, even as her own hips rock back in time with the tongue licking at her own slit.  Your body can only take so much of this wanton assault before you find yourself clenching your fingers in her fur as you orgasm, holding her head down in your crotch as she tries to lick up every bit of your juices even as they coat her muzzle.  Panting you can see that your newest pet has had her own orgasm as well, and your other pet is just as happily licking up the mess she made on the floor behind her. You can feel a smile tugging at your face as you look down on your two happily licking pets, glad to have such wonderful company to play with and train....";
 					Now coleencollared is 1;
 					now lastcoleenfucked is turns;
 					now coleenfound is 2;
-					stop the action;					
 			otherwise:
 				say "'You don't want to keep me?' She says as her ears and tail droop slightly, 'You just want to use me and fuck me like a bitch whenever you want, and let me roam the city like a stray animal, spreading my legs for whatever beast I can find?' Coleen moans as her tail lifts up again in excitement, her damp sex growing even damper as she realizes that she will be a stray bitch. 'That sounds so good too,' Coleen says with a moan as she rubs herself, obviously giving in to the infection mentally, and embracing her new role.  'I can't wait to start,' she pants out, and you can see her body shifting slightly as the changes accelerate, her hands shifting into a more pawlike form as her legs shift to better support the new bitch in the all fours stance you are sure she will be assuming regularly from now on. 'Don't worry though, I'll still come back here so you can use your stray bitch whenever you want,' She says as she pants eagerly at you, 'I mean the least I can do for you for helping me become such a wonderful slutty bitch, is let you play with me whenever you want to...' Coleen says as she gives you an eager canine smile, 'And speaking of playing, didn't you want to play with me just a second ago...' She says suggestively, her eyes locked on your crotch[line break]";
 				if cocks of player is greater than 0:
@@ -411,7 +400,6 @@ to say sexwithcoleen:
 					if Sandra is in bunker, now lust of Sandra is turns - 4;
 					now coleenfound is 2;
 					now lastcoleenfucked is turns;
-					stop the action;
 				otherwise:
 					say "Not waiting for a response, the stray bitch quickly buries her muzzle in your crotch, nipping and lapping eagerly at your damp passage, making you moan in pleasure at her rapid assault. After a second you push the horny bitch back slightly while you gasp and try to collect your thoughts.  'You taste so wet and needy already,' Coleen says as she licks her lips, obviously savoring the taste of your arousal.  'Are you sure you don't want to be a husky bitch yourself? A nice little slutty bitch for all the male dogs to fuck?'  She says as she moves close to you again, rubbing her soft husky fur up against your [skin of player] skin as she rubs her newly formed paw up against your damp crotch making you gasp.  'It's the most wonderful feeling to just give in and embrace life as a bitch,' she says as she whispers softly into your ear even as she presses herself up against your horny body.  'Trust me I should know how much fun it is to just let it all go.' Before you can respond to that she has locked her new muzzle over your mouth and is kissing you soundly, her canine tongue teasing your own even as she presses you back into the side of the bunker.[line break]";
 					say "Out of the corner of your eye you can see Sarah watching this new development with interest, as Coleen rubs herself up against you in lusty need.  You try to take control of the situation briefly, but find that you can't help but moan helplessly, your resistance melting under the military huskies soft touches, and you find yourself clutching her even tighter to you instead of pushing her away. Her paws roam your body, massaging and tweaking your nipples pleasantly, before dropping down to rub and tease at your increasingly damp slit. Soon your heavily aroused body is shuddering in orgasm under her hands, as your world explodes in pleasure.  Breaking the deep kiss at last, Coleen puts her husky muzzle right next to your ear and whispers 'See how much the idea of being a husky slut turns you on already?  Why don't you just admit to yourself how much you want to be just like me and your pet over there?' she asks you quietly, her paws still roaming your sensitive body as she waits for your response.";
@@ -422,7 +410,6 @@ to say sexwithcoleen:
 						if Sandra is in bunker, now lust of Sandra is turns + 4;
 						now sarahslut is 5;
 						now lastcoleenfucked is turns;
-						stop the action;
 					otherwise:
 						say "You manage to shake your head, trying to fight off the images of lusty husky bitchdom that Coleen's words are creating. 'That's too bad,' The new slutty stray bitch says as she stares at you for a moment, 'After you helped me realize how good it feels to be a husky bitch, I just wanted to help you realize how good it was as well,'  She says with a soft smile as she runs her paws over her new canine body.  'But now I think I need to go try this new body out some more in the city,' She says as she turns to the bunker entrance eagerly,  'But don't worry! I'll be sure to come back here often to tell you all about how much fun I am having being a husky bitch, and play with you any time you want!' She calls back over her shoulder as she heads outside, her tail wagging eagerly giving you a good view of her wet husky slit as she vanishes into the streets.";
 						infect "Female Husky";
@@ -430,18 +417,45 @@ to say sexwithcoleen:
 						increase coleenslut by 1;
 						if Sandra is in bunker, now lust of Sandra is turns - 4;
 						now coleenfound is 2;
-						stop the action;
-		if sarahslut is 3:
+		otherwise if coleenspray is 99:
+			say "'Sorry, I know we had lots of fun before, but I don't think that'd be a very good idea anymore.  I've tried to use my spray to change back, but it doesn't seem to last anymore.  I... I used it all up trying to clear up this husky thing I've picked up from Sarah, but it just reappears after a little while.  If we go at it again, I might end up another slutty husky bitch.'  She tries to stay calm, but she's clearly upset that she's going to be stuck like this.  Though her tail wags happily at the mention of becoming a bitch, so it seems her body's interested even if her mind's not accepted it yet.";
+			now coleenspray is 100;
+		otherwise if sarahslut is 3:
 			say "'Sorry, but lovely delicious beastial fucking seems to be how you lose yourself,' Coleen says, even as she pants slightly at the very idea, 'And I don't think I am ready to just give up and give in to infection, becoming just another happily fucked beast spreading her legs for any male that wants her, and being their happy little pet.' She says with a moan as she rubs herself, obviously extremely turned on by the very idea.  'No,' She says in a soft low voice, her eyes locked on Sarah,  'I don't think I am ready for that......Yet...' She pants out, her voice trailing off as she rubs her new fur in consideration.";
-			stop the action;
-		if sarahslut is 1 or sarahslut is 2:
+		otherwise if sarahslut is 1 or sarahslut is 2:
 			say "'Sorry, but unlike her,' Coleen says with a nod at the naked Sarah, 'I am still trying to keep myself nice and human, and if we ended up fucking, I think it would only make it harder for me to remember that I am not a slutty little bitch.' She says as she watches Sarah cautiously, although you notice her tail seems to be wagging invitingly, so her body is interested at least regardless of what her mind is saying.";
-			stop the action;
 		otherwise:
 			say "'Sorry, but we are both trying to hold on to our humanity as best we can,' Coleen says with a nod at the barely clothed Sarah, 'And sex would make it a hell of a lot harder to do so I think, especially since that seems to be the main way the infection seems to spread.'";
-			stop the action;
+	otherwise if coleenspray is 0:
+		say "     'Sorry, but that seems to be how the infection spreads the fastest.  And while I know I probably won't get out of this place without some changes, I think i'd like to try to keep them to a minimum.' Coleen says with a wry shrug.";
+		say "     Shall you suggest she use her spray to allow her to have sex instead of saving it for an emergency?";
+		if the player consents:
+			now coleenspray is 99;
+			say "     Not wanting to give up so easily, you tell her that you don't usually cause people to change, especially when they're not already changing on their own.  She seems skeptical of your claims, so you play your final card, reminding her of the restorative spray.  You suggest that if she used a bit of it each time after sex, she'd be able to stop any changes before they start to show up.  You even add that she'll certainly be safe from getting infected by creatures in here, so there's no need to save it for that when it could be put to much better use.";
+			say "     Clearly tempted by the prospect of sex, the idea gives her pause.  Moving in closer, you run your hands lightly along her sides and back, caressing her tantalizingly while continuing to reassure her.  Before she realizes it, you're slipping off her jacket and moving a hand under her shirt to caress her bare back.  Her unchanged skin is soft and smooth, a pleasant change from the scales and fur of many of the beasts of the city.  Guiding her forward, you pull her into a kiss with one hand and start to remove her pants with the other.  Soon you have her quite nude and laying upon her cot, ready to be made love to.  Caught up in the excitement and with the spray to allay any concerns, she welcomes you into her arms.";
+			attempttowait;
+			if cocks of player > 0:
+				say "[coleen_pretfsex01]";
+			otherwise:
+				say "[coleen_pretfsex02]";
+	otherwise if coleenspray is 99:
+		say "     Wanting another go at the human soldier, you approach her with an offer for sex.  She seems a little cautious as first, so you remind her that she can use the anything unwanted should start to come up.  What little reluctance she has fades as you run a hand along her side and whisper that it'll all turn out fine as you nibble her ear.  Soon you've got her naked again and on her cot in preparation of some fun.";
+		if cocks of player > 0:
+			say "[coleen_pretfsex01]";
+		otherwise:
+			say "[coleen_pretfsex02]";
 	otherwise:
 		say "'Sorry, but that seems to be how the infection spreads the fastest, and while I know I probably won't get out of this place without some changes, I think i'd like to try to keep them to a minimum.' Coleen says with a wry shrug.";
+
+
+to say coleen_pretfsex01:
+	say "     Atop her now, you guide your [cock size desc of player] cock into position.  Lining up your [cock of player] meat with her pussy, you [if cock length of player < 10]thrust into her, inciting a moan of delight from the soldier[otherwise if cock length of player < 20]push into her, inciting a whimpering moan of pleasure from the soldier[otherwise]push into her slowly, inciting a gasp as your oversized manhood stretches the soldier unnaturally open[end if][if cock length of player >= 10].  Despite the increased size of your shaft, her cunt is made to stretch around it, showing she's not wholly unaffected despite still being purely human[end if][if player is purehuman].  Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[otherwise].  Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
+	say "     You keep your pace steady as you fuck you human lover, enjoying the soft cries of pleasure she gives.  But Coleen is no passive lover, soon ending up with her legs wrapped around your waist, her arms around your shoulders and her lips locked to yours.  The sex is raw, straightforward and strong, much like the soldier you're fucking.  With such a passionate lover, it is no surprise when it comes to an end with mutual cries of orgasmic release.  You blast your [cum load size of player] load into her pussy, flooding her womb with your semen[if cock width of player > 30] to the point the woman's belly is stretched and bloated[otherwise if cock width of player > 20] to the point the woman's belly has a visible bulge from it[end if].  Sated, the female soldier releases you and flops back onto her bunk with a loud sigh of satisfaction.  She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
+
+to say coleen_pretfsex02:
+	say "     Atop her now, you move a hand between her thighs to caress across her mons and then to delve into her pussy.  This incites a moan of pleasure from the soldier and she grabs your ass firmly with one hand and places the other on your [if breast size of player > 0][breast size desc of player] tit[otherwise]side[end if][if player is purehuman].  Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[otherwise].  Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
+	say "     In time, her hand slips to your cunny and she starts caressing your pussy and clit in return.  For a while, you both play with one another's pussies and alternate between kissing one another and [if breast size of player > 0]sucking on each other's nipples[otherwise]you sucking on her nipples while she moans for more[end if].  The soldier's touch is surprisingly soft and delicate, working to bring pleasure to your sensitive, needy pussy and aching clit.  Your hips quiver and your juices flow freely as she excites you more and more with her sensual fingering.";
+	say "     After several minutes of this, Coleen gets a hungry look in her eye and rolls you over onto her back with a grin.  Turning around atop you, she buries her face between your legs and presses her juicy, dripping cunt to your lips.  She dives right in to licking your cunny.  She shows considerable skill at this, using her tongue artfully and eagerly to eat you out, the soldier clearly having done this before.  You lick her in return, working a finger into her cunt while you suck at her clit.  With all your earlier foreplay, it's not long before you're both crying out in orgasm even as you try to lap up the other's feminine juices.  You lap up the human woman's juices, loving the taste of them across your tongue.  Eventually, when both sated, Coleen releases you by rolling over onto her back once again with a loud sigh of satisfaction.  She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
 
 
 Section 6 - Endings
