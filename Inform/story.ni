@@ -5907,7 +5907,7 @@ Include Prairie Dog For Fs by Stripes.
 Include Snake For Fs by Stripes.
 Include Bald Eagle For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
-Include Goblin For FS by Stripes.
+Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
 Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
