@@ -13,7 +13,7 @@ Lindseyfucked is a number that varies. Lindseyfucked is usually 0.
 Lindsey is a man.[or woman]
 The description of Lindsey is "There is a large wolftaur examining itself in the mirror.  Its large, canine lower body stretches behind it and its tail is wagging slightly as it obviously approves of what it sees.  The upper body of the beast is covered in soft grey fur, and the face is definitely more lupine then human.  The sharp claws on its human hands look capable of doing a great deal of damage.  As the wolftaur shifts its body around and turns its yellow canine gaze to you, you are given a good look between its legs, the large canine organ hanging half erect there leaving no doubt as to the beast's maleness.";
 The conversation of Lindsey is { "Suck it!" }.
-Lindsey is in Bathrooms;
+Lindsey is in Zoo Restrooms;
 
 the scent of Lindsey is "Lindsey has a strong, masculine scent.  It is powerful and arousing, making you long to submit to this beast[if Lindseyaroused > 5].  As you should, for you are his bitch to use[end if].";
 
