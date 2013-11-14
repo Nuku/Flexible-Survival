@@ -1,5 +1,5 @@
 Version 9 of Herm Hyena For FS by Anony mouse begins here.
-[Version 9 - Defeat: Anal Option (M) and Victory: Cock Option (F) ]
+[Version 9.1 - Matriarch sub-form added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Herm Hyena to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -53,16 +53,16 @@ When Play begins:
 	now defeated entry is "[beatthehyena]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Herm Hyena attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "An anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. She is wearing jeans and a leather jacket with no shirt whatsoever leaving her full breasts exposed to the world. When she spots you a low chuckling begins to emanate from her throat and her mouth opens into a toothy smile as she begins to run toward you. As she approaches it becomes very clear that 'she' is also a he, a large bulge in her pants growing ever larger.";[ Description of the creature when you encounter it.]
-	now face entry is "brown-furred, hyena-like";[ Face description, format as the text 'Your face is (your text)'] 
-	now body entry is "lean and tightly muscled.";[ Body Description, format as the text 'Your Body is (your text)'] 
-	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "black, knotted";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it tightens noticeably and becomes attractively muscled"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face entry is "[if matriarchowned is 1]that of a strong hyena, with a scruffy streak of dark fur atop your head[otherwise]brown-furred, hyena-like[end if]";
+	now body entry is "[if matriarchowned is 1]that of a toughened hyena with an impressive build[otherwise]lean and tightly muscled[end if]";
+	now skin entry is "[if matriarchowned is 1]hyena-spotted furred[otherwise]brown furred[end if]";
+	now tail entry is "";
+	now cock entry is "[one of]black[or]knotted[at random]";
+	now face change entry is "[if matriarchowned is 1]shifts and stretches as a short but powerful muzzle forms at the end of your face, filled with sharp fangs.  Your ears move upwards and grow rounded as a scruffy streak of dark fur forms between them as your head settles into that of a hyena[otherwise]it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place[end if]";
+	now body change entry is "[if matriarchowned is 1]toughens up as it transforms once again, returning to your form as the hyena matriarch[otherwise]you lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle[end if]";
+	now skin change entry is "[if matriarchowned is 1]it is covered in the shaggy, brown and spotted fur of a hyena again[otherwise]it is covered in shaggy brown fur[end if]";
+	now ass change entry is "it tightens noticeably and becomes attractively muscled";
+	now cock change entry is "[if matriarchowned is 1]it pulses and throbs with excitment.  It's flesh darkens to pitch black and a knot swells up at its base.  You can't help but look at it and see it for the fine breeding tool that it is[otherwise]it turns pitch black, a knot forming at the base[end if]";
 	now str entry is 16;
 	now dex entry is 18;
 	now sta entry is 14;					
@@ -88,7 +88,7 @@ When Play begins:
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]lean[or]muscled[at random]";
+	now body descriptor entry is "[if matriarchowned is 1][one of]strong[or]powerful[or]muscular[or]impressive[or]matriarchal[at random][otherwise][one of]lean[or]muscled[at random][end if]";
 	now type entry is "hyena";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]

@@ -1,5 +1,5 @@
 Version 1 of Hyena Hideout by Sarokcat begins here.
-[ Version 1.2 - Fights flagged as situations ]
+[ Version 1.3 - Adjusted fight mechanics and Matriarch sub-form ]
 
 "Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
 
@@ -122,12 +122,9 @@ instead of conversing the Gina:
 		if player consents:
 			if cocks  of player is greater than 0:
 				say "'You would?' Gina says with surprise, 'Well if you[apostrophe]re sure you want to try again I won[apostrophe]t stop you from trying' Gina says as she leads you back once more to the matriarchs den.  'Be careful though, much more of the matriarchs brand of submissiveness training, and I doubt you would be able to be dominant to pretty much anyone here anymore.' She finishes, as you once more find yourself before the curtained area with the crowd gathering, you brace yourself this time as one of the guards charges you and the fight is on again.";
-				now inasituation is true;
-				Challenge "Herm Hyena";
-				Challenge "Herm Hyena";
-				Challenge "Hyena matriarch";
-				now inasituation is false;
+				say "[hyenamat_challenge]";
 				if matriarchowned is 1:
+					say "[hyenamat_victorytf]";
 					say "Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor.  Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes.  'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you.  'I knew you were special when I found ya, but I had no idea know just how tough you were.' She says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home.  'If you ever need any help with running this place or anything, you know where to find me.' Gina finishes, as she helps you settle in for a much needed rest after the hard fight, and fuck afterwards.";
 				otherwise:
 					say "Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off.  'Can[apostrophe]t say I didn[apostrophe]t warn you,' Gina mutters as she helps you settle down for a much needed rest. 'Though it definitely looked like you submitted pretty willingly there at the end.  Guess you don[apostrophe]t have to pretend to be a dominant anymore, it's pretty obvious how much you like being on the bottom instead,' Gina says with a smirk as you find yourself nodding almost automatically, an even stronger desire rising up in you to please the more dominant hyena by agreeing with whatever she wants.";
@@ -143,12 +140,9 @@ instead of conversing the Gina:
 		if player consents:
 			if cocks  of player is greater than 0:
 				say "'Well ok then hun,' Gina says, her expression growing slightly worried, 'If you[apostrophe]re sure you want to give it a try, be careful though.' She warns you as she begins to lead you back into the deeper part of the warehouse, 'She didn[apostrophe]t get to be where she is by being anything but the most dominant hyena around, and losing could really set you low on the pecking order,' Seeing your determined expression, she leads you to a curtained area with several other hyenas lounging around nearby, and announces your challenge to the area in general.  As word spreads and gang members from all over the warehouse run over to watch, you hear a dominant voice growl out from behind the curtain 'Challenge accepted!'  You have a second to reconsider as the largest hyena you have yet seen emerges from the curtain, her posture and musk reeking with dominance, before one of her hyena guards barrels into you and the fight is on!";
-				now inasituation is true;
-				Challenge "Herm Hyena";
-				Challenge "Herm Hyena";
-				Challenge "Hyena matriarch";
-				now inasituation is false;
+				say "[hyenamat_challenge]";
 				if matriarchowned is 1:
+					say "[hyenamat_victorytf]";
 					say "Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor.  Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes.  'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you.  'I knew you were special when I found ya, but I had no idea know just how tough you were.' She says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home.  'If you ever need any help with running this place or anything, you know where to find me.' Gina finishes, as she helps you settle in for a much needed rest after the hard fight, and fuck afterwards.";
 				otherwise:
 					say "Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off.  'Can[apostrophe]t say I didn[apostrophe]t warn you,' Gina mutters as she helps you settle down for a much needed rest. 'Things will be a bit different around her now that the matriarch has made  you one of the gang sluts, I won[apostrophe]t be able to keep you to myself anymore that[apostrophe]s for sure. And its definitely going to be harder for you to get much respect around here, plenty of fucking though if that's any consolation' She finishes with a leer, causing you to blush as you recall your recent encounter, the thought of it making your loins heat up again almost against your will.";
@@ -214,9 +208,62 @@ instead of fucking Gina:
 		increase ginaslut by 1;
 
 
+to say hyenamat_challenge:
+	now inasituation is true;
+	now fightoutcome is 100;
+	Challenge "Herm Hyena";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		Challenge "Herm Hyena";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			Challenge "Hyena matriarch";
+			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
+				let t be 0;	[do nothing extra]
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
+				let t be 0;	[do nothing extra]
+		otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[lose to guard #2]
+			say "Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch.  She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
+			say "[matriarch attack]";
+			hyenaify;	[second infect to match matriarch fight loss]
+			decrease morale of player by 5;
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:			[lose to guard #1]
+		say "Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch.  She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
+		say "[matriarch attack]";
+		hyenaify;	[second infect to match matriarch fight loss]
+		decrease morale of player by 5;
+	if fightoutcome >= 30:									[flee any fight]
+		say "     Your attempt to flee results in the mocking laugh of the rest of the gang.  Several of them grab onto you and you're dragged back in front of the matriarch, who strikes your several times while the other hyenas hold you.  You are then tossed to the ground at her feet.";
+		say "[matriarch attack]";
+		hyenaify;	[second infect to match matriarch fight loss]
+		decrease morale of player by 10;
+		now hp of player is 1;
+	now inasituation is false;
 
 
-
+to say hyenamat_victorytf:
+	setmonster "Herm Hyena";
+	choose row monster from the table of random critters;
+	say "As the hyena orgy goes on, you feel a growing sense of confidence and empowerment.  Looking over yourself, you can see that the victory has not left you unchanged.  Your hyena body's gotten larger and stronger with an improved physique.  You gain several inches of height as well, making you all the more impressive for leading the gang.  You've become a powerful figure suitable for your new role as the gang's matriarch.";
+	now tailname of player is "Herm Hyena";
+	now facename of player is "Herm Hyena";
+	now skinname of player is "Herm Hyena";
+	now bodyname of player is "Herm Hyena";
+	now cockname of player is "Herm Hyena";
+	now tail of player is tail entry;
+	now face of player is face entry;
+	now skin of player is skin entry;
+	now body of player is body entry;
+	now cock of player is cock entry;
+	attributeinfect;
+	now cock length entry is 15;		[ Length infection will make cock grow to if cocks]
+	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
+	now breast size entry is 5;		[Size of breasts infection will try to attain ]
+	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 9;		[ Width of female sex  infection will try and give you ] 
+	follow the sex change rule;
+	follow the sex change rule;
+	if libido of player < libido entry, now libido of player is libido entry;
 
 
 Hyena Hideout ends here.
