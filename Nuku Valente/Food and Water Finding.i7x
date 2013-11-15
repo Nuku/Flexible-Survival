@@ -1,5 +1,5 @@
 Version 4 of Food and Water Finding by Nuku Valente begins here.
-[ Version 4 - Upgrade to scavenging events]
+[ Version 4.1.1 - Haggler fixed ]
 
 "Allows finding food and water while roaming the city."
 
@@ -140,12 +140,13 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack";
 			add y to the invent of the player;
-[			if "Haggler" is listed in feats of player:
+			if "Haggler" is listed in feats of player:
 				let aa be a random number from 1 to charisma of player;
-				let bb be a random number from 1 to ( difficulty * 2 );
+				let bb be difficulty * 2;
+				let bb be a random number from 1 to bb;
 				if aa >= bb:
 					add y to invent of player;
-					say ".  You even manage to haggle a second one from the mutant";		]
+					say ".  You even manage to haggle a second one from the mutant";
 			say ".";
 	otherwise if x is 5:
 		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]
@@ -156,12 +157,13 @@ Instead of resolving a potential resources:
 				say "[scavsex_f01]";
 				say ".  You're tossed the [y] by one of her friends";
 				add y to the invent of the player;
-[				if "Haggler" is listed in feats of player:
+				if "Haggler" is listed in feats of player:
 					let aa be a random number from 1 to charisma of player;
-					let bb be a random number from 1 to ( difficulty * 2 );
+					let bb be difficulty * 2;
+					let bb be a random number from 1 to bb;
 					if aa >= bb:
 						add y to invent of player;
-						say " and even manage to haggle a second one from them";		]
+						say " and even manage to haggle a second one from them";
 				say ".";
 				if "Submissive" is listed in feats of player or "Kinky" is listed in feats of player:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
@@ -182,12 +184,13 @@ Instead of resolving a potential resources:
 				say "[scavsex_m01]";
 				say ".  You're tossed the [y] by one of his friends";
 				add y to the invent of the player;
-[				if "Haggler" is listed in feats of player:
+				if "Haggler" is listed in feats of player:
 					let aa be a random number from 1 to charisma of player;
-					let bb be a random number from 1 to ( difficulty * 2 );
+					let bb be difficulty * 2;
+					let bb be a random number from 1 to bb;
 					if aa >= bb:
 						add y to invent of player;
-						say " and even manage to haggle a second one from them";		]
+						say " and even manage to haggle a second one from them";
 				say ".";
 				if "Submissive" is listed in feats of player or "Kinky" is listed in feats of player:
 					say "     Despite, or perhaps even in part because, of how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on by what you've done.";
