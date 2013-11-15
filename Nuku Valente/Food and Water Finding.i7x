@@ -9,6 +9,8 @@ potential resources is a scavevent.
 The sarea of potential resources is "Allzones";
 
 Instead of resolving a potential resources:
+	let difficulty be a random number from 6 to 16;
+	if hardmode is true, increase difficulty by a random number between 0 and 3;
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -49,8 +51,6 @@ Instead of resolving a potential resources:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		add y to the invent of the player;
 	otherwise if x is 2:
-		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up high, forcing you to climb up after it. It looks ";
 		if difficulty is less than 8:
 			say "easy";
@@ -89,8 +89,6 @@ Instead of resolving a potential resources:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
 				add y to the invent of the player;
 	otherwise if x is 3:
-		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up stuck under something heavy. It looks ";
 		if difficulty is less than 8:
 			say "easy";
@@ -115,8 +113,6 @@ Instead of resolving a potential resources:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
 	otherwise if x is 4:
-		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is in the hands of a sentient!  Though mutant, perhaps you could convince them to give it up.  It looks like they have enough for themselves. They appear ";
 		if difficulty is less than 8:
 			say "easy";
