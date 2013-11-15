@@ -549,4 +549,24 @@ Instead of resolving a Cameo:
 	now Cameo is resolved;
 
 
+Section 9 - Raul's Wild Kingdom
+
+Wild Kingdom is a situation.
+The sarea of Wild Kingdom is "High";
+
+Instead of resolving a Wild Kingdom:
+	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out.  Inside you find the small place crammed full of animal people or all kinds.  A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade.  In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";
+	say "     Looking around, you are struck by several oddities.  Looking up, you see a turtle-man with his chest stuck to the ceiling.  He cranes his neck back lazily and waves down at you with a smile.  There's also a bulletin board in the foyer that includes a sign-up sheet for [']Poodle Flying Lessons['], but it's all filled up.";
+	if bodyname of player is "Badger" or facename of player is "Badger":
+		say "     When Raul notices you, he gets quite upset, pushing his way over to you.  'Badgers?  Badgers?  We don't need not steenkin['] badgers!'  He quickly shuffles you out the door and slams it in your face.";
+	otherwise if bodyname of player is "Pink Poodle" or facename of player is "Pink Poodle":
+		say "     When Raul notices you, he smiles excitedly and comes over to you.  'You must be here for the flying lessons.  Unfortunately, we're all filled up right now, but you can try back in a few days.  Just be sure to bring your insurance information; you know, sometimes it takes you a little longer to learn how to do it right.";
+		say "     You mill around briefly with the others there, but things are quite hectic.  They're certainly friendly enough, if rather odd.  Still, it turns out to be a pleasant break from being attacked or hit on.";
+		increase morale of player by 1;
+	otherwise:
+		say "     You mill around briefly with the others there, but things are quite hectic.  They're certainly friendly enough, if rather odd.  Still, it turns out to be a pleasant break from being attacked or hit on.";
+		increase morale of player by 1;
+	increase score by 1;
+
+
 High Rise Events ends here.
