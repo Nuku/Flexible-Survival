@@ -158,12 +158,12 @@ to say Brutus_DBCapture:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Let her go[as][0][end link][line break]";
+	say "[link]0 - Let it go[as][0][end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber is 0:
-			say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away.  She snatches up her doll and hisses angrily as she makes her escape.";
+			say "     Having proven yourself by beating the demon, you see little point in using it to sate your lusts when one of your own to use at your whim.  You signal for Brutus to let it go.  He grunts in disappointment and [if DBCaptureQuestVar is 5]gives it a final powerful punch, knocking it back a few feet[otherwise]tosses the creature back a few feet[end if], growling that it can now slink back to its hole.  The demon gives a final threatening growl before dissolving into purple smoke and whisking away.";
 			now sextablerun is 1;
 		otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
