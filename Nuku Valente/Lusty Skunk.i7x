@@ -1,5 +1,5 @@
 Version 2 of Lusty Skunk by Nuku Valente begins here.
-[Version 2 - Tie-in for Skunkbeast Lord content - Stripes]
+[Version 2.1 - Relocated to new Urban Forest area.]
 
 "Adds a situation to Flexible Survival with a sticky skunkette."
 
@@ -7,7 +7,7 @@ Version 2 of Lusty Skunk by Nuku Valente begins here.
 Section 1 - The Situation
 
 Lusty Skunk is a situation.
-The sarea of Lusty Skunk is "Park";
+The sarea of Lusty Skunk is "Forest";
 
 skrp is a number that varies. skrp is usually -1;
 Lastskunkfuck is a number that varies. Lastskunkfuck is usually 250.
@@ -119,6 +119,7 @@ to say doubleskunk:		[separated to edit and remove 'stop the action']
 				otherwise:
 					say "The sensations start to fade, and with it, fear and curiosity build rapidly. You draw yourself upright and look down to see what's going on, to find yourself looking at black and white furred legs, and a face. The skunk's snout looks up at you from your groin, smiling blissfully. Looking quickly behind you, you see the skunkette's sexy form is now larger and attached to your ass. You're a tauric skunk, with all your equipment tucked under your back crotch, and your front occupied by your co-inhabitor. 'It[apostrophe]s ok,' she suddenly says, 'You are not hurt, and I[apostrophe]m ok too.' Easy for her to say! You feel like you should be freaking out, but something keeps you calm, and then it becomes clear. She shares her emotions with you, gently soothing your fears, reassuring your injured ego. 'We are one now. I am happy to be part of you. We should go, explore. We have so much to do.' But she does not say what she wants to do, happy to help you with whatever you are doing. 'Oh, one thing. There are others of me around here, if we can find them. They like to play, and can help us a little, if we get changed.";
 				now skrp is 1;
+				add "Skunkbeast Lord" to infections of Taurlist;
 				[scale up the Skunkbeast Lord by 1]
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
@@ -143,6 +144,7 @@ to say doubleskunk:		[separated to edit and remove 'stop the action']
 				otherwise:
 					say "Her form bulks up behind you, matching you better as you become a skunk taur, at least from the hips downwards.  With a soft, wet, noise, her face pushes free of your front.  She takes a sharp breath, then looks up at you from what would be the groin of your torso.  'We are so pretty,' she sighs out.  A part of you agrees, the other part, repulsed.  But, at least for now, you are stuck with it.  'Oh, there are others here, like me.  We can play with them, and they can fix us, if we get changed,' she explains, smiling brightly.  'I am so happy I met you.  I know we'll have so much fun together.'  A little confused, you move back for safer grounds, your new body carrying you easily.";
 				now skrp is 1;
+				add "Skunkbeast Lord" to infections of Taurlist;
 				[scale up the Skunkbeast Lord by 1]
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;

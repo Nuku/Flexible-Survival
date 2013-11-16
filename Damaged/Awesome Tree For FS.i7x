@@ -1,4 +1,5 @@
 Version 7 of Awesome Tree For FS by Damaged begins here.
+[ Version 7.1 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Awesome Tree to Flexible Survivals Wandering Monsters table"
@@ -125,7 +126,7 @@ When Play begins:
 	now hp entry is 60;			[ How many HP has the monster got? ]
 	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 3;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 2;		[ Size of balls apparently ;) sneaky Nuku]

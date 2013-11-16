@@ -99,9 +99,9 @@ the scent of Primary Lab is "The lab smells of Dr Matt's experiments[if Susan is
 
 the scent of Park Entrance is "The park entrance smells of trees and flowers and a myriad of lustful creatures.";
 
-the scent of Park Trail is "Now in the park, the scents of the creatures are stronger.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[or]the sharp scent of skunk spray[at random].  You'd best be careful.";
+the scent of Park Trail is "Now in the park, the scents of the creatures are stronger.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[at random].  You'd best be careful.";
 
-the scent of Faint Trail is "The scents of the creatures roaming the park are stronger this way.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[or]the sharp scent of skunk spray[at random].  You'd best be careful.";
+the scent of Faint Trail is "The scents of the creatures roaming the park are stronger this way.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[at random].  You'd best be careful.";
 
 the scent of Cola Vending Machine is "The vending machine smells of burnt electronics and is busted.  Guess you'll have to hit it to get anything out.";
 

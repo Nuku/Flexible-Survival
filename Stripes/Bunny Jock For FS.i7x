@@ -1,5 +1,5 @@
 Version 1 of Bunny Jock For FS by Stripes begins here.
-[Version 1.1 - Alt attack tweaked]
+[ Version 1.2 - Demoted to level 4 ]
 
 "Adds a Bunny Jock creature to Flexible Survivals Wandering Monsters table with impregchance"
 
@@ -81,16 +81,16 @@ When Play begins:
 	now skin change entry is "soft, grey fur spreads over your body";
 	now ass change entry is "your ass becomes tight and firmly muscled.  This is followed by a soft [']pop['] a few seconds later as a cute cottontail puff appears atop your ass";
 	now cock change entry is "a soft sheath of fur and skin forms to house your maleness when not aroused";
-	now str entry is 22;			[ These are now the creature's stats... ]
-	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now str entry is 18;			[ These are now the creature's stats... ]
+	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 10;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 65;			[ The monster's starting hit points. ]
-	now lev entry is 8;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 10;			[ Monster's average damage when attacking. ]
+	now hp entry is 37;			[ The monster's starting hit points. ]
+	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 7;			[ Monster's average damage when attacking. ]
 	now area entry is "Campus";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 30;		[ Length infection will make cock grow to if cocks. ]

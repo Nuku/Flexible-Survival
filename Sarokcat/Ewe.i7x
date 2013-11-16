@@ -1,5 +1,5 @@
-Ewe by Sarokcat begins here.
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+Version 1 of Ewe by Sarokcat begins here.
+[ Version 1.1 - Unleashed ]
 
 "Adds a Ewe to Flexible Survivals Wandering Monsters table, With no Impreg chance"
 [Description text for this Extension.]
@@ -68,7 +68,7 @@ When Play begins:
 	now hp entry is 30;
 	now lev entry is 4;
 	now wdam entry is 7;
-	now area entry is "Store";
+	now area entry is "Outside";
 	now cocks entry is 0;
 	now cock length entry is 0;
 	now cock width entry is 0;

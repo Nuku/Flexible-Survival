@@ -1,5 +1,5 @@
 Version 4 of New Ewe Store by Sarokcat begins here.
-[Version 4 - M/M bondage/BDSM w/Leon]
+[ Version 4.1 - Ram and Ewe unleashed ]
 
 "Adds a situation to Flexible Survival with a flock of sheep with a problem."
 
@@ -27,18 +27,6 @@ Instead of Resolving a New Ewe Store:
 				If player consents:
 					say "      'Thank you very much, We've all been worried sick about her. It's not good for someone to be away from the flock for to long' The watching sheep nod at this statement.";
 					increase nes by 1;
-					if furry is not banned and girl is not banned:
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
-							if name entry is "ewe":
-								now area entry is "Outside";
-								break;
-					if furry is not banned and guy is not banned:
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
-							if name entry is "ram":
-								now area entry is "Outside";
-								break;
 				otherwise:
 					say "     They stare at you reproachfully with their big black sheep eyes making you uncomfortable, until you can't take it any more and leave.";
 					now New Ewe Store is resolved;
