@@ -1,4 +1,5 @@
 Version 1 of Cougar by Stripes begins here.
+[ Version 1.2 - Relocated to Urban Forest ]
 "Adds a Cougar creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
@@ -12,6 +13,14 @@ when play begins:
 to say losetocougar:
 	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you.  Her strong body holds you down as she rubs herself against you.  Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock against you";
+	if wslevel is 3 and a random chance of 2 in 5 succeeds:
+		say ".";
+		say "     She rubs herself against you as she moves forward, bringing her crotch to your face.  Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock.  Expecting her to want you to suck her off, you open your mouth.  But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle.  Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat.";
+		say "     After your hot drink is done, she moves on to satisfying her lusts";
+	otherwise if a random chance of 1 in 3 succeeds:
+		say ".";
+		say "     She rubs herself against you as she moves forward, bringing her crotch to your face.  Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock.  Knowing what's expected of you and[if hp of player > 0]accepting that you must satisfy the feline's needs[otherwise]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it.  You lick and suck at the dribbling member while she rumbles and purrs in pleasure.";
+		say "     After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively";
 	if cocks of player > 0 and cunts of player is 0:
 		say "[cougarride]";
 	otherwise if cunts of player > 0 and cocks of player is 0:
@@ -67,7 +76,7 @@ When Play begins:
 	now body entry is "athletic and firmly muscled, with a vaguely feline form and large paws for hands.  Your body and limbs are shaped such that you can comfortably switch to going upright or on all fours, and find yourself changing between these postures naturally when the need arises";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "golden brown fur with a creamy belly";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Attached at your rear is a cougar's tail, golden brown and darkening towards the tip.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "deep brown with soft, feline barbs";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now cock entry is "[one of]deep brown[or]sensually barbed[or]feline[as decreasingly likely outcomes]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "it reshapes into a feline muzzle and head";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes more feline in form and more athletically built.  You feel comfortable switching between walking upright and on all fours.  Your hands become feline paws with retractable claws";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "golden brown fur spreads all over your body.  Your colouration is uniform over most of your body, lacking elaborate markings or patterns and only a shift to a creamy colour at your belly and groin";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
@@ -83,7 +92,7 @@ When Play begins:
 	now hp entry is 50;			[ The monster's starting hit points. ]
 	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 8;			[ Monster's average damage when attacking. ]
-	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Forest";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]

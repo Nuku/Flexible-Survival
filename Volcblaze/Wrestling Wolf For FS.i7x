@@ -1,6 +1,5 @@
 Version 3 of Wrestling Wolf For FS by Volcblaze begins here.
-[Version 3.0 - Player victory - M/M anal - by Stripes]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+[ Version 3.1 - Promotion and relocation to College Campus area. ]
 
 "Adds a Wrestling Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -127,17 +126,17 @@ When Play begins:
    now skin change entry is "thick, rugged, black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
    now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
    now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 20;
-   now dex entry is 14;
+   now str entry is 24;
+   now dex entry is 17;
    now sta entry is 19;                    
-   now per entry is 16;
-   now int entry is 14;
-   now cha entry is 12;
+   now per entry is 13;
+   now int entry is 9;
+   now cha entry is 14;
    now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
    now hp entry is 150;            [ How many HP has the monster got? ]
-   now lev entry is 8;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+   now lev entry is 15;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
    now wdam entry is 30;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Outside";    [ Current options are 'Outside' and 'Mall'  Case sensitive]
+   now area entry is "Campus";    [ Current options are 'Outside' and 'Mall'  Case sensitive]
    now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
    now cock length entry is 0;        [ Length infection will make cock grow to if cocks]
    now cock width entry is 0;        [ Size of balls apparently ;) sneaky Nuku]

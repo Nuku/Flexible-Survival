@@ -1,5 +1,5 @@
 Version 10 of Skunk For FS by Damaged begins here.
-[ Version 10.2 - Updated to extended heat table - no MPreg heat yet - Stripes ]
+[ Version 10.3 - Relocated to Urban Forest area ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
@@ -189,7 +189,7 @@ When Play begins:
 	now hp entry is 64;            [- How many HP has the monster got? -]
 	now lev entry is 5;            [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
 	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
-	now area entry is "Park";    [- Current options are "Outside" and "Mall"  Case sensitive-]
+	now area entry is "Forest";    [- Current options are "Outside" and "Mall"  Case sensitive-]
 	now cocks entry is 0;            [- How many cocks will the infection try and cause if sex is "Male" or "Both"-]
 	now cock length entry is 0;        [- Length infection will make cock grow to if cocks-]
 	now cock width entry is 0;        [- Size of balls apparently ;) sneaky Nuku-]
@@ -210,12 +210,12 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "parkskunk";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "forestskunk";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"parkskunk"	skunkspray rule	--	--	--	--	--	--	--	--	--
+"forestskunk"	skunkspray rule	--	--	--	--	--	--	--	--	--
 
 
 this is the skunkspray rule:

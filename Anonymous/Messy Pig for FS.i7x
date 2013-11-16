@@ -1,6 +1,5 @@
 Version 9 of Messy Pig For FS by Anonymous begins here.
-[Version 9 - Defeat sex for males and Alt Combat - Stripes]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+[ Version 9.1 - WS loss add-on - Stripes]
 
 "Adds a Messy Pig to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -12,17 +11,17 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say messypigattack:
 	if cunts of player > 0:
-		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out!  Clearly this creature has an appetite for your sex!  She digs her snout deep as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.  The pig finally stands up and waddles off.  You cough, finally having fresh air as you climb to your knees shakily.";
-		if libido of player > 45:
-			decrease libido of player by 30;
-			if libido of player < 45, now libido of player is 45;
+		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out!  Clearly this creature has an appetite for your sex!  She digs her snout deep as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum";
 	otherwise if cocks of player > 0:
-		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about sucking your [cock of player] cock!  Clearly this creature has an appetite for your sex!  She bobs her snout over your throbbing meat as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.  The pig finally stands up and waddles off.  You cough, finally having fresh air as you climb to your knees shakily.";
-		if libido of player > 45:
-			decrease libido of player by 30;
-			if libido of player < 45, now libido of player is 45;
+		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about sucking your [cock of player] cock!  Clearly this creature has an appetite for your sex!  She bobs her snout over your throbbing meat as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum";
 	otherwise:
-		say "The pig girl looks you over and huffs angrily at your bare groin.  She gives you a hard bite on the hip and a kick with one of her cloven hooves.  Apparently you're not quite what she wanted!  She turns around, giving you a large view of her large behind before she kicks some dirt and mud into your face.  You cough and sneeze, and by the time you are able to see again she is gone.";
+		say "The pig girl looks you over and huffs angrily at your bare groin.  She gives you a hard bite on the hip and a kick with one of her cloven hooves.  Apparently you're not quite what she wanted!  She turns around, giving you a large view of her large behind before she kicks some dirt and mud into your face.  You cough and sneeze, only to be body-slammed by the hefty sow, crushing the air from your lungs and filling your vision with spots";
+	if wslevel is 3 and a random chance of 2 in 5 succeeds:
+		say ".";
+		say "     By the time time big porker's rising off of you, you've been badly flattened by her weight.  Left sore and weak after the pleasurable abuse, you can only squirm feebly as she starts pissing with a sigh.  You can't help but taste it as a stream of her urine sprays onto your face and more drips down from her crotch.  When she's done and has waddled off, you're left very messy by the dirty sow.";
+		infect;
+	otherwise:
+		say ".  The pig finally stands up and waddles off.  You cough, finally having fresh air as you climb to your knees shakily.";
 
 
 to say beatthepig:

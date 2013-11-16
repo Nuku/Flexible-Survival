@@ -1,5 +1,5 @@
 Version 2 of Alpha Wolf by Sarokcat begins here.
-[ Version 2.1 - Creature victory anal. ]
+[ Version 2.2 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Alpha Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -185,7 +185,7 @@ When Play begins:
 	now hp entry is 55;			[ How many HP has the monster got? ]
 	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku]

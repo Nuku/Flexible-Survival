@@ -6,7 +6,7 @@
 Section 1 - Event
 
 Finding Mack is a situation.  The level of Finding Mack is 8.
-The sarea of Finding Mack is "Park";
+The sarea of Finding Mack is "Forest";
 
 when play begins:
 	add Finding Mack to badspots of guy;
@@ -14,14 +14,14 @@ when play begins:
 
 Instead of resolving Finding Mack:
 	if hp of Macadamia is 0:
-		say "     As you're enjoying a peaceful walk through the park, all that is broken up as a fluffy burst of grey fur bursts out of the wood.  'Come'n through!' it says as you're pushed aside.  Suddenly expecting to be in a fight with the grey fluff, you turn to face it to see it already disappearing into the bushes on the other side.  As you regather your wits, you turn in time to see a man in green stepping silently from the woods behind you.  'I had thought to give chase to that troublesome rodent, but you look like much better sport,' he says with a musical cadence to his voice.  Taking in his smooth and beautiful features, you notice his pointed ears and realize it is an elf before you and not a man at all.  And he's now advancing on you with the lust for the hunt flashing in his eyes.";
+		say "     As you're enjoying a peaceful walk through the woods, all that is broken up as a fluffy burst of grey fur bursts out of the wood.  'Come'n through!' it says as you're pushed aside.  Suddenly expecting to be in a fight with the grey fluff, you turn to face it to see it already disappearing into the bushes on the other side.  As you regather your wits, you turn in time to see a man in green stepping silently from the woods behind you.  'I had thought to give chase to that troublesome rodent, but you look like much better sport,' he says with a musical cadence to his voice.  Taking in his smooth and beautiful features, you notice his pointed ears and realize it is an elf before you and not a man at all.  And he's now advancing on you with the lust for the hunt flashing in his eyes.";
 		challenge "Elven Hunter";
 		if fightoutcome >= 10 and fightoutcome <= 29:		[stuck around either way]
 			if fightoutcome >= 10 and fightoutcome <= 19:	[won]
 				say "     After dispatching the elven hunter, you spot the grey creature watching from the atop a tree.  'Hey, good job there.  Sorry for making you have to deal with my problem.  I just wanted to ditch him, but I ran into you on the way.  Luckily, it seems like you can take care of yourself.'  He leaps gracefully from tree to tree before landing on the open path beside you.  Your new acquaintance is a male squirrel and about 5 1/2 feet in height.  He has fluffy grey fur that's a little lighter at the chest and groin.  He has a big, bushy tail behind him as well.  It is roughly as long as he is tall.  Nude save for his fur and a small belt with several pouches, you've got a clear view of this small fellow's sheath and his impressive set of nuts.";
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[lost]
 				say "     After dispatching the elven hunter, you spot the grey creature watching from the atop a tree.  'Hey, I'm sorry about that.  You shouldn't have had to deal with my problem.  I just wanted to ditch him, but I ran into you on the way.  Luckily, he seems to be gone now that he's had his fun.  Better you than me, eh?' he says cheerfully.  He leaps gracefully from tree to tree before landing on the open path beside you.  Your new acquaintance is a male squirrel and about 5 1/2 feet in height.  He has fluffy grey fur that's a little lighter at the chest and groin.  He has a big, bushy tail behind him as well.  It is roughly as long as he is tall.  Nude save for his fur and a small belt with several pouches, you've got a clear view of this small fellow's sheath and his impressive set of nuts.";
-			say "     He scurries around you, looking you over with a friendly grin.  'Now that that guy's gone, I can get back to... Say!  How would you like to give me a hand again?' he says with a twitch of his whiskers and a flick of his tail.  'You see, things are getting pretty busy here in the park.  Lots of critters running around and a bunch o['] them are big predators compared to little ole me.  Now, the nuts here are nice, but I've picked quite a few spots clean already.'  He speaks very quickly and shifting around like the twitchy rodent he is.";
+			say "     He scurries around you, looking you over with a friendly grin.  'Now that that guy's gone, I can get back to... Say!  How would you like to give me a hand again?' he says with a twitch of his whiskers and a flick of his tail.  'You see, things are getting pretty busy here in the forest.  Lots of critters running around and a bunch o['] them are big predators compared to little ole me.  Now, the nuts here are nice, but I've picked quite a few spots clean already.'  He speaks very quickly and shifting around like the twitchy rodent he is.";
 			say "     'Now, I've got an angle, you see - and this is where you come in, buddy.  Oh, I'm Mack, by the way.  Short for Macadamia, cuz those are the best like me, you know.  Well, I know where there's a peanut roasting factory in the city.  And I figure they've got to have a good stash in there.  More than enough for me to get through the winter.  Maybe even a couple,' he adds, pulling a walnut out of one pouch and gnawing at its shell.  'Now, the thing is, a sweet nut stash like that's probably already been found by someone, so they'll have to be muscled out.  And you, my friend,' he says, zipping up beside you and kneading your shoulder, 'are gonna be my muscle.  Now don't make that face, I'll be helpin['] too.  I'll be doing most of the work, actually.  I just expect I'll need a little backup and I'll pay you for your help in nuts.'";
 			say "     'If you're interested, head to the warehouse district and look for me there,' he says.  He gives his tail a quick flick and leaps into the trees, going quickly from one to the next and out of sight.";
 			now hp of Macadamia is 1;
@@ -250,7 +250,7 @@ to say eatroastednuts:
 
 [	hp of Macadamia		]
 [ 0 - not met			]
-[ 1 - met in Park			]
+[ 1 - met in Forest		]
 [ 2 - refused plan once		]
 [ 3 - factory access - no sex	]
 [ 4 - talked - no sex		]

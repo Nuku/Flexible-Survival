@@ -5662,6 +5662,7 @@ Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
 Include Campus For Fs by Stripes.
+Include Urban Forest For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Equinoid Camp For FS by Stripes.
 Include Medical Checkups by Hellerhound.

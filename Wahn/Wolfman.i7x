@@ -1,5 +1,5 @@
 Version 2 of Wolfman by Wahn begins here.
-[Version 2.1 - Team Manager sex w/Jennifer by Stripes]
+[ Version 2.2 - Relocated to College Campus area. ]
 
 "Adds a team of football wolfmen to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -123,7 +123,7 @@ When Play begins:
 	now hp entry is 50;			[ The monster's starting hit points. ]
 	now lev entry is 6;                 [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 10;               [ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Campus";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8;        	[ Cock width, more commonly used for ball size. ]

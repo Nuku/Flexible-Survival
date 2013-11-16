@@ -324,19 +324,6 @@ To reciting2:
 					now New Ewe Store is unresolved;
 					now littlelostlamb is resolved;
 					now New Ewe Storeroom is unknown;
-					if nes > 0:
-						if furry is not banned and girl is not banned:
-							repeat with y running from 1 to number of filled rows in table of random critters:
-								choose row y in table of random critters;
-								if name entry is "ewe":
-									now area entry is "Outside";
-									break;
-						if furry is not banned and guy is not banned:
-							repeat with y running from 1 to number of filled rows in table of random critters:
-								choose row y in table of random critters;
-								if name entry is "ram":
-									now area entry is "Outside";
-									break;
 					if nes is 2:
 						now littlelostlamb is unresolved;
 					if nes >= 4:
@@ -1974,19 +1961,6 @@ Carry out reciting:
 					now New Ewe Store is unresolved;
 					now littlelostlamb is resolved;
 					now New Ewe Storeroom is unknown;
-					if nes > 0:
-						if furry is not banned and girl is not banned:
-							repeat with y running from 1 to number of filled rows in table of random critters:
-								choose row y in table of random critters;
-								if name entry is "ewe":
-									now area entry is "Outside";
-									break;
-						if furry is not banned and guy is not banned:
-							repeat with y running from 1 to number of filled rows in table of random critters:
-								choose row y in table of random critters;
-								if name entry is "ram":
-									now area entry is "Outside";
-									break;
 					if nes is 2:
 						now littlelostlamb is unresolved;
 					if nes >= 4:

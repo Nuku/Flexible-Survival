@@ -629,6 +629,7 @@ Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
 Music Store is a situation.  The level of Music Store is 2.
 The sarea of Music Store is "Outside";
 Music Store is resolved.
+violinspritefight is a truth state that varies.
 
 Instead of resolving Music Store:
 	if violinfound is 0 or violinfound is 1:
@@ -636,7 +637,9 @@ Instead of resolving Music Store:
 	otherwise if violinfound is 2 or violinfound is 3:	[returning]
 		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier.  Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door.  The buzz inside picks up inside as they notice the intruder.  'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
 	now fightstatus is 3;
+	now violinspritefight is true;
 	challenge "city sprite";
+	now violinspritefight is false;
 	if fightstatus is 3:
 		say "     Forced to flee by the horde of provocative and precocious pixies, you make a run for it down the street and through some alleys, eventually losing them.  Or so you think.  As you stop to catch your breath, you hear some giggling above you.  'Don't come back or you'll get more of the same!'  'Yeah!'  'Or wait, do come back and we'll all have fun giving you more of the same!'  'Teehee!'  There's then the buzz of wings as the sprites fly off, presumably back to their home in the music store.";
 		if violinfound is 0, now violinfound is 2;

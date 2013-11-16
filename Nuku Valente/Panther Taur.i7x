@@ -1,5 +1,6 @@
 Version 1 of Panther Taur by Nuku Valente begins here.
-[Version 1 -- Taken from Story.ni file and given dedicated file. Commissioned by AsureaSkie.]
+[ Version 1.1 - Promoted to level 4. ]
+[ Commissioned by AsureaSkie. ]
 
 "Adds a Panther Taur creature to Flexible Survivals Wandering Monsters table"
 
@@ -67,8 +68,8 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 20;			[ The monster's starting hit points. ]
-	now lev entry is 3;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now hp entry is 27;			[ The monster's starting hit points. ]
+	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 6;			[ Monster's average damage when attacking. ]
 	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
