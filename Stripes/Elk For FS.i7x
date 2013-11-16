@@ -1,5 +1,5 @@
 Version 1 of Elk For FS by Stripes begins here.
-[Version 1.1 - Player victory sex]
+[Version 1.2 - Relocated to Urban Forest area]
 
 "Adds an Elk creature to Flexible Survivals Wandering Monsters table"
 
@@ -156,7 +156,7 @@ When Play begins:
 	now hp entry is 53;			[ The monster's starting hit points. ]
 	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 9;			[ Monster's average damage when attacking. ]
-	now area entry is "Red";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Forest";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15;		[ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;		[ Cock width, more commonly used for ball size. ]

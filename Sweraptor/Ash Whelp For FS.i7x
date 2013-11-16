@@ -1,5 +1,5 @@
 Version 2 of Ash Whelp For FS by Sweraptor begins here.
-[ Version 2 - Fire Breath attack added]
+[ Version 2.1 - Demoted to lvl 2]
 "Adds an Ash Whelp to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Ash Whelps serve as a pathetic and annoying early warning system for the Ash brood. Only dangerous to weakened or new adventurers losing to these annoying mites is truly pathetic.]
 
@@ -59,7 +59,7 @@ When Play begins:
 	now cha entry is 8;
 	now sex entry is "Both";
 	now hp entry is 28;
-	now lev entry is 6;
+	now lev entry is 2;
 	now wdam entry is 6;
 	now area entry is "Capitol";
 	now cocks entry is 1;

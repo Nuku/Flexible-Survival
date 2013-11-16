@@ -1,5 +1,5 @@
 Version 2 of Incubus For FS by Stripes begins here.
-[Version 2.1 - Added oral victory sex for regular player]
+[Version 2.2 - Promotion to level 8]
 
 "Adds an Incubus creature to Flexible Survivals Wandering Monsters table"
 [Created in thanks for Wahn for all his hard work helping with typos]
@@ -126,7 +126,7 @@ When Play begins:
 	now cha entry is 25;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 50;			[ The monster's starting hit points. ]
-	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 8;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 14;			[ Monster's average damage when attacking. ]
 	now area entry is "Campus";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]

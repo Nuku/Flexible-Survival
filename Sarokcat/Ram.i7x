@@ -1,5 +1,5 @@
 Version 2 of Ram by Sarokcat begins here.
-[ Version 2 - Victory sex checks pussy first now, small scene tweaks. ]
+[ Version 2.1 - Unleashed ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Ram to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -67,7 +67,7 @@ When Play begins:
 	now hp entry is 50;
 	now lev entry is 6;
 	now wdam entry is 9;
-	now area entry is "Store";
+	now area entry is "Outside";
 	now cocks entry is 1;
 	now cock length entry is 9;
 	now cock width entry is 6;

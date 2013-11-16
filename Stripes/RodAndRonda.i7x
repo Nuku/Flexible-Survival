@@ -33,7 +33,7 @@ instead of conversing Rod Mallrat:
 	otherwise if hp of Ronda is 3:
 		say "     [one of]'So, will you help me out?'[or]'Have you gone to find out what the dog-woman in the shop needs to help Ronda?'[or]'You should go visit Nermine and see what she needs.  You promised you'd help fix Ronda.'[at random]";
 	otherwise if hp of Ronda is 4 or hp of Ronda is 5:
-		say "     [one of]'Don't give up.  Please keep looking for the stuff Nermine needs.'[or]'Thanks for helping me out.'[or]'Have you had any luck in finding the stuff to help Ronda?'[or]'Remember, she wanted something from a lizard girl at the park and the awesomest fruit you can find.'[at random]";
+		say "     [one of]'Don't give up.  Please keep looking for the stuff Nermine needs.'[or]'Thanks for helping me out.'[or]'Have you had any luck in finding the stuff to help Ronda?'[or]'Remember, she wanted something from a lizard girl at the park and the awesomest fruit you can find from the forest.'[at random]";
 	otherwise if hp of Ronda is 6:
 		say "     'Thanks for helping me out.  Good luck finding that other stuff.'[line break]";
 	otherwise if hp of Ronda is 7:
@@ -194,7 +194,7 @@ instead of going to Mall FoodCourt while ( hp of Ronda is 1 and lastfuck of rod 
 instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 ):
 	now hp of Ronda is 4;
 	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats.  'Ahh... I was wondering who the rat boy would find to be helping him.  Ironic that he should be picking you, eh?' she says, leaning across her counter.  'Well, perhaps you will be learning not to play around with things you are not understanding.  Now, as I told the rat boy, I should be needing some things to be making a cure for his love.  He is bound too tightly to the mall and cannot be leaving, even for the girl he loves.  But you are not having this problem.";
-	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  There are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.  Most of the other herbs and holy items I am having already.";
+	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  In the city, a forest has sprouted out of nowhere.  In it, there are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.  Most of the other herbs and holy items I am having already.";
 
 
 before conversing the Nermine while hp of Ronda is 5:

@@ -1,5 +1,5 @@
 Version 4 of Feral Wolf For FS by Shadowwolf94 begins here.
-[Version 4.4 - More Feral Wolf victory scene improvements - Blue Bishop and Stripes]
+[ Version 4.5 - Relocated to Urban Forest area. ]
 
 "Adds a Feral Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -160,7 +160,7 @@ When Play begins:
 	now hp entry is 45;			[ How many HP has the monster got? ]
 	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 15;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 9;		[ Size of balls apparently ;) sneaky Nuku]

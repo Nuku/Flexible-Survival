@@ -1,4 +1,5 @@
-Sprite by Nuku Valente begins here. 
+Version 2 of Sprite by Nuku Valente begins here.
+[ Version 2.1 - Relocated to Urban Forest area. ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Sprite to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -56,7 +57,15 @@ To say Sprite loss:
 		say "They pass it by without pause, leaving you hot and breathing heavily in anticipation. They start down at your feet, tickling and massaging them in turn. The work their way up your calves, and stop at your thighs. The sprites squeeze and caress and tickle your inner thighs, getting maddeningly close to the aching need between your legs.";
 		say "Finally, they turn their attention to your sopping wet pussy. They lick and stroke and tickle at you. One takes your clit into her mouth and sucks on it rigorously, driving you to your peak. Just as you are about to climax they stop once again. You look down at them questioningly through your lusty haze just in time to see one fly headfirst into your pussy. Stars explode into your vision as you finally climax with the sprite wiggling inside you. The other sprites start licking and stroking your cunt and massaging your breasts with their friend still squirming inside you. They make you cum and again and again in quick succession until your vision soon goes dark.";
 		say "You wake up some time later in a puddle of your own sweet love juices. The sprites are nowhere to be seen. You look for your backpack and see it lies open. Free sprites must have released the others after you passed out. You look around for your clothes and get dressed, still a bit dazed from your incredible time with the little fairies.";
-	
+
+
+to say spritedesc:
+	if violinspritefight is true:
+		say "     Swirling around you is a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.  They jeer at you for disturbing them, but also seem quite pleased to have had someone to play with stumble into their midst.";
+	otherwise:
+		say "     A faint sparkling from between the trees catches your eyes.  As you turn to look for it, you see it off to the side of you now and high up.  Turning again, you hear a high-pitched giggle and another flitter of motion behind you.  All of a sudden as you spin around, you are swarmed by a buzzing, flitting mob of naked, elfin females.  The tallest of them is two feet tall, many are less.  They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";
+
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -70,7 +79,7 @@ When Play begins:
 	now attack entry is "[one of]The swarm of sprites rushes over you, tickling at your sides in a maddening onslaught of the senses, leaving you giggling.[or][if cocks of player is greater than 0]A sprite zips between your thighs and grabs at your [cock of player] organ, tickling at the very tip of it with her wings as she holds on tight.[otherwise]The sprites focus on your chest, licking and rubbing against you in an excited swarm![end if][or][if cunts of player is greater than 0 and cunt length of player is greater than 5]With a sudden wet noise, you feel your vulva spread apart as a sprite flies up into you with astounding accuracy. She begins to wriggle in deeper, lost to sight, but certainly not to your slick tunnel which spasms in forced delight.[otherwise]The sprites get a sudden violent fit, grabbing tiny pebbles and rocks and pelting you with them in a hail of tiny debris.[end if][at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Sprite loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Sprite attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "A faint sparkling catches your eyes on the horizon. Squinting to look at it, you notice it getting larger by the moment. All too suddenly, it is upon you, a swarm of naked, elfin females. The tallest of them is two feet tall, many are less. They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";[ Description of the creature when you encounter it.]
+	now desc entry is "[spritedesc]";[ Description of the creature when you encounter it.]
 	now face entry is "exceptionally cute and young human female, with elfin ears at either side of your head";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "largely human, if not for the great set of dragonfly wings that rest on your back, with blackened flesh and clear for most of their length. Your form is also quite short and feminine.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "flawless human";[ skin Description, format as the text "You have (your text) skin"] 
@@ -91,7 +100,7 @@ When Play begins:
 	now hp entry is 26;			[ How many HP has the monster got? ]
 	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Forest";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]

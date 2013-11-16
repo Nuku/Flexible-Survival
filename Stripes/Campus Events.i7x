@@ -1,4 +1,5 @@
 Version 1 of Campus Events by Stripes begins here.
+[ Version 1.2 - Wrestling Wolf random encounter blocked out. ]
 [ Added Anime Club event.]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the College Campus area."
@@ -73,43 +74,43 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "     Travelling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
-	if number of entries in campuswander is 7, say "     You have an uneventual passage across the campus.";
-	let T be a random number between 1 and 7;
+	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
+	let T be a random number between 1 and 6;
 	while T is listed in campuswander:
 		increase T by 1;
-		if T is 8, now T is 1;
-	if T is 1:
+		if T is 7, now T is 1;
+[	if T is 1:
 		say "     Your wandering across the campus is interrupted as you hear a loud voice call out.  Looking over, you spot a large, muscled wolf in a wrestling outfit.  He's set up an impromptu ring beside the building you just passed.  'Ahh!  My alma mater!  It's good to be back,' he says.  'I should be able to have a few good matches here,' he says, looking around.  You try to sneak away, but he spots you.  'You should do fine for a warm-up match.'";
 		challenge "Wrestling Wolf";
-		add 1 to campuswander;
-	if T is 2:
+		add 1 to campuswander;	]
+	if T is 1:
 		say "     Your wandering across the campus is interrupted as an athletic puma herm comes rushing out from one of the buildings, plowing into you.  After a brief scuffle, you push her away and try to back off, but it's too late; she's already fixed her attention onto you.  Licking her muzzle as her cock starts to engorge with growing arousal, whatever she was running to or from completely forgotten in the face of her sexy prey.";
 		challenge "Cougar";
-		add 2 to campuswander;
-	if T is 3:
+		add 1 to campuswander;
+	if T is 2:
 		now campuswanderfight is 1;	[minor description/scene edits]
 		say "     As you travel the campus, you hear the rustle of the hedgerow beside you moments before a large, striped feline comes pouncing out of it at you.  You barely manage to avoid this sneak attack, but are now facing this large tigertaur that's found her way to the college.  Perhaps she succumbed to her infection after making it here.";
 		challenge "tigertaur";
 		now campuswanderfight is 0;	[minor description/scene edits]
-		add 3 to campuswander;
-	if T is 4:
+		add 2 to campuswander;
+	if T is 3:
 		say "     Your travel across the college grounds is interrupted as a red kangaroo girl bounds onto a nearby car, then off again, moving to bar your path with a look of lustful excitement in her eyes.";
 		challenge "red kangaroo";
-		add 4 to campuswander;
-	if T is 5:
+		add 3 to campuswander;
+	if T is 4:
 		say "     A large wolf creature leaps out from a broken window on one of the buildings.  Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you.  Shi looks you over with a hunger that is wholely carnal in nature.";
 		challenge "Painted Wolf Herm";
-		add 5 to campuswander;
-	if T is 6:
+		add 4 to campuswander;
+	if T is 5:
 		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close.  The snow leopard moans and wipes his brow, staggering a little.  'Aww man, where's the beer?  I could really use another drink,' he says, panting at the heat.  Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[otherwise]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
 		challenge "Snow Leopard";
-		add 6 to campuswander;
-	if T is 7:
+		add 5 to campuswander;
+	if T is 6:
 		say "     Preparing to cut across a large, open area on the campus, you look around carefully, wary of any hostile creatures which may spot you.  Not finding any, you make a dash for it, still scanning from side to side.  But your attempt is thwarted when you hear something above you moving in quickly.";
 		challenge "Bald Eagle";
-		add 7 to campuswander;
+		add 6 to campuswander;
 	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
-	if number of entries in campuswander is 7, now Wandering the Campus is resolved;
+	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
 
 
 Section 6 - Anime Club

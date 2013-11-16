@@ -493,7 +493,7 @@ The sarea of High Rise Detector Site is "High";
 ndmhigh is a number that varies.
 
 Instead of resolving a High Rise Detector Site:
-	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable.  Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries.  Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures.  You do eventually come across one office building that seems less populated and intact up to the top";
+	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable.  Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries.  Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures.  You do eventually come across one office building that seems less populated and sufficiently intact up to the top";
 	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	otherwise:
