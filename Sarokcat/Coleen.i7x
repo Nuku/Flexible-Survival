@@ -445,9 +445,14 @@ to say sexwithcoleen:
 			say "[coleen_pretfsex01]";
 		otherwise:
 			say "[coleen_pretfsex02]";
+		if player is purehuman:
+			if ( cocks of player + cunts of player > 1 ) or breasts of player > 2 or breast size of player > 6 or cock length of player > 9 or cock width of player > 9 or cunt length of player > 11 or cunt width of player > 9:
+				say "     'I know you still look human, but you've clearly been sexually altered.  [one of]Best not to take any chances[or]Better safe than sorry[or]Can't be too careful[at random],' she adds.";
+			otherwise:
+				say "     'I know you still look human, but [one of]it's best not to take any chances[or]better safe than sorry[or]one can't be too careful[at random],' she says.";
 		now lastcoleenfucked is turns;
 	otherwise:
-		say "'Sorry, but that seems to be how the infection spreads the fastest, and while I know I probably won't get out of this place without some changes, I think i'd like to try to keep them to a minimum.' Coleen says with a wry shrug.";
+		say "'Sorry, but that seems to be how the infection spreads the fastest.  While I know I probably won't get out of this place without some changes, I think I'd like to try to keep them to a minimum,' Coleen says with a wry shrug.";
 
 
 to say coleen_pretfsex01:
