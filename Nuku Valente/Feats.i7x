@@ -10,6 +10,7 @@ basic feats is functional.
 fun feats is a featset.
 featunlock is a number that varies.	[linked to Dr Matt/Dr Mouse hospital quest]
 autofeatloading is a truth state that varies. autofeatloading is usually false.
+boosterfeats is a number that varies. boosterfeats is usually 0.
 
 The player has a number called featgained.
 
@@ -18,7 +19,7 @@ understand "volunteer" as featgetting.
 
 Check featgetting:
 	if hp of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat ), say "You do not yet qualify for more feats." instead; 
+	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead; 
 	if hp of doctor matt <= 100:
 		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	otherwise:
@@ -337,6 +338,7 @@ This is the gainfeat rule:
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
 			now Warehouse District is known;
+			now Urban Forest is known;
 		if nam is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		if nam is "Vore Predator":
