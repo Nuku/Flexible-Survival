@@ -125,7 +125,7 @@ When Play begins:
 	now hp entry is 63;									[ The monster's starting hit points. ]
 	now lev entry is 8;                 [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 12;               [ Monster's average damage when attacking. ]
-	now area entry is "Park";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Forest";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
