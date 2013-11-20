@@ -1,5 +1,5 @@
 Version 1 of Hyena Hideout by Sarokcat begins here.
-[ Version 1.3 - Adjusted fight mechanics and Matriarch sub-form ]
+[ Version 1.4 - Hyena Gang WS scene for gang bitch ]
 
 "Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
 
@@ -75,6 +75,17 @@ instead of fucking the gang members:
 			hyenaify;
 			hyenaify;
 			now lastmemberfucked is turns - 2;
+		otherwise if wslevel is 3 and a random chance of 1 in 4 succeeds:
+			say "     As the hyenas move in around you, they start to chuckle and exchange a nod.  You feel one of them grab your ass tightly while the one whose cock you're sucking latches her paws onto your head.  A hot, acrid rush fills your mouth, flowing across your tongue and down your throat.  The others surrounding you unleash their bladders as well, pissing across your [bodydesc of player] body.  You squirm and briefly try to pull away, but don't stop drinking the hot urine despite the strong taste, your bitch body responding instinctively to being marked by the more dominant members of the pack.";
+			if cunts of player > 0:
+				say "     The one behind you purposefully shoots her stream across your loins, sending a rush of heat through you.  Your [if cocks of player > 0]cock[smn], balls, [end if]cunt[sfn] and asshole get sprayed down.  The others laugh louder at your wet moans and submissive whimpers as [if anallevel is 3 and a random chance of 2 in 7 succeeds]she presses her glans to your tight pucker and forces some of her stream right into you, marking you inside and out as the gang's property[otherwise if cocks of player > 0 and a random chance of 2 in 5 succeeds]your unwanted manhood is coated in the piss of your betters[otherwise]she presses her glans to your wet pussy and forces some of her stream right into you, marking you inside and out as the gang's property[end if].  Your hips quiver and you cum, adding your female juices[if cocks of player > 0] and semen[end if] to the mess dripping off of you.";
+			otherwise if cocks of player > 0:
+				say "     The one behind you purposefully shoots her stream across your loins, sending a rush of heat through you.  Your cock[smn], balls and asshole get sprayed down.  The others laugh louder at your wet moans and submissive whimpers as [if anallevel is 3 and a random chance of 3 in 5 succeeds]she presses her glans to your tight pucker and forces some of her stream right into you, marking you inside and out as the gang's property[otherwise]your unwanted manhood is coated in the piss of your betters[end if].  Your hips quiver and you cum, adding your semen to the mess dripping off of you.";
+			otherwise:
+				say "     The one behind you purposefully shoots her stream across your bare crotch and asshole, sending a rush of heat through you.  The others laugh louder at your wet moans and submissive whimpers as [if anallevel > 1 and a random chance of 2 in 3 succeeds]she presses her glans to your tight pucker and forces some of her stream right into you, marking you inside and out as the gang's property[otherwise]you're mocked for your lack of genitals even as your featureless crotch is being pissed all over by the hyena behind you[end if].
+			say "     When they're done, you're made to lick all their cocks clean, having to taste the piss from all of them.  You can't help but blush as you do so, humiliated by your actions, but loving it as well, knowing that you belong to them all.  That done, you're left laying in the messy puddle of their urine.  Their scent soaks into your flesh and clings to you.";
+			hyenaify;
+			now lastmemberfucked is turns;
 		otherwise:
 			If cocks of the player is greater than 0:
 				say "     Your cock dangles uselessly underneath you as they use your all to willing body, spurting its worthless submissive seed on the ground beneath you, as you are thoroughly used like the happy little breeding slut you know deep down you really are.";
