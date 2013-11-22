@@ -6776,6 +6776,7 @@ to say gsopt_start:
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "[line break]";
 	say "Welcome to...";
+	display the figure of title_graphic;
 	zephyrad rule in 1 turn from now;
 
 
@@ -6879,3 +6880,5 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
+
+include FS Graphics by Nuku Valente.

@@ -2601,7 +2601,7 @@ to say dorrpovbs:
 		now tempnum is 0;
 	if dorrp_tv4 is 1:
 		say "     Before he makes any effort to have his way with you, however, he seems intent on a bit of bestial formality, pinning you with a fore-talon whilst lifting a hind. Any meager ambiguity of the gesture is washed by the feel his hot piss hosed against your [bodydesc of player] form, the acrid, overpowering stench wafting up to assault your senses. He seems to have quite a fair amount, and exploits this to mark you thoroughly[if tempnum is 1], much in spite your protests[end if], christening you as his[if scalevalue of player < 4] little[end if] bitch. Eventually the flow recedes, and the dragon returns to the more immediate matter on his mind.";
-	say "     Moving to properly position himself [if scalevalue of player < 4]over[otherwise]on top of[end if] his new victim, you quickly the hot, firm tip of dragon's bestial tool repeatedly prodding ";
+	say "     Moving to properly position himself [if scalevalue of player < 4]over[otherwise]on top of[end if] his new victim, you quickly feel the hot, firm tip of dragon's bestial tool repeatedly prodding ";
 	if dorrp_tv3 is 2:
 		say "your exposed anal ring";
 	otherwise:
