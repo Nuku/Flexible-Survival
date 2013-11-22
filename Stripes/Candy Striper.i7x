@@ -342,14 +342,14 @@ to say sexwithCandy:
 			now title entry is "Get a blow job";
 			now sortorder entry is 3;
 			now description entry is "have him suck you off";
-[			choose a blank row in table of fucking options;
+			choose a blank row in table of fucking options;
 			now title entry is "Give a blow job";
 			now sortorder entry is 4;
-			now description entry is "have him suck you off";	]
-[			choose a blank row in table of fucking options;
+			now description entry is "have him suck you off";
+			choose a blank row in table of fucking options;
 			now title entry is "Share 69";
 			now sortorder entry is 5;
-			now description entry is "such each other off";		]
+			now description entry is "such each other off";
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";

@@ -1,5 +1,5 @@
 Version 3 of Settings Menus by Stripes begins here.
-[Version 3.1 - Ovi-Preg option added]
+[Version 3.2 - Booster Feats option added]
 
 trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
@@ -17,7 +17,7 @@ carry out trixiecheating:
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
 	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It don't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
-	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Play On[roman type] removes the time limit to the game.  [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
+	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Booster Feats[roman type] gives you one additional basic and fun feats.  [bold type]Play On[roman type] removes the time limit to the game.  [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Cheats:[roman type][line break]";
@@ -25,28 +25,29 @@ carry out trixiecheating:
 		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
 		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[otherwise][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
 		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
-		say "[link](5) Play On[as]5[end link] - [if playon is 0]Inactive[otherwise]Active[end if] (Score halved to reactivate)[line break]";
-		say "[link](6) Weak-Willed[as]6[end link] - [if weakwilled is true]Active[otherwise]Inactive[end if] (Bonus if activated)[line break]";
-		say "[link](7) Set Humanity[as]7[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
-		say "[link](8) Set Libido[as]8[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
+		say "[if boosterfeats > 0](5) Booster Feats cannot be deactivated[otherwise][link](5) Booster Feats[as]5[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[link](6) Play On[as]6[end link] - [if playon is 0]Inactive[otherwise]Active[end if] (Score halved to reactivate)[line break]";
+		say "[link](7) Weak-Willed[as]7[end link] - [if weakwilled is true]Active[otherwise]Inactive[end if] (Bonus if activated)[line break]";
+		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
+		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Game settings:[roman type][line break]";
-		say "[link](9) Set anal play content level[as]9[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
+		say "[link](10) Set anal play content level[as]10[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
 		if playercanvore is true:
-			say "[link](10) Access the vore menu[as]10[end link] -  Currently: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] and [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type][line break]";
+			say "[link](11) Access the vore menu[as]11[end link] -  Currently: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] and [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type][line break]";
 		otherwise:
-			say "(10) This option is not currently available to your character.[line break]";
-		say "[link](11) Set watersports (WS) content level[as]11[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](12) Set egg-pregnancy (ovi) content level[as]12[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
-		say "[link](13) Adjust flags[as]13[end link] - View/change warding settings[line break]";
+			say "(11) This option is not currently available to your character.[line break]";
+		say "[link](12) Set watersports (WS) content level[as]12[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
+		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
+		say "[link](14) Adjust flags[as]14[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-13)> [run paragraph on]";
+			say "Choice? (0-14)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 13:
+			if calcnumber >= 0 and calcnumber <= 14:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 13.";
+				say "Invalid choice.  Pick from 0 to 14.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -108,6 +109,16 @@ carry out trixiecheating:
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxhp of player by level of player plus 1;
 		otherwise if calcnumber is 5:
+			if boosterfeats > 0:
+				say "This ability cannot be removed once gained.";
+			otherwise:
+				add "Booster Feats" to feats of player;
+				now boosterfeats is 1;
+				say "You have gained the 'Booster Feats' cheat, but are penalized 400 points.  Pick your feats:";
+				featget;
+				funfeatget;
+				decrease score by 400;
+		otherwise if calcnumber is 6:
 			if playon is 1:
 				now playon is 0;
 				say "Play On has been deactivated[if score > 0] and your score halved[end if].  The end is nigh.";
@@ -118,7 +129,7 @@ carry out trixiecheating:
 			otherwise:
 				now playon is 1;
 				say "Play On has been activated.  You are now in extended play mode.  The rescue will never come.";
-		otherwise if calcnumber is 6:
+		otherwise if calcnumber is 7:
 			if weakwilled is true:
 				now weakwilled is false;
 				decrease score by 250;
@@ -128,7 +139,7 @@ carry out trixiecheating:
 				increase score by 250;
 				say "You have gained the 'Weak-Willed' flaw, but are rewarded 250 points.";
 				say "You now will find yourself increasingly tempted to spontaneously submit during fights as your libido increases.";
-		otherwise if calcnumber is 7:
+		otherwise if calcnumber is 8:
 			say "Set your humanity (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
@@ -137,7 +148,7 @@ carry out trixiecheating:
 				decrease score by 50;
 			otherwise:
 				say "Invalid choice - returning to menu.";
-		otherwise if calcnumber is 8:
+		otherwise if calcnumber is 9:
 			say "Set your libido (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
@@ -146,15 +157,15 @@ carry out trixiecheating:
 				decrease score by 50;
 			otherwise:
 				say "Invalid choice - returning to menu.";
-		otherwise if calcnumber is 9:
-			try analadjusting;
 		otherwise if calcnumber is 10:
-			try voremenuing;
+			try analadjusting;
 		otherwise if calcnumber is 11:
-			try WSadjusting;
+			try voremenuing;
 		otherwise if calcnumber is 12:
-			try Oviadjusting;
+			try WSadjusting;
 		otherwise if calcnumber is 13:
+			try Oviadjusting;
+		otherwise if calcnumber is 14:
 			try Flagadjusting;
 		otherwise if calcnumber is 0:
 			say "Exiting menu.";
