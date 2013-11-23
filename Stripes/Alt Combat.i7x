@@ -129,7 +129,22 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	if mindshield helmet is equipped:
 		increase plmindbonus by 3;
 	now fightoutcome is 100;
+	let nam be name entry;
+	let typ be type entry;
+	repeat through the table of infection graphics:
+		if title entry is nam:
+			now found is 1;
+			display icon entry;
+			break;
+	if found is 0:
+		repeat through the table of infection graphics:
+			if title entry is typ:
+				now found is 1;
+				display icon entry;
+				break;
+	choose row monster from table of random critters;
 	say "You run into a [name entry].[line break][desc entry][line break]";
+	let found be 0;
 
 
 Section 2 - Combat
