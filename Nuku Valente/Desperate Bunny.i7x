@@ -258,6 +258,7 @@ Rabbit Den is a room. It is fasttravel. It is private.
 
 The description of Rabbit Den is "Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.";
 Sandra is a woman.
+The icon of sandra is Figure of sandy_icon.
 The description of Sandra is "A mostly human female, if you didn't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.";
 Sandra is in Rabbit Den.
 The conversation of Sandra is { "Did I mention my name is Sandra yet? I can be a ditz sometimes about that.", "It is so nice having someone around to talk with.", "Do you think someone will come rescue us?", "I hope my rabbit is ok. I mean, yea, it did kind of bite me and turn me into a crazy rabbit lady, but he is still my pet.", "You smell nice. God that sounded weird, sorry.", "Hello there!" }

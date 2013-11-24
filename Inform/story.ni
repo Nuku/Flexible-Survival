@@ -22,6 +22,7 @@ Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
+include FS Graphics by Nuku Valente.
 
 [Absolute value]
 To decide which number is the absolute value of (N - a number):
@@ -6881,4 +6882,3 @@ When play begins:
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
 
-include FS Graphics by Nuku Valente.
