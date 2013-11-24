@@ -1,42 +1,78 @@
-Version 1 of Underground Events by Wahn begins here.
+Version 2 of Underground Events by Wahn begins here.
+[ Version 2 - Captive Breeding with a male version ]
 
 Captive Breeding is a situation.
 The sarea of Captive Breeding is "Sealed";
 
 when play begins:
-	add Captive Breeding to badspots of girl;     
+	add Captive Breeding to badspots of girl;
+	add Captive Breeding to badspots of guy;
+
+CaptiveBreederEncounter is a number that varies. 
 
 Instead of resolving a Captive Breeding:
-	say "     Walking through the dark passages of the expansive underground warren that is in the basement of the Trevor Labs, you hear something from up ahead - moaning. Who might that be, down here in the lair of the tentacle beasts? Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
-	say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
-	say "     [line break]";
-	say "     Uh oh - seems like what's in her wants out - now! What do you do? Stay with the woman [link](1)[as]1[end link], observe what's happening - from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		otherwise:
-			say "Invalid choice.  Type [link]1[end link] to help with the birth, [link]2[end link] to observe or [link]3[end link] to leave.";
-	if calcnumber is 1:								[stay with the woman]
-		say "     Suddenly thrust into this unusual situation, you decide to do your best in helping the woman give birth to... whatever it is. Taking hold of her hand, which thankfully isn't covered by her goo bindings, you try to calm her a bit with soft-spoken words and wipe the sweat of labor off her brow. From your ringside seat, you watch a tentacle with a whole row of suckers worm its way out of the woman's vagina, followed by another and another, all of them taking hold on the floor and the woman's legs as the creature struggles to pull itself out of her womb. Helped along by the woman's contractions, soon the little tentacle monster slips out of her with a wet, sloshing noise. Then it scuttles off, vanishing under a shelf faster than you could catch it.";
+	if a random chance of 1 in 2 succeeds:   [impregnated woman]
+		say "     Walking through the dark passages of the expansive underground warren that is in the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [otherwise]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
+		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
 		say "     [line break]";
-		say "     You're left alone with the human woman, down in the sub-levels of the Trevor Labs. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
-		if cocks of player > 0 and libido of player > 40:		
-			say "     [cuckold choice]";
-		say "     You stroke the captive woman's hair, telling her to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
-	otherwise if calcnumber is 2:			[observe]
-		say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive woman pants and gasps as contractions run through her lower body, then you see a tentacle with a whole row of suckers emerge from her pussy, taking hold of her leg to pull the rest of the creature free. Another and another follows, and soon the woman's monstrous offspring emerges with a wet, sloshing noise. It quickly scuttles off, vanishing under a shelf faster than you'd have thought.";
+		now CaptiveBreederEncounter is 1;		
+		say "     Uh oh - seems like what's in her wants out - now! What do you do? Stay with the woman [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			otherwise:
+				say "Invalid choice.  Type [link]1[end link] to help with the birth, [link]2[end link] to observe or [link]3[end link] to leave.";
+		if calcnumber is 1:								[stay with the woman]
+			say "     Suddenly thrust into this unusual situation, you decide to do your best in helping the woman give birth to... whatever it is. Taking hold of her hand, which thankfully isn't covered by her goo bindings, you try to calm her a bit with soft-spoken words and wipe the sweat of labor off her brow. From your ringside seat, you watch a tentacle with a whole row of suckers worm its way out of the woman's vagina, followed by another and another, all of them taking hold on the floor and the woman's legs as the creature struggles to pull itself out of her womb. Helped along by the woman's contractions, soon the little tentacle monster slips out of her with a wet, sloshing noise. Then it scuttles off, vanishing under a shelf faster than you could catch it.";
+			say "     [line break]";
+			say "     You're left alone with the human woman, down in the sub-levels of the Trevor Labs. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
+			if cocks of player > 0 and libido of player > 40:		
+				say "[cuckold choice]";
+			say "     You stroke the captive woman's hair, telling her to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+		otherwise if calcnumber is 2:			[observe]
+			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive woman pants and gasps as contractions run through her lower body, then you see a tentacle with a whole row of suckers emerge from her pussy, taking hold of her leg to pull the rest of the creature free. Another and another follows, and soon the woman's monstrous offspring emerges with a wet, sloshing noise. It quickly scuttles off, vanishing under a shelf faster than you'd have thought.";
+			say "     [line break]";
+			say "     You're left looking at the human woman, lying on the floor moaning. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
+			if cocks of player > 0 and libido of player > 40:		
+				say "[cuckold choice]";		
+			say "     [line break]";
+			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";		
+		otherwise:												[leave]
+			say "     This is getting way to creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth."; 
+	otherwise: 	[mpregged man]
+		say "     Walking through the dark passages of the expansive underground warren that is in the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [otherwise]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with stacks of large crates, you find a man, slouched on his back on one of the crates against the back wall. His hands and forearms are stuck to the wall above his head in some kind of substance, looking like solidified slimy goo, and his legs are similarly glued to the side crate under him in a lewd stretched position that leaves his crotch and ass freely accessible. He's naked, his cock fully erect, twitching and oozing precum, and his belly bulges massively upwards in what looks to be pregnancy.";
+		say "     Moving closer, you try talking to the man, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around his mouth, you'd guess something's been... feeding him, to keep him alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused his eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human man. Looking down, you see a puddle of slime on the ground and more of it running down the side of the crate as well as dripping out of the man's asshole. The skin of his belly ripples with movement under it.";
 		say "     [line break]";
-		say "     You're left looking at the human woman, lying on the floor moaning. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
-		if cocks of player > 0 and libido of player > 40:		
-			say "     [cuckold choice]";		
-		say "     [line break]";
-		say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";		
-	otherwise:												[leave]
-		say "     This is getting way to creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth.";  	
-	now Captive Breeding is resolved;
+		now CaptiveBreederEncounter is 1;
+		say "     Uh oh - seems like what's in her wants out - now! What do you do? Stay with the man [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			otherwise:
+				say "Invalid choice.  Type [link]1[end link] to help with the birth, [link]2[end link] to observe or [link]3[end link] to leave.";
+		if calcnumber is 1:								[stay with the man]
+			say "     Suddenly thrust into this unusual situation, you decide to do your best in helping the man give birth to... whatever it is. Putting a hand on his chest and the other on his squirming belly, you try to get through to him that he's not all alone and to calm him a bit with soft-spoken words. Wiping the sweat of labor off his brow, you watch a tentacle with a whole row of suckers worm its way out of the man's asshole, followed by another and another, all of them taking hold of the first thing they reach - be it the crate or the man's legs - as the creature struggles to pull itself out of his body. Helped along by the gasping man's contractions, soon the little tentacle monster slips out of him with a wet, sloshing noise and lands with a splat on the ground below. Then it scuttles off, vanishing in the shadows faster than you could catch it.";
+			say "     [line break]";
+			say "     You're left alone with the human man, down in the sub-levels of the Trevor Labs. What to do now... your thoughts wander to getting him out of here, but not knowing when (or even if) his current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least his captor seems to keep him alive - there's still hope he can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in him in the meantime you can only wonder about.";
+			if libido of player > 40:		
+				say "[cuckold choice male]";
+			say "     You stroke the captive man's cheek, telling him to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+		otherwise if calcnumber is 2:			[observe]
+			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive man pants and gasps as contractions run through his lower body, then you see a tentacle with a whole row of suckers emerge from his asshole, taking hold of the crate below to pull the rest of the creature free. Another and another follows, and soon the man's monstrous offspring emerges with a wet, sloshing noise and lands with a splat on the ground below. It quickly scuttles off, vanishing in the shadows faster than you'd have thought.";
+			say "     [line break]";
+			say "     You're left looking at the human man, slouched on the crate moaning. What to do now... your thoughts wander to getting him out of here, but not knowing when (or even if) his current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least his captor seems to keep him alive - there's still hope he can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in him in the meantime you can only wonder about.";
+			if libido of player > 40:		
+				say "[cuckold choice male]";		
+			say "     [line break]";
+			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";		
+		otherwise:												[leave]
+			say "     This is getting way to creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth."; 
 	
 to say cuckold choice:
 	say "     A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating her with more of its offspring. But no, you couldn't just knock her up - or could you? ";
@@ -47,6 +83,38 @@ to say cuckold choice:
 	otherwise:
 		say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
 	
+to say cuckold choice male:
+	setmonster "human";
+	choose row monster from the table of random critters;	
+	if cocks of player > 0:
+		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";
+		say "     [line break]";
+		say "     But no, you couldn't just knock this guy up - or could you? ";
+		if player consents:
+			say "     [line break]";
+			say "     'It's for his own good.' echoes as a somewhat lame excuse for your actions through your horny mind as you slip off your clothes and stroke your cock to full hardness. Then step up to stand in front of the crate, idly thinking that it's just the right height, and bring your erection to his opening, still wet with slimy goo. He moans in arousal as he feels your cockhead against his pucker, then gasps as you plunge right in. Still pretty tight for just having had that creature in him - but then, it was squishy enough not to stretch him out too much on the way out. You pump in and out of the man's tight hole, amazed how good this is and how full your balls feel as they get ready to blast your load into the human below you. The creature's slime lubing your shaft as it thrusts deep might have something to do with that...";
+			say "     But no matter, your thoughts are fully absorbed with cuckolding the tentacle monster here and now. Speeding up your movements more and more, you finally slam in all the way and cum, burst after burst of your seed shooting into the transformed man's receptive insides, no doubt finding its way to a womb somewhere in him. There, that should mix up the tentacle monster breeding program a bit... breathing deeply, you pull out and get your clothes back on.";
+		otherwise:
+			say "     [line break]";
+			say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
+	otherwise:
+		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. And his well-sized cock is fully hard too. A deviant little thought rears its head inside you, telling you that you could at least give the poor guy some... relief at least, since you can't/won't free him.";
+		say "     [line break]";
+		say "     Will you climb on the crate with the man and ride his cock? ";
+		if player consents:
+			say "     [line break]";
+			if cunts of player > 0:
+				say "     Eager to make use of - err, give the man relief - you strip off your gear and clothes, then climb on top of the crate with him and straddle his hips. With his shaft hard and ready to go, all slick in precum, it's just a question of holding it up and sinking yourself down on his shaft. He fills you quite nicely, rubbing sensitive spots inside you as you rock back and forth, grinding your hips down against his. Fucking yourself on his hard pole, you fall into a kind of aroused trance, with sex the only thing that matters anymore. Seems like some of the aphrodisiacs that the creature fed to him wound up in his precum too...";
+				say "     With the oversexed statue he already is in, it doesn't take all that long before your captive partner orgasms, trembling and moaning loudly as his cock blasts burst after burst of cum into you. Though even as he finishes cumming a short while later, his cock doesn't even begin to go down allowing you to keep riding him without pause, soon reaching your own climax, then continuing after catching your breath. In the course of quite a while of sweaty sexual grinding, he fills you with his cum several times over and you orgasm again and again, until finally your partner's head sinks back to rest against the wall and he falls into exhausted sleep. With shakey legs, you climb off him, leaving a messy trail of cum dripping from your [if cunts of player > 0]pussy [otherwise]ass [end if]as you go to collect your clothes.";
+				say "     [impregchance][impregchance][impregchance]";
+		otherwise:
+			say "     [line break]";
+			say "     Do you at least jerk him off? ";
+			if player consents:
+				say "     [line break]";
+				say "     Putting a hand on the captive human's cock, you jerk its long hard shaft, making him give pleased moans and grunts. Fondling his balls with the other one, you can feel how full they are, no doubt put into overdrive of cum-production from his oversexed state - he really must be aching for relief. It doesn't take long before your efforts drive him to a quite messy and noisy orgasm, with the guy's erection just blasting away with spurt after massive spurt of cum splashing against his ripped chest. But even after he stops cumming with that impressively large load, he's not done by far.";
+				say "     The cock in your hand shows no sign of going soft and his balls seem as full as ever, so you continue on jerking him off to another climax, and another. Finally, when he's splattered in cum all over, his shaft goes soft and with a satisfied sigh the man's head sinks back against the wall in exhausted sleep.";
+			
 Trashed Refuge is a situation.
 The sarea of Trashed Refuge is "Sealed";
 
