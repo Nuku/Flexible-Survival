@@ -1,5 +1,6 @@
 Version 4 of Stuck Dragon by hiccup begins here.
 [Version 4.2 - Updated to extended heat table - Stripes]
+[Version 4.3 - Updated to show egg count - cmacleod42]
 
 Section 1 - Finding the Building
 
@@ -26,7 +27,7 @@ to say dragonessbldg:
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by the rear of a large dragoness. The rest of its body is on the other side of the doorway so it can't see you";
 		if lust of Christy > 2:
-			say ".  There is a collection of large dragon eggs in the room as well, safely pushed to one side by her tail";
+			say ".  There [dragoneggsfull] in the room as well, safely pushed to one side by her tail";
 		say ".";
 	otherwise:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of collapsed debris from when Christy was pulled free.";
@@ -36,7 +37,20 @@ instead of sniffing the Isolated Street:
 
 instead of sniffing the Old Building:
 	say "The air in this old building is thick with the scent of aroused dragoness pussy.";
+	
+to say dragoneggsfull:
+	if lust of Christy > 5:
+		say "are ";
+	otherwise:
+		say "is a ";
+	say "[dragoneggs]";
 
+to say dragoneggs:
+	if lust of Christy > 5:
+		say "[lust of Christy divided by 3] clutches";
+	otherwise:
+		say "clutch";
+	say " of large dragon eggs";
 
 Section 2 - Trapped Dragon Rear
 
@@ -69,9 +83,9 @@ to say dragonessdesc:
 	otherwise if lust of Christy is 0:							[talked, no sex]
 		say ".";
 	otherwise if remainder after dividing lust of Christy by 3 is 1:		[recently fucked]
-		say ".  You can still see the cum you left in her before dripping from her well-used cunt[if lust of Christy is not 1].  Nearby, there are several huge eggs on the ground next to her from fucking her earlier[end if].";
+		say ".  You can still see the cum you left in her before dripping from her well-used cunt[if lust of Christy is not 1].  Nearby, there [dragoneggsfull] on the ground next to her from fucking her earlier[end if].";
 	otherwise if remainder after dividing lust of Christy by 3 is 2:		[egg-stuffed]
-		say ".  Her belly has swollen up, pressing her even more tightly into the doorway and raising her pussy out of reach.  Touching her, you can feel the bumps of several large, hard forms inside her waiting to come out.  She moans in pleasure at your touch and squirms a little.  It looks like you've impregnated her[if lust of Christy is not 2] again.  Nearby, there are several huge eggs on the ground next to her from fucking her earlier[end if].";
+		say ".  Her belly has swollen up, pressing her even more tightly into the doorway and raising her pussy out of reach.  Touching her, you can feel the bumps of several large, hard forms inside her waiting to come out.  She moans in pleasure at your touch and squirms a little.  It looks like you've impregnated her[if lust of Christy is not 2] again.  Nearby, there [dragoneggsfull] on the ground next to her from fucking her earlier[end if].";
 	otherwise if remainder after dividing lust of Christy by 3 is 0:		[ready for fucking]
 		say ".  Her belly has gone back to her normal size and there [if lust of Christy > 5]is another clutch of[otherwise]are several[end if] huge eggs on the ground next to her from fucking her earlier.";
 	if NoIntroduction is not 0:
@@ -179,7 +193,7 @@ to say backroomdesc:
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by the front half of a large dragoness. You can't see the rear of her body, because it's on the other side of the doorway.  There are several bottles of water and packages of food next to the dragoness, which explains why she didn't die of hunger or thirst while being trapped here.";
 	otherwise:
-		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of debris when the doorway collapsed[if lust of Christy > 2 and lust of Christy < 6].  There is are several huge eggs on the ground in an improvised nest by dragoness has constructed in her new lair[otherwise if lust of Christy > 5].  There is another clutch of huge eggs on the ground in an improvised nest by dragoness has constructed in her new lair[end if].";
+		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of debris when the doorway collapsed[if lust of Christy > 2 and lust of Christy < 6].  There is are several huge eggs on the ground in an improvised nest by dragoness has constructed in her new lair[otherwise if lust of Christy > 5].  There [dragoneggsfull] on the ground in an improvised nest by dragoness has constructed in her new lair[end if].";
 
 
 instead of sniffing Back Alley:
@@ -199,7 +213,7 @@ to say christydesc:
 	if hp of Christy is 0 or hp of Christy is 1:
 		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale.  The dragoness has beautiful, scarlet colored scales and emerald colored eyes.  There are two large wings on her back.  She is laying on her front and her body is so large that it is completely stuck in the doorway with no space between her body and the doorframe.  The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it.  The concrete wall around the doorframe has cracked, but not given way yet.";
 	otherwise:
-		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale.  The dragoness has beautiful, scarlet colored scales and emerald colored eyes.  There are two large wings on her back.  Now that she's been freed from the doorway, you're able to see just how big she is.  She's well over 10 feet tall and 15 feet long[if remainder after dividing lust of Christy by 3 is 1].  You can still see the cum you left in her before dripping from her well-used cunt[otherwise if remainder after dividing lust of Christy by 3 is 2].  Christy's belly is quite full of eggs right now, making it difficult for the large dragoness to move around in her improvised lair.  You smile happily at your handywork, looking forward to her laying her clutch so you can play with her again and maybe fill her all over again with eggs[end if][if lust of Christy > 2].  The red dragon can often be found snuggled around her clutch of eggs protectively[end if].";
+		say "     She looks like a dragon that was ripped straight from the pages of a fairy tale.  The dragoness has beautiful, scarlet colored scales and emerald colored eyes.  There are two large wings on her back.  Now that she's been freed from the doorway, you're able to see just how big she is.  She's well over 10 feet tall and 15 feet long[if remainder after dividing lust of Christy by 3 is 1].  You can still see the cum you left in her before dripping from her well-used cunt[otherwise if remainder after dividing lust of Christy by 3 is 2].  Christy's belly is quite full of eggs right now, making it difficult for the large dragoness to move around in her improvised lair.  You smile happily at your handywork, looking forward to her laying her clutch so you can play with her again and maybe fill her all over again with eggs[end if][if lust of Christy > 2].  The red dragon can often be found snuggled around her [dragoneggs] protectively[end if].";
 
 
 instead of sniffing Christy:
