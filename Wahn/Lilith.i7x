@@ -1,5 +1,6 @@
 Version 1 of Lilith by Wahn begins here.
 [Version 1: Npc setup]
+[Version 1.1: cmacleod42 - add Offspring Talk option]
 
 "Adds an NPC named Lilith to the Flexible Survival game"
 
@@ -87,6 +88,12 @@ to say LilithTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Make him herm if male, or fully female if herm.";
 		now toggle entry is LilithTalk rule;
+	if LilithKidCounter > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Offspring";
+		now sortorder entry is 9;
+		now description entry is "Discuss your offspring with Lilith.";
+		now toggle entry is LilithTalk rule;	
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 10;
@@ -110,7 +117,9 @@ This is the LilithTalk rule:
 		if (nam is "Ask about Elijah"):
 			say "[LilithTalk2]";	
 		if (nam is "Let her change your demon brute pet"):
-			say "[LilithTalk3]";	
+			say "[LilithTalk3]";
+		if (nam is "Offspring"):
+			say "[LilithTalk4]";
 		wait for any key;
 		
 to say LilithTalk1:
@@ -146,7 +155,10 @@ to say LilithTalk3:
 			say "     [LilithPregCheck]";
 		otherwise if DemonBruteStatus is 2:
 			say "     She looks a bit surprised and says 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";	
-				
+			
+to say LilithTalk4:
+	say "You discuss your demon offspring with Lilith, and she smiles at you. 'Our [LilithKidCounter] demon spawn are busy corrupting the world!'";
+			
 to say LilithPregCheck:
 	if LilithPregnancy is 0 or LilithPregnancy is 4:
 		if cocks of player > 0:
