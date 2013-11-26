@@ -4,6 +4,7 @@ Figure of title_graphic is the file "title.png".
 Figure of pixel is the file "pixel.png".
 Figure of sandy_icon is the file "sandra.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
+Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -16,6 +17,7 @@ before examining a thing(called t):
 Table of infection graphics
 title	icon(figure name)
 "Hermaphrodite Gryphon"	Figure of griffon_icon
+"Snow Leopard"	Figure of SnowLeopard_icon
 
 
 FS Graphics ends here.
