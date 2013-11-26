@@ -77,6 +77,7 @@ title	description
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
 "Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room.[line break]junk (item): destroy an item forever."
 "Weapons"	"Some items you find make good weapons! Be sure to [bold type]use (weapon)[roman type] before a battle to have them at hand."
+"Graphics"	"Graphics can be enabled or disabled by typing [bold type]graphics[roman type]."
 "Scavenging"	"Type [bold type]scavenge[roman type] in any room you can fast travel from to hunt for food and water."
 "Socializing"	"You can [bold type]talk (person)[roman type] to chat it up. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."

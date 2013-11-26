@@ -135,13 +135,13 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	repeat through the table of infection graphics:
 		if title entry is nam:
 			now found is 1;
-			display icon entry;
+			project icon entry;
 			break;
 	if found is 0:
 		repeat through the table of infection graphics:
 			if title entry is typ:
 				now found is 1;
-				display icon entry;
+				project icon entry;
 				break;
 	choose row monster from table of random critters;
 	say "You run into a [name entry].[line break][desc entry][line break]";

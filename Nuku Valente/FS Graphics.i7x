@@ -7,11 +7,28 @@ Figure of griffon_icon is the file "bluegriffon.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
+graphics is a truth state that varies.
+graphics is usually true.
 
 before examining a thing(called t):
 	if the icon of t is figure of pixel:
 		continue the action;
-	display the icon of t;
+	project the icon of t;
+
+to project (x - a figure name):
+	if graphics is true:
+		display x;
+		
+graphicmoding is an action applying to nothing.
+understand "graphics" as graphicmoding.
+
+carry out graphicmoding:
+	if graphics is true:
+		say "Graphics are now disabled.";
+		now graphics is false;
+	otherwise:
+		say "Graphics are now enabled.";
+		now graphics is true;
 
 Table of infection graphics
 title	icon(figure name)
