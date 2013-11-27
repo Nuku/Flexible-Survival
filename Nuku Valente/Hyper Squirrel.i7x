@@ -249,14 +249,14 @@ to say snowsquirrelgivein:
 		if cunt width of player < 6, now cunt width of player is 6;
 		if "Modest Organs" is listed in feats of player:
 			now cunt length of player is 8;
-			now cunt width of player is 4;
+			now cunt width of player is 5;
 	if "Female Preferred" is not listed in feats of player:
 		if cocks of player is 0, now cocks of player is 1;
 		if cock length of player < 9, now cock length of player is 9;
 		if cock width of player < 6, now cock width of player is 6;
 		if "Modest Organs" is listed in feats of player:
 			now cock length of player is 8;
-			now cock width of player is 4;
+			now cock width of player is 5;
 	say "     After guzzling down her now infectious seed and each getting filled from behind, you become more and more a wild squirrel for your sexy lover and mate.  You pull her into your arms and chitter happily as your loins change, becoming better suited to please her and she chitters back as she changes as well";
 	if cocks of player > 0:
 		say ".  Pulling her into your lap, you push your cock into her pussy and bounce her in your lap, her large breasts pressed to your chest.  The wild squirrels stand to either side of you, letting you both suck squirrel cock while fucking your new mate.  This beastial fucking goes on until you cum hard, filling her womb with your cum and each getting another tasty load from the squirrels down your throat.  After that, you're mounted again by the wild pair while Snow takes a turn sucking you off.  The romp continues on like this through a myriad of pairings and positions for hours despite the fact you both succumbed long ago.  Eventually, you four run off together back to the their nest to rest before going off in search of others to share your addictive lust with.";
@@ -342,14 +342,14 @@ Instead of resolving a wild squirrels:
 			if cunt width of player < 6, now cunt width of player is 6;
 			if "Modest Organs" is listed in feats of player:
 				now cunt length of player is 8;
-				now cunt width of player is 4;
+				now cunt width of player is 5;
 		if "Female Preferred" is not listed in feats of player:
 			if cocks of player is 0, now cocks of player is 1;
 			if cock length of player < 9, now cock length of player is 9;
 			if cock width of player < 6, now cock width of player is 6;
 			if "Modest Organs" is listed in feats of player:
 				now cock length of player is 8;
-				now cock width of player is 4;
+				now cock width of player is 5;
 		end the game saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	otherwise:
 		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";

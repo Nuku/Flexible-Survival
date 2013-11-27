@@ -400,7 +400,7 @@ to say libraryexplore:
 		now body of player is body entry;
 		now cock of player is cock entry;
 		if hellHoundLevel is 0:
-			if "Male Preferred" is not listed in feats of player or "Herm Preferred" is not listed in feats of player or "One Way" is not listed in feats of player:
+			if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "One Way" is not listed in feats of player and "Always Cocky" is not listed in feats of player:
 				now cocks of player is 0;
 				now cock length of player is 0;
 				now cock width of player is 0;

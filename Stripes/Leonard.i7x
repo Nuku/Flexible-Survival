@@ -862,7 +862,7 @@ Instead of resolving Hunting Prides:
 			now cunt width of player is 0;
 			now breasts of player is 2;
 			now breast size of player is 0;
-		otherwise if "Herm Preferred" is listed in feats of player:
+		otherwise if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 			now cunts of player is 1;
 			if cunt length of player < 9, now cunt length of player is 9;
 			if cunt width of player < 3, now cunt width of player is 3;
@@ -909,7 +909,7 @@ to say leonardrivalfight:
 			say "     Your body, no longer able to maintain itself locked as a male, starts to become more feminine and girlish as your[if cocks of player > 1]cocks go[otherwise]cock goes[end if] away to be replaced by a wet and juicy cunt.";
 			remove "Male Preferred" from feats of the player;
 		say "     As the mewling feline starts to nurse from your nipple, your body continues to change, becoming larger and stronger than the girlish lionesses around you.  When your felines from your work group notice this change, they mewl happily and start lavishing attention upon you, helping you grow even more matronly.  You caress and snuggle them in turn, giving them turns at your other breast as they show their affection for their new pride mother.  You purr and nuzzle the raven-haired feline, rumbling that she's home now and that her new pride loves her very much";
-		if "Herm Preferred" is listed in feats of player:
+		if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 			say ".  And to show her how much you care for her, you shift her over into your lap onto your throbbing clit-like erection, sinking it into her wet pussy, fucking a hot load from her matronly pride mother into her needy womb.  As you're cumming inside her, plumping her up with your virile seed, you feel Leonard there behind you, nuzzling and nibbling at your neck as you finish claiming her for the pride, telling you what a beautiful mate you've become.";
 		otherwise:
 			say ".  And to show her how much her pride cares for her, you hold her steady as Leonard moves in behing her, sinking his throbbing cock into her wet pussy, fucking a hot load of his leonine seed into her needy womb.  As he's cumming inside her, plumping her up with his virile seed, Leonard nuzzles and nibbles at your neck, telling you what a beautiful mate you've become.";
@@ -942,7 +942,7 @@ to say leonardrivalfight:
 		now breasts of player is 2;
 		if breast size of player < 5, now breast size of player is 5;
 		now breast size entry is 5;
-		if "Herm Preferred" is listed in feats of player:
+		if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 			now cocks of player is 1;
 			if cock length of player < 9, now cock length of player is 9;
 			if cock width of player < 6, now cock width of player is 6;
@@ -1004,7 +1004,7 @@ to say leonardrivalfight:
 			now cunt width of player is 0;
 			now breasts of player is 2;
 			now breast size of player is 0;
-		otherwise if "Herm Preferred" is listed in feats of player:
+		otherwise if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 			now cunts of player is 1;
 			if cunt length of player < 9, now cunt length of player is 9;
 			if cunt width of player < 3, now cunt width of player is 3;

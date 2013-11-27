@@ -79,19 +79,12 @@ to say awesome desc:
 		if "Male Preferred" is listed in feats of player:
 			now Awesome_sex is 2;
 			now sex entry is "Male";
-			now breasts entry is 0;
-			now breast size entry is 0;
+		otherwise if "Female Preferred" is listed in feats of player:
+			now Awesome_sex is 1;
+			now sex entry is "Female";
 		otherwise:
-			if "Female Preferred" is listed in feats of player:
-				now Awesome_sex is 1;	
-				now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-				now breast size entry is 3;		[Size of breasts infection will try to attain ]
-				now sex entry is "Female";
-			otherwise:
-				now breasts entry is 2;			[ Number of Breasts infection will give you. ]
-				now breast size entry is 3;		[Size of breasts infection will try to attain ]
-				now Awesome_sex is 0;
-				now sex entry is "Both";
+			now Awesome_sex is 0;
+			now sex entry is "Both";
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
 Table of random critters (continued)

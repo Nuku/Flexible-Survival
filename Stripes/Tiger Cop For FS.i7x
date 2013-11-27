@@ -306,7 +306,7 @@ to say totalTH:
 	now body of player is body entry;
 	now cock of player is cock entry;
 	if "Male Preferred" is listed in feats of player:
-		say "(Male Preferred, locked results)";
+[		say "(Male Preferred, locked results)";	]
 		if cocks of player is 0:			[Minimum of TH standard or greater]
 			now cocks of player is 1;
 		if cock length of player < 9:
@@ -314,7 +314,7 @@ to say totalTH:
 		if cock width of player < 5:
 			now cock width of player is 5;
 	otherwise if "Female Preferred" is listed in feats of player:
-		say "(Female Preferred, locked results)";
+[		say "(Female Preferred, locked results)";	]
 		if cunts of player is 0:
 			now cunts of player is 1;
 		if cunt length of player < 12:
@@ -325,7 +325,7 @@ to say totalTH:
 		if breast size of player < 4:
 			now breast size of player is 4;
 	otherwise if "One Way" is listed in feats of player:
-		say "(One Way, locked results)";
+[		say "(One Way, locked results)";		]
 		if cocks of player is 0:			[Minimum of TH standard or greater]
 			now cocks of player is 1;
 		if cock length of player < 9:

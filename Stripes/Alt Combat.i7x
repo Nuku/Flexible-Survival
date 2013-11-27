@@ -1181,6 +1181,14 @@ to win:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
 	increase the XP of the player by lev entry times two;
+	if the player is dominant:
+		let jj be a random number between 1 and 4;
+		if jj is 1:			[libido boost]
+			increase libido of player by 5;					[flat libido boost]
+		otherwise if jj if 2:
+			increase morale of player by 1;					[flat morale boost]
+		otherwise:
+			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
 		increase the xp of the companion of the player by lev entry times two;

@@ -140,8 +140,8 @@ to say lwmast1:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your pussy.  You release squeaky growls of pleasure as you tease the latex folds and your juices run down your thighs.  Your altered paws have trouble teasing your slit effectively, but you make due with stroking it[if cunt width of player > 3] and pushing a somewhat malleable paw into your cunt[end if].  Driven to climax eventually, you moan loudly and release a spurt of latex-like femme cum.  While you lay there, panting on your back, you lick your paws clean";
 		if cunt width of player < 5 and "Male Preferred" is not listed in feats of player:
 			increase cunt width of player by 1;
-			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
-				now cunt width of player is 4;
+			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
+				now cunt width of player is 5;
 
 to say lwmast2:
 	if cunts of player > 0:

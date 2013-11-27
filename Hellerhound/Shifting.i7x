@@ -148,32 +148,7 @@ To transform:
 		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 		now tailname of player is name entry;
 		now tail of player is tail entry;
-	if breasts of player is not breasts entry:
-		decrease breast size of player by 2;
-		follow the breast descr rule;
-		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or breasts of player is 0:
-			increase breasts of player by 2;
-			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-		otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
-			decrease breasts of player by 2;
-			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
-		increase breast size of player by 2;
-	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		increase breast size of player by 1;
-		increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		decrease breast size of player by 1;
-		decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	follow the breast change rule;
 	if bodyname of player is not name entry:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 		now bodyname of player is name entry;

@@ -32,7 +32,7 @@ to say latexfoxrape:
 			otherwise if cock length of player is less than 10:
 				say ". Your [cock of player] cock slides into the fox with little effort, the tight well lubed hole seems to suck you in even deeper as the Fox whimpers in pleasure.";
 			otherwise if cock length of player is less than 15:
-				say "Y. ou place the head of your ample [cock of player] cock at the Foxes dribbling asshole slowly increasing the pressure. With a small yelp from the Fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
+				say ". You place the head of your ample [cock of player] cock at the Foxes dribbling asshole slowly increasing the pressure. With a small yelp from the Fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
 			otherwise:
 				say ". With a sadistic grin you point your gargantuan [cock of player] missile at its target. The fox's eyes go wide when it realizes how large you are and starts trying to crawl away. Having none of that, you grab the fox by its ankles and start pulling him towards you. The fox's legs stretch elastically as you pull, his poor little asshole straining against your rod. Finally the fox's rubbery sphincter relaxes enough to let you in, and like a slingshot the fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the fox is just fine as he lets out a euphoric yelp and his eyes glaze over lost in the pleasurable fullness.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]

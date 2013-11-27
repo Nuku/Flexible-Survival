@@ -177,14 +177,13 @@ to say meetHellhound:
 		say "     'So, will you let me change you, mortal?  I do promise I don't want anything foolish or incorporeal like your soul.  I am just a gate keeper after all.  I have no use for such things.'";
 		say "     Shall you accept the Hellhound's dark offer?";
 		if player consents:
-			if "Herm Preferred" is listed in feats of player:
-				remove "Herm Preferred" from feats of the player;
-			if "Male Preferred" is listed in feats of player:
+			remove "Herm Preferred" from feats of the player, if present;
+			if "Male Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 				now isHellhound is true;
 				now maleHound is True;
 				now hellHoundLevel is 1;
 				Hellhound infect male;
-			otherwise if "Female Preferred" is listed in feats of player:
+			otherwise if "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
 				now isHellhound is true;
 				now maleHound is false;
 				now hellHoundLevel is 1;

@@ -259,33 +259,7 @@ to say reindeerbreastheat:
 			if name entry is "Reindeer":
 				now monster is y;
 				break;
-		[copied entirely from breast change section of 'to infect']
-		if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
-			decrease breast size of player by 2;
-			follow the breast descr rule;
-			if breasts entry is greater than breasts of player:
-				increase breasts of player by 2;
-				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-			otherwise:
-				decrease breasts of player by 2;
-				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
-			increase breast size of player by 2;
-		if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			increase breast size of player by 1;
-			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-		if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			decrease breast size of player by 1;
-			decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		follow the breast change rule;
 	otherwise:
 		say "You moan lustfully and fondle your chest, teasing your nipples.  Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal.  As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog.  Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]

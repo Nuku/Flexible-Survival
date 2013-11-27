@@ -95,7 +95,7 @@ Instead of resolving a Skunkbeast Battle:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			if "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or (isHellhound is true and maleHound is false):	[Forced female]
+			if "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player or (isHellhound is true and maleHound is false):	[Forced female]
 				if cunts of player is 0, now cunts of player is 1;
 				if cunt length of player < cunt length entry, now cunt length of player is cunt length entry;
 				if cunt width of player < cunt width entry, now cunt width of player is cunt width entry;

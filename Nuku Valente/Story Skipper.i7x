@@ -668,7 +668,7 @@ To reciting2:
 						if foundfel is 1:
 							now scale entry is 3;
 							now breast size entry is 5;
-							if "Herm Preferred" is listed in feats of player:
+							if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 								now sex entry is "Both";
 								now cocks entry is 1;
 								now cock length entry is 9;
