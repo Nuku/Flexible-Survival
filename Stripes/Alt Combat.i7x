@@ -1185,7 +1185,7 @@ to win:
 		let jj be a random number between 1 and 4;
 		if jj is 1:			[libido boost]
 			increase libido of player by 5;					[flat libido boost]
-		otherwise if jj if 2:
+		otherwise if jj is 2:
 			increase morale of player by 1;					[flat morale boost]
 		otherwise:
 			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
