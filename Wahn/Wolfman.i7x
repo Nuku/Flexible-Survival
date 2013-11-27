@@ -526,13 +526,14 @@ Section 5 - Septus, the wolfman talent scout
 Septus is a man.  Septus is in Wolfman Lair.  The hp of Septus is normally 100.
 The description of Septus is "[Septusdesc]";
 The conversation of Septus is { "Grrr!" }.
+The icon of Septus is Figure of Septus_icon.
 lastSeptusfucked is a number that varies.  lastSeptusfucked is normally 555.
 
 instead of sniffing Septus:
 	say "Septus has a strong, musky male smell.";
 
 to say Septusdesc:
-	say "     Septus is a tall and well muscled wolfman, named for the large numbers zero-seven shown in bright red on his chest and back. He stands on two legs and shows an interesting mix of lupine and human form. His legs are fully digitigrade and end in large paws while his arms are more human-like and end in strong clawed hands[if hp of Septus >= 7]. He's taking to his new role at the team captain quite well, working the others through drills and making sure everyone gets their fair share of rec time with the cheerleaders. And he doesn't slack off either, staying in the thick of it with the rest of the players and working himself as hard, if not harder, than them[end if]. He gives you a tooth-filled smile as he notices you looking at him, obviously pleased to see you here in the lair. You give him a nod and a smile back, letting him know to keep up the great work.";
+	say "     Septus is a tall and well muscled wolfman, named for the large number seven shown in bright red on his chest and back. He stands on two legs and shows an interesting mix of lupine and human form. His legs are fully digitigrade and end in large paws while his arms are more human-like and end in strong clawed hands[if hp of Septus >= 7]. He's taking to his new role at the team captain quite well, working the others through drills and making sure everyone gets their fair share of rec time with the cheerleaders. And he doesn't slack off either, staying in the thick of it with the rest of the players and working himself as hard, if not harder, than them[end if]. He gives you a tooth-filled smile as he notices you looking at him, obviously pleased to see you here in the lair. You give him a nod and a smile back, letting him know to keep up the great work.";
 
 instead of conversing Septus:
 	if hp of Septus < 7:

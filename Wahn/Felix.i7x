@@ -152,6 +152,7 @@ Felix is a man.  The hp of Felix is normally 0.
 The description of Felix is "[FelixDesc]";
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies.  lastFelixTalk is usually 555.	   	[turn-counter for talking delays (humanity restoration)]
+The icon of Felix is Figure of Felix_icon.
 
 instead of sniffing Felix:
 	say "Felix has a pleasant animalistic smell. It's definitely male, but a bit lighter than a stallion's you'd say. He is still a colt after all.";
