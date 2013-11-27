@@ -143,6 +143,7 @@ SandySaved is a number that varies.  SandySaved is usually 555.           [saved
 FelixSaved is a number that varies.  FelixSaved is usually 555.           [saved to put in a delay of at least 8 turns before Felix quest starts]
 ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
 ThomasPregnancy is a number that varies. 																	[pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
+The icon of Thomas is Figure of Thomas_icon.
 
 An everyturn rule:
 	if Thomas is in the the Dry Plains and hp of Thomas is 4:   [4 = invisibly pregnant]

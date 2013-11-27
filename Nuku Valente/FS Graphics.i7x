@@ -2,9 +2,20 @@ FS Graphics by Nuku Valente begins here.
 
 Figure of title_graphic is the file "title.png".
 Figure of pixel is the file "pixel.png".
-Figure of sandy_icon is the file "sandra.png".
+
+[infection icons]
 Figure of griffon_icon is the file "bluegriffon.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
+Figure of BlueGel_icon is the file "BlueGel.png".
+Figure of PinkGel_icon is the file "PinkGel.png".
+Figure of Zebra_icon is the file "Zebra.png".
+Figure of Mannequin_icon is the file "Mannequin.png".
+
+[npc icons]
+Figure of sandy_icon is the file "sandra.png".
+Figure of Septus_icon is the file "Septus.jpg".
+Figure of Thomas_icon is the file "Thomas.png".
+Figure of Felix_icon is the file "Felix.png".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -35,6 +46,37 @@ Table of infection graphics
 title	icon(figure name)
 "Hermaphrodite Gryphon"	Figure of griffon_icon
 "Snow Leopard"	Figure of SnowLeopard_icon
+"Pink Gel"	Figure of PinkGel_icon
+"Blue Gel"	Figure of BlueGel_icon
+"Zebra"	Figure of Zebra_icon
+"Mannequin"	Figure of Mannequin_icon
 
+
+artistcredits is an action applying to nothing.
+
+understand "artwork credits" as artistcredits.
+understand "artworkcredits" as artistcredits.
+understand "art credits" as artistcredits.
+understand "artcredits" as artistcredits.
+understand "art cred" as artistcredits.
+understand "artcred" as artistcredits.
+
+carry out artistcredits:
+	say "Artwork Credits for Flexible Survival:[line break]";
+	say "     [line break]";
+	say "Infections:[line break]";
+	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
+	say "     Hermaphrodite Gryphon by ?[line break]";
+	say "     Mannequin by Rastear @ y-gallery.net[line break]";
+	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
+	say "     Snow Leopard by ?[line break]";
+	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
+	say "     [line break]";
+	say "NPCs:[line break]";
+	say "     Felix by Geir @ furaffinity.net[line break]";
+	say "     Sandra by ?[line break]";
+	say "     Septus by Feralise @ furaffinity.net[line break]";
+	say "     Thomas by Geir @ furaffinity.net[line break]";
 
 FS Graphics ends here.
+
