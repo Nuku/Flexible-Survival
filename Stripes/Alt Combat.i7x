@@ -139,7 +139,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 			break;
 	if found is 0:
 		repeat through the table of infection graphics:
-			if title entry is typ:
+			if title entry matches the text typ:
 				now found is 1;
 				project icon entry;
 				break;
