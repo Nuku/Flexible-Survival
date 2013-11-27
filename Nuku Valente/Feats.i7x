@@ -140,18 +140,21 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
-	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is true ) ):
-		addfeat "Male Preferred" with "You will reject female mutation.";
-	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is false ) ):
-		addfeat "Female Preferred" with "You will reject male mutation.";
+	if "Male Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and "Always Cocky" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
+		if isHellhound is false or ( isHellhound is true and maleHound is true ):
+			addfeat "Male Preferred" with "You will reject female mutation.";
+		if isHellhound is false or ( isHellhound is true and maleHound is false ):
+			addfeat "Female Preferred" with "You will reject male mutation.";
+		if isHellhound is false:
+			addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership.";
+		addfeat "Single Sexed" with "You can be male, or female, but not both.";
+		if isHellhound is false:
+			addfeat "Always Cocky" with "Outside of special circumstances, you will always keep a cock.";
+			addfeat "Always A Pussy"  with "Outside of special circumstances, you will always keep a pussy.";
 	if "Male Preferred" is listed in feats of player:
-		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts, curious.";
+		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious.";
 	otherwise:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
-	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
-		addfeat "Single Sexed" with "You can be male, or female, but not both.";
-	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and isHellhound is false:
-		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
 	if "One Way" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
@@ -160,10 +163,10 @@ instead of addfeating the fun feats:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line.";
 	if "All The Things" is not listed in feats of player:
 		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
-	if "Bouncy Bouncy" is not listed in feats of player:
-		addfeat "One Pair" with "You will not grow more than two breasts.";
 	if "Just One" is not listed in feats of player or "One Way" is listed in feats of player:
 		addfeat "All The Things" with "Your groin seems to believe [']the more the merrier['].  Outside of a gender change, you will keep any [']extras['] you pick up.";
+	if "Bouncy Bouncy" is not listed in feats of player:
+		addfeat "One Pair" with "You will not grow more than two breasts.";
 	if "One Pair" is not listed in feats of player:
 		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot.  You won't be loosing any that you might gain.";
 	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
@@ -188,7 +191,10 @@ instead of addfeating the fun feats:
 [	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.  It can occasionally open new, kinkier sex scenes.";
-	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.  It can occasionally open new, submissive scene variations.";
+	if "Dominant" is not listed in feats of player:
+		addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.  It may occasionally open new, submissive scene variations.";
+	if "Submissive" is not listed in feats of player:
+		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or xp boost from it.  It may occasionally open new, dominant scene variations.";
 	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]

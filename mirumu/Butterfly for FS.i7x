@@ -284,8 +284,8 @@ To say butterfly attack:
 				decrease cock width of player by 1;
 				decrease cock width of player by cock width of player divided by 4;
 				if "Male Preferred" is listed in feats of player:
-					if cock length of player is less than 4, now cock length of player is 4;
-					if cock width of player is less than 2, now cock width of player is 2;
+					if cock length of player is less than 5, now cock length of player is 5;
+					if cock width of player is less than 3, now cock width of player is 3;
 				follow the cock descr rule;
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 				if cock length of player is less than 1 or cock width of player is less than 1:
@@ -302,8 +302,8 @@ To say butterfly attack:
 				decrease cunt width of player by 1;
 				decrease cunt width of player by cunt width of player divided by 4;
 				if "Female Preferred" is listed in feats of player:
-					if cunt length of player is less than 4, now cunt length of player is 4;
-					if cunt width of player is less than 2, now cunt width of player is 2;
+					if cunt length of player is less than 5, now cunt length of player is 5;
+					if cunt width of player is less than 3, now cunt width of player is 3;
 				follow the cunt descr rule;
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 				if cunt length of player is less than 1 or cunt width of player is less than 1:
@@ -634,7 +634,7 @@ before using a grab object(called x):
 		if cunts of player is greater than 0:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[if cunts of player is greater than 1]s[end if]. [if gestation of child is greater than 0]Your lower belly quivers causing you to feel ill. [end if]Are you sure to still want to use it?";
 			if the player consents:
-				if "Female Preferred" is listed in feats of player:
+				if "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
 					say "Your feat will not allow this to work.";
 					stop the action;
 				continue the action;

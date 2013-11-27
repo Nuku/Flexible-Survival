@@ -287,6 +287,12 @@ Definition: A person (called x) is submissive:
 	if "Submissive" is listed in feats of x, yes;
 	no;
 
+A person can be dominant.  A person is usually not dominant.
+
+Definition: A person (called x) is dominant:
+	if "Dominant" is listed in feats of x, yes;
+	no;
+
 A person can be twistcapped.  A person is usually not twistcapped.
 
 Definition: A person (called x) is twistcapped:
@@ -3075,8 +3081,8 @@ This is the sex change rule:
 		let prevcock be cock length of player;
 		decrease cock length of player by 1;
 		decrease cock length of player by ( cock length of player - ( ( cock length entry times 150 ) / 100 ) ) divided by 3;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cock length of player is less than 4, now cock length of player is 4;
+		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
+			if cock length of player is less than 5, now cock length of player is 5;
 		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 			now cock length of player is 8;
 		if prevcock > cock length of player:		[did cock actually shrink?]
@@ -3086,8 +3092,8 @@ This is the sex change rule:
 		let prevcock be cock width of player;
 		increase cock width of player by 1;
 		increase cock width of player by ( cock width entry minus cock width of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
-			now cock width of player is 4;
+		if "Modest Organs" is listed in feats of player and cock width of player is greater than 5:
+			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
 			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [ball size]!";
@@ -3095,10 +3101,10 @@ This is the sex change rule:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
 		decrease cock width of player by ( cock width of player - ( ( cock width entry times 150 ) / 100 ) ) divided by 3;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cock width of player is less than 2, now cock width of player is 2;
-		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
-			now cock width of player is 4;
+		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
+			if cock width of player is less than 3, now cock width of player is 3;
+		if "Modest Organs" is listed in feats of player and cock width of player is greater than 5:
+			now cock width of player is 5;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
@@ -3115,8 +3121,8 @@ This is the sex change rule:
 				now cock of player is cock entry;
 			if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 				now cock length of player is 8;
-			if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
-				now cock width of player is 4;
+			if "Modest Organs" is listed in feats of player and cock width of player is greater than 5:
+				now cock width of player is 5;
 		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[Extra cocks at 67%]
 			increase cocks of player by 1;
 		if singlesexadjust is 3 and sex entry is "Both":	[female remains female if herm infection]
@@ -3133,9 +3139,9 @@ This is the sex change rule:
 		decrease cock length of player by cock length of player divided by 3;
 		decrease cock width of player by 1;
 		decrease cock width of player by cock width of player divided by 4;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cock length of player is less than 4, now cock length of player is 4;
-			if cock width of player is less than 2, now cock width of player is 2;
+		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
+			if cock length of player is less than 5, now cock length of player is 5;
+			if cock width of player is less than 3, now cock width of player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 2) and sex entry is "Female":		[male/herm becomes female if female infection]
 			now cocks of player is 0;
 			now cock length of player is 0;
@@ -3167,8 +3173,8 @@ This is the sex change rule:
 		let prevcunt be cunt length of player;
 		decrease cunt length of player by 1;
 		decrease cunt length of player by ( cunt length of player - ( ( cunt length entry times 150 ) / 100 ) ) divided by 3;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cunt length of player is less than 4, now cunt length of player is 4;
+		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
+			if cunt length of player is less than 5, now cunt length of player is 5;
 		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 			now cunt length of player is 8;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
@@ -3178,8 +3184,8 @@ This is the sex change rule:
 		let prevcunt2 be cunt width of player;
 		increase cunt width of player by 1;
 		increase cunt width of player by ( cunt width entry minus cunt width of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
-			now cunt width of player is 4;
+		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
+			now cunt width of player is 5;
 		if prevcunt2 < cunt width of player:	[did cunt actually widen?]
 			follow the cunt descr rule;
 			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
@@ -3187,10 +3193,10 @@ This is the sex change rule:
 		let prevcunt be cunt width of player;
 		decrease cunt width of player by 1;
 		decrease cunt width of player by ( cunt width of player - ( ( cunt width entry times 150 ) / 100 ) ) divided by 3;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cunt width of player is less than 2, now cunt width of player is 2;
-		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
-			now cunt width of player is 4;
+		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
+			if cunt width of player is less than 3, now cunt width of player is 3;
+		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
+			now cunt width of player is 5;
 		if prevcunt > cunt width of player:		[did cock actually shrink?]
 			follow the cunt descr rule;
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as you are hit by an unexpected orgasm.  The squeezing does not release fully as your wet hole shrinks somewhat to better suit your new infection by becoming tighter.";
@@ -3204,8 +3210,8 @@ This is the sex change rule:
 			increase the cunt width of player by ( cunt width entry  ) divided by 3;
 			if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 				now cunt length of player is 8;
-			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
-				now cunt width of player is 4;
+			if "Modest Organs" is listed in feats of player and cunt width of player is greater than 5:
+				now cunt width of player is 5;
 		otherwise if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[2nd+ cunt at 67%]
 			increase the cunts of player by 1;
 		if singlesexadjust is 2 and sex entry is "Both":	[male remains male if herm infection]
@@ -3222,9 +3228,9 @@ This is the sex change rule:
 		decrease cunt length of player by cunt length of player divided by 3;
 		decrease cunt width of player by 1;
 		decrease cunt width of player by cunt width of player divided by 4;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
-			if cunt length of player is less than 4, now cunt length of player is 4;
-			if cunt width of player is less than 2, now cunt width of player is 2;
+		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
+			if cunt length of player is less than 5, now cunt length of player is 5;
+			if cunt width of player is less than 3, now cunt width of player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 3) and sex entry is "Male":	[female/herm becomes male if male infection]
 			now cunts of player is 0;
 			now cunt length of player is 0;
@@ -4223,6 +4229,16 @@ This is the turnpass rule:
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
 		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
+	if "Always Cocky" is listed in feats of player and cocks of player is 0:
+		now cocks of player is 1;
+		now cock length of player is 5;
+		now cock width of player is 3;
+		say "You feel a pressure at your groin that soon bursts forth as a brand new cock.  This [cock of player] shaft spurts and dribbles with cum from its orgasmic formation.";
+	otherwise if "Always A Pussy" is listed in feats of player and cunts of player is 0:
+		now cunts of player is 1;
+		now cunt length of player is 5;
+		now cunt width of player is 3;
+		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy.  This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player >= 25:
 			if cockname of player is not "Tanuki" and cockname of player is not listed in infections of Internallist:

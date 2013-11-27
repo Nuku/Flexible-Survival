@@ -137,6 +137,9 @@ Instead of Resolving a Vet supplies:
 		say "But before you can even come to any sort of decision, you feel the burning pain of hellfire within you.  Your hellhound tainted body clearly will not allow you to use such measures to potentially alter your pact with the fel beast.";
 		Now Vet supplies is resolved;
 	otherwise if player consents:
+		remove "Single Sexed" from feats of player, if present;		[***temporary fix]
+		remove "Always Cocky" from feats of player, if present;
+		remove "Always A Pussy" from feats of player, if present;
 		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Female, male or both?  Do you take the female shots?";
 		if player consents:
 			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
@@ -147,18 +150,15 @@ Instead of Resolving a Vet supplies:
 				say "You can feel the female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
 				remove "Male Preferred" from feats of the player;
 				decrease hp of player by 30;
-				stop the action;
 			otherwise if "Herm Preferred" is listed in feats of the player:
 				say "You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction.  Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won[']t have to worry about becoming anything but purely female anymore!";
 				remove "Herm Preferred" from feats of the player;
 				add "Female Preferred" to feats of the player;
 				decrease hp of player by 20;
-				stop the action;
 			otherwise:
 				say "You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
 				decrease humanity of player by 20;
 				add "Female Preferred" to feats of the player;
-				stop the action;
 		otherwise:
 			say "Shifting your focus to the other pile, your look at the male hormones.  Shall you use the male ones?";
 			if the player consents:
@@ -200,7 +200,7 @@ Instead of Resolving a Vet supplies:
 					add "Herm Preferred" to feats of the player;
 	otherwise:
 		say "Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
-		Now Vet supplies is resolved;
+[		Now Vet supplies is resolved;	]
 
 
 Section 14- Feeding time

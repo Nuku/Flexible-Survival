@@ -318,7 +318,7 @@ to say dragonchange:
 		now face of player is "reptilian shape with a long snout.  Your mouth is full of sharp teeth that peek out past your thin lips.  Your head is bald except for two backwards facing horns";
 		now skin of player is "blue coloured dragon scales covering your";
 		now cock of player is "[one of]draconic[or]azure[or]blue dragon[at random]";
-		if "Herm Perferred" is listed in feats of player and dragontype is 0:
+		if ( "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player ) and dragontype is 0:
 			say "     You look down at your body and discover that you[apostrophe]ve been completely transformed into a Slutty Dragoness!  While not as big as Christy, you have become quite the sexy beast.";
 			now cocks of player is 1;
 			now cock length of player is 24;
@@ -360,7 +360,7 @@ to say dragonchange:
 				now cunts of player is 1;
 				now cunt length of player is 20;
 				now cunt width of player is 15;
-			if "Herm Preferred" is listed in feats of player:
+			if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
 				now cocks of player is 1;
 				now cock length of player is 24;
 				now cock width of player is 16;
