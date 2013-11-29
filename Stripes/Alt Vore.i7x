@@ -264,59 +264,7 @@ to say ubbyplayer04:		[feet first]
 
 Chapter 6 - Vore Settings Menu
 
-voremenuing is an action applying to nothing.
-
-understand "voremenu" as voremenuing.
-understand "vore menu" as voremenuing.
-
-check voremenuing:
-	if playercanvore is false, say "Your character is currently incapable of such actions.";
-
-carry out voremenuing:
-	say "     You have accessed the [bold type]vore menu[roman type].  It is here that you may adjust some settings related to vore content in the game.";
-	say "     At present, there is only two features open for adjustment.  [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse.  [bold type]Choice for UB[roman type] will designate the same for unbirthing.  For both, this selection process will cycle through the options.";
-	let voreexit be 0;
-	while voreexit is 0:
-		say "[bold type]Vore Settings:[roman type][line break]";
-		if playercanvore is true:
-			say "[link](1) Choice to vore[as]1[end link] - [if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][line break]";
-		otherwise:
-			say "Vore by player - Inactive.";
-		say "[bold type]UB Settings:[roman type][line break]";
-		if playercanub is true:
-			say "[link](2) Choice to UB[as]1[end link] - [if ubchoice is 0]Player choice[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][line break]";
-		otherwise:
-			say "UB by player - Inactive.";
-		say "[link](0) Abort[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-2)> [run paragraph on]";
-			get a number;
-			if calcnumber >= 0 and calcnumber <= 2:
-				break;
-			otherwise:
-				say "Invalid choice.  Pick from 0 to 2.";
-		if calcnumber is 1:
-			if playercanvore is false:
-				say "This option is currently inactive.";
-			otherwise if vorechoice < 2:
-				increase vorechoice by 1;
-				say "The option to use of your voring ability has been set to '[if vorechoice is 1]Automatic vore[otherwise]Never vore[end if]'.";
-			otherwise:
-				now vorechoice is 0;
-				say "The option to use of your voring ability has been reset to 'Player choice'.";
-		otherwise if calcnumber is 2:
-			if playercanub is false:
-				say "This option is currently inactive.";
-			otherwise if ubchoice < 2:
-				increase ubchoice by 1;
-				say "The option to use of your unbirthing ability has been set to '[if ubchoice is 1]Automatic UB[otherwise]Never UB[end if]'.";
-			otherwise:
-				now ubchoice is 0;
-				say "The option to use of your unbirthing ability has been reset to 'Player choice'.";
-		otherwise if calcnumber is 0:
-			say "Exiting menu.";
-			now voreexit is 1;
-
+[Moved to Settings Menus file]
 
 [
 Notes:

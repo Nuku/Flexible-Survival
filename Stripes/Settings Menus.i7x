@@ -32,13 +32,15 @@ carry out trixiecheating:
 		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Game settings:[roman type][line break]";
-		say "[link](10) Set anal play content level[as]10[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
+		say "[link](10) Set anal play content level[as]10[end link] - Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
+		say "[link](11) Set watersports (WS) content level[as]11[end link] - Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
+		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if anallevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type]";
 		if playercanvore is true:
-			say "[link](11) Access the vore menu[as]11[end link] -  Currently: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] and [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type][line break]";
+			say "; Player predator: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] & [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type]";
+		say "[line break]";
 		otherwise:
-			say "(11) This option is not currently available to your character.[line break]";
-		say "[link](12) Set watersports (WS) content level[as]12[end link] -  Currently: [bold type][if WSlevel is 1]No WS[otherwise if WSlevel is 2]Standard[otherwise]Full WS[end if][roman type][line break]";
-		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] -  Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
+			say "(12) This option is not currently available to your character.[line break]";
+		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
 		say "[link](14) Adjust flags[as]14[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
@@ -160,9 +162,9 @@ carry out trixiecheating:
 		otherwise if calcnumber is 10:
 			try analadjusting;
 		otherwise if calcnumber is 11:
-			try voremenuing;
-		otherwise if calcnumber is 12:
 			try WSadjusting;
+		otherwise if calcnumber is 12:
+			try voremenuing;
 		otherwise if calcnumber is 13:
 			try Oviadjusting;
 		otherwise if calcnumber is 14:
@@ -191,10 +193,10 @@ carry out analadjusting:
 	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
 	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
 	say "- [link](3) More Anal[as]3[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the base scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
-	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+	say "- [link](0) Exit[as]0[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 3:
+		say "Choice? (0-3)>[run paragraph on]";
 		get a number;
 	if calcnumber is 1:
 		say "You are now set to receive Less Anal.";
@@ -211,7 +213,7 @@ carry out analadjusting:
 		now anallevel is 3;
 		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
 		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
-	otherwise if calcnumber is 4:
+	otherwise:
 		say "Exiting menu.";
 		say "[line break]";
 
@@ -233,10 +235,10 @@ carry out WSadjusting:
 	say "- [link](1) No WS[as]1[end link] will indicate that you're looking to not see any WS in your game.  This will either skip that portion of the content or pick one of the other available scenes.  Keep in mind that there may be a few scenes where you are asked if you want to be involved in WS and those prompts (and their associated scenes) may still be active, but you can pick the non-activation option for them at that time.  Should you have this setting active and get a WS scene in the game, do prompt us via the forums or blog so we might check on the issue as well - we are still implementing this mechanic.";
 	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with a low level of WS content, should it happen to come up.  Only some creatures/NPCs are active about including WS in their actions, so having this setting will keep their use of it infrequent.";
 	say "- [link](3) Full WS[as]3[end link] will indicate that you're open to view WS more often.  Some WS content may only be accessible via this setting, while in other cases it will raise the frequency of WS being shown.  Similarly, more detail might be thrown into a scene at this level.  Again, the amount of WS content presently in the game is rare, but setting yourself to this level will get the most out of it.";
-	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if wslevel is 1]No WS[otherwise if wslevel is 2]Standard (Low WS)[otherwise]Full WS[end if][roman type].";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+	say "- [link](0) Exit[as]0[end link]: Leave this menu.  You are currently set as [bold type][if wslevel is 1]No WS[otherwise if wslevel is 2]Standard (Low WS)[otherwise]Full WS[end if][roman type].";
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 3:
+		say "Choice? (0-3)>[run paragraph on]";
 		get a number;
 	if calcnumber is 1:
 		say "You are now set to receive No WS.";
@@ -247,9 +249,91 @@ carry out WSadjusting:
 	otherwise if calcnumber is 3:
 		say "You are now set to receive Full WS.";
 		now WSlevel is 3;
-	otherwise if calcnumber is 4:
+	otherwise:
 		say "Exiting menu.";
 		say "[line break]";
+
+[-----]
+
+[vorelevel is a number that varies.  vorelevel is usually 2.]		[normal]
+[UBlevel is a number that varies.  UBlevel is usually 2.]			[normal]
+
+voremenuing is an action applying to nothing.
+
+understand "voremenu" as voremenuing.
+understand "vore menu" as voremenuing.
+
+check voremenuing:
+	if playercanvore is false, say "Your character is currently incapable of such actions.";
+
+carry out voremenuing:
+	say "     You have accessed the [bold type]vore menu[roman type].  It is here that you may adjust some settings related to vore content in the game.  Options 1-3 deal with the frequency the player may be subject to vore by others, typically monsters.  While rare in the game at present, this will tell the game to bias for or against it in situations where it might occur.  Your selection may not apply in certain situations, especially when dealing with special, scripted scenes.  Options 5-7 are similar, but apply to unbirthing (UB) content.";
+	say "     Option 4 and 8 deal with vore and UB by the player respectively, and are only available options should those abilities be gained within the game.  [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse.  [bold type]Choice for UB[roman type] will designate the same for unbirthing.  For both, this selection process will cycle through the options.";
+	let voreexit be 0;
+	while voreexit is 0:
+		say "[bold type]Vore Settings:[roman type][line break]";
+		say "- [link](1) No Vore[as]1[end link] - Skip most scenes of the player getting vored[if vorelevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](2) Standard[as]2[end link] - Player may infrequently get vored[if vorelevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](3) Full Vore[as]3[end link] - Player more likely to get vored when possible[if vorelevel is 3]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		if playercanvore is true:
+			say "[link](4) Choice to vore[as]4[end link] - [if vorechoice is 0]Player choice[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][line break]";
+		otherwise:
+			say "(4) Vore by player - Inactive.";
+		say "[bold type]UB Settings:[roman type][line break]";
+		say "- [link](5) No UB[as]5[end link] - Skip most scenes of the player getting unbirthed[if UBlevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](6) Standard[as]6[end link] - Player may infrequently get unbirthed[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](7) Full UB[as]7[end link] - Player more likely to get unbirthed when possible[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		if playercanub is true:
+			say "[link](8) Choice to UB[as]8[end link] - [if ubchoice is 0]Player choice[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][line break]";
+		otherwise:
+			say "(8) UB by player - Inactive.";
+		say "[link](0) Abort[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-8)> [run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 8:
+				break;
+			otherwise:
+				say "Invalid choice.  Pick from 0 to 8.";
+		if calcnumber is 1:
+			say "You are now set to skip most vore content.";
+			now vorelevel is 1;
+		otherwise if calcnumber is 2:
+			say "You are now set to receive the Standard (low) amount of vore content.";
+			now vorelevel is 2;
+		otherwise if calcnumber is 3:
+			say "You are now set to receive full vore content.";
+			now vorelevel is 3;
+		otherwise if calcnumber is 4:
+			if playercanvore is false:
+				say "This option is currently inactive and unlocked via gameplay.";
+			otherwise if vorechoice < 2:
+				increase vorechoice by 1;
+				say "The option to use of your voring ability has been set to '[if vorechoice is 1]Automatic vore[otherwise]Never vore[end if]'.";
+			otherwise:
+				now vorechoice is 0;
+				say "The option to use of your voring ability has been reset to 'Player choice'.";
+		otherwise if calcnumber is 5:
+			say "You are now set to skip most unbirthing content.";
+			now UBlevel is 1;
+		otherwise if calcnumber is 6:
+			say "You are now set to receive the Standard (low) amount of unbirthing content.";
+			now UBlevel is 2;
+		otherwise if calcnumber is 7:
+			say "You are now set to receive full unbirthing content.";
+			now UBlevel is 3;
+		otherwise if calcnumber is 8:
+			if playercanub is false:
+				say "This option is currently inactive and unlocked via gameplay.";
+			otherwise if ubchoice < 2:
+				increase ubchoice by 1;
+				say "The option to use of your unbirthing ability has been set to '[if ubchoice is 1]Automatic UB[otherwise]Never UB[end if]'.";
+			otherwise:
+				now ubchoice is 0;
+				say "The option to use of your unbirthing ability has been reset to 'Player choice'.";
+		otherwise if calcnumber is 0:
+			say "Exiting menu.";
+			now voreexit is 1;
 
 [-----]
 
@@ -269,10 +353,10 @@ carry out oviadjusting:
 	say "- [link](1) No Ovi[as]1[end link] will indicate that you're looking to not have your player possibly bearing eggs.  All female pregnancies will be live young and MPreg to FPreg swaps will be treated as live births as well.";
 	say "- [link](2) Standard[as]2[end link] will indicate that you're okay with being impregnanted with eggs, if that's the creature's normal result.";
 	say "- [if ovipregalways is true][link](3) Always Ovi[as]3[end link] will indicate that you want all births to be eggs, regardless of their sire's normal result[otherwise](3) Always Ovi is not yet accessible to your character.  You'll need to find a way in the game to change yourself to always bear eggs before being able to choose this option[end if].";
-	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard (Some Ovi)[otherwise]Always Ovi[end if][roman type].";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+	say "- [link](0) Exit[as]0[end link]: Leave this menu.  You are currently set as [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard (Some Ovi)[otherwise]Always Ovi[end if][roman type].";
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 3:
+		say "Choice? (0-3)>[run paragraph on]";
 		get a number;
 	if calcnumber is 1:
 		say "You are now set to not bear eggs.";
@@ -286,7 +370,7 @@ carry out oviadjusting:
 			now ovipreglevel is 3;
 	 	otherwise:
 			say "You are not able to choose this option without alteration to your character's pregnancy abilities.";
-	otherwise if calcnumber is 4:
+	otherwise:
 		say "Exiting menu.";
 		say "[line break]";
 

@@ -1,4 +1,5 @@
 Version 3 of Presets by Default Settings begins here.
+[Version 3.1 - Added vorelevel and UBlevel.]
 
 "Separates out the presets for the alternate starting method for easier modification by the player.
 To play within the Inform 7 compiler, press F5 or the green Go! button in the top left.
@@ -72,6 +73,20 @@ WSlevel is usually 2.
 1 - No WS
 2 - Standard
 3 - Full WS
+NOTE: An invalid selection defaults to 'Standard'.]
+
+vorelevel is usually 2.
+[vorelevel - denotes the degree of vore content (player victim) appearing in the game.
+1 - No Vore
+2 - Standard
+3 - Full Vore
+NOTE: An invalid selection defaults to 'Standard'.]
+
+UBlevel is usually 2.
+[UBlevel - denotes the degree of unbirthing content (player victim) appearing in the game.
+1 - No UB
+2 - Standard
+3 - Full UB
 NOTE: An invalid selection defaults to 'Standard'.]
 
 ovipreglevel is usually 2.
