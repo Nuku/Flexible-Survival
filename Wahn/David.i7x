@@ -216,6 +216,7 @@ David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
 The conversation of David is { "Oh, hello." };
 lastfuck of David is usually 555.
+The icon of David is Figure of David_icon.
 
 The scent of David is "     David has a nice masculine human smell.";
 
