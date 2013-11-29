@@ -37,7 +37,7 @@ carry out trixiecheating:
 		say "[link](12) Access the vore menu[as]12[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[otherwise if anallevel is 2]Standard[otherwise]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[otherwise if UBlevel is 2]Standard[otherwise]Full UB[end if][roman type]";
 		if playercanvore is true:
 			say "; Player predator: [bold type][if vorechoice is 0]Player choice vore[otherwise if vorechoice is 1]Automatic vore[otherwise]Never vore[end if][roman type] & [bold type][if playercanub is false]Inactive UB[otherwise if ubchoice is 0]Player choice UB[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][roman type]";
-		say "[line break]";
+			say "[line break]";
 		otherwise:
 			say "(12) This option is not currently available to your character.[line break]";
 		say "[link](13) Set egg-pregnancy (ovi) content level[as]13[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[otherwise if ovipreglevel is 2]Standard[otherwise]Always Ovi[end if][roman type][line break]";
