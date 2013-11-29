@@ -178,9 +178,9 @@ to say elijahdesc:
 	if (hp of Elijah is 0):   [chained up in the chapel]
 		say "     The angel has had his armor ripped away and his white tunic is thorn, bloodstained and splattered with cum-stains. Even his once bright halo has suffered, now a pale flickering shadow of its former glory. He looks young, with an unlined face and long golden-blond hair. At the moment, his arms are chained to a wooden cross, the chains being the only thing holding him upwards as he drifts in and out of consciousness. His wings hang limply from his shoulders.";
 	if (hp of Elijah is 1) or (hp of Elijah is 2):   [wounded + unconscious in the bunker]
-		say "     The angel is tall and well-built, looking an early 20 years old. His unlined, very pretty face is framed by long strands of golden blond hair. At the moment, he's spending most of his time asleep on a bunk in the bunker, opening his azure eyes only rarely to look around tiredly and a bit confused. His large white wings poke out from under the sheet, reaching almost to the next bunk in line.";
+		say "     The angel is tall and well-built, looking an early 20 years old. His unlined, very pretty face is framed by long strands of golden blond hair. At the moment, he's spending most of his time asleep on a bunk in the bunker, opening his azure eyes only rarely to look around tiredly and a bit confused. He's naked under the sheet, and his large white wings poke out over the sides of the bed, reaching almost to the next bunk in line.";
 	if (hp of Elijah is 3):   [virgin Elijah]
-		say "     Elijah is tall and well-built, looking an early 20 years old. His unlined, very pretty face is framed by long strands of golden blond hair. At the moment, he's spending most of his time sitting quietly on his bunk, hands folded in prayer and observing his surroundings with azure eyes. He's garbed in a simple tunic of shining white fabric - where did that come from, you wonder. His large white wings are folded together behind his back.";
+		say "     Elijah is tall and well-built, looking an early 20 years old. His unlined, very pretty face is framed by long strands of golden blond hair. At the moment, he's spending most of his time sitting quietly on his bunk, hands folded in prayer and observing his surroundings with azure eyes. He's garbed in a simple white shirt and a pair of pants - where those came from, you can only wonder. His large white wings are folded together behind his back.";
 	if (hp of Elijah is 4):   [good Elijah]
 		say "     Elijah is tall and well-built, looking an early 20 years old. He has an unlined, very pretty face with azure eyes, crowned by an impressive mohawk of golden blond hair. Lately, he's often up and about, strolling out into the library and the nearer city blocks or having a look around from the air. He's taken up wearing a pair of tight jeans and military boots he found somewhere, leaving his chest bare and showing off some handsomely sculpted abs. His large white wings are folded together behind his back, but tend to spread out a bit and move animatedly when he's talking to you.";
 	if (hp of Elijah is 99):   [evil Elijah]
@@ -227,11 +227,12 @@ instead of conversing the Elijah:
 					otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]			
 						say "     When the demon beast collapses in front of you, the rest of the mob decide to abandon the fight, leading to a mad rush away from you on wing and foot. Now let's get out of here before they change their minds or braver individuals arrive. Pulling the angel's arm over your shoulder, you lead him away as quickly as possible. When you're half a block distant, you hear an infuriated roar from the chapel.  This is followed by a harsh, growling voice yelling 'Find them, you sniveling cowards or I'll flay the skin off the lot of you!' You dodge behind a dumpster and watch demon search parties file and fly out of the ruin. Time to run.";
 						say "     [line break]";
-						say "     Against all odds, you do arrive safely at the library several hours later. There were several really close calls, but you managed to shake your hunters - for now. You put your almost delirious rescuee on one of the cots in the bunker, then lock up the entrance tight to get some much-needed rest.";
+						say "     Against all odds, you do arrive safely at the library several hours later. There were several really close calls, but you managed to shake your hunters - for now. After getting him out of his stained and ripped tunic, you put your almost delirious rescuee on one of the cots in the bunker, then lock up the entrance tight to get some much-needed rest.";
 						now hp of Elijah is 1;
 						move Elijah to bunker;
 						move player to bunker;
 						now lastElijahfucked is turns;
+						now the icon of Elijah is Figure of Elijah_naked_icon;
 						increase score by 20;				
 			now inasituation is false;										
 		otherwise:   [try it later, 32 turns time to save him]
@@ -257,6 +258,7 @@ instead of conversing the Elijah:
 					say "     At first nothing happens, but then suddenly the angel's body starts convulsing on the bunk. As you hold him down, you feel waves of heat run through him, accompanying rapid physical changes. Gone is the golden-blond hair, its bright color instantly replaced by glossy blackness. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed,' this changed version of the angel growls. 'I'm Elijah, by the way - and I'm horny, so how about a quick fuck?'";
 					now hp of Elijah is 99;
+					now the icon of Elijah is Figure of Elijah_evil_icon;
 					now lastElijahfucked is turns + 8; [guarantee he's ready for action]
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
@@ -303,6 +305,7 @@ instead of conversing the Elijah:
 								now honeygiven is true;
 							delete healing booster;
 							now hp of Elijah is 3;
+							now the icon of Elijah is Figure of Elijah_virgin_icon;
 							increase score by 20;
 						otherwise:
 							say "     Maybe this isn't the right thing to do after all.  There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
@@ -963,6 +966,7 @@ Instead of fucking the Elijah:
 				otherwise:   [neuter]
 					say "     While you might be morally ready to do this, your distinct lack of demonic genitalia prevents you from acting out your impulses. Grow a cock or a pussy and try it again.";
 				decrease humanity of player by 25;
+				now the icon of Elijah is Figure of Elijah_evil_icon;
 				now lastElijahfucked is turns;
 			otherwise if lastElijahfucked is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
@@ -984,6 +988,7 @@ Instead of fucking the Elijah:
 				say "     [line break]";
 				say "     That ended a bit sudden, but hey - it's his first time. And from the looks of it you've gotten a very enthusiastic Elijah out of it. When he's got his body under control again, he gives you a deep kiss, saying 'I'm really looking forward to more 'human lessons' with you.'"; 
 				now hp of Elijah is 4;
+				now the icon of Elijah is Figure of Elijah_good_icon;
 				now lastElijahfucked is turns;
 	otherwise if (hp of Elijah is 4): [good repeats]
 		if bodyname of player is listed in the infections of hellspawn or bodyname of player is "Hellhound":
