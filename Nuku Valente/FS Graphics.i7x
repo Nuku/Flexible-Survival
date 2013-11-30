@@ -58,6 +58,11 @@ carry out graphicmoding:
 Table of infection graphics
 title	icon(figure name)
 "Alpha Husky"	Figure of AlphaHusky_icon
+"Bottlenose Toy"	Figure of Bottlenose_icon
+"Messy Pig"	Figure of MessyPig_icon
+"Latex Vixen"	Figure of LatexVixen_icon
+"Plush Lion"	Figure of PlushLion_icon
+"ram"	Figure of Ram_icon
 "Blue Gel"	Figure of BlueGel_icon
 "Demon Brute"	Figure of DemonBrute_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
