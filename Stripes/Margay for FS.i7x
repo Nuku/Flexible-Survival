@@ -1,5 +1,5 @@
 Version 1 of Margay for FS by Stripes begins here.
-[Version 1.1 - Alt attack tweaked]
+[Version 1.2 - Added nursing scene and adapted to UBlevel setting]
 
 [Adaptation for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -8,7 +8,7 @@ Version 1 of Margay for FS by Stripes begins here.
 "Adds Margay to Flexible Survival."
 
 margaydancecount is a number that varies.
-margaylosscount is a number that varies.
+margayubed is a number that varies.
 
 when play begins:
 	add { "Margay" } to infections of furry;
@@ -18,22 +18,29 @@ when play begins:
 Section 1 - Monster Responses
 
 to say losetomargay:
-	if margaylosscount is not 0 and margaylosscount is even:
+	if UBlevel is 1 or a random chance of 1 in 4 succeeds:
+		say "     The female margay looms over you, purring happily at her new prize.  You are grabbed by the ample feline and your face pressed to her bosom.  With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing.  As you drink it down, it becomes all you can focus on.";
+		say "     'Oh, such a good [if cunts of player > 0]girl[otherwise]boy[end if].  Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of player] body.";
+		say "     She holds you even closer and runs her paws along your back, reaching down to grab your ass in a most un-motherly way.  With a paw kneading your rear and the other [if cocks of player > 0]stroking your cock[otherwise]fingering your pussy[otherwise if anallevel is not 1]fingering your asshole[otherwise]rubbing your bare crotch[end if], you can't help but moan and mewl softly and suckle all the harder[if cocks of player > 0 or cunts of player > 0].  You're pushed to climax just as you're emptying her plentiful milkjugs of the last few drops[otherwise].  You're snuggled and caressed until you've emptied her plentiful milkjugs of every last drop[end if].  With your belly full of her warm milk, you end up drifting off in the big kitty's arms, only to awaken some time later [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your intimate meal.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		decrease humanity of player by 5;
+		decrease thirst of player by 6;
+	otherwise if margayubed is not 0 and margayubed is even:
 		say "     The female margay looms over you, purring happily at her new prize.  You are grabbed by the ample feline and your face pressed to her bosom.  With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing.  As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if cunts of player > 0]girl[otherwise]boy[end if].  Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of player] body.";
 		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan.  This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips.  Her wet folds ripple over your [if cocks of player > 1]throbbing [cock size desc of player] [cock of player] cocks[otherwise if cocks of player is 1]throbbing [cock size desc of player] [cock of player] cock[otherwise if cunts of player > 0]juicy [cunt size desc of player] petals[otherwise]bare groin[end if].";
 		say "     Holding your arms to your sides, she takes your hands in as well.  But it's only when you're pulled away from that dribbling by the constant peristaltic motion of her vaginal walls that you realize what's happening.  Though your main reaction to this is to mewl in disappointment and smack your lips for more of that tasty milk.  The Rubenesque feline only chuckles at this and rubs her paws over your head, pushing you further into her swollen body.  Soon enough, you're fully encapsulated in her womb, feeling content and sleepy from the warmth and the milk.  You feel quite happy as her uterine wall forms a placenta and an umbilical cord snakes its way down to connect to your navel, bonding you to your beautiful and loving feline mother.  Feeling her paws rubbing over her full belly, you drift into a peaceful slumber, knowing she'll take care of you.";
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		increase margayubed by 1;
 		decrease humanity of player by 10;
 		increase libido of player by 5;
 		decrease thirst of player by 6;
 	otherwise:
-		say "     The female margay looms over you, purring happily at her new prize.  You [if margaylosscount > 2]are almost looking forward to it as[otherwise]aren't prepared for what happens next as[end if] the feline turns around and flashes her two vaginas in your face. 'Oh you'll make a FINE member of my family,' she purrs before squatting on your head, pressing her large body down atop you.";
-		say "     You[if margaylosscount > 2] raise your head into position and lick at her wet folds as she kisses them to your face[otherwise][']re too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you.  Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus[if cocks of player > 1].  As your cocks are pressed between your body and[otherwise if cocks of player is 1].  As your cock is pressed between your body and[otherwise].  As your pussy grinds against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you.  You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious.  Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant.  Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
+		say "     The female margay looms over you, purring happily at her new prize.  You [if margayubed > 2]are almost looking forward to it as[otherwise]aren't prepared for what happens next as[end if] the feline turns around and flashes her two vaginas in your face. 'Oh you'll make a FINE member of my family,' she purrs before squatting on your head, pressing her large body down atop you.";
+		say "     You[if margayubed > 2] raise your head into position and lick at her wet folds as she kisses them to your face[otherwise][']re too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you.  Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus[if cocks of player > 1].  As your cocks are pressed between your body and[otherwise if cocks of player is 1].  As your cock is pressed between your body and[otherwise].  As your pussy grinds against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you.  You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious.  Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant.  Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		increase margayubed by 1;
 		decrease humanity of player by 5;
 		increase libido of player by 5;
-	increase margaylosscount by 1;
 
 
 to say beatthemargay:

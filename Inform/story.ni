@@ -16,7 +16,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 300.
-use MAX_VERBS of 300.
+use MAX_VERBS of 330.
 Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
@@ -585,6 +585,8 @@ freefeatfun is a text that varies.
 hypernull is a number that varies. 
 anallevel is a number that varies.
 WSlevel is a number that varies.
+vorelevel is a number that varies.
+UBlevel is a number that varies.
 ovipreglevel is a number that varies.
 ovipregnant is a truth state that varies.  ovipregnant is usually false.		[marks if ovi-pregnant now]
 ovipregalways is a truth state that varies.  ovipregalways is usually false.	[marks if allowed to pick always ovi]
@@ -6520,17 +6522,18 @@ To regularstart: [normal start method]
 		say "(7) [link]Banned Types[as]7[end link] - [bold type][startbannedflags][roman type][line break]";
 		say "(8) [link]Anal Content[as]8[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(9) [link]WS Content[as]9[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(10) [link]Ovi Pregnancy[as]10[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
-		say "(11) [link]Hyperlinks[as]11[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
-		say "(12) [link]Waiting for Input[as]12[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(13) [link]Screen Clearing[as]13[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(10) [link]Vore/UB Content[as]10[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Vore[roman type][line break]";
+		say "(11) [link]Ovi Pregnancy[as]11[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
+		say "(12) [link]Hyperlinks[as]12[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
+		say "(13) [link]Waiting for Input[as]13[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(14) [link]Screen Clearing[as]14[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-13)>[run paragraph on]";
+			say "(0-14)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 13 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 14 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6553,8 +6556,10 @@ To regularstart: [normal start method]
 		otherwise if calcnumber is 9:
 			try WSadjusting;
 		otherwise if calcnumber is 10:
-			try oviadjusting;
+			try voremenuing;
 		otherwise if calcnumber is 11:
+			try oviadjusting;
+		otherwise if calcnumber is 12:
 			if hypernull is 0:
 				now hypernull is 1;
 			otherwise:
@@ -6567,7 +6572,7 @@ To regularstart: [normal start method]
 				say "Turn on Hyperlinks?";
 				if player consents:
 					now hypernull is 0;		]
-		otherwise if calcnumber is 12:
+		otherwise if calcnumber is 13:
 			if waiterhater is 0:
 				now waiterhater is 1;
 			otherwise:
@@ -6580,7 +6585,7 @@ To regularstart: [normal start method]
 				say "Turn on delays?";
 				if player consents:
 					now waiterhater is 0;		]
-		otherwise if calcnumber is 13:
+		otherwise if calcnumber is 14:
 			if clearnomore is 0:
 				now clearnomore is 1;
 			otherwise:
