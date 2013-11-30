@@ -4,8 +4,14 @@ Figure of title_graphic is the file "title.png".
 Figure of pixel is the file "pixel.png".
 
 [infection icons]
+Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
+Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
+Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
+Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
+Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
+Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of griffon_icon is the file "bluegriffon.jpg".
 Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of PinkGel_icon is the file "PinkGel.png".
@@ -51,6 +57,7 @@ carry out graphicmoding:
 
 Table of infection graphics
 title	icon(figure name)
+"Alpha Husky"	Figure of AlphaHusky_icon
 "Blue Gel"	Figure of BlueGel_icon
 "Demon Brute"	Figure of DemonBrute_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
