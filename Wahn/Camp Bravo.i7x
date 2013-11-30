@@ -48,7 +48,6 @@ Instead of resolving a Trickster's Masterpiece:
 	Now Trickster's Masterpiece is resolved;
 
 
-
 Back at the Camp is a situation. Back at the Camp is resolved.  [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside";
 
@@ -805,6 +804,7 @@ to say AlexanderFucking:
 Tiny Tim is a man.
 The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground besides the hitching post used in couplings with him. He's a magnificently well-build creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner.";
 Tiny Tim is in Parade Ground.
+The icon of Tiny Tim is Figure of TinyTim_icon.
 The conversation of Tiny Tim is { "[one of]'Alexander is my friend.'[or]'I'm hungry.'[or]'I'm horny. Want to fuck.'[or]'Are you my friend?'[or]'You smell nice.'[or]'Humans are tight. Good.'[or]'Nice place here.'[or]'I like soldiers.'[at random]" };
 
 instead of sniffing Tiny Tim:
