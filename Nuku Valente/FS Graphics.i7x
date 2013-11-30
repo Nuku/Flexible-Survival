@@ -15,6 +15,7 @@ Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
 Figure of BrutusGood_icon is the file "Brutus_good.png".
+Figure of David_icon is the file "David.png".
 Figure of Elijah_evil_icon is the file "Elijah_evil.png".
 Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
@@ -22,6 +23,7 @@ Figure of Elijah_naked_icon is the file "Elijah_naked.png".
 Figure of Felix_icon is the file "Felix.png".
 Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
+Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
 
 A thing has a figure name called icon.
@@ -84,11 +86,13 @@ carry out artistcredits:
 	say "     [line break]";
 	say "NPCs:[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
+	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
 	say "     Sandra by ?[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
+	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
 
 FS Graphics ends here.
 
