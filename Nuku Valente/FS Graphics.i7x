@@ -80,6 +80,12 @@ carry out artistcredits:
 	say "Artwork Credits for Flexible Survival:[line break]";
 	say "     [line break]";
 	say "Infections:[line break]";
+	say "     Alpha Husky by Anymouse1968 @ Furaffinity[line break]";
+	say "     Bottlenose Toy by Anymouse1968 @ Furaffinity[line break]";
+	say "     Demon Brute by Anymouse1968 @ Furaffinity[line break]";
+	say "     Latex Vixen by Anymouse1968 @ Furaffinity[line break]";
+	say "     Messy Pig by Anymouse1968 @ Furaffinity[line break]";
+	say "     Ram by Anymouse1968 @ Furaffinity[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by ?[line break]";
