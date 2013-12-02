@@ -38,7 +38,7 @@ Section 3- small fire
 
 Section 4 - fallen tree
 
-fallen tree is a situation.  The level of fallen tree is 4.
+[fallen tree is a situation.  The level of fallen tree is 4.
 The sarea of fallen tree is "Park";
 when play begins:
 	add fallen tree to badspots of girl;
@@ -54,12 +54,12 @@ Instead of Resolving a fallen tree:
 		say "After recovering from the sudden onslaught, you manage to stumble back onto the path to continue on your way, resolving not to underestimate the dangers of the park, however cute and cuddly they might be.";
 	otherwise:
 		say "deciding the whole situation is far to suspicious for your liking, you heft your pack and head back down the way you came.";
-	now fallen tree is resolved;
+	now fallen tree is resolved;] [Chinchilla Alterations]
 
 
 Section 5- Poke trap
 
-Poke trap is a situation.  The level of Poke trap is 4.
+[Poke trap is a situation.  The level of Poke trap is 4.
 The sarea of Poke trap is "Park";
 when play begins:
 	add Poke trap to badspots of girl;
@@ -80,7 +80,7 @@ Instead of Resolving a Poke trap:
 			say "deciding that of all things you have seen, this one is just too freaky, you quickly leave the pikachu like creature behind while you still can... maybe you can find something to scrub the memory of its existence out of your brain if you look hard enough.";
 	otherwise:
 		say "your paranoia getting the best of you, you continue minding your own business.";
-	now Poke trap is resolved;
+	now Poke trap is resolved;] [Chinchilla Alteration]
 
 
 Section 6- Felinoid lair
