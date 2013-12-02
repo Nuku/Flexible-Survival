@@ -92,7 +92,7 @@ to say losetosnake:
 				
 to snakecoresex:
 	if cocks of player > 0: [Always goes for male genitalia first]
-		say "[cock size desc of player] dick[smn], [if breast size of player > 0]already quite hard after its prior ritual[otherwise if hp of player > 0]inclined to oblige the beast's affection with your arousal[otherwise]the beast's tainted infection having aroused you[end if]. Satisfied, and with almost no restraint, it's abyssal maw envelopes";
+		say "[cock size desc of player] dick[smn], [if breast size of player > 0]already quite hard after its prior ritual[otherwise if hp of player > 0]inclined to oblige the beast's affection with your arousal[otherwise]the beast's tainted infection having aroused you[end if]. Satisfied, and with almost no restraint, its abyssal maw envelopes ";
 		if cock length of player < 21:
 			say "[if cocks of player > 2]two of them[otherwise if cocks of player is 2]both of them[otherwise]the tool[end if] with little restraint or difficulty";
 		otherwise:
