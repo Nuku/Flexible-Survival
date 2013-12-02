@@ -373,6 +373,8 @@ to say sexwithCandy:
 							say "[sexwithcandy_03]";
 						otherwise if num is 4:
 							say "[sexwithcandy_04]";
+						otherwise if num is 5:
+							say "[sexwithcandy_05]";
 				otherwise:
 					say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 		otherwise:
