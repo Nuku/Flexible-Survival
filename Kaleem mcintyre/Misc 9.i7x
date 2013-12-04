@@ -94,11 +94,12 @@ Instead of resolving a The Cap:
 			increase score by 10;
 			now The Cap is resolved;
 			Move player to the Bunker;
+			now battleground is "void";
 		otherwise:
 			say "Trying to make your way through the hallways of the Museum as fast as you can you end up getting caught by another Cerberus Herm right as the one chasing you rounds the corner you had just tried to lose it at. Flipping your head between both creatures you end up cursing your luck as the two feral guardians begin to close in on you.";
-			challenge "Cerberus Herm";
+			challenge "Cerberus";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				challenge "Cerberus Herm";
+				challenge "Cerberus";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "Defeating the two canine guardians you make your way out of the Museum and then down the streets back towards the bunker. Of course, as luck would have it, you end up [one of]tripping over the side of the curb[or]slipping on a can[or]slipping over something hard[or]getting your feet tangled over a discarded pair of pants[at random] and accidently dropping the statue you are holding onto.";
 					say "Cursing you can only watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you slowly walk over to the wreckage of the statue and then reach down up to pick up the headwear before turning it over. On the front of the cap there's a single letter stitched into the material, the beginning of your name no less.";
@@ -107,6 +108,7 @@ Instead of resolving a The Cap:
 					increase score by 10;
 					now The Cap is resolved;
 					Move player to the Bunker;
+					now battleground is "void";
 				Otherwise:
 					Say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
 					now The Cap is resolved;

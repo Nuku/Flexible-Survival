@@ -1242,7 +1242,7 @@ To reciting2:
 						now rubber tigress is not tamed;
 						now carried of cup stack is 0;
 					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
-					if hp of rubber tigress is 11:
+					if hp of rubber tigress is 11 or hp of rubber tigress is 12:
 						now hp of rubber tigress is 10;
 						say "     There is a wet, popping sound as Artemis's sex toys detach themselves, ready to be installed again.";
 					now lust of rubber tigress is 0;
@@ -2867,7 +2867,7 @@ Carry out reciting:
 						now rubber tigress is not tamed;
 						now carried of cup stack is 0;
 					if hp of rubber tigress is 9, now hp of rubber tigress is 8;
-					if hp of rubber tigress is 11:
+					if hp of rubber tigress is 11 or hp of rubber tigress is 12:
 						now hp of rubber tigress is 10;
 						say "     There is a wet, popping sound as Artemis's sex toys detach themselves, ready to be installed again.";
 					now lust of rubber tigress is 0;
