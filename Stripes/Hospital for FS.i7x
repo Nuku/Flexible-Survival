@@ -389,6 +389,7 @@ Instead of resolving a Finding a Way in:
 	if hospnav > 2 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
 		say "     After taking many twists and turns through the hospital, you manage to find you way up several stories and over to the lit area.  There you pass by the operating theater and head down the hallway towards the door at the end.  It is partially open and light flows from it.  You approach cautiously, listening intently, but there is little sound coming from the room, labeled as [']Testing Labs['].";
 		say "[meetdrmouse]";
+		say "[line break]";
 		now the player is in Hidden Lab;
 		now locked stairwell is unlocked;
 		now Finding a Way in is resolved;
@@ -594,7 +595,7 @@ to say hospquestpt4:
 
 to say hospquestpt5:
 	if progress of doctor mouse minus turns is less than 12:
-		say "     Please leave me to my research for the moment.  I believe I shall have something special for you when I am done.";
+		say "     'Please leave me to my research for the moment.  I believe I shall have something special for you when I am done.'";
 	otherwise:
 		say "     'I have been able to perform some research on the sample you brought back.  While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature.  This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results.  And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.'  He smiles as he takes a syringe from a refrigerated storage case.  'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there.  And so, this is for you,' he says as he merrily injects you with it.";
