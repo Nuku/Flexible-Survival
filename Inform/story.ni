@@ -1845,7 +1845,7 @@ To Birth:
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise:
@@ -6019,7 +6019,9 @@ Include Tristian by Verath.
 Include Fancy by Sarokcat n Verath.
 Include Daisy by Sarokcat n Verath.
 Include Onyx by Sarokcat n Verath.
-Include Zoo People by Sarokcat.
+Include Brian by Sarokcat.
+Include Diego by Sarokcat.
+Include Timothy by Sarokcat.
 Include Sarah by Sarokcat&Hellerhound.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
