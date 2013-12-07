@@ -1,5 +1,5 @@
 Version 5 of Feral Sea Dragoness by Tunalord Sefont begins here.
-[Version 5.1 - Updated to extended heat table - Stripes]
+[Version 5.2 - Heat messages altered to fit with MPreg heat - Stripes]
 
 "Adds a Feral Sea Dragoness to Flexible Survivals Wandering Monsters table"
 
@@ -272,30 +272,26 @@ When Play begins:
 
 
 to say fsdheatstart:
-	[puts Feral Sea Dragon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "feral sea dragon":
-			now monster is y;
-			break;
-	increase cunt width of player by 1;
-	increase cunt length of player by 1;
-	if cunt width of player < cunt width entry, increase cunt width of player by 1;
-	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+	if cunts of player > 0:
+		setmonster "feral sea dragon";
+		choose row monster in table of random critters;
+		increase cunt width of player by 1;
+		increase cunt length of player by 1;
+		if cunt width of player < cunt width entry, increase cunt width of player by 1;
+		if cunt length of player < cunt length entry, increase cunt length of player by 1;
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
 
 
 to say fsdheatend:
-	say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
-	[puts Feral Sea Dragon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "feral sea dragon":
-			now monster is y;
-			break;
-	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
-	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	if cunts of player > 0:
+		setmonster "feral sea dragon";
+		choose row monster in table of random critters;
+		say "As your heat passes, the throbbing longing you feel in your draconic loins subsides.";
+		if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+		if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	otherwise:
+		say "As your male heat passes, that throbbing longing you feel deep in your ass subsides.";
 
 to say fsdinheat:
 	increase libido of player by 4;
@@ -311,14 +307,14 @@ to say fsdinheat:
 				now heatturnskipper is true;
 				follow the turnpass rule;
 			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Block:
-				say "Catching the breeze of the sea in the air, your pussy quivers with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
+				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
 				move the player to Beach Plaza;
 			otherwise if location of player is Public Beach:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave rolling onto the beach, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will sooth your heat.  Your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers with each wave rolling onto the beach, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			otherwise if location of player is Bouncy Castle:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will sooth your heat.  Your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			otherwise if location of player is Sloping Sand or location of player is Coral Ring or location of player is Sunken Ship:
@@ -326,9 +322,8 @@ to say fsdinheat:
 				decrease humanity of player by 5;
 				decrease libido of player by 20;
 			otherwise:
-				say "Your pussy quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your wet folds... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+				say "Your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your [if cunts of player > 0]wet folds[otherwise]crinkled hole[end if]... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
 	if libido of player > 100, now libido of player is 100;
-
 
 [Endings now part of the Feral Sea Dragon endings]
 
