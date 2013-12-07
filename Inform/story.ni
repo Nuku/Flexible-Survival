@@ -6529,13 +6529,14 @@ To regularstart: [normal start method]
 		say "(12) [link]Hyperlinks[as]12[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(13) [link]Waiting for Input[as]13[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Screen Clearing[as]14[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(15) [link]Graphics[as]15[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-14)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 14 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 15 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6566,40 +6567,21 @@ To regularstart: [normal start method]
 				now hypernull is 1;
 			otherwise:
 				now hypernull is 0;
-[			if hypernull is 0:
-				say "Turn off Hyperlinks?";
-				if player consents:
-					now hypernull is 1;
-			otherwise:
-				say "Turn on Hyperlinks?";
-				if player consents:
-					now hypernull is 0;		]
 		otherwise if calcnumber is 13:
 			if waiterhater is 0:
 				now waiterhater is 1;
 			otherwise:
 				now waiterhater is 0;
-[			if waiterhater is 0:
-				say "Turn off delays?";
-				if player consents:
-					now waiterhater is 1;
-			otherwise:
-				say "Turn on delays?";
-				if player consents:
-					now waiterhater is 0;		]
 		otherwise if calcnumber is 14:
 			if clearnomore is 0:
 				now clearnomore is 1;
 			otherwise:
 				now clearnomore is 0;
-[			if clearnomore is 0:
-				say "Turn off Screen Clearing?";
-				if player consents:
-					now clearnomore is 1;
+		otherwise if calcnumber is 15:
+			if graphics is false:
+				now graphics is true;
 			otherwise:
-				say "Turn on Screen Clearing?";
-				if player consents:
-					now clearnomore is 0;		]
+				now graphics is false;
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
