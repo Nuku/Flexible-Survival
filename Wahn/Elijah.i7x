@@ -81,8 +81,6 @@ Version 3 of Elijah by Wahn begins here.
 [   1: had the event with the spidertaur                               ]
 [ 100: declined sub bondage sex with Zephias/Elijah                    ]
 
-debugactive is a number that varies. debugactive is 0.
-
 Section 1 - Meeting Event
 
 Angel vs Demons is a situation. The level of Angel vs Demons is 10.
@@ -176,6 +174,8 @@ instead of sniffing Elijah:
 		say "The stench of brimstone and sulfur hangs in the air around Elijah.";
 
 to say elijahdesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Elijah], npcEint: [npcEint], Thirst: [thirst of Elijah] <- DEBUG[line break]";
 	if (hp of Elijah is 0):   [chained up in the chapel]
 		say "     The angel has had his armor ripped away and his white tunic is thorn, bloodstained and splattered with cum-stains. Even his once bright halo has suffered, now a pale flickering shadow of its former glory. He looks young, with an unlined face and long golden-blond hair. At the moment, his arms are chained to a wooden cross, the chains being the only thing holding him upwards as he drifts in and out of consciousness. His wings hang limply from his shoulders.";
 	if (hp of Elijah is 1) or (hp of Elijah is 2):   [wounded + unconscious in the bunker]
@@ -681,10 +681,10 @@ to say NPCintUpdate:
 		npceintAlter 12 with Char-L of Elijah;
 		npceintAlter 13 with Char-M of Elijah;		
 
-after going inside from the Grey Abbey Library while (hp of Elijah is 1 or hp of Elijah is 2 and NPCintCounter - turns > 3):
+after going inside from the Grey Abbey Library while (hp of Elijah is 1 or hp of Elijah is 2 and NPCintCounter - turns > 4):
 	move player to Bunker;	
 	if debugactive is 1:
-		say "    ELIJAH 1/2 WALKIN";
+		say "    ELIJAH 1/2 WALKIN[line break]";
 	if Candy is in bunker and Char-A of Elijah is "0":
 		say "     As you come down into the bunker, you spot Candy kneeling besides the injured angel's bunk. The coon is helping him drink some water out of a bottle, then eases him back down on the bunk as his patient loses consciousness again. It seems Candy still has some of his health-care training intact from his past life. And what he also has is curiosity and an active interest in other men - while checking that the angel is resting comfortably, Candy lifts his sheet and peeks under it, giggling girlishly. He whispers 'Get well soon, big boy,' to the sleeping angel, then goes back to his own bunk.";
 		now Char-A of Elijah is "1";
@@ -721,13 +721,13 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 1 or hp of
 	otherwise if (bee girl is tamed) and Char-J of Elijah is "0":
 		say "     Honey frets nervously at your side, clutching herself to you tightly as you take a moment to look over the injured angel.";
 		now Char-J of Elijah is "1";
-		now NPCintCounter is turns;
+	now NPCintCounter is turns;
 	say "[NPCintUpdate]";		
 		
-after going inside from the Grey Abbey Library while (hp of Elijah is 3 and NPCintCounter - turns > 3):	 [virgin-mode]
+after going inside from the Grey Abbey Library while (hp of Elijah is 3 and NPCintCounter - turns > 4):	 [virgin-mode]
 	move player to Bunker;
 	if debugactive is 1:	
-		say "    ELIJAH 3 WALKIN";	
+		say "    ELIJAH 3 WALKIN[line break]";	
 	if Candy is in bunker and (Char-A of Elijah is "0" or Char-A of Elijah is "1"):
 		say "     As you come down into the bunker, you pass Candy and Elijah going up into the library and catch some of their conversation. Candy says, '...and I even follow some of the rules you guys have. Isn't there something like 'love thy neighbour like yourself'? I sure love to stroke my dick and a hard shaft inside me, so of course I'm happy to do so for other men, too.' Elijah looks a bit puzzled at Candy's logic. Other parts of his anatomy seem to agree with the playful coon though, judging from the slight bulge in his tunic.";
 		now Char-A of Elijah is "2";
@@ -764,13 +764,13 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 3 and NPCi
 	otherwise if (bee girl is tamed) and (Char-J of Elijah is "0" or Char-J of Elijah is "1"):
 		say "     As you come down into the bunker, you notice the bee girl, Honey, approach Elijah and ask if he's feeling better.  'I am, thank you,' he replies with a nod and a smile.  'Oh, I am told that a cure was made of milk and honey.  Was that honey yours, little one?'  [if honeygiven is true]She nods, saying that it came from her hive[otherwise]She replies that she's not sure, but adds that it probably came from her hive[end if].  He takes her hand in his.  'Then my thanks again to you and your hive,' he says.  Honey gets a sad look in her eyes and buzzes off to be alone for a while, leaving Elijah confused.";
 		now Char-J of Elijah is "2";
-		now NPCintCounter is turns;
+	now NPCintCounter is turns;
 	say "[NPCintUpdate]";
 			
-after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCintCounter - turns > 3):	 [more human-like, nice guy]
+after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCintCounter - turns > 4):	 [more human-like, nice guy]
 	move player to Bunker;
 	if debugactive is 1:
-		say "    ELIJAH 4 WALKIN";		
+		say "    ELIJAH 4 WALKIN[line break]";		
 	if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2"):
 		say "     As you come down into the bunker, you see Elijah walking up to Candy holding a rectangular box in colorful wrapping paper behind his back. He hands it over to the coon, who squeals 'A present? Oooh, thank you honey.' As Candy weighs it in his hands and shakes the box softly to try to figure out what it is, Elijah explains 'I found it in one of the offices next door. Apparently it was meant as a prank for a Christmas party. I thought... you might like it.'";
 		say "     Curiosity and anticipation make Candy forget all restraint and he just shreds the wrapping paper and tears the lid of the cardboard box inside. What comes to light is... a rubber dildo, colored in the red and white striped pattern of a candy cane. Candy giggles as he sees it, then hugs Elijah and gives him a kiss on the cheek. 'Just what I always wanted. Let's go try it out!' The expression on Elijah's face is priceless as he stammers 'I - erm...' while Candy pulls him along in the direction of his bunk...";
@@ -818,13 +818,13 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 4 and NPCi
 			if remainder after dividing level of bee girl by 5 is 0:
 				increase dexterity of bee girl by 1;
 		now Char-J of Elijah is "3";
-		now NPCintCounter is turns;
+	now NPCintCounter is turns;
 	say "[NPCintUpdate]";		
 			
-after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPCintCounter - turns > 3):	 [evil, very direct sex-fiend]
+after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPCintCounter - turns > 4):	 [evil, very direct sex-fiend]
 	move player to Bunker;
 	if debugactive is 1:
-		say "    ELIJAH 99 WALKIN";			
+		say "    ELIJAH 99 WALKIN[line break]";			
 	if (Candy is in bunker) and (Char-A of Elijah is "0" or Char-A of Elijah is "1" or Char-A of Elijah is "2" or Char-A of Elijah is "3") and lastElijahfucked - turns >= 12:
 		say "     As you come down into the bunker, you see Elijah step up to Candy from behind and grab his ass. A furry bun in each hand, he squeezes them a bit, saying 'Bend over, I wanna fuck.' Candy replies 'Rather direct, aren't you now, hun. But I like men who know what they want.' He then takes up position against the nearest wall, bracing himself with his arms and pushing his ass back invitingly.";
 		say "     Elijah grins at you as he steps out of his leather pants, then moves behind Candy, rubbing his long and hard cock against the fur of Candy's ass. He plays with Candy for a moment, running his manhood up and down his crack, pushing against his pucker, then going back to rubbing against his fur. When he has Candy mewling in need, he suddenly thrusts deep inside the coon, making him gasp as he adjusts to the size of the invader. Then he really goes to town on the boytoy, shafting him hard and deep between moments where he stops all of a sudden until Candy begs him needily to go on and fuck him.";
@@ -895,7 +895,7 @@ after going inside from the Grey Abbey Library while (hp of Elijah is 99 and NPC
 				say ".  He turns and storms off, but not before rummaging through your pack and grabbing one of the spare bottles of water to use to clean himself up.";
 				decrease carried of water bottle by 1;
 		now Char-J of Elijah is "4";
-		now NPCintCounter is turns;
+	now NPCintCounter is turns;
 	say "[NPCintUpdate]";		
 
 Section 5 - Fucking Elijah

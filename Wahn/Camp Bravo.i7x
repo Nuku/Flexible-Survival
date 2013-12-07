@@ -527,6 +527,7 @@ to say ElaineFucking:
 
 Adam is a man.
 The description of Adam is "     The offspring of Elaine Scott and the minotaur out in the middle of the camp, Adam is a ...half-minotaur you'd say. While his lower body consists of furred, two-jointed legs and hooves like his father's, from the waist up he's almost completely human, with only small nubby horns poking out from under his shoulder-length black hair. All in all, he's much less bulky than his father, having a more slender build and the upper body of a fit teenager of about nineteen. His handsome, beardless face is very open and he smiles a lot. At the moment he's dressed in a black t-shirt and wide camo-shorts - with a hole in the back to allow for his moderately long flexible tail (which has a larger tuft of black fur at the end).";
+The icon of Adam is Figure of Adam_icon.
 The conversation of Adam is { "Oh, hello." };
 lastfuck of Adam is usually 555.
 

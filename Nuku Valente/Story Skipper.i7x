@@ -960,7 +960,9 @@ To reciting2:
 						now Captured Demon is resolved;
 						now Thankful Soldier is resolved;
 					if hp of David > 0 and hp of David < 4, move David to Parade Ground;
-					if hp of David is 4, move David to Bunker;
+					if hp of David is 4:
+						move David to Bunker;
+						now DavidBunkerEntry is turns;
 			-- 111:	[Camp Bravo / Adam]
 				if the player's command matches "[number]":
 					now hp of Adam is the number understood;
@@ -2586,7 +2588,9 @@ Carry out reciting:
 						now Captured Demon is resolved;
 						now Thankful Soldier is resolved;
 					if hp of David > 0 and hp of David < 4, move David to Parade Ground;
-					if hp of David is 4, move David to Bunker;
+					if hp of David is 4:
+						move David to Bunker;
+						now DavidBunkerEntry is turns;
 			-- 111:	[Camp Bravo / Adam]
 				if the player's command matches "[number]":
 					now hp of Adam is the number understood;
