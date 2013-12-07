@@ -20,6 +20,7 @@ Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
+Figure of Adam_icon is the file "Adam.png".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of David_icon is the file "David.png".
 Figure of Elijah_evil_icon is the file "Elijah_evil.png".
@@ -103,6 +104,7 @@ carry out artistcredits:
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
+	say "     Adam by Kadel @ y-gallery.net[line break]";	
 	say "     Brutus by Lay @ y-gallery.net[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";

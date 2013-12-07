@@ -204,6 +204,11 @@ Section 2 - NPC
 [  99: player agreed to have the demon brute fuck him                   ]
 [ 100: got fucked & enslaved by the demon brute                         ]
 [                                                                       ]
+[ Dexterity of David - Sven Interaction                                 ]
+[   0: nothing yet                                                      ]
+[   1: got blown by Sven                                                ]
+[  99: player didn't give Sven the go-ahead to blow him                 ]
+[                                                                       ]
 [ hp states of David - Location                                         ]
 [   0: on patrol                                                        ]
 [   1: got called in to Camp Bravo                                      ]
@@ -213,10 +218,11 @@ Section 2 - NPC
 [ 100: demon brute pet's slave - in the amulet                          ]
 
 David is a man.
-The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
+The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]";
 The conversation of David is { "Oh, hello." };
 lastfuck of David is usually 555.
 The icon of David is Figure of David_icon.
+DavidBunkerEntry is a number that varies.
 
 The scent of David is "     David has a nice masculine human smell.";
 
@@ -253,6 +259,12 @@ Instead of fucking David:
 			now sortorder entry is 5;
 			now description entry is "Fill the young soldier's ass with your cock.";
 		sort the table of fucking options in sortorder order;
+		if (Dexterity of David is 2 and David is in bunker and Sven is in bunker):
+			choose a blank row in table of fucking options;
+			now title entry is "Threesome with Sven";
+			now sortorder entry is 6;
+			now description entry is "Let the young soldier fuck Sven's ass.";
+		sort the table of fucking options in sortorder order;		
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
@@ -278,6 +290,8 @@ Instead of fucking David:
 						say "[DavidSex4]";
 					otherwise if (nam is "Take David's ass"):
 						say "[DavidSex5]";
+					otherwise if (nam is "Threesome with Sven"):
+						say "[DavidSex6]";						
 		if thirst of David < 5:
 			increase thirst of David by 1;
 		now lastfuck of David is turns;
@@ -309,6 +323,8 @@ instead of conversing David:
 			otherwise if calcnumber is 2:			[send him to the bunker/camp bravo]
 				if hp of David is 3:						[in the camp]
 					say "     David gives you a salute and says [if thirst of David is 20]'See you there, baby.' [otherwise]'As you wish, sir.' [end if]before going to collect his clothes and equipment.";
+					if DavidBunkerEntry is 0:
+						now DavidBunkerEntry is turns;
 					move David to Bunker;
 					now hp of David is 4;
 				otherwise if hp of David is 4:	[in the bunker]
@@ -453,7 +469,40 @@ after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
 		now thirst of David is 10;                [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
+after of going to Bunker while Dexterity of David is 0 and hp of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in bunker and hp of Sven >= 8 and hp of Sven < 50:
+	if debugactive is 1:
+		say "    DEBUG: DAVID/SVEN (DEXTERITY 0) WALKIN[line break]";
+	say "     As you enter the bunker, you swing by the rows of beds set up in the room and find David in one of them, stretched out on his back and sleeping. The thin blanket he's under is showing a large tent over his crotch, making it pretty obvious that he's got a boner right now. That must be one nice dream he's having. And you're not the only one who noticed that - not far away, Sven is sitting cross-legged on his own bed, stealing glances at the sleeping man. The snowmeow shyly lowers his gaze and flirts his long tail through the air in front of himself as he notices your attention. It's clear that he's... interested in David, though he'd never make a first move, being as shy and submissive as he is - and your pet on top of that.";
+	say "     [line break]";
+	say "     Do you want to tell Sven that he should... give David's dream a happy ending (Y), or do you let things stand as they are, with him just looking (N)? ";
+	if player consents:
+		now Dexterity of David is 1;   [he gets a blowjob]
+		say "     [line break]";
+		say "     Walking over to the snow leopard, you sit down beside him and stroke his fur, getting a pleased sigh and rumbling purr from him. Your affectionate snowmeow pet snuggles up to your touch, purring a bit louder as you rub his soft-furred belly, then gives a slight moan as your hand reaches down to cup his balls and fondles them. After petting him some more till he's pretty aroused and about half-hard, you whisper in Sven's ear what you'd like him to do next. Sven quickly looks over to David again and blushes brightly in his ears. 'While he's sleeping? I... I could not. It would be so forward,' he says as his cock throbs hard in your hand, your kitty clearly aroused at the thought of doing something so naughty as that.";
+		say "     'Do it, my pet.  You know you want to,' you tell him, giving him a pat on his rear in the right direction for added encouragement.  There is a last little moment of hesitation as he looks back to you, then David, and back again, followed by a happy kiss on your cheek. Then your horny little kitty almost flows out of the bed, silently stalking over to the soldier's bed in all his feline grace. Carefully taking hold of David's blanket, he slowly pulls it off, grinning wider and wider as more and more of the sleeping man's naked body comes into sight.";
+		say "     [WaitLineBreak]";
+		say "     Soon, the blanket is in a small heap at the foot of the bed, with David's naked body in full view of everyone and his hard cock standing up like a flagpole. Sven almost pounces on it in his eagerness, taking the young soldier's cock in a hand-paw and licking up and down its side before giving its head a little peck and then sliding his muzzle down over David's shaft. As the snowmeow goes down on him, soft moans start coming from the still sleeping David, his dream seemingly going into a more active phase to follow his body's impressions. In between the moans, he mumbles a bit, slowly getting more coherent while getting the blowjob, until there finally is an understandable 'Yeah, suck it baby.' and one of David's hands grabs Sven's head to pull him down against his crotch.";
+		say "     It's pretty obvious that he's mostly awake now, though he still has his eyes closed and thinks this is all still part of his dream. Moving his other hand to grab Sven's head too, David pulls him down on his shaft with quickly growing urgency, then thrusts his hips upwards with a grunt as he orgasms, blowing his load into the eager kitty's mouth. His whole body twitches with each blast of cum and the soldier is panting audibly by the time he's done shooting.";
+		say "     His climax over, the satisfied soldier raises his head and looks down with a sleepy expression at the kitty - who grins shyly and dips his ears nervously, fretting he might be in trouble. But David only smiles groggily and says 'Huh? *pant* Sven? That felt *pant* amazingly *pant* good.' Sven purrs in relief and David continues 'Pretty kzzzZZZ...', falling asleep again, rather worn out by the climax after his sudden awakening. Sven dutifully puts the blanket back on him, then bounces back to you to thanks you for being such a great [if cunts of player > 0 and cocks of player is 0]mistress[otherwise]master[end if] by encouraging your kitty pet.";
+	otherwise:
+		now Dexterity of David is 99;   [no blowjob from Sven]
+		say "     [line break]";
+		say "     Walking over to the snow leopard, you sit down beside him and stroke his fur, getting a pleased sigh and rumbling purr from him. After a few minutes with your affectionate snowmeow pet, relaxing as you rub his soft belly-fur and he snuggles up to your touch, you stand up and turn your attention back to the task of surviving in this changed city.";
+
+after of going to Bunker while Dexterity of David is 1 and hp of David is 4 and Sven is in bunker and hp of Sven >= 8 and hp of Sven < 50:
+	if debugactive is 1:
+		say "    DEBUG: DAVID/SVEN (DEXTERITY 1) WALKIN[line break]";
+	if cunts of player > 0 and cocks of player is 0:   [female player]
+		say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'Her pet, yes. She saved me and brought me here, takes care of me - the best and strongest and bravest mistress one can have. She even gave me this nice collar. I love her and am hers.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behaviour, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
+		say "     Sven blushes at the hesitant compliment and ducks momentarily behind his fluffy tail.  'Anything for my mistress['] friends,' he says softly.  Releasing his furry appendage, he lets it wind around David's waist as he slips up beside him, nuzzling against the young man's shoulder.  'And... and I like you too - you are very nice and very attractive,' he adds quietly as he snuggles all the closer.  Confronted with such a soft-spoken and cuddly snowmeow, David can't help himself but stroke Sven's fur too, accepting this strange bunker-mate for what he is.";
+	otherwise:   [male/herm/neuter player]
+		say "     As you enter the bunker, you see David sitting on one of the closer beds, right next to Sven. They're talking and you overhear David say '...so let me get this straight, you're -' 'His pet, yes. He saved me and brought me here, takes care of me - the best and strongest and bravest master one can have. He even gave me this nice collar. I love him and am his.' Sven happily replies, smiling at the young soldier as he praises you. David looks slightly nonplussed at the transformed student's so totally submissive behaviour, then shrugs to himself and says 'Well, if that's what you want.' After a quick look down at his crotch and with his cheeks reddening slightly, he continues 'Err - about what you did earlier... thanks? That was... pretty amazing. I thought I was dreaming till after I came and realized you felt pretty furry.'";
+		say "     Sven blushes at the hesitant compliment and ducks momentarily behind his fluffy tail.  'Anything for my master's friends,' he says softly.  Releasing his furry appendage, he lets it wind around David's waist as he slips up beside him, nuzzling against the young man's shoulder.  'And... and I like you too - you are very nice and very attractive,' he adds quietly as he snuggles all the closer.  Confronted with such a soft-spoken and cuddly snowmeow, David can't help himself but stroke Sven's fur too, accepting this strange bunker-mate for what he is.";
+	now Dexterity of David is 2;
+	
 after of going to Bunker while thirst of David is 5 and hp of David is 4:
+	if debugactive is 1:
+		say "    DEBUG: DAVID (THIRST 5) RELATIONSHIP WALKIN[line break]";	
 	say "     As you enter the bunker, David walks up to you and says he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.'";
 	say "     He looks at you with an earnest and hopeful expression. What do you tell him? Y = 'I like you too - come be my boyfriend.' ; N = 'We're just fuck-buddies, blowing off some steam.'";
 	if player consents:
@@ -465,7 +514,7 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 
 after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0:  [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
-		say "     DAVID/ERIC INTERACTION 1";
+		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
 	if hp of Eric is 1:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
@@ -501,6 +550,8 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:  [David talks with Eric about his gender and they exchange stories]
+	if debugactive is 1:
+		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 	say "     [line break]";
 	say "			[DavidEricTalk]";
@@ -519,8 +570,8 @@ instead of going to Bunker while hp of David is 4 and libido of David < 53 and c
 		if DBCaptureQuestVar is 5: [original, evil Brutus]
 			say "     As you enter the bunker with your demon brute pet in tow and David spots it, he jumps up from where he was sitting on one of the many cots and shouts 'Watch out, there's a dem...', then suddenly falls silent as he realizes the big creature is following you and controlled. 'What the fuck?' he says, still a bit shocked and wide-eyed. Explaining that you've got him tightly controlled and the demon can't hurt him, you assure David that he can calm down. The young soldier accepts your word on it, but still moves to distance himself from the demon brute as far as possible.";
 			if (DemonBruteStatus is 0 or DemonBruteStatus is 1):  [male/herm]
-				say "     Watching David move to the far side of the underground room, you notice feeling some heat against your arm that wasn't there before. Turning, you see the massive cock of the demon brute besides you, hanging down between his legs fully engorged, radiating a fair amount of warmth as it pulses in anticipation. Your pet's eyes follow David and he sniffs the air through his slit-like nostrils, a pleased rumble going through his chest. Quite a reaction... curious what prompted it so instantly, you ask the brute to explain himself.";
-				say "     Looking over to you, the demon gives an evil grin. 'That one has felt the touch of the Infernal Legion - I can smell is fear.' At that, he pulls in another lungful of air through his nose and precum starts dripping from his erection. He moves his claws over his chest, at the approximate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'Give him to me and I won't rip your arms off when I finally get free.'";
+				say "     Watching David move to the far side of the underground room, you feel some heat against your arm that wasn't there before. Turning, you see the massive cock of the demon brute besides you, hanging down between his legs fully engorged, radiating a fair amount of warmth as it pulses in anticipation. Your pet's eyes follow David and he sniffs the air through his slit-like nostrils, a pleased rumble going through his chest. Quite a reaction... curious what prompted it so instantly, you ask the brute to explain himself.";
+				say "     Looking over to you, the demon gives an evil grin. 'That one has felt the touch of the Infernal Legion - I can smell his fear.' At that, he pulls in another lungful of air through his nose and precum starts dripping from his erection. He moves his claws over his chest, at the approximate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'Give him to me and I won't rip your arms off when I finally get free.'";
 				say "     [line break]";
 				say "     Chuckling at the demon brute making demands even though he's yours to command, you grasp your demontooth amulet and whisper the command word, banishing him inside. Enough of this, for now.";
 				now libido of David is 1;   [first-time fright scene resolved]
@@ -536,7 +587,7 @@ instead of going to Bunker while hp of David is 4 and libido of David < 53 and c
 				]
 			otherwise if DemonBruteStatus is 2:  [cuntboy demon brute]
 				say "     Watching David move to the far side of the underground room, you notice the demon brute fidgeting besides you. Turning, you see the pussy between his legs, its lips open and swollen in arousal, moisture glistening on them. Your pet's eyes follow David and he sniffs the air through his slit-like nostrils, a pleased rumble going through his chest. His left hand moves to his crotch as if to grab his nonexistent cock and he snarls as he is reminded of you modifying his body. Quite a reaction... curious what prompted it so instantly, you ask the brute to explain himself.";
-				say "     Looking over to you, the demon grumbles. 'That one has felt the touch of the Infernal Legion - I can smell is fear.' At that, he pulls in another lungful of air through his nose and you can see droplets of female juices drip out of his pussy - much to the demon's chagrin as he looks down at his crotch. He moves his claws over his chest, at the approximate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'I'll flay you alive for gelding me and taking this chance away when I finally get free.'";
+				say "     Looking over to you, the demon grumbles. 'That one has felt the touch of the Infernal Legion - I can smell his fear.' At that, he pulls in another lungful of air through his nose and you can see droplets of female juices drip out of his pussy - much to the demon's chagrin as he looks down at his crotch. He moves his claws over his chest, at the approximate positions where David had bloody slashes from the other demon on your first meeting 'He is marked to be a Bal'ssh'avizatz'gul's slave, but can still walk without hobbling, so he hasn't been taken properly. I WANT him as mine!' His eyes flash brightly and his gaze bores into yours. 'I'll flay you alive for gelding me and taking this chance away when I finally get free.'";
 				say "     [line break]";
 				say "     Chuckling at the demon brute making threats even though he's yours to command, you grasp your demontooth amulet and whisper the command word, banishing him inside. Enough of this, for now.";
 				now libido of David is 1;  [first-time fright scene resolved]
@@ -696,7 +747,7 @@ to say DavidSex3:												[player pussy fucked]
 		if David is in Parade Ground:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 		otherwise:
-			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to your kiss and touch.";
 		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you grab David and pull him with you to one of the nearby bunks, lying down with him on top of you.";
 		say "     [WaitLineBreak]";
@@ -716,7 +767,7 @@ to say DavidSex4:												[player ass fucked]
 	if David is in Parade Ground:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 	otherwise:
-		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to your kiss and touch.";
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you push David to lie on one of the nearby bunks, then climb on top of him, straddling his hips.";
 	say "     [WaitLineBreak]";
@@ -741,7 +792,7 @@ to say DavidSex5:												[David ass fucked]
 		if David is in Parade Ground:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 		otherwise:
-			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to your kiss and touch.";
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	if lust of David is 0:								[anal virgin]
 		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around and push him towards one of the nearby bunks.";
@@ -766,6 +817,38 @@ to say DavidSex5:												[David ass fucked]
 		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
 	otherwise:    												[worrying about cheating on his girlfriend]
 		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'But even if I'm just Bi as you say - this is till cheating on Ann.'";
+
+to say DavidSex6:												[Sven's ass gets fucked by David]
+	setmonster "human";
+	choose row monster from the table of random critters;
+	say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the material of his pants you feel his manhood already filling out, as his body reacts to your kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's urgent moans, he's ready for some action.";
+	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then whisper in his ear to look over to one of the farther-away beds in the bunker. There, your snowmeow kitty Sven is lying on his stomach, reading a book, tail waving in the air above his enticing furry butt. As wound-up as you already have David, it doesn't take much more than describing how Sven's tight and ready hole would feel around his cock to get him interested. After undoing the soldier's pants and letting them drop, you quickly get rid of your own clothes and the two of you walk over towards Sven naked.";
+	say "     [WaitLineBreak]";
+	say "     You're almost at the bed before Sven notices you and turns his head, eyes going wide as he sees [if cunts of player > 0 and cocks of player is 0]his mistress and her human friend [otherwise]his master and his human friend [end if]walk towards him in the nude - and quite obviously horny. A shy but eager smile spreads over his face, then you're with him and start softly scritching behind his ears, which has Sven close his eyes and purr in contentment. David meanwhile runs a hand along the snow leopard's tail flirting in the air before him and asks 'I - can I fuck you?' Sven just keeps purring loudly, then stretches his body and raises his furry butt in unmistakable eagerness.";
+	say "     Taking a kneeling position behind the sexy kitty, David grabs his hard cock and rubs it teasingly over Sven's pucker and making it wet with his precum. Your feline pet's tail meanwhile strokes against David's naked chest, its end curling around his back almost as if to pull him closer. You can hear David mutter 'Such soft  fur you have, pretty kitty' under his breath, then he's pressing forward against Sven, his hard cock spreading open the snowmeow's tailhole. 'Yes! Fuck me, please!' Sven mrowls in delight, grinding his ass backwards to meet each thrust as David starts pounding into him.";
+	say "     [WaitLineBreak]";
+	if cocks of player > 0:
+		say "     With your two friends already enjoying each other's bodies, it's for you to decide where and how you want to join in. Do you present your cock to Sven and have him lick it (Y), or will you move in behind David and fuck his ass (N)? ";
+		if player consents:
+			say "     [line break]";
+			say "     Getting on the bed at its head end, you sit right in front of Sven and spread your legs wide, then pull his head down on your crotch. The eager feline licks and sucks at your cock, getting it fully hard before taking it into his muzzle[if cunts of player > 0] while his paws stroke and tease at your pussy[end if]. He's gotten quite good at this now in just a short time - amazingly so, in fact, as your feline sex pet can still do it while distracted by a hard cock fucking his ass. You continue to stroke his head and ears as you moan compliments to Sven and he bobs his head steadily over your cock while his raspy tongue slides all over it, focusing on every sensitive spot he's learned.";
+			say "     His softly furred paws travel over your rear, caressing your hips and thighs[if cunts of player > 0] before sinking a pair of fingers into your cunt[end if]. He makes sure to pace his licking and sucking, letting you build increasingly to greater heights.  When finally your climax does come, you blast your cum down his throat as you drain your aching balls with a loud groan of ecstasy. Smiling around your cock, he makes sure to swallow it all down. Just moments later, the satisfaction of getting his mistress off pushes your kitty over the edge too and with a yowl, he starts blasting his ample load onto the blanket below. And not long after that, David joins the two of you in orgasm, slamming deep into the snowmeow's ass and sending shot after shot into the feline's furry butt. After taking a moment to catch his breath, David eases his cock out of Sven's freshly creamed hole and moves over to give you a kiss. Then he says 'Thanks little buddy, you were amazing.' to Sven and starts petting and stroking your pet's furry body all over.";					
+		otherwise:
+			say "     [line break]";
+			if lust of David is 0: 	[anal virgin]
+				say "     Your eyes on the shapely form of David's bubble butt, you get on the bed behind him. Then you move a bit closer and cup his firm cheeks, spreading them a bit as your hard [cock of player] cock bumps against his virgin hole. This is such a nice opportunity to break David in for some good fucking that you just can't wait to get into him. Taking hold of your shaft with one hand, you line it up with his pucker, then push in against the soldier's body. Soon the muscle yields and you pop in, becoming the first man to explore his delightfully tight depths. David gasps as his hole is spread for the first time by your invading member, but soon starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
+				now lust of David is 1; 	[anally de-virginized]
+			otherwise:
+				say "     Your eyes on the shapely form of David's bubble butt, you get on the bed behind him. Then you move a bit closer and cup his firm cheeks, spreading them a bit as your hard [cock of player] cock bumps against his hole. You can't wait to get back into his nice and tight soldier ass. Taking hold of your shaft with one hand, you line it up with his pucker, then push in against the soldier's body. David gasps in lust as his hole is spread by your invading member, then starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
+			say "     Pounding David's ass with deep thrusts, you revel in the moans, gasps and slapping noises of your hips against his ass filling the whole bunker. Who'd have thought that post-apocalyptic survival would be like this? Fucking the tight hole of a handsome man while he himself is balls deep in a hot little catboy who's your pet - hell yeah, you'd pick this any day against your 'normal' life before. But moving your thoughts back to the thing at hand - or rather the hole you're balls deep in - you decide to change your rhythm of thrusts to match David's, moving in unison as the three of you fuck.";
+			say "     [WaitLineBreak]";
+			say "     Being penetrated at the same time as fucking Sven's furry ass has David pretty hot and bothered, and before too much longer, he moans 'I'm gonna... cummMMM!' He grabs the snow leopard's hips to pull him tight against his crotch as his whole body shudders when spurt after spurt of cum shoot out of his cock and deep into Sven's body. Getting bred by the young man, his body being filled with spurt after spurt of cum, drives your feline pet over the edge right with him, and with a lust-filled yowl, Sven starts blasting his ample load onto the blanket below. Meanwhile, your thrusting member being gripped by David's twitching anal muscles soon gives you the last bit of stimulation you need. Shoving your cock in all the way as you feel the need to cum rise inside your balls, a massive load of cum blasts through your shaft and into David's hole.";
+			say "     Exhausted by the hot fuck, you wrap your arms around David from the back and just hold on to him, your slowly softening shaft still inside his asshole. After catching your breath, you pull out and give your human friend a deep kiss, then go grab a towel and clean yourself up a bit. David eases his cock out of Sven's freshly creamed hole, then says 'Thanks little buddy, you were amazing.' to the still purring kitty and starts petting and stroking your pet's furry body all over.";
+	otherwise if cunts of player > 0:
+		say "     Getting on the bed at its head end, you sit right in front of Sven and spread your legs wide, then pull his head down on your crotch. The eager feline licks and fingers your pussy, getting you quite excited before alternating between diving his tongue and sliding [if cunt width of player > 5]a paw into your wide pussy[otherwise if cunt width of player > 2]three fingers into your ample pussy[otherwise]a pair of fingers into your wet pussy[end if]. He's gotten quite good at this now in just a short time - amazingly so, in fact, as your feline sex pet can still do it while distracted by a hard cock fucking his ass. He tweaks your clit while his raspy tongue slides everywhere it can get, focusing on every sensitive spot he's learned.";
+		say "     Sven makes sure to pace his licking and fingering, letting you build increasingly to greater heights. When finally your climax does come, you spray your hot juices over his tongue and paw with a loud groan of ecstasy. Just moments later, the satisfaction of getting his mistress off pushes your kitty over the edge too and with a yowl, he starts blasting his ample load onto the blanket below. And not long after that, David joins the two of you in orgasm, slamming deep into the snowmeow's ass and sending shot after shot into the feline's furry butt. After taking a moment to catch his breath, David eases his cock out of Sven's freshly creamed hole and moves over to give you a kiss. Then he says 'Thanks little buddy, you were amazing.' to Sven and starts petting and stroking your pet's furry body all over.";
+	otherwise:
+		say "     Not having any genitals of your own, you just get on the bed at the head end and sit right in front of Sven, your hands still rubbing and stroking him affectionately. Purring loudly, he replies in kind, caressing your body and lapping at your bare but nevertheless sensitive crotch to give you pleasure. Sven makes sure to pace his licking and fingering, letting you build increasingly to greater heights. When finally your climax does come, a tingling feeling of fulfillment spreads out through your body, making you groan loudly in ecstasy. Just moments later, the satisfaction of getting his master off pushes your kitty over the edge too and with a yowl, he starts blasting his ample load onto the blanket below. And not long after that, David joins the two of you in orgasm, slamming deep into the snowmeow's ass and sending shot after shot into the feline's furry butt. After taking a moment to catch his breath, David eases his cock out of Sven's freshly creamed hole and moves over to give you a kiss. Then he says 'Thanks little buddy, you were amazing.' to Sven and starts petting and stroking your pet's furry body all over.";
 
 Section 3 - Endings
 

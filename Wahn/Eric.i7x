@@ -41,6 +41,7 @@ Version 5 of Eric by Wahn begins here.
 [   3: Felinoid fucked him (seen by the player)                      ]
 [   4: Player told him that they're okay with it                     ]
 [  99: the player stopped the Felinoid from fucked him               ]
+
 	
 to say WaitLineBreak:   [little bit of often used code]
 	if waiterhater is 0:
@@ -98,11 +99,15 @@ to say lroomdesc:
 
 instead of going inside from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Bunker;
+	if debugactive is 1:
+		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";	
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
 	now libido of Eric is 1;
 	
 instead of navigating Sports Arena Lockerroom while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Sports Arena Lockerroom;
+	if debugactive is 1:
+		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";	
 	say "     As you enter the lockerroom and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies in the dorm after they transformed.'";
 	now libido of Eric is 1;
 
@@ -128,6 +133,8 @@ instead of sniffing Eric:
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk.";
 
 to say ericdesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric]  <- DEBUG[line break]";	
 	if (hp of Eric is 0):   [starting state]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
@@ -1316,8 +1323,10 @@ to say EricSex13_99_Female:	[sex slave Eric]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):	
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";		
 	if hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32:    [had sex with the player]
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
 		say "     [line break]";
@@ -1398,6 +1407,8 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			
 instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";		
 	if hp of Eric is 11:    [cuntboy Eric]
 		say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Eric - with your felinoid companion on top of him, mounting the smaller human and rapidly thrusting his hips at him. Seems like the big cat managed to put your friend under his influence again - though maybe this time Eric went to seek the feline out - after all, the young athlete is on his hands and knees on one of the mattresses from the cots in the bunker below, which he must have dragged up here for just this purpose...";
 		say "     [line break]";
@@ -1418,6 +1429,8 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 			
 instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and hp of Eric < 99):
 	move player to Bunker;
+	if debugactive is 1:
+		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";		
 	say "     As you come down the stairs into the bunker, Eric almost jumps up from where he was sitting on his cot and rushes over to you, his cheeks red with embarrassment. Before you can so much as ask what's wrong, he gushes forth with 'I'm sorry. I- I had sex with your felinoid companion. Something just came over me and I let him mount and fuck me! Can you ever forgive me for this?' His somewhat teary eyes seek out yours and take on a hopeful look as he realizes how calmly you're taking this (you did already know and didn't stop the felinoid from fucking him after all).";
 	say "     So, what do you tell him? That there's no shame in having some fun, even without you and with... exotic partners (Y)? Or do you just console him and tell him to avoid the felinoid in the future (N)?";
 	if player consents: [more felinoid scenes]

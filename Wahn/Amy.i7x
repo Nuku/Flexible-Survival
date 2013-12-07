@@ -1,7 +1,6 @@
 Version 1 of Amy by Wahn begins here.
 [Version 1 - Put into its own file]
 
-
 [ Amy, the husky                                                        ]
 [                                                                       ]
 [ HP of Amy                                                             ]
@@ -84,6 +83,8 @@ instead of conversing the Amy:
 		say "ERROR-Amy-[hp of Amy]C: She isn't in one of the states she should be in! Please report how you got to this message.";
 	
 to say AmyDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Amy], LUST: [lust of Amy], LIBIDO: [libido of Amy], THIRST: [thirst of Amy], LEVEL: [level of Amy], XP: [xp of AMY], DEXTERITY: [dexterity of Amy], SVENAMYSEX: [SvenAmySex], BRUTUSAMYSEX: [BrutusAmySex], SNOWAMYSEX: [SnowAmySex]  <- DEBUG[line break]";	
 	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if hp of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them. [otherwise]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk. [end if][if Lust of Amy > 12]There is a kind of special glow to her, and she seems to be very happy and fulfilled right now. [otherwise if Lust of Amy > 0]Her belly bulges in obvious pregnancy, making her a very content and happy husky.[end if][line break]";
 	if hp of Amy is 1:
 		say "     Her character is rather child-like, which might have something to do with having been born not all that long ago. She doesn't wear any clothing and usually moves around on all fours like a real dog.";
@@ -125,6 +126,8 @@ An everyturn rule:
 		
 instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - turns > 3):
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: AMY SOLO WALKIN [line break]";	
 	now lastAmySpotted is turns;
 	if AmyMaturityCounter > 16:		[child-like]
 		say "     As you come out of the bunker, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
@@ -135,6 +138,8 @@ instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - 
 				
 instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotted - turns > 3):
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: AMY SOLO WALKIN [line break]";		
 	now lastAmySpotted is turns;
 	if AmyMaturityCounter > 16:		[child-like]
 		say "     As you enter the library, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
@@ -145,6 +150,8 @@ instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotte
 
 instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: AMY LUST WALKIN [line break]";		
 	now lastfuck of Amy is turns + 4;
 	if hp of Amy is 2:    [mature virgin]
 		say "     As you come out of the bunker, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.'";
@@ -157,6 +164,8 @@ instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) a
 		
 instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
 	now lastAmySpotted is turns;
+	if debugactive is 1:
+		say "     DEBUG: AMY/NADIA TEACHING WALKIN [line break]";			
 	if Char-C of Nadia is "0":
 		now Char-C of Nadia is "1";
 		say "[npcNadiaintUpdate]";	
@@ -166,6 +175,8 @@ instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and 
 			
 instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
 	now lastNadiaSpotted is turns;
+	if debugactive is 1:
+		say "     DEBUG: AMY/NADIA PREG WALKIN [line break]";				
 	move player to Grey Abbey Library;
 	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
 	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realise what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
@@ -216,6 +227,8 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 			
 instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";					
 	now lastfuck of Amy is turns + 4;
 	if hp of Amy is 2:		[mature virgin]
 		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.'";
@@ -519,11 +532,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 				say "     [line break]";
 				say "     Gripping Icarus by the feathers on his head, you give him a strict look and tell him that he's yours and that you decide what he does or doesn't do. Then you tell him that he may - no he must - watch Amy play with herself and get fucked... and that he's forbidden from joining her or even masturbating. There, that should wind the little slut up some, making him especially needy for your touch. With a grin, you give his feathered butt a squeeze, then grab a chair from a nearby table and watch him a while, standing there to observe Amy and sometimes twitching a bit as he has to hold himself back from touching his increasingly aroused body.";
 				now IcarusAmySex is 99;  [Icarus/Amy sex forbidden]
-
-instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12 and a random chance of 1 in 3 succeeds):
-	move player to Grey Abbey Library;
-	now lastfuck of Amy is turns + 4;
-	if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
+	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
 		if Lust of Amy is 0:
