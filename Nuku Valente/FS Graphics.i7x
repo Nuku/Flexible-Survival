@@ -35,7 +35,7 @@ Figure of Thomas_icon is the file "Thomas.png".
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
 graphics is a truth state that varies.
-graphics is usually true.
+[graphics is usually true.]
 
 before examining a thing(called t):
 	if the icon of t is figure of pixel:
