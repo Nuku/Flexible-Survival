@@ -1350,6 +1350,8 @@ To reciting2:
 						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
 						now description entry is "";
 						now toggle entry is demoncleansing rule;
+					if DBCaptureQuestVar > 5:
+						now the icon of demon brute is Figure of BrutusGood_icon;						
 			-- 141:	[demon brute pet - gender]
 				if the player's command matches "[number]":
 					now DemonBruteStatus is the number understood;
@@ -2972,6 +2974,8 @@ Carry out reciting:
 						now title entry is "Ask about the possibility of freeing a demon of his inner evil";
 						now description entry is "";
 						now toggle entry is demoncleansing rule;
+					if DBCaptureQuestVar > 5:
+						now the icon of demon brute is Figure of BrutusGood_icon;						
 			-- 141:	[demon brute pet - gender]
 				if the player's command matches "[number]":
 					now DemonBruteStatus is the number understood;

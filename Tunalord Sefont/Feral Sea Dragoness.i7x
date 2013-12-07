@@ -322,7 +322,7 @@ to say fsdinheat:
 				decrease humanity of player by 5;
 				decrease libido of player by 20;
 			otherwise:
-				say "Your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your [if cunts of player >0]wet folds[otherwise]crinkled hole[end if]... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+				say "Your [if cunts of player > 0]pussy[otherwise]asshole[end if] quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your [if cunts of player > 0]wet folds[otherwise]crinkled hole[end if]... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
 	if libido of player > 100, now libido of player is 100;
 
 [Endings now part of the Feral Sea Dragon endings]

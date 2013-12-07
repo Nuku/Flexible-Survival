@@ -16,7 +16,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 300.
-use MAX_VERBS of 300.
+use MAX_VERBS of 330.
 Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.

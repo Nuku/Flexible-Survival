@@ -216,6 +216,7 @@ David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
 The conversation of David is { "Oh, hello." };
 lastfuck of David is usually 555.
+The icon of David is Figure of David_icon.
 
 The scent of David is "     David has a nice masculine human smell.";
 
@@ -463,6 +464,8 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
 after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0:  [David spots Eric's genitals and wants to talk about them]
+	if debugactive is 1:
+		say "     DAVID/ERIC INTERACTION 1";
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
 	if hp of Eric is 1:
 		say "     '...a woman, down below. I didn't know the infections could do that - change only your gender and nothing else. It must be very strange for him.'";
@@ -508,8 +511,10 @@ An everyturn rule:			[you can just wait for them to talk too]
 		say "     [line break]";
 		say "			[DavidEricTalk]";
 	
-instead of going to Bunker while hp of David is 4 and companion of player is demon brute:  [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while hp of David is 4 and libido of David < 53 and companion of player is demon brute:  [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
+	if debugactive is 1:
+		say "     DAVID/BRUTUS INTERACTION 1";
 	if libido of David is 0:  [first time David sees the player with a demon brute]
 		if DBCaptureQuestVar is 5: [original, evil Brutus]
 			say "     As you enter the bunker with your demon brute pet in tow and David spots it, he jumps up from where he was sitting on one of the many cots and shouts 'Watch out, there's a dem...', then suddenly falls silent as he realizes the big creature is following you and controlled. 'What the fuck?' he says, still a bit shocked and wide-eyed. Explaining that you've got him tightly controlled and the demon can't hurt him, you assure David that he can calm down. The young soldier accepts your word on it, but still moves to distance himself from the demon brute as far as possible.";
@@ -584,7 +589,12 @@ instead of going to Bunker while hp of David is 4 and companion of player is dem
 		otherwise:   [male+herm]	
 			say "     They stay in that tight hug for a moment, David pressed against Brutus chest, his arms not even close long enough to reach around the demon's wide chest. Then suddenly, Brutus clears his throat, his face taking on an interesting shade of embarrassed purple as he lets the young soldier in his arms go. As David steps away, you see the demon's cock in a quite aroused state, hanging where it must have pressed right against David. With you standing right next to them, both the soldier and the demon seem to come to the decision to ignore the last bit at the same time, resulting in a somewhat awkward 'See ya.' and 'Sure, friend.'";
 		now libido of David is 53;
-	otherwise if libido of David is 53:  [David thanked Brutus after he got hurt - some attraction here]
+	
+instead of going to Bunker while hp of David is 4 and companion of player is demon brute and libido of David > 52 and a random chance of 1 in 3 succeeds:  [David reacts when the player comes in with the demon brute pet]
+	move player to Bunker;	
+	if debugactive is 1:
+		say "     DAVID/BRUTUS INTERACTION 2";
+	if libido of David is 53:  [David thanked Brutus after he got hurt - some attraction here]
 		if a random chance of 4 in 10 succeeds: [40% chance]
 			let bonus be (( the Perception of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -593,10 +603,7 @@ instead of going to Bunker while hp of David is 4 and companion of player is dem
 				say "     As you walk into the bunker with Brutus in tow, you see David [one of]sitting on his bed, reading[or]sorting through his supplies[or]writing in a notebook[at random]. The young soldier looks up as he notices you, greeting you and your demon companion with a smile and a wave. [if diceroll > 15]Perceptive as you are, you notice that David's gaze lingering on Brutus muscular chest, then wandering lower to the large demon's crotch. The young man bites his lip, then suddenly realizes you're watching him stare at Brutus and looks back down, embarrassment giving him reddened cheeks.[end if]";
 			otherwise:   [Brutus is more obvious - just stands and stares]
 				say "     As you walk into the bunker with Brutus in tow, you see David [one of]just getting up after taking a rest[or]pull out some clean clothes out of his bag[or]walk to his bed half-dressed after freshening up[at random], his back turned to you. Walking along to the open area in the middle of the bunker, you notice the presence of Brutus missing from where he always walks along - behind your shoulder on the right side. Turning around, you find the demon still standing at the entrance, busy watching the young soldier pulling on a new pair of pants. There seems to be some interest for David in him, judging from [if DemonBruteStatus is 0 or DemonBruteStatus is 1]his semi-hard and throbbing member[otherwise]soon drippingly wet pussy[end if]. As you're still deciding if you should say something, Brutus notices you looking at him and hurries after you, taking his usual place with a murmured 'Sorry, master.'";
-	
-instead of going to Bunker while hp of David is 4 and companion of player is demon brute and a random chance of 1 in 3 succeeds:  [David reacts when the player comes in with the demon brute pet]
-	move player to Bunker;	
-	if libido of David is 54:  [they had some fun together]
+	otherwise if libido of David is 54:  [they had some fun together]
 		if a random chance of 1 in 2 succeeds:  [David greets the player and Brutus]
 			say "     As you walk into the bunker with Brutus in tow, you run into David just on his way up to the library to return a book and grab a new one. He gives the both of you a friendly smile, greeting you and giving Brutus a clap on the arm, squeezing it affectionately as he says 'Nice to see you, big guy.' Then he moves on, walking up the stairs and returning some time later with something new to read.";
 		otherwise:   [Brutus is rather more obvious]
@@ -759,5 +766,7 @@ to say DavidSex5:												[David ass fucked]
 		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
 	otherwise:    												[worrying about cheating on his girlfriend]
 		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'But even if I'm just Bi as you say - this is till cheating on Ann.'";
+
+Section 3 - Endings
 
 David ends here.
