@@ -1,4 +1,4 @@
- Version 2 of Mack for FS by Stripes begins here.
+Version 2 of Mack for FS by Stripes begins here.
 [Version 2 - Mack @ Bunker]
 
 "Adds a male Squirrel name Macadamia (Mack) to the Flexible Survival game"
