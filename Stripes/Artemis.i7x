@@ -368,7 +368,7 @@ to say artemissex8_mod:	[Engulf and masturbate]	[***]
 			now cunts of rubber tigress is 0;
 			now cunt length of rubber tigress is 0;
 			now cunt width of rubber tigress is 0;
-		if lust of rubber tigress is 1:
+		if thirst of rubber tigress is 1:
 			now cocks of rubber tigress is 1;
 			now cock length of rubber tigress is 9;
 			now cock width of rubber tigress is 9;
