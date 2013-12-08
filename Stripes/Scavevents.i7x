@@ -1,5 +1,6 @@
 Version 3 of Scavevents by Stripes begins here.
 [version 3 - Scavevents 13 to 15 added ]
+[version 4- altered Free Milk and  Gryphon Milkman event to add some flavour text for Dairy. Added new Abandoned Milk event - by cmacleod42]
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
@@ -362,6 +363,7 @@ when play begins:
 Instead of resolving a Gryphon Milkman:
 	say "As you're out and about looking for supplies, you hear the flapping of wings overhead.  Before you can do much more than look up, a gryphon lands in front of you.  This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs.  And what he also has is a white peaked cap and a wire carrier with several bottles.";
 	say "'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
+	say "The milk bottle has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.";
 	increase carried of gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
@@ -375,7 +377,7 @@ when play begins:
 	add Free Milk to badspots of hermaphrodite;
 
 Instead of resolving a Free Milk:
-	say "Your search for edible items leads you into a residential area.  As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full.  Walking over to the house, you take the bottle.  The milk is rather cold and smells delicious.  You wonder where it came from - you'd have thought that with the apocalypse and all, deliveries by the milkman would stop.  And are there even any cows left with these changing infections?";
+	say "Your search for edible items leads you into a residential area.  As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full.  Walking over to the house, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder where it came from - you'd have thought that with the apocalypse and all, deliveries by the milkman would stop.  And are there even any cows left with these changing infections?";
 	increase carried of gryphon milk by 1;
 	now Free Milk is resolved;
 
@@ -745,6 +747,20 @@ Instead of resolving a Shattered House:
 				fight;
 	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
+	
+Section 16 - Abandoned Milk (by cmacleod42)
+
+	Abandoned Milk is a scavevent.
+	The sarea of Abandoned Milk is "Outside";
+	when play begins:
+		add Abandoned Milk to badspots of furry;
+		add Abandoned Milk to badspots of hermaphrodite;
+
+	Instead of resolving a Abandoned Milk:
+		say "Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
+		say "On the bench you see an empty milk bottle lying on it's side. You also see an intact a milk bottle standing there - and it's full!  Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
+		increase carried of gryphon milk by 1;
+		now Abandoned Milk is resolved;
 
 
 Scavevents ends here.
