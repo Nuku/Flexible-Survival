@@ -1185,7 +1185,7 @@ when play begins:
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur" } to infections of Reptilelist;
+	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
@@ -1218,7 +1218,7 @@ when play begins:
 
 Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake", "Naga" } to infections of Internallist;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
@@ -5997,7 +5997,7 @@ Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
-[Include Earthen Brute by Blue Bishop]
+Include Sierrasaur by Blue Bishop
 
 [NPCs]
 Include Velos by Blue Bishop.
