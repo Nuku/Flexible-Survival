@@ -116,6 +116,7 @@ to sierrabind:
 					now lustatt is 0;
 					now bsextimer is 0;
 					now trixieexit is 1;
+					follow the turnpass rule;
 				next;
 			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide":
 				say "[line break]";
@@ -289,7 +290,7 @@ to say sierradesc:
 		otherwise:
 			add { "Sierrasaur" } to infections of hermaphrodite;
 		if sierramem is 0:
-			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[otherwise if scalevalue of player is 4]only slightly larger[otherwise]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in a earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who distrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+			say "     You happen upon what -- at first -- appears to be a large boulder randomly jutting up from the ground, [if scalevalue of player > 4]only slightly smaller[otherwise if scalevalue of player is 4]only slightly larger[otherwise]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in a earthen-coloured, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
 			now sierramem is 1;
 		otherwise:
 			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence[or]Your presence disrupting its rest, it's none too pleased by this[or]This one seems to be hunting for prey, perhaps gauging that you might suffice[at random], the craggy beast ponderously attempting to approach and subdue you, forcing you to keep your distance and deal with them.";
