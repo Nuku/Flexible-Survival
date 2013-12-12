@@ -1158,7 +1158,7 @@ when play begins:
 	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
-	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine", "Wyvern" } to infections of girl;
+	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine" } to infections of girl;
 
 [corollary]
 marker is a kind of thing.
@@ -5997,7 +5997,8 @@ Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
-Include Sierrasaur by Blue Bishop
+Include Sierrasaur by Blue Bishop.
+[Include Pewter Consort By Blue Bishop.]
 
 [NPCs]
 Include Velos by Blue Bishop.
