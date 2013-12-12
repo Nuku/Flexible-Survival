@@ -730,6 +730,30 @@ To remove (item - a text)  from invent of the player:
 			now carried of x is 0;
 			break;
 
+To decide which number is numeric/numerical value of (T - indexed text):
+	let S be 1;
+	let L be the number of characters in T;
+	if L is 0, decide on 0;
+	let negated be false;
+	if character number 1 in T is "-" begin;
+		let negated be true;
+		let S be 2;
+	end if;
+	let result be 0;
+	repeat with N running from S to L begin;
+		let C be character number N in T;
+		let D be 0;
+		if C is "1" begin; let D be 1; otherwise if C is "2"; let D be 2;
+		otherwise if C is "3"; let D be 3; otherwise if C is "4"; let D be 4;
+		otherwise if C is "5"; let D be 5; otherwise if C is "6"; let D be 6;
+		otherwise if C is "7"; let D be 7; otherwise if C is "8"; let D be 8;
+		otherwise if C is "9"; let D be 9; otherwise if C is "0"; let D be 0;
+		otherwise; decide on 0; end if;
+		let result be (result * 10) + D;
+	end repeat;
+	if negated is true, let result be 0 - result;
+	decide on result.
+	
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.

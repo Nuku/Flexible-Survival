@@ -1,16 +1,25 @@
 Story Skipper by Nuku Valente begins here.
 
-The File of Trixsave is called "txsave".
-The File of Trixsave2 is called "txsave2".
-The File of Trixsave3 is called "txsave3".
+The File of Trixsave  (owned by another project) is called "txsave".
+The File of Trixsave2  (owned by another project) is called "txsave2".
+The File of Trixsave3  (owned by another project) is called "txsave3".
+The File of invsave  (owned by another project) is called "invsave".
 trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
 trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
 trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
+invsavetext is an indexed text that varies. invsavetext is usually "no save file found".
 
 To savetrix:
 	 write "[trixsavetext1]" to the File of Trixsave;
 	 write "[trixsavetext2]" to the File of Trixsave2;
 	 write "[trixsavetext3]" to the File of Trixsave3;
+	 write "Soda|1" to the File of invsave;
+	 repeat with x running from 1 to the number of rows in the table of game objects:
+		choose row x in the table of game objects;
+		if object entry is owned:
+			let number be carried of object entry;
+			append "[name entry]|[number]}" to the File of invsave;
+	 
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
@@ -1668,6 +1677,25 @@ Carry out savetrix2:
 	now trixsavetext2 is "[text of the File of Trixsave2]" ;
 	now trixsavetext3 is "[text of the File of Trixsave3]" ;
 	reciting2;	
+	let invrecover be indexed text;
+	now invrecover is "[text of the File of invsave]";
+	replace the text " " in invrecover with "`";
+	replace the text " " in invrecover with "`";
+	replace the text "}" in invrecover with " ";
+	say "Recovering inventory...";
+	repeat with z running from 1 to number of words in invrecover:
+		let curword be word number z in invrecover;
+		replace the text "|" in curword with " ";
+		let cur be word number 1 in curword;
+		let amt be  0;
+		let amttext be word number 2 in curword;
+		now amt is numerical value of amttext;
+		replace the text "`" in cur with " ";
+		repeat with Q running through grab objects:
+			let obname be printed name of q;
+			if cur matches  the text obname, case insensitively:
+				now carried of q is amt;
+				break;
 
 [
 testsven is an action applying to nothing.
