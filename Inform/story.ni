@@ -6815,6 +6815,7 @@ to say gsopt_start:
 Book 10 - Let the Games Begin
 
 understand "saveword" as savewording;
+understand "save" as savewording;
 
 savewording is an action applying to nothing.
 
