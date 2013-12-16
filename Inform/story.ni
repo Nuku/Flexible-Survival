@@ -6816,6 +6816,7 @@ Book 10 - Let the Games Begin
 
 understand "saveword" as savewording;
 understand "save" as savewording;
+understand "oldsave" as saving the game.
 
 savewording is an action applying to nothing.
 
