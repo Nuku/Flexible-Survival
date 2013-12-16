@@ -1007,7 +1007,7 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
+"face mask"	"A basic filtered face mask.  Maybe it will help?  Probably not[first time].  You doubt it was designed with this madness in mind[only]."	3	face mask
 [
 "heuristic processor"	"A small electronic circuit.  You've been told it's amazingly adaptive and can learn anything.  Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites.  It's too bulky, and doesn't have the processing capacity to be of any use in the field.  Perhaps you could find a way around those limitations?"	13	reprogramming device
@@ -1015,7 +1015,7 @@ name	desc	weight	object	sortname (indexed text)
 ]
 
 face mask is equipment. It is a part of the player. It is not temporary.
-The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
+The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ";
 The placement of face mask is "face";
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus.  hitbonus of journal is usually 0.
@@ -4386,7 +4386,7 @@ This is the turnpass rule:
 		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
 			increase corruption by a random number from 0 to 1;
-		if "Pure" is listed in feats of player:
+		if "Strong Psyche" is listed in feats of player:
 			decrease corruption by a random number from 0 to 2;
 		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
 		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
