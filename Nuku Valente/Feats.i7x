@@ -142,11 +142,11 @@ To addfeat (x - text) with (y - text):
 instead of addfeating the fun feats:
 	if "Male Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and "Always Cocky" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
 		if isHellhound is false or ( isHellhound is true and maleHound is true ):
-			addfeat "Male Preferred" with "You will reject female mutation.";
+			addfeat "Male Preferred" with "Outside of special circumstances, you'll remain a guy.";
 		if isHellhound is false or ( isHellhound is true and maleHound is false ):
-			addfeat "Female Preferred" with "You will reject male mutation.";
+			addfeat "Female Preferred" with "Outside of special circumstances, you'll remain a girl.";
 		if isHellhound is false:
-			addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership.";
+			addfeat "Herm Preferred" with "Outside of special circumstances, you'll remain a herm.";
 		addfeat "Single Sexed" with "You can be male, or female, but not both.";
 		if isHellhound is false:
 			addfeat "Always Cocky" with "Outside of special circumstances, you will always keep a cock.";

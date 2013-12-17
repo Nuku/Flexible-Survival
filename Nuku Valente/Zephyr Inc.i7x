@@ -7,7 +7,7 @@ Section 1 - Zephyr Office
 
 This is the zephyrad rule:
 	say "A voice suddenly chimes out from your radio, 'Good day, wastelander. This is Zephyr Incorporated. After much demand, we have moved a branch office into your fine city. Coordinates follow. We here are Zephyr Inc are dedicated to the betterment of mankind through science. To start, we are rewarding all with a bounty on defeated hostiles. You will be alerted to your winnings. Put your money away. The US Government has collapsed,' the announcement goes on to claim, 'so we use a currency of our own devising, Free credits, also known as freecred or just creds. When you have some, swing on by and spend them on useful survival gear. We look forward to meeting you shortly.'";
-	attempttowait;
+[	attempttowait;
 	say "There is a brief pause and then a three-tone chime.  A new voice comes in.  'As an added announcement, a recent creature migration has taken place.  The fact that this coincides with Zephyr's planned lupine relocation program is purely coincidental.  We shall provide information on this occurence, but take no responsibility for those inconvenienced by ferals moving into their new habitats.  Details follow.  Deet-deet-deet.'";
 	say "- Feral and Alpha Wolves successfully relocated to the Urban Forest.";
 	say "- Football Wolfman and Wrestling Wolf successfully relocated to the College Campus.";
@@ -17,7 +17,7 @@ This is the zephyrad rule:
 	say "- Bunny Jock threat level reassessed to level 4.";
 	say "- Panther Taur threat level reassessed to level 4.";
 	say "- Incubus and Succubus threat levels reassessed to level 8.";
-	say "- Wrestling Wolf threat level reassessed to level 15.";
+	say "- Wrestling Wolf threat level reassessed to level 15.";		]
 	now zephyr lobby is known;
 
 Zephyr Lobby is a room. "This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with bright, fluorescent lights shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter." It is fasttravel. It is private.
