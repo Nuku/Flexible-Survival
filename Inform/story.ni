@@ -6001,7 +6001,8 @@ Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
-[Include Pewter Consort By Blue Bishop.]
+Include Pewter Consort By Blue Bishop.
+
 
 [NPCs]
 Include Velos by Blue Bishop.
