@@ -586,7 +586,7 @@ This is the submit rule:
 	let temp be the hp of the player;
 	now fightoutcome is 22;
 	Lose;
-	if "Submissive" is listed in feats of the player, increase the XP of the player by ( 2 + lev entry / 5 );
+	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 
