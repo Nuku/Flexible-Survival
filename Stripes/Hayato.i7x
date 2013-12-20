@@ -217,7 +217,7 @@ to say sexwithHayato:
 		if name entry is "Red Oni":
 			now area entry is "Capitol";
 			now non-infectious entry is false;
-	otherwise if hp of Hayato is 16:	[***]
+	otherwise if hp of Hayato >= 16:	[***]
 		say "[hayatosexmenu]";
 
 to say hayatosexmenu:
@@ -244,7 +244,7 @@ to say hayatosexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive fellatio";
 		now sortorder entry is 2;
-		now description entry is "take your turn on top";
+		now description entry is "fuck his face";
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
