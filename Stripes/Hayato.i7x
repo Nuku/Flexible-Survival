@@ -244,7 +244,7 @@ to say hayatosexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive fellatio";
 		now sortorder entry is 2;
-		now description entry is "take your turn on top";
+		now description entry is "fuck his face";
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
