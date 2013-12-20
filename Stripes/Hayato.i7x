@@ -217,7 +217,7 @@ to say sexwithHayato:
 		if name entry is "Red Oni":
 			now area entry is "Capitol";
 			now non-infectious entry is false;
-	otherwise if hp of Hayato is 16:	[***]
+	otherwise if hp of Hayato >= 16:	[***]
 		say "[hayatosexmenu]";
 
 to say hayatosexmenu:
