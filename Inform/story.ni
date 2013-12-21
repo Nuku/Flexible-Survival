@@ -668,6 +668,7 @@ Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the 
 Park Entrance is fasttravel.
 Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 North of Park Entrance is Park Trail.
+Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
 East of Faint Trail is Lost in the Woods.
 Faint Trail is a door. 
@@ -1490,6 +1491,247 @@ carry out hunting:
 					say "As you are trying to recover from your last encounter, another roving creature finds you.";
 					Fight;
 		follow the turnpass rule;
+
+to new ban menu:
+	now calcnumber is -1;
+	let gsexit be 0;
+	while gsexit is 0:
+		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
+		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely.[roman type][line break]";
+		say "[line break]";
+		say "(1) [link]Feral[as]1[end link]: [bracket]NYI[close bracket][line break]";
+		say "(2) [link]Furry[as]2[end link]:		[bracket][if furry is not banned and furry is not warded][bold type]None[roman type][otherwise][link]None[as]21[end link][end if][close bracket] [bracket][if furry is warded][bold type]Ward[roman type][otherwise][link]Ward[as]22[end link][end if][close bracket] [if furry is banned][bold type]Ban[roman type][otherwise][link]Ban[as]23[end link][end if][close bracket][line break]";
+		say "(3) [link]Guy[as]3[end link]:		[bracket][if guy is not banned and guy is not warded][bold type]None[roman type][otherwise][link]None[as]31[end link][end if][close bracket] [bracket][if guy is warded][bold type]Ward[roman type][otherwise][link]Ward[as]32[end link][end if][close bracket] [if guy is banned][bold type]Ban[roman type][otherwise][link]Ban[as]33[end link][end if][close bracket][line break]";
+		say "(4) [link]Girl[as]4[end link]:		[bracket][if girl is not banned and girl is not warded][bold type]None[roman type][otherwise][link]None[as]41[end link][end if][close bracket] [bracket][if girl is warded][bold type]Ward[roman type][otherwise][link]Ward[as]42[end link][end if][close bracket] [if girl is banned][bold type]Ban[roman type][otherwise][link]Ban[as]43[end link][end if][close bracket][line break]";
+		say "(5) [link]Humanoid[as]5[end link]: 	[bracket]NYI[close bracket][line break]";
+		say "(6) [link]Humorous[as]6[end link]: 	[bracket][if humorous is not banned and humorous is not warded][bold type]None[roman type][otherwise][link]None[as]61[end link][end if][close bracket] [bracket][if humorous is warded][bold type]Ward[roman type][otherwise][link]Ward[as]62[end link][end if][close bracket] [if humorous is banned][bold type]Ban[roman type][otherwise][link]Ban[as]63[end link][end if][close bracket][line break]";
+		say "(7) [link]Hellspawn[as]7[end link]: 	[bracket][if hellspawn is not banned and hellspawn is not warded][bold type]None[roman type][otherwise][link]None[as]71[end link][end if][close bracket] [bracket][if hellspawn is warded][bold type]Ward[roman type][otherwise][link]Ward[as]72[end link][end if][close bracket] [if hellspawn is banned][bold type]Ban[roman type][otherwise][link]Ban[as]73[end link][end if][close bracket][line break]";
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";	
+		while 1 is 1:
+			say "Choice? (0-73)>[run paragraph on]";
+			get a number;
+			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73):
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is 1:
+			if clearnomore is 0, clear the screen;
+			say "Not yet Implemented!";
+		otherwise if calcnumber is 2:
+			if furry is not banned and furry is not warded:
+				now furry is warded;
+				[if clearnomore is 0, clear the screen;]
+				say "Warding Furry.";				
+			otherwise if furry is warded:		
+				now furry is banned;
+				now furry is not warded;
+				[if clearnomore is 0, clear the screen;]
+				say "Banning Furry.";
+			otherwise:	
+				now furry is not banned;
+				now furry is not warded;
+				[if clearnomore is 0, clear the screen;]
+				say "Unbanning/Warding Furry.";
+		otherwise if calcnumber is 3:
+			if guy is not banned and guy is not warded:	
+				now guy is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Guy.";
+			otherwise if furry is warded:							
+				now guy is banned;
+				now guy is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Guy.";
+			otherwise:
+				now guy is not banned;
+				now guy is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Guy.";
+		otherwise if calcnumber is 4:
+			if girl is not banned and girl is not warded:
+				now girl is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Girl.";
+			otherwise if girl is warded:
+				now girl is banned;
+				now girl is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Girl.";
+			otherwise:
+				now girl is not banned;
+				now girl is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Girl.";
+		otherwise if calcnumber is 5:
+			say "Not yet Implemented!";
+		otherwise if calcnumber is 6:
+			if humorous is not banned and humorous is not warded:
+				now humorous is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Humorous.";
+			otherwise if humorous is warded:
+				now humorous is banned;
+				now humorous is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Humorous.";
+			otherwise:
+				now humorous is not banned;
+				now humorous is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Humorous.";
+		otherwise if calcnumber is 7:
+			if hellspawn is not banned and hellspawn is not warded:
+				now hellspawn is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Hellspawn.";
+			otherwise if hellspawn is warded:
+				now hellspawn is banned;
+				now hellspawn is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Hellspawn.";
+			otherwise:
+				say "Unbanning/Warding Hellspawn.";
+				if clearnomore is 0, clear the screen;
+				now hellspawn is not banned;
+				now hellspawn is not warded;
+		otherwise if calcnumber is 21:
+			if furry is not banned and furry is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Furry is already available!";
+			otherwise:	
+				now furry is not banned;
+				now furry is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Furry.";
+		otherwise if calcnumber is 22:
+			if furry is warded:
+				if clearnomore is 0, clear the screen;
+				say "Furry is already Warded!";
+			otherwise:
+				now furry is warded;
+				now furry is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Furry.";
+		otherwise if calcnumber is 23:
+			if furry is banned:
+				if clearnomore is 0, clear the screen;
+				say "Furry is already Banned!";
+			otherwise:
+				now furry is banned;
+				now furry is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Furry.";
+		otherwise if calcnumber is 31:
+			if guy is not banned and guy is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Guy is already available!";
+			otherwise:
+				now guy is not banned;
+				now guy is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Guy.";
+		otherwise if calcnumber is 32:
+			if guy is warded:
+				if clearnomore is 0, clear the screen;
+				say "Guy is already Warded!";
+			otherwise:
+				now guy is warded;
+				now guy is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Guy.";
+		otherwise if calcnumber is 33:
+			if guy is banned:
+				if clearnomore is 0, clear the screen;
+				say "Guy is already Banned!";
+			otherwise:
+				now guy is banned;
+				now guy is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Guy.";
+		otherwise if calcnumber is 41:
+			if girl is not banned and girl is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Girl is already available!";
+			otherwise:
+				now girl is not banned;
+				now girl is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Girl.";
+		otherwise if calcnumber is 42:
+			if girl is warded:
+				if clearnomore is 0, clear the screen;
+				say "Girl is already Warded!";
+			otherwise:
+				now girl is warded;
+				now girl is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Girl.";
+		otherwise if calcnumber is 43:
+			if girl is banned:
+				if clearnomore is 0, clear the screen;
+				say "Girl is already Banned!";
+			otherwise:
+				now girl is banned;
+				now girl is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Girl.";
+		otherwise if calcnumber is 61:
+			if humorous is not banned and humorous is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Humorous is already available!";
+			otherwise:
+				now humorous is not banned;
+				now humorous is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Humorous.";
+		otherwise if calcnumber is 62:
+			if humorous is warded:
+				if clearnomore is 0, clear the screen;
+				say "Humorous is already Warded!";
+			otherwise:
+				now humorous is warded;
+				now humorous is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Humorous.";
+		otherwise if calcnumber is 63:
+			if humorous is banned:
+				if clearnomore is 0, clear the screen;
+				say "Humorous is already Banned!";
+			otherwise:
+				now humorous is banned;
+				now humorous is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Humorous.";
+		otherwise if calcnumber is 71:
+			if hellspawn is not banned and hellspawn is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Hellspawn is already available!";
+			otherwise:
+				now hellspawn is not banned;
+				now hellspawn is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Hellspawn.";
+		otherwise if calcnumber is 72:
+			if hellspawn is warded:
+				if clearnomore is 0, clear the screen;
+				say "Hellspawn is already Warded!";
+			otherwise:
+				now hellspawn is warded;
+				now hellspawn is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Hellspawn.";
+		otherwise if calcnumber is 73:
+			if hellspawn is banned:
+				if clearnomore is 0, clear the screen;
+				say "Hellspawn is already Banned!";
+			otherwise:
+				now hellspawn is banned;
+				now hellspawn is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Hellspawn.";
+		otherwise:
+			now gsexit is 1;
 
 to ban menu:
 	blank out the whole of table of combat items;
@@ -3794,25 +4036,6 @@ To level up:
 	if the remainder after dividing level of the player by 5 is 0:
 		funfeatget;
 	increase score by level of the player times level of the player;
-
-[To level up: [-CUT-]
-	increase level of player by 1;
-	decrease xp of player by level of player times 10;
-	if "Fast Learner" is listed in feats of player:
-		increase xp of player by ( level of player times 2 );
-	say "You have gained level [level of player]! Congratulations!";
-	if remainder after dividing level of player by 2 is 0:
-		say "Pick a stat to increase.";
-		wait for any key;
-		change the current menu to Table of Start Game;
-		carry out the displaying activity;
-		if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
-	increase maxhp of player by 2;
-	now hp of player is maxhp of player;
-	if the remainder after dividing level of the player by 5 is 0:
-		funfeatget;
-	increase score by level of the player times level of the player;]
 	
 Before combat is a number that varies.
 
@@ -5419,32 +5642,42 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-
 When play ends:
+	clear the screen;
+	say "[bold type]Game Over![roman type][line break]";
+	ratetheplayer;
+	say "----------";
 	follow the self examine rule;
-	if hp of player is less than 1:
-		say "You did not survive, but at least you did not join the monstrous masses. There is something to be said for that, right?";
-		increase score by 10;
-	say "In Scenario: [scenario], You have achieved a score of [score].";
-	say "This rates you as ";
+	say "[line break]";
+	
+to ratetheplayer:
+	if gsgl is 1 and score > 0:
+		now tempnum is (score / 20);
+		increase score by tempnum;
+	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
+	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	say "You've achieve the rank of: [bold type]";
 	if score is less than 0:
-		say "Deflated inanimate pool toy.";
-	otherwise if score is less than 60:
-		say "Inanimate pool toy.";
-	otherwise if the score is less than 120:
-		say "Small barking dog.";
+		say "A used, broken condom!";
+	otherwise if score is less than 120:
+		say "A used condom!";
 	otherwise if the score is less than 240:
-		say "Talented Child";
+		say "Post-Apocalyptic Passaround!";
 	otherwise if the score is less than 500:
-		say "College Student";
-	otherwise if the score is less than 700:
-		say "Grad Student";
-	otherwise if the score is less than 960:
-		say "Professor";
-	otherwise if the score is less than 1400:
-		say "Grand Scholar";
+		say "Salacious Scavenger!";
+	otherwise if the score is less than 1000:
+		say "Wanton Wastewander!";
+	otherwise if the score is less than 1500:
+		say "Serpent Blisskin!";
+	otherwise if the score is less than 2000:
+		say "Maester Baster!";
+	otherwise if the score is less than 2500:
+		say "Baude Warrior!";
+	otherwise if score is greater than 9000:
+		say "Th -- What, 9000?!";
 	otherwise:
-		say "Ultimate Master";
+		say "The Lord Humungus!";
+	say "[roman type]";
 	if the score is greater than 999:
 		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
 		if bookfound is not 0:
@@ -5463,11 +5696,8 @@ When play ends:
 			say ".  In the Abbey, type [']dewey [bookcode entry]['] to find it again in your next game";
 		say ".";
 	say "[line break]";
-	if the score is greater than 9000:
-		say "What, 9000?!";
-	say "[line break]";
-	if hp of player is less than 1:
-		stop the action;
+		
+when play ends:
 	if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
@@ -5500,13 +5730,6 @@ When play ends:
 Book 8 - People
 
 [Rod and Ronda Mallrat have been moved to the RodAndRonda file]
-
-When play ends:
-	say "----------";
-	say "I hope you enjoyed playing that as much as I enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
-	say "http://flexiblesurvival.com/[line break]";
-	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
-	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000[line break][line break]";
 	
 Milking is an action applying to nothing.
 understand "milkme" as milking.
@@ -5514,14 +5737,11 @@ understand "milk me" as milking.
 understand "milk myself" as milking.
 lastmilking is a number that varies.  lastmilking is usually 500.
 
-
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "panther milk"	"The thick, luscious milk of one of the panther taurs."	1	panther milk
 "chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
-
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".  panther milk is milky.
 chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".  chocolate milk is milky.
@@ -5640,7 +5860,7 @@ After printing a parser error when the parser error count is at least 0:
 
 Book 9 - Add-Ons
 
-[Special]
+[Special] 
 Include Presets by Default Settings.
 Include Shifting by Hellerhound.
 Include Qytat Shifters by Hellerhound.
@@ -5658,7 +5878,6 @@ Include Alt Combat by Stripes.
 Include Alt Vore by Stripes.
 Include BFandI by Stripes.
 Include Parasite by Stripes.
-
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -6089,7 +6308,12 @@ Include Honey by Stripes.
 Include Artemis by Stripes.
 Include Hobo by Stripes.
 
-
+When play ends:
+	say "----------[line break]";
+	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
+	say "http://flexiblesurvival.com/[line break]";
+	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000";
 
 Book - Start the Game
 
@@ -6109,127 +6333,80 @@ instead of going through a dangerous door(called X):
 	[try looking.]
 
 
-[-CUT-]
-[
-Part Game Options
+gsgl is a number that varies. gsgl is usually 1;
 
-Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
-
-Stat Bonus is in Game Options. The description of Stat Bonus is "[startstatsstatus][startstatsoptions]";
-Gender is in Game Options. The description of Gender is "[startgenderstatus][startgenderoptions]";
-Scenario Choice is in Game Options. The description of Scenario Choice is "[startscenariostatus][startscenariooptions]";
-Free Feats is in Game Options. The description of Free Feats is "[startfeatsstatus][startfeatsoptions]";
-Banned Creatures is in Game Options. The description of Banned Creatures is "[startbannedstatus][startbannedoptions]";
-Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
-Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
-Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
-Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] will start play, using current settings.";
-
-
-Section Option Says
-
-To say starthyperstatus:
-	say "Hyperlinks are currently: [if hypernull is 0]On[otherwise if hypernull is 1]Off[end if]";
-To say starthyperoptions:
-	say "[line break]Type [bold type][link]Hyper On[end link][roman type] or [bold type][link]Hyper Off[end link][roman type]";
-
-To say startwaitsstatus:
-	say "Waiting for input is currently: [if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if]";
-To say startwaitoptions:
-	say "[line break]Type [bold type][link]Waits On[end link][roman type] or [bold type][link]Waits Off[end link][roman type]";
-
-To say startclearsstatus:
-	say "Screen clears are currently: [if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if]";
-To say startclearoptions:
-	say "[line break]Type [bold type][link]Clears On[end link][roman type] or [bold type][link]Clears Off[end link][roman type]";
-
-To say startstatsstatus:
-	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[otherwise if startstatbonus is 7]Randomized stats[end if]";
-To say startstatsoptions:
-	say "[line break]Type [bold type][link]set Stat Bonus to Strength[end link][roman type] or [bold type][link]set Stat Bonus to Dexterity[end link][roman type] or [bold type][link]set Stat Bonus to Stamina[end link][roman type] or [bold type][link]set Stat Bonus to Charisma[end link][roman type] or [bold type][link]set Stat Bonus to Perception[end link][roman type] or [bold type][link]set Stat Bonus to Intelligence[end link][roman type] or [bold type][link]set Stat Bonus to Random[end link][roman type]";
-	
-To say startgenderstatus:
-	say "Player gender is currently: [if startgenderchoice is 0]Male[otherwise if startgenderchoice is 1]Female[end if]";
-To say startgenderoptions:
-	say "[line break]Type [bold type][link]set Gender to Male[end link][roman type] or [bold type][link]set Gender to Female[end link][roman type]";
-	
-To say startscenariostatus:
-	say "Scenario is currently: [if startscenariochoice is 1]Bunker[otherwise if startscenariochoice is 2]Caught Outside[otherwise if startscenariochoice is 3]Rescuer Stranded[otherwise if startscenariochoice is 4]Forgotten[otherwise if startscenariochoice is 5]Researcher[otherwise if startscenariochoice is 6]Hard mode[end if]";
-To say startscenariooptions:
-	say "[line break]Type [bold type][link]set Scenario Choice to Bunker[end link][roman type] or [bold type][link]set Scenario Choice to Caught Outside[end link][roman type] or [bold type][link]set Scenario Choice to Rescuer Stranded[end link][roman type] or [bold type][link]set Scenario Choice to Forgotten[end link][roman type] or [bold type][link]set Scenario Choice to Researcher[end link][roman type] or [bold type][link]set Scenario Choice to Hard mode[end link][roman type]";
-
-To say startfeatsstatus:
-	say "Free feats are currently: [freefeatgeneral]  [freefeatfun]";
-To say startfeatsoptions:
-	say "[line break]Type [bold type][link]set Free Feats to general[end link][roman type] or [bold type][link]set Free Feats to fun[end link][roman type]";
-
-To say startbannedstatus:
-	say "The following creatures types are currently banned: [startbannedflags]";
-]
-
-To say startbannedflags:
-	blank out the whole of table of combat items;
-	let X be 1;
-	repeat with Q running through flags:
-		choose a blank row in table of combat items;
-		now title entry is printed name of Q;
-		now description entry is printed name of Q;
-		if q is banned:
-			say title entry;
-			say "  ";
-		now toggle entry is flag ban rule;
-
-To say startbannedoptions:
-	say "[line break]Type [bold type][link]set Banned Creatures to configure[end link][roman type]";
-
-[-CUT-]
-[
-Section Setting Options
-
-Understand "set [something] to [text]" as setting it to.
-Understand "set [something] [text]" as setting it to.
-
-[start settings]
-Instead of setting Stat Bonus to "Strength": now startstatbonus is 1; say "Your strength is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Dexterity": now startstatbonus is 2; say "Your dexterity is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Stamina": now startstatbonus is 3; say "Your stamina is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Charisma": now startstatbonus is 4; say "Your charisma is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Perception": now startstatbonus is 5; say "Your perception is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Intelligence": now startstatbonus is 6; say "Your intelligence is your specialty."; prealternatestartstats;
-Instead of setting Stat Bonus to "Random": now startstatbonus is 7; say "Your stats will be randomized.  If you no longer qualify for your selected feat, you'll be given the option to take a new one after starting the game."; prealternatestartstats;
-Instead of setting Gender to "Male": now startgenderchoice is 0; say "Gender is now Male.";
-Instead of setting Gender to "Female": now startgenderchoice is 1; say "Gender is now Female.";
-Instead of setting Scenario Choice to "Bunker": now startscenariochoice is 1; say "Scenario is now Bunker.";
-Instead of setting Scenario Choice to "Caught Outside": now startscenariochoice is 2; say "Scenario is now Caught Outside.";
-Instead of setting Scenario Choice to "Rescuer Stranded": now startscenariochoice is 3; say "Scenario is now Rescuer Stranded.";
-Instead of setting Scenario Choice to "Forgotten": now startscenariochoice is 4; say "Scenario is now Forgotten.";
-Instead of setting Scenario Choice to "Researcher": now startscenariochoice is 5; say "Scenario is now Researcher.";
-Instead of setting Scenario Choice to "Hard mode": now startscenariochoice is 6; say "Scenario is now Hard mode.";
-Instead of setting Free Feats to "general": startFeatget; say "General Feat chosen.";
-Instead of setting Free Feats to "fun": startFunFeatget; say "Fun Feat chosen.";
-Instead of setting Banned Creatures to "configure": ban menu; say "Banned Creatures configured.";
-Instead of pushing Start Button: start button;
-[display settings]
-Instead of setting Hyperlinks to "On": now hypernull is 0; say "Hyperlinks enabled.";
-Instead of setting Hyperlinks to "Off": now hypernull is 1; say "Hyperlinks disabled.";
-Instead of setting Waits to "On": WaitLoveFunction;
-Instead of setting Waits to "Off": WaitHateFunction;
-Instead of setting Clears to "On": ClearMoreFunction;
-Instead of setting Clears to "Off": ClearLessFunction;
-
-
-Section Alternate Start
-
-To prealternatestartstats: [set any stats that need to be set to keep the player's time in the options room working] [-CUT-]
-	now the strength of the player is 12;		[sets all to 12, then applies selected bonus]
-	now the Dexterity of the player is 12;
-	now the Stamina of the player is 12;
-	now the Charisma of the player is 12;
-	now the Perception of the player is 12;
-	now the Intelligence of the player is 12;
-	now the humanity of the player is 100;		[prevents endgame from sanity before game starts]
-	startstatbonus;						[applies the current, pre-selected stat boost]
-]
+to genderlockmenu:
+	now calcnumber is -1;
+	let gsexit be 0;
+	while gsexit is 0:
+		say "[bold type]Select a gender lock:[roman type][line break]";
+		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
+		say "(2) [link]Random[as]2[end link] - Fond of Excitement? A random lock is chosen for you at game start!";
+		say "[line break]";
+		say "[bold type]Standard:[roman type][line break]";
+		say "(3) [link]Male[as]3[end link] - You reject all female mutations.";
+		say "(4) [link]Female[as]4[end link] - You reject all male mutations.";
+		say "[line break]";
+		say "[bold type]Hybrid:[roman type][line break]";
+		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm -- however lacking female genitalia.";
+		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female -- however lacking any breasts.";
+		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm -- however lacking any breasts.";
+		say "(8) [link]Herm[as]8[end link] - You take on the configuration of a full herm.";
+		say "[line break]";
+		say "[bold type]Loose:[roman type][line break]";
+		say "(9) [link]Always Cocky[as]9[end link] - Regardless of mutation, you always retain some male anatomy.";
+		say "(10) [link]Always a Pussy[as]10[end link] - Regardless of mutation, you always retain some female anatomy.";
+		say "(11) [link]Single Sexed[as]11[end link] - Regardless of mutation, you will never be a herm.";
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";	
+		while 1 is 1:
+			say "Choice? (0-11)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 11:
+				break;
+			otherwise:
+				say "Invalid Entry";
+		if calcnumber is not 0:
+			now gsgl is calcnumber;
+			now gsexit is 1;
+		otherwise:
+			now gsexit is 1;
+			
+to startgenderlockget:
+	say "Locking Gender...";
+	if gsgl is 2:
+		now gsgl is a random number between 3 and 11;
+	if gsgl is not 1 or gsgl is not 0:
+		if gsgl is 3:
+			say "Locked to male gender.";
+			add "Male Preferred" to feats of player;
+		otherwise if gsgl is 4:
+			say "Locked to female gender.";
+			add "Female Preferred" to feats of player;
+		otherwise if gsgl is 5:
+			say "Locked to shemale configuration.";
+			add "Male Preferred" to feats of player;
+			add "Breasts" to feats of player;
+		otherwise if gsgl is 6:
+			say "Locked to cuntboy configuration.";
+			add "Female Preferred" to feats of player;
+			add "Flat Chested" to feats of player;
+		otherwise if gsgl is 7:
+			say "Locked to male herm configuration.";
+			add "Herm Preferred" to feats of player;
+			add "Flat Chested" to feats of player;
+		otherwise if gsgl is 8:
+			say "Locked to herm configuration.";
+			add "Herm Preferred" to feats of player;
+		otherwise if gsgl is 9:
+			say "Male anatomy locked in.";
+			add "Always Cocky" to feats of player;
+		otherwise if gsgl is 10:
+			say "Female anatomy locked in.";
+			add "Always A Pussy" to feats of player;
+		otherwise if gsgl is 11:
+			say "Locked to singular gender.";
+			add "Single Sexed" to feats of player;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat.  This represents a skill or innate ability you have.";
@@ -6292,43 +6469,6 @@ To startFunFeatget: [alternate funfeatget used for start]
 				continue the action;
 			otherwise:
 				say "Invalid Feat.";
-
-[-CUT-]
-[
-To start button: [options are set, begin game]
-	now started is 1; [make start as being done.  makes leveling/etc work right]
-	follow the random stats rule; [set stats to base for game]
-	move player to bunker, without printing a room description; [relocate for start]
-	startstatbonus; [apply stat bonus]
-	startgender; [apply gender stats]
-	startscenario; [sets scenario for use in introstorytext]
-	startfreefeats; [gives free feats]
-	startcreatureban; [bans creatures, as requested]
-	if waiterhater is 0, wait for any key; [waits so status text is shown.  could be removed?]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	introstorytext; [plays intro text and starts game]
-
-To startstatbonus: [apply stat bonus]
-	if startstatbonus is 1:
-		increase strength of player by 5;
-	otherwise if startstatbonus is 2:
-		increase dexterity of player by 5;
-	otherwise if startstatbonus is 3:
-		increase stamina of player by 5;
-	otherwise if startstatbonus is 4:
-		increase charisma of player by 5;
-	otherwise if startstatbonus is 5:
-		increase perception of player by 5;
-	otherwise if startstatbonus is 6:
-		increase intelligence of player by 5;
-	otherwise if startstatbonus is 7 and started is 1:
-		randomstatstart;
-	otherwise if started is 1:
-		say "Invalid stat choice - defaulting to random.";
-		randomstatstart;
-	if started is 1, say "[line break]You have decided your physical talents.";
-[	follow the prerestore the game rule;] [for loading?]
-]
 
 to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	now the strength of the player is 10;
@@ -6398,50 +6538,6 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 			if intelligence of player > 18:
 				now intelligence of player is 18;
 				increase tempnum by 1;
-
-[-CUT-]
-[
-To startgender: [apply gender stats]
-	if startgenderchoice is 0:
-		now the cocks of the player is 1;
-		now the cock length of the player is 6;
-		now the cock width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 0;
-		say "You are a man.";
-	otherwise:
-		now the cunts of the player is 1;
-		now the cunt length of the player is 6;
-		now the cunt width of the player is 4;
-		now the breasts of the player is 2;
-		now the breast size of the player is 2;
-		say "You are a woman.";
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxhp of the player is the hp of the player;
-	now the humanity of the player is 100;
-	now the capacity of the player is five times the strength of the player;
-	now the menu depth is 0;[unneded?]
-[	follow the location choice rule;][unneded?]
-
-To startscenario: [sets scenario for use in introstorytext]
-	if startscenariochoice is 1:
-		now scenario is "Bunker";
-	otherwise if startscenariochoice is 2:
-		now scenario is "Caught Outside";
-	otherwise if startscenariochoice is 3:
-		now scenario is "Rescuer Stranded";
-	otherwise if startscenariochoice is 4:
-		now scenario is "Forgotten";
-	otherwise if startscenariochoice is 5:
-		now scenario is "Researcher";
-	otherwise if startscenariochoice is 6:
-		now scenario is "Hard mode";
-	otherwise:
-		say "Invalid scenario choice, defaulting to [']Bunker['][line break]";
-		now scenario is "Bunker";
-]
 
 To startfreefeats: [gives free feats]
 	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
@@ -6521,24 +6617,25 @@ To regularstart: [normal start method]
 		say "(3) [link]Game Type[as]3[end link] - [bold type][scenario][roman type][line break]";	
 		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[otherwise]Off[end if][roman type][line break]";
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
-		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";		
+		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
+		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";			
 		say "[line break]";
 		say "[bold type]Options:[roman type][line break]";
-		say "(7) [link]Banned Types[as]7[end link] - [bold type][startbannedflags][roman type][line break]";
-		say "(8) [link]Anal Content[as]8[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
-		say "(9) [link]WS Content[as]9[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
-		say "(10) [link]Vore/UB Content[as]10[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Vore[roman type][line break]";
-		say "(11) [link]Ovi Pregnancy[as]11[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
-		say "(12) [link]Hyperlinks[as]12[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
-		say "(13) [link]Waiting for Input[as]13[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(14) [link]Screen Clearing[as]14[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
+		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
+		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
+		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
+		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
+		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
+		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
+		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-14)>[run paragraph on]";
+			say "(0-15)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 14 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 15 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6555,54 +6652,33 @@ To regularstart: [normal start method]
 		otherwise if calcnumber is 6:
 			startFunFeatget;
 		otherwise if calcnumber is 7:
-			ban menu;
+			genderlockmenu;
 		otherwise if calcnumber is 8:
-			try analadjusting;
+			if clearnomore is 0, clear the screen;
+			new ban menu;
 		otherwise if calcnumber is 9:
-			try WSadjusting;
+			try analadjusting;
 		otherwise if calcnumber is 10:
-			try voremenuing;
+			try WSadjusting;
 		otherwise if calcnumber is 11:
-			try oviadjusting;
+			try voremenuing;
 		otherwise if calcnumber is 12:
+			try oviadjusting;
+		otherwise if calcnumber is 13:
 			if hypernull is 0:
 				now hypernull is 1;
 			otherwise:
 				now hypernull is 0;
-[			if hypernull is 0:
-				say "Turn off Hyperlinks?";
-				if player consents:
-					now hypernull is 1;
-			otherwise:
-				say "Turn on Hyperlinks?";
-				if player consents:
-					now hypernull is 0;		]
-		otherwise if calcnumber is 13:
+		otherwise if calcnumber is 14:
 			if waiterhater is 0:
 				now waiterhater is 1;
 			otherwise:
 				now waiterhater is 0;
-[			if waiterhater is 0:
-				say "Turn off delays?";
-				if player consents:
-					now waiterhater is 1;
-			otherwise:
-				say "Turn on delays?";
-				if player consents:
-					now waiterhater is 0;		]
-		otherwise if calcnumber is 14:
+		otherwise if calcnumber is 15:
 			if clearnomore is 0:
 				now clearnomore is 1;
 			otherwise:
 				now clearnomore is 0;
-[			if clearnomore is 0:
-				say "Turn off Screen Clearing?";
-				if player consents:
-					now clearnomore is 1;
-			otherwise:
-				say "Turn on Screen Clearing?";
-				if player consents:
-					now clearnomore is 0;		]
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
@@ -6615,6 +6691,40 @@ To regularstart: [normal start method]
 				say "[gsopt_start]";
 				now trixieexit is 1;
 
+to say menuwardlist:
+	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded:
+		say "[bold type]Warded: [bracket]";
+		if furry is warded:
+			say "Furry ";
+		if guy is warded:
+			say "Guy ";
+		if girl is warded:
+			say "Girl ";
+		if humorous is warded:
+			say "Humorous ";
+		if hellspawn is warded:
+			say "Hellspawn";
+		say "[close bracket][roman type]";
+	otherwise:
+		say "[bold type]None Warded[roman type]";
+		
+to say menubanlist:
+	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned:
+		say "[bold type]Banned: [bracket]";
+		if furry is banned:
+			say "Furry ";
+		if guy is banned:
+			say "Guy ";
+		if girl is banned:
+			say "Girl ";
+		if humorous is banned:
+			say "Humorous ";
+		if hellspawn is banned:
+			say "Hellspawn";
+		say "[close bracket][roman type]";
+	otherwise:
+		say "[bold type]None Banned[roman type]";
+	
 to say gsopt_1:
 	now calcnumber is -1;
 	let gsexit be 0;
@@ -6746,6 +6856,7 @@ to say gsopt_start:
 	now the maxhp of the player is the hp of the player;
 	now the capacity of the player is five times the strength of the player;
 	now humanity of player is 100;
+	if gsgl > 1, startgenderlockget;
 	startfreefeats; 
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
@@ -6878,16 +6989,6 @@ When play begins:
 		let x be 0;
 	otherwise:
 		now hypernull is 1;
-	[say "Do you want to use the alternate (experimental) start method? (y/n)";
-	if player consents:
-		increase the score by 10;
-		repeat with x running through featsets:
-			now x is a part of the player;
-		prealternatestartstats; [sets stats to prevent oddities from alternate start]
-		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
-		say "[line break]Welcome to...";
-		move the player to Game Options, without printing a room description; [puts player in room for options, prevents displaying of look text?]
-	otherwise:]
 	repeat with x running through featsets:
 		now x is a part of the player;
 	if gsgt is 1:		[sets name of scenario for menu based on preset]
