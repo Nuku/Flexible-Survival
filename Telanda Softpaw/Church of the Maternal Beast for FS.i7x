@@ -1,7 +1,8 @@
-Version 3 of Church of the Maternal Beast for FS by Telanda Softpaw begins here.
-[Version 3.1 - Updated to extended heat table - Stripes]
+Version 4 of Church of the Maternal Beast for FS by Telanda Softpaw begins here.
+[Version 4 - Updated layout - Stripes]
 
 "This is a Complete interaction scene, including monsters, Rooms, a few scripted encounters and maybe even an item or Two."
+
 [
 the Beach Area is a situation.
 
@@ -16,20 +17,26 @@ Instead of Resolving the Beach Area:
 
 Book 1 - Rooms
 
-Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza leads down steps to small stretch of public beach.  There are various infected cavorting around in the sand and water, laughing and enjoying themselves.  To the north is a church, its wide double doors open and inviting, and to the southwest is a set of stairs down onto the beach proper.".
+Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to small stretch of public beach.  There are various infected cavorting around in the sand and water, laughing and enjoying themselves.  To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".
 The Beach Plaza is fasttravel. 
 The Beach Plaza is not known.
 Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. East of Beach Exit is Outside Exploration.
 [The Beach Plaza is private.]
 
-Public Beach is a Room.  "     A few changed faces glance up at you, and a few smile friendlily, but otherwise your left alone.  There seem to be a lot of aquatic infected here, otters & dolphins mainly, though one big hunk of an orca does stand out.  He looks occupied right now however.  To your north is set of dirty dingy sheds and off to your west is a set of rock outcrops, but there doesn't seem to be any way to get there.".
-Southwest of Beach Plaza is Public Beach.
+Public Beach is a Room.  "[publicbeachdesc]".
 
-Sea is a door. "The sea is visible to the east. What things lurk within?". Sea is dangerous.
-The marea of sea is "Beach";
+to say publicbeachdesc:
+	say "     You are standing on a clean, sandy beach, looking out across the water.  [if daytimer is day]The beach is sunny and warm, with the sea air fresh and calm[otherwise]The night sky is clear, letting the moonlight twinkle across the soft waves[end if].  In the distance, you can see the waves strike a treacherous reef of rocks.  This barrier is probably why the water is so calm close to the beach, protecting the beach from the force of the ocean's waves.";
+	say "     A few changed faces glance up at you, and a few smile friendlily, but otherwise you're left alone.  There seem to be [if daytimer is day]a lotof aquatic infected here[otherwise]quite a few aquatic infected here even at night[end if], otters & dolphins mainly, though one big hunk of an orca does stand out.  He's got a whistle around his meaty neck and seems to be acting as the lifeguard here.  He looks occupied right now however.";
+	say "     Thanks to the lifeguard, the immediate area on the beach seems peaceful enough, but things seem less supervised (and civilized) should you follow the sandy shoreline southwards.  The west leads out onto some sand bars before the water gets too deep and choppy for the casual swimmer as those rocky outcroppings start to appear.  To your north is set of dirty dingy sheds.  Should you wish to leave the beach, it is backed by a short block wall to the east with stairs leading back up to the plaza.";
 
-West of Public Beach is Sea.
-West of Sea is Ocean. [Check]
+West of Beach Plaza is Public Beach.
+
+Unsupervised Beach is a door. "The beach continues along to the south, but is unsupervised.  Unlike here, you see few people around... perhaps for good reason." Unsupervised Beach is dangerous.
+The marea of Unsupervised Beach is "Beach";
+
+South of Public Beach is Unsupervised Beach.
+South of Unsupervised Beach is UnsupBeach. [Check]
 
 instead of sniffing the beach plaza:
 	say "The seashore is near.  There is salt in the air.";
