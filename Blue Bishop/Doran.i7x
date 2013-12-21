@@ -380,7 +380,8 @@ When Play begins:
 
 Section 3.0 - Doran NPC
 
-Rocky Outcropping is a room. It is fasttravel. It is private.
+Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
+Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
 the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
 Doran is a man. Doran is in Rocky Outcropping.
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]";

@@ -129,6 +129,10 @@ to pewterbind:
 		if lustatt > 99:
 			now tempnum is 1;
 			pewterlustsate;
+			if pewtercuntvar2 > 0:
+				say "[impregchance]";
+			if pewterassvar2 > 0 and "MPreg" is listed in feats of player:
+				say "[mimpregchance]";
 			decrease libido of player by (libido of player / 10) + 1;
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;

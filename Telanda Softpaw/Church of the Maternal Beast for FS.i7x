@@ -19,6 +19,7 @@ Book 1 - Rooms
 Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza leads down steps to small stretch of public beach.  There are various infected cavorting around in the sand and water, laughing and enjoying themselves.  To the north is a church, its wide double doors open and inviting, and to the southwest is a set of stairs down onto the beach proper.".
 The Beach Plaza is fasttravel. 
 The Beach Plaza is not known.
+Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. East of Beach Exit is Outside Exploration.
 [The Beach Plaza is private.]
 
 Public Beach is a Room.  "     A few changed faces glance up at you, and a few smile friendlily, but otherwise your left alone.  There seem to be a lot of aquatic infected here, otters & dolphins mainly, though one big hunk of an orca does stand out.  He looks occupied right now however.  To your north is set of dirty dingy sheds and off to your west is a set of rock outcrops, but there doesn't seem to be any way to get there.".
@@ -27,8 +28,8 @@ Southwest of Beach Plaza is Public Beach.
 Sea is a door. "The sea is visible to the east. What things lurk within?". Sea is dangerous.
 The marea of sea is "Beach";
 
-East of Public Beach is Sea.
-East of Sea is Ocean.
+West of Public Beach is Sea.
+West of Sea is Ocean. [Check]
 
 instead of sniffing the beach plaza:
 	say "The seashore is near.  There is salt in the air.";
