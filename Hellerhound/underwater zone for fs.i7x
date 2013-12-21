@@ -108,7 +108,7 @@ after looking when the player is in the public beach:
 	say "The rolling waves pass over the sandy shore, which slopes down into the ocean. In the distance, past those sloping sands, the waves strike a rocky barrier. It doesn't look like there is any chance of getting past it here, so there is not much use of swimming all the way out there from this part of the beach.";
 
 The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean. From here, you have a better view of the rocky area with the crashing waves. It looks like a rather unhealthy area to get into the water - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could [bold type]swim[roman type] to the [bold type]coral ring[roman type]?";
-the Sloping Sand is southeast of public beach.
+the Sloping Sand is south of public beach.
 
 the scent of Sloping Sand is "All you can smell out here is the strong scent of the ocean.";
 

@@ -9,6 +9,7 @@ Abandoned Lot is a room. "In the industrial park on the outskirts of town, you f
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it.[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside.[end if]";
 
+Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
 South of Abandoned Lot is Warehouse Door.
 
 instead of sniffing Abandoned Lot:
