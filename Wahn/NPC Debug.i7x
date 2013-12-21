@@ -30,4 +30,13 @@ carry out npcdebugmode:
 		say "NPC DEBUG MODE DISABLED.";
 		now debugactive is 0;
 
+turncountdisplay is an action applying to nothing.
+understand "turn count" as turncountdisplay.
+understand "turncount" as turncountdisplay.
+understand "current turn" as turncountdisplay.
+understand "currentturn" as turncountdisplay.
+
+carry out turncountdisplay:
+	say "DEBUG: CURRENT TURN IS [turns]";
+
 NPC Debug ends here.
