@@ -388,9 +388,9 @@ when play ends:
 		if humanity of player is less than 10:
 			if voreloss is true:
 				say "     Succumbing from inside the reptile, you eventually grow obsessively fond of these twisted confines. Though you never grow to full size, you nonetheless remain ever tended to by your parental kin, leaving your new home only to be fed ";
-				if (cunts of player > 0 or "Mpreg" is listed in feats of player) and "Infertile" is not listed in feats of player:
+				if (cunts of player > 0 or "Mpreg" is listed in feats of player) and "Sterile" is not listed in feats of player:
 					say "and give birth to the beast's offspring";
-				otherwise if cocks of player > 0:
+				otherwise if cocks of player > 0 and sierramale is false:
 					say "and sire the beast's offspring";
 				say ".";
 				say "     Over time, the creature's pack grows in size, leaving you with others to deal with";
@@ -402,11 +402,13 @@ when play ends:
 			otherwise:
 				say "     Overwhelmed by your infection you eventually lose all self control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
 				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, that your new companion succumbs as you had, eventually offering itself";
-				if cocks of player > 0 and ((cunts of player > 0 or "Mpreg" is listed in feats of player) and "Infertile" is not listed in feats of player) and sierramale is false:
-					say "to sire your children and you to sire its";
+				if cocks of player > 0 and ((cunts of player > 0 or "Mpreg" is listed in feats of player) and "Sterile" is not listed in feats of player) and sierramale is false:
+					say "to sire your children";
+					if sierramale is true:
+						say " and you to sire its";
 				otherwise if cocks of player > 0 and sierramale is false:
 					say "for you to sire its children";
-				otherwise if (cunts of player > 0 or "Mpreg" is listed in feats of player) and "Infertile" is not listed in feats of player:
+				otherwise if (cunts of player > 0 or "Mpreg" is listed in feats of player) and "Sterile" is not listed in feats of player:
 					say "to sire your children";
 				otherwise:
 					say "to satisfy you on a whim and help you find more to be brought into the fold";
