@@ -134,7 +134,7 @@ instead of sniffing Eric:
 
 to say ericdesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric]  <- DEBUG[line break]";	
+		say "DEBUG -> HP: [hp of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric] <- DEBUG[line break]";	
 	if (hp of Eric is 0):   [starting state]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";

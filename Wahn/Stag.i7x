@@ -315,7 +315,6 @@ Instead of fucking Mike:
 		infect "Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
 		now lastfuck of Mike is turns;
 		
-
 to say MikeSex1:        [player sucks him]
 	if hp of Mike is 0 or hp of Mike is 99:     [post-combat, dominating]
 		say "     You step close to the stag a bit wary at first and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his side. Looks like he's resigned himself to obeying you - for now.";
