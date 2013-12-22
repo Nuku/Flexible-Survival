@@ -213,32 +213,38 @@ to say CarlSexMenu:
 	now title entry is "Suck Carl's cock";
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job.";
+	now toggle entry is CarlSex rule;			
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
 		now description entry is "Get a blow-job.";
+		now toggle entry is CarlSex rule;				
 [		
 	if (cocks of player > 0 or cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Carl";
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male husky.";
+		now toggle entry is CarlSex rule;				
 ]
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Carl fuck your pussy";
 		now sortorder entry is 4;
 		now description entry is "Let the husky breed you.";
+		now toggle entry is CarlSex rule;				
 	choose a blank row in table of fucking options;
 	now title entry is "Let Carl fuck your ass";
 	now sortorder entry is 5;
 	now description entry is "Let the husky fill your ass with his seed.";
+	now toggle entry is CarlSex rule;			
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Carl's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the husky's ass with your cock.";
+		now toggle entry is CarlSex rule;							
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
