@@ -128,50 +128,51 @@ to say WYVDESC:
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now WYVGEN is 0;
-	otherwise if guy is banned:
-		now WYVGEN is 1;
-	otherwise if girl is banned:
-		now WYVGEN is 0;
-	otherwise if guy is warded and girl is warded:
-		now WYVGEN is a random number between 0 and 1;
-	otherwise if ishunting is true: [hunting results in 2/3rds chance to get unwarded option]
-		if guy is warded and a random chance of 1 in 3 succeeds:
-			now WYVGEN is 1;
-		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
-			now WYVGEN is 0;
-	otherwise if ishunting is false:
-		if guy is warded:
-			now WYVGEN is 1;
-		otherwise if girl is warded:
-			now WYVGEN is 0;
-	if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if WYVGEN is 1:
-		now sex entry is "Male";
 	otherwise:
-		now sex entry is "Female";
-	say "     [if showlocale is true]As you explore the city, you suddenly find yourself[otherwise]Suddenly, you find yourself[end if] set upon by a Wyvern, swooping down to confront you and forcing you to pull back. Looking at the thing proper, it appears to be the size of a truck, wings doubling as talons for the grounded beast, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[otherwise]female[end if][roman type].";
-	if level of player < 20:
-		say "     Immediately, it opens its great maw, spitting a yellowish-white goop upon you, sticking to your frame. You manage to pry some of the stuff free of you, but it's had a clearly draining effect on you and the beast looks to prepare another bout. By your wagering you can't take this monster on directly, and it's best that you pull yourself free and make a run for it.";
-	otherwise if WYVLEV is 0:
-		say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop.  You feel a rush of excitement, of wild fervour and charge at the gigantic creature before you even realize what you're doing.  Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast.  [bold type]From this point on, you will face the monster directly.[roman type]";
-	otherwise:
-		say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You [if weapon object of player is journal]raise your fists[otherwise]raise your weapon in the air[end if] and give a wild battle cry before rushing at it.";
-	if level of player >= 20:
-		if hardmode is true and level of player > 20, let debit be level of player - 20;
-		now WYVLEV is 1;
-		now hp entry is ( a random number between 180 and 240 ) + ( debit * 6 );
-		now monsterhp is hp entry;
-		now wdam entry is 18 + ( ( 2 * debit ) / 5 );
-		now str entry is 24;
-		now dex entry is 22 + (debit / 5);
-		now sta entry is 20;
-		now per entry is 18;
-		now libido entry is 60;
+		if guy is banned:
+			now WYVGEN is 1;
+		otherwise if girl is banned:
+			now WYVGEN is 0;
+		otherwise if guy is warded and girl is warded:
+			now WYVGEN is a random number between 0 and 1;
+		otherwise if ishunting is true: [hunting results in 2/3rds chance to get unwarded option]
+			if guy is warded and a random chance of 1 in 3 succeeds:
+				now WYVGEN is 1;
+			otherwise if girl is warded and a random chance of 1 in 3 succeeds:
+				now WYVGEN is 0;
+		otherwise if ishunting is false:
+			if guy is warded:
+				now WYVGEN is 1;
+			otherwise if girl is warded:
+				now WYVGEN is 0;
+		if "Female Preferred" is listed in feats of player:
+			now sex entry is "Female";
+		otherwise if "Herm Preferred" is listed in feats of player:
+			now sex entry is "Both";
+		otherwise if "Male Preferred" is listed in feats of player:
+			now sex entry is "Male";
+		otherwise if WYVGEN is 1:
+			now sex entry is "Male";
+		otherwise:
+			now sex entry is "Female";
+		say "     [if showlocale is true]As you explore the city, you suddenly find yourself[otherwise]Suddenly, you find yourself[end if] set upon by a Wyvern, swooping down to confront you and forcing you to pull back. Looking at the thing proper, it appears to be the size of a truck, wings doubling as talons for the grounded beast, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[otherwise]female[end if][roman type].";
+		if level of player < 20:
+			say "     Immediately, it opens its great maw, spitting a yellowish-white goop upon you, sticking to your frame. You manage to pry some of the stuff free of you, but it's had a clearly draining effect on you and the beast looks to prepare another bout. By your wagering you can't take this monster on directly, and it's best that you pull yourself free and make a run for it.";
+		otherwise if WYVLEV is 0:
+			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop.  You feel a rush of excitement, of wild fervour and charge at the gigantic creature before you even realize what you're doing.  Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast.  [bold type]From this point on, you will face the monster directly.[roman type]";
+		otherwise:
+			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You [if weapon object of player is journal]raise your fists[otherwise]raise your weapon in the air[end if] and give a wild battle cry before rushing at it.";
+		if level of player >= 20:
+			if hardmode is true and level of player > 20, let debit be level of player - 20;
+			now WYVLEV is 1;
+			now hp entry is ( a random number between 180 and 240 ) + ( debit * 6 );
+			now monsterhp is hp entry;
+			now wdam entry is 18 + ( ( 2 * debit ) / 5 );
+			now str entry is 24;
+			now dex entry is 22 + (debit / 5);
+			now sta entry is 20;
+			now per entry is 18;
+			now libido entry is 60;
 
 
 Table of random critters (continued)

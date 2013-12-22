@@ -140,13 +140,13 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
-	if "Male Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and "Always Cocky" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
+	[if "Male Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Single Sexed" is not listed in feats of player and "Always Cocky" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
 		if isHellhound is false or ( isHellhound is true and maleHound is true ):
-			addfeat "Male Preferred" with "You will reject female mutation.";
+			addfeat "Male Preferred" with "Outside of special circumstances, you'll remain a guy.";
 		if isHellhound is false or ( isHellhound is true and maleHound is false ):
-			addfeat "Female Preferred" with "You will reject male mutation.";
+			addfeat "Female Preferred" with "Outside of special circumstances, you'll remain a girl.";
 		if isHellhound is false:
-			addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership.";
+			addfeat "Herm Preferred" with "Outside of special circumstances, you'll remain a herm.";
 		addfeat "Single Sexed" with "You can be male, or female, but not both.";
 		if isHellhound is false:
 			addfeat "Always Cocky" with "Outside of special circumstances, you will always keep a cock.";
@@ -154,7 +154,7 @@ instead of addfeating the fun feats:
 	if "Male Preferred" is listed in feats of player:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious.";
 	otherwise:
-		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
+		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";]
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
 	if "One Way" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
@@ -200,8 +200,8 @@ instead of addfeating the fun feats:
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale.";
-	if "Strong Psyche" is not listed in feats of player, addfeat "Weak Psyche" with "Having a higher mental succeptibility to corruption by the nanites, you have a weaker grip on your humanity.";
-	if "Weak Psyche" is not listed in feats of player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your humanity.";
+	if "Strong Psyche" is not listed in feats of player, addfeat "Weak Psyche" with "Having a higher mental succeptibility to corruption by the nanites, you have a weaker grip on your human identity.";
+	if "Weak Psyche" is not listed in feats of player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your human identity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
 	if "Open World" is not listed in feats of player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 

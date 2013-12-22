@@ -1,5 +1,5 @@
 Version 3 of Presets by Default Settings begins here.
-[Version 3.1 - Added vorelevel and UBlevel.]
+[Version 3.2 - Added graphics.]
 
 "Separates out the presets for the alternate starting method for easier modification by the player.
 To play within the Inform 7 compiler, press F5 or the green Go! button in the top left.
@@ -95,6 +95,12 @@ ovipreglevel is usually 2.
 2 - Standard
 3 - [not available until unlocked in the game]
 NOTE: An invalid selection defaults to 'Standard'.]
+
+graphics is usually true.
+[graphics - denotes whether you want graphics appearing in the game or not.
+true - graphics shown
+false - graphics not shown
+NOTE: Because it is a truth state, these are the only two results possible.  Also, graphics may not appear in all play sources, such as in-browser mode.]
 
 [
 *** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***
