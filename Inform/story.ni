@@ -1503,15 +1503,16 @@ to new ban menu:
 		say "(2) [link]Furry[as]2[end link]:		[bracket][if furry is not banned and furry is not warded][bold type]None[roman type][otherwise][link]None[as]21[end link][end if][close bracket] [bracket][if furry is warded][bold type]Ward[roman type][otherwise][link]Ward[as]22[end link][end if][close bracket] [if furry is banned][bold type]Ban[roman type][otherwise][link]Ban[as]23[end link][end if][close bracket][line break]";
 		say "(3) [link]Guy[as]3[end link]:		[bracket][if guy is not banned and guy is not warded][bold type]None[roman type][otherwise][link]None[as]31[end link][end if][close bracket] [bracket][if guy is warded][bold type]Ward[roman type][otherwise][link]Ward[as]32[end link][end if][close bracket] [if guy is banned][bold type]Ban[roman type][otherwise][link]Ban[as]33[end link][end if][close bracket][line break]";
 		say "(4) [link]Girl[as]4[end link]:		[bracket][if girl is not banned and girl is not warded][bold type]None[roman type][otherwise][link]None[as]41[end link][end if][close bracket] [bracket][if girl is warded][bold type]Ward[roman type][otherwise][link]Ward[as]42[end link][end if][close bracket] [if girl is banned][bold type]Ban[roman type][otherwise][link]Ban[as]43[end link][end if][close bracket][line break]";
-		say "(5) [link]Humanoid[as]5[end link]: 	[bracket]NYI[close bracket][line break]";
-		say "(6) [link]Humorous[as]6[end link]: 	[bracket][if humorous is not banned and humorous is not warded][bold type]None[roman type][otherwise][link]None[as]61[end link][end if][close bracket] [bracket][if humorous is warded][bold type]Ward[roman type][otherwise][link]Ward[as]62[end link][end if][close bracket] [if humorous is banned][bold type]Ban[roman type][otherwise][link]Ban[as]63[end link][end if][close bracket][line break]";
-		say "(7) [link]Hellspawn[as]7[end link]: 	[bracket][if hellspawn is not banned and hellspawn is not warded][bold type]None[roman type][otherwise][link]None[as]71[end link][end if][close bracket] [bracket][if hellspawn is warded][bold type]Ward[roman type][otherwise][link]Ward[as]72[end link][end if][close bracket] [if hellspawn is banned][bold type]Ban[roman type][otherwise][link]Ban[as]73[end link][end if][close bracket][line break]";
+		say "(5) [link]Hermaphrodite[as]6[end link]: 	[bracket][if hermaphrodite is not banned and hermaphrodite is not warded][bold type]None[roman type][otherwise][link]None[as]61[end link][end if][close bracket] [bracket][if hermaphrodite is warded][bold type]Ward[roman type][otherwise][link]Ward[as]62[end link][end if][close bracket] [if hermaphrodite is banned][bold type]Ban[roman type][otherwise][link]Ban[as]63[end link][end if][close bracket][line break]";
+		say "(6) [link]Humanoid[as]6[end link]: 	[bracket]NYI[close bracket][line break]";
+		say "(7) [link]Humorous[as]7[end link]: 	[bracket][if humorous is not banned and humorous is not warded][bold type]None[roman type][otherwise][link]None[as]71[end link][end if][close bracket] [bracket][if humorous is warded][bold type]Ward[roman type][otherwise][link]Ward[as]72[end link][end if][close bracket] [if humorous is banned][bold type]Ban[roman type][otherwise][link]Ban[as]73[end link][end if][close bracket][line break]";
+		say "(8) [link]Hellspawn[as]8[end link]: 	[bracket][if hellspawn is not banned and hellspawn is not warded][bold type]None[roman type][otherwise][link]None[as]81[end link][end if][close bracket] [bracket][if hellspawn is warded][bold type]Ward[roman type][otherwise][link]Ward[as]82[end link][end if][close bracket] [if hellspawn is banned][bold type]Ban[roman type][otherwise][link]Ban[as]83[end link][end if][close bracket][line break]";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";	
 		while 1 is 1:
-			say "Choice? (0-73)>[run paragraph on]";
+			say "Choice? (0-83)>[run paragraph on]";
 			get a number;
-			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73):
+			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -1566,6 +1567,21 @@ to new ban menu:
 		otherwise if calcnumber is 5:
 			say "Not yet Implemented!";
 		otherwise if calcnumber is 6:
+			if hermaphrodite is not banned and hermaphrodite is not warded:
+				now hermaphrodite is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Hermaphrodite.";
+			otherwise if hermaphrodite is warded:
+				now hermaphrodite is banned;
+				now hermaphrodite is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Hermaphrodite.";
+			otherwise:
+				now hermaphrodite is not banned;
+				now hermaphrodite is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Hermaphrodite.";
+		otherwise if calcnumber is 7:
 			if humorous is not banned and humorous is not warded:
 				now humorous is warded;
 				if clearnomore is 0, clear the screen;
@@ -1580,7 +1596,7 @@ to new ban menu:
 				now humorous is not warded;
 				if clearnomore is 0, clear the screen;
 				say "Unbanning/Warding Humorous.";
-		otherwise if calcnumber is 7:
+		otherwise if calcnumber is 8:
 			if hellspawn is not banned and hellspawn is not warded:
 				now hellspawn is warded;
 				if clearnomore is 0, clear the screen;
@@ -1677,6 +1693,33 @@ to new ban menu:
 				if clearnomore is 0, clear the screen;
 				say "Banning Girl.";
 		otherwise if calcnumber is 61:
+			if hermaphrodite is not banned and hermaphrodite is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Hermaphrodite is already available!";
+			otherwise:
+				now hermaphrodite is not banned;
+				now hermaphrodite is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Hermaphrodite.";
+		otherwise if calcnumber is 62:
+			if hermaphrodite is warded:
+				if clearnomore is 0, clear the screen;
+				say "Hermaphrodite is already Warded!";
+			otherwise:
+				now hermaphrodite is warded;
+				now hermaphrodite is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Hermaphrodite.";
+		otherwise if calcnumber is 63:
+			if hermaphrodite is banned:
+				if clearnomore is 0, clear the screen;
+				say "Hermaphrodite is already Banned!";
+			otherwise:
+				now hermaphrodite is banned;
+				now hermaphrodite is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Hermaphrodite.";
+		otherwise if calcnumber is 71:
 			if humorous is not banned and humorous is not warded:
 				if clearnomore is 0, clear the screen;
 				say "Humorous is already available!";
@@ -1685,7 +1728,7 @@ to new ban menu:
 				now humorous is not warded;
 				if clearnomore is 0, clear the screen;
 				say "Unbanning/Warding Humorous.";
-		otherwise if calcnumber is 62:
+		otherwise if calcnumber is 72:
 			if humorous is warded:
 				if clearnomore is 0, clear the screen;
 				say "Humorous is already Warded!";
@@ -1694,7 +1737,7 @@ to new ban menu:
 				now humorous is not banned;
 				if clearnomore is 0, clear the screen;
 				say "Warding Humorous.";
-		otherwise if calcnumber is 63:
+		otherwise if calcnumber is 73:
 			if humorous is banned:
 				if clearnomore is 0, clear the screen;
 				say "Humorous is already Banned!";
@@ -1703,7 +1746,7 @@ to new ban menu:
 				now humorous is not warded;
 				if clearnomore is 0, clear the screen;
 				say "Banning Humorous.";
-		otherwise if calcnumber is 71:
+		otherwise if calcnumber is 81:
 			if hellspawn is not banned and hellspawn is not warded:
 				if clearnomore is 0, clear the screen;
 				say "Hellspawn is already available!";
@@ -1712,7 +1755,7 @@ to new ban menu:
 				now hellspawn is not warded;
 				if clearnomore is 0, clear the screen;
 				say "Unbanning/Warding Hellspawn.";
-		otherwise if calcnumber is 72:
+		otherwise if calcnumber is 82:
 			if hellspawn is warded:
 				if clearnomore is 0, clear the screen;
 				say "Hellspawn is already Warded!";
@@ -1721,7 +1764,7 @@ to new ban menu:
 				now hellspawn is not banned;
 				if clearnomore is 0, clear the screen;
 				say "Warding Hellspawn.";
-		otherwise if calcnumber is 73:
+		otherwise if calcnumber is 83:
 			if hellspawn is banned:
 				if clearnomore is 0, clear the screen;
 				say "Hellspawn is already Banned!";
@@ -6692,35 +6735,39 @@ To regularstart: [normal start method]
 				now trixieexit is 1;
 
 to say menuwardlist:
-	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded:
-		say "[bold type]Warded: [bracket]";
+	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
+		say "[bold type]Warded: [bracket] ";
 		if furry is warded:
 			say "Furry ";
 		if guy is warded:
 			say "Guy ";
 		if girl is warded:
 			say "Girl ";
+		if hermaphrodite is warded:
+			say "Hermaphrodite ";	
 		if humorous is warded:
 			say "Humorous ";
 		if hellspawn is warded:
-			say "Hellspawn";
+			say "Hellspawn ";
 		say "[close bracket][roman type]";
 	otherwise:
 		say "[bold type]None Warded[roman type]";
 		
 to say menubanlist:
-	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned:
-		say "[bold type]Banned: [bracket]";
+	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned:
+		say "[bold type]Banned: [bracket] ";
 		if furry is banned:
 			say "Furry ";
 		if guy is banned:
 			say "Guy ";
 		if girl is banned:
 			say "Girl ";
+		if hermaphrodite is banned:
+			say "Hermaphrodite ";
 		if humorous is banned:
 			say "Humorous ";
 		if hellspawn is banned:
-			say "Hellspawn";
+			say "Hellspawn ";
 		say "[close bracket][roman type]";
 	otherwise:
 		say "[bold type]None Banned[roman type]";
