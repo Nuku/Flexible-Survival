@@ -1431,7 +1431,7 @@ To reciting2:
 			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
 				if the player's command matches "[number]":
 					now SquadEncounters is the number understood;
-					if SquadEncounters is 5:
+					if SquadEncounters is 6:
 						now Soldier Squad is resolved;
 			-- 154: [thirst of Corbin - location]
 				if the player's command matches "[number]":
@@ -3076,7 +3076,7 @@ Carry out reciting:
 			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
 				if the player's command matches "[number]":
 					now SquadEncounters is the number understood;
-					if SquadEncounters is 5:
+					if SquadEncounters is 6:
 						now Soldier Squad is resolved;
 			-- 154: [thirst of Corbin - location]
 				if the player's command matches "[number]":
