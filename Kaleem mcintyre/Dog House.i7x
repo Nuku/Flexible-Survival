@@ -287,9 +287,9 @@ to say defeatedbywolf:
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					challenge "Wolftaur";
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						challenge "twisted pimp";
+						challenge "Twisted Pimp";
 						if fightoutcome >= 10 and fightoutcome <= 19:
-							challenge "twisted pimp";
+							challenge "Twisted Pimp";
 							if fightoutcome >= 10 and fightoutcome <= 19:
 								say "With the small army taking care of you pant and then sigh before turning to notice Tyr walking up to you. The look on the other man's face is somewhat unreadable, but when the Dobie comes up to you to lick you across the face you get the strongest impression that Tyr's very pleased with your actions. 'I'm surprised, I...really didn't think you'd come back, especially not after that earlier defeat.' Telling the other that you didn't feel like running with your tail between your legs, figuratively speaking, you let the other man know that you didn't want to think about what might have happen, on the improbable likelihood that he happened to had lost. 'Listen, when I say that I can handle something, I mean just that.'[line break]";
 								say "'You shouldn't go putting yourself in danger over me like that, pup.' You feel somewhat chastised, but at the same time proud when Tyr walks over to nuzzle the underside of your chin. 'Come on, let's go and see if we can deal with the lot downstairs and then get ourselves out of here. I don't know about you, but this place gives me the creeps.' Laughing you follow after the Doberman as he moves around the defeated bunch at your feet. Working with Tyr the both of you help to free some of the other captured canine mutants and hybrid humans that you had missed before. Once you both are done you and Tyr find yourself leaving the warehouse behind and then going about your separate ways.";
