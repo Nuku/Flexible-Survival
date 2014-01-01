@@ -1,5 +1,5 @@
-Twisted pimp by Sarokcat begins here. 
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+Version 2 of Twisted pimp by Sarokcat begins here.
+[ Version 2 - An M/M player victory scene. ]
 
 "Adds a pimp to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -7,8 +7,8 @@ Twisted pimp by Sarokcat begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "twisted pimp" } to infections of guy;
-	add { "twisted pimp" } to infections of furry;
+	add { "Twisted Pimp" } to infections of guy;
+	add { "Twisted Pimp" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say pimp attack:
@@ -16,16 +16,30 @@ to say pimp attack:
 		say "You can hear the strange pimp chuckle with amusement as you fall to your knees in defeat, his other women surrounding you now and holding you in place as the pimp stalks forward until he is right in front of you. 'Yeah that's what I like to see,' the pimp says with a chuckle as he puts his hand on your head roughly, 'Another little slut on their knees begging for me to put them in their place,' The pimp says in a voice filled with amusement, his strangely soothing and seductive voice filling your mind and making you whimper slightly, 'Maybe I should train you up and make you a little whore for me just like the rest of my sluts,' He says as he pulls his [one of]pointed[or]knotted[or]barbed[or]reptilian[or]goat like[at random] cock out of his pants and strokes it teasingly, the strange scent of his arousal filling your head and making your mouth water, your mouth opening eagerly as he moves that delicious looking cock close to it. You moan happily as he shoves his thick length into your open mouth, your body seeming to thrum with pleasure as he fills your mouth with his unusual but amazing organ. 'Oh yeah, time to train you to be a proper whore for me, suck me like a good bitch little whore, and if your good enough maybe i[apostrophe]ll even keep you around.' He says with an amused chuckle, several of the girls in question giggling along as they stroke your helpless body, and while you know you should try to resist, you find yourself sucking on his cock eagerly instead. [line break]";
 		say "'That[apostrophe]s right, I can tell already how much you want me to make you a slutty little whore on the outside as well as the inside.' He says as he thrusts into your mouth enthusiastically, his strange exotic perfume filling your head and bringing all your deliciously submissive instincts to the front. Each thrust of his cock into your mouth makes you moan eagerly with pleasure, as you realize that the thought of being a whore for him, a lusty little harlot spreading yourself and serving any man or beast that wants you fills you with a strange sense of arousal, the thoughts seeming so very right and proper to your lust fogged mind.  Soon your eyes drift closed as you focus on the nearly hypnotic sensation of his cock pounding into your eager mouth, and you focus all your attention on pleasing this wonderful male master of yours. Your tongue licking and teasing his cock almost automatically as you suck at his meaty rod, something about the entire situation seeming so very right to you, even as soft female hands stroke your body and his other whores whisper soft words of encouragement to you, telling you how good it is to be a whore, and what a fine slut you will make for your master. You are so lost in the surreal fog of pleasure and servitude, as you please your master with your mouth, that you are completely surprised when his cock finally begins to shoot its seed into your mouth. [line break]";
 		say "You nearly choke for a minute, some of his seed dribbling down the sides of your mouth, before locking your lips around his cock and swallowing eagerly, somehow sure you need to get every bit of that wonderful transformative sperm inside you. When his load is finally spent, and he pulls his cock away from your mouth, you find yourself nearly crying at the loss of that amazing member, panting and whimpering for several minutes as the pimp chuckles above you, before your lust fogged brain begins to start working again. 'That[apostrophe]s a good little slut, you took to the training just like a proper whore should, I almost think I should keep you,' The pimp says with a laugh, his other whores laughing along and making you groan slightly and hang your head in embarrassment as you realize just how much like a whore you were acting, 'Still not quite ready for that? It[apostrophe]s ok, I[apostrophe]m sure you will be begging me for it soon enough, I[apostrophe]m looking forward to next time already little whore so be sure to come back soon.' the pimp says with amusement, as he and his entourage saunter away down the streets of the red light district while you stay there on your knees with his taste still in your mouth, trying to resist the urge to follow....";
-		infect "twisted pimp";
+		infect "Twisted Pimp";
 	otherwise:
 		say "You can hear the strange pimp chuckle with amusement as you fall to your knees in defeat, his other women surrounding you now and holding you in place as the pimp stalks forward until he is right in front of you. 'You think you a match for me man? You wanna take my place or my bitches? I think you need me to put you in your place instead.' The pimp says harshly as he whips his slightly strange and [one of]pointed[or]knotted[or]barbed[or]reptilian[or]goat-like[at random] cock out, and you open your mouth to protest, only to nearly choke as he shoves his thick length right into your mouth. 'I think you need some of the training I give my girls,' The pimp says with a chuckle, several of the girls in question giggling along as they stroke your helpless body, and while you try to resist and spit his cock out, you find yourself sucking on it eagerly instead.";
 		say "'That[apostrophe]s right, you be a good bitch and suck me off, and maybe you[apostrophe]ll even end up as much of a whore on the outside as you are on the inside.' He says as he thrusts into your mouth several times, his strangely enticing perfume filling your head and making you feel strangely submissive and horny, even as the taste of his strange meat fills your mouth with pleasure. His cock thrusts into your mouth again and again, and each time it rubs against the back of your throat you find yourself moaning wantonly, your eyes drifting closed as you focus on the nearly hypnotic sensation of his cock pounding into your eager mouth. Your tongue licking and teasing his cock almost automatically as you suck at his meaty rod, something about the entire situation seeming so very right to you, even as soft female hands stroke your body and his other whores whisper soft words of encouragement to you.";
 		say "You are so lost in the surreal sensations of pleasing him with your mouth, that you are completely surprised when his cock finally begins to shoot its seed into your mouth. You nearly choke for a minute, some of his seed dribbling down the sides of your mouth, before locking your lips around his cock and swallowing eagerly, somehow sure you need to get every bit of that wonderful transformative sperm inside you. When his load is finally spent, and he pulls his cock away from your mouth, you find yourself nearly crying at the loss of that amazing member, panting for several minutes as the pimp chuckles above you, before your lust fogged brain begins to start working again. 'You took to the training like a proper little slut, you should just go with that and become a nice little whore for me already,' The pimp says with a laugh, his other whores laughing along and making you groan as you realize just how much like a whore you were acting, as the pimp and his entourage wander away down into the red light district still laughing.";
-		infect "twisted pimp";
+		infect "Twisted Pimp";
 
 
 To say pimp loss:
-	say "Whimpering like the true coward the little slime is, the pimp quickly withdraws, several of his women glaring at you evilly as they cluster around their master and help him to stagger away.'";
+	if cocks of player > 0 and twpimploss > 2:
+		say "     Having beaten another of these twisted pimps, you pull him from his band of slutty whores before they can drag him to safety.  With him in your clutches, shall you turn the tables on him and make him your bitch for a while?";
+		if the player consents:
+			say "[twpimpbeaten_01]";
+		otherwise:
+			say "     Not wanting to waste any more of your time on this wretched bastard, you give him a few extra slaps across the face and toss him to the ground, leaving his collection of women to carry him away once you've safely left.";
+	otherwise:
+		say "     Whimpering like the true coward the little slime is, the pimp quickly withdraws, several of his women glaring at you evilly as they cluster around their master and help him to stagger away.";
+	increase twpimploss by 1;
+
+to say twpimpbeaten_01:
+	say "     Wanting some relief and looking to give him a taste of his own medecine, you push him over onto all fours.  Tearing aside his gaudy clothes, you bare his [one of]toned[or]furry[or]scaley[or]smooth-skinned[at random] ass and line your cock up with his pucker.  He groans and whimpers as you force your throbbing cock into his asshole and start pounding away at him.  His virgin-tight hole feels wonderful around your shaft and adds to the pleasure you're taking in breaking in the pimp's ass.";
+	say "     At first, he tries to squirm free, but soon his body starts to betray him and his anus squeezes and milks around your [cock of player] manhood.  And a little later, he's rocking back into your thrusts, panting with arousal despite himself.  You can't help but laugh at this and make a show of [one of]spanking his ass[or]calling him a bitch[or]suggesting he take up turning tricks himself[or]getting him to moan louder by thrusting extra hard into him[at random] for his gaggle of girls watching nervously from a safe distance amongst the rubble.";
+	say "     By the time you're done with him and have left your [cum load size of player] load inside him, he's cummed as well from the ass-fucking.  You wipe your cock slowly across his ass cheeks and then kick him aside.  He scrambles off to rejoin his pack of slave girls, which your happy to see has lost a few members thanks to their pimp's humiliating defeat.";
+
 
 Section 2 - Monster Insertion
 
@@ -36,7 +50,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "twisted pimp"; [Name of your new Monster]
+	now name entry is "Twisted Pimp"; [Name of your new Monster]
 	now attack entry is "[one of]He snaps his fingers and you feel dizzy for a minute, almost wanting to go over to him and do what he says.[or]He reaches out quickly and backhands you across the face.[or]He grins at you, his sharp teeth glinting for a minute before the punch you never saw coming lands right in your crotch.[or]You are distracted for a minute by one of the pimps stable of strange women, letting him land a powerful hit![or]A strangely arousing scent fills your head, making you pant with need and wonder why you are fighting instead of fucking...[or]The pimp gestures, and several of the women get in your way, giving him a clear shot at you.[or]Facing the pimp, you are surprised when several of his harem mob you at once, beating you with their fists before withdrawing while the pimp laughs at you[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[pimp loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[pimp attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -53,14 +67,14 @@ When Play begins:
 	now cock change entry is "it shifts and changes, growing slightly longer, but never seeming to settle on a proper shape as it seems to continue to shift, and soon you realize you have some control over its shape, making you grin as you realize that your cock can change to be a better and kinkier match for whatever partners you happen to find."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 18;
-	now sta entry is 24;					
+	now sta entry is 13;					
 	now per entry is 14;
 	now int entry is 6;
-	now cha entry is 24;
+	now cha entry is 15;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 40;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 15;			[Amount of Damage monster Does when attacking.]
+	now hp entry is 45;			[ How many HP has the monster got? ]
+	now lev entry is 8;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Red";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
@@ -85,7 +99,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "twisted pimp":
+	if bodyname of player is "Twisted Pimp":
 		if humanity of player is less than 10:
 			if cunts of player is greater than 0:
 				say "Succumbing to your bodies needs, your mind fills with images of the lovely pimp, and all his lusty little whores, and you smile happily as you finally realize your true purpose in life. 'I[apostrophe]m a whore...' you mutter with a happy smile on your face, before giggling in amusement, wondering how you could have not realized such a simple truth sooner. Your thoughts turning towards the strange pimp again, you moan in pleasure as you realize just how good an owner the obviously experienced pimp would make, after all, every slutty little whore like yourself needs an owner to take care of them right? Giggling rather ditzily again, you quickly begin to saunter back towards the red light district, where you are sure to find a proper owner who will find lots of handsome beasts to rent you out to so they can fill your empty pussy up again and again.";
