@@ -122,7 +122,7 @@ To say Plush Lion loss:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Let her go[as][0][end link][line break]";
+		say "[link]0 - Let him go[as][0][end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -148,6 +148,8 @@ To say Plush Lion loss:
 						say "[plionsex_04]";
 					otherwise if num is 5:
 						say "[plionsex_05]";
+			otherwise:
+				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
 
 
 to say plionsex_01:

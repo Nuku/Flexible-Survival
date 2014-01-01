@@ -1301,7 +1301,7 @@ carry out hunting:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -3807,6 +3807,7 @@ To Infect:
 					otherwise:
 						say "Your muscles feel weaker as the infection spreads through you.";
 						decrease strength of player by 1;
+						decrease capacity of player by 5;
 			if strength of player is less than str entry:
 				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of player by 1;
@@ -4122,7 +4123,7 @@ To fight:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -4593,6 +4594,7 @@ This is the turnpass rule:
 		if "Physical Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Strength of player by 1;
+				increase capacity of player by 5;
 				increase hunger of player by 6;
 				say "Your body strives to restore its lost might and rebuilds your muscles.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;

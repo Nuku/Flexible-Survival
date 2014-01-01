@@ -79,10 +79,11 @@ Instead of resolving a Wandering the Campus:
 	while T is listed in campuswander:
 		increase T by 1;
 		if T is 7, now T is 1;
-[	if T is 1:
-		say "     Your wandering across the campus is interrupted as you hear a loud voice call out.  Looking over, you spot a large, muscled wolf in a wrestling outfit.  He's set up an impromptu ring beside the building you just passed.  'Ahh!  My alma mater!  It's good to be back,' he says.  'I should be able to have a few good matches here,' he says, looking around.  You try to sneak away, but he spots you.  'You should do fine for a warm-up match.'";
-		challenge "Wrestling Wolf";
-		add 1 to campuswander;	]
+	now showlocale is false;
+	if T is 1:			[replaced with Fruit Bat]
+		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching.  Perhaps coming from one of the college's olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
+		challenge "Fruit Bat";
+		add 1 to campuswander;
 	if T is 1:
 		say "     Your wandering across the campus is interrupted as an athletic puma herm comes rushing out from one of the buildings, plowing into you.  After a brief scuffle, you push her away and try to back off, but it's too late; she's already fixed her attention onto you.  Licking her muzzle as her cock starts to engorge with growing arousal, whatever she was running to or from completely forgotten in the face of her sexy prey.";
 		challenge "Cougar";
@@ -110,6 +111,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Bald Eagle";
 		add 6 to campuswander;
 	now battleground is "void";		[prevents a random fight, as these are replacement random fights]
+	now showlocale is true;
 	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
 
 

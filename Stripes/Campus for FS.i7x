@@ -37,7 +37,7 @@ Instead of Resolving a Reaching the College:
 	now Reaching the College is resolved;
 
 
-Section 2 - College Campus
+Section 2 - Tenvale College Campus
 
 
 College Campus is a room. It is fasttravel.  It is private.

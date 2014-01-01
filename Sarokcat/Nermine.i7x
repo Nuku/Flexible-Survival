@@ -543,7 +543,8 @@ carry out bargainhunting:
 			decrease intelligence of player by 1;
 			decrease humanity of player by 5;
 			increase strength of player by 2;
-			say "your strength has increased by 2!";
+			say "Your strength has increased by 2!";
+			increase capacity of player by 10;
 		otherwise if Z is 18:
 			if "Cold Fish" is listed in feats of player:
 				say "Sorting through the strange bin, you feel a small shiver from one of the items in the bin and reflexively release the item, protecting yourself from it.  You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal.  Nermine, noticing your odd expression, slides back the water and food.  'Some items in the bargain bin do not agree with some people.  You may try again if you wish or leave matters be.'";
@@ -850,6 +851,7 @@ To say jackaltotemmagic:
 		now cockname of player is "jackalboy";
 		now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 		decrease strength of player by 2;
+		decrease capacity of player by 10;
 		increase dexterity of player by 4;
 		say "your dexterity has increased by 4!";
 		now jackalboytf is 4;
@@ -1395,6 +1397,7 @@ To say jackalankhmagic:
 		now cockname of player is "jackalman";
 		now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		increase strength of player by 4;
+		increase capacity of player by 20;
 		say "your Strength has increased by 4!";
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
