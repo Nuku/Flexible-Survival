@@ -100,5 +100,4 @@ when play ends:
 				say "     After being rescued by the soldiers, you're processed fairly quickly because of your common squirrel infection.  Upon your eventual release, you find some work at a nut processing plant.  Your affinity for nuts makes you a good employee, having a knack for spotting bad nuts and helping to improve the seasoning mixes[if cocks of player > 0 or cunts of player > 0].  Not that you tell anyone about that last part, instead slipping your own sexual fluids into the mix to add a little something special to them[otherwise] by coming up with new combinations and improvements the company can make[end if].  The popularity of the company's product goes up and those people who start to show signs of going squirrelly from the product are simply put down to having picked up the infection from somewhere.";
 
 
-[ Edit this to have the correct creature name as well]
 Grey Squirrel For FS ends here.

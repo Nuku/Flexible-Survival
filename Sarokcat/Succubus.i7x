@@ -1,5 +1,5 @@
 Version 3 of Succubus by Sarokcat begins here.
-[Version 3 - Tie-in for changing the demon brute pet & Lilith]
+[Version 3.1 - Promotion to level 8]
 
 "Adds a Succubus to Flexible Survivals Wandering Monsters table, With Impreg chance"
 

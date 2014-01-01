@@ -523,6 +523,7 @@ with two blank rows.
 
 
 This is the pitfightbattle rule:
+	now inasituation is true;
 	choose row current menu selection in the current menu;
 	if title entry is "Wolftaur":
 		say "[descriptionmessage]";
@@ -549,6 +550,7 @@ This is the pitfightbattle rule:
 		now descriptionmessage is "The wildcat seems to be living up to its name as the feline jumps around inside of the cage arena before coming to a land onto her twin feet right in front of you. Seems she really wants to fight by the feral smirk lining across her face.";
 		challenge "Wildcat";
 	decrease the menu depth by 1;
+	now inasituation is false;
 	rule succeeds;
 
 
