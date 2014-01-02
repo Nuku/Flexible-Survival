@@ -6701,13 +6701,14 @@ To regularstart: [normal start method]
 		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-15)>[run paragraph on]";
+			say "(0-16)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 15 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 16 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6751,6 +6752,11 @@ To regularstart: [normal start method]
 				now clearnomore is 1;
 			otherwise:
 				now clearnomore is 0;
+		otherwise if calcnumber is 16:
+			if graphics is true:
+				now graphics is false;
+			otherwise:
+				now graphics is true;
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
