@@ -21,7 +21,6 @@ Version 1 of Felix by Wahn begins here.
 [  99: Andre driven off                                              ] 
 [ 100: Andre driven off, told Felix about him                        ] 
 	
-
 Section 1 - Walk-in Event to put him into the dry plains room
 
 instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and hp of Felix is 0):
@@ -158,6 +157,8 @@ instead of sniffing Felix:
 	say "Felix has a pleasant animalistic smell. It's definitely male, but a bit lighter than a stallion's you'd say. He is still a colt after all.";
 
 to say FelixDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Felix], LIBIDO: [libido of Felix] <- DEBUG[line break]";		
 	if (hp of Felix is 0):   [starting state]
 		say "ERROR-Felix-001A: He should not be around yet anywhere where players can see him.";
 	otherwise if (hp of Felix is 100):

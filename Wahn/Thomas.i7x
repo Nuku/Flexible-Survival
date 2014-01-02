@@ -158,6 +158,8 @@ instead of sniffing Thomas:
 		say "Thomas has a pleasant animalistic smell. Mostly male, like a stallion - but there's an undertone of a mare's musk.";
 
 to say ThomasDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Thomas], PREGTIMER: [ThomasPregnancy], LIBIDO: [libido of Thomas], LUST: [lust of Thomas] <- DEBUG[line break]";	
 	if (hp of Thomas is 0):   [starting state]
 		say "ERROR-Thomas-001A: He should not be around yet anywhere where players can see him.";
 	otherwise if (hp of Thomas is 100):
