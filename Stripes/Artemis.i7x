@@ -1,5 +1,5 @@
 Version 4 of Artemis by Stripes begins here.
-[Version 4.0 - Modded glomping]
+[Version 4.1 - Modded: more engulfing / masturbation / sex / resting / SF engulfing ]
 
 "Adds a neuter rubber tigress pet named Artemis."
 
