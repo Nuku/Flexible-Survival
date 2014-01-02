@@ -50,7 +50,7 @@ instead of conversing the Carl:
 		say "     Carl says 'Listen, I really appreciate the risk you took in helping me. Mighty decent to take in someone with everything that's been going on.' His lips twitch for a moment as he tries to smile, something a canine's muzzle isn't quite meant to do, then he gives a little shrug and his tail starts wagging slowly. 'Now I want to do my part in getting us through this, so I'm gonna take position up here at the window and keep watch for anything approaching the building. Just get ready for a fight if you hear me shouting, ok?'";
 		now hp of Carl is 3;
 	otherwise if hp of Carl > 2:   
-		say "     Carl says '[one of]There was a gryphon who circled above the area for a while. He's gone now, but be on the lookout when you go out...[or]A pack of huskies came through the street not long ago. One of them looked like she wanted to check out the library, but in the end her mate just fucked her down on the stairs and they moved on afterwards.[or]Watch out if you go out there, I saw a huge wyvern fly over the area not too long ago.[or]Quite a few of the infected pass by the library and barely give it a second glance - seems like reading is the last thing on their mind and they don't expect to find any good loot in here.[at random]'";
+		say "     Carl says '[one of]There was a gryphon who circled above the area for a while. He's gone now, but be on the lookout when you go out...'[or]A pack of huskies came through the street not long ago. One of them looked like she wanted to check out the library, but in the end her mate just fucked her down on the stairs and they moved on afterwards.'[or]Watch out if you go out there, I saw a huge wyvern fly over the area not too long ago.'[or]Quite a few of the infected pass by the library and barely give it a second glance - seems like reading is the last thing on their mind and they don't expect to find any good loot in here.'[at random]";
 	otherwise:
 		say "ERROR-Carl-[hp of Carl]C: He isn't in one of the states she should be in! Please report how you got to this message.";
 	
@@ -95,18 +95,24 @@ Instead of fucking the Carl:
 			if cocks of player > 0 and cunts of player > 0:
 				say "     Do you want to fuck Carl (Y) or get fucked by him (N)? ";
 				if player consents:
+					say "     [line break]";
 					say "[Carl_Assfuck]";
 				otherwise:
+					say "     [line break]";
 					say "[Carl_FucksPlayerPussy]";
 			otherwise if cocks of player > 0:
 				say "     Do you want to fuck Carl (Y) or get fucked by him (N)? ";
 				if player consents:
+					say "     [line break]";
 					say "[Carl_Assfuck]";
 				otherwise:
+					say "     [line break]";
 					say "[Carl_FucksPlayerAss]";
 			otherwise if cunts of player > 0:
+				say "     [line break]";
 				say "[Carl_FucksPlayerPussy]";
 			otherwise:
+				say "     [line break]";
 				say "[Carl_FucksPlayerAss]";
 			now hp of Carl is 10;   [human in canine shape]
 	otherwise if (lastfuck of Carl - turns < 6):
@@ -416,7 +422,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 				say "     Sounds of ripping cloth and growls fill the silence in the aftermath of the dominance struggle, with Fang making short work of Carl's already partly ripped clothing. Then the transformed soldier sullenly takes position on all fours and is mounted by the wolf a second later. Standing over him and carefully taking hold of the scruff of Carl's neck with his teeth, Fang presses the tip of his length against the man's asshole, giving a victorious growl as he thrusts in. Carl gasps as his hole is forced wide open, with the wolf bucking fast and hard against him right from the start. Wanting to break in his new bitch, Fang fucks Carl with unrestrained animalistic vigor, just pounding him as deep as he can.";
 				say "     It's not long until Fang's growing arousal makes his knot fill out and he starts to ram his thick bulge against Carl's tight ring. The man struggles with all that's left in him, begging the wolf not to try and force it in. All that gets him is a rumbling growl from Fang and an even more powerful thrust against his hole, making Carl's mouth gape open, speechless and gasping for breath as the wolf uses all his strength to spread him wide open and pop his knot in. He then starts to pound the man's ass with all his strength, the tight hole quickly bringing him to climax as he howls out, filling the husky with his seed.";
 				say "     [WaitLineBreak]";			
-				say "     Satisfied, now that he's proven his dominance and got his rocks off, Fang pants lightly as he relaxes on top of Carl for a few quiet minutes. He even starts to gently nuzzle the man's back and sides with his muzzle, instinctively realizing that a pack his held together though not only force, but affection as well. Finally he gives a soft chuff in Carl's ear, then pulls free of him with a wet pop. Sniffing the transformed soldier's freshly fucked butt, he licks up some of his own seed trickling out of it, then pads off, leaving Carl to sag on the floor and clean himself up.";
+				say "     Satisfied, now that he's proven his dominance and got his rocks off, Fang pants lightly as he relaxes on top of Carl for a few quiet minutes. He even gently nuzzles the man's back and sides with his muzzle, instinctively realizing that an eclectic pack like this is held together not only with force, but with affection as well. Finally he gives a soft chuff in Carl's ear, then pulls free of him with a wet pop. Sniffing the transformed soldier's freshly fucked butt, he licks up some of his own seed trickling out of it, then pads off, leaving Carl to sag on the floor and clean himself up.";
 			otherwise:
 				say "     [line break]";		
 				say "     Leaving the two canines to sort out their dominance issues, you walk back down the library stairs, not even looking back as you hear a yowl and rhythmic slapping noises from behind you.";						
@@ -430,7 +436,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     Unobtrusively making your way closer, you watch the soon fully naked husky soldier ready himself for getting fucked by raising his ass a bit more. Rearing up and sliding on Carl's back, Fang carefully takes hold of the scruff of the anthro husky's neck with his teeth and presses the tip of his length against the man's asshole, giving a satisfied growl as he thrusts in. Carl gasps as his hole is forced wide open, with the wolf bucking fast and hard against him right from the start. Wanting to break in his new bitch, Fang fucks Carl with unrestrained animalistic vigor, just pounding him as deep as he can.";
 			say "     It's not long until Fang's growing arousal makes his knot fill out and he starts to ram his thick bulge against Carl's tight ring. Biting his lip at the somewhat painful stretching sensations that come with that, the man readies himself for what will come next. Then there is a rumbling growl from Fang and an even more powerful thrust against his hole, making Carl's mouth gape open, speechless and gasping for breath as the wolf uses all his strength to spread him wide open and pop his knot in. He then starts to pound the man's ass with all his strength, the tight hole quickly bringing him to climax as he howls out, filling the husky with his seed.";
 			say "     [WaitLineBreak]";			
-			say "     Satisfied now that he's gotten his rocks off, Fang pants lightly as he relaxes on top of Carl for a few quiet minutes. He even gently nuzzles the man's back and sides with his muzzle, instinctively realizing that a pack his held together though not only force, but affection as well. Finally he gives a soft chuff in Carl's ear, then pulls free of him with a wet pop. Sniffing the transformed soldier's freshly fucked butt, he licks up some of his own seed trickling out of it, then pads off, leaving Carl to sag on the floor and clean himself up.";
+			say "     Satisfied now that he's gotten his rocks off, Fang pants lightly as he relaxes on top of Carl for a few quiet minutes. He even gently nuzzles the man's back and sides with his muzzle, instinctively realizing that an eclectic pack like this is held together not only with force, but with affection as well. Finally he gives a soft chuff in Carl's ear, then pulls free of him with a wet pop. Sniffing the transformed soldier's freshly fucked butt, he licks up some of his own seed trickling out of it, then pads off, leaving Carl to sag on the floor and clean himself up.";
 		otherwise:
 			say "     [line break]";		
 			say "     Leaving the two canines to sort out their dominance issues, you walk back down the library stairs, not even looking back as you hear a yowl and rhythmic slapping noises from behind you.";		

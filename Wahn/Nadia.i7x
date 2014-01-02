@@ -229,6 +229,8 @@ instead of sniffing Nadia:     [how she smells]
 			say "     Nadia smells like damp feathers, with a hint of sweat.";
 			
 to say NadiaDesc:   [how she looks]
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility], NPCNADIAINT: [npcNadiaint] <- DEBUG[line break]";		
 	if (hp of Nadia is 0 or hp of Nadia is 99):   [not yet met or refused]
 		say "ERROR-Nadia-001L: She should not be around yet anywhere where players can see her.";
 	otherwise:
