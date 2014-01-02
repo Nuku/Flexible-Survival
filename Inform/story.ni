@@ -1301,7 +1301,7 @@ carry out hunting:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -3807,6 +3807,7 @@ To Infect:
 					otherwise:
 						say "Your muscles feel weaker as the infection spreads through you.";
 						decrease strength of player by 1;
+						decrease capacity of player by 5;
 			if strength of player is less than str entry:
 				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of player by 1;
@@ -4122,7 +4123,7 @@ To fight:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -4593,6 +4594,7 @@ This is the turnpass rule:
 		if "Physical Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Strength of player by 1;
+				increase capacity of player by 5;
 				increase hunger of player by 6;
 				say "Your body strives to restore its lost might and rebuilds your muscles.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;
@@ -6699,13 +6701,14 @@ To regularstart: [normal start method]
 		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-15)>[run paragraph on]";
+			say "(0-16)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 15 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 16 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6749,6 +6752,11 @@ To regularstart: [normal start method]
 				now clearnomore is 1;
 			otherwise:
 				now clearnomore is 0;
+		otherwise if calcnumber is 16:
+			if graphics is true:
+				now graphics is false;
+			otherwise:
+				now graphics is true;
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;

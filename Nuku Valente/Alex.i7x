@@ -11,7 +11,9 @@ alexdiego is a number that varies.
 alexleeinfo is a number that varies.
 gettinglee is a number that varies.
 
-instead of sniffing Alex:
+the scent of Alex is "[alexscent]".
+
+to say alexscent:
 	if alexbrunch < 4:
 		say "Alex smells like a mix of human and ferret.";
 	otherwise:
@@ -22,7 +24,9 @@ The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferre
 Alex's Condo is a room. It is fasttravel. It is private.
 The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises.  His place is fairly well-maintained, the mustelid tidying up occasionally.  It does have the faint, tangy smell of mustelid musk, but it's not too strong.  It is well-furnished, with expensive, trendy-looking furniture and decor.  The big screen television and large stereo are silent, but fill a sizable portion of one wall.  Several pieces of classy art adorn the others, all matching nicely with each other and the room decor as a whole.  There are several legal briefs and law books open on the coffee table in the living room.  Scattered around the floor are several colourful, rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3].  There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if].  A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless.  He's set up a small camper stove on his stove top and is using that for cooking.  Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.";
 
-Instead of sniffing Alex:
+the scent of Alex's Condo is "[alexcondoscent]".
+
+to say alexcondoscent:
 	say "The condo smells pretty clean.  Male mustelid, [if alexbrunch > 0], brunch[end if], potpourri and candles are the predominant scents.";
 
 Section 2 - Conversing with Alex

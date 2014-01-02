@@ -1,5 +1,5 @@
 Version 3 of Wrestling Wolf For FS by Volcblaze begins here.
-[ Version 3.1 - Promotion and relocation to College Campus area. ]
+[ Version 3.2 - First time appeance cribbed from event. ]
 
 "Adds a Wrestling Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -15,6 +15,7 @@ wrestlingwolfdefeat is a number that varies.
 wwheal is a number that varies.
 wrwolfanal is a number that varies.
 wrwolfbeaten is a number that varies.
+wrwolfseen is a truth state that varies.  wrwolfseen is usually false.
 
 to say wrestlingwolfattack:
 	if wrestlingwolfdefeat is 0: [ first time losing to wrestling wolf ]
@@ -98,7 +99,10 @@ to say beatthewrwolf:
 
 
 to say wrwolfdesc:
-	say "You are grabbed from behind and carried not too far off to what appears to be a makeshift wrestling ring. You are tossed into the ring. You quickly turn to find a tall male wolf. His thick black fur a bit rugged and unkempt. He stands at least two feet taller than you. He wears what appears to be a wrestling mask and a pair of wrestling briefs, you figure he was some kind of wrestler before the infection took place. '[one of]Sorry ta treat ya like that, but I just couldn't wait any longer I have ta fight ya[or]Ya looked strong. Maybe you can make this fight not a bore[or]Finally someone to fight. Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolf tail swinging excitedly behind him.";
+	if wrwolfseen is false:
+		say "     Your wandering across the campus is interrupted as you hear a loud voice call out.  Looking over, you spot a large, muscled wolf in a wrestling outfit.  He's set up an impromptu ring beside the building you just passed.  'Ahh!  My alma mater!  It's good to be back,' he says.  'I should be able to have a few good matches here,' he says, looking around.  You try to sneak away, but he spots you.  'You should do fine for a warm-up match.'";
+		now wrwolfseen is true;
+	say "     You are grabbed from behind and carried not too far off to the makeshift wrestling ring set up by that wrestling wolf.  You are tossed into the ring, followed by the tall male wolf bounding over the ropes to join you.  His thick black fur a bit rugged and unkempt.  He stands over 8 feet tall and is impressively muscled.  He wears what appears to be a wrestling mask and a pair of wrestling briefs, you figure he was some kind of wrestler before the infection took place.  '[one of]Sorry ta treat ya like that, but I just couldn't wait any longer I have ta fight ya[or]Ya looked strong.  Maybe you can make this fight not a bore[or]Finally someone to fight.  Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolf tail swinging excitedly behind him.";
 	now chargeup is 0;
 	now wwheal is 0;
    
