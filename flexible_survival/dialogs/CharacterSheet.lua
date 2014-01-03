@@ -119,11 +119,12 @@ function _M:drawDialog(kind)
     if kind == "general" then
         h = 0
         w = 0
+		local cur_exp, max_exp = game.player.exp, game.player:getExpChart(game.player.level+1)
         s:drawStringBlended(self.font, "Name : "..(player.name or "Unnamed"), w, h, 255, 255, 255, true) h = h + self.font_h
         s:drawStringBlended(self.font, "Role : "..(player.descriptor.role or player.type:capitalize()), w, h, 255, 255, 255, true) h = h + self.font_h
-		s:drawStringBlended(self.font, "XP : "..(game.player.exp), w, h, 255, 255, 255, true) h = h + self.font_h
+		self:mouseTooltip(self.TOOLTIP_LEVEL, s:drawColorStringBlended(self.font, ("Exp  : #00ff00#%2d%%"):format(100 * cur_exp / max_exp), w, h, 255, 255, 255, true)) h = h + self.font_h
         
-        h = h + self.font_h -- Adds an empty row
+		h = h + self.font_h -- Adds an empty row
         
         -- Draw some text with an attatched tooltip
         self:mouseTooltip([[#GOLD#Losing all of this would be bad.#LAST#]], s:drawColorStringBlended(self.font, ("#c00000#Life: #00ff00#%d/%d"):format(player.life, player.max_life), w, h, 255, 255, 255, true)) h = h + self.font_h

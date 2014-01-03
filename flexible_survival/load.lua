@@ -53,6 +53,24 @@ ActorStats:defineStat("Charisma",	"cha", 10, 1, 100, "How well you deal with oth
 ActorStats:defineStat("Intelligence",	"int", 10, 1, 100, "Your ability to think through problems from a purely analytical stand point.")
 ActorStats:defineStat("Willpower",	"wil", 10, 1, 100, "Your ability to resist temptation and external influences on your thought.")
 
+-- Actor Levels
+
+ActorLevel:defineMaxLevel(nil)
+ActorLevel.exp_chart = function(level)
+	local exp = 10
+	local mult = 8.5
+	local min = 3
+	for i = 2, level do
+		exp = exp + level * mult
+		if level < 30 then
+			mult = util.bound(mult - 0.2, min, mult)
+		else
+			mult = util.bound(mult - 0.1, min, mult)
+		end
+	end
+	return math.ceil(exp)
+end
+
 -- Actor AIs
 ActorAI:loadDefinition("/engine/ai/")
 

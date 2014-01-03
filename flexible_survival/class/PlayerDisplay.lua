@@ -86,7 +86,10 @@ function _M:display()
 
     self:makeTextureBar("#ffcc80#Power:", nil, player:getPower(), player.max_power, player.power_regen, x, h, 255, 255, 255, colors.DARK_BLUE, {r=colors.DARK_BLUE.r/2, g=colors.DARK_BLUE.g/2, b=colors.DARK_BLUE.b/2}) h = h + self.font_h
 	self:makeTextureBar("#c02020#Lust:", nil, player.lust, player.max_lust, player.lust_regen, x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
-
+	h = h + self.font_h * 4
+	local cur_exp, max_exp = player.exp, player:getExpChart(player.level+1)
+	self:makeTexture(("Experience: #00ff00#%2d%%"):format(100 * cur_exp / max_exp), x, h, 255, 255, 255) h = h + self.font_h
+    
     if savefile_pipe.saving then
         h = h + self.font_h
         self:makeTextureBar("Saving:", "%d%%", 100 * savefile_pipe.current_nb / savefile_pipe.total_nb, 100, nil, x, h, colors.YELLOW.r, colors.YELLOW.g, colors.YELLOW.b, 
