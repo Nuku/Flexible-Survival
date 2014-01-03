@@ -5,17 +5,17 @@ Apocalypse Store by DrGryphon begins here.
 Apocalypse Store is a situation.
 
 instead of resolving Apocalypse Store:
-	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, the windows are blown out along with doors. and the interior looks completly torn apart, with debries littered around the floor.";
+	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, the windows are blown out along with doors. and the interior looks completely torn apart, with debris littered around the floor.";
 	now Clothing Store is known;
-	say "Despite the stores destroyed appearance, you decide to have a look around inside anyway, maybe there's still something usefull in here? (Clothing Store now added to nav menu)";
+	say "Despite the stores destroyed appearance, you decide to have a look around inside anyway, maybe there's still something useful in here? (Clothing Store now added to nav menu)";
 	now Apocalypse Store is resolved;
 
 
-broken entrence is a door. "The two broken glass doors exit out to the city.".
-Clothing Store is a room. It is fasttravel. "The old cloting store has been compleatly torn apart by some unknown explosion. pieces off the roof litter the floor, and the display racks have all been thrown toward the entrence, and now lie on their sides. On the far end of the building you see scorch marks from what must be the source of the blast.".
-Clothing Store is west of broken entrence.
-broken entrence is dangerous.
-the marea of broken entrence is "Outside".
+broken entrance is a door. "The two broken glass doors exit out to the city.".
+Clothing Store is a room. It is fasttravel. "The old clothing store has been completely torn apart by some unknown explosion. pieces off the roof litter the floor, and the display racks have all been thrown toward the entrance, and now lie on their sides. On the far end of the building you see scorch marks from what must be the source of the blast.".
+Clothing Store is west of broken entrance.
+broken entrance is dangerous.
+the marea of broken entrance is "Outside".
 
 
 Apocalypse Mini-Skirt is a grab object.
@@ -29,7 +29,7 @@ The slot of Apocalypse Mini-Skirt is "body".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn from an explosion. It's still wearable and the destoryed looks fits in with the  current situation."	1	Apocalypse Mini-Skirt
+"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn from an explosion. It's still wearable and the destroyed looks fits in with the  current situation."	1	Apocalypse Mini-Skirt
 
 the scent of Apocalypse Mini-Skirt is "There is a faint smell of smoke  lingering on the item of clothing.";  
 
@@ -44,7 +44,7 @@ The slot of Apocalypse Shorts is "body".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Shorts"	"A pair of streatchy running shorts that have been singed and torn from an explosion. They're still wearable and the destoryed looks fits in with the  current situation."	1	Apocalypse Shorts
+"Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn from an explosion. They're still wearable and the destroyed looks fits in with the  current situation."	1	Apocalypse Shorts
 
 the scent of Apocalypse Shorts is "There is a faint smell of smoke  lingering on the item of clothing.";  
 
@@ -59,7 +59,7 @@ The slot of Apocalypse Hoody is "body".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Hoody"	"A large zippable hoody that has been singed and torn from an explosion. It's still wearable and the destoryed looks fits in with the current situation."	1	Apocalypse Hoody
+"Apocalypse Hoody"	"A large zippable hoody that has been singed and torn from an explosion. It's still wearable and the destroyed looks fits in with the current situation."	1	Apocalypse Hoodys
 
 the scent of Apocalypse Hoody is "There is a faint smell of smoke  lingering on the item of clothing.";  
 
@@ -74,7 +74,7 @@ The slot of Apocalypse Scarf is "face".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destoryed looks fits in with the current situation ."	1	Apocalypse Scarf
+"Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed looks fits in with the current situation ."	1	Apocalypse Scarf
 
 the scent of Apocalypse Scarf is "There is a faint smell of smoke  lingering on the item of clothing."; 
 
