@@ -26,7 +26,7 @@ newEntity{
 	type = "humanoid", subtype = "mutant",
 	display = "p", color=colors.RED,
 	desc = [[Shiny white and red latex squeak as it approaches you, baring its sharp plastic teeth in your direction.]],
-
+	image = "mobs/latex_herm_vixen.png",
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
 	stats = { str=5, dex=5, con=5 },
 	combat_armor = 0,
