@@ -17,4 +17,4 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-load("/data/general/npcs/kobold.lua")
+load("/data/general/npcs/latex_fox.lua")
