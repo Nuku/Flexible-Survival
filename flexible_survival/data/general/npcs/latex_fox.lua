@@ -30,6 +30,7 @@ newEntity{
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
 	stats = { str=5, dex=5, con=5 },
 	combat_armor = 0,
+	resolvers.talents{ [Talents.T_NIBBLE]=1,},
 }
 
 newEntity{ base = "BASE_NPC_LATEXFOX",
