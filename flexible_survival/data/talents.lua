@@ -66,19 +66,19 @@ newTalent{
 	cooldown = 6,
 	power = 2,
 	range = 1,
+	message = false,
 	action = function(self, t)
 		local tg = {type="hit", range=self:getTalentRange(t)}
 		local x, y, target = self:getTarget(tg)
 		if not x or not y or not target then return nil end
 		if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
-
 		--target:knockback(self.x, self.y, 2 + self:getDex())
+		--if game.player:hasLos(self.x, self.y) and game.player:canSee(self) then
+		game.logSeen("%s nibbles at %s!", self.name:capitalize(), target.name)
+		--end
 		return true
 	end,
-	if game.player:hasLos(self.x, self.y) and game.player:canSee(self) then
-		game.log("%s nibbles at %s!", self.name:capitalize(), target.name)
-	end
 	info = function(self, t)
-		return ""
+		return "nibble nibble nibble"
 	end,
 }
