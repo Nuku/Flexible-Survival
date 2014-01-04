@@ -17,6 +17,7 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
+load("/data/infections.lua")
 newTalentType{ type="role/combat", name = "combat", description = "Combat techniques" }
 
 newTalent{
@@ -74,7 +75,7 @@ newTalent{
 		if core.fov.distance(self.x, self.y, x, y) > 1 then return nil end
 		--target:knockback(self.x, self.y, 2 + self:getDex())
 		--if game.player:hasLos(self.x, self.y) and game.player:canSee(self) then
-		game.logSeen("%s nibbles at %s!", self.name:capitalize(), target.name)
+		game.logSeen(self,"%s nibbles at %s!", self.name:capitalize(), target.name)
 		--end
 		return true
 	end,
