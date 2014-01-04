@@ -30,6 +30,7 @@ newTalent{
 		self:learnTalent(self.ENHANCED_SENSES,true,1)
 		self:learnTalent(self.BITE,true,2)
 		self.head_desc = "a mixture of canine and human, a perpetual sneer showing off exposed teeth."
+		self.legs_tf =
 		self.head_species = "fox"
 		self.head_speciesadj = "vulpine"
 		return true
@@ -55,6 +56,7 @@ newTalent{
 	on_learn = function(self, t)
 		self:learnTalent(self.VITALITY,true,1)
 		self.torso_desc = "largely human, with only faint hints of bestial physique."
+		self.torso_tf = "Your body tingles oddly, but not much seems to change, externally at least."
 		self.torso_species = "human"
 		self.torso_speciesadj = "human"
 		return true
@@ -78,6 +80,7 @@ newTalent{
 	mode = "passive",
 	on_learn = function(self, t)
 		self.ass_desc = "They have a large fox tail cartoonishly ballooning from their bottom."
+		self.ass_tf = "A sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically."
 		self.ass_species = "fox"
 		self.ass_speciesadj = "vulpine"
 		return true
@@ -101,6 +104,7 @@ newTalent{
 	on_learn = function(self, t)
 		self:learnTalent(self.RUBBER_HIDE,true,1)
 		self.legs_desc = "digitigrade and shaped like dog legs with large paws for feet."
+		self.legs_tf = "Smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush."
 		self.legs_species = "fox"
 		self.legs_speciesadj = "vulpine"
 		return true
@@ -118,6 +122,31 @@ newTalent{
 }
 
 newTalent{
+	name = "T_LEGS_LATEXFOX",
+	type = {"inherent/infections", 1},
+	points = 1,
+	mode = "passive",
+	on_learn = function(self, t)
+		self:learnTalent(self.CLAW_SWIPE,true,1)
+		self.arms_desc = "largely human, except their hands are somewhat paw like, with black claws at the ends of fingers."
+		self.arms_tf = "Your arms tingle softly as your hands reshape into a slightly paw like fashion, with black claws at the end."
+		self.arms_species = "fox"
+		self.arms_speciesadj = "vulpine"
+		return true
+	end,
+	on_unlearn = function(self, t)
+		self:unlearnTalent(self.CLAW_SWIPE,true,1)
+		self.arms_desc = ""
+		self.arms_species = ""
+		self.arms_speciesadj = ""
+		return true
+	end,
+	info = function(self, t)
+		return ""
+	end,
+}
+
+newTalent{
 	name = "T_SKIN_LATEXFOX",
 	type = {"inherent/infections", 1},
 	points = 1,
@@ -125,6 +154,7 @@ newTalent{
 	on_learn = function(self, t)
 		self:learnTalent(self.RUBBER_HIDE,true,3)
 		self.skin_desc = "red and white latex"
+		self.legs_tf =
 		self.skin_longdesc= "red and white latex."
 		self.skin_species = "rubber"
 		self.skin_speciesadj = "rubbery"
