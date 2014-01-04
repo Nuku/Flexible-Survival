@@ -49,7 +49,7 @@ Instead of Resolving a Needy Rabbit Girl:
 			say "Do you follow your urges?";
 			if player consents:
 				say "As if she could detect the decision being made in your eyes, she reaches for your groin, rubbing slowly as she gets a smile. 'Well since you ask,' which you had not yet, 'Yes.' She grabs at a hand and guides you into a basement, 'My home,' she explains before turning to you.";
-				say "[sexwithSandra];
+				say "[sexwithSandra]";
 				say "[bold type]You now know how to navigate to the rabbit den[roman type].";
 			otherwise:
 				say "She looks clearly disappointed, and crosses her arms, 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you[apostrophe]re nice. Here[apostrophe]s my address, ok? Come visit any time.";
