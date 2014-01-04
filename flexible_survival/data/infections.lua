@@ -1,4 +1,5 @@
 -- Written by David Silver
+-- Copyright (C) 2014
 -- Based On:
 -- ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
