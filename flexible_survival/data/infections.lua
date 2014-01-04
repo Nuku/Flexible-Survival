@@ -1,3 +1,5 @@
+-- Written by David Silver
+-- Based On:
 -- ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
@@ -24,23 +26,20 @@ newTalent{
 	type = {"inherent/infections", 1},
 	points = 1,
 	mode = "passive",
-	cooldown = 0,
-	power = 0,
-	range = 0,
 	on_learn = function(self, t)
-		self.learnTalent(ENHANCED_SENSES,1,1)
-		self.learnTalent(BITE,1,2)
-		player.head_desc = "a mixture of canine and human, a perpetual sneer showing off exposed teeth."
-		player.head_species = "fox"
-		player.head_speciesadj = "vulpine"
+		self:learnTalent(self.ENHANCED_SENSES,TRUE,1)
+		self:learnTalent(self.BITE,TRUE,2)
+		self.head_desc = "a mixture of canine and human, a perpetual sneer showing off exposed teeth."
+		self.head_species = "fox"
+		self.head_speciesadj = "vulpine"
 		return true
 	end,
 	on_unlearn = function(self, t)
-		self.unlearnTalent(ENHANCED_SENSES,1,1)
-		self.unlearnTalent(BITE,1,2)
-		player.head_desc = ""
-		player.head_species = ""
-		player.head_speciesadj = ""
+		self:unlearnTalent(self.ENHANCED_SENSES,TRUE,1)
+		self:unlearnTalent(self.BITE,TRUE,2)
+		self.head_desc = ""
+		self.head_species = ""
+		self.head_speciesadj = ""
 		return true
 	end,
 	info = function(self, t)
