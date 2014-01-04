@@ -30,9 +30,12 @@ newTalent{
 		self:learnTalent(self.ENHANCED_SENSES,true,1)
 		self:learnTalent(self.BITE,true,2)
 		self.head_desc = "a mixture of canine and human, a perpetual sneer showing off exposed teeth."
-		self.legs_tf =
+		self.head_tf = "Your face reforms, vision blocked by a narrow fox like snout, new ears starting to twitch on top of your head."
 		self.head_species = "fox"
 		self.head_speciesadj = "vulpine"
+		if !(self.head_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.head_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
@@ -41,6 +44,7 @@ newTalent{
 		self.head_desc = ""
 		self.head_species = ""
 		self.head_speciesadj = ""
+		self.head_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
@@ -59,6 +63,9 @@ newTalent{
 		self.torso_tf = "Your body tingles oddly, but not much seems to change, externally at least."
 		self.torso_species = "human"
 		self.torso_speciesadj = "human"
+		if !(self.torso_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.torso_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
@@ -66,6 +73,7 @@ newTalent{
 		self.torso_desc = ""
 		self.torso_species = ""
 		self.torso_speciesadj = ""
+		self.torso_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
@@ -83,12 +91,16 @@ newTalent{
 		self.ass_tf = "A sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically."
 		self.ass_species = "fox"
 		self.ass_speciesadj = "vulpine"
+		if !(self.ass_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.ass_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
 		self.ass_desc = ""
 		self.ass_species = ""
 		self.ass_speciesadj = ""
+		self.ass_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
@@ -107,13 +119,17 @@ newTalent{
 		self.legs_tf = "Smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush."
 		self.legs_species = "fox"
 		self.legs_speciesadj = "vulpine"
+		if !(self.legs_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.legs_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
 		self:unlearnTalent(self.RUBBER_HIDE,true,1)
-		self.ass_desc = ""
-		self.ass_species = ""
-		self.ass_speciesadj = ""
+		self.legs_desc = ""
+		self.legs_species = ""
+		self.legs_speciesadj = ""
+		self.legs_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
@@ -122,7 +138,7 @@ newTalent{
 }
 
 newTalent{
-	name = "T_LEGS_LATEXFOX",
+	name = "T_ARMS_LATEXFOX",
 	type = {"inherent/infections", 1},
 	points = 1,
 	mode = "passive",
@@ -132,6 +148,9 @@ newTalent{
 		self.arms_tf = "Your arms tingle softly as your hands reshape into a slightly paw like fashion, with black claws at the end."
 		self.arms_species = "fox"
 		self.arms_speciesadj = "vulpine"
+		if !(self.arms_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.arms_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
@@ -139,6 +158,7 @@ newTalent{
 		self.arms_desc = ""
 		self.arms_species = ""
 		self.arms_speciesadj = ""
+		self.arms_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
@@ -158,6 +178,9 @@ newTalent{
 		self.skin_longdesc= "red and white latex."
 		self.skin_species = "rubber"
 		self.skin_speciesadj = "rubbery"
+		if !(self.skin_last == "Latex Fox") and self == player then
+			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.skin_tf)
+		end
 		return true
 	end,
 	on_unlearn = function(self, t)
@@ -166,6 +189,7 @@ newTalent{
 		self.skin_longdesc= ""
 		self.skin_species = "human"
 		self.skin_speciesadj = "smooth"
+		self.skin_last = "Latex Fox"
 		return true
 	end,
 	info = function(self, t)
