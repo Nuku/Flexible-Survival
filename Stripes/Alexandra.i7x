@@ -529,7 +529,7 @@ to say policestationdesc:
 
 to say policelockerdesc:
 	if hp of Alexandra < 57:
-		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.";
+		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.  There's a few cots wedged in here for others to use.";
 	otherwise:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
 
@@ -901,6 +901,7 @@ AT_Diego is a truth state that varies.  AT_Diego is usually false.
 AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
 AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
 AT_Jimmy is a truth state that varies.  AT_Jimmy is usually false.
+AT_Stella is a truth state that varies.  AT_Stella is usually false.
 no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
 
 
@@ -919,6 +920,7 @@ to AlexandraTaskChat:
 	if Gryphon Guard is unresolved and AT_Qytat is false, add 11 to AlexandraTask;
 	if Zoo Entrance is unknown, add 12 to AlexandraTask;
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
+	if Eager Dal is unresolved and AT_Stella is false, add 14 to AlexandraTask;
 	if AT_Jimmy is false and guy is not banned and hp of Alexandra >= 56:
 		if hp of Jimmy is 0:
 			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
@@ -942,6 +944,7 @@ to AlexandraTaskChat:
 		if entry 1 of AlexandraTask is 11, say "[A_Task11]";
 		if entry 1 of AlexandraTask is 12, say "[A_Task12]";
 		if entry 1 of AlexandraTask is 13, say "[A_Task13]";
+		if entry 1 of AlexandraTask is 14, say "[A_Task14]";
 		if entry 1 of AlexandraTask is 50, say "[A_Task50]";
 
 
@@ -1003,6 +1006,10 @@ to say A_Task12:
 to say A_Task13:
 	say "     'Those weak little huskies aren't much trouble on their own, but I've seen some of them roaming as a [bold type]husky pack[roman type].  They could be more trouble, sniffing out the few remaining survivors before the military can come in to rescue everyone.  Be on the lookout for them, but be ready for a fight.'";
 	now AT_Sarah is true;
+
+to say A_Task14:
+	say "     'There's several transformed people out there who're still fairly sane even if they're no longer human.  For many of those transformed, it seems the infection's too much for them.  But there may be some who're stable enough to stay sane even if they're no longer human.  It's a bit hazy, but I recall coming across a rather forward dalmation herm off in the red light district.  She gave me some attitude when I tried to tell her to go home and wait for rescue, but she left peacefully enough.  You should keep an eye out for that [bold type]eager dal[roman type], as she might still be sane.";
+	now AT_Stella is true;
 
 
 Part 2 - Tasks (50+)

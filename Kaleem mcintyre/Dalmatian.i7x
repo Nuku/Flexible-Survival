@@ -52,16 +52,16 @@ When Play begins:
 	now defeated entry is "[beattheDalmatian]";				[ Text when monster loses.  Change 'Dalmatian' as above. ]
 	now victory entry is "[losetoDalmatian]";					[ Text when monster wins.  Change 'Dalmatian' as above. ]
 	now desc entry is "[Dalmatiandesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "is covered with black spots while long floppy ears hang down the side of your regal looking head. With a fat red tongue hanging between your impressive jowls, sharp hazel eyes looking out from your face and black button nose set firmly at the end of your face you possess a charming looking Dalmatian's muzzle";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have underneath the pale wisps of black spotted fur covering your body. All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "short, but thick fur covered with black rosettes dotted all across your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble shaped rump.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "canine";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. With your tongue stretching free from out of your mouth, giving you a perfect dog tongue, you can only whimper and whine as you feel new canine instincts overcoming your senses";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your entire form starts to increase in length. If that wasn't odd enough when the muscles you have along your chest, arms, legs and torso quickly go to receding back into your body you feel yourself almost wanting to curl up and shiver into a tight knit ball as your body pumps all of your strength into your thickening bones, giving them extra added density needed for holding up your escalating form. You actually have to stop yourself from jumping around like mad as your heels stretch up to give you a twin pair of digitgrade feet as the raw urge to [']go play['] takes you over down to your core";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, however, the most peculiar thing to happen next is the appearance of large black spots dotting themselves across your body in no particular pattern you can figure out";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your butt cheeks spreads outwards, forming two perfectly bubbles just made for gripping, while your spine arches downwards with the extending expansion of your incoming tail";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "the mass of flesh between your [bodyname of player] legs twists and then shivers before pushing up from your body. When your maleness begins to quickly narrow at the tip you find yourself smiling as you think about how you're about to have a perfect dog's cock in the next few seconds. As a thick knot swells into being at the end of your shaft, forming a perfect bulge made for locking you into whatever partner your chose to be intimate with, you let out a moan of pleasure as you think about how good that's going to feel buried into someone";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "is covered with black spots while long floppy ears hang down the side of your regal looking head. With a fat red tongue hanging between your impressive jowls, sharp hazel eyes looking out from your face and black button nose set firmly at the end of your face you possess a [if cunts of player > 0]cute[otherwise]charming[end if] looking Dalmatian's muzzle";	
+	now body entry is "lean and limber with hidden muscles as your canine body hides what strength you have[if player is dalskinned] underneath the pale wisps of black spotted fur covering your body[end if].  All across your arms, legs, thighs, chest, and torso you have almost unseen muscles cropped along your wiry body as your cano-mutant form is now more suited for maximizing your newfound dexterity with extreme running, jumping, bounding and leaping rather than fighting with what strength you do possess, what with you now possessing digitigrade feet instead of the normal plantigrade ones that other mutants boast";
+	now skin entry is "short, but thick fur covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. With your tongue stretching free from out of your mouth, giving you a perfect dog tongue, you can only whimper and whine as you feel new canine instincts overcoming your senses";
+	now body change entry is "your entire form starts to increase in length. If that wasn't odd enough when the muscles you have along your chest, arms, legs and torso quickly go to receding back into your body you feel yourself almost wanting to curl up and shiver into a tight knit ball as your body pumps all of your strength into your thickening bones, giving them extra added density needed for holding up your escalating form. You actually have to stop yourself from jumping around like mad as your heels stretch up to give you a twin pair of digitgrade feet as the raw urge to [']go play['] takes you over down to your core";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, however, the most peculiar thing to happen next is the appearance of large black spots dotting themselves across your body in no particular pattern you can figure out";
+	now ass change entry is "your butt cheeks spreads outwards, forming two perfectly bubbles just made for gripping, while your spine arches downwards with the extending expansion of your incoming tail";
+	now cock change entry is "the mass of flesh between your [bodyname of player] legs twists and then shivers before pushing up from your body. When your maleness begins to quickly narrow at the tip you find yourself smiling as you think about how you're about to have a perfect dog's cock in the next few seconds.  As a thick knot swells into being at the end of your shaft, forming a perfect bulge made for locking you into whatever partner your chose to be intimate with, you let out a moan of pleasure as you think about how good that's going to feel buried into someone";
 	now str entry is 15;			[ These are now the creature's stats... ]
 	now dex entry is 22;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20;			[ These values may be used as part of alternate combat.]
@@ -76,12 +76,12 @@ When Play begins:
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
+	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
+	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
+	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 55;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
@@ -95,8 +95,11 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
+
+Definition: a person is dalskinned:
+	if the skinname of the player is "Dalmation", yes;
+	no;
+
 
 when play ends:
 	if bodyname of player is "Dalmatian":
