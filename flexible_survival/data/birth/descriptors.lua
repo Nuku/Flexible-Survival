@@ -32,26 +32,79 @@ newBirthDescriptor{
 }
 
 newBirthDescriptor{
-	type = "role",
-	name = "Destroyer",
+	type = "sex",
+	name = "Male",
 	desc =
 	{
 		"Crashhhhh!",
 	},
-	talents = {
-		[ActorTalents.T_KICK]=1,
+	bodyslots = { cock = 1, testicle = 2 },
+}
+
+newBirthDescriptor{
+	type = "sex",
+	name = "Female",
+	desc =
+	{
+		"Crashhhhh!",
+	},
+	bodyslots = { breast = 2, vagina = 1 },
+}
+
+
+newBirthDescriptor{
+	type = "sex",
+	name = "Shemale",
+	desc =
+	{
+		"Crashhhhh!",
+	},
+	bodyslots = { cock = 1, testicle = 2, breast = 2, vagina = 1 },
+}
+
+newBirthDescriptor{
+	type = "race",
+	name = "Human",
+	desc =
+	{
+		"Crashhhhh!",
+	},
+	bodyslots = { head = 1, torso = 1, leg = 2, skin = 1 },
+	bodyparts = {
+		BP_HEAD_HUMAN = "all",
+		BP_TORSO_HUMAN = "all",
+		BP_COCK_HUMAN = "all",
 	},
 }
 
 newBirthDescriptor{
-	type = "role",
-	name = "Acid-maniac",
+	type = "race",
+	name = "Latexfox",
 	desc =
 	{
-		"Zshhhhhhhh!",
+		"Crashhhhh!",
 	},
-	talents = {
-		[ActorTalents.T_ACID_SPRAY]=1,
+	bodyslots = { head = 1, torso = 1, leg = 2, skin = 1 },
+	bodyparts = {
+		BP_HEAD_LATEXFOX = "all",
+		BP_TORSO_LATEXFOX = "all",
 	},
 }
 
+newBirthDescriptor{
+	type = "specialization",
+	name = "Whatever",
+	desc =
+	{
+		"Crashhhhh!",
+	},
+}
+
+newBirthDescriptor{
+	type = "specialization",
+	name = "Whatever2",
+	desc =
+	{
+		"Crashhhhh!",
+	},
+}

@@ -1,3 +1,6 @@
+-- Written by David Silver
+-- Copyright (C) 2014
+-- Based On:
 -- ToME - Tales of Middle-Earth
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
@@ -17,13 +20,6 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-name = "Flexible Survival"
-long_name = "The humble start to the Flexible Survival module"
-short_name = "flexible-survival"
-author = { "Nuku Valente", "dms.silver@gmail.com" }
-homepage = "http://flexiblesurvival.com"
-version = {0,0,1}
-engine = {1,1,3,"te4"}
-description = "Welcome to Flexible Survival. \nThe nanites destroyed civilization as we know it, but you managed to survive, for now. Emerging from your bunker, you find your city a desolated wasteland filled with crazed mutants. Some of them want to kill you, some of them seem more interested in bedding you.\n \nYour humanity may be lost long before you can escape this place, if you even want to."
-starter = "mod.load"
-allow_userchat = true
+for _, f in ipairs(fs.list("/data/bodyparts/")) do
+	if f:find("%.lua$") then load("/data/bodyparts/"..f) end
+end

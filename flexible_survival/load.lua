@@ -20,6 +20,7 @@
 -- This file loads the game module, and loads data
 local KeyBind = require "engine.KeyBind"
 local DamageType = require "engine.DamageType"
+local ActorBody = require "mod.class.interface.ActorBody"
 local ActorStats = require "engine.interface.ActorStats"
 local ActorResource = require "engine.interface.ActorResource"
 local ActorTalents = require "engine.interface.ActorTalents"
@@ -39,6 +40,18 @@ ActorTalents:loadDefinition("/data/talents.lua")
 
 -- Timed Effects
 ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
+
+-- Actor body parts
+ActorBody:defineBodySlot("head", "Head", "A head, quite useful")
+ActorBody:defineBodySlot("torso", "Torso", "A torso, quite useful", {size=1})
+ActorBody:defineBodySlot("leg", "Leg", "A leg, you may need at least two")
+ActorBody:defineBodySlot("skin", "Skin", "A skin, quite useful")
+ActorBody:defineBodySlot("ass", "Ass", "Your back end, where tails go, if you have one?", {tightness=1})
+ActorBody:defineBodySlot("breast", "Breast", "A breast, lovely!", {size=1, density=1})
+ActorBody:defineBodySlot("vagina", "vagina", "A vagina, lovely!", {length=1, width=1})
+ActorBody:defineBodySlot("cock", "Cock", "A cock, useful!", {length=1, width=1})
+ActorBody:defineBodySlot("testicle", "Testicle", "A testicle, useful!", {size=1, density=1})
+ActorBody:loadDefinition("/data/bodyparts.lua")
 
 -- Actor resources
 ActorResource:defineResource("Power", "power", nil, "power_regen", "Power represent your ability to use special talents.")

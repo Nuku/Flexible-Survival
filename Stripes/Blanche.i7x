@@ -55,6 +55,7 @@ Section 2 - Blanche the Wolf
 Blanche is a woman.  Blanche is in Office Den.
 The description of Blanche is "[blanchedesc]";
 The conversation of Blanche is { "Thanks." }.
+The icon of blanche is Figure of Blanche_icon.
 
 the scent of Blanche is "She smells of wolf and half-hidden arousal.";
 
