@@ -10,8 +10,7 @@ The description of Fire Station 86 is "At the far end of the downtown red light 
 
 North of Fire Station 86 is Firehouse.
 
-Instead of sniffing Fire Station 86: 
-	say "The station smells relatively clean. Odd considering the things happening with the city as of now.";
+the scent of Fire Station 86 is "The station smells relatively clean. Odd considering the things happening with the city as of now.".
 
 
 Section 1a - Firehouse
@@ -819,8 +818,7 @@ LowerFirePole is in FireHouse.
 
 The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.";
 
-Instead of sniffing:
-	say "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.";
+the scent of lowerfirepole is "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.".
 
 Firepolescaling is an action applying to nothing. 
 Understand "climb up" as Firepolescaling.
@@ -869,7 +867,9 @@ to say SleepQuarters2:
 	say  "It's amazing that, unlike before with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys - of any sort - anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. There is a light after tang of mixed herm Dalmatian and Dal boy cum pervading the area giving the sleeping den a unique musky scent, but it's not too harsh on the senses. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here.";
 
 
-Instead of sniffing Sleeping Quarters:
+the scent of Sleeping Quarters is "[sleepingquartersscent]".
+
+to say sleepingquartersscent:
 	If KTO is 0:
 		say "[one of]The sleeping area smells of many disturbed nights of restless slumber while waiting on call for trouble, but that seems to be fading with time.[or]The scent of anxiety seems to be disappearing slowly from within the room as more time goes by.[or]Left behind in the mostly unused sleeping area if the lingering scent of...Dalmatian?[at random]";
 	otherwise if KTO is 1:
@@ -888,8 +888,7 @@ check firepolesliding:
 	otherwise if location of player is Eastern Parapets or location of player is Western Parapets:		[Bouncy Castle slide]
 		try bcsliding instead;
 
-Instead of sniffing UpperFirepole:
-	say "The fire pole smells of sleepy times, panic, courage, musk and undeniable valor.";
+the scent of UpperFirepole is "The fire pole smells of sleepy times, panic, courage, musk and undeniable valor.".
 
 Firepolesliding is an action applying to nothing. 
 Understand "go down" as Firepolesliding.
@@ -975,8 +974,7 @@ The conversation of OtherDals is { "Playtime!" }.
 To say Dalboys1:
 	Say "Having been reunited with each other and now sharing a bond of brotherhood, the likes of which they couldn't before when Othala had been a female, the Dalmatian firefighters are busy doing everything bachelors could hope to do inside with their freedom inside of the firehouse. Most of them seem to be completely disregarding Kenaz as the other tries to get them to straighten up, however between him and Othala the rest of the pack don't get too far out of hand. And yet, that doesn't mean that all is perfect inside of the firehouse as [one of]the other guys are busy mounting one another[or]the others are playing cards and talking overly loud at the moment[or]Pertho is busy trying to hump Kenaz[or]the guys are having a water balloon fight inside of the firehouse[or]everyone is busy rolling around on the floor in a giant dog pile[or]Kenaz is trying to get the others to do some drills...without much success[or]everyone is busy goofing off at the moment[at random]. [if Kenaztalk is 2]Though not as bad as they could be...you have to wonder if there is some way to make some kind of change within the group. Since you're not a part of the firefighter's crew you more than likely wouldn't have much say so with the group...yet maybe Kenaz could? That is...if he were to gain some more extra [']oomph['] about himself. But how to make that happen...[end if]"; 
 
-Instead of sniffing OtherDals:
-	Say "The group of Dalmatians smell like canine firefighters who are on break and enjoying themselves to the fullest by goofing off at will.";
+the scent of OtherDals is "The group of Dalmatians smell like canine firefighters who are on break and enjoying themselves to the fullest by goofing off at will.".
 
 Instead of conversing the OtherDals:
 	Say "Most of the firefighters spare you little more than a few passing glances as they look you over before going back to what they were doing. While not exactly rude their mannerisms leave much to be desired. However, the others quickly grow excited when Dagaz offers you a spot at their table to play a game of poker with them. Want to play a quick game of Poker? (Y=Yes, N=No)";
@@ -1014,8 +1012,7 @@ The conversation of DalmatianTroupe is { "YES SIR!" }.
 To say Dalboys2:
 	Say "Walking around the firehouse with both clothes on and tails swaying quietly between their legs are the other Dalmatians who cohabitate in the fire station with Kenaz. Ever since the former submissive Dalmatian's second transformation the others have gone through a very serious change of pace around here. To say the least the rest of the firefighters are now acting and behaving like decent canines with some sense about themselves instead of like bachelors free from responsibility. Mannaz is busy [one of]sweeping up[or]polishing off the fire trucks[or]mopping the floor[or]doing some kind of workout routine off to the side of the building[or]shadow boxing[or] wiping down the lower end of the fire pole[at random]. Birch is [one of]doing push-ups[or]listening to some Kenaz is saying to him[or]talking with some of the other guys[or]humming a tune that only he knows[or]trying to make something for the others to eat on the only grill within the firehouse[at random]. Othala is [one of]going over some paperwork[or]doing a serious of handstand push-ups[or]brushing her...or rather his fur[or]talking with Kenaz[or]waxing down the garage doors[or]quietly reading at the only table in the room[at random]. Dagaz is [one of]looking over something outside the window of the firehouse[or]talking to one of the other guys[or]sharpening his dewclaws with a file[or]taking his time wiping down the lockers set in the back[or]doing a one armed handstand[or]fixing up his fur[at random]. Pertho is the only odd one out of the group as the feral Dalmatian is occupying his time [one of]scratching behind his left ear[or]sleeping underneath the shadow of one of the fire engines[or]yawning while looking up at Kenaz talking with one of the others[or]trying to help out by fetching whatever one of the others might need that he can get[at random]. All in all the firefighters seem content with how things are progressing right about now and with things the way they are underneath Kenaz's banner you have a feeling that it's going to stay that way.";
 
-Instead of sniffing DalmatianTroupe:	
-	say "The once rowdy group of Dalmatian firefighters now smell ready for active duty! Just as soon as someone does call for them, that is.";
+the scent of DalmatianTroupe is "The once rowdy group of Dalmatian firefighters now smell ready for active duty! Just as soon as someone does call for them, that is.".
 
 Instead of conversing the DalmatianTroupe:
 	say "Now that Kenaz has taken over control of the fire station the rest of the firefighters busy themselves with cleaning up the firehouse as well as working and training with one another. It's only during a moment's peace between the pack that the others offer you a chance to play poker with them. Do you feel up to it? (Y=Yes, N=No)";

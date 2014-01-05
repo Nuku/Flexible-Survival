@@ -149,6 +149,11 @@ to say sandrasexmenu:
 	now title entry is "Cunnilingus";
 	now sortorder entry is 6;
 	now description entry is "eat the bunny girl out";
+	if cocks of player > 0 or ( cunts of player > 0 and rabbitsister >= 2 ):
+		choose a blank row in table of fucking options;
+		now title entry is "69";
+		now sortorder entry is 7;
+		now description entry is "have a sexy 69 with the bunny cutey";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -175,6 +180,9 @@ to say sandrasexmenu:
 				otherwise if nam is "Cunnilingus":
 					say "[sandrasex_leadin]";
 					say "[sandrasex3]";
+				otherwise if nam is "69":
+					say "[sandrasex_leadin]";
+					say "[sandrasex4]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
@@ -340,6 +348,18 @@ to say sandrasex2:		[become bunny sisters]
 
 to say sandrasex3:
 	say "     Deciding to do something nice for the bunny girl this time around, you offer to eat out that big pussy of hers.  She giggles happily at this and sits on the edge of her bunk with her legs spread wide.  You kneel down between them and bury your face in her juicy muff.  You start with some light licking and casual strokes of your fingertips across her wet folds, enjoying the soft sounds of pleasure of your bunny lover.  As things heat up, you start licking into her wide channel for her flowing femmecum while pumping a few fingers into her.  You vary this up by teasing her clit and by taking slow licks across the whole of her pussy from bottom to top.  Sandra moans and pants as her excitement builds, her hands rubbing over your head[if rabbitsister > 0].  She ends up tugging lightly on your bunny ears, urging you for more[end if][if scalevalue of player > 3].  You push several big fingers into her spacious vagina and fingerfuck her to a crashing orgasm[otherwise].  You end up pushing the whole of your hand into her spacious vagina and fist her to a crashing orgasm[end if].";
+	now lastrabbitfuck is turns;
+
+
+to say sandrasex4:
+	say "     The bunny girl grins happy at the offer for mutual oral pleasure and makes room for you to join her on her cot.  Laying on your sides, you get into position with your face buried between's thighs, giving you a perfect view of her large, dripping cunny.  You're about to get started when she ";
+	if cocks of player > 0:
+		say "takes hold of your [if cocks of player > 1]cocks and starts stroking and licking them[otherwise]cock and starts stroking and licking it[end if]
+[if a random chance of libido of player in 100 succeeds].  Not wanting to keep the eager rabbit waiting, you press your lips to her wet folds and drag your tongue across them.  As eager as the bunny for it, you lavish attention upon her pussy with energetic zeal[otherwise].  Rather than dive right into it like the eager rabbit, you instead start gradually with light caresses and brushes of your tongue across her wet folds.  After teasing her like this for a while, which only gets her more excited and sucking on your [cock of player] penis harder, you give her clit a kiss and then dive into eating her out as eagerly as she's going down on you[end if].";
+		say "     With an eager lover working hard to please you and earn their delicious reward, soon you're both panting and moaning between licks[if cock length of player > 30].  With a great deal of effort, she's managed to somehow wedge a considerable portion of your [cock size desc of player] manhood into her mouth and down her throat, bulging her out visibly[otherwise if cock length of player > 15].  With some effort, she's managed to stuff the whole of your [cock size desc of player] cock into her mouth and down her throat[otherwise].  By this point, she's taken the whole of your [cock size desc of player] cock into her mouth and is licking and sucking firmly at it[end if][if cocks of player > 1].  Her paws busily stroke and caress your other shaft[smn][end if].  For your part, you're brushing your fingers over her puffy folds while your eat her juicy muff, paying particular attention to the bunny's love button.  Your wild romp ends in a sticky, musky mess of orgasmic release that leaves you both panting on her cot and smelling strongly of sex for quite some time.";
+	otherwise:
+		say "presses her muzzle to your [cunt size desc of player] puss[ies] and starts stroking your sensitive petals and licking at them with gusto[if a random chance of libido of player in 100 succeeds].  Not wanting to keep the eager rabbit waiting, you press your lips to her wet folds and drag your tongue across them.  As eager as the bunny for it, you lavish attention upon her pussy with energetic zeal[otherwise].  Rather than dive right into it like the eager rabbit, you instead start gradually with light caresses and brushes of your tongue across her wet folds.  After teasing her like this for a while, which only gets her more excited and working her tongue even faster and deeper, you give her clit a kiss and then dive into eating her out as eagerly as she's going down on you[end if].";
+		say "     With an eager lover working hard to please you and earn their delicious reward, soon you're both panting and moaning between licks.  She's wriggling her tongue around inside your juicy cunny, clearly eager to have this chance to please her bunny sister while getting the same in return.  And knowing well what pleases a girl, she is very attentive to your clit, always going back to kissing and sucking on it[if cunts of player > 1].  Her furry fingers busily stroke and caress your other puss[yfn], her tongue's focus shifting from back and forth between them[end if].  For your part, you're brushing your fingers over her puffy folds while your eat her juicy muff, paying particular attention to the bunny's love button.  Your wild romp ends in a sticky, musky mess of orgasmic release that leaves you both panting on her cot and smelling strongly of sex for quite some time.";
 	now lastrabbitfuck is turns;
 
 		

@@ -43,8 +43,10 @@ black bra is a grab object.  it is part of the player.  It is not temporary. [it
 
 Instead of using black bra:
 	say "You look over the Ammy's bra. The faint scent of her on it is enticing.";
-	
-Instead of sniffing black bra:
+
+the scent of black bra is "[blackbrascent]".
+
+to say blackbrascent:
 	say "As you smell the black lacy bra a sweet female scent with a hint of musk invades your mind, it reminds you of the equine dancer from the club...";
 	if libido of player < 40:
 		increase libido of player by 10;
@@ -52,7 +54,8 @@ Instead of sniffing black bra:
 		increase libido of player by 5;
 	otherwise if libido of player < 80:
 		increase libido of player by 1;
-		
+	if libido of player > 100, now libido of player is 100;
+
 Instead of wearing black bra:
 	say "Don't be silly - you'd rather keep it as a gift than actual clothing.";
 
@@ -64,16 +67,14 @@ Section 1 - Lounge and Flatlet
 Topless Lounge is a room. Topless Lounge is southeast of PALOMINO.
 The description of Topless Lounge is "Moving through some rose-red curtains you spot a small passage. At the end of the short hallway is a opening and a sign, reading 'Topless Lounge'.  The room you enter isn't very big, pretty long but narrow. Red seats and couches around dark oval tables surround a raised stage with a dancing pole on it, some of the smaller tables even having their very own pole. Faint lights radiating from the candles that are stylishly placed on each of the round tables. There's not much going on here, most of the area empty. Even the small bar installed along the room is unattended, still, it is filled with some most exquisite bottles of various liquids. From behind you can still hear the dull beat of the loud music in the main room as you move along.."
 
-Instead of sniffing Topless Lounge:
-	say "The thick air smells of alcohol and sugar from all the sweet colorful drinks."
-	
+the scent of Topless Lounge is "The thick air smells of alcohol and sugar from all the sweet colorful drinks.".
+
 
 Ammy's Flatlet is a room. [Ammy's Flatlet is south of Topless Lounge.]
 The description of Ammy's Flatlet is "This small flatlet is pretty clean, at least compared to the rest of the PALOMINO. It looks like it was used as a storage room in first place, still Ammy's living here now. A nice big bed in the middle of the room catches most of the attention, it looks comfortable and pretty royal actually.. well, at least compared to the usual ruins in the rest of this world - dark red pillows and blanked on top of white sheets along with a black metal frame.[line break]Along with a caged window on the upper corner through which one can see up to the street there is another door, probably leading outside. It must have at least five different locks on it. The rest of the room is pretty spartan. Nothing except a few dimmable lights, a small black counter next to the bed, a wardrobe and an empty storage shelf is visible along the concrete walls and the light wooden floor that makes funny sounds whenever you hear Ammy walking on it with her hooves.";
 
-Instead of sniffing Ammy's Flatlet:
-	say "The small room surprisingly smells not like the rest of the club at all. It's smell reminds you of rose petals with a hint of sweets, even with the lack of air circulation the air seems pretty fresh.";
-	
+the scent of Ammy's Flatlet is "The small room surprisingly smells not like the rest of the club at all. It's smell reminds you of rose petals with a hint of sweets, even with the lack of air circulation the air seems pretty fresh.".
+
 'Employees Only' Door is a closed unopenable door. The 'Employees Only' Door is south of Topless Lounge and north of Ammy's Flatlet.
 The description of 'Employees Only' Door is "Hidden beyond some curtains there is a heavy wooden door with a big sign on it, reading 'Employees Only' and a heart drawn next to it with red paint or lipstick.";
 
@@ -87,28 +88,21 @@ The description of Ammy is "[ammy_desc]";
 
 The conversation of Ammy is { " " }
 
-Instead of sniffing Ammy:
+the scent of Ammy is "[ammyscent]".
+
+to say ammyscent:
 	say "The horny equine smells arousingly soft and sweet, yet very slightly musky.";
 	increase libido of player by 5;
-	
+
 Instead of asking Ammy about "DEBUG":
 	say "My affection now is [affection of Ammy][line break]";
 	say "My last event was at [lastevent of Ammy] turns[line break]";
 	say "My last sexevent was at [lastsexevent of Ammy] turns![line break]";
 	say "Current turns are [turns] turns";
-	
+
 Instead of asking Ammy about "DEBUG_INFECTME":
 	say "Ammy pushes you back, you naughty little thing you!";
 	ammy_infect;
-
-[
-when play begins:
-	add { "Ammy" } to infections of hermaphrodite;
-	add { "Ammy" } to infections of furry;
-	add { "Ammy" } to infections of Equinelist;
-]
-
-
 
 
 Section 3 - Conversation
@@ -147,7 +141,7 @@ Instead of conversing Ammy:
 				say "[if lastsexevent of Ammy is not turns][one of]'Ooh there you are again lovely!! What are you up to? Having something 'special' in mind?' Ammy asks you with one of her eyebrows raised.[or]The white equine falls into you, arms embracing your body while giving your forehead a kiss with her muzzle, 'Where have you been? I was missing you!'[or][ammy_idletalk][at random][else if affection of Ammy > 4][one of][or]If you want me to dance for you again you can always always ask me to sweetheart.[or][ammy_idletalk][at random][else][ammy_idletalk][end if]";
 	else:
 		say "[ammy_idletalk]";
-	
+
 
 Instead of asking Ammy about "Poledance":
 	if affection of Ammy > 4:
@@ -155,7 +149,7 @@ Instead of asking Ammy about "Poledance":
 		say "[ammy_poledance]";
 	otherwise:
 		say "'Hrm. What exactly makes you think I'd give you a free show?' the equine states and smiles and sticks her tongue out playfully at you.";
-	
+
 Instead of asking Ammy about "Lapdance":
 	if affection of Ammy >= 5:
 		if lastsexevent of Ammy is not turns:
@@ -175,7 +169,7 @@ Instead of asking Ammy about "help":
 	say "1 - I don't always have something new to say to you lovely! Sometimes you just have to wait a day.. or a turn (whatever this is!) until I have something new for you.";
 	say "2 - If you want to stay in touch with me, just ask me about contact! You might be surprised.";
 	say "3 - 'Oh, and if you want to reset me just type 'ask Ammy about Debug_Startover''!";
-	
+
 Instead of asking Ammy about "DEBUG_STARTOVER":
 	say "I'll pretend I have never met you before lovely <3";
 	now affection of Ammy is 0;	
@@ -192,19 +186,19 @@ Instead of asking Ammy about "take/taking off bra":
 	else:
 		say "'I've dropped it already! What more could you possible want? Nyehehehee~' she tells you with a smile while intentionally giving you a wonderful view of her bare chest.";
 		increase libido of player by 5;
-			
+
 Instead of asking Ammy about "take/taking off panties/pants":
 	say "Ammy rolls her eyes and looks upwards before stroking over the side of her muzzle and looking back to you with a mischievous grin on her face, 'Hmmmm....  not right now I suppose. But who knows what happens later...' she tells you with a one-eyed wink.";
-	
+
 Instead of asking Ammy about "pony/ponies":
 	say "'What? PONIES?! I am a strong HORSE, you know!!' she tells you with a slightly annoyed look in her face, 'Or.. a sparklingly colorful unicorn.. but still more of a horse than a pony!'";
-	
+
 Instead of asking Ammy about "Rarity":
 	say "Ammy looks from side to side as you ask her,";
 	say "Rarity? Who's that? Should I know her? I mean, if that character I don't know is female. Or a character. Or 'someone'.[line break]...";
 
-	
-	
+
+
 
 Section 4 - Sexy Times
 
@@ -219,7 +213,7 @@ Instead of fucking Ammy:
 			say "[ammy_sexengine]";
 		else:
 			say "Ammy hugs you before resting some of her weight onto you, 'I'm sorry lovely.. I might be a 'horny' horse.. but even I need some time to recover', kissing your forehead with her soft muzzle before she walks off again.";
-	
+
 
 
 
@@ -253,12 +247,12 @@ to say ammy_sex_lap:
 		say "Leaning forward Ammy places her hands on your shoulders, eyes closed with a concentrated expression in her face, 'W..wh..whait! I don't want to get too much ahead without giving you something in return' she gasps with a smile before nuzzling at your cheek. Of course you obey, stopping your doing and pulling your hands from between the two of you, giving the equine a second to catch breath.";
 		say "Ammy looks at you happily, moving forward against you, her breasts rubbing at your face.. her prick at your [ammy_playerchestdesc].[if breast size of player > 0]In fact, her long equine cock is quickly finding it's way in between your breasts as she[otherwise]Her long equine prick is drooling precum every where it touches your chest as she[end if] kneels above your groin now. Almost painfully slowly starts sliding downwards, until you can feel the tip of your cock entering her wet folds. She slowly moves down further until you are completely engulfed in her accommodating pussy. You hear her groan as she rises again, then falls again on your cock. Ammy's body rubs against yours as she begins to ride you, quickly picking up in pace, steadily fucking you, her surprisingly soft pussy sliding around your cock. Her rhythm reaches the steady beat of the dull beat of the music of the other room.[line break]You need to start panting in pleasure as the horse in your lap rides you, her huge horsecock rubbing along your front, pre sloshing out of it. Her cunt engulfing you fully as you feel yourself being even deeper into her depths. Your hands grip her thighs tightly, enforcing the rocking between your bodies. While your bodies slide against each other you breath heavy, not able to deny your upcoming peak any longer as you suddenly hear the herm on top of you whine out loudly in your lap. The pleasure you are giving Ammy is sending you right over the edge as well as you both writhe in pleasure at the very heels of your orgasms. Her snatch contracting around your engulfed cock, neighing as you pump her full. Her shaft between the two of you spewing huge amounts of cum between your bodies, painting your [skin of player] skin and her fur in a sticky white layer of cum.[line break]Seconds feel like minutes as you peak. It takes a felt eternity until you come down again, panting.[line break]Feeling a bit dizzy you lift your head up, looking deep into Ammy's gaze. You both don't say a word and just remain in this close position for a bit until she pulls herself off, her still huge, semi-erect prick flopping against your belly. 'That was nice..' she says in her soft voice and hugs you in a sticky embrace. After a while she gets up and tells you she wants to shower or it'll be a hell of getting her fur and mane clean again or something you don't really get, her long tail moving along swaying hips.";
 		if a random chance of 1 in 3 succeeds, ammy_infect;
-			
+
 to say ammy_sex_fellatio_giving:
 	say "With the sexy herm equine standing tall in front of you and looking at you expectantly you don't waste any time and get down on her, licking your chops. Nuzzling at the insides of that black panties you inhale the at the same time sweet and musky scent. One hand roaming along her inner thighs in front of you, the other finding it's way to her bubble butt, caressing it. Suddenly you feel one of  Ammy's hands caressing your [facename of player] head, the other one gently pulling down her (again black) lacy panties, revealing her wonderful tools. Suckling on the horse's balls while caressing her thighs gently with your hands you slowly work your way up her engorging equipment, licking along the tasty shaft as she starts to pet your head.[line break]It doesn't take long until you reach the tip of the slowly becoming hard horsecock with your mouth and you start taking it in. You need to hold the huge shaft with both hands while engulfing the broad tip with your mouth, as you hear a low moan from the white equine. You start bobbing your head back and forth, trying to get as much as possible of Ammy's shaft into your mouth. You still need to hold it with one hand, while with the other one you start fondling around her balls and cunt. You notice the warmth and liquids radiating from her wet folds, a sickly sweet scent emerging from them. It doesn't take too long until a copious amount of precum is emerging from the cocktip buried in your mouth already. Closing your eyes you gulp it down, savoring the wonderful taste of it as your free hand drifts downwards, tainted with the horse's liquids, you take also care of your own emerging needs.[line break]You hear a deep breath from the equine lady followed by a soft nicker, as you open your eyes again and look up. Her eyes are closed, she's holding your [facename of player] head with one hand, while the other is kneading her breasts. The herm obviously enjoying your services as your hand alternately taking care of her equipment and your own. Still breathing heavy, you also notice that she's thrusting her hips along with your bobbing, her hand on your head guiding you. Moans adding to her heavy breathing, movements getting fiercer by the minute.";
 	say "You're sure the equine's enjoying your work, not wanting to stop, you use both of your hands now on the horse's equipment, pumping at what's not buried in your mouth from her hard cock while massaging her pussy. You hear Ammy delightfully squealing, having trouble with your grip due to the ferocious thrusting of her. The precum emerging from her cock also is accelerating heavily, leaking from your mouth, running along and dripping from the shaft. Her female sex so wet that liquid runs down her inner thighs, droplets falling to the ground occasionally.[line break]From this situation it doesn't take long until you hear her whine out in bliss. One final strong thrust pushing as much as possible of her cock into your mouth. Head pointing upwards, arching her back forward she begins to orgasm, cum flooding your mouth. You try to swallow down as much as possible but quickly finding yourself at the limit, letting it just run down your [bodytype of player] body. More and more waves of cum hit you, her female sex also squirting liquids until the powerful peak finally begins to fade.[line break]...[line break]'Haaaah.. oh my, thank you! I needed this! I'm sorry.. but I got to get going now. Perhaps we can do something like this again soon? And next time you won't get away this easy! Nyehehee~' she laughs and gives you a hug, picking up her panties that lay on the ground before leaving.";
 	if a random chance of 1 in 3 succeeds, ammy_infect;
-	
+
 to say ammy_sex_fellatio_receiving:
 	say "With a evil grin in her face Ammy keeps looking at you as her gaze slowly drifts downwards, eying your crotch. While licking her chops she looks back at your face, speaking in a teasing voice 'Would you like if I'd make you happy down there, hmm?'[line break]Blushing a bit you just nod in anticipation while the beautiful equine leans against you, getting rid of everything you might have worn around your hips in the close embrace, then pushing you back onto the next comfortable seating opportunity. Not losing eye contact you just let yourself fall down until you find yourself in a sitting position all while Ammy follows you, going down into a kneeling position in front of your crotch - her eyes in the very same level as your crotch. Already from this sight and the anticipation of what's to come you feel yourself getting aroused, [if cocks of player > 0 and cunts of player > 0]your pecker slowly filling with blood and a general wetness beyond your balls making itself noticeable[otherwise if cocks of player > 0]your pecker slowly filling with blood[otherwise if cunts of player > 0]a wetness beyond your folds already making itself noticeable[end if].The curvy equine slowly nuzzles at your inner legs while her hands caress your sides, her breasts jiggling with the sensual movements. Slowly she draws her muzzle closer to your crotch, hands roaming along your rear.";
 	say "Staring in awe you watch the horse start to lick at your crotch, her broad tongue feeling heavenly as she touches your [skin of player] skin. A stray hand rubbing your thigh while she's spoiling you, suckling [if cocks of player > 0]at your balls, licking at the base of your shaft, which has become a rock hard boner in the meantime[otherwise]along your oh so wonderfully sensitive folds which are getting pretty juicy slowly[end if]. You need to take a deep breath at the wonderful feelings Ammy's giving you.[line break]Lick after slow lick she's [if cocks of player > 0]moving upwards your shaft, twitching from the pleasure each time her tongue touches it[otherwise]stretching, probing your cunt deeper and deeper with every lick[end if]. Just a few more slow licks until [if cocks of player > 0]she arrives at the top of your cock where as she pauses[otherwise]you can feel her entering your very depths with her long thick tongue[end if]. Fine strains of saliva pulling from your [if cocks of player > 0]cock[otherwise]cunt[end if] as she moves away a few centimeters, looking at you teasingly with an evil smile on her face.[line break][if cocks of player > 0]Pre is running down your shaft already[otherwise]Juices are flowing down your thighs[end if] as a few wordless moments pass, the two of you looking into each other's eyes until suddenly the curvy equine in front of you [if cocks of player > 0]takes the tip into her mouth[otherwise]starts french kissing your vagina[end if] making you gasp from the pleasure of it. 'Mmm.. you taste interesting! I wonder if there's more..' she says teasingly after a few tentative suckles while she begins to perform further.[line break]You need to groan at the sudden feelings as your [if cocks of player > 0]tool is[otherwise]folds are[end if] getting worked on with expertise. [if cocks of player > 0]It doesn't take long until she takes your whole cock in to her long muzzle, fondling your [cockname of player] sack with one hand.[end if] You slowly start bucking in a rhythm with Ammy's [if cocks of player > 0]sucking[otherwise]licking[end if], enjoying the very nice fellatio. Your hands roaming around until you finally get a grasp onto of her horns, guiding her movements. The other of your hand gently caresses her soft furred head in your lap. You can feel a faint warm breeze on your [skin of player] skin, escaping her nostrils while your body writhes within the overwhelming pleasures.";
@@ -268,7 +262,7 @@ to say ammy_sex_fellatio_receiving:
 	else:
 		say "Your thrusting is getting more and more uncontrolled until finally you begin to orgasm. You can feel your jizz shooting into her mouth while you watch her swallowing down all of it. While you writhe your body in peak you also notice her cumming from the taste of your own cum, painting the [one of]area between your legs[or]floor under your[at random] white while juices are dripping from between her legs. You need to throw your head back as shot after shot spurts out of your cock.[line break]While your orgasm finally fades you spot Ammy's cleaning up your cock eagerly, enjoying you to the last drop...[line break][line break]After she's done she gets up and sits next to you, leaning her curvy soft furred body against yours in afterglow..";
 	if a random chance of 1 in 5 succeeds, ammy_infect;
-		
+
 to say ammy_sex_frombehind:
 	say "Standing right next to her comfortable looking bed the white equine closes her eyes while gently embracing you with her petite arms, pressing her soft furred body against you. Your own hands start to stroke along her curves, feeling the soft fur on them, her wonderful sweet and rosy smell invading your nostrils. Pulling even closer to each other your [facename of player] face touches her muzzle, lips touching each other while you feel her caressing your cheek. You suckle on each other's lips a few times before you start kissing, her wide tongue dancing with yours. During your tight embrace you feel your bodies rubbing against each other, her soft breasts with perky nipples pressing against your [ammy_playerchestdesc]. All while Ammy's hands slowly roam downwards your back and sides until they eventually arrive at whatever you wear on your hips, entering it and brushing over your crotch. You find yourself moaning into the kiss, pushing your lips harder against hers as you notice a grin forming on her beautiful equine face, her eyes still closed enjoying the moment.[line break]A few further moments pass until you can feel Ammy shoving down your pants, her athletic equine legs brushing against yours occasionally while she helps you getting rid of your clothes. With your already hard cock freed now you just need to thrust forward a bit as the tip touches the soft fur on the herm's belly. A few seconds later she breaks the kiss, nuzzling and suckling at your neck as she turns around, her wonderfully shaped back facing you now. Taking your hands, placing one on top of her breast and one at her hip right at the edge of her panties you gladly help her to take them off as well. The horse's butt rubbing against your crotch, brushing along your balls and [cockname of player] cock while she sways her hips from side to side, helping you push her panties down further every move.";
 	say "After a few shoves you can see her male parts already dropping out, the thick shaft semi-erect. A low groan followed by a heavy breathing 'Brr...' is escaping Ammy's muzzle from time to time while you rub your equipment between her wonderful but cheeks she's moving so sensually, smearing precum at the them and the base of her tail while your other hand keeps groping her hand filling boobs until you finally make her pants drop down her legs and she steps out of them with two clops on the wooden floor, her floppy cock moving to the motion.[line break]Having both of your hands free now you start caressing all of her curvy body as she leans backwards, thick neck and head turning to the side so that her lips are able to meet yours again for another kiss. Some sensual moments later she breaks the feeling kiss again and licks at the side of your head, up onto your ear as you hear her whisper into it in slow, chanting words 'Take me~'.[line break]You find yourself suckling at her shoulders and neck, enjoying the feeling of the soft hairs of her mane as she turns her head back forward again. You don't hesitate long before positioning your [cockname of player] cock between her thighs, going down a bit while she tries to rise up further until you manage to find her already damp folds with your tool. Ammy throws her head upwards and moans a bit while inhaling deeply as you enter her awaiting cunt with the tip of your penis. You grasp one of her juicy thighs and lift the leg up to the side to have a better passage, almost heaving her whole weight as you start penetrating her deeper in a steady rhythm. The other hand still massaging and groping at her ample breasts thrust after thrust you can feel yourself entering her folds deeper, each time lifting her one still standing hoof a bit off the ground while she turns her head to you again, kissing you.[line break]After another invigorating moan of Ammy you break the kiss after a while and stop, gently putting her lifted leg back to the ground and pleasurably suckling at her shoulder again before you push her forward onto the bed in front of you two. Gladly playing along the unicorn lands on the sheets on all fours, proudly presenting her wonderful rear to you while she crawls forward a bit before looking back at you expectantly with her deep blue eyes.";
@@ -279,7 +273,7 @@ to say ammy_sex_frombehind:
 	else:
 		say "Rather continuing what you're already doing you grasp her hips tightly and continue to slam into her passage. Ammy keeps exhaling loudly every time you penetrate her deeper, her body slowly moving more forward with every thrust, not being able to compensate the force of yours any more. With one strong thrust of yours she suddenly drops forward, being pushed onto laying on her belly, rising up just with her front again as you hear her moan from the additional pleasure she's getting from her cock being squeezed between the ground and her belly. Having slipped out of Ammy she suddenly turns her head and looks back to you now with a displeased look in her face, 'Ih.. I'm sorry! D..Don't stop!!'.[line break]Smilingly you grab her sensitive shoulders and pull her back up onto you. In fact you pull her so hard that she ends up more sitting on top of your lap rather than laying in front of you while you kneel there. Not wasting any time you two continue where you stopped, Ammy guiding your tool right back into her again before teeting up and down. 'Oh yes that's SO much better' the white furred beauty whispers as you two start to get into the rhythm again. The equine's tail keeps whipping you softly while you push and pull her, licking and suckling at her shoulders and neck while you rock her. Ammy keeps arching her back, holding herself up only by her two petite hands placed behind her hips onto your sides. Watching this female in front of you ache and burn in pleasure brings you even closer to the edge until with final thrust you feel yourself explode into the unicorn. Already with the first shot of jizz you pump into her belly you can feel her contracting around you, waving her head from side to side as she moans loudly, joining you in bliss. You groan and wriggle your hips uncomfortably as you keep Ammy as tight on you as possible while she just keeps moaning louder and louder, cum spurting out of her cock while she arches her back even further - messing up all the nice made bed with lots of creamy white horsecum. A few timeless moments that feel like minutes you stay in this blissful state until both of you slowly calm down again, Ammy exhausted falling off you, cum dripping out of her used folds.";
 	say "Now you two lay there, catching breath until eventually Ammy states 'Oh my.. I hope you just had as much fun as I did' before hugging you, nuzzling and cuddling against you before she notices the mess around you, giggling. You spend a few more minutes of blissful afterglow together until the energetic horse gets up again, sweetly kissing you on your forehead before leaving.";
-	
+
 [
 to say ammy_sex_ontable:
 	say "SHE'S LAYING ON THE TABLE IN FRONT OF YOU";
@@ -314,25 +308,40 @@ to say ammy_desc:
 		say "Ammy is laying there on one of the cherry-red leather couches, looking stunningly beautiful. She's an anthropomorphic horse, or more an odd kind of unicorn. Lights are reflecting fuzzily from her silky white fur, that covers her whole form. Her neck is long and strong, a soft equine head on top of it, looking into your direction. A pentagram pendant with a gem in the middle of it is hanging around her horse neck, resting on her chest. Fine hairs form the the equine's mane, deep purple in hue. Her tail's got the same purple hue, reaching down her long legs that are tipped with hooves to support her sensually curved body. [line break]The view of her naked breasts is something very enjoyable, even mesmerizing a bit.. She's wearing tight black panties around her wide hips. A sizable bulge in her panties is making you wonder what's hiding under it, however, you enjoy what you can already visualize in your imagination.";
 	else:
 		say "Ammy the equine hermaphrodite is laying there on one of the cherry-red leather couches, looking stunningly beautiful with her amazing curves. She's an anthropomorphic horse, or more an odd kind of unicorn. Lights are reflecting fuzzily from her silky white fur, that covers her whole form. Her neck is long and strong, a soft equine head with blue eyes on top of it, looking into your direction, smiling as she notices you. In a row towards her muzzle two curly white horns with a hint of golden color standing out from her forehead. Fine hairs form her's mane, deep purple in hue. Sometimes she has bound some of them together with a hair tie or adds some jewelry into loose strands or around her horns. A pentagram pendant with a gem in the middle of it is hanging around her strong horse neck, resting on her chest. Her tail's got the same purple hue as her mane, long hairs reaching down her tall legs that are tipped with hooves to support her sensually curved body. The view of her naked breasts is something very enjoyable, even mesmerizing a bit.. the tight black panties she's wearing around her wide hips again makes you fantasize about what hides behind them and what you could do with.. or to her.[line break][one of]Ammy is also wearing a few ribbons, wrapped around her thighs. They seem to be part of some lacy underwear set.[or]The horse's also wearing some long black leather gloves and similar leather stockings around her juicy legs.. you wonder if she also hide a whip somewhere..[or]Ammy also is wearing [one of]pink[or]red[at random]-black striped stockings, they seem to be a bit vintage in style.[at random] ";
-		
+
 to say ammy_idletalk:
 	say "[one of]Hey there sweetheart~ [or]Nyeheheee~ this is the best apocalypse ever![or]DO NEVER EVER call me a PONY!!![or]Hmm.. people called me a duocorn or bicorn already, but I guess it's up for your liking what you prefer.[or]This body still keeps surprising me, suppose there still are things left to explore, she tells you with a seductive grin.[or]I wonder how I got this weird colors in my fur..[or]Hey! Will you get off my favourite couch please?![line break]..or at least make some room for me![or][if affection of Ammy > 3]Hey, hey! Eyes are up here![otherwise]You like my outfit?[end if][or]If you need any help you can always ask me for it sweetheart![line break][line break](type 'ask Ammy about help')[at random]";
-	
-	
+
+
 to say ammy_playerchestdesc:
 	say "[if breast size of player > 0][breast size desc of player] breasts[otherwise][bodytype of player] chest[end if]";
 	
 to ammy_infect:
-	if a random number from -1 to 6 is:
-	-- 1: infect "Mareslut"; 
-	-- 2: infect "Horseman"; 
-	-- 3: infect "Stallionboi"; 
-	-- 4: infect "Zebra"; 
-	-- 5: infect "red horse"; 
-	-- 6: infect "black equinoid"; 
-	-- otherwise: unicornify;
+	if furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned ):
+		let t be 0;	[do nothing]
+	otherwise:
+		let rinflist be a list of numbers;
+		if girl is not banned:
+			add 1 to rinflist;			[Mareslut]
+		if guy is not banned:
+			add 2 to rinflist;			[Horseman]
+			add 3 to rinflist;			[Stallionboi]
+			add 4 to rinflist;			[Zebra]
+			add 5 to rinflist;			[red horse]
+			add 6 to rinflist;			[Unicorn]
+		if hermaphrodite is not banned:
+			add 7 to rinflist;			[black equinoid]
+		sort rinflist in random order;
+		if entry 1 of rinflist is:
+		-- 1: infect "Mareslut";
+		-- 2: infect "Horseman";
+		-- 3: infect "Stallionboi";
+		-- 4: infect "Zebra";
+		-- 5: infect "red horse";
+		-- 6: unicornify;
+		-- 7: infect "black equinoid";
 
-	
+
 to say ammy_poledance:
 	say "A smile forms on Ammy's lips as you lean back and watch her climb onto the table with the pole on it. You watch eagerly as she starts leaning herself against the pole, arms grabbing the pipe up above her head as the metal touches her chest. A second later her whole body seems to be attracted to the pole, sticking to it as she narrows her eyes halfway down and starts looking at you, the grin in her face becoming wider.[line break]Slowly but steadily the beautiful equine starts rhythmically moving her body along the pole, her horns occasionally causing a faint crackle sound as they bump against the metal. She slowly starts lifting her [one of]left[or]right[at random] leg, one hoof on her foot slowly losing contact while balancing on the other as she starts rubbing her inner thigh against the thick pipe, thrusting forward and backward again in a steady motion - making her tail dance mesmerisingly in the faint light. You have problem of not starting to drool with your mouth hanging open wide like that as you hear the horse chuckle sweetly, the lifted leg slowly curling around the metal pole Ammy lifts herself up and starts turning in a circle around it. Within the same motion she leans backwards until she lets go of the pole and turns upside down, looking at you with a smile while her boobs jiggle from the movements and her beautiful mane's long hair slowly falls downwards.";
 	say "With big eyes you watch the equine drifting down the pole until she reaches the table, where she lets herself drift onto. She keeps laying in front of you in a mess with all her mane and tail's hair for a few moments, leaving you staring in awe until she turns around slowly, getting onto all fours and crawling into your direction a bit. Her eyes in one level with yours, still having a warm smile on her face. Just as you're about to notice your still open mouth she pushes herself back to the pole, gripping it behind above her head with her hands, pulling back into a crouching position with her front facing you, having legs closed.[line break]Slowly spreading her legs to the sides a wonderful view of her crotch is coming to you - a not exactly unexpected bulge hidden in this skimpy but for some reason everything covering black lacy panties she's wearing. Waiting in front of you with her legs spread widely, her rear almost touching the table she looks down to you, 'You like what you see? I certainly do hope so' and smiles at you for another moment before pulling herself up the pipe again – every movement still within this oh so sensual rhythm.[line break]Once standing again Ammy turns around, giving you a view of her back.. and rear she starts leaning forward while raising her ass, swaying her hips from side to side, tail dancing to the rhythmic motion. You notice her closing her eyes while nuzzling against the metal pole she's holding onto. The rocking of her hips is getting more and more wild by the minute, the nuzzling more passionate, making you crazy. This sensual movement of those wide hips and great arse is just too hot. A few more seconds pass until you hear the equine moan silently 'Nnngh~' and you notice the bulge in her panties is growing..[line break]The now heavier breathing horse suddenly looks back to you, her eyes shooting open as she turns around again and sits in front of you in a kneeling position, 'Nnngh~ I.. hope you liked. But I better stop 'practising' now before something happens..'. Ammy chuckles and turns to the side, hopping off the table and leaning forward to you, horns touching your forehead as she slides along it, giving it a kiss with her soft muzzle before she leaves quickly.";

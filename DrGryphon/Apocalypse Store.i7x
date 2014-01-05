@@ -21,8 +21,8 @@ the marea of broken entrance is "Outside".
 Apocalypse Mini-Skirt is a grab object.
 Apocalypse Mini-Skirt is equipment.
 It is not temporary.
-The AC of Apocalypse Mini-Skirt is 10.
-The effectiveness of Apocalypse Mini-Skirt is 10.
+The AC of Apocalypse Mini-Skirt is 0.
+The effectiveness of Apocalypse Mini-Skirt is 0.
 The placement of Apocalypse Mini-Skirt is "body". 
 The descmod of Apocalypse Mini-Skirt is "A torn and burnt mini skirt barely covers your lower [body of player] body.".
 The slot of Apocalypse Mini-Skirt is "body".
@@ -36,8 +36,8 @@ the scent of Apocalypse Mini-Skirt is "There is a faint smell of smoke lingering
 Apocalypse Shorts is a grab object.
 Apocalypse Shorts is equipment.
 It is not temporary.
-The AC of Apocalypse Shorts is 10.
-The effectiveness of Apocalypse Shorts is 10.
+The AC of Apocalypse Shorts is 0.
+The effectiveness of Apocalypse Shorts is 0.
 The placement of Apocalypse Shorts is "body". 
 The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts covers your legs.".
 The slot of Apocalypse Shorts is "body".
@@ -51,8 +51,8 @@ the scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on 
 Apocalypse Hoody is a grab object.
 Apocalypse Hoody is equipment.
 It is not temporary.
-The AC of Apocalypse Hoody is 15.
-The effectiveness of Apocalypse Hoody is 20.
+The AC of Apocalypse Hoody is 0.
+The effectiveness of Apocalypse Hoody is 0.
 The placement of Apocalypse Hoody is "body". 
 The descmod of Apocalypse Hoody is "A torn and burnt hoody covers your [body of player] body.".
 The slot of Apocalypse Hoody is "body".
@@ -66,8 +66,8 @@ the scent of Apocalypse Hoody is "There is a faint smell of smoke lingering on t
 Apocalypse Scarf is a grab object.
 Apocalypse Scarf is equipment.
 It is not temporary.
-The AC of Apocalypse Scarf is 10.
-The effectiveness of Apocalypse Scarf is 10.
+The AC of Apocalypse Scarf is 0.
+The effectiveness of Apocalypse Scarf is 0.
 The placement of Apocalypse Scarf is "face". 
 The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [face of player] face.".
 The slot of Apocalypse Scarf is "face".

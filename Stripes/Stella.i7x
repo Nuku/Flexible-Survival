@@ -54,6 +54,7 @@ to say convincestella:
 			increase morale of player by 2;
 		increase score by 20;
 		now hp of Stella is 2;
+		now laststellamove is turns;
 		now Eager Dal is resolved;
 	otherwise:
 		say "You tell Stella that you have just the place in mind, but she's not sure about going with you.  'I mean, what if you lose the plot again?  I'm more of a lover than a fighter, you know,' she giggles.  'Anyway, thanks for the offer, but I think I'll keep looking around for now.'  And with that, she waves and heads off.";
@@ -66,10 +67,10 @@ Stella is a woman.
 The description of Stella is "[stelladesc]";
 The conversation of Stella is { "Try my dick!" }.
 
-the scent of the Stella is "***";
+the scent of the Stella is "Stella smells of canine arousal, the scent of sex lingering around her always.";
 
 to say stelladesc:
-	say "***";
+	say "     Once a female exchange student from England, she's been transformed into a herm dalmatian by the outbreak.  Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle.  Despite having a refined British accent, it seems like she's always been a bit of a ditzy slut even before coming here.  She's got shoulder-length white hair with a splash of black on her bangs.  She's wearing a pair of glasses in front of her bright, blue eyes.  She's got a somewhat larger than normal cock, canine in form and lacking in sheath or balls.  It grows from the top of her pussy, turning her clitoris into this dripping doggy dong she's so proud of.";
 
 
 Section 2 - Conversation
@@ -80,10 +81,38 @@ Instead of conversing the Stella:
 	if hp of Stella is 0 or hp of Stella is 1:
 		say "ERROR-Stella-[hp of Stella]L: You should not be able to find her yet.";
 	otherwise if hp of Stella is 2:
-		say "     'This place ain't too bad.  It'll do fine for a place to take a kip when I need a break.  When I'm not faffing about here, I'll totally be wandering in and out.  Places to go, people to see, holes to stuff - you know how it is,' she giggles.  'Oh, speaking of, I don't want you to be getting any funny ideas.  If we're going to be banging - and I hope we will - I'm like totally going to be on top.  I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
+		say "     'This place ain't too bad.  It'll do fine for a place to take a kip when I need a break.  I don't mind staying here for a while, though if you know another safe spot as good as this with some interesting folks, I could go hang there for a while too.  Just ask me to [bold type]move[roman type].'";
+		say "     She stretches and rubs a paw over her groin.  'As it is, when I'm not faffing about here, I'll totally be wandering in and out.  Places to go, people to see, holes to stuff - you know how it is,' she giggles.  'Oh, speaking of, I don't want you to be getting any funny ideas.  If we're going to be banging - and I hope we will - I'm like totally going to be on top.  I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
 		now hp of Stella is 3;
 	otherwise:
 		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain.  I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed.  And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat.  'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[in random order]";
+
+
+Section 3 - Moving Stella
+
+stellamoving is an action applying to nothing.
+laststellamove is a number that varies.  laststellamove is usually 255.
+Understand "move Stella" as stellamoving.
+Understand "move Satellizer" as stellamoving.
+Understand "Satellizer move" as stellamoving.
+Understand "Stella move" as stellamoving.
+
+check stellamoving:
+	If Stella is not visible, say "Who?" instead;
+	if Police Station is not known or hp of Alexandra < 52, say "There's nowhere else to send her." instead;
+	if laststellamove - turns < 16, say "What?  I just got settled in here.  Maybe later." instead;
+
+carry out stellamoving:
+	if location of Stella is bunker:
+		say "     Taking Stella up on her suggestion, you escort her to the Police Station.  She seems pleased with the change of scenery, hopeful she can find a few interesting playmates in the area.";
+		move Stella to Police Lockerroom;
+		move player to Police Lockerroom;
+		now laststellamove is turns;
+	otherwise:
+		say "     Taking Stella up on her suggestion, you escort her to the bunker.  She seems pleased with the change of scenery, hopeful she can find a few interesting playmates in the area.";
+		move Stella to bunker;
+		move player to bunker;
+		now laststellamove is turns;
 
 
 Section 3 - Sex with Stella
