@@ -55,6 +55,8 @@ instead of sniffing Lilith:
 	say "Lilith smells... definitively female, seductive, enticing - but with a slight undertone of brimstone.";
 
 to say LilithDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Lilith], LILITHPREGNANCY: [LilithPregnancy], KIDCOUNTER: [LilithKidCounter], PREGCOUNTER: [LilithPregCounter] <- DEBUG[line break]";		
 	if (hp of Lilith is 0):   [starting state]
 		say "ERROR-Lilith-001A: She should not be around yet anywhere where players can see her.";
 	otherwise:

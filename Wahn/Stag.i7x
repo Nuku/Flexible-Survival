@@ -230,9 +230,14 @@ Section 4 - Mike and Lea
 [ 100: lost to the leopardman gang                        ]
 
 Mike is a man. Mike is in Mike's Office.
-The description of Mike is "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
+The description of Mike is "[MikeDesc]";
 The conversation of Mike is { "Oh, hello." };
 lastfuck of Mike is usually 555.
+
+to say MikeDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Mike] <- DEBUG[line break]";		
+	say "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 
 Mike's Home is a room. It is a fasttravel. It is private.
 The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbours didn't complain about noise. At the side of the house (north from you) is the back entrance to which Mike showed you where a key is hidden.";
@@ -485,6 +490,7 @@ hp of Xerxes is usually 0.
 [  10: got fucked only by Fang                     ]
 [  11: got fucked only by the Felinoid             ]
 [  12: got fucked by both Fang and the Felinoid    ]
+[                                                  ]
 [ lust of Xerxes                                   ]
 [   0: hasn't had sex with the player              ]
 [   1: had sex with the player once                ]
@@ -496,6 +502,8 @@ hp of Xerxes is usually 0.
 [   7: tattoo received                             ]
 
 to say xerxesdesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Xerxes], LUST: [lust of Xerxes] <- DEBUG[line break]";		
 	if lust of Xerxes < 3:
 		say "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen.  He has short black hair and a well-developed physique, with muscular arms and legs.  All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.  He watches you attentively, eager to follow the commands of his master";
 		if lust of Xerxes is 2:
@@ -1057,6 +1065,8 @@ HelenPregnant is a number that varies.
 [ HelenPregnant - timer since impregnation                       ]
 
 to say helendesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Xerxes], LUST: [lust of Xerxes], LIBIDO: [libido of Helen], THIRST: [thirst of Helen], PREGTIMER: [HelenPregnant] <- DEBUG[line break]";			
 	if lust of Helen < 3:
 		say "     Originally one of Mike's dogs, Helen now is a young human of about nineteen.  She has long black hair and a slender physique, with some muscles on arms and legs.  A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication.  She watches you attentively, eager to follow the commands of her master. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[otherwise if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[otherwise if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with your felinoid companion[otherwise if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[end if]";
 		if lust of Helen is 2:

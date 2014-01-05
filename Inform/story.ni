@@ -6368,6 +6368,7 @@ Include Zephias by Wahn.
 Include David by Wahn.
 Include Amy by Wahn.
 Include Carl by Wahn.
+Include HornyHorsey by femtoAmpere. 
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
