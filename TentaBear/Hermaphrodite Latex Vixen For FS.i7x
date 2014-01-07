@@ -73,8 +73,6 @@ to say hermaphrodite latex vixen defeat:
 					otherwise if nam is "Fuck her ass":
 						say "[hermlatexvix_02]";
 					otherwise if nam is "Get fucked":
-						say "[hermlatexvix_03]";
-					otherwise if nam is "Get fucked":
 						say "[hermlatexvix_06]";
 					otherwise if nam is "Receive fellatio":
 						say "[hermlatexvix_10]";
