@@ -1,5 +1,5 @@
 Version 1 of Feral Gryphon by UrsaOmega begins here.
-[Version 1.1 - Added to avian pred list]
+[Version 1.2 - Added M/M player victory - Stripes]
 "Adds a Feral Gryphon creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
@@ -43,7 +43,14 @@ to say losetoGryphon:
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
 
 to say beattheGryphon:	[Player victory scenes to come]
-	say "    The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey. Before you can do anything else with him, he takes off, limping his way into the air to nurse his wounds.";
+	if cocks of player > 0 and anallevel > 1:
+		say "     The beaten gryphon gives an angry cry, clearly disappointed you were not easier prey.  Feeling that he deserves to have the tables turned on him, there's a brief moment when you might catch the beast before he makes his escape.  Shall you take it... and take that leonine ass of his?";
+		if the player consents:
+			say "     Leaping atop the wounded creature before he can take to the air, you force him to the ground.  He screeches angrily and tries to snap at you with his beak, but you press his face to the ground.  This has the added benefit of leaving his ass raised - and thereby open for you.  Bringing your [cock of player] cock into position, you push it into the reluctant creature's asshole.  It is hot and tight, squeezing firmly around the unexpected intruder [if cock length of player > 40]forcing it open incredibly wide[otherwise if cock length of player > 20]forcing it open uncomfortably wide[otherwise]now buried inside it[end if].";
+			say "    As the victor in your conflict, you lustfully claim your prize, pounding away at the hybrid's [if cock length of player > 20]overstuffed [end if]ass with considerable zeal.  Whether the creature simply becomes resigned to his fate or starts to enjoy it is unclear, but the gryphon soon stops resisting.  You let your hands roam across his body, enjoying the soft feathers and warm fur of this mythological beast's.  And of course, your hands do end up at the gryphon's throbbing cock.  It's emerged from its sheath and is largely leonine in form, but also possesses a swelling knot.";
+			say "     Stroking the monster's erection makes him even more compliant and soon he's pushing back into your thrusts and cooing softly with pleasure.  At that point, it only takes a few more thrusts before you're cumming, painting the gryphon's bowels with a [cum load size of player] dose of your semen.  With his foot-long rod pulsing in your hand, your once-reluctant foe cries out as he cums, staining the ground with his virile load.  You pump your hips into him even as you pump his cock, making sure you're both drained before you release him and pull out.  Trying to preserve at least a little dignity, the gryphon gives a snarl and lowers his tail to hide the sticky mess you've left leaking out of him before taking to the air.";
+		otherwise:
+			say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
 
 to say Gryphondesc:
 	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
