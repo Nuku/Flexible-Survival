@@ -20,6 +20,7 @@ function _M:init(actor)
     self.c_general = Tab.new{title="General", default=true, fct=function() end, on_change=function(s) if s then self:switchTo("general") end end}
     self.c_attack = Tab.new{title="Attack", default=false, fct=function() end, on_change=function(s) if s then self:switchTo("attack") end end}
     self.c_defence = Tab.new{title="Defense", default=false, fct=function() end, on_change=function(s) if s then self:switchTo("defence") end end}
+	self.c_description = Tab.new{title="Description", default=false, fct=function() end, on_change=function(s) if s then self:switchTo("description") end end}
 
     local tw, th = self.font_bold:size(self.title)
 
@@ -39,6 +40,7 @@ Mouse: Hover over stat for info
         {left=15, top=self.c_tut.h, ui=self.c_general},
         {left=15+self.c_general.w, top=self.c_tut.h, ui=self.c_attack},
         {left=15+self.c_general.w+self.c_attack.w, top=self.c_tut.h, ui=self.c_defence},
+		{left=15+self.c_general.w+self.c_attack.w+self.c_defence.w, top=self.c_tut.h, ui=self.c_description},
         {left=0, top=self.c_tut.h + self.c_general.h, ui=self.vs},
 
         {left=0, top=self.c_tut.h + self.c_general.h + 5 + self.vs.h, ui=self.c_desc},
@@ -121,7 +123,7 @@ function _M:drawDialog(kind)
         w = 0
 		local cur_exp, max_exp = game.player.exp, game.player:getExpChart(game.player.level+1)
         s:drawStringBlended(self.font, "Name : "..(player.name or "Unnamed"), w, h, 255, 255, 255, true) h = h + self.font_h
-        s:drawStringBlended(self.font, "Role : "..(player.descriptor.role or player.type:capitalize()), w, h, 255, 255, 255, true) h = h + self.font_h
+        s:drawStringBlended(self.font, "Race : "..(player.descriptor.role or player.type:capitalize()), w, h, 255, 255, 255, true) h = h + self.font_h
 		self:mouseTooltip(self.TOOLTIP_LEVEL, s:drawColorStringBlended(self.font, ("Exp  : #00ff00#%2d%%"):format(100 * cur_exp / max_exp), w, h, 255, 255, 255, true)) h = h + self.font_h
         
 		h = h + self.font_h -- Adds an empty row
@@ -153,6 +155,13 @@ function _M:drawDialog(kind)
         
         -- draw the defence tab here
 
+	elseif kind=="description" then
+        h = 0
+        w = 0
+        
+        s:drawStringBlended(self.font, "Looking over "..(player.name or "Unnamed")..": ", w, h, 255, 255, 255, true) h = h + self.font_h
+		s:drawStringBlended(self.font, "Their body is covered in "..(game.player:descBodySkin("desc", 1))..". Their head is "..(game.player:descBodyHead("desc", 1)).." Their body is "..(game.player:descBodyTorso("desc", 1)).." They have 2 nipples. Their arms are "..(game.player:descBodyArms("desc", 1))..". Her legs are "..(game.player:descBodyLegs("desc", 1))..". "..(game.player:descBodyAss("desc", 1)).." A private peek would reveal that: GENITAL INFO HERE", w, h, 255, 255, 255, true) h = h + self.font_h
+
     end
 
     self.c_desc:generate()
@@ -174,7 +183,7 @@ function _M:dump()
     w1()
     
     w1(("%-32s"):format(makelabel("Name", player.name)))
-    w1(("%-32s"):format(makelabel("Role", player.descriptor.role or player.type:capitalize())))
+    w1(("%-32s"):format(makelabel("Race", player.descriptor.role or player.type:capitalize())))
     
     w1(("STR:  %d"):format(player:getStr()))
     

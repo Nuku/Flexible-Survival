@@ -65,7 +65,7 @@ newBodyPart{
 	talents = {
 	},
 	gain_message = "Your skin returns to your natural shade as it becomes human.",
-	desc = "smooth",
+	desc = "smooth skin",
 	species = "smooth",
 	speciesadj = "smooth",
 }
