@@ -27,7 +27,7 @@ local DamageType = require "engine.DamageType"
 local Zone = require "engine.Zone"
 local Map = require "engine.Map"
 local Level = require "engine.Level"
-local Birther = require "engine.Birther"
+local Birther = require "mod.dialogs.Birther"
 
 local Grid = require "mod.class.Grid"
 local Actor = require "mod.class.Actor"
@@ -97,7 +97,7 @@ function _M:newGame()
 	self:setupDisplayMode()
 
 	self.creating_player = true
-	local birth = Birther.new(nil, self.player, {"base", "role" }, function()
+	local birth = Birther.new(nil, self.player, {"base", "sex", "race", "specialization" }, function()
 		self:changeLevel(1, "dungeon")
 		print("[PLAYER BIRTH] resolve...")
 		self.player:resolve()
@@ -114,13 +114,13 @@ function _M:loaded()
 	engine.GameTurnBased.loaded(self)
 	Zone:setup{npc_class="mod.class.NPC", grid_class="mod.class.Grid", }
 	Map:setViewerActor(self.player)
-	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 32, 32, nil, 22, true)
+	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 64, 64, nil, 44, true)
 	self.key = engine.KeyBind.new()
 end
 
 function _M:setupDisplayMode()
 	print("[DISPLAY MODE] 32x32 ASCII/background")
-	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 32, 32, nil, 22, true)
+	Map:setViewPort(200, 20, self.w - 200, math.floor(self.h * 0.80) - 20, 64, 64, nil, 44, true)
 	Map:resetTiles()
 	Map.tiles.use_images = true
 	
@@ -255,6 +255,23 @@ function _M:setupCommands()
 
 	-- One key handled for normal function
 	self.key:unicodeInput(true)
+	self.key:addCommands{
+		[{"_d","ctrl"}] = function() if config.settings.cheat then
+			local descs = game.player:descBodyHead("speciesadj")
+			game.log("Your head is: %s", table.concat(descs, ", "))
+			local descs = game.player:descBodyTorso("speciesadj")
+			game.log("Your torso is: %s", table.concat(descs, ", "))
+			game.log("Your cock is: %s", game.player:descBodyCock("speciesadj", 1))
+		end end,
+		[{"_g","ctrl"}] = function() if config.settings.cheat then
+			game.player:gainBodyPart("BP_COCK_LATEXFOX", true)
+		end end,
+		[{"_i","ctrl"}] = function() if config.settings.cheat then
+			game.player:incBodyCockLength(0.1)
+			game.log("Your cock is of size: %f", game.player:bodyCockLength(1))
+		end end,
+	}
+
 	self.key:addBinds
 	{
 		-- Movements

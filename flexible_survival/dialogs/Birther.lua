@@ -1,4 +1,4 @@
--- ToME - Tales of Middle-Earth
+-- TE4 - T-Engine 4
 -- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
@@ -17,13 +17,21 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-name = "Flexible Survival"
-long_name = "The humble start to the Flexible Survival module"
-short_name = "flexible-survival"
-author = { "Nuku Valente", "dms.silver@gmail.com" }
-homepage = "http://flexiblesurvival.com"
-version = {0,0,1}
-engine = {1,1,3,"te4"}
-description = "Welcome to Flexible Survival. \nThe nanites destroyed civilization as we know it, but you managed to survive, for now. Emerging from your bunker, you find your city a desolated wasteland filled with crazed mutants. Some of them want to kill you, some of them seem more interested in bedding you.\n \nYour humanity may be lost long before you can escape this place, if you even want to."
-starter = "mod.load"
-allow_userchat = true
+require "engine.class"
+local Dialog = require "engine.ui.Dialog"
+local Birther = require "engine.Birther"
+
+module(..., package.seeall, class.inherit(Birther))
+
+function _M:applyingDescriptor(i, d)
+	if d.bodyslots then
+		print("Adding body slots")
+		table.print(d.bodyslots)
+		table.mergeAdd(self.actor.bodyparts, d.bodyslots, true)
+	end
+	if d.bodyparts then
+		for bpid, v in pairs(d.bodyparts) do
+			self.actor:gainBodyPart(bpid, v == "all", true)
+		end
+	end
+end

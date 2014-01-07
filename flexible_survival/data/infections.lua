@@ -34,7 +34,7 @@ newTalent{
 		self.head_tf = "Your face reforms, vision blocked by a narrow fox like snout, new ears starting to twitch on top of your head."
 		self.head_species = "fox"
 		self.head_speciesadj = "vulpine"
-		if !(self.head_last == "Latex Fox") and self == player then
+		if not (self.head_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.head_tf)
 		end
 		return true
@@ -64,7 +64,7 @@ newTalent{
 		self.torso_tf = "Your body tingles oddly, but not much seems to change, externally at least."
 		self.torso_species = "human"
 		self.torso_speciesadj = "human"
-		if !(self.torso_last == "Latex Fox") and self == player then
+		if not (self.torso_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.torso_tf)
 		end
 		return true
@@ -92,7 +92,7 @@ newTalent{
 		self.ass_tf = "A sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically."
 		self.ass_species = "fox"
 		self.ass_speciesadj = "vulpine"
-		if !(self.ass_last == "Latex Fox") and self == player then
+		if not (self.ass_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.ass_tf)
 		end
 		return true
@@ -120,7 +120,7 @@ newTalent{
 		self.legs_tf = "Smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush."
 		self.legs_species = "fox"
 		self.legs_speciesadj = "vulpine"
-		if !(self.legs_last == "Latex Fox") and self == player then
+		if not (self.legs_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.legs_tf)
 		end
 		return true
@@ -149,7 +149,7 @@ newTalent{
 		self.arms_tf = "Your arms tingle softly as your hands reshape into a slightly paw like fashion, with black claws at the end."
 		self.arms_species = "fox"
 		self.arms_speciesadj = "vulpine"
-		if !(self.arms_last == "Latex Fox") and self == player then
+		if not (self.arms_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.arms_tf)
 		end
 		return true
@@ -175,11 +175,11 @@ newTalent{
 	on_learn = function(self, t)
 		self:learnTalent(self.RUBBER_HIDE,true,3)
 		self.skin_desc = "red and white latex"
-		self.legs_tf =
+		self.skin_tf = "A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely shaped like paws."
 		self.skin_longdesc= "red and white latex."
 		self.skin_species = "rubber"
 		self.skin_speciesadj = "rubbery"
-		if !(self.skin_last == "Latex Fox") and self == player then
+		if not (self.skin_last == "Latex Fox") and self == player then
 			game.logPlayer(self, "#LIGHT_GREEN#Transform> #ORANGE#%s", player.skin_tf)
 		end
 		return true
