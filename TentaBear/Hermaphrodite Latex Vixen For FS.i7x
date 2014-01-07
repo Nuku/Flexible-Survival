@@ -103,6 +103,9 @@ to say hermlatexvix_02:
 	say "     When the vixen reaches back and starts to stroke her pink knotted shaft, you slap her hand away roughly.  Don't want her having too much fun.  She lets out a little whine, but then starts bucking against you, meeting each of your thrusts with one of her own.  You quickly succumb to her new attack, moaning loudly as you release jets of hot sperm deep into your cum dump's bowels.";
 	say "     With a loud *POP* you unceremoniously yank your [cock of player] rod[smn] out of her gleaming ass.  You get dressed and leave, the latex vixen still on the ground masturbating furiously trying to sate her endless lust.";
 
+to say hermlatexvix_03:
+	say "I forgot to put something here!";
+
 to say hermlatexvix_06:
 	say "     You reach out and roughly grab her long knotted shaft between her gleaming legs.  She yelps loudly as you twist her cock, forcing her to roll onto her back.  Stepping over her you straddle the bright pink shaft, the pointed tip brushing your clit, sending shivers up your spine.  Bending your knees you slowly lower yourself onto her twitching member.";
 	say "     You slide up and down, faster and faster moaning loudly and roughly rubbing your sensitive clit.  The Latex Vixen's knot start slamming against your pussy, you realize she is thrusting, trying to embed her knot in you.  Lifting one leg you step on her thigh, preventing the Vixen from thrusting.  You then plant your other foot on her, entirely riding the bright red fuck toy.";

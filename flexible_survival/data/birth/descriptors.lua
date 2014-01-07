@@ -36,7 +36,7 @@ newBirthDescriptor{
 	name = "Male",
 	desc =
 	{
-		"Crashhhhh!",
+		"Be a true man.",
 	},
 	bodyslots = { cock = 1, testicle = 2 },
 }
@@ -46,7 +46,7 @@ newBirthDescriptor{
 	name = "Female",
 	desc =
 	{
-		"Crashhhhh!",
+		"Be a proper lady.",
 	},
 	bodyslots = { breast = 2, vagina = 1 },
 }
@@ -54,10 +54,10 @@ newBirthDescriptor{
 
 newBirthDescriptor{
 	type = "sex",
-	name = "Shemale",
+	name = "Hermaphrodite",
 	desc =
 	{
-		"Crashhhhh!",
+		"Why pick one?",
 	},
 	bodyslots = { cock = 1, testicle = 2, breast = 2, vagina = 1 },
 }
@@ -67,13 +67,17 @@ newBirthDescriptor{
 	name = "Human",
 	desc =
 	{
-		"Crashhhhh!",
+		"You are a pure human, for now. How long will that last?",
 	},
-	bodyslots = { head = 1, torso = 1, leg = 2, skin = 1 },
+	bodyslots = { ass = 1, arms = 2, head = 1, torso = 1, legs = 2, skin = 1 },
 	bodyparts = {
 		BP_HEAD_HUMAN = "all",
 		BP_TORSO_HUMAN = "all",
 		BP_COCK_HUMAN = "all",
+		BP_SKIN_HUMAN = "all",
+		BP_ARMS_HUMAN = "all",
+		BP_LEGS_HUMAN = "all",
+		BP_ASS_HUMAN = "all",
 	},
 }
 
@@ -84,7 +88,7 @@ newBirthDescriptor{
 	{
 		"Crashhhhh!",
 	},
-	bodyslots = { head = 1, torso = 1, leg = 2, skin = 1 },
+	bodyslots = { ass = 1, arms = 2, head = 1, torso = 1, leg = 2, skin = 1 },
 	bodyparts = {
 		BP_HEAD_LATEXFOX = "all",
 		BP_TORSO_LATEXFOX = "all",
