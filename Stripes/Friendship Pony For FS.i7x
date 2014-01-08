@@ -60,24 +60,18 @@ to say fponydesc:
 	now rfponycolour2 is "[entry 1 in rfpclist2]";
 	now rfponybm is "[entry 1 in rfpbmlist]";		]
 	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance.  Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if].  The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs.  Its overall look is quite smooth and plasticky, having a [rfponycolour1] colour to its body.  Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze.  Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolour2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3].  There is a short horn poking out the front of her hair[end if].";
-	say "     '[if player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark!  Let's be friends[otherwise if player is fponybodied]Come, cutie!  Let's see if we can't earn you a booty mark[otherwise if player is fponyskinned]Oh! I love your booty mark!  Now lets see if we can't get you looking like a proper little pony[otherwise]Do you like my booty mark?  Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail.  She gives her rear a shake before coming towards you at a trot.  'Oh, we'll have so much fun together, my new friend,' she says with a grin.  Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
+	say "     '[if player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark!  Let's be friends[otherwise if player is fponybodied]Come, cutie!  Let's see if we can earn you a booty mark[otherwise if player is fponyskinned]Oh! I love your booty mark!  Now let's see if we can get you looking like a proper little pony[otherwise]Do you like my booty mark?  Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail.  She gives her rear a shake before coming towards you at a trot.  'Oh, we'll have so much fun together, my new friend,' she says with a grin.  Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
 
 to setrfpdesc:
 	if rfpc1 is 0, now rfpc1 is a random number between 1 and 31;
 	if rfpc2 is 0, now rfpc2 is a random number between 1 and 26;
 	if rfpbm is 0, now rfpbm is a random number between 1 and 34;
-	let oldrfpc1 be rfpc1;
-	let oldrfpc2 be rfpc2;
-	let oldrfpbm be rfpbm;
-	now rfpc1 is a random number between 1 and 31;
-	if rfpc1 is oldrfpc1, increase rfpc1 by a random number between 1 and 30;
+	increase rfpc1 by a random number between 1 and 30;
 	if rfpc1 > 31, decrease rfpc1 by 31;
-	now rfpc2 is a random number between 1 and 26;
-	if rfpc2 is oldrfpc2, increase rfpc2 by a random number between 1 and 25;
+	increase rfpc2 by a random number between 1 and 25;
 	if rfpc2 > 26, decrease rfpc2 by 26;
-	now rfpbm is a random number between 1 and 34;
-	if rfpbm is oldrfpbm, increase rfpbm by a random number between 1 and 33;
-	if rfpbm > 34, now rfpbm is 1;
+	increase rfpbm by a random number between 1 and 33;
+	if rfpbm > 34, deacrease rfpbm by 34;
 	if rfpc1 is:
 		-- 1:
 			now rfponycolour1 is "sky blue";
