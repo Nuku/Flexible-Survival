@@ -71,7 +71,7 @@ to setrfpdesc:
 	increase rfpc2 by a random number between 1 and 25;
 	if rfpc2 > 26, decrease rfpc2 by 26;
 	increase rfpbm by a random number between 1 and 33;
-	if rfpbm > 34, deacrease rfpbm by 34;
+	if rfpbm > 34, decrease rfpbm by 34;
 	if rfpc1 is:
 		-- 1:
 			now rfponycolour1 is "sky blue";
