@@ -32,6 +32,7 @@ Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
+Figure of Blanche_icon is the file "Blanche.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.

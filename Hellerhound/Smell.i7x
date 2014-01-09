@@ -109,19 +109,21 @@ the scent of Microwave is "The microwave smells a little from the dried stains i
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.";
 
-the scent of water bottle is "Water Bottles smell like plastic.";
+the scent of water bottle is "The water bottle smells like plastic.";
 
 the scent of dirty bottle is "The dirty water smells a little off, but is still potable.";
 
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].";
 
-the scent of pocketknife is "Pocketknives smell like metal.";
+the scent of pocketknife is "The pocketknife smells like metal.";
 
 the scent of chair is "The metal chair smells of metal and aging plastic.";
 
 the scent of journal is "The journal smells of cheap leather, paper and ink.";
 
 the scent of medkit is "The medkit smells like antiseptic.";
+
+the scent of face mask is "It smells pretty normal for a face mask; must still be good.";
 
 the scent of gryphon milk is "The milk smells faintly of those gryphon creatures.";
 

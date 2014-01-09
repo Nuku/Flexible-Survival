@@ -2,6 +2,11 @@ Green Hydra.i7x by Auto Translator - an extension stored in the correct author's
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Infection - title contains a full stop<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
+class/ by flexible_survival - folder or application in author folder<br>
+data/ by flexible_survival - folder or application in author folder<br>
+dialogs/ by flexible_survival - folder or application in author folder<br>
+Init.lua by flexible_survival - title contains a full stop<br>
+Load.lua by flexible_survival - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
 Mall Rat for FS.i7x by Nuku Valente - appears not to be an extension (its first line does not end 'begin(s) here', as extension titling lines must)<br>
 Story Skipper backup.i7x by Nuku Valente - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Story Skipper by Nuku Valente')<br>

@@ -525,7 +525,7 @@ Instead of resolving a PeachTree:
 		otherwise:
 			say "     Deciding not to risk it, you cover your nose and head back the way you came.";
 	otherwise:
-		if plantdefeat is 1:
+		if plantdefeat > 0:
 			say ".";
 			say "     As you approach the peach tree, there is a squirming sensation from your belly before the slumbering plant inside you pushes free.  It digs its main vine into the soil near the tree, trapping you there as other vines start to descent from the canopy.  Tricked by the plant's alluring scent and tempting fruit, you are now caught in a fight with the vines.  Between those from the tree and the one inside you, you will have a struggle on your hands.";
 			decrease hp of player by hp of player / 4;

@@ -5072,7 +5072,7 @@ This is the self examine rule:
 		if the cocks of the player is greater than 1:
 			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
@@ -6349,6 +6349,7 @@ Include Andrew by Stripes.
 Include Sam for FS by Stripes.
 Include Mack for FS by Stripes.
 Include Meredith by Stripes.
+Include Stella by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
@@ -6367,6 +6368,7 @@ Include Zephias by Wahn.
 Include David by Wahn.
 Include Amy by Wahn.
 Include Carl by Wahn.
+Include HornyHorsey by femtoAmpere. 
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

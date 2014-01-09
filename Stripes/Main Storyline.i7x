@@ -156,7 +156,7 @@ Instead of conversing the doctor matt:
 				if the player consents:
 					delete Chipped tooth;
 					increase score by 10;
-					say "     'It is good to see that you appreciate the important of my work.'  He picks up the large fang in his gloves and places it in a sample dish.";
+					say "     'It is good to see that you appreciate the importance of my work.'  He picks up the large fang in his gloves and places it in a sample dish.";
 					now sabtoothedmatt is 1;
 				otherwise:
 					say "     'I am disappointed that you don't appreciate the importance of my work.  I hope you will at least continue to keep me appraised of Dr Mouse's activities.";
