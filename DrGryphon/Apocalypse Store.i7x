@@ -3,18 +3,22 @@ Apocalypse Store by DrGryphon begins here.
 "Adds an area and equipment for the player." 
 
 Apocalypse Store is a situation.
+The sarea of Apocalypse Store is "Outside";
 
 instead of resolving Apocalypse Store:
 	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows that are blown out along with doors and a torn apart interior with debris littered around the floor.";
 	now Clothing Store is known;
 	say "Despite the store's destroyed appearance, you decide to have a look around inside anyway, maybe there's still something useful in here? (Clothing Store now added to nav menu)";
+	move player to Clothing Store;
+	now battleground is "void";
 	now Apocalypse Store is resolved;
 
 
 broken entrance is a door. "The two broken glass doors exit out to the city.".
-Clothing Store is a room. It is fasttravel. "The old clothing store has been completely torn apart by some unknown explosion. Pieces of the roof litter the floor, while the display racks have all been thrown toward the entrance and now lie on their sides. On the far end of the building you see scorch marks from what must be the source of the blast.".
+Clothing Store is a room. It is fasttravel.  It is private. "The old clothing store has been completely torn apart by some unknown explosion. Pieces of the roof litter the floor, while the display racks have all been thrown toward the entrance and now lie on their sides. On the far end of the building you see scorch marks from what must be the source of the blast.".
 Clothing Store is west of broken entrance.
 broken entrance is dangerous.
+east of broken entrance is Outside Exploration.
 the marea of broken entrance is "Outside".
 
 
@@ -59,7 +63,7 @@ The slot of Apocalypse Hoody is "body".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Hoody"	"A large zippable hoody that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodys
+"Apocalypse Hoody"	"A large zippable hoody that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoody
 
 the scent of Apocalypse Hoody is "There is a faint smell of smoke lingering on the item of clothing.";  
 
