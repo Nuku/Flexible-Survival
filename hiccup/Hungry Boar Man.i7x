@@ -1,5 +1,5 @@
 Version 3 of Hungry Boar Man by hiccup begins here.
-[Version 3.2 - Adapted to new Piggy infection and threesomes w/Sandra]
+[Version 3.3 - Mud wrestling with armpit licking and anal sex afterwards]
 
 "Adds an encounter to Flexible Survival with a hungry boar man."
 
@@ -39,7 +39,7 @@ lastPhilipfucked is a number that varies.  lastPhilipfucked is usually 800.
 lust of philip is 255.
 
 Philip is a man.
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet.  He is extremely fat with a bald head, floppy ears, and an upturned nose.  Flies are constantly buzzing around him, enticed by his foul odor.  He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm.  Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe.  He spends much of his time lounging in it[end if].";
+The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet.  He is extremely fat with a bald head, floppy ears, and an upturned nose.  Flies are constantly buzzing around him, enticed by his foul odor.  He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm.  Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe.  He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.";
 Philip is in Pig Pen.
 The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
 the fuckscene of philip is "[sexwithphilip]".
@@ -48,7 +48,7 @@ instead of sniffing Philip:
 	say "Philip has the strong scent of a male hog[if pigfucked > 3].  You've become quite used to his musky scent and find it quite arousing now[end if].";
 
 
-Section 4 - Feeding the Piggy
+Section 4 - Feeding/Wrestling the Piggy
 
 Pigfeeding is an action applying to nothing.
 
@@ -95,10 +95,6 @@ To pigfeed:
 			say "     Thank you,' He shouts as he snatches the food from you and starts to gobble it down.  The boar man goes into a feeding frenzy.  He barely chews as he stuffs the food into his mouth and swallows it down.  He almost seems to get a little bit fatter before your eyes as he eats.  Stray flecks of saliva fly from his mouth and splash on you.  Your body immediately begins to feel strange.  A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now tailname of player is "Piggy";
 			now tail of player is tail entry;
-[			increase stamina of player by 1;
-			if remainder after dividing stamina of player by 2 is 0:
-				increase maxhp of player by level of player plus 1;
-			say "[bold type]YOUR STAMINA HAS INCREASED BY 1[roman type]";	]
 			increase score by 5;							
 		otherwise:
 			say "     'You don't have any food,' he oinks sadly.";
@@ -113,11 +109,6 @@ To pigfeed:
 			say "     You open the box and start chowing down on the food inside.  As soon as you finish eating, you notice that the food didn't dull your hunger at all.  That's when your entire head begins to feel strange.  All the hair on your head falls out as your ears stretch out then flop downwards.  Your nose aches for a second as the tip bends upwards until you're left with the nose of a pig.  Your cheeks and face plump up with fat, making you look like you have beady little eyes and making it a little harder for you to see.";
 			now face of player is face entry;
 			now facename of player is "Piggy";
-[			increase stamina of player by 1;
-			decrease perception of player by 1;
-			if remainder after dividing stamina of player by 2 is 0:
-				increase maxhp of player by level of player plus 1;
-			say "[bold type]YOUR STAMINA HAS INCREASED BY 1[line break]YOUR PERCEPTION HAS GONE DOWN BY 1[roman type]";	]
 			increase score by 5;
 			now pigfed is 2;
 		otherwise:
@@ -163,6 +154,44 @@ To pigfeed:
 		otherwise:
 			say "     He groans and rubs his gut, 'I'm still digesting the food you gave me earlier.  Come back later.'";
 
+Mudwrestling is an action applying to nothing.
+
+understand "wrestle Philip" as Mudwrestling;
+understand "wrestle pig" as Mudwrestling;
+understand "wrestle the pig" as Mudwrestling;
+understand "wrestle hungry boar man" as Mudwrestling;
+understand "wrestle the hungry boar man" as Mudwrestling;
+understand "wrestle boar" as Mudwrestling;
+understand "wrestle the boar" as Mudwrestling;
+
+check Mudwrestling:
+	if Philip is not visible, say "Who?" instead;
+
+Carry out Mudwrestling:
+	Mudwrestle;
+
+To Mudwrestle:
+	setmonster "Piggy";
+	choose row monster from the table of random critters;
+	if lastPhilipfucked - turns is less than 6:
+		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up a while after having sex. Don't worry, we can have some fun in the mud soon.'";
+	otherwise: 	
+		say "     As you step up to Philip and ask to wrestle him, the boar says 'A challenger for the champion of this mud pit, hm? I've got to warn you, no one's ever beaten me. I mean - how would they, with this hot bod.' Grinning, he rubs his big gut, then shows off a thick flabby arm. 'Go on and strip, real wrestling is done naked!' With that, Philip throws himself into the mud, wallowing in it and smearing it all over himself as he waits for you.";
+		say "     Nude wrestling with a horny pigman? You can see where this could be going from a mile away. Do you really want to do it, knowing that he's in his element there, and has to have at least some muscles under all that fat (since he can move his big bulk without too much effort).";
+		if player consents:
+			say "     [line break]";
+			say "     Taking off your gear and clothing, you stack it far enough away so it doesn't get dirty, then step into the slippery mud with Philip. The boar man directs you to take position opposite himself, then calls out 'Go!' and wades towards you. The wrestling battle that follows isn't all that long, as you just can't get a grip on the pig's body, wobbly and liberally smeared with slick mud as it is, and neither can you push his large bulk over. In a move that might have come from sumo-wrestling, he eventually brings you to the ground with a muddy splash that leaves you lying on your back, then bears down on you with much of his weight to keep you down.";
+			say "     You feel pretty flattened, with Philip lying halfway across your chest, and the... aroma of the mud all around you distracts you from any thoughts for moves to get out of this situation. Trying to only breathe through your mouth, you sigh and admit defeat, much to the elation of your boar opponent. Philip grins down at you and says 'You give up? Ok, now show me that you really mean it.' With that, he wiggles on top of you a bit, bringing his armpit right over your face. Phew, how could he have gotten this sweaty in such short a match? 'Go on, lick it' he says, and you comply, getting an overwhelmingly strong impression of his odor as you raise your head, pressing your nose against his pit while you run your tongue over it. Your eyes water at the combined smell and taste and you're somewhat dazed for a moment, not being able to get up even as Philip lifts himself off you.";
+			say "     [WaitLineBreak]";
+			say "     Suddenly Philip's head comes back into your line of view and his hand softly slaps your cheeks a few times. 'I know I'm a breathtakingly handsome guy, but snap out of it. Time to pay up - you lost, so I get to fuck you now.' he oinks, then maneuvers you into a position on all fours as you slowly get up. Rubbing his piggish body against yours, the boar man grabs your ass and teases a meaty finger in between your cheeks and against your tight pucker. Moments later, his throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
+			say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. Then he gives a sudden deep thrust, indeed making you give out a high-pitched gasp. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you moaning and panting all the more, further exciting your porcine partner. The heavy hog nibbles at your ear, snorting and oinking as his excitement builds. He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if cocks of player > 0]. You can't help but cum yourself as you feel his hot semen filling you[otherwise if cunts of player > 0]. You can't help yourself and climax at the same time as you feel his hot semen filling you, your femcum running down your legs and dripping into the mud[end if].[mimpregchance]";
+			say "     [WaitLineBreak]";
+			say "     But he doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time.  Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your well-used hole a delightful chorus to your cries.";
+			say "     He pounds into you even harder than before, but pulls out before he's done this time. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[otherwise if cocks of player > 0]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[otherwise if cunts of player > 0]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
+			now lastPhilipfucked is turns;			
+		otherwise:
+			say "     [line break]";
+			say "     Changing your mind about this whole thing, you step back from the mud-smeared boar and give a lame excuse. He just shrugs, sinking back to wallow some more as he says 'Getting cold feet, hm? Oh well, I'll be waiting here if you decide you want to go for a round after all - or want to have other fun.' After that he gives you a wink and stretches out a bit, showing off his flabby body and erect cock.";
 
 Section 5 - Sexxxing the Piggy
 
@@ -180,11 +209,11 @@ to say sexwithphilip:
 		say "     'I know it's hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;
 	if Sandra is bunkered and hp of Philip is 0 and lust of philip - turns >= 16 and lastPhilipfucked < 800:
-		say "     Approaching Philip for some more of his big, sloppy loving, you him in Sandra's company.  She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock.  He's also eying her quite appreciatively, quite literally salivating at the bunny girl's breasts.  Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
+		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company.  She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock.  He's also eying her quite appreciatively, quite literally salivating at the bunny girl's breasts.  Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
 		if player consents:
 			say "     You smile as you go join them, moving in beside Philip and running your hands over him.  He oinks and gives you a sloppy kiss as he welcomes you.  'Mmm... hello there,' he grunts.  'The bunny and I were just getting to know each other a li-' he starts to say before getting distracted as you give his pink shaft a playful stroke, causing him to oink loudly again.  Glancing over, you catch Sandra glaring at you as you manhandle her prize.";
 			say "     'Oh, I agree.  We should all get to know each other better,' you say with a friendly smile.  'There's plenty of you to go around, isn't there Philip?'  He chuckles at his, rubbing his hands over his pudgy body, though its the hefty, dribbling cock at has Sandra's attention as you offer her a go at his erection.  And she's quickly on her knees, licking and kissing at that porcine rod, her earlier anger gone as she goes down on that musky pillar of meat.";
-			say "     Pleased to see your two new friends going at it, you drift between them, your hands running over their bodies.  Sandra's pussy drips with her juices, which you enjoy lapping up for a few mintues before fondling Philip's balls.  When you swap to the bunny girl's breasts, you remember the pig's interest in them and get them to change positions so the big boar man's cock is pressed between those fuzzy globes.  Between that, the eager sucking and your playful groping, it's not much longer before Philip's greasy cum is pumped into her muzzle and then sprayed across those lovely tits.  You have fun helping to lick her clean[if thirst of player > 50] and suckling a delicious drink of her milk to wash it all down[end if] while Philip rolls over to rest in his muddy wallow.";
+			say "     Pleased to see your two new friends going at it, you drift between them, your hands running over their bodies.  Sandra's pussy drips with her juices, which you enjoy lapping up for a few minutes before fondling Philip's balls.  When you swap to the bunny girl's breasts, you remember the pig's interest in them and get them to change positions so the big boar man's cock is pressed between those fuzzy globes.  Between that, the eager sucking and your playful groping, it's not much longer before Philip's greasy cum is pumped into her muzzle and then sprayed across those lovely tits.  You have fun helping to lick her clean[if thirst of player > 50] and suckling a delicious drink of her milk to wash it all down[end if] while Philip rolls over to rest in his muddy wallow.";
 			now lastPhilipfucked is turns;
 			now lastrabbitfuck is turns;
 			now hp of Philip is 2;
@@ -247,7 +276,7 @@ to say sexwithphilip:
 		say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you.  You moan and press back onto him, pushing more of his thick shaft into you as he chuckles.  He gives your plump, piggy bottom a slap, drawing a squeal out of you.  'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast.  This gets you squealing all the more, in part to further excite your lover and partially because you just can't control yourself.  The heavy hog nibbles at your floppy pig ear, snorting and oinking as his excitement builds.  He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if cocks of player > 0].  You can't help but cum as you feel his hot semen filling you as he fucks you like a pig[end if].[mimpregchance]";
 		attempttowait;
 		say "     But he doesn't stop there.  After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time.  Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you.  Some of it leaks out around his thrusting cock, but much of it gets pushed deeper.  Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your reused hole a delightful chorus to your cries.";
-		say "     He pounds into you even harder than before, but pulls out before he's done.  You try to push yourself back onto him, but he rolls you over onto your back.  You land in the mud with the boar knealing over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1].  With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[otherwise].  With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
+		say "     He pounds into you even harder than before, but pulls out before he's done.  You try to push yourself back onto him, but he rolls you over onto your back.  You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1].  With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[otherwise].  With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
 		say "     He runs a piggish hand all over your body as he blasts the last few shots across your face.  'That's my good sow,' he says as he runs his fingers over your sticky body";
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
