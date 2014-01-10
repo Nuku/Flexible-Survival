@@ -2,7 +2,7 @@ Version 1 of Stella by Stripes begins here.
 [Version 1.0 - Basic NPC]
 [NOTE: It was the commissioner's specific request that this character top only.  She's very "been there, done that" with her vagina and is instead all "I've got a stiffy!"]
 
-"Adds a dalmation herm to Flexible Survival."
+"Adds a dalmatian herm to Flexible Survival."
 
 Section 0 - Event
 
@@ -16,16 +16,16 @@ Instead of resolving a Eager Dal:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[otherwise]Not given[end if]. <- DEBUG[line break]";
 	if hp of Stella is 0:
-		say "     As you're sneaking through an alley between two buildings, you hear a cheerful British voice call out to you from behind.  'Hey there, hon.  Care to bang?'  Expecting it to be a sex-crazed monster by this point, you turn and take up a fighting stance.  'Whoa there, cowboy!  Kind of touchy, aren't we?  No need to spaz out!' the cute dalmation herm in front of you says, paws up as she takes a quick couple of steps back.";
+		say "     As you're sneaking through an alley between two buildings, you hear a cheerful British voice call out to you from behind.  'Hey there, hon.  Care to bang?'  Expecting it to be a sex-crazed monster by this point, you turn and take up a fighting stance.  'Whoa there, cowboy!  Kind of touchy, aren't we?  No need to spaz out!' the cute dalmatian herm in front of you says, paws up as she takes a quick couple of steps back.";
 		say "     Realizing you'd misjudged the situation, you relax a little and try to strike up a conversation.  As you do, you look her over more closely.  Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle.  She's got shoulder-length white hair with a splash of black on her bangs.  She's wearing a pair of glasses in front of her bright, blue eyes.  And between her legs is an obviously canine cock.";
-		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling.  She mainly talks about how she's been enjoying herself since she'd woken up as a dalmation.  Actually, her big thing's her new dick, which she's been trying out all around town.  It's no wonder she's ended up in this neighbourhood with an attitude like that.  When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.  Shall you do just that?";
+		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling.  She mainly talks about how she's been enjoying herself since she'd woken up as a dalmatian.  Actually, her big thing's her new dick, which she's been trying out all around town.  It's no wonder she's ended up in this neighbourhood with an attitude like that.  When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.  Shall you do just that?";
 		if the player consents:
 			say "[convincestella]";
 		otherwise:
-			say "     You decide against it and stay mum.  After a few more minutes of chatting, the dalmation herm gives a chipper farewell and goes off in search of fun elsewhere.";
+			say "     You decide against it and stay mum.  After a few more minutes of chatting, the dalmatian herm gives a chipper farewell and goes off in search of fun elsewhere.";
 			now Eager Dal is resolved;
 	otherwise:
-		say "     You end up crossing paths with Stella the dalmation herm again.  She strikes up a friendly, if meandering, conversation with you for a while.  During your chat, you try to convince her to come with you.";
+		say "     You end up crossing paths with Stella the dalmatian herm again.  She strikes up a friendly, if meandering, conversation with you for a while.  During your chat, you try to convince her to come with you.";
 		say "[convincestella]";
 
 
@@ -61,7 +61,7 @@ to say convincestella:
 		now hp of Stella is 1;
 
 
-Section 1 - Stella the Dalmation
+Section 1 - Stella the Dalmatian
 
 Stella is a woman.
 The description of Stella is "[stelladesc]";
@@ -127,9 +127,9 @@ to say sexwithStella:
 	otherwise if hp of Stella is 2:
 		say "     Perhaps you should talk to her first.  She certainly seems eager enough, but it'd probably be best to chat a bit first.";
 	otherwise if lastfuck of Stella - turns < 4:
-		say "     'I'm glad to see you're stoked for more, but [one of]I was thinking of popping out for a bit of variety[or]even I need a break from time to time[or]I'm knackered[at random],' the dalmation responds.";
+		say "     'I'm glad to see you're stoked for more, but [one of]I was thinking of popping out for a bit of variety[or]even I need a break from time to time[or]I'm knackered[at random],' the dalmatian responds.";
 	otherwise:
-		say "     The dalmation herm's ears perk up at the suggestion of sex.  She rubs her canine cock, making it twitch upwards as it stiffens at the prospect of fun.  '[one of]So which hole are you looking for me to stuff?'[or]How about you bend over for the pretty doggy?'[or]Let's get this shag on the road.'[at random]";
+		say "     The dalmatian herm's ears perk up at the suggestion of sex.  She rubs her canine cock, making it twitch upwards as it stiffens at the prospect of fun.  '[one of]So which hole are you looking for me to stuff?'[or]How about you bend over for the pretty doggy?'[or]Let's get this shag on the road.'[at random]";
 		say "[Stellasexmenu]";
 
 
@@ -190,13 +190,13 @@ to say Stellasexmenu:
 
 
 to say stellasex1:
-	say "     Offering to blow her, she grins and strokes her swelling penis.  'That's the spirit,' she says in her cheerful British accent.  As you drop to your knees in front of her, she offers her canine cock with a doggy grin on her muzzle.  It's a reddish-pink in colour and thoroughly canine in form.  It may just be the infection, but looking at it makes your mouth start to water.  [one of]After giving it a teasing lick[or]after some kisses along its six-inch length[or]After a playful lick across her pussy[at random], you let it slide past your lips and start sucking the dalmation herm off.";
+	say "     Offering to blow her, she grins and strokes her swelling penis.  'That's the spirit,' she says in her cheerful British accent.  As you drop to your knees in front of her, she offers her canine cock with a doggy grin on her muzzle.  It's a reddish-pink in colour and thoroughly canine in form.  It may just be the infection, but looking at it makes your mouth start to water.  [one of]After giving it a teasing lick[or]after some kisses along its six-inch length[or]After a playful lick across her pussy[at random], you let it slide past your lips and start sucking the dalmatian herm off.";
 	say "     Stella's doghood pulses and throbs in your mouth, drooling precum across your tongue.  You lick and suck on it eagerly while she strokes her paws over your head[one of].  While sucking on that juicy dogcock, you brush your fingers across her pussy lips.  After some light teasing, you slip a pair of fingers into her dripping folds and work them in and out.  She pants in excitement at this and starts thrusting into your mouth, all the more eager to fuck your face[or].  While sucking on that juicy dogcock, you can't help but notice her lack of balls, her penis growing up from her pussy like an enlarged clit, but shaped like a dog's wang.  You're distracted from your musing as she starts thrusting into your mouth because your attention's wavered[or].  While sucking on that juicy dogcock, you feel across it with your tongue, lavishing attention upon it.  You work especially attentively across her pointed glans and dribbling cumslit.  As her excitement builds, she grips your head more firm and starts thrusting into your mouth[at random].  Panting heavily with excitement, she grits her teeth and whines like a dog, her climax approaching.  And with barks of excitement, she presses your face to her groin and cums hard, pumping her canine cum down your throat.";
 
 to say stellasex2:
 	say "     Suggesting that you go for doggy-style, she grins and strokes her swelling penis.  'That's always been my favourite.  And it's even better now that I'm on top,' she says in her cheerful British accent.  Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position.  She brushes the pointed, drooling tip across your wet folds for a few passes to get you all the more excited before easing forward.  As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again.  She fucks you well, clearly having learned a lot on how to please a lady from having been boned herself so often[if breast size of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts.  Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[otherwise if cocks of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cock of player] shaft.  She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[otherwise].  Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cunt size desc of player] pussy while she stuffs it.  Her fingers tease your clit and caress over your folds even as she slides her pulsing rod between them[end if].  She keeps a nice, brisk pace and anticipates when it's time to change it up or shift positions slightly.  For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
-	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes against the back of your vagina.  As it builds up, having nowhere else to go, it flows into your womb.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.";
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes against the back of your vagina.  As it builds up, having nowhere else to go, it flows into your womb.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[impregchance]";
 
 to say stellasex3:
 	say "***spooning";
@@ -207,18 +207,27 @@ to say stellasex4:
 to say stellasex5:
 	say "     Suggesting that she take you in the ass, she grins and strokes her swelling penis.  '[if cunts of player > 0]Ooo!  Kinky girl!  I like that[otherwise]MMmm!  Sounds good.  Bend over and lemme at that arse of yours[end if],' she says in her cheerful British accent.  Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position.  She rubs the pointed, drooling tip against your pucker, letting her pre lube you up a little as she gets your back passage to ease open.  As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again.  She fucks you well, clearly having learned a lot on how to please a lover from having been boned herself so often[if breast size of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts.  Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[otherwise if cocks of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cock of player] shaft.  She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[end if].  She keeps a nice, brisk pace[if cocks of player > 0], grinding her throbbing cock against your prostate with every thrust, and[otherwise],[end if] then easing off before you can get too excited.  For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
-	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes [if cocks of player > 0]against your prostate[otherwise]around inside your bowels[end if].  As it builds up, having nowhere else to go, it can only flow deeper into you.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.";
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes [if cocks of player > 0]against your prostate[otherwise]around inside your bowels[end if].  As it builds up, having nowhere else to go, it can only flow deeper into you.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[mimpregchance]";
 
 
 to stellainfect:
-	setmonster "Dalmation";
+	setmonster "Dalmatian";
 	choose row monster from the table of random critters;
-	if name entry is "Dalmation":
+	if name entry is "Dalmatian":
 		let temptext be " ";
 		now temptext is sex entry;
-		now sex entry is "Female";
+		let tempnum be breasts entry;
+		if "Male Preferred" is listed in feats of player:
+			now sex entry is "Male";
+		otherwise if "Herm Preferred" is listed in feats of player:
+			now sex entry is "Both";
+			now breasts entry is 8;
+		otherwise:
+			now sex entry is "Female";
+			now breasts entry is 8;
 		infect;
 		now sex entry is temptext;
+		now breasts entry is tempnum;
 
 
 [  hp of Stella       ]

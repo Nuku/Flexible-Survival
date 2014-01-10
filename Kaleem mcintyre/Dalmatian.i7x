@@ -97,7 +97,7 @@ When Play begins:
 
 
 Definition: a person is dalskinned:
-	if the skinname of the player is "Dalmation", yes;
+	if the skinname of the player is "Dalmatian", yes;
 	no;
 
 
