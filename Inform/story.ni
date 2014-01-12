@@ -4944,6 +4944,7 @@ This is the cock descr rule:
 
 To say ball size:
 	if cock width of player is greater than 0:
+		say "a pair of ";
 		if cock width of player is less than 3:
 			say "[one of]marble-sized[or]tiny[or]very small[at random]";
 		otherwise if cock width of player is less than 6:
@@ -6291,6 +6292,7 @@ Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
+[Include Orc By Wahn.]
 
 
 [NPCs]
