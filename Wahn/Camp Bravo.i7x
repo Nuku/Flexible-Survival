@@ -1,5 +1,5 @@
 Version 1 of Camp Bravo by Wahn begins here.
-[Version 1 - Put into its own file]
+[Version 1.1 - Charisma-Check Fix]
 
 Section 1 - Events
 
@@ -99,7 +99,7 @@ Instead of resolving a Back at the Camp:
 					say "[GuardLeave]";
 
 to say GuardLie:    [lie to get into the camp]
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
