@@ -6292,7 +6292,7 @@ Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
-[Include Orc By Wahn.]
+Include Orc By Wahn.
 
 
 [NPCs]
