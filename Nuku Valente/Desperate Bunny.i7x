@@ -167,7 +167,7 @@ to say sandrasexmenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Sex the bunny up":
+				if nam is "Sex up the bunny":
 					say "[sandrasex_leadin]";
 					say "[sandrasex1]";
 				otherwise if nam is "Threesome w/Coleen":
@@ -362,7 +362,7 @@ to say sandrasex4:
 		say "     With an eager lover working hard to please you and earn their delicious reward, soon you're both panting and moaning between licks.  She's wriggling her tongue around inside your juicy cunny, clearly eager to have this chance to please her bunny sister while getting the same in return.  And knowing well what pleases a girl, she is very attentive to your clit, always going back to kissing and sucking on it[if cunts of player > 1].  Her furry fingers busily stroke and caress your other puss[yfn], her tongue's focus shifting from back and forth between them[end if].  For your part, you're brushing your fingers over her puffy folds while your eat her juicy muff, paying particular attention to the bunny's love button.  Your wild romp ends in a sticky, musky mess of orgasmic release that leaves you both panting on her cot and smelling strongly of sex for quite some time.";
 	now lastrabbitfuck is turns;
 
-		
+
 Section 4 - Sandra and Coleen Interplay
 
 An everyturn rule:
