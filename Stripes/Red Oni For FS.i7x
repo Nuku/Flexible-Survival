@@ -1,5 +1,5 @@
 Version 2 of Red Oni For FS by Stripes begins here.
-[Version 2.1 - creature victory added]
+[Version 2.2 - adapted for oni lair assault]
 
 "Adds a Red Oni creature to Flexible Survivals Wandering Monsters table"
 
@@ -10,25 +10,30 @@ when play begins:
 	add { "Red Oni" } to infections of hellspawn;
 
 to say losetoredoni:
-	if cunts of player > 0 and a random chance of 2 in 3 succeeds:
-		say "     You are grappled by the oni after its last blow leaves your ears ringing.  Pushed to the ground beneath it, the creature spreads your legs wide and presses the dark glans of its crimson cock to your [cunt size desc of player] pussy.  With a growl, that pulsing pillar of meat is jammed into your cunt[if cunt length of player < 9], stuffing you painfully full with one harsh thrust[otherwise if cunt length of player < 12], stretching your cunny a little to take the last few inches[otherwise], jamming its full length into you with one harsh thrust[end if].  You cry out at the sudden intrusion, but are too weakened from the fight to do more than squirm weakly in the creatures powerful grip.";
-		say "     Fucking you roughly, the demon ogre has no desire other than its own release.  Responding to that thrusting pole within it, your vagina squeezes and tugs at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success.  Fueled by cruelty and lust, it callously disregards your needs in favour of its own.  By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done.  Your cunt [if cunt length of player < 12]aches and your cervix feels bruised[otherwise]is aching and is messy with the creature's semen[end if], but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
-	otherwise if a random chance of ( anallevel - 1 ) in 3 succeeds:
-		say "     Dazed by the oni's last blow, your head spins and you nearly pass out.  As you start to regain your senses, you find yourself pinned beneath the large, red monster with the large, red monster between its legs pressed against your ass.  Before you've recovered enough to do anything about this, you feel that pulsing pillar of meat jamming its way into your bowels, making your cry out at the sudden intrusion.";
-		say "     Fucking you roughly, the demon ogre has no desire other than its own release.  Trying to make the best of it, your bowels squeeze and tug at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success.  Fueled by cruelty and lust, it callously disregards your needs in favour of its own.  By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done.  Your ass aches and your prostate feels bruised from the rough treatment you've received, but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
+	if hp of Hayato is 97:		[doing Oni Lair challenges]
+		say "     [if hp of player > 0]You surrender to the oni, unwilling to continue fighting the powerful creature.  Not simply accepting your surrender, the oni bashes you one last time with his club, knocking you to the ground hard[otherwise]You are defeated by the powerful creature and knocked to the ground by its massive club[end if].";
 	otherwise:
-		say "     Sent tumbling by the oni's last blow, your vision is blurry and you have trouble getting back up again.  Getting onto your hands and knees has you inadvertantly pressing your face against the oni's loincloth as it moves in to grab you.  Your face is ground against that musky smelling fur, making you all the dizzier and aroused.  When that cloth is pushed up by the demon ogre's red erection, you're forced to take it into your mouth.";
-		say "     The creature grips your head tightly and pounds into your mouth.  You try to lick and suck on it, but the monster's too rough and uncontrolled to let you give it a proper blow job.  It treats your mouth like a cocksleeve instead of a cocksucker, just wanting to blast its load into you... which is what it does a few minutes later, nearly choking you with its sticky seed.  The experience leaves your jaw and throat sore, but you're also aroused and unsatisfied.  Your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
-	if hp of Hayato is 16 or hp of Hayato is 17:
-		now hp of Hayato is 18;
-		say "     As you're recovering from its abusive lust, you remind yourself to inform Hayato about this new development.";
-	increase libido of player by 15;
-	if libido of player > 100, now libido of player is 100;
-[	say "     The red oni does some particularly rough and uncouth things with you to celebrate its victory.  You are left quite sore and sticky by the end of it.";	]
+		if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+			say "     [if hp of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves your ears ringing[otherwise]You are grappled by the oni after its last blow leaves your ears ringing[end if].  Pushed to the ground beneath it, the creature spreads your legs wide and presses the dark glans of its crimson cock to your [cunt size desc of player] pussy.  With a growl, that pulsing pillar of meat is jammed into your cunt[if cunt length of player < 9], stuffing you painfully full with one harsh thrust[otherwise if cunt length of player < 12], stretching your cunny a little to take the last few inches[otherwise], jamming its full length into you with one harsh thrust[end if].  You cry out at the sudden intrusion, but [if hp of player > 0]it is far too late to try to stop the monstrous ogre now, unable to do more than squirm weakly in the creature's powerful grip[otherwise]are too weakened from the fight to do more than squirm weakly in the creature's powerful grip.";
+			say "     Fucking you roughly, the demon ogre has no desire other than its own release.  Responding to that thrusting pole within it, your vagina squeezes and tugs at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success.  Fuelled by cruelty and lust, it callously disregards your needs in favour of its own.  By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done.  Your cunt [if cunt length of player < 12]aches and your cervix feels bruised[otherwise]is aching and is messy with the creature's semen[end if], but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
+		otherwise if a random chance of ( anallevel - 1 ) in 3 succeeds:
+			say "     [if hp of player > 0]You give up resisting and surrender to the oni, only to be struck by one last blow that leaves leaves you daze to the point that you almost pass out[otherwise]Dazed by the oni's last blow, your head spins and you nearly pass out[end if].  As you start to regain your senses, you find yourself pinned beneath the large, red monster with the large, red monster between its legs pressed against your ass.  Before you've recovered enough to do anything about this, you feel that pulsing pillar of meat jamming its way into your bowels, making your cry out at the sudden intrusion.";
+			say "     Fucking you roughly, the demon ogre has no desire other than its own release.  Trying to make the best of it, your bowels squeeze and tug at the thrusting rod, trying to get the red giant to set up a better rhythm and to increase your own pleasure, but with minimal success.  Fuelled by cruelty and lust, it callously disregards your needs in favour of its own.  By the time the monster blasts its tainted seed inside you, you've gotten quite aroused, but aren't quite close enough for release, leaving you aching for more when it pulls out as soon as it's done.  Your ass aches and your prostate feels bruised from the rough treatment you've received, but your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
+		otherwise:
+			say "     Sent tumbling by [if hp of player > 0]a final blow from the oni[otherwise]the oni's last blow[end if], your vision is blurry and you have trouble getting back up again.  Getting onto your hands and knees has you inadvertently pressing your face against the oni's loincloth as it moves in to grab you.  Your face is ground against that musky smelling fur, making you all the dizzier and aroused.  When that cloth is pushed up by the demon ogre's red erection, you're forced to take it into your mouth.";
+			say "     The creature grips your head tightly and pounds into your mouth.  You try to lick and suck on it, but the monster's too rough and uncontrolled to let you give it a proper blow job.  It treats your mouth like a cocksleeve instead of a cocksucker, just wanting to blast its load into you... which is what it does a few minutes later, nearly choking you with its sticky seed.  The experience leaves your jaw and throat sore, but you're also aroused and unsatisfied.  Your arousal leaves you frustrated and wanting to find some poor weak creature you can vent your lusts upon in a similar fashion.";
+		if hp of Hayato is 16 or hp of Hayato is 17:
+			now hp of Hayato is 18;
+			say "     As you're recovering from its abusive lust, you remind yourself to inform Hayato about this new development.";
+		increase libido of player by 15;
+		if libido of player > 100, now libido of player is 100;
 
 
 to say beattheredoni:
-	say "     With your final blow, the demon ogre growls angrily and stumbles back several steps.  It smashes its club heavily to the earth, cracking the ground with a mighty crash.  '[one of]I shall have my vengeance[or]Your kind will suffer soon[or]I shall crush you next time, [if scalevalue of player < 4]gnat[otherwise]wretch[end if][or]My brothers shall avenge me[or]The Oni Lord will crush you and all your kind[at random],' he snarls before storming off.";
+	if hp of Hayato is 97:		[doing Oni Lair challenges]
+		say "     After a hard-fought battle, you defeat your oni foe.";
+	otherwise:
+		say "     With your final blow, the demon ogre growls angrily and stumbles back several steps.  It smashes its club heavily to the earth, cracking the ground with a mighty crash.  '[one of]I shall have my vengeance[or]Your kind will suffer soon[or]I shall crush you next time, [if scalevalue of player < 4]gnat[otherwise]wretch[end if][or]My brothers shall avenge me[or]The Oni Lord will crush you and all your kind[at random],' he snarls before storming off.";
 
 
 to say redonidesc:
@@ -106,8 +111,17 @@ Definition: a person is redonicocked:
 	if the cockname of the player is "Red Oni", yes;
 	no;
 
+Definition: a person is redonibodied:
+	if the bodyname of the player is "Red Oni", yes;
+	no;
+
 
 Section 4 - Endings
+
+when play ends:
+	if bodyname of player is "Red Oni" and hp of Hayato is 96:
+		say "     You and Hayato are added to the ranks of the Great Oni's clan.  Your lusts for sex, destruction and flesh are almost all-encompassing.  Like your brethren, you revel in performing any evil that amuses you.  The oni of the clan often fight with one another, the victor claiming the other's body for sex.  There is little animosity to this, it is all done for the fun of battle and of sex.  As most of the clan aren't allowed to roam freely while the Great Oni marshals his forces, this allows you all to vent some steam and become stronger fighters.  The Great Oni watches many of these matches from atop his throne of bones and hides while the latest slave prize his minions have brought him services the fearsome red giant.";
+		say "     After much waiting, the Great Oni unleashes you all when the chaos in the city reaches its peak with the military cordon starting to collapse.  The surprise onslaught of a horde of battle-eager, sex-hungry oni pouring out all at once causes huge devastation.  Caught unawares, your clan rips through military and mutant forces alike, infecting many, but often just crushing your foes and moving on.  When the oni rampage finally stops several days later, much of the city has become the domain of the Great Oni.  Those defeated are either transformed, enslaved, killed or consumed.  Others of your kind have spread out of the city to either become solitary oni or form clans of their own.";
 
 [
 when play ends:
