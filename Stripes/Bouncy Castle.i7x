@@ -634,7 +634,7 @@ to say bcpptendril:
 		let tendrilnum be 170;
 		if skinname of player is listed in infections of Latexlist, increase tendrilnum by 15;
 		if bodyname of player is "Anime Babe", increase tendrilnum by 25;
-		if hardmode is true, increase tendrilnum by level of player;
+		if hardmode is true, increase tendrilnum by level of player / 2;
 		let tendrilnum be a random number between 1 and tendrilnum;
 		if playernum >= tendrilnum:
 			let tendrilescape be true;
@@ -668,6 +668,7 @@ to say bcpptendril:
 			otherwise:
 				say "     You pull as hard as you can, but just as you're starting to make back some ground, the tendrils latch onto your wrists and pull your arms up.  Lacking any means of pulling away, you are drawn inexorably towards the pillar as you feel your arousal growing out of control again.  The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you.  Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but give in and accept the situation, another fresh orgasm rocking through you.  You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholely into the now-bulging pillar.";
 				say "     Inside, you experience orgasm after orgasm as the [ppcolour] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
+				attempttowait;
 				now bcending is 5;
 				now bcfinalpillarform is bodyname of player;
 				now bodyname of player is "Captured";
@@ -691,7 +692,7 @@ to say bcpptendril:
 to say bcpptendril_accept:
 	let compnumber be the number of entries in childrenfaces;
 	if companion of player is not nullpet, increase compnumber by 1;
-	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you.  The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolour] latex[if compnumber is 1].  Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles['][otherwise if compnumber > 1].  Your companion, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles['][end if].  Some of the tendrils slide across your arms and legs while others wrap around your chest.";
+	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you.  The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolour] latex[if compnumber is 1].  Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles[otherwise if compnumber > 1].  Your companion, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles[end if].  Some of the tendrils slide across your arms and legs while others wrap around your chest.";
 	say "     You can't help but moan as one goes to your waist and [ppcolour] latex flows over your [if cocks of player is 0 and cunts of player is 0]barren crotch[otherwise]loins[end if], sending a rush of arousal through you as the goo spreads across your [if cocks of player > 0 and cunts of player > 0]cock[smn] and even into your puss[yfn][otherwise if cocks of player > 0]cock[smn][otherwise if cunts of player > 0]cunt[sfn][otherwise]ass and pushes into your asshole[end if]";
 	if cunts of player > 0:
 		say ".  You feel an unrestrained wave of pleasure as liquid latex flows into your vagina[sfn] and asshole, as if trying coat you inside and out[if cocks of player > 0] while it ripples and flows over your hard manhood[end if].";
@@ -707,8 +708,9 @@ to say bcpptendril_accept:
 	otherwise:
 		say "pumping and pushing inside your rectum, sending debilitating waves of pleasure through you[if anallevel is not 1].  As this orgasmic rush has your body quivering, you can feel the gooey flow working its way further into your bowels[end if].";
 	say "     It is only as you're coming down from this orgasm that you notice that you're being pulled right into the pillar that's ensnared you.  For the briefest of moments, you consider struggling, but it passes as another squeeze and push from the goo at your crotch sends lustful pleasure through you again[if compnumber is 1].  Glancing over, you can see your companion similarly being pulled into their pillar, a gooey tentacle thrusting down their throat as green latex flows from it over their head[otherwise if compnumber > 1].  Glancing over, you can see your companions similarly being pulled into their pillars, the one closest to you having a gooey tentacle thrusting down their throat as green latex flows from it over their head[end if].";
-	say "     You are drawn inexorably towards the pillar as you feel your arousal building again.  The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you.  Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but gulp the thick white stuff down as a fresh orgasm rocks through you.  You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholely into the now-bulging pillar.";
+	say "     You are drawn inexorably towards the pillar as you feel your arousal building again.  The tendrils flowing up your arms squeeze and pulse, their tips pointing towards your face before unleashing blasts of sticky white latex that clings to you.  Your vision blocked and your mouth being invaded by the cum-like goo, you can do nothing but gulp the thick white stuff down as a fresh orgasm rocks through you.  You feel the weight of it getting heavier around you, enclosing you more and more as you're pulled wholly into the now-bulging pillar.";
 	say "     Inside, you experience orgasm after orgasm as the [ppcolour] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
+	attempttowait;
 	now bcending is 5;
 	now bcfinalpillarform is bodyname of player;
 	now bodyname of player is "Captured";
