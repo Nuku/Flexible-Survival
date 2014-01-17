@@ -83,7 +83,7 @@ To say gryphon fuck:
 	if "Submissive" is listed in feats of player, increase analchance by 2;
 	if "MPreg" is listed in feats of player, increase analchance by 2;
 	if "More Anal" is not listed in feats of player, now analchance is 0;
-	if cocks of player > 0 and cunts of player > 0:
+	if cunts of player > 0 and cocks of player > 0:
 		if a random chance of 2 in 3 succeeds:	[fucking the player]
 			if cunt length of player >= 12:
 				say "[gryphonfuck1]";
