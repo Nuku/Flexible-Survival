@@ -1570,6 +1570,8 @@ To reciting2:
 						now Noh Mask is unresolved;
 					otherwise:
 						now Noh Mask is resolved;
+					if hp of Hayato >= 90:
+						remove Hayato from play;
 			-- 174: [hp of Tehuantl]
 				if the player's command matches "[number]":
 					now hp of Tehuantl is the number understood;
@@ -3216,6 +3218,8 @@ Carry out reciting:
 						now Noh Mask is unresolved;
 					otherwise:
 						now Noh Mask is resolved;
+					if hp of Hayato >= 90:
+						remove Hayato from play;
 			-- 174: [hp of Tehuantl]
 				if the player's command matches "[number]":
 					now hp of Tehuantl is the number understood;
