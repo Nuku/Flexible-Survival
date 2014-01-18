@@ -1,5 +1,5 @@
-Version 2 of Hayato by Stripes begins here.
-[Version 2.1 - More scenes and set-up for quest]
+Version 3 of Hayato by Stripes begins here.
+[Version 3.0 - Step 1 of oni lair assault]
 "Adds an Oni NPC named Hayato (Hal) to the Flexible Survival game."
 
 Section 1 - Event
@@ -146,14 +146,46 @@ Instead of conversing the Hayato:
 		say "[one of]'My grandmother used to tell me tales of the fearsome oni.  To be cursed to become such a creature...'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand.  'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is overrun with a mad lust.  The chastity device helps keep me from giving into those desires, but the wretched thing also keeps me from getting any relief... or enjoying the company of friends,' he says with a longing, lustful look.[or]'I do not wish to become a monster like the rampaging oni I encountered.  Perhaps a little relief would help quell that,' he says, shifting uneasily in his seat.[or]'I must contain my urges, lest I fully become a monster and harm others.'[or]'I am far too big to comfortably live in a house.  I must now live in this, my oni cave,' he says with a sad sigh.[or]As you chat with him, the oni gives your body many an appreciative glance as the unfocused arousal he's been trying to contain becomes increasingly focused on you.[or]'The shop where I got the medieval chastity belt was quite mysterious.  When I stumbled through the doorway, I was out in the city, but upon leaving it, I was inside a shopping mall filled with cheerful rat people.'[or]'The jackal woman running the mysterious shop was quite strange.  All she wanted in payment for the chastity belt was some little trinket.[at random]";
 	otherwise if hp of Hayato is 15:
 		say "[one of]'My grandmother used to tell me tales of the fearsome oni.  To be cursed to become such a creature...'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand.  'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is free to satisfy their needs.  Why did I choose this when there are so many fine partners out there?' he says, eyeing you with desire.[or]The chastity device helps keep me from giving into my moments of lust, but the wretched thing also keeps me from getting any relief... or enjoying the company of friends,' he says with a longing, lustful look.[or]'I do not wish to become a monster like the rampaging oni I encountered.  Perhaps a little relief would help quell that,' he says, shifting uneasily in his seat.[or]'I must contain my urges, lest I fully become a monster and harm others.'[or]'I am far too big to comfortably live in a house.  I must now live in this, my oni cave,' he says with a sad sigh.[or]As you chat with him, the oni gives your body many an appreciative glance as the unfocused arousal he's been trying to contain becomes increasingly focused on you.[or]'The shop where I got the medieval chastity belt was quite mysterious.  When I stumbled through the doorway, I was out in the city, but upon leaving it, I was inside a shopping mall filled with cheerful rat people.'[or]'The jackal woman running the mysterious shop was quite strange.  All she wanted in payment for the chastity belt was some little trinket.[at random]";
-	otherwise if hp of Hayato is 16 or hp of Hayato is 19:	[***]
+	otherwise if hp of Hayato is 21 and ( cocks of player > 0 or cunts of player > 0 ) and a random chance of 1 in 3 succeeds:
+		say "     As you chat with Hayato, your thoughts return to the problem of the Oni Lair you discovered.  Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?";
+		if the player consents:
+			say "     Hoping that you're ready for this, you give the big guy's shoulder a firm shake, telling him to get up.  As he starts to rise, he asks you what the rush is and you tell him that you're going back to deal with the oni lair and that he's coming with you.  He staggers back at this and starts to protest, but you emphasize that the problem's only going to get worse if something isn't done about it soon.  And if he doesn't confront his fear of the oni, he'll also fear himself and never fully feel he's in control of his new self.";
+			say "     Reluctantly forced to agree, he takes a deep breath, summons up his courage and heads out with you into the city again, this time returning to the Capitol District where you first found him.";
+			say "[onilairassault]";
+		otherwise:
+			say "     Deciding that you have more pressing matters, you put off the problem for another time.";	
+	otherwise if hp of Hayato is 16 or hp of Hayato is 19 or hp of Hayato is 21 or hp of Hayato is 30:
 		say "[one of]'My grandmother used to tell me tales of the fearsome oni.  You have made my being cursed to be one less terrible.'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand.  'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is overrun with a mad lust, but it seems it does not have to as I once thought.  The chastity device helped me gain control of it, but now it is good to be free of the infernal thing,' he says, a hand rubbing his groin with a lustful grin.[or]'I do not wish to become a monster like the rampaging oni I encountered.  I hope you'll continue to help me deal with this transformation,' he says with a lustful grin, loincloth brushed aside to stroke his cock meaningfully.[or]'I was trying so hard to contain my urges when I should have just found someone to help me let them out in a controlled manner.'[or]'I am glad to be away from that [']cave['] of mine.  It is easier to feel that some of me is still human in a place like this,' he says, looking around the bookshelves.[or]'That shop where I found the medieval chastity belt is quite mysterious.  Be careful what deals you make in there.  If what you say is true, I might have ended up sold off to anyone who'd bought the key.  Thankfully, you are the one who [']bought['] me,' he says with a playful grin.[or][if ( the number of booked people + number of bunkered people ) is 2]'I prefer staying up here out of the way.  That way, I don't upset your friend with my appearance[otherwise if ( the number of booked people + the number of bunkered people ) > 2]'I prefer staying up here out of the way.  That way, I don't upset the others with my appearance[otherwise]'I prefer staying up here out of the way.  That way I can be out of the way and read in peace[end if].  It also means I'm free to relax and get some relief if I need it,' he adds with a grin and a stroke across his semi-hard cock.[at random]";
-	otherwise if hp of Hayato is 17 or hp of Hayato is 18:	[***]
+	otherwise if hp of Hayato is 17 or hp of Hayato is 18:
 		now hp of Hayato is 19;
 		say "     Seeing Hayato has reminded you of having seen another red oni running around in the city.  Deciding to bring it up, you describe what happened and ask for his opinion.  As you relate the events to him, his expression grows increasingly sour - though he sounds more sad than angry when he speaks.";
-		say "     'From your description, it doesn't seem to be the one that changed me.  That one was even larger than I am now, so you probably met one of its many victims.  As I'd said, the oni I encountered that night was rampaging and raping wildly.  I expect many of its victims have ended up as demon ogres like myself, though wild and out of control.'  He grows silent for a while, pondering the matter.  'The fact that they're only appearing now leads me to believe that they have some form of [bold type]oni lair[roman type] from which they've only recently emerged.  I expect the larger one, probably their leader now, will be there as well.'  He voice grows both angrier and more fearful upon mentioning the monster who caused his transformation.";
-		say "[bracket]Continuation of quest to come later - the Mgmt.[close bracket]";
-[		now Oni Lair is unresolved;	]
+		say "     'From your description, it doesn't seem to be the one that changed me.  That one was even larger and more fearsome than I am now, so you probably met one of its many victims.  As I'd said, the oni I encountered that night was rampaging and raping wildly.  I expect many of its victims have ended up as demon ogres like myself, though wild and out of control.'  He grows silent for a while, pondering the matter.  'The fact that they're only appearing now leads me to believe that they have been in some form of [bold type]oni lair[roman type] from which they've only recently emerged.  I expect the larger one, probably their leader now, will be there as well.'  He voice grows both angrier and more fearful upon mentioning the monster who caused his transformation.";
+		say "     'You should keep an eye out for it and for them, if nothing more than to avoid stumbling into their home while you're exploring the city.  I don't think [if level of player >= 18]even [end if]you could deal with them all on your own.'  You nod in agreement, silence following as you both ponder the matter.  Hayato seems despondent after your conversation, though some sex might cheer him up.";
+		now lastfuck of Hayato is turns + 8;
+		now Oni Lair is unresolved;
+	otherwise if hp of Hayato is 20:
+		say "     Seeing Hayato has reminded you that you'd located the oni lair and so you sit down to discuss the matter with him.  You describe what you saw, including the rather grisly entrance.  He gets quite disturbed by this, momentarily angry enough to smash a nearby chair with his club before reining in his anger.";
+		say "     'I am sorry about that,' he says, relinquishing his club and bowing his head in apology.  'It upsets me to think what the oni are doing - and that I could very well have been like them.  But I do not know what can be done about them.  You should also remember, oni are often depicted as solitary creatures, living in mountain caves or other remote lairs.  If they are indeed in those ruins, then the great oni is likely there, ruling over them.'  Fear creeps back into his voice, still scared of the monstrous oni that attacked him.";
+		if cocks of player is 0 and cunts of player is 0:
+			say "     Seeing how you lack a gender of your own at present, you find it hard to work up the gumption to go deal with the problem right away, if at all.  Perhaps you should do something about your neutered state first.";
+			now hp of Hayato is 21;
+		otherwise:
+			say "     How shall you respond?  Shall you prompt him to confront his fear and join you in an [link]assault on the lair (1)[as]1[end link], tell him to [link]wait (2)[as]2[end link] and mentally prepare himself to face his fears or remind him that he's safe now and [link]forget it (3)[as]3[end link].";
+			now calcnumber is -1;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				say "     Feeling that you have to strike while the iron's hot, you give the big guy's shoulder a firm shake, telling him to get up.  As he starts to rise, he asks you what the rush is and you tell him that you're going back to deal with the oni lair and that he's coming with you.  He staggers back at this and starts to protest, but you emphasize that the problem's only going to get worse if something isn't done about it right away.  And if he doesn't confront his fear of the oni, he'll also fear himself and never fully feel he's in control of his new self.";
+				say "     Reluctantly forced to agree, he takes a deep breath, summons up his courage and heads out with you into the city again, this time returning to the Capitol District where you first found him.";
+				say "[onilairassault]";
+			otherwise if calcnumber is 2:
+				say "     Not wanting to rush out the door right now, but feeling that Hayato should face this at some point, you suggest that he start mentally preparing himself in case an opportunity to deal with the matter arises.  You add that the problem will only get worse if something isn't done about it.  The oni will continue their rampage and will just grow in numbers if something isn't done about it.  He isn't pleased to hear it, but he nods, knowing you're right.  He calms himself and tries to meditate, focusing himself for the eventual assualt.";
+				now hp of Hayato is 21;
+			otherwise if calcnumber is 3:
+				say "     Wanting to put the big guy at ease, you pat his shoulder and tell him to not worry about it.  You remind him that he's safe here and just has to wait for rescue comes.  Reassuring him that the military can deal with it when they arrive, you let him know that you'll be avoiding the area as well.  Your reassurances help put him at ease.  You likely won't have to worry about the matter any further.";
+				now hp of Hayato is 30;
+
 
 
 Part 3 - I Can Haz Sexy Oni?
@@ -403,8 +435,126 @@ when play begins:
 	add Oni Lair to badspots of hellspawn;
 
 instead of resolving Oni Lair:
-	say "***To be added later.";
+	if debugactive is 1:
+		say "DEBUG -> hp of Hayato: [hp of Hayato] <- DEBUG[line break]";
+	if hp of Hayato is 19:
+		say "     As your exploration takes you towards a collapsed office tower, you notice several odd things about it.  The building has fallen onto its side and is largely ruin, having taken out several other buildings during its fall.  This isn't too strange in and of itself, as several skyscrapers in this area were similarly knocked down during the eruption and quake, but the first few floor are mostly intact... you think.  It is difficult to be certain, as it appears that concrete rubble has been piled up in front of the windows.  Whether this was done to fortify the building or to block outside scrutiny is unclear, but it is definitely would have taken an exceptional feat of strength to do so.";
+		say "     Since the building fell forward, the front entrance is blocked and buried by the tower's rubble.  Knowing there has to be a way in since it's sealed up from the inside, you start to circle around the building in search of it.  As you move around the back, a disturbing sight comes into view.  The parking garage ramp has been converted into a gruesome entrance, lined with skulls (human and otherwise) on poles and littered with scraps of bones and cloth.  The yawning mouth into darkness is like the cave of some monster's lair.  Realizing what you've found is probably the lair of the oni creatures, you start to back away quickly, hoping you can get away unnoticed.";
+		attempttowait;
+		let bonus be (( perception of player minus 10 ) divided by 2 );
+		let fbonus be 0;
+		if "Bad Luck" is listed in feats of player, decrease fbonus by 2;
+		if "Curious" is listed in feats of player, decrease fbonus by 1;
+		if "Wary Watcher" is listed in feats of player, increase fbonus by 1;
+		if "Stealthy" is listed in feats of player, increase fbonus by 1;
+		if "Experienced Scout" is listed in feats of player, increase fbonus by 1;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]+[fbonus]: [dice + bonus + fbonus]: ";
+		if bonus + dice is greater than 15:
+			say "     As you're slipping away from the building, your suspicions are confirmed when you look behind you to see one of the red ogres emerging from an alleyway.  Taking cover among the rubble, you wait for it to move past and descend into its lair before making your escape.";
+			increase score by 10;
+			increase morale of player by 1;
+		otherwise:
+			say "     As you're slipping away from the building, you are too focused on the cavernous entrance.  You end up moving into full view of a red oni emerging from an alleyway on its way back to the lair.  The demon ogre grins evilly at the prospect of one last victim before returning to its cave-like lair.";
+		challenge "Red Oni";
+		if fightoutcome >= 10 and fightoutcome <= 19:				[WIN]
+			say "     Defeating the oni sends it back into its lair, snarling angrily.  Knowing this will bring the wrath of its brethren upon you, you make haste to get away from here as quickly as possible.  Now that you know where their lair is, you should probably talk to Hayato about it.";
+		otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[LOSE]
+			say "     After the red oni is done with you, he drags you to the entrance of the lair.  At first, you fear (anticipate?) being dragged inside and assaulted by the whole of oni tribe, but are instead tied up to a large piece of rubble just outside.  Your sticky, messy body is left there for its brethren to use as they return and as a warning to others who get too curious about the ruins.  Once your captor is out of sight inside, you struggle against your bonds and are thankfully able to free yourself before any more of those creatures come home and find you there.";
+		otherwise:													[FLEE]
+			say "     You manage to slip past the red oni and make a break for it.  It snarls angrily at you, but rather than pursue you, it turns and rushes towards the ruins.  It calls for its brethren to take up the hunt as you reach the alley and push yourself all the harder to get away.  You don't stop running until you get all the way back to the area around those rusty walkways.";
+			move player to Rusty Walkways;
+		now hp of Hayato is 20;
+	otherwise:
+		say "ERROR-Hayato-[hp of Hayato]E: This event (Oni Lair) should be closed at this time!";
 	now Oni Lair is resolved;
+
+
+Section 5 - Assaulting the Oni Lair
+
+to say onilairassault:
+	now inasituation is true;
+	say "     Your journey back to the devastated area around the Capitol building is thankfully peaceful, probably having the formidable oni by your side has encouraged the other creatures to keep their distance.  As you walk with Hayato, you try to talk with him to encourage him along, but he remains nervous.  It is clear that he's still worried about his self-control.  Knowing that he will need to be braver if this is to succeed, you tell him to man up and just draw strength from his new body.  Continuing to hide from it won't help him now and that he'll need to fight them - oni to oni.  He grumbles a little at this, but nods.  With further encouragement, he does his best to stand tall by your side as you march up to the gates of the oni lair.";
+	say "     The entrance to the oni lair is foreboding, with the grisly signs of the creature's warning totems on display before it.  But added to that are a pair of muscled oni just inside.  Clearly standing guard, they snarl and march out as you both arrive.  They growl and laugh roughly as they emerge.";
+	attempttowait;
+	say "     'What is this, another of our kind come to join the Great Oni's clan?  You are right to come here.  The clan grows strong and soon we will spread and crush the gnats of this city,' he laughs, speaking to Hayato.";
+	say "     'Yes, they are right to fear our wrath and shall fall before us.  Join us and share in the spoils,' the other adds.";
+	say "     'And you bring an offering for us - a toy to play with.'";
+	say "     'Or perhaps a meal,' the second suggests, eyeing you with a more mundane and deadly hunger.";
+	say "     Hearing you threatened, something snaps in Hayato and he growls.  'No, this is my friend.  You will not harm [if cunts of player > 0]her[otherwise]him[end if], or anyone!'  And with that, he's charging forward, club raised.  You rush to join him in battle, each taking on one of the guards.";
+	[***]
+	say "     'It's too bad the Great Oni and the rest of the clan are out on a picnic.  Still, we can more than kick your asses.'  'Yeah!'";
+	say "[bracket]Full version of Oni Lair to come later.  Enjoy step 1 for now. - the Mgmt[close bracket][line break]";
+	attempttowait;
+	now hp of Hayato is 97;
+	challenge "Red Oni";
+	if fightoutcome >= 10 and fightoutcome <= 19:				[WIN]
+		say "     Your final blow causes your foe to stumble back, slumping against one of the boulders of rubble.  Knocking its head against the concrete, it falls unconscious.  Looking over to check on your companion, you find Hayato having already beaten his foe.  Not stopping there, Hayato has the defeated oni pinned with his face to the ground and his meaty ass in the air.  He's giving the guard a thorough plowing, driving his throbbing rod into his ass again and again.  The creature growls angrily, but he's also quite hard and panting as that thick, crimson cock fucks him hard.";
+		say "     Seeing you done with your foe, your companion slaps the oni's ass.  'Nggg.  Get over here and [if cocks of player > 0]stuff this fool's mouth[otherwise]put this fool's mouth to use[end if].'  The sight of Hayato allowing himself to let loose and take a dominant role is quite arousing.  Shall you join him in teaching this brute a hard lesson?";
+		if the player consents:
+			if cocks of player > 0:
+				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be force-fed your [cock of player] cock.  Grabbing him by the horns, you pull his face to your crotch.  When a particularly hard thrust from Hayato has him cry out, you thrust your [cock size desc of player] shaft into his mouth[if cock length of player > 9] and down his throat.  Your would-be assailant sets himself to licking and sucking your [cock of player] rod right away, though he continues to growl and struggle.  And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
+				say "     'Show some respect to your betters and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection.  'I want to see you sucking harder.'  Between the assault on both fronts and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
+				say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe.  When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your head and pulling your face forward into a forceful kiss.  His tongue delves into your mouth and this last thing is enough to push you over the edge into orgasm, feeding your hot [cum load size of player] load down the demon ogre's throat.  When you're all finished, the oni beneath you is left too worn out from his struggles and the buggering and passes out.";
+			otherwise:
+				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be forced to eat out your [cunt size desc of player] cunt.  Grabbing him by the horns, you pull his face to your crotch.  When a particularly hard thrust from Hayato has him cry out, you grind your pussy against his face, leaking your juices onto his tongue.  Your would-be assailant sets himself to licking and sucking your juicy snatch right away, though he continues to growl and struggle.  And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
+				say "     'Show some respect to your betters and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection.  'I want to see you licking faster.'  Between the assault on both fronts and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
+				say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe.  When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your head and pulling your face forward into a forceful kiss.  His tongue delves into your mouth and this last thing is enough to push you over the edge into orgasm, soaking the other demon ogre's face in your juices.  When you're all finished, the oni beneath you is left too worn out from his struggles and the buggering and passes out.";
+		otherwise:
+			say "     Hayato gives a bit of a growl when you don't come over to join him and focuses his disappointment into fucking him fallen foe all the harder.  Grabbing him by one of the horns, the demon ogre's made to look at you.  'You see that, scum.  [if cunts of player > 0]She[otherwise]He[end if] doesn't even want to have anything to do with a wretch like you.'  The defeated guard growls and snarls back even as he's buggered roughly by the more powerful oni.  And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
+			say "     'Show some respect to your better and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection.  Between being fucked by Hayato and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
+			say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe.  When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your around the waist and pulling you into a forceful kiss.  His tongue delves into your mouth even as he floods his foe's ass with his hot load.  Once the victorious oni's done and pulled his cock free, the oni beneath him is left too worn out from his struggles and the buggering and passes out.";
+[		***beat them, adventure continues.";	]
+		attempttowait;
+		say "     When you and Hayato venture inside, you find that the two guards were indeed telling the truth.  It seems the rest of the oni aren't here right now.  There's the remains of sandwich fixing, open packets of drink mix and the plastic wrapper for a picnic basket.  You're strangely disappointed at having missed them, but relieved as well.  Certainly Hayato's seeming much more confident for having gone face to face with his infection.  You gather up the remaining supplies you can salvage from the mess and head back to the bunker together.";
+		[*** say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss.  'Mmm... I'm feeling so much better after all that.  That felt so good to take charge like that and take what I wanted.'  He gives your ass a firm squeeze and grinds his crotch against you side, throbbing with growing need.  'From now on, we'll do things my way,' he adds with a lustful growl.";	***]
+		say "     Upon your return, Hayato pulls you into his arms and gives you another lustful kiss.  'Mmm... I feel much better for that.  It felt so good to take charge like that and take what I wanted for a change.'  He gives your ass a pat and grinds his crotch against your side with a smile.  'Perhaps I might try it again sometime soon.'";
+		say "[bracket]Dominant Hayato content to come later.  Please enjoy the normal scenes for now. - the Mgmt[close bracket][line break]";
+		increase carried of food by 2;
+		increase score by 20;
+		now lastfuck of Hayato is turns + 8;
+[		now hp of Hayato is 50;	***]
+		now hp of Hayato is 30;
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[LOSE]
+		say "     While Hayato was winning his fight against the one oni, getting double-teamed after you've gone down becomes too much for him and he's forced to the ground.  You're pulled over beside him and the two guards take turns fucking you both.  After that, you and Hayato are made to fuck each other for the amusement of the other two guards.  By this point, you've both lost your senses, becoming more and more into monstrous oni like the two big, sexy ogres spraying their seed across your rutting bodies.";
+		say "[onilairlost1]";
+	otherwise:													[FLEE]
+		say "     You turn to make your escape and head as quickly as you can away from the oni lair.  Glancing back, you see Hayato look at you in surprise as you flee.  Taking advantage of the opportunity, his weakened foe leaps atop him and they start wrestling on the ground.  The third oni, having lost his opponent, joins in with a growl.  Taking one last look from the alleyway, you watch as the fight concludes and turns into a roughhousing threesome.  You're no longer able to tell which of them is which.  Regardless, it's clear that Hayato's lost himself to the infection.";
+		now hp of Hayato is 98;
+		remove Hayato from play;
+		move player to Rusty Walkways;
+	now inasituation is false;
+
+
+to say onilairlost1:
+	now hp of Hayato is 96;
+	setmonster "Red Oni";
+	choose row monster in table of random critters;
+	now tailname of player is "Red Oni";
+	now facename of player is "Red Oni";
+	now skinname of player is "Red Oni";
+	now bodyname of player is "Red Oni";
+	now cockname of player is "Red Oni";
+	attributeinfect;
+	now tail of player is tail entry;
+	now face of player is face entry;
+	now skin of player is skin entry;
+	now body of player is body entry;
+	now cock of player is cock entry;
+	if hellHoundLevel is 0:
+		follow the sex change rule;
+		follow the sex change rule;
+	if libido of player < libido entry, now libido of player is libido entry;
+	attempttowait;
+	end the game saying "Reduced to wild oni, you join the Great Oni's clan.";
+	now battleground is "void";
+	wait for any key;
+	now skipturnblocker is 1;
+	follow the turnpass rule;
+	stop the action;
+
+
+
 
 
 [ hp of Hayato                ]
@@ -422,7 +572,16 @@ instead of resolving Oni Lair:
 [ 17 = Red Oni w/Hayato saved ]
 [ 18 = 2nd reminder           ]
 [ 19 = Discussed Red Oni      ]
-
+[ 20 = Found Oni Lair         ]
+[ 21 = Discussed Oni Lair     ]
+[...]
+[ 30 = No to assault          ]
+[...]
+[ 50 = Dominant Hayato        ]
+[...]
+[ 96 = Defeated @ Oni Lair    ]
+[ 97 = @ Red Oni Lair         ]
+[ 98 = Hayato abandoned       ]
 [ 99 = Hayato attacked        ]
 [ 100 = Red Oni w/o Hayato    ]
 
