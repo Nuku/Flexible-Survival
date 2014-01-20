@@ -32,18 +32,7 @@ Instead of resolving a Arts Department:
 
 Section 3 - Phi Iota Gamma
 
-Frat House is a situation.  The level of Frat House is 3.
-The sarea of Frat House is "Campus";
-when play begins:
-	add Frat House to badspots of girl;
-	add Frat House to badspots of furry;
-
-Instead of resolving a Frat House:
-	say "     Exploring the edge of campus, you can hear the raucous sounds of drunken partying happening nearby.  Approaching cautiously, you find a large frat house with numerous boars, hogs and sows partying out on the lawn.  All of them are carousing with beer in hand or lustfully fucking one another, or both.  Despite the messy state of the pigs, there's something tempting about their carefree partying that draws your attention to watch.  You find yourself a little too drawn to watch a well-hung hog fucking a squealing sow and fail to notice one of the messy pigs sneaking up on you.  With a lustful squeal, she charges, trying to force herself onto you.";
-	challenge "Messy Pig";
-	say "     That over, you decide to leave before the others have a chance to investigate the commotion, leaving the Phi Iota Gamma fraternity behind."; 
-	now Frat House is resolved.
-
+[moved and expanded within the PIG Frat file.]
 
 Section 4 - Languages Department
 

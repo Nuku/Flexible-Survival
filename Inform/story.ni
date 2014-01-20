@@ -5978,6 +5978,7 @@ Include Campus For Fs by Stripes.
 Include Urban Forest For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Equinoid Camp For FS by Stripes.
+Include PIG Frat by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
@@ -6292,7 +6293,7 @@ Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
-Include Orc By Wahn.
+Include Orc by Wahn.
 
 
 [NPCs]
