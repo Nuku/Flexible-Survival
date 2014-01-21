@@ -65,11 +65,7 @@ to say haleventfight:
 	say "     As you wait for the dust to clear, you think over what just happened, realizing that the demon's blows were all wide.  Either he had very poor aim or he wasn't trying to hit you, but instead just looking to scare you off.  Regardless, he certainly fled rather than fight you.  You ponder what just happened as you attempt to search the rubble for anything that might have survived, but it is difficult work and only yields a small pack of cookies which is intact.";
 	increase carried of chips by 1;
 	now hp of Hayato is 99;
-	setmonster "Red Oni";
-	choose row monster from the table of random critters; 
-	if name entry is "Red Oni":
-		now area entry is "Capitol";
-		now non-infectious entry is false;
+	unleashredoni;
 	now Garage Demon is resolved;
 
 
@@ -244,11 +240,7 @@ to say sexwithHayato:
 		move player to Grey Abbey 2F;
 		now hp of Hayato is 16;
 		increase score by 25;
-		setmonster "Red Oni";
-		choose row monster from the table of random critters; 
-		if name entry is "Red Oni":
-			now area entry is "Capitol";
-			now non-infectious entry is false;
+		unleashredoni;
 	otherwise if hp of Hayato >= 16:	[***]
 		say "[hayatosexmenu]";
 
@@ -515,6 +507,7 @@ to say onilairassault:
 		now lastfuck of Hayato is turns + 8;
 [		now hp of Hayato is 50;	***]
 		now hp of Hayato is 30;
+[	***temporarily resetting from 30 to 20 during save word - remove that once fully live ]
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[LOSE]
 		say "     While Hayato was winning his fight against the one oni, getting double-teamed after you've gone down becomes too much for him and he's forced to the ground.  You're pulled over beside him and the two guards take turns fucking you both.  After that, you and Hayato are made to fuck each other for the amusement of the other two guards.  By this point, you've both lost your senses, becoming more and more into monstrous oni like the two big, sexy ogres spraying their seed across your rutting bodies.";
 		say "[onilairlost1]";
@@ -553,9 +546,12 @@ to say onilairlost1:
 	follow the turnpass rule;
 	stop the action;
 
-
-
-
+to unleashredoni:
+	setmonster "Red Oni";
+	choose row monster from the table of random critters;
+	if name entry is "Red Oni":
+		now area entry is "Capitol";
+		now non-infectious entry is false;
 
 [ hp of Hayato                ]
 [ 0 = Not met                 ]
