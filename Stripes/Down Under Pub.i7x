@@ -81,12 +81,9 @@ to say down under pub scene:
 				break;
 		let rooness be 0;
 		say "     Returning to the pub again, you smile to the barmaid as you enter and give her rear a pat before taking a seat.  The barman grunts a little, but seeing your friendliness with his server, lets it slide.  Looking around, a few faces seem familiar from the crowd, but it's mostly a new group of roos today.  There must be quite a few of them around, you conclude.  This makes you smile, rather enjoying your new body now that you're in the company of all these boomers and jills.  Speaking of, you giving the server a lusty kiss as she comes over with your food and drink.";
-		if a random chance of 3 in 10 succeeds:
+		if a random chance of 3 in 7 succeeds:
 			increase rooness by 1;
-			if cocks of player > 0:
-				say "     It seems luck's on your side this time, as she's got a few minutes to spend with you and she's under the table, licking and sucking at your cock eagerly.  You moan in pleasure and rub her ears as her long muzzle bobs over your meaty shaft.  Once you're nice and slick, she's up again and into your lap for a ride.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Taking her strong roo legs in your hands, you raise them up high so everyone gets a good view of your cock plowing into her.  Getting in on the show, she fondles her bosom and holds one of her breasts up so she can lick her nipple slowly.  Turned on by showing off your lover to the others, you have a very enjoyable fuck before shooting your hot load into her.  Setting her back down, you give her another kiss and pat on the rear to send her back to her duties.";
-			otherwise:
-				say "     It seems luck's on your side this time, as she's got a few minutes to spend with you and she's under the table, licking and lapping at your pussy eagerly.  You moan in pleasure and rub her ears as her tongue dives into you again and again.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Patting her side and turning in your seat, you raise one of your powerful roo legs high, spreading yourself.  Getting in on the fun, she nibbles and kisses along your thighs so the others can get a peek at your dripping snatch before she dives back into eating you out.  With her own tail raised high and her fingers in her snatch, she fingers herself wildly, much to the crowd's delight.  Turned on by showing off your lover to the others, you have a very enjoyable time before finally cumming hard and soaking her muzzle in your juices.  Setting her back down, you give her another kiss (which tastes of you) and pat on the rear to send her back to her duties.";
+			say "[gillianpubfun]";
 		attempttowait;
 		say "     After your meal, you hang out and chat with a bunch of the sexy kangaroos.  After some arousing carousing, you find yourself feeling in the mood for some fun.  Drunk, aroused and caught up in the moment as you are, you offer yourself up to the sexy roo beside you.  You snuggle up close to the roo, fondling them as you kiss.";
 		let randomroos be { 1 };					[manly boomer]
@@ -102,7 +99,7 @@ to say down under pub scene:
 		if entry 1 of randomroos is 5, say "[roopubsex5]";
 		now lastpubvisit is turns;
 		increase rooness by 1;
-		if a random chance of 1 in 5 succeeds and rooness is not 2:			[conversion show]
+		if a random chance of 2 in 5 succeeds and rooness is not 2:			[conversion show]
 			wait for any key;
 			say "[roofloorshow]";
 			now lastpubvisit is turns - 8;			[wait extra day after a tf show]
@@ -132,6 +129,39 @@ after navigating Sweet Tooth:
 
 
 Section 3 - Various sex scenes
+
+Gillian is a woman.	[details to come later]
+
+to say gillianpubfun:
+	if the remainder after dividing libido of gillian by 3 is:
+		-- 0:
+			if cocks of player > 0:
+				say "     It seems luck's on your side this time, as [if hp of Gillian < 4]she's[otherwise]Gillian's[end if] got a few minutes to spend with you and she's under the table, licking and sucking at your cock eagerly.  You moan in pleasure and rub her ears as her long muzzle bobs over your meaty shaft.  Once you're nice and slick, she's up again and into your lap for a ride.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Taking her strong roo legs in your hands, you raise them up high so everyone gets a good view of your cock plowing into her.  Getting in on the show, she fondles her bosom and holds one of her breasts up so she can lick her nipple slowly.  Turned on by showing off your lover to the others, you have a very enjoyable fuck before shooting your hot load into her.  Setting her back down, you give her another kiss and pat on the rear to send her back to her duties.";
+			otherwise:
+				say "     It seems luck's on your side this time, as [if hp of Gillian < 4]she's[otherwise]Gillian's[end if] got a few minutes to spend with you and she's under the table, licking and lapping at your pussy eagerly.  You moan in pleasure and rub her ears as her tongue dives into you again and again.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Patting her side and turning in your seat, you raise one of your powerful roo legs high, spreading yourself.  Getting in on the fun, she nibbles and kisses along your thighs so the others can get a peek at your dripping snatch before she dives back into eating you out.  With her own tail raised high and her fingers in her snatch, she fingers herself wildly, much to the crowd's delight.  Turned on by showing off your lover to the others, you have a very enjoyable time before finally cumming hard and soaking her muzzle in your juices.  Setting her back down, you give her another kiss (which tastes of you) and pat on the rear to send her back to her duties.";
+		-- 1:
+			say "     Luckily for you, [if hp of Gillian < 4]she's[otherwise]Gillian's[end if] got a few minutes between her duties and chooses to spend them with you.  After a lustful kiss, she pulls you over to a nearby open space by the wall";
+			if cocks of player > 0 and a random chance of 3 in 5 succeeds:
+				say ".  Facing it, she raises her tail and shakes her ass at you, telling you to fuck her hard and fast.  The nearby boomers and jills watch with happy grins as they watch you drive your [cock of player] cock into her juicy cunny[if cock length of player > 30].  It takes some effort, pressing the horny roo right up against the wall to get your [cock size desc of player] shaft fully buried into her, but you manage it in the end[otherwise if cock length of player > 20].  it takes a little added effort to get your [cock size desc of player] shaft all the way into her[end if].  Because she'll need to get back to work, the sex is fast and hard, your hands running over her sexy bod while she pushes back with her powerful hips and squeezes her vaginal walls down around your shaft until you finally cum, filling her with a fresh, creamy load to run down her thighs while she waits the tables.";
+			otherwise:
+				say ".  Leaning back against it, she pushes you down to your knees and moans for you to eat her out.  Knowing she needs it badly, you dive on it.  She runs her hands over your head and keeps you pressed between her strong thighs.  Her succulent pussy is a delicious delight, her juices subtly sweet and heady with her arousal.  You tongue her wet folds while your fingers stroke her pussy all over.  Knowing she'll need to be back to work soon, you drive a pair of fingers into her and frig her juicy box with rapid strokes while sucking on her clit, sending her over the edge.  Her femme cum soaks your face and runs down her thighs, a tantalizing sight for the patrons to see while she waits their tables.";
+		-- 2:
+			say "     Fortunately, [if hp of Gillian < 4]she[otherwise]Gillian[end if] is able to get a few minutes to spend some not-so-private time with you.  While kissing you lustfully";
+			if cocks of player > 0:
+				say ", she gets her furry hands on your [one of][cock of player][or][cock size desc of player][at random] cock and eagerly strokes it to erection.  She gets down on her knees and nuzzles against your manhood before making a show of slowly licking across your glans.  Not wanting to wait any longer, she plunges her muzzle over your throbbing shaft[if cock length of player > 30], doing her best to get your [cock size desc of player] manhood down her throat and her best proves her to be quite the champ, able to take the full of it after only a few attempts[otherwise if cock length of player > 20], putting in the added effort to get your [cock size desc of player] cock into her mouth and down her throat[end if].  She sucks at your shaft like a vacuum while her tongue artfully plays across it";
+				if cunts of player > 0:
+					if cockname of player is listed in infections of internallist:
+						say ".  Your having internal balls leaves her with free access to your juicy pussy, letting her plunge her fingers into your cunny as well";
+					otherwise:
+						say ".  After giving your [ball size] a grope, she shifts her paw's focus to your juicy pussy and plunges her fingers into your cunny";
+				otherwise if cockname of player is not listed in infections of internallist:
+					say ".  As she sucks your throbbing rod, she gropes your balls, eager for the tasty treat inside them";
+				say ".";
+				say "     With her working so hard to get it, it's not long before you're moaning that you're about to cum.  She doesn't let up, having you blast your load into her muzzle and down her throat.  She strokes your shaft even as she eases her muzzle back, pushing the last few drops from your urethra.  Keeping it in her muzzle, she [one of]makes a big production of swallowing it down for the crowd[or]goes over to a nearby [if a random chance of 2 in 3 succeeds]jill[otherwise]boomer[end if] and snowballs your load with them, much to the delight of the crowd[or]lets it drool out over the next plateful of food she's handed, giving some lucky roo some [']secret sauce['] for their burger[cycling].";
+			otherwise:
+				say " she pulls out a double-ended dildo she was somehow concealing.  Referring to it as her [']double-duty['], she brushes the latex toy across your wet folds a few times before easing half of it into you.  Burying your face in her ample bosom, she lowers herself down onto the remainder of the toy with a lustful cry.  She rides that toy for all its worth and her gyrations cause the toy to slide and wriggle around inside you delightfully as well.  The ride is fast and frantic, bringing a quick but powerful orgasm that leaves you panting in your seat.  After withdrawing the toy from you, she gets you to suck on her end of it while she does the same to yours, much to the added delight of the nearby patrons watching the fun.";
+	increase libido of Gillian by 1;
+
 
 to say roopubsex1:
 	say "     The sexy male roo puts his strong arms around you and runs his paws down your back even as your paws find their way to his throbbing cock.  He's quite hard and eager for some fun as well.  The serving girl winks at you as she clears the table, making room for you to be bent over it by the big boomer.  He kneads his paws over your ass and rumbles how he's been looking forward to this since you came in.  He lines up his throbbing shaft with your [if cunts of player > 0]dripping cunt[otherwise]tight pucker[end if] and slowly starts easing his tapered, roo-like cock into you, making you moan in pleasure.";
