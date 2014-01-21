@@ -1,5 +1,5 @@
 Version 3 of Bottlenose Toy For FS by Stripes begins here.
-[Version 3.5 - Tie-in to Bouncy Castle]
+[Version 3.6 - Coded BE scene written by GentlemanB]
 "Adds an Inflatable Dolphin creature to Flexible Survivals Wandering Monsters table"
 
 
@@ -145,6 +145,16 @@ to say losetodolphinflatable:
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 				stop the action;
+		otherwise if ( sex entry is not "Male" or "Breasts" is listed in feats of player ) and "Passing Grade Chest" is not listed in feats of player and "Flat Chested" is not listed in feats of player and bodyname of player is "Bottlenose Toy" and breasts of player > 0 and ( breast size of player < 6 or "One Way" is listed in feats of player ) and a random chance of 2 in 5 succeeds:
+			say ".  She settles herself atop you and runs her decal eyes over your cetacean body, and soon has them focused on your nipples and their plastic air valves.";
+			say "     The dolphin girl smirks down at you slyly while her fin-like hands drift across your [bodytype of player] form, squeaking lightly as the stroke and tease your PVC imitation of [skinname of player] flesh.  A sharp gasp escapes your lips as one hand finds it's way to your chest, [if breast size of player > 0] giving your breast a quick squeeze before[end if] she pinches your inflation nozzle nipple with a giggle.  With your arms bound and the giggling dolphin girl atop you, all you can do is squirm and moan in pleasure as your altered nipples are teased and tweaked endlessly.  Eventually the pinching comes to an end and you are given a moment to catch your breath before the inflatable leans forward to take your altered nipple into her mouth with a mischievous squeak.";
+			say "     Taking a deep breath before wrapping her snout tightly around your inflation nozzle, the dolphin girl begins blowing into your breast, filling your chest with a sudden tightness.  Your PVC flesh creaks and groans as the bottlenose girl continues forcing air into your body, stretching your bosom to new limits.  The sudden influx of air makes you lightheaded and giggly, and by the time she stops to take another breath you've given up resisting completely.  After a quick kiss, the dolphin girl resumes at your other breast, plumping it up to match the first";
+			if breasts of player > 2 and "Bouncy Bouncy" is listed in feats of player:
+				say ".  Your additional breasts are also given the same treatment once your upper pair's been expanded up a cup size";
+			say ".";
+			say "     With her work done, the inflatable girl pauses to grope and play with your newly swollen breasts briefly before she springs up off you.  She deftly slips her towel out from underneath you and wraps it back around herself before running into the water to play and splash around some more.  You are left to explore your new chest and regain clear your head.";
+			increase breast size of player by 1;
+			if ( breast size entry is 4 or breast size entry is 5 ) and breast size of player > breast size entry, increase breast size entry by 1;
 		otherwise if cocks of player > 0:
 			if dolinfloss is 2:	[oral]
 				say ".  She settles herself over your head, pressing her damp slit to your face.  There is an arousing scent to her juices beyond the faint plasticky smell.  Bound as you are, you cannot really get away, not that you're really thinking about that at this point.  You start licking and kissing at her wet pussy, making her giggle merrily.  You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices.  Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue.";
