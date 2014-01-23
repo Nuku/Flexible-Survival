@@ -126,7 +126,14 @@ to say rookickreset:
 	now alt1chance entry is 20;
 
 
-Section 4 - Endings
+Section 4 - Definitions
+
+Definition: a person is redroobodied:
+	if the bodyname of the player is "red kangaroo", yes;
+	no;
+
+
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "red kangaroo":
