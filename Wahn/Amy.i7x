@@ -59,6 +59,7 @@ Version 1 of Amy by Wahn begins here.
 
 
 Amy is a woman. The hp of Amy is usually 0.
+The icon of Amy is Figure of Amy_icon.
 The description of Amy is "[AmyDesc]";
 The conversation of Amy is { "Woof." };
 lastfuck of Amy is usually 555.

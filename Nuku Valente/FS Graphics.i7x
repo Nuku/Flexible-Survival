@@ -21,7 +21,9 @@ Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
 Figure of Adam_icon is the file "Adam.png".
+Figure of Amy_icon is the file "Amy.png".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
+Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
 Figure of David_icon is the file "David.png".
 Figure of Elijah_evil_icon is the file "Elijah_evil.png".
 Figure of Elijah_good_icon is the file "Elijah_good.png".
@@ -105,8 +107,10 @@ carry out artistcredits:
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
+	say "     Amy by Sususmiles @ furaffinity.net[line break]";	
 	say "     Adam by Kadel @ y-gallery.net[line break]";	
 	say "     Brutus by Lay @ y-gallery.net[line break]";
+	say "     Carl by Hufnaar @ furaffinity.net[line break]";	
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
