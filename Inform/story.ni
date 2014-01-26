@@ -6326,6 +6326,7 @@ Include Midnight by Sarokcat.
 Include Harold by Sarokcat.
 Include Kara by Sarokcat.
 Include Janice by Sarokcat.
+Include Kristen by Stripes.
 Include Alex by Nuku Valente.
 Include Hadiya by Kaxin.
 Include Desperate Bunny by Nuku Valente.
