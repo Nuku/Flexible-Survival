@@ -445,15 +445,27 @@ to say LilithSexMenu:
 		now toggle entry is LilithSex rule;
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
-		now title entry is "Threesome with Lilith & Brutus (spit-roast - you fuck her, he gets a BJ)";
+		now title entry is "Threesome with Lilith & Brutus - A";
 		now sortorder entry is 6;
-		now description entry is "Have the succubus suck one of you while the other fucks her.";
-		now toggle entry is LilithSex rule;		
+		now description entry is "Have the succubus suck Brutus while you fuck her from behind.";
+		now toggle entry is LilithSex rule;
 	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
-		now title entry is "Threesome with Lilith & Brutus (you get blown off, he fucks her)";
-		now sortorder entry is 6;
-		now description entry is "Fuck Lilith's face while having Brutus pound her pussy.";
+		now title entry is "Threesome with Lilith & Brutus - B";
+		now sortorder entry is 7;
+		now description entry is "Lie on the bed with Lilith riding your cock while she sucks off Brutus.";
+		now toggle entry is LilithSex rule;
+	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+		choose a blank row in table of fucking options;
+		now title entry is "Use Brutus to dominate Lilith - A";
+		now sortorder entry is 8;
+		now description entry is "Face-Fuck Lilith while Brutus pounds her pussy.";
+		now toggle entry is LilithSex rule;
+	if (cocks of player > 0 and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+		choose a blank row in table of fucking options;
+		now title entry is "Use Brutus to dominate Lilith - B";
+		now sortorder entry is 9;
+		now description entry is "Sandwich her - Brutus impales her on his cock and holds her against his chest while you fuck her pussy.";
 		now toggle entry is LilithSex rule;		
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
@@ -471,17 +483,21 @@ This is the LilithSex rule:
 		if (nam is "Have her blow your cock"):
 			say "[LilithSex1]";
 		if (nam is "Have her lick your pussy"):
-			say "[LilithSex2]";	
+			say "[LilithSex2]";
 		otherwise if (nam is "Eat Lilith out"):
 			say "[LilithSex3]";
 		otherwise if (nam is "Fuck her pussy"):
 			say "[LilithSex4]";
 		otherwise if (nam is "Take Lilith's ass"):
 			say "[LilithSex5]";
-		otherwise if (nam is "Threesome with Lilith & Brutus (spit-roast - you fuck her, he gets a BJ)"):
-			say "[LilithSex6]";			
-		otherwise if (nam is "Threesome with Lilith & Brutus (you get blown off, he fucks her)"):
-			say "[LilithSex7]";				
+		otherwise if (nam is "Threesome with Lilith & Brutus - A"):
+			say "[LilithSex6]";
+		otherwise if (nam is "Threesome with Lilith & Brutus - B"):
+			say "[LilithSex7]";			
+		otherwise if (nam is "Use Brutus to dominate Lilith - A"):
+			say "[LilithSex8]";
+		otherwise if (nam is "Use Brutus to dominate Lilith - B"):
+			say "[LilithSex9]";				
 		wait for any key;
 	now lastfuck of Lilith is turns;
 
@@ -523,7 +539,7 @@ to say LilithSex5:    [Take Lilith's ass]
 	say "     Some time later, you feel the urgent urge to cum rise inside you, making you speed up even more, and soon you pass the point of no return. Driving all the way into Lilith's ass one last time, you gasp loudly as your balls pulse, sending burst after burst of cum deep into the succubus ass. You stay like that for a moment, just standing behind her and holding on to her until you catch your breath. Then you pull out slowly, allowing her to pucker to pull tight again and not even lose a drop of cum. The satisfied demoness turns around, gives you a hot kiss on the lips, then goes to lie on the bed, lounging in an erotic pose.";
 
 to say LilithSex6:    [Spit-Roast her with Brutus]
-	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome.' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she gives her hindquarters a little wiggle and tells you 'Mount up and fuck me - I'll take care of your boy here', reaching up to take hold of Brutus massive manhood with one hand as she does so. While she starts to lick the demon brute's hard shaft, you quickly step up on the bed and get into position, kneeling behind her on the silken sheets.";
+	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she gives her hindquarters a little wiggle and tells you 'Mount up and fuck me - I'll take care of your boy here', reaching up to take hold of Brutus massive manhood with one hand as she does so. While she starts to lick the demon brute's hard shaft, you quickly step up on the bed and get into position, kneeling behind her on the silken sheets.";
 	say "     [WaitLineBreak]";
 	say "     Leaning forward, you reach around her to cup the demoness[apostrophe] full and firm breasts, giving them a good grope before letting your hands wander down her curvy body. Soon arriving at her very shapely behind, you knead her shapely buttcheeks for a moment, then move on and softly brush your hand over her nether lips. Lilith gives a lust-filled moan as you touch her sensitive folds, then spread them apart a bit and slip a finger into her warm and very wet pussy. She looks over her shoulder, a hungry look underlying her seductive demeanour, and says 'I need a cock inside me - now! Fuck me, lover-boy.' At that command, your hips almost move forward on their own, causing your hard manhood to bump against her crotch. Moving a tiny bit to let your cock find its mark, you then mount the irresistible demoness, driving your shaft into her in one deep stroke. A gasp escapes your lips as you feel her pussy tightly gripping your manhood and you start to fuck her with rapid thrusts.";
 	say "     Having sex with this succubus is almost incomparable with other females, as she does and feels exactly how you like it, how you need it, her demonic powers making her the perfect woman to fuck. Gripping your shaft with her pussy, rubbing her hips back against you, even stroking your body with the sides of her wings, she's got you totally in her power. And all the while she's also taking care of Brutus too, sucking on his massive cock and even managing to deep-throat him, making your demon companion pant and grunt in lust and arousal. It's no big surprise that, with her masterful skill as a sex demon, she manages to push the both of you over the edge to explosive orgasms at the same time, your cock pulsing with blast after blast of cum you shoot into Lilith's womb while Brutus grunts and pumps his massive load directly into Lilith's stomach.";	
@@ -536,13 +552,37 @@ to say LilithSex6:    [Spit-Roast her with Brutus]
 			now LilithPregnancy is 1;					[invisibly pregnant]		
 
 to say LilithSex7:    [Threesome with Brutus]
-	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome.' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she gives her hindquarters a little wiggle and tells you 'Mount up and fuck me - I'll take care of your boy here', reaching up to take hold of Brutus massive manhood with one hand as she does so.";
+	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she stands up and brushes against you with her whole body, wrapping her arms around you and giving you a breathtakingly hot kiss. After coming back up for air, she then turns the two of you around a bit, softly pushing against your chest to make you fall onto the bed. Saying 'Just lie back and enjoy, I'll take care of you and your boy here' the succubus looks down on you while stroking Brutus shaft with one hand.";
 	say "     [WaitLineBreak]";
-	say "     But you have some other plans for her right now... it only takes a quick command to have the demon brute pick Lilith up and flip her around, landing on her back with spread legs. Her eyes flare up in anger about being disobeyed, though the start of a complaint about this is drowned out by her own pants and moans as Brutus thrusts his hard shaft into her pussy, stretching it tight around his massive girth. While your demon [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] starts fucking the succubus with unrestrained lust, you quickly climb on top of the bed - and her. Kneeling over Lilith with your legs left and right of her chest, you hold out your erect manhood and pull her mouth onto it mid-moan. Even though you thoroughly derailed her plans for this threesome, she nevertheless instantly starts sucking on your cock, proving that sating her lusts trumps any feelings of annoyance in this succubus.";
+	say "     Pulling Brutus with her to stand just between your legs dangling over the side of the bed, Lilith climbs on top of you and gently lowers herself on your stiffly standing erection. The warm and tight wetness of her pussy feels amazing around your shaft, making you throw back your head and moan loudly in lust. After getting into a nice little rhythm of fucking herself on your cock, she leans forward and starts jerking off the waiting demon brute at the same time, then soon moves on to blowing his massive manhood.";
+	say "     Having sex with a succubus is almost incomparable with other females, as she does and feels exactly how you like it, how you need it, her demonic powers making her the perfect woman to fuck. Gripping your shaft with her pussy, sliding up and down on your hard pole, even gently wrapping her tail around your arm as you feel up her shapely ass, she's got you totally in her power. And all the while she's also taking care of Brutus too, sucking on his massive cock and even managing to deep-throat him, making your demon companion pant and grunt in lust and arousal. It's no big surprise that, with her masterful skill as a sex demon, she manages to push the both of you over the edge to explosive orgasms at the same time, your cock pulsing with blast after blast of cum you shoot into Lilith's womb while Brutus grunts and pumps his massive load directly into Lilith's stomach.";	
+	if LilithPregnancy is 0:              [not already preggers]
+		let LilithPregChance be a random number from 1 to 20;  	
+		if LilithPregChance > 5:            [75% chance]
+			now LilithPregCounter is 48;      [48 turns till birth] 
+			now LilithPregnancy is 1;					[invisibly pregnant]	
+	
+to say LilithSex8:    [Brutus pounds her pussy, you fuck her mouth]
+	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she gives her hindquarters a little wiggle and tells you 'Mount up and fuck me - I'll take care of your boy here', reaching up to take hold of Brutus massive manhood with one hand as she does so.";
+	say "     [WaitLineBreak]";
+	say "     But you have some other plans for her right now... it only takes a quick command to have the demon brute pick Lilith up and flip her around, landing on her back with spread legs. Her eyes flare up in anger about being manhandled though the start of a complaint about it is drowned out by her own pants and moans as Brutus thrusts his hard shaft into her pussy, stretching it tight around his massive girth. While your demon [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] starts fucking the succubus with unrestrained lust, you quickly climb on top of the bed - and her. Kneeling over Lilith with your legs left and right of her chest, you hold out your erect manhood and pull her mouth onto it mid-moan. Even though you thoroughly derailed her plans for this threesome, she nevertheless instantly starts sucking on your cock, proving that sating her lusts trumps any feelings of annoyance in this succubus.";
 	say "     Fucking Lilith's face, you revel in her soft lips around your shaft and the long tongue teasing your manhood. The grunts and growls of Brutus from behind you as he pounds her pussy make this all the more sweet in a constant reminder that you're in control this time, with her being shafted by his massive cock on your orders. Making the succubus deep-throat you, lick your balls and suckle on your cockhead is quite a bit of fun, and you can feel the urge to cum rise inside you before much longer. As you do so, you decide to switch things up a bit, pulling out of her mouth and scooching a bit down over her body to rub your shaft against her breasts. Putting it just between them, you take hold of Lilith's ample globes and push them against your prick, then thrust in and out between them. Close as you already were, it's just a matter of time before you reach the point of no return and come, moaning loudly as your cum shoots out to splatter Lilith's neck, face and hair.";
 	say "     [WaitLineBreak]";	
-	say "     Satisfied, you get off the succubus, smiling as you sit back and watch Brutus fuck her hard and deep, with her hands gripping the sheets tightly each time his massive manhood plunges in. After some more pretty intense pounding, he too reaches his goal, orgasming with a roar and pumping an insane amount of cum into Lilith. You're almost spell-bound to watching his cock and balls pulse again and again, wondering when it might end as Lilith's belly starts to bulge more and more. Finally, when she's got about the 'baby-bump' of a three months pregnant woman, the demon pulls out of her, accompanied by a gush of cum from her stretched passage. With a last look at the cum-splattered form of the succubus on the bed, you get up and collect your clothes.";
-	
+	say "     Satisfied, you get off the succubus, smiling as you sit back and watch Brutus fuck her hard and deep, with her hands gripping the sheets tightly each time his massive manhood plunges in. After some more pretty intense pounding, he too reaches his goal, orgasming with a roar and pumping an insane amount of cum into Lilith. You're almost spell-bound to watching his cock and balls pulse again and again, wondering when it might end as Lilith's belly starts to bulge more and more. Finally, [if LilithPregnancy is 3 or LilithPregnancy is 2]when her already large pregnant belly looks as if she was carrying twins, [otherwise]when she's got about the 'baby-bump' of a three months pregnant woman, [end if]the demon pulls out of her, accompanied by a gush of cum from her stretched passage. With a last look at the cum-splattered form of the succubus on the bed, you get up and collect your clothes.";
+		
+to say LilithSex9:    [sandwich fuck with Brutus]
+	say "     Lilith watches with interest as you strip down and then step up to the bed with your demonic [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] by your side, her eyes wandering over your naked bodies with unrestrained lust. 'So the master is going to allow his pet a little treat? Perfect, I'm just in the mood for a threesome' the succubus says and crawls to the edge of the mattress on all fours, her full breasts swinging attractively as she does so. Then she stands up and brushes against you with her whole body, wrapping her arms around you and giving you a breathtakingly hot kiss. After coming back up for air, she then turns the two of you around a bit, softly pushing against your chest to make you fall onto the bed. Saying 'Just lie back and enjoy, I'll take care of you and your boy here' the succubus looks down on you while stroking Brutus shaft with one hand.";
+	say "     [WaitLineBreak]";
+	say "     But you have some other plans for her right now... it only takes a quick command to have the demon brute pick Lilith up, lifting her off her feet and holding her against his chest with one muscular arm. Her eyes flare up in anger about being manhandled this way, though the start of a complaint about it is quickly drowned out by a shocked gasp as Brutus rubs her shapely behind against his massive cock. Taking hold of his manhood with one clawed hand, he sets its tip against her pucker, [if DBCaptureQuestVar is 5]then slams the succubus down without mercy, howling in savage glee at her pained shout when he impales her on his thick shaft. Without any delay, he then immediately starts to fuck her ass hard and deep, grunting and growling loudly as he thrusts into her[otherwise]then slowly pushes the succubus down, impaling Lilith as gently as he can on his thick shaft. He gives her a moment to get used to his invading member, then starts to fuck her with deep thrusts, grunting loudly as he does so[end if].";
+	say "     Watching from your position on the bed, you could see the changes of Lilith's expression - from the initial outrage and pain of penetration soon on to her more typical aroused and lusty look as she got into getting fucked after a short while and started to actively participate. Which shows that despite you so suddenly springing this situation on her, the need sating her lusts trumps any feelings of annoyance or betrayal for Lilith. After letting Brutus use the succubus like his own sex doll for a bit and jerking off to the show, you decide it's time to get involved yourself. Standing up, you command your demon [if DBCaptureQuestVar is 5]slave[otherwise]companion[end if] to back off a bit and kneel. With Lilith still impaled on his long shaft and held against his chest, she's now the perfect height for you to just step up and slide your erection into her drippingly wet pussy - which you do with a satisfied grunt.";
+	say "     [WaitLineBreak]"; 
+	say "     The succubus hot pussy feels amazing around your shaft, tight and gripping - especially as she starts to flex her inner muscles to give the two of you more pleasure. Having sex with a succubus really is almost incomparable with other females, as she does and feels exactly how you like it, how you need it, her demonic powers making her the perfect woman to fuck. And besides that, you can also feel Brutus massive member move inside Lilith as he fucks her, rubbing against your own through her inner falls, a pleasing reminder that you're the dominant partner over the demoness in this. The three of you fill the defiled sacristy with moans, pants and grunts as you grind against each other, arousal building up higher and higher. It's no big surprise that, with her masterful skill as a sex demon, Lilith manages to push both Brutus and yourself over the edge to explosive orgasms at the same time, your cock pulsing with blast after blast of cum you shoot into Lilith's womb while Brutus grunts and pumps his massive load deep into her asshole.";	
+	say "     Out of breath from all the sex, you lean against Lilith for a moment, resting your head against her ample breasts. After a few moments like that, you raise your head and give the demoness a grin, then quickly pull out of her and step back to take in the whole image before you. The large purple form of your [if DBCaptureQuestVar is 5]demonic servant, full of impotent rage at his enslavement, [otherwise]demonic companion, looking very pleased and thankful that you let him fuck, [end if]and against his chest Lilith, still impaled on the demon's pole, thoroughly fucked and worn out, with your load trickling out of her pussy. And with all the cum in her, [if LilithPregnancy is 3 or LilithPregnancy is 2]her pregnant belly looks even larger than before. [otherwise]her belly even looks like she's three months pregnant! [end if]Too bad that this is in the middle of a nanite apocalypse and you can't take a photo of it all. With a sigh, you order Brutus to just put Lilith down on the bed and start to gather up your clothes.";	
+	if LilithPregnancy is 0:              [not already preggers]
+		let LilithPregChance be a random number from 1 to 20;  	
+		if LilithPregChance > 5:            [75% chance]
+			now LilithPregCounter is 48;      [48 turns till birth] 
+			now LilithPregnancy is 1;					[invisibly pregnant]			
 
 Section 3 - Endings
 
