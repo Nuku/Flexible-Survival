@@ -46,7 +46,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "red kangaroo"; [Name of your new Monster]
-	now attack entry is "[one of]A left hook catches you in the chin, making you stumble.[or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs.[or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach.[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches.[at random][rookickreset]"; [Text used when the monster makes an Attack]
+[	now attack entry is "[one of]A left hook catches you in the chin, making you stumble.[or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs.[or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach.[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches.[at random][rookickreset]"; [Text used when the monster makes an Attack]	***]
+	now attack entry is "[one of]A left hook catches you in the chin, making you stumble.[or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs.[or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach.[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?'  [or]Eeeee! A new plaything for me!'  [or]You[apostrophe]re going to give me just what I want.'  [at random]Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";[ Description of the creature when you encounter it.]
@@ -90,7 +91,8 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "redroo";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+[	now altcombat entry is "redroo";		[ Row used to designate any special combat features, "default" for standard combat. ]	***]
 
 
 Section 3 - Alt-Attack Roo Double-Kick
@@ -124,7 +126,7 @@ this is the rookick rule:		[+75% dmg cartoonish double-kick]
 to say rookickreset:
 	choose row monstercom from table of Critter Combat;
 	now alt1chance entry is 20;
-
+	
 
 Section 4 - Definitions
 
