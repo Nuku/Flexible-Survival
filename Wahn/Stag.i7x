@@ -1,5 +1,5 @@
-Version 5 of Stag by Wahn begins here.
-[Version 5.3 - 69 for Awesome Helen/Xerxes]
+Version 6 of Stag by Wahn begins here.
+[Version 6 - Taking Ares & Helen to the park]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -1053,6 +1053,7 @@ HelenPregnant is a number that varies.
 [   2: pregnant by Fang                                          ]
 [   3: pregnant by the Felinoid                                  ]
 [   4: pregnant by Kara                                          ]
+[   5: pregnant by Ares                                          ]
 [ lust of Helen                                                  ]
 [   0: hasn't had sex with the player                            ]
 [   1: had sex with the player once                              ]
@@ -1152,7 +1153,12 @@ Instead of fucking Helen:
 			choose a blank row in table of fucking options;
 			now title entry is "Get Helen a tattoo";
 			now sortorder entry is 10;
-			now description entry is "Bring Helen to Kara to get a tattoo.";      
+			now description entry is "Bring Helen to Kara to get a tattoo.";
+		if (hp of Ares > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Take Helen and Ares for a walk";
+			now sortorder entry is 11;
+			now description entry is "Go pick up Ares from Mike's kennel and take him and Helen for a walk.";  			
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1187,6 +1193,8 @@ Instead of fucking Helen:
 						say "[HelenSex7]";
 					otherwise if (nam is "Get Helen a tattoo"):
 						say "[awesomerhelensex2]";
+					otherwise if (nam is "Take Helen and Ares for a walk"):
+						say "[AresHelenWalk]";						
 		if lust of Helen is 0:
 			now lust of Helen is 1;
 		otherwise if lust of Helen is 1:
@@ -1575,11 +1583,14 @@ to say awesomerhelensex2:
 
 Section 7 - Ares
 
-[ hp states of Ares                                           ]
-[   0: hasn't met the player yet                              ]
-[   1: option for walking him brought up                      ]
-[   2: no sex during a walk with him                          ]
-[   3: mounted the player when out for a walk                 ]
+[ hp states of Ares                                                               ]
+[   0: hasn't met the player yet                                                  ]
+[   1: option for walking him brought up                                          ]
+[   2: no sex during a walk with him                                              ]
+[   3: mounted the player when out for a walk                                     ]
+[   4: mounted Helen/Xerxes when out for a walk                                   ]
+[   5: mounted both the player and Helen/Xerxes when out for a walk               ]
+
 
 Chapter 1 - Ares Basics
 
@@ -1670,8 +1681,8 @@ to say AresParkMounting:
 			say "     [line break]";
 			say "     Enough of this. Finally coming back to your senses, you shove Ares off and grab the leash again before scolding him for what he tried to do. He accepts that with a hanging head, though you guess that's more from being sad that he didn't succeed than from understanding you at all.";	
 			now hp of Ares is 2;
-	otherwise:  [he fucked the player before]
-		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours his cock dangling erect under his muscular body.";
+	otherwise if hp of Ares is 3 or hp of Ares is 5:  [he fucked the player before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
 		say "     [line break]";
 		say "     Seems like he wants another round on what he thinks is his bitch... do you let him?";
 		if player consents:
@@ -1682,10 +1693,192 @@ to say AresParkMounting:
 			say "     As his cock and balls keep twitching with blast after blast of cum into you, the transformed dog just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and making out with lots of tongue-action between you two. As his instincts tell him to stay still till his knot pops out, Ares leaves his human manhood in your freshly bred ass till it softens enough to slip out on its own. Then he dismounts you and starts to lap at your butt, licking up any trickle of cum escaping your still a bit gaping pucker. As this feels quite nice, you stay as you are some more time before you finally stand up again and put your clothes in order.";			
 		otherwise:
 			say "     [line break]";
-			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";			
-	say "     Getting back to the original thing you were out here for, dog-walking, you do a quick tour through the small park, with Ares marking another tree at the entrance on the other side. Then the two of you turn back into the street leading to Mike's house, where you arrive a short while later. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him back into his kennel.";			
-		
-				
+			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
+	otherwise if hp of Ares is 4:  [he only fucked Helen/Xerxes before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked [if hp of Helen > 0]Helen[otherwise]Xerxes[end if] right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man standing in front of you on all fours, his cock dangling erect under his muscular body.";
+		say "     [line break]";
+		say "     Seems like he wants to repeat his performance with [if hp of Helen > 0]Helen[otherwise]Xerxes[end if] and make you his bitch too... do you let him?";
+		if player consents:
+			say "     [line break]";
+			say "     Panting softly in anticipation, you quickly slip off your clothes, then get on all fours on the leafy ground, wiggling your ass invitingly at the human dog. Instantly hot and ready for action, Ares doesn't hesitate a second before he mounts you for real in typical doggie-style, hugging your chest from behind as his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in. As your pucker yields to Ares invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
+			say "     Ares fucks you with a wild animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. Being mounted by this animal in human form, pushed down by his weight on your back makes you all tingly with arousal at your submission, which quickly builds up to a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the leafy ground[otherwise if cunts of player > 0] that makes your pussy drip with femcum[end if]. Meanwhile, your anal muscles twitching around his cock pleases and excites Ares, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
+			say "     [WaitLineBreak]";
+			say "     As his cock and balls keep twitching with blast after blast of cum into you, the transformed dog just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and making out with lots of tongue-action between you two. As his instincts tell him to stay still till his knot pops out, Ares leaves his human manhood in your freshly bred ass till it softens enough to slip out on its own. Then he dismounts you and starts to lap at your butt, licking up any trickle of cum escaping your still a bit gaping pucker. As this feels quite nice, you stay as you are some more time before you finally stand up again and put your clothes in order.";			
+			now hp of Ares is 5;
+		otherwise:
+			say "     [line break]";
+			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";						
+	say "     Getting back to the original thing you were out here for, dog-walking, you do a quick tour through the small park, with Ares marking another tree at the entrance on the other side. Then the two of you turn back into the street leading to Mike's house, where you arrive a short while later. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him back into his kennel.";
+					
+to say AresHelenWalk:
+	say "     As you look down at Helen, happily padding around in the library, you remember one of Mike's other dogs - Ares. With Mike busy caring for Lea, the human dog doesn't get out much from his kennel these days, so you decide to go and take him for a walk - and Helen too, while you're at it. You whistle to call Helen, making the dog with the buck-naked body of a young woman immediately rush to you from where she was. She comes to stand beside you, looking happy at getting her master's attention[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' she says with a wide grin[end if]. Explaining that you're gonna take her for a walk and to see the other dogs, you find yourself with a very exuberant and happy Helen, eager to go out with you. With your human dog by your side, you leave the library and make your way through the mostly empty streets, thankful that you seem to have chosen a lull in the creature activity in this area for your little excursion. Maybe they're asleep... or busy fucking each other - no matter which, you arrive unmolested at Mike's House not too much later and are greeted by the stag after knocking on the door.";
+	say "     'Oh, hello - and hello Helen.' he says, patting her head, then allowing her to trot inside and go see Lea. While the two young women happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Helen, I hope?' Assuring him that you're very happy with having her as your pet, you tell him that you just wanted to take her and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if hp of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [otherwise if hp of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Helen and Lea, who were getting a bit wild in their reunion.";
+	say "     [WaitLineBreak]";
+	say "     Entering the room with the dog's cages, you walk over to where the collars and leashes hang on the wall and grab a pair of them, then go to Ares kennel and open the door. The human dog is exuberantly happy at being let out, woofing and circling you several times to sniff you and rub his head against your legs. Then he sits down and lets you put the collar on him, thoroughly used to this procedure for going outside. Moments later, with the attractive young man on your leash, you walk out into Mike's office and after a quick whistle to Helen that brings her to your side, you're out the door with your two 'dogs'.";	
+	if a random chance of 1 in 3 succeeds:  [no fight]
+		say "     It's a rather pleasant [if daytimer is day]day[otherwise]night[end if] for a day during the nanite apocalypse and everything is nice and quiet as you stroll along with the human dogs. Ares is just a bundle of untamed energy, most of the time dashing ahead and sniffing this or that, often pulling on his leash if you're not quite fast enough to keep up. Even the usually so obedient Helen is somewhat infected by his demeanour, often running along with Ares as he rushes about before circling back to you and taking her position at your side again. Not long afterwards, you get to the park Mike mentioned, which is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
+		say "     [AresHelenParkMounting]";
+	otherwise:  [fight]
+		say "     It's a rather pleasant [if daytimer is day]day[otherwise]night[end if] for a day during the nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
+		say "     [line break]";
+		now companion of player is human dog;
+		now battleground is "Outside";
+		fight;
+		now companion of player is nullpet;
+		if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
+			say "     Looks as if Helen and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Helen back to the library.";
+		otherwise if fightoutcome >= 30:			[fled]			
+			say "     When you ran, Helen and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
+			say "     [AresParkMounting]";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
+			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
+			say "     [AresHelenParkMounting]";
+			
+to say AresHelenParkMounting:
+	if hp of Ares < 3:  [no sex before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly all of its own, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
+		say "     [line break]";
+		say "     If he still was a normal dog, he'd likely have knotted her by now and you'd be powerless to do anything about this. But he isn't, and you doubt he understands that he doesn't have a knot anymore. Do you let Ares continue (Y), or pull him off Helen (N)?";
+		if player consents:   [let Ares fuck her]
+			say "     [line break]";
+			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucking Helen with a untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
+			say "     [line break]";
+			say "     [AresHelenParkFuck]";
+			now hp of Ares is 4;  [only had sex with Helen]
+		otherwise:  [pull Ares off]
+			say "     [line break]";
+			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Helen, with him giving a surprised (for not being safely locked with her by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
+	otherwise if hp of Ares is 3:  [he fucked only the player before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and you right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";
+		say "     [line break]";
+		say "     Seems like he wants to make Helen his bitch too - just like he did with you. Do you let him?";
+		if player consents:
+			say "     [line break]";
+			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
+			say "     [line break]";
+			say "     [AresHelenParkFuck]";
+			now hp of Ares is 5;     [had sex with the player and Helen]
+		otherwise:
+			say "     [line break]";
+			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
+	otherwise if hp of Ares is 4 or hp of Ares is 5:  [he fucked Helen before]
+		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - which brings up the memory of the time the human dog pulled you over and fucked Helen right here. Arousal starts to tingle inside you as you think back to it, and you're not the only one - Ares sudden bark shakes you out of your thoughts, and you can see the young man pad up to Helen, cock dangling erect under his muscular body.";		
+		say "     [line break]";		
+		say "     Seems like he wants another round on what he thinks is his bitch... do you let him?";
+		if player consents:
+			say "     [line break]";
+			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
+			say "     [line break]";
+			say "     [AresHelenParkFuck]";				
+		otherwise:
+			say "     [line break]";
+			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
+	say "     Getting back to the original thing you were out here for, dog-walking, you do a quick tour through the small park, with Ares marking another tree at the entrance on the other side. Then the three of you turn back into the street leading to Mike's house, where you arrive a short while later. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him into his kennel, then make your way back to the library with Helen.";
+					
+to say AresHelenParkFuck:
+	say "     [if cocks of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own cock hard as a rock, [otherwise if cunts of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own sex swollen and dripping wet, [otherwise]Seeing Ares thrust into Helen's welcoming pussy has you all tingly inside, [end if]and thoughts of joining in for some fun are at the forefront of your mind. Do you do so?";
+	if player consents:
+		say "     [line break]";
+		if cocks of player > 0:
+			say "     So what do you want to do with them? Present your cock for Helen to lick [link](1)[as]1[end link], wait your turn to fuck her [link](2)[as]2[end link] or get behind Ares and fuck his ass [link](3)[as]3[end link]?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				otherwise:
+					say "Invalid choice. Type [link]1[end link] to get blown, [link]2[end link] to fuck Helen or [link]3[end link] to fuck Ares.";
+			if calcnumber is 1:								[BJ]
+				say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit while holding your erect manhood up for the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
+				if lust of Helen < 4:
+					say ".  With her eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
+				otherwise if lust of Helen < 7:
+					say ".  With her increased awareness, she's become more responsive and even more eager in her cocksucking.";
+					say "     She even tries to use her hands a little, rubbing your balls or stroking your shaft as she sucks on your glans.  She's still a little unsure in using her hands, but she's certainly improving now that she's discovered they can be used to pleasure her loving master.  With her eager sucking and stroking, it doesn't take much longer until the need to cum rises in your balls.";
+				otherwise:
+					say ".  With her increased awareness, she's become more responsive and even more eager in her cocksucking.";
+					say "     She even makes use of her hands a little, rubbing your balls or stroking your shaft as she sucks on your glans.  She's still improving with using her hands, but her attentiveness to your instructions is quickly paying off.  With her eager sucking and stroking, it doesn't take much longer until the need to cum rises in your balls.";
+				say "     Moaning, you grab Helen's head and do a few upward thrusts with your hips, your cock deep in her throat as it starts shooting a huge load.  Pumping blast after blast directly into her stomach, you hold her head against your crotch, then pull back up a moment later to let her get some air. She quickly goes back to work, catching the last spurts of cum with her mouth, then puts her lips around your cockhead, softly sucking as it goes down[if lust of Helen >= 4]. When she finally releases your cock, she smiles a very human smile up at you. 'Master tasty,' she says, licking her lips[end if].";
+				say "     [WaitLineBreak]";
+				say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
+				say "     As his cock and balls twitching with the last spurts of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Some time later, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
+				if thirst of Helen is 0:              [not pregnant]
+					now thirst of Helen is 1;           [pregnant]
+					now libido of Helen is 5;           [...by Ares]
+					now HelenPregnant is 1;             [pregnancy timer]					
+			otherwise if calcnumber is 2:			[fuck Helen]
+				say "     Jerking off slowly, you watch the human dogs couple, Ares really pounding into Helen with rapid thrusts, only slowing down a bit in the middle as he realizes he can do more than just hold on to her with his hands and starts to fondle the young woman's breasts. With Ares wandering hands now stroking and groping her chest and him getting back into his fucking rhythm soon after while still keeping that up, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
+				say "     Used to having a knot, Ares would likely have stayed inside her till he got fully hard, but horny as you are, you're not patient enough to wait that long and give him a little push that makes him slip out of Helen's cum-filled pussy. It's clear that he's a bit surprised about this, but having gotten his rocks off, he doesn't really mind you moving in on his bitch now. As he dismounts, he gives her crotch a good sniff, then pads to the side and sits down, a wide smile on his face.";
+				say "     [WaitLineBreak]";
+				say "     Eager to fuck your human dog, you quickly strip off your clothes and kneel behind Helen. Running both hands down her back, you reach around her for a moment to fondle her breasts, then move on to stroke the soft skin of her hips and ass. Rubbing Helen's pussy lips with your fingers, feeling her own wetness and Ares cum trickling out of her, your cock almost aches in anticipation as you move its tip into position against her. You can hear her make her animal-like needful noises as your cock brushes against her, then a pleased gasp as you push forward and slide your manhood into her body. Helen's pussy is warm and nicely slick - no wonder, with Ares having shot a full load in her just moments ago. You take a moment to appreciate the tightly gripping feel of her as you bottom out, then start fucking, with Helen panting and yipping in lust as you slide in and out[if lust of Helen >= 4]. 'Good master,' she moans, pressing her rear back into your thrusts[end if].";
+				if lust of Helen > 4:
+					if a random chance of 3 in 5 succeeds:
+						say "     You run your hands over her sexy body, caressing her lovely skin[if lust of Helen >= 7] and running your fingers along her collar tattoo[end if] as you lean overtop of her. This draws added moans and yips of pleasure from her and she pushes herself back into your thrusts, her pussy squeezing along your shaft as you fuck her like a dog. You play with her breasts and finger her clit while fucking her, whispering in her ear what a good girl she is.";
+					otherwise:
+						say "     After running your hands over her sexy body, you pause in your thrusting to get her to lay on her back. She giggles a little at what seems an unnatural position to her, but welcomes you into her arms as you get your cock lined up again and push into her wanton hole again. She lavishes you with licks and kisses while running her hands across your back[if lust of Helen < 7] almost as if she were petting you[otherwise], stroking and caressing your [bodydesc of player] body with growing adeptness[end if]. Between the kisses you share, you whisper to her what a good girl she is.";
+				say "     [WaitLineBreak]";						
+				say "     Helen's moans build up into a crescendo, sounding through the whole park as she orgasms. You yourself are not far behind and soon give a deep moan as your balls start twitching and send spurt after spurt of cum to fill Helen's womb and mingle with Ares earlier deposit. With your cock delivering your seed into her, you pull Helen's upper body against your chest, and give her a deep kiss. Then, after your last shot, you just hold her for some time as you come down from your respective orgasms[if lust of Helen >= 4]. 'Mmm... Master fuck Helen good,' she mumbles softly, snuggling up to you lovingly[end if][if lust of Helen >= 7] as you kiss along the tattooed collar ringing her neck[end if]. A pleasant while later, you go pick up your clothes again and dress, taking Ares leash and having Helen come to your side when you finish.";
+				if thirst of Helen is 0:              [not pregnant]
+					now thirst of Helen is 1;           [pregnant]
+					if a random chance of 2 in 3 succeeds:
+						now libido of Helen is 5;           [...by Ares]
+					otherwise:
+						now libido of Helen is 1;           [...by the player]
+					now HelenPregnant is 1;             [pregnancy timer]									
+			otherwise if calcnumber is 3:			[fuck Ares]
+				say "     Quickly getting into position behind Ares, you get your throbbing cock lined up with his tailhole, then push forward just as he pulls back from another thrust into Helen. He gives a soft whimper, but takes your cock easily enough - clearly having had some training from Mike in that regard. And he even speeds up his own movements, grunting in panting in lust as each pull back from Helen's pussy impales his ass on your hard shaft. Fucking Ares feels amazing, his hot hole tight around your member and knowing that with each thrust in his hole you're driving him into Helen's pussy at the same time, as if you were fucking two persons at once. Embracing him from behind, you feel Ares muscular chest and revel in the hot threesome all of you are having.";
+				say "     After you don't know how long of an amazing time for the three of you, you can hear the pitch of Helen's moans rise up into a crescendo, sounding through the whole park as she orgasms. That creates a bit of a chain reaction, as the feeling of her pussy getting all wet with femcum and the trembling of Helen's muscles pushes Ares over the edge right with her. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. And with each blast of cum into Helen, Ares anal muscles clench and tighten around your own thrusting manhood, a bit as if he was jerking you off inside his ass. The pleasant feelings that gives you can't be denied for very long, and after just a few more deep penetrations, you come, grunting almost incoherently from the force of your orgasm. Spurt after spurt of your load blasts deep into Ares, leaving you panting breathless while leaning against his back.";
+				say "     [WaitLineBreak]";
+				say "     As his cock and balls twitching with the last spurts of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Some time later, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";
+				if thirst of Helen is 0:              [not pregnant]
+					now thirst of Helen is 1;           [pregnant]
+					now libido of Helen is 5;           [...by Ares]
+					now HelenPregnant is 1;             [pregnancy timer]					
+		otherwise if cunts of player > 0:
+			say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit while spreading your pussy lips a bit for the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue over your nether lips, then laps at your clit. As Helen starts giving you pretty good cunnilingus, you resolve to thank Mike the next time you see him for your expertly trained pet";
+			if lust of Helen < 4:
+				say ".  With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			otherwise if lust of Helen < 7:
+				say ".  With her increased awareness, she's become more responsive and even more eager in her oral play.";
+				say "     She even tries to use her hands a little, rubbing your crotch and pushing a finger into your vagina to stroke it. She's still a little unsure in using her hands, but she's certainly improving now that she's discovered they can be used to pleasure her loving mistress. With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			otherwise:
+				say ".  With her increased awareness, she's become more responsive and even more eager in her oral play.";
+				say "     She even tries to use her hands a little, rubbing your crotch and pushing a finger into your vagina to stroke it. She's still improving with using her hands, but her attentiveness to your instructions is quickly paying off. With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			say "     Moaning, you grab Helen's head and hold her against your crotch, making her speed up her lapping, which brings you the rest of the way to your climax. Shivering all over as ecstasy floods your whole body and femcum squirts from your spread pussy, you let go of Helen's head. She just keeps going, licking up your female juices and eagerly swallowing[if lust of Helen >= 4]. When she finally raises her head again and looks at you, she gives a very human smile up at you. 'Mistress tasty,' she says, licking her lips[end if].";
+			say "     [WaitLineBreak]";
+			say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
+			say "     As his cock and balls keep twitching with blast after blast of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Finally, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";			
+			if thirst of Helen is 0:              [not pregnant]
+				now thirst of Helen is 1;           [pregnant]
+				now libido of Helen is 5;           [...by Ares]
+				now HelenPregnant is 1;             [pregnancy timer]						
+		otherwise:
+			say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit and present your smooth (but nonetheless quite sensitive) crotch to the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue over your skin, then starts to lap at the spot where your genitals would be if you still had them. As Helen gives you quite a bit of pleasure that way, you resolve to thank Mike the next time you see him for your expertly trained pet";
+			if lust of Helen < 4:
+				say ".  With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			otherwise if lust of Helen < 7:
+				say ".  With her increased awareness, she's become more responsive and even more eager in her oral play.";
+				say "     She even tries to use her hands a little, rubbing your crotch and stroking the inside of your leg. She's still a little unsure in using her hands, but she's certainly improving now that she's discovered they can be used to pleasure her loving mistress. With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			otherwise:
+				say ".  With her increased awareness, she's become more responsive and even more eager in her oral play.";
+				say "     She even tries to use her hands a little, rubbing your crotch and stroking the inside of your leg. She's still improving with using her hands, but her attentiveness to your instructions is quickly paying off. With her eager attention, your arousal quickly builds up and up and the need to come rises inside you.";
+			say "     Moaning, you grab Helen's head and hold her against your crotch, making her speed up her lapping, which brings you the rest of the way to your climax. Shivering all over as ecstasy floods your whole body, you let go of Helen's head and she just keeps going, licking the whole time until your orgasm finally winds down and you tell her to stop.";
+			say "     [WaitLineBreak]";
+			say "     Satisfied and content from just having gotten off, you lean back on your elbows and watch as Ares continues to fuck Helen with rapid thrusts. He seems to have realized at some point that his hands are good for more than just holding on to her, as he's got them cupping her breasts and feeling them up. With Ares wandering hands now stroking and groping her chest while he pounds into her, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
+			say "     As his cock and balls keep twitching with blast after blast of cum into Helen, the transformed dog just keeps holding on to her, panting with his head resting against her shoulder. His instincts are telling him that he has a knot and has to wait for it to go down, even though that's no longer the case. You don't really mind that he wants to stay balls deep inside Helen's freshly bred pussy for a while, as that gives you time to put your clothes back on and gather up your gear. Finally, when Ares is soft enough to pop out on his own, you pick up the leash again and call for Helen to walk by your side.";	
+			if thirst of Helen is 0:              [not pregnant]
+				now thirst of Helen is 1;           [pregnant]
+				now libido of Helen is 5;           [...by Ares]
+				now HelenPregnant is 1;             [pregnancy timer]						
+	otherwise:
+		say "     Happy to just watch them go at it, you simply stand back and [if cocks of player > 0]jerk off a bit while you do. [otherwise if cunts of player > 0]finger your pussy while you do so. [otherwise]stroke your sensitive crotch while you do so. [end if]The coupling of the human dogs continues for a while, with Ares really pounding into Helen with rapid thrusts, only slowing down a bit in the middle as he realizes he can do more than just hold on to her with his hands and starts to fondle the young woman's breasts. With Ares wandering hands now stroking and groping her chest and him getting back into his fucking rhythm soon after while still keeping that up, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. Used to having a knot, Ares stays on top of Helen for a while even after he finishes coming, then finally dismounts when his cock goes soft.";	
+		if thirst of Helen is 0:              [not pregnant]
+			now thirst of Helen is 1;           [pregnant]
+			now libido of Helen is 5;           [...by Ares]
+			now HelenPregnant is 1;             [pregnancy timer]					
+	
+						
 Chapter 3 - Pet Ares
 
 human dog is a pet. human dog is a part of the player;
@@ -1737,6 +1930,8 @@ when play ends:
 					say "The first of her children - a boy - being the offspring of your felinoid companion from before you lost your humanity, quickly develops into a relatively bright teenager. As he matures, he develops the ability to create a seductive, pheromone-laden smell, almost as strong as his father's was. Growing up in a pack of horny dogs and having absorbed their morals, he makes relentless use of this ability, dominating the whole pack though sexual dependence. Even though the old Alpha is still around, protecting the pack, it's now the felinoid's son who has the power. He fuck them all regularly, males and females, impregnating the female huskies as well as his human-shape half-sisters and mother.";
 				otherwise if libido of Helen is 4:  [by Kara]
 					say "The first of her children - a boy - being the offspring of Kara, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the submissive nature inherited from his hyena father and submits to being the male bitch of the pack's alpha husky's.  This doesn't stop him from sneaking fucks from the female huskies as well as his human-shape half-sisters and mother whenever he can get away with it.  He is caught at this from time to time, but always seems to get out of the worst of the alpha's wrath by tempting the angry husky to viciously pound his ass instead, which he seems to love most of all.";
+				otherwise if libido of Helen is 5:  [by Ares]
+					say "The first of her children - a boy - being the offspring of Ares, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the cunning nature inherited from his father and starts fucking the pack bitches behind the alpha's back. Knowing just when and how to sneak fucks fucks from the female huskies as well as his human-shape half-sisters and mother, he's does so whenever he can and is never caught at it. Just about every puppy growing in the females in the following months is secretly his, and before they're born and can show from their looks and smell that he, and not the alpha is the father, he arranges for another male husky to challenge and win over the former packmaster. With the new alpha an imposing figurehead, long used to getting fucked by the cunning young man, Ares[apostrophe] son becomes the de facto leader of the pack.";
 		otherwise:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Helen is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced she's a regular survivor who had a mental break and whom you took care of. You whisper to her to stay calm and that you'll come get her before she gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Helen, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Helen > 0] and share your bed[end if].";
 			if lust of Helen > 3:
@@ -1750,6 +1945,8 @@ when play ends:
 					say "Several months later, she gives birth to the offspring of your felinoid companion, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and an inheritance of his father comes through - the ability to create a seductive pheromone-laden musk around himself. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate two teachers, five cheerleaders, one of your neighbours and her two German Shepherd bitches. Thankfully he went through half the football team too over the course of that weekend, otherwise there'd have been even more knocked up teenagers. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets discovered as an actor, owing his good looks and 'charming' personality...";
 				otherwise if libido of Helen is 4:  [by Kara]
 					say "Several months later, she gives birth to the offspring of Kara, a beautiful human boy.  He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language.  He's a very obedient and peaceful child with quite a bit of artistic talent which he throws into drawing and painting.  And while his taste in girlfriends (and boyfriends, for that matter), tends towards the rougher and meaner kids, he seems to be quite happy with their abuse and rough treatment.  Certainly, you hear plenty of loud and vigorous sex coming from his room over the year it takes him to grow up to full maturity.  He becomes an artist and while he doesn't seem to make that much money at it, he's never short on lovers he can shack up with, being their fucktoy bitch for while living their for free.";
+				otherwise if libido of Helen is 5:  [by Ares]
+					say "Several months later, she gives birth to the offspring of Ares, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and the well-developed sex drive as well as cunning of his father comes through. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate half the (mostly married) woman he was lawnmowing for, a teacher and several cheerleaders - all the while double-teaming the girls by having sex with their boyfriends too. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets into college...";
 	if hp of Mike is 100:
 		say "[line break]";
 		say "You don't see Mike or Lea ever again, as they were taken to the leopardmen's lair to serve as the feline's playtoys. With them face-fucking Mike all the time, forcing him to swallow their cum, it doesn't take very long until he becomes a leopardess in heat. Him and Lea are the center of many a gang-bang, during which Mike is knocked up several times with litters of leopard kits. After his and Lea's daughter is born and grows to sexual maturity, she joins the lineup of submissive breeding holes for the gang.";
