@@ -24,9 +24,9 @@ Instead of resolving FindingKristen:
 				challenge "ewe";
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     After your victory, you turn to check on the woman find the mound of crushed boxes empty.  Looking up, you can see her atop the wooden wall, looking down at you";
-					if bodyname of player is "human" and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 and cock length of player < 6 ):
+					if ( bodyname of player is "human" or bodyname of player is "herm human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
 						say ".  Without further hesitation, she reaches out to grab your hand to help a fellow human.  Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
-					otherwise if player is bodily human and player is facially human and player is skintone human and tail of player is not "":
+					otherwise if player is bodily human and player is facially human and player is skintone human and tail of player is "":
 						say ".  She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly.  It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her.  You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					otherwise:
 						say ".  She hesitates for a few moments, staring at your mutated body.  It is only when the sound of the approaching mob catches her attention does she reach out to take your hand.  Helping you up and over the wall, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
