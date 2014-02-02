@@ -6206,6 +6206,7 @@ Include Piggy by Stripes.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
 Include Margay For Fs by Stripes.
+Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
 Include Cerberus For Fs by Stripes.
