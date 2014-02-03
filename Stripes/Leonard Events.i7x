@@ -1,5 +1,5 @@
 Version 2 of Leonard Events by Stripes begins here.
-[version 2.6 - Shadow #2 park event]
+[version 2.7 - Special Gift den event]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
@@ -22,7 +22,9 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		say "[leodenscene2]";
 	otherwise if hp of Leonard is 18 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene3]";
-[	otherwise if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
+	otherwise if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene4]";
+[	otherwise if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene4]";		]
 	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
@@ -75,9 +77,9 @@ Part 2 - Work Group Scene
 to say leodenscene2:
 	say "     Your approach to Leonard's cave den is pleasantly interrupted by an encounter with your work group.  They are in a cheerful mood and welcome you with many hugs, kisses and caresses[if player is not felinebodied].  Their kneading paws and licking tongues soon prompt your body to change, restoring your matronly figure[end if].  As you approach the den, you ask them what's got them in such a good mood.";
 	say "     'Oh, Master Leonard asked us a while ago to keep an eye out for more sheet music.  You see, we were told to try looking around the...' she starts to say, but is interrupted by Raven gently bopping her on top of the head with the leather satchel she's carrying.";
-	say "     'If you tell her, you'll go on forever about it,' she cuts in.  'While we were out looking for some furniture,' she goes on to say while smiling at the others, 'we managed to get our paws on this.'  The dark-haired kitty pats the satchel and shows you a sheet of violin music from the very full case.  From the way the other three are whispering excitely, you're certain they're looking forward to presenting their find to the lion.";
+	say "     'If you tell her, you'll go on forever about it,' she cuts in.  'While we were out looking for some furniture,' she goes on to say while smiling at the others, 'we managed to get our paws on this.'  The dark-haired kitty pats the satchel and shows you a sheet of violin music from the very full case.  From the way the other three are whispering excitedly, you're certain they're looking forward to presenting their find to the lion.";
 	say "     'And now we've run into you on our way back,' Jasmine adds excitedly.  'Will you be staying for a while?'";
-	say "     You respond that you're only stopping by for a little while as always, but add that you can stay and help Leonard thank them for their diligence, if they'd like.  They're all quite pleased with this and snuggle in close as you continue along the path together.  You change the subject to them, asking if they're run into any trouble or if anything in the city's been giving them trouble.";
+	say "     You respond that you're only stopping by for a little while as always, but add that you can stay and help Leonard thank them for their diligence, if they'd like.  They're all quite pleased with this and snuggle in close as you continue along the path together.  You change the subject to them, asking if they've run into any trouble or if anything in the city's been giving them trouble.";
 	attempttowait;
 	say "     'Nothing we can't handle, matron.  We've been paying attention to your advice about moving around in the city.  We're smaller than most, so it's easier for us the sneak around when we have to.  Dahlia's really good at spotting trouble, so we manage to avoid a lot of it.'  The other girl, who's been pretty quiet up to now, smiles and nods.";
 	say "     Yarrow giggles and hugs her compatriot.  'Yeah, she's smart enough to keep quiet.  Not like me,' she adds, laughing.  'There was this one time when this big wolf heard me joking (keeping everyone's spirits up).  He was such a big, mean looking guy.  Really well hung though - might've been worth the fleas to get a ride on that meat of his.'  She even adds some exaggerated itch-scratching.";
@@ -132,7 +134,53 @@ to say leodenscene3:
 		say "     While unable to completely stop them, the delay you cause by getting some of them to chase you does hamper the felinoids.  By the time Leonard arrives to assist you, he is still able to save some of the girls who were being captured.  Helping those who remain, you head back to the den to check on the pride.";
 		say "     As you walk hand in hand back with Leonard, he speaks softly to you.  'Like everyone else, they seek mates of their own and the little lionesses are an obvious choice for them.  Such losses are bound to happen; it is the new natural order of things,' he says with a soft sigh before growing harder as he continues.  'But with this, they tried to steal many at once.  It did not matter to them whether the girls were part of our pride or not, only wanting as many as they could get.  And given how much trouble and the losses they took, I don't think they'll try such a thing again even if they did get away with some girls.  They are not prone to such cooperation normally and their painful lesson should discourage them from trying it again.'";
 	say "     Upon returning to the den, [if krsuccessrate > 0]you both are[otherwise]Leonard is[end if] given a hero's welcome by the pride[if krsuccessrate is 2].  Among the girls there are several new faces, dragged along by the others fleeing their captors.  From the looks of it, the pride has already begun welcoming them into joining.  You and Leonard make their indoctrination into the pride part of the celebration, adding to the festivities[otherwise if krsuccessrate is 1].  From what you can tell, there have been a few losses to the pride, but many of the kitty girls managed to get away during the confusion and make it back home[otherwise].  There's sadly been some losses to the pride, but the group as a whole has been protected and those responsible have been punished[end if].  It is some time before things settle down and the mob of girls finally disperses, the work group going along to provide protection for them.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	now lastdenevent is turns;
 	now hp of Leonard is 19;
+
+
+Part 4 - Special Gift
+
+to say leodenscene4:
+	say "     You enter the den to find Raven there as well.  She's on the floor between Leonard's legs, cock in mouth, while he's relaxing in his chair.  He smiles up at you and pats the kitty's head, purring that you've arrived but for her to keep going.  You come up to them, pet the purring girl's back and inquire what brings her here on her own.  Before she can respond, Leonard draws you into a passionate kiss.  He runs a paw over your chest and down to your hip while your tongues play against each other.";
+	say "    When the kiss is broken, he responds for the kitty while encouraging her to continue with her oral ministrations.  'The other girls were here earlier, but they had to get - oh yes, keep going my dear Raven - back to something after their visit.  They all had a nice, long visit, but had an appointment to keep.  They found something for you my dear - mrrrr, just like that - so I suggested that Raven stay behind a little longer.  It's been nice spending some time with herrrr...'  His words trail off into a deep rumble as his excitement builds.  Grabbing her head, he stuffs his cock fully into her muzzle and growls in orgasm.  Shot after shot of leonine seed is swallowed down by the dark-haired kitty until your lion lover is spent.  He gives a contented sigh and releases her head, leaning back in his chair.  'As you can see, she's been very nice company,' he purrs with a smile.";
+	say "     Raven, released now that her task is done, puts her arms around you and hugs you tightly.  'It's so good to see you again, my matron,' she purrs.  You share several cum-flavoured kisses with her before she nuzzles down to your chest for a drink of matron's milk to wash down her meal of lion seed[if player is not felinebodied].  Her kneading and nursing help encourage your body back into its lovely leonine form[end if].  The feel of those soft lips around your nipple, drawing out your milk, leaves you panting and purring by the time she's had her fill.";
+	say "     'Oh, I was so hoping you'd come back before I had to leave.  Leonard said you were about due for another visit, so I stuck around a little longer to give you your gift.  Ahhh!  Your gift!  Come see!' she exclaims, rushing off to the back area.  You glance over to Leonard to see if he's coming, but he waves you to go along without him with a sleepy yawn.  Typical lion, you think to yourself with a grin.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	if cocks of player is 0 and cunts of player is 0, follow the sex change rule;
+	attempttowait;
+	say "     Given Raven's eagerness, you don't linger any longer and move quickly into the bedroom area of the den.  There you find her heaving a heavy duffel bag onto the bed.  At her prompting, you open it up to find a bulletproof vest inside.  Surprised by the unexpected gift, you turn to look at her.";
+	say "     'It took us some work to get it, but when the girls and I saw it,' she exclaims, 'we knew it was just what you needed.  We know you're strong and smart, that's why you're our matron now, but it's not a safe place to be on your own.  We've been so worried about you running around in the city like you have been.  You don't have to do that any more - there's plenty you can do here for the pride - but you still don't stay.  So until you get this urge to wander out of your system, we want you to be safe,' she says with a bit of a quaver in her voice, the corners of her eyes wet with emotion.  She puts her arms around you, hugging you tight.";
+	say "     A [if humanity of player < 30]large [end if]part of you wants to say you'll stay from now on, but you rein it in.  Instead you put your arms around her and hug her tight.  Touched by the gift and her words, you give her several tender kisses.  These kisses soon become more amorous as her paws cling to you with obvious desire.  Still filled with lust and longing after sucking on Leonard's cock, the feline is ready to show you how much she wants you here in a more physical way.";
+	attempttowait;
+	if cocks of player > 0:
+		say "     Knowing what the feline girl needs, you gently lower her onto the plush bed and move atop her.  Your paws running over her cute body, you spread her legs and move to mount her.  Pressing your lips to hers and your glans to her pussy, you thrust your tongue and [cock size desc of player] cock into her.  She releases a muffled mrowl and digs her claws into your back, gripping you with both an emotional and physical need.";
+		say "     You pound away at her zeal, eager to show your appreciation for the gift and to leave her thoroughly satisfied with her personal time with the pride's matron.  And she's clearly eager to make the most of it as well, her hips rising up into every thrust.  Already aching with need from her earlier fun, her pussy quivers and clenches around your meat with an obvious need.  You drive her to several orgasms before you finally sink your shaft into her a final time and unload your [cum load size of player] load into her sopping cunt.";
+	otherwise:
+		say "     Knowing what the feline girl needs, you gently lower her onto the plush bed and move into a 69 position alongside her.   Your paws running over her cute body, you raise one of her legs and move your head in between her thighs.  Pressing your lips to her juicy folds, you start licking and kissing at them.  She releases a soft mrowl and dives in, her muzzle finding its way to your snatch to give you similar treatment.  She grips your ass hard, digging her claws into your rump and pulling it tight to her face, gripping you with both an emotional and physical need.";
+		say "     You eat her out with zeal, eager to show your appreciation for the gift and to leave her thoroughly satisfied with her personal time with the pride's matron.  And she's clearly eager to make the most of it as well, her hips grinding against your face as your tongue laps across her clit.  Already aching with need from her earlier fun, her pussy quivers and clenches around your finger with an obvious need when you push it into her.  You drive her to several orgasms while your own excitement builds until you both crest with powerful climaxes in quick succession.";
+	say "     After it's over, you snuggle and cuddle for a while.  Leonard, satisfied that you've had your private time together, comes to join you and snuggles up to you from behind.  Raven is the first to fall asleep, the exhaustion of her multiple releases catches up with her and she drifts off for a catnap.  You nuzzle the slumbering kitty and give her a tender kiss on her forehead.  Leonard, already having grabbed forty winks, is more alert and purrs softly to you, suggesting once again at that you stay with them.  As you start to drift off, your muse over how the pride must feel about you always being away.  Would it be so bad to stay with them?  What out there can compare to the love you receive from Leonard and his loving lionesses?";
+	say "     When you awaken later, Raven is preparing to leave, needing to rejoin the others.  She's given a heavy satchel and a pat on the rear by Leonard.  With a parting hug and a whispered wish of 'Be safe, my matron,' she heads out.";
+	increase carried of bulletproof vest by 1;
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	infect "Feline";
+	decrease libido of player by 10;
+	decrease humanity of player by 5;
+	if libido of player < 0, now libido of player is 0;
+	now hp of Leonard is 20;
+	now lastdenevent is turns;
+	rest;
+	follow the turnpass rule;
+
 
 Part 7 - Special Dinner
 
@@ -165,10 +213,10 @@ to say leodenspecial1:
 Part 8 - Shadow #1
 
 to say leodenspecial2:
-	say "     You arrive at the den just as Leonard is pulling on his suit coat and preparing to step out.  'Oh, you're here just in time, my dearest.  I was about to step out to meet with one of the girls.  Come join me,' he says, picking up an old leather satchel bag.  Curious that he's going out to see one of his girls instead of meeting with her here, you follow along.  It isn't far, just a few minutes away, before you arrive on a darkened path.  'Psst!  Boss,' comes a whisper from behind a tree and you spot a kitty girl you've not met before wearing a tan trenchcoat and fedora.  She glances around to make doubly sure you tow are alone and then motions for you to follow her deeper into the bushes.  While physically much like the others, she's found or made a shortened trenchcoat and fedora to fit her small stature.  The coat is even fitted with a hole for her tail, you notice.";
+	say "     You arrive at the den just as Leonard is pulling on his suit coat and preparing to step out.  'Oh, you're here just in time, my dearest.  I was about to step out to meet with one of the girls.  Come join me,' he says, picking up an old leather satchel bag.  Curious that he's going out to see one of his girls instead of meeting with her here, you follow along.  It isn't far, just a few minutes away, before you arrive on a darkened path.  'Psst!  Boss,' comes a whisper from behind a tree and you spot a kitty girl you've not met before wearing a tan trenchcoat and fedora.  She glances around to make doubly sure you two are alone and then motions for you to follow her deeper into the bushes.  While physically much like the others, she's found or made a shortened trenchcoat and fedora to fit her small stature.  The coat is even fitted with a hole for her tail, you notice.";
 	attempttowait;
-	say "     'Hey there, boss, toots,' she says with a nod.  You're a little surprised by her odd mannerisms and unusually irreverent attitude towards you both.  'I checked into that stuff you were askin['] about, boss.  A bunch of [']em are still on edge after the big blow-up we had, but nobody's lookin['] to move on you quite yet.  Made it pretty clear to most of [']em that you two aren't easy pickin['].  I made sure to hint to a few ears that we've come out of this even bigger than before, so they ain't gonna think we've been softened up either.  They'll be lookin['] to move on some weaker groups instead or against each other for now.  I did manage to get some word on that too, if you want the details, boss-cat,' she adds.";
-	say "     Leonard questions her for a while about what she's learned, gaining details on several of the other factions in and around the park, their movements and the growth or recession of their territory.  She's even got info on those creatures who haven't formed cohesive groups, detailing how their postion's been shifting relative to the others.  Of particular note, she talks about the squabbles and escalating conflicts between some of the other creatures.  Quite a bit of what she relays is definitely insider information, somethings even orders or plans made by the various leaders - so much so that you have to ask her how she came by it.  'Oh, you know how it is in my line of work, toots.  Found a few stoolies, greased a few palms, sucked a few cocks and got the info ya wanted.  Speakin['] of which, ain't it about time for my pay?' she says, turning back to Leonard.";
+	say "     'Hey there, boss, toots,' she says with a nod.  You're a little surprised by her odd mannerisms and unusually irreverent attitude towards you both.  'I checked into that stuff you were askin['] about, boss.  A bunch of [']em are still on edge after the big blow-up we had, but nobody's lookin['] to move on you quite yet.  Made it pretty clear to most of [']em that you two aren't easy pickinz.  I made sure to hint to a few ears that we've come out of this even bigger than before, so they ain't gonna think we've been softened up either.  They'll be lookin['] to move on some weaker groups instead or against each other for now.  I did manage to get some word on that too, if you want the details, boss-cat,' she adds.";
+	say "     Leonard questions her for a while about what she's learned, gaining details on several of the other factions in and around the park, their movements and the growth or recession of their territory.  She's even got info on those creatures who haven't formed cohesive groups, detailing how their position's been shifting relative to the others.  Of particular note, she talks about the squabbles and escalating conflicts between some of the other creatures.  Quite a bit of what she relays is definitely insider information, sometimes even orders or plans made by the various leaders - so much so that you have to ask her how she came by it.  'Oh, you know how it is in my line of work, toots.  Found a few stoolies, greased a few palms, sucked a few cocks and got the info ya wanted.  Speakin['] of which, ain't it about time for my pay?' she says, turning back to Leonard.";
 	attempttowait;
 	say "     'Oh, indeed, my dear Shadow,' he says with an obvious smile and a growing erection.  Taking her into his arms, he pushes open her heavy coat and presses her back against a tree.  After lining up his cock with her pussy, he thrusts deep into her, much to her mewling delight.  Despite her earlier attempts to be discrete, she moans and yowls lustfully as the big lion fucks her hard.  Your mate motions for you to come join in, clearly eager to reward this girl for her exceptional work.  Adjusting his position, Leonard allows you between his legs with clear access to his cock thrusting into Shadow's pussy.  You lick and lap at their point of lustful union, savouring the mingling tastes of feline arousal from them.";
 	say "     'Mmmm... yeah, boss.  Harder,' she cries out as her excitement builds to climax after a few minutes.  Leonard empties his load into her with a growl while sinking his claws into the tree as he pulls himself firmly against his strange spy.  With the lion's cock pressing her against the tree, you're unable to continue licking until he's emptied his load and withdrawn, but you're there ready and waiting to eat out her cream-filled cunt when he does.";
@@ -176,17 +224,19 @@ to say leodenspecial2:
 	attempttowait;
 	say "     As you head back to the den, Leonard motions for you to hold your questions.  You're quite curious about this odd exchange and are thankful it isn't long before you're comfortably back in the lion's den.  After fixing you both a drink and taking a seat in his plush chair, Leonard explains.  'Shadow's been one of my girls for quite some time, but she could never really find her place in the pride.  Try as I might, the poor girl's proven to be sterile and it saddened her that she couldn't bear kittens for me like the others.  I assured her it was fine, but it still troubled her.";
 	say "     'After one particular unenthusiastic evening with her, I happened to mention wanting some more information on the others in the park.  She seemed quite enthused at the opportunity to help the pride and headed off in better spirits than I'd seen from her in some time.  It was a distressingly long time before I heard from her again, so long that I'd worried she'd been taken by another creature, but she'd simply thrown herself into it wholeheartedly.  She made that coat, plays the role and excels at it.  It is all like a grand game for her, though one she seems to take seriously as far as results.  She insists on these [']clandestine['] meetings away from the den, accepts my affections as her payment and requires only an assortment of supplies and bribes for her informants.  I don't know if it is her monomania with her role or some pre-existing quirk of hers, but it's become clear she's immune to infection from those she dallies with, so I have little worry about the pride losing her.'";
-	say "     You'd been aware before that Leonard had been keeping tabs on the area, but you'd not known the details or the extent of it until now.  Having learned about this odd, secret member of the pride has left you with a newfound respect for your mate's resoursefulness.";
+	say "     You'd been aware before that Leonard had been keeping tabs on the area, but you'd not known the details or the extent of it until now.  Having learned about this odd, secret member of the pride has left you with a newfound respect for your mate's resourcefulness.  You've also learned a lot of information which could be helpful to you in the future when dealing with these creatures.";
 	if player is felinebodied:
 		infect "Feline";
 	otherwise:
 		felinebodyshift;
+	increase xp of player by ( intelligence of player * 2 ) + level of player;
 	now lastdenevent is turns;
 	remove 2 from leodenlist;
 	decrease thirst of player by 6;
 	if thirst of player < 0, now thirst of player is 0;
 	now leoshadowmet is true;
 	add 11 to leoparklist;	[opens Shadow #2 in Park Events]
+
 
 Part 10 - Supply Delivery
 
@@ -243,16 +293,16 @@ to say leosupplyoral1:
 
 
 to say leosupplyoral2:
-	say "     You kneal down between Leonard's legs, running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] along his thighs.  You nuzzle at the cute kitty's belly and down to her juicy pussy, giving it a tender kiss.  As Leonard boosts her up briefly, you raise his shaft into position.  As she's lowered back down onto the lion's rod, you continually lick at her spread lips and at the cock sinking between them.  It is a lovely sight that gets you quite turned on and makes you long for your next chance to be in her position.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.";
+	say "     You kneel down between Leonard's legs, running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] along his thighs.  You nuzzle at the cute kitty's belly and down to her juicy pussy, giving it a tender kiss.  As Leonard boosts her up briefly, you raise his shaft into position.  As she's lowered back down onto the lion's rod, you continually lick at her spread lips and at the cock sinking between them.  It is a lovely sight that gets you quite turned on and makes you long for your next chance to be in her position.  If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long.";
 	say "     Things grow more heated as everyone's lusts grow higher and higher, your tonguework getting both felines quite worked up.  The kitty mewls and moans, rubbing her paws over your head, urging you to keep going.  Certainly, the copious juices of her arousal, coupled with the musky flavour of Leonard's cock, seems delicious to you and you lap up as much as you can get.  As Leonard is fucking her, he rumbles to her about how she's been such a diligent, hard-working girl in collecting supplies and how pleased you both are with her efforts.  Rubbing one [if bodyname of player is listed in infections of Felinelist]paw[otherwise]hand[end if] at the lion's balls while the other teases her folds, you suck down hard on her clit.  This sends the girl over the edge with a yowl of ecstasy and a fresh rush of her juices.  Her orgasm is soon followed by the pulsing of Leonard's shaft as he cums as well, filling her womb to the point that trickles of his cum overflow around his cock for you to lick up.  Having gotten them both to climax and tasted their mingled up is quite arousing for you and [if cocks of player > 0 or cunts of player > 0]pushes you to cum as well[otherwise]sends a rush of pleasure through you[end if].";
 
 
 Part 11 - Practice Session
 
 to say leopracticesession:
-	say "     As you're approaching Leonard's den, you can hear the soft sounds of his violin being played.  Hearing it makes you smile and move more quickly towards your mate's home.  When you arrive, you find him attentively practicing while the maids listen happily as they snuggle together on a nearby rug.  Noticing you, he smiles and continues to play, though with added enthusiasm now.  You smile and take a seat in your soft chair, relaxing and enjoying the lovely music.";
+	say "     As you're approaching Leonard's den, you can hear the soft sounds of his violin being played.  Hearing it makes you smile and move more quickly towards your mate's home.  When you arrive, you find him attentively practising while the maids listen happily as they snuggle together on a nearby rug.  Noticing you, he smiles and continues to play, though with added enthusiasm now.  You smile and take a seat in your soft chair, relaxing and enjoying the lovely music.";
 	if a random chance of 1 in 3 succeeds:
-		say "     While Leonard practices, you notice a [one of]shy[or]nervous[or]curious[or]eager[at random] feline girl poking her head around the edge of the tunnel.  You make a faint motion for Leonard, who nods and continues to play, switching from practicing to playing one of his more [one of]welcoming[or]exciting[or]alluring[or]sensual[at random] pieces.  As he plays, you can see it having an effect on the visitor, getting her to relax and move in a little further to hear better.  As Leonard starts up another song, you motion for her to come and sit with you and, captivated by the lovely music, she is easily coaxed into your lap.";
+		say "     While Leonard practices, you notice a [one of]shy[or]nervous[or]curious[or]eager[at random] feline girl poking her head around the edge of the tunnel.  You make a faint motion for Leonard, who nods and continues to play, switching from practising to playing one of his more [one of]welcoming[or]exciting[or]alluring[or]sensual[at random] pieces.  As he plays, you can see it having an effect on the visitor, getting her to relax and move in a little further to hear better.  As Leonard starts up another song, you motion for her to come and sit with you and, captivated by the lovely music, she is easily coaxed into your lap.";
 		if the player is felinebodied:
 			say "     Now with her in your arms, you guide her muzzle to your chest and have her start nursing from your [breast size desc of player] breasts.  As she does, you slip your hand down between her legs, rubbing her pussy and slipping a finger into it.  You enjoy her soft moans of pleasure that seem to flow into the passionate, erotic melody Leonard's playing has transitioned into";
 		otherwise:
@@ -646,7 +696,7 @@ to say leoparkscene9:
 	if player is not felinebodied:
 		felinebodyshift;
 		now tempnum is 1;
-	say "     'Master Leonard had mentioned that a writing desk would be handy for writing letters and about his life.  Since it was a big job, he entrusted it to us,' Jasmine says with obvious pride.  'It took us a while to find a really good one, but Raven talked to a pretty butterfly girl who told us where to find this one.  It's just been a lot of work to bring it all this way and we're getting really tired.'";
+	say "     'Master Leonard had mentioned that a writing desk would be handy for writing letters and his memoires.  Since it was a big job, he entrusted it to us,' Jasmine says with obvious pride.  'It took us a while to find a really good one, but Raven talked to a pretty butterfly girl who told us where to find this one.  It's just been a lot of work to bring it all this way and we're getting really tired.'";
 	say "     'But we're almost there,' Raven adds with a smile, her mood much improved after her refreshing drink of matron milk.";
 	say "     When you offer to help them take it the rest of the way, you are immediately buried underneath a pile of grateful kitties.  They kiss, snuggle and grope you lovingly for several minutes, during which they all get to take a drink of your milk, before it's decided to get back to work.  The writing desk is quite large and is considerably taller than the girls trying to carry it.  It's an older style with the narrow build and a door that lowers to become the writing area as well as a shelving section above it.  While not as ostentacious as big office desks can be, it will fit much better into the limited space of Leonard's cave.  And while you may not be that knowledgeable of such things, it certainly looks like a well-made and older collector's piece.  It is made of solid wood and is quite heavy, making it clear how much work the girls have been putting into this gift for their leonine mate and master.";
 	attempttowait;
@@ -690,7 +740,7 @@ to say leoparkscene11:
 	say "     While going along a wooded path, you are surprised to see Shadow pop out from around a tree.  This feline girl, Leonard's snoop, is wearing her usual fedora and kitty-sized trenchcoat.  'Hey, boss-lady... uh... Matron,' she whispers, nervously glancing back behind her.  She seems quite on edge compared to her usual self.";
 	say "     When you ask her what's wrong, she glances back again.  Looking that way, you can see another feline girl waiting deeper in the trees.  The lioness is in quite a bad state herself, looking rather battered and dishevelled.  'Nothin's wrong.  Just need a little assist from you.  I got a new recruit for...' she starts to say, but you give her a stern glare.  'Okay, look - it's not a big deal, but you've got to keep it from the boss-cat, is all.  Promise?' she asks, giving you the cute kitty eyes and everything, surely one of the many tools in her spy arsenal and definitely an effective one.  You agree, but only as long as it doesn't cause trouble down the line.";
 	attempttowait;
-	say "    'Strictly speakin['], I'm not supposed to be doin['] it, but I've started keepin['] a few contacts in the other prides ever since that big dust-up we had.  Just a girl or two at the periphery of the lion's circle of mates.  No one they notice often and who are a little needier for some companionship.  I pose as a prideless stray, [']bump into['] them from time to time and get a little info out during the pillow talk afterwards.  Most of [']em don't know much, but it's enough to hear what inter-pride rivalries are on the go.'";
+	say "    'Strictly speakin['], I'm not supposed to be doin['] it, but I've started keepin['] a few contacts in the other prides ever since that big dust-up we had.  Just a girl or two at the periphery of the lion's circle of mates.  No one they notice often and so are a little needier for some companionship.  I pose as a prideless stray, [']bump into['] them from time to time and get a little info out during the pillow talk afterwards.  Most of [']em don't know much, but it's enough to hear what inter-pride rivalries are on the go.'";
 	say "     'And that girl...?' you start to ask, leaving it hanging.";
 	say "     'Yeah, she's one of [']em.  My cover's not blown or nothin[']; it's just that she's in a bad situation.  Her male's been treatin['] her quite beastly for a while and it's only gettin['] worse.  You see, she's... well, there's been no kittens.'  It all suddenly falls into place for you and you try your best to hide your realization behind righteous anger as Shadow continues.  'I just found out when I went to see her again.  And since Leonard was able to find a place fo... I mean, he's been such a good master to us all, I know he'd be good to her even if she can't...'  Shadow's voice goes soft and her lip quivers, but then she presses on.  'So I just need you to welcome her into the pride and be the one to bring her to the boss-cat to finish the job.  Let him know about her [']problem['], so there's no surprises.  Just keep my part in this between you and me.'";
 	attempttowait;
@@ -746,6 +796,20 @@ to felinebodyshift:
 	now body of player is body entry;
 	follow the breast change rule;
 	follow the sex change rule;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"bulletproof vest"	"A bulletproof vest - a gift that might save your life."	10	bulletproof vest
+
+bulletproof vest is equipment. It is not temporary.
+The AC of bulletproof vest is 50.
+The effectiveness of bulletproof vest is 55.
+The placement of bulletproof vest is "body".
+The descmod of bulletproof vest is "You are wearing the bulletproof vest you were given.".
+The slot of bulletproof vest is "body".
+
+the scent of bulletproof vest is "The bulletproof vest has picked up a bit of your scent, but is otherwise odourless.";
 
 
 Leonard Events ends here.
