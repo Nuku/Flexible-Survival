@@ -19,7 +19,7 @@ to say losetomegakitty:
 	if hp of player > 0:
 		say "     Giving up, you are grabbed by the massive feline and smooshed against her chest.  'See.  You'll see it's much better when you listen to your Big Momma like a good kitten,' she purrs";
 	otherwise:
-		say "     Crumpling under the assualt of the massive feline, you are left weak and panting on the ground.  'See.  There is no point in fighting with your Big Momma.  And now it's time for you to be punished for being such a troublesome kitten,' she rumbles, grabbing you in her strong paws";
+		say "     Crumpling under the assault of the massive feline, you are left weak and panting on the ground.  'See.  There is no point in fighting with your Big Momma.  And now it's time for you to be punished for being such a troublesome kitten,' she rumbles, grabbing you in her strong paws";
 	if MKmet is odd:
 		say ".  You are pushed so your face is wedged between her thighs and pressed right up to her sopping pussy.  The scent of it is strong and alluring and you start licking at it.  As you do, she places the femmecum-slick sextoy into position in front of you.";
 		say "     Gripping your head with one paw and giant vibrator with the other, she starts lowering herself down.  Her rippling cunny is pushed down over your head even as her tailhole spread around the vibrator[if hp of player <= 0].  Despite your attempts to resist, you are inexorably drawn into her[end if].  You can feel its rumbling across the thin walls of soft flesh between the two quivering tunnels.  The Megakitty mrowls in pleasure and continues to lower herself down, forcing both her playthings into her needy holes as they stretch easily to accommodate them.";
@@ -49,15 +49,15 @@ to say megakittydesc:
 		say "     Reaching between her thighs, she drives a meaty paw into her extra-wide cunt.  With a moan, she pulls a massive, three foot long vibrator from herself.  Unlike the others, she's got only that single pussy at her crotch, but it's all the larger for it.  From the size of her and the stretchability of her kind, she'd clearly have no trouble stuffing any of the other big kitties (or you) into her dripping snatch.  Still wet with her juices, he heaves up the vibrator like a rumbling club and stomps towards you, feeling no need to pussyfoot around any longer.";
 	otherwise:
 		say "     You find your path blocked by the massive Megakitty.  Called [']Big Momma['] by the others, she's a bigger version of the other margays you've seen, with more than two feet of additional height to her.  The Rubenesque feline is covered in spotted and striped fur across the whole of her massively maternal body.  Her hips are extra-wide and rounded, giving the big kitty an earthshaking booty beneath her thrashing tail.";
-		say "     She gives a lustful mrowl and licks her muzzle as she eyes you.  '[if lastMKoutcome is 100]I won't let you get away so easily this time,[otherwise if lastMKoutcome is 1]Don't fight it.  You'll be plump kitten in my belly sooner or later.  You'll wear down and give in eventually - they always do,[otherwise if lastMKoutcome is 2]Don't fight it, kitten.  It's time to go back where you belong,[end if]' she purrs as she fingers her juicy snatch, withdrawing her massive sextoy from it to make room for you.  With lust in her eyes, she stomps towards you, intent on adding you to her family, regardless of how you may feel.";
+		say "     She gives a lustful mrowl and licks her muzzle as she eyes you.  '[if lastMKoutcome is 100]I won't let you get away so easily this time,[otherwise if lastMKoutcome is 3]Don't fight it.  You'll be plump kitten in my belly sooner or later.  You'll wear down and give in eventually - they always do,[otherwise if lastMKoutcome is 2]Don't fight it, kitten.  It's time to go back where you belong,[end if]' she purrs as she fingers her juicy snatch, withdrawing her massive sextoy from it to make room for you.  With lust in her eyes, she stomps towards you, intent on adding you to her family, regardless of how you may feel.";
 	increase MKmet by 1;
 	now lastMKoutcome is 100;
 
 
 [ lastMKresult ]
 [ 0 = not met  ]
-[ 1 = won      ]
 [ 2 = lost     ]
+[ 3 = won      ]
 [ 100 = fled   ]
 
 Section 2 - Monster Insertion
