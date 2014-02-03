@@ -39,7 +39,7 @@ garbage can lid is equipment. It is not temporary.
 The AC of garbage can lid is 28.
 The effectiveness of garbage can lid is 30.
 The placement of garbage can lid is "body".
-The descmod of garbage can lid is "You hold an aluminum garbage can lid in your off hand as an improvised shield.".
+The descmod of garbage can lid is "You hold an aluminium garbage can lid in your off hand as an improvised shield.".
 The slot of garbage can lid is "shield".
 
 the scent of garbage can lid is "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
