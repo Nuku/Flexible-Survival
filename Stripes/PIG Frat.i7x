@@ -74,8 +74,7 @@ to say phiiotagammadesc:
 			say "     'Look, I'm glad to see you're eager to join up, but you can't do so without a sponsor.  The mighty Phi Iota Gamma...'  Again, he pauses to oink and snort loudly along with his frat brothers.  '...is the best around.  You'll need to find a senior member in good standing willing to support your joining up.  You might look like you'll fit in, but we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.'  No further ahead for your troubles, you turn to go even before the noise dies down.";
 		move player to College Campus;
 	otherwise if piginitiation is 4:
-		say "     You swing by the Phi Iota Gamma house to visit your frat brothers.  They welcome you merrily and with lots of messy, piggy sex.";
-		say "[bracket]More P.I.G. content to come later. - The Mgmt[close bracket][line break]";
+		say "     The Phi Iota Gamma fraternity is quite literally a sty, but it suits its residents.  The large, multi-room frat house is populated by carousing, lustful pigs in various states of inebriation, fornication and incapacitation.  Aside from the boars and sows lounging out on the front lawn and the burly doorkeeper (Big Willy) keeping an eye on things from the porch, there's more members inside the common room (littered with empty beer cans), kitchen (devoid of any real food) and their bedrooms (reeking of porcine sex).  A lot of the pigs here are passed out right now after their last rousing party, but surely you can find a frat member or two to have some fun with if you'd like.";
 
 
 Section 3 - Initiation
@@ -161,5 +160,83 @@ to say pig_fratinitiation:
 		now piginitiation is 4;
 		now lastPhilipfucked is turns;
 
+
+Section 4 - Frat Members
+
+frat members is a person.
+The description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house.  Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender.  Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies.  Despite, or perhaps because of, their messy and crude behaviour, a part of you finds joining in on their fun quite appealing.";
+The conversation of frat members is { "Oink!" }.
+frat members is in Phi Iota Gamma.
+
+the scent of frat members is "The frat members all smell of pigs, beer and sex.";
+
+instead of conversing the frat members:
+	say "     You try to chat with some of the members, but they aren't really interested in talking about much aside from beer and sex.";
+
+the fuckscene of frat members is "[sexwithfratmembers]".
+
+to say sexwithfratmembers:
+	if lastfuck of frat members - turns < 4:
+		say "     While you had lots of fun, you're not sure if you're quite up for more messy sex with one of the frat members quite yet.";
+	otherwise:
+		say "     Looking around for possible playmates, you find yourself with several options.  What do you feel in the mood for?";
+		say "[bracket]Only one option at present, but more can be added. - The Mgmt[close bracket][line break]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		choose a blank row in table of fucking options;
+		now title entry is "Get fucked by one of the boars";
+		now sortorder entry is 1;
+		now description entry is "find a horny hog to pork you";
+		choose a blank row in table of fucking options;
+		now title entry is "Suck some boar cock";
+		now sortorder entry is 2;
+		now description entry is "wrap your lips around the nearest pig's meat";
+[		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck one of the sows";
+			now sortorder entry is 3;
+			now description entry is "pick a random sow and pork her";	]
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "Shall you [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Get fucked by one of the boars":
+						say "[fratmembersex01]";
+					otherwise if nam is "Suck some boar cock":
+						say "[fratmembersex02]";
+					otherwise if nam is "Fuck one of the sows":
+						say "[fratmembersex03]";
+			otherwise:
+				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+		now lastfuck of frat members is turns;
+		increase hp of frat members by 1;
+		wait for any key;
+		clear the screen and hyperlink list;
+
+to say fratmembersex01:
+	say "     Approaching one of the big pigs, you run your hands over his body and down to his groin.  Asking him if he'd care to stick his big sausage in you, he heartily agrees.  With an oink, he shoves you over and onto all fours, moving to mount you right there.  The big, sweaty boar of a man presses his porcine atop of yours and thrusts his stiff cock into your ";
+	if cunts of player > 0:
+		say "juicy pussy.  Grabbing your chest, he gropes you while pounding his thick meat into you.  '[one of]Mmm... I love fucking slutty sows like you[or]It's great living here.  All the pussy a hog could want[or]Take it, you dirty sow[at random],' he oinks.  His throbbing rod feels great inside you and his strong, musky scent is arousing, turning you on all the more.";
+		say "     You and he got at it for quite a while, the big male rutting you with pounding thrusts.  His flabby body presses down atop you, warm and slick against you.  He snuffles at your ear and fondles your [if cocks of player > 0]erection[otherwise if breast size of player > 1]tits[otherwise]stuffed pussy[end if] while fucking you.  With a loud oink, he drives himself fully into you and unleashes his greasy pig cum deep inside you, seeking to breed you.  After fucking you, he pulls out and [one of]staggers off to get some more drink[or]rolls over to pass out[or]belches and heads off to find another sow to screw[in random order].";
+	otherwise:
+		say "tight rectum.  Grabbing your sides, he holds you tightly as his thick meat pushes its way into you, violating your back entrance with his greasy flesh.  Once he's buried inside you, he lowers himself overtop you and starts rutting you with grunting thrusts.  '[one of]Mmm... you're a tight little sow-boy, aren't you?' he chuckles[or]You're quite the slut for pig cock, aren't you?' he teases[or]Ain't quite a juicy pussy, but it's a close second, slut,' he oinks[or]This frat's awesome.  Plenty of ass when you can't get no pussy,' he says[or]I've got a big, greasy load just right for a slutty bottom like you,' he oinks[in random order].  His throbbing rod feels great inside you and his strong, musky scent is arousing, turning you on all the more.";
+		say "     You and he go at it for quite a while, the big male rutting you with pounding thrusts.  His flabby body presses down atop you, warm and slick against your back.  He gives your ass the occasional slap, calling you a dirty sow while he fucks you.  After several minutes of wild, sticky rutting, he drives his large shaft deep inside your bowels and unleashes his greasy load of pig cum into your bowels.  You can feel his cock throb with each shot of hot semen into you.  After fucking you, he pulls out and [one of]staggers off to get some more drink[or]rolls over to pass out[or]belches and heads off to find a proper sow to screw[or]wipes his cock across your ass and flops down in a chair[in random order].";
+	infect "Messy Pig";
+
+to say fratmembersex02:
+	say "     Heading over to a sexy porker flopped out on the sofa, you drop to your knees between his legs.  Without introductions or preamble, you grab hold of his cock and stuff it right into your mouth.  He gives a grunt of surprise and [one of]presses your face right into his musky groin[or]proclaims what a great frat this is[or]oinks that you're quite the slut[or]takes another big swig of his beer[or]chuckles that all new members should be as eager as you to service the seniors[at random].  You slide your tongue up and down his throbbing pole, lapping up the greasy precum that leaks from it.  You work your lips up and down his pink shaft as you bob your head and suck down harder.  Fondling his hefty balls, you grow all the hungrier for their contents and are soon rewarded for your efforts.  His gooey, greasy cum floods your mouth and runs down your throat, filling your belly with an exciting warmth.  Once he's drained, you lick your chops and stride off, excited in the feeling of being such a horny cockslut.";
+	infect "Messy Pig";
+
+to say fratmembersex03:
+	say "***";
 
 PIG Frat ends here.
