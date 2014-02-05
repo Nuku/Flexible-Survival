@@ -115,7 +115,7 @@ Carry out smithing:
 			say "     Showing Snow the nanite collector you've obtained, she checks it out with a critical eye.  'This is a pretty fancy piece of tech.  I don't quite understand how all of it works, but I certainly see a few ways to mod it.  Now, I can bypass a few systems and take them out to make it lighter, but it'll be a little less effective.  Otherwise, I can add an extra pump and larger reservoir.  That'll make it work a bit better, but it'll be a little heavier too.  Otherwise, I can just leave it alone.  Which would you like?'";
 		otherwise if nanitemeter is 3:
 			say "     Showing Snow the modified nanite collector, she gives it a once-over and a quick tune-up.  'How's that extra pump and bigger tank working out for you?  If it's too heavy, I can take them off and restore it to how you got it.  Or I can even strip it down some more and make it even lighter still.  Which would you like?";
-		say "     Modify it?  [link]Light (1)[as]1[end link], [link]Standard (2)[as]2[end link], Heavy (3)[as]3[end link] or [end link]No Change (0)[as]0[end link]?";
+		say "     Modify it?  [link]Light (1)[as]1[end link], [link]Standard (2)[as]2[end link], [link]Heavy (3)[as]3[end link] or [link]No Change (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
