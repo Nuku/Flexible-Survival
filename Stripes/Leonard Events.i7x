@@ -14,6 +14,7 @@ leodenlist is a list of numbers that varies.  leodenlist is usually { 1, 2 }.
 leodinner is a truth state that varies.  leodinner is usually false.
 leoshadowmet is a truth state that varies.  leoshadowmet is usually false.
 leonardcaraway is a truth state that varies.  leonardcaraway is usually false.
+lastleomidcoitus is a number that varies.
 
 after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 and lastdenevent - turns >= 12:
 	if hp of Leonard is 16:	[maids]
@@ -24,8 +25,10 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		say "[leodenscene3]";
 	otherwise if hp of Leonard is 19 and a random chance of 2 in 5 succeeds:
 		say "[leodenscene4]";
-[	otherwise if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
-		say "[leodenscene4]";		]
+	otherwise if hp of Leonard is 20 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene5]";
+[	otherwise if hp of Leonard is 21 and a random chance of 2 in 5 succeeds:
+		say "[leodenscene6]";		]
 	otherwise if leodenlist is not empty and a random chance of (the number of entries in leodenlist) in 5 succeeds:
 		sort leodenlist in random order;
 		if entry 1 of leodenlist is 1:
@@ -39,10 +42,13 @@ after navigating Lion's Den while hp of Leonard >= 16 and hp of Leonard < 100 an
 		otherwise if entry 1 of leodenlist is 4:
 			say "[leodenspecial4]";			]
 	otherwise if a random chance of 1 in 4 succeeds:	[repeatable]
-		if a random chance of 2 in 3 succeeds:
+		if a random chance of 2 in 5 succeeds:
 			say "[leosupplyscene]";
+		otherwise if a random chance of 2 in 5 succeeds:
+			say "[leomidcoitus]";
 		otherwise:
 			say "[leopracticesession]";
+
 
 Part 1 - Maid Scene
 
@@ -155,9 +161,9 @@ to say leodenscene4:
 		felinebodyshift;
 	if cocks of player is 0 and cunts of player is 0, follow the sex change rule;
 	attempttowait;
-	say "     Given Raven's eagerness, you don't linger any longer and move quickly into the bedroom area of the den.  There you find her heaving a heavy duffel bag onto the bed.  At her prompting, you open it up to find a bulletproof vest inside.  Surprised by the unexpected gift, you turn to look at her.";
-	say "     'It took us some work to get it, but when the girls and I saw it,' she exclaims, 'we knew it was just what you needed.  We know you're strong and smart, that's why you're our matron now, but it's not a safe place to be on your own.  We've been so worried about you running around in the city like you have been.  You don't have to do that any more - there's plenty you can do here for the pride - but you still don't stay.  So until you get this urge to wander out of your system, we want you to be safe,' she says with a bit of a quaver in her voice, the corners of her eyes wet with emotion.  She puts her arms around you, hugging you tight.";
-	say "     A [if humanity of player < 30]large [end if]part of you wants to say you'll stay from now on, but you rein it in.  Instead you put your arms around her and hug her tight.  Touched by the gift and her words, you give her several tender kisses.  These kisses soon become more amorous as her paws cling to you with obvious desire.  Still filled with lust and longing after sucking on Leonard's cock, the feline is ready to show you how much she wants you here in a more physical way.";
+	say "     Given Raven's eagerness, you don't linger any longer and move quickly into the bedroom area of the den.  There you find her heaving a heavy duffel bag onto the bed.  At her prompting, you open it up to find a bulletproof vest inside.  Surprised by the unexpectedly functional gift, you turn to look at her.";
+	say "     'It took us some work to get it, but when the girls and I saw it,' she exclaims, 'we knew it was just what you needed.  We know you're strong and smart - that's why you're our matron now - but it's not a safe place to be on your own.  We've been so worried about you running around in the city like you have been.  You don't have to do that any more - there's plenty you can do here for the pride - but you still don't stay.  So until you get this urge to wander out of your system, we want you to be safe,' she says with a bit of a quaver in her voice, the corners of her eyes wet with emotion.  She puts her arms around you, hugging you tight.";
+	say "     A [if humanity of player < 30]large [end if]part of you wants to say you'll stay from now on, but you rein it in.  Instead you put your arms around her and hug her tight.  Touched by her gift and her words, you give her several tender kisses.  These kisses soon become more amorous as her paws cling to you with obvious desire.  Still filled with lust and longing after sucking on Leonard's cock, the feline is ready to show you how much she wants you here in a more physical way.";
 	attempttowait;
 	if cocks of player > 0:
 		say "     Knowing what the feline girl needs, you gently lower her onto the plush bed and move atop her.  Your paws running over her cute body, you spread her legs and move to mount her.  Pressing your lips to hers and your glans to her pussy, you thrust your tongue and [cock size desc of player] cock into her.  She releases a muffled mrowl and digs her claws into your back, gripping you with both an emotional and physical need.";
@@ -182,6 +188,45 @@ to say leodenscene4:
 	follow the turnpass rule;
 
 
+Part 5 - Unexpected Recruit
+
+to say leodenscene5:
+	say "     Your trip to the den this time was interrupted when a soldier came running out of the woods.  A little wild-eyed from whatever he's fleeing, he ";
+	if the player is bodily human and the player is facially human and the player is skintone human and tail of player is "" and ( breast size of player < 10 and cock length of player < 16 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
+		say "failed to notice you until he almost the last second.  Swerving to avoid you, he ended up running into a tree and knocked himself senseless";
+	otherwise:
+		say "screamed in shock as he noticed you in front of him.  Turning to get away from this new mutated creature, he ended up running right into a tree and knocked himself senseless";
+	say ".  Already close to the den and having your mate and pride on your mind, you carried the dazed soldier there with not entirely noble intentions.";
+	attempttowait;
+	say "     Once inside the den, you are greated by Leonard and the maids.  The latter quickly move to take charge of the surprise guest, whisking him off to the bed to lay down.  In the meantime, your mate speaks with you.  'Is this some friend of yours, my dear?' he inquires.  When you explain what happened, he nods and glances over at the young man.  'And so you brought him to me... I thank you very much, my mate.  You've done the right thing.  Let us go welcome our guest,' he purrs with a predatory grin that you share.";
+	say "     The young soldier, whether from the chock or his unexpected nap, is still somewhat dazed and hasn't fully taken in his present situation.  One of the maids is dabbing the bump on his head while the others cuddle him close.  His torn jacket's already been slipped off, as has been his belt.  A feline paw is under his shirt and another is in his pants while the lioness maids nuzzle him tenderly.";
+	say "     The shock of seeing Leonard startles a little life back into him, but he doesn't pull away from the affectionate and tender maids cuddling him.  'I... I... Ah... Wha... Who?  Where am I?' he finally manages to blurt out.";
+	say "     Leonard, as suave and gentlemanly as ever, smiles to the young man.  'Don't worry, soldier.  My name is Leonard and you're safe here in my den.  We mean you no harm.  You hurt yourself rather badly when you almost crashed into my mate here.'  He indicates to you and you smile, keeping a polite distance for the moment.  '[if cunts of player > 0]She[otherwise]He[end if] says you seemed quite agitated and were perhaps fleeing something?  What happened to your unit?' he asks in a concerned manner.";
+	say "     'There was... some big cat thing - Ah! Not like you though... uh... sir,' he quickly adds.  'Some four-footed beast.  Wild and vicious.  It took us by surprise and drug off Paul.  It got Marcus next... though it might have been a different lion-thing.  The others were picked off one by one.  In the end, Tony just gave himself up and let it mount him then and there.'";
+	say "     Leonard listens attentively during the account, nodding and expressing his condolences as appropriate.  'Yes, the felinoids have been quite beastly pests.  We've had our troubles with them as well, but you're safe from them with us.  I do hope this experience hasn't put you off of felines as a whole,' he inquires politely.  With lioness ears on the man's head and fur rising on his now bared chest, the young man shakes his head and smiles dreamily.  'No, you've all been so nice to me.  I'm feeling much better already.'";
+	say "     'I can see that,' your mate rumbles.  'But it may not be safe to leave quite yet.  It'd be better if you stayed with us a little while longer.'  Leonard, having eased closer, runs his paw over the soldier's increasingly feline and feminine face.";
+	say "     'I'd like that,' the transforming soldier purrs, nuzzling against his paw.";
+	say "     'I knew you would,' the lion responds, moving in to kiss that cute, new muzzle.  There is a brief moment of surprise on the soldier's altered face, perhaps realizing what's happening before his feline instincts override his reason and his resistance vanishes.  It is a sight that fills your matronly heart with excitement and, unwilling to wait any longer, you move in to join your mate in welcoming this soon-to-be newest member to your pride.";
+	attempttowait;
+	say "     While the maids guide Leonard's stiff cock into their charge's muzzle, you move in between his legs and tug down his pants.  Though [']his['] really won't be appropriate for much longer, his cock and balls already quite small even as a fresh, virgin pussy is forming to replace them.  You lick your lips and start lapping across it, encouraging the change.  You kiss the cock goodbye as it shrinks down to become the clitoris for her new vagina.  As much as you may like to stuff [if cocks of player > 0]your cock or  [end if]a few fingers into her pristine pussy, you content yourself with some light touching and a thorough licking, saving her deflowering for your mate.";
+	say "     During the blow job, Leonard rumbles to her about what a fine, brave kitty she is and how happy the pride is to have her in its service.  Excited and wanting to get to the main event, Leonard goes for a quick finish to the oral prelude and releases a lustful roar along with his semen.  The new kitty moans in pleasure as she swallows down the lion's first load.  And by that point, you've gotten her so hot and bothered that she moves onto all fours and raises her tail unbidden as soon as the lion moves back.  'Do me, sir.  Please, I need it,' she mrowls in heated need as she presents herself for his inspection.";
+	say "     Rumbling again what a fine kitty she is, Leonard stiffens right back up and thrusts into her, taking her new-found virginity.  A shiver of pained delight runs through her as her hymen's broken, but the discomfort disappears almost immediately, leaving only the lustful need for more.  Snuggling up beside her, you reach underneath the lioness to caress her stuffed pussy and Leonard's cock while they mate.  You and the lion slide her partially atop you so she can start nursing for your matronly milk.  As she nurses, you purr to her about how the pride needs brave, loyal lionesses like her.  Adding that a strong, obedient lionesses like her deserves to be rewarded, Leonard buries his rod deep inside her and drains his balls, claiming her womb with her virile reward.  She mrowls loudly in climax in response, kissing you repeatedly as she swears her love and loyalty to her pride.";
+	attempttowait;
+	say "     After that, the mating winds down into playful snuggling while the maids lick the three of you clean before all of you enjoy a nap on the plush bed together.  When you awaken, Leonard is seeing the newest member of the pride off.  Now fully a cute lioness, she's also sporting an altered version of her military jacket that's been re-tailored by the maids into a sexy open top.  She gives you both a sharp salute and heads off with a smile on her eager face.";
+	say "     Taking a seat with Leonard in the sitting room, he passes you a drink.  'I had an informative discussion with our new Olive when she awoke.  She doesn't recall much and it's fading quickly, but I queried her on the soldiers coming into the city.  The rank and file soldiers clearly aren't being told much, but I was able to glean much.  A shrewd gentleman must be able to discern what's going on from the limited details available.  If the pride's properly prepared, I think we things could turn out rather well for us.  As for Olive, I believe she'll work out quite well for us if her training still holds.  If so, her and a few like-minded recruits would make a good team to help protect the other, less combat-ready girls.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	decrease libido of player by 10;
+	decrease humanity of player by 20;
+	if libido of player < 0, now libido of player is 0;
+	now hp of Leonard is 21;
+	now lastdenevent is turns;
+	rest;
+	follow the turnpass rule;
+
+
 Part 7 - Special Dinner
 
 to say leodenspecial1:
@@ -192,7 +237,7 @@ to say leodenspecial1:
 	otherwise:
 		felinebodyshift;
 	attempttowait;
-	say "     Arriving at the den, you are greated by the delicious scent of cooking food even before you step inside.  At the tunnel mouth sits Leonard at a wooden table set for two and [if leonardcaraway is true]an array[otherwise]several[end if] steaming dishes set out.  The maids are waiting behind him, smiling politely as they stand at the ready.  Seeing you, the gentlemanly lion rises.  'Welcome, my dearest mate.  I had heard through the grapevine that you were coming this way and thought you might want to sit and enjoy the sunset with me,' he says with a soft purr in his voice and a smile on his muzzle.  'I do hope those two chatterboxes didn't bore you too badly, but we needed a little extra time to prepare.'  He steps around the table to pull out your chair for you, giving you a loving kiss as you sit down.";
+	say "     Arriving at the den, you are greeted by the delicious scent of cooking food even before you step inside.  At the tunnel mouth sits Leonard at a wooden table set for two and [if leonardcaraway is true]an array[otherwise]several[end if] steaming dishes set out.  The maids are waiting behind him, smiling politely as they stand at the ready.  Seeing you, the gentlemanly lion rises.  'Welcome, my dearest mate.  I had heard through the grapevine that you were coming this way and thought you might want to sit and enjoy the sunset with me,' he says with a soft purr in his voice and a smile on his muzzle.  'I do hope those two chatterboxes didn't bore you too badly, but we needed a little extra time to prepare.'  He steps around the table to pull out your chair for you, giving you a loving kiss as you sit down.";
 	say "     You and Leonard have a lovely dinner together in the fading light, enjoying the beautiful sunset as your backdrop.  You discuss several pride matters as well as your recent adventures in the city.  You are served a [if leonardcaraway is true]seven[otherwise]five[end if] course meal by the maids, ending with dessert by candlelight.  You can tell as the evening wears on that Leonard's getting aroused by how often he's groping the cute maids and you can't help but give them a few teasing touches yourself[if leonardcaraway is true].  This is especially true when Caraway comes out with the dessert, playing with her pussy to the point she's weak-kneed as she tries to serve you[end if].  By the time you're both finishing up dessert, there is a maid beneath the table at both ends, [if cocks of player > 0]one sucking your cock and another dealing with Leonard's[otherwise if cunts of player > 0]one licking your pussy while another deals with Leonard's cock[otherwise]one licking and rubbing your bare groin while another deals with Leonard's cock[end if].";
 	say "     Once dessert is finished, you are Leonard can wait no longer.  Rather than go inside or even wait for the table to be cleared, he pushes you down overtop of it and starts riding you as you moan and mewl lustfully for more.  The maid girls smile and watch, clearing the dishes and the remains of dinner out of the way while the studly lion's hard thrusting threatens to tumble everything onto the ground.  Mindful of the antique table, you grab a handful of the tablecloth in both hands and dig your claws into that rather than the wood.  Your cries of lustful mating carry out into the night air, certainly not the only such cries around, but definitely the loudest tonight.  He fucks you and fills you twice on the tabletop before taking you inside onto the bed and mating you again there[if leonardcaraway is true].  After mating you repeatedly, Caraway is called over so Leonard can give his compliments to the chef, fucking her to a loud orgasm while you play with her breasts.  After the repeated matings, the three of you[otherwise].  After the repeated matings, you both[end if] pass out for a catnap on the bed.[impregchance]";
 	if player is felinebodied:
@@ -344,6 +389,29 @@ to say leopracticesession:
 	now lastdenevent is turns;
 
 
+Part 12 - Mid-Coitus
+
+to say leomidcoitus:
+	say "     Arriving at the den, you're greeted by the sounds and smells of leonine sex before even entering.  It gets you [if cocks of player > 0 and cunts of player > 0]hard and wet[otherwise if cocks of player > 0]hard[otherwise if cunts of player > 0]wet[otherwise]aroused[end if] and you move quickly ";
+[	if lastleomidcoitus is even:	]
+	if 1 is 1:
+		say "into the den area to find Leonard with one of his feline girls in his lap and speared upon his throbbing cock.  Seeing her bouncing in his lap with her wet juices running down his throbbing manhood as he slides her up and down his pole is quite hot.  And from the sounds of it, they're getting close.";
+		say "     [one of]'It looks like the Matron's here to join us, kitten?' [or]'It seems we have some company, my little kitty,' [or]'Well, it seems you'll get to see the Matron after all this visit,' [or]'Aren't you a lucky kitty, being here when the Matron comes to visit us,' [in random order]Leonard purrs to the girl in his lap.  Her bliss-filled face smiles all the more and she gives a needy mewl.  Needing no further invitation, you toss off your gear as quick as you can and move in to join them.";
+		if cocks of player > 0 and a random chance of 3 in 5 succeeds:
+			say "     Stroking your already stiff erection, you motion for Leonard to switch positions.  Draping the lusty lioness across the arm of his chair, he resumes pounding her pussy while you move to her muzzle.  Stroking her feline head, you stick your [cock of player] cock into her welcoming mouth.  She licks and sucks at your shaft [if cock length of player > 20]as best she can given your impressive size[otherwise if cock length of player > 12]as it stuffs her muzzle full[otherwise]eagerly[end if].  Already having gone at it for a while, it isn't long before Leonard's burying his shaft in the kitten's juicy cunt and offloading his hot seed into her.  As he breeds the lioness, she mrowls and grinds back onto his shaft, the scent of her juices growing stronger as well as she cums hard.  After the mating's over, Leonard remains inside her, enjoying her quivering cunt while she finishes you off and is rewarded with a tasty treat of your hot semen as well.  Leonard quickly sends her on her way, clearly having only eyes for you now.  The lioness, thoroughly fucked and sated, is not slighted by this and staggers out into the park with a grin of sexual satisfaction upon her muzzle.";
+		otherwise if a random chance of 3 in 5 succeeds:
+			say "     The sight of their point of union is too tantalizing to resist and you drop to your knees in front of them.  Licking your lips in anticipation, you spread her thighs wider and press your muzzle between her legs.  'Oh, Matron,' she moans as you run your tongue across her dripping folds.  You focus your first few licks on the girl's stuffed cunny before expanding your range from Leonard's full balls to her clitoris and everything in between.  Already having gone at it for a while, your added stimulation soon sends them over the edge into orgasmic release.  You're treated to a front row seat as Leonard buries his pulsing rod deep into her cunt and offloads his virile seed into her.  As he breeds the lioness, she mrowls lustfully and her cunt quivers as she orgasms.  You eagerly lap up the mix of semen and femmecum leaking from her stuffed pussy, eventually extending her orgasm to another yowling peak before it's over.  Sliding her from his lap, Leonard quickly sends her on her way, clearly only having eyes for you now.  The lioness, thoroughly fucked and sated, is not slighted by this and staggers out into the park with a grin of sexual satisfaction on her muzzle.";
+		otherwise:
+			say "     Moving in front of them, you hug the lap-rider to your chest.  Instinctively, her muzzle finds its way to your breast and starts suckling[if the player is not felinebodied], restoring your matronly figure[end if].  As your milk begins to flow, she does her best to drink it down, though some dribbles run down your chest as the pace of their mating picks up again.  Already having gone at it for a while, it isn't much longer before Leonard reaches his peak and thrusts deep into her with a triumphant growl.  She mrowls and wriggles in delight as she's bred by the virile lion.  With her climax following at the heels of his, she has to stop nursing while waves of pleasure shudder through her.  A mix of her hot juices and lion cum leaks from her stuffed cunny.  Once spent, she's released from the lion's lap and quickly sent on her way, Leonard clearly only having eyes for you now.  The lioness, thoroughly fucked and sated, is not slighted by this and staggers out into the park with a grin of sexual satisfaction on her muzzle.";
+	if player is felinebodied:
+		infect "Feline";
+	otherwise:
+		felinebodyshift;
+	increase libido of player by 6;
+	if libido of player > 100, now libido of player is 100;
+	increase feline_meow by 1;
+	increase lastleomidcoitus by 1;
+	now lastdenevent is turns;
 
 
 Section 1 - Park
@@ -669,7 +737,7 @@ Part 7 - Special Park Pride 7 - Walk #2
 
 to say leoparkscene7:
 	say "     Travelling through the park, you are surprised to come across Leonard on another excursion from the den.  He smiles to you and welcomes you into his arms, kissing his mate lovingly.  '[if daytimer is day]I have the maids cleaning up a storm in the den, so I am leaving them to it while I get some fresh air[otherwise]I decided to come out and enjoy a walk in the brisk night air.  You can see the stars so much better these days[end if],' he says, offering you his arm to join him in his walk.  You smile and take it, wandering the park with your gentlemanly lover for a time.";
-	say "     As before, the walk is a mix of business and pleasure, the lion enjoying the scenery and company, but also checking up on the state of things in the park.  When others from the pride are met, he checks with them for what news they can give.  Most of them aren't very mindful of things outside their own needs and lusts.  But even then, Leonard is at least able to glean some news on how often they're seeing the other denizens of the park, helping to give you both a rough idea of the size of those groups and what they're up to.  After answering his questions, they are all treated to an opportunity to nurse from you[if the player is not felinebodied], helping to restore your matronly figure[end if].  They don't tary long, leaving their master and matron to enjoy their walk together.  It is both an enjoyable and informative time for you with your mate and the girls.  Eventually, the meandering steers back to lion's den and you join him inside.";
+	say "     As before, the walk is a mix of business and pleasure, the lion enjoying the scenery and company, but also checking up on the state of things in the park.  When others from the pride are met, he checks with them for what news they can give.  Most of them aren't very mindful of things outside their own needs and lusts.  But even then, Leonard is at least able to glean some news on how often they're seeing the other denizens of the park, helping to give you both a rough idea of the size of those groups and what they're up to.  After answering his questions, they are all treated to an opportunity to nurse from you[if the player is not felinebodied], helping to restore your matronly figure[end if].  They don't tarry long, leaving their master and matron to enjoy their walk together.  It is both an enjoyable and informative time for you with your mate and the girls.  Eventually, the meandering steers back to lion's den and you join him inside.";
 	if the player is not felinebodied:
 		felinebodyshift;
 	otherwise:

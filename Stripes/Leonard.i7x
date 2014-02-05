@@ -1043,7 +1043,10 @@ to say leonardrivalfight:
 [ 15 = succumbed as matron				]
 [ 16 = matron player					]
 [ 17 = had maid scene					]
-[ 18 = had work group scene			]
+[ 18 = had work group scene				]
+[ 19 = had kitty rescue scene			]
+[ 20 = had special gift scene			]
+[ 21 = had new recruit scene			]
 [ 100 = lost/fled lion fight				]
 
 
