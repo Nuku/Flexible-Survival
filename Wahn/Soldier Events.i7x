@@ -254,9 +254,9 @@ Instead of resolving a Soldiers & Snowmeows:
 	if debugactive is 1:
 		say "    DEBUG -> SNOWMEOWSOLDIERSTATUS [SnowmeowSoldierStatus] <- DEBUG[line break]";
 	if SnowmeowSoldierStatus is 0:
+		now SnowmeowSoldierStatus is 1;
 		say "     You come across a sight that has become quite common in this infection-riddled city. A man, a stray soldier by the looks of him, on his hands and knees, with his pants around his ankles, panting hard as he gets a hard cock thrust into his ass. Hunched over him, one of the large snow leopards roaming this district pants and purrs as he thrusts noisily into the man's body. The cat's captive has already started to change - you can see tufts of fur erupt from his bare arms and a long tail sprouting from his spine as it twines about his rapist's body. His moans are clearly more of pleasure than of pain or fear, with a few meows as the soldier loses himself more and more to his lust. A small jet of cum spurts from the transforming man's jerking, shrinking penis as the cat thrusts into him.";
 		say "     [line break]";
-		now inasituation is true;
 		say "     Do you want to step in and stop the snow leopard?";
 		if player consents:
 			say "     [line break]";
@@ -278,11 +278,13 @@ Instead of resolving a Soldiers & Snowmeows:
 						say "     As you do so, your animal nature takes over for a while, making you mount the panting female under you with an untamed wild energy, mating her with rapid and forceful thrusts. It just feels so right to really pound into her while you feel her breasts with your hand-paws and lick them, then make out with her hungrily. As intense as this feels, you wish you could just go on fucking her forever, though at some point your body just can't be denied any longer. With a loud grunt, you slam into your snow leopard mate one last time and start to blast your fertile seed into her receptive womb, filling her up with spurt after spurt.";
 						say "     [WaitLineBreak]";
 						say "     Lying on the ground for a while in post-coital contentment, you listen to the female's breathing slow down and become more regular as she winds down from her own state of arousal. Then suddenly, she gasps and sits up, looking down on you in panic. Wide-eyed and sputtering 'I... you did... we -', she realizes in shock that she acted just like an animal in heat. That she could be so strongly ruled by desires and instincts frightens her and she panics, snatching up her uniform parts from the ground and running away with them clutched to her chest.";
-						decrease humanity of player by 5;					
+						decrease humanity of player by 5;
+						now SnowmeowSoldierStatus is 2;
 					otherwise:
 						say "     [line break]";
 						say "     Shaking your head to clear your mind, you force yourself to let go of the female snow leopard and step back from her, determined not to let animal instincts dominate your behaviour. The former soldier looks at you with a surprised expression, a bit lost now that you've derailed what her body was telling her would happen next. She pants in her undiminished arousal, then turns and runs, dashing off to find a male who will give her what she so urgently needs.";
-						increase humanity of player by 5;					
+						increase humanity of player by 5;
+						if humanity of player > 100, now humanity of player is 100;
 				otherwise:				
 					say "     Glancing up at you, the newly female snow feline panics and dashes off, quickly losing you in the winding allies of the city. With a sigh, you let her go.";
 		otherwise:
@@ -294,8 +296,6 @@ Instead of resolving a Soldiers & Snowmeows:
 			otherwise:
 				say "     [line break]";
 				say "     Leaving the two to their mating, you manage to sneak away without being seen.";
-		now inasituation is false;
-		now SnowmeowSoldierStatus is 1;
 	otherwise if SnowmeowSoldierStatus is 1 or SnowmeowSoldierStatus is 2:
 		say "     You're a bit surprised when you spot a lone soldier making his way through the streets. Don't they teach basic safety in military schools anymore? Safety in numbers! Curious what he's doing out here alone, you trail the guy as he nears a storefront, one of the few that still has most of the windows intact. Following him inside, you realize you've stepped into a small clothing store. Clothes racks and a few (thankfully) unmoving mannequins decorate the floor, while mirrors and shelves filled with perfumes and small trinkets define the walls, making the store feel much larger inside.";
 		say "     The soldier calls out as he moves cautiously towards the back of the store. 'Bob? Is that you?' 'Hi Lee', answers a soft, very feminine voice. Quietly sneaking around the racks, you spot the snowmeow soldier you encountered [if SnowmeowSoldierStatus is 2]and fucked[end if] earlier. Seems like she's retained at least some of her humanity. Standing upright, she's bound her long white-grey hair up into a ponytail atop her head and has picked out a matching set of bra and panties to wear, yellow satin and lace, with a matching pair of nylons that she's somehow managed to slide up her legs.";
