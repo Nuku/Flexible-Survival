@@ -1534,6 +1534,13 @@ this is the firebreath rule:
 				say "[one of]The oriental dragon[or]The [name entry][or]The serpentine dragon[purely at random] exhales a wave of blue fire towards you.  Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
 			otherwise:
 				say "[one of]The oriental dragon[or]The [name entry][or]It[or]The serpentine dragon[purely at random] exhales a wave of blue fire over you.  You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
+		otherwise if name entry is "Salamander":
+			if fbhit is 2:
+				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly.  The heat threatens is like that of a blast furnace and threatens to overwhelm you.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise if fbhit is 1:
+				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
 		otherwise:
 			if fbhit is 2:
 				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";
