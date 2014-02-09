@@ -38,19 +38,21 @@ to say sandman loses:
 	say "     The sand man takes a step back and raises his hands in a pacifying gesture. 'Ok, ok - I give up. You can be on top when I fuck you.' Judging from the hard bulge in his speedos, it doesn't even seem to occur to him that your fight might have been anything other than a sex game for dominance. He's pretty single-minded in his expectation of getting sex with anyone on the beach.";
 	if cocks of player > 0:
 		say " 		[line break]";
-		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
+		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], try to teach him a painful lesson to leave you alone in the future [link](3)[as]3[end link] or just go [link](4)[as]4[end link].";
 		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
 			otherwise:
-				say "Invalid choice.  Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him or [link]3[end link] to leave.";
+				say "Invalid choice.  Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to knee him or [link]4[end link] to just leave.";
 		if calcnumber is 1:								[mount his cock]
 			say "[sandman ride]";
 		otherwise if calcnumber is 2:			[fuck him in the ass]
 			say "[sandman fucked]";
+		otherwise if calcnumber is 3:			[knee him in the crotch]
+			say "     Calmly stepping up to the beach stud, you tell him that sometimes he should take the hint when someone is not interested... and then you knee him in the groin, leaving him to sink to his knees in a pained whimper as you walk away. Its doubtful that he'll learn anything from this and actually stop bothering you the next time you meet, though there's something oddly satisfying in leaving this pushy guy on his knees and holding his crotch.";			
 		otherwise:												[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	otherwise:
