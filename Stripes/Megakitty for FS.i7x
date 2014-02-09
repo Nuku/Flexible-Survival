@@ -4,7 +4,9 @@ Version 1 of Megakitty for FS by Stripes begins here.
 "Adds a boss-level Margay referred to as the 'Megakitty' and named 'Big Momma'."
 
 MKunleashed is a truth state that varies.  MKunleashed is usually false.
-MKmet is a number that varies.
+MKmet is a number that varies.		[# of encounters]
+MKloss is a number that varies.		[# of player losses]
+MKwin is a number that varies.		[# of player wins]
 lastMKoutcome is a number that varies.
 
 when play begins:
@@ -16,11 +18,17 @@ when play begins:
 Section 1 - Monster Responses
 
 to say losetomegakitty:
+	increase MKloss by 1;
 	if hp of player > 0:
 		say "     Giving up, you are grabbed by the massive feline and smooshed against her chest.  'See.  You'll see it's much better when you listen to your Big Momma like a good kitten,' she purrs";
 	otherwise:
 		say "     Crumpling under the assault of the massive feline, you are left weak and panting on the ground.  'See.  There is no point in fighting with your Big Momma.  And now it's time for you to be punished for being such a troublesome kitten,' she rumbles, grabbing you in her strong paws";
-	if MKmet is odd:
+	if the remainder after dividing MKloss by 3 is 0 and anallevel is not 1:
+		say ".  Pressing your face to her super-sized pussy, she mrowls and grinds against you until you start licking at it.  Setting aside her giant sextoy for a moment, she grabs you by both shoulders and drives your head forcibly right between her juicy petals.  Her spacious cunny grips around you and starts tugging you further in [if hp of player > 0]once again[otherwise]despite your feeble attempts to resist[end if].";
+		say "     With you secured and being pulled steadily deeper into her, she moves her paws to your ass and grabs it.  Kneading your rear, she pops your shoulders in with a moan that sends quivers through her rippling vagina[if MKloss is 3].  You then feel something big and slick at your rump.  For a moment you think it's her fist, but then realize it's the massive vibrator.  You try to pull away, but her hold on your ass is too tight[otherwise].  When you feel her massive vibrator at your ass again, you bite your lip and whimper, but are unable to do anything more than wait for it[end if].  With one paw gripping your backside tightly, she holds the huge toy against your [if the player is twistcapped]stretchable[otherwise]tight[end if] hole, letting the pussy juices on it drool slowly onto your soon to be compromised pucker.";
+		say "     She turns the vibration down low, letting its soft rumble [if the player is twistcapped]prompt your capacious hole to start relaxing in preparation[otherwise]coax your inadequate hole relaxing a little[end if].  When another quiver of her pussy around you makes her moan, she decides she's tired of waiting and drives the vibrator into you, stretching your asshole [if the player is twistcapped]delightfully[otherwise]painfully[end if] wide.  Shivers of aching joy run through you as she turns up the power on the sextoy even as she forces more and more of it into you[if scalevalue of player < 3].  It's so big inside you that it feels like you're being stretched around it[end if].";
+		say "     With all your attention locked on that massive intruder, you barely notice that you're also being forced deeper and deeper into her hot cunny.  The rumbling inside your bowels[if cocks of player > 0] and against your prostate[end if] [if cocks of player > 0 or cunts of player > 0]grinds your loins against her vaginal walls, easily driving you to a sticky orgasm[otherwise]grinds your body against her vaginal walls.  Even as you're slipping into her womb, she cranks the vibrator up to full power, shaking you into mind-numbing bliss.  The powerful motion also helps to slip you off the toy as you're drawn quickly into her uterus.  When you pop off the rumbling dildo, her cervix seals up between you and it, leaving you trapped in your new mother's womb.  The soft rumble of the sextoy, much like her feline purring, comforts you, lulling you into slumber.  Curling up in a fetal position, an umbilical cord forms to connect you to her.";
+	otherwise if MKloss is odd:
 		say ".  You are pushed so your face is wedged between her thighs and pressed right up to her sopping pussy.  The scent of it is strong and alluring and you start licking at it.  As you do, she places the femmecum-slick sextoy into position in front of you.";
 		say "     Gripping your head with one paw and giant vibrator with the other, she starts lowering herself down.  Her rippling cunny is pushed down over your head even as her tailhole spread around the vibrator[if hp of player <= 0].  Despite your attempts to resist, you are inexorably drawn into her[end if].  You can feel its rumbling across the thin walls of soft flesh between the two quivering tunnels.  The Megakitty mrowls in pleasure and continues to lower herself down, forcing both her playthings into her needy holes as they stretch easily to accommodate them.";
 		say "     Once she's got you stuffed inside her to your hips, she raises herself back up.  This is mostly so she can start riding up and down on the vibrator in her ass.  Addled by the warmth, scent, taste and feel of her all around you, you lose yourself in the pleasure of her clenching cunt rippling all around you as that vibrating toy slides in and out alongside you.  After taking her good, sweet time to enjoy this, she resumes feeding you into her needy cunt by popping your hips past her wet folds[if cocks of player > 0 or cunts of player > 0].  With the massive dildo rumbling against your crotch, you moan in climax, adding your sexual release to the wet juices lubricating your passage[end if].  After that, it's an easy matter of slurping up your legs and depositing you in the warm embrace of her womb.  There you drift off into a blissful slumber, your dreams filled with loving thoughts of your feline mother.";
@@ -30,12 +38,16 @@ to say losetomegakitty:
 		say "     As she's engulfing your thighs, she pauses to pet and caress your head tenderly, purring about what a lovely, happy kitty you'll be.  You only respond by purring and moaning, cuddling the rumbling dildo more tightly[if cocks of player > 0 or cunts of player > 0].  She smiles down at you and adds a little extra pressure to the base of the sextoy, rubbing it firmly against your groin until you cum with a mrowl[end if].  The massive margay takes you by the waist and pulls you in, popping your hips past her juicy folds with an orgasmic cry of her own.";
 		say "     With her clenching, pulling vagina drawing you ever deeper, soon you're forced to relinquish the vibrator so your chest can be pulled into her.  Your arms are pressed to your sides and get drawn in with it.  She does keep that delicious, rumbling sextoy pressed to your face though so you can continue to lick at it even as your head is drawn up into her cunt.  The dildo follows right behind you into her snatch, helping to push you along on your way into her womb.  It is only when your head slides past her cervix and that ring draws shut that you're cut off from it, though you can still feel its comforting rumbling just on the other side.  You soon drift off, descending into a blissful slumber with dreams of plump, sexy kitties.";
 	say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random].  And you feel different too, changed a little by your unusual experience.  You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+	if anallevel is 3 and MKloss is 9 and the player is not twistcapped:
+		say "     Your ass feels strange and you reach back to rub it.  Finding it even rounder than before, you slide a finger to your recently abused pucker.  Rubbing it causes it to relax quickly and considerably, a stretchiness that lets you stuff your whole fist into yourself with a sense that you could easily take much more.  It seems after so much abuse, your ass will never quite be the same again.  You have gained the [bold type]Twisted Capacity[roman type] feat.";
+		add "Twisted Capacity" to feats of player;
 	now lastMKoutcome is 2;
 	infect "Margay";
 
 
 to say beatthemegakitty:
 	say "     The big feline hisses angrily as you continue to resist her.  'Fine!  I've got plenty of other kitties to play with for now.  But I'll be back for you later,' she adds as she backs off.";
+	increase MKwin by 1;
 	now lastMKoutcome is 3;
 
 

@@ -22,19 +22,21 @@ Figure of Zebra_icon is the file "Zebra.png".
 [npc icons]
 Figure of Adam_icon is the file "Adam.png".
 Figure of Amy_icon is the file "Amy.png".
+Figure of Blanche_icon is the file "blanche_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
 Figure of David_icon is the file "David.png".
+Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of Elijah_evil_icon is the file "Elijah_evil.png".
 Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
 Figure of Felix_icon is the file "Felix.png".
+Figure of SamBadEnd_icon is the file "fleckt10.jpg".
 Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
-Figure of Blanche_icon is the file "Blanche.jpg".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -99,25 +101,27 @@ carry out artistcredits:
 	say "     Ram by Anymouse1968 @ Furaffinity[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
-	say "     Hermaphrodite Gryphon by ?[line break]";
+	say "     Hermaphrodite Gryphon by dbd @ furaffinity[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Shadow Beast by Fennris @ furaffinity.net[line break]";
-	say "     Snow Leopard by ?[line break]";
+	say "     Snow Leopard by Anymouse1968 @ Furaffinity[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";	
 	say "     Adam by Kadel @ y-gallery.net[line break]";	
+	say "     Blanche by The_Negative @ furaffinity[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";	
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
+	say "     Dr. Moffatt by The_Negative @ furaffinity[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
-	say "     Sandra by ?[line break]";
+	say "     Sandra by Trav @ ???[line break]";
+	say "     Sam's Bad End by The_Negative @ furaffinity[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
 
 FS Graphics ends here.
-
