@@ -8,20 +8,27 @@ Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
+Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
+Figure of FireSpriteMale_icon is the file "FireSpriteMale.png".
+Figure of GooGirl_icon is the file "GooGirl.png".
+Figure of griffon_icon is the file "bluegriffon.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
+Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
+Figure of PinkGel_icon is the file "PinkGel.png".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
-Figure of griffon_icon is the file "bluegriffon.jpg".
-Figure of Mannequin_icon is the file "Mannequin.png".
-Figure of PinkGel_icon is the file "PinkGel.png".
 Figure of ShadowBeast_icon is the file "ShadowBeast.png".
+Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
+Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
 Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
 Figure of Adam_icon is the file "Adam.png".
 Figure of Amy_icon is the file "Amy.png".
+Figure of Andre_icon is the file "Andre.png".
+Figure of Anthony_icon is the file "Anthony.jpg".
 Figure of Blanche_icon is the file "blanche_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".
 Figure of CarlClothed_icon is the file "Carl_clothed.jpg".
@@ -32,6 +39,8 @@ Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
 Figure of Felix_icon is the file "Felix.png".
+Figure of MarcOrwell_icon is the file "MarcOrwell.png".
+Figure of Mike_icon is the file "Mike.jpg".
 Figure of SamBadEnd_icon is the file "fleckt10.jpg".
 Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
@@ -66,18 +75,22 @@ carry out graphicmoding:
 Table of infection graphics
 title	icon(figure name)
 "Alpha Husky"	Figure of AlphaHusky_icon
+"Blue Gel"	Figure of BlueGel_icon
 "Bottlenose Toy"	Figure of Bottlenose_icon
-"Messy Pig"	Figure of MessyPig_icon
+"Demon Brute"	Figure of DemonBrute_icon
+"Elven Hunter"	Figure of ElvenHunter_icon
+"Goo Girl"	Figure of GooGirl_icon
+"Helot"	Figure of SpartanHelot_icon
+"Hermaphrodite Gryphon"	Figure of griffon_icon
 "Latex Vixen"	Figure of LatexVixen_icon
+"Mannequin"	Figure of Mannequin_icon
+"Messy Pig"	Figure of MessyPig_icon
+"Pink Gel"	Figure of PinkGel_icon
 "Plush Lion"	Figure of PlushLion_icon
 "ram"	Figure of Ram_icon
-"Blue Gel"	Figure of BlueGel_icon
-"Demon Brute"	Figure of DemonBrute_icon
-"Hermaphrodite Gryphon"	Figure of griffon_icon
-"Mannequin"	Figure of Mannequin_icon
 "Shadow Beast"	Figure of ShadowBeast_icon
 "Snow Leopard"	Figure of SnowLeopard_icon
-"Pink Gel"	Figure of PinkGel_icon
+"Spartan"	Figure of SpartanHelot_icon
 "Zebra"	Figure of Zebra_icon
 
 artistcredits is an action applying to nothing.
@@ -95,22 +108,28 @@ carry out artistcredits:
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ Furaffinity[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ Furaffinity[line break]";
-	say "     Demon Brute by Anymouse1968 @ Furaffinity[line break]";
-	say "     Latex Vixen by Anymouse1968 @ Furaffinity[line break]";
-	say "     Messy Pig by Anymouse1968 @ Furaffinity[line break]";
-	say "     Ram by Anymouse1968 @ Furaffinity[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
+	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
+	say "     Helot by Darian821 @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity[line break]";
+	say "     Latex Vixen by Anymouse1968 @ Furaffinity[line break]";
+	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
+	say "     Messy Pig by Anymouse1968 @ Furaffinity[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
+	say "     Ram by Anymouse1968 @ Furaffinity[line break]";
 	say "     Shadow Beast by Fennris @ furaffinity.net[line break]";
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity[line break]";
+	say "     Spartan by Darian821 @ y-gallery.net[line break]";
+	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
 	say "     [line break]";
 	say "NPCs:[line break]";
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";	
 	say "     Adam by Kadel @ y-gallery.net[line break]";	
+	say "     Andre by Wemd @ furaffinity.net[line break]";	
+	say "     Anthony by FsMaverick @ furaffinity.net[line break]";	
 	say "     Blanche by The_Negative @ furaffinity[line break]";
 	say "     Brutus by Lay @ y-gallery.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";	
@@ -118,8 +137,10 @@ carry out artistcredits:
 	say "     Dr. Moffatt by The_Negative @ furaffinity[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
-	say "     Sandra by Trav @ ???[line break]";
+	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
+	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity[line break]";
+	say "     Sandra by Trav @ ???[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";

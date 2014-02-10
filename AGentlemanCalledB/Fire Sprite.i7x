@@ -206,10 +206,11 @@ to say FireSpritedesc:
 	say "     As you're working your way through the difficult terrain of the ruined capital [one of]you hear a maniacal giggle behind you, you turn slowly[or]a fireball zips past you, narrowly missing your head, you spin around quickly[or]you turn a corner[at random] and find yourself face to face with a small elfin creature.";
 	if FireSpritemode is 0: [Female]
 		say "     The sprite before you is not much more then two feet tall, with bright orange flesh and slim feminine features. While decidedly small compared to many of the creatures you've seen around her perky C cup breasts seems quite large compared to her lithe body, and her long orange and [one of]red[or]white[at random] hair seems to shimmer as she moves, flickering like a fire.";
-		say "     Small wisps of flame flare from her exposed flesh occasionally, increasing in frequency as they seems to run down her arm, pooling in her palm as a ball of flame, which she raises threateningly as she approaches you grinning manically";
+		say "     Small wisps of flame flare from her exposed flesh occasionally, increasing in frequency as they seems to run down her arm, pooling in her palm as a ball of flame, which she raises threateningly as she approaches you grinning manically.";
 	if FireSpritemode is 1: [Male]
-		say "     The sprite before you is not much more then two feet tall, with bright orange flesh and slim features. While his exposed 6 inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] seems to shimmer as she moves, flickering like a fire.";
-		say "     Small wisps of flame flare from his exposed flesh occasionally, increasing in frequency as they seems to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you grinning manically";
+		project the figure of FireSpriteMale_icon;
+		say "     The sprite before you is not much more then two feet tall, with bright orange flesh and slim features. While his exposed 6 inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] seems to shimmer as he moves, flickering like a fire.";
+		say "     Small wisps of flame flare from his exposed flesh occasionally, increasing in frequency as they seems to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you grinning manically.";
 	now sex entry is "Female";
 	if "Male Preferred" is listed in the feats of the player, now sex entry is "Male";
 	if "Herm Preferred" is listed in the feats of the player, now sex entry is "Both";

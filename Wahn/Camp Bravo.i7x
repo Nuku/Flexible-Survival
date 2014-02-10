@@ -158,6 +158,7 @@ MovingOrwell is a number that varies. MovingOrwell usually is 0.
 Private Orwell is a man. Private Orwell is in Camp Bravo Entrance.
 The description of Private Orwell is " [OrwellDesc]";
 The conversation of Private Orwell is { "Meep!" };
+The icon of Private Orwell is Figure of MarcOrwell_icon.
 
 to say OrwellDesc:
 	if MovingOrwell < 2:
