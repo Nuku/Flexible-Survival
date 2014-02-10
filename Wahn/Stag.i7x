@@ -233,6 +233,7 @@ Mike is a man. Mike is in Mike's Office.
 The description of Mike is "[MikeDesc]";
 The conversation of Mike is { "Oh, hello." };
 lastfuck of Mike is usually 555.
+The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
 	if debugactive is 1:
