@@ -34,6 +34,7 @@ Instead of resolving a Cow Hunting:
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to say you haven't seen any, [link]2[end link] to rape him or [link]3[end link] to ask if he's serious.";
 	if calcnumber is 1:               [no]
+		say "     [line break]";
 		say "     He nods as you tell him you haven't seen any standard non-infected cows around since before the outbreak. 'Well, thanks anyways. But if you do find her after all please come and tell me over at the farm. It's the McDermott family farm a few miles that way. Or if you could just bring Wendy along... then there'd be a reward in it for you. No worries, she's pretty tame and tractable as long as there isn't a slavering beast running after her.' With that, the cowboy makes his goodbye and walks off to keep searching.";
 		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;   
@@ -41,6 +42,7 @@ Instead of resolving a Cow Hunting:
 		now thirst of Duke is 1;		    [starting the day/night movement of Duke]
 		now thirst of Corbin is 1;      [starting the day/night movement of Corbin]
 	otherwise if calcnumber is 2:     [rape]
+		say "     [line break]";		
 		say "     The cowboy brings out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -51,6 +53,7 @@ Instead of resolving a Cow Hunting:
 				break;    
 		challenge "Cowboy Cuntboy";
 	otherwise:                        [seriously?]
+		say "     [line break]";
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";     
 		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;   
@@ -65,8 +68,10 @@ The sarea of Missing Cow is "Plains";
 Instead of resolving a Missing Cow:
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she's minding getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";
+	say "     [line break]";	
 	say "     So - wait (Y) or attack now (N)?";
 	if player consents:
+		say "     [line break]";
 		say "     You decide to just wait the gryphon out, keeping your distance (at first) and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow keeps getting mounted by the winged lion, both of them oblivious to anything around them. As you watch the unequal partner's coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and the hind legs. This obviously has been going on for quite a while, more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
 		say "     The sex continues with unabated wildness for some more time, until you notice the feral gryphon getting louder in his shrieks and faster with the thrusts. Finally he pushes all of his hard cock into her for a final time, knotting with the bovine as he blasts another large load of his seed into her. Staying bound to Wendy for some more time after that, her pussy and womb flooded with his seed held in by the knot, the gryphon rubs the side of his beak and head against her back affectionately, taking care not to hurt her with the sharp tip of his beak.";
 		say "     [WaitLineBreak]";
@@ -74,6 +79,7 @@ Instead of resolving a Missing Cow:
 		say "     Seems like you got through to him on some level... with a last squawk that might be a goodbye, the gryphon rubs his head against Wendy, then jumps into the air, flying off with strong beats of his large wings. You're left standing on the plains with Wendy the cow, now munching calmly on a mouthful of grass as she looks back at you and her pussy twitches as the gryphon's cum keeps dripping out of it.";
 		say "     [WendyGryphonAftermath]";   
 	otherwise:  [fight]
+		say "     [line break]";
 		say "     Rushing forward, waving your arms and shouting at the gryphon, you get its attention and ruin the mood for the large creature. With an annoyed squawk, the feral dismounts Wendy, then turns to you.";
 		challenge "Feral Gryphon";
 		if fightoutcome >= 20 and fightoutcome <= 29:                 [lost]
@@ -90,6 +96,7 @@ to say WendyGryphonAftermath:
 	if cocks of player > 0:
 		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it? Do you follow through with this idea (Y), or just bring the cow back to the McDermott Farm right now (N)?";
 		if player consents:
+			say "     [line break]";			
 			if scalevalue of player < 3:
 				say "     The will to act may be there, but you're just too small to actually do it. There's no way you could get your cock up into Wendy's pussy on your own, and the number of stepladders available out here in the plains is rather low.";
 			otherwise if scalevalue of player is 3:
@@ -97,7 +104,9 @@ to say WendyGryphonAftermath:
 			otherwise:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence and lowers her head again to graze. Then you walk to her back end, gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
 		otherwise:
+			say "     [line break]";						
 			say "     Fuck a cow? What strange ideas come up inside you these days... the nanites must be getting to you. You do your best to ignore that inner voice.";
+	say "     [line break]";			
 	say "     Stroking Wendy and feeding her bits of grass, you manage to get the cow moving towards the farm. She's got a rather sedate tempo and often stops to rip off the rare green and more succulent plants along the way, but after about two hours, you finally arrive at the McDermott farm.";
 	say "     [WaitLineBreak]";
 	say "     Having been spotted on your approach, the anthro horse cowboy Corbin you met before out in the plains comes to greet you. 'Hey there, you actually found her. Thanks a lot for bringing Wendy back.' He rubs the cow's neck and scritches her on a special spot behind her ears as he talks to her 'You got frightened and ran away, then couldn't find your way back, could you? Poor Wendy, you must be really feeling the pressure in your udder now. Go on, you know the way to the milking shed, I'll be along shortly.' With a pleased 'Moo', the cow trots towards one of the larger buildings on the farm.";
@@ -136,7 +145,14 @@ Instead of sniffing Farmhouse Main Room:
 	say "     The comfortable scents of wood and the leather couches hang in the air.";
 
 Southwest of Central Farm Square is Worker Barracks.
-The description of Worker Barracks is "     This long building is mostly one large room, a kind of living area at the front with a table, sofas and a TV, the back half filled with quite a few bunk beds spaced a bit apart, with tall lockers in between. Several farm-workers are always present, for the main part anthro horsemen, though most don't seem to be all that talkative, coming here to rest and sleep after long hours battling the encroaching nanite-enhanced grassland. It looks like there's lots of unused room and empty beds in here - with these barracks being laid out for the number of people working in harvest time and currently only the base crew of permanent farm hands here.";
+The description of Worker Barracks is "[BarracksDesc]".
+
+to say BarracksDesc:
+	say "     This long building is mostly one large room, a kind of living area at the front with a table, sofas and a TV, the back half filled with quite a few bunk beds spaced a bit apart, with tall lockers in between. Several farm-workers are always present, for the main part anthro horsemen, though most don't seem to be all that talkative, coming here to rest and sleep after long hours battling the encroaching nanite-enhanced grassland. It looks like there's lots of unused room and empty beds in here - with these barracks being laid out for the number of people working in harvest time and currently only the base crew of permanent farm hands here.";
+	if CorbinKidCounter is 1:
+		say "     Corbin's child bounces around in here too, the little tyke being a pretty active and curious kid. Thankfully, the workers treat him well, even playing with him or teaching him stuff.";
+	otherwise if CorbinKidCounter > 1:
+		say "     Corbin's children bounce around in here too, the little tykes being pretty active and curious about everything. Thankfully, the workers treat them well, even playing with them or teaching them all kinds of stuff.";
 
 Northeast of Central Farm Square is Farm Pathway.
 The description of Farm Pathway is "     Between the long milking shed in the south and the fenced paddock in the west, northwest and north, this pathway leads from the central farm square in the southwest to a rather large green meadow in the east.";
@@ -220,12 +236,19 @@ Section 3 - NPCs
 [   1: had oral sex with the player                                     ]
 [   2: player caught him milking himself at night in the milking shed   ]
 [   3: player fucked him                                                ]
+[   4: his secret is out to the horsemen in the barracks                ]
+[   5: player stopped the horsemen from fucking Corbin                  ]
+[  90: player stood back and watched the horsemen gangbang Corbin       ]
 [ 100: player attacked him, around as an encounter in the dry plains    ]
 
 [ thirst of Corbin - Location                                           ]
 [   0: not met                                                          ]
 [   1: in the worker barracks                                           ]
 [   2: in the milking shed                                              ]
+
+[ libido of Corbin - father of his current baby                         ]
+[   1: player                                                           ]
+[   2: horseguy                                                         ]
 
 [ CorbinPregnancy - pregnancy progress variable                         ]
 [  0: not preggers                                                      ]
@@ -243,51 +266,142 @@ The conversation of Corbin is { "Mew!" }.
 CorbinPregnancy is a number that varies.    [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 CorbinKidCounter is a number that varies.
 CorbinPregCounter is a number that varies.
+CorbinImpregnatingCock is a text that varies.
 	
 instead of sniffing Corbin:
 	say "Corbin has a pleasant animalistic smell. Mostly male, like a stallion - but there's an undertone of a mare's musk.";
 
 to say CorbinDesc:
-	if hp of Corbin is 2:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Corbin], THIRST: [thirst of Corbin], LIBIDO: [libido of Corbin], CORBINPREGNANCY: [CorbinPregnancy], CORBINKIDCOUNTER: [CorbinKidCounter], PREGCOUNTER [CorbinPregCounter] <- DEBUG[line break]";		
+	if hp of Corbin > 1 and hp of Corbin < 100:
 		if CorbinPregnancy is 0 or CorbinPregnancy is 4:
 			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there). Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";             
 		otherwise if CorbinPregnancy is 1:
 			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there). As you look at him, your thoughts run back to you fucking the equine cuntboy, thrusting into the tight pussy hidden by his pants. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";     
 		otherwise if CorbinPregnancy is 2:
-			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting bulge starting to show on his stomach, the result of your fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";              
+			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting bulge starting to show on his stomach, the result of [if libido of Corbin is 1]your[otherwise]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 		otherwise if CorbinPregnancy is 3:
-			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting massive bulge on his stomach, showing his advanced state of pregnancy, the result of your fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";             
+			say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area (resulting from the perky breasts you know he has there) - and an even more interesting massive bulge on his stomach, showing his advanced state of pregnancy, the result of [if libido of Corbin is 1]your[otherwise]someone's[end if] fertile seed being shot deep into his pussy. Corbin's chest is bare, showing off a well-built upper body. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";             
 	otherwise if hp of Corbin is 1:
 		say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area - which (as you now know) stems from a pair of perky breasts over a tight pussy. His chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 	otherwise:
 		say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 
 instead of conversing the Corbin:
-	say "     [one of]'Did anyone tell you yet that I'm the resident cocksucker here?' He gives a resigned shrug and adds 'I'm good at it too - although it sometimes can get a bit annoying when everyone just thinks they can walk up and whip it out at any time. Blow one guy in the barn and suddenly there's a line... good that I like the like the taste.' He winks to you at that last bit.[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
+	if hp of Corbin < 4:
+		say "     [one of]'Did anyone tell you yet that I'm the resident cocksucker here?' He gives a resigned shrug and adds 'I'm good at it too - although it sometimes can get a bit annoying when everyone just thinks they can walk up and whip it out at any time. Blow one guy in the barn and suddenly there's a line... good that I like the like the taste.' He winks to you at that last bit.[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
+	otherwise if hp of Corbin is 4:
+		say "     'Damn, now everyone knows about me. It's just a question of time till they act on that. And I don't think I can resist becoming a total slut - just thinking about it makes me wet.' he says with a disconcerted frown.";
+	otherwise if hp of Corbin is 5:
+		say "     [one of]'Thanks for helping me against the others, I really appreciate it. Now they know I'm not just a slut to be used when they want.'[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
+	otherwise if hp of Corbin is 90:
+		say "     You chat a bit with Corbin, noticing that he seems to be a bit down in general. As you ask him about that, he grimaces and says 'You're almost the only one who talked to me today with something other than 'Suck my cock' or 'I want to fuck you'. I like being an anthro horse, but not that everyone treats me like a brainless bimbo to be fucked!'";		
 		
 instead of going east from Central Farm Square while (hp of Corbin < 2 and daytimer is night):
 	move player to Milking Shed Main Room;  
-	say "     As you walk into milking shed, you notice that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
+	say "     As you walk into the milking shed, you notice that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
 	say "     Taking in those attractive sights, you only notice a moment later that tubes of the milking apparatus dangle in the air on the front side of his body, twitching as something is sucked through them. Is he using that thing as a cock pump? You can't stop yourself from stepping forward to have a look. As you move up besides Corbin, you see that things aren't quite what you expected. He isn't a stallion at all, but has a rather wet mare's pussy between his legs into which he's thrusting a rubber dildo - and the two suction cups of the machine are attached to small but perky breasts just a bit above his genitals in the crotch area.";
 	say "     [WaitLineBreak]";
 	say "     Moaning softly, his eyes closed as a surprising amount of milk is chugged away by the machine out of his small breasts, Corbin doesn't notice you at first and just keeps using the dildo on himself. Soon, he reaches his goal, gasping loudly as he orgasms, then almost jumps out of his skin as he opens his eyes and sees you right next to him. As he stumbles away to catch himself on the railing at the other side of the stall, the suction cups are pulled off his breasts, flopping through the air in a spray of fresh milk. The dildo also escapes his grasp, slipping out of the cuntboy's female bits to wetly thump on the ground. It's shaped like a horse-cock you notice, flared tip and all.";
 	say "      Still rather wide-eyed, Corbin turns to you 'Man - don't sneak up on me like that. How did you even get in here? Oh, I forgot to lock the door, didn't I?' As you nod, he looks from the dangling tube with its milking cups to the dildo and finally to his own dripping pussy. 'Guess I'm found out then - all the way. Having a pussy, breasts and all.' He sighs, then gives a shrug. 'You know, I've been coming her at night for weeks now to... take the edge off without anyone noticing. I don't mind being a horse, or a woman, down below - in fact, it's great. But... have you talked to the guys over in the barracks? They're good buddies, but if they'd know... I don't think I'd have a moment of rest with them coming over to 'visit' my bunk. And I doubt I could - or even would want to - stop them, not with how good this feels.' At that, he reaches down and strokes his swollen and drippingly wet pussy lips, then looks up at you and gives a wink. 'Since you already know, we could... have some fun here sometime, just us two after dark? As for the others - please keep this quiet, ok?'"; 
 	say "     [WaitLineBreak]";
-	say "     Wiping himself off with a towel, Corbin pulls his jeans back on, then grabs a water bucket, rinsing the suction cups out in it and afterwards cleaning the horsecock dildo. He then takes it to a storage closet standing against the back wall, hiding it inside and locking the closet for good measure.";  
+	say "     Wiping himself off with a towel, Corbin pulls his jeans back on, then grabs a water bucket, rinsing the suction cups out in it and afterwards cleaning the horsecock dildo. He then takes it to a storage closet standing against the back wall, hiding it inside and locking the closet for good measure.";
 	now lastfuck of Corbin is turns;
 	now hp of Corbin is 2;
 	
+instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
+	move player to Worker Barracks;
+	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
+	say "     Do you just want to stand back and let this unfold as it's about to (Y), or do you step in and show those horsemen how to treat Corbin right if they don't want a beating (N)? ";
+	if player consents:   [watch]
+		say "     [line break]";
+		say "     With you just watching, they have Corbin on one of the beds in short order and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
+		say "     For some time, grunts, moans and the sounds of the horseman's balls hitting the cuntboy's crotch fill the barracks, finally building up to a shouted 'Uh uh uuuuh - I'm gonna fill you up, slut!' as Corbin's fucker slams forward one last time and floods the equine cowboy's womb with a deluge of cum. After he finishes coming, the horseman then pulls out unceremoniously and is immediately replaced by another, who sinks his own shaft into Corbin's freshly bred hole with a wet squishy noise and starts to fuck him. This continues for quite a while, with all of the men taking a turn, or even two, before they allow the totally exhausted and sticky cuntboy some rest.";		
+		now lastfuck of Corbin is turns;
+		now hp of Corbin is 90;	
+	otherwise:   [fight]
+		now horsefight is 2;
+		say "     [line break]";
+		say "     Getting a grip on the shoulder of the farmhand preparing to fuck Corbin, you pull him back, much to the annoyance of the muscled equine. Enraged at you cock-blocking him, he comes at you with balled fists.";
+		say "     [line break]";		
+		challenge "Horseman";
+		if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
+			say "[LoseInBarracksfight]";
+		otherwise if fightoutcome >= 30:			[fled]			
+			say "[RunFromBarracksfight]";
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
+			say "     One of the group of horsemen is out of the fight, though another steps right up.";
+			say "     [line break]";
+			challenge "Horseman";
+			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+				say "[LoseInBarracksfight]";
+			otherwise if fightoutcome >= 30:			[fled]			
+				say "[RunFromBarracksfight]";
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
+				say "    That's a second one of the group of horsemen out of the fight. But still, another equine farmhand steps right up, hands raised in a boxing pose.";
+				say "     [line break]";
+				challenge "Horseman";
+				if fightoutcome >= 20 and fightoutcome <= 29:							[lost]
+					say "[LoseInBarracksfight]";
+				otherwise if fightoutcome >= 30:			[fled]			
+					say "[RunFromBarracksfight]";
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  	[won]
+					say "    With you already having knocked out three of their buddies, the other farmhands don't look quite as eager to be the next one in line. There's a moment in which looks go back and forth between them, then most of them pull away from you. One guy, on suddenly finding himself standing in the front after everyone stepped back, says 'Okay okay - you win. He's all yours.'";
+					say "    The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
+					now hp of Corbin is 5;
+		now horsefight is 0;
+		
+instead of going southwest from Central Farm Square while (CorbinPregnancy is 4	and daytimer is day):
+	if libido of Corbin is 1:   [player was the father]
+		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little boy in his early teens and introduces you to your child, who looks like a [CorbinImpregnatingCock].";
+	otherwise:    [a horseman was the father]
+		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little boy in his early teens and introduces you to his horseman child.";
+	now CorbinPregnancy is 0;
+
+instead of going east from Central Farm Square while (CorbinPregnancy is 4	and daytimer is night):
+	if libido of Corbin is 1:   [player was the father]
+		say "     As you enter the milking shed, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little boy in his early teens who looks like a [CorbinImpregnatingCock].";
+	otherwise:    [a horseman was the father]
+		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little horseman boy in his early teens.";
+	now CorbinPregnancy is 0;
+				
+to say LoseInBarracksfight:
+	say "     With you out of action, there isn't anything left so stop the horny horsemen. In short order, they have Corbin on one of the beds and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
+	say "     For some time, grunts, moans and the sounds of the horseman's balls hitting the cuntboy's crotch fill the barracks, finally building up to a shouted 'Uh uh uuuuh - I'm gonna fill you up, slut!' as Corbin's fucker slams forward one last time and floods the equine cowboy's womb with a deluge of cum. After he finishes coming, the horseman then pulls out unceremoniously and is immediately replaced by another, who sinks his own shaft into Corbin's freshly bred hole with a wet squishy noise and starts to fuck him. This continues for quite a while, with all of the men taking a turn, or even two, before they allow the totally exhausted and sticky cuntboy some rest.";				
+	now lastfuck of Corbin is turns;
+	now hp of Corbin is 90;
+				
+to say RunFromBarracksfight:
+	say "     As you break away from the fight, the horseman you were facing doesn't really try to follow you, content in having driven you off. He's got other, more interesting things to do and immediately rejoins the group around the bunk beds. Soon after, grunts, moans and cheers echo out of the barracks building as they take turns with their new barracks slut.";	
+	move player to Central Farm Square;   
+	now hp of Corbin is 90;
+	
 An everyturn rule:
 	if CorbinPregCounter is 1:
-		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should go back to the McDermott farm and check with Corbin.";
+		if Corbin is in Worker Barracks and player is in Worker Barracks:
+			say "     Suddenly, there is a gasp from Corbin and he yells 'It's coming!' Rushing over to the cuntboy who's panting and holding his pregnant belly, you can see a large patch of wetness on the crotch of his jeans - amniotic fluid from his womb that shows that this isn't a false alarm. Quickly guiding him over to the nearest bed, you help him get out of his clothes and sit beside him, holding his hand as he spreads his legs.";
+			say "     Soon, the contractions come quicker and quicker, and then a little horseman foal slides out of Corbin's stretched vagina. You quickly grab a sheet and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
+		otherwise if Corbin is in Milking Shed and player is in Milking Shed:
+			say "     Suddenly, there is a gasp from Corbin and he yells 'It's coming!' Rushing over to the cuntboy who's panting and holding his pregnant belly, you can see a large patch of wetness on the crotch of his jeans - amniotic fluid from his womb that shows that this isn't a false alarm. Quickly guiding him over a pile of straw to lie down on, you help him get out of his clothes and sit beside him, holding his hand as he spreads his legs.";
+			if libido of Corbin is 2:  [horseman child]
+				say "     Soon, the contractions come quicker and quicker, and then a little horseman foal slides out of Corbin's stretched vagina. You quickly grab Corbin's shirt from the floor and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
+			otherwise if libido of Corbin is 1:   [player's kid]
+				say "     Soon, the contractions come quicker and quicker, and then a little [CorbinImpregnatingCock] baby slides out of Corbin's stretched vagina. You quickly grab Corbin's shirt from the floor and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";							
+			now CorbinPregnancy is 0;     [reset]
+		otherwise:
+			say "You have a strange feeling in your body, as if you somehow just know that a new life has entered this world. Maybe you should go back to the McDermott farm and check with Corbin.";
+			now CorbinPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
 		increase CorbinKidCounter by 1;
-		increase score by a random number between 5 and 10;
-		now CorbinPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
-		now CorbinPregCounter is 0;
+		now CorbinPregCounter is 0;         [reset]
+		now libido of Corbin is 0;          [reset]
+		now CorbinImpregnatingCock is " ";					
 	otherwise if CorbinPregCounter is 12:
 		now CorbinPregnancy is 3;   [very visible pregnancy]
 	otherwise if CorbinPregCounter is 24:
 		now CorbinPregnancy is 2;   [visible pregnancy]
+		if hp of Corbin < 4:   [his secret isn't out yet]
+			now hp of Corbin is 4;   [with his visible pregnancy, it becomes obvious that something is going on]
 	if CorbinPregCounter is greater than 1:
 		decrease CorbinPregCounter by 1;
 	if daytimer is night and thirst of Corbin is 1:
@@ -383,7 +497,35 @@ to say CorbinSex2:    [cunt licked by Corbin]
 
 to say CorbinSex3:    [Corbin's cunt licked/fingered]
 	if thirst of Corbin is 1:  [in the barracks]
-		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+		if hp of Corbin is 2 or hp of Corbin is 3:  [player fucked him - or just saw him in the milking shed, his pussy still a secret]		
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+			say "     Do you accept this (Y), or proceed anyways? (N)";
+			if player consents:
+				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
+			otherwise:
+				say "     Not deterred from doing what you want by the cuntboy's words, you move to stand close again, this time pushing your hand under the band of his pants before he can stop you. As your fingers touch his sensitive pussy lips and dip in between them, a needful moan escapes the equine cowboy's lips and all his resistance melts away in moments. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too.";
+				say "     After some more stroking and fingering Corbin's pussy, you kneel down to pop open the button of his jeans, then lower the zipper and pull them down his legs. There's a murmur in the room as the cuntboy's swollen nether lips and the perky breasts on his crotch come into sight. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it and being rewarded with a squirt of tasty milk. You drink several swallows from this breast, then the other, pleased at the look of bliss coming over Corbin's face as you suckle from him. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets.";
+				say "     Letting go of his breasts and turning your attention to Corbin's female bits, you give him a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's panting and squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he says with an a bit pained voice 'Did you have to do that - here?' With a concerned look at the group of horny horsemen in the barracks leering at him, he pulls up his jeans and rushes out the back door of the barracks.";
+				move Corbin to Milking Shed Main Room;
+				now thirst of Corbin is 2;
+				now hp of Corbin is 4;   [he's 'out' to the horsemen - who're starting to get interested]
+				now lastfuck of Corbin is turns;				
+		otherwise if hp of Corbin is 5:  [player fought off the horsemen going for Corbin]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. Though while they might be... interested in Corbin, one pointed look from you in their direction has the closest few suddenly deciding they need some fresh air outside. Knocking out several of them before seems to have left an impact, with Corbin off-limits unless he initiates it. For which your grateful cuntboy cowboy leans in to plant a thankful kiss on your lips - leading over to a hungry bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you kneel down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it and being rewarded with a squirt of tasty milk. You drink several swallows from this breast, then the other, pleased at the look of bliss coming over Corbin's face as you suckle from him. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets.";    
+			say "     Letting go of his breasts and turning your attention to Corbin's female bits, you give him a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's panting and squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, gushing femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he grabs you and pulls you into a deep kiss, then says 'Thank you lover, I really needed that.'";
+			now lastfuck of Corbin is turns;
+		otherwise if hp of Corbin is 90:  [barracks slut]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the somewhat damp fabric of his jeans there. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Then you push your hand under the band of his pants and feel for his sensitive pussy lips, slipping in a finger into the wet hole between them. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. You don't let that distract you and just lean in to plant a hungry kiss on Corbin's lips - leading over to a bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you kneel down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's swollen-looking nether lips come into sight, still wet with the cum one of his equine housemates blasted into him not too long ago. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it and being rewarded with a squirt of tasty milk. You drink several swallows from this breast, then the other, pleased at the look of bliss coming over Corbin's face as you suckle from him. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets.";    
+			say "     Letting go of his breasts and turning your attention to Corbin's female bits, you give him a careful lick, tasting his juices and the horseman cum, then really go to town on him - licking and fondling him until he's panting and squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep eating him out for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, gushing femcum from his spread pussy. As you stand up again, you suddenly feel a hand on your shoulder. It's one of the horseman farmhands, naked, with his hard prick in hand. He says 'Ok, you're done - my turn with the little slut.' Corbin only gives a sigh, then lets himself be led off to the man's bunk to be mounted and bred.";
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 2;        [horseman is the father]			
+			now lastfuck of Corbin is turns;					
 	otherwise if thirst of Corbin is 2:   [in the milking shed]
 		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Kneeling down, you pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it and being rewarded with a squirt of tasty milk. You drink several swallows from this breast, then the other, pleased at the look of bliss coming over Corbin's face as you suckle from him. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets.";    
 		say "     Letting go of his breasts and turning your attention to Corbin's female bits, you give him a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's panting and squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he grabs you and pulls you into a deep kiss, then says 'Thank you, I really needed that.'";
@@ -392,7 +534,64 @@ to say CorbinSex3:    [Corbin's cunt licked/fingered]
 
 to say CorbinSex4:    [Corbin's pussy fucked]
 	if thirst of Corbin is 1:  [in the barracks]
-		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+		if hp of Corbin is 2 or hp of Corbin is 3:  [player fucked him - or just saw him in the milking shed, his pussy still a secret]		
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+			say "     Do you accept this (Y), or proceed anyways? (N)";
+			if player consents:
+				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
+			otherwise:
+				say "     Not deterred from doing what you want by the cuntboy's words, you move to stand close again, this time pushing your hand under the band of his pants before he can stop you. As your fingers touch his sensitive pussy lips and dip in between them, a needful moan escapes the equine cowboy's lips and all his resistance melts away in moments. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too.";			
+				say "     After some more stroking and fingering Corbin's pussy, you kneel down to pop open the button of his jeans, then lower the zipper and pull them down his legs. There's a murmur in the room as the cuntboy's swollen nether lips and the perky breasts on his crotch come into sight. Standing back up again, one hand around his chest to hold him close, the other stroking his pussy, you walk Corbin over to the nearest bed and softly push his unresisting form to lie down on it.";					
+				say "     [WaitLineBreak]";
+				say "     The sight of the hot equine cuntboy, lying on his back, legs spread just waiting for you, has your cock hard and ready to go instantly. Eager to thrust into his wet folds but holding back for now, you kneel between his legs, letting your hard manhood rest against his pubic mound for a moment as you take hold of and fondle his breasts. Then you grind against him with your hips, your shaft rubbing over Corbin's swollen pussy lips before you put its tip between them and slide in, spreading the cowboy's passage around your cock. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper - all the way!' Corbin tells you as he wraps his legs around your hips, pulling you closer against his body.";
+				say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his hips with a satisfying slap. His upper body rears up with a loud moan as you bottom out inside him, bringing his head close to yours and allowing him to pull you into a hot kiss. As he comes back up for air, he moans 'Fuck me' into your mouth, then lies back again, completely giving himself to you. With the warm, tight hole of such an eager partner around your cock, all restraint goes out the window and start fucking him hard and deep. Just as he likes it - Corbin gives lustful grunts to accompany the sound of your hips slapping against his crotch and is just panting with arousal.";
+				say "     [WaitLineBreak]";
+				say "     You have sex with him like a horny bunny for quite a while, the rapid thrusting and ever louder moans and groans building up to a breathtaking climax. When you finally pass the point of no return and start blasting your fertile load deep into Corbin's womb, a cheer goes through the watching crowd, combined with comments like 'Give it to him good!' and 'Fill that pussy!' As he hears the horsemen's words, Corbin turns his head to look at them and gives a groan. He looks the other way, still breathing a bit heavily as he rides out the throes of his own orgasm, then winds his way out from under you and stands up. With an a bit pained voice he says to you 'Did you have to do that - here?' Then he grabs his pants, accompanied by wolf whistles from the other horsemen as he bends to pick them up, and rushes out of the back door of the barracks without even putting them on.";
+				move Corbin to Milking Shed Main Room;				
+				now thirst of Corbin is 2;				
+				if CorbinPregnancy is 0:              [not already preggers]
+					let CorbinPregChance be a random number from 1 to 20;  	
+					if CorbinPregChance > 10:           [50% chance]
+						now CorbinPregCounter is 48;      [48 turns till birth] 
+						now CorbinPregnancy is 1;					[invisibly pregnant]
+						now libido of Corbin is 1;        [player is the father]		
+						now CorbinImpregnatingCock is cockname of player;
+				now hp of Corbin is 4;   [he's 'out' to the horsemen - who're starting to get interested]						
+				now lastfuck of Corbin is turns;				
+		otherwise if hp of Corbin is 5:  [player fought off the horsemen going for Corbin]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. Though while they might be... interested in Corbin, one pointed look from you in their direction has the closest few suddenly deciding they need some fresh air outside. Knocking out several of them before seems to have left an impact, with Corbin off-limits unless he initiates it. For which your grateful cuntboy cowboy leans in to plant a thankful kiss on your lips - leading over to a hungry bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you reach down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. While you quickly take off your own clothes, he saunters over to his bunk and lies down on it. The sight of the hot equine cuntboy, lying on his back, legs spread just waiting for you, has your cock hard and ready to go instantly. Eager to thrust into his wet folds but holding back for now, you kneel between his legs, letting your hard manhood rest against his pubic mound for a moment as you take hold of and fondle his breasts. Then you grind against him with your hips, your shaft rubbing over Corbin's swollen pussy lips before you put its tip between them and slide in, spreading the cowboy's passage around your cock. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper - all the way!' Corbin tells you as he wraps his legs around your hips, pulling you closer against his body.";
+			say "     [WaitLineBreak]";
+			say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his hips with a satisfying slap. His upper body rears up with a loud moan as you bottom out inside him, bringing his head close to yours and allowing him to pull you into a hot kiss. As he comes back up for air, he moans 'Fuck me' into your mouth, then lies back again, completely giving himself to you. With the warm, tight hole of such an eager partner around your cock, all restraint goes out the window and start fucking him hard and deep. Just as he likes it - Corbin gives lustful grunts to accompany the sound of your hips slapping against his crotch and is just panting with arousal.";
+			say "     You have sex with him like a horny bunny for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride with your horsey cuntboy, until finally - after him and you coming multiple times - you flop down to lie on your back on the mattress besides him. Exhaustedly, he reaches over to caress your chest, panting 'It's unbelievable how good you make me feel. Thank you.' Then he rolls over on his side, stretching a bit to give you a kiss on the cheek before promptly dozing off. Smiling at the sleeping horseman as you grab your clothes, you leave him to rest and quietly dress.";
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 1;        [player is the father]
+					now CorbinImpregnatingCock is cockname of player;				
+			now lastfuck of Corbin is turns;						
+		otherwise if hp of Corbin is 90:  [barracks slut]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the somewhat damp fabric of his jeans there. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Then you push your hand under the band of his pants and feel for his sensitive pussy lips, slipping in a finger into the wet hole between them. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. You don't let that distract you and just lean in to plant a hungry kiss on Corbin's lips - leading over to a bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you reach down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's swollen-looking nether lips come into sight, still wet with the cum one of his equine housemates blasted into him not too long ago. While you quickly take off your own clothes, he saunters over to his bunk and lies down on it. The sight of the hot equine cuntboy, lying on his back, legs spread just waiting for you, has your cock hard and ready to go instantly. Eager to thrust into his wet folds but holding back for now, you kneel between his legs, letting your hard manhood rest against his pubic mound for a moment as you take hold of and fondle his breasts. Then you grind against him with your hips, your shaft rubbing over Corbin's swollen pussy lips before you put its tip between them and slide in, spreading the cowboy's passage around your cock. The cuntboy gives a lust-filled grunt as you sink your cock into his cum-slick hole, gripping the sheets under him as arousal floods his body. A pant of 'Harder. Deeper.' escapes his lips in between moans.";
+			say "     [WaitLineBreak]";   
+			say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his hips with a satisfying slap. His upper body rears up with a loud moan as you bottom out inside him, bringing his head close to yours and allowing you to pull him into a hot kiss. As he comes sinks back on the mattress afterwards, he moans 'Fuck me' completely giving in to his bodies urges. With the warm, tight hole of the hot cuntboy around your cock, all restraint goes out the window and start fucking him hard and deep. Corbin gives lustful grunts to accompany the sound of your hips slapping against his crotch and is just panting with arousal.";			
+			say "     You have sex with him like a horny bunny for quite a while, the rapid thrusting and ever louder moans and groans building up to a breathtaking climax. When you finally pass the point of no return and start blasting your fertile load deep into Corbin's womb, a cheer goes through the watching crowd, combined with comments like 'Give it to him good!' and 'Fill that pussy!' The equine cowboy also orgasms as you come in him, his female bits sending waves of pleasure through his body as they are filled with fertile seed as they're supposed to. You keep pumping in and out of his femcum-slick hole slowly for a while longer after you finish shooting, then suddenly feel a hand on your shoulder. It's one of the horseman farmhands, naked, with his hard prick in hand. He says 'Ok, you're done - my turn with the little slut.' Corbin only gives a sigh, staying right where he is as the other man pushes you aside to fuck and breed him.";
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 1;        [player is the father]
+					now CorbinImpregnatingCock is cockname of player;										
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 2;        [horseman is the father]			
+			now lastfuck of Corbin is turns;							
 	otherwise if thirst of Corbin is 2:   [in the milking shed]
 		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Kneeling down, you pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. While you quickly take off your own clothes, he grabs a thick blanket from the nearby supply closet, spreading it on the floor and lying down on it.";
 		say "     The sight of the hot equine cuntboy, lying on his back, legs spread just waiting for you, has your cock hard and ready to go instantly. Eager to thrust into his wet folds but holding back for now, you kneel between his legs, letting your hard manhood rest against his pubic mound for a moment as you take hold of and fondle his breasts. Then you grind against him with your hips, your shaft rubbing over Corbin's swollen pussy lips before you put its tip between them and slide in, spreading the cowboy's passage around your cock. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper - all the way!' Corbin tells you as he wraps his legs around your hips, pulling you closer against his body.";
@@ -400,23 +599,92 @@ to say CorbinSex4:    [Corbin's pussy fucked]
 		say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his hips with a satisfying slap. His upper body rears up with a loud moan as you bottom out inside him, bringing his head close to yours and allowing him to pull you into a hot kiss. As he comes back up for air, he moans 'Fuck me' into your mouth, then lies back again, completely giving himself to you. With the warm, tight hole of such an eager partner around your cock, all restraint goes out the window and start fucking him hard and deep. Just as he likes it - Corbin gives lustful grunts to accompany the sound of your hips slapping against his crotch and is just panting with arousal.";
 		say "     You have sex with him like a horny bunny for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride with your horsey cuntboy, until finally - after him and you coming multiple times - you flop down to lie on your back on the blanket besides him. Exhaustedly, he reaches over to caress your chest, panting 'You can't believe how good this feels after holding everything in for weeks. Thank you.' Then he rolls over on his side, stretching a bit to give you a kiss on the cheek before promptly dozing off. Smiling at the sleeping horseman as you grab your clothes, you leave him to rest and quietly sneak out of the building.";
 		move player to Central Farm Square;   
-		now lastfuck of Corbin is turns;      
+		now lastfuck of Corbin is turns;     
+		if CorbinPregnancy is 0:              [not already preggers]
+			let CorbinPregChance be a random number from 1 to 20;  	
+			if CorbinPregChance > 10:           [50% chance]
+				now CorbinPregCounter is 48;      [48 turns till birth] 
+				now CorbinPregnancy is 1;					[invisibly pregnant]
+				now libido of Corbin is 1;        [player is the father]
+				now CorbinImpregnatingCock is cockname of player;									
 		
 to say CorbinSex5:    [Corbin's ass fucked]
 	if thirst of Corbin is 1:  [in the barracks]
-		say "     Stepping up close to Corbin, you put your hand on his ass, giving it a good squeeze. He instinctively pushes back against you, suppressing a moan - then suddenly, gives you a shove away from him and says loudly 'I may be willing to give blowjobs, but I'm not taking it up the ass.' Seeing the surprised look in your face, he gives you a telling stare and a little nod to the side, where you see one of the other horsemen casually observing the two of you. Corbin gives you a wink, whispering 'Tonight, in the milking shed, ok?'";
+		if hp of Corbin is 2 or hp of Corbin is 3:  [player fucked him - or just saw him in the milking shed, his pussy still a secret]		
+			say "     Stepping up close to Corbin, you put your hand on his ass, giving it a good squeeze. He instinctively pushes back against you, suppressing a moan - then suddenly, gives you a shove away from him and says loudly 'I may be willing to give blowjobs, but I'm not taking it up the ass.' Seeing the surprised look in your face, he gives you a telling stare and a little nod to the side, where you see one of the other horsemen casually observing the two of you. Corbin gives you a wink, whispering 'Tonight, in the milking shed, ok?'";
+			say "     Do you accept this (Y), or proceed anyways? (N)";
+			if player consents:
+				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
+			otherwise:
+				say "     Not deterred from doing what you want by the cuntboy's words, you move to stand close again, sliding your arms down the sides of his muscular chest, then around his body to grab both the shapely cheeks of his ass. The equine cuntboy can barely suppress a moan, automatically shifting his stance a bit forward to lean into your touch. Smiling, you move your hands upward a bit, then slip them into his pants, now kneading the lightly furred orbs of his ass directly. Corbin puts his lips to yours, lust making him forget about his reluctance as he gives you a hungry kiss and asks 'So you want to take a ride on this pony? Fine - I need it bad!' He gives your crotch a light squeeze, then walks over a close-by bunk bed, letting his jeans drop and stepping out of them on the way. Bending forward, both hands on the metal rail of the upper bunk, he looks back at you and wiggles his ass invitingly.";
+				say "     You set a new record in getting out of your clothes and gear, quickly stepping into position behind the hot equine cuntboy with a by then fully hard and ready cock. Giving him a light slap on the ass, making him whinny like a real horse, you put your manhood between his cheeks, rubbing it up and down against the cowboy's crack. Corbin moans 'Come on, mount up - I'm waiting' and grinds his ass back against your crotch. Not losing any more time, you take hold of your cock, aim it at his pucker and press forward, finding that it readily accommodates your girth, stretching easily but still tightly around your manhood. Seems like he's got quite a bit of experience in taking it though the back door. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper, harder - all the way!' Corbin tells you as he grips the metal bar tightly.";
+				say "     [WaitLineBreak]";
+				say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his cheeks with your hips with a satisfying slap. A loud, lustful groan can be heard from Corbin and he pushes back against you to make sure you're in as deep as you can go. Then he rocks forward and back a bit, too eager to get fucked to wait a second longer. Chuckling at his need to be fucked, you take up a rhythm that compliments his, holding on to his hips and slamming forward when he is just on the move back. The two of you fill the barracks with loud moans and the slapping noises as your hips and ass meet again and again.";
+				say "     You have sex with him like a horny bunny for quite a while, the rapid thrusting and ever louder moans and groans building up to a breathtaking climax. When you finally pass the point of no return and start blasting your fertile load deep into Corbin's ass, a cheer goes through the watching crowd, combined with comments like 'Give it to him good!' and 'Fill that bitch!' As he hears the horsemen's words, Corbin turns his head to look at them and gives a groan, now realizing what you two fucking here means without arousal clouding his judgement. He looks the other way, still breathing a bit heavily as he rides out the throes of his own orgasm, then slides off your shaft with a wet slurp and turns around. With an a bit pained voice he says to you 'Did you have to do that - here?' Then he grabs his pants, accompanied by wolf whistles from the other horsemen as he bends to pick them up, and rushes out of the back door of the barracks without even putting them on.";				
+				move Corbin to Milking Shed Main Room;
+				now thirst of Corbin is 2;				
+				now hp of Corbin is 4;   [he's 'out' to the horsemen - who're starting to get interested]				
+				now lastfuck of Corbin is turns;				
+		otherwise if hp of Corbin is 5:  [player fought off the horsemen going for Corbin]
+			say "     Stepping up close to Corbin, you slide your arms down the sides of his muscular chest, then around his body to grab both the shapely cheeks of his ass. The equine cuntboy can barely suppress a moan, automatically shifting his stance a bit forward to lean into your touch. Smiling, you move your hands upward a bit, then slip them into his pants, now kneading the lightly furred orbs of his ass directly. As you start to slide a finger up and down his crack, teasing the cuntboy's pucker, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. Though while they might be... interested in Corbin, one pointed look from you in their direction has the closest few suddenly deciding they need some fresh air outside. Knocking out several of them before seems to have left an impact, with Corbin off-limits unless he initiates it. For which your grateful cuntboy cowboy leans in to plant a thankful kiss on your lips - leading over to a hungry bit of making out.";
+			say "     After some enjoyable tongue-wrestling, Corbin says 'So you want to take a ride on this pony? Good - I need it bad!' He gives your crotch a light squeeze, then walks over a close-by bunk bed, letting his jeans drop and stepping out of them on the way. Bending forward, both hands on the metal rail of the upper bunk, he looks back at you and wiggles his ass invitingly. You set a new record in getting out of your clothes and gear, quickly stepping into position behind the hot equine cuntboy with a by then fully hard and ready cock. Giving him a light slap on the ass, making him whinny like a real horse, you put your manhood between his cheeks, rubbing it up and down against the cowboy's crack. Corbin moans 'Come on, mount up - I'm waiting' and grinds his ass back against your crotch. Not losing any more time, you take hold of your cock, aim it at his pucker and press forward, finding that it readily accommodates your girth, stretching easily but still tightly around your manhood. Seems like he's got quite a bit of experience in taking it though the back door. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper, harder - all the way!' Corbin tells you as he grips the metal bar tightly.";
+			say "     [WaitLineBreak]";
+			say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his cheeks with your hips with a satisfying slap. A loud, lustful groan can be heard from Corbin and he pushes back against you to make sure you're in as deep as you can go. Then he rocks forward and back a bit, too eager to get fucked to wait a second longer. Chuckling at his need to be fucked, you take up a rhythm that compliments his, holding on to his hips and slamming forward when he is just on the move back. The two of you fill the barracks with loud moans and the slapping noises as your hips and ass meet again and again.";	
+			say "     You have sex with Corbin like a horny bunny for at least an hour, only stopping for a moment when you cum inside him and fill his asshole with your seed, then make out a bit until you're ready to go on. It's a wild ride with your horsey cuntboy, until finally - after him and you coming multiple times - the two of you sink down to and lie on the bed in exhaustion. Exhaustedly, he reaches over to caress your chest, panting 'It's unbelievable how good you make me feel. Thank you.' Then he rolls over on his side, stretching a bit to give you a kiss on the cheek before promptly dozing off. Smiling at the sleeping horseman as you grab your clothes, you leave him to rest and quietly dress.";
+			now lastfuck of Corbin is turns;			
+		otherwise if hp of Corbin is 90:  [barracks slut]
+			say "     Stepping up close to Corbin, you slide your arms down the sides of his muscular chest, then around his body to grab both the shapely cheeks of his ass. The equine cuntboy can barely suppress a moan, automatically shifting his stance a bit forward to lean into your touch. Smiling, you move your hands upward a bit, then slip them into his pants, now kneading the lightly furred orbs of his ass directly. As you start to slide a finger up and down his crack, teasing the cuntboy's pucker, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. You don't let that distract you and just lean in to plant a hungry kiss on Corbin's lips - leading over to a bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you reach down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's swollen-looking nether lips come into sight, still wet with the cum one of his equine housemates blasted into him not too long ago. Giving a needful whinny, the transgendered cowboy walks over to a close-by bunk bed and bends forward, both hands on the metal rail of the upper bunk. You set a new record in getting out of your clothes and gear, quickly stepping into position behind the hot equine cuntboy with a by then fully hard and ready cock. Giving him a light slap on the ass, you put your manhood between his cheeks, rubbing it up and down against the cowboy's crack. Corbin moans 'Come on, mount up - I'm waiting' and grinds his ass back against your crotch. Not losing any more time, you take hold of your cock, aim it at his pucker and press forward, finding that it readily accommodates your girth, stretching easily but still tightly around your manhood. Seems like he's got quite a bit of experience in taking it though the back door. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper, harder - all the way!' Corbin tells you as he grips the metal bar tightly.";
+			say "     [WaitLineBreak]";   
+			say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his cheeks with your hips with a satisfying slap. A loud, lustful groan can be heard from Corbin and he pushes back against you to make sure you're in as deep as you can go. Then he rocks forward and back a bit, too eager to get fucked to wait a second longer. Chuckling at his need to be fucked, you take up a rhythm that compliments his, holding on to his hips and slamming forward when he is just on the move back. The two of you fill the barracks with loud moans and the slapping noises as your hips and ass meet again and again.";		
+			say "     You have sex with him like a horny bunny for quite a while, the rapid thrusting and ever louder moans and groans building up to a breathtaking climax. When you finally pass the point of no return and start blasting your fertile load deep into Corbin's ass, a cheer goes through the watching crowd, combined with comments like 'Give it to him good!' and 'Fill that pussy!' The equine cowboy also orgasms as you come in him, anal muscles trembling around your shaft and his pussy squirting femcum to trickle down the inside of his leg. You keep pumping in and out of his cum-filled asshole slowly for a while longer after you finish shooting, then suddenly feel a hand on your shoulder. It's one of the horseman farmhands, naked, with his hard prick in hand. He says 'Ok, you're done - my turn with the little slut.' Corbin only gives a sigh, staying right where he is as the other man pushes you aside to fuck and breed him.";
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 2;        [horseman is the father]	
+			now lastfuck of Corbin is turns;					
 	otherwise if thirst of Corbin is 2:   [in the milking shed]
-		say "     Stepping up close to Corbin, you slide your arms down the sides of his muscular chest, then around his body to grab both the shapely cheeks of his ass. The equine cuntboy can barely suppress a moan, automatically shifting his stance a bit forward to lean into your touch. Smiling, you move your hands upward a bit, then slide them into his pants, now kneading the lightly furred orbs of his ass directly. Corbin puts his lips to yours, giving you a hungry kiss, then asks 'So you want to take a ride on this pony? Bring it on!' He gives your crotch a light squeeze, then walks over to the back wall of the milking booth, letting his jeans drop and stepping out of them on the way. Bending forward, both hands on the metal rail on the wall, he looks back at you and wiggles his ass invitingly.";
+		say "     Stepping up close to Corbin, you slide your arms down the sides of his muscular chest, then around his body to grab both the shapely cheeks of his ass. The equine cuntboy can barely suppress a moan, automatically shifting his stance a bit forward to lean into your touch. Smiling, you move your hands upward a bit, then slip them into his pants, now kneading the lightly furred orbs of his ass directly. Corbin puts his lips to yours, giving you a hungry kiss, then asks 'So you want to take a ride on this pony? Bring it on!' He gives your crotch a light squeeze, then walks over to the back wall of the milking booth, letting his jeans drop and stepping out of them on the way. Bending forward, both hands on the metal rail on the wall, he looks back at you and wiggles his ass invitingly.";
 		say "     You set a new record in getting out of your clothes and gear, quickly stepping into position behind the hot equine cuntboy with a by then fully hard and ready cock. Giving him a light slap on the ass, making him whinny like a real horse, you put your manhood between his cheeks, rubbing it up and down against the cowboy's crack. Corbin moans 'Come on, mount up - I'm waiting' and grinds his ass back against your crotch. Not losing any more time, you take hold of your cock, aim it at his pucker and press forward, finding that it readily accommodates your girth, stretching easily but still tightly around your manhood. Seems like he's got quite a bit of experience in taking it though the back door. 'Yeah, *pant* you feel so good inside me. *moan* Go deeper, harder - all the way!' Corbin tells you as he grips the metal bar tightly.";
 		say "     [WaitLineBreak]";
 		say "     Quick to respond to your handsome partner's request, you thrust forward, sliding yourself fully into his depths and meeting his cheeks with your hips with a satisfying slap. A loud, lustful groan can be heard from Corbin and he pushes back against you to make sure you're in as deep as you can go. Then he rocks forward and back a bit, too eager to get fucked to wait a second longer. Chuckling at his need to be fucked, you take up a rhythm that compliments his, holding on to his hips and slamming forward when he is just on the move back. The two of you fill the milking shed with loud moans and the slapping noises as your hips and ass meet again and again.";
-		say "     You have sex with Corbin like a horny bunny for at least an hour, only stopping for a moment when you cum inside him and fill his asshole with your seed, then make out a bit until you're ready to go on. It's a wild ride with your horsey cuntboy, until finally - after him and you coming multiple times - he and you sink down to lean against the wall in exhaustion. Smiling, he reaches over to caress your chest, panting 'You can't believe how good this feels after holding everything in for weeks. Thank you.' Then leans over to you, stretching a bit to give you a kiss on the cheek before promptly dozing off on your shoulder. You gently lower the sleeping horseman to the ground, putting his bunched-up jeans under his head as a pillow, then grab your stuff and leave him to rest, quietly sneaking out of the building.";
+		say "     You have sex with Corbin like a horny bunny for at least an hour, only stopping for a moment when you cum inside him and fill his asshole with your seed, then make out a bit until you're ready to go on. It's a wild ride with your horsey cuntboy, until finally - after him and you coming multiple times - the two of you sink down to lean against the wall in exhaustion. Smiling, he reaches over to caress your chest, panting 'You can't believe how good this feels after holding everything in for weeks. Thank you.' Then leans over to you, stretching a bit to give you a kiss on the cheek before promptly dozing off on your shoulder. You gently lower the sleeping horseman to the ground, putting his bunched-up jeans under his head as a pillow, then grab your stuff and leave him to rest, quietly sneaking out of the building.";
 		move player to Central Farm Square;   
 		now lastfuck of Corbin is turns;        
 
 to say CorbinSex6:    [Corbin milked]
 	if thirst of Corbin is 1:  [in the barracks]
-		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+		if hp of Corbin is 2 or hp of Corbin is 3:  [player fucked him - or just saw him in the milking shed, his pussy still a secret]		
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch - then he realizes where you are, stepping backwards and looking around with concern in his eyes. He says in a low whisper 'Phew - no one noticed. Please, we can't do this here.' He bites his lip, then takes a deep breath, fighting down his arousal 'No, we really can't - later, in the milking shed tonight, ok?'";
+			say "     Do you accept this (Y), or proceed anyways? (N)";
+			if player consents:
+				say "     After a last grope at Corbin's crotch, you nod and leave him be for now.";
+			otherwise:
+				say "     Not deterred from doing what you want by the cuntboy's words, you move to stand close again, this time pushing your hand under the band of his pants before he can stop you. As your fingers touch his sensitive pussy lips and dip in between them, a needful moan escapes the equine cowboy's lips and all his resistance melts away in moments. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too.";
+				say "     After some more stroking and fingering Corbin's pussy, you kneel down to pop open the button of his jeans, then lower the zipper and pull them down his legs. There's a murmur in the room as the cuntboy's swollen nether lips and the perky breasts on his crotch come into sight. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it, then pulling back as the first drop of milk touches your lips. You caress his nipple, circling it with your finger, then lean down to your pack and grab an empty water bottle, starting to softly squeeze Corbin's breast and catch the milk squirting out in the bottle. A look of bliss coming over Corbin's face as you slowly milk him, taking care of the pressure in one of his breasts, then repeating the same on the other side. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets...";    
+				say "     When the flow of milk slows down to just a trickle and the bottle is almost full anyways, you let go his breasts and turn your attention to Corbin's female bits. You can't just leave him panting in lust like this, so you give his pussy a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he says with an a bit pained voice 'Did you have to do that - here?' With a concerned look at the group of horny horsemen in the barracks leering at him, he pulls up his jeans and rushes out the back door of the barracks.";
+				move Corbin to Milking Shed Main Room;
+				now thirst of Corbin is 2;	[now in the milking shed]
+				now hp of Corbin is 4;   [he's 'out' to the horsemen - who're starting to get interested]				
+				now lastfuck of Corbin is turns;				
+		otherwise if hp of Corbin is 5:  [player fought off the horsemen going for Corbin]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. Though while they might be... interested in Corbin, one pointed look from you in their direction has the closest few suddenly deciding they need some fresh air outside. Knocking out several of them before seems to have left an impact, with Corbin off-limits unless he initiates it. For which your grateful cuntboy cowboy leans in to plant a thankful kiss on your lips - leading over to a hungry bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you reach down and pop open the button of his jeans, then lower the zipper and pull them down his legs. As you kneel down, Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it, then pulling back as the first drop of milk touches your lips. You caress his nipple, circling it with your finger, then lean down to your pack and grab an empty water bottle, starting to softly squeeze Corbin's breast and catch the milk squirting out in the bottle. A look of bliss coming over Corbin's face as you slowly milk him, taking care of the pressure in one of his breasts, then repeating the same on the other side. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets...";    
+			say "     When the flow of milk slows down to just a trickle and the bottle is almost full anyways, you let go his breasts and turn your attention to Corbin's female bits. You can't just leave him panting in lust like this, so you give his pussy a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he grabs you and pulls you into a deep kiss, then says 'Thank you, I really needed that.'";
+			now lastfuck of Corbin is turns;			
+		otherwise if hp of Corbin is 90:  [barracks slut]
+			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the somewhat damp fabric of his jeans there. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Then you push your hand under the band of his pants and feel for his sensitive pussy lips, slipping in a finger into the wet hole between them. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. You don't let that distract you and just lean in to plant a hungry kiss on Corbin's lips - leading over to a bit of making out.";
+			say "     After some enjoyable tongue-wrestling, you reach down and pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's swollen-looking nether lips come into sight, still wet with the cum one of his equine housemates blasted into him not too long ago. And left and right of that, his perky breasts await you, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it, then pulling back as the first drop of milk touches your lips. You caress his nipple, circling it with your finger, then lean down to your pack and grab an empty water bottle, starting to softly squeeze Corbin's breast and catch the milk squirting out in the bottle. A look of bliss coming over Corbin's face as you slowly milk him, taking care of the pressure in one of his breasts, then repeating the same on the other side. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets...";  
+			say "     When the flow of milk slows down to just a trickle and the bottle is almost full anyways, you let go his breasts and turn your attention to Corbin's female bits. You can't just leave him panting in lust like this, so you give his pussy a careful lick and taste his juices as well as the horseman cum, then really go to town on him - licking and fondling him until he's squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, you suddenly feel a hand on your shoulder. It's one of the horseman farmhands, naked, with his hard prick in hand. He says 'Ok, you're done - my turn with the little slut.' Corbin only gives a sigh, staying right where he is as the other man pushes you aside to fuck and breed him.";
+			if CorbinPregnancy is 0:              [not already preggers]
+				let CorbinPregChance be a random number from 1 to 20;  	
+				if CorbinPregChance > 10:           [50% chance]
+					now CorbinPregCounter is 48;      [48 turns till birth] 
+					now CorbinPregnancy is 1;					[invisibly pregnant]
+					now libido of Corbin is 2;        [horseman is the father]		
+			now lastfuck of Corbin is turns;							
 	otherwise if thirst of Corbin is 2:   [in the milking shed]
 		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Kneeling down, you pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it, then pulling back as the first drop of milk touches your lips. You caress his nipple, circling it with your finger, then lean down to your pack and grab an empty water bottle, starting to softly squeeze Corbin's breast and catch the milk squirting out in the bottle. A look of bliss coming over Corbin's face as you slowly milk him, taking care of the pressure in one of his breasts, then repeating the same on the other side. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets...";    
 		say "     When the flow of milk slows down to just a trickle and the bottle is almost full anyways, you let go his breasts and turn your attention to Corbin's female bits. You can't just leave him panting in lust like this, so you give his pussy a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's squirming in arousal, his hands grabbing your your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he grabs you and pulls you into a deep kiss, then says 'Thank you, I really needed that.'";
@@ -429,15 +697,19 @@ to say CorbinSex6:    [Corbin milked]
 [   2: talked to the player                                                    ]
 [   3: about to give a reward for returning Wendy to a player he met before    ]
 [   4: gave the player his reward for returning Wendy                          ]
+[   5: player helped Shawn & Duke and got rewarded                             ]
 
 Anthony is a man.  The hp of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]";
 The conversation of Anthony is { "Mew!" }.
+The icon of Anthony is Figure of Anthony_icon.
 
 instead of sniffing Anthony:
 	say "Anthony has a pleasant animalistic smell. Clearly male and somewhat spicy, you almost have to hold yourself back from getting too close and pushing your nose into his lustrous fur.";
 
 to say AnthonyDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Anthony] <- DEBUG[line break]";			
 	say "     Anthony McDermott is a tall anthro anteater in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
 	say "     The young man's body is covered in lustrous and silky fur, with most of it light brown to blond and pretty short, showing off the fit shape and light muscles of his upper body, abs, legs and (you assume) crotch. Meanwhile, his forearms and lower legs have longer, almost purely blond hair covering them, and the very long prehensile tail behind him looks pretty big with the thick and darker brown fur along its length.";
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
@@ -459,6 +731,21 @@ instead of conversing the Anthony:
 		if hp of Anthony < 4:
 			say "     'You've been around in the area and further into the city, so could you please have a look out for a cow - a regular, untransformed one. Some of our cows ran off when a critter broke through the fence and frightened them, and we still haven't found one of our best producers. Really hope she's all right. Her name is Wendy and she's very docile and peaceful. If you do find her, just calm her down, talk to her a bit and she'll follow you so you can bring her back here.'";
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Wendy back, I can give you a bag of food - farm-fresh and guaranteed infection free.'";
+		otherwise if hp of Anthony is 4:
+			if hp of Duke < 10:
+				say "     'You're pretty resourceful and often out in the city, aren't you? Maybe you could find a way to help Shawn and Duke - they're shepherds, really nice guys and hard workers. Just go out to the meadow after dark and you'll see what's going on, ok?'";
+			otherwise: 
+				say "     'I was gonna ask you to help out Shawn and Duke, but you already did that, didn't you? I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
+				say "    [line break]";
+				say "    Do you wait patiently for him to get you some food (Y), or would you rather pull him against yourself for a kiss and a more 'personal' reward (N)?";
+				if player consents:
+					say "     [line break]";
+					say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
+					increase carried of food by 4;    
+				otherwise:
+					say "     [line break]";
+					say "     [AnthonyRewardSex]";
+				now hp of Anthony is 5;						
 		otherwise:
 			say "     Clicking his claws together thoughtfully, he finally says 'I'll have to get back to you on that later, not sure what would be right for your skill-set at the moment. Just sending you to milk cows would be a waste of your time...' (further quests remain to be written - please have patience)";
 	otherwise if calcnumber is 3:     [break off talking]
@@ -481,7 +768,37 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 	otherwise if hp of Anthony is 3:  [met the player before]
 		say "    Entering the main room of the farmhouse, you walk up to Anthony and tell him about the cow you found and led back to the farm. Visibly relieved, he puts his long arms around you, giving you an exuberant hug. Realizing a moment later that you don't really know him all that well and might not like this, he lets you go, giving you a clap in camaraderie on the shoulder instead. 'Thank you, thank you. I had feared she'd just be lost out there, alone, maybe eaten. That's a big worry of my mind. Here, let me give you a reward for your efforts.' With that, the anthro anteater walks over into the kitchen, packing a carrying bag with fresh fruit for you, then handing it over with a smile.";
 		increase carried of food by 4;    
-		now hp of Anthony is 4;   
+		now hp of Anthony is 4;
+	otherwise if hp of Anthony is 4 and hp of Duke > 9:
+		say "    Entering the main room of the farmhouse, you walk up to Anthony and tell him about Shawn's transformation from feral sheep to a more human form. Very happy to hear about that, he gives you a beaming smile and claps you in camaraderie on the shoulder. 'Thank you, thank you. I'm glad you could help them. It'd have been terrible if Duke lost his boyfriend forever to these damned nanites. Let me give you a reward for your help.' With that, the anthro anteater starts turning to go into the kitchen and grab another tasty treat for you.";
+		say "    [line break]";
+		say "    Do you wait patiently for him to get you some food (Y), or would you rather pull him against yourself for a kiss and a more 'personal' reward (N)?";
+		if player consents:
+			say "     [line break]";
+			say "     Calmly waiting for him, you accept a carrying bag of fresh fruit and thank Anthony.";
+			increase carried of food by 4;    
+		otherwise:
+			say "     [line break]";
+			say "     [AnthonyRewardSex]";
+		now hp of Anthony is 5;
+		
+to say AnthonyRewardSex:
+	say "     Quickly stepping forward, you put a hand on Anthony's arm and pull him against you, finding his lips with yours. The sudden kiss startles him at first, but he quickly gets into it and eagerly replies, sliding an arm around you while making out. After some hot and hungry kisses, the giant anteater comes back up for air and pants 'So you want... something else as your reward, I gather?', looking down towards your crotch as he does so. Before you can do anything more than nod, he starts to pull off your clothes, guiding you step by step towards the nearest couch as he does so. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with Anthony kneeling between your legs. 'Just relax and enjoy' he says in a seductive voice, smiling up at you as he sticks out his long, long tongue and leans forward.";
+	say "     [WaitLineBreak]";
+	if cocks of player > 0:
+		say "     Anthony is very careful as he handles your manhood and balls with his clawed hands, gently rubbing while his tongue plays over your skin in a feathery light touch. He spends some time teasing your balls, wrapping his tongue around one then the other and lightly squeezing them, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your soon fully hard cock. It's a strange but very pleasant feeling to have him play his long but thin tongue over your erection, then wrap around it and tug on it in a pretty stimulating fashing. Overwhelmed in the novel sensations of having this anthro anteater jerk you off with his tongue, you moan and lean your head backwards, savouring the pleasure he gives you.";
+		say "     After a while of just licking and squeezing your manhood, Anthony moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his tight and narrow muzzle. It's good that anteaters have no teeth, otherwise you doubt that your cock would even have fit, as tightly as he's got his lips stretched around your shaft. Bobbing up and down in the pretty amazing blowjob he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
+		say "     [WaitLineBreak]";
+		say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to cum rises in your bells. You moan that you're close, which only has the giant anteater speed up more, lips still tightly wrapped around your shaft as you blow your load. He eagerly swallows spurter after spurt of your cum, even milking the very last drops from your soon softening cock, then sits down on the couch next to you and moans 'Hmm, you're tasty' while licking his lips. After leaning in for a kiss, he continues 'I wish I had time to do this more often...'";
+	otherwise if cunts of player > 0:
+		say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently pulling apart your nether lips while his tongue plays over its folds in a feathery light touch. He spends some time just licking your outermost lips, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your clit and inner labia. It's a strange but very pleasant feeling to have him play his long but thin tongue over your privates, then dip into your vagina and explore inside. Overwhelmed in the novel sensations of having this anthro anteater tease and lick the inner walls of your pussy, you moan and lean your head backwards, savouring the pleasure he gives you.";
+		say "     After a while of gentle licking and soft poking, Anthony pulls back a bit, then puts his lips to your clitoris and really concentrates on that, nibbling on it and brushing over it with the tip of his tongue. Head against your crotch in the pretty amazing cunnilingus he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
+		say "     [WaitLineBreak]";
+		say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, pushing his long tongue even deeper into your vagina than before and finding all new spots to caress and tease. Moments later, you moan loudly, orgasming from the continued stimulation, femcum squirting from your pussy and hitting Anthony right on his long muzzle. He eagerly puts his lips to your sex, catching and swallowing it all after the first splash, then licks his muzzle clean with his long tongue and sits down on the couch next to you. 'Hmm, you're tasty' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";		
+	otherwise:
+		say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently stroking your genderless but still sensitive skin and playing over it in a feathery light touch with his tongue. He spends some time just licking your pubic area, then snakes his tongue down between your legs to brush against your back door and tease it a bit before returning to your crotch. Dealing with your sexless state without any hesitation, he's creative in the ways he tickles, licks and strokes you, giving you a very pleasant feeling. While his head is against your crotch in the pretty amazing oral attention he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
+		say "     [WaitLineBreak]";
+		say "     Arousal quickly mounting higher and higher from Anthony's gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, and moments later a feeling of bliss floods your body and you shake in orgasm. He continues pleasing you until your climax abates, then sits down on the couch next to you. 'Hmm, you're tasty' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";			
 
 Wendy is a woman.  The hp of Wendy is normally 0. 
 The description of Wendy is "[WendyDesc]";
@@ -514,7 +831,6 @@ instead of fucking the Wendy:
 [   3: sheep-player refused to transform Shawn                          ]
 [  10: player helped transform Shawn                                    ]
 [  11: player had sex with Duke                                         ]
-[ 100: player attacked him, around as an encounter in the dry plains    ]
 
 [ thirst states of Duke (location)                                      ]
 [   0: not met                                                          ]
@@ -529,6 +845,8 @@ instead of sniffing Duke:
 	say "Duke has a pleasant animalistic smell, just like a male dog. Though there seems to be an undertone of of sheep-musk there too.";
 
 to say DukeDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [hp of Duke], THIRST: [thirst of Duke] <- DEBUG[line break]";	
 	if daytimer is day: 
 		say "     Standing before you is an anthro German shepherd, standing tall on two digitigrade legs and keeping the spread-out sheep in his attentive gaze at all times. As his view crosses your position, he gives you a slight nod, then continues with his vigilance.";
 		say "     The dog-morph has a fit, muscular body sporting the traditional brown and tan fur coat of his breed. Seeing as he's not wearing anything except a black dog-collar with a medallion bearing the name 'Duke', it is quite clear that he's male, with a furry canine sheath resting against is belly and a pair of golf ball size balls dangling beneath.";
@@ -538,7 +856,7 @@ to say DukeDesc:
 		
 instead of conversing the Duke:
 	if daytimer is day:   [he doesn't talk to the player during the day]
-		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, don't distract me'[or]'I don't have time to chat now'[or]'Look for me this evening, if you want to talk'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
+		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now'[or]'Look for me this evening, if you want to talk'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
 	otherwise:   [at night, he's got some time to chat]
 		if hp of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
@@ -632,20 +950,26 @@ instead of conversing the Duke:
 					say "     [line break]";
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now hp of Duke is 2;					
-		otherwise if hp of Duke is 10:					
+		otherwise if hp of Duke is 10 or hp of Duke is 11:					
 			say "     Duke gives you a happy smile as you approach, saying 'I can't thank you enough. What you've done for me and Shawn is just amazing.'";
 		
 to say DukeShawnFirstTimeSex:
 	say "     Wincing, holding his horned head, Shawn rises from the ground on unsteady digitigrade legs. 'Man, I had the weirdest dream...' he says, then adds 'Wait - what's this?' as he looks at his hand, arm, then down his body. Nonplussed at his furred, anthro ram body, he looks to you, then is almost bowled over as Duke rushes in and gives him an exuberant embrace. The shepherd hugs his ram friend tight, saying 'It's me, Duke - so good to have you finally back. I've missed you terribly.'";
 	say "     There is a moment of silence as the two of them just look into each other's eyes, then suddenly, they kiss and start making out with each other. Basically forgetting the world around them, Duke and Shawn just keep going at it, hands exploring each other's body while they're busy tongue-wrestling or Duke licks Shawn's face. It doesn't take long until the anthro canine sinks to the floor, still embracing Shawn and pulling him down with him to lie together in the green grass. Their make-out-session continues some more with Shawn now lying on top of Duke - until there is a moaned 'Fuck me' audible from Duke between their kisses.";
+	say "     [line break]";
+	say "     Do you want to watch them go at it (Y), or would you rather give em some privacy (N)?";
+	if player consents:
+		say "     [line break]";
+		say "     Giving his canine lover a last loud smooch, Shawn moves back a little bit, coming to kneel between Duke's legs and looking down on him. A smile on the ram's face, he takes hold of his hard cock and rubs it against the German shepherd's knotted shaft, then takes both of them in one hand and strokes them together. Next, he moves his hands to Duke's legs, rubbing the insides of his thighs and lifting the legs up into the air. Duke readily helps him out with that, taking over holding his own legs in that position, his tail beating against the ground in the dog-morph's eagerness for what will come next.";
+		say "     With the Duke's hips raised a bit and his legs spread, he's in a perfect position for Shawn, who quickly aims his hard cock then pushes its tip against the German shepherd's pucker, easily stretching it around his shaft as he did so many times before when they were animals. Still, now with both of them in anthro shape, it's kind of their first time, so Shawn takes it slow, sinking his manhood into the dog bit by bit and taking breaks for him to get used to it. When he finally is all the way inside, Shawn leans forward, with Duke meeting his lips for a kiss. Then the ram takes up thrusting into his partner, quickly getting faster and harder as his libido runs high.";
+		say "     [WaitLineBreak]";
+		say "     The two of them going at it is quite a show. They're like - well... a bit like animals, though with lots of caresses and kisses between the loving partners thrown in. Standing where you are, watching them, you suddenly notice movement to your sides - it's several sheep, who've moved over to have a look too. One of them gives you a meaning-laden 'Meeeh', then looks back at Duke and Shawn.";
+		say "     Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps and his knotted cock starts shooting long spurts of the dog's seed all over his chestfur.";
+	otherwise:
+		say "     [line break]";
+		say "     Silently moving back a bit from the two men, you turn to leave, but are stopped from actually walking away by quite a few sheep encircling the scene now. One of them gives you a meaning-laden 'Meeeh', then returns its attention to Duke and Shawn. Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps in lust himself.";
 	say "     [WaitLineBreak]";
-	say "     Giving his canine lover a last loud smooch, Shawn moves back a little bit, coming to kneel between Duke's legs and looking down on him. A smile on the ram's face, he takes hold of his hard cock and rubs it against the German shepherd's knotted shaft, then takes both of them in one hand and strokes them together. Next, he moves his hands to Duke's legs, rubbing the insides of his thighs and lifting the legs up into the air. Duke readily helps him out with that, taking over holding his own legs in that position, his tail beating against the ground in the dog-morph's eagerness for what will come next.";
-	say "     With the Duke's hips raised a bit and his legs spread, he's in a perfect position for Shawn, who quickly aims his hard cock then pushes its tip against the German shepherd's pucker, easily stretching it around his shaft as he did so many times before when they were animals. Still, now with both of them in anthro shape, it's kind of their first time, so Shawn takes it slow, sinking his manhood into the dog bit by bit and taking breaks for him to get used to it. When he finally is all the way inside, Shawn leans forward, with Duke meeting his lips for a kiss. Then the ram takes up thrusting into his partner, quickly getting faster and harder as his libido runs high.";
-	say "     [WaitLineBreak]";
-	say "     The two of them going at it is quite a show. They're like - well... a bit like animals, though with lots of caresses and kisses between the loving partners thrown in. Standing where you are, watching them, you suddenly notice movement to your sides - it's several sheep, who've moved over to have a look too. One of them gives you a meaning-laden 'Meeeh', then looks back at Duke and Shawn.";
-	say "     Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps and his knotted cock starts shooting long spurts of the dog's seed all over his chestfur.";
-	say "     [WaitLineBreak]";
-	say "     As they come down from their respective climaxes, still lying in the grass and holding one another, Shawn finally looks up and sees all the sheep standing in a circle around them. 'Did you like the show, guys and gals? Sadly, it's over for now... and I'm not letting go of this doggie until we're done cuddling. Just go back to the group-hug and get some sleep, ok?' Almost seems like the gathered sheep understood what he said, as they give a chorus of 'Meeh', then trot back over to where the rest of their herd are. The crowd around you now having vanished, you're left standing alone before the exhausted ram and German shepherd.";
+	say "     As they come down from their respective climaxes, lying in the grass and holding one another, Shawn finally looks up and sees all the sheep standing in a circle around them. 'Did you like the show, guys and gals? Sadly, it's over for now... and I'm not letting go of this doggie until we're done cuddling. Just go back to the group-hug and get some sleep, ok?' Almost seems like the gathered sheep understood what he said, as they give a chorus of 'Meeh', then trot back over to where the rest of their herd are. The crowd around you now having vanished, you're left standing alone before the exhausted ram and German shepherd.";
 	say "     Seeing you there, Duke says 'Oh, err - sorry for just leaving you to wait while we... got distracted'. He continues to tell Shawn all about your part in getting him transformed, both of them thanking you effusively afterwards.";
 	now lastfuck of Duke is turns;
 	move Shawn to Sheep Meadow SE;
@@ -684,26 +1008,29 @@ to say DukeShawnSheepScene:
 	now hp of Duke is 1;
 	
 instead of fucking the Duke:
-	if hp of Duke < 10:
-		say "     As you make Duke your offer of some nice time together, he looks over to you and shakes his head. 'I'm flattered, but... no. I hardly know you, after all...'";
-	otherwise if hp of Duke is 10:
-		say "     As you make Duke your offer of some nice time together, he looks over to you and gives a smile. 'Of course I'm interested. I'd do almost anything for you. Though as you've... seen before, I'm gay, and a bottom at that. Pussy just doesn't do anything for me, so you'll have to excuse me if you wanted me to fuck you or anyone anyone...'";	
-		wait for any key;
-		say "[DukeSexMenu]";
-		now lastfuck of Duke is turns;
-	otherwise:
-		if daytimer is day:
-			say "     As you make Duke your offer of some interesting time together, he looks over to you and gives a slight shake of his head. 'Got to watch the herd.'";
+	if daytimer is day:   [he doesn't talk to the player during the day]
+		say "     Duke says [one of]'I take my duty protect the herd seriously, not now'[or]'I have to stay vigilant so the herd is safe, please don't distract me'[or]'I don't have time to chat now, sorry'[or]'Look for me this evening if you want to talk, ok?'[at random], not even taking his eyes off the sheep and ignoring any attempt to start a conversation.";
+	otherwise: 	
+		if hp of Duke < 10:
+			say "     As you make Duke your offer of some nice time together, he looks over to you and shakes his head. 'I'm flattered, but... no. I hardly know you, after all...'";
+		otherwise if hp of Duke is 10:
+			say "     As you make Duke your offer of some nice time together, he looks over to you and gives a smile. 'Of course I'm interested. I'd do almost anything for you. Though as you've... seen before, I'm gay, and a bottom at that. Pussy just doesn't do anything for me, so you'll have to excuse me if you wanted me to fuck you or anyone anyone...'";	
+			wait for any key;
+			say "[DukeSexMenu]";
+			now lastfuck of Duke is turns;
 		otherwise:
-			if lastfuck of Duke - turns < 6:
-				say "     As you approach Duke and ask him for some sexy time, he shakes his head 'Not now, I'm exhausted.'";
+			if daytimer is day:
+				say "     As you make Duke your offer of some interesting time together, he looks over to you and gives a slight shake of his head. 'Got to watch the herd.'";
 			otherwise:
-				say "     You walk over to Duke and ask him if he'd like to have some fun with you. Giving your body an appreciative look, the anthro dog smiles and steps closer to you, his tail wagging excitedly.";
-				wait for any key;
-				say "[DukeSexMenu]";
-				now lastfuck of Duke is turns;
-				if hp of Duke is 10:
-					now hp of Duke is 11;
+				if lastfuck of Duke - turns < 6:
+					say "     As you approach Duke and ask him for some sexy time, he shakes his head 'Not now, I'm exhausted.'";
+				otherwise:
+					say "     You walk over to Duke and ask him if he'd like to have some fun with you. Giving your body an appreciative look, the anthro dog smiles and steps closer to you, his tail wagging excitedly.";
+					wait for any key;
+					say "[DukeSexMenu]";
+					now lastfuck of Duke is turns;
+					if hp of Duke is 10:
+						now hp of Duke is 11;
 
 to say DukeSexMenu:
 	blank out the whole of table of fucking options;
@@ -731,13 +1058,12 @@ to say DukeSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Fill the German shepherd's ass with your cock.";
 		now toggle entry is DukeSex rule; 
-[
-	choose a blank row in table of fucking options;
-	now title entry is "Let him fuck your ass";
-	now sortorder entry is 7;
-	now description entry is "Take his canine shaft in the back door and be knotted by him.";
-	now toggle entry is DukeSex rule;     
-]
+	if (cocks of player > 0):		
+		choose a blank row in table of fucking options;
+		now title entry is "Let him fuck your ass";
+		now sortorder entry is 7;
+		now description entry is "Take his canine shaft in the back door and be knotted by him.";
+		now toggle entry is DukeSex rule;     
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -796,11 +1122,17 @@ to say DukeSex4:    [Duke fucked in the ass]
 	say "     Holding the German shepherd until your orgasm ebbs out and the last spurt of cum is shot inside him, you pull out after a while, feeling his pucker pull tight the moment you leave his body, not letting one drop of your load escape. Duke turns around and gives your shoulder a squeeze, then leans in to lick your face. 'Thanks a lot, you were awesome. A really great friend to have.'";	
 		
 to say DukeSex5:    [Player fucked in the ass]
+	setmonster "German Shepherd";
+	choose row monster from the table of random critters;		
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
-	say "     [WaitLineBreak]";	
-	say "     Putting your arms around Duke from behind, you feel his muscular chest, then whisper in his ear that he's not the only one who likes hard dick in his ass, reaching down to grab his erect canine manhood. Inviting him to be the top for a change, you walk around Duke, stripping your clothes off on the move to stop on your hands and knees in the grass in front of the German shepherd. Looking back at him, wiggling your naked ass invitingly, you tell him to mount you.";
-	say "     Duke is a bit hesitant at first, always having been the bottom in his pairing with Shawn, then his natural (though nanite-enhanced) urges take over, making him follow the guiding arrow of his erect penis. The anthro dog kneels behind you, his hands cupping your buttcheeks, then kneading them. The next thing you feel is your canine friend's tongue, lapping up and down your crack to give you a pleasant tingly feeling. His wet nose pressed against your skin, ";	
-	say "     <more sex scene>";   [ to continue here when I have some time... ]
+	say "     [WaitLineBreak]";
+	say "     Putting your arms around Duke from behind, you feel his muscular chest, then whisper in his ear that he's not the only one who likes hard dick in his ass, reaching down to grab his erect canine manhood. Inviting him to be the top for a change, you walk around Duke, stripping your clothes off on the move to stop on your hands and knees in the grass in front of the German shepherd. Looking back at him, wiggling your naked ass invitingly, you tell him to mount you. Duke is a bit hesitant at first, always having been the bottom in his pairing with Shawn, then his natural (though nanite-enhanced) urges take over, making him follow the guiding arrow of his erect penis.";
+	say "     The anthro dog kneels behind you, his hands cupping your buttcheeks, then kneading them. The next thing you feel is your canine friend's tongue, lapping up and down your crack to give you a pleasant tingly feeling. Wet nose pressed against your skin, he pushes his tongue against your hole teasingly, then wiggles its tip in as you relax your muscle. Duke happily eats you out and gets you nice and wet - giving you a very nice feeling as he does so, then you remind him that he's supposed to fuck you. 'Oh, yes - of course' he answers in a still rather submissive tone, then lifts his upper body and moves forwards till his hard cock pokes you in the butt.";	
+	say "     [WaitLineBreak]";
+	say "     Brushing his erect canine cock against a willing partner's body seems almost to break a little dam in Duke's mind, and with a low lusty growl, he takes hold of his shaft and sets it right against your quivering pucker. Driven by animalistic instinct, he thrusts deep in your thankfully wet and well-lubed hole till the meaty bulge of his knots rests against its outside, then grips your hips with both hands and starts to really pound your ass with rapid thrusts. It feels amazing to have the well-hung canine fuck you, hitting just the right spots to have you moan in lust and grip the grass tightly. As his arousal mounts higher and higher, Duke eventually just keeps pushing against your hole when he's in to his knot - and with a sudden stretching sensation, it pops in too."; 
+	say "     Burying his manhood down to the base in your warm and tight ass is the last straw for the German Shepherd. He gives a sound that's halfway between a howl and an aroused grunt, then starts to flood your insides with blast after blast of canine seed, gushing forth as his knot expands even more and seals the two of you together. Panting, Duke leans against your back, his cock still pulsing with more cum shooting into you. He says 'That was... amazing.' and caresses your chest, then reaches down to take hold of your own shaft and return the favor. With how hot and horny all this fucking already made you, it doesn't take all that long until his eager jerking drives you over the edge and you spray your own seed all over the grass below.[mimpregchance]";
+	say "     [WaitLineBreak]";
+	say "     With both of you having gotten off, Duke just puts his arms around your body to hold you and pulls you down to lie on the grass as you wait for his knot to go down. He nuzzles against your neck from behind and whispers 'Thanks for letting me fuck you. I really could get used to this too...'";
 		
 Shawn is a man. The hp of Shawn is normally 0. 
 The description of Shawn is "[ShawnDesc]";
