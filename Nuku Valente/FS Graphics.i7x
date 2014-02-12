@@ -21,10 +21,10 @@ Figure of PinkGel_icon is the file "PinkGel.png".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.png".
-Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".
+Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
-Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
+Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene grapic]
 Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
@@ -94,12 +94,6 @@ Table of infection graphics
 title	icon(figure name)
 "Alpha Husky"	Figure of AlphaHusky_icon
 ["Beaver"	Figure of Beaver_icon	]	[first time only & M/H ending]
-"Bottlenose Toy"	Figure of Bottlenose_icon
-"Messy Pig"	Figure of MessyPig_icon
-"Latex Vixen"	Figure of LatexVixen_icon
-["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
-"Plush Lion"	Figure of PlushLion_icon
-"ram"	Figure of Ram_icon
 "Blue Gel"	Figure of BlueGel_icon
 "Bottlenose Toy"	Figure of Bottlenose_icon
 "Demon Brute"	Figure of DemonBrute_icon
@@ -107,11 +101,12 @@ title	icon(figure name)
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of SpartanHelot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
+["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 "Latex Vixen"	Figure of LatexVixen_icon
 "Mannequin"	Figure of Mannequin_icon
 "Messy Pig"	Figure of MessyPig_icon
-"Pink Gel"	Figure of PinkGel_icon
 "Plush Lion"	Figure of PlushLion_icon
+"Pink Gel"	Figure of PinkGel_icon
 "ram"	Figure of Ram_icon
 "Shadow Beast"	Figure of ShadowBeast_icon
 "Siamese Cat"	Figure of SiameseCat_icon
@@ -121,7 +116,6 @@ title	icon(figure name)
 "Tigress Hooker"	Figure of TigressHooker_icon
 "Triceratops"	Figure of Triceratops_icon
 "Wildcat"	Figure of Wildcat_icon
-"Pink Gel"	Figure of PinkGel_icon
 "Zebra"	Figure of Zebra_icon
 
 artistcredits is an action applying to nothing.
@@ -139,19 +133,15 @@ carry out artistcredits:
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ Furaffinity[line break]";
 	say "     Beaver by MarcLeonhardt @ Furaffinity[line break]";
-	say "     Bottlenose Toy by Anymouse1968 @ Furaffinity[line break]";
-	say "     Demon Brute by Anymouse1968 @ Furaffinity[line break]";
-	say "     Latex Ermine by Halcy0n @ Furaffinity[line break]";
-	say "     Latex Vixen by Anymouse1968 @ Furaffinity[line break]";
-	say "     Messy Pig by Anymouse1968 @ Furaffinity[line break]";
-	say "     Ram by Anymouse1968 @ Furaffinity[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
+	say "     Bottlenose Toy by Anymouse1968 @ Furaffinity[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
+	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity[line break]";
+	say "     Latex Ermine by Halcy0n @ Furaffinity[line break]";
 	say "     Latex Vixen by Anymouse1968 @ Furaffinity[line break]";
-	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ Furaffinity[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
@@ -184,14 +174,13 @@ carry out artistcredits:
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
-	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
-	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
+	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
+	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Orthas by The_Negative @ furaffinity[line break]";
 	say "     Rod by The_Negative @ furaffinity[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
-	say "     Sandra by Trav @ ???[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity[line break]";
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
