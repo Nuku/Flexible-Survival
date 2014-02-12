@@ -345,6 +345,7 @@ to say leosupplyoral2:
 Part 11 - Practice Session
 
 to say leopracticesession:
+	project the figure of LeonardViolin_icon;
 	say "     As you're approaching Leonard's den, you can hear the soft sounds of his violin being played.  Hearing it makes you smile and move more quickly towards your mate's home.  When you arrive, you find him attentively practising while the maids listen happily as they snuggle together on a nearby rug.  Noticing you, he smiles and continues to play, though with added enthusiasm now.  You smile and take a seat in your soft chair, relaxing and enjoying the lovely music.";
 	if a random chance of 1 in 3 succeeds:
 		say "     While Leonard practices, you notice a [one of]shy[or]nervous[or]curious[or]eager[at random] feline girl poking her head around the edge of the tunnel.  You make a faint motion for Leonard, who nods and continues to play, switching from practising to playing one of his more [one of]welcoming[or]exciting[or]alluring[or]sensual[at random] pieces.  As he plays, you can see it having an effect on the visitor, getting her to relax and move in a little further to hear better.  As Leonard starts up another song, you motion for her to come and sit with you and, captivated by the lovely music, she is easily coaxed into your lap.";

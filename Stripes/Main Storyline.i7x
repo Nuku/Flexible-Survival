@@ -10,6 +10,7 @@ The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 understand "Left Behind Recording of Doctor Matt " as doctor matt.
+the icon of Doctor Matt is DrMatt_icon;
 
 the conversation of Doctor Matt is { "empty" };
 
@@ -21,8 +22,7 @@ Instead of conversing the doctor matt:
 		now hp of testerbot is 1;
 		say "'The military has returned my testing robot, wanting more data on the affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available briefly though before I have to send it off to the military's scientists so they may analyze the data.'";
 		say "'When they returned it, they also included a note about its [']unfriendly disposition['].  So I've given it a nice smile,' he says, pointing to the poorly aligned smile on the robot's boxy face.  The edges of the large sticker seem scratched and frayed, as if the robot tried to pull it off, but couldn't with its pincher hands.  Either ordered to stop or resigned to leave it there, the robot now has a big, friendly grin stuck to its face.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		attempttowait;
 	if hp of doctor matt is 100:
 		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
@@ -309,7 +309,7 @@ Instead of conversing the doctor matt:
 		if number of fasttravel rooms > ( number of known fasttravel rooms * 2 ):
 			say "     You fill Dr Matt in on what you've been able to learn about the city and the safer paths to travel through it.  'Based on the information you've been able to provide me, you only have about [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered.  The military is requesting information on at least 50% of these locations.'";
 		otherwise:
-			say "     You fill Dr Matt in on what you've been able to learn about the city and the safer paths to travel through it.  'Based on the infromation you've been able to provide me, you have roughly [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered.  That should greatly assist the military with their scouting and rescue efforts.'";
+			say "     You fill Dr Matt in on what you've been able to learn about the city and the safer paths to travel through it.  'Based on the information you've been able to provide me, you have roughly [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered.  That should greatly assist the military with their scouting and rescue efforts.'";
 			now tempnum is 100 + ( 4 * number of known fasttravel rooms);
 			increase freecred by tempnum;
 			now hp of doctor matt is 16;

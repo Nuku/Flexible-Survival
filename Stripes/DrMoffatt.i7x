@@ -77,6 +77,7 @@ Section 3 - Doctor Moffatt
 Doctor Moffatt is a person.  Doctor Moffatt is in Psych Department.
 The description of Doctor Moffatt is "[drmoffattdesc]";
 The conversation of Doctor Moffatt is { "..." }.
+The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
 the scent of Doctor Moffatt is "She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger.  She also has a pleasant, perfumed scent beneath that.";
