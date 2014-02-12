@@ -419,6 +419,10 @@ To reciting2:
 			-- 60:	[Orthas]
 				if the player's command matches "[number]":
 					now orthasstart is the number understood;
+					if orthasstart >= 2:
+						now the icon of Orthas is figure of Orthas_icon;
+					otherwise:
+						now the icon of Orthas is figure of pixel;
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
@@ -639,6 +643,10 @@ To reciting2:
 					now Hunting Prides is resolved;
 					now PridePark is resolved;
 					if hp of Leonard is 100, now hp of Leonard is 0;
+					if hp of Leonard >= 6:
+						now the icon of Leonard is the figure of LeonardViolin_icon;
+					otherwise:
+						now the icon of Leonard is the figure of pixel;
 					if hp of Leonard > 0:
 						now Lion's Den is known;
 						now Feline Friend is resolved;
@@ -684,6 +692,7 @@ To reciting2:
 								now cock width entry is 6;
 						if bodyname of player is "Feline", attributeinfect;
 						now PridePark is unresolved;
+					if hp of Leonard is 20 and carried of bulletproof vest is 0, now carried of bulletproof vest is 1;
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
@@ -708,12 +717,15 @@ To reciting2:
 					if hp of Ronda > 0 and hp of Ronda < 10:
 						remove Ronda Mallrat from play;
 						move Rod Mallrat to Mall FoodCourt;
+						now the icon of Rod Mallrat is figure of Rod_icon;
 					if hp of Ronda is 0 or hp of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
+						now the icon of Rod Mallrat is figure of Rod_icon;
 					if hp of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
 						move Rod Mallrat to SlutRat Den;
+						now the icon of Rod Mallrat is figure of pixel;
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -2087,6 +2099,10 @@ Carry out reciting:
 			-- 60:	[Orthas]
 				if the player's command matches "[number]":
 					now orthasstart is the number understood;
+					if orthasstart >= 2:
+						now the icon of Orthas is figure of Orthas_icon;
+					otherwise:
+						now the icon of Orthas is figure of pixel;
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
@@ -2307,6 +2323,10 @@ Carry out reciting:
 					now Hunting Prides is resolved;
 					now PridePark is resolved;
 					if hp of Leonard is 100, now hp of Leonard is 0;
+					if hp of Leonard >= 6:
+						now the icon of Leonard is the figure of LeonardViolin_icon;
+					otherwise:
+						now the icon of Leonard is the figure of pixel;
 					if hp of Leonard > 0:
 						now Lion's Den is known;
 						now Feline Friend is resolved;
@@ -2376,12 +2396,15 @@ Carry out reciting:
 					if hp of Ronda > 0 and hp of Ronda < 10:
 						remove Ronda Mallrat from play;
 						move Rod Mallrat to Mall FoodCourt;
+						now the icon of Rod Mallrat is figure of Rod_icon;
 					if hp of Ronda is 0 or hp of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
+						now the icon of Rod Mallrat is figure of Rod_icon;
 					if hp of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
 						move Rod Mallrat to SlutRat Den;
+						now the icon of Rod Mallrat is figure of pixel;
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;

@@ -36,6 +36,8 @@ instead of going east from Trevor Labs Lobby when the hp of doctor matt is great
 			say "'Mmm.. you smell really good,' she says, her eyes looking at you with a gaze positively filled with lust. 'I know I'm not looking my best... but you don't want to have a romp with me, do you?' She smiles at you widely --- you can practically smell the heat coming off of her. (Y/N?)";
 			if the player consents:
 				say "She lets out a toothy grin, as she reaches up with strong arms and pulls you down into a kiss. Her long tongue wraps around yours, as her other hand rubs over your body, which already has begun to respond to her actions. She pulls off the kiss after a moment, and rips off the rest of her clothes, what's left after her visit to the basement. Her body is toned and athletic, looking practically amazonian to your own lust-filled eye. Her hands caress every part of your body for a moment, before assisting you out of your own clothes.";
+				now the icon of Orthas is figure of Orthas_icon;
+				project the icon of Orthas;
 				if cocks of player is greater than 0:
 					say "'Ooooh... you're quite the stud!' She says, getting a good gander at your manhood, already reaching past half-erect just from the arousal of the moment and the sight of your body. It doesn't take her long to get into a position for you to take her --- laying on her back on the seat cushions, in fact. 'Mmm! Come on big boy, give me what you can provide!' An idle thought passes through your mind about whether dragonesses would lay eggs or have live young, but all thoughts thereof are lost on you as you push into her sweltering depths.";
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]

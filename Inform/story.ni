@@ -5199,6 +5199,7 @@ This is the location choice rule:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;
@@ -5209,6 +5210,7 @@ This is the location choice rule:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 900;
 			extend game by 240;
@@ -6973,6 +6975,7 @@ to say gsopt_start:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;

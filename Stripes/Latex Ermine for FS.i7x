@@ -42,6 +42,7 @@ to say beatthelatexermine:
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     The ermine girl stumbles backwards from your final blow, falling backwards onto her padded tail with a soft [']meep['].  She makes one last attempt to convince you to play with her, but your genderless body isn't overly tempted by her offer.  When you tell her to leave, she pouts that you're just being a grump and gets up, heading on her way.";
 	otherwise:
+		project the figure of LatexErmine_icon;
 		say "     The ermine girl stumbles backwards from your final blow, falling backwards onto her padded tail with a soft [']meep['].  She makes one last attempt to convince you to play with her, [one of]stretching out and posing sexily on the ground[or]rubbing her breasts while licking her lips provocatively[or]fingering her pussy in a wanton display[at random].  '[one of]Won't you claim your prize?' [or]Okay, you win.  And to the victor...' [or]Alright, I give up.  I'm all yours,' [at random]she says with an alluring purr in her voice.  Shall you have some fun with the latex lovely or send her packing?";
 		if the player consents:
 			now nolatexerminesex is 0;

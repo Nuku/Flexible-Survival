@@ -738,6 +738,7 @@ Instead of resolving Dragon Prey:
 	if the player consents:
 		let playernum be 10 + charisma of player;
 		if "Haggler" is listed in feats of player, increase playernum by 3;
+		let playernum be a random number between 1 and playernum;
 		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]:  ";
 		if playernum >= 15:
 			say "You quickly start to apologize to Christy with as much sincerity as you can muster under the rather frightening circumstances.  You tell her that you're sorry that you upset her and that you didn't mean for her to be hurt.  You go on to add that you realized what you were doing was wrong, which is why you went looking for a way to free her.  You confess that you've really started to care for her and that you didn't want to hurt her feeling by telling her that it has been you before.  You add that she's such a kind and loving soul that you didn't want to hurt her any more than you already had.";
@@ -785,6 +786,7 @@ Section 10 - Guide to Christy Stats
 [ 7 = UB'd again	]
 [ 8 = made up	]
 [ 90 = banished	]
+[ 100 = gone    ]
 
 [ lust of Christy		]
 [ for M/F sex		]
@@ -938,6 +940,7 @@ When play ends:
 				if lust of Christy > 2:
 					say "     The dragoness you found trapped in a doorway is freed by her offspring after they hatch.  She never discovers the identity of the father.  Her offspring begin to worship her as a deity, then they conquer a large part of the country and make her the queen of it.";
 				otherwise:
+					project the figure of Christyend_icon;
 					say "The dragoness you found trapped in a doorway is discovered by the military.  They examined her until they discovered that she was no longer infectious, then they left... without freeing her from the doorway.  Eventually, the trapped dragoness became a tourist attraction and her exposed pussy gets fucked by almost every male tourist that visits the city.";
 			otherwise:
 				if lust of Christy > 2:

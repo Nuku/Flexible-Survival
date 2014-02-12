@@ -28,6 +28,7 @@ when play begins:
 [	99 refused quest		]
 
 Instead of resolving a Policeman:
+	project the icon of Sgt Marks;
 	if mqstatus is 0:
 		say "     While traveling through the streets of the ravaged city, you encounter a large tigerman wearing a partial police uniform.  The jacket is left open, unable to close it over his broad, striped chest.  The pants mostly fit, though the bottom of the legs are torn and leave the bottom third of his legs uncovered.  To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast.";
 		say "     The cop walks up to you purposefully, pulling out his nightstick and slapping his palm with it a couple of times while sizing you up.  Watching your reactions, he notices that you're not a mindless monster (yet) and relaxes only slightly.  'Hold it right there.  What are you doin[apostrophe] roamin[apostrophe] the streets during a crisis?  All citizens were advised to stay at home and in shelters before all communications dropped,' he growls with authority.";
@@ -148,6 +149,7 @@ Sgt Marks is a man. Sgt Marks is in Police Car.
 The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking.  His police jacket hangs open, unable to close around his broad, striped chest.  His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered.  To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast.  His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
 The conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
 sgtmarkstalk is an number that varies.
+The icon of Sgt Marks is figure of SgtMarks_icon.
 
 the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.";
 
