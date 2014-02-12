@@ -33,7 +33,9 @@ Figure of Zebra_icon is the file "Zebra.png".
 [npc icons]
 Figure of Adam_icon is the file "Adam.png".
 Figure of Amy_icon is the file "Amy.png".
+Figure of Andre_icon is the file "Andre.png".
 Figure of Andrew_icon is the file "Andrew_ig.jpg".
+Figure of Anthony_icon is the file "Anthony.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
 Figure of Blanche_icon is the file "blanche_ig.jpg".
 Figure of BrutusGood_icon is the file "Brutus_good.png".

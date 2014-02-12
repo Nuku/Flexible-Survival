@@ -453,7 +453,7 @@ Andre is a man.  The hp of Andre is normally 0.
 The description of Andre is "[AndreDesc]";
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies.  lastAndreTalk is usually 555.	   	[turn-counter for talking delays (humanity restoration)]
-[The icon of Andre is Figure of Andre_icon.] [Icon not found!] 
+The icon of Andre is Figure of Andre_icon.
 
 instead of sniffing Andre:
 	say "Andre has a pleasant animalistic smell. It's definitely male, with a kind of spicy undertone.";

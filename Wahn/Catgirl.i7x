@@ -1,8 +1,7 @@
-Version 1 of Catgirl by Wahn begins here.
-[Version 1.1 - Small Adjustments]
+Version 2 of Catgirl by Wahn begins here.
+[Version 2 - Adjusted texts all over]
 
 "Adds a Catgirl to Flexible Survival's Wandering Monsters table."
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
@@ -16,23 +15,28 @@ to say Catgirl_Wins:
 	
 to say Catgirl_Loses:
 	say "     With a lust-filled mrowl, the catgirl accepts your dominance, dropping to all fours and flirting her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
-	if cunts of player > 0 and cocks of player < 1:		[female]
-		say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, running your hands over her breasts and then starting to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your own libido awakens and you quickly push off your clothes and play with your female parts in tandem with the catgirl's.";
-		say "     Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
-		say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by cleaning herself, licking up all the female juices out of her fur. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - too bad, since having one all to your own would be awesome. For now, it looks like you'll have to hunt down her or another of the street-cats if you want another round.";
-	otherwise if cocks of player > 0:									[male + herm]
-		say "     Who could resist such a nice invitation? Quickly throwing off your clothes, you take hold of your already half-hard cock and kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, then bring it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust.";
-		say "     It feels great to reap the pleasure you earned by defeating her, the now willing catgirl gripping your cock tightly with her inner muscles as you fuck her. The sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum into her. And before too much longer, her efforts bear fruit, with the urgent need spend your load rising in your balls. With a last deep thrust, you bottom out in her, then shoot spurt after spurt of seed directly into her womb.";
-		say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by cleaning herself up afterwards, licking up any cum that ran out of her pussy and cleaning up the rest of her fur too. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - too bad, since having one all to your own would be awesome. For now, it looks like you'll have to hunt down her or another of the street-cats if you want another round.";
-	otherwise:																				[neuter]
-		say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, running your hands over her breasts and then starting to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her.";
-		say "     The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit light-headed too, the fringe of orgasm you're picking up making you think about becoming a female yourself.";
-		say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - too bad, since having one all to your own would be awesome. For now, it looks like you'll have to hunt down her or another of the street-cats if you want another round.";
+	say "     [line break]";
+	say "     The little fight with her did get your blood pumping quite a bit, and you feel yourself tempted to have some fun with her. Do you do so? ";
+	if player consents:
+		if cunts of player > 0 and cocks of player < 1:		[female]
+			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your own libido awakens. You quickly remove your clothes and play with your own female parts in tandem with the catgirl's.";
+			say "     Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.";
+		otherwise if cocks of player > 0:									[male + herm]
+			say "     Who could resist such a nice invitation? Quickly throwing off your clothes, you take hold of your already half-hard cock and kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust.";
+			say "     It feels great to reap the pleasure you earned by defeating her, the now willing catgirl gripping your cock tightly with her inner muscles as you fuck her. The sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
+			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.";
+		otherwise:																				[neuter]
+			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your genderless body attunes with hers, letting you feel part of the pleasure you're giving her.";
+			say "     The catgirl's yowls and moans get louder and louder, and before too much longer, she orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you become a bit light-headed yourself. The fringe of orgasm you're picking up makes you think about becoming a female yourself.";
+			say "     She proves her amazing flexibility by cleaning herself up afterwards, licking her own female juices out of the fur between her legs. Watching her bend and stretch has an invigorating effect on you, waking a deep aching inside for a cock to fuck her with. All too soon, she finishes her cleaning and dashes off. Pretty flighty, these hot felines - too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round.";
+	otherwise:
+		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behaviour of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
 		
 to say Catgirl_Desc:
-	say "     A slender black-furred female crosses your path, meowing as she comes closer to have a look at you. She's a mixture between human and cat, having short cream colored fur covering her humanoid body, pointy ears, typical cat's eyes and a long tail. She walks with seductive grace on two digitigrade paws.";		
+	say "     A slender black-furred female comes out of an alley a short distance ahead from you, meowing as she comes closer to have a look at you. She's a mixture between human and cat, having short fur covering her humanoid body, pointy ears, typical cat's eyes and a long tail. She walks with seductive grace on two digitigrade paws.";		
 	say "     After a moment of studying you from a distance, it seems she comes to a decision and starts to give you a bit of a show. With flowing movements, she runs her hands over her own body, stroking over her own breasts and flirting her tail at you. Then she demonstratively bends over, flashing you her moist and ready pussy.";
-	say "     But as you step closer and each out to touch her, she hisses and bares her claws, though even then still showing off her body. Looks like she's in heat and wants to be mated - but only from a partner who proves his strength and virility.";
+	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if cocks of player > 0]to be mated - but only by a partner who proves his strength and virility. [otherwise]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
 
 Section 2 - Monster Insertion
 
@@ -43,20 +47,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Catgirl";
-	now attack entry is "She rakes you with her claws, leaving long bloody marks on your body.";
+	now attack entry is "[one of]She rakes you with her claws, leaving long bloody marks on your body.[or]Sharp fangs pierce your skin as the catgirl bites you.[or]With a lightning-quick move, she vaults over you, dragging a clawed hand down your back as she lands.[at random]";
 	now defeated entry is "[Catgirl_Loses]";
 	now victory entry is "[Catgirl_Wins]";
 	now desc entry is "[Catgirl_Desc]";
-	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cat's ears realatively high on your head complete the picture";
+	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cats ears relatively high on your head complete the picture";
 	now body entry is "very slender and sleek, built for speed and agility. Your hands are mostly human, although equipped with sharp claws, while your long legs end in more paw-like digitigrade feet";
 	now skin entry is "black, soft-furred";
 	now tail entry is "You have a long mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
-	now cock entry is "spined";
-	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth and your ears grow and migrate further up on your head";
+	now cock entry is "feline, spined";
+	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth as your ears grow and migrate further up your head";
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";
 	now skin change entry is "short black fur sprouts all over your body";
 	now ass change entry is "it becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
-	now cock change entry is "it develops lots of tiny spines";
+	now cock change entry is "it takes on a more feline shape, turning deep red in color and developing lots of tiny spines";
 	now str entry is 12;
 	now dex entry is 22;
 	now sta entry is 14;
@@ -80,7 +84,6 @@ When Play begins:
 	now libido entry is 25;							[ Amount player Libido will go up if defeated ]
 	now loot entry is "";								[ Loot monster drops, ]
 	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 2;								[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]flexible[or]slender[at random]";
 	now type entry is "feline";
