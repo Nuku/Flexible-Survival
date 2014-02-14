@@ -718,14 +718,17 @@ To reciting2:
 						remove Ronda Mallrat from play;
 						move Rod Mallrat to Mall FoodCourt;
 						now the icon of Rod Mallrat is figure of Rod_icon;
+						now the icon of Ronda is figure of pixel;
 					if hp of Ronda is 0 or hp of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
 						now the icon of Rod Mallrat is figure of Rod_icon;
+						now the icon of Ronda is figure of pixel;
 					if hp of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
 						move Rod Mallrat to SlutRat Den;
 						now the icon of Rod Mallrat is figure of pixel;
+						now the icon of Ronda is figure of RondaSR_icon;
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -2397,14 +2400,17 @@ Carry out reciting:
 						remove Ronda Mallrat from play;
 						move Rod Mallrat to Mall FoodCourt;
 						now the icon of Rod Mallrat is figure of Rod_icon;
+						now the icon of Ronda is figure of pixel;
 					if hp of Ronda is 0 or hp of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
 						move Rod Mallrat to Mall FoodCourt;
 						now the icon of Rod Mallrat is figure of Rod_icon;
+						now the icon of Ronda is figure of pixel;
 					if hp of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
 						move Rod Mallrat to SlutRat Den;
 						now the icon of Rod Mallrat is figure of pixel;
+						now the icon of Ronda is figure of RondaSR_icon;
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;

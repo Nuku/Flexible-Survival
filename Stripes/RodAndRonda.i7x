@@ -162,6 +162,7 @@ Section 3 - Unleashing the Slut Rats
 
 instead of trading the demon seed when the current action involves the ronda:
 	if hp of Ronda is 0:
+		project the figure of RondaSR_icon;
 		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 		delete demon seed;
 		remove ronda from play;
@@ -315,6 +316,7 @@ to say rondarescue:
 		infect "Slut Rat";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		project the figure of RondaSR_icon;
 		say "     After the sexy show is over, you keep an eye on Ronda, letting her relax for a bit and hopefully become aroused enough to be tempted away for some more fun.  Noticing her cock start to throb as her fingertips subconsciously slide over it, you snuggle up beside her and run your paw across her hip.  At first, she doesn't seem very interested, but you start teasing her.  Once you begin to get her attention, you discretely slip out the pack of deluxe chocolates, which really pique her interest.  Whispering that you don't really have enough for everyone, you wrap your paw around her cock and lead her off towards a shadowy alcove where some junk and supplies are kept.  She follows with a paw on your ass, squeezing it.";
 		say "     Once out of sight of the others, Ronda stuffs several of the chocolates into her muzzle, moaning in pleasure before pressing you into a chocolatey kiss.  Her tongue dives into your mouth, sharing the chocolate and hazelnut flavour with you as her paws run all over your body.  Fully hard and leaking precum, she grinds her cock against you lustfully.  'Oh, I've missed these so much,' she moans.  'It's like I can... almost remember...' she says softly.  You tell her that there are more waiting for her, that you'll help her remember, that her boyfriend's sent you to help change her back.  You slide the small vial of grey liquid from your pack.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -369,6 +371,7 @@ to say helpingronda:
 	now hp of Ronda is 100;
 	move Rod to Slutrat Den;
 	now the icon of Rod Mallrat is figure of pixel;
+	now the icon of Ronda is figure of RondaSR_icon;
 	move Ronda to Slutrat Den;
 	move player to Mall FoodCourt;
 
