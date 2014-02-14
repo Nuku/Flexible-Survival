@@ -128,7 +128,7 @@ to say cepark11:
 Section 12 - Empty jeep (by Sarokcat)
 
 to say cepark12:
-	say "While traveling through the park, you come across what is obviously a caretakers jeep, the off-road vehicle just sitting there in the middle of the area with its drivers side door wide open. Moving closer to investigate you realize a strange and powerful smell is coming from within the jeep, it smells like whoever was in the vehicle got sprayed by one of those wandering skunks.  Sadly you realize, with as much of the musk as was sprayed into the jeep, if you tried to take the vehicle, even if it worked you probably wouldn[apostrophe]t get far before turning into a skunk beast like you assume must have happened to the vehicles former owner. Sighing you continue on your way. ";
+	say "While traveling through the park, you come across what is obviously a caretakers jeep.  The off-road vehicle is just sitting in the middle of a grassy area with its drivers side door wide open.  Moving closer to investigate, you notice that there is a strange and powerful smell is coming from within the jeep and realize that it seems like whoever was in the vehicle got sprayed by one of those wandering skunks and has probably been transformed into another of the beasts.  Sadly, you realize that whether the jeep works or not is irrelevant as the powerful and lingering musk would probably also change you into a skunk beast before you got very far.  Sighing, you continue on your way.";
 	increase the score by 1;
 	remove 12 from cepark2list;
 
