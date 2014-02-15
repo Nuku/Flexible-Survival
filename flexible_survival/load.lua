@@ -1,5 +1,5 @@
 -- ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
+-- Copyright (C) 2009 - 2014 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -18,6 +18,9 @@
 -- darkgod@te4.org
 
 -- This file loads the game module, and loads data
+local UIBase = require "engine.ui.Base"
+UIBase.ui = "flexible"
+
 local KeyBind = require "engine.KeyBind"
 local DamageType = require "engine.DamageType"
 local ActorBody = require "mod.class.interface.ActorBody"
