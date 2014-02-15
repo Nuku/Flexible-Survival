@@ -13,7 +13,8 @@ Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
 Figure of FireSpriteMale_icon is the file "FireSpriteMale.png".
 Figure of GooGirl_icon is the file "GooGirl.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
-Figure of incubus_icon is the file "incubus.jpg".
+Figure of incubus1_icon is the file "incubus1.jpg".
+Figure of incubus2_icon is the file "incubus2.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".
@@ -54,7 +55,7 @@ Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
 Figure of Felix_icon is the file "Felix.png".
-Figure of Grant_icon is the file "grant_ig.gif".
+Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.png".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of James_icon is the file "james_ig.jpg".
@@ -63,7 +64,7 @@ Figure of Orthas_icon is the file "orthas.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
-Figure of SamBadEnd_icon is the file "fleckt10.jpg".
+Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".
 Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
@@ -106,7 +107,7 @@ title	icon(figure name)
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of SpartanHelot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
-"Incubus"	Figure of incubus_icon
+"Incubus"	Figure of incubus2_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
 "Latex Vixen"	Figure of LatexVixen_icon
 "Mannequin"	Figure of Mannequin_icon
@@ -147,6 +148,8 @@ carry out artistcredits:
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
+	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
+	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
 	say "     Latex Ermine by Halcy0n @ furaffinity.net[line break]";
 	say "     Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
@@ -158,6 +161,7 @@ carry out artistcredits:
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
 	say "     Spartan by Darian821 @ y-gallery.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
+	say "     Succubus by kv2001ar @ furaffinity.net[line break]";
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
