@@ -1177,13 +1177,15 @@ Girl is a flag.
 Humorous is a flag.
 Hermaphrodite is a flag.
 Hellspawn is a flag.
+Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
+	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
 	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine" } to infections of girl;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
@@ -1252,10 +1254,6 @@ when play begins:
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
 	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
-
-Ferallist is a marker.	[list of infections w/internal male genitals]
-when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of Ferallist;
 
 Part 2 - Rules
 
@@ -1523,7 +1521,7 @@ to new ban menu:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely.[roman type][line break]";
 		say "[line break]";
-		say "(1) [link]Feral[as]1[end link]: [bracket]NYI[close bracket][line break]";
+		say "(1) [link]Feral[as]1[end link]: 		[bracket][if feral is not banned and feral is not warded][bold type]None[roman type][otherwise][link]None[as]11[end link][end if][close bracket] [bracket][if feral is warded][bold type]Ward[roman type][otherwise][link]Ward[as]12[end link][end if][close bracket] [if feral is banned][bold type]Ban[roman type][otherwise][link]Ban[as]13[end link][end if][close bracket] [bold type][bracket]Caution: Early Implementation![close bracket][roman type][line break]";
 		say "(2) [link]Furry[as]2[end link]:		[bracket][if furry is not banned and furry is not warded][bold type]None[roman type][otherwise][link]None[as]21[end link][end if][close bracket] [bracket][if furry is warded][bold type]Ward[roman type][otherwise][link]Ward[as]22[end link][end if][close bracket] [if furry is banned][bold type]Ban[roman type][otherwise][link]Ban[as]23[end link][end if][close bracket][line break]";
 		say "(3) [link]Guy[as]3[end link]:		[bracket][if guy is not banned and guy is not warded][bold type]None[roman type][otherwise][link]None[as]31[end link][end if][close bracket] [bracket][if guy is warded][bold type]Ward[roman type][otherwise][link]Ward[as]32[end link][end if][close bracket] [if guy is banned][bold type]Ban[roman type][otherwise][link]Ban[as]33[end link][end if][close bracket][line break]";
 		say "(4) [link]Girl[as]4[end link]:		[bracket][if girl is not banned and girl is not warded][bold type]None[roman type][otherwise][link]None[as]41[end link][end if][close bracket] [bracket][if girl is warded][bold type]Ward[roman type][otherwise][link]Ward[as]42[end link][end if][close bracket] [if girl is banned][bold type]Ban[roman type][otherwise][link]Ban[as]43[end link][end if][close bracket][line break]";
@@ -1536,34 +1534,47 @@ to new ban menu:
 		while 1 is 1:
 			say "Choice? (0-83)>[run paragraph on]";
 			get a number;
-			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
+			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 11 and calcnumber <= 13) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
 				break;
 			otherwise:
 				say "Invalid Entry";
 		if calcnumber is 1:
 			if clearnomore is 0, clear the screen;
-			say "Not yet Implemented!";
+			if feral is not banned and feral is not warded:
+				now feral is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Feral.";				
+			otherwise if feral is warded:		
+				now feral is banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Feral.";
+			otherwise:	
+				now feral is not banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Feral.";
 		otherwise if calcnumber is 2:
 			if furry is not banned and furry is not warded:
 				now furry is warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Warding Furry.";				
 			otherwise if furry is warded:		
 				now furry is banned;
 				now furry is not warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Banning Furry.";
 			otherwise:	
 				now furry is not banned;
 				now furry is not warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Unbanning/Warding Furry.";
 		otherwise if calcnumber is 3:
 			if guy is not banned and guy is not warded:	
 				now guy is warded;
 				if clearnomore is 0, clear the screen;
 				say "Warding Guy.";
-			otherwise if furry is warded:							
+			otherwise if guy is warded:							
 				now guy is banned;
 				now guy is not warded;
 				if clearnomore is 0, clear the screen;
@@ -1635,6 +1646,33 @@ to new ban menu:
 				if clearnomore is 0, clear the screen;
 				now hellspawn is not banned;
 				now hellspawn is not warded;
+		otherwise if calcnumber is 11:
+			if feral is not banned and feral is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already available!";
+			otherwise:	
+				now feral is not banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Feral.";
+		otherwise if calcnumber is 12:
+			if feral is warded:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already Warded!";
+			otherwise:
+				now feral is warded;
+				now feral is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Feral.";
+		otherwise if calcnumber is 13:
+			if feral is banned:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already Banned!";
+			otherwise:
+				now feral is banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Feral.";
 		otherwise if calcnumber is 21:
 			if furry is not banned and furry is not warded:
 				if clearnomore is 0, clear the screen;
@@ -4101,7 +4139,7 @@ To level up:
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
-	if the remainder after dividing level of the player by 5 is 0:
+	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of player:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	
@@ -5725,8 +5763,11 @@ to ratetheplayer:
 	if gsgl is 1 and score > 0:
 		now tempnum is (score / 20);
 		increase score by tempnum;
+	if "Ultimatum" is listed in feats of player and score > 0:
+		now tempnum2 is (score / 10);
 	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
 	if score is less than 0:
 		say "A used, broken condom!";
@@ -6782,6 +6823,8 @@ To regularstart: [normal start method]
 to say menuwardlist:
 	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
 		say "[bold type]Warded: [bracket] ";
+		if feral is warded:
+			say "Feral ";
 		if furry is warded:
 			say "Furry ";
 		if guy is warded:
@@ -6801,6 +6844,8 @@ to say menuwardlist:
 to say menubanlist:
 	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned:
 		say "[bold type]Banned: [bracket] ";
+		if feral is banned:
+			say "Feral ";
 		if furry is banned:
 			say "Furry ";
 		if guy is banned:
