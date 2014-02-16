@@ -709,7 +709,7 @@ to wyvore:
 			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
 		increase boundcounter by 1;
 		if boundcounter is 4:
-			say "     [italic type]The wyvern's body churns and [ghe] seems to have reached a point where [ghe] can keep you down. It seems your prolongued presence here has given you no other choice but to leave the beast through the other way out[roman type].";
+			say "     The wyvern's body churns and [ghe] seems to have reached a point where [ghe] can keep you down. It seems your prolongued presence here has given you no other choice but to leave the beast through the other way out.";
 			now boundmod is 1;
 		if boundsegment is not 1:
 			if a random chance of 4 in 5 succeeds:
@@ -724,13 +724,24 @@ to wyvore:
 		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [wyvstrugglebar][line break][run paragraph on]";
 		if humanity of player < 1:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Wyvern":
+					now monster is y;
+					break;
 			now bodyname of player is "Wyvern";
 			now facename of player is "Wyvern";
 			now tailname of player is "Wyvern";
 			now skinname of player is "Wyvern";
 			now cockname of player is "Wyvern";
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
+			end the game saying "You became a Wyvern's meal!";
 		otherwise:
 			let k be 0;
 			now keychar is "INVALID";
@@ -755,6 +766,7 @@ to wyvore:
 						say "     [if WYVGEN is 1]She[otherwise]He[end if] only pursues you briefly, trying to retrieve you once more, but [ghe]'s clearly frustrated enough with you that [ghe] eventually just gives up, turning off and taking flight once more to find easier prey. Catching your breath for a moment, you eventually, cautiously step out from hiding, going back to your own business once it's clear you're in no immediate danger.";
 						cleanboundmemory;
 						now trixieexit is 1;
+						follow the turnpass rule;
 				otherwise:
 					if struggleatt < 3:
 						say "     You struggle to free yourself of the wyvern's stomach, [if struggleatt is 1]barely registering for the beast[otherwise]the beast beginning to growl in discontent.[run paragraph on].[run paragraph on][end if].";
@@ -1003,13 +1015,23 @@ to wyvorgy:
 		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100 [Bold type]A:[roman type] [if wyvkin1gen is 1]Male[otherwise]Female[end if]: [wyvkin1lib]/100 [Bold type]B:[roman type] [if wyvkin2gen is 1]Male[otherwise]Female[end if]: [wyvkin2lib]/100 [Bold type]C[roman type] [if wyvkinocc < 1]--[otherwise if wyvkin3gen is 1]Male[otherwise]Female[end if]: [wyvkin3lib]/100 [Bold type]D:[roman type] [if wyvkinocc < 2]--[otherwise if wyvkin4gen is 1]Male[otherwise]Female[end if]: [wyvkin4lib]/100	Struggle: _-[if struggleatt > 2][bold type]X[roman type][otherwise]-[end if][if struggleatt > 1][bold type]X[roman type][otherwise]-[end if][if struggleatt > 0][bold type]X[roman type][otherwise]-[end if]_[line break][run paragraph on]";
 		if humanity of player < 1:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Wyvern":
+					now monster is y;
+					break;
 			now bodyname of player is "Wyvern";
 			now facename of player is "Wyvern";
 			now tailname of player is "Wyvern";
 			now skinname of player is "Wyvern";
 			now cockname of player is "Wyvern";
-			follow the turnpass rule;
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
 			now trixieexit is 1;
+			end the game saying "You lost your mind while bound!";
 		otherwise:
 			let k be 0;
 			now keychar is "INVALID";
