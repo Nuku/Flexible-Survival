@@ -731,6 +731,30 @@ To remove (item - a text)  from invent of the player:
 			now carried of x is 0;
 			break;
 
+To decide which number is numeric/numerical value of (T - indexed text):
+	let S be 1;
+	let L be the number of characters in T;
+	if L is 0, decide on 0;
+	let negated be false;
+	if character number 1 in T is "-" begin;
+		let negated be true;
+		let S be 2;
+	end if;
+	let result be 0;
+	repeat with N running from S to L begin;
+		let C be character number N in T;
+		let D be 0;
+		if C is "1" begin; let D be 1; otherwise if C is "2"; let D be 2;
+		otherwise if C is "3"; let D be 3; otherwise if C is "4"; let D be 4;
+		otherwise if C is "5"; let D be 5; otherwise if C is "6"; let D be 6;
+		otherwise if C is "7"; let D be 7; otherwise if C is "8"; let D be 8;
+		otherwise if C is "9"; let D be 9; otherwise if C is "0"; let D be 0;
+		otherwise; decide on 0; end if;
+		let result be (result * 10) + D;
+	end repeat;
+	if negated is true, let result be 0 - result;
+	decide on result.
+	
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
@@ -1008,7 +1032,7 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
+"face mask"	"A basic filtered face mask.  Maybe it will help?  Probably not[first time].  You doubt it was designed with this madness in mind[only]."	3	face mask
 [
 "heuristic processor"	"A small electronic circuit.  You've been told it's amazingly adaptive and can learn anything.  Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites.  It's too bulky, and doesn't have the processing capacity to be of any use in the field.  Perhaps you could find a way around those limitations?"	13	reprogramming device
@@ -1016,7 +1040,7 @@ name	desc	weight	object	sortname (indexed text)
 ]
 
 face mask is equipment. It is a part of the player. It is not temporary.
-The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
+The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ";
 The placement of face mask is "face";
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus.  hitbonus of journal is usually 0.
@@ -1153,13 +1177,15 @@ Girl is a flag.
 Humorous is a flag.
 Hermaphrodite is a flag.
 Hellspawn is a flag.
+Feral is a flag.
 [Cub is a flag.  Cub is usually warded.	]
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
+	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
 	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
 	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine" } to infections of girl;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
@@ -1229,10 +1255,6 @@ Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
 	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
 
-Ferallist is a marker.	[list of infections w/internal male genitals]
-when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of Ferallist;
-
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
@@ -1277,7 +1299,7 @@ carry out hunting:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -1499,7 +1521,7 @@ to new ban menu:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely.[roman type][line break]";
 		say "[line break]";
-		say "(1) [link]Feral[as]1[end link]: [bracket]NYI[close bracket][line break]";
+		say "(1) [link]Feral[as]1[end link]: 		[bracket][if feral is not banned and feral is not warded][bold type]None[roman type][otherwise][link]None[as]11[end link][end if][close bracket] [bracket][if feral is warded][bold type]Ward[roman type][otherwise][link]Ward[as]12[end link][end if][close bracket] [if feral is banned][bold type]Ban[roman type][otherwise][link]Ban[as]13[end link][end if][close bracket] [bold type][bracket]Caution: Early Implementation![close bracket][roman type][line break]";
 		say "(2) [link]Furry[as]2[end link]:		[bracket][if furry is not banned and furry is not warded][bold type]None[roman type][otherwise][link]None[as]21[end link][end if][close bracket] [bracket][if furry is warded][bold type]Ward[roman type][otherwise][link]Ward[as]22[end link][end if][close bracket] [if furry is banned][bold type]Ban[roman type][otherwise][link]Ban[as]23[end link][end if][close bracket][line break]";
 		say "(3) [link]Guy[as]3[end link]:		[bracket][if guy is not banned and guy is not warded][bold type]None[roman type][otherwise][link]None[as]31[end link][end if][close bracket] [bracket][if guy is warded][bold type]Ward[roman type][otherwise][link]Ward[as]32[end link][end if][close bracket] [if guy is banned][bold type]Ban[roman type][otherwise][link]Ban[as]33[end link][end if][close bracket][line break]";
 		say "(4) [link]Girl[as]4[end link]:		[bracket][if girl is not banned and girl is not warded][bold type]None[roman type][otherwise][link]None[as]41[end link][end if][close bracket] [bracket][if girl is warded][bold type]Ward[roman type][otherwise][link]Ward[as]42[end link][end if][close bracket] [if girl is banned][bold type]Ban[roman type][otherwise][link]Ban[as]43[end link][end if][close bracket][line break]";
@@ -1512,34 +1534,47 @@ to new ban menu:
 		while 1 is 1:
 			say "Choice? (0-83)>[run paragraph on]";
 			get a number;
-			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
+			if (calcnumber >= 0 and calcnumber <= 7) or (calcnumber >= 11 and calcnumber <= 13) or (calcnumber >= 21 and calcnumber <= 23) or (calcnumber >= 31 and calcnumber <= 33) or (calcnumber >= 41 and calcnumber <= 43) or (calcnumber >= 61 and calcnumber <= 63) or (calcnumber >= 71 and calcnumber <= 73) or (calcnumber >= 81 and calcnumber <= 83):
 				break;
 			otherwise:
 				say "Invalid Entry";
 		if calcnumber is 1:
 			if clearnomore is 0, clear the screen;
-			say "Not yet Implemented!";
+			if feral is not banned and feral is not warded:
+				now feral is warded;
+				if clearnomore is 0, clear the screen;
+				say "Warding Feral.";				
+			otherwise if feral is warded:		
+				now feral is banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Feral.";
+			otherwise:	
+				now feral is not banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Feral.";
 		otherwise if calcnumber is 2:
 			if furry is not banned and furry is not warded:
 				now furry is warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Warding Furry.";				
 			otherwise if furry is warded:		
 				now furry is banned;
 				now furry is not warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Banning Furry.";
 			otherwise:	
 				now furry is not banned;
 				now furry is not warded;
-				[if clearnomore is 0, clear the screen;]
+				if clearnomore is 0, clear the screen;
 				say "Unbanning/Warding Furry.";
 		otherwise if calcnumber is 3:
 			if guy is not banned and guy is not warded:	
 				now guy is warded;
 				if clearnomore is 0, clear the screen;
 				say "Warding Guy.";
-			otherwise if furry is warded:							
+			otherwise if guy is warded:							
 				now guy is banned;
 				now guy is not warded;
 				if clearnomore is 0, clear the screen;
@@ -1611,6 +1646,33 @@ to new ban menu:
 				if clearnomore is 0, clear the screen;
 				now hellspawn is not banned;
 				now hellspawn is not warded;
+		otherwise if calcnumber is 11:
+			if feral is not banned and feral is not warded:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already available!";
+			otherwise:	
+				now feral is not banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Unbanning/Warding Feral.";
+		otherwise if calcnumber is 12:
+			if feral is warded:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already Warded!";
+			otherwise:
+				now feral is warded;
+				now feral is not banned;
+				if clearnomore is 0, clear the screen;
+				say "Warding Feral.";
+		otherwise if calcnumber is 13:
+			if feral is banned:
+				if clearnomore is 0, clear the screen;
+				say "Feral is already Banned!";
+			otherwise:
+				now feral is banned;
+				now feral is not warded;
+				if clearnomore is 0, clear the screen;
+				say "Banning Feral.";
 		otherwise if calcnumber is 21:
 			if furry is not banned and furry is not warded:
 				if clearnomore is 0, clear the screen;
@@ -2133,7 +2195,7 @@ To Birth:
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of player] body.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		otherwise:
@@ -3386,7 +3448,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3783,6 +3845,7 @@ To Infect:
 					otherwise:
 						say "Your muscles feel weaker as the infection spreads through you.";
 						decrease strength of player by 1;
+						decrease capacity of player by 5;
 			if strength of player is less than str entry:
 				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of player by 1;
@@ -4076,7 +4139,7 @@ To level up:
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
-	if the remainder after dividing level of the player by 5 is 0:
+	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of player:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	
@@ -4098,7 +4161,7 @@ To fight:
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":
+		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Black Wasp":
@@ -4569,6 +4632,7 @@ This is the turnpass rule:
 		if "Physical Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Strength of player by 1;
+				increase capacity of player by 5;
 				increase hunger of player by 6;
 				say "Your body strives to restore its lost might and rebuilds your muscles.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;
@@ -4655,7 +4719,7 @@ This is the turnpass rule:
 		if "Weak Psyche" is listed in feats of player:
 			increase corruption by a random number from 0 to 1;
 			increase corruption by a random number from 0 to 1;
-		if "Pure" is listed in feats of player:
+		if "Strong Psyche" is listed in feats of player:
 			decrease corruption by a random number from 0 to 2;
 		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
 		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
@@ -5044,9 +5108,9 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hang[end if] [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
@@ -5173,6 +5237,7 @@ This is the location choice rule:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;
@@ -5183,6 +5248,7 @@ This is the location choice rule:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 900;
 			extend game by 240;
@@ -5697,8 +5763,11 @@ to ratetheplayer:
 	if gsgl is 1 and score > 0:
 		now tempnum is (score / 20);
 		increase score by tempnum;
+	if "Ultimatum" is listed in feats of player and score > 0:
+		now tempnum2 is (score / 10);
 	say "In Scenario: [bold type][scenario][roman type], You have achieved a score of [bold type][score][roman type].";
 	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	if "Ultimatum" is listed in feats of player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
 	if score is less than 0:
 		say "A used, broken condom!";
@@ -5921,6 +5990,7 @@ Include Alt Combat by Stripes.
 Include Alt Vore by Stripes.
 Include BFandI by Stripes.
 Include Parasite by Stripes.
+Include NPC Debug by Wahn.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
@@ -5950,6 +6020,7 @@ Include Campus For Fs by Stripes.
 Include Urban Forest For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Equinoid Camp For FS by Stripes.
+Include PIG Frat by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
@@ -6169,6 +6240,7 @@ Include Dracovixentaur for FS by Stripes.
 Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
 Include Queen Bee for FS by Stripes.
+Include Salamander by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
@@ -6177,6 +6249,7 @@ Include Piggy by Stripes.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
 Include Margay For Fs by Stripes.
+Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
 Include Cerberus For Fs by Stripes.
@@ -6264,6 +6337,7 @@ Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
+Include Orc by Wahn.
 
 
 [NPCs]
@@ -6286,7 +6360,9 @@ Include Tristian by Verath.
 Include Fancy by Sarokcat n Verath.
 Include Daisy by Sarokcat n Verath.
 Include Onyx by Sarokcat n Verath.
-Include Zoo People by Sarokcat.
+Include Brian by Sarokcat.
+Include Diego by Sarokcat.
+Include Timothy by Sarokcat.
 Include Sarah by Sarokcat&Hellerhound.
 Include Nermine by Sarokcat.
 Include Lindsey by Sarokcat.
@@ -6295,6 +6371,7 @@ Include Midnight by Sarokcat.
 Include Harold by Sarokcat.
 Include Kara by Sarokcat.
 Include Janice by Sarokcat.
+Include Kristen by Stripes.
 Include Alex by Nuku Valente.
 Include Hadiya by Kaxin.
 Include Desperate Bunny by Nuku Valente.
@@ -6320,6 +6397,8 @@ Include Andrew by Stripes.
 Include Sam for FS by Stripes.
 Include Mack for FS by Stripes.
 Include Meredith by Stripes.
+Include Stella by Stripes.
+Include Bubble by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
@@ -6338,6 +6417,7 @@ Include Zephias by Wahn.
 Include David by Wahn.
 Include Amy by Wahn.
 Include Carl by Wahn.
+Include HornyHorsey by femtoAmpere.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
@@ -6672,13 +6752,14 @@ To regularstart: [normal start method]
 		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
+		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Load a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-15)>[run paragraph on]";
+			say "(0-16)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 15 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 16 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -6722,6 +6803,11 @@ To regularstart: [normal start method]
 				now clearnomore is 1;
 			otherwise:
 				now clearnomore is 0;
+		otherwise if calcnumber is 16:
+			if graphics is true:
+				now graphics is false;
+			otherwise:
+				now graphics is true;
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
@@ -6737,6 +6823,8 @@ To regularstart: [normal start method]
 to say menuwardlist:
 	if furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded:
 		say "[bold type]Warded: [bracket] ";
+		if feral is warded:
+			say "Feral ";
 		if furry is warded:
 			say "Furry ";
 		if guy is warded:
@@ -6756,6 +6844,8 @@ to say menuwardlist:
 to say menubanlist:
 	if furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned:
 		say "[bold type]Banned: [bracket] ";
+		if feral is banned:
+			say "Feral ";
 		if furry is banned:
 			say "Furry ";
 		if guy is banned:
@@ -6931,6 +7021,7 @@ to say gsopt_start:
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the hp of doctor matt is 100;
+			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;
@@ -6969,6 +7060,8 @@ to say gsopt_start:
 Book 10 - Let the Games Begin
 
 understand "saveword" as savewording;
+understand "save" as savewording;
+understand "oldsave" as saving the game.
 
 savewording is an action applying to nothing.
 
