@@ -36,7 +36,6 @@ to say WYVDEF:
 				say "     You choose to leave the creature as-is, turning to depart.";
 		otherwise:
 			say ". Satisfied in your supreme victory, you turn to depart.";
-		
 
 to say WYVVIC:
 	if hp of player > 0 and boundstate is false:
@@ -216,6 +215,19 @@ to say WYVVIC:
 				increase lustatt by 20;
 			otherwise:
 				say "     Satisfied, the wyvern eventually pulls herself free of you, not giving you much of her regard beyond her need before taking flight once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
+	if boundstate is false:
+		if WYVGEN is 1 and bodyname of player is "Wyvern":
+			if WYVSF < 3:
+				increase WYVSF by 1;
+				say "     [italic type]Your infection seems to be influencing your mind and making you more inclined towards female wyverns, [if WYVSF is 2]though you could really go either way at this point[otherwise]to the exclusion of all others[end if][roman type].";
+			otherwise if WYVSF is 0:
+				now WYVSF is 3;
+		otherwise if bodyname of player is "Wyvern":
+			if WYVSF > 1:
+				decrease WYVSF by 1;
+				say "     [italic type]Your infection seems to be influencing your mind and making you more inclined towards male wyverns, [if WYVSF is 2]though you could really go either way at this point[otherwise]to the exclusion of all others[end if][roman type].";
+			otherwise if WYVSF is 0:
+				now WYVSF is 1;
 
 to malepronouns:
 	now ghis is "his";
@@ -249,6 +261,8 @@ to psycheeval:
 		now psycheadjust is 0;
 
 to say WYVDESC:
+	if WYVSF is 0:
+		now WYVSF is 2;
 	choose row monster from the table of random critters;
 	if a random chance of 1 in 2 succeeds:
 		now WYVGEN is 1;
@@ -269,9 +283,11 @@ to say WYVDESC:
 		if guy is banned or wyvernbias is 1:
 			now WYVGEN is 1;
 			femalepronouns;
+			now WYVSF is 3;
 		otherwise if girl is banned or wyvernbias is 5:
 			now WYVGEN is 0;
 			malepronouns;
+			now WYVSF is 1;
 		otherwise if (guy is warded and girl is warded) or wyvernbias is 3:
 			if a random chance of 1 in 2 succeeds:
 				now WYVGEN is 1;
@@ -1778,9 +1794,9 @@ when play ends:
 					say "companion...";
 			otherwise:
 				if WYVSF is 0:
-					if guy is banned:
+					if guy is banned or wyvernbias < 3 or guy is warded:
 						now WYVSF is 3;
-					otherwise if girl is banned:
+					otherwise if girl is banned or wyvernbias > 3 or girl is warded:
 						now WYVSF is 1;
 					otherwise:
 						now WYVSF is 2;
