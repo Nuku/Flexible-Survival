@@ -1,5 +1,5 @@
 -- ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
+-- Copyright (C) 2009 - 2014 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,6 +31,7 @@ require "engine.interface.ActorFOV"
 require "mod.class.interface.ActorBody"
 require "mod.class.interface.Combat"
 local Map = require "engine.Map"
+local Chat = require "engine.Chat"
 
 module(..., package.seeall, class.inherit(
 	engine.Actor,
@@ -47,12 +48,22 @@ module(..., package.seeall, class.inherit(
 ))
 
 function _M:init(t, no_default)
-	-- Define some basic combat stats
-	self.combat_armor = 0
-
 	-- Default regen
 	t.power_regen = t.power_regen or 1
 	t.life_regen = t.life_regen or 0.25 -- Life regen real slow
+
+	-- Stats
+	t.combat_accuracy = t.combat_accuracy or 0
+	t.combat_evasion = t.combat_evasion or 0
+
+	t.combat_physical_power = t.combat_physical_power or 0
+	t.combat_physical_resist = t.combat_physical_resist or 0
+
+	t.combat_social_power = t.combat_social_power or 0
+	t.combat_social_resist = t.combat_social_resist or 0
+
+	t.combat_mental_power = t.combat_mental_power or 0
+	t.combat_mental_resist = t.combat_mental_resist or 0
 
 	-- Default melee barehanded damage
 	self.combat = { dam=1 }
@@ -126,6 +137,11 @@ function _M:die(src)
 	-- Gives the killer some exp for the kill
 	if src and src.gainExp then
 		src:gainExp(self:worthExp(src))
+	end
+
+	if src and src.player and self:attr("chat_on_defeated") then
+		local chat = Chat.new(self:attr("chat_on_defeated"), self, src)
+		chat:invoke()
 	end
 
 	return true
