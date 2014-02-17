@@ -510,8 +510,8 @@ to say bckingchair:
 			say "     It is a lucky glance down that has you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch.  The sudden realization that this chair intends to keep you or somehow transform you as part of its fun startles you from your complacency and you make a final attempt to pull free of the alluring inflatable.";
 			increase libido of player by 8;
 			decrease humanity of player by 3;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
 			if libido of player > 100, now libido of player is 100;
@@ -651,8 +651,8 @@ to say bcpptendril:
 			say "     As you're coming down from your climax, you notice that you've been dragged much closer to the pillar and that it's about to grab you with another set of tentacles.  Trying your best to shake off the afterglow, you try to grip the padded floor as best you can and pull out of its grip before it's too late.  With the [ppcolour] stuff climbing quickly up your chest and more about to latch onto your arms, you know this is probably your last chance to get away for it does... whatever kinky, delightful - no, terrible! - thing it has planned for you.";
 			increase libido of player by 8;
 			decrease humanity of player by 3;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Weak Psyche" is listed in feats of player, increase humanity of player by 1;
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
 			if libido of player > 100, now libido of player is 100;
