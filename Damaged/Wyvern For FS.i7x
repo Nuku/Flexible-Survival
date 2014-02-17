@@ -775,7 +775,7 @@ to wyvore:
 						wait for any key;
 					otherwise:
 						if boundmod is not 1:
-							say "     Unable to keep you down any longer, the belly's slick walls constrict around you squeezing you back up from whence you came; however, not intent on letting [ghis] recent meal off that easy, he keeps you firmly confined to [ghis] gullet, desperately trying to swallow you back down!";
+							say "     Unable to keep you down any longer, the belly's slick walls constrict around you squeezing you back up from whence you came; however, not intent on letting [ghis] recent meal off that easy, [ghe] keeps you firmly confined to [ghis] gullet, desperately trying to swallow you back down!";
 							now tempnum2 is 1;
 							wait for any key;
 							now boundsegment is 1;
@@ -794,7 +794,7 @@ to wyvore:
 					now tempnum2 is 0;
 					now boundsegment is 0;
 				otherwise:
-					say "     You oblige your fate as a meal for the wyvern for a little longer. Your captor [one of]choosing to mull around for a bit as [ghe] drains you[or]taunting you with his talon's caress over [ghis] slightly bulging belly[or]half-heartedly pursuing other potential victims who have the proper sense to run and hide[at random].";
+					say "     You oblige your fate as a meal for the wyvern for a little longer. Your captor [one of]choosing to mull around for a bit as [ghe] drains you[or]taunting you with [ghis] talon's caress over [ghis] slightly bulging belly[or]half-heartedly pursuing other potential victims who have the proper sense to run and hide[at random].";
 				say "[line break]";
 				increase lustatt by 7 + (lustadjust * 2);
 				wyvhumanityroll;
@@ -1005,7 +1005,7 @@ to wyvorgy:
 				increase wyvkin3lib by 7;
 			wyvernkinlustcheck;
 			now tempnum is 0;
-		say "     Pinned to the ground by the [bold type][if wyvkinocc is 2]four[otherwise if wyvkinocc is 1]three[otherwise]two[end if][roman type] wyverns, you're trapped within the confines of some sort of twisted nest, now at the mercy of the monstrous offspring of the reptile who first kidnapped you. Wyvern A is [if wyvkin1att is 1]kissing you[otherwise if wyvkin1att is 2]forcing you to suck his dick[otherwise if wyvkin1att is 3]forcing you to her her cunt[otherwise if wyvkin1att is 4]grinding against your torso[otherwise if wyvkin1att is 5]fucking you[otherwise if wyvkin1att is 6]fucking your ass[otherwise if wyvkin1att is 7]riding your dick[otherwise if wyvkin1att is 8]grinding against your crotch[otherwise]watching you[end if][if wyvkinocc is 0] and[otherwise],[end if] Wyvern B is [if wyvkin2att is 1]kissing you[otherwise if wyvkin2att is 2]forcing you to suck of his dick[otherwise if wyvkin2att is 3]forcing you to eat her cunt[otherwise if wyvkin2att is 4]grinding against your torso[otherwise if wyvkin2att is 5]fucking you[otherwise if wyvkin2att is 6]fucking your ass[otherwise if wyvkin2att is 7]riding your dick[otherwise if wyvkin2att is 8]grinding against your crotch[otherwise]watching you[end if]";
+		say "     Pinned to the ground by the [bold type][if wyvkinocc is 2]four[otherwise if wyvkinocc is 1]three[otherwise]two[end if][roman type] wyverns, you're trapped within the confines of some sort of twisted nest, now at the mercy of the monstrous offspring of the reptile who first kidnapped you. Wyvern A is [if wyvkin1att is 1]kissing you[otherwise if wyvkin1att is 2]forcing you to suck his dick[otherwise if wyvkin1att is 3]forcing you to eat her cunt[otherwise if wyvkin1att is 4]grinding against your torso[otherwise if wyvkin1att is 5]fucking you[otherwise if wyvkin1att is 6]fucking your ass[otherwise if wyvkin1att is 7]riding your dick[otherwise if wyvkin1att is 8]grinding against your crotch[otherwise]watching you[end if][if wyvkinocc is 0] and[otherwise],[end if] Wyvern B is [if wyvkin2att is 1]kissing you[otherwise if wyvkin2att is 2]forcing you to suck of his dick[otherwise if wyvkin2att is 3]forcing you to eat her cunt[otherwise if wyvkin2att is 4]grinding against your torso[otherwise if wyvkin2att is 5]fucking you[otherwise if wyvkin2att is 6]fucking your ass[otherwise if wyvkin2att is 7]riding your dick[otherwise if wyvkin2att is 8]grinding against your crotch[otherwise]watching you[end if]";
 		if wyvkinocc > 0:
 			say ",[if wyvkinocc is 1] and[end if] Wyvern C is [if wyvkin3att is 1]kissing you[otherwise if wyvkin3att is 2]forcing you to suck his dick[otherwise if wyvkin3att is 3]forcing you to eat her cunt[otherwise if wyvkin3att is 4]grinding against your torso[otherwise if wyvkin3att is 5]fucking you[otherwise if wyvkin3att is 6]fucking your ass[otherwise if wyvkin3att is 7]riding your dick[otherwise if wyvkin3att is 8]grinding against your crotch[otherwise]watching you[end if]";
 		if wyvkinocc > 1:
