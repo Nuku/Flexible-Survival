@@ -91,18 +91,8 @@ to say pewterdesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	if "Horny Bastard" is listed in feats of player: [lust adjust check]
-		now lustadjust is 1;
-	otherwise if "Cold Fish" is listed in feats of player:
-		now lustadjust is -1;
-	otherwise:
-		now lustadjust is 0;
-	if "Weak Psyche" is listed in feats of player: [psyche adjust check]
-		now psycheadjust is 1;
-	otherwise if "Strong Psyche" is listed in feats of player:
-		now psycheadjust is -1;
-	otherwise:
-		now psycheadjust is 0;
+	psycheeval;
+	libidoeval;
 	say "     Met with the sound of a low, droning growl, you are suddenly beset upon by a peculiar beast. The well-toned quadruped's lean flesh a distinct, faintly metallic gray hue, it's no animal you've ever seen, the alien-looking creature's head utterly devoid of any features save for a toothy, slightly agape, and grinning maw. Slowly circling around you, clearly sizing you up, it's somewhat long and flexible tail sways patiently, and you're soon given a clear view of his apparent arousal, oozing a silvery fluid onto the ground.";
 
 Section 1.1 - Pewter Consort Bind
@@ -147,13 +137,23 @@ to pewterbind:
 		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][otherwise]-[end if][if struggleatt > 0][bold type]X[roman type][otherwise]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of player < 1:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Pewter Consort":
+					now monster is y;
+					break;
 			now bodyname of player is "Pewter Consort";
 			now facename of player is "Pewter Consort";
 			now tailname of player is "Pewter Consort";
 			now skinname of player is "Pewter Consort";
 			now cockname of player is "Pewter Consort";
-			follow the turnpass rule;
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
 			now trixieexit is 1;
+			end the game saying "You lost your mind while bound!";
 		otherwise:
 			let k be 0;
 			now keychar is "INVALID";
@@ -178,27 +178,11 @@ to pewterbind:
 					wait for any key;
 				otherwise:
 					say "     You finally manage to pull yourself free and climb out of the pool. Crawling away and catching your breath, the lot of them appear too preoccupied with attending to eachother to pursue you, allowing you to gather your things strewn about and get some additional distance. Eventually, you recover enough from the messy and exhausting ordeal to go about your business once more.";
-					now boundstate is false;
-					now pewterbodyocc is 0;
-					now pewterheadocc is 0;
-					now pewtercockocc is 0;
-					now pewterassocc is 0;
-					now pewtercuntocc is 0;
-					now pewterheadvar1 is 0;
-					now pewterheadvar2 is 0;
-					now pewtercockvar1 is 0; 
-					now pewtercockvar2 is 0;
-					now pewtercuntvar1 is 0;
-					now pewtercuntvar2 is 0; 
-					now pewterassvar1 is 0; 
-					now pewterassvar2 is 0; 
-					now struggleatt is 0;
-					now lustatt is 0;
-					now bsextimer is 0;
+					cleanboundmemory;
 					now trixieexit is 1;
 					follow the turnpass rule;
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide":
+			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case matches the text " ":
 				say "[line break]";
 				say "     You choose to abide their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
 				say "[line break]";
