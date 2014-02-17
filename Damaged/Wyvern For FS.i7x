@@ -406,10 +406,10 @@ to wyvfemvic:
 	let trixieexit be 0;
 	while trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
-		say "(1) [if cocks of player > 0][link]Mount her[as]5[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(2) [if cocks of player > 0][link]Mount her anally[as]5[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]5[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
-		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]5[end link][otherwise][italic type]Female-specific interaction[roman type][end if][line break]";
+		say "(1) [if cocks of player > 0][link]Mount her[as]1[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(2) [if cocks of player > 0][link]Mount her anally[as]2[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(3) [if cocks of player > 0][link]Have her suck your dick[as]3[end link][otherwise][italic type]Male-specific interaction[roman type][end if][line break]";
+		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][otherwise][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Attend her cunt[as]5[end link][line break]";
 		say "[line break]";
 		say "(0) [link]Nevermind.[as]0[end link][line break]";	
