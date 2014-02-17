@@ -6353,6 +6353,7 @@ Include Solstice by Stripes.
 Include Leonard by Stripes.
 Include Athanasia by Stripes.
 Include Andrew by Stripes.
+Include Brooke by Stripes.
 Include Sam for FS by Stripes.
 Include Mack for FS by Stripes.
 Include Meredith by Stripes.
