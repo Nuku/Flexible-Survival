@@ -1,7 +1,7 @@
 -- Written by David Silver(Nuku Valente)
 -- Based on code from:
 -- ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
+-- Copyright (C) 2009 - 2014 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -31,6 +31,10 @@ newEntity{
 	stats = { str=5, dex=5, con=5 },
 	combat_armor = 0,
 	resolvers.talents{ [Talents.T_NIBBLE]=1,},
+
+	chat_on_defeating = "latexfox/defeating",
+	chat_on_defeated = "latexfox/defeated",
+	chat_on_domniate = "latexfox/dominate",
 }
 
 newEntity{ base = "BASE_NPC_LATEXFOX",

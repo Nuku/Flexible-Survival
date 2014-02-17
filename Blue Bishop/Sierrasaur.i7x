@@ -64,13 +64,24 @@ to sierrabind:
 		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][otherwise]-[end if][if struggleatt > 0][bold type]X[roman type][otherwise]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of player < 1:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Sierrasaur":
+					now monster is y;
+					break;
 			now bodyname of player is "Sierrasaur";
 			now facename of player is "Sierrasaur";
 			now tailname of player is "Sierrasaur";
 			now skinname of player is "Sierrasaur";
 			now cockname of player is "Sierrasaur";
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
 			now voreloss is true;
 			now trixieexit is 1;
+			end the game saying "You lost your mind while bound!";
 		otherwise:
 			let k be 0;
 			now keychar is "INVALID";
@@ -111,14 +122,11 @@ to sierrabind:
 						wait for any key;
 				otherwise:
 					say "     Finally successful, you're met with the low hacking sound from the beast. Apparently, it wants to relinquish you from you confines, as his firm stomach squeezes you back from whence you came, up through its gullet and out, foot by foot, into the dry, cool open air, made to wallow in a puddle of saliva. Finally having had enough of your fussing, it turns to slowly depart, leaving you to gather your things and go about your business freely once more.";
-					now boundstate is false;
-					now struggleatt is 0;
-					now lustatt is 0;
-					now bsextimer is 0;
+					cleanboundmemory;
 					now trixieexit is 1;
 					follow the turnpass rule;
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide":
+			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case exactly matches the text " ":
 				say "[line break]";
 				say "     You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
 				say "[line break]";
@@ -266,18 +274,8 @@ to say sierradesc:
 		now sierrapure is true;
 	otherwise:
 		now sierrapure is false;
-	if "Weak Psyche" is listed in feats of player: [psyche adjust check]
-		now psycheadjust is 1;
-	otherwise if "Strong Psyche" is listed in feats of player:
-		now psycheadjust is -1;
-	otherwise:
-		now psycheadjust is 0;
-	if "Horny Bastard" is listed in feats of player: [lust adjust check]
-		now lustadjust is 1;
-	otherwise if "Cold Fish" is listed in feats of player:
-		now lustadjust is -1;
-	otherwise:
-		now lustadjust is 0;
+	psycheeval;
+	libidoeval;
 	if guy is banned and hermaphrodite is banned:
 		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
 		blank out the whole row;

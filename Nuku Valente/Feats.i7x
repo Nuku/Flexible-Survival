@@ -204,6 +204,7 @@ instead of addfeating the fun feats:
 	if "Weak Psyche" is not listed in feats of player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your human identity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
 	if "Open World" is not listed in feats of player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
+	addfeat "Ultimatum" with "You have enough! Choosing Ultimatum grants you a 10% point bonus at game end, but you [bold type]no longer receive Fun Feats[roman type].";
 
 instead of addfeating the basic feats:
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";

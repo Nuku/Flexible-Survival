@@ -1,5 +1,5 @@
 -- ToME - Tales of Middle-Earth
--- Copyright (C) 2009, 2010, 2011, 2012, 2013 Nicolas Casalini
+-- Copyright (C) 2009 - 2014 Nicolas Casalini
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@ require "engine.interface.PlayerMouse"
 require "engine.interface.PlayerHotkeys"
 local Map = require "engine.Map"
 local Dialog = require "engine.Dialog"
+local Chat = require "engine.Chat"
 local ActorTalents = require "engine.interface.ActorTalents"
 local DeathDialog = require "mod.dialogs.DeathDialog"
 local Astar = require"engine.Astar"
@@ -109,6 +110,13 @@ function _M:onTakeHit(value, src)
 end
 
 function _M:die(src)
+	if src and src.attr and src:attr("chat_on_defeating") then
+		local chat = Chat.new(src:attr("chat_on_defeating"), src, self)
+		chat:invoke()
+	end
+end
+
+function _M:realDie(src)
 	if self.game_ender then
 		engine.interface.ActorLife.die(self, src)
 		game.paused = true
