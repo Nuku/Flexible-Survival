@@ -280,28 +280,7 @@ to say AndrewBrutusShow:  [cleansed Brutus + Andrew]
 	now lust of Andrew is 4;
 
 
-[ hp of Andrew                      ]
-[ 0 = Nothing                       ]
-[ 1 = Talked w/him                  ]
-[ 2 = Recieved oral                 ]
-[ 3 = Had sex once                  ]
-[ 4 = Had sex again                 ]
-[ 5 = Gave oral                     ]
-[ 6 = Had sex again                 ]
-[ 7 = Covered in wolf cum           ]
-[ 8 = Had sex again                 ]
-[ 9 = Bukkake special               ]
-
-[ lust of Andrew                    ]
-[ Andrew + Demon Brute pet          ]
-[ 0 = no interaction                ]
-[ 1 = plan rejected                 ]
-[ 2 = demon sex show                ]
-[ 3 = post demon-show talk          ]
-[ 4 = redeemed demon sex show       ]
-[ 5 = post redeemed demon sex show  ]
-[ 100 = demon show ending           ]
-
+Section 8 - Miscellaneous Subroutines
 
 to andrewinfect:
 	[puts Alpha Wolf as lead monster for possible impregnation]
@@ -321,7 +300,6 @@ to andrewinfect:
 	infect "Black Wolf";
 	now non-infectious entry is true;
 	now sex entry is tempvalue;
-
 
 
 randomcolourlist is a list of text that varies.  randomcolourlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "grey ", "maroon ", "golden ", "cyan ", "peach " }.
@@ -377,8 +355,35 @@ carry out andrewtesting:
 		say "male3c: [male3c][line break]";
 		say "male4c: [male4c][line break][line break]";
 
+
+Section 9 - Endings
+
 when play ends:
 	if lust of Andrew is 100:
 		say "     The wild debauchery at the Palomino goes on and on, the safe haven falling into a den for the demonic orgy.  It becomes a nexus of infection that spreads out and corrupts the surrounding area.  During the wild sex, the demon takes the amulet from you and drapes it around Andrew's neck with a sinister grin.  Your last order to the demon had been to obey Andrew, to fuck him hard and to not harm him, all of which he's done, in a dark and twisted way.  Having screwed the wolf into a wild lust, Andrew is no more than a puppet for the demon, his only desire now is for the demon to keep fucking him.  And remaining unharmed by the harsh pounding, the demon can screw the wolf for hours on end before he passes out.  Whenever the wolf is unconscious, the demon simply switches to fucking a few of the horny supplicants in the crowd to keep the scent of infernal lust heavy in the air so the orgy never ends.  The Palomino Club, briefly a safe haven from the menace of feral mutants, has become a source of them that cannot be stopped.";
+
+
+[ hp of Andrew                      ]
+[ 0 = Nothing                       ]
+[ 1 = Talked w/him                  ]
+[ 2 = Received oral                 ]
+[ 3 = Had sex once                  ]
+[ 4 = Had sex again                 ]
+[ 5 = Gave oral                     ]
+[ 6 = Had sex again                 ]
+[ 7 = Covered in wolf cum           ]
+[ 8 = Had sex again                 ]
+[ 9 = Bukkake special               ]
+
+[ lust of Andrew                    ]
+[ Andrew + Demon Brute pet          ]
+[ 0 = no interaction                ]
+[ 1 = plan rejected                 ]
+[ 2 = demon sex show                ]
+[ 3 = post demon-show talk          ]
+[ 4 = redeemed demon sex show       ]
+[ 5 = post redeemed demon sex show  ]
+[ 100 = demon show ending           ]
+
 
 Andrew ends here.
