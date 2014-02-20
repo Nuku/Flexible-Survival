@@ -1706,7 +1706,7 @@ savetrix2 is an action applying to nothing.
 understand "load game" as savetrix2;	
 
 Check savetrix2:
-	if trixie is not visible, say "Your words seem to have no effect." instead;
+	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
 	
 Carry out savetrix2:
 	now trixsavetext1 is "[text of the File of Trixsave]" ;
@@ -1745,7 +1745,7 @@ Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
 
 Check reciting:
-	if trixie is not visible, say "Your words seem to have no effect." instead;
+	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
 
 Carry out reciting:
 	let x be indexed text;
