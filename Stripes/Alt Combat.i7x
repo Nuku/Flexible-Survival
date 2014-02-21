@@ -1244,9 +1244,9 @@ To lose:
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
-	if libido of player < libido entry:
+	if libido of player < libido entry and non-infectious entry is false:
 		increase libido of player by 4;
-	otherwise:
+	otherwise if non-infectious entry is false:
 		increase libido of player by 2;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 
