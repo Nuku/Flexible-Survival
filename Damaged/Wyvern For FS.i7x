@@ -46,13 +46,13 @@ to say WYVVIC:
 		otherwise:
 			say "     Tired of your impudence, the massive beast strikes you down one last time, bringing you to your knees before [ghe] pins you to the earth with [ghis] adhesive fluid, any further struggles ultimately proving wholly impotent";
 	if WYVGEN is 0: [male]
-		if "Touched by Madness" is listed in feats of player and "MPreg" is listed in feats of player and (("Kinky" is listed in feats of player and a random chance of 1 in 2 succeeds) or ("Kinky" is not listed in feats of player and a random chance of 1 in 4 succeeds)) and scalevalue of player < 4 and boundstate is false:
+		if "Touched by Madness" is listed in feats of player and "MPreg" is listed in feats of player and (a random chance of 1 in 3 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or (ublevel is 3 and a random chance of 1 in 4 succeeds)) and scalevalue of player < 4 and boundstate is false:
 			say ". The monster circles around you for a moment, intent on asserting his dominance by screeching at you as he eyes you over, sizing you up with a rather peculiar expression.";
 			say "     Approaching you, his tongue briefly assesses your [bodytype of player] form, its slick, writhing affection bathing you in his heated breath and saliva. Afflicted with a twisted compulsion, he pulls away before he begins to make a loud, deliberate hacking sound, his maw quickly flooding with the strange fluid, scaled lips clenched only slightly to let it ooze down over you.";
 			say "     Thick, warm goo slowly beginning to envelope you, [if hp of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[otherwise]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before she relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[otherwise]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
 			infect;
 			if waiterhater is 0, wait for any key;
-			if a random chance of wyvorgyroll in 7 succeeds:
+			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
 				if "Kinky" is listed in feats of player, increase wyvorgyroll by 1;
@@ -169,7 +169,7 @@ to say WYVVIC:
 			say "     Thick, warm goo slowly beginning to envelope you, [if hp of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[otherwise]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before she relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[otherwise]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
 			infect;
 			if waiterhater is 0, wait for any key;
-			if a random chance of wyvorgyroll in 7 succeeds:
+			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
 				if "Kinky" is listed in feats of player, increase wyvorgyroll by 1;
@@ -681,7 +681,7 @@ When Play begins:
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
+	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Wyvern Goop";			[ Loot monster drops, ]
 	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
@@ -803,7 +803,7 @@ to wyvore:
 							now trixieexit is 1;
 							follow the turnpass rule;		
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case exactly matches the text " ":
+			otherwise: [if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case exactly matches the text " ":]
 				say "[line break]";
 				if boundsegment is 1:
 					say "     You find yourself unwilling to protest against the wyvern's will. In mere seconds, the beast intent on exploiting this, you're plunged[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single gulp, the beast growling in approval of its [if tempnum2 is 1]returning[otherwise]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[otherwise]new[end if] confines.";
@@ -1217,7 +1217,7 @@ to wyvernheadapply:
 			otherwise if wyvkinassign is 4:
 				now wyvkin4att is 3;
 				say "     Wyvern [bold type]D[roman type]";
-			say " moves to climb up on you, his oozing, bestial cunt grinding insistently against your face. [if scalevalue of player < 4]Quite a lot to take all at once[otherwise]Showing absolutely no restraint[end if], your face is smeared with her tainted honey, making it very difficult to think straight.";
+			say " moves to climb up on you, her oozing, bestial cunt grinding insistently against your face. [if scalevalue of player < 4]Quite a lot to take all at once[otherwise]Showing absolutely no restraint[end if], your face is smeared with her tainted honey, making it very difficult to think straight.";
 	increase pewterheadocc by 1;
 
 pewterheadvar3 is a number that varies;

@@ -1228,6 +1228,7 @@ to win:
 	if reward > 50, now reward is 50;
 	increase freecred by reward;
 	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
+	if libido of player > 25, decrease libido of player by 4;
 	AttemptToWaitBeforeClear; [wait for any key;]
 	[clear the screen and hyperlink list;]
 	AttemptToClearHyper;
@@ -1256,6 +1257,10 @@ To lose:
 	if ktspeciesbonus > 0, increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
+	if libido of player < libido entry and non-infectious entry is false:
+		increase libido of player by 4;
+	otherwise if non-infectious entry is false:
+		increase libido of player by 2;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 
 

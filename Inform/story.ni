@@ -1079,7 +1079,7 @@ title	subtable	description	toggle
 "Intelligence: [Intelligence of player]"	--	"Your ability to logically compute things. Helps with activities that require 'book smarts'."	finish stats rule
 ["Reroll Stats"	--	"Randomize your stats. Do this as often as you want."	random stats rule]
 "Select a Stat to gain [if started is 0]+5[otherwise]+1[end if]"	--	"You are satisfied with your stats"	--
-"Load a save"	--	"Load a save game!"	prerestore the game rule
+"Restore a save"	--	"Restore a save game!"	prerestore the game rule
 
 This is the prerestore the game rule:
 	decrease the menu depth by 1;
@@ -6756,7 +6756,7 @@ To regularstart: [normal start method]
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
 		say "[line break]";
-		say "(99) [link]Load a save[as]99[end link][line break]";
+		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-16)>[run paragraph on]";
@@ -7091,7 +7091,9 @@ to say promptsay:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
-	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
+	say "[link][bracket]Save[close bracket][as]save[end link] ";	
+	say "[link][bracket]Restore[close bracket][as]restore[end link] ";	
+	say "[link][bracket]Saveword[close bracket][as]saveword[end link] ";
 	if "Unerring Hunter" is listed in feats of player and there is a visible dangerous door:
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";

@@ -30,7 +30,7 @@ to say losetofluffyowl:
 
 to say beatthefluffyowl:		[WIN]
 	say "     With the fluffy bird knocked down, ";
-	if libido of player > 29 or (bodyname of player is listed in infections of AvianList and libido of player > 14):
+	if libido of player > 29 or (bodyname of player is listed in infections of AvianList and libido of player > 14) or "Dominant" is listed in feats of player:
 		say "you look over her shapely body, tempted by those huge breasts and that feather-padded bottom.  Shall you play with the captured birdy?";
 		if the player consents:
 			say "     Grabbing the owl's big hooters, you run your fingers through the soft down and squeeze the warm, soft flesh beneath.  She hoots softly in pleasure and gives into your manhandling readily.  It seems her enlarged breasts are quite sensitive.  Finding those hidden nipples, you start to squeeze and tease them, getting her all the more excited.";
@@ -94,7 +94,7 @@ When Play begins:
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 10;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 50;			[ Target libido the infection will rise towards. ]
+	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "distilled milk";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 28;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
