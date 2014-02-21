@@ -4510,7 +4510,7 @@ This is the turnpass rule:
 	if libido of player is less than 100 and "Horny Bastard" is listed in feats of player:
 		increase libido of player by square root of ( 55 - ( libido of player / 2 ) );
 		if libido of player > 100, now libido of player is 100;
-	if libido of player is greater than 20 and "Cold Fish" is listed in feats of player and libido of player is not 100:
+	if libido of player is greater than 20 and "Cold Fish" is listed in feats of player and libido of player < 100:
 		decrease libido of player by square root of ( libido of player - 15 );
 	if oldlib is less than 80 and libido of player is greater than 79:
 		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][otherwise if cocks of player > 1]  Your cocks is fully erect constantly and drools precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][otherwise if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
@@ -6393,6 +6393,7 @@ Include Joanna by Stripes.
 Include Solstice by Stripes.
 Include Leonard by Stripes.
 Include Athanasia by Stripes.
+Include Newt by Stripes.
 Include Andrew by Stripes.
 Include Brooke by Stripes.
 Include Sam for FS by Stripes.
