@@ -24,7 +24,7 @@ to say felitaur rape:
 			say "The feline brushes her paw like hands across your [skin of player] body, pressing to your front with her two heavy milk bags. Her hands reach for your sides, caressing as she bites at your ears gently, whispering, 'You will do just fine.'[line break][line break]She prowls about you to your back, then her forepaws hook around your torso, hefting you up as she eases herself forward. You can feel her firm spear press against your thick lips, then push smoothly into your trembling form. Despite its mass, the cat has no issue fucking your huge pussy, holding you firmly to her lower torso as she rocks against you powerfully, letting her heavy balls slap against you with potent thuds.[line break][line break]The barbs of the shaft tickle and pull at your inner walls with every withdraw of the firm tool, sending ecstatic tingles along your spine and keeping your paralyzed form locked in one fitful release after another. Those barbs press harder suddenly, digging softly against your flesh as great floods of seed rush out into your body, rounding your belly with molten heat spreading through you, and pouring in a waterfall back down along the shaft and your thighs, dripping to the ground below.[impregchance] The cat, roaring her satisfaction, is slow to gently pull you free, and set you to your shaking feet.";
  
 To say felitaur tempt:
-	if a random number from 1 to 100 is less than the libido of the player:
+	if humanity of player - libido of player is less than a random number from 40 to 75:
 		if cocks of player is less than 1 and cunts of player is greater than 0:
 			say "[felitaur rape]";
 		otherwise if cocks of player is greater than 0:
@@ -81,7 +81,7 @@ When Play begins:
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 14;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 8;		[ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 90;			[ Target libido the infection will rise towards. ]
+	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
