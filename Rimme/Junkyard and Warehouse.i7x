@@ -377,7 +377,7 @@ To stevenjunkfuck:
 		say "     You slide over and cuddle up against Steven, pulling you both down to the ground.  You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft.  He groans and shivers a little as you begin to gently stroking it";
 		if cocks of player > 0:
 			if cunts of player > 0:
-				say ".   While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give my a some [']oral['] attention.  (Y=Ride, N=Suck) ";
+				say ".   While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give him a some [']oral['] attention.  (Y=Ride, N=Suck) ";
 				if the player consents:
 					say "[stevenride]";
 				otherwise:
