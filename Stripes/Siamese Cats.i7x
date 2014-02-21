@@ -97,7 +97,7 @@ to say losetosiamesecat:
 
 to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well";
-	if libido of player > 29 and (cocks of player > 0 or cunts of player > 0):
+	if (libido of player > 29 or "Dominant" is listed in feats of player) and (cocks of player > 0 or cunts of player > 0):
 		say ".  They mewl softly, beaten now.  Looking them over, you consider playing with one of them.  Do you want to have some fun with one of the Siamese twins? (Y/N)";
 		if the player consents:
 			decrease libido of player by 10;
@@ -325,7 +325,7 @@ When Play begins:
 	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-	now libido entry is 50;            [ Will raise the player's libido towards this amount]
+	now libido entry is 40;            [ Will raise the player's libido towards this amount]
 	now loot entry is "";            [ Dropped item, if any ]
 	now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]

@@ -681,7 +681,7 @@ When Play begins:
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
+	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Wyvern Goop";			[ Loot monster drops, ]
 	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
