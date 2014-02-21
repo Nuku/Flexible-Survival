@@ -54,7 +54,7 @@ to say losetovixennurse:
 
 to say beatthevixennurse:
 	choose row monster from the table of random critters;
-	if libido of player > 29:
+	if libido of player > 29 or "Dominant" is listed in feats of player:
 		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying half-heartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
 		if the player consents:
 			if cocks of player > 0:
@@ -153,7 +153,7 @@ When Play begins:
    now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
    now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
    now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 66;            [ Set to zero in this monster to control elsewhere ]
+   now libido entry is 60;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "healing booster";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 20;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]

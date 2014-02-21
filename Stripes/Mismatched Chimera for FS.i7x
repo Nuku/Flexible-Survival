@@ -197,7 +197,7 @@ When Play begins:
    now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
    now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
    now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 75;            [ Set to zero in this monster to control elsewhere ]
+   now libido entry is 60;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
