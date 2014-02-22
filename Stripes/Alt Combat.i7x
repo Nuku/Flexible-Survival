@@ -8,8 +8,9 @@ Section 0 - Basic variables
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
-ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]	]
-ktcockmatch is a truth state that varies.  [ Checks for matching player cock while using the 'Know Thyself' feat. ]	]
+ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
+ktcockmatch is a truth state that varies.
+ktcockmatch is usually false.           [ Checks for matching player cock while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
 skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
@@ -98,7 +99,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
-		decrease plhitbonus by the ( absolute value of ( scalevalue of player - objsize of weapon object of player);
+		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player);
 	if weapon object of player is bo staff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
@@ -1186,8 +1187,6 @@ to win:
 		otherwise:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
-	if libido of player > 25:								[libido dropped for victory sex/self-restraint]
-		decrease libido of player by 4;
 	increase the XP of the player by lev entry times two;
 	if the player is dominant:
 		let jj be a random number between 1 and 4;
@@ -1247,7 +1246,7 @@ To lose:
 	otherwise:
 		infect;
 	choose row monster from the table of random critters;
-	if libido of player < libido entry:
+	if libido of player < libido entry and non-infectious entry is false:
 		increase libido of player by 4;
 	otherwise:
 		increase libido of player by 2;
@@ -1257,10 +1256,6 @@ To lose:
 	if ktspeciesbonus > 0, increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
-	if libido of player < libido entry and non-infectious entry is false:
-		increase libido of player by 4;
-	otherwise if non-infectious entry is false:
-		increase libido of player by 2;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 
 
