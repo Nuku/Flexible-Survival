@@ -8,7 +8,9 @@ Section 0 - Basic variables
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
-[ speciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]	]
+ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
+ktcockmatch is a truth state that varies.
+ktcockmatch is usually false.           [ Checks for matching player cock while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
 skipretaliate is a truth state that varies. [Used to detect if monster will be denied a chance to retaliate.]
@@ -87,6 +89,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	now monhitbonus is 0;
 	now mondodgebonus is 0;
 	now monmindbonus is 0;
+	now ktspeciesbonus is 0;
+	now ktcockmatch is false;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	otherwise:
@@ -104,15 +108,18 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
-		let speciesbonus be 0;
-		if bodyname of player is name entry, increase speciesbonus by 3;
-		if facename of player is name entry, increase speciesbonus by 2;
-		if speciesbonus > 4, now speciesbonus is 4;
-		increase plhitbonus by speciesbonus;
 		let mmb be 0;
-		if bodyname of player is name entry, increase mmb by 1;
-		if facename of player is name entry, increase mmb by 1;
-		if cockname of player is name entry, increase mmb by 2;
+		if bodyname of player is name entry:
+			increase ktspeciesbonus by 3;
+			increase mmb by 1;
+		if facename of player is name entry:
+			increase ktspeciesbonus by 2;
+			increase mmb by 1;
+		if cockname of player is name entry:
+			increase mmb by 2;
+			now ktcockmatch is true;
+		if ktspeciesbonus > 4, now ktspeciesbonus is 4;
+		increase plhitbonus by ktspeciesbonus;
 		if mmb > 2, now mmb is 2;
 		decrease plmindbonus by mmb;		[increased vulnerability to mental/allure attacks]
 	if "Weak Psyche" is listed in feats of player:
@@ -324,8 +331,8 @@ This is the player attack rule:
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
-	if "Know Thyself" is listed in feats of player:		[That's what you get for thinking with your crotch.]
-		if cockname of player is name entry, increase libido of player by a random number from 0 to 2;
+	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
+		increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
 		if the combat bonus is greater than 16:
 			now combat bonus is 16;
@@ -587,7 +594,7 @@ This is the submit rule:
 	now fightoutcome is 22;
 	Lose;
 	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
+	if ktspeciesbonus > 0, increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 
 
@@ -1189,7 +1196,7 @@ to win:
 			increase morale of player by 1;					[flat morale boost]
 		otherwise:
 			increase xp of player by ( lev entry + 2 ) / 5;		[10% xp boost]
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
+	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
 	if the player is not lonely:
 		increase the xp of the companion of the player by lev entry times two;
 		if "Ringmaster" is not listed in feats of player:
@@ -1238,16 +1245,17 @@ To lose:
 		say "";
 	otherwise:
 		infect;
+	choose row monster from the table of random critters;
+	if libido of player < libido entry and non-infectious entry is false:
+		increase libido of player by 4;
+	otherwise:
+		increase libido of player by 2;
 	if hp of player is less than 1, now hp of player is 1;
 	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
+	if ktspeciesbonus > 0, increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
-	if libido of player < libido entry and non-infectious entry is false:
-		increase libido of player by 4;
-	otherwise if non-infectious entry is false:
-		increase libido of player by 2;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 
 
