@@ -115,6 +115,7 @@ When Play begins:
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now nocturnal entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
