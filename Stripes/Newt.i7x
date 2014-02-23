@@ -1,6 +1,5 @@
 Version 1 of Newt by Stripes begins here.
 [Version 1 - Basic character]
-[ 5 hrs - ]
 
 "Adds a female Salamander NPC called Newt through interaction w/Athanasia."
 
@@ -105,10 +104,18 @@ to say sexwithNewt:
 					[*** otherwise if nam is "Threesome w/Athanasia (oral)":	]
 					otherwise if nam is "Threesome w/Athanasia":
 						say "[NewtAthanasia3someA]";
+						now lastfuck of athanasia is turns;
 					otherwise if nam is "Threesome w/Athanasia (fuck)":
 						say "[NewtAthanasia3someB]";
+						now lastfuck of athanasia is turns;
 					otherwise if nam is "Threesome w/Athanasia (dildo)":
 						say "[NewtAthanasia3someC]";
+						now lastfuck of athanasia is turns;
+			otherwise:
+				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+		now lastfuck of Newt is turns;
+		wait for any key;
+		clear the screen and hyperlink list;
 
 
 to say newtsex01:	[fuck her]
