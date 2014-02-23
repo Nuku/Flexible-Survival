@@ -331,8 +331,8 @@ This is the player attack rule:
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 	let the combat bonus be attack bonus - defense bonus;
-[	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
-		increase libido of player by a random number from 0 to 2; ] [ This doesn't compile ]
+	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
+		increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
 		if the combat bonus is greater than 16:
 			now combat bonus is 16;
