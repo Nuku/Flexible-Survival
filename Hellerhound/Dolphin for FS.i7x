@@ -41,20 +41,24 @@ to say dolphin attack:
 	say "[dolphin fuck]";
 
 To say dolphin loss:
-	say "You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her.";
-	if the libido of the player is less than 80:
-		say "You do not have the desire to mate with her, and leave her there.";
+	say "You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her";
+	if the libido of the player < 40 and "Dominant" is not listed in feats of player:
+		say ". You do not have the desire to mate with her, and leave her there.";
 	otherwise if dolphintricked < 2:
-		increase dolphintricked by 1;
-		now dolphinconsent is 1;
-		say "You uncover your tools and swim closer.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "Closer";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "[bold type] AND closer[roman type]";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' She mutters.";
-		say "[dolphin fuck]";
+		say ". Have your way with the creature?";
+		if player consents:
+			increase dolphintricked by 1;
+			now dolphinconsent is 1;
+			say "You uncover yourself and swim closer.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			say "Closer";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			say "[bold type] AND closer[roman type]";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' She mutters.";
+			say "[dolphin fuck]";
+		otherwise:
+			say "You decide against exploiting this opportunity, leaving the creature as she is.";
 	otherwise:
 		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before before it can make it's final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
