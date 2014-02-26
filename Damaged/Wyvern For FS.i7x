@@ -494,7 +494,7 @@ to say wyvgen_1: [Anal Pitching]
 		otherwise:
 			say ". [if WYVGEN is 0]He[otherwise]She[end if] can only twitch and groan as [ghe]'s shamed so, growling weakly as [ghis] [if WYVGEN is 0]own, unattended dick throbbing and oozing[otherwise if tempnum is not 2]oozing portals aching for additional attention[otherwise]oozing, unattended pussy aching for attention[end if] against the open air.";
 	otherwise:
-		say "     With one final thrust, you [if cockname is listed in infections of caninelist]tie[otherwise]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping [ghim] tightly as the[if scalevalue of player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[otherwise] is[end if] pumped full with your [cum load size of player] load[if cock width of player > 19], quickly beginning to leak with your excess seed[end if]";
+		say "     With one final thrust, you [if cockname of player is listed in infections of knotlist]tie[otherwise]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping [ghim] tightly as the[if scalevalue of player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[otherwise] is[end if] pumped full with your [cum load size of player] load[if cock width of player > 19], quickly beginning to leak with your excess seed[end if]";
 		if tempnum2 is 1:
 			say ". This is enough to set [ghim] off as well, roaring out as [ghis] [if WYVGEN is 0]own, monstrous, and unattended dick twitches and sputters his seed across the earth[otherwise if tempnum is 2]greedy portals squeezes and milks your invading dicks of every last drop[otherwise]greedy pucker squeezes and milkes you tightly of every last drop[end if].";
 		otherwise:
@@ -615,7 +615,7 @@ to say wyvfem_1: [Cunt Pitching]
 		otherwise:
 			say ". She can only twitch and groan as [ghe]'s shamed so, growling weakly as her oozing portal aches for additional attention against the open air.";
 	otherwise:
-		say "     With one final thrust, you [if cockname is listed in infections of caninelist]tie[otherwise]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping her tightly as the[if scalevalue of player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[otherwise] is[end if] pumped full with your [cum load size of player] load[if cock width of player > 19], quickly beginning to leak with your excess seed[end if]";
+		say "     With one final thrust, you [if cockname of player is listed in infections of knotlist]tie[otherwise]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping her tightly as the[if scalevalue of player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[otherwise] is[end if] pumped full with your [cum load size of player] load[if cock width of player > 19], quickly beginning to leak with your excess seed[end if]";
 		if tempnum2 is 1:
 			say ". This is enough to set [ghim] off as well, roaring out as her [if tempnum is 2]greedy portals squeezes and milks your invading dicks of every last drop[otherwise]greedy portal squeezes and milkes you tightly of every last drop[end if].";
 		otherwise:
