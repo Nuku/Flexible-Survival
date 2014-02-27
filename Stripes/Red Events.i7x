@@ -50,13 +50,13 @@ Instead of resolving a Raided Corner Store:
 			otherwise:
 				challenge "Herm Hyena";
 				challenge "Herm Hyena";
-				say "After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.";
+				say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.";
 		otherwise:
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
-			say "After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.  Disappointed, you head back into the city.";
+			say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.  Disappointed, you head back into the city.";
 	otherwise:
-		say "You opt to leave it alone and head back to search elsewhere.  The grapes were probably sour anyhow.";
+		say "     You opt to leave it alone and head back to search elsewhere.  The grapes were probably sour anyhow.";
 		increase score by 1;
 	Now Raided Corner Store is resolved;
 
