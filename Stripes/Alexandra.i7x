@@ -604,7 +604,7 @@ to say alexandra_supplies:
 		if carried of food >= 6 and carried of water bottle >= 6:
 			say "     Having enough of the food and water supplies in your pack, shall you give them over to her?";
 			if the player consents:
-				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.'  She gives you a quick kiss on the cheek, then realizes what she's done.  'Ah... umm...'  She blushes at her ears and scoops up the supplies clumsily, hurrying off towards the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
+				say "     The doberwoman smiles happily, a canine grin on her face.  'I knew I could count on you.  Thanks a lot, hon.'  She gives you a quick kiss on the cheek, then realizes what she's done.  'Ah... umm...'  She blushes at her ears and scoops up the supplies clumsily, hurrying off toward the storage lock-up.  There is a hint of canine arousal in the air after her departure.";
 				decrease carried of food by 6;
 				decrease carried of water bottle by 6;
 				increase score by 25;
@@ -744,6 +744,15 @@ to say alexandra_supplies:
 [ 97 = Fang + oral ]
 [ 98 = Fang + cunn ]
 [ 99 = Fang ]
+
+[     policerepair      ]
+[ 0 = task not assigned ]
+[ 1 = task assigned     ]
+[ 2 = partial windows   ]
+[ 3 = completed windows ]
+[ 4 = partial doors     ]
+[ 5 = completed doors   ]
+[ 6 = miscellaneous     ]
 
 
 Section 9 - Conversation on other NPCs
@@ -901,6 +910,7 @@ AT_Diego is a truth state that varies.  AT_Diego is usually false.
 AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
 AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
 AT_Jimmy is a truth state that varies.  AT_Jimmy is usually false.
+AT_Repair is a truth state that varies.  AT_Repair is usually false.
 AT_Stella is a truth state that varies.  AT_Stella is usually false.
 no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
 
@@ -926,6 +936,16 @@ to AlexandraTaskChat:
 			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
 		otherwise:
 			add { 50, 50 } to AlexandraTask;
+	if AT_Repair is false and hp of Alexandra >= 56:
+		if policerepair is 0:
+			add { 51, 51, 51, 51, 51 } to AlexandraTask;
+		otherwise:
+			add { 51, 51 } to AlexandraTask;
+[	if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false:
+		if hp of Paula is 0:
+			add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
+		otherwise:
+			add { 52, 52 } to AlexandraTask;	]
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
@@ -946,6 +966,8 @@ to AlexandraTaskChat:
 		if entry 1 of AlexandraTask is 13, say "[A_Task13]";
 		if entry 1 of AlexandraTask is 14, say "[A_Task14]";
 		if entry 1 of AlexandraTask is 50, say "[A_Task50]";
+		if entry 1 of AlexandraTask is 51, say "[A_Task51]";
+		if entry 1 of AlexandraTask is 52, say "[A_Task52]";
 
 
 Part 1 - Hints (<50)
@@ -976,7 +998,9 @@ to say A_Task05:
 
 to say A_Task06:
 	say "     'There's some really over-sexualized creatures out there, many of them concentrated in the seedier part of town.  Cock creatures, horny succubi, hookers, pimps and more.  If you approach [if Entrance to the Red Light District is unknown]the area around the strip clubs and sex shops around these streets,' she says, outlining the area she's talking about, '[otherwise]there, [end if]you need to be really careful or you could end up joining them as another sex slut roaming the red light district of town.'  There's the faint scent of canine arousal as Alexandra talks to you about what she saw out there.";
-	now Entrance to the Red Light District is known;
+	if Entrance to the Red Light District is unknown:
+		say "You now know how to locate the Entrance to the Red Light District.";
+		now Entrance to the Red Light District is known;
 	now AT_RLD is true;
 
 to say A_Task07:
@@ -1000,7 +1024,7 @@ to say A_Task11:
 	now AT_Qytat is true;
 
 to say A_Task12:
-	say "     'The zoo's become... well, a zoo.  With all the wild animals that were there, we've got a lot of exotic and dangerous infections running around.  I saw cheetahs, rhinos, tiger and wolf taurs, and even a giant zookeeper roaming around there, just to name a few.  I expect our city's hyena problem started there as well.  Be careful if you go poking around there, or you might become just another wild animal person stalking around there.'";
+	say "     'The zoo's become... well, a zoo.  With all the wild animals that were there, we've got a lot of exotic and dangerous infections running around.  I saw cheetahs, rhinos, tiger and wolf taurs, and even a giant zookeeper roaming around there, just to name a few.  I expect our city's hyena problem started there as well.  Be careful if you go poking around there, or you might become just another wild animal person stalking the grounds.'";
 	now Zoo Entrance is known;
 
 to say A_Task13:
@@ -1029,6 +1053,197 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 	otherwise:
 		say "     'Good work rescuing Jimmy from those automatons.  He wouldn't have been able to get out of that situation without your timely assistance.  He's great to have around; really helps with morale and keeping this place clean.  He's always so helpful.";
 		now AT_Jimmy is true;
+
+
+
+
+to say A_Task51:
+	if policerepair is 0:
+		say "     'There's been quite a bit of damage done here that I'd like fixed up.  I don't mean we need to rebuild the place, but we do need to block up the broken windows and stuff like that.  If we're going to provide a safe place to stay for a while, we can't allow crazed mutants to sneak in to get at them.  I managed to scrounge up some tools and hardware, but I need help doing the work.  It's not something I really know much about.  There's quite a bit to do, but whenever you're ready to [bold type]repair the police station[roman type], just let me know.";
+		now policerepair is 1;
+	otherwise if policerepair < 6:
+		say "     'We've got some more work to do to [bold type]repair the police station[roman type].  Just let me know when you're ready to get back to it.";
+
+
+policerepairing is an action applying to nothing.
+policerepair is a number that varies.
+lastpolicerepair is a number that varies.  lastpolicerepair is usually 255.
+pr_task01 is a truth state that varies.  pr_task01 is usually false.
+pr_task02 is a truth state that varies.  pr_task02 is usually false.
+pr_task03 is a truth state that varies.  pr_task03 is usually false.
+pr_task04 is a truth state that varies.  pr_task04 is usually false.
+pr_completion is a number that varies.
+Understand "repair the police station" as policerepairing.
+Understand "repair police station" as policerepairing.
+Understand "repair the station" as policerepairing.
+Understand "repair station" as policerepairing.
+Understand "repair police" as policerepairing.
+Understand "fix the police station" as policerepairing.
+Understand "fix police station" as policerepairing.
+Understand "fix the station" as policerepairing.
+Understand "fix station" as policerepairing.
+Understand "fix police" as policerepairing.
+
+check policerepairing:
+	if AT_Repair is true, say "You've done pretty much all you can." instead;
+	if hp of Alexandra < 56 or policerepair is 0, say "She hasn't mentioned anything about that yet." instead;
+	if player is not in Police Station or Alexandra is not visible, say "You should go talk to Alexandra about that." instead;
+	if lastpolicerepair is turns, say "Alexandra needs a bit of a break before getting back to the repairs." instead;
+
+carry out policerepairing:
+	if pr_task01 is false:
+		let bonus be ( stamina of player minus 10 ) divided by 2;
+		increase bonus by pr_completion;
+		let dice be a random number from 1 to 20;
+		say "STAMINA - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+		if bonus + dice is greater than 12:
+			if pr_completion is 0:
+				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it is the plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Partway through this sweaty work, you notice the Doberwoman's top's gotten quite damp with her sweat.  Wishing her shirt was white, you still get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
+				increase policerepair by 2;
+			otherwise:
+				say "     Getting back to the task of boarding up the broken windows, you and Alexandra carry the remaining plywood sheets up the stairs and put them into place.  Thankfully, you do get one perk from all this hard labour.  The Doberwoman's top gets quite sweaty from all the heavy lifting.  While you wish her shirt was white, you're still able to get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
+				increase policerepair by 1;
+			increase score by 10;
+			now pr_task01 is true;
+			now pr_completion is 0;
+		otherwise:
+			if pr_completion is 0:
+				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it is the plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Carrying the plywood sheets up the stairs is tiring work and wears you down.  You get some of the work done, but eventually have to stop and take a break.  You'll need to get back to it later to finish the rest of them.";
+				increase policerepair by 1;
+			otherwise:
+				say "     Getting back to the task of boarding up the broken windows, you and Alexandra carry more plywood sheets up the stairs and put them into place.  It's tough going and you're still not able to get it all done, but you've gotten closer to completion.  You stop work to take a break, thankful at least that you're making progress.";
+			increase score by 1;
+			increase pr_completion by 2 + ( bonus + dice ) / 5;
+	otherwise if pr_task02 is false:
+		let bonus be ( strength of player minus 10 ) divided by 2;
+		increase bonus by pr_completion;
+		let dice be a random number from 1 to 20;
+		say "STRENGTH - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+		if bonus + dice is greater than 12:
+			if pr_completion is 0:
+				say "     Offering to help Alexandra with further securing the building, the two of you go around barricading the other doors.  You have to go around the offices, finding desks and filing cabinets and so forth to move in front of them.  You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency.  It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks.  While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process.  As an added bonus, you do find some hidden snacks buried in some of the desks as well, some of which you share with her while taking a break.";
+				decrease hunger of player by 6;
+				if hunger of player < 0, now hunger of player is 0;
+				increase carried of chips by 1;
+				increase policerepair by 2;
+			otherwise:
+				say "     Returning to barricading the other exits from the building, you and Alexandra drag around more heavy furniture to block them.  You do make it a point to set up one barricade that's fairly easy to tear down from the inside in case of emergency.  It's a lot of hard work, but you and Alexandra have some fun laughing at some of the odd trinkets and junk you find on the desks.  While it's bittersweet for her to be reminded that her fellow officers are gone, reminiscing about them does help her with the grieving process.  As an added bonus, you do find some hidden snacks buried in some of the desks as well.";
+				decrease hunger of player by 6;
+				if hunger of player < 0, now hunger of player is 0;
+				increase carried of chips by 1;
+				increase policerepair by 1;
+			increase score by 10;
+			now pr_task02 is true;
+			now pr_completion is 0;
+		otherwise:
+			if pr_completion is 0:
+				say "     Offering to help Alexandra with further securing the building, the two of you go around barricading the other doors.  You have to go around the offices, finding desks and filing cabinets and so forth to move in front of them.  The two of you do as much of this back-breaking labour as you're able to take before finally having to stop and take a break to recover.";
+				increase policerepair by 1;
+			otherwise:
+				say "     Returning to barricading the other exits from the building, you and Alexandra drag around more heavy furniture to block them.  You make more headway, but eventually have to stop again to rest your weary muscles.  Thankfully, you've made more progress and are getting closer to finishing this task.";
+			increase score by 1;
+			increase pr_completion by 2 + ( bonus + dice ) / 5;
+	otherwise if pr_task03 is false:
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "DEXTERITY - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+		if bonus + dice is greater than 12:
+			say "     Suggesting that the two of you get back to work on the building, you head off to take care of a bunch of other repairs and maintenance issues.  At this point, it's more to make the place more livable rather than for security.  You work away with her for a few hours, doing what you can here and there to help out.  Catching sight of that cute ass in those tight pants of hers, you make sure to give her some tasks that have her bending over or kneeling down so you can look it over.  And from the little grin on her muzzle and the wag of her tail, it seems she's caught onto your ploy.  She makes no objection and you even catch a whiff of canine arousal coming from the policewoman the next time she's on her knees to do something.";
+			increase score by 10;
+		otherwise:
+			say "     Suggesting that the two of you get back to work on the building, you head off to take care of a bunch of other repairs and maintenance issues.  At this point, it's more to make the place more livable rather than for security.  You work away with her for a few hours, doing what you can here and there to help out.  Catching sight of that cute ass in those tight pants of hers, you make sure to give her some tasks that have her bending over or kneeling down so you can look it over.  And from the little grin on her muzzle and the wag of her tail, it seems she's caught onto your ploy.  She makes no objection and you even catch a whiff of canine arousal coming from the policewoman the next time she's on her knees to do something.  Unfortunately, this distracts you and you end up banging yourself with a hammer, scraping yourself with a knife and give yourself a few other minor injuries over the course of your repairs.";
+			decrease hp of player by 8 + ( level of player / 4 );
+			increase score by 5;
+		if hp of Jimmy > 3:
+			say "     Jimmy brings in drinks for you both at one point.  'Thanks so much for helping out with all this.  You two are doing a super job,' the chipper corgi says.  'You deserve something special for all your hard work.  Can I interest either of you in a quick pick-me-up?' he adds with a wink, tail wagging excitedly.  Still smelling Alexandra's arousal, she seems briefly tempted, but regains her composure and declines.  She states that it'd be fine by her if you want to take Jimmy's offer";
+			if cocks of player is 0 and cunts of player is 0:
+				say ".  Lacking any genitals for the corgi to play with, you're forced to decline as well.  The little guy seems briefly disappointed, but perks back up soon enough.";
+			otherwise:
+				say ".  Shall you do so?";
+				if the player consents:
+					if cocks of player > 0 and anallevel is not 1:
+						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms.  As you kiss the cute corgi, Alexandra politely excuses herself until you two are done.  Kneading his ass with one hand, you guide your cock until his tail with the other.  The little guy moans softly and his tail wags excitedly.  Easing him down slowly, you let your [cock of player] cock pop into his tight tailhole[if cock length of player > 15].  Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[otherwise if cock length of player > 7].  Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[otherwise].  Your [cock size desc of player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
+						say "     You bounce the cute fellow easily up and down your cock.  He pants and moans as you fuck his ass.  His own canine cock throbs against your belly, the six-inch red rod spurting precum onto it with every press of your penis against his prostate.  As his excitement builds, his knot swells up and soon he's spurting dog cum across the both of you with a cry of ecstasy.  Feeling him clamp down around your shaft, you push deep into him one last time and cum, pumping your [cum load size of player] load into the happy doggy.";
+						say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support.  'Oh wow!  I mean... I'd never... that was awesome.  I wish I knew how great that felt; I'd've been doing that for years had I known.'  Taking a seat on the floor, you cuddle the cute guy, wiping up the mess you've made with a [if cock width of player >= 12]few rags[otherwise]rag[end if].  After a few more kisses, you let Alexandra know you're ready to get back to work.";
+						now hp of Jimmy is 5;
+						increase score by 5;
+					otherwise:
+						say "[Jimmysex01]";
+				otherwise:
+					say "     The cute corgi's a little disappointed at your response, but nods.  'Sorry, I don't mean to distract you from your work.  We can just talk while you get back to it,' he says cheerfully.";
+			say "     Jimmy sticks around to help you two out, mainly by passing you any tools and hardware you might need.  The three of you talk while working, enjoying each other's company.  The cute corgi, when he catches onto your little game with Alexandra doing all the floor level work, grins and gives you a playful elbow to the thigh.  He joins you in taking in the fine view of the doberwoman's tight buns.  Knowing she's being watched by her two friends, the scent of her arousal returns.  The three of you are in fine spirits by the time you finish everything up, though you and Alexandra are rather worn out from all your hard work.";
+			decrease thirst of player by 6;
+			if thirst of player < 0, now thirst of player is 0;
+		otherwise:
+			say "     The two of you talk while working, enjoying each other's company.  You can't help but notice that Alexandra's lightened up quite a bit since you'd first met her.  Letting the conversation drift towards how sex has gotten quite prevalent, you try to see how she feels about the matter.  She starts to respond, then realizes what you're asking and gives you a narrow look.  Trying to look innocent, she harrumphes and gets back to work.  Though from the way she gives her ass a wiggle and the increase in the scent of her arousal, you can tell she's not as upset about it as she's letting on.  The two of you finish up the work in fine spirits, but are both rather worn out.";
+		say "     As you're putting away the tools, Alexandra comes up to you.  'You've been a big help here.  I wouldn't have been able to handle all of this on my own.  Here, how about you take this?' she says, offering you one of the carpentry hammers from the tool set.  'This might come in handy and would make for a pretty good weapon in a pinch.  I think I can trust you not to kill anyone with this, so you can use it to defend yourself against those mutants.  They heal pretty quick, so they should survive as long as you don't go overboard.'";
+		say "     You have gained a [bold type]claw hammer[roman type].  When all you have is a hammer, every mutant looks like a nail.";
+		increase carried of claw hammer by 1;
+		increase score by 10;
+		increase policerepair by 1;
+		now pr_task03 is true;
+	otherwise if pr_task04 is false:
+		let bonus be ( perception of player minus 10 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "PERCEPTION - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+		if bonus + dice is greater than 12:
+			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done at this point is beyond your limited capabilities.  You do deal with a few more odds and ends, and it looks at first like you've done a very thorough job.";
+			say "     You do come across a door in the service area that you'd not noticed before because it's partially obscured behind some cardboard boxes and a whiteboard.  Investigating further, you discover it opens onto a small hallway with a janitor's closet and a service door to the outside.  This steel door's in rough shape, having gotten quite bent and no longer closing properly.";
+			if intelligence of player > 15:
+				say "     Looking at the damaged door, you realize it'd take quite a bit of work to get it bent back into shape and properly reseated.  You're about to go grab the tools you'll need for this when you realize a far better solution.  After taking some quick measurements, you unscrew the first door you'd found and, with Alexandra's help, get it mounted in place of the exterior door.  Adding the door hardware, you're able to get his door to close and lock properly.  A few heavy objects are added as a further barricade and this potential back entrance is fully secured.  Work smarter, not harder.";
+				increase policerepair by 3;
+			otherwise:
+				let bonus be ( strength of player minus 10 ) divided by 2;
+				let dice be a random number from 1 to 20;
+				say "STRENGTH - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+				if bonus + dice is greater than 12:
+					say "     You have to go back and get some bigger tools to deal wit the damaged door.  Telling Alexandra about the problem, she joins you in trying to deal with it.  You do your best to try and pound the door back into shape, but it's very hard work.  By the time you're done, your muscles ache, but you're able to pretty much undo the warp in it, getting it straight enough to close nicely and latch tight.  It doesn't look very pretty, but it works well enough.  A few heavy objects are added as a further barricade and this potential back entrance feels more secure.  Great work.";
+					increase policerepair by 2;
+				otherwise:
+					say "     You have to go back and get some bigger tools to deal wit the damaged door.  Telling Alexandra about the problem, she joins you in trying to deal with it.  You do your best to try and pound the door back into shape, but it's very hard work.  You are able to partially undo the warp in it, getting it straight enough to partially close and to latch.  It's still in bad shape and you can see outside through the top and bottom corner, but at least it's not hanging open.  A few heavy objects are added as a further barricade and this potential back entrance feels more secure.  Good going.";
+					increase policerepair by 1;
+			now pr_task04 is true;
+		otherwise:
+			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done is beyond your limited capabilities.  You do deal with a few more odds and ends, but it looks like you've done a very thorough job.  The place certainly isn't in great shape, but it looks a little better than before and seems quite secure thanks to your hard work.  Alexandra seems pleased as well, thanking you with a quick hug before regaining her composure.";
+		say "     'Ahem.  Sorry about that.  You've just been such a good friend.  Thanks again for all your help.'  She straightens her shirt and heads off quickly, claiming she needs to do some rounds.  The scent of canine arousal lingers for a little while even after her departure.";
+		now pr_task04 is true;
+		now AT_Repair is true;
+	follow the turnpass rule;
+	now lastpolicerepair is turns;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"claw hammer"	"A carpentry hammer with a strong head and a clawed back."	3	claw hammer
+
+claw hammer is an armament. It is part of the player. It has a weapon "[one of]your hammer[or]your claw hammer[or]your carpenter's hammer[or]the hammer[or]the claw hammer[at random]". The weapon damage of claw hammer is 6. The weapon type of claw hammer is "Melee". It is not temporary.
+
+the scent of the claw hammer is "The sturdy hammer smells of metal and sweat.";
+
+
+
+[
+Obtain some medical supplies from the Hospital?  Paula? - secondary (potential gain)
+Perform some repairs via stat checks.  Limited number of attempts per turn.
+]
+
+
+
+
+to say A_Task52:
+	say "***";
+[	if hp of Paula is 0:
+		say "***";
+	otherwise if hp of Paula is 1:	[unable to get supplies - need to return]
+		say "***";
+	otherwise if hp of Paula is 2:	[got supplies w/o Paula]
+		say "***";
+		now AT_Paula is true;
+	otherwise:						[got supplies and Paula]
+		say "***";
+		now AT_Paula is true;
+]
+
 
 
 Section 11 - Endings
