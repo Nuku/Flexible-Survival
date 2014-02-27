@@ -466,7 +466,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;				
 		
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 4 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 8 succeeds):	
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: NORM CARL FUCKS BETA FANG - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";		
@@ -483,7 +483,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;		
 		
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 4 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 8 succeeds):	
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FANG FUCKS SUB CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";		
