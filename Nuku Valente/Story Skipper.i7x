@@ -601,6 +601,14 @@ To reciting2:
 					now NPCintCounter is turns;
 					now Angel vs Demons is unresolved;
 					now Burned-Out Chapel is unknown;
+					if hp of Elijah is 1 or hp of Elijah is 2:
+						now the icon of Elijah is Figure of Elijah_naked_icon;
+					otherwise if hp of Elijah is 3:
+						now the icon of Elijah is Figure of Elijah_virgin_icon;
+					otherwise if hp of Elijah is 4:
+						now the icon of Elijah is Figure of Elijah_good_icon;
+					otherwise if hp of Elijah is 99:
+						now the icon of Elijah is Figure of Elijah_evil_icon;
 					if hp of Elijah > 0:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
@@ -2284,6 +2292,14 @@ Carry out reciting:
 					now NPCintCounter is turns;
 					now Angel vs Demons is unresolved;
 					now Burned-Out Chapel is unknown;
+					if hp of Elijah is 1 or hp of Elijah is 2:
+						now the icon of Elijah is Figure of Elijah_naked_icon;
+					otherwise if hp of Elijah is 3:
+						now the icon of Elijah is Figure of Elijah_virgin_icon;
+					otherwise if hp of Elijah is 4:
+						now the icon of Elijah is Figure of Elijah_good_icon;
+					otherwise if hp of Elijah is 99:
+						now the icon of Elijah is Figure of Elijah_evil_icon;					
 					if hp of Elijah > 0:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
