@@ -1,7 +1,7 @@
 Version 1 of Megakitty for FS by Stripes begins here.
 [Version 1.0 - Unlocking 'Big Momma Megakitty']
 
-"Adds a boss-level Margay referred to as the 'Megakitty' and named 'Big Momma'."
+"Adds a roaming boss-level Margay referred to as the 'Megakitty' and named 'Big Momma'."
 
 MKunleashed is a truth state that varies.  MKunleashed is usually false.
 MKmet is a number that varies.		[# of encounters]

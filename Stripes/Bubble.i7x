@@ -24,18 +24,18 @@ to say bubbledesc:
 Section 2 - Conversation
 
 Instead of conversing the Bubble:
-	if vixdol < 4:
-		say "ERROR-Bubble-[vixdol]C: Something funky's going on here.";
-	otherwise if vixdol is 4:
+	if hp of Bubble < 4:
+		say "ERROR-Bubble-[hp of Bubble]C: Something funky's going on here.";
+	otherwise if hp of Bubble is 4:
 		say "     'This is such a fun place you've got here,' she giggles happily.  There's lots of space[if the number of bunkered people + the number of booked people > 3], lots of new friends[end if] and plenty of interesting stuff to go see outside.  Thanks for letting me stay here, cutie.'  She gives you a kiss on the cheek while giving your ass a squeeze before bounding around happily, only the weight of her sneakers keeping her partly grounded.";
-		now vixdol is 5;
-	otherwise if vixdol is 6 and a random chance of 1 in 3 succeeds:
+		now hp of Bubble is 5;
+	otherwise if hp of Bubble is 6 and a random chance of 1 in 3 succeeds:
 		say "     'I've been having such a great time since I've come here.  Playing [']High Dive['] is especially fun!' she says excitedly.  Confused, you ask her what she's talking about and she just giggles.  'I'll show you.  It's loads of fun!'";
 		say "     Bending over to untie her sneakers, she ends up flashing you a fine view of her delectable pussy and bubble butt.  'I got these sneakers so I don't bounce around too much while I'm having fun,' she says with some clarity.  'But they'd mess up things up now,' she adds with a giggle.  After pulling them off, she snuggles her own tail and, pinching the air valve at its tip, takes a few quick breaths and blows into it.  This causes her body to start to swell up, inflating herself until she's got a plump, rounded figure.  Full of air, she bounds effortlessly to the balcony area overlooking the main floor and leaps right off.  Crying out, you run to the balcony railing to see her floating down at a rather sedate speed while she giggles happily.";
-		say "     Reaching the bottom, she bounces lightly off of the floor and rises back up several feet, rolling in mid-air as she does.  'Come on.  You try it now,' she calls up merrily.  'It's awesome!'  Responding that you don't think that'd be such a good idea, you head over to take the stairs down, only to find her bounding buoyantly up them four or five steps at a time.  Once she reaches the top, she dives right over the railing again.  She floats down, bounces around, rushes back up and leaps off again repeatedly, getting seemingly endless amusement out of it.";
-		now vixdol is 7;
+		say "     Reaching the bottom, she bounces lightly off of the floor and rises back up several feet, rolling in mid-air as she does.  'Come on.  You try it now,' she calls up merrily.  'It's awesome!'  Responding that you don't think that'd be such a good idea, you head over to take the stairs down, only to find her bounding buoyantly up them four or five steps at a time.  Once she reaches the top, she dives right over the railing again, this time with a spin.  She twirls down, bounces around, rushes back up and leaps off again repeatedly, getting seemingly endless amusement out of it.";
+		now hp of Bubble is 7;
 	otherwise:
-		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there.  They have such a sexy sheen to their latex.'[or]'Thanks again for saving me.  From what I saw of it, getting to me couldn't have been easy.  And now we can have lots fo fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon.  It's great.'[or]'I was so stressed before.  So many worries and problems.  All pointless stuff that was weighing me down.  But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if skinname of player is listed in infections of Latexlist]'Your skin feels so nice like this,' she says, running her paws over your smooth hide.[otherwise]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest.[end if][or][if vixdol is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve.  'The great thing about the new me is I can have any sexy figure I want.  Or you want,' she adds with coquettishly.[otherwise]She giggles vapidly and makes some air-headed comment.[end if][or]She giggles vapidly and makes some air-headed comment.[in random order]";
+		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there.  They have such a sexy sheen to their latex.'[or]'Thanks again for saving me.  From what I saw of it, getting to me couldn't have been easy.  And now we can have lots fo fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon.  It's great.'[or]'I was so stressed before.  So many worries and problems.  All pointless stuff that was weighing me down.  But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if skinname of player is listed in infections of Latexlist]'Your skin feels so nice like this,' she says, running her paws over your smooth hide.[otherwise]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest.[end if][or][if hp of Bubble is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve.  'The great thing about the new me is I can have any sexy figure I want.  Or you want,' she adds with coquettishly.[otherwise]She giggles vapidly and makes some air-headed comment.[end if][or]She giggles vapidly and makes some air-headed comment.[in random order]";
 
 
 Section 3 - Sexytimes
@@ -89,7 +89,7 @@ to say bubblesex00:
 	now title entry is "Rim job";
 	now sortorder entry is 7;
 	now description entry is "have your ass licked";	]
-	if vixdol >= 7:
+	if hp of Bubble >= 7:
 		choose a blank row in table of fucking options;
 		if libido of Bubble is 0:
 			now title entry is "Inflate";
@@ -131,7 +131,7 @@ to say bubblesex00:
 					say "[bubblesex09]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
-	if vixdol is 5, now vixdol is 6;
+	if hp of Bubble is 5, now hp of Bubble is 6;
 	now libido of player is ( libido of player * 2 ) + 50 / 3;
 	now lastfuck of Bubble is turns;
 	wait for any key;
@@ -196,7 +196,7 @@ to say bubblesex09:
 
 Section 9 - Information
 
-[ vixdol                 ]
+[ hp of Bubble           ]
 [ 0 = not started        ]
 [ 1 = Bouncy Castle open ]
 [ 2 = Arrive at BC       ]
@@ -205,6 +205,9 @@ Section 9 - Information
 [ 5 = talked             ]
 [ 6 = had sex            ]
 [ 7 = High Dive scene    ]
+[ ...                    ]
+[ 99 = too late @ BC     ]
+[ 100 = too late         ]
 
 [ libido of Bubble        ]
 [ 0 = slender (deflated)  ]

@@ -9,6 +9,7 @@ Aussie Pub is a situation.
 The sarea of Aussie Pub is "Red";
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
+
 when play begins:
 	add Aussie Pub to badspots of girl;
 	add Aussie Pub to badspots of guy;
@@ -95,6 +96,10 @@ to say down under pub scene:
 				move the player to Gillian's Flat;
 		otherwise:
 			say "[downunderpubvisit]";
+	if location of player is Down Under Pub:
+		say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
+		attempttowait;
+		move the player to Entrance to the Red Light District;
 
 to say downunderpubvisit:
 	[puts red kangaroo as lead monster in case of impregnation]
@@ -149,13 +154,7 @@ to say downunderpubvisit:
 		attempttowait;
 		say "     As you're getting ready to leave, the barmaid comes up to you again.  She gives your ass a firm squeeze and kisses you lustfully.  'Mmm... I've been keeping my eye on you, hot stuff.  How about you drop by and see me some time after hours?  I'm in the flat upstairs.  Oh, and the name's Gillian,' she adds as she's turning to go, giving her thick tail and meaty rump an enticing sway.";
 		increase hp of Gillian by 1;
-
-
-after navigating Down Under Pub:
-	if location of player is not Gillian's Flat:
-		say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
-		attempttowait;
-		move the player to Entrance to the Red Light District;
+		now Gillian's Flat is known;
 
 
 Section 3 - Various sex scenes
@@ -251,7 +250,7 @@ to say roofloorshow:
 Section 4 - Gillian's Flat
 
 Gillian's Flat is a room.  It is fasttravel.  It is private.  It is sleepsafe.
-The description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here.  It's nothing fancy, but it certainly beats living out on the streets, especially these days.  The studio apartment is sparsely decorated, having a loveseat and a bed and not much else.  The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around.  There's a couple of generic posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub.  Exiting and heading [bold type]east[roman type] will lead you back to the district's entrance.".
+The description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here.  It's nothing fancy, but it certainly beats living out on the streets, especially these days.  The studio apartment is sparsely decorated, having a loveseat and a bed and not much else.  The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around.  There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub.  Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
 [Downtopub is a door.  Downtopub is down from Gillian's Flat.
 PlaceholderforDUP is a room.  PlaceholderforDUP is down of Downtopub.
 EasttoRLD is a door.  EasttoRLD is east from Gillian's Flat.
@@ -435,9 +434,12 @@ to say randomdesc2:	[female]
 		now slutname is "wolf";
 
 [ hp of Gillian               ]
-[ 0 - no contact              ]
-[ 1 - first visit             ]
-[ 2 - sex her up again in pub ]
+[ 0 = no contact              ]
+[ 1 = first visit             ]
+[ 2 = sex her up again in pub ]
+[ 3 = sex again in pub        ]
+[ 4 = invited up to her flat  ]
+[ 5 = spoke w/Gillian         ]
 
 [ libido of Gillian     ]
 [ positions for pub sex ]
