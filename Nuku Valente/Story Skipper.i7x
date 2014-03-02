@@ -1643,7 +1643,7 @@ To reciting2:
 						now kristenmsg3 is true;
 						now carried of Janice's blouse is 0;
 					otherwise:
-						now kristenmsg is false;
+						now kristenmsg3 is false;
 						now carried of Janice's blouse is 0;
 			-- 178: [libido of Kristen]
 				if the player's command matches "[number]":
@@ -3401,7 +3401,7 @@ Carry out reciting:
 						now kristenmsg3 is true;
 						now carried of Janice's blouse is 0;
 					otherwise:
-						now kristenmsg is false;
+						now kristenmsg3 is false;
 						now carried of Janice's blouse is 0;
 			-- 178: [libido of Kristen]
 				if the player's command matches "[number]":

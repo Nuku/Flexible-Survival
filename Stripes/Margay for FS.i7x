@@ -257,6 +257,7 @@ when play ends:
 				say "     You move in together soon enough and you take care of her as her belly swells with new life.  The waitress does not transform, your treatment managing to hold your infection from spreading to her.  When your children are born, they are lovely margay kittens with a pair of pussies, much to your delight.  Your partner is pleased as well, cherishing her twin girls and already talking about you breeding her again.";
 
 
+[
 Notes:
 Hi there! I was just wondering if I would be able to get a a couple extensions and maybe a new NPC based off the Margay creature currently in FS?
 
@@ -325,7 +326,7 @@ Okay, so have you sent 3 hours and another 5 hours or did you only send 5 hours?
 Ive only made one payment of 75 USD so 5 hours like you told me to do earlier. :) 
 
 --
-
+]
 
 
 Margay for FS ends here.

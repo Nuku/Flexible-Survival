@@ -6,7 +6,7 @@ Section 1 - Starting Event
 
 Snared Vixen is a situation.  The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
-hp of Bubble is a number that varies.
+
 vixcountdown is a number that varies.
 dolphinbundle is a number that varies.
 dolphinlist is a list of text that varies.
