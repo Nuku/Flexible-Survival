@@ -19,7 +19,7 @@ to say losetocougar:
 		say "     After your hot drink is done, she moves on to satisfying her lusts";
 	otherwise if a random chance of 1 in 3 succeeds:
 		say ".";
-		say "     She rubs herself against you as she moves forward, bringing her crotch to your face.  Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock.  Knowing what's expected of you and[if hp of player > 0]accepting that you must satisfy the feline's needs[otherwise]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it.  You lick and suck at the dribbling member while she rumbles and purrs in pleasure.";
+		say "     She rubs herself against you as she moves forward, bringing her crotch to your face.  Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock.  Knowing what's expected of you and [if hp of player > 0]accepting that you must satisfy the feline's needs[otherwise]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it.  You lick and suck at the dribbling member while she rumbles and purrs in pleasure.";
 		say "     After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively";
 	if cocks of player > 0 and cunts of player is 0:
 		say "[cougarride]";
