@@ -6336,6 +6336,7 @@ Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
+Include Yuppy Mink by StripeGuy.
 Include Caveman by TheRecipe.
 Include Viking by Wahn.
 Include Seraphim by Wahn.
