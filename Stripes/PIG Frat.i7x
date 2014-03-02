@@ -51,6 +51,7 @@ to say phiiotagammadesc:
 			otherwise:
 				say "     You tell him that it was your mistake and leave as quickly as you can without stirring up the porcine people.";
 				now piginitiation is 1;
+		attempttowait;
 		move player to College Campus;
 	otherwise if piginitiation is 1:
 		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds].  There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if].  That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order].  Seeing you coming up, he grunts and gets up to block the steps.  Shall you ask to [link]join (Y)[as]y[end link] the frat or take the hint and [link]leave (N)[as]n[end link]?";
@@ -65,6 +66,7 @@ to say phiiotagammadesc:
 		otherwise:
 			say "     You tell him that it was your mistake and leave as quickly as you can without stirring up the porcine people.";
 			now piginitiation is 1;
+		attempttowait;
 		move player to College Campus;
 	otherwise if piginitiation is 2 or piginitiation is 3:
 		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds].  There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if].  That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order].  Seeing you coming up, he grunts and gets up to block the steps.";
@@ -72,6 +74,7 @@ to say phiiotagammadesc:
 			say "     'Look, I told you that you can't join up without a sponsor.  The mighty Phi Iota Gamma...'  Again, he pauses to oink and snort loudly along with his frat brothers.  '...doesn't let just anyone join up.  You'll need to find a senior member in good standing willing to support your joining up.  As you can see, we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.'  And with this, another round of oinking and snorting starts up.  No further ahead for your troubles, you turn to go even before the noise dies down.";
 		otherwise:
 			say "     'Look, I'm glad to see you're eager to join up, but you can't do so without a sponsor.  The mighty Phi Iota Gamma...'  Again, he pauses to oink and snort loudly along with his frat brothers.  '...is the best around.  You'll need to find a senior member in good standing willing to support your joining up.  You might look like you'll fit in, but we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.'  No further ahead for your troubles, you turn to go even before the noise dies down.";
+		attempttowait;
 		move player to College Campus;
 	otherwise if piginitiation is 4:
 		say "     The Phi Iota Gamma fraternity is quite literally a sty, but it suits its residents.  The large, multi-room frat house is populated by carousing, lustful pigs in various states of inebriation, fornication and incapacitation.  Aside from the boars and sows lounging out on the front lawn and the burly doorkeeper (Big Willy) keeping an eye on things from the porch, there's more members inside the common room (littered with empty beer cans), kitchen (devoid of any real food) and their bedrooms (reeking of porcine sex).  A lot of the pigs here are passed out right now after their last rousing party, but surely you can find a frat member or two to have some fun with if you'd like.";
@@ -238,5 +241,13 @@ to say fratmembersex02:
 
 to say fratmembersex03:
 	say "***";
+
+
+[ piginitiation ]
+[ 0 = not encountered ]
+[ 1 = encountered     ]
+[ 2 = asked to join   ]
+[ 3 = told Philip     ]
+[ 4 = initiated       ]
 
 PIG Frat ends here.
