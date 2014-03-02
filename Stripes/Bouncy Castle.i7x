@@ -6,7 +6,7 @@ Section 1 - Starting Event
 
 Snared Vixen is a situation.  The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
-vixdol is a number that varies.
+hp of Bubble is a number that varies.
 vixcountdown is a number that varies.
 dolphinbundle is a number that varies.
 dolphinlist is a list of text that varies.
@@ -31,7 +31,7 @@ Instead of resolving a Snared Vixen:
 		otherwise if hasgills is 1:
 			say "     It would take a bit of work, but you should be able to swim all the way out to the bouncy castle thanks to your gills.";
 		now Bouncy Castle is known;
-		now vixdol is 1;
+		now hp of Bubble is 1;
 		now vixcountdown is 29;
 		now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" };
 		let templist be { "A", "C", "D", "E"};
@@ -50,13 +50,13 @@ Section 2 - Travelling to the Bouncy Castle
 rowing is a truth state that varies.  rowing is usually false.
 
 instead of navigating Bouncy Castle:
-	if vixdol is 0:
+	if hp of Bubble is 0:
 		say "Go where now?";
 		stop the action;
-	if vixdol is 100:
+	if hp of Bubble is 100:
 		say "By this point, there's no reason to risk going there.";
 		stop the action;
-	otherwise if vixdol > 2:
+	otherwise if hp of Bubble > 2:
 		say "Don't you remember?  You sent it out to sea.";
 		stop the action;
 	if hasgills is 0 and boatfound <= 1:
@@ -219,10 +219,10 @@ Book 1 - Ground Floor
 Chapter 1 - Entrance
 
 to say bcentrance:
-	if vixdol is 1:
+	if hp of Bubble is 1:
 		say "     As you approach your destination, you can see it's much larger than you'd originally guessed.  Being the size of a good sized home, it could probably accommodate several dozen rambunctious, jumping kids at once.  It even seems to be two tiered, with a waterslide coming down from the upper level on both the east and west sides.  There is also a taller tower somewhere off at the back.  You didn't think these things were made this large, but maybe.  The exterior of the castle is sky blue, making it difficult to see at a distance.  The large inflatable has been secured by two long ropes which lead to rocky outcroppings, mooring it safely inbetween them.  But despite this, it does shift and sway around considerably.  Coupling that with its bouncy floor makes movement inside rather difficult.";
 		say "     You pull yourself into the first room and look around the entrance room.  It has a soft, bouncy floor and is a couple of feet above the water level, necessitating an easy climb up a mesh ladder that hangs from the entrance mouth.  The interior of this room has a dark green floor, blue walls with yellow arches and columns and a ceiling of red.  There's a couple of beach balls and pool noodles left scattered on the floor here, probably by the airheaded dolphin girls[if daytimer is night].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].";
-		now vixdol is 2;
+		now hp of Bubble is 2;
 		increase score by 5;
 	otherwise:
 		say "     This inflatable castle floats on the water, tethered between two rocks by thick ropes.  It sways and bobs on the water, adding to the instability of its floor, making it difficult for you to move around.  The bouncy castle itself is brightly coloured with the exterior a sky blue, making it hard to spot on the water in the distance.  The interior has a dark green floor, blue walls with yellow arches and columns, and a ceiling of red vinyl[if daytimer is night].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].";
@@ -1153,7 +1153,7 @@ carry out dolchecking:
 		otherwise:
 			say "Error - unknown variation.";
 		increase dolcastleturn by 1;
-		if remainder after dividing dolcastleturn by 3 is 0 and vixdol is not 3:
+		if remainder after dividing dolcastleturn by 3 is 0 and hp of Bubble is not 3:
 			now dolcastleturn is 0;
 			follow the turnpass rule;		[three searches per turn]
 
@@ -1505,7 +1505,7 @@ to say bcchairfinal1:
 				say "     Frustrated with the time you've wasted on this project, you swim to the mooring lines securing the castle and untie them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 			move player to Beach Plaza;
 			now Bouncy Castle is unknown;
-			now vixdol is 99;
+			now hp of Bubble is 99;
 			decrease score by 10;
 
 
@@ -1581,7 +1581,7 @@ to say bcfinal3:		[Escape - leave w/o vixen]
 		say "     Frustrated with the time you've wasted on this project, you swim to the mooring lines securing the castle and untie them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 	move player to Beach Plaza;
 	now Bouncy Castle is unknown;
-	now vixdol is 99;
+	now hp of Bubble is 99;
 	decrease score by 10;
 
 
@@ -1605,13 +1605,13 @@ to say bcfinalsuccess:
 		otherwise:
 			say "     Finding your crotch bare, gives it a few kisses, saying it's so sad that you're like this when there's so much sexy fun to be had.  'At least there's no shortage of people out there who'd be willing to help you solve your little problem,' she giggles.  Kneading your rear, she continues to kiss and lick you, moving back to your crinkled hole instead[if anallevel is 1].  She gives it a few licks while fingering herself to a quick orgasm[otherwise].  She brushes her latex tongue across your anal ring slowly before wriggling it into you.  You moan at the slick, squirming penetration and unconsciously push your rear back, seeking more.  She caresses your needy bottom with her inflatable paws and pushes her tongue deeper.  It even feels like it's swelling up inside you.  Trembles of undirected pleasure run through your body as you can only grind back against her muzzle and squeeze down around her tongue.  Eventually, she pops her tongue free with a wet slurp.  Looking back, you can see it was indeed inflated and stretched out like a long, thin balloon.  'Wooo!  That was fun!' she giggles as soon as her tongue's deflated back to its normal size and she's able to speak again[end if].";
 		say "     'Say!  I can't really remember my name anymore,' she says as cheerfully as everything else that bubbles out of her.  'That means I need a new one.  Let's see... how about... Bubble?  Yeah!  I'm Bubble,' she yips happily.";		
-		now vixdol is 4;
+		now hp of Bubble is 4;
 		move Bubble to Grey Abbey 2F;
 		move player to Grey Abbey 2F;
 		now battleground is "void";
 	otherwise:
 		say "     'Oh...  Well, thanks for saving me, I guess,' she says, briefly disappointed, before her mind wanders again.  'Maybe some else out there would like a little latex lovin['].  I know I do,' she yips merrily.  'Well, time for me to head off, sweety.  Thanks for the rescue,' she says, giving your ass a squeeze before dashing off with a girlish giggle.";
-		now vixdol is 3;
+		now hp of Bubble is 3;
 		move player to Public Beach;
 	increase carried of water bottle by 3;
 	increase score by 60;
@@ -1628,7 +1628,7 @@ Instead of scavenging while player is in Bouncy Castle:
 	say "There is nowhere to scavenge out here.";
 
 an everyturn rule:
-	if vixdol is 2 and the player is in Throne Room:
+	if hp of Bubble is 2 and the player is in Throne Room:
 		now dolcastleturn is 0;
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:
@@ -1639,9 +1639,9 @@ an everyturn rule:
 				say "     Frustrated with the time you've wasted on this project, you leap back into the water and swim to the mooring lines securing the castle and untie them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 			move player to Beach Plaza;
 			now Bouncy Castle is unknown;
-			now vixdol is 99;
+			now hp of Bubble is 99;
 			decrease score by 10;
-	otherwise if vixdol is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets or the player is in Great Hall or the player is in King's Chambers or the player is in Lower Tower or the player is in Upper Tower or the player is in Tower Turret or the player is in Upper Hall or the player is in Eastern Parapets or the player is in Western Parapets ):
+	otherwise if hp of Bubble is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets or the player is in Great Hall or the player is in King's Chambers or the player is in Lower Tower or the player is in Upper Tower or the player is in Tower Turret or the player is in Upper Hall or the player is in Eastern Parapets or the player is in Western Parapets ):
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:
 			say "     As you pause for a moment to catch your breath, you hear loud, muffled cries of ecstacy coming from somewhere on the upper level of the castle.  Given the mix of yiffs and trills to the sound and how they finish by becoming purely trills of delight, you sadly have to assume that was the vixen girl finally giving in to whatever is happening to her.  Deciding there's little point in remaining here any longer, you push your way back to the entrance.";
@@ -1651,14 +1651,14 @@ an everyturn rule:
 				say "     Frustrated with the time you've wasted on this project, you leap back into the water and swim to the mooring lines securing the castle and untie them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 			move player to Beach Plaza;
 			now Bouncy Castle is unknown;
-			now vixdol is 99;
+			now hp of Bubble is 99;
 			decrease score by 10;
-	otherwise if vixdol is 1 or vixdol is 2:
+	otherwise if hp of Bubble is 1 or hp of Bubble is 2:
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:
 			say "     Your thoughts stray back to the vixen and dolphin girls you saw on the beach.  It's been several days, so it's probably too late to help her now.";
 			decrease score by 10;
-			now vixdol is 100;
+			now hp of Bubble is 100;
 
 
 
