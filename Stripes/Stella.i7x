@@ -66,6 +66,7 @@ Section 1 - Stella the Dalmatian
 Stella is a woman.
 The description of Stella is "[stelladesc]";
 The conversation of Stella is { "Try my dick!" }.
+StellaNPCInt is a text that varies.  StellaNPCInt is usually "AAAAAAAAAAAA".
 
 the scent of the Stella is "Stella smells of canine arousal, the scent of sex lingering around her always.";
 
