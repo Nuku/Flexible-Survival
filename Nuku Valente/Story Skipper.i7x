@@ -1,5 +1,5 @@
-Version 186 of Story Skipper by Nuku Valente begins here.
-[ Version 186 - Kristen, Brooke, Bubble, Newt, the Megakitty, Phi Iota Gamma, Down Under Pub + Gillian and Stella added ]
+Version 188 of Story Skipper by Nuku Valente begins here.
+[ Version 188 - Orc Lair added ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
 The File of Trixsave2  (owned by another project) is called "txsave2".
@@ -44,7 +44,7 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}[if MKunleashed is true]1[otherwise]0[end if]}[piginitiation]}[hp of Gillian]}[hp of Stella]}AAAAAAAAAAAA";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}[if MKunleashed is true]1[otherwise]0[end if]}[piginitiation]}[hp of Gillian]}[hp of Stella]}[OrcSlaverStatus]}[CellDoorStatus]}AAAAAAAAAAAA";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -1710,6 +1710,21 @@ To reciting2:
 						move Stella to Bunker;
 			-- 186:	[Stella threesome code - placeholder]
 				let xstella be 0;	[do nothing]
+			-- 187: [OrcSlaverStatus]
+				if the player's command matches "[number]":
+					now OrcSlaverStatus is the number understood;
+					if OrcSlaverStatus is 0:
+						now Orc Lair Side Entrance is not known;
+					otherwise:					
+						now Orc Lair Side Entrance is known;
+						now OrcSlaverCaptureTime is turns;
+			-- 188: [CellDoorStatus - Orc Lair]
+				if the player's command matches "[number]":
+					now CellDoorStatus is the number understood;
+					if CellDoorStatus is 1 or CellDoorStatus is 3:
+						now the Cell Door 1 is unlocked;
+					if CellDoorStatus is 2 or CellDoorStatus is 3:
+						now the Cell Door 2 is unlocked;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3468,6 +3483,21 @@ Carry out reciting:
 						move Stella to Bunker;
 			-- 186:	[Stella threesome code - placeholder]
 				let xstella be 0;	[do nothing]
+			-- 187: [OrcSlaverStatus]
+				if the player's command matches "[number]":
+					now OrcSlaverStatus is the number understood;
+					if OrcSlaverStatus is 0:
+						now Orc Lair Side Entrance is not known;
+					otherwise:					
+						now Orc Lair Side Entrance is known;
+						now OrcSlaverCaptureTime is turns;
+			-- 188: [CellDoorStatus - Orc Lair]
+				if the player's command matches "[number]":
+					now CellDoorStatus is the number understood;
+					if CellDoorStatus is 1 or CellDoorStatus is 3:
+						now the Cell Door 1 is unlocked;
+					if CellDoorStatus is 2 or CellDoorStatus is 3:
+						now the Cell Door 2 is unlocked;			
 		if upit is 1, decrease z by 58;
 		if upit is 2, decrease z by 160;
 	if hospquest is 3, now hospquest is 2;
