@@ -19,6 +19,8 @@ Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
+Figure of Naga_icon is the file "Naga.png".
+Figure of OrcWarrior_icon is the file "OrcWarrior.png".
 Figure of PinkGel_icon is the file "PinkGel.png".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
@@ -28,6 +30,7 @@ Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene grapic]
 Figure of succubus_icon is the file "succubus.jpg".
+Figure of ThoughtEater_icon is the file "ThoughtEater.png".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.png".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
@@ -112,6 +115,8 @@ title	icon(figure name)
 "Latex Vixen"	Figure of LatexVixen_icon
 "Mannequin"	Figure of Mannequin_icon
 "Messy Pig"	Figure of MessyPig_icon
+"Naga"	Figure of Naga_icon
+"Orc Warrior"	Figure of OrcWarrior_icon
 "Plush Lion"	Figure of PlushLion_icon
 "Pink Gel"	Figure of PinkGel_icon
 "ram"	Figure of Ram_icon
@@ -120,6 +125,7 @@ title	icon(figure name)
 "Snow Leopard"	Figure of SnowLeopard_icon
 "Spartan"	Figure of SpartanHelot_icon
 "Succubus"	Figure of succubus_icon
+"Thought Eater"	Figure of ThoughtEater_icon
 "Tiger Cop"	Figure of SgtMarks_icon
 "Tigress Hooker"	Figure of TigressHooker_icon
 "Triceratops"	Figure of Triceratops_icon
@@ -154,6 +160,8 @@ carry out artistcredits:
 	say "     Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Naga by Rastear @ y-gallery.net[line break]";
+	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Shadow Beast by Fennris @ furaffinity.net[line break]";
@@ -162,6 +170,7 @@ carry out artistcredits:
 	say "     Spartan by Darian821 @ y-gallery.net[line break]";
 	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Succubus by kv2001ar @ furaffinity.net[line break]";
+	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
 	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
 	say "     Triceratops by HBruton @ furaffinity.net[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
