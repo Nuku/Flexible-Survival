@@ -44,7 +44,7 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}[if MKunleashed is true]1[otherwise]0[end if]}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}AAAAAAAAAAAA}[OrcSlaverStatus]}[CellDoorStatus]";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -1675,14 +1675,15 @@ To reciting2:
 					if hp of Athanasia < 11, now hp of Newt is 0;
 					if hp of Newt >= 4:
 						move Newt to Volcanic Cave;
-			-- 182:	[Megakitty]
+			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
 				if the player's command matches "[number]":
-					if the number understood is 1 and girl is not banned and furry is not banned:
+					now tempnum is 0;	[do-nothing command]
+[					if the number understood is 1 and girl is not banned and furry is not banned:
 						setmonster "Megakitty";
 						choose row monster from the table of random critters;
 						if name entry is "Megakitty":
 							now MKunleashed is true;
-							now area entry is "Midway";
+							now area entry is "Midway";		]
 			-- 183:	[Phi Iota Gamma]
 				if the player's command matches "[number]":
 					now piginitiation is the number understood;
@@ -1711,7 +1712,7 @@ To reciting2:
 			-- 186:	[Stella threesome code - placeholder]
 				now StellaNPCInt is "[the player's command]";	[do nothing]
 				let xstella be 0;	[do nothing]
-			-- 188: [OrcSlaverStatus]
+			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
 					if OrcSlaverStatus is 0:
@@ -1719,13 +1720,13 @@ To reciting2:
 					otherwise:					
 						now Orc Lair Side Entrance is known;
 						now OrcSlaverCaptureTime is turns;
-			-- 189: [CellDoorStatus - Orc Lair]
+			-- 188: [CellDoorStatus - Orc Lair]
 				if the player's command matches "[number]":
 					now CellDoorStatus is the number understood;
 					if CellDoorStatus is 1 or CellDoorStatus is 3:
 						now the Cell Door 1 is unlocked;
 					if CellDoorStatus is 2 or CellDoorStatus is 3:
-						now the Cell Door 2 is unlocked;
+						now the Cell Door 2 is unlocked;			
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3449,14 +3450,15 @@ Carry out reciting:
 					if hp of Athanasia < 11, now hp of Newt is 0;
 					if hp of Newt >= 4:
 						move Newt to Volcanic Cave;
-			-- 182:	[Megakitty]
+			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
 				if the player's command matches "[number]":
-					if the number understood is 1 and girl is not banned and furry is not banned:
+					now tempnum is 0;	[do-nothing command]
+[					if the number understood is 1 and girl is not banned and furry is not banned:
 						setmonster "Megakitty";
 						choose row monster from the table of random critters;
 						if name entry is "Megakitty":
 							now MKunleashed is true;
-							now area entry is "Midway";
+							now area entry is "Midway";		]
 			-- 183:	[Phi Iota Gamma]
 				if the player's command matches "[number]":
 					now piginitiation is the number understood;
@@ -3485,7 +3487,7 @@ Carry out reciting:
 			-- 186:	[Stella threesome code - placeholder]
 				now StellaNPCInt is "[the player's command]";	[do nothing]
 				let xstella be 0;	[do nothing]
-			-- 188: [OrcSlaverStatus]
+			-- 187: [OrcSlaverStatus]
 				if the player's command matches "[number]":
 					now OrcSlaverStatus is the number understood;
 					if OrcSlaverStatus is 0:
@@ -3493,7 +3495,7 @@ Carry out reciting:
 					otherwise:					
 						now Orc Lair Side Entrance is known;
 						now OrcSlaverCaptureTime is turns;
-			-- 189: [CellDoorStatus - Orc Lair]
+			-- 188: [CellDoorStatus - Orc Lair]
 				if the player's command matches "[number]":
 					now CellDoorStatus is the number understood;
 					if CellDoorStatus is 1 or CellDoorStatus is 3:
