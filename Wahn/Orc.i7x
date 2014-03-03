@@ -460,7 +460,7 @@ The description of Breeder Lockup A is "     You're in a room holding two large 
 Cell Door 1 is a door.
 Cell Door 1 is west of Breeder Lockup A;
 Cell Door 1 is lockable and locked.
-The description of Cell Door 1 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]"; 
+The description of Cell Door 1 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell.[end if]"; 
 Cell Key unlocks Cell Door 2.
 
 Slave Cell 1 is a room. 
@@ -471,7 +471,7 @@ The description of Slave Cell 1 is "     This large cell holds a bed in the back
 Cell Door 2 is a door.
 Cell Door 2 is east of Breeder Lockup A;
 Cell Door 2 is lockable and locked.
-The description of Cell Door 2 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]"; 
+The description of Cell Door 2 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell.[end if]"; 
 Cell Key unlocks Cell Door 2.
 
 Slave Cell 2 is a room. 
