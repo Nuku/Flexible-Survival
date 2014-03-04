@@ -40,7 +40,12 @@ before sniffing:
 
 
 carry out sniffing:
-	say "It smells like a [noun].";
+	if noun is a person:
+		say "[noun] smells pretty much as you'd expect.";
+	otherwise if noun is a room:
+		say "This place smells as you'd expect.";
+	otherwise:
+		say "It smells pretty normal for a [noun].";
 
 
 heresniffing is an action applying to nothing.

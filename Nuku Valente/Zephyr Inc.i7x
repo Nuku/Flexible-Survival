@@ -87,9 +87,9 @@ Carry out vialselling:
 	if found is 0:
 		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for our bureau's collection.'  She credits you for [special-style-1][basevalue][roman type] freecreds.";
 	otherwise if found is 1:
-		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [special-style-1][basevalue][roman type] freecred(s).";
+		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [special-style-1][basevalue][roman type] freecred.";
 	otherwise if found >= 2:
-		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [special-style-1][basevalue][roman type] freecred(s) for it.";
+		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
 	increase freecred by basevalue;
 	remove entry z from vials of player;
 	add name entry to vials of Larissa;

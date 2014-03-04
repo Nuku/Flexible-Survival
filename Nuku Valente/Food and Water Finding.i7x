@@ -71,7 +71,7 @@ Instead of resolving a potential resources:
 			add y to invent of player;
 		otherwise if companion of player is Gryphoness:
 			let gryphlets be libido of gryphoness / 4;
-			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease and brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
+			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She bring it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
 			add y to invent of player;
 		otherwise:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
@@ -134,7 +134,7 @@ Instead of resolving a potential resources:
 		if difficulty is greater than dice:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 		otherwise:
-			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack";
+			say "After working out the specifics, you are handed the [y] and stuff it into your backpack";
 			add y to the invent of the player;
 			if "Haggler" is listed in feats of player:
 				let aa be a random number from 1 to charisma of player;

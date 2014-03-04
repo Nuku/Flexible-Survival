@@ -168,8 +168,8 @@ instead of addfeating the fun feats:
 	if "Bouncy Bouncy" is not listed in feats of player:
 		addfeat "One Pair" with "You will not grow more than two breasts.";
 	if "One Pair" is not listed in feats of player:
-		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot.  You won't be loosing any that you might gain.";
-	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
+		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot.  You won't be losing any that you might gain.";
+	addfeat "Singular" with "You are not one to go in halfway. Whatever form your torso takes, the rest tends to follow.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	addfeat "Bad Luck" with "You may end up in back-to-back fights occasionally.";
 	if "Cold Fish" is not listed in feats of player:
