@@ -64,7 +64,7 @@ to say Zebra loss:
 				while calcnumber < 1 or calcnumber > 4:
 					say "Choice? (1-4)>[run paragraph on]";
 					get a number;
-					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 						break;
 					otherwise:
 						say "Invalid choice.  Type [link]1[end link] to get a blowjob, [link]2[end link] to fuck him, [link]3[end link] to ride him or [link]4[end link] to rough him up.";
@@ -103,10 +103,10 @@ to say Zebra loss:
 			otherwise if cunts of player > 0:
 				say "     Now that you have the upper hand in this, what do you want to with the zebra? Get him to lick you [link](1)[as]1[end link], claim a [link](2) ride on his pole[as]2[end link] on your own terms or just give him a [link](3) beating[as]3[end link]?";
 				now calcnumber is 0;
-				while calcnumber < 1 or calcnumber > 2:
-					say "Choice? (1-2)>[run paragraph on]";
+				while calcnumber < 1 or calcnumber > 3:
+					say "Choice? (1-3)>[run paragraph on]";
 					get a number;
-					if calcnumber is 1 or calcnumber is 2:
+					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					otherwise:
 						say "Invalid choice.  Type [link]1[end link] to get a licked, [link]2[end link] to ride him or [link]3[end link] to rough him up.";
