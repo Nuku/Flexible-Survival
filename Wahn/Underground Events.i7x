@@ -47,7 +47,7 @@ Instead of resolving a Captive Breeding:
 		say "     Moving closer, you try talking to the man, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around his mouth, you'd guess something's been... feeding him, to keep him alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused his eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human man. Looking down, you see a puddle of slime on the ground and more of it running down the side of the crate as well as dripping out of the man's asshole. The skin of his belly ripples with movement under it.";
 		say "     [line break]";
 		now CaptiveBreederEncounter is 1;
-		say "     Uh oh - seems like what's in her wants out - now! What do you do? Stay with the man [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
+		say "     Uh oh - seems like what's in him wants out - now! What do you do? Stay with the man [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>[run paragraph on]";
