@@ -1,9 +1,9 @@
-Yuppy Mink by StripeGuy begins here.
+Yuppie Mink by StripeGuy begins here.
 
-"Adds Yuppy Mink to Flexible Survival."
+"Adds Yuppie Mink to Flexible Survival."
 
 when play begins:
-	add { "Yuppy Mink" } to infections of furry;
+	add { "Yuppie Mink" } to infections of furry;
 
 
 Section 1 - Monster Responses
@@ -60,7 +60,7 @@ to say beattheymgirl:
 to say beattheymguy:
 	say "     The poor mink fellow sinks down to his knees, jaunty cap sliding off to clatter across the deck. It splashes into the water, forlornly.";
 	if cocks of player > 0: [male]
-		say "Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppy mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it[']s time to hit the adventuring trail!  ";
+		say "Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppie mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it[']s time to hit the adventuring trail!  ";
 	otherwise if cunts of player > 0: [female]	
 		say "You admire the well tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he[']ll think twice before attacking you![impregchance]"; 
 	otherwise:
@@ -106,7 +106,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
  
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Yuppy Mink"; [Name of your new Monster]
+	now name entry is "Yuppie Mink"; [Name of your new Monster]
 	now attack entry is "[ymgfight]";
 	now defeated entry is "[beattheymg]";
 	now victory entry is  "[losetoymg]";
@@ -157,11 +157,11 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Yuppy Mink":
+	if bodyname of player is "Yuppie Mink":
 		if humanity of player is less than 10:
-			say "     Lost in the inhuman desires that rule your body and the shell of your mind, you leave the city. The dueling needs you feel to breed and rule end up making you quite disfunctional, barely able to even survive until you find your way to another yuppy mink who is not quite as far gone as you are. What begins as a mindless fuckfest eventually becomes something like an arranged marriage, in that they arrange continual survival for you, and your body is married to their genitals. It works out well enough for you in the long run, not that you are ever aware enough to truly realize and appreciate it.";
+			say "     Lost in the inhuman desires that rule your body and the shell of your mind, you leave the city. The dueling needs you feel to breed and rule end up making you quite disfunctional, barely able to even survive until you find your way to another yuppie mink who is not quite as far gone as you are. What begins as a mindless fuckfest eventually becomes something like an arranged marriage, in that they arrange continual survival for you, and your body is married to their genitals. It works out well enough for you in the long run, not that you are ever aware enough to truly realize and appreciate it.";
 		otherwise:
-			say "     You manage to surive the many hardships of the city with something like an intact sense of self and free-will. Despite your impressive feats in combat and stealth, you still fall prey to the effects of your Yuppy Mink infection, and emerge with an obnoxious sense of entitlement that drives the military up the wall. Between demands for special treatment and confusion as to the location of the shiatsu massage parlor, your time under quarantine is insufferable for everyone involved. To add insult to injury, there is not a single person in the camp as sophisticated and worldly as you are!";
+			say "     You manage to surive the many hardships of the city with something like an intact sense of self and free-will. Despite your impressive feats in combat and stealth, you still fall prey to the effects of your Yuppie Mink infection, and emerge with an obnoxious sense of entitlement that drives the military up the wall. Between demands for special treatment and confusion as to the location of the shiatsu massage parlor, your time under quarantine is insufferable for everyone involved. To add insult to injury, there is not a single person in the camp as sophisticated and worldly as you are!";
 			say "     After you are released, you try to fit back into society in one way or another. Being a temporarily embarassed millionare, it is not easy for you in the half-way house for refugees - but you endure! With your considerable charm and appearance you manage to talk your way into some rather high class establishments. A bit of guile and sensuality gets you first the uniform of an employee, which you then manage to ply into access to the wardrobe of the wealthy. A change of clothes later, and you are able to mingle with the rich and well-bred with whom you belong.";
 			if cunts of player > 0:							[FEMALE/HERM]
 				say "     It takes a bit of time and some quick thinking, but before long you manage to cultivate a small group of suitable bachelors. You wrap them around your dainty little fingers first, exploring their wealth and influence. When you find one that suits you in personality and holdings, you strike with the predatory swiftness of your mink breeding. The curves of your body in another woman[']s gown hypnotize him like startled prey, and he is easily lured away from the droll party to somewhere more private. Once alone, it is easy to goad him into exploring your body, the heat of your slavering cunt like a siren[']s call. For a wonderful mindless night you allow him to fuck you senseless, addicting him to the sensation of your talented snatch.";
@@ -171,4 +171,4 @@ when play ends:
 				say "     Her parents are less than pleased that a seemingly penniless mutant has bred their daughter, and intends to wed. A bit of charm does the trick - dear old mum gets a skilled fucking right atop her tea cozies, while dad experiences the famous mink flexiblity as you ride his cock and suck his balls at the same time. She is barely showing when you walk down the aisle, but that soon changes. A lot of things change, actually, as you become the center of a slew of minks! Between your children and your wife, you also infect her immediate family with your strain of nouveau riche minkness.";
 
  
-Yuppy Mink ends here. 
+Yuppie Mink ends here. 

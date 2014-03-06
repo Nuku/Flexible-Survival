@@ -657,7 +657,7 @@ to say testosterone pill use:
 		increase cock width of player by 2;
 		follow the cock descr rule;
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
-		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
 	otherwise if cunts of player > 0:				[FEMALE]
 		now cunts of player is 0;
 		now cunt width of player is 0;
@@ -666,7 +666,7 @@ to say testosterone pill use:
 		now cock length of player is 6;
 		now cock width of player is 4;
 		follow the cock descr rule;
-		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
 	otherwise if cocks of player > 0:				[MALE]
 		now cunts of player is 0;
 		now cunt width of player is 0;
@@ -675,7 +675,7 @@ to say testosterone pill use:
 		increase cock width of player by 2;
 		follow the cock descr rule;
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
-		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
 	otherwise:								[NEUTER]
 		now cunts of player is 0;
 		now cunt width of player is 0;
@@ -683,7 +683,7 @@ to say testosterone pill use:
 		now cocks of player is 1;
 		now cock length of player is 6;
 		now cock width of player is 4;
-		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
 	if breast size of player is greater than 0:
 		now breast size of player is 0;
 		say "With the feel of a popping balloon your breasts deflate leaving you with a flat yet muscular chest. ";

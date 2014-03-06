@@ -1,9 +1,10 @@
-Version 2 of Snow Leopard For FS by Stripes begins here.
-[Version 2 - Sven specific endings added]
+Version 3 of Snow Leopard For FS by Stripes begins here.
+[Version 3 - Revamped player victory for menu system and added submissive-anal option]
 "Adds a Snow Leopard creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
 
+nosnowmeowsex is a number that varies.
 when play begins:
 	add { "Snow Leopard" } to infections of guy;
 	add { "Snow Leopard" } to infections of furry;
@@ -11,6 +12,7 @@ when play begins:
 
 to say losetosnowmeow:
 	now snowmeowfight is 2;				[lost]
+	now nosnowmeowsex is 0;
 	say "     The snow leopard gives a throaty purr as your struggles cease.  He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft.  The fight over, you can see it is steely grey with a slightly feline-shaped glans and a pair of ample balls below it.  Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsciously licking your lips as a few beads of precum leak down that hard meat.";
 	if cocks of player > 0:
 		say "     The snow leopard licks his lips lustfully as he eyes your cock.  Turning around, he brings his stiff shaft to your face while his soft paws work your shaft to full erection.  His precum drips down onto your lips and your remaining self-control breaks.  You open your mouth and guide that tasty meat into your waiting mouth.  You lick and suck at it hungrily, moaning with increasing desire as his own lips close around your cock and he starts licking and sucking your throbbing shaft.";
@@ -49,55 +51,96 @@ to say losetosnowmeow:
 
 to say beatthesnowmeow:
 	now snowmeowfight is 1;		[victory]
-	say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you.  He staggers a little as he walks, starting to stumble back into the city";
-	if libido of player > 40:
-		say ".  As you watch his alluring, feline body, you debate taking advantage of the poor feline.  He certainly looks in no shape to resist you taking advantage of him instead.  Do you pounce the kitty before he can get away?";
-		if the player consents:
-			say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down.  He mewls softly as you pin him down and wrap your fingers around his cock.  His shaft is a steely grey and has a slightly pointed, feline shaped glans.  Beneath his above-average length are an impressive pair of balls.  As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further.  You lick your lips and try to decide if you want to suck him off or do something more.  (Y-oral, N-other)";
-			if the player consents:
-				say "     Thirsting for the snow leopard's rich load, you fondle his balls and start sucking at his throbbing member.  He moans and thrusts gently into your mouth.  Your tongue plays over his long, thick meat as you tease and taste the feline.  You work him up slowly, easing back from his peak again and again to ensure you can get all you can from the thirsty kitty.";
-				say "     His paws stroke your head and shoulders lightly as he rumbles and purrs happily at all the attention you're giving him, though he does growl weakly in frustration as you keep him from climaxing.  Eventually, you decide the poor kitty's had enough.  Licking, sucking and fondling him vigorously, you drive him quickly over the edge.  His big cock throbs in your mouth, spraying blast after blast of feline seed down your throat.  It is very thick and flavourful, a satisfying treat.";
-				say "     Drained in more ways than one, the exhausted snowmeow passes out in the shadows of the city to eventually recover.  Licking your lips, you find yourself hoping to find more of these sexy kitties to play with in the future.";
-				decrease thirst of player by a random number between 4 and 8;
-				decrease hunger of player by a random number between 2 and 5;
-			otherwise if cocks of player > 0:
-				say "     Aroused by the sexy feline's lovely body, you stroke your throbbing shaft, debating how you want to take advantage of this delightful opportunity.  Do you want to mount the fluffy kitty's shapely ass or take a ride on his cock?  (Y-Top, N-Ride)";
-				if the player consents:
-					say "     Having come to your decision, you roll the weakened feline over onto all fours.  He whimpers sweetly, but flags his tail and grinds his ass back against your cock.  You grin at this and tease him briefly, pressing lightly against his tailhole and letting your pre wet it, but not mounting him yet.  He starts to mewl and moan with increasing need until you finally relent, mostly from your own lustful desires, and sink your cock slowly into the tight hole.";
-					say "     The tight, warm ass feels wonderful around your cock, and the thick padding of his fur lets you pound away at him good and hard.  You reach around to play with his cock and balls, rolling the heavy orbs around in your palm as feline pre dribbles onto the ground.  His ass, apparently well practiced, squeezes and pulls at your cock each time you thrust into him.";
-					say "     Finding him such an enjoyable fuck, you try to hold back and savour it as long as you can.  But eventually all good things must come to an end and when the end does come, it is wonderful.  You drive yourself deep inside him [if cock length of player > 24]enough to make his belly bulge from your giant cock [otherwise if cock length of player > 12]stuffing your big cock fully into him [end if]and unleash your hot load into his bowels.  He murrrowls in lustful satisfaction as you pump your semen into him[if cock width of player > 10], bloating his tummy as you drain your large balls into that tight ass[end if].  His own, heavy balls unleash a sizeable load of thick seed onto the ground beneath him as you pump him dry.";
-					say "     Done with him, you withdraw and wipe your cock with his fluffy tail before pushing him over into the sticky puddle he's made.  He [if cock width of player > 10]rubs his swollen tummy and [end if]laps at the pool of semen, slaking his growing thirst a little with his own cum.";
-				otherwise:
-					say "[ridesnowmeow]";
+	if ( libido of player > 40 or player is dominant ) and ( nosnowmeowsex < 3 or ( nosnowmeowsex > 0 and the remainder after dividing nosnowmeowsex by 5 is 0 ) ):
+		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you.  He staggers a little as he walks, starting to stumble back into the city.  As you watch his alluring, feline body, you debate taking advantage of the poor feline.  He certainly looks in no shape to resist you taking advantage of him instead.  Tempted, you consider pouncing the kitty before he can get away.";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Top him";
+			now sortorder entry is 1;
+			now description entry is "screw his fluffy ass";
+		choose a blank row in table of fucking options;
+		now title entry is "Suck him off";
+		now sortorder entry is 2;
+		now description entry is "drain the kitty's balls down your throat";
+		choose a blank row in table of fucking options;
+		now title entry is "Ride him";
+		now sortorder entry is 3;
+		now description entry is "get that cock of his in you";
+		if cunts of player is 0 and player is submissive:
+			choose a blank row in table of fucking options;
+			now title entry is "Anal doggy-style";
+			now sortorder entry is 4;
+			now description entry is "let the horny feline mount your ass";
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Let him go[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber is 0:
+				say "     You let the overheated snowmeow leave, instead turning your attention to your own concerns.";
+				increase nosnowmeowsex by 1;
+				now sextablerun is 1;
+			otherwise if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: Shall you [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Top him":
+						say "[snowmeow_vsex01]";
+					otherwise if nam is "Suck him off":
+						say "[snowmeow_vsex02]";
+					otherwise if nam is "Ride him":
+						say "[snowmeow_vsex03]";
+					otherwise if nam is "Anal doggy-style":
+						say "[snowmeow_vsex04]";
+					now nosnowmeowsex is 0;
 			otherwise:
-				say "[ridesnowmeow]";
-			decrease libido of player by 12;
-		otherwise:
-			say ".  You let the overheated snowmeow leave, instead turning your attention to your own concerns, but feeling a little more aroused from the whole ordeal.";
-			increase libido of player by a random number from 3 to 8;
-			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
-			if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
-			if libido of player > 100, now libido of player is 100;
+				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
+	otherwise if nosnowmeowsex >= 3:
+		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you.  He staggers a little as he walks, starting to stumble back into the city.  As with the others of his kind you've seen, you opt to let the overheated snowmeow leave and instead turn your attention to your own concerns.";
+		increase nosnowmeowsex by 1;
 	otherwise:
-		say ".  You let the overheated snowmeow leave, instead turning your attention to your own concerns, but feeling a little more aroused from the whole ordeal.";
-		increase libido of player by a random number from 3 to 8;
-		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
-		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
-		if libido of player > 100, now libido of player is 100;
+		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you.  He staggers a little as he walks, starting to stumble back into the city.  You let the overheated snowmeow leave, instead turning your attention to your own concerns.";
 
-to say ridesnowmeow:
+to say snowmeow_vsex01:
+	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down.  He mewls softly as you pin him down and wrap your fingers around his cock.  His shaft is a steely grey and has a slightly pointed, feline shaped glans.  Beneath his above-average length are an impressive pair of balls.  As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further.  You lick your lips and stroke your throbbing shaft as your eyes are drawn to the fluffy kitty's shapely ass.";
+	say "     Having come to your decision, you roll the weakened feline over onto all fours.  He whimpers sweetly, but flags his tail and grinds his ass back against your cock.  You grin at this and tease him briefly, pressing lightly against his tailhole and letting your pre wet it, but not mounting him yet.  He starts to mewl and moan with increasing need until you finally relent, mostly from your own lustful desires, and sink your cock slowly into the tight hole.";
+	say "     The tight, warm ass feels wonderful around your cock, and the thick padding of his fur lets you pound away at him good and hard.  You reach around to play with his cock and balls, rolling the heavy orbs around in your palm as feline pre dribbles onto the ground.  His ass, apparently well practised, squeezes and pulls at your cock each time you thrust into him.";
+	say "     Finding him such an enjoyable fuck, you try to hold back and savour it as long as you can.  But eventually all good things must come to an end and when the end does come, it is wonderful.  You drive yourself deep inside him [if cock length of player > 24]enough to make his belly bulge from your giant cock [otherwise if cock length of player > 12]stuffing your big cock fully into him [end if]and unleash your hot load into his bowels.  He murrrowls in lustful satisfaction as you pump your semen into him[if cock width of player > 10], bloating his tummy as you drain your large balls into that tight ass[end if].  His own, heavy balls unleash a sizable load of thick seed onto the ground beneath him as you pump him dry.";
+	say "     Done with him, you withdraw and wipe your cock with his fluffy tail before pushing him over into the sticky puddle he's made.  He [if cock width of player > 10]rubs his swollen tummy and [end if]laps at the pool of semen, slaking his growing thirst a little with his own cum.";
+
+to say snowmeow_vsex02:
+	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down.  He mewls softly as you pin him down and wrap your fingers around his cock.  His shaft is a steely grey and has a slightly pointed, feline shaped glans.  Beneath his above-average length are an impressive pair of balls.  As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further.  You lick your lips and decide you're thirsting for the snow leopard's rich load.  You fondle his balls and start sucking at his throbbing member.  He moans and thrusts gently into your mouth.  Your tongue plays over his long, thick meat as you tease and taste the feline.  You work him up slowly, easing back from his peak again and again to ensure you can get all you can from the thirsty kitty.";
+	say "     His paws stroke your head and shoulders lightly as he rumbles and purrs happily at all the attention you're giving him, though he does growl weakly in frustration as you keep him from climaxing.  Eventually, you decide the poor kitty's had enough.  Licking, sucking and fondling him vigorously, you drive him quickly over the edge.  His big cock throbs in your mouth, spraying blast after blast of feline seed down your throat.  It is very thick and flavourful, a satisfying treat.";
+	say "     Drained in more ways than one, the exhausted snowmeow passes out in the shadows of the city to eventually recover.  Licking your lips, you find yourself hoping to find more of these sexy kitties to play with in the future.";
+	decrease thirst of player by a random number between 4 and 8;
+	decrease hunger of player by a random number between 2 and 5;
+
+to say snowmeow_vsex03:
+	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down.  He mewls softly as you pin him down and wrap your fingers around his cock.  His shaft is a steely grey and has a slightly pointed, feline shaped glans.  Beneath his above-average length are an impressive pair of balls.  As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further.  You lick your lips in anticipation of having a ride on that hard pole of his.";
 	if cunts of player > 0:
-		say "     Eying that grey cock, close to a foot long, you decide you want to get some of that and straddle the prone feline.  With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up [if cunt width of player > 4 and cunt length of player > 10]before slamming yourself down onto him, taking him into your large pussy with ease[otherwise]before lowering yourself down slowly onto his big meat gradually, letting yourself adjust to his girth[end if].  After a few bounces on his cock to find a rhythm that won't let that delicious cock slip free, you slide your hand back to grope his heavy balls.  He moans softly and you lick your lips, eager for the equally big load filling them.";
+		say "     Eyeing that grey cock, close to a foot long, you aim it upwards and straddle the prone feline.  With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up [if cunt width of player > 4 and cunt length of player > 10]before slamming yourself down onto him, taking him into your large pussy with ease[otherwise]before lowering yourself down slowly onto his big meat gradually, letting yourself adjust to his girth[end if].  After a few bounces on his cock to find a rhythm that won't let that delicious cock slip free, you slide your hand back to grope his heavy balls.  He moans softly and you lick your lips, eager for the equally big load filling them.";
 		say "     You take your time with the sexy feline, enjoying every lustful mewl and moan he makes as you tease him while riding that big, feline shaft of his.  You have a few small orgasms from your stuffed cunt that soak his thick crotch fur, but you are careful not to let the snowmeow get off too soon and deprive your growing lust from the full load he can produce[if cocks of player > 1].  His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[otherwise if cocks of player is 1].  His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
 		if cocks of player > 0:
 			say "     As you feel your [if cocks of player > 1]cocks[otherwise]cock[end if] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing [if cunt width of player > 4 and cunt length of player > 10]the full length down into you and squeezing your inner walls down around it tightly as you climax[otherwise]as much of the large cock into you as you can and squeezing your inner walls down around it tightly as you climax[end if].  This sends your caught lover over the edge and you can feel his large ballsac tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your hungry pussy.  His ample load flows up into your womb, making your tummy swell with its volume[if cock length of player > 24].  With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[otherwise if cocks of player is 1].  Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[otherwise].  Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little [end if].";
 		otherwise:
 			say "     As you feel your big climax coming, you ride up and down on his big meat, pushing [if cunt width of player > 4 and cunt length of player > 10]the full length down into you and squeezing your inner walls down around it tightly as you climax[otherwise]as much of the large cock into you as you can and squeezing your inner walls down around it tightly as you climax[end if].  This sends your caught lover over the edge and you can feel his large ballsac tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your hungry pussy.  His ample load flows up into your womb, making your tummy swell with its volume.[if a random chance of 1 in 2 succeeds][impregchance][end if][impregchance]";	[additional 50% chance of impreg]
 	otherwise:
-		say "     Eying that grey cock, weighing in at a good eleven inches, you decide you want to get some of that and straddle the prone feline.  With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up with your back door.  You let his dribbling precum wet your pucker before slowly easing yourself down onto it.  You take it nice and slow, particularly enjoying the weakened kitty's soft mewls and moans as he's unable to pound his cock into you as he clearly desires.  As you take more and more of it into your tight rump, you grope and fondle his heavy balls, eager for the equally big load filling them.";
+		say "     Eyeing that grey cock, weighing in at a good eleven inches, you aim it upwards and straddle the prone feline.  With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up with your back door.  You let his dribbling precum wet your pucker before slowly easing yourself down onto it.  You take it nice and slow, particularly enjoying the weakened kitty's soft mewls and moans as he's unable to pound his cock into you as he clearly desires.  As you take more and more of it into your tight rump, you grope and fondle his heavy balls, eager for the equally big load filling them.";
 		say "     You take your time with the sexy feline, enjoying every lustful sound he makes as you tease him while riding that big, feline shaft of his.  Your cock twitches and dribbles precum as his stiff meat rubs against your prostate so deliciously.  Despite the pleasure of such a big kitty filling you, you do your best to hold back and take your time, wanting as much from those big balls as he can give[if cocks of player > 1].  His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[otherwise if cocks of player is 1].  His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
 		say "     As you feel your [if cocks of player > 1]cocks[otherwise]cock[end if] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing the full length down into your stretched ass and squeezing your inner walls down around it tightly as you climax.  This sends your caught lover over the edge and you can feel his large ballsac tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your bowls.  His ample load flows up into your belly, making your tummy swell with its volume[if cock length of player > 24].  With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[otherwise if cocks of player is 1].  Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[otherwise].  Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little [end if].[if a random chance of 1 in 2 succeeds][impregchance][end if][impregchance]";	[additional 50% chance of impreg]
 	say "     When the snow leopard's balls are drained and he passes out, you ease yourself off his softening erection.  You smile contentedly as you rub your overfull belly, leaving the spent feline unconscious in the shadows.  You finger your [if cunts of player > 0]overful pussy[otherwise]leaking anus[end if] as his thick cum slowly dribbles out and runs down your thighs.  You find yourself looking forward to encountering another of these rare felines to play with in the future.";
+
+to say snowmeow_vsex04:
+	say "     The snow leopard provides too tantalizing a prize for you to ignore.  Taking advantage of your opportunity that's arisen, you grab him from behind and press him down.  Now that he's been properly quelled, you redirect his desires easily enough.  Stroking his steely grey cock, you get it erect and drooling precum from its slightly pointed, feline shaped tip.  Beneath his above-average length are an impressive pair of balls that you also rub and tease.  As the scent of feline arousal builds and he pants with lust, your own excitement builds further.  When you move onto all fours and give your ass a meaningful slap, he gives a playful mrowl and mounts you eagerly.";
+	say "     The feline's meaty shaft presses into you after a few test thrusts to get lined up.  You moan beneath your furry lover as he fucks your tight hole.  His thick fur against your back is delightfully soft and the feel of his hot breath panting at your neck speaks of his own growing excitement.  Though each throb inside your squeezing bowels and press against your sensitive prostate are quite clear on the matter as well.  As his lust runs wild, he pounds into you even harder.  And you push back into each of those thrusts, your submissive urges loving the fact that you're getting pounded in the ass by your fallen foe.";
+	say "     With a loud mrowl, he buries himself deep inside you and unleashes shot after shot of feline-tainted semen.  The lustful feline even reaches around for your [cock of player] cock, stroking you off as he creams your ass.  As your orgasm's ending, the snowmeow's grip on your cock waves and his final thrust is quite feeble.  With a moaning sigh, his eyes roll back in his head and he topples off of you, collapsing of heat exhaustion with a big grin on his muzzle.";
 
 
 to say snowmeowdesc:

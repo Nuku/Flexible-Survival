@@ -1,5 +1,5 @@
 Version 9 of Wyvern For FS by Damaged begins here.
-[ Version 9 - Dragonpalooza 2. Existing scene overhaul, bound state additions, victory sex. ]
+[ Version 9.1 - Full-level Wyvern statted ]
 
 "Adds a Wyvern to Flexible Survivals Wandering Monsters table"
 
@@ -329,13 +329,15 @@ to say WYVDESC:
 		otherwise:
 			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You [if weapon object of player is journal]raise your fists[otherwise]raise your weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of player >= 20:
-			if hardmode is true and level of player > 20, let debit be level of player - 20;
+			let debit be 0;
+			if hardmode is true and level of player > 25, now debit is level of player - 25;
 			now WYVLEV is 1;
-			now hp entry is ( a random number between 180 and 240 ) + ( debit * 6 );
+			now hp entry is ( a random number between 200 and 275 ) + ( debit * 5 );
 			now monsterhp is hp entry;
 			now wdam entry is 18 + ( ( 2 * debit ) / 5 );
-			now str entry is 24;
-			now dex entry is 22 + (debit / 5);
+			now lev entry is 25 + debit;
+			now str entry is 30;
+			now dex entry is 28 + ( debit / 4 );
 			now sta entry is 20;
 			now per entry is 18;
 			now libido entry is 60;
