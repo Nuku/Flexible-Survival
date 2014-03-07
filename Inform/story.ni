@@ -3592,7 +3592,7 @@ This is the sex change rule:
 			now cunt width of player is 0;
 		if prevcunt > cunt length of player or prevcunt2 > cunt width of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfv][or]vagina[sfn][or]cleft[sfn][at random] begin[sfv] to shrink. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] begin[sfv] to shrink. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr]. ";
 			if cunt length of player is less than 1 or cunt width of player is less than 1:
 				say "With a sickening noise, you cease to be female all together.";
 				now the cunts of the player is 0;
