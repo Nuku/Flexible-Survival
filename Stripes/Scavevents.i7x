@@ -1,6 +1,7 @@
 Version 3 of Scavevents by Stripes begins here.
 [version 3 - Scavevents 13 to 15 added ]
-[version 4- altered Free Milk and  Gryphon Milkman event to add some flavour text for Dairy. Added new Abandoned Milk event - by cmacleod42]
+[version 3.1 - altered Free Milk and Gryphon Milkman event to add some flavour text for Dairy. Added new Abandoned Milk event - by cmacleod42]
+[version 3.2 - special content for Satyr-shape player in the free drink event - by Wahn]
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
@@ -568,9 +569,8 @@ when play begins:
 	add Free Drink to badspots of guy;
 
 Instead of resolving a Free Drink:
-	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings.  They seem in rather good spirits, if a little tired, and wave at you in a friendly manner.  Deciding to risk it, you approach cautiously.  They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work.  You're offered a swig as well.  Would you like to take a drink to quench your thirst?";
+	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well. Would you like to take a drink to quench your thirst?";
 	if the player consents:
-		say "     Taking the drink, you swallow down the rich, flavourful wine.  It quenches some of your thirst, but leaves you feeling a little strange as well.  They laugh and slap you on the back after taking big drinks of their own.  Their break done, the satyrs cork it back up and resume rolling the large cask.";
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
 		decrease humanity of player by 5;
@@ -578,9 +578,29 @@ Instead of resolving a Free Drink:
 		infect "Satyr";
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
-			now winefound is 2;
+			now winefound is 2;				
+		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
+			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
+			say "     [line break]";
+			say "     Do you go with the satyrs?";
+			if player consents:
+				say "     [line break]";
+				say "     [Satyr Frat Party]";  [Further content in Wahn/Satyr Frat.i7x]
+			otherwise:
+				say "     [line break]";
+				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
+		otherwise:
+			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, the satyrs cork it back up and resume rolling the large cask.";
+			decrease thirst of player by 10;
+			if thirst of player < 0, now thirst of player is 0;
+			decrease humanity of player by 5;
+			infect "Satyr";
+			infect "Satyr";
+			if winefound is 1:
+				say "     You do manage to save some of the wine in a vial to give to Nermine.";
+				now winefound is 2;
 	otherwise:
-		say "     Deciding it'd be best not to drink, they shrug.  'Your loss,' the laugh and take hefty drinks before getting back to work.";
+		say "     Deciding it'd be best not to drink, they shrug. 'Your loss,' the laugh and take hefty drinks before getting back to work.";
 	now Free Drink is resolved;
 
 
