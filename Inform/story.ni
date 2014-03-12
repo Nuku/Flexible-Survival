@@ -6347,6 +6347,7 @@ Include Batcubus for FS by Blaydrex.
 Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
 Include Orc by Wahn.
+Include Horse-Hung Nerd by Wahn.
 
 
 [NPCs]
