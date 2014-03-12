@@ -6115,6 +6115,7 @@ Include Soldier Events by Wahn.
 Include Endings by Darthan.
 Include Underground Events by Wahn.
 Include Sugar Feud by AGentlemanCalledB.
+Include Satyr Frat by Wahn.
 
 
 [Monsters/Infections]
