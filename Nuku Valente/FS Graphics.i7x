@@ -150,6 +150,7 @@ carry out artistcredits:
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
+	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
