@@ -64,14 +64,14 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to climb.";
 		if companion of player is bee girl:
-			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back.  'Don't risk it.  I can get it for you, honeybunch.'  And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and bring it to you with a happy smile.";
+			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back.  'Don't risk it.  I can get it for you, honeybunch.'  And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
 			add y to invent of player;
 		otherwise if companion of player is Exotic Bird:
 			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in.  Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
 			add y to invent of player;
 		otherwise if companion of player is Gryphoness:
 			let gryphlets be libido of gryphoness / 4;
-			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She bring it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
+			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease.  She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
 			add y to invent of player;
 		otherwise:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
