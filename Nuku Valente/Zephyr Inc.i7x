@@ -85,7 +85,7 @@ Carry out vialselling:
 		say ", but she shakes her head.  'We have met our quota for that sample and have no more interest nanites from [name entry] creatures.  Try hunting for bigger game.'";
 		continue the action;
 	if found is 0:
-		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for our bureau's collection.'  She credits you for [special-style-1][basevalue][roman type] freecreds.";
+		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for our bureau's collection.'  She credits you for [special-style-1][basevalue][roman type] freecred.";
 	otherwise if found is 1:
 		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [special-style-1][basevalue][roman type] freecred.";
 	otherwise if found >= 2:

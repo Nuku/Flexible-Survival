@@ -205,7 +205,7 @@ To Combat Menu:
 			next;
 		otherwise:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee, [bold type]T[roman type]hrow the fight[line break]";
+			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]F[roman type]lee, [bold type]S[roman type]ubmit, [bold type]T[roman type]hrow the fight[line break]";
 			let combatopt be 0;
 			repeat through table of basic combat:
 				increase combatopt by 1;
