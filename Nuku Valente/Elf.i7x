@@ -18,7 +18,7 @@ to say Elf attack:
 		say "     '[one of]Hmm[or]Oh[or]Yes[at random], [one of]I love to play with my prey[or]I think you'll do[or]you should've ran, I love it when they run[at random]...' Tracing";
 	otherwise:
 		say "     When you surrender to the lady, she can't help but sneer slightly at you, approaching to pin you onto the ground and seat herself atop you.";
-		say "     '[one of]Hmpf[or]Well[or]Ha[at random], [one of]I was hoping you'd be of better use to me than as a mere pet[or]Such a naughty one, relegating themselves as a plaything to the first lady the find[or]there's little fun to be have in hunting such submissive prey[at random]!' Tracing";
+		say "     '[one of]Hmpf[or]Well[or]Ha[at random], [one of]I was hoping you'd be of better use to me than as a mere pet[or]Such a naughty one, relegating themselves as a plaything to the first lady they find[or]there's little fun to be have in hunting such submissive prey[at random]!' Tracing";
 	say " along your [bodydesc of player] form";
 	if cocks of player > 0 and cock length of player < 13 and a random chance of 1 in 2 succeeds:
 		say ", her delicate hands eventually descend to grip[if cocks of player > 1] one of[end if] your [cock size desc of player] cock[smn], giving you a smug expression as you writhe against her touch, more than enough to drive you to arousal[if hp of player < 1] in spite of your protests[end if].";
