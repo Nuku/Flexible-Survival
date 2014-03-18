@@ -1,5 +1,5 @@
 Version 9 of Wyvern For FS by Damaged begins here.
-[ Version 9.1 - Full-level Wyvern statted ]
+[ Version 9.2 - fix and tweaks ]
 
 "Adds a Wyvern to Flexible Survivals Wandering Monsters table"
 
@@ -1076,7 +1076,7 @@ to wyvorgy:
 					now trixieexit is 1;
 					follow the turnpass rule;
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case matches the text " ":
+			otherwise:
 				say "[line break]";
 				say "     You choose to abide the wyvern kin's continued abuse, [one of]much to their screeching, biting approval[or]though they're certainly not easier on you for it[or]of which they happily exploit[at random].";
 				say "[line break]";
@@ -1112,53 +1112,52 @@ to cleanboundmemory:
 	now wyvkin2lib is 0;
 	now wyvkin3lib is 0;
 	now wyvkin4lib is 0;
+	now wyvkin1gen is 0;
+	now wyvkin2gen is 0;
+	now wyvkin3gen is 0;
+	now wyvkin4gen is 0;
 	now wyvkinassign is 0;
 	now wyvkinatt is 0;
 	now lustatt is 0;
 	now bsextimer is 0;
 	now boundcounter is 0;
 	now boundmod is 0;
+	[now boundmod2 is 0;]
 	now boundsegment is 0;
 	
 to wyvernattendassess:
-	let pewtercockvar1 be 1;
-	while pewtercockvar1 is 1:
-		if wyvkin1att is 0 and a random chance of 1 in 4 succeeds:
-			now wyvkinassign is 1;
-			if wyvkin1gen is 1:
-				now tempnum is 1;
-			otherwise:
-				now tempnum is 0;
-			wyvernattendroll;
-			now pewtercockvar1 is 0;
-			increase wyvkinatt by 1;
-		otherwise if wyvkin2att is 0 and a random chance of 1 in 3 succeeds:
-			now wyvkinassign is 2;
-			if wyvkin2gen is 1:
-				now tempnum is 1;
-			otherwise:
-				now tempnum is 0;
-			wyvernattendroll;
-			now pewtercockvar1 is 0;
-			increase wyvkinatt by 1;
-		otherwise if wyvkinocc > 0 and wyvkin3att is 0 and a random chance of 1 in 2 succeeds:
-			now wyvkinassign is 3;
-			if wyvkin3gen is 1:
-				now tempnum is 1;
-			otherwise:
-				now tempnum is 0;
-			wyvernattendroll;
-			now pewtercockvar1 is 0;
-			increase wyvkinatt by 1;
-		otherwise if wyvkinocc > 1 and wyvkin4att is 0:
-			now wyvkinassign is 4;
-			if wyvkin4gen is 1:
-				now tempnum is 1;
-			otherwise:
-				now tempnum is 0;
-			wyvernattendroll;
-			now pewtercockvar1 is 0;
-			increase wyvkinatt by 1;
+	if wyvkin1att is 0 and a random chance of 1 in 4 succeeds:
+		now wyvkinassign is 1;
+		if wyvkin1gen is 1:
+			now tempnum is 1;
+		otherwise:
+			now tempnum is 0;
+		wyvernattendroll;
+		increase wyvkinatt by 1;
+	otherwise if wyvkin2att is 0 and a random chance of 1 in 3 succeeds:
+		now wyvkinassign is 2;
+		if wyvkin2gen is 1:
+			now tempnum is 1;
+		otherwise:
+			now tempnum is 0;
+		wyvernattendroll;
+		increase wyvkinatt by 1;
+	otherwise if wyvkinocc > 0 and wyvkin3att is 0 and a random chance of 1 in 2 succeeds:
+		now wyvkinassign is 3;
+		if wyvkin3gen is 1:
+			now tempnum is 1;
+		otherwise:
+			now tempnum is 0;
+		wyvernattendroll;
+		increase wyvkinatt by 1;
+	otherwise if wyvkinocc > 1 and wyvkin4att is 0:
+		now wyvkinassign is 4;
+		if wyvkin4gen is 1:
+			now tempnum is 1;
+		otherwise:
+			now tempnum is 0;
+		wyvernattendroll;
+		increase wyvkinatt by 1;
 		
 to wyvernattendroll:
 	let pewtercockvar2 be 1;
