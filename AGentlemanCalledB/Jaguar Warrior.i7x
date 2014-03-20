@@ -236,7 +236,7 @@ Instead of conversing the Tehuantl:
 	otherwise if TehuantlStatus is 2:
 		say "     [one of]Tehuantl mewls at you plaintively as she stares up from her spot on the floor, furiously working [if hp of Tehuantl > 14]a large dildo[otherwise]several fingers[end if] into her needy cunt[or]'Oh master, I need you...'[or]Too busy licking and sucking at her own groin as she mewls in pleasure, Tehuantl doesn't even notice you approach[or]'Please, fill me master'[at random]";
 	otherwise:
-		say "[one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I serve, or service, you master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
+		say "[one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I serve - or service - you, my master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
 
 to say Tehuantlsex:
 	if hp of Tehuantl is 11:
