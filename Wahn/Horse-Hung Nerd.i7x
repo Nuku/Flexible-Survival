@@ -1,5 +1,6 @@
 Version 1 of Horse-Hung Nerd by Wahn begins here.
-[Version 1 - Initial setup]
+[Version 1    - Initial setup]
+[Version 1.1  - Player Victory Sex]
 
 "Adds a Horse Hung Nerd to Flexible Survivals Wandering Monsters table, with impreg chance"
 
@@ -71,8 +72,64 @@ to say HHNerd Fucking:
 		say "     'Remember this for next time, so you know what to do and how to please me,' Clyde says after catching his breath, then pulls out and stands up. Pushing his still cum-dripping horsecock down the [one of]left[or]right[at random] leg of his pants, he zips up, then struts off with a spring in is step.";
 
 to say HHNerd loses:
-	say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, popping off its cork and throwing its contents at you. You do your best to evade, but even so, some of the stuff splashes on you - and forces you almost to your knees with its stench. Man - what kind of chemical was that? A bit dazed by this unexpected attack, you stumble backwards and frantically throw off soiled clothing and try to rub the scent off your skin... which gives Clyde easily enough time to run off. The last you hear from him are the words 'You'll regret resisting against me!', shouted over his shoulder.";
+	if a random chance of 1 in 3 succeeds:
+		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, popping off its cork and throwing its contents at you. You do your best to evade, but even so, some of the stuff splashes on you - and forces you almost to your knees with its stench. Man - what kind of chemical was that? A bit dazed by this unexpected attack, you stumble backwards and frantically throw off soiled clothing and try to rub the scent off your skin... which gives Clyde easily enough time to run off. The last you hear from him are the words 'You'll regret resisting against me!', shouted over his shoulder.";
+	otherwise:
+		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, getting ready to... do something with it you guess. As you don't want to find out, you react instantly and slap his hand to the side, sending the glass vial flying away. After that, you set an end to the fight with a punch to Clyde's nose, sending the nerdy guy sprawling on the ground. Groaning, he sits up on the ground, wiping a small amount of blood from his nose as he says 'Okay, you win. The cleverer give in, so stop hitting me.'";
+		say "     Now that you've got him at your mercy, what do you do with Clyde?";
+		wait for any key;
+		say "     [HHNerdSexMenu]";
+		
+to say HHNerdSexMenu:
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck his ass";
+		now sortorder entry is 1;
+		now description entry is "Pound Clyde's butt.";
+		now toggle entry is HHNerdSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Blow him off";
+	now sortorder entry is 2;
+	now description entry is "Suck the nerd's horsecock.";
+	now toggle entry is HHNerdSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Give him a kick and leave";
+	now sortorder entry is 10;
+	now description entry is "Just walk away from the nerdy bastard.";
+	now toggle entry is HHNerdSex rule;
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
 
+This is the HHNerdSex rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want?";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Fuck his ass"):
+			say "[HHNerdSex1]";
+		if (nam is "Blow him off"):
+			say "[HHNerdSex2]";
+		otherwise if (nam is "Give him a kick and leave"):
+			say "     Giving Clyde a kick, you turn around and walk away. It's doubtful that he'll learn anything from this, but sometimes kicking people just feels good.";	
+		wait for any key;
+				
+to say HHNerdSex1:
+	say "     Standing over Clyde, you undo your pants and drop them, letting your [cock size desc of player] [cock of player] shaft dangle before his eyes. [if cock length of player < 10]He scoffs 'You call that a penis? Such a little - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [otherwise if cock length of player < 20]He scoffs 'You think you're big, don't you? If you had just submitted as you're supposed to, I'd have shown you - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [otherwise]He scoffs 'You might be hung like me, but I bet I'm much better in - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [end if]Telling the stuck-up student that you'll show him what his behaviour gets him, you order him to get on all fours. After a moment's hesitation, he complies, getting into position with his ass raised high, though not without giving a little annoyed grunt as he does so.";
+	say "     You jerk yourself to full hardness, then kneel down behind him and put both hands on the tight buttcheeks he presents to you. They're nice and firm, feeling warm and smooth under your groping fingers, and as you pull them apart you see Clyde's pink, winking pucker. Putting a bit of spit on your fingers, you poke them into his hole, finding it pretty relaxed and easily stretching around your probing digits. Seems like your nerd-boy here has been playing with his ass for quite a while. Seeing how easily he takes two, then three fingers, you decide it's time for the main event and align your hard cock with Clyde's hole. He gives a lust-filled pant as you push forward and pop past his ring-muscle, then sink deeper and deeper into him. Finally your balls touch his ass, with your whole [cock length of player] inches of cock inside his passage.";
+	say "     [WaitLineBreak]";
+	say "     Yielding, but tight - Clyde really does have a very nice bottom, though you'd wish it was attached to a nicer person. It doesn't take long before the horse-hung nerd gets over the feelings of being penetrated and starts getting bossy again, calling over his shoulder 'Fuck me already, you stupid brute!' Well, he asked for it, so you pull out most of the way and slam your manhood back in quickly until your hips meet Clyde's cheeks with a meaty slap. He winces a little under is breath, but mostly just moans and pushes back against you, obviously enjoying getting a rough fuck. Clyde even pants 'Yeah, just like that. Keep going!' in between all the groans and gasps.";		
+	say "     He keeps riling you up with snotty comments and grumbling, making you fuck him in a rapid pace and with pretty hard strokes, just as he likes it. You can feel yourself getting closer to orgasm by the second - and you're not the only one. Suddenly Clyde gives a shout 'I'm coming!' and starts trembling under you, his whole body twitching as cum blasts from his equine shaft and hits the ground. His anal muscles tighten around your manhood with each spurt, driving you over the edge just moments later. Breathing heavily, you thrust into him all the way and unload your big load deep inside him. After staying balls-deep in Clyde's hole until your last spurts of cum ebb away, you pull out of him with a wet slurp then just grab your clothes and go, leaving the panting student to pick himself up later.";
+	
+to say HHNerdSex2:
+	say "    Kneeling down besides the downed student, you take hold of his meaty, equine shaft. Fingers around the long member, you start jerking on it, causing the guy to pant and moan as you stroke him. True to his contrary character, Clyde opens his mouth to say something (very likely demeaning), but you quickly get him to shut up with the threat of just stopping what you're doing. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority organ. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your horse-hung nerd boy a bit, grinning as he gives aroused grunts at your touch. Leaning forward, you lick up the glistening bead of precum forming at the tip of his hard cock, and finding it nicely tasty, you immediately slide your lips over his cockhead and start blowing him off.";
+	say "    With both your hands on his long pole while you bob your head up and down and tease him with your tongue, you quickly push the young man to higher and higher arousal. Before that much longer, his grunts and moans betray a growing urgency as they rise in volume, and you can feel him getting pretty close. Eager to taste what he has to offer, you proceed to go down on him with even greater relish and just moments later, a shudder runs through the slender man's supine body and he orgasms. Accompanied by loud lust-filled grunts, blast after blast of his creamy horse-cum fills your mouth. You do your best to swallow it all, though with the sheer volume he puts out, you soon can't keep up. Forced to pull off his cock, you're sprayed with several big blasts of his cum, covering your face and chest with the horsey nerd's seed. Demanding he take his shirt off, you use it to wipe yourself clean again afterwards, then drop it on his chest afterwards and walk away, leaving the panting student to pick himself up later.";
+				
 to say HHNerdDesc:
 	if NerdMeetings is 0:
 		say "     A tall and pretty slender guy comes into your line of sight on the campus grounds, some distance ahead of you. Dressed in tight jeans and a t-shirt, your first impression of him says human, though as he walks closer to you with swaggering steps, you do notice some qualities that show at least a partial infection with some strain of the nanites. He's got hooves, for example, as well as pointed and very mobile horse's ears. The young man's hair might be called a mane and seems to have been part of the transformation too. And finally, as your eyes wander lower again, you spot something that's definitively not human - as he's got a pretty big bulge in his pants and the outline of an enormous schlong of a cock is visible stuffed down one of his pants legs.";
