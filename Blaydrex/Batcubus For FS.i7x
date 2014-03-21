@@ -1,5 +1,5 @@
 Version 2 of Batcubus For FS by Blaydrex begins here.
-[Version 2.1 - Stat adjustments and tentatively moved to Sealed area ]
+[Version 2.1 - Stat adjustments and moved to Warehouse area ]
 
 "Adds a Batcubus to Flexible Survivals Wandering Monsters table"
 
@@ -63,10 +63,10 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 56;                 [ How many HP has the monster got? ]
-	now lev entry is 7;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 7;               [ Amount of Damage monster Does when attacking.]
-	now area entry is "Sealed";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now hp entry is 49;                 [ How many HP has the monster got? ]
+	now lev entry is 6;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 6;               [ Amount of Damage monster Does when attacking.]
+	now area entry is "Warehouse";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku]
@@ -81,7 +81,7 @@ When Play begins:
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]elegant[cycling]";
-	now type entry is "bat";            [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "[one of]bat[or]batty[or]bat-like[at random]";
 	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -116,9 +116,9 @@ When play ends:
 		otherwise:
 			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
 			if cocks of player is greater than 0 and cunts of player is greater than 0:
-				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctually lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully ne day somene can find out how to get this lipstick off you.";
+				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
 			otherwise if cocks of player is greater than 0:
-				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable,no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. Shi wastes no time in rpjing you and dominating you until you submit to hir. Shi claims you as hir own and shi is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to hir.";
+				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable,no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. Shi wastes no time in raping you and dominating you until you submit to hir. Shi claims you as hir own and shi is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to hir.";
 			otherwise:
 				say "...";
 
