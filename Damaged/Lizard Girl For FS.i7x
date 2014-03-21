@@ -1,7 +1,5 @@
 Version 8 of Lizard Girl For FS by Damaged begins here.
-[ Version 8 - Updated to extended heat table - no MPreg heat - Stripes ]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-
+[ Version 8.1 - Streamlined feat check - no MPreg heat - Stripes ]
 
 "Adds a Lizard Girl to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -40,8 +38,8 @@ to say lizgirl impreg:
 to say lizgirl check angry:
 	if lizgirlangry is 1:
 		if hp of player < 11:
-			say "The lizard girl draws away from the fight. [line break][line break]'Useless useless useless, your blood is tainted and weak!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
 			now fightoutcome is 19;
+			say "The lizard girl draws away from the fight. [line break][line break]'Useless useless useless, your blood is tainted and weak!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
 		
 to say lizgirl attack:
 	if lizgirlmarked is 0:
@@ -49,7 +47,7 @@ to say lizgirl attack:
 		if cocks of player > 0:
 			say "'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock of player] member, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break]Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future. 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl impreg][lizgirl female]";
 		otherwise:
-			say "'Oh, nothing for me to play with? I have a cure for that.' she says, pushing you to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player], leaving you paralyzed and unable to resist. Slowly as her ministrations increase you feel a tingling in your groin. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl herm]";
+			say "'Oh, nothing for me to play with? I have a cure for that.' she says, pushing you to your back and lowering herself between your legs. You would pull away but her reptilian tongue suddenly draws a gasp from you as it attacks your [cunt size desc of player] cunt, leaving you paralyzed and unable to resist. Slowly as her ministrations increase you feel a tingling in your groin. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl herm]";
 	otherwise:
 		if cocks of player is 0:
 			if lizgirlimpreg is 0:
@@ -58,7 +56,7 @@ to say lizgirl attack:
 				if lizgirlinheat is 0:
 					say "'Mmm, you carry my seed little one, do not fear, you will be done soon.' the Lizard Girl murmurs close by your head, walking around you [one of]as she runs her clawed hands all over every exposed part[or]lashing out at random with her tongue every so often, leaving tingling little spots all over you[at random].";	
 				otherwise:
-					say "'Oh, what this? Are we feeling a little tender, a little needy? Oh my poor baby come here.' the lizard girl says, taking you into her arms. For your part, its a welcome relief as she starts to lap at your aching entrance, cleaning the latest stains of your semen that had leaked out. Your orgasm, female in origin, wracks your body, leaving you at peace in the wonderful afterglow. Laying there still, you feel a need for something to taste and before you know what you are doing you have your head buried between the lizard girl's thighs, administering pleasure to her slit even as she continues on your own. After what feels like days of pleasure and release you slowly pull apart. 'My wonderful little treasure, you are, without a doubt, perfect.' she says, and you feel that inner glow intensify. Looking down at her thigh, you see another name scrawled there, similar to hers on your own leg. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
+					say "'Oh, what's this? Are we feeling a little tender, a little needy? Oh my poor baby. Come here.' the lizard girl says, taking you into her arms. For your part, its a welcome relief as she starts to lap at your aching entrance, cleaning the latest stains of your semen that had leaked out. Your orgasm, female in origin, wracks your body, leaving you at peace in the wonderful afterglow. Laying there still, you feel a need for something to taste and before you know what you are doing you have your head buried between the lizard girl's thighs, administering pleasure to her slit even as she continues on your own. After what feels like days of pleasure and release you slowly pull apart. 'My wonderful little treasure, you are, without a doubt, perfect.' she says, and you feel that inner glow intensify. Looking down at her thigh, you see another name scrawled there, similar to hers on your own leg. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
 		otherwise:
 			if lizgirlimpreg is 0:
 				say "Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now its my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break] 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
@@ -99,23 +97,12 @@ to say lizdefnone:
 	say "You look down upon the defeated lizard girl[']s body, you arousal growing as you decide to sate your lusts on this creature. However, you stop and look down at yourself, realizing that you lack the proper equipment. Growling at yourself, you turn around and storm off in a huff.";
 
 to say lizgirl desc:
-	if "Male Preferred" is listed in feats of player:	
+	now lizgirlangry is 0;
+	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Sterile" is listed in feats of player or "One Way" is listed in feats of player or "Always Cocky" is listed in feats of player or "Always A Pussy" is listed in feats of player:
 		say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";
 		now lizgirlangry is 1;
 	otherwise:
-		if "Female Preferred" is listed in feats of player:		
-			say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";
-			now lizgirlangry is 1;
-		otherwise:
-			if "Sterile" is listed in feats of player:
-				say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";
-				now lizgirlangry is 1;
-			otherwise:
-				if "One Way" is listed in feats of player:	
-					say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace. She sniffs the air, and leaps at you without warning, slicing you on the arm. Leaning in close, not touching you with any part of herself, her slender forked tongue dances out, above the small trail of blood. Pulling back with a stricken look on her muzzle she cries out, 'This clay is useless!' she seems angry as all hell now, and comes at you with claws flashing.";
-					now lizgirlangry is 1;
-				otherwise:
-					say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace, a half smile across her short muzzle. You can't help feel that to her, you are nothing more than an art piece awaiting her masterful expertise.";
+		say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace, a half smile across her short muzzle. You can't help feel that to her, you are nothing more than an art piece awaiting her masterful expertise.";
 			
 Section 2 - Monster Insertion
 

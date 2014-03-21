@@ -203,7 +203,7 @@ to say LilithPregCheck:
 			
 instead of going northeast from Burned-Out Chapel while hp of Lilith is 0:	[first meeting]
 	move player to Sacristy;
-	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveller. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you gives you little touches and caresses, inevitably heightening your arousal a bit.";
+	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveller. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
 	now hp of Lilith is 1;   [has met the player, not the demon brute yet]
 								
