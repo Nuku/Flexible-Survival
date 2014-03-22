@@ -64,7 +64,7 @@ to say corruptedvicdesc:
 	otherwise if corrvicchange1 is 13:
 		say "a cybernetic pack fused into her back with blinking lights on it";
 	otherwise if corrvicchange1 is 14:
-		say "an addional pair of robotic arms growing from her back";
+		say "an additional pair of robotic arms growing from her back";
 	otherwise if corrvicchange1 is 15:
 		say "hardened plates across her back";
 	otherwise if corrvicchange1 is 16:
