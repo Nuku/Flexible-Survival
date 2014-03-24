@@ -187,7 +187,7 @@ to say feline desc:
 	choose row monster from the table of random critters;
 	let debit be 0;
 	if Feline_type is 3:			[forced hunting pride fight]
-		say "     You are facing off against a small pride of roving feline girls.  The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent.  Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride.  As Leonard's requested, you'll have to defeat and break up these groups to help protect your pride sisters[if hp of Leonard is 10].  Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
+		say "     You are facing off against a small pride of roving feline girls.  The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretence of looking cute and innocent.  Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride.  As Leonard's requested, you'll have to defeat and break up these groups to help protect your pride sisters[if hp of Leonard is 10].  Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
 		let levcalc be level of Hunting Prides;
 		if hardmode is true:
 			if level of player > level of Hunting Prides:
