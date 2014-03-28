@@ -36,6 +36,7 @@ Version 1 of Carl by Wahn begins here.
 [  50: sub Carl fucked Xerxes                                                          ]
 [ 100: declined Carl starting something with Xerxes                                    ]
 
+
 Section 1 - Description
 
 Carl is a man. The hp of Carl is usually 0.
