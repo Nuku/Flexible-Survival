@@ -132,7 +132,7 @@ to say bubblesex00:
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	if hp of Bubble is 5, now hp of Bubble is 6;
-	now libido of player is ( libido of player * 2 ) + 50 / 3;
+	now libido of player is ( ( libido of player * 2 ) + 50 ) / 3;
 	now lastfuck of Bubble is turns;
 	wait for any key;
 	clear the screen and hyperlink list;
