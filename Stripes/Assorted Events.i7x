@@ -248,7 +248,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 10;
 		increase loversbench by 1;
 	otherwise if loversbench is 2:		[third+ visit]
-		say "     Returning to the area around the lovers'['] bench, you decide to search around it again.  Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items.  Sadly, you are unable to locate anything new or of any use.";
+		say "     Returning to the area around the lovers['] bench, you decide to search around it again.  Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items.  Sadly, you are unable to locate anything new or of any use.";
 	if loversbench is 2 and companion of player is not listed in lbcomplist and (cocks of player > 0 or cunts of player > 0):
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]

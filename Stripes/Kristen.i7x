@@ -1,5 +1,5 @@
 Version 2 of Kristen by Stripes begins here.
-[ Version 2.1 - Infection progresses further + tweaks]
+[ Version 2.2 - Infection step 3]
 "Adds an Arctic Fox named Kristen to the Flexible Survival game."
 
 Section 1 - Event
@@ -74,22 +74,36 @@ to say krishideoutdesc:
 		say "     This second floor apartment is above a ruined coffee shop.  It is fairly small, with a small living room, kitchen, bathroom and bedroom.  Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive.  The furniture is of high quality, is well padded and rests upon hardwood floors.  The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom.  It's clear that this place belonged to someone who liked living in the lap of luxury.  The place has been kept quite clean given the circumstances.  The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
 	otherwise if hp of Kristen is 12:
 		say "[kristentf_phase1]";
+		attempttowait;
 		now hp of Kristen is 13;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-	otherwise if hp of Kristen < 15 and lastfuck of Kristen - turns < 4:
-		say "     [if libido of Kristen is 2]You promised to give Kristen some time to think.  You should give her a little longer before returning.[otherwise if libido of Kristen is 3]As much as you look forward to seducing the transforming woman further, you don't want to rush things.  You decide to wait a little longer before returning to see her again.[otherwise]As much as you look forward to enjoying the transforming vixen's body, you should give her some time to allow her infection to progress further.  Besides, she'll be hornier if you let her change further.[end if]";
+	otherwise if hp of Kristen < 16 and lastfuck of Kristen - turns < 4:
+		if hp of Kristen < 15:
+			say "     [if libido of Kristen is 2]You promised to give Kristen some time to think.  You should give her a little longer before returning.[otherwise if libido of Kristen is 3]As much as you look forward to seducing the transforming woman further, you don't want to rush things.  You decide to wait a little longer before returning to see her again.[otherwise]As much as you look forward to enjoying the transforming vixen's body, you should give her some time to allow her infection to progress further.  Besides, she'll be hornier if you let her change further.[end if]";
+		otherwise:
+			say "     Kristen could use some time to rest and take stock of her situation before you return to see how she's dealing with her changes[if libido of Kristen is 2].  [otherwise if libido of Kristen is 3].  After the excitement last time, you decide to give her a little more time before attempting to seal the deal again[otherwise].  As eager as you are to see if the slutty vixen's completed her transformation, you decide to wait a little longer to be sure[end if].";
+		attempttowait;
+		move player to Grey Abbey Library;
 	otherwise if hp of Kristen is 13:
 		say "[kristentf_phase2]";
+		attempttowait;
 		now hp of Kristen is 14;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-[	otherwise if hp of Kristen is 14:
+	otherwise if hp of Kristen is 14:
 		say "[kristentf_phase3]";
+		attempttowait;
 		now hp of Kristen is 15;
 		move player to Grey Abbey Library;
+		now lastfuck of Kristen is turns;
+[	otherwise if hp of Kristen is 15:
+		say "[kristentf_phase4]";
+		attempttowait;
+		now hp of Kristen is 16;
+		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;	]
-	otherwise if hp of Kristen is 14:
+	otherwise if hp of Kristen is 15:
 		say "[bracket]Location temporarily closed from this point, but more to come. - The Mgmt[close bracket][line break]";
 		move player to Grey Abbey Library;
 
@@ -104,6 +118,7 @@ kristenmsg2 is a truth state that varies.  kristenmsg2 is usually false.	[genera
 kristenmsg3 is a truth state that varies.  kristenmsg3 is usually false.	[J mentioned K]
 kristenmsg4 is a truth state that varies.  kristenmsg4 is usually false.	[K told about J]
 kristenmsg5 is a truth state that varies.  kristenmsg5 is usually false.	[prompted for blouse?]
+kristentf3fuck is a truth state that varies.  kristentf3fuck is usually false.	[fucked Kristen at tf stage 3]
 
 the scent of Kristen is "[kristenscent]";
 
@@ -168,7 +183,7 @@ to say kristentf_phase1:	[denial/anger]
 	say "     When you confirm your hypothesis, Kristen loses it.  Swatting a nearby vase, she sends it flying into the wall.  'That bitch!  I'll wring her fuzzy little neck.'  She storms around the room, throwing a few more of Janice's expensive furnishings around.  'I'll kick her ass from here to Sunday.  No, I'll find the biggest strap-on I can and pound her ass until it's raw.  Mmm... that sounds like fun!  Eeep!'  She freezes mid-step and slaps her hands over her mouth, eyes wide in shock at what she just said.  'Oh no!  It's starting to affect my brain,' she says, a bit of a tremble in her voice.";
 	attempttowait;
 	say "     Noticing that she's been strutting around in her bra and that your eyes are on her, she turns her attention to you.  'That's it, isn't it?  This is all your fault!  You brought this... this... this horrible [bold type]thing[roman type] to me,' she says, grabbing the blouse and throwing it in your face.  'You're trying to get me infected, too!  You want to make me into a slutty beast for you to fuck, don't you?' she snarls.  She grabs another vase and sends it flying a foot from your head.";
-	say "     Clearly you'll need to help Kristen through this, though how you go about it will likely have profound affects on her by the time it's over.  You could try to be [link]supportive (1)[as]1[end link] and try to calm her down.  You could take a more [link]seductive (2)[as]2[end link] approach in the hopes of getting her hot for you.  Or, you can not bother waiting and take a [link]forceful (3)[as]3[end link] approach to get some hot sexing right now.  What shall you do?";
+	say "     Clearly you'll need to help Kristen through this, though how you go about it will likely have profound affects on her by the time it's over.  You could try to be [link]supportive (1)[as]1[end link] in the hopes of calming her down.  You could take a more [link]seductive (2)[as]2[end link] approach in the hopes of getting her hot for you.  Or, you can not bother waiting and take a [link]forceful (3)[as]3[end link] approach to get some hot sexing right now.  What shall you do?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
@@ -219,13 +234,15 @@ to say kristentf_phase1:	[denial/anger]
 to say kristentf_phase2:	[bargaining]
 	say "     When you announce your arrival below Kirsten's hideout, she's at the window and lowering the ladder in record time.  Heading up, you're helped through the window rather roughly.  'I'm glad you're back.  I need your help,' she says frantically, not even bothering to remove the ladder or even close the window before starting, quite unlike herself.  As you take care of all that, she continues on.  'Look, you know how the soldiers out there [if xp of Kristen is 0]seem to be resistant to transformation?  They've got some kind of spray or pills or something that ups their resistance.  [otherwise]have got that spray stuff to make them more resistant and reverse minor changes?  [end if]Now, if you can get a bunch of that stuff for me - I mean like a whole lot - maybe you can help me get out of this mess.'  She spews out her plan quickly, almost babbling in here eagerness for your assistance.  She's pants heavily and grips your shoulders firmly with her paws.";
 	say "     The sight of her paws draws your attention to them and you look her over.  In addition to her foxish ears, she's now got paw-like hands.  They're mostly human in form with elegant digits, but also have pawpads and small claws at the fingertips.  Short, black fur covers them, thinning as it crosses her wrists and her human skin resumes.  She's wearing her white shirt again, though [if libido of Kristen is 4]you can see that the white fluff that started at her crotch has crept up past her navel, spreading further[otherwise]you catch a glimpse of some white fluff that's spread from her crotch and up past her navel[end if].  Her figure, already quite lovely, has subtly changed to make her even more appealing.  She's got a short fox tail that's started to form as well, only about a foot or so long at present.  Following her legs down to her feet, you can see they've become black-furred paws as well, though somewhat more animal-like than her hands.  With her changes progressing even without the blouse on any more, it's clear why she's frantic to find a way to stop this.";
-	say "     '...get away from this mess.  Hey!  Are you even listening?' she growls angrily while her short tail thrashes.  'This is an emergency!  There's got to be a way out of this, so I was thinking we might try getting out of the city.  If it's a local thing, I should be safe once I get away from whatever's causing this mess.  I mean, it's not like it's fully changed me yet,' she says with desperate hope.";
+	attempttowait;
+	say "     '...get away from this mess.  Hey!  Are you even listening?' she growls angrily while her short tail thrashes.  'This is an emergency!  There's got to be a way out of this, so I was thinking we might try getting out of the city.  I've got some money saved up; just a couple grand, but you can have it if you can get me out of the city.  If it's a local thing, I should be safe once I get away from whatever's causing this mess.  I mean, it's not like it's fully changed me yet,' she says with desperate hope.";
 	say "     Realizing that your chances of getting past the military cordon are grim, you immediately try to dissuade her from this.  Adding that you doubt the infection works that way, seeing how it's spreading despite having taken off the blouse that set it off.  The nanites are in her and actively making her more foxish.";
+	attempttowait;
 	say "     'Maybe the army thing is too risky... So then we need a scientist or a doctor or something.  Someone in this crazy city's got to know what's going on and how to cure this.  I mean, if it started here, then someone or something set it off, so somebody's got to know what's happening or is at least working on solving it.  We just need to find them and then they can fix me.  There must be teams of scientists outside the city trying to undo this.  If we could get out and find them...' she goes on, returning to escaping the city.";
 	say "     She seems ready to keep trying to find a way out of her predicament.  How shall you respond?";
-	if libido of kristen <= 2, say "[link][bracket]1[close bracket] - Dissuade her[end link] from her madcap false hopes,[line break]";
-	if libido of kristen <= 3, say "[link][bracket]2[close bracket] - Snuggle up[end link] with a promise to keep looking for a solution, or[line break]";
-	if libido of kristen <= 4, say "[link][bracket]3[close bracket] - Shut her up[end link] by giving her mouth something else to do.";
+	if libido of kristen <= 2, say "[link][bracket]1[close bracket] - Dissuade her[as]1[end link] from her madcap false hopes,[line break]";
+	if libido of kristen <= 3, say "[link][bracket]2[close bracket] - Snuggle up[as]2[end link] with a promise to keep looking for a solution, or[line break]";
+	if libido of kristen <= 4, say "[link][bracket]3[close bracket] - Shut her up[as]3[end link] by giving her mouth something else to do.";
 	now calcnumber is 0;
 	let x be libido of Kristen - 1;
 	while calcnumber < x or calcnumber > 3:
@@ -250,22 +267,89 @@ to say kristentf_phase2:	[bargaining]
 		if cocks of player > 0:
 			say "     Rather than listen to more of these desperate plans, you lightly shove her to sit on the couch.  Telling her that she's grasping at straws, you press her face to your crotch.  'And since you're going to end up being a sexy vixen, you may as well enjoy it.  And I should get to enjoy it too,' you add, pressing your swelling penis to her face.  The scent of your manhood distracts her as her eyes run over your [cock size desc of player] [cock of player] cock.  She licks her lips and gives your shaft a tentative lick, her arousal quickly overcoming her caution.  After a few more licks, she's sliding your cock into her hot, wet mouth.";
 			say "     Rubbing those foxish ears of hers, you tell her what fine vixen slut she'll be.  Her ears dip at this at first and she blushes in shame, but they dip less each time you reiterate it and she instead sucks you all the harder.  Smiling happily at her response, you get even more turned on and start thrusting between those lovely lips of hers.  She moans and relaxes her throat, letting you set the pace for fucking her face.  She presses a paw between her legs to play with her juicy pussy while the other fondles her breasts.";
+			attempttowait;
 			say "     Her growing compliance makes you look forward to the day you'll be able to fuck her as a sexy, horny vixen.  Just the thought of that is enough to push you over the top and you pull her face to your crotch and unload your hot semen into her mouth and down her throat.  She moans again, swallowing it down with an almost desperate need.  Feeding her all you've got to give, [if cock width of player < 20]her mouth is left sticky and drooling cum by the time you're done[otherwise if cock width of player < 32]she's left drooling cum and has a lightly rounded stomach by the time you're done[otherwise]her mouth is overflowing with cum and her stomach is bloated with your seed by the time you're done[end if].  She whimpers softly at your betrayal, but continues to squirm on the couch, fingering herself to a moaning climax.  After enjoying that show, you tell her you'll be back to check up on her again soon and warn her not to go out or something else might make her into something much worse than a slutty vixen.";
 		otherwise if cunts of player > 0:
 			say "     Rather than listen to more of these desperate plans, you lightly shove her to sit on the couch.  Telling her that she's grasping at straws, you press her face to your crotch.  'And since you're going to end up being a sexy vixen, you may as well enjoy it.  And I should get to enjoy it too,' you add, pressing your damp pussy to her face.  The scent of your snatch distracts her as her eyes run over your [cunt size desc of player] cunt.  She licks her lips and gives your soft folds a tentative lick, her arousal quickly overcoming her caution.  After a few more licks, she's lapping her tongue into your hot, wet cunny.";
 			say "     Rubbing those foxish ears of hers, you tell her what fine vixen slut she'll be.  Her ears dip at this at first and she blushes in shame, but they dip less each time you reiterate it and she instead licks you with a growing eagerness.  Smiling happily at her response, you get even more turned on and grind your netherlips to her mouth.  She moans and sucks on your clit, letting you do as you please.  She presses a paw between her legs to play with her own juicy pussy while the other fondles her breasts.";
+			attempttowait;
 			say "     Her growing compliance makes you look forward to the day you'll be able to do this with her as a sexy, horny vixen.  Just the thought of that is enough to push you over the top and you pull her face to your crotch and cry out in orgasmic release.  Your femmecum flows across her tongue and into her mouth.  She moans again, lapping it up and swallowing it down with an almost desperate need.  After a long and drawn out climax, her face is left sticky with your juices and she's rather dazed in her lust.  She whimpers softly at your betrayal, but continues to squirm on the couch, fingering herself to a moaning climax.  After enjoying that show, you tell her you'll be back to check up on her again soon and warn her not to go out or something else might make her into something much worse than a slutty vixen.";
 		otherwise:
 			say "     Rather than listen to more of these desperate plans, you lightly shove her to sit on the couch.  Telling her that she's grasping at straws, you press her face to your crotch.  'And since you're going to end up being a sexy vixen, you may as well learn to enjoy it.  And I should get to enjoy it too,' you add, pressing your bare crotch to her face.  Ordering her to lick you there, you tell her to imagine all the throbbing cocks and juicy pussies she's going to get.  She licks her lips, starting to imagine it and becoming aroused.  She gives your featureless groin a tentative lick at first, her arousal quickly overcoming her caution.  After a few more licks, she closes her eyes and laps and kisses at your crotch.";
 			say "     Rubbing those foxish ears of hers, you tell her what fine vixen slut she'll be.  Her ears dip at this at first and she blushes in shame, but they dip less each time you reiterate it and she instead licks you with a growing eagerness.  Smiling happily at her response, you get even more turned on and grind your flat groin to her mouth.  She moans and works her tongue wildly across your skin, clearly imagining those cocks and pussies you tell her she won't be able to resist tasting.  She presses a paw between her legs to play with her own juicy pussy while the other fondles her breasts.";
+			attempttowait;
 			say "     Her growing compliance makes you long for a gender of your own so you can properly enjoy the day you'll be able to do this with her as a sexy, horny vixen.  Just the thought of that is enough to push you over the top and you pull her face to your crotch.  Having no focused means of release, your [bodytype of player] body trembles with pent-up arousal and you grind your flat groin against her face hard.  She moans again, kissing and licking at it with an almost desperate need to satisfy you.  After your unsatisfying release fades, you push her away.  She whimpers softly at your betrayal, but continues to squirm on the couch, fingering herself to a moaning climax.  After enjoying that show, you tell her you'll be back to check up on her again soon and warn her not to go out or something else might make her into something much worse than a slutty vixen.";
 		now libido of Kristen is 4;
 
-
-
-
-
-
+to say kristentf_phase3:	[depression]
+	say "     Arriving outside Kristen's, you toss a few pebbles up at the window to let her know you're there.  At first there's no answer and you wonder if she's out.  After tossing a few more and getting no response, you double-check on the ladder's hiding spot, but don't find it there.  Knowing she must be upstairs, you toss a few more pebbles and risk calling up to her.  Finally, you see a corner of the blinds be split open as she peers out at you.  After a long delay, the window opens and the ladder is lowered out for you.";
+	say "     Coming up, you find her sitting on the floor next to the window.  She's slumped against the wall [if libido of Kristen is 4]with a sad expression on her muzzled face, but also a paw stuffed into her shorts[otherwise]with a sad expression on her muzzled face, ears hanging low[end if].  That muzzle is not her only change either, her infection having progressed noticeably since your last visit.  Starting from the top, her hair's gone from its previous dirty blond to a lustrous white.  A little lower is her muzzle, not fully formed, but definitely vulpine in shape, with a dark nose and markings contrasting sharply with the white fur.  The fur on her arms has extended further, nearly to her elbows.  This makes the charcoal fur seem like long-sleeved gloves on her arms.  Similarly, her legs have black [']socks['] that go almost to her knees.  Her tail's also grown further, full and fluffy now, though flopped out limply on the floor.";
+	attempttowait;
+	if libido of Kristen is 2:
+		say "     'I've tried to hold on, but I don't think I can do it much longer,' she says sadly, her voice drained of life by her depression";
+	otherwise if libido of Kristen is 3:
+		say "     'No luck finding a way out of this?  I didn't think so,' she says sadly, her voice drained of life by her depression";
+	otherwise:
+		say "     'Come to finish me off, have you?' she asks flatly, not even bothering to look up";
+	say ".  'I just keep changing more and more[if libido of Kristen is 4], and getting hornier and hornier[end if].  Soon there won't be anything left of the old me at all.  There's no point in fighting it.  I may as well just wander outside and let some [if libido of Kristen is 4]sexy[otherwise]strange[end if] creature find me.";
+	say "     Given how drained and fatalistic she's sounding, you'll need to do something to shake her out of this funk.  How shall you respond?";
+	if libido of kristen <= 2, say "[link][bracket]1[close bracket] - Keep encouraging her[as]1[end link],[line break]";
+	if libido of kristen <= 3, say "[link][bracket]2[close bracket] - Charm her[as]2[end link] during a romantic walk, or[line break]";
+	if libido of kristen <= 4, say "[link][bracket]3[close bracket] - Fuck her[as]3[end link] out of her funk.";
+	now calcnumber is 0;
+	let x be libido of Kristen - 1;
+	while calcnumber < x or calcnumber > 3:
+		if calcnumber is 1 or calcnumber is 2:
+			say "It is too late to try that approach after what you did earlier.";
+		say "Choice? ([x]-3)>[run paragraph on]";
+		get a number;
+	if calcnumber is 1 and libido of Kristen <= 2:
+		say "     Responding that that would be as good as dying, you give her a rough shake and tell her to keep fighting.  She's inconsolate at first, so you remind her that Kristen the person is still in there and that she's got to hold onto that.  People never stay the same person throughout their lives; they just don't change this quickly.  If she can hold onto herself, she'll be Kristen the vixen; but if not, then Kristen dies and all there is a feral vixen - for as long as that lasts before some monster out there changes her further and even that disappears.";
+		say "     'But what's the point then, if I'm now this vixen instead of me?' she asks.";
+		say "     'Who says you can't be both?' you respond.  'In this crazy city, there's much worse things to be than a foxy lady.'";
+		say "     She nods a little at that.  'Yeah, like those sheep out there.  Hoping to be someone's woolly cum-rag before they're someone's mutton,' she says.  'And you'd saved me from that.  I guess you're right that things could be worse.'";
+		attempttowait;
+		say "     With a sniffle, Kristen moves away from the wall and leans against you instead.  Putting your arms around her, you hold her comfortingly.  Resting her vulpine head against your shoulder, she has a much needed cry.  You let her get it all out, occasionally reassuring her that she can get through this, but mostly just holding her quietly.";
+		say "     Some time after she's finished crying, she moves back.  Wiping her eyes with her fuzzy wrist, she gives you a weak smile.  'Thanks for being there for me.  I should probably go lie down for a while, but can you come check on me again soon?'  Leaning in quickly, she gives you a peck on the cheek before rising to her feet.  Giving her a final reassurance, you exit through the window and wave to her as she pulls the ladder back in behind you.";
+		now libido of Kristen is 2;
+	otherwise if calcnumber is 2 and libido of Kristen <= 3:
+		say "     Taking one of her paws in hand, you pull her up to her feet, telling her that being cooped up in here isn't helping her mood.  She sighs and asks if you're just going to find some beast out there to claim her.  Pulling her to your side, you tell her that you're not giving up on your foxy vixen.  Adding that you'll be there for her, you let your free hand glide across her ass.  She rests her head on your shoulder, her tail giving a slight wag.";
+		say "     After exiting her haven and stowing the ladder, you talk on a walk through some of the more peaceful areas you've seen.  You have to be cautious, but thankfully run into no problems you can't handle with a keen eye or a menacing growl.  Eventually, your path takes you to the west end of the city and a cliff overlooking the ocean.  Remembering it as a being a rather successful make-out point, you did not arrive here by accident.";
+		attempttowait;
+		say "     Having already cheered up a little while walking with you, thanks to some friendly conversation peppered with compliments, her mood's started to improve.  Sitting with her on a grassy spot near the railing, you put your arm around her and [if daytimer is day]look out over the rolling waves, taking in the fresh sea air.  While watching the ocean[otherwise]look up at the stars while listening to the rolling waves, taking in the fresh sea air.  While stargazing[end if], you continue to lay on the charm, being complimentary to her new looks and saying stuff like how her natural beauty still shines through even as she's changing.  Her mood improves over time, still a little sad, but also hanging on your words, loving the attention after being lonely for so long.";
+		say "     You play it cool, not going too fast, though you keep an arm around her back with hand on hip and the other across her tummy, softly stroking her soft fur.  After gazing long into her now yellow eyes (describing them as shining, golden gems), you move in to kiss her...";
+		attempttowait;
+		say "...only to be interrupted by one of those female huskies.  'Oooo!  Hawt!  Can I join in?' she asks, advancing quickly.";
+		attempttowait;
+		say "     Grumbling inside at the interruption just as things were getting good, you start to rise to deal with her.  But you're quite literally beaten to the punch by Kristen, who stomps towards the fluffy dog and clocks her right in the muzzle with a snarl.";
+		say "     'You bitch!  Get your own [if cocks of player > 0]man[otherwise if cunts of player > 0]girl[otherwise]guy[end if],' she snaps at the canine girl.  The husky whimpers and clutches her broken nose, slinking back several paces before turning and running.  Kristen huffs and shakes her sore paw, then laughs a little.  Looking back at you, she blushes at her ears and rushes into your arms.  Clinging to you tightly, she rests her head against your chest and winds her fluffy tail around you.  After this long hug, she lets go and says that she should probably get back before anything meaner finds them.  A little reluctant to let her go when you were so close, you do make sure to give her that kiss (along with a pat on the ass) and tell the lovely vixen to be careful before you part ways with a promise to come see her after she's had a chance to rest.";
+		now libido of Kristen is 3;
+	otherwise if calcnumber is 3 and libido of Kristen <= 4:
+		say "     'Well, if you're just going to become a slutty vixen anyhow, let's make the most of it.  I'm not just going to let some random beast out there have you.  You're too sexy a fox to let get away,' you say with a lascivious edge in your voice.";
+		say "     Taking one of her paws in hand, you pull her up and onto the couch instead.  Sliding down her shorts, you bare her juicy pussy to you[if libido of Kristen is 4].  She moans and pants, spreading her legs in wanton need despite herself[otherwise].  She doesn't resist as you spread her legs[end if].  Groping a breast from under her shirt, you dip a pair of fingers into her pussy and work them around inside her already dripping cunny.";
+		attempttowait;
+		say "     'MMm... ohh... but I thought you were my friend.  Why're you doing this to me?' she manages to ask between pants as her excited body quivers on the cushions.";
+		say "     'That's why I'm doing it,' you say with a smile, licking her muzzle.  'You need to accept that you're a slutty vixen now.  It'll be fun, you'll see.'  Wriggling your fingers inside her quivering cunny, you tease her clit[if libido of Kristen is 4].  'Didn't you have fun earlier[otherwise].  'Doesn't that feel good[end if]?'";
+		attempttowait;
+		if cocks of player > 0:
+			say "     She nibbles at her lip and releases a whimper of pleasure.  'Yessss...' she moans softly, 'but...'  Cutting off her hesitant objection with a kiss, you move into position atop her.  Easing your fingers out of her pussy, you grind your erection against it instead.  Her body responds, pressing back against your throbbing meat with a need to be filled.  You tease her like that until she's moaning to have you fill her, her earlier concerns forgotten in her lustful state.";
+			say "     Hearing her begging for a good fucking, you don't keep her waiting any longer.  With a hand on her thigh and the other guiding your cock in, you thrust your [cock of player] penis into her vulpine snatch.  She yips and yiffs excitedly, finally about to get the fucking she's been trying to resist for so long.  And her body, finally getting what it's been needing since she's started to change, pushes back onto your pole to welcome it into her heated depths.";
+			attempttowait;
+			say "     As you thrust, you tell her what a sexy, beautiful and (most importantly) slutty vixen she's becoming.  Worn down by this point, she can't help but moan in agreement.  She also grows more vigorous in her participation, running her paws over your chest before moving them to her breasts.  She plays with her tits and rubs her nipples in a wanton display that excites you further.";
+			say "     Feeling your orgasm approaching, you tell her you're about to cum.  'Ngg... no... not inside me,' she moans even as her hips grind into your thrusts all the harder.  Pulling out at the last possible moment, you grab your pulsing rod and spray your load across her sexy body.  Between groans, you tell her that next time you'll be finishing in her.  Already fingering herself, she plunges her digits in deep and orgasms with a series of moaning yips.";
+			attempttowait;
+			say "     The spent vixen ends up passing out after her release.  Leaving her coated in your cum as a reminder that you'll be back for more, you exit her hidden abode.  Storing the ladder away should ensure that she'll be there when you return to finish the job.";
+			now kristentf3fuck is true;
+		otherwise if cunts of player > 0:
+			say "     She nibbles at her lip and releases a whimper of pleasure.  'Yessss...' she moans softly, 'but...'  Cutting off her hesitant objection with a kiss, you turn yourself around overtop her.  Pressing your wet pussy against her new muzzle, she's given a heady nose-full of your aroused scent, further clouding her reason.  Easing your fingers out of her pussy, you press your lips to her juicy folds and start licking very delicately.  Her body responds, pressing back against your sliding tongue.  You continue to tease her with the barest of touches until she's moaning for you to eat her out and slathering her own tongue across your heated folds.";
+			say "     Hearing her begging for it and eating you out to get it, you don't keep her waiting any longer.  Spreading her pussy open with your fingers, you dive your tongue into her vulpine snatch.  She yips and yiffs excitedly, finally getting the release she's been trying to resist for so long.  And her body, fuelled by the tasted and scent of your musky juices, is wracked with pleasure and pulls your hips down onto her face even tighter so her tongue can delve deeper.";
+			attempttowait;
+			say "     As you eat each other out, you tell her what a sexy, beautiful and (most importantly) slutty vixen she's becoming.  Worn down by this point, she can't help but moan in agreement.  She also grows more vigorous in her participation, her fingers exploring your pussy[if anallevel is 3] and anus[end if], inside and out, while her tongue ravishes you.  She licks and sucks at your clit wantonly to excite you further.  Soon, you're both enjoying a crashing orgasm, wetting one another's faces with your feminine juices, as you cry out in release.  Her moans of delight are intermixed with yips as her tongue laps up as much of your delicious femmecum as she can get.";
+			attempttowait;
+			say "     The spent vixen ends up passing out after her release.  Leaving her muzzle coated in your sticky juices as a reminder that you'll be back for more, you exit her hidden abode.  Storing the ladder away should ensure that she'll be there when you return to finish the job.";
+		otherwise:
+			say "[bracket]***Scene to be added later. - The Mgmt[close bracket][line break]";
+		now libido of Kristen is 4;
 
 
 
@@ -297,12 +381,12 @@ Section 8 - Variable Charts
 [ 2 = saved				  ]
 [ 3 = talked to her		  ]
 [ ...                     ]
-[ 8 = player told Kristen ]
-[ 9 = player told both    ]
 [ 10 = player gets item   ]
 [ 11 = item given         ]
 [ 12 = triggered          ]
 [ 13 = infected, step 1   ]
+[ 14 = infected, step 2   ]
+[ 15 = infected, step 3   ]
 [...                      ]
 
 [     xp of Kirsten       ]  [not currently active, but preparatory]
@@ -320,10 +404,6 @@ Section 8 - Variable Charts
 
 Section 9 - Temporary Raw Notes
 
-[
-	say "     Arriving outside Kristen's, you toss a few pebbles up at the window to let her know you're there.  At first there's no answer and you wonder if she's out.  After tossing a few more and getting no response, you double-check on the ladder's hiding spot, but don't find it there.  Knowing she must be upstairs, you toss a few more pebbles and risk calling up to her.  Finally, you see a corner of the blinds be split open as she peers out at you.  After a long delay, the window opens and the ladder is lowered out for you.";
-	say "     Coming up...
-]
 
 [ lovers bench ]
 
