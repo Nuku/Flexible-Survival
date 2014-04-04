@@ -261,7 +261,7 @@ Instead of Resolving a For the Future:
 		say "'This is [italic type]exactly[roman type] what I need.' The redheaded woman collects the centaur stallion's seed and then caps the jar only to hurriedly put the near full container away into a bag sitting at her feet. 'Thank you so much!' The redhead smiles to you in an unexpectedly chipper manner and you slowly find yourself cautiously backing up from the oddball woman. Did she not just see you get owned by a lust-drunk centaur and then subsequently [if cunts of player > 0]fucked right up the cunt like a mare[otherwise]creamed across the chest as though you were a hand towel[end if]? Or maybe the more important questions to be asked are - why did she collect the stallion's cum and what is she gonna use is it for latter?";
 		say "You nod to the strange redhead and then watch as her brightly lit golden eyes twinkle at you with almost childlike jubilation. 'You have got to come to my studio now! There's no way that I could let someone as resourceful as you get away from me!' The redheaded is almost fanatically adamant about this as, once she grabs her backpack from off of the ground, she quickly takes you by the hand and then starts to pull on you towards the northern area of the plains. You struggle against the woman's [']impressive['] grip while asking, in a rather loud and boisterous voice, if she's got some sort of mental problem before successfully ripping your hand away from the redhead.";
 		say "'No am I not crazy!' The woman shouts after she turns to face you and then stomps one foot across the ground as if that will help prove her point. You then ask her why in the name of all that is holy would she try and drag you off against your will without so much as giving you her name. 'Oh! I didn't tell you who I was?' You shake your head at the other and then cautiously take a few steps back from the other. 'Oops. Sorry 'bout that.' The redhead takes a small bow and then gives you her name. 'My name is Omio. And I'm a...researcher, per say, working out here for the betterment of mankind.' You give the redhead a dubious look at that.";
-		say "'Look, I could go into m whole spiel here, but if you just come to my studio then I'll explain everything. It's over by the northern end of the plains.' Omio hikes a thumb behind herself and then chuckles for some unknown reason. 'If you come I'll even share some tea with you and then tell you the whole story.";
+		say "'Look, I could go into my whole spiel here, but if you just come to my studio then I'll explain everything. It's over by the northern end of the plains.' Omio hikes a thumb behind herself and then chuckles for some unknown reason. 'If you come I'll even share some tea with you and then tell you the whole story.";
 		say "Not sure what to say you tell Omio that you [italic type]might[roman type] think about it if you can find some time later on. 'That's fine, I can accept that promise.' The strawberry redhead turns away from you and then begins to off on her, however, before she can leave completely you sudden call out to her to ask what she plans to do with that centaur stallion cum you managed to [italic type]acquire[roman type] for her. Omio stops and then shakes her head before turning to regard you. 'Come to my [bold type]Research Studio[roman type] and I'll tell you.' A snicker from the woman has you shuddering slightly as Omio turns to go off about her way, leaving you with your thoughts.";
 		now Researcher Studio is known;
 		now For the Future is resolved;
@@ -270,7 +270,7 @@ Instead of Resolving a For the Future:
 
 
 
-
+[
 when play ends:
 	if omq > 2 and omq is not 100:
 		if humanity of player < 9:
@@ -279,5 +279,6 @@ when play ends:
 			say "After the military rolls into town you find yourself going back to Omio's studio to look for the redhead. What you find upon crossing the plains is an empty studio that looks as though it hadn't seen much use in maybe ten years? Odd since the garden outside seems as though it has been watered very recently. Not understanding this you search around the place, calling out for Omio as you do so, without much success in locating the ."; 
 			say "When you finally decide to give up almost thirty minutes later you stumble across something shining on the ground several steps away from the house. Kneeling down and picking up the thing you realize that you've found a mini GPS unit. Turning on the power of the little machine you blink in awe as a set of directions flash in front of your face with the destination name 'Prometheus Prison' glowing faintly above the coordinates.";
 			say "Could Omio have left this behind for you? And if so, what happened to the  to make her neutralize her presence here so efficiently?";
+]
 
 Researcher Studio ends here.
