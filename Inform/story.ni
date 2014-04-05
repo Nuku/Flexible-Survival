@@ -7167,4 +7167,3 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
-
