@@ -43,12 +43,12 @@ to say convincestella:
 				move Stella to Police Lockerroom;
 				move player to Police Lockerroom;
 			otherwise:
-				say "     You and Stella travel together back to the bunker.  You don't run into any particular difficulties on the trip, allowing you more time to talk to Stella.  And while she doesn't really have anything insightful or interesting to say, her ditzy, super-friendly attitude does make for a cheerful enough trip.  Once you arrive[if the number of bunkered people + number of booked people > 0] and after quick introdutions[end if], she picks out a bunk for herself and flops out onto it with a happy sigh, paw going to her cock.";
+				say "     You and Stella travel together back to the bunker.  You don't run into any particular difficulties on the trip, allowing you more time to talk to Stella.  And while she doesn't really have anything insightful or interesting to say, her ditzy, super-friendly attitude does make for a cheerful enough trip.  Once you arrive[if the number of bunkered people + number of booked people > 0] and after quick introductions[end if], she picks out a bunk for herself and flops out onto it with a happy sigh, paw going to her cock.";
 				move Stella to Bunker;
 				move player to Bunker;
 				increase morale of player by 2;
 		otherwise:
-			say "     You and Stella travel together back to the bunker.  You don't run into any particular difficulties on the trip, allowing you more time to talk to Stella.  And while she doesn't really have anything insightful or interesting to say, her ditzy, super-friendly attitude does make for a cheerful enough trip.  Once you arrive[if the number of bunkered people + number of booked people > 0] and after quick introdutions[end if], she picks out a bunk for herself and flops out onto it with a happy sigh, paw going to her cock.";
+			say "     You and Stella travel together back to the bunker.  You don't run into any particular difficulties on the trip, allowing you more time to talk to Stella.  And while she doesn't really have anything insightful or interesting to say, her ditzy, super-friendly attitude does make for a cheerful enough trip.  Once you arrive[if the number of bunkered people + number of booked people > 0] and after quick introductions[end if], she picks out a bunk for herself and flops out onto it with a happy sigh, paw going to her cock.";
 			move Stella to Bunker;
 			move player to Bunker;
 			increase morale of player by 2;
