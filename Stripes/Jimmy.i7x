@@ -85,6 +85,8 @@ to say sexwithJimmy:
 		say "ERROR-Jimmy-[hp of Jimmy]F: You shouldn't be able to find me.";
 	otherwise if hp of Jimmy is 3:
 		say "     You should probably try talking to him some more first.";
+	otherwise if lastfuck of Jimmy - turns < 6:
+		say "     You'd played around with the cute corgi recently.  Maybe you should give him a bit more of a break before getting back to it.";
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     There's not much point in playing with him given your lack of genitals.";
 	otherwise:
