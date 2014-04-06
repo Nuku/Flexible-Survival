@@ -72,7 +72,7 @@ instead of conversing the Janice:
 		say "- Janice's blouse added to your inventory -[line break]";
 		now hp of Kristen is 10;
 		now carried of Janice's blouse is 1;
-		increase score by 5;	
+		increase score by 5;
 	otherwise if hp of Kristen is 10 and a random chance of 1 in 3 succeeds:
 		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift?  I do so miss her and want her to know that I'm safe and happy.  She must be so worried.  Please do that for me, sweety,' she purrs with alluring smile.";
 	otherwise if hp of Kristen is 11:
