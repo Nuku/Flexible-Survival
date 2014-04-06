@@ -17,7 +17,7 @@ use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
-use MAX_ACTIONS of 300.
+use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
 Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 2000.
@@ -2938,14 +2938,14 @@ To process (X - a grab object):
 		otherwise if carried of First Aid Manual > 0:
 			increase healed by 2;
 		if "Rapid Healing" is listed in the feats of the player:
-			now healed is ( healed times 110 ) divided by 100;
+			now healed is ( healed times 115 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
-			now healed is ( healed times 110 ) divided by 100;
+			now healed is ( healed times 115 ) divided by 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your medkit, [one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
+		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[otherwise][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
 			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
@@ -6397,6 +6397,7 @@ Include Frank by Stripes.
 Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
+Include Paula by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.

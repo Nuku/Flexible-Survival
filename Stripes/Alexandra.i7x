@@ -532,6 +532,8 @@ to say policelockerdesc:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.  There's a few cots wedged in here for others to use.";
 	otherwise:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
+	if paula is lockered:
+		say "     Paula's converted a small corner of this room into her nurse's station.  The medical supplies, which she's put herself in charge of, are secured in some lockers to prevent misuse.  She's also set aside a cot to use as her examination table.";
 
 
 A person can be policed. A person can be lockered. A person is usually not policed. A person is usually not lockered.
@@ -712,7 +714,8 @@ to say alexandra_supplies:
 [ 54 = Food given/water needed ]
 [ 55 = Water given/food needed ]
 [ 56 = Both given ]
-[ 57 = Brought in a survivor ]
+[ 57 = Brought in a survivor (Jimmy) ]
+[ 58 = Medical supplies (and Paula?) ]
 
 [ lust of Alexandra ]
 [ 0 = not preggers ]
@@ -910,6 +913,7 @@ AT_Diego is a truth state that varies.  AT_Diego is usually false.
 AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
 AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
 AT_Jimmy is a truth state that varies.  AT_Jimmy is usually false.
+AT_Paula is a truth state that varies.  AT_Paula is usually false.
 AT_Repair is a truth state that varies.  AT_Repair is usually false.
 AT_Stella is a truth state that varies.  AT_Stella is usually false.
 no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
@@ -941,11 +945,8 @@ to AlexandraTaskChat:
 			add { 51, 51, 51, 51, 51 } to AlexandraTask;
 		otherwise:
 			add { 51, 51 } to AlexandraTask;
-[	if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false:
-		if hp of Paula is 0:
-			add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
-		otherwise:
-			add { 52, 52 } to AlexandraTask;	]
+	if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false:
+		add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
@@ -1055,8 +1056,6 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 		now AT_Jimmy is true;
 
 
-
-
 to say A_Task51:
 	if policerepair is 0:
 		say "     'There's been quite a bit of damage done here that I'd like fixed up.  I don't mean we need to rebuild the place, but we do need to block up the broken windows and stuff like that.  If we're going to provide a safe place to stay for a while, we can't allow crazed mutants to sneak in to get at them.  I managed to scrounge up some tools and hardware, but I need help doing the work.  It's not something I really know much about.  There's quite a bit to do, but whenever you're ready to [bold type]repair the police station[roman type], just let me know.";
@@ -1098,7 +1097,7 @@ carry out policerepairing:
 		say "STAMINA - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice is greater than 12:
 			if pr_completion is 0:
-				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it is the plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Partway through this sweaty work, you notice the Doberwoman's top's gotten quite damp with her sweat.  Wishing her shirt was white, you still get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
+				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it are those plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Partway through this sweaty work, you notice the Doberwoman's top's gotten quite damp with her sweat.  Wishing her shirt was white, you still get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
 				increase policerepair by 2;
 			otherwise:
 				say "     Getting back to the task of boarding up the broken windows, you and Alexandra carry the remaining plywood sheets up the stairs and put them into place.  Thankfully, you do get one perk from all this hard labour.  The Doberwoman's top gets quite sweaty from all the heavy lifting.  While you wish her shirt was white, you're still able to get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
@@ -1228,23 +1227,16 @@ Perform some repairs via stat checks.  Limited number of attempts per turn.
 ]
 
 
-
-
 to say A_Task52:
-	say "***";
-[	if hp of Paula is 0:
-		say "***";
-	otherwise if hp of Paula is 1:	[unable to get supplies - need to return]
-		say "***";
-	otherwise if hp of Paula is 2:	[got supplies w/o Paula]
-		say "***";
-		now AT_Paula is true;
-	otherwise:						[got supplies and Paula]
-		say "***";
-		now AT_Paula is true;
-]
-
-
+	say "     'I was thinking we should have some medical supplies here in case of emergencies.  I figured I'd go check out the city hospital to get them.  I'll be heading out there shortly.  Did you want to come along?  I should be fine, but the help would be appreciated if you're free.'";
+	say "     Shall you accompany the doberwoman on her scavenging expedition?";
+	if the player consents:
+		say "[paula_rescue]";
+	otherwise:
+		say "     Stating that you have other things to deal with, you leave her to go on her expedition.  Trusting her to be able to handle herself, she doesn't disappoint, returning a few hours later with some medkits and other medical supplies.  She seems a little worn out, but in good spirits for her success at finding the items in an examination room.";
+		now hp of Paula is 1;
+	now AT_Paula is true;
+	now hp of Alexandra is 58;
 
 Section 11 - Endings
 
