@@ -3621,6 +3621,8 @@ Carry out reciting:
 		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
+	
+]]
 
 restoreletter is a text that varies.  restoreletter is normally "0";
 
