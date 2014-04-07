@@ -1732,7 +1732,7 @@ To reciting2:
 					now xp of Onyx is the number understood;
 					if xp of Onyx >= 6 and xp of Onyx <= 29:
 						move Onyx to Grey Abbey Library;
-					[otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
+					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
 						move Onyx to Holding Pens;+
@@ -3525,7 +3525,7 @@ Carry out reciting:
 					now xp of Onyx is the number understood;
 					if xp of Onyx >= 6 and xp of Onyx <= 29:
 						move Onyx to Grey Abbey Library;
-					[otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
+					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
 						move Onyx to Holding Pens;+
@@ -3621,8 +3621,7 @@ Carry out reciting:
 		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
-	
-]]
+
 
 restoreletter is a text that varies.  restoreletter is normally "0";
 
