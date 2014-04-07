@@ -60,7 +60,7 @@ instead of conversing the Janice:
 		say "     'Well, there's one other thing you could do to show your willingness to help me out.  It's a bit of a long shot though.  A few days after this crazy fun kicked in, I was outside and I thought I spotted a friend of mine in the distance - and still human at that.  I called out to her, but some of the other guys outside saw her and ended up chased her away.  She's about 5['] 10', wears blonde hair in a pony tail and dresses pretty casually.'  She goes on to describe her some more.  'I know it's not much to go on, but can you keep an eye out and try [bold type]findingKristen[roman type] for me?";
 		now kristenmsg3 is true;
 		if hp of Kristen >= 2:
-			say "     Telling her that you've already met Kristen[if kristenmsg1 is true] and that she's mentioned her[end if], you get a big hug from the sexy vixen.  'Oh, that's simply wonderful.  Is she still alright?  Did something get her?  Turn her into some creature yet or is she still an uninfected human?' she asks with an excited gleam in her eye.  You fill her in on her friend, telling her that she's quite safe at the vixen's old place.";
+			say "     Telling her that you've already met Kristen[if kristenmsg1 is true] and that she's mentioned her[end if], you get a big hug from the sexy vixen.  'Oh, that's simply wonderful.  So that was her in the distance then.  Is she still alright?  Did something get her?  Turn her into some creature yet or has she managed to remain an uninfected human?' she asks with an excited gleam in her eye.  You fill her in on her friend, telling her that she's quite safe at the vixen's old place.";
 			say "     'I'm really glad to hear that.  Please let her know how I'm doing and that I do miss her.  I hope she'll be able to come visit me sometime soon.  Oh!' she adds, reaching under the divan to pull out a designer blouse, '[bold type]give[roman type] this to her so she'll know it's really me.  She's always liked my blouse and wanted one just like it.  I don't need it now that I've permanently got this sexy fur coat, so she should have it.  I'd [italic type]really[roman type] appreciate it if you did that for me,' she says with a sultry tone in her voice.";
 			say "- Janice's blouse added to your inventory -[line break]";
 			now hp of Kristen is 10;
@@ -72,7 +72,7 @@ instead of conversing the Janice:
 		say "- Janice's blouse added to your inventory -[line break]";
 		now hp of Kristen is 10;
 		now carried of Janice's blouse is 1;
-		increase score by 5;	
+		increase score by 5;
 	otherwise if hp of Kristen is 10 and a random chance of 1 in 3 succeeds:
 		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift?  I do so miss her and want her to know that I'm safe and happy.  She must be so worried.  Please do that for me, sweety,' she purrs with alluring smile.";
 	otherwise if hp of Kristen is 11:

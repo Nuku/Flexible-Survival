@@ -280,7 +280,7 @@ carry out voremenuing:
 		say "[bold type]UB Settings:[roman type][line break]";
 		say "- [link](5) No UB[as]5[end link] - Skip most scenes of the player getting unbirthed[if UBlevel is 1]. [bold type]Selected[roman type][line break][otherwise].[end if]";
 		say "- [link](6) Standard[as]6[end link] - Player may infrequently get unbirthed[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
-		say "- [link](7) Full UB[as]7[end link] - Player more likely to get unbirthed when possible[if UBlevel is 2]. [bold type]Selected[roman type][line break][otherwise].[end if]";
+		say "- [link](7) Full UB[as]7[end link] - Player more likely to get unbirthed when possible[if UBlevel is 3]. [bold type]Selected[roman type][line break][otherwise].[end if]";
 		if playercanub is true:
 			say "[link](8) Choice to UB[as]8[end link] - [if ubchoice is 0]Player choice[otherwise if ubchoice is 1]Automatic UB[otherwise]Never UB[end if][line break]";
 		otherwise:

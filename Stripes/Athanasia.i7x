@@ -387,9 +387,9 @@ to say athanasiasex07:		[give cunnilingus]
 	say "     Deciding to enjoy more intimate time with the phoenix, you run your hands across her body and then down to her hot loins when the turns and presents her tail to you.  Getting down on your knees behind her, you bury your face in those soft feathers, licking and kissing her pussy.  She moans and chirps musically in pleasure especially loudly when you suck at her hard clit.  'Oh yes.  Just like that.  I love this new form of mine so much thanks to you.'  You lavish attention on her cloacal pussy, alternating between your mouth and several fingers, getting her to quiver and moan again and again before she reaches a crashing, fiery climax that sends her hot juices across your face.  You lap up her delicious juices, getting the giant bird clean before letting her roll over onto her back so you can snuggle up in her warm wings.";
 
 [*** - flight scene?
-	[otherwise if cocks of player > 0 and hp of Athanasia >= 10 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
+	[otherwise if cocks of player > 0 and hp of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
 		if hp of Athanasia is 11:
-			say "     I've been feeling stronger lately.  I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek.  Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it.  'In that case, I'll take care of the flying.  It will not be a problem.  Don't you trust me?' she trills teasingly.  Given the amazing things she's already shown you, what's one more?";		]
+			say "     I've been feeling stronger lately.  I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek.  Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it.  'In that case, I'll take care of the flying.  It will not be a problem.  Don't you trust me?' she trills teasingly.  Given all the amazing things she's already shown herself capable of, what's one more?";		]
 ]
 
 

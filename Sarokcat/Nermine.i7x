@@ -543,8 +543,8 @@ carry out bargainhunting:
 			decrease intelligence of player by 1;
 			decrease humanity of player by 5;
 			increase strength of player by 2;
-			say "Your strength has increased by 2!";
 			increase capacity of player by 10;
+			say "Your strength has increased by 2!";
 		otherwise if Z is 18:
 			if "Cold Fish" is listed in feats of player:
 				say "Sorting through the strange bin, you feel a small shiver from one of the items in the bin and reflexively release the item, protecting yourself from it.  You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal.  Nermine, noticing your odd expression, slides back the water and food.  'Some items in the bargain bin do not agree with some people.  You may try again if you wish or leave matters be.'";
@@ -853,7 +853,8 @@ To say jackaltotemmagic:
 		decrease strength of player by 2;
 		decrease capacity of player by 10;
 		increase dexterity of player by 4;
-		say "your dexterity has increased by 4!";
+		say "Your strength has decreased by 2!";
+		say "Your dexterity has increased by 4!";
 		now jackalboytf is 4;
 	
 
@@ -1005,7 +1006,7 @@ Instead of resolving a Alternative entry:
 
 
 Instead of conversing the Mary while ( Hyenatrailing is 3 and nes is 5 ):
-	say "'You want to know about hyenas in the subways?' The lamb asks you as she blinks in surprise, 'Actually come to think of it I do think I heard some of them while I was down there.' The little sheep says with a shy smile, 'The way they were talking I was kind of scared to say anything, but I am pretty sure there were several small groups that were moving around down there, I think they actually all belonged to some kind of gang though, or at least they kept talking about one.' The ewe says as she eyes you hopefully, resting her hooflike hand on your soft black furred side as she looks up at you eagerly, 'I do hope that helps you somehow, I'm always happy to help you out after all you've done for me.' She says, and you assure her that her words were a big help. She seems happy with that as she goes back to working on cleaning up the store, and you sigh as you realize that the thing you were afraid of is now the most likely possibility, somehow the items you are looking for have probably ended up in the hands of the Hyena gang that is taking over much of the territory of the city... sadly if you want to find the items, you will probably need to go outside and into their territory..";
+	say "'You want to know about hyenas in the subways?' The lamb asks you as she blinks in surprise, 'Actually come to think of it I do think I heard some of them while I was down there.' The little sheep says with a shy smile, 'The way they were talking I was kind of scared to say anything, but I am pretty sure there were several small groups that were moving around down there, I think they actually all belonged to some kind of gang though, or at least they kept talking about one.' The ewe says as she eyes you hopefully, resting her hoof-like hand on your soft black furred side as she looks up at you eagerly, 'I do hope that helps you somehow, I'm always happy to help you out after all you've done for me.' She says, and you assure her that her words were a big help. She seems happy with that as she goes back to working on cleaning up the store, and you sigh as you realize that the thing you were afraid of is now the most likely possibility, somehow the items you are looking for have probably ended up in the hands of the Hyena gang that is taking over much of the territory of the city... sadly if you want to find the items, you will probably need to go outside and into their territory..";
 	now hyenatrailing is 4;
 
 
@@ -1066,7 +1067,7 @@ Instead of resolving a Hyena Challenging:
 			otherwise:
 				say "Defeated by the hyenas, you have no choice but to slink back off down the streets of the city, wondering how you could lose to just a couple hyenas after having come this far successfully... and resolving to try again as soon as you have recovered.";			
 	otherwise:
-		say "Traveling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other, noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
+		say "Travelling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other, noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
 
 
 
@@ -1398,9 +1399,9 @@ To say jackalankhmagic:
 		now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		increase strength of player by 4;
 		increase capacity of player by 20;
-		say "your Strength has increased by 4!";
+		say "Your strength has increased by 4!";
 		increase dexterity of player by 2;
-		say "your dexterity has increased by 2!";
+		say "Your dexterity has increased by 2!";
 		now jackalmantf is 4;
 	if jackalmantf is 5:
 		say "You examine the strange ankh in your hand, but it seems to slip out of your fingers.  When you look for it, you can't seem to find it.  Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
