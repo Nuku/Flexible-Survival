@@ -130,7 +130,7 @@ Carry out Marefeeding:
 
 Holding Pens is a room.
 
-The description of Holding Pens is "This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if onyxquest is 0]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[otherwise]Onyx's holding pen remains open as if awaiting a new occupant[end if].  Next to it someone has hung a handmade sign reading ['][if onyxquest is not 6]Onyx[otherwise]Obsidian[end if]['].";
+The description of Holding Pens is "This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if xp of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[otherwise]Onyx's holding pen remains open as if awaiting a new occupant[end if].  Next to it someone has hung a handmade sign reading ['][if xp of Onyx >= 60 and xp of Onyx <= 79]Obsidian[otherwise]Onyx[end if]['].";
 Onyx is in Holding Pens.
 
 instead of sniffing Holding Pens:
