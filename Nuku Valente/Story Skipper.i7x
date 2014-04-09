@@ -14,7 +14,7 @@ To savetrix:
 	 write "[trixsavetext1]" to the File of Trixsave;
 	 write "[trixsavetext2]" to the File of Trixsave2;
 	 write "[trixsavetext3]" to the File of Trixsave3;
-	 write "Soda|1" to the File of invsave;
+	 write "Soda|1}" to the File of invsave;
 	 repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		if object entry is owned:
@@ -1735,7 +1735,7 @@ To reciting2:
 					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
-						move Onyx to Holding Pens;+
+						move Onyx to Holding Pens;
 					if xp of Onyx is 1:
 						now Equineguardpost is unresolved;
 					otherwise:
@@ -3528,7 +3528,7 @@ Carry out reciting:
 					otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:
 						move Onyx to Palomino;
 					otherwise:
-						move Onyx to Holding Pens;+
+						move Onyx to Holding Pens;
 					if xp of Onyx is 1:
 						now Equineguardpost is unresolved;
 					otherwise:
