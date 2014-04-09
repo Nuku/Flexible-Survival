@@ -1896,8 +1896,6 @@ understand "navigate" as destinationcheck.
 understand "nav" as destinationcheck.
 
 carry out destinationcheck:
-
-carry out destinationcheck:
 	[ Note: The city areas and locations within are sorted alphabetically, please put new rooms in the right spots as you add them ]
 	[start of the capitol area]
 	say "[bold type]Capitol District[roman type]: ";
