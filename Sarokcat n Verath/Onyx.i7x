@@ -1,5 +1,5 @@
 Version 3 of Onyx by Sarokcat n Verath begins here.
-[ Version 3 - Onyx content reorganized, consolidated the variables ]
+[ Version 3.1 - Onyx only asks once about player topping ]
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
@@ -279,17 +279,16 @@ to say onyxbunkersex:
 			if onyxdmra is 0:		[First time making the offer]
 				say "     Onyx runs his strong hands over your body, holding you close.  'Mmm...  You've been such a good slut for me.  Now, I know you usually prefer being the one in charge, and your big stud appreciates you giving that up for him.  So I've going to let you take a turn on top,' he says, running his strong hand along your throbbing member.  'I received quite a bit of training at the Stables and I thought it might be nice to put it to practical use.  You've helped me out so much, I think you deserve a big reward,' he says, stretching out across a table.  Laying on his side, he reaches back and holds his ass cheeks apart, giving you a tantalizing view of his ebon pucker - ready, waiting and even pre-lubed.";
 				say "     Shall you take him up on his offer and take a turn fucking the stallion stud?";
-			otherwise:				[Subsequent offers]
-				say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up.  'I figured I'd offer you another shot at taking a turn on top.  Fair's fair and all.'  The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully.  'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you.  'Your stallion master orders you to pony up and mount his sexy ass.'";
-			if the player consents:
-				now recanal_skip is 1;
-				say "[onyxbrecanal]";
-			otherwise:						[did not accept reciprocal anal]
-				if onyxdmra is 0:
+				if the player consents:
+					now recanal_skip is 1;
+					say "[onyxbrecanal]";
+				otherwise:						[did not accept reciprocal anal]
 					now onyxdmra is -1;		[reciprocal anal now locked out]
 					say "     The big stallion seems a little disappointed when you don't take him up on his offer and slowly gets up off the table.  'If that's how you'd like it, who am I to complain?' he says.  'I'm the big, sexy stud after all.'  You tell him that you'd much rather let the strong stallion have his way with you.  He smiles at this and strides forward with confidence, eager to have fun with his slutty friend.";
-				otherwise:
-					say "     The big stallion seems a little disappointed when you don't take him up on his offer and slowly gets up off the table.  'Well, perhaps another time then?'  As he stretches again, you look longingly at his strong muscles and tell him that you'd much rather let your big, sexy stud have his way with you.  He smiles at this and strides forward with confidence, eager to have fun with his slutty friend.";
+			otherwise:				[Subsequent offers]
+				say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up.  'I figured I'd offer you another shot at taking a turn on top.  Fair's fair and all.'  The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully.  'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you.  'Your stallion master orders you to pony up and mount his sexy ass.'";
+				now recanal_skip is 1;
+				say "[onyxbrecanal]";
 		if recanal_skip is 1:
 			let xx be 0;	[do nothing - skip regular scene]
 		otherwise if cocks of player > 0 and cunts of player > 0:	[HERM]
