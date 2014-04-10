@@ -193,8 +193,8 @@ this is the pigpussy rule:
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 2;
 	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
 [		say "TEST: [playernum] vs [messypignum]:[line break]";	]
-		let playernum be a random number between 10 and playernum;
-		let messypignum be a random number between 10 and messypignum;
+		let playernum be a random number between 1 and playernum;
+		let messypignum be a random number between 1 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
 	if messypigcaught is 1 and playernum >= messypignum and hp of player > 0 and libido of player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.  She grunts in frustration, you having managed to stop just before her climax.";
