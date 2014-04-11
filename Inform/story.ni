@@ -628,9 +628,9 @@ to say abbey desc:
 		say ".  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	otherwise if Fang is booked:
 		if hp of Fang < 3:
-			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
-		otherwise:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+		otherwise:
+			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
 	otherwise if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
