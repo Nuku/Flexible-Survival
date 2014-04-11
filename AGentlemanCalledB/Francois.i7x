@@ -889,7 +889,7 @@ Bleuettonne has a usedesc "[Bleuettonne Use]";
 the scent of Bleuettonne is "The small candy carries the deep, rich scent of chocolate.";
 
 to say Bleuettonne Use:
-	say "     You bite into the Bleuettonne, and find your mouth filled with a burst of  blueberry jelly, more then you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
+	say "     You bite into the Bleuettonne, and find your mouth filled with a burst of blueberry jelly, more then you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
 	if "Female Preferred" is listed in feats of player or "Modest Organs" is listed in feats of player or ( "Single Sexed" is listed in feats of player and cunts of player > 0 ):
 		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles, clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	otherwise if cocks of player is 0:
