@@ -69,11 +69,11 @@ to say briansexmenu:
 	now title entry is "Blow him";
 	now sortorder entry is 1;
 	now description entry is "suck the rhino's cock";
-[	if breast size of player > 2:
+	if breast size of player > 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Titty-fuck";
 		now sortorder entry is 2;
-		now description entry is "press his cock between your jugs";		]
+		now description entry is "press his cock between your jugs";
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked - vaginal";
@@ -89,11 +89,11 @@ to say briansexmenu:
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
 		now description entry is "stuff the rhino's ass";
-[		if cock length of player > 8:
+		if cock length of player > 8:
 			choose a blank row in table of fucking options;
 			now title entry is "Frottage";
 			now sortorder entry is 6;
-			now description entry is "grind and stroke your cocks against one another";		]
+			now description entry is "grind and stroke your cocks against one another";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -155,7 +155,8 @@ to say sexwithBrian01:		[oral on Brian]
 
 
 to say sexwithBrian02:		[titty-fuck]
-	say "***Titty-fuck.";
+	say "     Wanting that rock-hard pillar nestled between your breasts, you lower yourself to your knees and squeeze it between your tits.  The rhino moans happily and rubs his meaty hand over your head.  'Mmm... now that's what I'm talkin['] about.  Ain't nothing like a sexy pair of tits,' he says with a grin.  His gray shaft throbs and drools precum as you rub your breasts around it.  Licking your lips, you give its glans several kisses and licks while working your bosom around it.  You tweak and pinch your nipples, playing with yourself as you work to get the rhino off.  He thrusts gently, mostly letting you take care of it at your own pace.  In time, he's panting and grunting that he's about to blow, so you lean in and lick frantically at his glans while working your titties against his meat until he blows.  Wads of thick rhino cum splatter across your face and into your mouth.  You lick up great gobs of it, but much of it ends up painting your face and dripping down onto your breasts.  You lick up as much of it as you can get and rub the rest into your tits as a final show for the burly rhino stud.";
+
 
 to say sexwithBrian03:		[vaginal on player]
 	say "     You get into proper position beneath him, letting the horny rhino line up his throbbing member with your wet cunt.  Wanting to savour it[if cunt length of player < 10] and take it easy on you[end if], he starts by teasing his glans across your folds and lightly prodding at your vaginal opening.  Able to feel the throb of his meat, you can tell he's quite excited by the prospect of stuffing your pussy.  You grind back against him with a wiggle of your rear, inviting the big stud in.  And when he does mount you properly, popping that thick cock of his a few inches into your heated and dripping cunny, you can't help but moan in pleasure.";
@@ -210,11 +211,10 @@ to say sexwithBrian05:		[anal on Brian]
 	if xp of Brian < 2:
 		say "     'Now, that weren't half-bad,' he pants.  'Feels kind of strange and sticky, but nice and warm, too.  I'd be up for that again sometime,' he adds, as he starts to rise.  'Got to get back to that wall though.  It ain't gonna knock itself down.'  Before he can go charging off, you do hold him back briefly so you can share a passionate kiss with the big lug.";
 		now xp of Brian is 2;
-	
 
 
 to say sexwithBrian06:		[frottage]
-	say "***Frottage.";
+	say "     Enjoying being pressed up against him, you decide to enjoy the same pleasure in an even more intimate manner.  Rubbing your groin against his, you press your throbbing meat to his[if cock length of player < 18].  The rhino can't help but smile smugly at how his impressive cock outsizes yours[otherwise if cock length of player is 18].  The rhino grins happily at how you're just as well hung as he is[otherwise].  You can't help but grin smugly at how your [cock size desc of player] cock[smn] outsize[smv] even his impressive meat[end if].  Each of you put a hand around the grinding cocks, mutually stroking them as you kiss.  Precum drools from your shafts and gets spread across his rhino penis and your [cock of player] penis[esmn], making them nice and slick.  The feel of his steely gray pillar throbbing against your erection[smn] is wonderful, two fine studs enjoying the sensation of their virile cocks pressed between them.  And when the two of you cum, the eruption of musky semen splatters across you both.  A deliciously manly mess that clings to your flesh and leaves you both reeking of sex and your lover.";
 
 
 [ hp of Brian ]
