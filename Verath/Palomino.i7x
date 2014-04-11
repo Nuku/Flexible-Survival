@@ -2,17 +2,17 @@ Version 2 of Palomino by Verath begins here.
 [ Updated files, reordered content, renamed infection to Palomino and made it non-infectious normally ]
 [ Two new sex scenes: one random and one timed, then random after - Stripes ]
 
-"Adds a new area (PALOMINO Club) and the Palomino infection to Flexible Survival."
+"Adds a new area (Palomino Club) and the Palomino infection to Flexible Survival."
 
-Section 1 - The PALOMINO Club
+Section 1 - The Palomino Club
 
-The PALOMINO is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
+The Palomino is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
 
-The description of The PALOMINO is "Ducking down a darkened alleyway, you find yourself standing in front of a door that has recently been painted dark red.  The sound of a techno rhythm from inside is making the door vibrate.  Looking above the door, you see a hand lettered sign that simply says 'THE PALOMINO'.  Going through the door, you find yourself in a short ordinary looking hallway, set slightly apart from the loud music and flashing lights spreading down the hallway from around the far corner.  Stepping around the corner of the hall, the room beyond is much bigger than you expected.  It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners.  There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built, anthropomorphic stallion.  Looking closer at the tapestry you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass.  There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.  A mirror ball sparkles and sends a shimmering wave of reflected colours over the foggy dance floor, where around thirty or so people are dancing to the beat of the music.  At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
+The description of The Palomino is "Ducking down a darkened alleyway, you find yourself standing in front of a door that has recently been painted dark red.  The sound of a techno rhythm from inside is making the door vibrate.  Looking above the door, you see a hand lettered sign that simply says 'THE Palomino'.  Going through the door, you find yourself in a short ordinary looking hallway, set slightly apart from the loud music and flashing lights spreading down the hallway from around the far corner.  Stepping around the corner of the hall, the room beyond is much bigger than you expected.  It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners.  There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built, anthropomorphic stallion.  Looking closer at the tapestry you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass.  There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.  A mirror ball sparkles and sends a shimmering wave of reflected colours over the foggy dance floor, where around thirty or so people are dancing to the beat of the music.  At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
 
-The invent of The PALOMINO is { "soda" , "soda" };
+The invent of The Palomino is { "soda" , "soda" };
 
-instead of sniffing PALOMINO:
+instead of sniffing Palomino:
 	say "The infected dance club smells strongly of aroused males, sweat and sex.  Lots of sex.";
 
 
@@ -65,7 +65,7 @@ When Play begins:
 	now hp entry is 21;			[ How many HP has the monster got? ]
 	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
-	now area entry is "PALOMINO";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Palomino";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 14;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku]
