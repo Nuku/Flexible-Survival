@@ -6,7 +6,7 @@ Version 2 of Hadiya by Kaxin begins here.
 Section 1 - The Situation
 
 Annoyed Hyena is a situation.
-The sarea of Annoyed Hyena is "Outside";
+The sarea of Annoyed Hyena is "Junkyard";
 when play begins:
 	add Annoyed Hyena to badspots of hermaphrodite;
 	add Annoyed Hyena to badspots of furry;

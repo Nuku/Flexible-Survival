@@ -1,9 +1,9 @@
-Stables by Sarokcat begins here.
+Stables Hotel by Sarokcat begins here.
 
 "Adds a new area to Flexible Survival with a variety of npcs..."
 
 Section 1 - A Stabled Situation
-[For locating the Stables]
+[For locating the Stables Hotel]
 
 A Stabled Situation is a situation.
 Stablesearchstatus is a number that varies.
@@ -23,8 +23,8 @@ Instead of Resolving a A Stabled Situation:
 				say "Searching through your pack, while the two horsemen eye you curiously, you pull out several items to see how they react, only to be disappointed each time as they continue to watch you with suspicion. Finally your pack is almost empty by the time you pull out some chips and soda, and notice the horsemen lick their lips and shift on their hoof-like feet as they seem to realize just how hungry guard duty has made them. Grinning you offer the snack food to the guards, only to pull it back when one of them reaches for it, gesturing at the closed door between the two guards you give them a questioning look. The horsemen sigh as they glance at each other for a minute, before nodding at you, and one of them waves you on inside as you hand them the junk food to share. As you enter you hope they will pass the word to the next group of guards as well, since you would rather not have to go through that every time you come here.";
 				delete chips;
 				delete soda;
-				Move player to The Stables;
-				Now The Stables is known;
+				Move player to The Stables Hotel;
+				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:
 				say "Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[']t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something.  Everyone likes snack food right?";
@@ -39,8 +39,8 @@ Instead of Resolving a A Stabled Situation:
 				say "You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, as you pull out several items to see how they react, only to be disappointed each time as they continue to watch you with suspicion. Finally your pack is almost empty by the time you pull out some chips and soda, and notice the horsemen lick their lips and shift on their hoof-like feet as they seem to realize just how hungry guard duty has made them. Grinning you offer the snack food to the guards, only to pull it back when one of them reaches for it, gesturing at the closed door between the two guards you give them a questioning look. The horsemen sigh as they glance at each other for a minute, before nodding at you, and one of them waves you on inside as you hand them the junk food to share. As you enter you hope they will pass the word to the next group of guards as well, since you would rather not have to go through that every time you come here.";
 				delete chips;
 				delete soda;
-				Move player to The Stables;
-				Now The Stables is known;
+				Move player to The Stables Hotel;
+				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:
 				say "You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[']t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
@@ -48,29 +48,29 @@ Instead of Resolving a A Stabled Situation:
 			say "Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
 
 
-Section 2- The Stables
+Section 2 - The Stables Hotel
 
-Stables is a room. It is fasttravel. It is private. 
+Stables Hotel is a room. It is fasttravel. It is private. 
 Stable is a room.
 Stalls is a room.
 
-The description of Stables is "The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn[']t appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.";
+The description of Stables Hotel is "The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn[']t appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.";
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 
-Northeast of Stables is Stalls.
-West of Stables is Employee Access. 
+Northeast of Stables Hotel is Stalls.
+West of Stables Hotel is Employee Access. 
 
-The invent of The Stables is { "lucky horseshoe" , "lucky horseshoe" };
+The invent of The Stables Hotel is { "lucky horseshoe" , "lucky horseshoe" };
 
 [This part creates a hunting area for your location, feel free to ignore it or remove it if the area does NOT have a random encounter zone.]
 Stable entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
 
 North of Stable entry is Stable.
-North of The Stables is Stable entry.
+North of The Stables Hotel is Stable entry.
 
 The marea of Stable entry is "Stable".
 
-instead of sniffing Stables:
+instead of sniffing Stables Hotel:
 	say "The air here is thick with the scents of many equines.  Arousal and sex is strong in the air as well.";
 
 instead of sniffing Stalls:
@@ -146,4 +146,4 @@ instead of sniffing Employee Access:
 
 
 
-Stables ends here.
+Stables Hotel ends here.
