@@ -1542,6 +1542,8 @@ To reciting2:
 			-- 162:	[hp of Nadia]
 				if the player's command matches "[number]":
 					now hp of Nadia is the number understood;
+					if hp of Nadia > 0:
+						now Bird Troubles is resolved;
 					if hp of Nadia > 0 and hp of Nadia < 99:
 						move Nadia to Grey Abbey 2F;
 					if hp of Nadia is 5:
@@ -3336,6 +3338,8 @@ Carry out reciting:
 			-- 162:	[hp of Nadia]
 				if the player's command matches "[number]":
 					now hp of Nadia is the number understood;
+					if hp of Nadia > 0:
+						now Bird Troubles is resolved;						
 					if hp of Nadia > 0 and hp of Nadia < 99:
 						move Nadia to Grey Abbey 2F;
 					if hp of Nadia is 5:
