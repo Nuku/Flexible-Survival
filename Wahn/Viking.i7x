@@ -29,11 +29,20 @@ when play begins:
 [  3: male player knocked her up (bulging belly)                   ]
 [  4: after the kid's been born                                    ]
 
+[ VikingKidGender                                                  ]
+[  0: no kids                                                      ]
+[  1: just boys                                                    ]
+[  2: just girls                                                   ]
+[  3: mixed                                                        ]
+
+[ VikingKidShape - Sonya's kids are part human, part X             ]
 [ VikingKidCounter - number of children with the player            ]
 [ VikingPregCounter - timer for the next birth (48h from start)    ]
 
 VikingRelationship is a number that varies.			[main variable, something for the saveword]
-VikingPregnancy is a number that varies.				
+VikingPregnancy is a number that varies.			
+VikingKidShape is a text that varies.					
+VikingKidGender is a number that varies.	
 VikingKidCounter is a number that varies.				[another thing that should be saved]
 VikingPregCounter is a number that varies.
 VikingUltimatum is a number that varies.
@@ -41,10 +50,36 @@ VikingUltimatum is a number that varies.
 An everyturn rule:
 	if VikingRelationship < 100:  [to prevent birth-messages after she's gone from play]
 		if VikingPregCounter is 1:
-			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should look for Sonya again on the beach...";
 			increase VikingKidCounter by 1;
 			increase score by a random number between 5 and 10;
-			now VikingPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
+			if player is in Sonya's Cabin:
+				say "     Suddenly, Sonya calls 'It's time!' and starts panting loudly, holding her bulging stomach with both hands. You rush over to her and help her to sit on the bed, then open the door to the lengthwise hallway through the ship and shout for help. In no time at all, an elderly viking woman and two younger women rush into the cabin and help Sonya out of her clothes while telling her to keep calm breathe. So you're not standing in the way, they just tell you to sit on the bed besides your wife, keeping her company and holding her hand.";
+				if a random chance of 1 in 2 succeeds:  [kid is a boy]
+					if VikingKidShape is "human":
+						say "     Soon, her contractions come quicker and quicker, and then with a gush of fluids, Sonya's child is pushed out of her stretched vagina. The matronly viking gives him a soft slap on the butt and the baby takes his first breath, then immediately starts bawling at full volume. After tying off the umbilical cord and cutting it, the little one is quickly picked up by the experienced women and wiped down, then brought up to his mother, who puts him against her chest in a loving embrace. A bit of peace and quiet returns to the cabin a moment later as he finds her breast and starts suckling. The little human boy in Sonya's arms - your child - looks so incredibly cute, you just can't help yourself from leaning over to kiss him on the head, then give your wife a loving kiss on the lips.";
+						say "     While you hold and kiss your viking wife, the reality of a nanite-infected world starts to show itself in your child, as the boy grows and grows, seemingly getting weeks, if not months older with each swallow of her milk. The baby quickly becomes a toddler, then a very young child, getting older and more developed by the second. By the time he's finished drinking from one breast, then the other, a boy looking about fourteen years old is sitting between the two of you. He gives Sonya and you a hug, then shouts 'I'm gonna go play catch with [one of]Svetjalf[or]Snorri[or]Leif[or]Arnvid[or]Ari[or]Finn[or]Gudrun[or]Halla[or]Svala[at random]', jumping off the bed to run out of the room, naked as he is. Seems like he absorbed the knowledge about the other children directly from his mother. Oh, kids grow up so fast these days...";
+					otherwise:
+						say "     Soon, her contractions come quicker and quicker, and then with a gush of fluids, Sonya's child is pushed out of her stretched vagina. The matronly viking gives him a soft slap on the butt and the baby takes his first breath, then immediately starts bawling at full volume. After tying off the umbilical cord and cutting it, the little one is quickly picked up by the experienced women and wiped down, then brought up to his mother, who puts him against her chest in a loving embrace. A bit of peace and quiet returns to the cabin a moment later as he finds her breast and starts suckling. The little baby in Sonya's arms - your child - looks so incredibly cute in a half-human, half-[VikingKidShape] way, you just can't help yourself from leaning over to kiss him on the head, then give your wife a loving kiss on the lips.";
+						say "     While you hold and kiss your viking wife, the reality of a nanite-infected world starts to show itself in your child, as the boy grows and grows, seemingly getting weeks, if not months older with each swallow of her milk. The baby quickly becomes a toddler, then a very young child, getting older and more developed by the second. By the time he's finished drinking from one breast, then the other, a boy looking about fourteen is sitting between the two of you. He gives Sonya and you a hug, then shouts 'I'm gonna go play catch with [one of]Svetjalf[or]Snorri[or]Leif[or]Arnvid[or]Ari[or]Finn[or]Gudrun[or]Halla[or]Svala[at random]', jumping off the bed to run out of the room, naked as he is. Seems like he absorbed the knowledge about the other children directly from his mother. Oh, kids grow up so fast these days...";						
+					if VikingKidGender is 0:
+						now VikingKidGender is 1;
+					otherwise if VikingKidGender is 2:
+						now VikingKidGender is 3;
+				otherwise:  [kid was a girl]
+					if VikingKidShape is "human":
+						say "     Soon, her contractions come quicker and quicker, and then with a gush of fluids, Sonya's child is pushed out of her stretched vagina. The matronly viking gives her a soft slap on the butt and the baby takes her first breath, then immediately starts bawling at full volume. After tying off the umbilical cord and cutting it, the little one is quickly picked up by the experienced women and wiped down, then brought up to her mother, who puts her against her chest in a loving embrace. A bit of peace and quiet returns to the cabin a moment later as the girl finds her breast and starts suckling. The little human baby in Sonya's arms - your child - looks so incredibly cute, you just can't help yourself from leaning over to kiss her on the head, then give your wife a loving kiss on the lips.";
+						say "     While you hold and kiss your viking wife, the reality of a nanite-infected world starts to show itself in your child, as the girl grows and grows, seemingly getting weeks, if not months, older with each swallow of her milk. The baby quickly becomes a toddler, then a very young child, getting more developed by the second. By the time she's finished drinking from one breast, then the other, a girl looking about fourteen years old is sitting between the two of you. She gives Sonya and you a hug, then shouts 'I'm gonna go play catch with [one of]Svetjalf[or]Snorri[or]Leif[or]Arnvid[or]Ari[or]Finn[or]Gudrun[or]Halla[or]Svala[at random]', jumping off the bed to run out of the room, naked as she is. Seems like she absorbed the knowledge about the other children directly from her mother. Oh, kids grow up so fast these days...";
+					otherwise:
+						say "     Soon, her contractions come quicker and quicker, and then with a gush of fluids, Sonya's child is pushed out of her stretched vagina. The matronly viking gives her a soft slap on the butt and the baby takes her first breath, then immediately starts bawling at full volume. After tying off the umbilical cord and cutting it, the little one is quickly picked up by the experienced women and wiped down, then brought up to her mother, who puts her against her chest in a loving embrace. A bit of peace and quiet returns to the cabin a moment later as the girl finds her breast and starts suckling. The little baby in Sonya's arms - your child - looks so incredibly cute in a half-human, half-[VikingKidShape] way, you just can't help yourself from leaning over to kiss her on the head, then give your wife a loving kiss on the lips.";
+						say "     While you hold and kiss your viking wife, the reality of a nanite-infected world starts to show itself in your child, as the girl grows and grows, seemingly getting weeks, if not months, older with each swallow of her milk. The baby quickly becomes a toddler, then a very young child, getting more developed by the second. By the time she's finished drinking from one breast, then the other, a girl looking about fourteen years old is sitting between the two of you. She gives Sonya and you a hug, then shouts 'I'm gonna go play catch with [one of]Svetjalf[or]Snorri[or]Leif[or]Arnvid[or]Ari[or]Finn[or]Gudrun[or]Halla[or]Svala[at random]', jumping off the bed to run out of the room, naked as she is. Seems like she absorbed the knowledge about the other children directly from her mother. Oh, kids grow up so fast these days...";
+					if VikingKidGender is 0:
+						now VikingKidGender is 2;
+					otherwise if VikingKidGender is 1:
+						now VikingKidGender is 3;			
+				now VikingPregnancy is 0;     [no need to tell the player about the birth, as he was present]
+			otherwise:
+				say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should look for Sonya again on the beach[if VikingRelationship is 20] or visit her in her cabin on the Viking ship[end if]...";			
+				now VikingPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
 			now VikingPregCounter is 0;
 		otherwise if VikingPregCounter is 12:
 			now VikingPregnancy is 3;   [very visible pregnancy]
@@ -84,7 +119,7 @@ to say Viking wins:
 						say "     'What kind of monster are you, meekly surrendering to me? I was told there are powerful beasts in the world, not... this.' With a scoff, she shoves you to the ground. 'Let's see if you're at least of use for some pleasure.' With that, she puts down her weapon and starts undressing, revealing a tough and strong body, though not without female curves and a pair of well-rounded, perky breasts.";
 						say "[VikingWinSex]";       
 					otherwise:    [ugly people just get robbed]
-						say "     'What kind of monster are you, meekly surrendering to me? I was told there are powerful beasts in the world, not... this.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";          
+						say "     'What kind of monster are you, meekly surrendering to me? I was told there are powerful beasts in the world, not... this.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";  
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
 							decrease carried of food by 1;
@@ -196,7 +231,7 @@ to say AffectionateVikingWinSex:     [sex with player, gets the player off too]
 	say "     [line break]";
 	if cocks of player > 0:                      [male+herm]
 		say "     With that, she grinds her crotch against yours, your hard shaft rubbing against her soft, pale skin. Panting in lust, you bring your hands to her hips, pushing them up a bit so you can align your cock with her pussy. Touching her nether lips with its tip, you can feel them spreading a bit for your entry, then... pull away. Sonya grins down at you, saying 'Ahah - you didn't earn that this time, lover. See it as a motivation to fight better next time...' She moves further up and turns around, then leans forward until she's in the 69 position on top of you. Her crotch is right in your face and the blond hair of her bush tickles your chin. Going with the flow, you put your tongue to work, licking and teasing her pussy. Meanwhile, your Viking partner takes hold of your cock, stroking it and fondling your balls softly. Then she takes the tip into her mouth and sinks her lips deeper around the shaft, bobbing up and down."; 
-		say "     The two of you lick and suck and stroke each other for quite a while, each totally focused on the other's pleasure. When things get pretty close for both of you, Sonya changes positions again, getting to kneel over your crotch. With flowing movements of her hips, she rubs the moist and swollen lips of her pussy along the shaft of your cock, sometimes teasingly letting the tip of it come between them then quickly moving down along the shaft again. It doesn't take more than a minute or two of this to finally drive you over the edge, gasping as your balls twitch and spurt after spurt of your seed splats all over your chest and abdomen. The Viking woman isn't far behind, the feel of your pulsing shaft rubbing against her pussy lips giving her an intense climax.";  
+		say "     The two of you lick and suck and stroke each other for quite a while, each totally focused on the other's pleasure. When things get pretty close for both of you, Sonya changes positions again, getting to kneel over your crotch. With flowing movements of her hips, she rubs the moist and swollen lips of her pussy along the shaft of your cock, sometimes teasingly letting the tip of it come between them then quickly moving down along the shaft again. It doesn't take more than a minute or two of this to finally drive you over the edge, gasping as your balls twitch and spurt after spurt of your seed splats all over your chest and abdomen. The Viking woman isn't far behind, the feel of your pulsing shaft rubbing against her pussy lips giving her an intense climax."; 
 		say "     [WaitLineBreak]";
 		if the player is not facially human or the player is not bodily human or the player is not skintone human:      
 			say "     Sticky with sweat, cum and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my monster.' and presses a kiss against your lips. You keep making out for a moment longer, then each gather your gear and get back to everyday post-apocalyptic survival.";
@@ -207,17 +242,17 @@ to say AffectionateVikingWinSex:     [sex with player, gets the player off too]
 		say "     The two of you lick and suck and stroke each other for quite a while, each totally focused on the other's pleasure. When things get pretty close for both of you, Sonya changes positions again, getting to kneel over your crotch. With flowing movements of her hips, she rubs the moist and swollen lips of her pussy against yours. Knowing exactly how to please a woman, she moves you towards orgasm at the same pace as herself, and less than a minute later, the two of you climax at the same time, loud gasps and moans only interrupted as she kisses you.";  
 		say "     [WaitLineBreak]";
 		if the player is not facially human or the player is not bodily human or the player is not skintone human:      
-			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my monster.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
+			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my monster.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with the beach's very fine dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
 		otherwise:
-			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my warrior.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
+			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my warrior.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with the beach's very fine dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
 	otherwise:                                   [neuter]
 		say "     With that, she grinds her crotch against yours, and even though you don't have any genitals, her touch wakes urges inside you. Sonya grins down at you, saying 'How about you eat me out and I stoke you there...' She moves further up and turns around, then leans forward until she's in the 69 position on top of you. Her crotch is right in your face and the blond hair of her bush tickles your chin. Going with the flow, you put your tongue to work, licking and teasing her pussy. Meanwhile, your Viking partner caresses the skin of your bare crotch with her fingers and tongue."; 
 		say "     The two of you lick and stroke each other for quite a while, each totally focused on the other's pleasure. When things get pretty close for both of you, Sonya changes positions again, getting to kneel over your crotch again. With flowing movements of her hips, she rubs the moist and swollen lips of her pussy against you. It feels great, and less than a minute later, a tingly feeling of satisfaction runs through your whole body. Satisfied, Sonya quickly strokes herself and joins you just moments later, her femcum dripping down on you.";  
 		say "     [WaitLineBreak]";
 		if the player is not facially human or the player is not bodily human or the player is not skintone human:      
-			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my monster.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
+			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my monster.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with the beach's very fine dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
 		otherwise:
-			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my warrior.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
+			say "     Sticky with sweat and female juices, you lie there together, holding each other in your arms as your orgasms wind down. Breathing deeply, Sonya moans 'I love you, my warrior.' and presses another kiss against your lips. You keep making out for a moment longer, then rub yourselves clean with the beach's very fine dry sand and each gather your gear. Time to get back to everyday post-apocalyptic survival.";
 
 to say Viking loses:
 	if VikingRelationship is 1:             [first time victory over her]
@@ -284,7 +319,7 @@ to say VikingVirginSex:             [first time with the player]
 		say "     Soon, Sonya moans 'Go on. Take me!', her legs wrapping around your hips to pull you deeper into her vagina. Taking up sliding out then pounding deep into her again, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. Her arms wrap around your upper body, pulling you fully on top of her as she seeks your lips with hers, hungrily making out with you. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, the muscles in her vagina tightening their grip on your cock as the Viking orgasms. Not to lag too far behind, you abandon all restraint, grinding against her crotch urgently, and blow your load moments later. Pulse after pulse of your fertile seed shoot deep into the young woman's insides, making her well and truly deflowered.";
-		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls off your softening shaft and cleans up a bit by rubbing off with dry sand. Then she goes to collect her gear.";
+		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls off your softening shaft and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her gear.";
 	otherwise if cunts of player > 0:            [female]
 		say "     You watch Sonya take off her armor and then the rest of her clothes, revealing the pale-skinned perfection of her well-trained body. There is a certain... urgency to her movements, as you guess there would be with her a virgin and all. Now completely naked, her perky breasts bouncing as she moves, the young Viking moves to lie down in the sand, spreading her legs a bit and looking up expectantly at you. 'Come on, claim your prize - But you better be good. I've been waiting a long time for this.' Feeling decidedly overdressed, you quickly remove your own clothes, revealing your own pussy.";
 		say "     With a sigh and a chuckle, Sonya remarks 'Finally getting beaten - and then by a woman who can't even take me properly. But we're in luck - seems like Freya foresaw this and led my steps earlier when I found...' She stretches over to the pile of her clothing, opening up her satchel and... pulls out a bright green double headed dildo. Where the hell did she pick that up? Ah, who cares - your eyes riveted to the rubber sex toy, you kneel between the young Viking's legs and take it from her. Pushing one end in between her pussy lips, you have Sonya softly moaning as she's getting penetrated for the first time. Then you hit something - her hymen - and slowly increase the pressure till it gives way and you can push more and more of the rubber cock into her.";
@@ -293,7 +328,7 @@ to say VikingVirginSex:             [first time with the player]
 		say "     Soon, Sonya moans 'Harder, harder!', her legs wrapping around your hips to make you push the dildo deeper into her vagina. Taking up sliding it out then pounding deep into her again, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. Her arms wrap around your upper body, pulling you fully on top of her as she seeks your lips with hers, hungrily making out with you. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo connecting you. Not to lag too far behind, you push the sex toy deeper into yourself, rubbing it against your inner walls until you reach your peak a moment later. A trickle of your femcum runs down over the sex toy, to drip down into she sand with your partner's.";
-		say "     Exhausted, you stay on top of her, still with the dildo connecting you, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out of both of you and cleans up a bit by rubbing off with dry sand. Then she goes to collect her other gear.";
+		say "     Exhausted, you stay on top of her, still with the dildo connecting you, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out of both of you and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her other gear.";
 	otherwise:                                   [neuter]
 		say "     You watch Sonya take off her armor and then the rest of her clothes, revealing the pale-skinned perfection of her well-trained body. There is a certain... urgency to her movements, as you guess there would be with her a virgin and all. Now completely naked, her perky breasts bouncing as she moves, the young Viking moves to lie down in the sand, spreading her legs a bit and looking up expectantly at you. 'Come on, claim your prize - But you better be good. I've been waiting a long time for this.' Feeling decidedly overdressed, you quickly remove your own clothes, revealing your bare, genital-less crotch.";
 		say "     Sonya gives a surprised 'What?', then remarks with a sigh 'Finally getting beaten - and then by... what are you, even? With nothing between your... ah, no matter. Seems like Freya foresaw your little problem and led my steps earlier when I found...' She stretches over to the pile of her clothing, opening up her satchel and... pulls out a bright green double headed dildo. Your eyes riveted to the rubber sex toy, you kneel between the young Viking's legs and take it from her. Pushing one end in between her pussy lips, you have Sonya softly moaning as she's getting penetrated for the first time. Then you hit something - her hymen - and slowly increase the pressure till it gives way and you can push more and more of the rubber cock into her.";
@@ -302,7 +337,7 @@ to say VikingVirginSex:             [first time with the player]
 		say "     Before long, Sonya moans 'Harder, harder!' her arms pulling you tight against her. Taking up the speed of your thrusts into her, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. It's great fun finding out what she likes best and how you can make her squeal in delight. For a while, anything but making out, touching and fucking is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo in your hand as her inner muscles grip it. A trickle of her femcum runs down over the sex toy, to drip down into she sand.";
-		say "     After a moment of catching her breath, Sonya looks up at you and... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out herself and cleans up a bit by rubbing off with dry sand. Then she goes to collect her other gear.";
+		say "     After a moment of catching her breath, Sonya looks up at you and... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out herself and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her other gear.";
 	say "     [line break]";
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]    
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, then she shakes her head. 'You weren't half bad in fulfilling your duty in my oath - but don't think that makes you special in any way or gives you rights with me. You're still just a foreign monster, and one victory over me won't change that!' On that note, she turns away and walks off without a look back."; 
@@ -317,7 +352,7 @@ to say VikingLossSex:               [second time with the player]
 		say "     Soon, Sonya moans 'Go on. Take me!', her legs wrapping around your hips to pull you deeper into her vagina. Taking up sliding out then pounding deep into her again, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. Her arms wrap around your upper body, pulling you fully on top of her as she seeks your lips with hers, hungrily making out with you. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, the muscles in her vagina tightening their grip on your cock as the Viking orgasms. Not to lag too far behind, you abandon all restraint, grinding against her crotch urgently, and blow your load moments later. Pulse after pulse of your fertile seed shoot deep into the young woman's insides.";
-		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls off your softening shaft and cleans up a bit by rubbing off with dry sand. Then she goes to collect her gear.";
+		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls off your softening shaft and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her gear.";
 	otherwise if cunts of player > 0:            [female]
 		say "     After following the young viking to a secluded spot behind the crest of a dune, you watch Sonya take off her armor and then the rest of her clothes, revealing the pale-skinned perfection of her well-trained body. There is a certain... urgency to her movements, as you guess there would be with her a virgin and all. Now completely naked, her perky breasts bouncing as she moves, the young Viking moves to lie down in the sand, spreading her legs a bit and looking up expectantly at you. 'Come on, claim your prize - But you better be good. I've been waiting a long time for this.' Feeling decidedly overdressed, you quickly remove your own clothes, revealing your own pussy.";
 		say "     [line break]";
@@ -325,7 +360,7 @@ to say VikingLossSex:               [second time with the player]
 		say "     Soon, Sonya moans 'Harder, harder!', her legs wrapping around your hips to make you push the dildo deeper into her vagina. Taking up sliding it out then pounding deep into her again, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. Her arms wrap around your upper body, pulling you fully on top of her as she seeks your lips with hers, hungrily making out with you. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo connecting you. Not to lag too far behind, you push the sex toy deeper into yourself, rubbing it against your inner walls until you reach your peak a moment later. A trickle of your femcum runs down over the sex toy, to drip down into she sand with your partner's.";
-		say "     Exhausted, you stay on top of her, still with the dildo connecting you, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out of both of you and cleans up a bit by rubbing off with dry sand. Then she goes to collect her other gear.";
+		say "     Exhausted, you stay on top of her, still with the dildo connecting you, and try to catch your breath. Looks like Sonya has other ideas... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out of both of you and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her other gear.";
 	otherwise:                                   [neuter]
 		say "     After following the young viking to a secluded spot behind the crest of a dune, you watch Sonya take off her armor and then the rest of her clothes, revealing the pale-skinned perfection of her well-trained body. There is a certain... urgency to her movements, as you guess there would be with her a virgin and all. Now completely naked, her perky breasts bouncing as she moves, the young Viking moves to lie down in the sand, spreading her legs a bit and looking up expectantly at you. 'Come on, claim your prize - But you better be good. I've been waiting a long time for this.' Feeling decidedly overdressed, you quickly remove your own clothes, revealing your bare, genital-less crotch.";
 		say "     Sonya looks at you and remarks 'I still don't know how you can live without... oh well. Luckily, I come prepared...' She stretches over to the pile of her clothing, opening up her satchel and... pulls out a bright green double headed dildo. Your eyes riveted to the rubber sex toy, you kneel between the young Viking's legs and take it from her. Pushing one end in between her pussy lips, her moans encourage you to go deeper and deeper.";
@@ -334,7 +369,7 @@ to say VikingLossSex:               [second time with the player]
 		say "     Before long, Sonya moans 'Harder, harder!' her arms pulling you tight against her. Taking up the speed of your thrusts into her, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. It's great fun finding out what she likes best and how you can make her squeal in delight. For a while, anything but making out, touching and fucking is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo in your hand as her inner muscles grip it. A trickle of her femcum runs down over the sex toy, to drip down into she sand.";
-		say "     After a moment of catching her breath, Sonya looks up at you and... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out herself and cleans up a bit by rubbing off with dry sand. Then she goes to collect her other gear.";
+		say "     After a moment of catching her breath, Sonya looks up at you and... suddenly the world spins as she rolls the two of you over until she's on top and straddling your hips. With a new composure, now that her lusts have been satisfied, she pulls the rubber cock out herself and cleans up a bit by rubbing off with the beach's very fine dry sand. Then she goes to collect her other gear.";
 	say "     [line break]";
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:    [non-human player = a monster, in her words]    
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, and you can almost see lust and desire flickering up in her eyes again. Then she shakes her head. 'You're not bad at all at this - or fighting, I have to admit. But now I've got to go, monster. Raiding targets don't scout themselves, you know...' She winks at you, then walks away, giving you a short look back as she climbs over the crest of the dune.";
@@ -349,12 +384,16 @@ to say AffectionateVikingLossSex:   [3+ times with the player]
 		say "     As you bottom out inside her, Sonya wraps her legs around your hips, holding you tight against herself. Her arms pull your upper body down on her too, so she can make out with you. In between kisses she pants 'Fuck me hard!' and you comply eagerly, pulling out most of your shaft before plunging back in in a fast rhythm. The sexy Viking even pushes down her hips to meet each of your thrusts and pulls you down on her with her legs around your ass. It feels amazing to have her warm and tight passage stretched around your manhood as you are pounding the Nordic warrior-woman's pussy. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, the muscles in her vagina tightening their grip on your cock as the Viking orgasms. Not to lag too far behind, you abandon all restraint, grinding against her crotch urgently, and blow your load moments later. Pulse after pulse of your fertile seed shoot deep into the young woman's insides.";
-		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. She strokes your back softly, content in just lying there with you for a while, resting and holding one another. Then, she sighs, rubbing your nose with hers before sliding out from under you and sitting up. After cleaning up a bit by rubbing off with dry sand, she stands up and goes to collect her gear.";
+		say "     Exhausted, you stay on top of her, still with your cock inside, and try to catch your breath. She strokes your back softly, content in just lying there with you for a while, resting and holding one another. Then, she sighs, rubbing your nose with hers before sliding out from under you and sitting up. After cleaning up a bit by rubbing off with the beach's very fine dry sand, she stands up and goes to collect her gear.";
 		if VikingPregnancy is 0:              [not already preggers]
 			let VikingPregChance be a random number from 1 to 20;  	
 			if VikingPregChance > 10:           [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth] 
 				now VikingPregnancy is 1;					[invisibly pregnant]
+				if the player is not facially human or the player is not bodily human or the player is not skintone human:     [player a legendary monster]
+					now VikingKidShape is bodyname of player;					
+				otherwise:    [human player]		
+					now VikingKidShape is "human";		
 	otherwise if cunts of player > 0:            [female]
 		say "     Hand in hand, you climb over the crest of a nearby dune, stopping several times on the way to share hungry kisses. After finally arriving in a somewhat protected spot, out of sight from the beach, Sonya pushes you to sit in the sand and starts to undress in a hot little strip-show. It's amazing how arousing she can make taking off scale mail armor and then piece by piece her other clothing. She quickly has you so hot and bothered that you just can't resist standing up and 'helping her' a bit, pulling off articles of clothing and caressing her. Soon she is completely naked, revealing the pale-skinned perfection of her well-trained body. A beaming smile on her face, she starts undressing you too, rubbing her breasts and body against you as you're stripped bare.";
 		say "     Acting all inconspicuous as she picks up the green dildo you used before from among her things, Sonya saunters over to you. She gooses your ass, daring you to catch her, and runs off a few steps, her perky breasts bouncing as she moves. With her not really trying to get away, you quickly catch her, embracing her as you plant a kiss on her lips. Holding on you, she lets herself fall into the sand on the side of the dune, and you find yourself lying on the eager young woman, your crotch rubbing against hers. It's a matter of moments to put the double-headed dildo back to its intended use, connecting you two pussy to pussy.";
@@ -434,10 +473,24 @@ to say VikingDesc:
 				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child told me you were close. He always gets more active when you're there.' She rubs her belly through the tunic and gives you a challenging look. 'But don't you think I've become a tame brood-cow now. I'd love another tumble in the dunes, but you'll still have to prove your power. Let's fight!' She brings up her shield again and raises the sword, rushing at you.";     
 		otherwise if VikingPregnancy is 4:
 			say "     Walking along the beach, you suddenly find yourself confronted with a female Viking, running down the raise of the dune where she lay in wait and rushing at you. The attractive blond woman in light scale mail brandishes her sword and shield as she lets her gaze wander over you.";
-			if the player is not facially human or the player is not bodily human or the player is not skintone human:     [sees player as a legendary monster]
-				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] monster. Our child is strong and healthy, a beautiful little [one of]boy. He[or]girl. She[at random] looks a lot like you and will become a powerful warrior for sure, being half-monster like in the legends.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you.";
-			otherwise:    [human player to be raided]
-				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child is strong and healthy, a beautiful little [one of]boy. He[or]girl. She[at random] looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you."; 
+			if a random chance of 1 in 2 succeeds:  [kid was a boy]
+				if the player is not facially human or the player is not bodily human or the player is not skintone human:     [sees player as a legendary monster]
+					say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] monster. Our child is strong and healthy, a beautiful little boy. He looks a lot like you and will become a powerful warrior for sure, being half-monster like in the legends.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you.";
+				otherwise:    [human player to be raided]
+					say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child is strong and healthy, a beautiful little boy. He looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you."; 
+					if VikingKidGender is 0:
+						now VikingKidGender is 1;
+					otherwise if VikingKidGender is 2:
+						now VikingKidGender is 3;
+			otherwise:  [kid was a girl]
+				if the player is not facially human or the player is not bodily human or the player is not skintone human:     [sees player as a legendary monster]
+					say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] monster. Our child is strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure, being half-monster like in the legends.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you.";
+				otherwise:    [human player to be raided]
+					say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child is strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. 'I miss having part of you inside me, and by body tells me I'm ready again already. How about you prove your power over me again and ravish me? Let's fight!' She brings up her shield again and raises the sword, rushing at you."; 				
+					if VikingKidGender is 0:
+						now VikingKidGender is 2;
+					otherwise if VikingKidGender is 1:
+						now VikingKidGender is 3;					
 			now VikingPregnancy is 0;    [reset into receptive state]
 	otherwise if VikingRelationship is 7:  [Sonya is on the ship, her cousin appears and offers an ultimatum]
 		now VikingUltimatum is 24;  	[72h to appear for the challenge]
@@ -538,7 +591,7 @@ Instead of resolving a Chieftain's Challenge:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:     [they see the player as a monster]
 		say "     Arriving at the rocky part of the beach, you find an armored grey-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander monster. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until the clan is here to witness your death. Chief Frithjof will gut you for what you did to Sonya' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
 		say "     [WaitLineBreak]";
-		say "     It takes several trips from and to the ship to ferry all the Vikings over (except a few watchstanders on the ship), though with lots of young blond and red-headed young men to row the boats, they're still quicker than you'd have expected. Soon there's a circle of more than thirty Vikings around you, mostly men but also some women in various age-groups. The majority looks to be about 20-30, though there are some grey-beards and still beardless youngsters too. All of them - except Sonya, who stands flanked by her two cousins - give you rather hostile looks and there's a background murmur of speculation about you. You hear them call you all kinds of names as they speculate what you used to bespell or control Sonya.";
+		say "     It takes several trips from and to the ship to ferry all the Vikings over (except a few watch-standers on the ship), though with lots of young blond and red-headed young men to row the boats, they're still quicker than you'd have expected. Soon there's a circle of more than thirty Vikings around you, mostly men but also some women in various age-groups. The majority looks to be about 20-30, though there are some grey-beards and still beardless youngsters too. All of them - except Sonya, who stands flanked by her two cousins - give you rather hostile looks and there's a background murmur of speculation about you. You hear them call you all kinds of names as they speculate what you used to bespell or control Sonya.";
 		say "     Everyone goes silent as a large and muscular man steps forward into the ring of people, pretty imposing in scale-mail armor. He's got the bearing of a seasoned fighter and is armed with a wickedly sharp-looking axe and a large round shield. From his scowl at you and the similar looks, this must be Sonya's father.";
 	otherwise:     [player is a human-like person]
 		say "     Arriving at the rocky part of the beach, you find an armored grey-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander bastard. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until everyone's here to witness your death. Chief Frithjof will gut you for what you did to Sonya' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
@@ -639,6 +692,10 @@ to say VikingPublicSex:
 			if VikingPregChance > 10:           [50% chance]
 				now VikingPregCounter is 48;      [48 turns till birth] 
 				now VikingPregnancy is 1;					[invisibly pregnant]
+				if the player is not facially human or the player is not bodily human or the player is not skintone human:     [player a legendary monster]
+					now VikingKidShape is bodyname of player;					
+				otherwise:    [human player]		
+					now VikingKidShape is "human";						
 	otherwise if cunts of player > 0:            [female]
 		say "     Accompanied by whistles and cheers from the drink Vikings, you quickly pull off your own clothes, letting them drop to the floor to lie with Sonya's, then step up to her, stroking the insides of her legs as you spread them a bit further. Your by also pretty moist pussy rubs against her her pubic mound as you lean over her and cup her breasts, taking one nipple, then the other into your mouth to gently suck on them. Then she pulls your head up to hers for a quick kiss, followed by a moaned 'Fuck me - now!' She feels around between the furs for a moment, then pulls the green dildo you two used before out from under one and presses it in your hand.";
 		say "     [WaitLineBreak]";
@@ -671,7 +728,7 @@ to say VShipDesc:
 		say "     During the day as it is right now, many of the Vikings are on deck, preparing caught fish as food, practicing fighting, etc.";
 	otherwise:
 		say "     You're on the deck of a large sailing vessel, crewed by about forty people - Vikings, to be specific, looking pretty alike to each other with their pale, Nordic skins and blond hair. Many of them are men, though there are also some women around, who don't rank much below their fellows in muscles and toughness. The majority looks to be about 20-30, though there are some grey-beards and still beardless youngsters as well as teenage girls too.";
-		say "     As it is night currently, there are only few Vikings on deck, just a few watchstanders and a group of men playing dice in the bow.";		
+		say "     As it is night currently, there are only few Vikings on deck, just a few watch-standers and a group of men playing dice in the bow.";		
 
 Instead of sniffing Viking Ship:
 	say "     The air smells salty in your nose, no wonder - you're on a ship.";
@@ -679,23 +736,287 @@ Instead of sniffing Viking Ship:
 instead of navigating Viking Ship:
 	say "     Making your way to the right spot on the beach, you signal the Viking ship out before the coast and soon get picked up by a muscled Viking who rows a boat to the beach and back.[line break]";
 	move player to Viking Ship;
+	
+down from Viking Ship is Sonya's Cabin.
+Sonya's Cabin is a room. 
+The description of Sonya's Cabin is "[SCDesc]";
+
+to say SCDesc:
+	say "     Sonya's cabin is relatively big - being the chieftain's daughter has its perks - and sports a bed big enough for two, covered in soft furs. You can see that it's bolted to the wooden floorboards, just like the two chests that stand against the opposite wall. Not much for loose clutter, these vikings - those three items are the only furniture in here. But then, that's just a sensible thing to do, avoiding things being thrown around in a storm... and also allowing to do all kinds of sexy stuff in the bed without it knocking against the neighbouring cabin wall.";
+	
+instead of going down from Viking Ship:
+	say "     Going to the door leading below-deck, you climb down a steep set of stairs, then make your way to the cabin in which your viking wife awaits you.";
+	say "     [line break]";
+	if VikingPregnancy is 4:
+		if a random chance of 1 in 2 succeeds:  [kid was a boy]
+			if the player is not facially human or the player is not bodily human or the player is not skintone human:     [sees player as a legendary monster]
+				say "     As you enter, you're greeted by Sonya, who says 'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] monster. Our child came while you were out - he's strong and healthy, a beautiful little boy. He looks a lot like you and will become a powerful warrior for sure, being half-monster like in the legends.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but...[otherwise]But[end if] I miss having part of you inside me, and by body tells me I'm ready again already. How a taking me for a ride in the sheets?'";
+			otherwise:    [human player to be raided]
+				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child came while you were out - he's strong and healthy, a beautiful little boy. He looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but...[otherwise]But[end if] I miss having part of you inside me, and by body tells me I'm ready again already. How a taking me for a ride in the sheets?'";
+				if VikingKidGender is 0:
+					now VikingKidGender is 1;
+				otherwise if VikingKidGender is 2:
+					now VikingKidGender is 3;
+		otherwise:  [kid was a girl]
+			if the player is not facially human or the player is not bodily human or the player is not skintone human:     [sees player as a legendary monster]
+				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] monster. Our child came while you were out - he's strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure, being half-monster like in the legends.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but...[otherwise]But[end if] I miss having part of you inside me, and by body tells me I'm ready again already. How a taking me for a ride in the sheets?'";
+			otherwise:    [human player to be raided]
+				say "     'Hello, my [one of]brave[or]strong[or]powerful[or]beloved[or]handsome[at random] warrior. Our child came while you were out - he's strong and healthy, a beautiful little girl. She looks a lot like you and will become a powerful warrior for sure.' Biting her lip, she gives you a look, half challenging half needful. '[if VikingKidCounter > 4]Father is already joking that we'll have to build another ship soon if we keep going like this, but...[otherwise]But[end if] I miss having part of you inside me, and by body tells me I'm ready again already. How a taking me for a ride in the sheets?'";
+	move player to Sonya's Cabin;
 			
-Section 5 - Endings
+Section 5 - NPC Sonya
 
-when play ends:
-	if bodyname of player is "dead":
-		stop the action;
+[ VikingPregnancy - pregnancy progress variable                    ]
+[  0: not preggers                                                 ]
+[  1: male player knocked her up (invisible)                       ]
+[  2: male player knocked her up (slightly visible)                ]
+[  3: male player knocked her up (bulging belly)                   ]
+[  4: after the kid's been born                                    ]
 
-[
-when play ends:
-	if bodyname of player is "Viking":
-		if humanity of player is less than 10:   [succumbed]
-			say "     A";
-		otherwise:    [sane]
-			say "     B";
+[ VikingKidCounter - number of children with the player            ]
+[ VikingPregCounter - timer for the next birth (48h from start)    ]
+
+[ 		
+If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.		
 ]
 
-Section 6 - Drop Item 
+Sonya is a woman.  The hp of Sonya is normally 0. 
+Sonya is in Sonya's Cabin.
+The description of Sonya is "[SonyaDesc]";
+The conversation of Sonya is { "Mew!" }.
+
+instead of sniffing Sonya:
+	say "Sonya has a pleasant feminine smell.";
+
+to say SonyaDesc:
+	if debugactive is 1:
+		say "DEBUG -> VIKINGRELATIONSHIP: [VikingRelationship], PREGTIMER: [VikingPregCounter], KIDS: [VikingKidCounter], PREG VISIBILITY: [VikingPregnancy] <- DEBUG[line break]";	
+	if (VikingRelationship < 20):   [not yet married]
+		say "ERROR-Sonya-020A: She should not be here to look at yet, as her relationship value is [VikingRelationship]. Please report this.";
+	otherwise if (VikingRelationship > 99):
+		say "ERROR-Sonya-100A: She should no longer be in the game, the player having refused her father's challenge.";
+	otherwise: 
+		say "     Sonya Frithjofsdotter is a very attractive blond woman with shoulder-long golden-blond hair. She is dressed in fur-rimmed boots, a comfortable set of leather pants and a woolen tunic pulled tight with a belt. Everything about her screams warrior, from her lithe and muscled shape to simply the way she stands, a confident look in her eyes that says she can take anyone in a fight - well, except you, the [if cunts of player > 0 and cocks of player is 0]wife[otherwise]husband[end if] she adores. ";
+		if VikingPregnancy is 1:
+			say "There is a kind of special glow about her that tells you she's expecting a child, thanks to your sperm's virility.";
+		otherwise if VikingPregnancy is 2:
+			say "A slight bulge of her stomach shows the first visible proof of her pregnancy and tells you that your child is developing well.";
+		otherwise if VikingPregnancy is 3:
+			say "She is quite obviously pregnant, with a bulging belly showing proof of your sperm's virility.";
+		say "     As Sonya notices your intense gaze upon her, she walks up to you and playfully pulls you close, meeting your lips to share a loving kiss.";
+
+instead of conversing the Sonya:
+	if (VikingRelationship < 20):   [not yet married]
+		say "ERROR-Sonya-020A: She should not be here to look at yet, as her relationship value is [VikingRelationship]. Please report this.";
+	otherwise if (VikingRelationship > 99):
+		say "ERROR-Sonya-100A: She should no longer be in the game, the player having refused her father's challenge.";
+	otherwise:      				
+		if the player is not facially human or the player is not bodily human or the player is not skintone human: 
+			say "     Seeing that you want to talk to her, Sonya smiles at you and says 'Yes, my brave monster?'";			
+		otherwise: 		
+			say "     Seeing that you want to talk to her, Sonya smiles at you and says 'Yes, my outlander warrior?'";
+		wait for any key;
+		say "[SonyaTalkMenu]";
+
+to say SonyaTalkMenu:
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Talk about the things happening along the coast";
+	now sortorder entry is 1;
+	now description entry is "Have her tell you what she's seen while exploring.";
+	now toggle entry is SonyaTalk rule;
+	choose a blank row in table of fucking options;
+	if (VikingKidCounter is 1):
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about your child";
+		now sortorder entry is 2;
+		now description entry is "Ask her about your offspring.";
+		now toggle entry is SonyaTalk rule;	
+	otherwise if (VikingKidCounter > 1):
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about your children";
+		now sortorder entry is 3;
+		now description entry is "Ask her about your offspring.";
+		now toggle entry is SonyaTalk rule;
+[
+	choose a blank row in table of fucking options;
+	now title entry is "Talk about the Vikings";
+	now sortorder entry is 3;
+	now description entry is "Ask her about her family and Vikings in general.";
+	now toggle entry is SonyaTalk rule;		
+]
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the SonyaTalk rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want?";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Talk about the things happening along the coast"):
+			say "[SonyaTalk1]";
+		if (nam is "Talk about your child"):
+			say "[SonyaTalk2]";	
+		if (nam is "Talk about your children"):
+			say "[SonyaTalk2]";
+		if (nam is "Talk about the Vikings"):
+			say "[SonyaTalk3]";				
+		wait for any key;
+		
+to say SonyaTalk1:
+	let randomnumber be a random number from 1 to 10;
+	if randomnumber is:
+		-- 1:		
+			say "     Sonya says: 'Some of those blue winged beasts - gryphons - seem to be nesting up on the cliffs along the shore. Thankfully, they seem concentrate their activity on the city, but I've one or another of them come and go in the sky many times. So be careful when you're near the cliffs, my love.'";
+		-- 2: 
+			say "     Sonya says: 'Those sand-men out there could be a real threat if they stopped just lounging around and wearing those garishly colored speedos that make em easy to spot. Some real fighter with that kind of camouflage on the beach could ambush anyone. And they're impervious to damage too - the last one that tried to touch me lost his forearm to my sword... until it just reformed out of the sand he was standing on.'";
+		-- 3: 
+			say "     Sonya says: 'Some mighty sorcerer or god lives in a floating castle out in the ocean. It's tempting to raid such a place - imagine the treasures that must lie within. But there are strange, rubbery creatures roaming near it, and with such minions who knows how mighty their master is. For now, we're raiding the ripe pickings elsewhere along the coast. Most of those I see when scouting are far too busy fucking to pose any kind of real resistance.'";
+		-- 4: 
+			say "     Sonya says: 'Beware the otters on the beach, my love. They may be relatively short and thin, but they're excellent swimmers. The little bastards overturned one of our rowing boats a while back, carrying off my cousin Thundalf... Even a young and strong warrior can fall prey to them if he gets swarmed.'";
+		-- 5:
+			say "     Sonya says: 'This is a strange land indeed. I've seen one of the mighty blackfish walk out of the ocean on legs. They've always managed to catch seals right up in the surf, but now even those who keep their distance can fall prey to them...'";
+		-- 6: 
+			say "     Sonya says: 'Some shark pirates tried to attack out ship a while back. Hah, as if they were a match for real Viking raiders!'";
+		-- 7:
+			say "     Sonya says: 'Don't listen to the siren's songs if you are unlucky enough to encounter one of them. They're known to lull and lure men and women out into the sea. Many never return.'";
+		-- 8: 
+			say "     Sonya says: 'There is a large group of creatures over where stairs lead up to the beach plaza, just lounging around, playing and often copulating. They seem peaceful, but I don't trust that impression to walk through between them. Better safe than sorry and swarmed by the whole group. There's enough other, more stealthy ways to enter the city - through the dunes or climbing up the lower sections of the cliffs for example.'";
+		-- 9: 
+			say "     Sonya says: 'Legends tell of a strange tree whose fruit allows men to breathe water like a fish. With all the strange things going on in this land, it might just exist here...'";
+		-- 10:
+			say "     Sonya says in a thoughtful tone: 'Seeing many men, women and beasts enjoy themselves so wantonly all over this strange land made me curse myself for swearing my oath more than once. Even the strongest warrior finds lust difficult to resist... and it was hard, every day I was out there.' She smiles at you, embracing you and affectionately brushing her cheek against yours, then says 'Thank the gods I met you, my brave [if cunts of player > 0 and cocks of player is 0]wife[otherwise]husband[end if]. All the waiting was worth it, for getting you in the end.'";
+					
+to say SonyaTalk2:
+	if VikingKidCounter is 1:  [just one kid so far]
+		if VikingKidGender is 1: [a boy]
+			say "     Sonya gives you a beaming smile as she tells you about your child, how quickly the little boy grows and how strong he's getting. [one of]He even already got his first wooden sword from one of his uncles and now is constantly swinging away with it.[or]He's apparently the new champion when it comes to wrestling with the other youngsters on the ship.[at random] Seems like your kid has a bright future as a warrior ahead of him.";
+		otherwise:  [a girl]
+			say "     Sonya gives you a beaming smile as she tells you about your child, how quickly the little girl grows and how strong she's getting. There is a proud gleam in her eye as she tells you how [one of]she's roughhousing with the other youngsters on the ship - and that she broke the nose of one of them when he grabbed her butt.[or]she got a wooden sword from her uncle and is pretty good with that already, just like her mother.[or]she already learned how to swim very well.[at random]";					
+	otherwise if VikingKidCounter > 1:  [more than one kid]
+		if VikingKidGender is 1 or (VikingKidGender is 3 and a random chance of 1 in 2 succeeds): [one of the boys]
+			say "     Sonya gives you a beaming smile as she tells you about your [VikingKidCounter] children, picking out one that she's especially proud of - a boy who grows really quickly and is getting pretty strong for a kid. [one of]He even already got his first wooden sword from one of his uncles and now is constantly swinging away with it.[or]He's apparently the new champion when it comes to wrestling with the other youngsters on the ship.[at random] Seems like your kid has a bright future as a warrior ahead of him.";
+		otherwise if VikingKidGender is 2 or (VikingKidGender is 3 and a random chance of 1 in 2 succeeds): [one of the girls]
+			say "     Sonya gives you a beaming smile as she tells you about your [VikingKidCounter] children, picking out one that she's especially proud of - a girl who grows especially quickly and is getting pretty strong for a kid. There is a proud gleam in her eye as she tells you how your daughter [one of]is roughhousing with the other youngsters on the ship - and that she broke the nose of one of them when he grabbed her butt.[or]got a wooden sword from her uncle and is pretty good with that already, just like her mother.[or]already learned how to swim and dive.[at random]";					
+				
+to say SonyaTalk3:
+	let randomnumber be a random number from 1 to 9;
+	if randomnumber is:
+		-- 1:		
+			say "     ";
+			
+
+Instead of fucking the Sonya:
+	if(lastfuck of Sonya - turns < 5):
+		say "     Sonya puts a hand on your chest to hold you back, gently but firmly. With a little shake of her head, she says 'Sorry my love, I [one of]can't spend all my energy here in bed with you - even though I want to. We can't raid if no one scouts the coast and I've got to go soon.' [or]have got to clean my armor and sharpen my sword right now.' [or]need a bit of a break. You can really wear a woman out, you know.' [at random]Giving you an affectionate kiss on the cheek, your viking wife then steps away from you.";
+	otherwise:
+		say "[SonyaSexMenu]";
+
+to say SonyaSexMenu:
+	blank out the whole of table of fucking options;
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her pussy";
+		now sortorder entry is 5;
+		now description entry is "Have sex with your Viking wife.";
+		now toggle entry is SonyaSex rule;
+[
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Have her blow your cock";
+		now sortorder entry is 1;
+		now description entry is "Let the Viking beauty blow you.";
+		now toggle entry is SonyaSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Have oral sex with her (69)";
+	now sortorder entry is 3;
+	now description entry is "Offer Sonya to please each other with your tongues.";
+	now toggle entry is SonyaSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Finger her pussy";
+	now sortorder entry is 4;
+	now description entry is "Finger-fuck Sonya's pussy to make her come.";
+	now toggle entry is SonyaSex rule;		
+	if (cunts of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Let her fuck your pussy";
+		now sortorder entry is 6;
+		now description entry is "Share Sonya's double dildo.";
+		now toggle entry is SonyaSex rule;		
+	if (cocks of player > 0 and lust of Sonya > 1):
+		choose a blank row in table of fucking options;
+		now title entry is "Take Sonya ass";
+		now sortorder entry is 8;
+		now description entry is "Fill the Viking woman's ass with your cock.";
+		now toggle entry is SonyaSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Let her fuck your ass";
+	now sortorder entry is 9;
+	now description entry is "Take Sonya's double dildo in your rear entrance.";
+	now toggle entry is SonyaSex rule;			
+]
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the SonyaSex rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want?";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Fuck her pussy"):
+			say "[SonyaSex1]";
+		wait for any key;
+	now lastfuck of Sonya is turns;
+			
+to say SonyaSex1:  [fucking her]
+	if cocks of player > 0:
+		say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her husband while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya then gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
+		say "     Starting by sinuously moving her shoulders cupping those oh so well-rounded breasts through the fabric of her tunic, she then slowly undoes her belt, making you hard from just the anticipation of seeing her pale, perfect body. A moment later, her arms grab the lower edge of her tunic, pulling it over her head to be dropped to the side, revealing your wife's muscled, but still feminine curves. Now with her shapely breasts in full view and Sonya sticking out her chest while she rubs their nipples, your legs walk you closer almost on their own - and you can't resist but 'help her' a bit when she undoes her pants, pulling them down and off her legs, quickly followed by a silky soft pair of panties. Soon she is completely naked, lying on her side and showing off the pale-skinned perfection of her well-trained body[if VikingPregnancy is 2]and the slight curve of her belly that has your child growing inside of it[otherwise if VikingPregnancy is 3]and the bulging curve of her belly that has your child growing inside of it[end if]. A beaming smile on her face, she says 'Your turn, my love.'";
+		say "     [WaitLineBreak]";		
+		say "     Under the lusty gaze of your Viking woman, you undress much more quickly, too horny and wound-up to give her such a nice show as she did herself. Though Sonya doesn't mind, as she's more than ready to get into the real fun herself now. Rising back up on her knees, she even reaches out to touch your naked body, then pulls you close for a hungry kiss with some urgency. A bit too quickly, actually, as you lose your balance and fall into bed bed with her, still eagerly kissing each other. Finding yourself lying on the eager young wife, your cock poking against her pubic mound, you're not one to waste such an opportunity and just move your hips a bit. The tip of your manhood brushes over her nether lips in no time at all and you thrust in, sinking deep into your Viking's moist vagina.";
+		say "     As you bottom out inside her, Sonya wraps her legs around your hips, holding you tight against herself. Her arms stay around your chest likewise, to hold you close as she makes out with you. In between kisses she pants 'Fuck me hard!' and you comply eagerly, pulling out most of your shaft before plunging back in in a fast rhythm. The sexy Viking even pushes down her hips to meet each of your thrusts and pulls you down on her with her legs around your ass. It feels amazing to have her warm and tight passage stretched around your manhood as you are pounding the Nordic warrior-woman's pussy. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the cabin with loud moans and gasps of pleasure...";
+		say "     [WaitLineBreak]";
+		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, the muscles in her vagina tightening their grip on your cock as the Viking orgasms. Not to lag too far behind, you abandon all restraint, grinding against her crotch urgently, and blow your load moments later. Pulse after pulse of your fertile seed shoot deep into the young woman's insides.";
+		say "     Exhausted, you roll the two of you over to lie on your sides, still with your cock inside her, and try to catch your breath. Sonya strokes your chest softly and looks deep into your eyes, content in just lying there on the warm furs with you for a while, resting and holding one another. Then, she sighs 'I love you, my husband', rubbing your nose with hers before sitting up. After cleaning up a bit with a soft towel from one of the two chests against the wall, she gathers up her clothes and gets dressed.";
+		if VikingPregnancy is 0:              [not already preggers]
+			let VikingPregChance be a random number from 1 to 20;  	
+			if VikingPregChance > 10:           [50% chance]
+				now VikingPregCounter is 48;      [48 turns till birth] 
+				now VikingPregnancy is 1;					[invisibly pregnant]
+				if the player is not facially human or the player is not bodily human or the player is not skintone human:     [player a legendary monster]
+					now VikingKidShape is bodyname of player;					
+				otherwise:    [human player]		
+					now VikingKidShape is "human";		
+	otherwise if cunts of player > 0:            [female]
+		say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her wife while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya then gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
+		say "     Starting by sinuously moving her shoulders cupping those oh so well-rounded breasts through the fabric of her tunic, she then slowly undoes her belt, making you all wet from just the anticipation of seeing her pale, perfect body. A moment later, her arms grab the lower edge of her tunic, pulling it over her head to be dropped to the side, revealing your wife's muscled, but still feminine curves. Now with her shapely breasts in full view and Sonya sticking out her chest while she rubs their nipples, your legs walk you closer almost on their own - and you can't resist but 'help her' a bit when she undoes her pants, pulling them down and off her legs, quickly followed by a silky soft pair of panties. Soon she is completely naked, lying on her side and showing off the pale-skinned perfection of her well-trained body[if VikingPregnancy is 2]and the slight curve of her belly that has your child growing inside of it[otherwise if VikingPregnancy is 3]and the bulging curve of her belly that has your child growing inside of it[end if]. A beaming smile on her face, she says 'Your turn, my love.'";		
+		say "     [WaitLineBreak]";		
+		say "     Under the lusty gaze of your Viking woman, you undress much more quickly, too horny and wound-up to give her such a nice show as she did herself. Though Sonya doesn't mind, as she's more than ready to get into the real fun herself now. Rising back up on her knees, she even reaches out to touch your naked body, then pulls you close for a hungry kiss with some urgency. A bit too quickly, actually, as you lose your balance and fall into bed bed with her, still eagerly kissing each other. With you lying on top of her and just a bit distracted by Sonya's breasts rubbing against your chest, the Viking woman inconspicuously reaches over to feel between the soft furs on the bed, pulling out a long green dildo a moment later. It's a matter of moments to put the double-headed sex toy to its intended use, connecting you two pussy to pussy.";
+		say "     Holding on to the rubber dick when you pull back, you can fuck each other, in a fashion. As you are grinding against each other at the hips, Sonya's hands roam over your body, stroking and touching you. It feels amazing to be so intimately close to her, and feeling her movements through the rubber cock you two share. Soon, Sonya moans 'Harder, harder!', her legs wrapping around your hips to make you push the dildo even deeper into her vagina. Taking up sliding it out then pounding deep into her again, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. Her arms wrap around your upper body, pulling you fully on top of her as she seeks your lips with hers, hungrily making out with you. For a while, anything but the wild and urgent sex you have with her is forgotten, the two of you filling the cabin with loud moans and gasps of pleasure...";		
+		say "     [WaitLineBreak]";
+		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo connecting you. Not to lag too far behind, you push the sex toy deeper into yourself, rubbing it against your inner walls until you reach your peak a moment later. A trickle of your femcum runs down over the sex toy, to drip down to soak into the furs under you.";
+		say "     Exhausted, you roll the two of you over to lie on your sides, the dildo still connecting you, and try to catch your breath. Sonya strokes your chest softly and looks deep into your eyes, content in just lying there on the warm furs with you for a while, resting and holding one another. Then, she sighs 'I love you, my wife', rubbing your nose with hers before sitting up. After cleaning up a bit with a soft towel from one of the two chests against the wall, she gathers up her clothes and gets dressed.";		
+	otherwise:                                   [neuter]
+		say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her wife while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya then gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
+		say "     Starting by sinuously moving her shoulders cupping those oh so well-rounded breasts through the fabric of her tunic, she then slowly undoes her belt, making you all tingly from just the anticipation of seeing her pale, perfect body. A moment later, her arms grab the lower edge of her tunic, pulling it over her head to be dropped to the side, revealing your wife's muscled, but still feminine curves. Now with her shapely breasts in full view and Sonya sticking out her chest while she rubs their nipples, your legs walk you closer almost on their own - and you can't resist but 'help her' a bit when she undoes her pants, pulling them down and off her legs, quickly followed by a silky soft pair of panties. Soon she is completely naked, lying on her side and showing off the pale-skinned perfection of her well-trained body[if VikingPregnancy is 2]and the slight curve of her belly that has your child growing inside of it[otherwise if VikingPregnancy is 3]and the bulging curve of her belly that has your child growing inside of it[end if]. A beaming smile on her face, she says 'Your turn, my love.'";		
+		say "     [WaitLineBreak]";		
+		say "     Under the lusty gaze of your Viking woman, you undress much more quickly, too horny and wound-up to give her such a nice show as she did herself. Though Sonya doesn't mind, as she's more than ready to get into the real fun herself now. Rising back up on her knees, she even reaches out to touch your naked body, then pulls you close for a hungry kiss with some urgency. A bit too quickly, actually, as you lose your balance and fall into bed bed with her, still eagerly kissing each other. With you lying on top of her and just a bit distracted by Sonya's breasts rubbing against your chest, the Viking woman inconspicuously reaches over to feel between the soft furs on the bed, pulling out a long green dildo a moment later. It's a matter of moments to put the double-headed dildo back to its intended use, sliding in and out of your partner as you guide it with your hand.";
+		say "     You slowly fuck Sonya while your other hand explores her body, stroking over soft skin and fondling her breasts. With her writhing in pleasure under your ministrations, there soon is a gasp of 'Kiss me', and you eagerly comply, moving up on top of her and finding her lips with yours. It feels amazing to be so intimately close to her, and making out as you fuck her with a dildo. Before long, Sonya moans 'Harder, harder!' her arms pulling you tight against her. Taking up the speed of your thrusts into her, you find yourself with a very enthusiastic partner, meeting each of your thrusts with a push of her hips. It's great fun finding out what she likes best and how you can make her squeal in delight. For a while, anything but making out, touching and fucking is forgotten, the two of you filling the air with loud moans and gasps of pleasure...";
+		say "     [WaitLineBreak]";
+		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo in your hand as her inner muscles grip it. A trickle of her femcum runs down over the sex toy, to soak into the furs under you.";
+		say "     Exhausted, you roll the two of you over to lie on your sides, the dildo still connecting you, and try to catch your breath. Sonya strokes your chest softly and looks deep into your eyes, content in just lying there on the warm furs with you for a while, resting and holding one another. Then, she sighs 'I love you, my wife', rubbing your nose with hers before sitting up. After cleaning up a bit with a soft towel from one of the two chests against the wall, she gathers up her clothes and gets dressed.";			
+			
+Section 6 - Drop Item
 	
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -733,6 +1054,21 @@ It has a weapon "shining steel blade". The weapon damage of viking sword is 8. T
 
 Instead of sniffing viking sword:
 	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it."; 
+		
+Section 7 - Endings
+
+when play ends:
+	if bodyname of player is "dead":
+		stop the action;
+
+[
+when play ends:
+	if bodyname of player is "Viking":
+		if humanity of player is less than 10:   [succumbed]
+			say "     A";
+		otherwise:    [sane]
+			say "     B";
+]		
 		
 
 Viking ends here.
