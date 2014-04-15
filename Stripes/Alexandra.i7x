@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4.3 - Starting Tasks added]
+[Version 4.4 - More tasks]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -1280,6 +1280,7 @@ to say A_Task53:	[Patrols]
 				say "     Making your escape from the creature, you do your best to draw it away from the station before losing it.  Once you've managed that, you sneak back around and return to the police station.  You fill Alexandra in on your encounter and tell her to keep an eye out for the creature the next time she goes out.  She thanks you for going out and facing that threat to help protect the station house.";
 		otherwise:
 			say ".  The trip is thankfully uneventful, most of the mutants knowing to steer clear of what they see as the Doberman cop's territory.  You patrol for a few hours before eventually returning.  Alexandra thanks you again for taking a turn on patrol for her.";
+		follow the turnpass rule;
 	otherwise:
 		say "     Alexandra nods and grabs her nightstick and thermos, getting ready to go out.  'Alright.  I'll be back in a while.'  You nod to her and watch her head out.  She returns some time later, [one of]a little scruffy from a fight[or]none the worse for wear[or]a little dirty, but otherwise fine[or]safe and sound[or]nursing a sore shoulder[at random].";
 	now lastPolicePatrol is turns;

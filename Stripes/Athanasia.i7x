@@ -111,6 +111,7 @@ instead of going down from Volcanic Crater:
 	otherwise if hp of Athanasia is 4:
 		move the player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool.  Fearing the worst, you start calling out Athanasia's name while searching the alcoves and crevices of the cavern.  You find nothing and are about to give up hope when there is a loud, triumphant shriek from outside the cave.  Running to its mouth, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings.  The lava pours off the reborn phoenix like water and it comes swooping into the cave.";
+		project the figure of Athanasia_icon;
 		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed.  You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you.  'You did wonderfully,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
 		say "     The bird spreads its wings for you, showing off its reborn body.  'I was just having a refreshing bath when I heard you calling out for me.  Isn't my new body lovely?' the phoenix asks, preening its rich red and gold plumage.  'And I have changed like I needed to.  Now I'm reborn for this w... this place,' the firebird adds, turning around and raising her tail to show off a plump and wet cloacal pussy which you don't recall being there before.  'Mmmm... and it feels so good,' she adds with a coy glance at you and a shake of her tailfeathers.";
 		now hp of Athanasia is 5;
@@ -134,6 +135,7 @@ Athanasia is a woman.
 The description of Athanasia is "[athanasiadesc]";
 The conversation of Athanasia is { "Burninate!" }.
 lastfuck of Athanasia is normally 555.
+The icon of Athanasia is Figure of Athanasia_icon.
 
 the scent of the Athanasia is "The phoenix smells of woodsmoke.";
 

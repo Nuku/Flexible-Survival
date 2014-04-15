@@ -10,7 +10,7 @@ when play begins:
 	add { "Beaver" } to infections of Tailweapon;		[usable for Tail Strike feat]
 
 nobeaversex is a number that varies.
-beavericonshown is a truth state that varies.
+[beavericonshown is a truth state that varies.  beavericonshown is usually false.]
 
 to say losetobeaver:
 	now nobeaversex is 0;
@@ -127,9 +127,9 @@ to say beaver_pvsex3:	[f-oral]
 
 
 to say beaverdesc:
-	if beavericonshown is false:
-		project the figure of Beaver_icon;
-		now beavericonshown is true;
+[	if beavericonshown is false:
+		project the figure of Beaver1_icon;
+		now beavericonshown is true;	]
 	say "     A pudgy beaver steps into view[one of], chewing on a chunk of wood[or], accidentally bumping into you and apologizing[or], humming some energetic little tune while miming skating around with an imaginary hockey stick and puck[or], as he finishes off the last of a bottle of beer.  He mumbles something about weak American piss and drops the empty in the trash[at random].  The plump furry fellow is wearing a colourful hockey jersey and nothing else.  His fur is brown and quite glossy, if a little ruffled.  His hands and feet are webbed and have small claws.";
 	say "     Having noticed you, he slaps his tail on the ground and chuckles.  He's got a happy smile on his muzzle that puts his large front teeth prominently on display.  '[one of]How's it goin['], eh?  How aboot showing a lost Canuck a good time?' he says, his dark brown cock hard and leaking[or]Let's hit the bars.  I could use a drinkin['] buddy.  Or maybe a fuck buddy,' he adds with a laugh, making a grab for you[or]My buds and I came down from [randomcanadiancity] for the big game.  Talk aboot bad timing, eh?' he says with a laugh and moving in to pull you into a hug[or]My buddies and I are doin['] a bit of pub crawl to celebrate the end of the world.  Care to join us?' he asks, rubbing his hefty balls and moving to put his arm around your shoulder[or]Nice place you got here.  It ain't no Rue Ste-Catherine, but you certainly got more titties, pussy and cock - sometimes all in one package for that matter, eh? - as part of the free show.  Come on, [if cocks of player > 0]buddy[otherwise]baby[end if], let's find something to drink,' he adds, moving to put his arm around your shoulder[or]Excuse me.  Where's the nearest Timmy's?  You can blow me while I grab me a double-double,' he says cheerfully while stroking his chubby cock[or]There's a nice dépanneur aboot a klick down the road.  How about we go snag a two-four and have some fun?' he asks confusingly while rubbing his chestnut shaft[or]Care for a taste of maple syrup?  It's [if cunts of player is 0][']straight['][otherwise]straight[end if] from Canada,' he laughs, stroking his leaking cock[at random].  He's got a strong Canadian accent, almost stereotypically so.  You step back from the overly affectionate beaver, who seems a little tipsy and quite upset that you don't want to come with him.  'Aww, what's all this aboot?  Gimme a kiss.'";
 
@@ -201,8 +201,8 @@ Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Beaver":
-		if cocks of player > 0:
-			project the figure of Beaver_icon;
+		if cocks of player > 0 and player is pure:
+			project the figure of Beaver2_icon;
 		if humanity of player is less than 10:
 			say "     As you start to succumb to the beaver infection afflicting you, you start to become confused, things seeming out of place.  You don't belong here.  You're just visiting this place.  Feeling that a beer would help you get a handle on all this, you walk a few klicks to get back to the bars around the Red Light District and start rummaging around for some proper beer, a mickie of rye or at least some pop that isn't made with corn syrup.  After a few stops, you stumble across a group of beavers in one bar.  It seems they've found some [']imported['] Canadian beer.  After a few moments, you recognize them as your friends, your colony, who came with you to see the big game.";
 			say "     By the time you get through drinking all the beer and have had plenty of sex, things are getting rather noisy out in the city.  Americans playing at war with their guns again, it seems.  There's lots of soldiers running through the city, fighting mutants and scaring off all the sexy sluts.  Deciding with the others that it's time to cut your vacation short, you make your way out of the city, diving into the nearby river to evade the collapsing military lines.  It's a long trip back with few donuts and even less proper beer, but you got make the occasional excursion into towns along the way to grab a little fun and leave behind some beaver-tailed locals.  Figuring they can catch up later or make a colony of their own out of the river town, you move on.";

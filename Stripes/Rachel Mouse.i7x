@@ -137,6 +137,7 @@ The summondesc of mouse girl is "Walking up to join you before you even call out
 The assault of mouse girl is "[rachelattack]";
 the fuckscene of mouse girl is "[sexwithmousegirl]".
 rachelfuck is a number that varies.
+The icon of mouse girl is Figure of Rachel_icon.
 
 understand "Rachel" as mouse girl.
 

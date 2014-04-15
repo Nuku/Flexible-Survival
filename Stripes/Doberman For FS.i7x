@@ -304,6 +304,7 @@ to say weaponconf:
 
 
 to say beattheDoberman:
+	project the figure of DobermanCop_icon;
 	if dobielibido < 1, now dobielibido is 1;
 	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down.  She releases a canine whimper that she quickly stifles as she fails to get back up";
 	if dobielibido < 50:			[low-lust cop]
