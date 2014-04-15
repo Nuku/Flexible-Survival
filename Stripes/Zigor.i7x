@@ -43,6 +43,7 @@ Section 2 - Zigor the Leather Wolf
 Zigor is a man.  Zigor is in Cuero Lobo.
 The description of Zigor is "[zigordesc]";
 The conversation of Zigor is { "Hola!" }.
+The icon of Zigor is Figure of Zigor_icon.
 
 the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.";
 
