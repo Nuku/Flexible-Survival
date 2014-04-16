@@ -176,7 +176,7 @@ carry out artistcredits:
 	say "     [line break]";
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]
+	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 [	say "     Beaver by Marc Leonhardt @ furaffinity.net[line break]";	]
 	say "     Beaver by HBruton @ furaffinity.net[line break]";
@@ -186,7 +186,7 @@ carry out artistcredits:
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
-	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]
+	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
