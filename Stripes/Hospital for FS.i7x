@@ -1174,9 +1174,9 @@ to say tlvictory:
 	if susan is visible:
 		attempttowait;
 		say "     You glance back over to the other pair and find Susan finishing up as well.  Her ballsac tightens up as she unleashes spurt after spurt of her seed into the dragoness.  Her orgasm lasts quite a long time, apparently having a considerable load saved up from lack of use.";
-		if orthasstart > 1:
+		if hp of Orthas > 1:
 			say "     As the dragoness's belly starts to swell with the telltale sign of her eggs, the doe withdraws her shaft and grins to you.  'Bring that perv over here, hon.'  You nod and pull the huskybunny slut over, tossing her atop the dragoness.  She moans and grinds her cock against Orthas's belly as the dragoness's ovipositor starts to emerge.";
-			say "     'No, doctor.  Don't,' she moans, but cannot help herself as her body's urges push the ovipositor into the dripping waiting right above it.  She whimpers a little, but works the flexible, probing flesh deeper in, starting to rut the mindless sextoy whom she's failed to protect.";
+			say "     'No, doctor.  Don't,' she moans, but cannot help herself as her body's urges push the ovipositor into the dripping and eager snatch right above it.  She whimpers a little, but works the flexible, probing flesh deeper in, starting to rut the mindless sextoy whom she's failed to protect.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the dragon eggs start sliding through the ovipositor and into the slut's womb.";
 		otherwise:
@@ -1190,7 +1190,7 @@ to say tlvictory:
 			say "     You glance over at Orthas and decide not to leave her out of the action.  Grabbing the little slut, you pull her off the table and over to the dragoness.  Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
 			say "     'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			say "     You set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if orthasstart > 1].  As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[otherwise].  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum in an attempt to breed with her[end if].";
+			say "     You set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if hp of Orthas > 1].  As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[otherwise].  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum in an attempt to breed with her[end if].";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		otherwise:
 			now hp of doctor matt is 104;		[Claimed Dr Matt as pet]
