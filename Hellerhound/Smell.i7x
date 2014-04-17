@@ -96,7 +96,7 @@ the scent of Mall Atrium is "The air smells of fake plants and excessive perfume
 
 the scent of Outside Trevor Labs is "The air out here smells no different than the rest of the city.";
 
-the scent of Trevor Labs Lobby is "The air is better in here[if orthasstart > 2], with Orthas's aroused scent in the room[otherwise], without the excess scents of sex and arousal of the city[end if].";
+the scent of Trevor Labs Lobby is "The air is better in here[if hp of Orthas > 2], with Orthas's aroused scent in the room[otherwise], without the excess scents of sex and arousal of the city[end if].";
 
 the scent of 2F Trevor Labs is "The air smells pretty clear up here.  It doesn't seem that roaming creatures have been getting in here.";
 
