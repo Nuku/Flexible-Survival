@@ -555,7 +555,7 @@ First Aid Manual is a grab object.  It is part of the player.  It is not tempora
 
 instead of using First Aid Manual:
 	say "     You pull out the book and flip through it, scanning through its procedures for dealing with various injuries.  It should be handy if you get hurt out in the city.";
-	say "     Keeping this book in your possession will increase your healing rate by 1 each turn and by 2 when using a healing item (unless superseded by the 'Expert Medic' feat.)[line break]";
+	say "     Keeping this book in your possession will increase your healing rate by 1 each turn and by 2 when using a healing item (unless superseded by the 'Expert Medic' feat).";
 
 the scent of First Aid Manual is "     It smells like an old book.";
 
