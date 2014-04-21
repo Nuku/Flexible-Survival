@@ -694,6 +694,10 @@ after going west from Breeder Lockup A:
 		now hp of Val is 1;
 	if ValPregnancy > 1 and hp of Val < 2:
 		now hp of Val is 2;   [the player has seen that he's pregnant]
+	if ValPregnancy is 4:
+		say "     Seeing Val, you immediately notice that he isn't pregnant anymore. The orc follows your gaze to his stomach and explains 'I've given birth while you were out. You should have seen my beautiful little boy, growing up so quickly to a handsome young orc. Master Mul named him 'Chotuzz' and traded him to another orc. I'm sure he'll make a fine breeder for his new master...' Val smiles as he says this, but you notice a hint of sadness in his eyes. Maybe you could have changed something at his son's fate if you had been here for the birth...";
+		now ValPregnancy is 0;
+		now hp of Chris is 100;  [lost]
 		
 after going east from Breeder Lockup A:
 	try looking;
@@ -1595,12 +1599,14 @@ An everyturn rule:
 					now battleground is "void";	[blocks a random fight after this]			
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
+					now hp of Chris is 1;
 				otherwise:
 					say "     Val moves over to the cell door, holding it open for you. As you leave the cell, the door automatically falls shut again when Val lets go of it, pushed by a spring at the top. The breeder slave gives you a wave, being too tamed and dependent on orc cum to want to escape himself, then sits down on his cot. Well, if he doesn't want to leave himself, there's nothing much you can do about that, so you just make your way out and down the corridor with Chris, silently escaping the orc lair. The young orc is a natural at stealthy movement, no doubt thanks to the skills inherited from his father, and you make your way to the library with ease after that.";
 					now the Cell Door 1 is closed;
 					now battleground is "void";	[blocks a random fight after this]
 					move player to Grey Abbey 2F;
 					move Chris to Grey Abbey 2F;
+					now hp of Chris is 1;
 			otherwise:
 				say "     [line break]";
 				say "     Val's expression falls as you decline, and the disappointment is audible in his voice as he says 'I - I'll just spend what time I have with Chris then... while he still is Chris.' Turning away from you, the orc breeder then walks over to his son, talking to him in a quiet voice. You decide to keep your distance and leave them to it in peace.";
@@ -1697,6 +1703,11 @@ to say ValSex2:  [riding him]
 		
 				
 [ Chris starts here ------------------------------------------------------------------------]
+				
+[ hp of Chris - location                           ]				
+[   0: not born yet                                ]				
+[   1: in the library                              ]				
+[ 100: lost in the orc lair                        ]
 				
 Chris is a man.  The hp of Chris is normally 0. 
 The description of Chris is "[ChrisDesc]";
