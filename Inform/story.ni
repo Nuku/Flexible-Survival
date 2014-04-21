@@ -4597,6 +4597,8 @@ check resting:
 		say "You rest on the cot.";
 	otherwise if the player is in the bunker:
 		say "You rest on one of the cots available.";
+	otherwise if the player is in Slave Cell 1 or player is in Slave Cell 2:
+		say "You rest on the bed in the back of the cell.";
 	otherwise if silk hammock is owned or silk hammock is present:
 		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";				
 	otherwise if "Roughing It" is listed in feats of player:
