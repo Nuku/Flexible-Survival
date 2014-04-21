@@ -44,7 +44,7 @@ To say magic word:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
 	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}0}0}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";
 	now trixsavetext2 is "chantpartA}[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[hp of bee girl]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]";
+	now trixsavetext3 is "chantpartB}[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[otherwise][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]";
 	say "[trixsavetext1][line break]";
 	say "[trixsavetext2][line break]";
 	say "[trixsavetext3][line break]";
@@ -368,14 +368,16 @@ To reciting2:
 			-- 55:	[Angie]
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
-					if angiehappy is greater than 0:
+					if AngieHappy > 0:
 						move Angie to the Zoo Giftshop;
 						now zoo entrance is known;
+					if AngieHappy > 1:
+						Now AngieTrapped is resolved;
+					if AngieHappy is 2:
+						increase carried of catnip by 1;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
-					if angietalk is greater than 1:
-						Now AngieTrapped is resolved;
 			-- 57:	[Susan]
 				if the player's command matches "[number]":
 					now deerconsent is the number understood;
@@ -1377,8 +1379,7 @@ To reciting2:
 			-- 139:   [Angie]
 				if the player's command matches "[number]":
 					now angiearoused is the number understood;
-					if angiearoused is 2, now midnightsighted is 0;
-					if angiearoused >= 3:
+					if AngieAroused is 50:
 						now FindingMidnight is resolved;
 						move Midnight to Zoo Giftshop;
 			-- 140:	[demon brute pet]
@@ -1755,6 +1756,29 @@ To reciting2:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+			-- 190: [hp of Val]
+				if the player's command matches "[number]":
+					now hp of Val is the number understood;
+			-- 191: [thirst of Val]
+				if the player's command matches "[number]":
+					now thirst of Val is the number understood;
+			-- 192: [ValPregCounter]
+				if the player's command matches "[number]":
+					now ValPregCounter is the number understood;
+			-- 193: [ValPregnancy]
+				if the player's command matches "[number]":
+					now ValPregnancy is the number understood;					
+			-- 194: [SlaveRaidEncounters]
+				if the player's command matches "[number]":
+					now SlaveRaidEncounters is the number understood;
+					if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
+						now SlaveRaidEncounters is 2;   [enslaved]
+						now ValPregnancy is 48;         [knocked up]
+						now thirst of Val is 1;					[...by an orc]
+					if SlaveRaidEncounters < 2:
+						remove Val from play;
+					otherwise:
+						move Val to Slave Cell 1;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -2200,14 +2224,16 @@ Carry out reciting:
 			-- 55:	[Angie]
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
-					if angiehappy is greater than 0:
+					if AngieHappy > 0:
 						move Angie to the Zoo Giftshop;
 						now zoo entrance is known;
+					if AngieHappy > 1:
+						Now AngieTrapped is resolved;
+					if AngieHappy is 2:
+						increase carried of catnip by 1;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
-					if angietalk is greater than 1:
-						Now AngieTrapped is resolved;
 			-- 57:	[Susan]
 				if the player's command matches "[number]":
 					now deerconsent is the number understood;
@@ -3190,11 +3216,11 @@ Carry out reciting:
 						now lust of Joanna is 0;
 					if hp of Joanna >= 7 and hp of Joanna < 90:
 						if lust of Joanna < 3, now lust of Joanna is 3;
+						now plantdefeat is 1;						
 			-- 139:   [Angie]
 				if the player's command matches "[number]":
 					now angiearoused is the number understood;
-					if angiearoused is 2, now midnightsighted is 0;
-					if angiearoused >= 3:
+					if AngieAroused is 50:
 						now FindingMidnight is resolved;
 						move Midnight to Zoo Giftshop;
 			-- 140:	[demon brute pet]
@@ -3558,6 +3584,29 @@ Carry out reciting:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+			-- 190: [hp of Val]
+				if the player's command matches "[number]":
+					now hp of Val is the number understood;
+			-- 191: [thirst of Val]
+				if the player's command matches "[number]":
+					now thirst of Val is the number understood;
+			-- 192: [ValPregCounter]
+				if the player's command matches "[number]":
+					now ValPregCounter is the number understood;
+			-- 193: [ValPregnancy]
+				if the player's command matches "[number]":
+					now ValPregnancy is the number understood;					
+			-- 194: [SlaveRaidEncounters]
+				if the player's command matches "[number]":
+					now SlaveRaidEncounters is the number understood;
+					if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
+						now SlaveRaidEncounters is 2;   [enslaved]
+						now ValPregnancy is 48;         [knocked up]
+						now thirst of Val is 1;					[...by an orc]
+					if SlaveRaidEncounters < 2:
+						remove Val from play;
+					otherwise:
+						move Val to Slave Cell 1;
 		if upit is 1, decrease z by 58;
 		if upit is 2, decrease z by 160;
 	if hospquest is 3, now hospquest is 2;
