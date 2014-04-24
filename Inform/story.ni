@@ -6668,6 +6668,7 @@ Include Campus Gym by UrsaOmega.
 Include Lilith by Wahn.
 Include Coleen by Sarokcat.
 Include Vanessa by Stripes.
+Include Gwen by Stripes.
 Include Nadia by Wahn.
 Include Zephias by Wahn.
 Include David by Wahn.
