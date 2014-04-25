@@ -19,6 +19,7 @@ use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
 use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
+use MAX_ARRAYS of 1600.
 Use MAX_ZCODE_SIZE of 1000000.
 Use maximum indexed text length of at least 2000.
 [ End compiler settings. ]
@@ -6246,10 +6247,6 @@ Include NPC Debug by Wahn.
 Include Zephyr Inc by Nuku Valente.
 Include Red Light by Hiccup.
 Include High Rise District by Batroo.
-Include Grizzly Bear by UrsaOmega.
-Include Impala by UrsaOmega.
-Include Feral Gryphon by UrsaOmega.
-Include Shadow Beast by UrsaOmega.
 Include Stables Hotel by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include Hyena Hideout by Sarokcat.
@@ -6492,6 +6489,7 @@ Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
 Include Queen Bee for FS by Stripes.
 Include Salamander by Stripes.
+Include Inflatable Vulpine for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
@@ -6591,6 +6589,10 @@ Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
 Include Orc by Wahn.
 Include Horse-Hung Nerd by Wahn.
+Include Grizzly Bear by UrsaOmega.
+Include Impala by UrsaOmega.
+Include Feral Gryphon by UrsaOmega.
+Include Shadow Beast by UrsaOmega.
 
 
 [NPCs]

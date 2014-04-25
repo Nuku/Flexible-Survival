@@ -157,9 +157,9 @@ This is the musiclisten rule:
 To say jazzfriends:
 	if Sarah is in the bunker:
 		if sarahslut is 0:
-			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[If Coleen is in the bunker]. Coleen silently moves over to Sarah to nuzzle up next to the other husky woman[end if].";	
+			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[If Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";	
 		otherwise:
-			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless you snuggle up close into her as you both listen to the soft rhythms bouncing through the bunker[If Coleen is in the bunker]. Coleen silently moves over to Sarah to nuzzle up next to the other husky woman[end if].";
+			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless you snuggle up close into her as you both listen to the soft rhythms bouncing through the bunker[If Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 			if sarahpups is greater than 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that the both you and she are sharing right now.";
 	If Fang is in the Grey Abbey Library:
@@ -269,9 +269,12 @@ to say RockandRollfriends:
 
 to say Oceanfriends:
 	if Sarah is in the bunker:
-		say "     At hearing this kind of slow and melodious music Sarah is quick to come up over to where you are lying down to snuggle up with you.  Her furry body warms you up quickly and you find your arm wrapping around her without you thinking about it.  The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
-		if sarahpups is greater than 0:
-			say "     Sarah's pups encircle both you and their mother as they sleepy start to drift off together one after another.";
+		if sarahslut is 0:
+			say "     At hearing this kind of slow and melodious music Sarah is quick to come up over to where you are lying down to snuggle up with you.  With her cuddled in close, you find your arm wrapping around her without you thinking about it.  The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
+		otherwise:
+			say "     At hearing this kind of slow and melodious music Sarah is quick to come up over to where you are lying down to snuggle up with you.  Her furry body warms you up quickly and you find your arm wrapping around her without you thinking about it.  The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
+			if sarahpups is greater than 0:
+				say "     Sarah's pups encircle both you and their mother as they sleepy start to drift off together one after another.";
 	If Fang is in the Grey Abbey Library:
 		if hp of Fang is 3 or hp of Fang is 4:
 			say "     Fang slowly comes over to where you are and then curl himself up at your head.  Panting softly the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
