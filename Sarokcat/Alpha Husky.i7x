@@ -39,7 +39,7 @@ to say Alpha Husky attack:
 			say "     'I think,' He says as he draws back to the pointed tip, then drives the thick knot of his member into you, 'That I will keep you like this.' The words stop, replaced with a howl of release as he begins to fill your body with hot gushes of seed. Your grasp of your old save feels weak for a moment as strange new adoration for this husky tries to displace them and your body is rocked with powerful climax. By the time you can even see again, the Alpha has departed, leaving you sticky with a reminder of how much better it could be the next time.";
 			decrease humanity of player by a random number between 4 and 8;
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
-			if "Weak Psyche" is listed in feats of player, decrease humanity by a random number between 0 and 2;
+			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 			if humanity of player is less than 10:
 				end the game saying "[alpha husky bitch]";
 		otherwise if sex entry is "Female":
