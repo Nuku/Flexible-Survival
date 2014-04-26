@@ -1,4 +1,5 @@
-Tyr's Club by Kaleem mcintyre begins here.
+Version 2 of Tyr's Club by Kaleem mcintyre begins here.
+[ Version 2 - Upgrade to link menu system ]
 
 Section 1 - Tyr's Club
 
@@ -33,7 +34,7 @@ Instead of conversing the Tyr:
 	if Tyrtalk is 0:
 		say "'Hey, it's good to see you!' Tyr walks over and then hugs you before giving you a noggie across your [facename of player] head. 'Welcome to my club by the way, sorry I didn't tell you everything when we met up before.' Tyr says after pulling back. 'I...well let's not worry about it, but anyway. This is my place. A little hideaway for those who are looking to try and build up their muscles and skills so that they'll be able to survive the chaos going on upstairs.[line break]";
 		say "'You're more than welcome to have a look around and to do whatever, just remember I've got three rules here.' The Doberman says in all seriousness. 'One, if you want to fight, do it in the pit. I catch you trying to start some shit in here then you deal with me, and believe me I'm hell in a hand basket on a good day.' You nod when the Dobie starts to growl at you and then smirks with all teeth.[line break]";
-		say "'Two, I don't mind if you want to have sex in the place. Hell, I almost expect it, but please, if you're going to do the dirty, clean up afterwards. I don't have a maid around here and I like cleaning up about as much as the next bachelor.' Tyr sighs gives a long-suffering sigh at this before reaching up to pinch the bridge of his nose. He mutters something under his breath, but whatever the Doberman says it's not English. 'There's a mop, bucket and broom over by the other side of the cage. Feel free to use them.' Again you nod at Tyr, though trying not to chuckle as you do while he looks wearily around the club.[line break]";
+		say "'Two, I don't mind if you want to have sex in the place. Hell, I almost expect it, but please, if you're going to do the dirty, clean up afterwards. I don't have a maid around here and I like cleaning up about as much as the next bachelor.' Tyr gives a long-suffering sigh at this before reaching up to pinch the bridge of his nose. He mutters something under his breath, but whatever the Doberman says it's not English. 'There's a mop, bucket and broom over by the other side of the cage. Feel free to use them.' Again you nod at Tyr, though trying not to chuckle as you do while he looks wearily around the club.[line break]";
 		say "'Last thing, if you've got a grudge against someone bury it at the door. This place is made for people who are looking to workout, get off and maybe release some pent up aggression. I don't care about your personal business. So do leave it behind when you come. Again, you start some trouble, I'll start worse trouble.' Tyr growls at you while lowering his eyes slightly. 'You got me?' Again you can only nod while swallowing thickly. 'Ok, well other than that welcome to the club.' Tyr pats you on the shoulder hard enough to make you wince.[line break]";
 		say "'I'll be here for a while, but I may disappear from time to time, so if you don't see me,' The Doberman shrugs at this. 'Anyway, I think that's everything...oh! One thing before I let you go,' Tyr points to the arena. 'There are some Great Dane's in there who are looking for someone to fight. If you do up against them, be extra careful because they are almost as vicious as me when they want to be! And that's something.' Turning to look at the fighting pit you watch as two of the Danes are fighting with each other. From what you can see the battle is almost sickening to watch as the two bitches hit each other with enough force to make blood splatter out the sides of their muzzles. The sad part about this is, they seem to like it when they hit each other like that as when one wipes blood from the side of their muzzles the injured one barks and then bares fangs in a manic smile at her opponent.[line break]";
 		say "'Like I said, do not fuck with them lightly. I think they were all abused women at one time or another, or something, and now they've become something like fury incarnated because any [']male['] or female that steps to them wrong in there gets an extra helping of asswhooping when fighting them. Make sure that if you step in there that you are ready for a tail beating the likes of which will leave you with more than a couple of bruises. 'Oh, and if you are too pregnant, don't bother going in there. The rep I have watching over the place will [bold type]NOT[roman type] let you fight.' Tyr looks down to your belly and then sniffs you lightly.'[line break]";
@@ -478,6 +479,7 @@ Instead of conversing the Receptionist:
 
 Section 6 - Fighting Arena
 
+arenabattlecounter is a number that varies.
 PitBattle is an action applying to nothing.
 
 Understand "battle" as PitBattle.
@@ -488,71 +490,100 @@ Check PitBattle:
 	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on.";
 
 Carry out PitBattle:
-	If gestation of child > 0 or larvaegg is 2:		[preggers or parasite eggs]
-		say "I'm sorry, but I'm afraid that you'll have to withdraw any thoughts of fighting in the arena for now, with you being so far along in your pregnancy and all.' Kris shakes his head sadly at you before blinking bright gold eyes up into your [facename of player] face. 'In consolation, want me to tell you about my day?' At the heart-melting smile the pup shines up at you, you find yourself nodding, though not because you really want to.[line break]";
+	if arenabattlecounter >= 16:
+		say "     I'm sorry, but you've been fighting in the arena a lot.  The other competitors want to use the arena and the crowd's getting tired of seeing you.  We've got to keep it exciting for them, too.  Give it a break for a while before you come back.";
+	otherwise if gestation of child > 0 or larvaegg is 2:		[preggers or parasite eggs]
+		say "I'm sorry, but I'm afraid that you'll have to withdraw any thoughts of fighting in the arena for now, with you being pregnant and all.' Kris shakes his head sadly at you before blinking bright gold eyes up into your [facename of player] face. 'In consolation, want me to tell you about my day?' At the heart-melting smile the pup shines up at you, you find yourself nodding, though not because you really want to.";
 		Say "'Ok, so where to start?! [one of]Oh yeah, did you know that Tyr likes to...[or]I usually start my day of by...[or]I have the most fun when I...[or]All of the pit fighters seem to like me, but...[or]When I grow up I'm going to...[or]I really wish Va and Bra would get along better...[or]I hope that Shimi is doing well. She usually...[at random]' An hour later Kris has just finished his tale and you suddenly feel as though you've learned a lot about how to handle puppies. Maybe this will make you a better parent?";
 		Decrease libido of player by 10;
 		If libido of player < 0, now libido of player is 0;
 		follow the turnpass rule;
 	otherwise: 
 		say "'Ok, so you want to fight? Well we have several candidates for you.' Kris says while looking over a document on top of his desk. 'Most of them are canines so I hope that's not a problem!' You shake your head at Kris to let him know that you'll be fine with that. A nod of the pup's head and then he is passing a list over to you. 'Chose one and have fun!'[line break]";
-		say "[fightcheck][line break]";
+		say "[arenafightcheck]";
 
-descriptionmessage is a text that varies.
 
-to say fightcheck:
-	say "Not sure of which you would prefer you look over the list.";
+to say arenafightcheck:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if furry is not banned and guy is not banned:
+		choose a blank row in table of fucking options;
+		now title entry is "Wolftaur";
+		now sortorder entry is 1;
+		now description entry is "a lupine taur";
+		choose a blank row in table of fucking options;
+		now title entry is "Alpha Wolf";
+		now sortorder entry is 2;
+		now description entry is "a dominant wolf";
+		choose a blank row in table of fucking options;
+		now title entry is "Alpha Husky";
+		now sortorder entry is 5;
+		now description entry is "a dominant canine";
+	if guy is not banned:
+		choose a blank row in table of fucking options;
+		now title entry is "Minotaur";
+		now sortorder entry is 3;
+		now description entry is "a mythological monstrocity";
+	if furry is not banned and girl is not banned:
+		choose a blank row in table of fucking options;
+		now title entry is "Great Dane Rouge";
+		now sortorder entry is 4;
+		now description entry is "a female canine fighter";
+	if furry is not banned and hermaphrodite is not banned:
+		choose a blank row in table of fucking options;
+		now title entry is "Wildcat";
+		now sortorder entry is 6;
+		now description entry is "an armoured herm feline";
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - ABORT[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "Shall you battle [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				now inasituation is true;
+				if nam is "Wolftaur":
+					say "A burly looking wolftaur looks ready to fight you as it punches a fist into one of its massive clawed hands.";
+					challenge "Wolftaur";
+				otherwise if nam is "Alpha Wolf":
+					say "An alpha wolf growls at you while standing up onto its hind legs in preparation to battle.";
+					challenge "Alpha Wolf";
+				otherwise if nam is "Minotaur":
+					say "The beefy minotaur standing off to the side with his arms cross snorts as he turns to look decisively at you.";
+					challenge "Minotaur";
+				otherwise if nam is "Great Dane Rouge":
+					say "The unfamiliar Dane mutant growls at you while pop her neck from side to side. When she lifts up her lips to show you an impressive display of canines you gulp as you wonder what the hell have you gotten yourself into.";
+					challenge "Great Dane Rouge";
+				otherwise if nam is "Alpha Husky":
+					say "The alpha husky growls playfully as he looks over you with expectant eyes. He seems to think you're going to outright submit to him...but he's about to be proven wrong.";
+					challenge "Alpha Husky";
+				otherwise if nam is "Wildcat":
+					say "The wildcat seems to be living up to its name as the feline jumps around inside of the cage arena before coming to a land onto her twin feet right in front of you. Seems she really wants to fight by the feral smirk lining across her face.";
+					challenge "Wildcat";
+				now inasituation is false;
+				say "Your battle over, you need to take a short break to recover.";
+				increase arenabattlecounter by 8;
+				follow the turnpass rule;
+		otherwise if calcnumber is 0:
+			say "Exit the fighting menu?";
+			if the player consents:
+				now sextablerun is 1;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
-	now descriptionmessage is "";
-	sort the table of Fighting Options in sortorder order;
-	change the current menu to table of Fighting Options;
-	carry out the displaying activity;
-	clear the screen;
-	wait for any key;
-	try looking;
-		
-Table of Fighting Options
-title		subtable	description	sortorder	toggle
-"Wolftaur"		--	--	1	pitfightbattle rule
-"Alpha Wolf"		--	--	2	pitfightbattle rule
-"Minotaur"		--	--	3	pitfightbattle rule
-"Great Dane Rouge"		--	--	4	pitfightbattle rule
-"Alpha Husky"		--	--	5	pitfightbattle rule
-"Wildcat"		--	--	6	pitfightbattle rule
-with two blank rows.
+	clear the screen and hyperlink list;
 
-
-This is the pitfightbattle rule:
-	now inasituation is true;
-	choose row current menu selection in the current menu;
-	if title entry is "Wolftaur":
-		say "[descriptionmessage]";
-		now descriptionmessage is "A burly looking wolftaur looks ready to fight you as it punches a fist into one of its massive clawed hands.";
-		challenge "Wolftaur";
-	otherwise if title entry is "Alpha Wolf":
-		say "[descriptionmessage]";
-		now descriptionmessage is "An alpha wolf growls at you while standing up onto its hind legs in preparation to battle.";
-		challenge "Alpha Wolf";
-	otherwise if title entry is "Minotaur":
-		say "[descriptionmessage]";
-		now descriptionmessage is "The beefy minotaur standing off to the side with his arms cross snorts as he turns to look decisively at you.";
-		challenge "Minotaur";
-	otherwise if title entry is "Great Dane Rouge":
-		say "[descriptionmessage]";
-		now descriptionmessage is "The unfamiliar Dane mutant growls at you while pop her neck from side to side. When she lifts up her lips to show you an impressive display of canines you gulp as you wonder what the hell have you gotten yourself into.";
-		challenge "Great Dane Rouge";
-	otherwise if title entry is "Alpha Husky":
-		say "[descriptionmessage]";
-		now descriptionmessage is "The alpha husky growls playfully as he looks over you with expectant eyes. He seems to think you're going to outright submit to him...but he's about to be proven wrong.";
-		challenge "Alpha Husky";
-	otherwise if title entry is "Wildcat":
-		say "[descriptionmessage]";
-		now descriptionmessage is "The wildcat seems to be living up to its name as the feline jumps around inside of the cage arena before coming to a land onto her twin feet right in front of you. Seems she really wants to fight by the feral smirk lining across her face.";
-		challenge "Wildcat";
-	decrease the menu depth by 1;
-	now inasituation is false;
-	rule succeeds;
-
+an everyturn rule:
+	if arenabattlecounter > 0, decrease arenabattlecounter by 1;
 
 
 Section 7 - LockerRoom
