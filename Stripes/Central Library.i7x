@@ -1,5 +1,5 @@
-Version 1 of Central Library by Stripes begins here.
-[ Version 1.1 - 2 new books to find]
+Version 2 of Central Library by Stripes begins here.
+[ Version 2 - upgrade to link menu system ]
 
 "Adds the Central Library to the Flexible Survival game"
 
@@ -33,36 +33,33 @@ Instead of resolving a Central Library:
 		say "     Keeping your distance, you manage to talk to him.  It seems he's done a good job keeping the area clear, so you're able to talk to him from across the street without worry about attracting attention.  'My name is... James.  It's James, dammit,' he growls, struggling to hang onto it.  'I live nearby and walked over to come on duty early in the morning.  I guess I didn't notice what was happening in the city since it was so early and the sun hadn't come up yet.  Or maybe I was already changing and was too focused on getting to work.  I remember being really gung-ho about guarding the library from the moment I put on my coat and went out the door.  Didn't matter that it wasn't even 5 a.m. that morning.'  He paces up and down the steps, looking down both sides of the deserted street and takes a deep breath to relax and refocus, letting you cross the street to join him on the steps.";
 		say "     'Well, I started changing once I got here, slowly turning into the burly creature I am now.  I... it probably should have upset me, but I help feeling that it would only help me guard the library better.  And now I'm so young and strong.  Only problem's been that I can't leave my post because my replacement hasn't come to take his shift.  Can't leave it unguarded.  So many crazy creatures around now,' he says, growling a little in his throat.  'Gotta keep watch.  There's been no chance to sleep and only what little food the librarians might give me while I'm patrolling inside the library.  It's been getting harder and harder to keep it together.  Haven't slept since that morning.  Can't.  Gotta protect the library.  Gotta...' he trails off.";
 		say "     It seems that the library's gone undisturbed thanks to his unending vigil.  You find yourself wondering what you could find within to help you.  You consider some options on how to get past the guard.";
-		wait for any key;
-		say "[libraryentrance]";
 	otherwise:
 		project the figure of James_icon;
 		say "     Finding yourself in the vicinity of the Central Library, you approach again, being cautious to let the wolverine guard notice you at a distance.  He's initially put on edge, but when you reassure him that it's just you returning, he relaxes and lets you approach.  'It's nice to see you again.  Good to have someone who hasn't gone completely over the edge yet to talk to.'";
 		say "     It seems that the library is still safe thanks to his unending vigil.  You find yourself wondering what you could find within to help you and ponder ways to get past the guard.";
-		wait for any key;
-		say "[libraryentrance]";
+	attempttowait;
+	say "[libraryentrance]";
 
 
 Section 2 - Conversation options
 
 to say libraryentrance:
+	say "[line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
-	now title entry is "Come back later";
+[	now title entry is "Come back later";
 	now sortorder entry is 99;
 	now description entry is "Do you wish to leave and return later?";
-	now toggle entry is libentry rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
-	now description entry is "Shall you give up on this plan entirely?";
-	now toggle entry is libentry rule;
+	now description entry is "Shall you give up on this plan entirely?";	]
 	if centrallib is 1 or ( centrallib is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";
 		now sortorder entry is 1;
-		now description entry is "Do you want to offer to take over for him for a few hours?";
-		now toggle entry is libentry rule;
+		now description entry is "Do you want to offer to take over for him for a few hours";
 	let foodfound be 0;
 	let waterfound be 0;
 	if ( carried of water bottle > 1 and carried of food > 1 ) or jamesfed is 1:
@@ -70,55 +67,68 @@ to say libraryentrance:
 		now title entry is "Bribe";
 		now sortorder entry is 2;
 		if jamesfed is 0:
-			now description entry is "Will you try bribing him with some supplies?";
+			now description entry is "Will you try bribing him with some supplies";
 		otherwise:
-			now description entry is "Will you discuss a weapon trade?";
-		now toggle entry is libentry rule;
+			now description entry is "Will you discuss a weapon trade";
 	choose a blank row in table of fucking options;
 	now title entry is "Fight!";
 	now sortorder entry is 3;
-	now description entry is "Do you fight your way past him?";
-	now toggle entry is libentry rule;
+	now description entry is "Do you fight your way past him";
 	if jamessex is 0 or ( jamessex is 1 and cunts of player > 0 ) or ( jamessex is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex him up";
 		now sortorder entry is 4;
-		now description entry is "Will you try sexing him up to gain entry?";
-		now toggle entry is libentry rule;
+		now description entry is "Will you try sexing him up to gain entry";
 	if "Stealthy" is listed in feats of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Sneak in";
 		now sortorder entry is 5;
-		now description entry is "Do you pretend to leave and try sneaking in another way?";
-		now toggle entry is libentry rule;
+		now description entry is "Do you pretend to leave and try sneaking in another way";
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-this is the libentry rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[description entry]";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if nam is "Come back later":
-			say "     You bid adieu to the wolverine security guard, wishing him well.  You tell him that you may stop by again later to check up on him.  He smiles and nods, saying that talking to you has helped him remember himself a little.  As you walk off, you look back, seeing him resuming his unending protection of the library.";
-		otherwise if nam is "Nevermind":
-			say "     You bid adieu to the wolverine security guard, wishing him well.  Deciding not to risk further contact with the volatile guard, you make a mental note to avoid the vicinity in the future.  Left to his own devices, the guard resumes his unending protection of the library.";
-			now Central Library is resolved;
-		otherwise if nam is "Offer to take over":
-			say "[libguard1]";
-		otherwise if nam is "Bribe":
-			say "[libguard2]";
-		otherwise if nam is "Fight!":
-			say "[libguard3]";
-		otherwise if nam is "Sex him up":
-			say "[libguard4]";
-		otherwise if nam is "Sneak in":
-			say "[libguard5]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]99 - Come back later[as]99[end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Offer to take over":
+					say "[libguard1]";
+				otherwise if nam is "Bribe":
+					say "[libguard2]";
+				otherwise if nam is "Fight!":
+					say "[libguard3]";
+				otherwise if nam is "Sex him up":
+					say "[libguard4]";
+				otherwise if nam is "Sneak in":
+					say "[libguard5]";
+		otherwise if calcnumber is 99:
+			say "Do you wish to leave and return later?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You bid adieu to the wolverine security guard, wishing him well.  You tell him that you may stop by again later to check up on him.  He smiles and nods, saying that talking to you has helped him remember himself a little.  As you walk off, you look back, seeing him resuming his unending protection of the library.";
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 99/100 to exit.";
+		otherwise if calcnumber is 100:
+			say "Shall you give up on this plan entirely?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You bid adieu to the wolverine security guard, wishing him well.  Deciding not to risk further contact with the volatile guard, you make a mental note to avoid the vicinity in the future.  Left to his own devices, the guard resumes his unending protection of the library.";
+				now Central Library is resolved;
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 99/100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 
 [ Centrallib - gaining entry/posing as guard	]
@@ -166,6 +176,7 @@ to say libguard1:						[Bluff]
 		if bonus + dice >= 14:
 			say "     You manage to convince James that you're here as special relief.  'But only for a few hours,' you emphasize again.  Glancing at your watch, you add that it's almost time for you to start.  'Thanks, pal,' he says, getting up and heading to the doors.  'I think I'll head off to the staff lounge and catch forty-winks on the couch in there.  I don't want to leave the library entirely if you're just going to swap out for a while, but I could really use the nap.  If you've got to patrol inside, be sure to keep it quiet.  The librarians don't like to be disturbed and they're not quite right now.  Probably spent too much time in the mythology section or something.'  With that cryptic comment, he passes you the keys and slips inside, watching you lock up before heading further in.  You give him a little bit to make sure he's bedded down and then unlock the door and slip inside[if humanity of player < 30].  There is a slight twinge from your wolverine instincts for leaving your post, but you manage to fight it down[end if].";
 			now centrallib is 4;
+			wait for any key;
 			say "[libraryexplore]";
 		otherwise:
 			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy.  'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty.  I could really use a break, but we gotta follow procedure, especially during a situation.  Especially you, you could get fired easily since you just started.'  Well, that plan went bust.  You'll have to consider other options.";
@@ -193,6 +204,7 @@ to say libguard2:						[Bribe]
 			say "[libweaponoffer]";
 		otherwise:
 			say "     Not wanting to give up that much from your supplies, you act like you've got none, instead saying that you're out looking some.  He nods.  'Just be sure to keep me in mind, since I can't go off duty to find some.  You should get going though.  I can feel my guarding instincts making me edgy about you hanging around and I should do another patrol as well.  You'd best be moving along before I end up getting forceful about it.";
+			wait for any key;
 	otherwise if jamesfed is 1:
 		say "     James smiles as you bring up the topic of weapons again, his large paws clenching in anticipation of holding a big, blunt weapon to beat away any crooks trying to get into his library.";
 		say "[libweaponoffer]";
@@ -227,6 +239,7 @@ to say libweaponoffer:
 					say ".  You flash the corner of a notepad, claiming you need to write a report and need to check a book out from the library for it";
 				say ".  He seems a little reluctant, but agrees.  'Well, I guess that'd be okay.  You've been a good pal and this is a fine gift,' he says, hefting his new, blunt instrument around with a rather wild look in his eyes.  'This'll really help me guard my post.  And it is a public library, so go quick and watch out for the librarians.  I think they spent a little too long in the mythology section or something.  They're not quite right anymore,' he adds cryptically as he pushes you in and closes the door behind you.";
 				now jamesfed is 2;
+				wait for any key;
 				say "[libraryexplore]";
 			otherwise:
 				say "     You tell him that you don't want to part with the weapon.  James nods and says, 'I can certainly understand that.  You want to be able to protect yourself  It's dangerous out there.'  It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[otherwise if weaponpick is 2]crowbar[otherwise if weaponpick is 3]tire iron[otherwise if weaponpick is 4]flotsam club[end if] back to you.  You try to offer him something else or another weapon, but he's decided that one's the best for him.  Needing to get back on duty, he shuffles you on your way.  He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
@@ -240,15 +253,18 @@ to say libguard3:
 	if wolvfightresult is 1:
 		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap.  Passed out after the fight, it looks like you've finally made him take his much needed rest.  Quickly grabbing his keys, you unlock the library door and slip inside.";
 		now libfight is 3;
+		wait for any key;
 		say "[libraryexplore]";
 	otherwise if wolvfightresult is 2:
 		say "     The wolverine growls and tosses you roughly into the street.  As you're getting up, James brushes open his jacket and rests his large paw firmly on a holster hidden there.  'You need to move along and not come back,' he says with a firm growl.  Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived.  You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
+		wait for any key;
 	otherwise:
 		say "     Making a run for it from the crazed wolverine, you can hear him yelling at you from the steps.  'And don't you come back, or I'll give you some of this,' James yells, waving a gun in the air.  Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived.  You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
+		wait for any key;
 	now wolvfightresult is 0;
 
 to say libguard4:
@@ -261,6 +277,7 @@ to say libguard4:
 	if cunts of player is 0:
 		say "     James seems a little flustered by your offer.  'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values.  Ain't nothing wrong with it, mind you.  It's just not for me.'  He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention.  'Umm... you should maybe be moving along.  You can stop by again.  Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.'  It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now.  Perhaps the fairer sex would have more luck with him.";
 		now jamessex is 1;
+		wait for any key;
 	otherwise if bodyname of player is not "Wolverine Guard" or facename of player is not "Wolverine Guard":
 		say "     James clearly seems tempted by the offer, but manages to resist.  'I... I should really stay on duty,' he rumbles.  Clearly there's some lust buried there.  Perhaps if you were a little more appealing to him.  Since he hasn't sent you off, you can always try another approach as well.";
 		wait for any key;
@@ -296,21 +313,22 @@ to say libguard4:
 			say "     You feel a strong urge to stay with him, to protect the library, but you manage to pull yourself out of it.  Still feeling quite drawn to him at the moment, you snuggle up beside him and scritch his manly chest.  He is quite relaxed now and you should be able to get what you came for.  You lean over and kiss his cheek.  You tell him, quite truthfully, how wonderful that was and he rumbles happily.  You keep sweet talking him while running your strong paws over his body.  After a little of this, you roll over, letting him get a good view of your leaking pussy and cum-soaked crotch and ask him to let you pop inside for a bit so you can freshen up.  He smiles and brushes your hip, passing you the keys.  'Just be quiet.  Don't want you disturbing the librarians,' he says before stretching back on the steps, looking quite pleased with himself.";
 			now libido of player is libido of player / 5;
 			now jamessex is 3;
+			wait for any key;
 			say "[libraryexplore]";
 
 
 to say libguard5:
 	say "     You chat with him a little long, looking over the front of the building for any other possible entry points.  Finding none there, you say farewell to the wolverine security guard, wishing him well.  Remaining nonchalant, you walk away and turn a corner, then double-back around the library.  Sneaking around, you start casing the joint from behind.  Eventually, you are rewarded, finding an open window on the second floor close to a dumpster.  You push it a meter over, climb up and leap up to grab the window ledge.  Soon enough, you are inside - easy peasy.";
 	now libstealth is 1;
+	wait for any key;
 	say "[libraryexplore]";
 
 
 Section 3 - Inside the Central Library
 
 to say libraryexplore:
-	wait for any key;
 	say "     Inside the library, you start looking around quickly, passing through the stacks.  You spot a few signs of transformed victims - clothes and cum stains mostly - but not many.  Clearly only a few people were here when the outbreak started.  You scan through the stacks, looking for anything that might be helpful to your situation.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	let randomlist be a list of numbers;
 	if 1 is not listed in bookcollection, add 1 to randomlist;
 	if 2 is not listed in bookcollection, add 2 to randomlist;
@@ -350,7 +368,7 @@ to say libraryexplore:
 	otherwise if entry 1 of randomlist is 7:
 		say "[libbook7]";			[animal handling]
 		now bookfound is 7;
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	if xp of player is greater than ( level of player plus one ) times 10:
 		level up;
 	otherwise if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
@@ -374,6 +392,7 @@ to say libraryexplore:
 				increase score by 10;
 				now harpyfight is 0;
 				now centrallib is 5;
+				wait for any key;
 				now Central Library is resolved;
 			otherwise:									[negative entry]
 				say ".  The big wolverine growls angrily at finding you inside, and fighting the harpies to make matters worse.  He bellows in rage and charges at you, pulling out a gun from under his coat.  You dive for cover under a table and hustle as quickly as you can through the chaos.  Thankfully, his arrival distracted the harpies enough that you're able to try getting past them.  You dodge a few close calls and have to dive under a second table before you can make a rush for the front door.  You push yourself free and leap down the steps three at a time.  A gunshot rings out, chipping one of the stone lions as you run past it.  You charge into an alley across the street, then make your way to cover.";
@@ -381,6 +400,7 @@ to say libraryexplore:
 				increase score by 10;
 				now harpyfight is 0;
 				now centrallib is 6;
+				wait for any key;
 				now Central Library is resolved;
 	if harpyfight is 2:
 		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons.  With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area.  James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3].  He shakes his fist at the harpies and growls.  'I told you not to upset them.  I'm sorry, but they won't let me up there.'  With no hope of rescue from him, you[otherwise].  He growls and shakes his fist.  'Serves you right!  I told you this library is closed!'  You[end if] are carried up to the top floor and dropped onto a large nest made of books.  Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down.  You are trapped with them and at their mercy.";
@@ -413,7 +433,7 @@ to say libraryexplore:
 				if cunt width of player < 4, now cunt width of player is 4;
 				if breasts of player is 0, now breasts of player is 2;
 				if breast size of player < 3, now breast size of player is 3;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		attempttowait;
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
 		end the game saying "You have joined the librarian harpies in their home at the Central Library.";

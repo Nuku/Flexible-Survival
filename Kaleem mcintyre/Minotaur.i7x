@@ -11,7 +11,6 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 
 when play begins:
 	add { "Minotaur" } to infections of guy;
-	add { "Minotaur" } to infections of furry;
 
 to say losetomino:
 	if cunts of player > 0:

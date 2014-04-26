@@ -127,7 +127,7 @@ to say meredithdesc:
 	if hp of meredith is 0 or hp of Meredith is 100:
 		say "ERROR-Meredith-[hp of Meredith]L: You should not be able to find me!";
 		remove Meredith from play;
-	if hp of meredith is 1 or hp of meredith is 2 or hp of meredith is 3:
+	otherwise if hp of meredith is 1 or hp of meredith is 2 or hp of meredith is 3:
 		say "     Meredith is a researcher that Vanessa's scouting team was to escort during their failed mission.  Having been found and rescued, she's been brought back here to await recovery by the military.  She's a rather plain young woman with an average build, though the occasional peek you've snuck show her to have some nice tits and a cute ass.  She's fairly pretty in a geeky sort of way once you look past her nerdy glasses and the plain haircut her ginger hair's been given.  She's wearing a grey shirt and khaki cargo pants.  Her many pockets hold a collection of technical and scientific instruments, which she fiddles with frequently.  Having found an old binder in the library, she's stuffed her crumpled notes into it and can often be found adding to them.";
 	otherwise if hp of meredith is 4:
 		say "     Meredith is a researcher that Vanessa's scouting team was to escort during their failed mission.  Having been found and rescued, she's been brought back here to await recovery by the military.  Once a rather plain young woman with an average build, her clumsiness has resulted in her getting partially infected.  Her changes are relatively minor, having gained horse hooves for feet, a short equine tail and pointy ears.  That aside, she's fairly pretty in a geeky sort of way once you look past her nerdy glasses and the plain haircut her ginger hair's been given.  She's wearing a grey shirt and khaki cargo pants.  Her many pockets hold a collection of technical and scientific instruments, which she fiddles with frequently.  Having found an old binder in the library, she's stuffed her crumpled notes into it and can often be found adding to them.";
@@ -427,6 +427,7 @@ to say Meredithsex1:
 	if hp of Meredith > 10:
 		if xp of Meredith is 0 and a random chance of 2 in 3 succeeds:
 			now xp of Meredith is 1;
+			if hp of Meredith is 11, now hp of Meredith is 12;
 	if libido of Meredith < 2, now libido of Meredith is 2;
 
 to say Meredithsex2:
@@ -455,6 +456,7 @@ to say Meredith_3some1:
 		if hp of Meredith > 10:
 			if xp of Meredith is 0 and a random chance of 2 in 3 succeeds:
 				now xp of Meredith is 1;
+				if hp of Meredith is 11, now hp of Meredith is 12;
 		if libido of Meredith < 2, now libido of Meredith is 2;
 	otherwise:
 		say "     After this warmup, Vanessa trots around to give Mare a swat on the rear, telling her to get into position and raise her tail for you.  The bigger centaur then lines up alongside her and does the same.  With the lovely sight of these two mares showing their juicy equine vulvae to you, you lick your lips and move in, placing a hand on each.  You trace your fingers lightly over those wet folds, complimenting the lovely mares on how juicy they look before slowly pushing a few fingers into them.";
@@ -473,6 +475,7 @@ to say Meredith_3some2:
 		if hp of Meredith > 10:
 			if xp of Meredith is 0 and a random chance of 2 in 3 succeeds:
 				now xp of Meredith is 1;
+				if hp of Meredith is 11, now hp of Meredith is 12;
 		if libido of Meredith < 2, now libido of Meredith is 2;
 	otherwise:
 		say "     Once the husky's had her turn, you gently nuzzle her over and move in to lick at that dripping cunny.  Coleen moves around to Meredith's front, hugging and kissing her while they play with each other's breasts.  The sight of them making out turns you on all the more and you dive in with increased zeal, pumping a few fingers into that juicy hole while your tongue and lips tend to her equine labia.  The soft whinnies and yips of the excited females mix with the wet sounds of your tonguework and fingering as the three of you go at it.";
