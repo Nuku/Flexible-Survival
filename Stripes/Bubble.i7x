@@ -1,5 +1,5 @@
 Version 1 of Bubble by Stripes begins here.
-[Version 1.1 - UB + infection]
+[Version 1.2 - UB hint & player inflation/deflation opened]
 
 "Adds Bubble the Inflatable Vixen as an NPC to the Flexible Survival game."
 
@@ -32,8 +32,10 @@ Instead of conversing the Bubble:
 	otherwise if hp of Bubble is 6 and a random chance of 1 in 3 succeeds:
 		say "     'I've been having such a great time since I've come here.  Playing [']High Dive['] is especially fun!' she says excitedly.  Confused, you ask her what she's talking about and she just giggles.  'I'll show you.  It's loads of fun!'";
 		say "     Bending over to untie her sneakers, she ends up flashing you a fine view of her delectable pussy and bubble butt.  'I got these sneakers so I don't bounce around too much while I'm having fun,' she says with some clarity.  'But they'd mess up things up now,' she adds with a giggle.  After pulling them off, she snuggles her own tail and, pinching the air valve at its tip, takes a few quick breaths and blows into it.  This causes her body to start to swell up, inflating herself until she's got a plump, rounded figure.  Full of air, she bounds effortlessly to the balcony area overlooking the main floor and leaps right off.  Crying out, you run to the balcony railing to see her floating down at a rather sedate speed while she giggles happily.";
-		say "     Reaching the bottom, she bounces lightly off of the floor and rises back up several feet, rolling in mid-air as she does.  'Come on.  You try it now,' she calls up merrily.  'It's awesome!'  Responding that you don't think that'd be such a good idea, you head over to take the stairs down, only to find her bounding buoyantly up them four or five steps at a time.  Once she reaches the top, she dives right over the railing again, this time with a spin.  She twirls down, bounces around, rushes back up and leaps off again repeatedly, getting seemingly endless amusement out of it.";
+		say "     Reaching the bottom, she bounces lightly off of the floor and rises back up several feet, rolling in mid-air as she does.  'Come on.  You try it now,' she calls up merrily in mid-bounce.  'It's awesome!'  Responding that you don't think that'd be such a good idea, you head over to take the stairs down, only to find her bounding buoyantly up them four or five steps at a time.  Once she reaches the top, she dives right over the railing again, this time with a spin.  She twirls down, bounces around, rushes back up and leaps off again repeatedly, getting seemingly endless amusement out of it.";
 		now hp of Bubble is 7;
+	otherwise if hp of Bubble >= 7 and a random chance of 2 in hp of Bubble succeeds:
+		say "     [one of]'I'm so super-stretchy now, even down in my pussy.  I could probably fit anything I like in there.'[or]'I found a new friend out in the city.  He was this big - wide!' she says, holding her paws over two feet apart.  'He was so surprised when I was able to take him no problem,' she giggles.[or]'I met a funny little doggy out in the city.  We were playing and he pushed himself right into me.  I was surprised, but it was loads of fun[if hp of Bubble is 7].  We should try it[end if]'[at random]";
 	otherwise:
 		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there.  They have such a sexy sheen to their latex.'[or]'Thanks again for saving me.  From what I saw of it, getting to me couldn't have been easy.  And now we can have lots fo fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon.  It's great.'[or]'I was so stressed before.  So many worries and problems.  All pointless stuff that was weighing me down.  But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if skinname of player is listed in infections of Latexlist]'Your skin feels so nice like this,' she says, running her paws over your smooth hide.[otherwise]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest.[end if][or][if hp of Bubble is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve.  'The great thing about the new me is I can have any sexy figure I want.  Or you want,' she adds with coquettishly.[otherwise]She giggles vapidly and makes some air-headed comment.[end if][or]She giggles vapidly and makes some air-headed comment.[in random order]";
 
@@ -102,13 +104,13 @@ to say bubblesex00:
 		now sortorder entry is 10;
 		now description entry is "change her figure by [if libido of Bubble is 0]inflating[otherwise]deflating[end if] her";
 		choose a blank row in table of fucking options;
-[	if hp of Bubble >= 8 and bodyname of player is "Inflatable Vulpine" and player is pure:
-		if <variable>:
+	if hp of Bubble >= 8 and bodyname of player is "Inflatable Vulpine" and player is pure:
+		if infvulpstate <= 2:
 			now title entry is "Be inflated";
 		otherwise:
 			now title entry is "Be deflated";
 		now sortorder entry is 11;
-		now description entry is "change your figure by getting [if libido of Bubble is 0]inflated[otherwise]deflated[end if]";	]
+		now description entry is "change your figure by getting [if libido of Bubble is 0]inflated[otherwise]deflated[end if]";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -268,6 +270,7 @@ Section 9 - Information
 [ 5 = talked             ]
 [ 6 = had sex            ]
 [ 7 = High Dive scene    ]
+[ 8 = Did UB on player   ]
 [ ...                    ]
 [ 99 = too late @ BC     ]
 [ 100 = too late         ]
