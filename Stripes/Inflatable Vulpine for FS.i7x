@@ -1,10 +1,11 @@
 Version 1 of Inflatable Vulpine For FS by Stripes begins here.
+[ Version 1.1 - Airheaded message fix ]
 
 "Adds an Inflatable Vulpine infection for use with Bubble the Inflatable Vixen"
 
 Section 1 - Monster Responses
 
-last_infvulp_airhead is a number that varies.  last_infvulp_airhead is usually -2147483648.
+last_infvulp_airhead is a number that varies.  last_infvulp_airhead is usually 255.
 infvulpstate is a number that varies.
 
 when play begins:
@@ -113,24 +114,25 @@ to say infvulpbodychange:
 to say infvulp_reset:
 	now last_infvulp_airhead is turns;
 
+
 Section 3 - Everyturn Airhead
 
 an everyturn rule:
-	now tempnum is intelligence of player + 5;
+	now tempnum is intelligence of player + 6;
 	increase tempnum by humanity of player / 10;
 	decrease tempnum by libido of player / 10;
-	if a random chance of 5 in tempnum succeeds and last_infvulp_airhead - 2 < turns:
-		if ( facename of player is "Inflatable Vupline" and a random chance of 2 in 3 succeeds ) or ( bodyname of player is "Inflatable Vixen" and a random chance of 1 in 2 succeeds ):
+	if a random chance of 5 in tempnum succeeds and last_infvulp_airhead - 2 > turns:
+		if facename of player is "Inflatable Vupline" or bodyname of player is "Inflatable Vulpine":
 			now last_infvulp_airhead is turns;
 			let T be a random number between 1 and 3;
 			if T is 1:
-				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colourful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily.  As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout.[in random order]";
+				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colourful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily.  As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout without even realizing it.[in random order]";
 				if morale of player < ( charisma of player + perception of player ) / 2, increase morale by 1;	[half of 'maxmorale']
 			otherwise if T is 2:
 				say "     [one of]You start listing off the creatures you've seen, trying to come up with your own [']top 10 sexiest['] list.[or]An air-headed, lustful thought pops into your head to go off in a random direction and ask the next creature you find to fuck you.  It sounds like such a fun game full of surprises.[or]You lose track of what you were doing, sit down and start masturbating without a care in the world.  You're doing this for a few minutes before reality sets back in and you regain control of yourself.[or]You plop yourself down with a happy giggle and masturbate with a vacant grin on your face.  You stop suddenly a few minutes later when you suddenly realize what you're doing.[in random order]";
 				increase libido of player by 3;
 			otherwise:
-				say "     [one of]You end up staring at your reflection in [if the player is in the bunker]a bathroom mirror[otherwise]a window[end if], smiling happily at how cute you look.[or]You are about to rush outside to find some cute mutants to [']play['] with.  Thankfully you come to your senses and head back into cover.[or]Seeing a cute mutant passing by, you imagine having some fun with them and almost rush off after them as they turn the corner.[or]You're captivated by touching your altered features, especially pleased by your balloon-like nature.[in random order]";
+				say "     [one of]You end up staring at your reflection in [if the player is in the bunker]a bathroom mirror[otherwise]a window[end if], smiling happily at how cute you look.[or]You are about to rush outside to find some cute mutants to [']play['] with.  Thankfully you come to your senses and head back into cover.[or]Seeing a cute mutant passing by, you imagine having some fun with them and almost rush off after them as they turn the corner.[or]You're captivated by touching your altered features, especially pleased by your balloon-like nature.[or]You forget yourself momentarily, overcome by vapid, vulpine thoughts.[in random order]";
 				decrease humanity of player by 2;
 		otherwise:
 			now last_infvulp_airhead is -2147483648;
