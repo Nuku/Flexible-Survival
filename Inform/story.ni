@@ -3673,7 +3673,7 @@ This is the sex change rule:
 			now cock length of player is 8;
 		if prevcock < cock length of player:		[did cock actually grow?]
 			follow the cock descr rule;
-			say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[otherwise]it gains[end if] in length, becoming [descr]!";
+			say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if cocks of player > 1]they gain[otherwise]it gains[end if] in length, becoming [descr]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock length of player > ( ( cock length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock length of player;
 		decrease cock length of player by 1;
@@ -3693,7 +3693,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3755,7 +3755,7 @@ This is the sex change rule:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
 	otherwise if cocks of player > cocks entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
-		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
 		decrease cocks of player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		let prevcunt be cunt length of player;
@@ -3765,7 +3765,7 @@ This is the sex change rule:
 			now cunt length of player is 8;
 		if prevcunt < cunt length of player:	[did cunt actually grow?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as [if cunts of player > 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
+			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as [if cunts of player is 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
 	otherwise if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player > ( ( cunt length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		decrease cunt length of player by 1;
@@ -3776,7 +3776,7 @@ This is the sex change rule:
 			now cunt length of player is 8;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
-			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[otherwise][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
+			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[otherwise][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		let prevcunt2 be cunt width of player;
 		increase cunt width of player by 1;
@@ -3817,7 +3817,7 @@ This is the sex change rule:
 			now cunt width of player is 0;
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
-			say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
+			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
 	if cunts of player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		let prevcunt2 be cunt width of player;
