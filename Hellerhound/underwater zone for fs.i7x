@@ -75,13 +75,13 @@ to swimmingfight:
 			increase T by 1;
 		otherwise:
 			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "feral sea dragon"; [duh case, all three ways]
+			challenge "Feral Sea Dragon"; [duh case, all three ways]
 	if T is 2:
 		if furry is banned or girl is banned:
 			increase T by 1;
 		otherwise:
 			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "feral sea dragoness";
+			challenge "Feral Sea Dragoness";
 	if T is 3:
 		if furry is banned or hermaphrodite is banned:
 			increase T by 1;
@@ -153,21 +153,21 @@ to say sea dragon cum use:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
 		if the player consents:
 			if a random chance of one in two succeeds and guy is not banned:
-				infect "feral sea dragon";
+				infect "Feral Sea Dragon";
 			otherwise:
-				infect "feral sea dragoness";
+				infect "Feral Sea Dragoness";
 		otherwise:
 			say "You rub the thick stuff into your waiting cunt, massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
 			if a random chance of one in two succeeds and guy is not banned:
-				infect "feral sea dragon";
+				infect "Feral Sea Dragon";
 			otherwise:
-				infect "feral sea dragoness";
-			impregnate with "feral sea dragon[one of][or]ess[at random]";
+				infect "Feral Sea Dragoness";
+			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
 	otherwise:
 		if a random chance of one in two succeeds and guy is not banned:
-			infect "feral sea dragon";
+			infect "Feral Sea Dragon";
 		otherwise:
-			infect "feral sea dragoness";		
+			infect "Feral Sea Dragoness";		
 
 sea dragon cum is a grab object;
 sea dragon cum has a usedesc "[sea dragon cum use]";

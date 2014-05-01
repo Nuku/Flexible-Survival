@@ -107,7 +107,7 @@ when play begins:
 
 Instead of resolving a Strange wave:
 	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[apostrophe]t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
-	infect "feral sea dragon";
+	infect "Feral Sea Dragon";
 	Now Strange wave is resolved;
 
 
@@ -137,9 +137,9 @@ when play begins:
 Instead of resolving a Dragon voyeurism:
 	say "Moving along the beach, you hear strange noises from up ahead, causing you to move cautiously as you look around the upcoming dune.  You gasp at the strange sight before you, of a male sea dragon in the shallows mounting what looks to be a mixture of a human and sea dragoness, shreds of a divers wetsuit still cling to her expanding body as he fucks her roughly. The expression on the woman's face is screwed up into one of the purest ecstasy as he thrusts into her, her happy cries and the strong musk of their mating causing you to grow excited as well. You find yourself unable to move on your eyes locked to the strangely erotic scene in front of you even as your hands begin to roam your body.  The woman cooing and writhing wantonly under the dragon, even as her changes continue sweeping over her, until finally the sea dragon roars as he spills his seed into what used to be a human diver, and is now indistinguishable from just another sea dragon. The dragons stay there in the low surf for a minute, shuddering in pleasure, before the male sea dragon pulls out, and drags himself back out into the surf. The newly made dragoness looks around for a minute as if confused by something, before fixating on his retreating form, she quickly dives into the surf after him, swimming along quickly to catch up to the beast that changed her, and now owns her.  You gasp in relief tinged with disappointment as they move away, your body tingling both from the sheer erotic nature of the sight you just witnessed, as well as the strong scent of sea dragon mating that covers the area and seems to cling to you strongly.";
 	increase libido of player by 30;
-	infect "feral sea dragon";
-	infect "feral sea dragon";
-	infect "feral sea dragon";
+	infect "Feral Sea Dragon";
+	infect "Feral Sea Dragon";
+	infect "Feral Sea Dragon";
 	Now Dragon voyeurism is resolved;
 
 
