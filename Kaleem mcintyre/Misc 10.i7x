@@ -122,13 +122,13 @@ Instead of resolving a Triton:
 		Say "Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure with a long white rising up out of the sea to take the trident into one of his meaty bronze hands.";
 	Otherwise:
 		Say "Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
-		Challenge "feral sea dragon";
+		Challenge "Feral Sea Dragon";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			Challenge "feral sea dragon";
+			Challenge "Feral Sea Dragon";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				Challenge "feral sea dragon";
+				Challenge "Feral Sea Dragon";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					Challenge "feral sea dragon";
+					Challenge "Feral Sea Dragon";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Having beaten back the pack of feral dragons you experience a sense of well deserve pride overcome you as you watch the group of feral reptiles scampering away back into the sea. Turning to head back to the beach with a smug smirk lining your face you never notice a half naked masculine figure with a long white beard rise up out of the sea to look at you inquisitively. Too busy enjoying your triumph you also never notice the trident you are still holding glowing with a faint golden light as you get ready to head off about your way.";
 						now carried of trident is 1;

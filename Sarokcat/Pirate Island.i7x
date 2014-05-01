@@ -58,7 +58,7 @@ carry out treasurehunt:
 			say "Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can[apostrophe]t wait to find it! With a grin on your face you pick a cave and stride forward!";
 			if rarequesting is 5:
 				say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you,  the cave seems to be a Sea dragons lair!";
-				challenge "feral sea dragon";
+				challenge "Feral Sea Dragon";
 				if lost is 1:
 					say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 					stop the action;
@@ -106,7 +106,7 @@ carry out treasurehunt:
 					stop the action;
 				if T is 6:
 					say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you,  the cave seems to be a Sea dragons lair!";
-					challenge "feral sea dragon";
+					challenge "Feral Sea Dragon";
 					if lost is 1:
 						say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 						stop the action;
@@ -161,11 +161,11 @@ carry out treasurehunt:
 					if player consents:
 						say "Moving ahead you find yourself in a large open beach cave, a strange pleasant scent filling your nostrils as you move into the cave.  The noise continues, before a loud roar lets out behind you.  Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating!  The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing.  Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
 						if cunts of player is greater than 0 or girl is banned:
-							infect "feral sea dragon";
-							infect "feral sea dragon";
+							infect "Feral Sea Dragon";
+							infect "Feral Sea Dragon";
 						otherwise:
-							infect "feral sea dragoness";
-							infect "feral sea dragoness";
+							infect "Feral Sea Dragoness";
+							infect "Feral Sea Dragoness";
 					otherwise:
 						say "Deciding that it probably isn[apostrophe]t treasure, you continue on your way.";
 					stop the action;
