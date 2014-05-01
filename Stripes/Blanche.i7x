@@ -22,6 +22,8 @@ Instead of resolving Wolfrape:
 			say "     Having defeated the formidable creature and driven it back into hiding, you rush over to the female wolf.  She is still quite dazed from her assault, but mumbles some thanks as you help her to her feet.  You consider taking her back with you, but are unsure how safe this unknown wolf could turn out to be.  You are spared from the decision as she starts indicating directions for you to follow.  She leads you to a partially ruined office building just a few blocks away.  The entrance is buried in rubble, but there's a concealed back entrance to the five-story building which she unlocks.";
 			move player to Office Den;
 			now Office Den is known;
+			attempttowait;
+			project the figure of Blanche2_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you.  As if suddenly realizing what she's done, she takes a step back, blushing at her ears.  'Oh, I'm sorry.  It's this... infection thing.  I'm sure you know what it does to you.  I am really thankful though for your help.'  She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase.  She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands.  'Please take this.  I'd give you more, really, but it's about all I can spare right now.  You were really brave to try and help me against that monster.  I don't like going out there much because there are so many of them.  You could... if you need somewhere safe to hide that is... maybe stay here... with me.'  She speaks softly, but with obvious longing in her voice.  Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now hp of Blanche is 1;
@@ -55,7 +57,7 @@ Section 2 - Blanche the Wolf
 Blanche is a woman.  Blanche is in Office Den.
 The description of Blanche is "[blanchedesc]";
 The conversation of Blanche is { "Thanks." }.
-The icon of blanche is Figure of Blanche_icon.
+The icon of blanche is Figure of Blanche1_icon.
 
 the scent of Blanche is "She smells of wolf and half-hidden arousal.";
 
@@ -70,7 +72,7 @@ Instead of conversing the Blanche:
 	if hp of Blanche is 1:
 		say "     'I was here working late with a few others on a big project late into the night.  At first, we hadn't noticed something was going on, but suddenly the radio station's broadcast was cut off with a strange announcement about some kind of emergency and how everyone should stay hidden in their homes until rescue arrived.  We were really confused and went outside to see what was going on.'";
 		say "     Blanche pauses for a moment before continuing.  'And that's when it all went crazy.  The ground started to shake and a few moments later, there was a blast of fire and noise as a huge cloud blocked out the night sky.  Buildings started to crumble around us.  Luckily, we'd stepped far enough from the entrance to not be caught under it when the awning collapsed.  Fire started to fall from the sky, wrecking more buildings.  And that's when we started to see the creatures running around in fear.  All of it was just too much and we freaked out.  I tried to get the others to head back inside, but they wanted to get home and find their families.  Some of them promised to come back, but they never did.  I knew it wasn't safe out there.  I've been hiding out here ever since.'";
-		say "     She moves a little closer to you, pressing herself to your side.  'I'm really glad you found me when you did.  It's been getting more difficult dealing with these... well, it's been gettind more difficult around here.  It's just much better having a friendly face around.  Someone to keep me company.'  She blushes a little at her ears as she says this, but her body rubs against you all the more.  You can smell the scent of her arousal stronger in the air.";
+		say "     She moves a little closer to you, pressing herself to your side.  'I'm really glad you found me when you did.  It's been getting more difficult dealing with these... well, it's been getting more difficult around here.  It's just much better having a friendly face around.  Someone to keep me company.'  She blushes a little at her ears as she says this, but her body rubs against you all the more.  You can smell the scent of her arousal stronger in the air.";
 		now hp of Blanche is 2;
 	otherwise if hp of Blanche is 2:
 		say "     [one of]'I was starting to get really lonely hiding here all alone.  I'm glad you're here to keep me company.'[or]'I tried to fix this place up as best I could now that it's become my wolf den.'[or]'I had to go out to gather some supplies, a place to sleep and a few other things.  After I came back from one of those trips, I started to feel funny.  It started slowly at first, but soon I was a wolf.  I was a little scared before, but I'm not really sure why.  I think my new body's much prettier.'[or]She slides up beside you.  'Will you stay for a while and keep me company?' she asks softly, but with a longing in her voice.[or]'The power's gone out around here, but thankfully the lights have stayed on down here.'[at random]";

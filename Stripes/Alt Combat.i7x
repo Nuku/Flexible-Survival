@@ -1226,7 +1226,7 @@ to win:
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	if reward > 50, now reward is 50;
 	increase freecred by reward;
-	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
+	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecred, and now have [freecred] creds.";
 	if libido of player > 25, decrease libido of player by 4;
 	AttemptToWaitBeforeClear; [wait for any key;]
 	[clear the screen and hyperlink list;]

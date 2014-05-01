@@ -77,7 +77,7 @@ carry out riddlesphinxing:
 		say "'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess.  'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs.  'We should definitely do this again sometime soon.  Oh, and I did mention a prize, didn't I?  Here, I suppose you earned this...' she says as she pushes an item towards you.  'I found it lying around here somewhere.  Maybe you can make better use of it.  Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
 		if riddlewin > 2:
-			say "'I'll also be going around the museum to do some of my rounds soon.  I wouldn't mind a little companionship on these trips.  If you'd like to tag along, perhaps we might even find something interesting to do,' he says with an coy smile and a swish of her tail.";
+			say "'I'll also be going around the museum to do some of my rounds soon.  I wouldn't mind a little companionship on these trips.  If you'd like to tag along, perhaps we might even find something interesting to do,' she says with an coy smile and a swish of her tail.";
 		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
 		choose row prizegift from the table of random critters;
 		if there is a loot entry:

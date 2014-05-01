@@ -1,5 +1,5 @@
 Version 4 of Alexandra by Stripes begins here.
-[Version 4.3 - Starting Tasks added]
+[Version 4.4 - More tasks]
 
 "Adds Alexandra the Doberwoman as an NPC to the Flexible Survival game"
 
@@ -11,6 +11,8 @@ The conversation of Alexandra is { "Yes Boss!" }.
 Alexandrastory is a truth state that varies.  Alexandrastory is usually false.
 Alexandrastory2 is a truth state that varies.  Alexandrastory2 is usually false.
 Alexandrastory3 is a truth state that varies.  Alexandrastory3 is usually false.
+Alexandracoffee is a truth state that varies.  Alexandracoffee is usually false.
+lastPolicePatrol is a number that varies.  lastPolicePatrol is usually 255.
 dobieanal is a truth state that varies.  dobieanal is usually false.
 lastdobiemess is a number that varies.
 
@@ -532,6 +534,8 @@ to say policelockerdesc:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  It looks like this place was hit pretty hard, with lots of torn clothes and cum stains littering the floor.  Many of the lockers have been knocked over or even torn asunder by clawed hands.  It looks like Alexandra started to clean up this room, but there's still much more to be done.  There's a few cots wedged in here for others to use.";
 	otherwise:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
+	if paula is lockered:
+		say "     Paula's converted a small corner of this room into her nurse's station.  The medical supplies, which she's put herself in charge of, are secured in some lockers to prevent misuse.  She's also set aside a cot to use as her examination table.";
 
 
 A person can be policed. A person can be lockered. A person is usually not policed. A person is usually not lockered.
@@ -572,17 +576,34 @@ to say alexandratalk_gg:
 		say "     Alexandra leans back in her chair and rubs her brow.  'My parents were criminals, doing drugs and committing petty crimes to pay for the habit.  It wasn't a very good home to grow up in, so I was taken away by Child Services when they were finally caught.  That wasn't much better, but it let me learn that I didn't have to be like them.  When I grew up, I decided to become a police officer and tried my best to be an example to others,' she says, subconsciously sitting back up straighter.";
 		say "     'I told myself that my parents being criminals didn't matter and that I didn't need to end up like them.  I think that drive to be [']a good and moral person['] helped motivate me to stay sane.  At least for a while,' she adds, rubbing her brow.  'Things were starting to get rather confused towards the end.  Beating up the mutants.  Writing them tickets.  I was getting so worked up about trying to hold the city together that I was probably going to crack entirely soon.  So I'm really glad you came along when you did.  I really appreciate you talking some sense into me, that's for sure.  Uggh... I'm tired of talking about this stuff.  I'm going to do a quick walkaround to clear my head,' she says with a growl as she hops up out of her chair and heads off, a hint of canine arousal in the air in the wake of her departure.";
 		now Alexandrastory is true;
-	otherwise if hp of Alexandra >= 57 and a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is true:
+	otherwise if hp of Alexandra >= 57 and a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is false:
 		say "     Alexandra leans back in her chair and rubs her brow.  'Things were pretty hard for a while after I was taken away from my neglectful parents.  I had a tough time fitting in, feeling that everyone was judging me, so I did my best to be a good person and prove that I was better than my folks.  I was probably really just trying to prove it to myself.  So when things collapsed during the outbreak, I guess my infected mind started obsessing over that more and more,' she says shaking her head.";
 		say "     'I just kept trying to prove myself and do my best to be a good cop.  But I was getting more and more confused on what that meant in this crazy, over-sexed city.  I'm glad you came along and talked some sense into me before I became another sex-crazy monster.  I've been transformed into a dog woman and I need to learn how to deal with that.  There's nothing to be gained from pretending this crisis will go away if I keep acting like a police officer.  I need to try helping people get through this mess instead of trying to act like the city hasn't fallen completely apart";
 		say ".'";
 		now Alexandrastory2 is true;
-[***		if hp of Alexandra > xxx:
+[		if hp of Alexandra > xxx:		[***]
 			say ".'  Alexandra gets out of her chair and grabs you by the wrist, pulling you in close.  'Enough talk for now though.  Those 'dog woman urges' could use some relief.'";
 			attempttowait;
 			now Alexandrastory2 is true;
 			now lastfuck of Alexandra is turns + 8;
 			try fucking Alexandra;				]
+	otherwise if hp of Alexandra >= 58 and a random chance of 1 in 3 succeeds and Alexandracoffee is false:
+		say "     'Oh, I almost forgot.  I found this a little while ago, but hadn't had a chance to get it working yet,' she says, getting up and heading over to a box in the corner.  Pulling out a small gas cooker from it, a little battered but functional, she sets it up on one of the desks.  With a little help from you to get it cleaned up, she manages to get it running.  Some coffee, also among the items in the box, is brewed up for you and [if the number of policed people + the number of lockered people > 1]the others[otherwise]Jimmy[end if] to enjoy - a rare treat these days.";
+		say "     'Oh, that's the stuff,' Jimmy says with a sigh of pleasure as he downs a hot mouthful.";
+		increase lastfuck of Jimmy by 6;
+		if Paula is lockered:
+			say "     'Be careful, that stuff'll stunt your growth,' Paula teases him.  Jimmy gives a flat 'Ha-ha' in response and takes another big gulp.";
+			increase lastfuck of Paula by 6;
+		if Stella is lockered:
+			say "     'You got any tea in there,' Stella comments, sniffing around in the box.  Not finding any, the dalmation's forced to take the coffee, though she drinks it down as eagerly as the rest of you.  'Bleck.  Well, that's at least perked me up,' she laughs, her cock stiffening as the buzz of caffeine runs through her.";
+			increase lastfuck of Stella by 6;
+		[***other NPCs in station can get added]
+		say "     'Mmm... how I missed you, old friend,' Alexandra says as she takes the last cup.  'Life blood of cops.  Now if only we had some doughnuts,' she says with a grin.  You all enjoy the hot cup of jo, the mood in the place improving considerably thanks to it.";
+[		if hp of Alexandra > ***, increase lastfuck of Alexandra by 6;	]
+		increase morale of player by 3;
+		decrease thirst of player by 6;
+		if thirst of player < 0, now thirst of player is 0;
+		now Alexandracoffee is true;
 	otherwise if hp of Alexandra > 51 and no_AlexandraTask - turns > 3 and a random chance of 1 in 3 succeeds:
 		AlexandraTaskChat;
 	otherwise:
@@ -712,7 +733,8 @@ to say alexandra_supplies:
 [ 54 = Food given/water needed ]
 [ 55 = Water given/food needed ]
 [ 56 = Both given ]
-[ 57 = Brought in a survivor ]
+[ 57 = Brought in a survivor (Jimmy) ]
+[ 58 = Medical supplies (and Paula?) ]
 
 [ lust of Alexandra ]
 [ 0 = not preggers ]
@@ -910,6 +932,7 @@ AT_Diego is a truth state that varies.  AT_Diego is usually false.
 AT_Qytat is a truth state that varies.  AT_Qytat is usually false.
 AT_Sarah is a truth state that varies.  AT_Sarah is usually false.
 AT_Jimmy is a truth state that varies.  AT_Jimmy is usually false.
+AT_Paula is a truth state that varies.  AT_Paula is usually false.
 AT_Repair is a truth state that varies.  AT_Repair is usually false.
 AT_Stella is a truth state that varies.  AT_Stella is usually false.
 no_AlexandraTask is a number that varies.  no_AlexandraTask is usually 255.
@@ -941,33 +964,34 @@ to AlexandraTaskChat:
 			add { 51, 51, 51, 51, 51 } to AlexandraTask;
 		otherwise:
 			add { 51, 51 } to AlexandraTask;
-[	if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false:
-		if hp of Paula is 0:
-			add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
-		otherwise:
-			add { 52, 52 } to AlexandraTask;	]
+	if hp of Jimmy > 2 and hp of Alexandra >= 56 and AT_Paula is false:
+		add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
+	if hp of Alexandra >= 56 and lastPolicePatrol - turns < 8:
+		add { 53 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
 	otherwise:
 		sort AlexandraTask in random order;
-		if entry 1 of AlexandraTask is 1, say "[A_Task01]";
-		if entry 1 of AlexandraTask is 2, say "[A_Task02]";
-		if entry 1 of AlexandraTask is 3, say "[A_Task03]";
-		if entry 1 of AlexandraTask is 4, say "[A_Task04]";
-		if entry 1 of AlexandraTask is 5, say "[A_Task05]";
-		if entry 1 of AlexandraTask is 6, say "[A_Task06]";
-		if entry 1 of AlexandraTask is 7, say "[A_Task07]";
-		if entry 1 of AlexandraTask is 8, say "[A_Task08]";
-		if entry 1 of AlexandraTask is 9, say "[A_Task09]";
-		if entry 1 of AlexandraTask is 10, say "[A_Task10]";
-		if entry 1 of AlexandraTask is 11, say "[A_Task11]";
-		if entry 1 of AlexandraTask is 12, say "[A_Task12]";
-		if entry 1 of AlexandraTask is 13, say "[A_Task13]";
-		if entry 1 of AlexandraTask is 14, say "[A_Task14]";
-		if entry 1 of AlexandraTask is 50, say "[A_Task50]";
-		if entry 1 of AlexandraTask is 51, say "[A_Task51]";
-		if entry 1 of AlexandraTask is 52, say "[A_Task52]";
+		if entry 1 of AlexandraTask is 1, say "[A_Task01]";		[Trevor Labs hint/directions]
+		if entry 1 of AlexandraTask is 2, say "[A_Task02]";		[City Hospital hint/directions]
+		if entry 1 of AlexandraTask is 3, say "[A_Task03]";		[Sandra hint]
+		if entry 1 of AlexandraTask is 4, say "[A_Task04]";		[Snow hint]
+		if entry 1 of AlexandraTask is 5, say "[A_Task05]";		[Philip hint]
+		if entry 1 of AlexandraTask is 6, say "[A_Task06]";		[RLD warning/directions]
+		if entry 1 of AlexandraTask is 7, say "[A_Task07]";		[Sven hint]
+		if entry 1 of AlexandraTask is 8, say "[A_Task08]";		[Sgt Marks warning]
+		if entry 1 of AlexandraTask is 9, say "[A_Task09]";		[Lisa hint]
+		if entry 1 of AlexandraTask is 10, say "[A_Task10]";	[Diego warning]
+		if entry 1 of AlexandraTask is 11, say "[A_Task11]";	[Qytat hint]
+		if entry 1 of AlexandraTask is 12, say "[A_Task12]";	[Zoo warning/directions]
+		if entry 1 of AlexandraTask is 13, say "[A_Task13]";	[Sarah hint]
+		if entry 1 of AlexandraTask is 14, say "[A_Task14]";	[Stella hint]
+		if entry 1 of AlexandraTask is 50, say "[A_Task50]";	[Police Quest 1 - Jimmy]
+		if entry 1 of AlexandraTask is 51, say "[A_Task51]";	[Police Extra 1 - Repairs]
+		if entry 1 of AlexandraTask is 52, say "[A_Task52]";	[Police Quest 2 - Med supplies/Paula]
+		if entry 1 of AlexandraTask is 53, say "[A_Task53]";	[Police Extra 2 - Patrols]
+		
 
 
 Part 1 - Hints (<50)
@@ -980,7 +1004,7 @@ to say A_Task01:
 	now AT_Matt is true;
 
 to say A_Task02:
-	say "     'I spotted some activity on the upper level of the city hospital.  Something's definitely going on there, though I can't really get in to find out what.  I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked.  You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown].  Getting to the hospital can be a little tricky, but this path is fairly clear.  I'd recommend you go that way to get there[end if].'";
+	say "     'I spotted some activity on the upper level of the city hospital.  Something's definitely going on there, though I can't really get in to find out what.  I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked.  You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown].  Getting to the hospital can be a little tricky, but this path is fairly clear.  I'd recommend you take the following route to get there..[run paragraph on][end if].'";
 	now City Hospital is known;
 	now AT_Mouse is true;
 
@@ -1055,8 +1079,6 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 		now AT_Jimmy is true;
 
 
-
-
 to say A_Task51:
 	if policerepair is 0:
 		say "     'There's been quite a bit of damage done here that I'd like fixed up.  I don't mean we need to rebuild the place, but we do need to block up the broken windows and stuff like that.  If we're going to provide a safe place to stay for a while, we can't allow crazed mutants to sneak in to get at them.  I managed to scrounge up some tools and hardware, but I need help doing the work.  It's not something I really know much about.  There's quite a bit to do, but whenever you're ready to [bold type]repair the police station[roman type], just let me know.";
@@ -1098,7 +1120,7 @@ carry out policerepairing:
 		say "STAMINA - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice is greater than 12:
 			if pr_completion is 0:
-				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it is the plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Partway through this sweaty work, you notice the Doberwoman's top's gotten quite damp with her sweat.  Wishing her shirt was white, you still get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
+				say "     Offering to help Alexandra out with the repairs, you accompany her upstairs to check out the broken windows.  There's quite a few of them to block up, so you set to work with her.  Since you can't replace the windows, you're going to have to screw plywood to their frames.  The worst part of it are those plywood sheets, you and the policewoman having to carry them up the stairs one by one.  Partway through this sweaty work, you notice the Doberwoman's top's gotten quite damp with her sweat.  Wishing her shirt was white, you still get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
 				increase policerepair by 2;
 			otherwise:
 				say "     Getting back to the task of boarding up the broken windows, you and Alexandra carry the remaining plywood sheets up the stairs and put them into place.  Thankfully, you do get one perk from all this hard labour.  The Doberwoman's top gets quite sweaty from all the heavy lifting.  While you wish her shirt was white, you're still able to get a partial view of her breasts through the light blue material, especially the outline of those dark nipples of hers.  The sight of them helps spur you on to keep going until the work is done.  Once finished, you and Alexandra take a well-deserved break.";
@@ -1187,7 +1209,7 @@ carry out policerepairing:
 		let dice be a random number from 1 to 20;
 		say "PERCEPTION - You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice is greater than 12:
-			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done at this point is beyond your limited capabilities.  You do deal with a few more odds and ends, and it looks at first like you've done a very thorough job.";
+			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done at this point is beyond the limited capabilities of you and your supplies.  You do deal with a few more odds and ends, and it looks at first like you've done a very thorough job.";
 			say "     You do come across a door in the service area that you'd not noticed before because it's partially obscured behind some cardboard boxes and a whiteboard.  Investigating further, you discover it opens onto a small hallway with a janitor's closet and a service door to the outside.  This steel door's in rough shape, having gotten quite bent and no longer closing properly.";
 			if intelligence of player > 15:
 				say "     Looking at the damaged door, you realize it'd take quite a bit of work to get it bent back into shape and properly reseated.  You're about to go grab the tools you'll need for this when you realize a far better solution.  After taking some quick measurements, you unscrew the first door you'd found and, with Alexandra's help, get it mounted in place of the exterior door.  Adding the door hardware, you're able to get his door to close and lock properly.  A few heavy objects are added as a further barricade and this potential back entrance is fully secured.  Work smarter, not harder.";
@@ -1204,8 +1226,9 @@ carry out policerepairing:
 					increase policerepair by 1;
 			now pr_task04 is true;
 		otherwise:
-			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done is beyond your limited capabilities.  You do deal with a few more odds and ends, but it looks like you've done a very thorough job.  The place certainly isn't in great shape, but it looks a little better than before and seems quite secure thanks to your hard work.  Alexandra seems pleased as well, thanking you with a quick hug before regaining her composure.";
+			say "     You go around the police station, looking for any more work that needs to be done.  You find the occasional thing to take care of, but most of the stuff that still needs to be done is beyond the limited capabilities of you and your supplies.  You do deal with a few more odds and ends, but it looks like you've done a very thorough job.  The place certainly isn't in great shape, but it looks a little better than before and seems quite secure thanks to your hard work.  Alexandra seems pleased as well, thanking you with a quick hug before regaining her composure.";
 		say "     'Ahem.  Sorry about that.  You've just been such a good friend.  Thanks again for all your help.'  She straightens her shirt and heads off quickly, claiming she needs to do some rounds.  The scent of canine arousal lingers for a little while even after her departure.";
+		increase score by policerepair * 3;
 		now pr_task04 is true;
 		now AT_Repair is true;
 	follow the turnpass rule;
@@ -1228,22 +1251,40 @@ Perform some repairs via stat checks.  Limited number of attempts per turn.
 ]
 
 
+to say A_Task52:	[See Paula.i7x for rescue and NPC content]
+	say "     'I was thinking we should have some medical supplies here in case of emergencies.  I figured I'd go check out the city hospital to get them.  I'll be heading out there shortly.  Did you want to come along?  I should be fine, but the help would be appreciated if you're free.'";
+	say "     Shall you accompany the doberwoman on her scavenging expedition?";
+	if the player consents:
+		say "[paula_rescue]";
+	otherwise:
+		say "     Stating that you have other things to deal with, you leave her to go on her expedition.  Trusting her to be able to handle herself, she doesn't disappoint, returning a few hours later with some medkits and other medical supplies.  She seems a little worn out, but in good spirits for her success at finding the items in an examination room.";
+		now hp of Paula is 1;
+	now AT_Paula is true;
+	now hp of Alexandra is 58;
 
 
-to say A_Task52:
-	say "***";
-[	if hp of Paula is 0:
-		say "***";
-	otherwise if hp of Paula is 1:	[unable to get supplies - need to return]
-		say "***";
-	otherwise if hp of Paula is 2:	[got supplies w/o Paula]
-		say "***";
-		now AT_Paula is true;
-	otherwise:						[got supplies and Paula]
-		say "***";
-		now AT_Paula is true;
-]
-
+to say A_Task53:	[Patrols]
+	say "     'Actually, I was thinking it was about time to go on patrol again.  I don't want any sex-crazed mutants getting too comfortable coming near here, [if the number of policed people + the number of lockered people > 6]especially now that we've got several survivors living here[otherwise]especially once more survivors start hearing about this place and showing up[end if].  While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem.  One of us should stay here on guard.  Did you want to patrol around the area?";
+	now fightoutcome is 100;
+	if the player consents:
+		say "     Alexandra wishes you good luck.  'I'll see you when you get back,' she says.  You head out in the neighbouring city and wander the area surrounding the station on the lookout for trouble";
+		if a random chance of 3 in 5 succeeds:
+			say ".  You end up coming across a mutant getting a little too curious about the police station for your liking.  Going over to check it out, your suspicions are confirmed when the creature notices you and advances.";
+			now battleground is "Outside";
+			fight;
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Your battle over, you complete your patrol and return to the police station.  You fill Alexandra in on your encounter and she thanks you for dealing with the creature and for taking a turn on patrol for her.";
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+				say "     After you recover from your loss, you stagger your way back to the station and fill Alexandra in on your encounter.  Sparing her some of the messier details, you warn her to keep an eye out for the creature the next time she goes out.  She thanks you for going out and facing that threat to help protect the station house.";
+			otherwise:
+				say "     Making your escape from the creature, you do your best to draw it away from the station before losing it.  Once you've managed that, you sneak back around and return to the police station.  You fill Alexandra in on your encounter and tell her to keep an eye out for the creature the next time she goes out.  She thanks you for going out and facing that threat to help protect the station house.";
+		otherwise:
+			say ".  The trip is thankfully uneventful, most of the mutants knowing to steer clear of what they see as the Doberman cop's territory.  You patrol for a few hours before eventually returning.  Alexandra thanks you again for taking a turn on patrol for her.";
+		follow the turnpass rule;
+	otherwise:
+		say "     Alexandra nods and grabs her nightstick and thermos, getting ready to go out.  'Alright.  I'll be back in a while.'  You nod to her and watch her head out.  She returns some time later, [one of]a little scruffy from a fight[or]none the worse for wear[or]a little dirty, but otherwise fine[or]safe and sound[or]nursing a sore shoulder[at random].";
+	now lastPolicePatrol is turns;
+	if fightoutcome >= 20 and fightoutcome < 100, decrease lastPolicePatrol by 8;	[player lost/fled = added delay before asked to patrol again]
 
 
 Section 11 - Endings

@@ -5,20 +5,25 @@ Book 0 - Pre game prep stuff
 Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
+[ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
+[ To determine if one of these is your issue, Use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
-use MAX_SYMBOLS of 13000000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 80000. [ You can increase the two below to help fix code 10s]
-use SYMBOLS_CHUNK_SIZE of 15000.
+use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
+use MAX_NUM_STATIC_STRINGS of 100000. [ Code 10 ]
+use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1250.
-use MAX_ACTIONS of 300.
+use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
+use MAX_ARRAYS of 1600.
 Use MAX_ZCODE_SIZE of 1000000.
-Use maximum indexed text length of at least 5000.
+Use maximum indexed text length of at least 2000.
+[ End compiler settings. ]
+
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
@@ -624,9 +629,9 @@ to say abbey desc:
 		say ".  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	otherwise if Fang is booked:
 		if hp of Fang < 3:
-			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
-		otherwise:
 			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+		otherwise:
+			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
 	otherwise if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
@@ -1892,16 +1897,253 @@ understand "navigate" as destinationcheck.
 understand "nav" as destinationcheck.
 
 carry out destinationcheck:
-	let L be a list of rooms;
-	repeat with Q running through known fasttravel rooms:
-		add q to L;
-	say "You know how to get to the following places: [line break]";
-	if the number of entries in L is 0:
-		say "Nowhere.";
-	otherwise:
-		sort L;
-		repeat with q running through L:
-			say "[link][Q][as]nav [Q][end link][line break]";
+	[ Note: The city areas and locations within are sorted alphabetically, please put new rooms in the right spots as you add them ]
+	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
+	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link]";
+	if Outside Trevor Labs is known:
+		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
+	say "[line break]";
+	[start of the capitol area]
+	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:
+		say "[bold type]Capitol District[roman type]: ";
+		if Approaching the Capitol Building is known:
+			say "[link][bracket]Approaching the Capitol Building[close bracket][as]nav Approaching the Capitol Building[end link] - ";
+		if Disused Garage is known:
+			say "| [link][bracket]Disused Garage[close bracket][as]nav Disused Garage[end link] ";
+		if Office Den is known:
+			say "| [link][bracket]Office Den[close bracket][as]nav Office Den[end link] ";
+		if Orc Lair Side Entrance is known:
+			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
+		say "[line break]";
+	[a subsection of the 'outside' area (named Central City here)]
+	if Camp Bravo Entrance is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+		say "[bold type]Central City[roman type]: ";
+		if Camp Bravo Entrance is known:
+			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
+		if Green Apartment is known:
+			say "| [link][bracket]Green Apartment[close bracket][as]nav Green Apartment[end link] ";
+		if Fire Station 86 is known:
+			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
+		if Mini-Lab is known:
+			say "| [link][bracket]Mini-Lab[close bracket][as]nav Mini-Lab[end link] ";
+		if Pediatrics Lobby is known:
+			say "| [link][bracket]Pediatrics Lobby[close bracket][as]nav Pediatrics Lobby[end link] ";
+		if Pig Pen is known:
+			say "| [link][bracket]Pig Pen[close bracket][as]nav Pig Pen[end link] ";
+		if Police Station is known:
+			say "| [link][bracket]Police Station[close bracket][as]nav Police Station[end link] ";
+		if Rabbit Den is known:
+			say "| [link][bracket]Rabbit Den[close bracket][as]nav Rabbit Den[end link] ";
+		if Red Apartment is known:
+			say "| [link][bracket]Red Apartment[close bracket][as]nav Red Apartment[end link] ";
+		if Tyr's Club is known:
+			say "| [link][bracket]Tyr's Club[close bracket][as]nav Tyr's Club[end link] ";
+		say "[line break]";
+	[start of the park area]
+	if Park Entrance is known or Equinoid Camp is known or Lion's Den is known:
+		say "[bold type]City Park[roman type]: ";
+		if Park Entrance is known:
+			say "[link][bracket]Park Entrance[close bracket][as]nav Park Entrance[end link] - ";
+		if Equinoid Camp is known:
+			say "| [link][bracket]Equinoid Camp[close bracket][as]nav Equinoid Camp[end link] ";
+		if Lion's Den is known:
+			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
+		say "[line break]";
+	[another sub-section of the 'outside' area (named Commercial District here)]
+	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known:
+		say "[bold type]Commercial District[roman type]: ";
+		if Smith Haven Mall Lot South is known:
+			say "[link][bracket]Smith Haven Mall[close bracket][as]nav Smith Haven Mall Lot South[end link] - ";
+		if Back Alley is known:
+			say "| [link][bracket]Back Alley[close bracket][as]nav Back Alley[end link] ";
+		if Comic Shop is known:
+			say "| [link][bracket]Comic Shop[close bracket][as]nav Comic Shop[end link] ";
+		if Isolated Street is known:
+			say "| [link][bracket]Isolated Street[close bracket][as]nav Isolated Street[end link] ";
+		if Kristen's Hideout is known:
+			say "| [link][bracket]Kristen's Hideout[close bracket][as]nav Kristen's Hideout[end link] ";
+		if Lingerie Store is known:
+			say "| [link][bracket]Lingerie Store[close bracket][as]nav Lingerie Store[end link] ";
+		if New Ewe Storeroom is known:
+			say "| [link][bracket]New Ewe Store[close bracket][as]nav New Ewe Storeroom[end link] ";
+		if The Palomino is known:
+			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
+		if SlutRat Den is known:
+			say "| [link][bracket]SlutRat Den[close bracket][as]nav SlutRat Den[end link] ";
+		say "[line break]";
+	[start of the dry plains area]
+	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
+		say "[bold type]Dry Plains[roman type]: ";
+		if Dry Plains is known:
+			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] - ";
+		if McDermott Farm Entrance is known:
+			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
+		if Researcher Studio is known:
+			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
+		if Rocky Outcropping is known:
+			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
+		say "[line break]";
+	[another sub-section of the 'outside' area (named Industrial Sector here)]
+	if Nutso Factory is known or Plant Overview is known or Power Lines is known or Reservoir is known:
+		say "[bold type]Industrial Sector[roman type]: ";
+		if Nutso Factory is known:
+			say "| [link][bracket]Nutso Factory[close bracket][as]nav Nutso Factory[end link] ";
+		if Plant Overview is known:
+			say "| [link][bracket]Plant Overview[close bracket][as]nav Plant Overview[end link] ";
+		if Power Lines is known:
+			say "| [link][bracket]Power Lines[close bracket][as]nav Power Lines[end link] ";
+		if Reservoir is known:
+			say "| [link][bracket]Reservoir[close bracket][as]nav Reservoir[end link] ";
+		say "[line break]";
+	[start of the fairgrounds area]
+	if State Fair is known or Sweet Tooth is known:
+		say "[bold type]Fairgrounds[roman type]: ";
+		if State Fair is known:
+			say "| [link][bracket]State Fair[close bracket][as]nav State Fair[end link] ";
+		if Sweet Tooth is known:
+			say "| [link][bracket]Sweet Tooth[close bracket][as]nav Sweet Tooth[end link] ";
+		say "[line break]";
+	[start of the high rise area]
+	if Entrance to the High Rise District is known or Agency is known or Alex's Condo is known or Bone-Appetit is known or Butterfly Grove is known or Butterfly Grove is known or Flower Garden is known or Lizard Parlor is known or Rex's Place is known or Zephyr Lobby is known:
+		say "[bold type]High Rise District[roman type]: ";
+		if Entrance to the High Rise District is known:
+			say "[link][bracket]Entrance to the High Rise District[close bracket][as]nav Entrance to the High Rise District[end link] - ";
+		if Agency is known:
+			say "| [link][bracket]Agency[close bracket][as]nav Agency[end link] ";
+		if Alex's Condo is known:
+			say "| [link][bracket]Alex's Condo[close bracket][as]nav Alex's Condo[end link] ";
+		if Bone-Appetit is known:
+			say "| [link][bracket]Bone-Appetit[close bracket][as]nav Bone-Appetit[end link] ";
+		if Butterfly Grove is known:
+			say "| [link][bracket]Butterfly Grove[close bracket][as]nav Butterfly Grove[end link] ";
+		if Flower Garden is known:
+			say "| [link][bracket]Flower Garden[close bracket][as]nav Flower Garden[end link] ";
+		if Lizard Parlor is known:
+			say "| [link][bracket]Lizard Parlor[close bracket][as]nav Lizard Parlor[end link] ";
+		if Rex's Place is known:
+			say "| [link][bracket]Rex's Place[close bracket][as]nav Rex's Place[end link] ";
+		if Zephyr Lobby is known:
+			say "| [link][bracket]Zephyr[close bracket][as]nav Zephyr Lobby[end link] ";
+		say "[line break]";
+	[start of the Hospital area]
+	if City Hospital is known or Psych Department is known:
+		say "[bold type]Hospital[roman type]: ";
+		if City Hospital is known:
+			say "[link][bracket]City Hospital[close bracket][as]nav City Hospital[end link] - ";	
+		if Psych Department is known:
+			say "| [link][bracket]Hospital Psych Department[close bracket][as]nav Psych Department[end link] ";
+		say "[line break]";
+	[start of Junkyard area]
+	if Abandoned Lot is known or Hyena Shack is known or Steven's home is known:
+		say "[bold type]Junkyard[roman type]: ";
+		if Abandoned Lot is known:
+			say "[link][bracket]Abandoned Lot[close bracket][as]nav Abandoned Lot[end link] - ";
+		if Hyena Shack is known:
+			say "| [link][bracket]Hyena Shack[close bracket][as]nav Hyena Shack[end link] ";
+		if Steven's home is known:
+			say "| [link][bracket]Steven's home[close bracket][as]nav Steven's home[end link] ";
+		say "[line break]";
+	[start of the misc area]
+	if Foxy Hideaway is known or Shifting Room is known:
+		say "[bold type]Misc[roman type]: ";
+		if Foxy Hideaway is known:
+			say "| [link][bracket]Foxy Hideaway[close bracket][as]nav Foxy Hideaway[end link] ";
+		if Shifting Room is known:
+			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
+		say "[line break]";
+	[start of the Museum area]
+	if Museum Foyer is known:
+		say "[bold type]Museum[roman type]: ";
+		if Museum Foyer is known:
+			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] -";
+		say "[line break]";
+	[start of the red light area]
+	if Entrance to the Red Light District is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
+		say "[bold type]Red Light District[roman type]: ";
+		if Entrance to the Red Light District is known:
+			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] - ";
+		if Bright Alley is known:
+			say "| [link][bracket]Bright Alley[close bracket][as]nav Bright Alley[end link] ";
+		if Burned-Out Chapel is known:
+			say "| [link][bracket]Burned-Out Chapel[close bracket][as]nav Burned-Out Chapel[end link] ";
+		if Cuero Lobo is known:
+			say "| [link][bracket]Cuero Lobo[close bracket][as]nav Cuero Lobo[end link] ";
+		if Down Under Pub is known:
+			say "| [link][bracket]Down Under Pub[close bracket][as]nav Down Under Pub[end link] ";
+		if Gillian's Flat is known:
+			say "| [link][bracket]Gillian's Flat[close bracket][as]nav Gillian's Flat[end link] ";
+		if Police Car is known:
+			say "| [link][bracket]Police Car[close bracket][as]nav Sven's Place[end link] ";
+		if Porn Store is known:
+			say "| [link][bracket]Porn Store[close bracket][as]nav Porn Store[end link] ";
+		if Sven's Place is known:
+			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
+		if Tattoo Parlor is known:
+			say "| [link][bracket]Tattoo Parlor[close bracket][as]nav Tattoo Parlor[end link] ";
+		say "[line break]";
+	[start of the seaside area]
+	if Beach Plaza is known or Bouncy Castle is known or Pirate Island is known or Viking Ship is known:
+		say "[bold type]Seaside[roman type]: ";
+		if Beach Plaza is known:
+			say "[link][bracket]Beach Plaza[close bracket][as]nav Beach Plaza[end link] - ";
+		if Bouncy Castle is known:
+			say "| [link][bracket]Bouncy Castle[close bracket][as]nav Bouncy Castle[end link] ";
+		if Pirate Island is known:
+			say "| [link][bracket]Pirate Island[close bracket][as]nav Pirate Island[end link] ";
+		if Viking Ship is known:
+			say "| [link][bracket]Viking Ship[close bracket][as]nav Viking Ship[end link] ";
+		say "[line break]";
+	[start of the Stables area]
+	if Stables Hotel is known or Master's Office is known:
+		say "[bold type]The Stables[roman type]: ";
+		if Stables Hotel is known:
+			say "[link][bracket]Stables Hotel[close bracket][as]nav Stables Hotel[end link] - ";
+		if Master's Office is known:
+			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
+		say "[line break]";
+	[start of the college area]
+	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known:
+		say "[bold type]Tenvale College[roman type]: ";
+		if College Campus is known:
+			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
+		if Campus Gym is known:
+			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
+		if Paleontology Office is known:
+			say "| [link][bracket]Paleontology Office[close bracket][as]nav Paleontology Office[end link] ";
+		if Phi Iota Gamma is known:
+			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
+		if Sports Arena Lockerroom is known:
+			say "| [link][bracket]Sports Arena Lockerroom[close bracket][as]nav Sports Arena Lockerroom[end link] ";
+		say "[line break]";
+	[start of the forest area]
+	if Urban Forest is known:
+		say "[bold type]Urban Forest[roman type]: ";
+		if Urban Forest is known:
+			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] - ";
+		say "[line break]";
+	[start of the warehouse area]
+	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Wolfman Lair is known:
+		say "[bold type]Warehouse District[roman type]: ";
+		if Warehouse District is known:
+			say "[link][bracket]Warehouse District[close bracket][as]nav Warehouse District[end link] - ";
+		if Hyena Hideout is known:
+			say "| [link][bracket]Hyena Hideout[close bracket][as]nav Hyena Hideout[end link] ";
+		if Mike's Home is known:
+			say "| [link][bracket]Mike's Home[close bracket][as]nav Mike's Home[end link] ";
+		if Wolfman Lair is known:
+			say "| [link][bracket]Wolfman Lair[close bracket][as]nav Wolfman Lair[end link] ";
+		say "[line break]";
+	[start of the zoo area]
+	if Zoo Entrance is known or Gator Den is known or Tiger den is known:
+		say "[bold type]Zoo[roman type]: ";
+		if Zoo Entrance is known:
+			say "| [link][bracket]Zoo Entrance[close bracket][as]nav Zoo Entrance[end link] ";
+		if Gator Den is known:
+			say "| [link][bracket]Gator Den[close bracket][as]nav Gator Den[end link] ";
+		if Tiger den is known:
+			say "| [link][bracket]Tiger den[close bracket][as]nav Tiger den[end link] ";
+		say "[line break]";
+
 	
 navigating is an action applying to one thing.
 
@@ -2934,14 +3176,14 @@ To process (X - a grab object):
 		otherwise if carried of First Aid Manual > 0:
 			increase healed by 2;
 		if "Rapid Healing" is listed in the feats of the player:
-			now healed is ( healed times 110 ) divided by 100;
+			now healed is ( healed times 115 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
-			now healed is ( healed times 110 ) divided by 100;
+			now healed is ( healed times 115 ) divided by 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your medkit, [one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
+		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[otherwise][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
 			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
@@ -3431,7 +3673,7 @@ This is the sex change rule:
 			now cock length of player is 8;
 		if prevcock < cock length of player:		[did cock actually grow?]
 			follow the cock descr rule;
-			say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[otherwise]it gains[end if] in length, becoming [descr]!";
+			say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if cocks of player > 1]they gain[otherwise]it gains[end if] in length, becoming [descr]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock length of player > ( ( cock length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock length of player;
 		decrease cock length of player by 1;
@@ -3451,7 +3693,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3513,7 +3755,7 @@ This is the sex change rule:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
 	otherwise if cocks of player > cocks entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
-		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
 		decrease cocks of player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		let prevcunt be cunt length of player;
@@ -3523,7 +3765,7 @@ This is the sex change rule:
 			now cunt length of player is 8;
 		if prevcunt < cunt length of player:	[did cunt actually grow?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as [if cunts of player > 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
+			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as [if cunts of player is 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
 	otherwise if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player > ( ( cunt length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		decrease cunt length of player by 1;
@@ -3534,7 +3776,7 @@ This is the sex change rule:
 			now cunt length of player is 8;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
-			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[otherwise][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
+			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[otherwise][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		let prevcunt2 be cunt width of player;
 		increase cunt width of player by 1;
@@ -3575,7 +3817,7 @@ This is the sex change rule:
 			now cunt width of player is 0;
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
-			say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
+			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
 	if cunts of player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		let prevcunt2 be cunt width of player;
@@ -4356,6 +4598,8 @@ check resting:
 		say "You rest on the cot.";
 	otherwise if the player is in the bunker:
 		say "You rest on one of the cots available.";
+	otherwise if the player is in Slave Cell 1 or player is in Slave Cell 2:
+		say "You rest on the bed in the back of the cell.";
 	otherwise if silk hammock is owned or silk hammock is present:
 		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";				
 	otherwise if "Roughing It" is listed in feats of player:
@@ -6003,11 +6247,7 @@ Include NPC Debug by Wahn.
 Include Zephyr Inc by Nuku Valente.
 Include Red Light by Hiccup.
 Include High Rise District by Batroo.
-Include Grizzly Bear by UrsaOmega.
-Include Impala by UrsaOmega.
-Include Feral Gryphon by UrsaOmega.
-Include Shadow Beast by UrsaOmega.
-Include Stables by Sarokcat.
+Include Stables Hotel by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include Hyena Hideout by Sarokcat.
 Include Museum by Sarokcat.
@@ -6249,6 +6489,7 @@ Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
 Include Queen Bee for FS by Stripes.
 Include Salamander by Stripes.
+Include Inflatable Vulpine for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
@@ -6348,6 +6589,10 @@ Include Sierrasaur by Blue Bishop.
 Include Pewter Consort By Blue Bishop.
 Include Orc by Wahn.
 Include Horse-Hung Nerd by Wahn.
+Include Grizzly Bear by UrsaOmega.
+Include Impala by UrsaOmega.
+Include Feral Gryphon by UrsaOmega.
+Include Shadow Beast by UrsaOmega.
 
 
 [NPCs]
@@ -6393,6 +6638,7 @@ Include Frank by Stripes.
 Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
+Include Paula by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.
@@ -6424,6 +6670,7 @@ Include Campus Gym by UrsaOmega.
 Include Lilith by Wahn.
 Include Coleen by Sarokcat.
 Include Vanessa by Stripes.
+Include Gwen by Stripes.
 Include Nadia by Wahn.
 Include Zephias by Wahn.
 Include David by Wahn.
@@ -7163,4 +7410,3 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
-

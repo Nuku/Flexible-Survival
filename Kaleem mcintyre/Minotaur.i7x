@@ -11,7 +11,6 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 
 when play begins:
 	add { "Minotaur" } to infections of guy;
-	add { "Minotaur" } to infections of furry;
 
 to say losetomino:
 	if cunts of player > 0:
@@ -53,7 +52,7 @@ to say beatthemino:
 				attempttowait;
 				say "     Letting out a rough grumble of laughter, you pull back from the Minotaur once your nuts have emptied themselves fully into the bullman and then slap the other's rump before telling him to find you again if he wants another [']rough ride['].";
 			otherwise:
-				say "     Pushing the defeated Minotaur onto the ground you quickly strip out of your clothes and then reach down to pump your [cock of player] shaft to full hardness, watching in rough satisfaction as the bullman's wary eyes begin to grow wide as he puts two and two together. Smirking at the other you lower yourself down onto the muscular mutant before place=ing yourself snug between the tired bullman's sweat soaked legs. Moving the Minotaur's tail out of the way of your intended prize, you stare down at the winking tailstar with a hungry look before moving one of your hands up to place them at the bullman's face. A rough command has the other licking your fingers and before long your fingers are liberally drenched in the Minotaur's viscous saliva."; 
+				say "     Pushing the defeated Minotaur onto the ground you quickly strip out of your clothes and then reach down to pump your [cock of player] shaft to full hardness, watching in rough satisfaction as the bullman's wary eyes begin to grow wide as he puts two and two together. Smirking at the other you lower yourself down onto the muscular mutant before placing yourself snug between the tired bullman's sweat soaked legs. Moving the Minotaur's tail out of the way of your intended prize, you stare down at the winking tailstar with a hungry look before moving one of your hands up to place them at the bullman's face. A rough command has the other licking your fingers and before long your fingers are liberally drenched in the Minotaur's viscous saliva."; 
 				attempttowait;
 				say "     Coating the tight muscles of the bullman's ring with his own spittle you tell him to loosen up or else the ride is going to be much rougher on him. A rough bellow has you wondering if the other likes things rough before you feel three of your fingers literally get sucked up into the Minotaur's hungry depths. Smirking up at the other, you call him a good calf before fingering his rectum with short and fast strokes. The bullman grunts and rolls his head around onto the ground as his tail lashes wildly beside you, forcing you to take it into a firm grip to keep it steady. Once you feel that the other is ready you pull your fingers back, line your throbbing cock up with the now gaping hole and then plunge into the warm, heated depths of the Minotaur."; 
 				attempttowait;

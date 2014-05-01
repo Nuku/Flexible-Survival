@@ -111,6 +111,7 @@ instead of going down from Volcanic Crater:
 	otherwise if hp of Athanasia is 4:
 		move the player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool.  Fearing the worst, you start calling out Athanasia's name while searching the alcoves and crevices of the cavern.  You find nothing and are about to give up hope when there is a loud, triumphant shriek from outside the cave.  Running to its mouth, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings.  The lava pours off the reborn phoenix like water and it comes swooping into the cave.";
+		project the figure of Athanasia_icon;
 		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed.  You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you.  'You did wonderfully,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
 		say "     The bird spreads its wings for you, showing off its reborn body.  'I was just having a refreshing bath when I heard you calling out for me.  Isn't my new body lovely?' the phoenix asks, preening its rich red and gold plumage.  'And I have changed like I needed to.  Now I'm reborn for this w... this place,' the firebird adds, turning around and raising her tail to show off a plump and wet cloacal pussy which you don't recall being there before.  'Mmmm... and it feels so good,' she adds with a coy glance at you and a shake of her tailfeathers.";
 		now hp of Athanasia is 5;
@@ -134,6 +135,7 @@ Athanasia is a woman.
 The description of Athanasia is "[athanasiadesc]";
 The conversation of Athanasia is { "Burninate!" }.
 lastfuck of Athanasia is normally 555.
+The icon of Athanasia is Figure of Athanasia_icon.
 
 the scent of the Athanasia is "The phoenix smells of woodsmoke.";
 
@@ -213,9 +215,14 @@ to athanasiasexmenu:
 		now title entry is "On her back";
 		now sortorder entry is 2;
 		now description entry is "fuck the phoenix while she's laying on her back";
+		if player is dominant:
+			choose a blank row in table of fucking options;
+			now title entry is "Dommy fuck";
+			now sortorder entry is 3;
+			now description entry is "take charge and fuck the phoenix";
 		choose a blank row in table of fucking options;
 		now title entry is "Volcano sex";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "fuck her in the lava pool";
 		choose a blank row in table of fucking options;
 		now title entry is "Birdy blow job";
@@ -280,6 +287,8 @@ to athanasiasexmenu:
 					say "[athanasiasex06d]";
 				otherwise if nam is "Give cunnilingus":
 					say "[athanasiasex07]";
+				otherwise if nam is "Dommy fuck":
+					say "[athanasiasex08]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Athanasia is turns;
@@ -386,10 +395,17 @@ to say athanasiasex06d:		[volcano - 69]
 to say athanasiasex07:		[give cunnilingus]
 	say "     Deciding to enjoy more intimate time with the phoenix, you run your hands across her body and then down to her hot loins when the turns and presents her tail to you.  Getting down on your knees behind her, you bury your face in those soft feathers, licking and kissing her pussy.  She moans and chirps musically in pleasure especially loudly when you suck at her hard clit.  'Oh yes.  Just like that.  I love this new form of mine so much thanks to you.'  You lavish attention on her cloacal pussy, alternating between your mouth and several fingers, getting her to quiver and moan again and again before she reaches a crashing, fiery climax that sends her hot juices across your face.  You lap up her delicious juices, getting the giant bird clean before letting her roll over onto her back so you can snuggle up in her warm wings.";
 
+to say athanasiasex08:		[dommy fuck]
+	say "     In the mood to enjoy the phoenix's sexy body again, you run your hand along her side and then under her tail to her heated pussy.  Fingering it roughly gets a squawk of surprised pleasure from her.  Moving with confidence and control, you coax the fiery bird to press her upper body to the ground while raising her tailfeathers, presenting herself to you.  With a grin, you pump your fingers in and out of her cloacal pussy faster, enjoying how her hips quiver as her juices run down her thighs.  Only once she's good and worked up do you bring your [cock size desc of player] cock to her dripping folds and mount her.";
+	say "     Placing your hands on her shoulder blades, both the keep her pinned and to let you bear down upon her, you drive your [cock of player] shaft into her again and again.  Feeling her heat flowing into you again, your excitement grows at you rut her all the harder, much to her delight.  That heat flows through you and seems to pool inside your testes[if cock width of player < 12].  You can sense them getting heavier and churning with your seed like bubbling magma in need of volcanic release[otherwise].  You can sense your seed churning inside them like bubbling magma in need of volcanic release[end if].  The pressure builds, but you hold it back, pounding the lustful bird harder and faster.  Dominated and loving it, all she can do is chirp and trill as she grinds back into you.";
+	say "     Eventually, you drive the phoenix to orgasm, her flames welling up and the temperature of her clenching pussy skyrocketting.  She shrieks in delight and moans for you to cum in her.  And with all that added heat pouring into you, your balls bubble over and you drive hard into her a final time, burying your [cock size desc of player] [cock of player] cock deep inside the firebird's cunt and unleashing your hot load into her womb in an effort to sire a few more eggs in the crimson bird of flame.  Once spent, you pull out and let the tried phoenix flop out on the cave floor, panting and chirping softly in post-orgasmic bliss.  Striding over to her face, you fill her beak with your sticky shaft, having her clean up the gooey mix of semen and female juices from it.";
+	if cock width of player < 12, increase cock width of player by 1;
+
+
 [*** - flight scene?
-	[otherwise if cocks of player > 0 and hp of Athanasia >= 10 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
+	[otherwise if cocks of player > 0 and hp of Athanasia >= 11 and bodyname of player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
 		if hp of Athanasia is 11:
-			say "     I've been feeling stronger lately.  I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek.  Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it.  'In that case, I'll take care of the flying.  It will not be a problem.  Don't you trust me?' she trills teasingly.  Given the amazing things she's already shown you, what's one more?";		]
+			say "     I've been feeling stronger lately.  I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek.  Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it.  'In that case, I'll take care of the flying.  It will not be a problem.  Don't you trust me?' she trills teasingly.  Given all the amazing things she's already shown herself capable of, what's one more?";		]
 ]
 
 

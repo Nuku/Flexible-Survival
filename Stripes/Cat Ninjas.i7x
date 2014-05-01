@@ -35,7 +35,7 @@ to say ninjaattack:
 	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you.  The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random].  There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you.  As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
-		if libido of player > 100, now libido of player is 100;
+		if libido of player > 110, now libido of player is 110;
 		let dammy be a random number between 2 and 3;
 		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease the hp of player by dammy;
@@ -50,7 +50,7 @@ to say ninjaattack:
 	if T is 4:
 		say "The cat swings at you with his weapon, but slips a dagger from his robes.  The feint succeeds and you are struck in the [one of]thigh[or]arm[or]shoulder[or]side[or]hip[at random] by the small blade.  The strike tingles with heat that causes your loins to stir with excitement!";
 		increase libido of player by a random number between 2 and 5;
-		if libido of player > 100, now libido of player is 100;
+		if libido of player > 110, now libido of player is 110;
 	if T is 5:
 		say "The agile cat slips behind you and sinks his claws into your chest while grinding the hard bulge between his legs against your rear.  His other paw gropes your groin, making you moan.  When you shove him off, he rolls and grabs his dropped weapon, readying it again if you continue to resist him!";
 	if T is 6:
@@ -76,7 +76,7 @@ to say ninjadesc:
 		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease hp of player by dammy;
 		increase libido of player by 10;
-		if libido of player > 100, now libido of player is 100;
+		if libido of player > 110, now libido of player is 110;
 		if hp of Hayato is 12:	[in Noh Mask fights]
 			say "     When the ninja feline spins to face you, his paw makes a fast motion.  Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage.  The pain is quickly replaced by a warm rush of lustful excitement.  Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you.  He pulls an oriental weapon from his black outfit and swings to strike.";
 		otherwise:
@@ -155,7 +155,7 @@ this is the ninjastar rule:
 		decrease dex entry by 4;
 		if monsterhit is true:
 			increase libido of player by a random number between 2 and 5;
-			if libido of player > 100, now libido of player is 100;
+			if libido of player > 110, now libido of player is 110;
 			let dammy be a random number between 2 and 3;
 			if hardmode is true, increase dammy by ( square root of lev entry );
 			now damagein is dammy;
@@ -171,8 +171,10 @@ this is the ninjastar rule:
 when play ends:
 	if bodyname of player is "Ninja Cat":
 		if humanity of player is less than 10:
+			if cunts of player > 0 and the player is pure:
+				project the figure of CatNinja_F_icon;
 			say "     Corrupted by the infection, your mind falters and fails, losing itself in dreams of feudal Japan.  You are drawn back to the museum, cloaking yourself in some dark fabric you find along the way.  There you silently wander the halls until a feline ninja drops from the ceiling right in front of you.  Several others leap from the shadows and surround you.";
-			say "     You and the other ninja begin to spar, trading blows and tricks while the others watch.  Eventually the battle becomes less of a fight and more of a practiced routine of blows, blocks, gropes and grinds.  The blows become fewer and the gropes become fondles until finally, without any signal, it ends.  The group backs off and disappears into the shadows and you join them, following them back to their hidden lair.";
+			say "     You and the other ninja begin to spar, trading blows and tricks while the others watch.  Eventually the battle becomes less of a fight and more of a practised routine of blows, blocks, gropes and grinds.  The blows become fewer and the gropes become fondles until finally, without any signal, it ends.  The group backs off and disappears into the shadows and you join them, following them back to their hidden lair.";
 			say "     There, you join their ranks in a night of lustful passion with several of the agile felines in your new clan.  You partake in the enjoyment of [if cocks of player > 0 and cunts of player > 0]several of the males and a few of the rare females[otherwise if cocks of player > 0]several of the rare females[otherwise]several of the males[end if] in their midst.  After rest and the food, the whole of the next day is spent in the company of the kachira, the ninja chief.  She is a tan-coloured female with green, passionate eyes and long, black hair.  Her face is stern, but her paws are soft and able to bring so much pleasure.  With her talent outstripping her many subordinates, your day is filled with such pleasures that you would follow her orders and face death for her without hesitation at any moment.  For that is what it means to be ninja.";
 			if cunts of player > 0 and "Sterile" is not listed in feats of player:
 				say "     In time, you grow round with kittens and bear your young into the clan.  They are raised to be ninja, protecting the museum from the shadows from any who would strike at it.";

@@ -105,6 +105,8 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Queen Bee":
+		if player is pure:
+			project the figure of QueenBee_icon;
 		if humanity of player is less than 10:
 			say "     With your mind losing itself to the buzz of the nanites in your mind, you slip further and further into your role as the queen bee.  Together you and Honey set up a new hive together[if hp of Joanna > 0 and hp of Joanna < 90] in one of the buildings beside Joanna's flower garden[otherwise]in an abandoned building at the edge of the park[end if], filling it with a honeycombed hive full of cute and hardworking bee girl drones and boytoy warriors to serve you.  Honey becomes a second queen for the hive by consuming the remaining royal jelly, sharing in the royal duties and the breeding required to fill the new hive.";
 		otherwise:

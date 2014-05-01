@@ -1,4 +1,5 @@
 Stable Related Quests by Sarokcat begins here.
+[ Version 2 - Onyx content reorganized ]
 
 "Adds a series of random events to Flexible Survival set in the Stables area."
 
@@ -9,7 +10,7 @@ Equineguardpost is a situation.  Equineguardpost is resolved.  The level of Equi
 The sarea of Equineguardpost is "Stable";
 
 Instead of Resolving a Equineguardpost:
-	if onyxkeys is 1:
+	if xp of Onyx is 1:
 		let skip be 0;
 		if guy is not banned:
 			say "Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy two of those wannabe horsemen you saw outside relaxing in the area, more importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren[']t on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx[']s cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the stallionbois.";
@@ -23,6 +24,7 @@ Instead of Resolving a Equineguardpost:
 				challenge "Donkeywoman";
 		otherwise:
 			say "Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts.  Unfortunately, the place has been locked up tight with a sign on the door marked as 'Sealed due to imposed bans.'  Not quite sure what that means, but knowing it somehow means you won't be able to get inside, you sigh sadly and head off, reminded that you won't be able to help Onyx now.";
+			now xp of Onyx is 100;
 			now Equineguardpost is resolved;
 			now skip is 1;
 		if skip is 1:
@@ -31,7 +33,7 @@ Instead of Resolving a Equineguardpost:
 			say "Beaten and left to lie in the corridor outside the guardpost, you barely manage to crawl back towards the entryway, your battered and well used form needing quite a bit of rest before you can attempt something like that again...";
 		otherwise:
 			say "With the guards temporarily unable to stop you, you quickly rummage through the makeshift guardpost and grab as many different sets of keys as you can find before leaving as fast as possible. With the jingling mass of keys in hand, you feel sure that you have the key to Onyx[']s cell with you now, and quite possibly the key to some other places in the Stables as well...";
-			now onyxkeys is 2;
+			now xp of Onyx is 2;
 			now Equineguardpost is resolved;
 	otherwise:
 		say "Wandering through the dimly lit halls of the hotel, you hear some raucous laughter coming from up ahead. Moving cautiously you look into the room ahead, only to spy a couple of horsemen hanging out and laughing while they drink some sort of barely fermented brew. You spend a second to glance around the crude guardpost, but seeing nothing worth the fight with the horse guards, you slip away quietly and continue your trip through the quiet halls of the building.";
@@ -44,7 +46,7 @@ Stablestoreroom is a situation.  Stablestoreroom is resolved;
 The sarea of Stablestoreroom is "Stable";
 
 Instead of Resolving a Stablestoreroom:
-	if onyxkeys is 3:
+	if xp of Onyx is 4:
 		say "Carefully exploring the Stables interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously, you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Looking around at the large, unorganized piles of random stuff, you figure this must be where they toss the personal items from their captives when they search them. You sigh slightly as you realize that the necklace Daisy sent you after is probably buried somewhere in the large amount of clutter stacked up in the small room. Figuring you had better get started looking, you shake your head slightly as you begin sorting through the room looking for the necklace the changing mare described.";
 		let bonus be ( the Perception of the player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
@@ -52,7 +54,7 @@ Instead of Resolving a Stablestoreroom:
 		increase diceroll by bonus;
 		if diceroll is greater than 15:
 			say "Sifting through the disorganized piles of junk, you find yourself growing frustrated at the seemingly unending supply of debris and geegaws stacked around the room. You are about to give up the search, when you spot a small silver glint which appears to have recently been unearthed due to your poking around in the piles. Pulling the item out, you find it is a rather intricately patterned necklace in the shape of several interlocking leaves.  The inscription on the back reads [']To Diana From Oscar[']. Smiling at your good fortune, you tuck the small necklace away in your pack, sure that this is the item that Daisy sent you to retrieve and, still smiling softly, you slip out of the room and head back to the entranceway, sure that Onyx will want to see your recent find.";
-			now onyxkeys is 4;
+			now xp of Onyx is 5;
 			Now Stablestoreroom is resolved;
 		otherwise:
 			say "You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewelery and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren[']t the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";

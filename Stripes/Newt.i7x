@@ -1,5 +1,5 @@
 Version 1 of Newt by Stripes begins here.
-[Version 1 - Basic character]
+[Version 1.1 - More sexxxings]
 
 "Adds a female Salamander NPC called Newt through interaction w/Athanasia."
 
@@ -47,20 +47,25 @@ to say sexwithNewt:
 			now title entry is "Blow job";
 			now sortorder entry is 2;
 			now description entry is "have her suck your cock";
+		if cocks of player > 0 and cock length of player < 18:
+			choose a blank row in table of fucking options;
+			now title entry is "Titty fuck";
+			now sortorder entry is 3;
+			now description entry is "nestle your cock between her breasts";
 		if cunts of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get cunnilingus";
-			now sortorder entry is 3;
+			now sortorder entry is 4;
 			now description entry is "have Newt eat you out";
-[		choose a blank row in table of fucking options;
+		choose a blank row in table of fucking options;
 		now title entry is "Lick Newt";
-		now sortorder entry is 4;
-		now description entry is "lick Newt's snatch.";	]
-[		if cunts of player > 0 or cocks of player > 0:
+		now sortorder entry is 5;
+		now description entry is "lick Newt's snatch.";
+		if cunts of player > 0 or cocks of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "69";
-			now sortorder entry is 5;
-			now description entry is "have a 69 with the salamander";	]
+			now sortorder entry is 6;
+			now description entry is "have a 69 with the salamander";
 		if ( cocks of player > 0 or cunts of player > 0 ) and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			[*** now title entry is "Threesome w/Athanasia (oral)"; ]
@@ -75,7 +80,7 @@ to say sexwithNewt:
 [		if cunts of player > 0 and lastfuck of Athanasia - turns >= 6:
 			choose a blank row in table of fucking options;
 			now title entry is "Threesome w/Athanasia (dildo)";
-			now sortorder entry is 11;
+			now sortorder entry is 12;
 			now description entry is "share the basalt toy with both hot females";	]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -95,12 +100,14 @@ to say sexwithNewt:
 						say "[newtsex01]";
 					otherwise if nam is "Blow job":
 						say "[newtsex02]";
-					otherwise if nam is "Get cunnilingus":
+					otherwise if nam is "Titty fuck":
 						say "[newtsex03]";
-					otherwise if nam is "Lick Newt":
+					otherwise if nam is "Get cunnilingus":
 						say "[newtsex04]";
-					otherwise if nam is "69":
+					otherwise if nam is "Lick Newt":
 						say "[newtsex05]";
+					otherwise if nam is "69":
+						say "[newtsex06]";
 					[*** otherwise if nam is "Threesome w/Athanasia (oral)":	]
 					otherwise if nam is "Threesome w/Athanasia":
 						say "[NewtAthanasia3someA]";
@@ -127,15 +134,28 @@ to say newtsex02:	[blow job]
 	say "     Coming up to Newt, you put your arms around her and give her a kiss.  She wriggles her tongue into your mouth and runs it along your palate and even to the back of your throat.  Taking a gasping breath after the long and lustful kiss, you suggest she put that wild tongue of hers to work on your cock.  She grins at this and gets on her knees to get your meat in her muzzle.";
 	say "     She licks and sucks on your [cock of player] cock with great enthusiasm.  Her tongue slides across your sensitive flesh in a myriad of delightful ways - flicking your glans, coiling around your shaft, sliding along its length[if cockname of player is not listed in infections of Internallist], extending out to lick your balls[end if] and more.  You caress and compliment the speckled beauty, loving all the attention.  And when you do cum, you pump your [cum load size of player] load down her throat, the salamander girl hungrily swallowing it all down.";
 
-to say newtsex03:	[get cunnilingus]
+to say newtsex03:	[titty fuck]
+	say "     Coming up to Newt, you run your arms along her sides and up to her breasts.  After kissing her, you tease her pierced nipples and tell her how you'd like your cock[smn] nestled between those beautiful mounds of hers.  Dropping to her knees slowly, she slides her long tongue down your body as she brings her bosom to your [cock size desc of player] erection[smn].  While only B-cups, she presses them gently around your manhood, providing a warm and slick hug of breast flesh against your shaft[smn] for you to enjoy.";
+	say "     As she works her chest against your penis[esmn], her tongue plays around, getting into all kinds of kinky trouble.  At first, you feel it tease across your glans, lapping up your precum.  After getting you quite worked up, it moves on to your hips and thighs before slipping lower[if cunts of player > 0 and cockname of player is listed in infections of Internallist].  After licking across your balls and gently squeezing them, it finds it way behind them to your puss[yfn] and runs across your netherlips[otherwise if cunts of player > 0].  Sliding beneath her breasts, it finds its way to your puss[yfn] and runs across your netherlips[otherwise if cockname of player is listed in infections of Internallist].  Sliding beneath her breasts, it finds its way to your ballsac and licks across it before gently squeezing your [ball size][end if][if anallevel is 3].  Not even your anus is spared, her playful tongue finding its way to your pucker and giving it a few teasing licks[end if].";
+	say "     By the time her wandering tongue returns back to licking your glans, you're on the edge of blowing and a few last licks push you to orgasm.  Spraying streaks of your semen across her exotic face and breasts, you watch as her tongue slithers across her slick flesh, licking it up as quickly as she can.  The sight of this turns you on all the more and you shoot your [cum load size of player] load onto the sexy salamander.  When you're spent, she leans back, resting on her hands and making a sexy show of licking herself clean only using that elongated tongue of hers.  What a delicious sight.";
+
+to say newtsex04:	[get cunnilingus]
 	say "     Coming up to Newt, you put your arms around her and give her a kiss.  She wriggles her tongue into your mouth and runs it along your palate and even to the back of your throat.  Taking a gasping breath after the long and lustful kiss, you suggest she put that wild tongue of hers to work on your pussy.  She grins at this and gets on her knees to get that tongue of hers into your cunny.";
-	say "     She starts with a few playful licks across your juicy folds.  Spreading your lips, she shifts her attention to your clit until you're moaning with need.  At that point, she slides that wriggling appendage up into your vagina.  It licks and laps along your inner walls, teasing any sensitive or tasty spot it can find.  Having plenty of length to it, it plumbs the very depths of your hot love tunnel, sending shivers though your lower body.  Gripping your ass with her hands, she helps support you as her tongue goes into overdrive and you get weak-kneed.  A powerful orgasm rushes though you, your vaginal muscles squeezing and pulling at that lively appendage.  Your cunt milks at it like it were a penis until finally you have to push her away as you become oversensitive after that wonderful orgasm.  She makes a show of slurping her long tongue back into her mouth with a playful grin.";
+	say "     She starts with a few playful licks across your juicy folds.  Spreading your lips, she shifts her attention to your clit until you're moaning with need.  At that point, she slides that wriggling appendage up into your vagina.  It licks and laps along your inner walls, teasing any sensitive or tasty spot it can find.  Having plenty of length to it, it plumbs the very depths of your hot love tunnel, sending shivers though your lower body.  Gripping your ass with her hands, she helps support you as her tongue goes into overdrive and you get weak-kneed.  A powerful orgasm rushes though you, your vaginal muscles squeezing and pulling at that lively appendage as it launches into you rapidly over and over, practically fucking you to orgasm with it.  Your cunt milks at it like it were a penis until finally you have to push her away as you become oversensitive after that wonderful orgasm.  She makes a show of slurping her long tongue back into her mouth with a playful grin.";
 
-to say newtsex04:	[lick Newt]
-	say "***";
+to say newtsex05:	[lick Newt]
+	say "     Pulling Newt into a kiss, you let a hand slip between her legs to tease her pussy.  She moans at this and eagerly moves into a comfortable seating position when you offer to eat her out.  Running your hands along her smooth legs, you caress her thighs while eyeing her lovely snatch.  Exotically beautiful thanks to the colourful, speckled hide surrounding its puffy folds, the sight and scent of it makes your mouth water.  Making a show of licking your lips, you kiss along her slick thighs on an inexorable path to her pussy.  And once there, you lick her clit and kiss those crimson lips before diving your tongue into her hot cunny.";
+	say "     The lovely salamander gently caresses your head, moaning and hissing softly in pleasure as your tongue works to pleasure her.  The heat from her dripping pussy feels like a furnace, but is never scalding, instead stoking the fires of your own arousal.  You slip a pair of fingers into that quivering tunnel.  As you work them around inside her, seeking out her most sensitive spots, your tongue shifts its focus back to her clit.  You lick and suck at that pierced bump of pleasure until she can take no more and achieves a hissing, grinding orgasm that rewards you with a rush of her delicious femmecum[if cocks of player > 0].  Grabbing your [cock size desc of player] cock, you masturbate yourself frantically and spray your load across her slick skin of her belly and breasts[otherwise if cunts of player > 0].  Stuffing a few fingers into yourself, you frig your pussy until you're moaning against her pussy as you climax[end if].  Licking your lips as you get back up, you smile down at the sexy salamander stretched out on the ground in a steaming puddle of her own juices.";
+	say "     'Ahhhhhh!' she sighs in blissful delight.";
 
-to say newtsex05:	[69]
-	say "***";
+to say newtsex06:	[69]
+	say "     Pulling Newt into a kiss, you let your hand slip between her legs to tease her pussy while grinding your crotch against her slick thigh.  She moans at this and eagerly lays down on her side when you suggest a sixty-nine.  Moving into position alongside her, you run a hand along her side and across her outer thigh, at which point she bends the leg and bares her juicy snatch to you.  Already feeling her tongue at your loins, you dive in quickly, running your tongue along her crimson folds.  Reaching around, you caress her curvy bottom and wriggle your tongue into her heated cunny.";
+	if cocks of player > 0:
+		say "     As you lap away at the steamy furnace that is her cunt, Newt is eagerly licking and kissing along your [cock size desc of player] penis.  Her long tongue slides up and down your length and winds around it while she sucks at your leaking glans[if cockname of player is not listed in infections of internallist].  She places a hand on your scrotum and fondles [ball size][end if].  With a hungry moan, she opens her wide mouth and welcomes your [cock of player] cock past her lips.  Still licking and sucking on it, she works her muzzle over your manhood as well.";
+		say "     Between the salamander's steamy juices arousing your taste buds and the hot, slick feel of her mouth and tongue on your shaft, you feel your orgasm coming rapidly.  Barely able to moan out a warning, she responds by taking your cock deeper and sucking harder, guzzling down your [cum load size of player] load as you drain your balls into her mouth.  She cums moments later, a rush of her delicious fluids washing across your face and tongue.  You lap up as much of it as you can get, loving the taste of the sexy femme.  When you're both sated, you roll onto your backs and lay there, hand in hand and panting softly in post-orgasmic bliss.";
+	otherwise:
+		say "     As you lap away at the steamy furnace that is her cunt, Newt is eagerly licking and kissing at your [cunt size desc of player] snatch.  Her long tongue roams across your thighs, mons and taint while she kisses at your throbbing clit.  That slick, squirming appendage of hers wriggles deep into your cunny, delving to your very depths in search of your most sensitive spots.  Its undulations inside you make your hips quiver as she skillfully works that powerful muscle inside your quivering hole.";
+		say "     Between the salamander's steamy juices arousing your taste buds and the hot, writhing feel of her tongue inside your pussy, you feel your orgasm coming rapidly.  Barely able to moan out a warning, she responds by pulsing her tongue in and out of your cunt using her powerful and rapid-fire tongue.  Feeling it shooting into you again and again with fast, deep licks, she's practically fucking your cunt with her tongue as you orgasm.  Your cunt squeezes and quivers around that super-long tongue of hers as you can do little more than bury your face in her snatch and moan.  Knowing she's driven you to ecstasy is enough to finally put the sexy salamander over the top herself and she cums as well, a rush of her delicious fluids washing across your face and tongue.  You lap up as much as of it as you can get, loving the taste of the sexy femme.  When you're both sated, you roll onto your backs and lay there, hand in hand and panting softly in post-orgasmic bliss.";
 
 to say NewtAthanasia3someA:
 	if cocks of player > 0:
@@ -157,10 +177,11 @@ to say NewtAthanasia3someA:
 				say "     After the first few blasts, Athanasia pulls back, letting your cum splatter across her beak and fiery feathers.  Moving over, she lets Newt have a turn [if cock width of player > 16]under the fountain of semen[otherwise]receiving a few splatters as well[end if].  Draining your [ball size] across the two of them, the phoenix takes the final lick while the salamander's long, slimy tongue sets to work cleaning their faces.  This turns into sloppy kisses between the two fiery females while you finger them both to moaning orgasms.";
 	otherwise:
 		say "     Both smile at your offer and move in close to snuggle with you.  After some kisses and nips are exchanged, Newt drops to her knees and buries her face between your legs.  Nuzzling your thigh, she makes her way to your juicy cunny and runs her elongated tongue along it.  Feeling the approaching warmth of her heated breath, you place your hands on her smooth head.  She smiles up at you and presses her lips to your netherlips while her tongue wriggles against them.  With a moan of pleasure, she slips her tongue right into you.";
-		if a random chance of 1 in 3 succeeds:
+		let xx be a random number between 1 and 3;
+		if xx is 1:
 			say "     While the sexy salamander eats you out, Athanasia moves in behind her.  Taking the basalt toy from its resting spot, she lays down on her side near Newt.  Moving into position, she slides it into the girl's heated cunt.  Newt hisses in delight at this and laps deeper into you.  Athanasia grins up at you and drives the stone dildo in again and again, each thrust bringing another happy hiss and a tremble runs through her wriggling tongue.";
 			say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly.  As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch.  With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you.  Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue.  Lapping up your juices, she eagerly dives in again and again for more while grinding hard onto the stony dildo.  From the rich scent of her arousal in the air, you can tell she's just orgasmed.  A few thrusts later, Athanasia withdraws the toy so she can lick the steamy juices from the girl's pussy.  And when your orgasm ebbs and you release her head, Newt turns the basalt toy loose in Athanasia's cloacal pussy.  She pumps it into her while licking around it's edge until the phoenix cums with a shriek of avian delight.";
-		otherwise if a random chance of 1 in 2 succeeds:
+		otherwise if xx is 2:
 			say "     While the sexy salamander eats you out, Athanasia moves in behind her.  Nuzzling her beak under Newt's tail, she nips her thighs and asks her to spread them.  The girl giggles excitedly and makes more room by spreading her legs and raising her tail.  The phoenix starts licking the salamander's dripping cunny.  Running her broad, thick tongue over those wet folds, she sets the girl's hips quivering and she wriggles her tongue all the deeper into you.";
 			say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly.  As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch.  With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you.  Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue.  Lapping up your juices, she eagerly dives in again and again for more while grinding hard against the phoenix's beak.  From the rich scent of her arousal in the air and the sounds of juicy licking as Athanasia goes after those steam juices, you can tell the girl's just orgasmed.  And when your orgasm ebbs and you release her head, Newt turns around to 69 with Athanasia, licking her cloacal pussy until the phoenix has cum as well.";
 		otherwise:

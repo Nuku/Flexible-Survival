@@ -35,7 +35,7 @@ to say beattheRetriever:
 			if the player consents:
 				say "You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";
 				if cocks of player > 0:
-					say "Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of player] [cock of player] cock she begins to whimper needfully, already begins to buck against you, trying to force you inside her. You begin trust into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
+					say "Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of player] [cock of player] cock she begins to whimper needfully, already begins to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
 					say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly  forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']

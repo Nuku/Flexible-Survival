@@ -18,11 +18,15 @@ to say losetoeagle:
 	let T be 1;
 	if "Submissive" is listed in feats of player, increase T by 1;
 	if "MPreg" is listed in feats of player, increase T by 1;
-	if "More Anal" is listed in feats of player, increase T by 1;
-	if "Less Anal" is listed in feats of player, now T is 0;
+	if anallevel is 3, increase T by 1;
+	if anallevel is 1, now T is 0;
 	say "     Having defeated you, the eagle releases a triumph call and pushes you down.  His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey";
 	if cunts of player > 0 and a random chance of 2 in 3 succeeds:
-		say ".  He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy.  You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  Your inner walls quiver and your honeyed juices start to flow as your excitement builds.  He nips at your shoulder and neck with his pointed beak while mating you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.[ovichance]";
+		if player is impreg_able and a random chance of 2 in 3 succeeds:
+			say ".  He roughly turns you over onto all fours and climbs atop you.  As he grinds his slick cock against your pussy's wet lips, you can't help but moan a little, your needy cunt suddenly feeling empty.  He nips at your shoulder and chuckles.  'Mmm... it sounds like someone's in need of a clutch in her,' he says, rubbing a taloned hand across your tummy.  Before you can respond, he shifts his position enough to get his penis lined up and drives his foot-long erection into you, drawing another moan from your trembling body.";
+			say "     As he mates you, he continues to nip and nuzzle at your neck and shoulders, reinforcing his dominance over you even as they feel relaxing and pleasurable.  Your inner walls quiver and your honeyed juices start to flow as your excitement builds.  Your vagina squeezes and pulls at his meaty rod and, after several minutes of steady pounding, is rewarded with the hot rush of the eagle's semen.  As he climaxes, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Once spent, he rubs your belly meaningfully once again before taking flight, leaving you panting and leaking his tainted seed.[ovichance]";
+		otherwise:
+			say ".  He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy.  You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  Your inner walls quiver and your honeyed juices start to flow as your excitement builds.  He nips at your shoulder and neck with his pointed beak while mating you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.[ovichance]";
 	otherwise if cunts of player is 0 and a random chance of T in 6 succeeds:
 		say ".  He roughly turns you over onto all fours and grabs your ass.  'You're no eagless, but you'll do for now,' he says as he climbs atop you, sinking his slick cock into your ass. You groan in discomfort at the sudden penetration, but quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  He nips at your shoulder and neck with his pointed beak while ass-fucking you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you, stuffing your bowels with his seed.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.[movichance]";
 	otherwise:
@@ -95,7 +99,7 @@ When Play begins:
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 1;			[ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
