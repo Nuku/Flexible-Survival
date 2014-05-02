@@ -304,7 +304,7 @@ to say sexwithMeredith:
 		say "     Meredith moans and blushes brightly at the touch but doesn't pull away, even sighing a little as two fingers are slipped into her cunt.  'It... it was so nice.  After all that teasing, getting to see so many others enjoying it, it felt wonderful to finally have sex.  It still feels good,' she says contentedly, nuzzling back at the centaur woman holding her.";
 		say "     'It's like a warm tingle from my hooves to my ears.  Wait... how can I...?' Meredith starts to ask, looking down at her legs.  You can see the darker socks of horsefur spread further up her ankles as a chestnut coat spreads up the rest of her legs even as they become more equine in shape.  As the changes slow at her hips, her tail grows out longer with a swish of its russet red hair.  Looking her over more fully, you can see that her chest has indeed filled out a little more and her nipples are larger with darker areolae.  Her ears have drifted further up her skull and have become more even more pointed and have darkened considerably, now well on their way to become horse ears.";
 		say "     Realizing she's changed further as well as had infection-fueled sex, she squirms free of Vanessa and rushes to add to her notes.  The centaur chuckles at this and urges you to leave her be for now.  Meredith lays face down on her cot, writing furiously with her equine legs bent and swaying in the air.  This affords you a good view of her off hand between her thighs, pumping away at her [if cocks of player > 0]creamy[otherwise]juicy[end if] cunt while she logs her experience while still in the nude.";
-		increase hp of meredith by 1;
+		increase hp of Meredith by 1;
 	otherwise if hp of meredith is 5:
 		say "     Meredith smiles at your offer, but pauses momentarily to look herself over, as if pondering the risks consequences of transforming further.  'I... uhh... For Science!' she exclaims with a giggle, throwing herself into your arms and kissing you.  Given the ardour of her kiss and the groping of her eager hands, it's clear that her lust has played a strong part in her decision, regardless of her invocation towards scientific discovery.  You help strip each other down quickly, lowering her back onto the cot before helping her get her ill-fitting pants off from around her equine ankles, lest she end up tumbling backwards again.";
 		say "     Once nude and on the cot, you lustfully embrace and run your hands over each other.  Her hands are more focused on you and your [if player is purehuman]seemingly uninfected[otherwise]infected[end if] features as they wander you all over in a mix of sexual play and curious exploration.  While she does this, you keep your own caresses light, teasing her breasts and thighs so as to keep her aroused but not to distract her.  It's clear her curiosity's been satisfied, at least for the moment when ";
@@ -332,7 +332,7 @@ to say sexwithMeredith:
 	otherwise if hp of meredith >= 6:
 		say "     Approaching Meredith, you run a hand across her flank as ask if she's got time for some more 'practical experimentation'.  She grins happily and flicks her tail up.  'Oh, I'm always up for some sexy science, [if cocks of player > 0]stud[otherwise]honey[end if],' she laughs with a bit of a blush.  She [one of]fumbles a bit in trying to get her pack unhooked until you help her with it[or]almost knocks over her cot trying to turn around to hug you[or]bumps over a stack of notebooks after getting her saddle pack off[or]almost ends up stomping on some sample dishes in her excitement before you can move them out of the way[at random].  Dealing with this gives you a moment to decide what you'd like to show the clumsy cutie next.";
 		say "[Meredithsexmenu]";
-		increase hp of Meredith by 1;
+		if hp of Meredith < 8, increase hp of Meredith by 1;
 
 
 to say Meredithsexmenu:
@@ -380,6 +380,7 @@ to say Meredithsexmenu:
 		now title entry is "UB fun";
 		now sortorder entry is 10;
 		now description entry is "take a turn inside the mare's womb";		]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
