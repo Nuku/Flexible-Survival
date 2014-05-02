@@ -669,9 +669,9 @@ Primary Lab is a room. "One of the few places in the city with working power, th
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
-Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of, wait no, that grass has not been mowed for a while. Just how long were you in that bunker anyway? The grass is just starting to creep up onto the pavement that leads further into the park, Northwards. The wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
+Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble started anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
-Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 North of Park Entrance is Park Trail.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
@@ -2410,26 +2410,32 @@ To Birth:
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
 	if snakehijack is false or "They Have Your Eyes" is listed in feats of player:
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is skinname of child;
-		otherwise:
-			now infection is skinname of player;
-		now skinname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is bodyname of child;
-		otherwise:
-			now infection is bodyname of player;
-		now bodyname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is tailname of child;
-		otherwise:
-			now infection is tailname of player;
-		now tailname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is facename of child;
-		otherwise:
-			now infection is facename of player;
-		now facename of child is infection;
+		if "Cheerbreeder" is listed in feats of player:
+			now skinname of child is "Football Wolfman";
+			now bodyname of child is "Football Wolfman";
+			now tailname of child is "Football Wolfman";
+			now facename of child is "Football Wolfman";	
+		otherwise: 
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is skinname of child;
+			otherwise:
+				now infection is skinname of player;
+			now skinname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is bodyname of child;
+			otherwise:
+				now infection is bodyname of player;
+			now bodyname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is tailname of child;
+			otherwise:
+				now infection is tailname of player;
+			now tailname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is facename of child;
+			otherwise:
+				now infection is facename of player;
+			now facename of child is infection;
 	otherwise:
 		let infection be "Snake";
 		now skinname of child is infection;
@@ -2497,35 +2503,49 @@ To impregnate with (x - text):
 		stop the action;
 	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
 		stop the action;
-	if "Selective Mother" is listed in feats of player:
-		say "Do you wish to be impregnated with a/an [x] child?";
-		if the player consents:
-			let q be 1;
+	if "Cheerbreeder" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a Football Wolfman child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Football Wolfman";
+		now bodyname of child is "Football Wolfman";
+		now tailname of child is "Football Wolfman";
+		now facename of child is "Football Wolfman";
+	otherwise:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a/an [x] child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		let infection be "";
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
 		otherwise:
-			say "You choose not to accept the seed.";
-			stop the action;
-	now gestation of child is a random number from 24 to 48;
-	let infection be "";
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is skinname of player;
-	now skinname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is bodyname of player;
-	now bodyname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is tailname of player;
-	now tailname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is facename of player;
-	now facename of child is infection;
+			now infection is skinname of player;
+		now skinname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is bodyname of player;
+		now bodyname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is tailname of player;
+		now tailname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is facename of player;
+		now facename of child is infection;
 	if cunts of player > 0:
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	otherwise:
