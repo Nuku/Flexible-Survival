@@ -14,14 +14,14 @@ to say fsdm attack:
 			if name entry is "Feral Sea Dragoness":
 				now monster is y;
 				break;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise if "Herm Preferred" is listed in feats of player:
-		now sex entry is "Both";
-	otherwise:
-		now sex entry is "Female";
+		if "Male Preferred" is listed in feats of player:
+			now sex entry is "Male";
+		otherwise if "Female Preferred" is listed in feats of player:
+			now sex entry is "Female";
+		otherwise if "Herm Preferred" is listed in feats of player:
+			now sex entry is "Both";
+		otherwise:
+			now sex entry is "Female";
 	if vorelevel is not 1 and scalevalue of player < 4 and (A random chance of 1 in 5 succeeds or ("Kinky" is listed in feats of player and a random chance of 1 in 4 succeeds) or (vorelevel is 3 and a random chance of 1 in 3 succeeds)):
 		if hp of player > 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight… He doesn't seem inclined to very much regard your submission as anything more than the opening for him, and he immediately dives for";
@@ -230,6 +230,15 @@ to say fsdm desc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now tempnum2 is 0;
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
 	say "     You notice something in the water, which appears to be a large shadow on its approach towards you.  Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you.  [one of]The dragon sniffs the air before seeing you, its eyes agleam with particular hunger[or]Looking at you, the dragon roars its challenge with a frightening glare[or]The dragon eyes you unnervingly as it seems to consider you for some purpose[at random].  You'd imagine its fin-like limbs would be ill-equipped to move across land, but he's quick to prove otherwise as the massive bulk begins rushing down upon you.";
 
 Section 1-2 - Player Victory
