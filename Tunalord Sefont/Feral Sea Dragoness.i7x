@@ -630,7 +630,7 @@ to fsdfvore:
 				say "[line break]";
 				if boundsegment is 1, increase boundmod by 1;
 				if boundmod > 2 and boundsegment is 1:
-					say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if]through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragoness's stomach. Your surroundings slowly draining you, you imagine you won't last long in here...";
+					say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragoness's stomach. Your surroundings slowly draining you, you imagine you won't last long in here...";
 					if tempnum2 is not 4:
 						now tempnum2 is 4;
 						say "     Singing out in satisfaction over your [if hp of player < 1]utter defeat[otherwise]ultimate fate[end if], the sea dragoness moves around to take to the ocean once more, tussling you about in the process. The motion doesn't get any less disorienting once he's swimming in the ocean, a dizzying sensation of your prison moving up and down with each wave. No doubt this will make the ordeal of escaping all the more of a challenge.";
@@ -707,7 +707,7 @@ to fsdfvore:
 					now boundmod is 0;
 				otherwise if boundsegment is 1:
 					if boundmod > 2:
-						say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if]through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
+						say "     [if struggleatt > 1]Briefly given a glimpse of the outside world, you're suddenly plunged back into the black depths of the monster's throat, punctuating your failed escape[otherwise]Your descent inevitable, the monster punctuates your ultimate fate[end if] with one final gulp. Squeezed[if tempnum2 is 4] back[end if] through her tight ring, you're confined to the slightly looser -- albeit no less slick and dark -- prison of the sea dragon's stomach. Your surroundings slowly draining you, you imagine you won't last long in here!";
 						increase lustatt by 7 + (lustadjust * 2);
 						if tempnum2 is not 4:
 							now tempnum2 is 4;
@@ -804,14 +804,14 @@ to say fsdinheat:
 				now heatturnskipper is true;
 				follow the turnpass rule;
 			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Block:
-				say "Catching the breeze of the sea in the air, your pussy quivers with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
+				say "Catching the breeze of the sea in the air, your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
 				move the player to Beach Plaza;
 			otherwise if location of player is Public Beach:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave rolling onto the beach, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will sooth your heat.  Your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with each wave rolling onto the beach, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			otherwise if location of player is Bouncy Castle:
-				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will sooth your heat.  Your [if cunts of player > 0]puss[yfn] quiver[sfv][otherwise if cocks of player > 0]dick[smn] throb[smv][otherwise]body trembles[end if] with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
 				decrease humanity of player by 3;
 				increase libido of player by 2;
 			otherwise if location of player is Sloping Sand or location of player is Coral Ring or location of player is Sunken Ship:
@@ -819,7 +819,12 @@ to say fsdinheat:
 				decrease humanity of player by 5;
 				decrease libido of player by 20;
 			otherwise:
-				say "Your pussy quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your wet folds... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+				if cunts of player > 0:
+					say "Your puss[yfn] quiver[sfv] and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your wet folds... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+				otherwise if cocks of player > 0:
+					say "Your dick[smn] throb[smv] and spurts in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your slick, [cock size desc of player] cock[smn]... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+				otherwise:
+					say "Your body trembles in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your slick undercarriage... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
 	if libido of player > 100, now libido of player is 100;
 
 [Endings can be found in the Feral Sea Dragon extension]
