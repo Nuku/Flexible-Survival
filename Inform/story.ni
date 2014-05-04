@@ -2304,6 +2304,7 @@ carry out Inventorying:
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
+		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
@@ -2339,7 +2340,13 @@ carry out Inventorying:
 				let number be carried of object entry;
 				say "[number]([weight entry times number] lbs)";
 				increase weight by weight entry times number;
-				say "[line break]";
+				if newline is 0:
+					say "   --   ";
+					increase newline by 1;
+				otherwise:
+					say "[line break]";
+					now newline is 0;
+		if newline is 1, say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
 	if scenario is "Researcher" or nanitemeter > 0:
