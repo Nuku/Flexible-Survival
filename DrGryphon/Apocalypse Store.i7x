@@ -1,26 +1,18 @@
 Apocalypse Store by DrGryphon begins here.
 
-"Adds an area and equipment for the player." 
+"Adds new equipment for the player." 
 
-Apocalypse Store is a situation.
-The sarea of Apocalypse Store is "Outside";
+Clothing Store is a situation.
 
-instead of resolving Apocalypse Store:
-	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows that are blown out along with doors and a torn apart interior with debris littered around the floor.";
-	now Clothing Store is known;
-	say "Despite the store's destroyed appearance, you decide to have a look around inside anyway, maybe there's still something useful in here? (Clothing Store now added to nav menu)";
-	move player to Clothing Store;
-	now battleground is "void";
-	now Apocalypse Store is resolved;
-
-
-broken entrance is a door. "The two broken glass doors exit out to the city.".
-Clothing Store is a room. It is fasttravel.  It is private. "The old clothing store has been completely torn apart by some unknown explosion. Pieces of the roof litter the floor, while the display racks have all been thrown toward the entrance and now lie on their sides. On the far end of the building you see scorch marks from what must be the source of the blast.".
-Clothing Store is west of broken entrance.
-broken entrance is dangerous.
-east of broken entrance is Outside Exploration.
-the marea of broken entrance is "Outside".
-
+instead of resolving Clothing Store:
+	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows and doors that are blown out, along with a torn apart interior and debris littered around the floor.";
+	say "Despite the stores destroyed appearance, you decide to have a look around inside anyway.";
+	increase carried of Apocalypse Mini-Skirt by 1;
+	increase carried of Apocalypse Shorts by 1;
+	increase carried of Apocalypse Hoody by 1;
+	increase carried of Apocalypse Scarf by 1;
+	say "After a short while of searching, you manage to recover a few articles of still usable clothing. Not seeing anything else of intrest in the store, you decide to return to the library.";
+	now Clothing Store is resolved;
 
 Apocalypse Mini-Skirt is a grab object.
 Apocalypse Mini-Skirt is equipment.
@@ -33,7 +25,7 @@ The slot of Apocalypse Mini-Skirt is "body".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Mini-Skirt
+"Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the  current situation."	1	Apocalypse Mini-Skirt
 
 the scent of Apocalypse Mini-Skirt is "There is a faint smell of smoke lingering on the item of clothing.";  
 
@@ -78,11 +70,9 @@ The slot of Apocalypse Scarf is "face".
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Apocalypse Scarf"	"A long scarf that has been torn and burnt by an explosion. It's still wearable and the destroyed look fits in with the current situation ."	1	Apocalypse Scarf
+"Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destoryed look fits in with the current situation ."	1	Apocalypse Scarf
 
-the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing."; 
-
-the invent of Clothing Store is {"Apocalypse Mini-Skirt","Apocalypse Shorts","Apocalypse Hoody", "Apocalypse Scarf" }. 
+the scent of Apocalypse Scarf is "There is a faint smell of smoke  lingering on the item of clothing."; 
 
 
 Apocalypse Store ends here.
