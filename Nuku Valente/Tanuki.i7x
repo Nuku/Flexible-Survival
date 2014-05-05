@@ -1,5 +1,5 @@
 Version 1 of Tanuki by Nuku Valente begins here.
-[Version 1.1 - Fixes several potential size change bugs - Stripes]
+[Version 1.2 - Some size change fixes - Stripes]
 
 "Adds Tanuki to Flexible Survival"
 
@@ -102,8 +102,8 @@ check ballgrowing:
 
 carry out ballgrowing:
 	if cocks of player is 0:
-		say "Your tanuki magic forms  a set a balls for you, growing a tiny cock to go with them.";
-		now cocks of player is 0;
+		say "Your tanuki magic forms a set a balls for you, growing a tiny cock to go with them.";
+		now cocks of player is 1;
 		now cock length of player is 2;
 	increase cock width of player by a random number between 1 and 5;
 	say "Your tanuki magic surges down into your balls as they begin to swell rapidly! Your balls feel like they have become [ball size]!";
@@ -136,7 +136,7 @@ check cockgrowing:
 carry out cockgrowing:
 	if cocks of player is 0:
 		say "Your tanuki magic grows a cock for you as you form a tiny set a balls for yourself as well.";
-		now cocks of player is 0;
+		now cocks of player is 1;
 		now cock width of player is 2;
 	increase cock length of player by a random number between 1 and 5;
 	follow the cock descr rule;
