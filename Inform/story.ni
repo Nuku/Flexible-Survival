@@ -2461,7 +2461,7 @@ To Birth:
 			say "As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth.  Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated.  Though you do become faintly aware of that emptiness inside your belly again.";
 	otherwise if "Wild Womb" is listed in feats of player:
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity.  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		otherwise:
@@ -2469,7 +2469,7 @@ To Birth:
 		say "As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
 	otherwise:
 		if cunts of player > 0:
-			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if]at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+			say "Your child [if ovipregnant is true]pushes free of the shell enclosing it and you gather it into your arms so it may suckle[otherwise]suckles[end if] at your [breast size desc of player] breast.  Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise if breasts of player > 0:
 			say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		otherwise:
@@ -3883,7 +3883,6 @@ This is the breast change rule:
 		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
 
-
 To grow breasts by (x - a number):
 	if "Flat Chested" is listed in feats of player:
 		continue the action;
@@ -3994,6 +3993,7 @@ To Infect:
 			now body of player is body entry;
 		attributeinfect;			[sets the new attributes]
 		follow the sex change rule;
+		say "[line break]";
 	if x is 5:
 		follow the sex change rule;
 		if cockname of player is not name entry:
@@ -4072,12 +4072,13 @@ To Infect:
 				now body of player is body entry;
 			attributeinfect;			[sets the new attributes]
 			follow the sex change rule;
+			say "[line break]";
 		if x is 5:
 			follow the sex change rule;
 			if cockname of player is not name entry:
 				if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 				now cockname of player is name entry;
-				now cock of player is cock entry;				[** end of addition for 'Mutable']
+				now cock of player is cock entry;		[** end of addition for 'Mutable']
 	now x is a random number from 1 to 6;
 	if "Mighty Mutation" is not listed in feats of player:
 		now x is 0;
@@ -5413,7 +5414,9 @@ This is the self examine rule:
 				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child is greater than 0:
 		if gestation of child is less than 10:
+			now looknow is 0;
 			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
+			now looknow is 1;
 		otherwise if gestation of child is less than 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		otherwise if gestation of child is less than 30:
@@ -6029,7 +6032,7 @@ to ratetheplayer:
 	otherwise if the score is less than 500:
 		say "Salacious Scavenger!";
 	otherwise if the score is less than 1000:
-		say "Wanton Wastewander!";
+		say "Wanton Wastewanderer!";
 	otherwise if the score is less than 1500:
 		say "Serpent Blisskin!";
 	otherwise if the score is less than 2000:

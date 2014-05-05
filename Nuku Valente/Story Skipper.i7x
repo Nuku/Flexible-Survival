@@ -1,5 +1,5 @@
 Version 200 of Story Skipper by Nuku Valente begins here.
-[ Version 200 - Vanessa, Meredith and Gwen added ]
+[ Version 200.1 - Restoring nanite collector status ]
 
 The File of Trixsave  (owned by another project) is called "txsave".
 The File of Trixsave2  (owned by another project) is called "txsave2".
@@ -1944,6 +1944,13 @@ Carry out savetrix2:
 			let obname be printed name of q;
 			if cur matches  the text obname, case insensitively:
 				now carried of q is amt;
+				break;
+	if carried of nanite collector > 0:
+		now nanitemeter is 2;
+		repeat with y running from 1 to number of filled rows in table of game objects:
+			choose row y in table of game objects;
+			if name entry is "nanite collector":
+				now weight entry is 25;
 				break;
 
 [
