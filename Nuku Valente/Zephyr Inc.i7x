@@ -140,7 +140,7 @@ Carry out zephbuying:
 Table of Game Objects(continued)
 name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
-"pistol"	"A small, but servicable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
+"pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
 pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of pistol is 7. The objsize of pistol is 2.
 
