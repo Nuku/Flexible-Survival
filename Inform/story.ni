@@ -60,6 +60,23 @@ to clear the screen and hyperlink list:
 	now hyperlink list is {}.
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
+To say row of (N - number) spaces: (- spaces {N}; -).
+
+To decide what indexed text is (orig - text) formatted to (len - number) characters:
+	let T be an indexed text;
+	now T is orig;
+	let N be the number of characters in T;
+	if N < len:
+		repeat with Z running from 1 to len - N:
+			now T is "[T] ";
+[		let temp be number understood;
+		now number understood is len - N;
+		let sub be "[row of number understood spaces]";
+		replace the regular expression "$" in T with sub;
+		now number understood is temp;]
+	else if N > len:
+		replace the regular expression ".{[N - len]}$" in T with "";
+	decide on T.	
 
 To keypause:
 	(- KeyPause(); -)
@@ -2308,7 +2325,7 @@ carry out Inventorying:
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				say "[link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
+				say "[variable letter spacing][link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
 				say " [link][bracket][bold type]L[roman type][close bracket][as]look [name entry][end link]";
 				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
@@ -2329,7 +2346,7 @@ carry out Inventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				say " [name entry]";
+				say " [fixed letter spacing][name entry formatted to 15 characters]";
 				if object entry is wielded and object entry is armament:
 					say " (wielded)";
 				if object entry is equipment and object entry is equipped:
@@ -2338,10 +2355,12 @@ carry out Inventorying:
 					say " (improved)";
 				say " x ";
 				let number be carried of object entry;
-				say "[number]([weight entry times number] lbs)";
+				let weighttxt be text;
+				let weightnum be weight entry times number;
+				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
 				increase weight by weight entry times number;
 				if newline is 0:
-					say "   --   ";
+					say "  --  ";
 					increase newline by 1;
 				otherwise:
 					say "[line break]";
