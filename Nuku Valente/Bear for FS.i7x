@@ -100,7 +100,7 @@ When Play begins:
 	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]shaggy furred[or]coarsely furred[or]honey-scented furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a short black tail hidden mostly by the sheer size of you. ";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]pink bulbous[or] ribbed [or]usually sheathed[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your your nose changes and darkens as you face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position. "; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "coarse shaggy, dark brown,  fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]

@@ -4,7 +4,7 @@ Version 3 of Orthas by Nuku Valente begins here.
 Section 0 - Orthas
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
-The description of Orthas is "[orthasdesc]".
+The description of Orthas is "[orthasNPCdesc]".
 The conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
@@ -12,7 +12,7 @@ the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of
 
 the fuckscene of orthas is "[orthasfuck]".
 
-to say orthadesc:
+to say orthasNPCdesc:
 	say "     Orthas is a black scaled dragon woman.  She stands about six and a half feet tall, with wings that are about three feet long each folded to her back.  She watches the area intently, her arms crossed half the time.  Behind her, a slender reptilian tail sways slowly.  Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.  Her overall build is quite strong, enough so that the clothes she's wearing have trouble fitting, making for an impressive guard.";
 
 
