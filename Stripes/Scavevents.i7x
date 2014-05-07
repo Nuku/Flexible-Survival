@@ -383,15 +383,15 @@ Instead of resolving a Free Milk:
 	now Free Milk is resolved;
 
 
-Section 9 - Mana from Heaven (by Wahn)
+Section 9 - Manna from Heaven (by Wahn)
 
-Mana from Heaven is a scavevent.
-The sarea of Mana from Heaven is "Outside";
+Manna from Heaven is a scavevent.
+The sarea of Manna from Heaven is "Outside";
 
-Instead of resolving a Mana from Heaven:
+Instead of resolving a Manna from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above.  It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her.  Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons.  Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands.  You quickly dash off with it before the harpies team up and attack you.";
 	increase carried of food by 1;
-	now Mana from Heaven is resolved;
+	now Manna from Heaven is resolved;
 
 
 Section 10 - Plains Scavenging (by Kaleem)
