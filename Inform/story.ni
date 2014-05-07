@@ -60,6 +60,23 @@ to clear the screen and hyperlink list:
 	now hyperlink list is {}.
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
+To say row of (N - number) spaces: (- spaces {N}; -).
+
+To decide what indexed text is (orig - text) formatted to (len - number) characters:
+	let T be an indexed text;
+	now T is orig;
+	let N be the number of characters in T;
+	if N < len:
+		repeat with Z running from 1 to len - N:
+			now T is "[T] ";
+[		let temp be number understood;
+		now number understood is len - N;
+		let sub be "[row of number understood spaces]";
+		replace the regular expression "$" in T with sub;
+		now number understood is temp;]
+	else if N > len:
+		replace the regular expression ".{[N - len]}$" in T with "";
+	decide on T.	
 
 To keypause:
 	(- KeyPause(); -)
@@ -669,9 +686,9 @@ Primary Lab is a room. "One of the few places in the city with working power, th
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
-Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of, wait no, that grass has not been mowed for a while. Just how long were you in that bunker anyway? The grass is just starting to creep up onto the pavement that leads further into the park, Northwards. The wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
+Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble started anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
-Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room. "Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 North of Park Entrance is Park Trail.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. South of Park Exit is Outside Exploration.
 East of Park Trail is Faint Trail.
@@ -1187,17 +1204,17 @@ Feral is a flag.
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Female Husky", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
-	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
+	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
-	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "feral sea dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake","Sierrasaur", "Feral Wolf", "Latex Wolf", "Ash Whelp", "Ash Dragator", "Manticore", "Mismatched Chimera", "Quilled Trousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Grizzly Bear", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 [corollary]
 marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "Feral Sea Dragon", "Feral Sea Dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
 
 Felinelist is a marker.	[list of feline infections]
 when play begins:
@@ -1217,7 +1234,7 @@ when play begins:
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
+	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur", "Sierrasaur" } to infections of Reptilelist;
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
@@ -1250,7 +1267,7 @@ when play begins:
 
 Internallist is a marker.	[list of infections w/internal male genitals]
 when play begins:
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "feral sea dragon", "feral sea dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
+	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Naga", "Sierrasaur" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
@@ -2304,10 +2321,11 @@ carry out Inventorying:
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
+		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				say "[link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
+				say "[variable letter spacing][link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
 				say " [link][bracket][bold type]L[roman type][close bracket][as]look [name entry][end link]";
 				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
@@ -2328,7 +2346,7 @@ carry out Inventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				say " [name entry]";
+				say " [fixed letter spacing][name entry formatted to 15 characters]";
 				if object entry is wielded and object entry is armament:
 					say " (wielded)";
 				if object entry is equipment and object entry is equipped:
@@ -2337,9 +2355,17 @@ carry out Inventorying:
 					say " (improved)";
 				say " x ";
 				let number be carried of object entry;
-				say "[number]([weight entry times number] lbs)";
+				let weighttxt be text;
+				let weightnum be weight entry times number;
+				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
 				increase weight by weight entry times number;
-				say "[line break]";
+				if newline is 0:
+					say "  --  ";
+					increase newline by 1;
+				otherwise:
+					say "[line break]";
+					now newline is 0;
+		if newline is 1, say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
 	if scenario is "Researcher" or nanitemeter > 0:
@@ -2410,26 +2436,32 @@ To Birth:
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
 	if snakehijack is false or "They Have Your Eyes" is listed in feats of player:
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is skinname of child;
-		otherwise:
-			now infection is skinname of player;
-		now skinname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is bodyname of child;
-		otherwise:
-			now infection is bodyname of player;
-		now bodyname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is tailname of child;
-		otherwise:
-			now infection is tailname of player;
-		now tailname of child is infection;
-		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-			now infection is facename of child;
-		otherwise:
-			now infection is facename of player;
-		now facename of child is infection;
+		if "Cheerbreeder" is listed in feats of player:
+			now skinname of child is "Football Wolfman";
+			now bodyname of child is "Football Wolfman";
+			now tailname of child is "Football Wolfman";
+			now facename of child is "Football Wolfman";	
+		otherwise: 
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is skinname of child;
+			otherwise:
+				now infection is skinname of player;
+			now skinname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is bodyname of child;
+			otherwise:
+				now infection is bodyname of player;
+			now bodyname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is tailname of child;
+			otherwise:
+				now infection is tailname of player;
+			now tailname of child is infection;
+			if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+				now infection is facename of child;
+			otherwise:
+				now infection is facename of player;
+			now facename of child is infection;
 	otherwise:
 		let infection be "Snake";
 		now skinname of child is infection;
@@ -2497,35 +2529,49 @@ To impregnate with (x - text):
 		stop the action;
 	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
 		stop the action;
-	if "Selective Mother" is listed in feats of player:
-		say "Do you wish to be impregnated with a/an [x] child?";
-		if the player consents:
-			let q be 1;
+	if "Cheerbreeder" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a Football Wolfman child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Football Wolfman";
+		now bodyname of child is "Football Wolfman";
+		now tailname of child is "Football Wolfman";
+		now facename of child is "Football Wolfman";
+	otherwise:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with a/an [x] child?";
+			if the player consents:
+				let q be 1;
+			otherwise:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		let infection be "";
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
 		otherwise:
-			say "You choose not to accept the seed.";
-			stop the action;
-	now gestation of child is a random number from 24 to 48;
-	let infection be "";
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is skinname of player;
-	now skinname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is bodyname of player;
-	now bodyname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is tailname of player;
-	now tailname of child is infection;
-	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
-		now infection is x;
-	otherwise:
-		now infection is facename of player;
-	now facename of child is infection;
+			now infection is skinname of player;
+		now skinname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is bodyname of player;
+		now bodyname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is tailname of player;
+		now tailname of child is infection;
+		if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+			now infection is x;
+		otherwise:
+			now infection is facename of player;
+		now facename of child is infection;
 	if cunts of player > 0:
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	otherwise:
