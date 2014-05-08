@@ -6408,6 +6408,7 @@ Include Satyr Frat by Wahn.
 
 
 [Monsters/Infections]
+Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.
 Include Goo Girl by Nuku Valente.
 Include Latex Fox by Nuku Valente.
