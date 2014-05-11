@@ -409,10 +409,10 @@ to say RaneTalk4:     [talk about fighting]
 Instead of fucking Rane:
 	setmonster "Blue Oni";
 	choose row monster from the table of random critters;		
-	if(lastfuck of Rane - turns < 5):
-		say "     Rane chuckles and says 'Quite frisky, aren't you? Give me a moment to catch my breath...'";
-	otherwise if hp of Rane is 5:
+	if hp of Rane < 7:
 		say "     [RaneFirstFuck]";
+	otherwise if(lastfuck of Rane - turns < 5):
+		say "     Rane chuckles and says 'Quite frisky, aren't you? Give me a moment to catch my breath...'";
 	otherwise:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
