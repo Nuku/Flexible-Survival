@@ -6351,6 +6351,7 @@ Include Dog House by Kaleem mcintyre.
 Include Tyr's Club by Kaleem mcintyre.
 Include Farm by Wahn.
 Include Camp Bravo by Wahn.
+Include Apocalypse Store by DrGryphon.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
