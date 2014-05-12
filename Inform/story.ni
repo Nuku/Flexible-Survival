@@ -3904,33 +3904,58 @@ This is the breast change rule:
 	if breasts of player is not breasts entry:
 		decrease breast size of player by 2;
 		follow the breast descr rule;
-		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or breasts of player is 0:
-			increase breasts of player by 2;
+		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or ( breasts of player is 0 and breasts entry > 0 ):
 			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+			increase breasts of player by 2;
 		otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
 			decrease breasts of player by 2;
 			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 		increase breast size of player by 2;
-	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		increase breast size of player by 1;
-		increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		decrease breast size of player by 1;
-		decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if breasts of player is 0:
+		let n be 0;		[do nothing]
+	otherwise if the sex entry is "Female" or the sex entry is "Both":
+		if breast size of player < breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		otherwise if breast size of player > breast size entry and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	otherwise if the sex entry is "Male":
+		let breasttarget be male breast size entry;
+		if "Breasts" is listed in feats of player:
+			if male breast size entry is 0, now breasttarget is breast size entry;
+		otherwise if "Male Preferred" is listed in feats of player or "Flat Chested" is listed in feats of player:
+			now breasttarget is 0;
+		if breast size of player < breasttarget:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breasttarget minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		otherwise if breast size of player > breasttarget and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size of player minus breasttarget ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
 
 To grow breasts by (x - a number):
-	if "Flat Chested" is listed in feats of player:
+	if "Flat Chested" is listed in feats of player or breast size of player >= 26:
 		continue the action;
 	follow the breast descr rule;
 	let oldbreast be descr;
@@ -5454,7 +5479,7 @@ This is the self examine rule:
 			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
 		otherwise:
 			if breasts of player is greater than 2:
-				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
 				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			otherwise:
 				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
