@@ -22,9 +22,13 @@ this is the rattymilk rule:
 	say "!  You take [special-style-2][dam][roman type] damage";
 	if "Female Preferred" is listed in feats of player:
 		say ".  You can feel a tingling in your groin that starts to flare up, but is then resisted until it subsides.";
-	otherwise if cock width of player is greater than 0:
+	otherwise if cock width of player is greater than 0 and cock width of player < 10:
 		increase cock width of player by a random number from 1 to 3;
+		if cock width of player > 10, now cock width of player is 10;
 		say ".  Your balls sing with pleasure as they grow heavier as the milk sends them into overproduction and your balls feel like they have become [ball size]!";
+	otherwise if cock width of player >= 10:
+		say ".  Your balls throb with pleasure as their sperm production goes into overdrive and you start dribbling sperm-rich precum from your pulsing erection.";
+		increase libido of player by 2;
 	otherwise:
 		say ".  You squirm in shock as you feel a new set of balls erupt from your body and a [cock of player] cock forming to go with them!";
 		increase cock width of player by a random number from 1 to 3;
@@ -118,7 +122,7 @@ to say slut rat victory:
 			otherwise:
 				say "     Your needy cunt is soon being stuffed and your body rocked as she crashes into you with practiced strokes, tickling at your most sensitive places with her rock hard member. You can feel the tool spurting thick gobs of fluid inside of you with every thrust, even though she hasn't even climaxed yet, your body tingling with pleasure.[impregchance]";
 		otherwise:
-			say "     The rat [if location of player is slutrat den]beat you[otherwise]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of player] form and cooes in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
+			say "     The rat [if location of player is slutrat den]beat you[otherwise]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of player] form and coos in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
 		say "     A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights.  [slut rat growth]";
 		say "     All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
 		if a random chance of 1 in 2 succeeds and slutrat den is unknown:
@@ -134,8 +138,12 @@ To say slut rat growth:
 		increase cock length of player by a random number from 2 to 4;
 		increase cock width of player by a random number from 1 to 3;
 		say "Your new balls feel like they have become [ball size] and you gain a small [cock of player] cock to go with them!";
+	otherwise if cock width of player >= 10:
+		say "Your balls throb with pleasure as their sperm production goes into overdrive and you start dribbling sperm-rich precum from your pulsing erection.";
+		increase libido of player by 2;
 	otherwise:
 		increase cock width of player by a random number from 1 to 3;
+		if cock width of player > 10, now cock width of player is 10;
 		say "Your balls feel like they have become [ball size]!";
 
 

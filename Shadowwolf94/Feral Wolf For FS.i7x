@@ -201,9 +201,12 @@ when play ends:
 				say "     Sandra, lustful for the big wolf, comes over to visit often.  Fang fucks her like a wild animal, stuffing his throbbing cock into her and keeping her coming back for more.  The kinky bunny also enjoys watching the wolf ravage you as well, finding the sight of it very arousing between her own turns beneath the alpha wolf.  The bunny's tummy grows large after one of these visits and Fang has her move in, adding her to his harem of lovers.  She eventually gives birth to a pair of wolf cubs with bunny ears and a tail.  These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 		otherwise:						[no Alpha Fang]
 			if humanity of player is less than 10:
-				say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate. Your mind is gone and now only the most primal of instincts remain.";
+				if cocks of player > 0:
+					say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate.  Your mind is gone and now only the most primal of instincts remain.";
+				otherwise:
+					say "Giving in to your feral nature, you prowl the city street, looking for a worthy male to mount and breed you.  Your mind is gone and now only the most primal of instincts remain.";
 			otherwise:
-				say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for your to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a grey muzzle.";
+				say "Returning to modern society proves to be hard for you.  Your feral tendencies make it hard for your to be accepted in large urban areas, so you move out to a more secluded area in the mountains.  You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a grey muzzle.";
 			
 Table of Game Objects(continued)
 name	desc	weight	object
