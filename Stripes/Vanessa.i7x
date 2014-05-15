@@ -5,7 +5,7 @@ Version 2 of Vanessa by Stripes begins here.
 
 Section 0 - Event
 
-Paratrooper is a situation.  Paratrooper is resolved.
+Paratrooper is a situation.  Paratrooper is resolved.		[unlocked after 3rd stage of 'Military presence']
 The sarea of Paratrooper is "Plains";
 when play begins:
 	add Paratrooper to badspots of girl;
@@ -231,6 +231,7 @@ to say Vanessasexmenu:
 	now title entry is "Nursing";
 	now sortorder entry is 5;
 	now description entry is "suckle some mare milk";
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

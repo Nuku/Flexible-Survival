@@ -74,7 +74,7 @@ When Play begins:
 	now defeated entry is "[dryad defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
-	now desc entry is "Walking through the red light district, you come across a road filled with trees. Many have had sex nearby, as you note the twisted shape of their branches, and the pinkish bark. One tree seems normalish enough, despite the enormous amounts of cum around its base. As you walk closer, the tree fades, and a dryad jumps in front of you.";[ Description of the creature when you encounter it.]
+	now desc entry is "Walking through the urban forest, you pass along a road filled with trees.  You can see the signs of many having had sex nearby.  One tree seems normalish enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches, and the pinkish tinge to its bark.  As you walk closer, the tree fades, and a dryad jumps in front of you.";	[ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"] 
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"] 
