@@ -11,6 +11,8 @@ fun feats is a featset.
 featunlock is a number that varies.	[linked to Dr Matt/Dr Mouse hospital quest]
 autofeatloading is a truth state that varies. autofeatloading is usually false.
 boosterfeats is a number that varies. boosterfeats is usually 0.
+muggerison is a truth state that varies.  muggerison is usually true.
+FeralBirths is a number that varies. FeralBirths is usually 0.
 
 The player has a number called featgained.
 
@@ -262,6 +264,8 @@ instead of addfeating the basic feats:
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you.";
 	if perception of player is greater than 14:
 		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops.";
+		if "Magpie Eyes" is listed in feats of player:
+			addfeat "Mugger" with "You want it all!  A flat drop rate increase based on perception you can (de)activate.";
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases.";
 		if "Expert Hunter" is listed in feats of player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature.";
@@ -351,9 +355,24 @@ This is the gainfeat rule:
 		if nam is "Vore Predator":
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command.  It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]).  It is used for adjusting vore-related game settings.";
 			now playercanvore is true;
+		if nam is "Mugger":
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception.  This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].";
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
 
-FeralBirths is a number that varies. FeralBirths is usually 0.
+
+muggering is an action applying to nothing.
+understand "mugger" as muggering.
+understand "mugging" as muggering.
+
+check muggering:
+	if "Mugger" is not listed in feats of player, say "INVALID! You don't possess that feat yet." instead;
+
+carry out muggering:
+	if muggerison is false:
+		now muggerison is true;
+	otherwise:
+		now muggerison is false;
+	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[otherwise]OFF[end if][roman type].  You will gain drop items [if muggerison is true]more frequently[otherwise]as normal[end if].";
 
 Feats ends here.

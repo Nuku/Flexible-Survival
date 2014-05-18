@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.7 - Modified for updated Alt-Vore]
+[Version 2.8 - Adding Mugger looting feat]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -1202,7 +1202,37 @@ to win:
 		if "Ringmaster" is not listed in feats of player:
 			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
 	increase the morale of the player by 1;
+	let randomdropchance be lootchance entry;
 	let z be 0;
+	if randomdropchance is 0:
+		now randomdropchance is 0;		[no drop = do nothing]
+	otherwise if randomdropchance is 100:
+		now randomdropchance is 100;	[always drops = no need to run all the maths]
+		say "You gain 1 x [loot entry]!";
+		add loot entry to the invent of the player;
+	otherwise:
+		if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 50:
+			now z is ( 100 - randomdropchance ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
+			increase randomdropchance by z;
+		otherwise if "Magpie Eyes" is listed in feats of player and randomdropchance is greater than 0:
+			now z is randomdropchance divided by 3;
+			increase randomdropchance by z;
+		if "Mugger" is listed in feats of player and muggerison is true:		[flat perception based increase]
+			if perception of player < 30:
+				increase randomdropchance by ( perception of player / 2 );
+				if randomdropchance > 100, now randomdropchance is 100;
+			otherwise:
+				increase randomdropchance by 15;
+			if randomdropchance > 100, now randomdropchance is 100;
+		let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
+		if yy > 30, now yy is 30;
+		if randomdropchance > 50, now yy is ( yy * ( 100 - randomdropchance ) ) divided by 100;
+		if randomdropchance <= 50, now yy is ( yy * randomdropchance ) divided by 100;
+		now randomdropchance is randomdropchance + yy;
+		if a random chance of randomdropchance in 100 succeeds:
+			say "You gain 1 x [loot entry]!";
+			add loot entry to the invent of the player;
+[	let z be 0;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
 		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
 		increase lootchance entry by z;
@@ -1217,8 +1247,8 @@ to win:
 		say "You gain 1 x [loot entry]!";
 		add loot entry to the invent of the player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-		decrease lootchance entry by z;
-	if fightoutcome is not 13:
+		decrease lootchance entry by z;		]
+	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:
 		vialchance (name entry);
 	let reward be lev entry * 2;
 	if lev entry > 2, increase reward by 1;
