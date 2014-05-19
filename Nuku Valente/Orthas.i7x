@@ -374,7 +374,7 @@ to say orthasdesc:
 	now monsterhp is 150 + ( debit * 6 );
 	now wdam entry is 10;
 	if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
-	say "[line break]     Orthas, the black dragon, steps forward to battle you.  She stands about six and a half feet tall and has a very athletic body.  Her bat-like wings are each about three feet long and folded onto her back at the moment.  She was large, F cup breasts, but they don't seem to affect her balance or ability to fight at all.  Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
+	say "[line break]     Orthas, the black dragon, steps forward to battle you.  She stands about six and a half feet tall and has a very athletic body.  Her bat-like wings are each about three feet long and folded onto her back at the moment.  And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all.  Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
 	if Susan is in Primary Lab:
 		say "     The dragoness is still rather woozy after the blow given to her by the doe.  While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
 		decrease monsterhp by 25 + debit;
