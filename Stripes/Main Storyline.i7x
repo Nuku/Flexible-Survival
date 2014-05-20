@@ -314,7 +314,7 @@ Instead of conversing the doctor matt:
 			increase freecred by tempnum;
 			now hp of doctor matt is 16;
 			increase score by (number of known fasttravel rooms) * 2;
-			say "     You have gained [special-style-1][tempnum][roman type] freecreds and now have [freecred] freecreds.";
+			say "     You have gained [special-style-1][tempnum][roman type] freecred and now have [freecred] freecred.";
 			if waiterhater is 0, wait for any key; [skips waiting if selected]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "     You'll notice that I was able to provide you with a sum of 'free credits.'  These are a form of currency alternative that the Zephyr conglomorate has implemented.  While my contacts with the military assure me that at least portions of the nation are still functioning, it is clear that the federal government is in disarray at the moment.  And while Zephyr seems intent on exploiting this to position themselves as the new driving force in the nation, if not the world, there is no question that they are prepared and in possession of considerable knowledge about the infection and the nanites.  So much so that I have to wonder about their role in all of this.'";
