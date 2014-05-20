@@ -290,6 +290,29 @@ Segment	Shift Text	Desc Text
 "rear"		"The black latex shifts over your ass, squeezing it until it's tight and sexy."														"Your rubbery rear is very tight and shapely."
 "full"		"latex skunk"	"You are a rather female anthropomorphic latex skunk."
 
+Section - Irish Cat
+
+Table icat - Irish Cat
+Segment	Shift Text	Desc Text
+"head"		"Your ears tickle a moment as something nudges against both from the side. A peek reveals tabby like stripes on pointed ears holding up a round green hat."		"You wear a green round hat that rests perfectly between your brown, white, and black furred ears. Your head is that of a tabby."
+"chest"		"Brown, white, and black fur sweeps out in bold stripes as your chest settles into two round breasts that jiggle slightly with your movement. A green outfit comes into being rapidly around you, concealing your newly reshaped breasts."	"Your striped breasts are concealed by a bright green jacket. You have a brown bow around your neck."
+"gut"		"Your belly rumbles as your lower torso becomes slender and well formed. Dark cloth covers it as a shirt seems to appear from nowhere."												"Your slender belly is covered in a dark shirt."
+"pelvis"		"Your groin feels like it suddenly caught fire with an intense pain. It fades almost immediately, becoming a warm pulsing pleasure as you grow a striped pussy."											"You have a furry striped, blue lipped, vagina."
+"left upper arm"	"Fur erupts from the pores of your upper left arm as you gain stripes."											"Your upper left arm is covered in soft furry stripes."
+"left forearm"	"Your left forearm is soon covered in soft feline fur as stripes run along it."											"Your left forearm is thin and covered in striped fur."
+"left hand"	"Thin claws erupt from your left hand as you gain thick pads and a general feline appearance."							"Your left hand is a mix between a human's and a cat's, covered in soft white fur and padded."
+"right upper arm"	"Fur erupts from the pores of your upper right arm as you gain stripes."											"Your upper right arm is covered in soft furry stripes."
+"right forearm"	"Your right forearm is soon covered in soft feline fur as stripes run along it."											"Your right forearm is thin and covered in striped fur."
+"right hand"	"Thin claws erupt from your right hand as you gain thick pads and a general feline appearance."							"Your right hand is a mix between a human's and a cat's, covered in soft white fur and padded."
+"left thigh"	"Your left thigh gains a feminine flair as the fur flows over it, becoming far more shapely."												"Your striped left thigh is very shapely and feminine."
+"left shin"	"Your left shin and calf become thinner and far more attractive as the fur flows over them."										"Your black left shin would be extremely attractive on someone else."
+"left foot"	"The fur sweeps down over your left foot, leaving a large feline pad in its place."												"Your left foot has become the striped paw of a feline."
+"right thigh"	"Your right thigh gains a feminine flair as the fur flows over it, becoming far more shapely."												"Your striped right thigh is very shapely and feminine."
+"right shin"	"Your right shin and calf become thinner and far more attractive as the fur flows over them."										"Your black right shin would be extremely attractive on someone else."
+"right foot"	"The fur sweeps down over your right foot, leaving a large feline pad in its place."												"Your right foot has become the striped paw of a feline."
+"rear"		"You grow a long and slinky striped feline tail even as a skirt flows smoothly to cover your hips."														"You have a long feline tail poking out of a green skirt."
+"full"		"irish cat"	"You have become a brown furred, with white and black stripes, cat girl. Perched between your triangular ears is a round cap of two shades of green. You have a stylish green jacket with a darker material worn beneath. A lighter shade of green rests on your tartan skirt, from which your long tail sways behind you. You have a brown ribbon fastened around your neck and the white fur of your hands gives the false appearance of gloves."
+
 Section - Gryphon
 
 Table Gryphon - Gryphon Shifts
@@ -1750,7 +1773,7 @@ Check feeding:
 	if the pregnant of player is greater than 20:
 		say "Your heavily pregnant breasts allow you to do this.";
 		continue the action;
-	if the tf table of pelvis is not table fox taur and the tf table of chest is not table phoenix and the tf table of chest is not table felitaur and the tf table of gut is not table felitaur and the feline torso is not a part of the rear, say "Your breasts don't have that property." instead;
+	if the tf table of pelvis is not table fox taur and the tf table of chest is not table phoenix  and the tf table of chest is not table icat and the tf table of chest is not table felitaur and the tf table of gut is not table felitaur and the feline torso is not a part of the rear, say "Your breasts don't have that property." instead;
 
 Carry out feeding:
 	if the feline torso is a part of the rear: [ felitaur milk ]
@@ -2847,6 +2870,7 @@ if the tf table of the pelvis is table wyvern, yes;
 if the tf table of the pelvis is table feral dragoness, yes;
 if the tf table of the pelvis is table rogue, yes;
 if the tf table of the pelvis is table vixen, yes;
+if the tf table of the pelvis is table icat, yes;
 if the tf table of the pelvis is table elf, yes;
 if the tf table of the pelvis is table echoen, yes;
 if the tf table of the pelvis is table husky, yes;
@@ -2928,6 +2952,7 @@ if the tf table of the pelvis is table sheep, no;
 if the tf table of the pelvis is table vixen, no;
 if the tf table of the pelvis is table elf, no;
 if the tf table of the pelvis is table fennec, no;
+if the tf table of the pelvis is table icat, no;
 if the tf table of the pelvis is table rogue, no;
 if the tf table of the pelvis is table harpy, no;
 if the tf table of the pelvis is table husky, no;
@@ -3083,6 +3108,9 @@ Section - Sex/Cat Girl
 [general kissing]
 
 Female sex of things is usually "[if the player is butch]     You lean her back and begin to piston into her juicy depths with increasing lust. Soon you are both trembling with building tension. As you spill your essence into her body, she squeals in delight and holds close to you for a few moments, holding your cock deep inside of her.[end if][if player is femme and player is not butch]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[end if][if the player is not butch and the player is not femme]Though you lack genitals of your own, you eagerly push her back and dive between her legs, licking and nibbling at her until she's crying with pleasure, rocking against your face as you work at her.[end if]";
+
+female sex of irish cat is "[if player is femme]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise if noun is compatible]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[otherwise]As she approaches you, the Irish Cat fills up a mug full of beer and shoves it into your hands as she slowly drops her miniskirt to the ground to reveal her dripping wet Aqua blue pussy to you. Her paws grip your shoulders softly as you drink the beer you feel her slowly plunge your cock deep into her wonderfully tight pussy, her vaginal walls tug and massage at your shaft as she continues to ride you slowly and hard. Really drawing it out as her double-C cup breasts bounced and moved softly inside of her outfit, the mug falling from your hands as you place them on her hips firmly. It is all just moments later when you cum hard into the Irish Cats aqua colored pussy and drain your load into her womb. After you finish blowing your load into her, she gives you a deep kiss on the lips as she orgasms all over your cock and balls. Getting off of you as she saunters off.[end if]";
+male sex of irish cat is "[if noun is female]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[end if]";
 male sex of things is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into his form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling him back against your rocking motions until you fill his bowels with thick gouts of seed, groaning with relief.[end if][if player is not butch]You approach the [printed name of noun] and reach for their cock, but they refuse you, instead grabbing at your hips and moving into position against you. Soon they are pistoning against you, rocking deeper with every stroke along your sensitive loins as you both sing in pleasure. You can feel his seed spraying deep into your waiting womb as your body shudders in climax.[end if]";
 female sex of momma nido is "[if player is butch][one of]The matronly looking creature looks at you as you approach with your jutting cock. She smiles and extends her hands to you. You move into her embrace eagerly, grinding your arrousal to her urgently. She makes soft soothing sounds at you as she leans you back slowly, then swats you firmly on the ass, [apostrophe]Naughty boy, you will not play with mother like that,[apostrophe] she chastises with a grin. She slides up against you and starts to stroke over your excited pole, bringing you to full hardness, then keeping you on the edge as she cooes into your ear. Your body trembles as your seed begins to spill wildly, spraying across the both of you before she finally releases you.[or]You sneak up behind [Noun], hoping to catch her by surprise. Just as you move to leap at her, her thick tail slices across the ground and you're sent sprawling. She is on you in a flash, pulling your rump into her lap and starting to smack it with the flesh of her palm, bringing shameful burning stinging to your butt as she dispenses maternal justice. Only after it feels like you're glowing red does she flip you over and cradle you like a baby against her curvaceous form, slowly stroking your member hard, then to bursting, letting you spray your hot cum across yourself as her soft fingers work at you.[at random][otherwise]You approach [Noun] and smile at her, and she smiles back. As if sensing your urge, she reaches for your hips and pulls you closer, [apostrophe]I know you're becoming a big girl, but I can not fulfill you that way. Lay back and I will put that fire out for a little while.[apostrophe] She soon has you on your back and her soft fingers are flicking over your netherlips, teasing and taunting you to a fever pitch as she plays you like an instrument. Your body goes rigid as you reach climax, then another, trembling under her unending assault on your cunt, smearing your flowing honey across your form as she works. Eventually, with your body limp and sated, she rises, looking satisfied.[end if]";
 female sex of coyote is "[if noun is compatible][one of][Noun] barks softly at you and you freeze in place as if struck with lightning. She approaches and runs her soft hands over your sides, crossing together at your cock. As she slowly strokes along it, your body begins to relax, the effects of her bark wearing off. You lean in and lick at her snout, and she returns the favor, then she shoves. You are soon on your back, with her settling on top of you, guiding your cock into her waiting wet depths. She begins to moan and pant, long tongue dangling, as she rides you energetically. You watch her many breasts jiggle with every bounce and reach, caressing and stroking at them until climax strikes. You grab for her hips and pull her down into a thrust, locking your knot in her and filling her as you both howl your pleasure.[or]You approach [noun] with a grin and bark at her. She yips in return, then goes to all fours, raising her tail at you and wagging her bottom. You need no further permission, and leap atop her, grabbing her shoulders and starting to pound into her body. Her curvy form bounces and jostles with each motion as the both of you groan and pant with delight. You slide in closer to her, letting your large balls slap against her as your hands explore the soft warmth of her many breasts. Your knot pops into her, making your motions shorter, sharper, then the bliss hits peak. You howl as you fire thick jets of seed into her waiting cunt.[at random][otherwise if noun is neuter and noun is not tauric]You feel uncertain a moment, approaching something that has the curves you lust for, and a cock as well, but the lust wins out. You grab [noun] and lick her cheek before you thrust right up into her without foreplay. She takes it with grace, grabbing your ass firmly and driving her thick cock against your belly. You rock against one another with increasing anxiety until you both release in powerful torrents. Seed flowing into her womb as hers splatters messily over your belly.[otherwise]You creep up on [Noun] from behind before hugging from behind and shoving your large cock into their waiting passage. You begin to pant as you casually rape them, though they seem to be growing warm to the attention as it goes on. They do make a delightful yelp as your swollen knot is forced into them, then your seed flows, rushing deep within their trembling body.[end if]";
@@ -4195,6 +4223,17 @@ The secondary attack description of a skunkbeast is "is covered by the thick mus
 The TF description of a skunkbeast is "is consumed entirely by fur, dropping to all fours and leaving only a".
 
 The skunk tail is a body part.  The body part origin of the skunk tail is "rear".  The shift of the skunk tail is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip.  A pair of white stripes travel up its length, completing the effect."  The desc of the skunk tail is "A thick and luscious fluffy skunk tail extends upwards from behind you."  The TF table of the skunk tail is Table 14.  The tag of the skunk tail is "tail".
+
+Section - Irish Cat
+
+An irish cat is a infection model.  The description of a irish cat is "This curvy lass has clear feline influences, covered in striped fur of brown, black, and white. She has triangular ears that twitch top her head to either side of a round green hat. A well pressed green jacket rests over a darker shaded shirt and a tartan skirt covers her hips, with her tail poking out the back end. She wields a tankard of some kind of booze that she is taking generous swigs from as she looks about eagerly for companions."  The TF table of a irish cat is Table icat.  Irish Cat is female.
+
+The move rate of a irish cat is 3.
+The attack rate of a irish cat is 5.
+The reflex of a irish cat is 11.
+The primary attack description of a irish cat is "raises a tankard into the air, swinging it dangerously before some of the golden stuff spills on".
+The TF description of a irish cat is "lets out a sudden cheer as their clothes turn bright green and a mug of booze appears out of nowhere in their rapidly fuzzing hands. Soon there is a leering example of an".
+
 
 Section - Latex Skunk
 
@@ -5547,6 +5586,9 @@ when play ends:
 			if tf table of head is table elf begin;
 				say "Feeling no more attachment to this boring world, you speak the words of a spell that you suddenly remember. The air ripples and shudders as a great portal opens before you, shimmering with heat. You step through without hesitation and a great feline beast waits patiently in a jungle. You mount the beast and he carries you back to your people swiftly. Play time was over, but you would not forget your time amongst the humans. You would suggest to the queen that your people take over a town of them. They would make delightful pets...";
 			end if;
+			if tf table of head is table icat begin;
+				say "As the military rolls into the city, you and the other Irish Cats all run to the nearby pub and enter inside of it. The sounds of every joyous and drunken cat’s draws the military to the pub and before they can do anything you hand them tankards of alcohol and egg them onto drinking. Hours pass as the drunk soldier’s screw many of your fellow sister’s and become Irish Cat’s themselves. Very few of the soldier’s remain human, a few of them even remain male with fur that matches your own with ears and a cats tail protruding from their bodies. The military’s operations seem to stay intact due to another military regiment being sent to the city and quarantining the city to keep this outbreak contained.";
+			end if;
 			if tf table of head is table hyena begin;
 				let u be the number of brave not compatible on-stage npc persons;
 				let j be the number of compatible on-stage npc persons;
@@ -5956,6 +5998,8 @@ Coyote Tail is a kind of clothing. "Wedged between two fur coats is a discarded 
 Stag Antlers is a kind of clothing. understand "Antlers" as stag antlers.  The clothing type of stag antlers is "headware". The description of Stag Antlers is "The antlers of some deer, removed by a hunter and set out to display. Oddly, it has a strap on it. You could wear it easily.". The tf table of stag antlers is table deer. The clothing type of stag antlers is "headwear". Stag Antlers is infectitem.
 
 Feathered Mask is a kind of clothing. understand "Mask" as Feathered Mask.  The clothing type of Feathered Mask is "headware". The description of Feathered Mask is "Blue feathers around a long beak. What an odd mask.". The tf table of Feathered Mask is table gryphon. The clothing type of Feathered Mask is "headwear". Feathered Mask is infectitem.
+
+Green Hat is a kind of clothing. understand "hat" as Green Hat.  The clothing type of Green Hat is "headware". The description of Green Hat is "A round cap that is bright green. It practically screams 'Irish' looking at it.". The tf table of Green Hat is table icat. Green Hat is infectitem. There is a Green Hat in downtown.
 
 Interesting Lipstick is a kind of clothing. understand "Lipstick" as Interesting Lipstick.  The clothing type of Interesting Lipstick is "headware". The description of Interesting Lipstick is "A shiny red metal cannister that can be turned to reveal silky smooth lipstick.". The tf table of Interesting Lipstick is table rogue. The clothing type of Interesting Lipstick is "headwear". Interesting Lipstick is infectitem.
 
