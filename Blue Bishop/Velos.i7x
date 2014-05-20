@@ -271,12 +271,12 @@ to say sgtalexmusing:
 	if vmusedone of diego is true:
 		say "     'W--... Y--... Ah--... Oooh--... DIEGOOOOOOOOOO!'  Such a yell is enough to send a jolt down everyone's spine.";
 		say "     'What? Who? Calm down, er... Sir?'";
-		say "     'I can't--... How coul--... No words!  You know how hard it is for me to have no--... Why--...?'  The serpent, apoplexic with rage, almost ties himself into knots before managing to spit out the question.";
+		say "     'I can't--... How coul--... No words!  You know how hard it is for me to have no--... Why--...?'  The serpent, apoplectic with rage, almost ties himself into knots before managing to spit out the question.";
 		say "     'Are... Are you alright?' the soldier asks cautiously.";
 		say "     'YOU'VE BEEN DUPED!  THE INFECTION'S MELTED YOUR BRAIN, YOU FOOL!'  You try really hard to calm Velos down, seeing as how his screaming is bound to attract unwanted attention.  'That dog doesn't want us to leave, I'll be trapped in this hellhole forever--This must be their most elaborate hallucination yet, if they're trying to break me this time it might just be working!'";
 		say "     'Oh god, I've seen faces like that before.  He's losing it.  Maybe I should get a gun?'";
 		say "     'Yessss, get a gun.  I'm going to need it when I see that mangy mutt again.'  Velos is about to go completely off the deep end by this point, white snake blatantly red with impotent rage, and you eventually have no choice but to force the serpent back inside you before other soldiers--doubtlessly drawn over by the sudden yelling--come to see what is up.  You wave them off, trying to be innocuous before you return to Alexander again.";
-	Otherwise:
+	otherwise:
 		say "     'W--... Y--... Ah--... Oooh--... AAAAAAAAAUGH!'  Such a yell is enough to send a jolt down everyone's spine.";
 		say "     'What the? Calm down, er... Sir?'";
 		say "     'I can't--... How coul--... No words!  You know how hard it is for me to have no--... Why--...?'";
@@ -393,7 +393,7 @@ to say alexmusing:
 	say "     'Ah, so you're getting a free ride and there's nothing my client can do about it.  And without any form of compensation either.'";
 	say "     'Oh? So my friend's your client now?'";
 	say "     'Someone has to look out for their best interests.'";
-	say "     'And I'm not?  It'd be pretty distressing for me if something bad happened to the person I'm dependant on.'";
+	say "     'And I'm not?  It'd be pretty distressing for me if something bad happened to the person I'm dependent on.'";
 	say "     'Very well.  How's that working out for you so far?'";
 	say "     'I'll have you know that I offer the best advice! ...That nobody happens to listens to.'";
 	say "     'Isn't that always the way?' Alex responds with a chuckle, who now seems a bit more comfortable with this situation.";
