@@ -8,7 +8,7 @@ messypigaltorgasm is a truth state that varies.  messypigaltorgasm is usually fa
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say messypigattack:
 	if cunts of player > 0:
 		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt.  The pig quickly pins you down with her heavy body.  She turns, and your vision is filled with large, fat, pig butt.  Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out!  Clearly this creature has an appetite for your sex!  She digs her snout deep as she laps at it greedily.  You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face.  Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell.  After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum";

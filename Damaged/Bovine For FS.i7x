@@ -7,7 +7,7 @@ Version 9 of Bovine For FS by Damaged begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 Mooing is a number that varies;
 CowKiller is a number that varies;
 Mooed is a number that varies;
@@ -273,8 +273,8 @@ to say bovineheat:
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Bovine";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usualy 7 ]
-	now heat duration entry is 400;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 400;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat..]

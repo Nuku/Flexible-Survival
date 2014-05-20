@@ -7,7 +7,7 @@ Version 9 of Herm Hyena For FS by Anony mouse begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say herm hyena attack:
 	if wslevel is not 1 and ( a random chance of ( wslevel * wslevel ) in 25 succeeds ):
 		say "     [if hp of player > 0]Having given up the fight[otherwise]Unable to continue the fight[end if], you are thrown to the ground by the victorious hyena as she gives a barking laugh.  Grabbing your head, she pulls your face to her crotch and shoves her manhood into your mouth.  The dark penis has a strong taste to it that is soon overwhelmed by the acrid flow of her piss into your mouth.  You try to pull back in surprise, but she's got too firm a grip on your head.  In the end, you're forced to swallow down her salty, bitter urine while she laughs mockingly.  When she's done, she makes it a point to smear her wet cock across your cheeks, further marking you with her scent.  It is quite some time before you're able to clear the taste of her from your mouth.";
@@ -64,7 +64,7 @@ When Play begins:
 	now body change entry is "[if matriarchowned is 1]toughens up as it transforms once again, returning to your form as the hyena matriarch[otherwise]you lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle[end if]";
 	now skin change entry is "[if matriarchowned is 1]it is covered in the shaggy, brown and spotted fur of a hyena again[otherwise]it is covered in shaggy brown fur[end if]";
 	now ass change entry is "it tightens noticeably and becomes attractively muscled";
-	now cock change entry is "[if matriarchowned is 1]it pulses and throbs with excitment.  It's flesh darkens to pitch black and a knot swells up at its base.  You can't help but look at it and see it for the fine breeding tool that it is[otherwise]it turns pitch black, a knot forming at the base[end if]";
+	now cock change entry is "[if matriarchowned is 1]it pulses and throbs with excitement.  It's flesh darkens to pitch black and a knot swells up at its base.  You can't help but look at it and see it for the fine breeding tool that it is[otherwise]it turns pitch black, a knot forming at the base[end if]";
 	now str entry is 16;
 	now dex entry is 18;
 	now sta entry is 14;					

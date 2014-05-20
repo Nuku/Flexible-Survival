@@ -224,7 +224,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fire Sprite";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "The fire sprite [one of]Prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defences, landing a sharp blow[at random]!";	[Text used when the monster succeeds on an attack]
+	now attack entry is "The fire sprite [one of]Prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defenses, landing a sharp blow[at random]!";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheFireSprite]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetoFireSprite]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[FireSpritedesc]";						[ Description of the creature when you encounter it. ]
@@ -235,7 +235,7 @@ When Play begins:
 	now cock entry is "glowing orange human-like";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body fills with heat as [if scalevalue of player > 1]the world seems to grows around you and[end if] your you take on a slim human-like shape";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you begin sweeting, heat seeming to radiate off you as you flesh takes on a smooth orange appearance";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "you begin sweating, heat seeming to radiate off you as you flesh takes on a smooth orange appearance";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes tight and firm";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to radiate with warmth, taking on a warm orange hue";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;					[ These are now the creature's stats... ]

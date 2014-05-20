@@ -64,7 +64,7 @@ to say skunkg defeat:
 	otherwise if a random number from 1 to 100 is greater than 2:
 		say "     The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	otherwise:
-		say "     The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realise your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		say "     The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realize your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 		infect "Skunk";
 
 to say skunk_defeat:
@@ -90,7 +90,7 @@ to say skunk_attack:
 	otherwise if Skunk_type is 1:
 		say "     The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
 	otherwise:
-		say "     The [one of]giant skunk[or]black and white beast[or]beastial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
+		say "     The [one of]giant skunk[or]black and white beast[or]bestial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
 
 to say sblvictorysex:
 	now fightoutcome is 11;
@@ -225,7 +225,7 @@ this is the skunkspray rule:
 		retaliate;				[follows the advanced model if alternate]
 
 
-to skspray:						[ignores defences, requires no hit, hum/lib check instead to resist]
+to skspray:						[ignores defenses, requires no hit, hum/lib check instead to resist]
 	choose row monster from table of random critters;
 	let checknum be ( humanity of player + ( level of player * 2 ) + ( plmindbonus * 2 ) - libido of player ) * 2;
 	if checknum > 180, now checknum is 180;
@@ -295,7 +295,7 @@ to say skunk heat end:
 
 
 to say skunk in heat:
-	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realise that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or] 'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
+	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realize that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or] 'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by a random number between 5 and 10;
 
