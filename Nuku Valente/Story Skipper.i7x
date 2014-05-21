@@ -1840,6 +1840,14 @@ To reciting2:
 						move Rane to shrine;
 					otherwise if hp of Rane is 7:
 						move Rane to Grey Abbey 2F;
+					if hp of Rane is 5:
+						now The blue Oni is unresolved;
+					otherwise:
+						now The blue Oni is resolved;
+					if hp of Rane > 4:
+						now Rooftop Rumble is resolved;
+					otherwise:
+						now Rooftop Rumble is unresolved;
 			-- 202: [thirst of Elijah]
 				if the player's command matches "[number]":
 					now thirst of Elijah is the number understood;						
