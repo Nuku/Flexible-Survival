@@ -123,8 +123,9 @@ Instead of resolving a Rooftop Rumble:
 					say "     The sounds of screaming, crashes and breaking bones fill the air until it grows silent once more. With all the strength you can manage, you try again to get to your feet, and just as you feel about to crash backwards yet again, something grips your arm tightly and in an instant you are hauled to your feet. Shaking your head and trying to get your bearings, your eyes finally regain focus, and realization dawns that you are looking at something very big and very blue.";
 					say "     [WaitLineBreak]";
 					say "[MeetRane]";
-					now hp of Rane is 5;					
+					now hp of Rane is 5;									
 					now Rooftop Rumble is resolved;					
+					now The blue Oni is unresolved;					
 				otherwise if fightoutcome >= 30:			[fled]			
 					say "     Taking your legs under your arms, you manage to slip out of the circle of gang-members and make a run for it, dashing back into the alley you came from. Making use of all the tricks you know, you manage shake your human attackers after a while, but are left gasping for air and with burning leg-muscles. You resolve not to return to that area in the future, as the whole 'blue devil' and gang situation seems a bit too hot to handle.";
 					now Rooftop Rumble is resolved;
@@ -139,6 +140,7 @@ Instead of resolving a Rooftop Rumble:
 					say "[MeetRane]";
 					now hp of Rane is 5;
 					now Rooftop Rumble is resolved;
+					now The blue Oni is unresolved;
 		otherwise:
 			say "     [line break]";
 			say "     Quickly deciding that the danger far outweighs any other consideration, you run back the way you came as fast as possible and continue running even after exiting the alleyway maze. After a few blocks you stop and catch your breath, no longer feeling the sensation of being watched. Resolving to put this nonsense all behind you, you press on, promising yourself not to return.";
@@ -162,7 +164,7 @@ to say MeetRane:
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
 		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";	
 
-The blue Oni is a situation. The level of The blue Oni is 5.
+The blue Oni is a situation. The level of The blue Oni is 5. The blue Oni is resolved;
 The sarea of The blue Oni is "Park";
 
 Instead of resolving a The blue Oni:
@@ -193,6 +195,7 @@ Instead of resolving a The blue Oni:
 		now hp of Rane is 6;
 		now battleground is "void";	[blocks a random fight after this]
 		move player to Shrine;
+	now The blue Oni is resolved;
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
