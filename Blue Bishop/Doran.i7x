@@ -13,7 +13,6 @@ dorgr is text that varies; [A DORGER IS YOU]
 dorlastfed is a number that varies. dorlastfed is usually 555; [Doran Last Fed Timer]
 dorgenreg is a truth state that varies; [Doran Gender Regard. Boolean, false = male, true = female]
 dorrolereg is a number that varies. dorrolereg is usually 2; [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
-dorlastsex is a number that varies. dorlastsex is usually 555; [Sex timer]
 dorroleint is a number that varies. dorroleint is usually 2; [Doran Role Intensity. Numeric. 0 = full dominant, 1-3 = neutral, 4 = full submissive]
 dordomtop is a number that varies; [Doran Dominance Topic. Numeric. 0 = Player didn't submit, 1 = player did submit, 2 Doran's voluntary dominance revealed]
 dorfirsttalk is a truth state that varies. dorfirsttalk is usually false; [Flag to detect if the player's talked to Doran at least once]
@@ -216,7 +215,7 @@ Section 1.2 - Doran Monster Sex Pool
 to say dorvic_1: [fuck the dragon]
 	say "     You suggest, rather bluntly, that he bend over and offer himself to you. The dragon, particularly excited by your blunt request, turns around, [if scalevalue of player < 4]lowering himself to the ground before [end if]hiking his tail over to leave your entry unexposed. Shapely ass revealed before you, he's already quite aroused by the prospect of your imminent abuse. Knotted, fleshy, and impressive dick and ample, scaled balls exposed to the open air.";
 	say "     'My victor ought not worry for my welfare, abuse me as much as it pleases them.' It's glaringly obvious by now that this beast is very heavily inclined towards submission. You expose your [cock size desc of player] dick[smn] before him, [if cock length of player > 17]a very eager look in his eyes at the prospect of getting[otherwise]clearly eager to be[end if] impaled by [if cocks of player > 1]one of those things[otherwise]such a thing[end if].";
-	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the head of[if cocks of player > 1]one of [end if] your [if cock length of player > 17]impressive [end if]tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
+	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if cocks of player > 1]one of [end if] your [if cock length of player > 17]impressive [end if]tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
 	if cock length of player > 17:
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' Is his reply, and with a bit of work and pre's slick lubrication his tight tailpipe grows progressively willing to take your sizeable tool[if cockname of player is listed in infections of knotlist], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	otherwise:
@@ -452,7 +451,7 @@ to say doransex:
 		say "     Your lack of proper sexual outlet makes the prospect of such an interaction with the dragon a little one-sided, and as such you decide against it.";
 	otherwise if dorfirsttalk is false:
 		say "     You should probably talk to the dragon first before you get down to any sort of business.";
-	otherwise if dorlastsex - turns <= 8:
+	otherwise if lastfuck of Doran - turns <= 8:
 		if dorrolereg is 0:
 			say "     'Oh, my [dorgr] is interested in another go, so soon? I'm afraid I'm still too tired from the last bout. I'll be more than eager to have my fun with them when I'm up to it.'";
 		otherwise:
@@ -562,7 +561,7 @@ to say dorsexprot: [Doran Sex Protocol]
 			otherwise if dorroleint < 2:
 				increase dorroleint by 1;
 			now dorneutroll is a random number between 1 and 2;
-		now dorlastsex is turns;
+		now lastfuck of Doran is turns;
 		if dorbb is true:
 			increase libido of player by 5;
 			if libido of player > 100:
@@ -587,7 +586,7 @@ an everyturn rule:
 			let x be 0;
 		otherwise:
 			continue the action;
-		if (dorautint is 1 and dorlastsex - turns < 9) or (dorautint is 2 and dorlastsex - turns < 17):
+		if (dorautint is 1 and lastfuck of Doran - turns < 9) or (dorautint is 2 and lastfuck of doran - turns < 17):
 			continue the action;	
 		now dorauto is true;
 		say "[dorsexprot]";
@@ -861,7 +860,7 @@ to say dordom_3: [Dom Doran oral sex]
 to say dorsub_1: [Sub Doran being fucked]
 	say "     You decide to [if dorroleint is 4]order[otherwise]ask[end if] the dragon to turn away and offer himself. Eager to please, he wheels around, [if scalevalue of player < 4]lowering himself to the ground before [end if]hiking his tail over to leave your entry unexposed. Shapely ass revealed before you, he's already quite aroused by the prospect of your imminent abuse, partially exposed tool staining the dirt with its pre.";
 	say "     '[one of]Ah[or]Oh[or]Mm[or]Very well[at random], [dorgr], [if dorroleint is 4][one of]completely ruin me[or]please abuse me[or]I ache for them[at random][otherwise][one of]don't hold back[or]I'm ready for anything they've got[or]I'm all theirs[at random][end if].' You expose your [cock size desc of player] dick[smn] before him, [if cock length of player > 17 or dorroleint is 4]a very eager, needy look in his eyes at the prospect of getting[otherwise]clearly eager to be[end if] impaled by [if cocks of player > 1]one of those things[otherwise]such a thing[end if].";
-	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] between the cheeks of his well-toned rear, scales immaculate and smooth under your touch. Slowly, you sink the head of[if cocks of player > 1]one of [end if] your [if cock length of player > 17]impressive [end if]tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
+	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] between the cheeks of his well-toned rear, scales immaculate and smooth under your touch. Slowly, you sink the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if cocks of player > 1]one of [end if] your [if cock length of player > 17]impressive [end if]tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
 	if cock length of player > 17:
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, [dorgr], further!' he would reply, and with a bit of work and pre's slick lubrication his tight tailpipe grows increasingly abiding to your sizeable tool[if cockname of player is listed in infections of knotlist], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	otherwise:

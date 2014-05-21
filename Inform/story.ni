@@ -1277,11 +1277,14 @@ Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
 	add { "Wyvern", "Dracovixentaur", "Dragontaur", "Feral Sea Dragoness", "Feral Sea Dragon", "Ash Whelp", "Ash Dragator", "Ash Drakenoid", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon" } to infections of Firebreathlist;
 
+Bluntlist is a marker.	[list of infections w/blunt cock]
+when play begins:
+	add { "black equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
-
 
 d18 is a number that varies.
 descr is text that varies.
@@ -4787,7 +4790,11 @@ This is the explore rule:
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
-	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+	if something is 0:
+		if battleground is "Outside":
+			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+		otherwise:
+			say "You decide to go exploring, but after three long hours of wandering around the [location of player] you return to the last relatively safe place you were at.";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
