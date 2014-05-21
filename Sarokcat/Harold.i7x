@@ -63,10 +63,21 @@ instead of conversing the Harold:
 		decrease carried of water bottle by 10;
 		decrease carried of food by 10;
 		say "     When you walk up to Harold to let him know that you have the food and water he needs the unicorn quickly waves a hand to hush you and then nods for you to follow him back behind the bar. Once you're in the back Harold has you unload the food and water over by a small generator powered refrigerator unit and then leads you back to the front.";
-		say "     'Thanks a lot for this, I really appreciate it.' Harold whickers gratefully and you nod to the unicorn before turning to head off about your way. 'Hey, hold up a sec.' Stopping you turn to look back at Harold and then find yourself being handed something by the stallion. 'It's not much, but I wanted you to have this. Looking at what the unicorn hands you, you find yourself in possession of a good number of freecreds. 'Some guys at Zephyr have been giving these out for nailing the beasts running around... so... yeah...' Wondering how Harold got a hold of these, considering that he's been at the bar the whole time, right before you shrug and then thank the other man for the gift. 'No problem!'";
+		say "     'Thanks a lot for this, I really appreciate it.' Harold whickers gratefully and you nod to the unicorn before turning to head off about your way. 'Hey, hold up a sec.' Stopping you turn to look back at Harold and then find yourself being handed something by the stallion. 'It's not much, but I wanted you to have this. Looking at what the unicorn hands you, you find yourself in possession of a good number of freecred. 'Some guys at Zephyr have been giving these out for nailing the beasts running around... so... yeah...' Wondering how Harold got a hold of these, considering that he's been at the bar the whole time, right before you shrug and then thank the other man for the gift. 'No problem!'";
 		increase freecred by 100;
 		increase xp of player by 12 + level of player;
 		now Haroldtalk is 2;
+	otherwise if femonyxq is 0 and girl is not banned and xp of Onyx >= 6 and xp of Onyx <= 8:
+		say "     As you approach bar, you're stricken with the notion that Onyx might be better suited here than at the Abbey, though you're not sure if all the ladies around might have an effect on him. Shall you raise the topic with him?";
+		if girl is warded:
+			say "     [italic type][bracket]Ward Caution: Will turn Onyx female[close bracket][roman type][line break]";
+		if player consents:
+			say "      You call the bartender over and ask about perhaps sheltering a friend of your who might be able to work for him. When asked why here, in particular, you suggest that it simply felt appropriate, given the name of the bar and the Onyx's equine infection.";
+			say "     'Well... [if haroldtalk is 3]We're kinda strapped for supplies here, but[otherwise]Since I like you,[end if] sure, bring them around and we'll see if there's anything that can be done. No harm in it, I suppose.' That worked out easily enough! With this in mind, you should probably return to Onyx and talk to him about the deal.";
+			now femonyxq is 1;
+		otherwise:
+			say "     You ward off the notion, returning your attention to whatever else you might've had in mind.";
+			now femonyxq is 99;
 	otherwise:
 		If a random chance of 1 in 3 succeeds and lastrandomharold - turns >= 8 and LastDrinkserved is not 250:
 			say "     'Hey, would you mind tasting this for me?' Harold asks just after pouring a pink tinged liquor from a pair of shakers he had been tossing about into a lone wine glass atop his bar.  Seeing the drink, and noting the funny way the liquid shimmers an almost pale white in underneath the flashing lights of the club, you glance up at the bartender, then back to the drink.  Shall you try it?'";

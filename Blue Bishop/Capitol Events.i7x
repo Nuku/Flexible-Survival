@@ -133,7 +133,7 @@ Failed Escape is a situation.
 The sarea of Failed Escape is "Capitol".
 
 Instead of resolving Failed Escape:
-	say "     You encounter what appears to be a crashed military helicopter.  Its equipment is completely roasted and its once-occupants are nowhere to be found.  Upon closer inspection, there appears to be the stains of some sexual fluids, long sinced dried and caked on the charred surfaces, perhaps inferring the fate of those who tried to escape on this.";
+	say "     You encounter what appears to be a crashed military helicopter.  Its equipment is completely roasted and its once-occupants are nowhere to be found.  Upon closer inspection, there appears to be the stains of some sexual fluids, long since dried and caked on the charred surfaces, perhaps inferring the fate of those who tried to escape on this.";
 	now Failed Escape is resolved;
 
 

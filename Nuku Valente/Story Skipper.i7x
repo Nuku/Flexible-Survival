@@ -24,7 +24,7 @@ To savetrix:
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixis is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
+The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
 
 The description of trixie is "[trixiedesc]";
 

@@ -120,7 +120,7 @@ An everyturn rule(this is the Warrior Payday rule):
 			say "You lack the funds to properly pay for warriors. Morale: -[x / 2]";
 		otherwise:
 			decrease creds of tribe of player by x;
-			say "You pay [x] freecreds for your military.";
+			say "You pay [x] freecred for your military.";
 
 Settler is a job.
 The validation of it is the Settlervailable rule.

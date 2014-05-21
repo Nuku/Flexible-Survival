@@ -3,7 +3,7 @@ Version 3 of Presets by Default Settings begins here.
 
 "Separates out the presets for the alternate starting method for easier modification by the player.
 To play within the Inform 7 compiler, press F5 or the green Go! button in the top left.
-To create your own .gblorb file to play in a seperate environment, press the purple Release button in the upper left.
+To create your own .gblorb file to play in a separate environment, press the purple Release button in the upper left.
 *** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***"
 
 Section Starting Variables
@@ -18,7 +18,7 @@ gspg is usually 1.
 NOTE: An invalid selection defaults to Female when the game starts.]
 
 gsms is usually 1.
-[gsms - denotes which base stat will recieve the bonus +5 as the players main stat.  The options are as follows:
+[gsms - denotes which base stat will receive the bonus +5 as the players main stat.  The options are as follows:
 1 - Strength
 2 - Dexterity
 3 - Stamina

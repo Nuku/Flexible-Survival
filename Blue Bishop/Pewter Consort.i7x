@@ -131,7 +131,7 @@ to pewterbind:
 			pewterdisengage;
 			if a random chance of 1 in 2 succeeds, pewterdisengage;
 			now tempnum is 0;
-		say "     You are submerged in the writhing flesh of several grey beasts. [one of]You briefly brake the surface, gasping for breath before you're pulled back into the sordid depths[or]The sensation of so much movement all around you is disorienting[or]The thick, masculine odour and the loud groans and gowls of sex are all that floods your senses[at random]. Presently, you're [pewtercharacterassess]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, lest you [bold type]A[roman type]bide these questionable circumstances.";				
+		say "     You are submerged in the writhing flesh of several grey beasts. [one of]You briefly brake the surface, gasping for breath before you're pulled back into the sordid depths[or]The sensation of so much movement all around you is disorienting[or]The thick, masculine odour and the loud groans and howls of sex are all that floods your senses[at random]. Presently, you're [pewtercharacterassess]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, lest you [bold type]A[roman type]bide these questionable circumstances.";				
 		[say "     Head: [pewterheadocc] Attend: [pewterheadvar1] Dick: [pewterheadvar2] || Torso: [pewterbodyocc] || Genital: Cock: [pewtercockocc] Attend: [pewtercockvar1] Dick: [pewtercockvar2] | Cunt: [pewtercuntocc] Attend: [pewtercuntvar1] Dick: [pewtercuntvar2] | Ass: [pewterassocc] Attend: [pewterassvar1] Dick: [pewterassvar2][line break]";] [Dev tool]
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
@@ -177,7 +177,7 @@ to pewterbind:
 						infect;
 					wait for any key;
 				otherwise:
-					say "     You finally manage to pull yourself free and climb out of the pool. Crawling away and catching your breath, the lot of them appear too preoccupied with attending to eachother to pursue you, allowing you to gather your things strewn about and get some additional distance. Eventually, you recover enough from the messy and exhausting ordeal to go about your business once more.";
+					say "     You finally manage to pull yourself free and climb out of the pool. Crawling away and catching your breath, the lot of them appear too preoccupied with attending to each other to pursue you, allowing you to gather your things strewn about and get some additional distance. Eventually, you recover enough from the messy and exhausting ordeal to go about your business once more.";
 					cleanboundmemory;
 					now trixieexit is 1;
 					follow the turnpass rule;
@@ -328,16 +328,16 @@ to say pewtercharacterassess:
 		if pewtercockocc > 0:
 			if pewtercockocc > 1:
 				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "[if pewtercockvar1 is 1]one[otherwise][pewtercockvar1][end if] of your dicks are sucked off, [if pewtercockvar2 is 1]one other[otherwise][pewtercockvar2] others[end if] being riden";
+					say "[if pewtercockvar1 is 1]one[otherwise][pewtercockvar1][end if] of your dicks are sucked off, [if pewtercockvar2 is 1]one other[otherwise][pewtercockvar2] others[end if] being ridden";
 				otherwise if pewtercockvar1 > 0:
 					say "[if pewtercockvar1 is 1]one[otherwise][pewtercockvar1][end if] of your dicks are sucked off";
 				otherwise:
-					say "[if pewtercockvar2 is 1]one[otherwise][pewtercockvar2][end if] of your dicks are being riden";
+					say "[if pewtercockvar2 is 1]one[otherwise][pewtercockvar2][end if] of your dicks are being ridden";
 			otherwise:
 				if pewtercockvar1 > 0:
 					say "[if cocks of player > 1]one of your dicks are[otherwise]your dick is[end if] sucked off";
 				otherwise:
-					say "[if cocks of player > 1]one of your dicks are[otherwise]your dick is[end if] being riden";
+					say "[if cocks of player > 1]one of your dicks are[otherwise]your dick is[end if] being ridden";
 			if (pewtercuntocc > 0 and pewterassocc is 0) or (pewtercuntocc is 0 and pewterassocc > 0):
 				say ", and ";
 			otherwise if pewtercuntocc is 0 and pewterassocc is 0:

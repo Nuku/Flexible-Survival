@@ -107,12 +107,12 @@ When Play begins:
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
 	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if hp of Rex > 9].  Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
-	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitgrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
+	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[or]pointed doggy[at random]";
 	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully, you realize why when you feel them shifting to the top of your head while the rest of your face changes to match the female retriever almost exactly";
-	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitgrade configuration with canine paws. The changes continue up your body like a wave, leaving your with a stunning hourglass figure and paw-like hands, much like that retriever bitch.";
+	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving your with a stunning hourglass figure and paw-like hands, much like that retriever bitch.";
 	now skin change entry is "as a thick coat of golden fur covers your entire body";
 	now ass change entry is "feminine curves overtake it leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input, looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
 	now cock change entry is "your entire manhood is consumed by a growing golden furred sheath, once covered you feel an unusual pressure while it changes into that of a male retriever";
@@ -188,7 +188,7 @@ when play ends:
 				say "	Once the military moves into the city you and Karen are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors";
 				say ". Thanks to the success of your business and the friendly and upbeat demeanor provided by your retriever infection, neither of you ever have difficulty finding company to follow home for the night.";
 				if cocks of player > 0:
-					say "	However, the nights you spend in eachother's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
+					say "	However, the nights you spend in each other's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
 			otherwise if hp of Rex > 9:
 				say "     Despite having submitted yourself to a life as Rex's pet, you manage to maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you to continue wearing your collar and occasionally giving you a refresher 'lesson' to ensure your training hasn't been forgotten.";
 			otherwise:

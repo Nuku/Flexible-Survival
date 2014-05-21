@@ -320,7 +320,7 @@ to say françoissex3:		[player performs oral]
 	if libido of François is 3:
 		say "     In the mood to return the favour to the friendly mutt, you let your hands wander downwards and slide them under his apron.  He moans softly as you take a hold of his plump sheath and heavy orbs keeps hidden behind the white cloth.  Leaning in, you give him an kiss, feeling his cock swelling and sliding further from the kitteny soft fur and downy feathers of its warm home.  Teasing the pointed tip, you break the kiss and start to move downwards.";
 		say "     'Are you sure, mon ami?  It is a little... strange...' he says with a bit of embarrassment at his transformed nature.  To reassure him, you smile and nod, flipping up his apron so you can get a good look at his waiting erection.  As you've felt in the past, its got a very feline shape, though also possessing a growing knot at its base.  What you could not tell before is that it has a mottled pattern of colours, ranging from dark black and browns to pinks to near white in a few spots.  Some of the changes are abrupt while others fade from one to another.  This patchwork colour scheme extends to his sheath as well, varying textures, patterns and colours of fur, and even a puff of red feathers at the underside of his ballsac.";
-		say "     It is certainly unusual, but given all you've seen and experienced in the city, it is certainly not unappealing.  If anything, the more you look at it, the cuter and more interesting its patterns appear.  Noticing that you've been staring at it overly long and the hybrid is starting to get embarassed again (as well as going soft), you take it in hand confidently, aim it towards your mouth and dive onto it.";
+		say "     It is certainly unusual, but given all you've seen and experienced in the city, it is certainly not unappealing.  If anything, the more you look at it, the cuter and more interesting its patterns appear.  Noticing that you've been staring at it overly long and the hybrid is starting to get embarrassed again (as well as going soft), you take it in hand confidently, aim it towards your mouth and dive onto it.";
 	otherwise:
 		say "     Wanting another go at the hybrid's unique cock, you let your hands wander downwards and slide them under his apron.  He moans softly, pulling you into a kiss, slipping his canine tongue into your mouth.  His talented tongue fences agilely with yours while you grope him, playing with his soft sheath and coaxing him to full erection.  Once you've gotten him ready, you break off the kiss together and lower yourself in front of him.  Smiling, he pauses only briefly before pulling up his apron to expose himself to you, letting you at his very unique and interesting cock.";
 		say "     You let your eyes run over unusual, mottled patterns of its flesh for a moment before leaning forward and running your tongue slowly along the feline length.  He moans softly and his cock twitches, a dribble of precum running down.  This first taste has a decidedly [one of]canine[or]feline[or]avian[as decreasingly likely outcomes] flavour that is quite pleasant.  You give him several more licks while caressing his ballsac, stroking the soft fur and feathers covering it.  After your playful taste test, you drag your tongue from base to tip along its sensitive underside before aiming his cock into your mouth and sucking down on it.";
@@ -776,7 +776,7 @@ to say CrèmeAbondanteGet:
 		if "Male Preferred" is listed in feats of player or "Passing Grade Chest" is listed in feats of player or "One Pair" is listed in feats of player:
 			say "	When your stomach finally stops it's groaning, you look up to see François staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		otherwise:
-			say "     François cocks his head to the side as he watches you chest swell, 'I have a feeling this will be a popular dish among les femmes' He says while eying your growing mammaries 'I am glad I was not the first to test it though.'";
+			say "     François cocks his head to the side as he watches you chest swell, 'I have a feeling this will be a popular dish among les femmes' He says while eyeing your growing mammaries 'I am glad I was not the first to test it though.'";
 	otherwise:
 		say "	Accepting the treat from François, he looks quite disappointed as you stash the snack away in you bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		increase carried of Crème Abondante by 1;
@@ -797,11 +797,11 @@ to say LollicockGet:
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "a rumbling builds in your belly, clearly your body doesn't agree with something about the treat.";
 		decrease hunger of player by 5;
@@ -980,11 +980,11 @@ to say Lollicock Use:
 				now cock length of player is 5;
 				now cock width of player is 4;
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 			otherwise:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now cockname of player is "candy cock";
-				now cock of player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
+				now cock of player is "[one of]candy[or]confectionery[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		otherwise:
 			say "you are filled with a pleasant warmth, a subtle afterglow filling your body after the tasty treat.";
 	decrease hunger of player by 5;

@@ -716,4 +716,3 @@ Instead of resolving the lost territory:
 	say "You get the sudden good news. Some land that was though to be infested with hostile mutants has been reported as abandoned by your scouts. Your people claim it eagerly.";
 	increase the territory of tribe of player by a random number from 2 to 6;
 	now lost territory is resolved;
-

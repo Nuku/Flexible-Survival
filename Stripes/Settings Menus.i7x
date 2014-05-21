@@ -16,7 +16,7 @@ carry out trixiecheating:
 	let Automatic Survival be "Automatic Survival";
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
-	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It don't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
+	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It doesn't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
 	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Booster Feats[roman type] gives you one additional basic and fun feats.  [bold type]Play On[roman type] removes the time limit to the game.  [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 	let trixieexit be 0;
 	while trixieexit is 0:

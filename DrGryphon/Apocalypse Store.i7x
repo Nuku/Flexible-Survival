@@ -10,7 +10,7 @@ instead of resolving Clothing Store:
 	say "Despite the stores destroyed appearance, you decide to have a look around inside anyway.";
 	increase carried of Apocalypse Mini-Skirt by 1;
 	increase carried of Apocalypse Shorts by 1;
-	increase carried of Apocalypse Hoody by 1;
+	increase carried of Apocalypse Hoodie by 1;
 	increase carried of Apocalypse Scarf by 1;
 	say "After a short while of searching, you manage to recover a few articles of still usable clothing. Not seeing anything else of interest in the store, you decide to return to the library.";
 	increase score by 5;
@@ -20,7 +20,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Apocalypse Mini-Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the  current situation."	1	Apocalypse Mini-Skirt
 "Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the  current situation."	1	Apocalypse Shorts
-"Apocalypse Hoody"	"A large zippable hoody that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoody
+"Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
 "Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation ."	1	Apocalypse Scarf
 
 Apocalypse Mini-Skirt is a grab object.
@@ -43,15 +43,15 @@ The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts cov
 The slot of Apocalypse Shorts is "body".
 the scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on the item of clothing.";  
 
-Apocalypse Hoody is a grab object.
-Apocalypse Hoody is equipment.
+Apocalypse Hoodie is a grab object.
+Apocalypse Hoodie is equipment.
 It is not temporary.
-The AC of Apocalypse Hoody is 0.
-The effectiveness of Apocalypse Hoody is 0.
-The placement of Apocalypse Hoody is "body". 
-The descmod of Apocalypse Hoody is "A torn and burnt hoody covers your [bodydesc of player] body.".
-The slot of Apocalypse Hoody is "body".
-the scent of Apocalypse Hoody is "There is a faint smell of smoke lingering on the item of clothing.";  
+The AC of Apocalypse Hoodie is 0.
+The effectiveness of Apocalypse Hoodie is 0.
+The placement of Apocalypse Hoodie is "body". 
+The descmod of Apocalypse Hoodie is "A torn and burnt hoodie covers your [bodydesc of player] body.".
+The slot of Apocalypse Hoodie is "body".
+the scent of Apocalypse Hoodie is "There is a faint smell of smoke lingering on the item of clothing.";  
 
 Apocalypse Scarf is a grab object.
 Apocalypse Scarf is equipment.
