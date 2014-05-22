@@ -215,7 +215,7 @@ Down of VacantUpstairs is MainRoom.
 
 Section 9 – Glass Window
 
-The description of Glass Window is "A glass window illuminates the [if daytimer is day]sunlight[otherwise]moonlight[end if] streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?";
+The description of Glass Window is "A glass window illuminates the [if daytimer is day]su[otherwise]moo[end if]nlight streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?";
 
 Instead of sniffing glass window:
 	say "The glass window smells like glass, grass, light and night.";
