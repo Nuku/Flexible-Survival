@@ -278,7 +278,7 @@ to say medeaadjustments:
 							if heatlevel is 3:
 								now num is num + ( num / 4 );
 							say ".  I'd estimate this particular round of heat will [if heatlevel is 3]roughly [end if]last ";
-							guestimate time at num;
+							guesstimate time at num;
 							say ".'";
 					otherwise:
 						say "     'You are not currently in heat, though you are on an active estrus cycle,' she says with a hint of disappointment.  'When it starts up again, it will be marked by increased arousal and a higher fertility rate.'  Saying this does seem to perk her back up a little[if defaultheat is false].  In your particular case, you are on a [cockname of player] heat cycle[otherwise].  In your particular case, you are on a fairly common version of the heat cycle the infected go through[end if] which should reach estrus ";
@@ -289,7 +289,7 @@ to say medeaadjustments:
 							if heatlevel is 3:
 								now num is num - ( num / 5 );
 							say "in [if heatlevel is 3]roughly [end if]";
-							guestimate time at num;
+							guesstimate time at num;
 							say ".'";
 						otherwise if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
 							say "at any moment.'";
@@ -299,7 +299,7 @@ to say medeaadjustments:
 							if heatlevel is 3:
 								now num is num - ( num / 5 );
 							say "in [if heatlevel is 3]roughly [end if]";
-							guestimate time at num;
+							guesstimate time at num;
 							say ".'";
 				otherwise if nam is "Discuss heat control":
 					if lust of Medea is 0:
