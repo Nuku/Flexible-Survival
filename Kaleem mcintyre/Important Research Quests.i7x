@@ -141,7 +141,7 @@ Instead of resolving Important Treasure:
 								say "'If it wasn't for Greg...I'd think I have...' You press your head up over the top of the iguana's chin to stop him before he could finish that statement. Whatever the other was going to say...it wasn't worth voicing since it was lost in a past best left forgotten.";
 								if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 								if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
-								say "Minutes later the iguana's partner shows up and you hand the no longer shivering reptile back to the older raptor. You don't stick around to hear what was completely said between the two, but you do hear something about [']choices['] and [']future['] and [']a better way than this['] before  you can no longer hear the voices of the two reptiles.";
+								say "Minutes later the iguana's partner shows up and you hand the no longer shivering reptile back to the older raptor. You don't stick around to hear what was completely said between the two, but you do hear something about [']choices['] and [']future['] and [']a better way than this['] before you can no longer hear the voices of the two reptiles.";
 								now opcl is 4;
 								increase score by 20;
 							otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -345,7 +345,7 @@ Instead of resolving a Ouroboros:
 	if omq < 10:
 		say "Walking through the somewhat quiet halls of the museum you find yourself passing by a impressive looking medallion with a snake circled around itself nibbling at its tail. A coy smile tugs at your lips as you wonder why someone would draw a serpent doing such a thing before you shrug and then move on about your way.";
 	otherwise if omq is 10:
-		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea. But then again wouldn't a good fight make this capper all more interesting? (Y=Fight Wolverine, N=Think up a plan)[line break]";
+		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea. But then again wouldn't a good fight make this caper all more interesting? (Y=Fight Wolverine, N=Think up a plan)[line break]";
 		if player consents:
 			say "Deciding just to plow your way through you step up to the wolverine and tell it that you'll be taking that medallion back behind him. The dark eyes of the guard animal narrow at you dangerously and the wolverine is quick to step up to meet your challenge![line break]";
 			challenge "Wolverine Guard";
