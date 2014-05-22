@@ -903,13 +903,13 @@ Before NanofabCreating: [checks that you have everything needed to build the nan
 		say "You are short a method of changing the nanites code.  Without a [bold type]Reprogramming Device[roman type] you'll never build a Nanofabricator.  ";
 		stop the action; [fails if item not in inventory]
 	if Infection Scanner is not owned: [replace with better materials if desired]
-		say "Without a way to tell what the nanites are currently configured for, you won't be able to tell how/if reprogramming has occured propperly.  You'll an [bold type]Infection Scanner[roman type] of some sort.  Sounds like the sort of thing a lab might have, maybe you should look around Trevor Labs.";
+		say "Without a way to tell what the nanites are currently configured for, you won't be able to tell how/if reprogramming has occurred properly.  You'll an [bold type]Infection Scanner[roman type] of some sort.  Sounds like the sort of thing a lab might have, maybe you should look around Trevor Labs.";
 		stop the action; [fails if item not in inventory]
 	if Nanite Collector is not owned: [replace with better materials if desired]
 		say "You need something to sort and control where the nanites move.  Perhaps some sort of [bold type]Nanite Collector[roman type] would work.  Maybe someone at Zephyr Inc could help you find one.";
 		stop the action; [fails if item not in inventory]
 	if carried of medkit is not greater than 2: [replace with better materials if desired]
-		say "You need something to hold the Nanofabricator together.  Perhaps the bandages from a [bold type]Medkit[roman type] would work.  Althought it might take more than one, you should get a few just to be safe.";
+		say "You need something to hold the Nanofabricator together.  Perhaps the bandages from a [bold type]Medkit[roman type] would work.  Although it might take more than one, you should get a few just to be safe.";
 		stop the action; [fails if item not in inventory]
 
 
@@ -918,7 +918,7 @@ Carry out NanofabCreating:
 	delete medkit;
 	say "You move some junk around and setup the Nanite Collector to hold your gathered nanites.  ";
 	delete Nanite Collector;
-	say "You mount the Infection Scanner on the side of the colelctor.  ";
+	say "You mount the Infection Scanner on the side of the collector.  ";
 	delete infection scanner;
 	say "Next, you position the Reprogramming Device, granting you the ability to safely reconfigure the nanites to suit your purposes.  ";
 	delete reprogramming device;
@@ -1002,7 +1002,7 @@ Carry out Nanofeeding something(called x):
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
 		Choose a blank row from Table of Fabbable Items;
 		now object entry is the noun;[important bit, adds new stuff to fabbable item list]
-		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be frabricated with sufficent material.[roman type][line break]";
+		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be fabricated with sufficient material.[roman type][line break]";
 		delete x;
 	otherwise: [learning failed, consume item]
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Consuming input for raw material.[roman type][line break]";
@@ -2481,9 +2481,9 @@ To Birth:
 		otherwise:
 			say "Your child pushes free of the shell enclosing it and you gather it into your arms.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[otherwise], further strengthening their bond to you[end if].  They have not been left unchanged by their incubation within you[if wwvar is 1].  They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin[otherwise].  They pop free and stand, smiling.  With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin[end if]";
 		if snakehijack is true and "They Have Your Eyes" is listed in feats of player:
-			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitmiate offspring.";
+			say ".  It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		otherwise if snakehijack is true:
-			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legimate offspring, a twisted fate for such a creature.";
+			say ".  It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
 		otherwise:
 			say ".";
 		if wwvar is 1:
@@ -2968,7 +2968,7 @@ definition: Daytimer is night:
 	otherwise:
 		yes;
 
-to guestimate time at (x - a number):
+to guesstimate time at (x - a number):
 	if x < 0:
 		say "ERROR: Negative time period.";
 	otherwise if x is 0:
@@ -3027,7 +3027,7 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about somthing.  There is a sudden pressure at your chest as your feel the curning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissapointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		otherwise if "Junk Food Junky" is listed in feats of player:
 			if hunger of player is greater than 14:
 				increase score by 5;
@@ -3120,7 +3120,7 @@ To process (X - a grab object):
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			decrease thirst of player by 30;
 			if thirst of player is less than 0, now thirst of player is 0;
-			say "Awesome!  Soda!  You it down, a delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
+			say "Awesome!  Soda!  You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
 			if morale of player is less than 0:
 				increase morale of player by 75;
 				if morale of player is greater than 0, now morale of player is 0;
@@ -5329,7 +5329,7 @@ To say ball size:
 to say cum load size of ( x - a person ):
 	if cock width of x > 0:
 		if cock width of x is less than 3:
-			say "[one of]piddling[or]tiny[or]miniscule[or]feeble[or]small[or]meager[at random]";
+			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
 		otherwise if cock width of x is less than 6:
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
 		otherwise if cock width of x is less than 12:
@@ -6212,7 +6212,7 @@ Carry out milking:
 				add "gryphon milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Shemale Smooth Collie":
-		say "Moving your hands to touch and caress your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] furred breasts, you wake deep maternal urges in your canine body. Images of a whole litter of your own puppies nuzzling your breasts fill your mind while you touch yourself, panting in arousal and need. It doesn't take long till small beads of milk form at the nipples as your breasts get ready to feed your imaginary brood. You're lost in the pleasureable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
+		say "Moving your hands to touch and caress your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] furred breasts, you wake deep maternal urges in your canine body. Images of a whole litter of your own puppies nuzzling your breasts fill your mind while you touch yourself, panting in arousal and need. It doesn't take long till small beads of milk form at the nipples as your breasts get ready to feed your imaginary brood. You're lost in the pleasurable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
 		repeat with T running from one to the breasts of the player:
 			add "dog milk" to the invent of the player;
 		if breast size of player > 8:
@@ -6221,7 +6221,7 @@ Carry out milking:
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Panther Taur":
 		if breasts of player > 2:
-			say "Running a hand-paw over your upper body's [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you, then lie on your side and reach down to give your lower breasts a caress too. Touching yourself like this wakes deep maternal urges in your panther body, calling to mind a whole litter of cute panther kits suckling at your breasts. It doesn't take long till small beads of milk form at the nipples as your body gets ready to feed your imaginary brood. You're lost in the pleasureable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
+			say "Running a hand-paw over your upper body's [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you, then lie on your side and reach down to give your lower breasts a caress too. Touching yourself like this wakes deep maternal urges in your panther body, calling to mind a whole litter of cute panther kits suckling at your breasts. It doesn't take long till small beads of milk form at the nipples as your body gets ready to feed your imaginary brood. You're lost in the pleasurable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
 		otherwise:
 			say "Running your hand-paws over your two [breast size desc of player] black-furred breasts, you revel in the pleasant sensations that gives you. Caressing their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the rich panther milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own little panther kits to suckle on your breasts.";		
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
@@ -6231,14 +6231,14 @@ Carry out milking:
 				add "panther milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "cheetah woman":
-		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] feline breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your cheetah body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it, panting at the pleasureable feelings this gives you.";
+		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] feline breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your cheetah body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it, panting at the pleasurable feelings this gives you.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "cheetah milk" to the invent of the player;
 		if breast size of player > 8:
 			add "cheetah milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Chocolate Lab":
-		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white cocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavoured milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
+		say "Moving your hands to caress the soft curves of your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] breasts, you revel in the sensations that wakes in you. Soon they start leaking white chocolate syrup, revealing to anyone watching that your chocolate body has a creamy filling. It takes little effort to draw some white chocolate flavoured milk from your breasts, carefully squirting it into an empty water bottle before packing the now milk-filled container away.";
 		repeat with T running from one to the breasts of the player:
 			add "chocolate milk" to the invent of the player;
 		if breast size of player > 8:
@@ -6246,7 +6246,7 @@ Carry out milking:
 				add "chocolate milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Vixen Nurse":
-		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] silvery furred breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your vulpine body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it and gather a small amount of milk, panting at the pleasureable feelings this gives you.";
+		say "Using both hands, you cup your [if breasts of player is 2]two[otherwise][breasts of player][end if] [breast size desc of player] silvery furred breasts, caressing their sensitive curves. Touching yourself like this wakes deep maternal urges in your vulpine body, calling to mind a whole litter of cute little kits suckling at your breasts. This leads to small beads of milk forming at their nipples within moments, your transformed body almost instantly getting ready to provide sustenance for your imaginary offspring. Quickly grabbing an empty plastic bottle, you gently milk yourself into it and gather a small amount of milk, panting at the pleasurable feelings this gives you.";
 		add "vixen milk" to the invent of the player;
 		if breast size of player > 8:
 			add "vixen milk" to the invent of the player;
@@ -6280,7 +6280,7 @@ Carry out milking:
 				add "cow milk" to invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Margay":
-		say "You start lactating shortly after you begin playing with your breasts. Besides the pleasureable senstations that wakes inside yourself, you're also rewarded with a slow but steady flow of milk as you pinch your nipples. You gather your milk into bottles and store it away in you pack.";
+		say "You start lactating shortly after you begin playing with your breasts. Besides the pleasurable sensations that wakes inside yourself, you're also rewarded with a slow but steady flow of milk as you pinch your nipples. You gather your milk into bottles and store it away in you pack.";
 		let Z be square root of ( breasts of player * breast size of player );
 		repeat with T running from one to Z:
 			increase carried of margay milk by 1;
@@ -7388,7 +7388,7 @@ to say gsopt_start:
 		say "Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able.  While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire.  Fearing to exit, you remained in the safety of the bunker until it was peaceful again.  You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type].";
 		say "Still... how bad could it be?";
 	otherwise if scenario is "Researcher":
-		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordonned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go.  Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos.  Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor.  The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	say "No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";

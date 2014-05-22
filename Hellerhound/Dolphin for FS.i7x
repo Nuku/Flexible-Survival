@@ -13,7 +13,7 @@ when play begins:
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 dolphindefeat is a number that varies.
 dolphinconsent is a number that varies.
 dolphinwantmate is a number that varies.
