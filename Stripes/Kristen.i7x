@@ -1,5 +1,5 @@
 Version 2 of Kristen by Stripes begins here.
-[ Version 2.2 - Infection step 3]
+[ Version 2.3 - Infection final ]
 "Adds an Arctic Fox named Kristen to the Flexible Survival game."
 
 Section 1 - Event
@@ -54,7 +54,7 @@ Instead of resolving FindingKristen:
 
 Section 2 - Kristen's Hideout
 
-Kristen's Hideout is a room. It is fasttravel. It is private.
+Kristen's Hideout is a room.  It is fasttravel.  It is private.  It is sleepsafe.
 The description of Kristen's Hideout is "[krishideoutdesc]";
 
 the scent of Kristen's Hideout is "[krishideoutscent]";
@@ -97,15 +97,14 @@ to say krishideoutdesc:
 		now hp of Kristen is 15;
 		move player to Grey Abbey Library;
 		now lastfuck of Kristen is turns;
-[	otherwise if hp of Kristen is 15:
+	otherwise if hp of Kristen is 15:
 		say "[kristentf_phase4]";
 		attempttowait;
 		now hp of Kristen is 16;
-		move player to Grey Abbey Library;
-		now lastfuck of Kristen is turns;	]
-	otherwise if hp of Kristen is 15:
-		say "[bracket]Location temporarily closed from this point, but more to come. - The Mgmt[close bracket][line break]";
-		move player to Grey Abbey Library;
+		move Kristen to Private club room;
+		move player to Private club room;
+	otherwise:
+		say "     The second floor apartment which Kristen had been staying in since the outbreak is vacant now.  It is fairly small, and while nicely furnished, holds little of practical use given your current situation.  While may be a safe and comfortable place to rest, it doesn't seem nearly as secure as the bunker is.";
 
 
 Section 2 - Kristen
@@ -133,10 +132,14 @@ to say kristendesc:
 		say "DEBUG -> HP: [hp of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[otherwise]N[end if], Msg 2: [if kristenmsg2 is true]Y[otherwise]N[end if], Msg 3: [if kristenmsg3 is true]Y[otherwise]N[end if], Msg 4: [if kristenmsg4 is true]Y[otherwise]N[end if] <- DEBUG[line break]";		
 	if hp of Kristen < 2:
 		say "ERROR-Kristen-[hp of Kristen]L: You should be able to find me yet.";
-	otherwise:
+	otherwise if hp of Kristen < 12:
 		say "     Still apparently unchanged, this Caucasian woman stands about 5 foot 10 inches.  She has a slender figure with just the right amount of sexy curves to give her feminine allure.  She's wearing a white cotton shirt and black jeans.  She has fair skin with only a light tan, partially from staying hidden indoors a lot lately as well as her frequent use of sunscreen.  She's got shoulder-length dirty blonde hair which she wears in a ponytail.  Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
-
-
+	otherwise if hp of Kristen < 16:
+		say "ERROR-Kristen-[hp of Kristen]L: You shouldn't be able to see me right now.";
+	otherwise:
+		say "     The now vulpine Kristen is a sensually beautiful vixen.  While showing signs of being an arctic fox like Janice with her snowy white fur, she's also got the black gloves and socks of a more traditional fox.  Her ears and the tip of her fluffy tail are also charcoal black.  It gives her quite the [if libido of Kristen is 4]sexy[otherwise]elegant[end if] appearance, adding to her exotic allure.  She's also continuing to wear the traitorous blouse that started this transformation, [if libido of Kristen is 2]worn over[otherwise if libido of Kristen is 3]worn only partly buttoned up to tantalize with[otherwise]left open to show off[end if] her slightly fuller and perkier breasts.";
+			
+			
 Section 3 - Conversation Tree
 
 Instead of conversing the Kristen:
@@ -170,8 +173,11 @@ Instead of conversing the Kristen:
 			now kristenmsg5 is true;
 	otherwise if hp of Kristen < 12:
 		say "     [one of]'I've been raiding my friend's cupboards and gathered what I can from the nearby shops, so I'm okay for now.'[or]'I'm glad I decided to trust you.  It's good to have someone to talk to after all this.'[or]'I'm lucky I've managed to stay human for now, but I've got to be careful.'[or]'You need to be careful about what you come into contact with.  From what I've seen, lots of stuff - even random objects - can prompt a mutation.  There was one guy while I was trying to get here who turned into a cougar just because that was the kind of car he was driving.'[or]'Ever since this started, I've been really horny.  I'm sometimes tempted to just give up on all this hiding and throw myself into the arms of one of those sexy creatures I see from the windows.  I'm guessing that's how they get you.'[or]'Thanks again for helping me out back there.  I don't think I would have made it out of there without your help.  That ewe was cute and all, but I've never been a sheep to just follow the herd.'[or]'Stuck here on my own, I can't help but sometimes think everyone whose lives have been destroyed by this mess.  So many dead or driven mad.  It's a disaster when you really think about it.'[in random order]";
-	otherwise:
-		say "***temp";
+	otherwise if hp of Kristen <= 15:
+		say "ERROR-Kristen-[hp of Kristen]T: You should be able to talk to me.";
+	otherwise if hp of Kristen is 16:
+		say "     [one of]'It's nice to be back together with Janice.  We're better friends than ever[if libido of Kristen is 2].  Isn't that right?' she asks the other vixen as she pats her bottom[otherwise if libido of Kristen is 3],' she says, demonstrating this with a very sexy kiss with the other vixen[otherwise],' she says, demonstrating this with gropes of the vixen's breasts from behind[end if].'[or]'Janice has been showing me that there are some definite perks to being a [if libido of Kristen is 2]beautiful[otherwise if libido of Kristen is 3]sexy[otherwise]slutty[end if] vixen.'[or]'I've been meeting Janice's other would-be suitors.  But don't worry, you're definitely our favourite.'[or]'As nice as it is to be here with Janice, it can be a little too loud at times.  Sometimes you just want some quiet time... together.'  She runs a paw across your cheek on that final word.[or][if libido of Kristen is 2]'Thanks for all your help, hon.'[otherwise if libido of Kristen is 3]'Why don't you stick around?  Janice and I would love to show you our appreciation for our mate,' she says while brushing her tail across your side.[otherwise]'I'm quite popular with many of the club-goers.'[end if][or]'The Palomino's always been a good club, but I think I like this new version even better.'[or][if libido of Kristen is 2]'Do you really think I'm beautiful like this?' she asks with a teasing swish of her tail.[otherwise if libido of kristen is 3]'Tell me again how beautiful I am,' she says as she poses sexily, longing for your approval.[otherwise]'Don't you think I look sexy,' she asks, posing wantonly before you.[end if][or]Kristen takes you out into the club to dance for a while[if libido of Kristen is 2], the two of you having a good time[otherwise if libido of Kristen is 3], sharing a slow dance together[otherwise], bumping and grinding her sexy body against yours[end if].[in random order]";
+
 
 Section 4 - Kristen TF
 
@@ -321,8 +327,8 @@ to say kristentf_phase3:	[depression]
 		attempttowait;
 		say "...only to be interrupted by one of those female huskies.  'Oooo!  Hawt!  Can I join in?' she asks, advancing quickly.";
 		attempttowait;
-		say "     Grumbling inside at the interruption just as things were getting good, you start to rise to deal with her.  But you're quite literally beaten to the punch by Kristen, who stomps towards the fluffy dog and clocks her right in the muzzle with a snarl.";
-		say "     'You bitch!  Get your own [if cocks of player > 0]man[otherwise if cunts of player > 0]girl[otherwise]guy[end if],' she snaps at the canine girl.  The husky whimpers and clutches her broken nose, slinking back several paces before turning and running.  Kristen huffs and shakes her sore paw, then laughs a little.  Looking back at you, she blushes at her ears and rushes into your arms.  Clinging to you tightly, she rests her head against your chest and winds her fluffy tail around you.  After this long hug, she lets go and says that she should probably get back before anything meaner finds them.  A little reluctant to let her go when you were so close, you do make sure to give her that kiss (along with a pat on the ass) and tell the lovely vixen to be careful before you part ways with a promise to come see her after she's had a chance to rest.";
+		say "     Grumbling inside at the interruption just as things were getting good, you start to rise to deal with her.  But you're beaten to the punch by Kristen, who stomps towards the fluffy dog and smacks her firmly with a rolled up newspaper from the nearby waste bin.  She whaps the dog a few times on her muzzle with a snarl.";
+		say "     'You bitch!  Get your own [if cocks of player > 0]man[otherwise if cunts of player > 0]girl[otherwise]guy[end if],' she snaps at the canine girl.  The husky whimpers and clutches her bopped nose, slinking back several paces before turning and running away with her tail between her legs.  Kristen huffs and tosses the paper aside, then laughs a little.  Looking back at you, she blushes at her ears and rushes into your arms.  Clinging to you tightly, she rests her head against your chest and winds her fluffy tail around you.  After this long hug, she lets go and says that she should probably get back before anything meaner finds you.  A little reluctant to let her go when you were so close, you do make sure to give her that kiss (along with a pat on the ass) and tell the lovely vixen to be careful before you part ways with a promise to come see her after she's had a chance to rest.";
 		now libido of Kristen is 3;
 	otherwise if calcnumber is 3 and libido of Kristen <= 4:
 		say "     'Well, if you're just going to become a slutty vixen anyhow, let's make the most of it.  I'm not just going to let some random beast out there have you.  You're too sexy a fox to let get away,' you say with a lascivious edge in your voice.";
@@ -335,7 +341,7 @@ to say kristentf_phase3:	[depression]
 			say "     She nibbles at her lip and releases a whimper of pleasure.  'Yessss...' she moans softly, 'but...'  Cutting off her hesitant objection with a kiss, you move into position atop her.  Easing your fingers out of her pussy, you grind your erection against it instead.  Her body responds, pressing back against your throbbing meat with a need to be filled.  You tease her like that until she's moaning to have you fill her, her earlier concerns forgotten in her lustful state.";
 			say "     Hearing her begging for a good fucking, you don't keep her waiting any longer.  With a hand on her thigh and the other guiding your cock in, you thrust your [cock of player] penis into her vulpine snatch.  She yips and yiffs excitedly, finally about to get the fucking she's been trying to resist for so long.  And her body, finally getting what it's been needing since she's started to change, pushes back onto your pole to welcome it into her heated depths.";
 			attempttowait;
-			say "     As you thrust, you tell her what a sexy, beautiful and (most importantly) slutty vixen she's becoming.  Worn down by this point, she can't help but moan in agreement.  She also grows more vigorous in her participation, running her paws over your chest before moving them to her breasts.  She plays with her tits and rubs her nipples in a wanton display that excites you further.";
+			say "     As you thrust, you tell her what a sexy, beautiful and (most importantly) slutty vixen she's becoming.  Worn down by this point, she can't help but moan in agreement.  She also grows more vigorous in her participation, running her paws over your chest before moving them to her breasts.  She plays with her tits and rubs her pierced nipples in a wanton display that excites you further.";
 			say "     Feeling your orgasm approaching, you tell her you're about to cum.  'Ngg... no... not inside me,' she moans even as her hips grind into your thrusts all the harder.  Pulling out at the last possible moment, you grab your pulsing rod and spray your load across her sexy body.  Between groans, you tell her that next time you'll be finishing in her.  Already fingering herself, she plunges her digits in deep and orgasms with a series of moaning yips.";
 			attempttowait;
 			say "     The spent vixen ends up passing out after her release.  Leaving her coated in your cum as a reminder that you'll be back for more, you exit her hidden abode.  Storing the ladder away should ensure that she'll be there when you return to finish the job.";
@@ -348,9 +354,182 @@ to say kristentf_phase3:	[depression]
 			attempttowait;
 			say "     The spent vixen ends up passing out after her release.  Leaving her muzzle coated in your sticky juices as a reminder that you'll be back for more, you exit her hidden abode.  Storing the ladder away should ensure that she'll be there when you return to finish the job.";
 		otherwise:
-			say "[bracket]***Scene to be added later. - The Mgmt[close bracket][line break]";
+			say "[bracket]***Neuter scene to be added later. - The Mgmt[close bracket][line break]";
 		now libido of Kristen is 4;
 
+
+to say kristentf_phase4:	[acceptance]
+	if libido of Kristen is 2:
+		say "[kristentf_phase4_2]";		[supportive]
+	otherwise if libido of Kristen is 3:
+		say "[kristentf_phase4_3]";		[seductive]
+	otherwise:
+		say "[kristentf_phase4_4]";		[forceful]
+	now hp of Kristen is 16;
+	increase score by 25;
+
+to say kristentf_phase4_2:		[supportive]
+	say "     You're pleased to see Kristen lower the ladder for you promptly when you signal your arrival.  Hoping that this is a good sign, you head up into her hideout.  She greets you with a weak smile and does a quick turn around, showing that she's fully transformed.  'I guess there's no fighting it now.  I'm a fox and I'm just going to have to deal with that.'";
+	say "     Looking her over the transformed woman, you can see that she's indeed become fully vulpine.  Her muzzle's finished forming and is exotically attractive now.  The fur that's spread across her body is an ivory white, like her hair now, and transitions to charcoal black halfway along her upper arm and just under her knees.  This almost gives her the appearance of wearing elegant gloves and dark socks.  Her ears and the tip of her fluffy tail are also black.  Under the fur, her body's changed subtly, her figure becoming more attractive and alluring.  She's also taken to wearing the traitorous blouse that started this transformation, worn over her slightly fuller and perkier breasts.";
+	attempttowait;
+	say "     'I don't know if I would have been able to handle this without you.  Whenever it felt like I was going to snap and do something foolish out of fear or lust, I thought of your advice and tried to keep a level head.'  She gives you a quick kiss in thanks... or at least that's how it starts.  Soon she has her arms draped around you and she's kissing you passionately.  'And if I'm going to be a sexy fox woman, I think I should give this hot new bod of mine a test drive, don't you?' she says with a grin.";
+	say "     Taking her paw in hand, you go with her into the bedroom and there you strip one another of clothes and gear.  Lowering the beautiful vixen onto the soft bed, you give her another kiss before taking another opportunity to run your eyes over her lovely new form.  Your eyes are soon drawn to her wet snatch though and her eager paws urge you gently to move into position.  Not wanting to keep you friend or yourself waiting any longer, you ";
+	if cocks of player > 0:
+		say "move atop her and grind your throbbing [cock of player] cock against her furry thigh.";
+		say "     'Mmmm!  Come on, hon.  Let's see what this new body of mine can do,' she says with a playful grin as she wraps one leg around your waist.  Your [cock of player] penis sinks into her [if cock length of player < 8]welcoming pussy with ease[otherwise if cock length of player < 16]juicy pussy[otherwise]juicy pussy with a moan as the vixen's cunny is spread to accommodate your [cock size desc of player] manhood[end if].";
+		attempttowait;
+		say "     As the two of you fuck on the plush bed, your hands run over each other's body.  You caress her vulpine form, stroking her soft, glossy coat.  This petting soon turns more sexual as your hands settle on her breasts.  You rub those lovely mounds and tease her pierced nipples, much to her delight.  She ends up gripping your ass with one kneading paw while the other [if breast size of player > 0]cups one of your breasts while her thumb teases your nipple[otherwise]caresses your chest and side[end if].  Kristen's pussy squeezes down upon you with every thrust you make, her vulpine body eager for sexual release.  As your thrust grows increasingly fast and strong, the bed starts to rock, thumping against the wall.  Some small corner of your mind worries for a moment this might be noticed, but the vixen is enjoying this much-anticipated fuck too much to consider pausing or holding back at this point.";
+		say "     'Oh yiff!  Just keep going!  I'm not to wait any longer,' she moans, grinding herself firmly into each thrust.  Feeling yourself getting closer, you moan that you're about to cum and make her a cream-filled vixen.  Deep in lustful passion, her ears only twitch momentarily as she nibbles her lip, but she's too close now to have you pull out.  And as quick as it came, that final worry fades and she cries out in orgasm as she stops holding back.  'Do it!  Do it, baby!  Pump your cum into my hot vixen pussy!'";
+		attempttowait;
+		say "     Hearing her unrestrained passion like that pushes you over the top and you drill your rod deep into the lustful vixen and cum hard.  Blast after blast of your rich seed is pumped messily into her quivering hole.  Feeling your [cum load size of player] load painting her vaginal walls, she's driven to a second orgasm on the heels of the first.  You continue to pound into her, draining all your [ball size] will give.";
+	otherwise if cunts of player > 0:
+		say "climb in to join her.";
+		say "     Stretching out across the bed, you lay opposite to Kristen and snuggle in close.  After some more kissing and playful groping, she turns herself around and into a 69 with you.  Given a clear view of her vulpine pussy, you lick your lips and dive in, the vixen doing the same to you.  Brushing your fingertips across her damp folds, you take in the alluring scent of her arousal.  After parting those juicy lips, you give her clit a slow lick that makes her moan.  You then set yourself to the delicious task of eating her out.";
+		attempttowait;
+		say "     While you are doing so, she is no less diligent in her attempts to pleasure you.  She works [if cunt width of player < 4]a finger[otherwise if cunt width of player < 8]a pair of fingers[otherwise if cunt width of player < 12]three fingers[otherwise]her paw[end if] inside your quivering tunnel while lapping across your juicy petals.  This is peppered with the occasional kiss or suck at your sensitive clit.  After a few quick orgasms, you work each other up carefully, finally building to a crashing climax that has you both cumming hard.";
+		say "     'Oh yes!  Yes!  That feels soooo good.'  Hearing her unrestrained passion like that makes it all the better and you wriggle your tongue into the lustful vixen's cunny, to her even greater delight.  You eagerly lap up each other's juices until finally you're both left panting and dazed in post-coital bliss.  A little wobbly, she turns herself back around to snuggle into your arms, sharing a kiss rich in your mutual juices.";
+	otherwise:
+		say "into a 69 position alongside her.";
+		say "[bracket]***Neuter scene to be added later. - The Mgmt[close bracket][line break]";
+	attempttowait;
+	say "     After laying in bed together for a while to recover (and, in your case, just enjoy the chance to be in a proper bed for a while), you get up and start helping Kristen gather a few things.  She's decided to leave here and go to the Palomino to be with Janice.  'From the sounds of it, she'll need me there to keep her out of trouble.  She might do something to really get herself into trouble next time she tries something.'  And with that decided and a collection of things the two of them might need packed, you escort the sexy vixen to the club.";
+	attempttowait;
+	move Kristen to Private Club Room;
+	move player to Private Club Room;
+	say "     When the two of you arrive and head into the private club room to see Janice, the arctic vixen is overjoyed to see her friend - especially in her new, vulpine state.  After a quick hug, Kristen shoves the other vixen down onto her divan and pins her there.  'You conniving bitch,' she growls.  'Tricking me with your blouse to get me infected.  Well if you dare think I'm just going to let you off the hook for that, you've got another thing coming.'  And with that, she kisses the vixen, groping her between the legs.  With aggressive passion, she finger-fucks her friend to a loud and sudden orgasm.";
+	say "     With a grin, Kristen licks her juice-laden fingers clean.  'I forgive you, Janice; I understand how hard this must have been for you all on your own.  Well, we're here now and I'm going to make sure you stay in line from now on.  And now that you've roped me into this and gotten me all foxy, you're going to have to make it up to me... over and over again,' she says sensually with another light brush of her fingertips.  Janice, still recovering from all this excitement, can only pant and nod.";
+	attempttowait;
+	say "     After watching the hot show, you're tempted to join the sexy pair right then and here, but you remain patient and instead help Kristen unpack and settle in.  'Thanks again for all your help.  Janice and I should be fine here with this stuff, so if there's anything at her place you'd like, feel free to help yourself.'";
+	add { "pepperspray", "food", "food", "water bottle" } to invent of Kristen's Hideout;
+
+
+to say kristentf_phase4_3:		[seductive]
+	say "     You're pleased to see Kristen lower the ladder for you promptly when you signal your arrival.  Hoping that this is a good sign, you head up into her hideout.  She greets you with a tender smile and strikes a sexy pose before doing a quick turn around, showing that she's fully transformed.  'I guess there's no fighting it now.  I'm a fox and I'm just going to have to deal with that.'";
+	say "     Looking her over the transformed woman, you can see that she's indeed become fully vulpine.  Her muzzle's finished forming and is exotically attractive now.  The fur that's spread across her body is an ivory white, like her hair now, and transitions to charcoal black halfway along her upper arm and just under her knees.  This almost gives her the appearance of wearing elegant gloves and dark socks.  Her ears and the tip of her fluffy tail are also black.  Under the fur, her body's changed subtly, her figure becoming more attractive and alluring.  She's also taken to wearing the traitorous blouse that started this transformation, partially covering her fuller and perkier breasts.";
+	attempttowait;
+	say "     You're almost distracted from it by Kristen's sexy new appearance, but you remind yourself that you have a plan in mind to finish seducing the lovely vixen.  Taking her paw in hand, you gently caress it while gazing into her golden eyes.  After a quick compliment about what a lovely vixen she makes, you offer to take her out on another date.  She blushes a bit at her ears and agrees readily";
+	if daytimer is day:		[daytime - park picnic]
+		say ".  Having her gather some supplies from the cupboards, the two of you exit down the ladder.  Praising her lovely appearance and reiterating that you'll protect her on the journey, you make your way towards the city park.";
+		say "     [if Park Entrance is unknown]Fortunately, your half-remembered details on how to get there turn out to be correct and you luckily avoid any significant trouble on the way[otherwise]Fortunately, you encounter no significant trouble on the way[end if]";
+		if diegotalk > 0:	[met Diego]
+			say ".  Seeing Diego waiting there as usual, you wrap your arm around the vixen protectively and give the coyote a sly wink as you pass.  [if diegochanged is 0]He[otherwise]She[end if] makes a show of growling lustfully at her, but slinks off when you advance.  Kristen is impressed by your bravery and gives you a hug and a kiss while you and Diego share a thumbs up behind her back.";
+		otherwise:			[not met Diego]
+			say ".  Spotting [if Park Entrance is unknown]a[otherwise]that[end if] coyote hanging out by the entrance, Kristen moves closer and you put your arm protectively around her.  He gives her a lecherous look, but makes a show of backing off when you move between them.  Kristen hugs and kisses you for being so brave.  Glancing over, you spot the coyote, leaning casually against the wall again, give you a wink and a thumbs up behind her back, which you return.";
+		attempttowait;
+		if loversbench is 0:
+			say "     Making your way through the park in search of an appropriate spot, you find a peaceful clearing with an old bench.  The bench is marked up with quite a few claw marks and scratches, clearly used often by others since the outbreak, as well as older, carved graffiti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park, gradually starting to arouse you both.  Perfect.";
+		otherwise:
+			say "     Making your way through the park, you lead her to the clearing with the lovers['] bench you'd found earlier.  The bench is marked up with quite a few claw marks and scratches, clearly used often by others since the outbreak, as well as older, carved graffiti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park, gradually starting to arouse you both.  Perfect.";
+		say "     Setting out the supplies you brought on a blanket, you and Kristen enjoy a picnic in the park.  While eating the food doesn't make for a particularly grand meal, the place is peaceful and (as you tell Kristen) the company is beautiful.  You exchange sweet nothings for a time and, as you're finishing up the last of what you brought, eating shifts more to caresses and kisses.  Seeing the bench nearby, you lead the vixen over to this well-used make-out spot.  The scent of arousal and sex has you both quite excited by this point and she spreads herself out across it with a needy moan while you strip her of her blouse and jeans.";
+		attempttowait;
+		if cocks of player > 0:
+			say "     Kristen sits at an angle across the bench so her hips are pushed out and her dripping pussy is available to you.  Getting a grip on the back of the wooden bench, you move your [cock of player] cock in position.  Wrapping one leg around you, she urges you to enter her.";
+			say "     'Oh baby!  I've been wanting you for so long!  Come now, my hero, and mount this needy vixen,' she moans with a mix of adoration and lust in her lovely eyes.  She truly is beautiful, you think to yourself, as you don't keep her waiting any longer.  Your [cock of player] penis sinks into her [if cock length of player < 8]welcoming pussy with ease[otherwise if cock length of player < 16]juicy pussy[otherwise]juicy pussy with a moan as the vixen's cunny is spread to accommodate your [cock size desc of player] manhood[end if].";
+			attempttowait;
+			say "     Caressing her side and sharing kisses, you make love to the lustful vixen.  She pants and moans with obvious desire for her studly hero, one paw clutching your shoulder while the other digs its claws into the wooden bench, adding fresh marks to the wood.  Kristen's pussy squeezes down upon you with every thrust you make, her vulpine body eager to be mated and filled.  As your lovemaking grows increasingly impassioned, it never sinks to the level of just raw sex.  It remains loving and tender, as if something about this place or this bench is special.  Special like the lovely and beautiful vixen beneath you is.";
+			say "     Rubbing one of those lovely breasts of hers and teasing its nipple get her to cry out louder, begging for you to pound her harder.  As the wet sounds of sex grow louder, so does the vixen's moans of delight.  'Oh yiff!  I want you soooo bad!' she pants, grinding herself firmly into each thrust.  Feeling yourself getting closer, you moan that you're going to make her yours by giving her the hot load a lovely vixen like her needs.  Lost in her loving desire for you, her ears only twitch as she bites her lip, but can't stop herself from gripping you all the harder.  And as quick as it came, that final moment of uncertainty fades and she cries out in orgasm as she loses herself in her loving desire for you.  'Do it!  Do it, baby!  Pump your cum into your beautiful vixen mate!'";
+			attempttowait;
+			say "     Hearing her give in like that pushes you over the top and you drill your rod deep into the lustful vixen and cum hard.  Blast after blast of your rich seed is pumped messily into her quivering hole.  Feeling your [cum load size of player] load painting her vaginal walls, she's driven to a second orgasm on the heels of the first.  You continue to pound into her, draining all your [ball size] will give.";
+		otherwise if cunts of player > 0:
+			say "     Given a clear view of her vulpine pussy, you lick your lips and dive in, the vixen moaning in delight as your tongue plays across her sensitive petals.  Brushing your fingertips across her damp folds, you take in the alluring scent of her arousal.  After parting those juicy lips, you give her clit a slow lick that makes her moan all the more.  You then set yourself to the delicious task of eating her out until she cries out in orgasm, adding her femcum to the scents marking the oft-used bench.";
+			say "     After her release, she insists you swap places with her.  'I should be the one thanking you.  Oh, how I want to thank you,' she purrs with desire as she nuzzles your thigh and licks her way to your crotch.  And she is quite diligent in her attempts to pleasure you with lips, tongue and fingers.  She works [if cunt width of player < 4]a finger[otherwise if cunt width of player < 8]a pair of fingers[otherwise if cunt width of player < 12]three fingers[otherwise]her paw[end if] inside your quivering tunnel while lapping across your juicy petals.  This is peppered with the occasional kiss or suck at your sensitive clit.  After an initial orgasm that has you panting, she continues on, working you up carefully, finally building to a crashing climax that has you crying out and cumming hard.  Your nails dig into the wood of the bench as your body is overcome with the ecstasy of release.";
+			attempttowait;
+			say "     'Mmmm yes!  You taste soooo good,' she moans between licks.  You can see her other paw buried between her legs, vigorously fingering herself to another orgasm as she laps up your hot juices.  After licking you clean, she ends up flopped out with her head in your lap, smiling up at you with adoration for you, her chosen lover.  And you can't help but smile back, stroking her long, white hair and feeling a tenderness for this beautiful, needy vixen.";
+		otherwise:
+			say "[bracket]***Neuter scene to be added later. - The Mgmt[close bracket][line break]";
+		if loversbench is 0 or loversbench is 1:
+			say "     As you're cleaning up your picnic site, you take a few moments to look through the scattered clothes likely dropped and forgotten by others using this popular make-out spot.  You have to be careful, as some of the stuff left behind it covered in sticky stains, but by lifting them with a branch, you're able to check them out";
+			if scenario is "Bunker" or scenario is "Caught Outside":
+				say ".  The food you find has been reduced to scraps and crumbs and the drink bottles are empty.  You do find a small pocketknife in a pair of khakis, but it's no better than your own, so you toss it aside.  A pair of jeans yields something of use though, a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
+				say "     Pepperspray obtained.";
+				increase carried of pepperspray by 1;
+				increase score by 5;
+			otherwise:
+				say ".  The food you find has been reduced to scraps and crumbs and the drink bottles are empty.  You do find a small pocketknife in a pair of khakis and, thinking it might be a useful tool or perhaps a weapon in a pinch, you take it.  A pair of jeans yields something of use though, a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
+				say "     Pocketknife and pepperspray obtained.";
+				increase carried of pocketknife by 1;
+				increase carried of pepperspray by 1;
+				increase score by 10;
+			now loversbench is 2;
+		now Park Entrance is known;
+		decrease hunger of player by 12;
+		decrease thirst of player by 12;
+		if hunger of player < 0, now hunger of player is 0;
+		if thirst of player < 0, now thirst of player is 0;
+	otherwise:		[nighttime - Ferris wheel]
+		say ".  After checking to make sure the coast is clear, the two of you exit down the ladder.  Praising her lovely appearance and reiterating that you'll protect her on the journey, you make your way towards the state fair.";
+		say "     [if State Fair is unknown]Fortunately, your half-remembered details on how to get there turn out to be correct and you luckily avoid any significant trouble on the way[otherwise]Fortunately, you encounter no significant trouble on the way[end if]";
+		if boristalk > 0:	[met Boris]
+			say ".  Boris waves friendlily to you as you arrive and you introduce Kristen to him.  You keep the chat brief, getting some news on the recent creature activity at the fairgrounds before entering the midway with the sexy vixen.  Seeing you with such a lovely woman, Boris gives you a big thumbs up.  Kristen's a little saddened by the mascot's plight, but you give her a reassuring hug and tell her you'll help make sure she doesn't end up mentally lost and trapped by the infection like he has.  She returns the hug with an affectionate kiss.";
+		otherwise:			[not met Boris]
+			say ".  A mascot lion waves in a friendly manner to you both as you arrive.  While seeming safe enough, you keep your distance from the strange fellow and continue on to the midway with the sexy vixen.  Glancing back at him, Kristen expresses her worry about ending up like him, lost to his infection.  You give her a reassuring hug and tell her that you'll make she doesn't end up trapped like that.";
+		attempttowait;
+		say "     While the midway is full of showy lights and carnival fun, much of it is running itself or being run by strange creatures, so you take care not to get too close.  That said, there's also an air of happiness and excitement in the place that's lacking in the rest of the city and soon you start having fun together.  Seeing a few other fairgoers safely use some of the game booths, you stop and play at them for a while.  You get a laugh when you spot some pink sugar gliders soaring in a circle around some colourful ferrets.  The two groups giggle merrily as they exchange light-hearted insults while the ferrets throw candy at the teasing marsupials.  After they move on, you and Kristen gather up the scattered candies and enjoy the sweets as you continue having a good time together.";
+		say "     With your eventual goal in sight, it's fairly easy to eventually meander your way to the Ferris wheel.  Getting in one of the gondolas with her, you slowly ride up.  As you ascend, you are treated to a beautiful view of the starry sky and the lights of the fairground.  With the beautiful lights above and below, Kristen snuggles in close.  Giving her muzzle a tender caress, you once again compare her golden yellow eyes to the twinkling lights before leaning in to give her a kiss.  The kiss becomes passionate, and soon heated, as your hands run over each other, pushing aside clothes and gear as your excitement rises.";
+		attempttowait;
+		if cocks of player > 0:
+			say "     Kristen sits at an angle across the bench so her hips are pushed out and her dripping pussy is available to you.  With some careful manoeuvring, you get your [cock of player] cock in position.  Wrapping one leg around you, she urges you to enter her.";
+			say "     'Oh baby!  I've been wanting you for so long!  Come now, my hero, and mount this needy vixen,' she moans with a mix of adoration and lust in her lovely eyes.  She truly is beautiful, you think to yourself, as you don't keep her waiting any longer.  Your [cock of player] penis sinks into her [if cock length of player < 8]welcoming pussy with ease[otherwise if cock length of player < 16]juicy pussy[otherwise]juicy pussy with a moan as the vixen's cunny is spread to accommodate your [cock size desc of player] manhood[end if].";
+			attempttowait;
+			say "     Caressing her side and sharing kisses, you make love to the lustful vixen.  She pants and moans with obvious desire for her studly hero, her paws clutching your shoulders.  Kristen's pussy squeezes down upon you with every thrust you make, her vulpine body eager to be mated and filled.  As your lovemaking grows increasingly impassioned, the gondola you're riding in gently sways, setting a gentle rhythm for the lovers inside.  The mutant carny running the ride does give your pod a leering look as you go by, but lets you keep riding for several passes.  From the moans and wet sounds from the other passenger cars, you can tell you two aren't the only ones moved to passion by the beautiful night tonight.";
+			say "     Rubbing one of those lovely breasts of hers and teasing its nipple get her to cry out louder, begging for you to pound her harder.  Doing so sets the gondola to rocking further, making it quite clear to any looking outside what's occurring on within.  'Oh yiff!  I want you soooo bad!' she pants, grinding herself firmly into each thrust.  Feeling yourself getting closer, you moan that you're going to make her yours by giving her the hot load a lovely vixen like her needs.  Lost in her loving desire for you, her ears only twitch as she bites her lip, but can't stop herself from gripping you the harder.  And as quick as it came, that final moment of uncertainty fades and she cries out in orgasm as she loses herself in her loving desire for you.  'Do it!  Do it, baby!  Pump your cum into your beautiful vixen mate!'";
+			attempttowait;
+			say "     Hearing her give in like that pushes you over the top and you drill your rod deep into the lustful vixen and cum hard.  Blast after blast of your rich seed is pumped messily into her quivering hole.  Feeling your [cum load size of player] load painting her vaginal walls, she's driven to a second orgasm on the heels of the first.  You continue to pound into her, draining all your [ball size] will give.";
+		otherwise if cunts of player > 0:
+			say "     Kristen sits at an angle across the bench so her hips are pushed out and her dripping pussy is available to you.  With some careful manoeuvring, you kneel down in the footwell and boost her up a little further.  Now given a clear view of her vulpine pussy, you lick your lips and dive in, the vixen moaning in delight as your tongue plays across her sensitive petals.  Brushing your fingertips across her damp folds, you take in the alluring scent of her arousal.  After parting those juicy lips, you give her clit a slow lick that makes her moan all the more.  You then set yourself to the delicious task of eating her out until she cries out in orgasm.";
+			say "     The sound of her cries is definitely audible over the whirr of the motor and the creaking of the turning wheel.  The mutant carny running the ride does give your pod a leering look as you go by, but lets you keep riding for several passes.  From the moans and wet sounds from the other passenger cars, you can tell you two aren't the only ones moved to passion by the beautiful night tonight.";
+			attempttowait;
+			say "     After her release, she insists you swap places with her.  'I should be the one thanking you.  Oh, how I want to thank you,' she purrs with desire as she nuzzles your thigh and licks her way to your crotch.  And she is quite diligent in her attempts to pleasure you with lips, tongue and fingers.  She works [if cunt width of player < 4]a finger[otherwise if cunt width of player < 8]a pair of fingers[otherwise if cunt width of player < 12]three fingers[otherwise]her paw[end if] inside your quivering tunnel while lapping across your juicy petals.  This is peppered with the occasional kiss or suck at your sensitive clit.  After an initial orgasm that has you panting, she continues on, working you up carefully, finally building to a crashing climax that has you crying out and cumming hard.  Your nails dig into the wood of the bench as your body is overcome with the ecstasy of release.";
+			say "     'Mmmm yes!  You taste soooo good,' she moans between licks.  You can see her other paw buried between her legs, vigorously fingering herself to another orgasm as she laps up your hot juices.  After licking you clean, she rests her head in your lap, smiling up at you with adoration for you, her chosen lover.  And you can't help but smile back, stroking her long, white hair and feeling a tenderness for this beautiful, needy vixen.";
+		otherwise:
+			say "[bracket]***Neuter scene to be added later. - The Mgmt[close bracket][line break]";
+		increase morale of player by 5;
+	attempttowait;
+	say "     [if daytimer is day]Kristen is extra-snugly after the lovemaking, nuzzling and kissing at you as you cuddle her in your arms while sitting on the bench[otherwise]The Ferris wheel stops on your gondola soon after you're finished, the ride operator letting you both out with an amused grin on his face.  You and Kristen take a seat on a nearby bench, the vixen snuggling up into your arms[end if].  After taking a few minutes to recover, you and Kristen get up and start making your way back to her hideout.  Once there, she starts to gather a few things.  You've suggested she instead go stay at the Palomino to be with Janice.  'That sounds like it'd be nice.  And if we're there together, I won't have to worry about her seducing you away from me and you can have two sexy vixens instead.'  And with that decided and a collection of things the two of them might need packed, you escort the sexy vixen to the club.";
+	attempttowait;
+	move Kristen to Private Club Room;
+	move player to Private Club Room;
+	say "     When the two of you arrive and head into the private club room to see Janice, the arctic vixen is overjoyed to see her friend - especially in her new, vulpine state.  After a quick hug and a rather hot kiss, Kristen presses the other vixen back down onto her divan and rubs her sexy body against her friend's.  'Well, it looks like you got what you wanted, you sneaky minx,' she purrs sensually.  'Setting me up to get infected like you.  I think it's time you get what's coming to you.  And I'm sure our [if cunts of player > 0]lovely[otherwise]handsome[end if] [if cocks of player > 0]mate[otherwise]lover[end if] here will appreciate it as well after all the trouble you've put him through.'  And this that, the two vixens start kissing passionately again.  With a paw on the other's breast and between their friend's legs, they grope and fondle each other.  With lustful eagerness, they finger-fuck other another while playing with their tits, quickly coming to a loud and sudden orgasm.";
+	say "     After licking the juices off their fingers, they share a sloppy kiss which must taste of the two vixens['] pussies.  'If it's going to be fun like this, I forgive you, Janice.  I guess it must have been hard for you all on your own.  Well, we can keep each other company now and we've got a sexy mate to help keep [if cunts of player > 0]her[otherwise]his[end if] vixen mates safe and satisfied,' she says sensually, the two of them panting and making a show of turning their juices pussies towards you.";
+	attempttowait;
+	say "     After watching the hot show, you're tempted to join the sexy pair right then and here, but you remain patient and instead help Kristen unpack and settle in.  'Thanks again for all your help, hon.  If Janice and I are missing anything, I'm sure we can get one of her would-be suitors to fetch it for us.  So if there's anything at her place you'd like, feel free to help yourself.'";
+	if daytimer is day:
+		add { "pepperspray", "water bottle" } to invent of Kristen's Hideout;
+	otherwise:
+		add { "pepperspray", "food", "food", "water bottle" } to invent of Kristen's Hideout;
+
+
+to say kristentf_phase4_4:		[forceful]
+	say "     Arriving outside Kristen's, you take the ladder from where you left it and make your ascent into the second story flat.  You're pleased to see her opening the blinds and window promptly, taking it as a sign in your favour.  She greets you with a lustful smile and strikes a naughty pose before doing a quick turn around, showing that she's fully transformed.  'I guess there was never any point in fighting it.  You were right - I'm a slutty vixen and that's just how it's going to be.'";
+	say "     Looking her over the transformed woman, you can see that she's indeed become fully vulpine.  Her muzzle's finished forming and is exotically attractive now.  The fur that's spread across her body is an ivory white, like her hair now, and transitions to charcoal black halfway along her upper arm and just under her knees.  This almost gives her the appearance of wearing elegant gloves and dark socks.  Her ears and the tip of her fluffy tail are also black.  Under the fur, her body's changed subtly, her figure becoming more attractive and alluring, a fact that she's showing off.  She's also taken to wearing the traitorous blouse that started this transformation, left open to show off her fuller and perkier breasts.";
+	attempttowait;
+	say "     'I couldn't stop thinking about you,' she says, pressing her body to yours.  'I was so tempted to go out and find someone or something to take me.  I'd probably have jumped out the window, but I kept telling myself you'd be back to claim me soon.  So come on,' she says, removing the blouse and skirt.  'Take me.'";
+	if cocks of player > 0:
+		say "     This is just what you've been hoping to hear and, after quickly shucking your gear, you grab the wanton vixen and press her back to the wall with a lustful kiss.  She returns it with equal zeal, no longer holding back.  Taking her by the hip, you boost her up.  As she wraps her legs around your waist, you thrust into her.  Your [cock of player] penis sinks into her [if cock length of player < 8]welcoming pussy with ease[otherwise if cock length of player < 16]juicy pussy[otherwise]juicy pussy with a moan as the vixen's cunny is spread to accommodate your [cock size desc of player] manhood[end if].";
+		attempttowait;
+		say "     Keeping a hand gripped possessively on her ass, you screw the lustful vixen.  She pants and moans loudly, her paws clutching your shoulders as she bounces atop your [cock size desc of player] rod.  Kristen's pussy squeezes down upon you with every thrust you make, her vulpine body eager to be fucked and filled.  Grabbing one of those lovely breasts of hers and squeezing its nipple gets her to cry out louder, begging for you to pound her harder.";
+		say "     'Oh yiff!  I need this soooo bad!  More!' she pants, grinding herself firmly into each thrust.  Feeling yourself getting closer, you moan that you're going to claim your prize and give her the hot load a slutty vixen like her needs.  Her ears twitch and she bites her lip, but can't stop herself from riding you all the harder.  And as quick as it came, that final moment of resistance fades and she cries out in orgasm.  'Do it!  Do it, baby!  Pump your cum into your horny vixen slut!'";
+		attempttowait;
+		say "     Hearing her give in like that pushes you over the top and you drill your rod deep into the wanton vixen and cum hard.  Blast after blast of your rich seed is pumped messily into her quivering hole.  Feeling your [cum load size of player] load painting her vaginal walls, she's driven to a second orgasm on the heels of the first.  You continue to pound into her, draining all your [ball size] will give.";
+	otherwise if cunts of player > 0:
+		say "     This is just what you've been hoping to hear and, after quickly shucking your gear, you grab the wanton vixen and press her back to the wall with a lustful kiss.  She returns it with equal zeal, no longer holding back.  Spreading her legs, you grab her crotch and slip a few fingers into the hot hole of hers.  You cup her lovely breast in your other hand, fondling it possessively and teasing her pierced nipple to hear her lustful whimpers.  She squirms and moans with need, grinding hard against your hand until you drive her to a quick orgasm that has her panting with a need for more.";
+		attempttowait;
+		say "     Pushing her to the floor, you pin her down and move atop her in a 69 position.  Given a clear view of her vulpine pussy, you lick your lips and dive in, the vixen moaning in delight as your tongue plays across her sensitive petals.  Brushing your fingertips across her damp folds, you take in the alluring scent of her arousal.  After parting those juicy lips, you give her clit a slow lick that makes her moan for more.  You then set yourself to the delicious fun of eating her out.";
+		say "     While doing so, you grind your crotch into her face and order her to satisfy you as well.  Though in her current state, you certainly don't need to command her to do it.  With lustful eagerness, she seeks to please you with her lips, tongue and fingers.  She works [if cunt width of player < 4]a finger[otherwise if cunt width of player < 8]a pair of fingers[otherwise if cunt width of player < 12]three fingers[otherwise]her paw[end if] inside your quivering tunnel while lapping across your juicy petals.  This is peppered with the occasional kiss or suck at your sensitive clit.  After an initial orgasm that has you panting, she continues on, working you up carefully, finally building to a crashing climax that has you crying out and cumming hard.  As you cum, she gets off again, giving you a fresh taste of her vulpine juices.";
+		attempttowait;
+		say "     'Mmmm!  Soooo good.  Oh, I just know I'm going to love being your slutty vixen,' she moans between licks.  Hearing her give in like that is the perfect capper for your fun and you sit back up.  You stay overtop of her face, leaving her to lick you clean before you'll move off of her.  You then pull her into your arms, groping the vixen playfully while in her sex-addled daze.";
+	otherwise:
+		say "[bracket]***Neuter scene to be added later. - The Mgmt[close bracket][line break]";
+	attempttowait;
+	say "     After taking a few minutes to recover, you order Kristen to get up start gathering her things.  You tell her you'll be taking her to stay at the Palomino with Janice now so your two sexy vixens can be together.  'Oooo!  That sounds like it could be lots of fun.  I can have fun with her and those would-be suitors while waiting for you to come back and claim your slutty vixen.'  And with that decided and a collection of things the two of them might need packed, you escort the sexy vixen to the club.";
+	attempttowait;
+	move Kristen to Private Club Room;
+	move player to Private Club Room;
+	say "     When the two of you arrive and head into the private club room to see Janice, the arctic vixen is overjoyed to see her friend - especially in her new, vulpine state.  After a groping hug and a lascivious kiss, Kristen gets pressed down onto the divan as the other vixen rubs her sexy body against her friend's.  'You're such a naughty friend,' Kristen moans as Janice runs a paw down her side.  'Getting me infected and turned into a vixen slut.  Well, don't stop now, babe... claim your foxy fucktoy.'  And hearing that, Janice kisses the vixen, groping her between the legs.  With a lustful need, she finger-fucks her newly transformed friend to a loud and sudden orgasm.";
+	say "     With a grin, Janice takes a lick from her fingers, sampling Kristen's juices before having the other vixen suck them clean.  'Mmm... You forgive me, don't you?' Janice whispers sensually, still lightly caressing Kristen's soaked pussy.  'We'll have so much fun together, you'll see.  It'll be even more fun than before.'  Kristen, still recovering from all this excitement, can only nod in response, too lust-addled and too focused on sucking the vixen's digits clean to disagree.";
+	attempttowait;
+	say "     After watching the hot show, you're tempted to join the sexy pair right then and here, but you remain patient and instead wait for Kristen unpack and settle in.  'Thanks again for showing me what I was missing out on.  Janice says I can do [']favours['] for some of her suitors to get anything else we might need, so if there's anything at her place you'd like, feel free to help yourself.'";
+	add { "pepperspray", "food", "food", "water bottle" } to invent of Kristen's Hideout;
 
 
 Section 5 - Sex with Kristen
@@ -368,8 +547,10 @@ to say sexwithKristen:
 		say "     'I need a little more time to recover, hon.'";
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to play with her right now.";
-	otherwise:
-		say "[bracket]***Sorry, sex content is coming soon. - The Mgmt[close bracket][line break]";
+	otherwise if hp of Kristen < 12:
+		say "[bracket]***Sorry, sex as human content not present at this time. - The Mgmt[close bracket][line break]";
+	otherwise if hp of Kristen >= 16:
+		say "[bracket]***Sorry, sex as vixen content coming soon. - The Mgmt[close bracket][line break]";
 [		now lastfuck of Kristen is turns;	]
 
 
@@ -387,6 +568,7 @@ Section 8 - Variable Charts
 [ 13 = infected, step 1   ]
 [ 14 = infected, step 2   ]
 [ 15 = infected, step 3   ]
+[ 16 = fully tf'd         ]
 [...                      ]
 
 [     xp of Kirsten       ]  [not currently active, but preparatory]
