@@ -98,7 +98,7 @@ The nerd has a research called current.
 cur is a text that varies.
 
 Local Survey is a Research.
-The description of it is "Surveying our immediate sorroundings will better prepare us for the unexpected(Perception +5%)".
+The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected(Perception +5%)".
 The cost of it is 30.
 The completion of it is Local Survey Rule.
 
