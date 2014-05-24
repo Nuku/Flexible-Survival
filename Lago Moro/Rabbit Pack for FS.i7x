@@ -12,7 +12,7 @@ when play begins:
 	add { "rabbit pack" } to infections of guy;
 	add { "rabbit pack" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
 to say rabpackdesc:
 	choose row monster from the table of random critters;
