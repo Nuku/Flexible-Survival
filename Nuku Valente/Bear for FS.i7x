@@ -12,7 +12,7 @@ I wanted her to be strong, hard hitting, and fairly easy to dodge.  Honeycomb se
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 ursinedefeat is a number that varies.
 to say ursine attack:
 	if hp of bee girl is 3:
