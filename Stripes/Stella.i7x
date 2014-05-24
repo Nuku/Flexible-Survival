@@ -86,7 +86,7 @@ Instead of conversing the Stella:
 		say "     She stretches and rubs a paw over her groin.  'As it is, when I'm not faffing about here, I'll totally be wandering in and out.  Places to go, people to see, holes to stuff - you know how it is,' she giggles.  'Oh, speaking of, I don't want you to be getting any funny ideas.  If we're going to be banging - and I hope we will - I'm like totally going to be on top.  I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
 		now hp of Stella is 3;
 	otherwise:
-		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain.  I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed.  And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat.  'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[in random order]";
+		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain.  I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed.  And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat.  'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[or][if police station is known and laststellamove - turns >= 16]Do let me know if you find another spot with some fun [']friends['] I can get to [']know better['] and I can [bold type]move[roman type] there for a while.'[otherwise]'I'm really enjoying making friends around here.  There's plenty of people out there happy to have a go at this girl's doggy dong.'[in random order]";
 
 
 Section 3 - Moving Stella
@@ -158,6 +158,11 @@ to say Stellasexmenu:
 	now title entry is "Anal";
 	now sortorder entry is 5;
 	now description entry is "take it up the arse";
+	if player is submissive:
+		choose a blank row in table of fucking options;
+		now title entry is "Dominant doggy";
+		now sortorder entry is 6;
+		now description entry is "be this brit's bitch";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -181,6 +186,8 @@ to say Stellasexmenu:
 					say "[stellasex4]";
 				otherwise if nam is "Anal":
 					say "[stellasex5]";
+				otherwise if nam is "Dominant doggy":
+					say "[stellasex6]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	if hp of Stella is 3, now hp of Stella is 4;
@@ -209,6 +216,11 @@ to say stellasex5:
 	say "     Suggesting that she take you in the ass, she grins and strokes her swelling penis.  '[if cunts of player > 0]Ooo!  Kinky girl!  I like that[otherwise]MMmm!  Sounds good.  Bend over and lemme at that arse of yours[end if],' she says in her cheerful British accent.  Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position.  She rubs the pointed, drooling tip against your pucker, letting her pre lube you up a little as she gets your back passage to ease open.  As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again.  She fucks you well, clearly having learned a lot on how to please a lover from having been boned herself so often[if breast size of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts.  Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[otherwise if cocks of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cock of player] shaft.  She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[end if].  She keeps a nice, brisk pace[if cocks of player > 0], grinding her throbbing cock against your prostate with every thrust, and[otherwise],[end if] then easing off before you can get too excited.  For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
 	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes [if cocks of player > 0]against your prostate[otherwise]around inside your bowels[end if].  As it builds up, having nowhere else to go, it can only flow deeper into you.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[mimpregchance]";
+
+to say stellasex6:
+	say "     As you offer to let Stella fuck you, there's a little something in your voice that causes her canine ears to perk up.  Sensing the submissive need in your tone, she gives a doggy grin and a sniff.  'Smells like someone's looking forward to their chance to be my bitch[if hp of Stella >= 4] again[end if].  Don't worry, I'll give you the proper shagging a slut like you deserves,' she says with a lustful growl in her voice.  Pressing you down onto a bench, she gives your rear a couple of slaps with her cock, making you blush as you grow all the more aroused by her mistreatment of you.";
+	say "     Having gotten herself quite worked up as well, precum drools from her cock onto your [if cunts of player > 0]pussy[otherwise]tight pucker[end if] as she gets into position.  Not in the mood to wait any long, she takes the nape of your neck in her muzzle and thrusts into you.  Thankfully, she shows a little restraint, but is still steady and inexorable in her determination to stuff your [if cunts of player > 0]needy cunt[otherwise]back passage[end if].  Her paws roam over your body, groping and teasing you as she pants in your ear about what a slutty bitch you are, lusting for dog cock so badly.  You can only pant and moan beneath her, feeling like the dog herm's bitch and loving it as she pounds away at you.";
+	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes [if cunts of player > 0]against your cervix[otherwise if cocks of player > 0]against your prostate[otherwise]around inside your bowels[end if].  As it builds up, having nowhere else to go, it can only flow deeper into you.  While waiting for her extended climax to end and her knot to go down, she continues to grope and fondle you, enjoying your whimpers of pleasure and lustful cries as her paws roam over your [bodytype of player] body appreciatively.[impregchance]";
 
 
 to stellainfect:
