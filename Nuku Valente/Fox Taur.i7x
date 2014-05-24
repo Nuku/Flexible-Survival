@@ -5,7 +5,7 @@ Section Table
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat color could be that of a grey fox, a red fox, or artic fox.
+Coat color could be that of a grey fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
@@ -28,7 +28,7 @@ Segment	Shift Text	Desc Text
 "right shin"	"Your right ankle itches profusely as red hairs sprout all over it, quickly covering it in a coat of fur."	"Your right shin is covered in a lush coat of rusty red fur."
 "right foot"	"Your right foot seems to melt as its bone structure is reworked. Your skin grows white fur and before you know it, you've got a fox's paw."	"Your right foot is less of a foot and more of a canine paw, covered in white fur."
 "rear"	"Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Warm tingles erupt along your new, lower, belly as a thick udder bubbles into being even as your cock swells right up, pressing along its back and underside as it screams almost as loudly as your sopping wet cunt for action."	"You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end. [if the number of playerheld people is greater than 0]Your belly is swollen, bringing back fond memories of devouring [list of playerheld people] into your wanting cunt.[end if]"
-"full"		"Fox Taur"	"You are scarsely recogniseable as a human anymore. You have become a large fox taur, a with the upper body in the shape of a human's but with vulpine features. Black-tipped ears adorn your head, and a thin, carefully-sculpted muzzle shapes your face. A large set of breasts jiggle from your chest, you estimate them to be about F cup size. Red fur covers the entirety of your body, save for your underbelly and paws. Starting from your ass and extending backwards is a second torso, ending with a fox tail. The underside of your tauric body is lined with 8 teats and a jiggling udder. [if the number of playerheld people is greater than 0]Your belly is swollen, bringing back fond memories of devouring [list of playerheld people] into your wanting cunt.[end if]"
+"full"		"Fox Taur"	"You are scarcely recognizable as a human anymore. You have become a large fox taur, a with the upper body in the shape of a human's but with vulpine features. Black-tipped ears adorn your head, and a thin, carefully-sculpted muzzle shapes your face. A large set of breasts jiggle from your chest, you estimate them to be about F cup size. Red fur covers the entirety of your body, save for your underbelly and paws. Starting from your ass and extending backwards is a second torso, ending with a fox tail. The underside of your tauric body is lined with 8 teats and a jiggling udder.[if the number of playerheld people is greater than 0] Your belly is swollen, bringing back fond memories of devouring [list of playerheld people] into your wanting cunt.[end if]"
 
 Section Rules
 
@@ -39,7 +39,7 @@ male sex of Fox Taur is usually "[if player is butch]You guide your cock to his 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat color could be that of a grey fox, a red fox, or artic fox.
+Coat color could be that of a grey fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
@@ -71,7 +71,7 @@ Instead of using a milking machine:
 
 to say foxtaur ending:
 	say "Detecting incoming danger, you immediately flee the city on your swift fox paws. Avoiding all contact until you're more than a state away. You stumble across a farm and find it to be inhabited only by an old married couple that look years from death. They are quite surprised to find you one morning, attached to the milking machine and relieving the pressure that was building down there. Feigning harmlessness, they accept you as one of their animals, if the strangest one they ever saw. This works out well enough until the husband falls over while feeding the chickens. You easily leap over the stall wall and scurry over for a look. It appears that age had claimed him and he was dying. Thinking of no better way to assist, you gather him up and let your hungry womb consume him.";
-	say "The wife is quite distraught when she can't find her husband and spends days fretting until she comes to you, tearful and sobbing. She tells you about her life with him and how she can't even think about life without him. You can't hold your silence any longer. You reach for her and gently pet her greyed hair and offer her a chance to join him. She is quite startled to have her exotic animal talking back to her instead of placidly listening to her bawling. After some hesitation, she agrees, if it means she can be with her husband. Your womb becomes full shortly after. You remained on the farm ever since, with your two 'younger' children, taking care of the animals and living fondly with one another. Your family does grow over the years, as your rejuvinated children suggest neighbors that could benefit from a life as a fox taur.";
+	say "The wife is quite distraught when she can't find her husband and spends days fretting until she comes to you, tearful and sobbing. She tells you about her life with him and how she can't even think about life without him. You can't hold your silence any longer. You reach for her and gently pet her greyed hair and offer her a chance to join him. She is quite startled to have her exotic animal talking back to her instead of placidly listening to her bawling. After some hesitation, she agrees, if it means she can be with her husband. Your womb becomes full shortly after. You remained on the farm ever since, with your two 'younger' children, taking care of the animals and living fondly with one another. Your family does grow over the years, as your rejuvenated children suggest neighbors that could benefit from a life as a fox taur.";
 
 
 Fox Taur ends here.
