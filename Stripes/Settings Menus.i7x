@@ -1,5 +1,5 @@
 Version 3 of Settings Menus by Stripes begins here.
-[Version 3.2 - Booster Feats option added]
+[Version 3.3 - Inventory columns option added]
 
 trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
