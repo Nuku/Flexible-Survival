@@ -12,7 +12,7 @@ beatgrnymph is a number that varies.
 when play begins:
 	add { "Greek Nymph" } to infections of girl;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say Greek Nymph attack:
 	if cocks of player is greater than 0:
  		say "With one last blow, the nymph knocks you to the ground, dazed. 'Yay that was fun!' The beautiful young woman cries out, clapping her hands at her victory, 'I won! I won! Now we get to play a new game!' The nymph says as she eyes your prone form, making you nervous.  Her eyes fix on your cock, which is already partially erect due to her naked state, 'And I know what I want to play with!' The nymph says as she lowers her hand to tease your cock.  The feel of her soft hands on your cock has you lying back on the floor with a groan as she slowly runs her hands all over it. 'Mmm I just love your [cock of player] cock, it looks like fun, we should try it out.' The nymph says with a moan of her own, as she positions herself above you.[line break]";
