@@ -90,9 +90,9 @@ to say sexwithJimmy:
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     There's not much point in playing with him given your lack of genitals.";
 	otherwise:
-		[if hp of Jimmy is 5 and cocks of player > 0 and a random chance of anallevel in 5 succeeds:
-			say "***anal sex";	]
-		if 1 is 1:
+		if hp of Jimmy >= 5 and cocks of player > 0 and a random chance of anallevel in 7 succeeds:
+			say "[Jimmysex02]";
+		otherwise:
 			say "[Jimmysex01]";
 		now lastfuck of Jimmy is turns;
 
@@ -106,6 +106,16 @@ to say Jimmysex01:		[oral]
 	otherwise:
 		say "     Jimmy smiles happily at the prospect of having fun with you.  The small corgi fellow nuzzles between your legs, his cute muzzle homing in on your groin.  Nosing at your puss[yfn], he takes in your scent before sliding his tongue slowly across your juicy folds.  He lavishes attention upon your cunt[sfn], [if cunts of player > 1]swapping between them[otherwise], working his playful tongue in such delightful ways[end if] in his quest to please you.  After giving your sensitive folds a thorough tongue-bath, the corgi's hard-working tongue delves into your hot tunnel[sfn], causing shivers to delight to ripple along your inner walls.";
 		say "     He is very thorough in his licking, moving his attention back and forth between your [if cunts of player > 1][cunt size desc of player] cunts to lap across their folds, clit and inner walls[otherwise]the juicy fold, throbbing clit and quivering inner walls of your [cunt size desc of player] cunt[end if].  While eating you out, his little paws rub over you, one kneading your thigh and the other brushing across your pussy lips.  As your climax approaches, he buries his muzzle between your legs, diving his tongue as deep as he can and squirming it around inside you.  You cum a few moments later, your hot juices soaking the little guy's muzzle, drenching his furry face.  When your orgasm slakes off, Jimmy withdraws that delightful tongue of his and licks his chops with a happy grin.  'Mmm... good stuff.'";
+
+
+to say Jimmysex02:
+	if hp of Jimmy is 4:	[not had anal yet]
+		say "***will not be accessible until later - first time via regular sex.";
+	otherwise:
+		say "     Jimmy's tail wags excitedly at the prospect of having some more fun with you.  Bending over, the little guy wiggles his ass in the air.  'How about you fill me up again?' he asks as he shows that tempting, crinkled hole of his.  It's already pre-lubed, the corgi clearly having hoped for another chance to ride your cock.  With such a tantalizing offer, you find it hard to refuse the cute little guy.  Wrapping your arms around him, you sit him in your lap and onto your throbbing erection.  After sharing a kiss with him, tongues darting across one another, you ease him down slowly, letting your [cock of player] cock pop into his tight tailhole[if cock length of player > 15].  Given the size of your [cock size desc of player] manhood, you have to take it very slow and aren't able to fully bury yourself into him, but that doesn't stop the two of you from enjoying it immensely[otherwise if cock length of player > 7].  Given the size of your [cock size desc of player] manhood, you have to start carefully, but soon you're able to fully bury yourself into his fuzzy rear, much to your immense mutual enjoyment[otherwise].  Your [cock size desc of player] manhood slides fairly easily into his prepped hole and soon you're buried fully in his fuzzy bottom, much to your immense mutual enjoyment[end if].";
+	say "     Partly opening up his K9 unit vest, you slip a hand into it, rubbing his fuzzy chest.  You bounce the cute fellow easily up and down on your cock.  He pants and moans in delight as you fuck his cute ass.  His own canine cock throbs, releasing spurts of precum onto the ground between your feet with every push against his prostate.  The little guy's anus is wonderfully tight[if hp of Jimmy >= 5] even with his earlier preparation[end if], squeezing it hard each time you push into him[one of], and soon you can't help but bounce him even faster in your lap[or].  Taking a hold of his canine cock with your free hand, you stroke his pulsing rod[or], and soon you're pulling him down even harder with every thrust you make[in random order].  This proves too much for the little guy, his knot swelling up and soon she's spurting dog cum across the floor in long streaks as he cries out in ecstasy.  Feeling him clamp down around your shaft, you push deep into him one last time and unleash your [cum load size of player] load into the happy doggy.";
+	say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support as he's still weak at the knees.  '[if hp of Jimmy is 4]Oh wow!  I mean... I'd never... that was awesome.  I wish I knew how great that felt; I'd've been doing that for years had I known[otherwise][one of]That just keeps getting better and better[or]Oh, how I ache, but it's such a good ache[or]Mmmm... I feel so warm and full[at random][end if].'  Cuddling the cute guy, you help him wipe up the mess you two've made with some rags.  After sharing another kiss, he flops out on his cot, rubbing his [if cock width of player > 24]bulging [otherwise if cock width of player >= 12]rounded [otherwise]tummy with a happy smile on his doggy muzzle.";
+	if hp of Jimmy is 4, now hp of Jimmy is 5;
 
 
 [          hp of Jimmy         ]
