@@ -1281,10 +1281,12 @@ Bluntlist is a marker.	[list of infections w/blunt cock]
 when play begins:
 	add { "black equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra", "Sierrasaur", "Wyvern", "Donkeyman", "Donkeywoman", "Giraffe", "Nightmare", "Palomino", "Friendship Pony", "Reindeer" } to infections of Bluntlist;
 
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
+
 
 d18 is a number that varies.
 descr is text that varies.
@@ -2298,6 +2300,21 @@ Carry out vialalldropping:
 		say "You chuck all your [target] vials away.";
 
 
+understand the command "set inventory columns" and "inventory columns" and "set inventory" and "set columns" as something new.
+
+settinginvcolumns is an action applying to nothing.
+
+understand "set inventory columns" as settinginvcolumns.
+understand "inventory columns" as settinginvcolumns.
+understand "set inventory" as settinginvcolumns.
+understand "set columns" as settinginvcolumns.
+
+invcolumns is a number that varies.  [invcolumns is usually 2. - set as part of Default Settings]
+
+carry out settinginvcolumns:
+	say "[set_invcolumns]";
+
+
 understand the command "i" and "inv" and "inventory" as something new.
 
 Inventorying is an action applying to nothing.
@@ -2307,9 +2324,12 @@ understand "i" as Inventorying.
 understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
+invcolumns is a number that varies.  invcolumns is usually 2.
+
 does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
+	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	sort invent of player;
 	let dseed be 0;
 [	let tempname be indexed text;
@@ -2322,7 +2342,7 @@ carry out Inventorying:
 	if Janice's blouse is owned, let jblouse be 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
 		let weight be 0;
 		let newline be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -2349,30 +2369,37 @@ carry out Inventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				say " [fixed letter spacing][name entry formatted to 15 characters]";
+				if invcolumns > 1:
+					say " [fixed letter spacing][name entry formatted to 15 characters]";
+				otherwise:
+					say " [fixed letter spacing][name entry formatted to 24 characters]";
 				if object entry is wielded and object entry is armament:
-					say " (wielded)";
+					say " (*)";
 				if object entry is equipment and object entry is equipped:
-					say " (equipped)";
+					say " (*)";
 				if object entry is improved and ( object entry is armament or object entry is equipment ):
-					say " (improved)";
+					say " (+)";
 				say " x ";
 				let number be carried of object entry;
 				let weighttxt be text;
 				let weightnum be weight entry times number;
 				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
 				increase weight by weight entry times number;
-				if newline is 0:
+				if newline < (invcolumns - 1):
 					say "  --  ";
 					increase newline by 1;
 				otherwise:
 					say "[line break]";
 					now newline is 0;
-		if newline is 1, say "[line break]";
-		if the player is overburdened, say "*OVERBURDENED* ";
-		say "Total Weight: [weight]/[capacity of player] lbs.";
+		if newline > 0, say "[line break]";
+		say "Total Weight: [weight]/[capacity of player] lbs";
+		if the player is overburdened:
+			say ". *OVERBURDENED*[line break]";
+		otherwise:
+			say ".";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
+
 
 Definition: A grab object (called D) is fiveowned:
 	let count be 0;
@@ -4790,11 +4817,7 @@ This is the explore rule:
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
-	if something is 0:
-		if battleground is "Outside":
-			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
-		otherwise:
-			say "You decide to go exploring, but after three long hours of wandering around the [location of player] you return to the last relatively safe place you were at.";
+	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
@@ -7072,6 +7095,7 @@ To startcreatureban: [bans creatures, as requested]
 Section Story Start Text
 
 To regularstart: [normal start method]
+	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	follow the random stats rule;
 	now calcnumber is -1;
 	let trixieexit be 0;
@@ -7086,23 +7110,26 @@ To regularstart: [normal start method]
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[otherwise if gsgl is 2]Random[otherwise if gsgl is 3]Male[otherwise if gsgl is 4]Female[otherwise if gsgl is 5]Shemale[otherwise if gsgl is 6]Cuntboy[otherwise if gsgl is 7]Male Herm[otherwise if gsgl is 8]Herm[otherwise if gsgl is 9]Always Cocky[otherwise if gsgl is 10]Always a Pussy[otherwise if gsgl is 11]Single Sexed[otherwise]ERROR[end if][roman type][line break]";			
 		say "[line break]";
-		say "[bold type]Options:[roman type][line break]";
+		say "[bold type]Gameplay Options:[roman type][line break]";
 		say "(8) [link]Banned/Warded Types[as]8[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(9) [link]Anal Content[as]9[end link] - [bold type][if anallevel is 1]Less[otherwise if anallevel is 2]Normal[otherwise if anallevel is 3]More[end if][roman type][line break]";
 		say "(10) [link]WS Content[as]10[end link] - [bold type][if wslevel is 1]None[otherwise if wslevel is 2]Normal[otherwise if wslevel is 3]Full[end if][roman type][line break]";
 		say "(11) [link]Vore/UB Content[as]11[end link] - [bold type][if vorelevel is 1]None[otherwise if vorelevel is 2]Normal[otherwise if vorelevel is 3]Full[end if] Vore[roman type] & [bold type][if ublevel is 1]None[otherwise if ublevel is 2]Normal[otherwise if ublevel is 3]Full[end if] Unbirth[roman type][line break]";
 		say "(12) [link]Ovi Pregnancy[as]12[end link] - [bold type][if ovipreglevel is 1]Never[otherwise]Normal[end if][roman type][line break]";
+		say "[line break]";
+		say "[bold type]Display Options:[roman type][line break]";
 		say "(13) [link]Hyperlinks[as]13[end link] - [bold type][if hypernull is 0]On[otherwise if hypernull is 1]Off[end if][roman type][line break]";
 		say "(14) [link]Waiting for Input[as]14[end link] - [bold type][if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(15) [link]Screen Clearing[as]15[end link] - [bold type][if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if][roman type][line break]";
 		say "(16) [link]Graphics[as]16[end link] - [bold type][if graphics is true]On[otherwise]Off[end if][roman type][line break]";
+		say "(17) [link]Inventory Columns[as]17[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "(99) [link]Restore a save[as]99[end link][line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-16)>[run paragraph on]";
+			say "(0-17)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 16 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 17 ) or calcnumber is 99:
 				break;
 			otherwise:
 				say "Invalid Entry";
@@ -7151,6 +7178,8 @@ To regularstart: [normal start method]
 				now graphics is false;
 			otherwise:
 				now graphics is true;
+		otherwise if calcnumber is 17:
+			say "[set_invcolumns]";
 		otherwise if calcnumber is 99:
 			now trixieexit is 1;
 			try restoring the game;
@@ -7398,6 +7427,23 @@ to say gsopt_start:
 	say "Welcome to...";
 	display the figure of title_graphic;
 	zephyrad rule in 1 turn from now;
+
+
+to say set_invcolumns:
+	now calcnumber is -1;
+	let gsexit be 0;
+	say "     How many columns would you like the inventory to display (1 - 4) or (0) to abort?";
+	say "     [if invcolumns is not 1][link][bracket]1[close bracket][as]1[end link][otherwise][bold type][bracket]1[close bracket][roman type][end if]  [if invcolumns is not 2][link][bracket]2[close bracket][as]2[end link][otherwise][bold type][bracket]2[close bracket][roman type][end if]  [if invcolumns is not 3][link][bracket]3[close bracket][as]3[end link][otherwise][bold type][bracket]3[close bracket][roman type][end if]  [if invcolumns is not 4][link][bracket]4[close bracket][as]4[end link][otherwise][bold type][bracket]4[close bracket][roman type][end if]  [link][bracket]0[close bracket] - Abort[as]0[end link][line break]";
+	while gsexit is 0:
+		say "Choice? (0-4)>[run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber < 5:
+			now invcolumns is calcnumber;
+			now gsexit is 1;
+		otherwise if calcnumber is 0:
+			now gsexit is 1;
+		otherwise:
+			say "Invalid: Choose between 0 and 4.";
 
 
 Book 10 - Let the Games Begin
