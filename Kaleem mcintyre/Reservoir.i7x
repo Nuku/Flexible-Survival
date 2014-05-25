@@ -47,7 +47,7 @@ instead of sniffing Reservoir Main Pathway:
 	if waterworks is 0:
 		say "The main pathway smells like cum, piss, other bodily fluids as well as something...pervasive like...sorrow?";
 	otherwise if waterworks > 0:
-		say "A clean scent prevades the area of the pathway of the reservoir. The place feels much more lively now. Happy even...";
+		say "A clean scent pervades the area of the pathway of the reservoir. The place feels much more lively now. Happy even...";
 
 The marea of Reservoir Main Pathway entry is "Reservoir".
 
@@ -80,7 +80,7 @@ The sarea of For Purity's Sake is "Reservoir";
 
 Instead of resolving For Purity's Sake:
 	If resevquest is 0:
-		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nauseas that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch."; 
+		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nausea that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch."; 
 		say "This small dilemma frustrates you for a moment before you calm yourself down and realize that if there is something that you can do then you'll just have to do it to the best of your own natural ability. Come what may you can't make the situation any worse than it already is.";
 		now resevquest is 1;
 		increase score by 2;
@@ -152,7 +152,7 @@ The sarea of Slightly Sidetracked is "Reservoir";
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
-		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familair sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee."; 
+		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee."; 
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
 		say "[resevfight2]";
 		say "[resevfight2]";
@@ -250,7 +250,7 @@ This is the doorcheck rule:
 						now ldoor is 1;
 						now doorsearch is 1;
 					otherwise:
-						say "Bumping into the door with your miniscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right? (Y=Yes, N= No)";
+						say "Bumping into the door with your minuscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right? (Y=Yes, N= No)";
 						if player consents:
 							follow the turnpass rule;
 							wait for any key;
@@ -303,7 +303,7 @@ This is the doorcheck rule:
 
 
 
-Section 3 - Reservoir Fight (Preperation)
+Section 3 - Reservoir Fight (Preparation)
 
 The beast of the tainted waters is a situation.
 The sarea of The beast of the tainted waters is "Reservoir";

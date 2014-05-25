@@ -7,7 +7,7 @@ Version 2 of Otter by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 Otterdefeat is a number that varies.
 Otterconsent is a number that varies.
 
@@ -16,7 +16,7 @@ Anal play scenes will not occur if the player is set as Less Anal.
 If guy is banned, the male interplay scenes are removed from the sex.  Female scenes will instead be more likely (75% chance each).
 If girl is banned, the female interplay scenes are removed from the sex.  Male scenes will instead be more likely (75% chance each).
 A male otter may ride the player's cock if guy is not banned, but the female is more common (75%) unless female is banned.
-An otter (75% male/25% female unless banned) may rim the player if they're not recieving anal sex and if the player is set for More Anal.
+An otter (75% male/25% female unless banned) may rim the player if they're not receiving anal sex and if the player is set for More Anal.
 If girl or guy is banned, direct reference to that gender is removed from combat.
 If both guy and girl are banned, then they will show as normal during combat.
 If both guy and girl is banned, a special case is reached, with a unique herm otter coming in for the sex.
@@ -39,7 +39,7 @@ to say Otter attack:
 			attempttowait;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing her bosom and hard prick against you.  But it is not hir cock that needs attention, but hir pussy, which shi brings into position over your shaft before sinking down onto it.  Feeling hir pussy sliding over you, you can't help but moan loudly.  With hir arms around your chest, shi starts riding your cock slowly, letting you enjoy every sensual moment.";
 			attempttowait;
-			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in synch with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
+			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in sync with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
 			attempttowait;
 			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When your release finally comes, you blast your heavy load, emptying your overfilled balls into hir.  Shi clenches hir pussy down firmly around you, keeping all of your cum inside, letting it fill hir with your heat even as a strange heat grows in your loins in response.  When you are spent, shi eases hirself off of you and nibbles your ear lightly before swimming away.";
 			attempttowait;
@@ -48,7 +48,7 @@ to say Otter attack:
 			attempttowait;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing hir bosom and hard prick against you.  You want to feel that cock in you so badly and shi happily obliges, bringing hir shaft into position before sinking it slowly into you.  Feeling hir hard member sliding into you, you can't help but moan loudly.  With hir arms around your chest, shi starts thrusting into you slowly, letting you enjoy every sensual moment.";
 			attempttowait;
-			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in synch with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
+			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in sync with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
 			attempttowait;
 			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When hir release finally comes, shi blasts hir heavy load into you, emptying hir potent seed into your womb.  You moan and tremble as the heat of hir cum fills you, flowing out to warm your whole body as you are wracked with a series of powerful orgasms.  The multiple orgasms leave you spent and panting in the water as shi eases hirself out of you.  Shi nibbles your ear lightly before swimming away.[impregchance][impregchance]";	[2x chance impreg]
 		say "     The other otters pull you to shore, leaving you to recover on the beach, still buzzing with a wicked afterglow.  Shi said nothing, but you can feel shi wants you to join them and part of you longs to do it so you can be with hir again.";
@@ -105,7 +105,7 @@ to say Otter attack:
 					say ".";
 				attempttowait;
 			otherwise:
-				say ".  After worshipping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest.  The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily.  He grinds and wriggles atop it, making your cock throb with need.  A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
+				say ".  After worshiping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest.  The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily.  He grinds and wriggles atop it, making your cock throb with need.  A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if cocks of player is greater than 1:
 					if girl is not banned:
 						say "     Not to be left out, the females swim up, intent on your extra male meat.  The flexible otters wriggle into position, the females taking turns with your additional maleness.  The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";

@@ -5995,11 +5995,11 @@ Fennec Ear Hat is a kind of clothing. Understand "hat" as Fennec Ear Hat. The de
 
 Coyote Tail is a kind of clothing. "Wedged between two fur coats is a discarded coyote tail, odd.". Understand "tail" as Coyote Tail. The description of Coyote Tail is "What an odd thing. You didn't know this fur store actually catered to furries, but there it is, a wearable coyote tail.". The tf table of Coyote Tail is table coyote. Coyote Tail is infectitem. The clothing type of Coyote Tail is "pants".
 
-Stag Antlers is a kind of clothing. understand "Antlers" as stag antlers.  The clothing type of stag antlers is "headware". The description of Stag Antlers is "The antlers of some deer, removed by a hunter and set out to display. Oddly, it has a strap on it. You could wear it easily.". The tf table of stag antlers is table deer. The clothing type of stag antlers is "headwear". Stag Antlers is infectitem.
+Stag Antlers is a kind of clothing. understand "Antlers" as stag antlers.  The clothing type of stag antlers is "headwear". The description of Stag Antlers is "The antlers of some deer, removed by a hunter and set out to display. Oddly, it has a strap on it. You could wear it easily.". The tf table of stag antlers is table deer. The clothing type of stag antlers is "headwear". Stag Antlers is infectitem.
 
 Feathered Mask is a kind of clothing. understand "Mask" as Feathered Mask.  The clothing type of Feathered Mask is "headware". The description of Feathered Mask is "Blue feathers around a long beak. What an odd mask.". The tf table of Feathered Mask is table gryphon. The clothing type of Feathered Mask is "headwear". Feathered Mask is infectitem.
 
-Green Hat is a kind of clothing. understand "hat" as Green Hat.  The clothing type of Green Hat is "headware". The description of Green Hat is "A round cap that is bright green. It practically screams 'Irish' looking at it.". The tf table of Green Hat is table icat. Green Hat is infectitem. There is a Green Hat in downtown.
+Irish Cap is a kind of clothing. understand "hat" as Irish Cap.  The clothing type of Irish Cap is "headwear". The description of Irish Cap is "A round cap that is bright green. It practically screams 'Irish' looking at it.". The tf table of Irish Cap is table icat. Irish Cap is infectitem. There is a Irish Cap in downtown.
 
 Interesting Lipstick is a kind of clothing. understand "Lipstick" as Interesting Lipstick.  The clothing type of Interesting Lipstick is "headware". The description of Interesting Lipstick is "A shiny red metal cannister that can be turned to reveal silky smooth lipstick.". The tf table of Interesting Lipstick is table rogue. The clothing type of Interesting Lipstick is "headwear". Interesting Lipstick is infectitem.
 

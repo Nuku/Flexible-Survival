@@ -111,7 +111,7 @@ To say status of/for (P - a person) :
 		otherwise if x is at most 30:
 			say "have taken quite a beating";
 		otherwise if x is at most 60:
-			say "have definately been better, but you could be worse";
+			say "have definitely been better, but you could be worse";
 		otherwise if x is at most 70:
 			say "are a little beaten up";
 		otherwise if x is at most 80:
@@ -130,7 +130,7 @@ To say status of/for (P - a person) :
 		otherwise if x is at most 30:
 			say "has taken quite a beating";
 		otherwise if x is at most 60:
-			say "has definately been better, but could be worse";
+			say "has definitely been better, but could be worse";
 		otherwise if x is at most 70:
 			say "is a little beaten up";
 		otherwise if x is at most 80:
@@ -166,7 +166,7 @@ Check shooting something (called the target) with something (called the boomstic
 
 Check shooting something (called the target) with something (called the boomstick) (this is the you can't shoot something with itself rule):
 	if the target is the boomstick begin;
-		say "You try to riccochet the shot so that. . . Wait, you can't shoot [the boomstick] with itself!";
+		say "You try to ricochet the shot so that... Wait, you can't shoot [the boomstick] with itself!";
 		stop the action;
 	end if.
 
@@ -266,7 +266,7 @@ Check stabbing something (called the target) with something (called the pigstick
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the you can't stab something with itself rule):
 	if the target is the pigsticker begin;
-		say "You try to break the blade so that. . . Wait, you can't stab [the pigsticker] with itself!";
+		say "You try to break the blade so that... Wait, you can't stab [the pigsticker] with itself!";
 		stop the action;
 	end if.
 
@@ -366,7 +366,7 @@ Check clubbing something (called the target) with something (called the cudgel) 
 
 Check clubbing something (called the target) with something (called the cudgel) (this is the you can't club something with itself rule):
 	if the target is the cudgel begin;
-		say "You try to break the club so that. . . Wait, you can't club [the cudgel] with itself!";
+		say "You try to break the club so that... Wait, you can't club [the cudgel] with itself!";
 		stop the action;
 	end if.
 
@@ -575,19 +575,19 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 
 		Instead of drinking a potion:
 			if the present health of the player is less than 86 begin;
-				let elixer be a random potion carried by the player;
+				let elixir be a random potion carried by the player;
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
 				change the present health of the player to the present health of the player + 15;
-				remove elixer from play;
+				remove elixir from play;
 			otherwise;
 				say "Drinking the potion while your health is [present health of the player] will do you no good. Save it for when you need it.";
 			end if.
 
 		A troll is a kind of person. The max health of a troll is usually 40. A troll is usually hostile. Every troll carries one sharpened bone.
 
-		Forrest is a room. The description of forrest is "A lush forrest. In front of you is a cave. A peculiar odor wafts out from the cave. Strangely, you neither see nor here any animals. Will you go in?" The crossbow and one potion are here.
+		Forrest is a room. The description of forest is "A lush forest. In front of you is a cave. A peculiar odor wafts out from the cave. Strangely, you neither see nor here any animals. Will you go in?" The crossbow and one potion are here.
 
-		Cave is a room. Cave is inside from forrest. The description of cave is "A dank cave. It smells rather like trolls." A troll called a tall troll is in cave.
+		Cave is a room. Cave is inside from forest. The description of cave is "A dank cave. It smells rather like trolls." A troll called a tall troll is in cave.
 
 		Passage is north of cave. The description is "A narrow passage leading deeper into the cave." A troll called a short troll is here. It carries two potions.
 

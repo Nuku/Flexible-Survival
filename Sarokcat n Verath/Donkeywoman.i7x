@@ -10,7 +10,7 @@ when play begins:
 	add { "Donkeywoman" } to infections of girl;
 	add { "Donkeywoman" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
 to say Donkeywoman attack:
 	say "The donkey woman laughs in amusement as you collapse helplessly before her, 'Is that all you have in you? I do so enjoy it when they put up more of a struggle,' She says with a chuckle as she hauls you to your feet before pinning you up against the wall. 'And now for the fun part,' She says with a wicked grin as she traces the tip of her whip over your chest teasingly.";

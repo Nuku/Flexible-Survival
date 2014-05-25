@@ -246,7 +246,7 @@ to say RockandRollfriends:
 		if sarahpups is greater than 0:
 			say "     All around the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerism embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
 	If Coleen is in the bunker:
-		say "     At hearing the music playing on the boombox Coleen proceeds to rock the house as she howls and swivles her body while dancing with the beat of the drumset and electric guitars being played.";
+		say "     At hearing the music playing on the boombox Coleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if hp of Fang is 3 or hp of Fang is 4:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this, after all a win is a win in your book by any accounts.";
@@ -306,7 +306,7 @@ to say Oceanfriends:
 		If hp of Elijah is 3 or hp of Elijah is 4:
 			say "     Elijah moves over by your side and snuggles up to you as best he can.  His large and fluffy wings prove to be very nice comforters for your head to rest on.";
 	if Alexandra is booked:
-		say "     Noticing [if fang is booked]that Fang's not at the door[otherwise]that the lack of activitiy[end if], Alexandra pokes her head inside to see if anything's up.  Noticing the soft music and beach sounds, rolls her eyes with a huff and heads back out to stand watch.";
+		say "     Noticing [if fang is booked]that Fang's not at the door[otherwise]that the lack of activity[end if], Alexandra pokes her head inside to see if anything's up.  Noticing the soft music and beach sounds, rolls her eyes with a huff and heads back out to stand watch.";
 		now lastfuck of Alexandra is lastfuck of Alexandra - 2;
 	increase humanity of player by 4;
 	if humanity of player > 100, now humanity of player is 100;

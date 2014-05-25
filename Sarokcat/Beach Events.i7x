@@ -80,7 +80,7 @@ Instead of resolving a Flotsam bits:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"flotsam club"	"A rough log of driftwood, polished smooth by the waves and somehow hardened in the salt water.  It is quite cumbersom and were it not lightened by its time in the sea, it would be too heavy to wield at all."	15	flotsam club
+"flotsam club"	"A rough log of driftwood, polished smooth by the waves and somehow hardened in the salt water.  It is quite cumbersome and were it not lightened by its time in the sea, it would be too heavy to wield at all."	15	flotsam club
 
 flotsam club is an armament. It is part of the player. It has a weapon "[one of]your giant club[or]your rough club[or]your flotsam log[or]your length of sea hardened wood[at random]". The weapon damage of flotsam club is 10. The weapon type of flotsam club is "Melee". It is not temporary. the objsize of flotsam club is 5. the hitbonus of flotsam club is -2.
 
@@ -106,7 +106,7 @@ when play begins:
 	add Strange wave to badspots of furry;
 
 Instead of resolving a Strange wave:
-	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[apostrophe]t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
+	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[']t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
 	infect "Feral Sea Dragon";
 	Now Strange wave is resolved;
 
@@ -117,7 +117,7 @@ Smashed boat is a situation.
 The sarea of Smashed boat is "Beach";
 
 Instead of resolving a Smashed boat:
-	say "As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[apostrophe]t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
+	say "As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[']t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
 	increase carried of food by 2;
 	increase carried of water bottle by 1;
 	say "You acquired quite a bit of food, but only a little water.";
@@ -192,7 +192,7 @@ Strange castle is a situation.
 The sarea of Strange castle is "Beach";
 
 Instead of resolving a Strange castle:
-	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[apostrophe]t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.";
+	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[']t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.";
 	Now Strange castle is resolved;
 
 
@@ -217,13 +217,13 @@ when play begins:
 	add Cream stand to badspots of furry;
 
 Instead of resolving a Cream stand:
-	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[apostrophe]t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";
+	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[']t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";
 	if player consents:
-		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[apostrophe]t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more then wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
+		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[']t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more then wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
 		decrease hp of player by 20;
 		gryphonify;
 		challenge "Hermaphrodite Gryphon";
-		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here.  You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphons little trap.  Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
+		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here.  You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap.  Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
 	otherwise:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
@@ -240,14 +240,14 @@ Instead of resolving a Lucky seashell:
 	let T be a random number between one and five;
 	Now Lucky seashell is resolved;
 	if T is 1:
-		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures.  And while you don[apostrophe]t actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
+		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures.  And while you don[']t actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
 		increase perception of player by 2;
 		say "your perception has increased by 2!";
 	otherwise if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		increase carried of water bottle by 1;
 	otherwise if T is 3:
-		say "Walking along the beach with the shell in hand, you can[apostrophe]t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[apostrophe]t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[apostrophe]t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[apostrophe]t a total loss";
+		say "Walking along the beach with the shell in hand, you can[']t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[']t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[']t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[']t a total loss";
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
 	otherwise if T is 4:

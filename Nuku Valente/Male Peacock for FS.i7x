@@ -72,12 +72,12 @@ When Play begins:
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[peacockskin]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "[peacocktail]";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]thin red[or]ondulated[or]avian-like[at random]";
+	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can[apostrophe]t fly, though"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes slim and ondulated. It retracts into a new, just formed, slit.  Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit.  Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 6;			[ These are now the creature's stats... ]
 	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10;			[ These values may be used as part of alternate combat.]
