@@ -2392,7 +2392,7 @@ carry out Inventorying:
 					say "[line break]";
 					now newline is 0;
 		if newline > 0, say "[line break]";
-		say "Total Weight: [weight]/[capacity of player] lbs";
+		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs";
 		if the player is overburdened:
 			say ". *OVERBURDENED*[line break]";
 		otherwise:

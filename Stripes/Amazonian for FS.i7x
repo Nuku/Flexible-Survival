@@ -1,5 +1,5 @@
 Version 1 of Amazonian for FS by Stripes begins here.
-[ Version 1.1 - WS scenes added ]
+[ Version 1.2 - Estosterogen pill added ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Amazonian to Flexible Survival."
@@ -102,8 +102,8 @@ When Play begins:
 	now cunt length entry is 16;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "estosterogen pill";			[ Loot monster drops, ]
+	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
  	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
@@ -113,6 +113,77 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Estosterogen Pill
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"estosterogen pill"	"This bi-colour pill has a pair of interconnected rings marked onto it, one with a cross and the other with a plus quartering them."	1	estosterogen pill
+
+estosterogen pill is a grab object. It is temporary. It is a part of the player.
+
+the usedesc of estosterogen pill is "[estosterogen pill use]";
+
+before using a grab object(called x):
+	if x is estosterogen pill:
+		say "[line break]";
+		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+			say "Your feat will not allow this to work.";
+			stop the action;
+		continue the action;
+
+to say estosterogen pill use:
+	if cunts of player > 0 and cocks of player > 0:		[HERM]
+		increase cock length of player by 2;
+		increase cock width of player by 1;
+		increase cunt length of player by 2;
+		increase cunt width of player by 1;
+		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly[run paragraph on]";
+		say ".  Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn].  Your balls plump up a little as well with a surge of added virility[run paragraph on]";
+		follow the cunt descr rule;
+		say ".  Even as this is occurring, you watch your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr][run paragraph on]";
+	otherwise if cunts of player > 0:				[FEMALE]
+		now cocks of player is 1;
+		now cock width of player is 6;
+		now cock length of player is 4;
+		increase cunt length of player by 2;
+		increase cunt width of player by 1;
+		follow the cunt descr rule;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  You watch as your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth[run paragraph on]";
+		say ".  As this is occurring, a twinge centred at your clit increases rapidly.  With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt that from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if][run paragraph on]";
+	otherwise if cocks of player > 0:				[MALE]
+		increase cock length of player by 2;
+		increase cock width of player by 1;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn].  Your balls plump up a little as well with a surge of added virility[run paragraph on]";
+		say ".  Even as this is occurring, you feel your bare groin clench as internal changes begin.  There comes a pulling sensation as a wet passage opens and flesh folds form around it.  Within moments, you have a wet pussy and needy little cunt between your legs as well[run paragraph on]";
+	otherwise:								[NEUTER]
+		now cocks of player is 1;
+		now cock width of player is 6;
+		now cock length of player is 4;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  With your body in shock, you feel your bare groin clench as internal changes begin.  Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises.  Soon enough, you've grown a [cock size desc of player] [cock of player] cock and a [cunt size desc of player] cunt as your gender suddenly reverses from neither to both male and female in one[run paragraph on]";
+	if breasts of player is 0:
+		now breasts of player is 2;
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+	otherwise if breast size of player is 0:
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+	otherwise:
+		increase breast size of player by 1;
+		if breast size of player > 10, increase breast size by 1;
+		if breast size of player > 26, now breast size of player is 26;
+		follow the breast descr rule;
+		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
 [
