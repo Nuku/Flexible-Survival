@@ -44,39 +44,46 @@ Instead of resolving a Pharmaceutical Storage:
 	say "     You manage to find the hospital's pharmaceutical storage room.  It has clearly been gone through already by someone, as the shelves are barren.  There are a few sticky stains and scattered bottles on the floor you carefully avoid stepping on.  Carefully, you poke through the remaining items to see if anything useful remains among the last scattered samples and bottles.";
 	say "[drugsearch]";
 	say "[drugsearch]";
+	say "[drugsearch]";
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 5;
 	now Pharmaceutical Storage is resolved;
 
 to say drugsearch:
-	let T be a random number between 1 and 11;
+	let T be a random number between 1 and 13;
 	if T is 1:
 		say "     You find a medkit.";
 		increase carried of medkit by 1;
 	if T is 2 or T is 3:
-		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?[line break]";
+		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?";
 		increase hasparts by 1;
 	if T is 4:
 		say "     You find a testosterone pill still in the sample pack.";
 		increase carried of testosterone pill by 1;
 	if T is 5:
+		say "     You find an estrogen pill still in the sample pack.";
+		increase carried of estrogen pill by 1;
+	if T is 6:
+		say "     You find an odd pill labelled as being [']estosterogen['] still in its sample pack.";
+		increase carried of estosterogen pill by 1;
+	if T is 7:
 		say "     You find a cock pill still in the sample pack.";
 		increase carried of cock pill by 1;
-	if T is 6:
+	if T is 8:
 		say "     You find a birth control pill still in the sample pack.";
 		increase carried of birth control pill by 1;
-	if T is 7:
+	if T is 9:
 		say "     You find a fertility enhancement pill still in the sample pack.";
 		increase carried of fertile pill by 1;
-	if T is 8:
+	if T is 10:
 		say "     You find a strange, blood red pill.";
 		increase carried of blood pill by 1;
-	if T is 9 or T is 10:
-		say "     You find a small syringe with clear, blue fluid in it and labeled as a [']healing booster['].";
+	if T is 11 or T is 12:
+		say "     You find a small syringe with clear, blue fluid in it and labelled as a [']healing booster['].";
 		increase carried of healing booster by 1;
-	if T is 11:
-		say "     You find a small syringe with cloudy, orange fluid in it and labeled as a [']libido suppressant['].";
+	if T is 13:
+		say "     You find a small syringe with cloudy, orange fluid in it and labelled as a [']libido suppressant['].";
 		increase carried of libido suppressant by 1;
 
 
@@ -1090,10 +1097,10 @@ to say tlabsbigfight:
 	project the icon of Sally;
 	say "     You can see that he's becoming some strange hybrid of husky and rabbit, with a cute, rabbit-like muzzle and ears, but a coat of fluffy fur and curled tail like a husky.  As six breasts with perky nipples start to form on his chest and a wet slit grows in under his fuzzy sheath, the struggles to get away start to become lustful grinding against your body as the hormones course through her system, clouding the doctor's judgement.";
 	attempttowait;
-	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door slams open almost off its hinges as an angry dragon bursts in.  She growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
+	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door slams open almost off its hinges as an angry dragon bursts in.  Orthas growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
 	if Susan is visible:
 		attempttowait;
-		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as Orthas shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
+		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as the dragoness shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
 	now fightstatus is 3;
 	now inasituation is true;
 	challenge "Dragon";

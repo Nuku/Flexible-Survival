@@ -1,5 +1,5 @@
 Version 2 of Twisted pimp by Sarokcat begins here.
-[ Version 2 - An M/M player victory scene. ]
+[ Version 2.1 - Estrogen pill added. ]
 
 "Adds a pimp to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -88,8 +88,8 @@ When Play begins:
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "estrogen pill";			[ Loot monster drops, ]
+	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]exotic[or]sexy[or]beastial[or]sultry[at random]";
@@ -99,6 +99,81 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Estrogen Pill
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"estrogen pill"	"This small potent looking object has a heart symbol, subdivided by a plus."	1	estrogen pill
+
+estrogen pill is a grab object. It is temporary. It is a part of the player.
+
+the usedesc of estrogen pill is "[estrogen pill use]";
+
+before using a grab object(called x):
+	if x is estrogen pill:
+		say "[line break]";
+		if cocks of player is greater than 0:
+			say "As you move to slip the pill in your mouth, you feel an uneasy twinge run through your cock[smn].  Are you sure to still want to use it?";
+			if the player consents:
+				if "Male Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
+					say "Your feat will not allow this to work.";
+					stop the action;
+				continue the action;
+			otherwise:
+				say "You decide against using the pill and pop it back into your backpack.";
+				stop the action;
+
+to say estrogen pill use:
+	if cunts of player > 0 and cocks of player > 0:		[HERM]
+		now cocks of player is 0;
+		now cock width of player is 0;
+		now cock length of player is 0;
+		say "With a burst of intense pain, you feel your cock[smn] rapidly recede[smv] and your balls withering away.  Within moments, nothing remains of your former masculinity[run paragraph on]";
+		increase cunt length of player by 2;
+		increase cunt width of player by 2;
+		follow the cunt descr rule;
+		say ".  You can also see your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr][run paragraph on]";
+	otherwise if cunts of player > 0:				[FEMALE]
+		now cocks of player is 0;
+		now cock width of player is 0;
+		now cock length of player is 0;
+		increase cunt length of player by 2;
+		increase cunt width of player by 2;
+		follow the cunt descr rule;
+		say "You feel a rush of warmth to your loins as you watch your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr][run paragraph on]";
+	otherwise if cocks of player > 0:				[MALE]
+		now cocks of player is 0;
+		now cock width of player is 0;
+		now cock length of player is 0;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		follow the cunt descr rule;
+		say "With your body in shock, you feel your cock[smn] rapidly recede[smv] and your balls getting drawn into your lower belly.  As your cock[smn] form[smv] into a clit and a small, dripping pussy forms underneath it, you feel your testes changing inside you as they become the ovaries for your newly formed womb[run paragraph on]";
+	otherwise:								[NEUTER]
+		now cocks of player is 0;
+		now cock width of player is 0;
+		now cock length of player is 0;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		say "With your body in shock, you feel your bare groin clench as internal changes begin.  Soon you feel a pulling sensation as a wet passage opens and flesh folds form around it.  Within moments, you have a wet pussy and needy little cunt between your legs[run paragraph on]";
+	if breasts of player is 0:
+		now breasts of player is 2;
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+	otherwise if breast size of player is 0:
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+	otherwise:
+		increase breast size of player by 1;
+		if breast size of player > 10, increase breast size by 1;
+		if breast size of player > 26, now breast size of player is 26;
+		follow the breast descr rule;
+		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+
 
 when play ends:
 	if bodyname of player is "Twisted Pimp":
