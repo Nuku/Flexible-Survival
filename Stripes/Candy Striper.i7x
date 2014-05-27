@@ -47,8 +47,9 @@ to say losetocandycoon:
 
 
 to say beatthecandycoon:
-	if nocandycoonsex > 2:
+	if nocandycoonsex > 2 and ( the remainder after dividing nocandycoonsex by 5 is not 0 ):
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts as you have in the past.";
+		increase nocandycoonsex by 1;
 	otherwise if libido of player < 30:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	otherwise:
