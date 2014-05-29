@@ -2150,6 +2150,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Hyena Hideout[close bracket][as]nav Hyena Hideout[end link] ";
 		if Mike's Home is known:
 			say "| [link][bracket]Mike's Home[close bracket][as]nav Mike's Home[end link] ";
+		if Spider's Web is known:
+			say "| [link][bracket]Spider's Web[close bracket][as]nav Spider's Web[end link] ";
 		if Wolfman Lair is known:
 			say "| [link][bracket]Wolfman Lair[close bracket][as]nav Wolfman Lair[end link] ";
 		say "[line break]";
