@@ -1584,6 +1584,13 @@ this is the firebreath rule:
 				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven.  You suffer [special-style-2][dam][roman type] damage!";
 			otherwise:
 				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
+		otherwise if name entry is "Magic Drake":
+			if fbhit is 2:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise if fbhit is 1:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it.  The strange fire is both burning hot and also strangely arousing.  It saps some of your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames.  Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		otherwise:
 			if fbhit is 2:
 				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";
