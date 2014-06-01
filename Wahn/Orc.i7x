@@ -1737,10 +1737,7 @@ to say ChrisDesc:
 		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'.";
 		
 instead of conversing the Chris:
-	if Chris is in Grey Abbey 2F:
-		say "     <Wahn says: Sorry, this part of him is still under construction>";
-	otherwise:   [prepared for later use]
-		say "[ChrisTalkMenu]";
+	say "[ChrisTalkMenu]";
 		
 instead of trading the orc brew when the current action involves the Chris:
 	if libido of Chris is 0:
@@ -1779,36 +1776,72 @@ instead of trading the orc cum when the current action involves the Chris:
 		say "     Accepting the plastic bottle of orc cum from you, Chris weighs it in his big hand, looking at the light green, thick and creamy liquid within. He screws the cap off and sniffs it, then hands it back to you. 'No thanks, I'd rather have something with some booze in it. A drink for real men!'";
 		
 to say ChrisTalkMenu:
+	say "What do you want to talk with Chris about?";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
-	now title entry is "Talk about him";
-	now sortorder entry is 1;
-	now description entry is "Let him tell you about himself.";
-	now toggle entry is ChrisTalk rule;
-	choose a blank row in table of fucking options;
+	[]
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Himself";
+		now sortorder entry is 1;
+		now description entry is "Ask the orc about himself";
+	[]		
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Sex";
+		now sortorder entry is 2;
+		now description entry is "Ask the orc about sex";
+	[]		
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the ChrisTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Talk about him"):
-			say "[ChrisTalk1]";
-		wait for any key;
-		
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if nam is "Himself":
+					say "[ChrisTalk1]";
+				if nam is "Sex":
+					say "[ChrisTalk2]";					
+				wait for any key;
+				now lastfuck of Aelias is turns;
+		otherwise if calcnumber is 100:
+			say "Break off?";
+			if the player consents:
+				now sextablerun is 1;
+				say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
+				wait for any key;				
+			otherwise:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;			
+			
 to say ChrisTalk1:
-	say "     A";
+	if libido of Chris is 0:   [basic Chris]
+		say "     Chris gives a little shrug, then says 'Not much to tell when you haven't been around that long. I mean - you were there when I was born, then brought me here.' Nodding towards the row of large windows, he continues 'Been scavenging out in the nearer buildings a bit - carefully, you know, so nothing jumps me or follows back here. There's quite a bit of useful stuff to find.' After letting his eyes wander over his little camp, with its mattress, sleeping bag and numerous items piled up besides them, he the looks at the bookshelves. 'As for the future - I remember from dad that people used to have jobs, doing something instead of just scrambling to survive. I guess this whole chaos won't last forever and at some point a new society will establish itself, so I've been reading up a bit. Planning and building houses seems to be a good skill to have... what with whole city blocks burning down because no one can stop a fire that breaks out.'";
+	otherwise if libido of Chris is 1:   [orc breeder]
+		say "     With an adoring look on his face, Chris gushes at you 'I'm so happy to be your slave, master. Please make use of me, I need someone to fuck me, make me feel good and feed me their cum. You, your friends, your pets - I live to serve!'";
+	otherwise if libido of Chris is 2:   [orc warrior]
+		say "     Chris rubs the bulge at the front of his pants and says 'I feel great! Strong and powerful - and pretty much horny all the time... but that isn't a problem. There's lots of ass th be had, you can just grab em off the street.' Giving you a lusty grin and a 'light' (for an orc) bump with his elbow, he continues, [one of]'Did you know there's a German Shepherd living just a block over to the west? Thought he was a tough guy and barked at me, hah - one little swat on the nose and that little bitch was out of the fight. It felt really good to have his hole wrapped around my shaft and to pump him full of cum. Now he begs me for more when I come his way, like a proper little slut...'[or]'A gryphon tried to jump me when I went out not too long ago - her feathers tickled quite a bit when I fucked her hard...'[or]'Isn't it funny how those little latex foxes bulge and expand when one blasts em full of cum? Almost thought the last one was gonna burst - haha!'[or]'I ran into this husky out on the streets with his flock of sluts. Said he was their alpha and offered me one of them to fuck since he didn't want to fight. Pfft - as if I wanted to take those weakling bitches... so I had some fun with the guy himself. Even struggled a bit, but he was no match for a real orc. You should have heard him whimper and howl when I pounded his hole...'[at random]";
 					
 to say ChrisTalk2:
-	say "     B";					
-						
+	if libido of Chris is 0:   [basic Chris]
+		say "     A smile shows on Chris mouth as you chat him up and he says 'What about it? Sex is fun - you offering?' Giving you a playful wink that brazenly promises a good time, the orc then continues with, 'Or do you want to talk about sex in the old world? Those strange customs I remember from dad... why would anyone refuse to share comfort and pleasure with others if they're interested in each other. Or even two people just deciding to only fuck each other until they're all bored and annoyed with each other...'";
+	otherwise if libido of Chris is 1:   [orc breeder]
+		say "     With an adoring look on his face, Chris gushes at you 'Does my master wish me to do something right now? I'm always ready to please you. Or do you want me to learn some new way to please you? I think I saw some instructive books in the shelves...'";
+	otherwise if libido of Chris is 2:   [orc warrior]
+		say "     Chris gives a deep chuckle and rubs the bulge in his pants. 'Ha! Of course you're gonna ask me about it. I'm just a sex machine! Okay then... first you got to grab yourself a nice little bitch to have fun with, maybe give him a few light pats till he stops struggling.' To illustrate his point, Chris lets his balled up fist meet his other hand in a meaty slap. 'After that, you let him suck your cock, get it nice and wet - that's important for later! You can also use lube, but it's more fun with someone licking your balls and cock, you know. And then it's go-time, bend over your bottom boy and start pushing it in...' In a pretty lewd demonstration Chris mimes holding on to someone by the hips and pulling them against his crotch, then thrusting against them. 'At that point you'll have to show some self control... you'll want to just pound the little bitch immediately, but you can't - wouldn't want to break your pet, you know. So you take it slow, get him used to your thick shaft - and THEN you fuck him as wild as you want. And be sure to fill him up good and maybe feed him some more cum later - then you'll have a much more willing slave the next time it's time to fuck...'";
+														
 to say ChrisTalk3:
 	say "     C";
 
@@ -1824,7 +1857,13 @@ Instead of fucking the Chris:
 			now title entry is "Get a blowjob from Chris";
 			now sortorder entry is 1;
 			now description entry is "Let the orc suck you off";
-		[]		
+		[		
+		if cocks of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the orc's ass";
+			now sortorder entry is 2;
+			now description entry is "Pound your dick into Chris";
+		]				
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -1843,6 +1882,8 @@ Instead of fucking the Chris:
 					now sextablerun is 1;
 					if nam is "Get a blowjob from Chris":
 						say "[ChrisSex1]";
+					if nam is "Fuck the orc's ass":
+						say "[ChrisSex2]";
 					wait for any key;
 					now lastfuck of Aelias is turns;
 			otherwise if calcnumber is 100:
@@ -1859,7 +1900,7 @@ Instead of fucking the Chris:
 	
 to say ChrisSex1: [Chris sucks the player]
 	if libido of Chris is 0:   [base state]
-		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'Sure, I'm down for anything,' then gets on his knees and starts to undo your pants. His eager fingers quickly have you naked below the belly-button, then they move to cup your balls and give your quickly hardening cock a few low jerks. Lifting your manhood, he proceeds to lick up its underside, from your balls to the tip, then slides his soft lips over the cockhead.";		
+		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'Sure, I'm down for anything,' then gets on his knees and starts to undo your pants. His eager fingers quickly have you naked below the belly-button, then they move to cup your balls and give your quickly hardening cock a few slow jerks. Lifting your manhood, he proceeds to lick up its underside, from your balls to the tip, then slides his soft lips over the cockhead.";		
 		if cockname of player is "Orc Warrior" or cockname of player is "Orc Breeder":  [transformation danger]
 			say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris quickly pull off your cock. He pants 'Sorry, but I shouldn't swallow your cum...' and starts to raise his hand to jerk you off instead. A sudden urge to just grab him and face-fuck the young man until you cum wells up inside you. That must be your orc instincts, wishing to push him into the transformation to be your private orc breeder, to fill and knock up as you wish.";
 			say "     [line break]";
@@ -1875,11 +1916,42 @@ to say ChrisSex1: [Chris sucks the player]
 		otherwise:   [regular BJ]
 			say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris increase his efforts, going down on you with a vengeance. Unsurprisingly, this pushes you over the edge within moments, making you pant loudly as you start blasting away into his mouth and down his throat. The handsome orc hungrily swallows everything you can give him and doesn't stop until he's milked you for even the last little drop. Finally pulling off your shaft, he smacks his lips contently, then stands up and puts his arms around you for a long kiss.";		
 	otherwise if libido of Chris is 1:
-		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'Of course, master. I love serving you,' then gets on his knees and starts to undo your pants. His eager fingers quickly have you naked below the belly-button, then they move to cup your balls and give your quickly hardening cock a few low jerks. Lifting your manhood, he proceeds to lick up its underside, from your balls to the tip, then slides his soft lips over the cockhead.";		
+		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'Of course, master. I love serving you,' then gets on his knees and starts to undo your pants. His eager fingers quickly have you naked below the belly-button, then they move to cup your balls and give your quickly hardening cock a few slow jerks. Lifting your manhood, he proceeds to lick up its underside, from your balls to the tip, then slides his soft lips over the cockhead.";		
 		say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris increase his efforts, going down on you with a vengeance. Unsurprisingly, this pushes you over the edge within moments, making you pant loudly as you start blasting away into his mouth and down his throat. The handsome orc hungrily swallows everything you can give him and doesn't stop until he's milked you for even the last little drop. Finally pulling off your shaft, he smacks his lips contently, then stands up and puts his arms around you for a long kiss.";
 	otherwise if libido of Chris is 2:
 		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'So? If you wanna have fun, why don't YOU suck MY cock. You can jerk off while you deep-throat me.' Changing your approach, you playfully insinuate that it's okay and you won't hold it against him that he's not man enough to take your whole shaft. 'Hah - there's nothing a real orc can't do,' he grunts, then falls to his knees before you. 'Bring it on - I'll show you what's what!' Hooking two fingers under your waistband, he pulls your pants down with a powerful wrench, then leans forward to lick your soon hardening shaft, sliding his soft lips over the cockhead in short notice.";		
 		say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris increase his efforts, going down on you with a vengeance. Unsurprisingly, this pushes you over the edge within moments, making you pant loudly as you start blasting away into his mouth and down his throat. The handsome orc hungrily swallows everything you can give him and doesn't stop until he's milked you for even the last little drop. Finally pulling off your shaft, he smacks his lips contently, then stands up and wipes a bit of cum off the corner of his mouth. 'See - told ya. Orc warriors are the best at everything!'";		
+
+to say ChrisSex2: [the player fucks Chris]
+	if libido of Chris is 0:   [base state]
+		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'Sure, I'm down for anything,' then reaches for your pants. His eager fingers quickly have you naked below the belly-button, then they move to cup your balls and give your quickly hardening cock a few slow jerks. Drawing your head towards his to meet your lips for a kiss, the young man pants 'Can't wait to feel you inside me.' After that, he sashays over towards his mattress, casually undoing his shorts and letting them drop on the way, then lies down. The handsome and shapely orc gives you a very inviting smile as he proceeds to pull up his legs, holding them spread open for you to present his asshole.";
+		say "     Eager to join Chris between (or rather on top of) the sheets, you hurriedly throw off your gear and clothing and get down on the mattress yourself. Leaning forward, you grab the young man's already fully hard cock, licking the hot and hard pole slowly before moving lower as you jerk him with your hands. The orc gives an aroused gasp as you lap over his balls, then encircle one of them with your lips and suck on it, before finally arriving at his invitingly quivering hole. You bury your nose between his firm cheeks, breathing in Chris's own masculine scent, and lap along his crack, then seek out the pucker with the tip of your tongue and stick it in. There is something very gratifying about the way you can make this strong man quiver and pant by just wiggling your tongue a little bit as you eat out his ass.";
+		say "     [WaitLineBreak]";
+		say "     After spending some time going down on Chris, you hear him moan 'You're amazing - but I need more. Please, stick it in and fuck me hard!' Who could resist such an enticing request? You don't even try, instead moving closer to him on your knees, until your own hard cock is just in the right position to take the green hunk's ass. Reaching down to take hold of your manhood, you gently brush it over Chris's hole, making him pant in arousal. Then you press in and sink your hard shaft into the orc's rear end, stretching his inner muscles around you. With you taking the time to prepare and relax him with oral sex, as well as some inherited traits from his orc breeder parent, you find Chris to be able to take your erection easily, while at the same time still being nice and snugly tight.";
+[---------------- roadworks ahead------------------]		
+		say "     The young man really is a natural at bottoming, squeezing and flexing his inner muscles around your invading member to add to your pleasure. ...";
+		say "     or maybe part of the whole orc breeder infection - not that you care that much about which it is currently, being balls-deep inside him and running your hands over Val's muscled chest and abs. After stroking down over his stomach, you give Val's own hard cock a few strokes, then put your hands on his hips, gripping him tightly. Then you pull your cock out almost all the way and start fucking him with deep and hard strokes, filling the cell with slapping noises as you pound against his butt.";
+		say "     Val just takes everything you can give, even moaning to take him ever faster and harder, while at the same time flexing his inner muscles to grip and squeeze your thrusting shaft for maximum pleasure. Getting a good ass-fucking drives the eager orc breeder over the edge before much longer, almost shouting 'Just like that, yeah, YEAH - aahhh - I'm coming!' as his cock sprays a pretty hefty load of cum all over his chest. His inner muscles twitch and flex with each shot of seed erupting from Val's cock, giving you all new stimulating sensations as you move in and out of him. Just a moment later, you reach the climax of your arousal and come, filling the orc's insides with spurt after spurt of your warm seed.";
+		say "     [WaitLineBreak]";
+		say "     After that, the slutty little orc breeder just stays lying on the bench, enjoying the afterglow of his orgasm and the full feeling you gave him. You on the other hand go and grab your gear and clothes to get dressed, as you don't have the time to lounge around all day like this kept slave.";		
+		if cockname of player is "Orc Warrior" or cockname of player is "Orc Breeder":  [transformation danger]
+			say "     A.";
+			say "     [line break]";
+			say "     Do you do the 'right' thing and suppress those urges, or would you like to fill Chris with his first of many loads of orc cum?";
+			if player consents:
+				say "     [line break]";
+				say "     A";
+			otherwise:
+				say "     [line break]";
+				say "     A.";
+				now libido of Chris is 1;
+		otherwise:   [regular BJ]
+			say "     A";		
+	otherwise if libido of Chris is 1:
+		say "     A";
+	otherwise if libido of Chris is 2:
+		say "     A'";		
+[---------------- roadworks end ------------------]		
 
 		
 Section 6 - Endings
