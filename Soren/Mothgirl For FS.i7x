@@ -7,7 +7,7 @@ Version 9 of Mothgirl For FS by Soren begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
 mothgirlnosex is a number that varies.
 Mothdefeat is a number that varies.
@@ -15,7 +15,7 @@ Mothdefeat is a number that varies.
 to say Moth attack:
 	now mothgirlnosex is 0;
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "     The Mothgirl, grinning at it's newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, she thusly exploiting your vulnerable state to grind her breasts against [if breasts of player > 0]your own [breast size desc of player] curvature[otherwise][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter.  She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
+		say "     The Mothgirl, grinning at it's newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against [if breasts of player > 0]your own [breast size desc of player] curvature[otherwise][bodydesc of player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter.  She leaves you only with the soft whisper 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
 		increase libido of player by 5;
 		decrease humanity of player by 3;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -61,7 +61,7 @@ to say mothgirl defeat:
 					say "     On her knees, you grip the mothgirl by the tuft of fur on her chest and pull her to your crotch, pressing her face against your [cunt size desc of player] cunt.  Inevitably obliging, you begin to feel her tongue caress your supple surface.  You coax her to make a greater effort in pleasuring you, and her pace hastens, soon feeling that slick organ explore your depths.";
 					say "     Eventually, her involuntary affections are rewarded with your blissful release, dousing the beleaguered creature with your sexual fluids. Obsessed with her own lust, the mothgirl licks up these fluids even from her own face after you inevitably part from her. You decide to leave her to her own devices and depart.";
 			otherwise:
-				say "     At this point the mothgirl is bent over, giving you a clear view of her exposed behind, which inspires you to offer her a more [']literal['] punishment.  You harshly swat her supple ass before making a more deliberate rhythm of spanking the diminutive creature.  Her pleads for reprieve transform into moans as the pain gradually trends into pleasure, so much so that your efforts are enough to cause her to orgasm into the open air.  Satisfied with what you have wrought, you let her go. No doubt immensely embarrassed, she hobbles away, rubbing her red ass as she departs.";  
+				say "     At this point the mothgirl is bent over, giving you a clear view of her exposed behind, which inspires you to offer her a more [']literal['] punishment.  You harshly swat her supple ass before making a more deliberate rhythm of spanking the diminutive creature.  Her pleads for reprieve transform into moans as the pain gradually trends into pleasure, so much so that your efforts are enough to cause her to orgasm into the open air.  Satisfied with what you have wrought, you let her go. No doubt immensely embarrassed, she hobbles away, rubbing her red ass as she departs.";
 		Otherwise:
 			increase mothgirlnosex by 1;
 			say "     You decide to let her go.  Slowly, she scrambles to her feet and flies off, no doubt to recover from her loss.";
@@ -77,7 +77,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mothgirl"; [Name of your new Monster]
-	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Grey[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the grey-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked.";[ Description of the creature when you encounter it.]
