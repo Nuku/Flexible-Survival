@@ -1,15 +1,15 @@
 Version 1 of Tanuki by Nuku Valente begins here.
-[Version 1.2 - Some size change fixes - Stripes]
+[Version 1.3 - Shrine description update]
 
 "Adds Tanuki to Flexible Survival"
 
 Section 1 - The Situation
 
-Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well kept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese gently roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shrine.
 
 instead of sniffing Shrine:
-	say "The shrine smells faintly of cherry blossoms and spring.  The scent puts you at ease.";
+	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shrine has a Grab Object called Demand.
