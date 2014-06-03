@@ -90,7 +90,7 @@ When Play begins:
 	now libido entry is 66;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]curvy[or]motherly[or]twisted[as decreasingly likely outcomes]";
 	now type entry is "[one of]canine[or]mutant[or]dog-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -132,7 +132,7 @@ when play ends:
 				if T is 1:
 					say "a large wolverine guarding a historic building.  Once the home of a famous writer, the house has been maintained for its historic value and the wolverine has taken to guarding it aggressively.  He captures you and pins you down, fucking you repeatedly.  But instead of driving you off after draining his hefty balls into you, he drags you inside and keeps you in one of the bedrooms, adding you to his fixation.  He is a rambunctious lover when not on watch, pounding into you hard and deep, much to your delight.  Otherwise, he leaves you to yourself to enjoy the lovely home he's given you.  And while you cannot leave, you feel little need to do so, as your guard gives you plenty of sex to satisfy your cravings.";
 				if T is 2:
-					say "a male kangaroo, who drags you back to a small pub filled with many more roos.  There you are meant to be the night's designated sport-fuck.  The kangaroos take turns mounting and fucking you.  They are intrigued by your pouch and play with your teats, but you transform no further, much to the dismay of some.  After a night-long romp where everyone has a go at you - male, female and herm alike – you are left quite satisfied on top of the table, leaking roo cum from every hole.  A few even sprayed their load into your pouch, filling it with their warm, slick semen.  Despite your not changing, they decide to keep you and you quickly settle in as a staple of their pub's entertainment.";
+					say "a male kangaroo, who drags you back to a small pub filled with many more roos.  There you are meant to be the night's designated sport-fuck.  The kangaroos take turns mounting and fucking you.  They are intrigued by your pouch and play with your teats, but you transform no further, much to the dismay of some.  After a night-long romp where everyone has a go at you - male, female and herm alike - you are left quite satisfied on top of the table, leaking roo cum from every hole.  A few even sprayed their load into your pouch, filling it with their warm, slick semen.  Despite your not changing, they decide to keep you and you quickly settle in as a staple of their pub's entertainment.";
 				if T is 3:
 					say "a patrol of horsemen, who take you back to their brothel.  There, you are added to their collection of whores and peddled to their patrons.  They spend considerable effort attempting to transform you into another mare, but are quite unsuccessful.  Eventually, they give up and use you as a lure, drawing in new clients with your alluring body before letting the mares coax them over for more sex and eventually changing them into another mare for the brothel.  The horsemen are quite pleased with your success at this task and always fuck you extra hard when you help catch a new girl for them.";
 		otherwise:
