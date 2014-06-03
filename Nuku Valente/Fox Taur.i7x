@@ -5,14 +5,14 @@ Section Table
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat color could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a grey fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
 Table Fox Taur - Fox Taur Shifts
 Segment	Shift Text	Desc Text
 "head"	"Your skull begins to shape and mold itself like putty. Elongating into a muzzle, it soon afterwards grows rich, red fur to cover it, and whiskers to boot. "	"Your head is canine in shape, with a sleek and slender snout covered with beautiful rusty fur. Starting at your chin, the fur is white and continues down the front of your neck towards your chest."
-"chest"	"Your chest suddenly feels quite heavy as additional flesh begins to form, soon cascading into two hefty F-cup sized breasts. However, somehow you don't feel very impeded by their weight. A coat of red fur soon covers the rest of your chest, while your front gets a milky white color."	"The majority of your front is taken up by two large, F-cup breasts. They are lightly furry, with a coat of silky white fur. Your nipples poke through the fur ever-so-slightly as two black nubs."
+"chest"	"Your chest suddenly feels quite heavy as additional flesh begins to form, soon cascading into two hefty F-cup sized breasts. However, somehow you don't feel very impeded by their weight. A coat of red fur soon covers the rest of your chest, while your front gets a milky white colour."	"The majority of your front is taken up by two large, F-cup breasts. They are lightly furry, with a coat of silky white fur. Your nipples poke through the fur ever-so-slightly as two black nubs."
 "gut"	"Soft, white fur covers your belly. A contrasting red covers your back and sides."	"Your belly has white fur along the front with rusty red fur along the sides and along your back."
 "pelvis"	"Silken white fur encroaches on your groin, covering and consuming your genitals with an uncomfortable itch. Soon, a new canine-style cock inflates from your pelvis, along with a set of balls behind it. A moist feeling behind that alerts you to the presence of a vagina as well."	"Your entire pelvic area is covered in lush white fur, but most attention is directed to your large, knotted canine shaft and female sex."
 "left upper arm"	"Red fur creeps along your left upper arm."	"Your left upper arm is covered in soft red fur."
@@ -21,10 +21,10 @@ Segment	Shift Text	Desc Text
 "right upper arm"	"Red fur creeps along your right upper arm."	"Your right upper arm is covered in soft red fur."
 "right forearm"	"Your right forearm is soon covered in a coat of lush red fur."	"Your right forearm is covered in red fur."
 "right hand"	"The nails of your right hand erupt into small claws, red fur sweeps backwards from there to cover the entire hand."	"Your right hand is humanlike, but covered in red fur, and has pads on the palm. Your nails have hardened into tiny claws."
-"left thigh"	"Your left thigh becomes awash in rust-colored fur and your muscles tighten noticeably."	"Red fur covers your muscled left thigh."
+"left thigh"	"Your left thigh becomes awash in rust-coloured fur and your muscles tighten noticeably."	"Red fur covers your muscled left thigh."
 "left shin"	"Your left ankle itches profusely as red hairs sprout all over it, quickly covering it in a coat of fur."	"Your left shin is covered in a lush coat of rusty red fur."
 "left foot"	"Your left foot seems to melt as its bone structure is reworked. Your skin grows white fur and before you know it, you've got a fox's paw."	"Your left foot is less of a foot and more of a canine paw, covered in white fur."
-"right thigh"	"Your right thigh becomes awash in rust-colored fur and your muscles tighten noticeably."	"Red fur covers your muscled right thigh."
+"right thigh"	"Your right thigh becomes awash in rust-coloured fur and your muscles tighten noticeably."	"Red fur covers your muscled right thigh."
 "right shin"	"Your right ankle itches profusely as red hairs sprout all over it, quickly covering it in a coat of fur."	"Your right shin is covered in a lush coat of rusty red fur."
 "right foot"	"Your right foot seems to melt as its bone structure is reworked. Your skin grows white fur and before you know it, you've got a fox's paw."	"Your right foot is less of a foot and more of a canine paw, covered in white fur."
 "rear"	"Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Warm tingles erupt along your new, lower, belly as a thick udder bubbles into being even as your cock swells right up, pressing along its back and underside as it screams almost as loudly as your sopping wet cunt for action."	"You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end. [if the number of playerheld people is greater than 0]Your belly is swollen, bringing back fond memories of devouring [list of playerheld people] into your wanting cunt.[end if]"
@@ -39,7 +39,7 @@ male sex of Fox Taur is usually "[if player is butch]You guide your cock to his 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
 -Knotted canine shaft, default of 15 inches long, with a knot the size of a baseball. (sex interactions that involve penetration should require a turn of vulnerability while knot deflates.)
-Coat color could be that of a grey fox, a red fox, or arctic fox.
+Coat colour could be that of a grey fox, a red fox, or arctic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
