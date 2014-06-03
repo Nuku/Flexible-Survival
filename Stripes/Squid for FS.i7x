@@ -48,7 +48,7 @@ to say squidskinchange:
 	now squidcolour is a random number between 0 and 3;
 	if squidcolour is tempnum, increase squidcolour by 1;
 	if squidcolour is 4, now squidcolour is 0;
-	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below.  As you admire your new skin with wonder, it suddenly shifts to blue.  Your surprise brings on a yellow hue.  With a bit of practice, you settle on a color that suits you";
+	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below.  As you admire your new skin with wonder, it suddenly shifts to blue.  Your surprise brings on a yellow hue.  With a bit of practice, you settle on a colour that suits you";
 
 to say squiddesc:
 	if a random chance of 1 in 2 succeeds:
@@ -78,7 +78,7 @@ When Play begins:
 	now victory entry is "[losetosquid]";
 	now desc entry is "[squiddesc]";
 	now face entry is "almost human-like, except for the soft-fleshed, elongated crown and large dark eyes";
-	now body entry is "sleek and smooth, made for gliding through the water with ease. Your chest is a slightly lighter color than the rest of your body.  Your arms are long tentacles, lined with rows of suckers and ending in pad-like hands.  Your legs are a collection of tentacles, eight in number, that twist and roll as you move around";
+	now body entry is "sleek and smooth, made for gliding through the water with ease. Your chest is a slightly lighter colour than the rest of your body.  Your arms are long tentacles, lined with rows of suckers and ending in pad-like hands.  Your legs are a collection of tentacles, eight in number, that twist and roll as you move around";
 	now skin entry is "wet-looking [if squidcolour is 1]red[otherwise if squidcolour is 2]blue[otherwise if squidcolour is 3]yellow[otherwise if squidcolour is 0]purple[end if]";
 	now tail entry is "Your ass is small and compact, barely disturbing the silhouette of your body.";
 	now cock entry is "bulb-headed tentacle";
