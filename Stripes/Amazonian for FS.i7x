@@ -14,7 +14,7 @@ to say losetoamazonian:
 	now noamazoniansex is 0;
 	if wslevel is 3 and a random chance of 1 in 3 succeeds:
 		if hp of player > 0:
-			say "     The amazonian woman grabs you roughly and slams you to the ground when you give up the fight early.  'What a useless, cowardly creature you are,' she growls with disdain.  'Why should I consent to [if cunts of player > 0]breeding such a feeble warrior[otherwise]taking one such as you as a mate[end if] if you will not struggle to the end?  You are nought but waste.'  And with that, she presses her foot down onto your gut and starts to urinate.  The hot stream splatters across your chest and face.  Digging her heel in harder, you groan in discomfort, which allows her piss to leak into your mouth, forcing you to taste the acrid liquid.";
+			say "     The amazonian woman grabs you roughly and slams you to the ground when you give up the fight early.  'What a useless, cowardly creature you are,' she growls with disdain.  'Why should I consent to [if cunts of player > 0]breeding such a feeble warrior[otherwise]taking one such as you as a mate[end if] if you will not struggle to the end?  You are naught but waste.'  And with that, she presses her foot down onto your gut and starts to urinate.  The hot stream splatters across your chest and face.  Digging her heel in harder, you groan in discomfort, which allows her piss to leak into your mouth, forcing you to taste the acrid liquid.";
 			say "     After her bladder is drained, she keeps you in place with her foot and strokes her throbbing erection.  Already quite aroused by her mistreatment of her cowardly foe, it doesn't take long before she cums.  Adding to the mess, you're covered in sticky splatters of her gooey semen.  'That is the only sample you'll get of my warrior seed.  Now away with you,' she snarls, giving you a harsh kick to the side.  You are forced to scramble away, wet and reeking of cum and urine.";
 			decrease hp of player by wdam entry;
 		otherwise:
@@ -105,7 +105,7 @@ When Play begins:
 	now loot entry is "estosterogen pill";			[ Loot monster drops, ]
 	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
  	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]amazonian[as decreasingly likely outcomes]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
