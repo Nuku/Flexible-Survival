@@ -191,7 +191,7 @@ When Play begins:
 	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]widened[or]broad-chested[as decreasingly likely outcomes]";
 	now type entry is "canine";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -318,7 +318,7 @@ when play ends:
 		if humanity of player < 10:
 			say "     As you succumb to the infection, your two silent heads start taking over more.  But they have succumb as well to your changing instincts and seek to follow their lustful urges as well.  You still remain the primary leader, but the others take control more often, usually when an idea for sex crosses their minds.  Not that you really mind, as you share the enjoyment of their plans with them, often pleasantly surprised by the varied, kinky desires of the left one and by the wild, lustful urges of the right one.  Thanks to them, your existence is a much more varied and pleasurable one than it may have otherwise been.";
 		otherwise:
-			say "     Your trio of heads draw some interest from the scientists who are working with the army.  You are put through a series of psychological and awareness tests before the military personnel stop the research when they notice that it has ceased to be of worthwhile military application.  It does have the benefit of helping you come to a greater understanding with your companion heads, increasing your cooperation.  Better able to share your body with the mute, dependant pair, you are able to get on with your life with only the occasional interruption of control when one of them is feeling particularly strongly about something, which is usually sex of some kind.";
+			say "     Your trio of heads draw some interest from the scientists who are working with the army.  You are put through a series of psychological and awareness tests before the military personnel stop the research when they notice that it has ceased to be of worthwhile military application.  It does have the benefit of helping you come to a greater understanding with your companion heads, increasing your cooperation.  Better able to share your body with the mute, dependent pair, you are able to get on with your life with only the occasional interruption of control when one of them is feeling particularly strongly about something, which is usually sex of some kind.";
 
 
 Cerberus for FS ends here. 
