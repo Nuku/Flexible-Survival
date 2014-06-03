@@ -7,7 +7,7 @@ Version 5 of Candy Striper by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 nocandycoonsex is a number that varies.
 coonstatus is a number that varies.
@@ -116,7 +116,7 @@ When Play begins:
    now libido entry is 50;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "healing booster";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 10;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
    now type entry is "[one of]coon-like[or]raccoon[at random]";
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -418,7 +418,7 @@ to say sexwithcandy_02:
 			say "     Before jumping into the sex, he buries his muzzle betwene your cheeks and licks at your tight ring.  His tongue sends shivers of pleasure up your spine as he slathers your hole with his saliva.  After getting the crinkled hole nice and wet, he squirms it right into your rectum to further prep you.  The soft licking has you moaning and very eager for the main event by the time he pulls his muzzle back.";
 		otherwise:
 			say " as he takes a moment to spread some of the lube across your pucker as well.";
-		say "     Once ready, the girly raccoon moves in behind you, lining up his six-inch stiffy with your back door.  He eases into you with a soft churr of delight.  His paws caress your sides and back while thrusting away steadily at your ass.  At first, he shifts his positon often, working to find the perfect angle and motion to please you.";
+		say "     Once ready, the girly raccoon moves in behind you, lining up his six-inch stiffy with your back door.  He eases into you with a soft churr of delight.  His paws caress your sides and back while thrusting away steadily at your ass.  At first, he shifts his position often, working to find the perfect angle and motion to please you.";
 		say "     Being a practiced veteran at fucking asses, he has plenty of endurance, letting him fuck you for a long time, rarely needing to slow down or pause.  At those times, he reaches around to stroke your manhood, rubs your balls or kneads your bottom.  You end up quick worked up near the end of it and are almost begging for him to cum in you.  Probably knowing how far he's pushed you, he throws himself into pounding your ass extra hard for a messy finish that has you both crying out in release as semen is sown in your clenching anus and across his cot.[mimpregchance]";
 	infect;
 	now libido of player is ( libido of player + 1 ) / 3;
@@ -433,7 +433,7 @@ to say sexwithcandy_03:
 
 to say sexwithcandy_04:
 	if bodyname of player is "Raccoon":
-		say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it.  He lets his little claws run over your shapely curves and girly body with churrs of delight.  His fluffy tail brushes across your legs, caressing them.  'You look so sexy like this, sweety.  I'm glad you appreciate it.  You certainly look adorably sexy like this; it gets me so hard,' he addds with a nibble to your ear as he grinds against you.";
+		say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it.  He lets his little claws run over your shapely curves and girly body with churrs of delight.  His fluffy tail brushes across your legs, caressing them.  'You look so sexy like this, sweety.  I'm glad you appreciate it.  You certainly look adorably sexy like this; it gets me so hard,' he adds with a nibble to your ear as he grinds against you.";
 	say "     Deciding you'd like a taste of the girly coon's cock, you go down on your knees and flip up his short skirt.  He giggles cutely, mock-blushing as you run your eyes over the bulge in his panties.  Pulling his underwear down, his erection pops free.  Taking a moment to lick your lips, you plunge your mouth over the hot pink rod and start sucking.";
 	say "     Your mouth and tongue work over the cute cock, lapping up Candy's faintly sweet pre.  You tease the coonboi's nuts in your palm, enjoying his moans and churrs of pleasure.  When the raccoon cums, it is with spurts of cotton candy flavoured semen.  Enjoying the sugary treat, you lick and suck for all he'll give before releasing him from your mouth.";
 	increase libido of player by 10;
