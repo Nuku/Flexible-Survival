@@ -105,7 +105,7 @@ to say Otter attack:
 					say ".";
 				attempttowait;
 			otherwise:
-				say ".  After worshiping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest.  The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily.  He grinds and wriggles atop it, making your cock throb with need.  A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
+				say ".  After worshipping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest.  The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily.  He grinds and wriggles atop it, making your cock throb with need.  A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if cocks of player is greater than 1:
 					if girl is not banned:
 						say "     Not to be left out, the females swim up, intent on your extra male meat.  The flexible otters wriggle into position, the females taking turns with your additional maleness.  The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";
