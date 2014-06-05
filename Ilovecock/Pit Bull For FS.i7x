@@ -348,7 +348,7 @@ When Play begins:
 	now body change entry is "it becomes adapted for fighting. Muscles grow and become lean. Your legs go digitigrade and claws pop out of your feet. Make that paws now. You feel ready to take on the world"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "short, white hairs pop out all over, with a few black patches, most notably a splotch on your eye"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes attractively muscled and you feel a sharp pop as a small nub of a tail pops out"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "Your cock feels funny as a knot forms on the base while a sheath forms towards the bottom, it shimmers in color before deciding on a deep burgundy color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "Your cock feels funny as a knot forms on the base while a sheath forms towards the bottom, it shimmers in colour before deciding on a deep burgundy colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 16;
 	now sta entry is 14;					
