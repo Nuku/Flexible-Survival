@@ -239,7 +239,7 @@ Section 4 - Endings
 When play ends:
 	if mousefucked is greater than 1 and humanity of the player > 9:
 		increase score by 5;
-		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of wierd cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
+		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
 		if mousespot is greater than 0:
 			say ".  She writes that you remain to be the only male she's ever laid with that didn[']t become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe.... They say it is never too late.";
 			increase score by 10;
