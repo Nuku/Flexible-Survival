@@ -189,7 +189,7 @@ Instead of going west from dirty sheds:
 				say "[line break]     'Oh... he really did send you, didn't he?'  You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear.  Seeing that it is, Lee steps out, and he isn't a he anymore.  In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point.  'C-come on, let's hurry.  I don't want anyone to see me!' she says.  She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
 				now success is 1;
 			otherwise:
-				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you[apostrophe]ll have to try again later to convince him to come out once he[apostrophe]s calmed down.";
+				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you[']ll have to try again later to convince him to come out once he[']s calmed down.";
 		if success is 0:
 			say "     Do you attempt to break down the door? (Y/N)";
 			if the player consents:
@@ -340,9 +340,9 @@ to say alexbrunchtime:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if cocks of player > 0:			[MALE/HERM]
-			say "     The smaller ferret climbs into your lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret playfully grinds his ass against your cock as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [apostrophe]him[apostrophe] become more comfortable with being partly a [apostrophe]her[apostrophe] as well and they are making a rather cute couple.";
+			say "     The smaller ferret climbs into your lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret playfully grinds his ass against your cock as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [']him['] become more comfortable with being partly a [']her['] as well and they are making a rather cute couple.";
 		otherwise:					[FEMALE]
-			say "     You climb into his lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret[']s playful fingers tease your pussy as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [apostrophe]him[apostrophe] become more comfortable with being partly a [apostrophe]her[apostrophe] as well and they are making a rather cute couple.";
+			say "     You climb into his lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret[']s playful fingers tease your pussy as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [']him['] become more comfortable with being partly a [']her['] as well and they are making a rather cute couple.";
 		say "     Once your meal is done, you head back to the bedroom to get ready to head back out, but more prominently in your mind, to watch the next wave of changes overcome you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
