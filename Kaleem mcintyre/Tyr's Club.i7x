@@ -473,7 +473,7 @@ Instead of conversing the Receptionist:
 		decrease libido of player by 25;
 		if libido of player < 0, now libido of player is 0;
 	if Receptionisttalk is 1:
-		say "[one of]'Hello, are you looking to fight today?'[or]'I hope you find today more joyous than yesterday!' Kris giggles at you.[or]'May you days be bright, young one.' Kris pops a hand over his muzzle after saying this and then giggles shyly.[or]'I wonder how the others are doing?'[or]'I hope Vis is getting alone well 'Va.'[or]'I miss Shimi's songs.'[or]Kris is drawing in a coloring book and barely notices you.[or]Kris is playing with a yo-yo.[or]Kris is watching the fights with rapt attention.[or]Kris looks sleepy.[or]Kris seems to be thinking up something important.[or]Kris is so cute you just want to hug him![or]'If you need to get some problems off of your chest try and talk with Tyr, he's surprisingly good at mediating conflicts.'[or]Kris yawns and then yips cutely.[at random]";
+		say "[one of]'Hello, are you looking to fight today?'[or]'I hope you find today more joyous than yesterday!' Kris giggles at you.[or]'May you days be bright, young one.' Kris pops a hand over his muzzle after saying this and then giggles shyly.[or]'I wonder how the others are doing?'[or]'I hope Vis is getting alone well 'Va.'[or]'I miss Shimi's songs.'[or]Kris is drawing in a colouring book and barely notices you.[or]Kris is playing with a yo-yo.[or]Kris is watching the fights with rapt attention.[or]Kris looks sleepy.[or]Kris seems to be thinking up something important.[or]Kris is so cute you just want to hug him![or]'If you need to get some problems off of your chest try and talk with Tyr, he's surprisingly good at mediating conflicts.'[or]Kris yawns and then yips cutely.[at random]";
 
 
 
