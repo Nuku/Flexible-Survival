@@ -31,7 +31,7 @@ to say Sprite attack:
 			if cocks of player is greater than 1:
 				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [ball size] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
 		otherwise:
-			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[apostrophe]t plan to let this go to waste...'";
+			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[']t plan to let this go to waste...'";
 			wait for any key;
 			say "She guides your cock to her hairless entrance and thrusts her hips forward, taking you deeply even as you spread her quite wide on your tool. She squeals and shudders around you, working herself deeper and deeper until you are hilted in her willing form, like a tiny hot vice that ripples and pulls at your cock urgently.";
 			if cocks of player is greater than 1:
@@ -152,7 +152,7 @@ when play ends:
 				say "Your memories of your old life begin to fade away and you take off in a sudden buzz, flying around the city in search of... something, but you never quite find it. It's quite a surprise when a net falls down on you a few days later and you're hauled out of the city. Your captor proves to be reasonably kind, but never treats you as more than an interesting and delicate-looking animal, despite your protests.";
 		otherwise:
 			if Spriteconsent is 1:
-				say "Great glows of bright colors emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
+				say "Great glows of bright colours emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
 			otherwise:
 				say "You are picked up by the rescuers just moments before you start to shrink down the rest of the way to Sprite size. You have a hard time getting a job being so small, at least until that advertising firm found you. You did quite well as a model, where scale meant a lot less. Besides, how could Sprite resist using you?";
 
