@@ -600,7 +600,7 @@ to femonyxsex:
 				otherwise:
 					femonyxsex2;
 					now trixieexit is 1;
-			otherwise if calcnumber is 2:
+			otherwise if calcnumber is 3:
 				if cock length of player > 15:
 					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
 				otherwise:
