@@ -207,7 +207,7 @@ this is the DVtaurpounce rule:		[double-damage pouncing]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "The [one of]dracovixen[or]dracovixentaur[or]hybrid creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly.  It's many talons claw at you while she giggles and presses her many breasts down atop you while roaring playfully.  This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
+	say "The [one of]dracovixen[or]dracovixentaur[or]hybrid creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly.  Its many talons claw at you while she giggles and presses her many breasts down atop you while roaring playfully.  This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 	if absorb is greater than dam:
