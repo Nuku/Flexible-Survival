@@ -10,7 +10,7 @@ when play begins:
 
 
 to say losetodarkelf:
-	say "     After pulling off your clothes and gear, the ebon skinned elf looks you over and";
+	say "     After pulling off your clothes and gear, the ebon skinned elf looks you over and ";
 	if cocks of player is 0 and cunts of player is 0 and breast size of player is 0:
 		say "snarls.  'You are WORTHLESS to me. In every way.'  As you lie defeated before her, she spits in your face, and then kicks you in your head, knocking you out.";
 	otherwise:
@@ -97,7 +97,7 @@ When Play begins:
 	now skin entry is "[one of]dark[or]smooth and flawless[or]midnight black[or]ebon[at random]";
 	now tail entry is "";
 	now cock entry is "[one of]ebon[or]midnight black[or]charcoal[or]inky dark[at random]";
-	now face change entry is "the world around you takes on greater clarity as bones in your face ache.  You becomes something close to human, but not quite.  You can feel your eyes shift, your lips grow plump and your ears entend up into points";
+	now face change entry is "the world around you takes on greater clarity as bones in your face ache.  You becomes something close to human, but not quite.  You can feel your eyes shift, your lips grow plump and your ears extend up into points";
 	now body change entry is "you feel a pinch, as your waist narrows.  Your body becoming thin and curvy, and your instincts shift your posture, flaunting a very female sensuality.  Your arms thin and you watch as your fingers grow longer with a long, pointed nail sprouting out of the end of each.  Your feel light on your feet as your legs smooth and strengthen";
 	now skin change entry is "it darkens and charcoal coloured smoothness spreads to cover your body.  Strength and energy floods into you as youthful vitality floods your system";
 	now ass change entry is "it becomes a plump and very grabbable booty";
@@ -126,7 +126,7 @@ When Play begins:
 	now loot entry is "estosterogen pill";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 5;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sultry[or]sexy[or]effeminate[or]slender[at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
