@@ -188,7 +188,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As you give in to your feral instincts, your helper dog looks at you mournfully.  He then turns and wanders off to find another poor, needy soul to help.  Perhaps he will be more successful next time.";
 		otherwise:
-			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help.";   [The God-I'm-so-fucking-Canadian ending]
+			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help."; [The God-I'm-so-fucking-Canadian ending]
 
 
 Hobo ends here.
