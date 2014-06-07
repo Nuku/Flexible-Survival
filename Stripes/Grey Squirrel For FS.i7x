@@ -67,7 +67,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cunts of player > 0][one of]womanly[or]full-figured[or]wide-hipped[at random][otherwise][one of]flexible[or]slender[or]cute[or]pretty[at random][end if]";
 	now type entry is "[one of]squirrel[or]sciurine[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
