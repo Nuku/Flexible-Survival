@@ -200,34 +200,34 @@ The player has a number called capacity.
 A person has a number called libido.
 A person has a text called linkaction.
 
-The player has a text called skin. Skin is usually "smooth";
-The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-The player has a text called face. Face is usually "charmingly human";
-The player has a text called tail. tail is usually "";
-The player has a text called body. Body is usually "charmingly human";
-The player has a text called bodyname. Bodyname is usually "human";
-The player has a text called facename. Facename is usually "human";
-The player has a text called skinname. Skinname is usually "human";
-The player has a text called cockname. cockname is usually "human";
-The player has a text called tailname. Tailname is usually "human";
-The child has a text called bodyname. Bodyname is usually "human";
-The child has a text called facename. Facename is usually "human";
-The child has a text called skinname. Skinname is usually "human";
-The child has a text called cockname. cockname is usually "human";
-The child has a text called tailname. Tailname is usually "human";
+The player has a text called skin. Skin is usually "smooth".
+The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
+The player has a text called face. Face is usually "charmingly human".
+The player has a text called tail. tail is usually "".
+The player has a text called body. Body is usually "charmingly human".
+The player has a text called bodyname. Bodyname is usually "human".
+The player has a text called facename. Facename is usually "human".
+The player has a text called skinname. Skinname is usually "human".
+The player has a text called cockname. cockname is usually "human".
+The player has a text called tailname. Tailname is usually "human".
+The child has a text called bodyname. Bodyname is usually "human".
+The child has a text called facename. Facename is usually "human".
+The child has a text called skinname. Skinname is usually "human".
+The child has a text called cockname. cockname is usually "human".
+The child has a text called tailname. Tailname is usually "human".
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
 The player has text called Short Breast Size Desc.
-The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
-The player has a text called weapon type. Weapon type is usually "Melee";
+The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
+The player has a text called weapon type. Weapon type is usually "Melee".
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
 The player has a number called scalevalue.  The scalevalue is usually 3.						[value for body size]
-The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]";	[adjective for body type/appearance]
-The player has a text called bodytype.  The bodytype is usually "human";						[broad adjective for species]
+The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
+The player has a text called bodytype.  The bodytype is usually "human".						[broad adjective for species]
 The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
@@ -243,7 +243,7 @@ Grab Object is a kind of thing.
 a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
 rooms have a text called scent.
-The player has a grab object called weapon object. A weapon object is usually journal;
+The player has a grab object called weapon object. A weapon object is usually journal.
 A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
@@ -252,9 +252,9 @@ A armament has a number called hitbonus.	[Rare, usually magic]
 An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
-Equipment has a text called descmod. The descmod of equipment is usually "";
-Equipment has a text called placement. The placement of equipment is usually "end";
-Equipment has a text called slot. The slot of equipment is usually "";
+Equipment has a text called descmod. The descmod of equipment is usually "".
+Equipment has a text called placement. The placement of equipment is usually "end".
+Equipment has a text called slot. The slot of equipment is usually "".
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
 Equipment has a number called dodgebonus.  The dodgebonus of equipment is usually 0.	[Rare, usually magic]
@@ -271,9 +271,9 @@ A grab object has a text called usedesc.
 A grab object has a number called carried.
 A grab object has a number called stashed.
 Turns is a number that varies. Turns is 240.
-Hardmode is a truth state that varies. Hardmode is usually false;
-Levelwindow is a number that varies. Levelwindow is 3;
-Lastjournaluse is a number that varies. Lastjournaluse is 248;
+Hardmode is a truth state that varies. Hardmode is usually false.
+Levelwindow is a number that varies. Levelwindow is 3.
+Lastjournaluse is a number that varies. Lastjournaluse is 248.
 Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
@@ -601,7 +601,7 @@ gsms is a number that varies.			[main stat]
 gspg is a number that varies.			[player gender]
 gsgt is a number that varies.			[game type]
 gshm is a truth state that varies.		[hard mode on/off]
-gsexit is a number that varies. gsexit is usually 0;
+gsexit is a number that varies. gsexit is usually 0.
 freefeatgeneral is a text that varies.
 freefeatfun is a text that varies.
 hypernull is a number that varies. 
@@ -617,7 +617,7 @@ Book 2 - Places
 
 Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.  Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
-Bunker is a room.  The description of Bunker is "[bunker desc]";
+Bunker is a room.  The description of Bunker is "[bunker desc]".
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
@@ -653,7 +653,7 @@ to say abbey desc:
 		say "     Alexandra is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
 Grey Abbey Library is below Grey Abbey 2F.
-Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]";
+Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]".
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
 
 to say abbey 2F desc:
@@ -680,9 +680,9 @@ Outside Trevor Labs is fasttravel.
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 Trevor Labs Lobby is a room. "The ground floor of Trevor Labs. New age furniture has been ripped to shreds and thrown around and unknown liquid is splattered all over the place. The smell is somewhere between burnt plastic and sweaty humanity in an unappealing mixture. Fortunately, the scent is fading with time. It's somewhat dark, but not too dark as to see the emergency stairs are still accessible going up and down.".
 West of Outside Trevor Labs is Trevor Labs Lobby.
-2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.";
+2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
 Trevor Labs Lobby is below 2F Trevor Labs.
-Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.";
+Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.".
 Primary Lab is north of 2F Trevor Labs.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
@@ -1062,8 +1062,8 @@ name	desc	weight	object	sortname (indexed text)
 ]
 
 face mask is equipment. It is a part of the player. It is not temporary.
-The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ";
-The placement of face mask is "face";
+The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
+The placement of face mask is "face".
 journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus.  hitbonus of journal is usually 0.
 cot is a grab object. It is a part of the player. It is not temporary.
@@ -1085,7 +1085,7 @@ pocketknife is a armament. It is a part of the player. It has a weapon "[one of]
 understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.  the objsize of chair is 4.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
 distilled milk is a grab object. It is a part of the player.  it is not milky.
 
 
@@ -1291,7 +1291,7 @@ First for constructing the status line (this is the bypass status line map rule)
 d18 is a number that varies.
 descr is text that varies.
 sh-descr is text that varies.
-cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 battleground is a text that varies.
 Lusting is a text that varies.
 
@@ -2171,13 +2171,13 @@ carry out destinationcheck:
 	
 navigating is an action applying to one thing.
 
-understand "navigate [any known fasttravel room]" as navigating;
-understand "navigate to [any known fasttravel room]" as navigating;
-understand "nav [any known fasttravel room]" as navigating;
-understand "travel to [any known fasttravel room]" as navigating;
-understand "travel [any known fasttravel room]" as navigating;
-understand "go to [any known fasttravel room]" as navigating;
-understand "return to [any known fasttravel room]" as navigating;
+understand "navigate [any known fasttravel room]" as navigating.
+understand "navigate to [any known fasttravel room]" as navigating.
+understand "nav [any known fasttravel room]" as navigating.
+understand "travel to [any known fasttravel room]" as navigating.
+understand "travel [any known fasttravel room]" as navigating.
+understand "go to [any known fasttravel room]" as navigating.
+understand "return to [any known fasttravel room]" as navigating.
 
 
 carry out navigating:
@@ -4685,7 +4685,7 @@ carry out punying:
 	say "You feel puny, but perceptive.";
 
 Resting is an action applying to nothing.
-understand "Rest" as resting;
+understand "Rest" as resting.
 roughing is a truth state that varies.  roughing is usually false.
 
 check resting:
@@ -7451,8 +7451,8 @@ to say set_invcolumns:
 
 Book 10 - Let the Games Begin
 
-understand "saveword" as savewording;
-understand "save" as savewording;
+understand "saveword" as savewording.
+understand "save" as savewording.
 understand "oldsave" as saving the game.
 
 savewording is an action applying to nothing.
@@ -7543,3 +7543,4 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	regularstart; [original start method.  easier to move everything then leave here]
+	
