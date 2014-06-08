@@ -59,7 +59,7 @@ The level of rubber tigress is 3.
 The Dexterity of rubber tigress is 16.
 The summondesc of rubber tigress is "The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over.  She purrs happily when you scritch her ears."
 The assault of rubber tigress is "[artemisattack]".
-the fuckscene of rubber tigress is "You are unable to initiate pet sex with Artemis - yet."
+the fuckscene of rubber tigress is "You are unable to initiate pet sex with Artemis - yet.".
 templust is a number that varies.
 tempthirst is a number that varies.
 The rubber tigress has a number called cocks.
