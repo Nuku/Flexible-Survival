@@ -137,7 +137,7 @@ to say drinkacidmilk:
 		decrease thirst of player by 3;
 		if thirst of player < 3, now thirst of player is 0;
 
-the scent of acid milk is "The milk has a sharp, acidic scent and doesn't seem very appetizing.";
+the scent of acid milk is "The milk has a sharp, acidic scent and doesn't seem very appetizing.".
 
 
 Section 4 - Definitions

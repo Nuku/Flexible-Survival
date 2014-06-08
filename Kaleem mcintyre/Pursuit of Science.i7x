@@ -21,11 +21,11 @@ Ointerrogate is a number that varies.
 
 omioquesting is an action applying to nothing.
 
-understand "help Omio" as omioquesting;
-understand "Omio help" as omioquesting;
-understand "quest Omio" as omioquesting;
-understand "Omio quest" as omioquesting;
-understand "quest" as omioquesting;
+understand "help Omio" as omioquesting.
+understand "Omio help" as omioquesting.
+understand "quest Omio" as omioquesting.
+understand "Omio quest" as omioquesting.
+understand "quest" as omioquesting.
 
 check omioquesting:
 	if Omio is not visible, say "You can't very well offer to help them if they're not here." instead;
@@ -499,7 +499,7 @@ to say omioquest14:
 Section 2 - Dream of a Unicorn
 
 Dream of a Unicorn is a situation.
-The sarea of Dream of a Unicorn is "Park";
+The sarea of Dream of a Unicorn is "Park".
 
 When play begins:
 	Add Dream of a Unicorn to badspots of furry;

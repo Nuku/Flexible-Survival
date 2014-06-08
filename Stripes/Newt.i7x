@@ -9,7 +9,7 @@ Newt is a woman.
 The description of Newt is "[newtdesc]".
 The conversation of Newt is { "Hiss" }.
 
-the scent of Newt is "     It is difficult to smell Newt over the vapours of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.";
+the scent of Newt is "     It is difficult to smell Newt over the vapours of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.".
 
 to say newtdesc:
 	say "     Looking quite similar to the other salamander girls you've seen, her body is a mix of animal and human forms.  Her body is quite effeminate, with wide hips, thighs and a slender waistline.  Her breasts are quite modest B-cups.  Her arms and legs are quite human, but have added flexibility and agility.  She's got small, dark claws on the ends of her digits.  She possesses a flat, wide head with a short muzzle that often has a cheerful smile.  She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks.  Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";

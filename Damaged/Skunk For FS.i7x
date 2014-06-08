@@ -7,9 +7,9 @@ Version 10 of Skunk For FS by Damaged begins here.
 
 Section 1 - Monster Responses
 
-skunkready is a number that varies;
-Skunk_type is a number that varies; [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if its a 2 its a skunkbeast...]
-skunkfight is a number that varies;
+skunkready is a number that varies.
+Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if its a 2 its a skunkbeast...]
+skunkfight is a number that varies.
 
 to say skunk vict:
 	if skunkready > 2:
@@ -308,7 +308,7 @@ Skunk Goo is a grab object.
 
 Skunk Goo is infectious. The strain of skunk goo is "Skunk".
 
-the scent of skunk goo is "The gooey black gunk smells strongly of skunk.";
+the scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
 
 
 Section 4 - Endings

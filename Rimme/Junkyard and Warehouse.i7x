@@ -399,7 +399,7 @@ To stevenjunkfuck:
 		infect "red horse";
 		now laststevenfuck is turns;
 
-stevenfuckcount is a number that varies;
+stevenfuckcount is a number that varies.
  
  to say stevenride:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";

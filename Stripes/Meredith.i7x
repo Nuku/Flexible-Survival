@@ -118,10 +118,10 @@ to say meredithrescue_flee:
 Section 1 - Meredith the Mare
 
 Meredith is a woman.
-The description of Meredith is "[meredithdesc]";
+The description of Meredith is "[meredithdesc]".
 The conversation of Meredith is { "Oops!" }.
 
-the scent of the Meredith is "[if hp of Meredith is 1]Meredith still has the stale and fading scent of a parking garage clinging to her[otherwise]Meredith smells of horses and female arousal[end if].";
+the scent of the Meredith is "[if hp of Meredith is 1]Meredith still has the stale and fading scent of a parking garage clinging to her[otherwise]Meredith smells of horses and female arousal[end if].".
 
 to say meredithdesc:
 	if hp of meredith is 0 or hp of Meredith is 100:

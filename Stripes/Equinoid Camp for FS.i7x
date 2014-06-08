@@ -24,7 +24,7 @@ to say equinoidcampinvite:
 Section 2 - Equinoid Camp
 
 Equinoid Camp is a room. It is fasttravel. It is private.
-The description of Equinoid Camp is "[equicampdesc]";
+The description of Equinoid Camp is "[equicampdesc]".
 
 the scent of Equinoid Camp is "The equinoid came smells strongly of the horse people living there.".
 
@@ -112,14 +112,14 @@ to say equicampdesc:
 
 Section 2 - Equinoid Warrior Pet
 
-equinoid warrior is a pet.  equinoid warrior is a part of the player;
+equinoid warrior is a pet.  equinoid warrior is a part of the player.
 The description of equinoid warrior is "[lilianadesc]".
-The weapon damage of equinoid warrior is 7;
-The level of equinoid warrior is 3;
-The Dexterity of equinoid warrior is 12;
-The summondesc of equinoid warrior is "Liliana strides up to your side with a determined look on her equine face.";
-The assault of equinoid warrior is "[lilianaattack]";
-the fuckscene of equinoid warrior is "[sexwithliliana]";
+The weapon damage of equinoid warrior is 7.
+The level of equinoid warrior is 3.
+The Dexterity of equinoid warrior is 12.
+The summondesc of equinoid warrior is "Liliana strides up to your side with a determined look on her equine face.".
+The assault of equinoid warrior is "[lilianaattack]".
+the fuckscene of equinoid warrior is "[sexwithliliana]".
 
 understand "Liliana" as equinoid warrior.
 
@@ -129,7 +129,7 @@ to say lilianaattack:
 to say lilianadesc:
 	say "     This black equinoid may look a little younger than the others, but she's as much a warrior as the rest of her tribe.  Liliana has a tall, imposing figure with strong muscles and a glossy coat of black hair.  She has bright, hazel eyes and a pretty smile with white, flat teeth.  She's dressed in a simple robe that only covers but does not truly hide the shape of her muscled bosom or equine cock.";
 
-the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.";
+the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.".
 
 to say sexwithliliana:
 	if lastfuck of equinoid warrior - turns < 4:

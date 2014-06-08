@@ -12,7 +12,7 @@ Section 3 - Gryphon Nest
 
 Gryphon nest is a room.
 
-The description of Gryphon nest is "This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.";
+The description of Gryphon nest is "This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.".
 Timothy is in Gryphon nest.
 Gryphon nest is west of City Plaza.
 
@@ -30,7 +30,7 @@ LastTimothyfucked is a number that varies. LastTimothyfucked is usually 250.
 Timothyfucked is a number that varies. Timothyfucked is usually 0.
 
 Timothy is a man.
-The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphon's distended belly, and the rather large and obviously well used passage resting between the gryphon's leonine thighs.  Its leonine tail twitches where it is lying between her slightly spread legs, as the hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'";
+The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphon's distended belly, and the rather large and obviously well used passage resting between the gryphon's leonine thighs.  Its leonine tail twitches where it is lying between her slightly spread legs, as the hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'".
 the conversation of Timothy is { "EggsEggsEggs!" }.
 
 instead of linkactioning Timothy when Timothytalk > 0:

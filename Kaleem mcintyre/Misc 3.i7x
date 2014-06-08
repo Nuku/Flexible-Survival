@@ -11,7 +11,7 @@ Section 1- Mysterious Girl
 Section 2 - Jam Session
 
 Jam Session is a situation.
-The sarea of Jam Session is "Junkyard";
+The sarea of Jam Session is "Junkyard".
 when play begins:
 	add Jam Session to badspots of furry;
 	add Jam Session to badspots of guy;

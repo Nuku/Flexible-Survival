@@ -355,7 +355,7 @@ OrcSlaverCaptureTime is a number that varies.
 Koghhstatus is a number that varies.
 
 Orcish Slave Raid is a situation.
-The sarea of Orcish Slave Raid is "Warehouse";
+The sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
 	add Orcish Slave Raid to badspots of guy;       [male orcs]
 
@@ -614,19 +614,19 @@ to say LoseToOrcSlavers:
 Section 5 - Orc Lair
 			
 Orc Lair Side Entrance is a room. It is a fasttravel. It is private.
-The description of Orc Lair Side Entrance is "     You're standing outside a side door leading into the Capitol District police station. Maybe it'd be a good idea not to stay here too long, with this being the main orc lair in the city. Sooner or later, one of them is bound to come out or return here...";
+The description of Orc Lair Side Entrance is "     You're standing outside a side door leading into the Capitol District police station. Maybe it'd be a good idea not to stay here too long, with this being the main orc lair in the city. Sooner or later, one of them is bound to come out or return here...".
 
 West of Orc Lair Side Entrance is Dark Hallway 2.
-The description of Dark Hallway 2 is "     You're in a long windowless hallway continuing to the west and ending at the side door of the building in the east. An unmarked door leads to the north. It's pretty dark in here with no windows or electricity for the lights on the ceiling.";
+The description of Dark Hallway 2 is "     You're in a long windowless hallway continuing to the west and ending at the side door of the building in the east. An unmarked door leads to the north. It's pretty dark in here with no windows or electricity for the lights on the ceiling.".
 
 North of Dark Hallway 2 is Observation Room.
-The description of Observation Room is "     This is a relatively small room with recording equipment and a one-way-mirror window in the west wall, allowing a view into the interrogation room to the west. Not much to see currently, though - it's pretty dark in there. Though from what you can make out of its contents... and the splash of what's clearly dried cum on the glass, you'd bet that room has seen quite a bit of use recently. Interestingly, the sound system is hooked up to a car battery standing on the single table in here - so you bet one could also hear everything going on next door clearly. Maybe it'd be worth your while to [bold type]wait[roman type] here and observe what might happen.";
+The description of Observation Room is "     This is a relatively small room with recording equipment and a one-way-mirror window in the west wall, allowing a view into the interrogation room to the west. Not much to see currently, though - it's pretty dark in there. Though from what you can make out of its contents... and the splash of what's clearly dried cum on the glass, you'd bet that room has seen quite a bit of use recently. Interestingly, the sound system is hooked up to a car battery standing on the single table in here - so you bet one could also hear everything going on next door clearly. Maybe it'd be worth your while to [bold type]wait[roman type] here and observe what might happen.".
 
 before going North from Dark Hallway 2:
 	say "     The door of the observation room is a bit warped or something, requiring you to wiggle and lift the doorknob a bit as you open it. That fact, together with the relatively small size of the room might actually make it a rare safe spot in the orc lair. If you do want to get some rest somewhere in here, this would be the place to do it...";
 
-West of Dark Hallway 2 is Dark Hallway 1;
-The description of Dark Hallway 1 is "     You're in a long windowless hallway continuing to the east and ending at the entrance of a large room in the west. From the sounds of many orcs talking, drinking and fucking that echo from in there, you're pretty sure you shouldn't go that way right now. Thankfully, with no electricity to run the lights, it's pretty dark in the hallway, so you're relatively safe in its shadowy length. A locked door bearing a plaque with 'Interrogation' on it leads to the north, while another with the sign 'Cells' lies to the south.";
+West of Dark Hallway 2 is Dark Hallway 1.
+The description of Dark Hallway 1 is "     You're in a long windowless hallway continuing to the east and ending at the entrance of a large room in the west. From the sounds of many orcs talking, drinking and fucking that echo from in there, you're pretty sure you shouldn't go that way right now. Thankfully, with no electricity to run the lights, it's pretty dark in the hallway, so you're relatively safe in its shadowy length. A locked door bearing a plaque with 'Interrogation' on it leads to the north, while another with the sign 'Cells' lies to the south."
 
 after going west from Dark Hallway 2 while a random chance of 1 in 2 succeeds:
 	say "    [OrcLairMainChamberWatching]";
@@ -655,13 +655,13 @@ to say OrcLairMainChamberWatching:
 			say "     As it splashes down, you realize that the creature consists of nothing but cum and has a feminine figure - though not for long, as the cum girl immediately starts to meld with the orc seed all around herself. She quivers and shifts, her face showing an expression of surprise as she looks down and sees green veins working their way through her body. When the rapid change of the cum creature finishes, it no longer looks female, but has the form of a burly and muscular, if a bit slimy-looking, orc. The newly transformed cum-orc gives a loud bellow and wades forward with sloshing movements to sink its mouth on the nearest orc's cock, hungry for more.";
 			say "     Finally shaking off the strange fascination that made you watch the things going on in there, you duck back into the dark shadows of the hallway. Getting caught up in between all the orcs in the main chamber of this police station turned orc lair is really something you should avoid - especially as they just might throw you in with their new pet at the moment.";			
 
-South of Dark Hallway 1 is Breeder Lockup A;
-The description of Breeder Lockup A is "     You're in a room holding two large cells to the east and west - most likely originally the 'drunk tank' and another group holding cell. Now the orcs use them to lock up their newly caught slaves. A door to the north allows you to leave this place again. A bent nail to hold a key is driven into the south wall, well out of reach of anyone inside the cells.";
+South of Dark Hallway 1 is Breeder Lockup A.
+The description of Breeder Lockup A is "     You're in a room holding two large cells to the east and west - most likely originally the 'drunk tank' and another group holding cell. Now the orcs use them to lock up their newly caught slaves. A door to the north allows you to leave this place again. A bent nail to hold a key is driven into the south wall, well out of reach of anyone inside the cells.".
 
 Cell Door 1 is a door.
-Cell Door 1 is west of Breeder Lockup A;
+Cell Door 1 is west of Breeder Lockup A.
 Cell Door 1 is lockable and locked.
-The description of Cell Door 1 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]"; 
+The description of Cell Door 1 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
 
 Slave Cell 1 is a room. 
@@ -670,9 +670,9 @@ Slave Cell 1 is sleepsafe.
 The description of Slave Cell 1 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the east. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here. [otherwise if CellDoorStatus is 1 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here.[otherwise]You're stuck in here - unless you find a way to [bold type]escape the cell[roman type].[end if]".
 
 Cell Door 2 is a door.
-Cell Door 2 is east of Breeder Lockup A;
+Cell Door 2 is east of Breeder Lockup A.
 Cell Door 2 is lockable and locked.
-The description of Cell Door 2 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]"; 
+The description of Cell Door 2 is "    A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
 
 Slave Cell 2 is a room. 
@@ -813,7 +813,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Cell Key"	"A relatively unremarkable key that opens the cell doors of the Orc Lair. There's still a few dried cum stains on it."	0	Cell Key
 
-the scent of Cell Key is "Smells like metal and a bit of cum.";
+the scent of Cell Key is "Smells like metal and a bit of cum.".
 
 the invent of Breeder Lockup A is {"Cell Key"}.
 
@@ -827,7 +827,7 @@ before opening Cell Door 2:
 		now Cell Door 2 is unlocked;
 		say "You use your key to unlock the door.";
 
-CellDoorStatus is a number that varies;
+CellDoorStatus is a number that varies.
 
 [CellDoorStatus                                   ]
 [ 0: both intact                                  ]
@@ -837,13 +837,13 @@ CellDoorStatus is a number that varies;
 
 CellEscape is an action applying to nothing.
 
-understand "escape this cell" as CellEscape;
-understand "escape the cell" as CellEscape;
-understand "escape cell" as CellEscape;
-understand "escape this slave cell" as CellEscape;
-understand "escape the slave cell" as CellEscape;
-understand "escape slave cell" as CellEscape;
-understand "break out" as CellEscape;
+understand "escape this cell" as CellEscape.
+understand "escape the cell" as CellEscape.
+understand "escape cell" as CellEscape.
+understand "escape this slave cell" as CellEscape.
+understand "escape the slave cell" as CellEscape.
+understand "escape slave cell" as CellEscape.
+understand "break out" as CellEscape.
 
 check CellEscape:
 	if player is not in Slave Cell 1 and player is not in Slave Cell 2, say "You're not in a cell at the moment." instead;
@@ -1463,7 +1463,7 @@ to say ObservationRoomFuck:
 Section 5 - NPCs
 
 Mul is a man. 
-The description of Mul is "[MulDesc]";
+The description of Mul is "[MulDesc]".
 The conversation of Mul is { "Mew!" }.
 
 to say MulDesc:
@@ -1498,7 +1498,7 @@ instead of fucking Mul:
 [  4: kid born and taken while the player was out              ]
 		
 Val is a man.  The hp of Val is normally 0. 
-The description of Val is "[ValDesc]";
+The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
 ValPregnancy is a number that varies.
@@ -1717,7 +1717,7 @@ to say ValSex2:  [riding him]
 
 				
 Chris is a man.  The hp of Chris is normally 0. 
-The description of Chris is "[ChrisDesc]";
+The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 
 instead of sniffing Chris:

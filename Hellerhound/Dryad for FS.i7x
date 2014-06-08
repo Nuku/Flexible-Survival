@@ -16,7 +16,7 @@ name	desc	weight	object
 
 dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad".  The purified of dryad cum is "water bottle".
 
-the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.";
+the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
 
 Section 2 - Monster Insertion
 

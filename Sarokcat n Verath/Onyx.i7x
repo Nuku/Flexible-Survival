@@ -14,7 +14,7 @@ Onyxboislut is a number that varies.	[Stables Onyx / dom male / player into stal
 femonyxq is a number that varies. [Quest variable for fem onyx]
 
 Onyx is a man.
-The description of Onyx is "[onyxappearance]";
+The description of Onyx is "[onyxappearance]".
 The conversation of Onyx is { "Help me!" }.
 
 instead of sniffing Onyx:		[results for currently uncoded outcomes included]

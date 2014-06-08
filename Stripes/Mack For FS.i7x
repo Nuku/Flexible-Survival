@@ -6,7 +6,7 @@ Version 2 of Mack for FS by Stripes begins here.
 Section 1 - Event
 
 Finding Mack is a situation.  The level of Finding Mack is 8.
-The sarea of Finding Mack is "Forest";
+The sarea of Finding Mack is "Forest".
 
 when play begins:
 	add Finding Mack to badspots of guy;
@@ -96,9 +96,9 @@ Section 3 - Nutso Factory
 
 
 Nutso Factory is a room. It is fasttravel. It is private.
-The description of Nutso Factory is "[nutsofactorydesc]";
+The description of Nutso Factory is "[nutsofactorydesc]".
 
-the scent of Nutso Factory is "The air here smells of oil, machinery and nuts (roasted and unroasted).";
+the scent of Nutso Factory is "The air here smells of oil, machinery and nuts (roasted and unroasted).".
 
 to say nutsofactorydesc:
 	say "     The Nutso Factory manufactured roasted and salted nuts before the outbreak.  While it looks like some of the stores were taken before you and Macadamia got here, there was still a sizable amount of nuts in their storeroom[if hp of Macadamia is 12].  The squirrel has busily moved most of that somewhere else for safe keeping[otherwise if hp of Macadamia >= 13].  The squirrel has taken the remaining stores elsewhere for safe keeping, leaving this place empty[end if][if hp of Macadamia <= 12].  You can smell that the squirrel has been roasting some of the nuts recently as well[end if].";
@@ -107,11 +107,11 @@ to say nutsofactorydesc:
 Section 4 - Macadamia the Squirrel
 
 Macadamia is a man.  Macadamia is in Nutso Factory.
-The description of Macadamia is "[macadamiadesc]";
+The description of Macadamia is "[macadamiadesc]".
 The conversation of Macadamia is { "Chitr!" }.
 understand "Mack" as Macadamia.
 
-the scent of Macadamia is "Macadamia smells of nuts, predominantly of the macadamias he loves the most.";
+the scent of Macadamia is "Macadamia smells of nuts, predominantly of the macadamias he loves the most.".
 
 to say macadamiadesc:
 	say "     Macadamia, or Mack for short, is an energetic grey squirrel with a love of nuts.  He's about 5 1/2 feet tall with an agile, flexible body.  He has fluffy grey fur that is a somewhat lighter at the chest and groin.  He has a big, bushy tail that is roughly as long as he is tall.  He goes around in the nude except for a belt with several pouches on it.  Below the belt, he's got a plump sheath and an impressive set of nuts for such a small fellow.";

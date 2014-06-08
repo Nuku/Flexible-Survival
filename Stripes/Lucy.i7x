@@ -28,10 +28,10 @@ instead of going to Mall FoodCourt while ( hp of Ronda is 10 and hp of Lucy is 0
 Section 2 - Lucy
 
 Lucy is a woman.
-The description of Lucy is "[lucydesc]";
+The description of Lucy is "[lucydesc]".
 The conversation of Lucy is { "Hey baby!" }.
 
-the scent of Lucy is "The rat girl smells of perfume and nail polish.";
+the scent of Lucy is "The rat girl smells of perfume and nail polish.".
 
 to say lucydesc:
 	let dayturn be turns divided by 8;
@@ -179,7 +179,7 @@ to say lucysex6:
 Section 4 - Mall Recall
 
 Memories of the Mall is a situation.  It is resolved.
-The sarea of Memories of the Mall is "Outside";
+The sarea of Memories of the Mall is "Outside".
 
 Instead of resolving a Memories of the Mall:
 	say "     As you're walking around the city, you find your mind wandering back to the mall, and more specifically, to your rat girlfriend waiting there.  Little things you keep seeing remind you of her - stuff like the way that husky's breasts bounce when she runs, or the tight ass on that other mutant, or the unchanged rat you see scurrying between some trash cans.  Unable to get your sexy girlfriend off your mind, you change directions and strike off towards the mall to see her again.  Once you arrive, you make your way back to the atrium to see her again.";

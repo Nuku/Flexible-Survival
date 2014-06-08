@@ -30,7 +30,7 @@ LastAngieLearned is a number that varies. LastAngieLearned is usually 250.
 Section 1 - Finding Angie
 
 AngieTrapped is a situation.
-The sarea of AngieTrapped is "Zoo";
+The sarea of AngieTrapped is "Zoo".
 when play begins:
 	add AngieTrapped to badspots of hermaphrodite;
 	add AngieTrapped to badspots of furry;
@@ -89,7 +89,7 @@ Section 2 - Zoo Giftshop
 Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.
 
-the scent of Zoo Giftshop is "[zoogiftscent]";
+the scent of Zoo Giftshop is "[zoogiftscent]".
 
 to say zoogiftscent:
 	if AngieAroused > 0:
@@ -99,9 +99,9 @@ to say zoogiftscent:
 	otherwise:
 		say "     There is the scents of many animal creatures having been through here.";
 
-The invent of Zoo Giftshop is { "chips" , "soda" };
+The invent of Zoo Giftshop is { "chips" , "soda" }.
 
-The description of Zoo Giftshop is "[shopappearance]";
+The description of Zoo Giftshop is "[shopappearance]".
 
 to say shopappearance:
 	if AngieAroused is 3:   [ Angie + Midnight in the gift shop ]
@@ -115,7 +115,7 @@ to say shopappearance:
 Section 3 - Angie
 
 Angie is a woman.
-The description of Angie is "[AngieAppearance]";
+The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
 lastfuck of Angie is usually 250.
 
@@ -130,7 +130,7 @@ to say AngieAppearance:
 	otherwise:
 		say "     Standing over by the counter, eyeing the destruction in the store sadly, is a six foot tall humanoid black panther. She sports a nice rack of large breasts, barely hidden by her stretched and torn shirt. On top of that, she wears her zoo worker's vest, though it too is several sizes too small for her new frame. She has replaced her torn shorts with a short khaki skirt with a little cheerful lion waving on them, though this does little to hide the bulge where her new cock presses against the fabric, and her long black tail lashes idly behind her, lifting the rear of the skirt up for easier access from behind. She seems to balance easily on her paws however, her movements swift and smooth like that of the hunting cat she now resembles.";
 
-the scent of Angie is "Angie's scent is that of a herm panther, [if AngieAroused > 1]heavy with the smell of sex and[otherwise]with a hidden scent of suppressed[end if] arousal.";
+the scent of Angie is "Angie's scent is that of a herm panther, [if AngieAroused > 1]heavy with the smell of sex and[otherwise]with a hidden scent of suppressed[end if] arousal.".
 						
 instead of conversing the Angie:
 	if carried of catnip > 0 and AngieHappy < 3:

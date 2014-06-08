@@ -16,7 +16,7 @@ LastDiegofucked is a number that varies. LastDiegofucked is usually 250.
 Diegofucked is a number that varies. Diegofucked is usually 0.
 
 Diego is a man.
-The description of Diego is "[Diegodescribed]";
+The description of Diego is "[Diegodescribed]".
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 
@@ -28,7 +28,7 @@ to say diegolinkaction:
 	otherwise:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
 
-the scent of Diego is "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.";
+the scent of Diego is "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.".
 
 To say diegodescribed:
 	if diegochanged is 2:

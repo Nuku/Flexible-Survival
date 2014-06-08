@@ -5,7 +5,7 @@ How High by Kaleem mcintyre begins here.
 Section 1- How High
 
 How High is a situation.
-The sarea of How High is "Park";
+The sarea of How High is "Park".
 when play begins:
 	add How High to badspots of furry;
 	add How High to badspots of guy;

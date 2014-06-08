@@ -6,7 +6,7 @@ Version 4 of Alexandra by Stripes begins here.
 Section 0 - Basic Structure
 
 Alexandra is a person.  Alexandra is in Police Station.
-The description of Alexandra is "[if hp of Alexandra < 50][alexandradesc_bg][otherwise][alexandradesc_gg][end if]";
+The description of Alexandra is "[if hp of Alexandra < 50][alexandradesc_bg][otherwise][alexandradesc_gg][end if]".
 The conversation of Alexandra is { "Yes Boss!" }.
 Alexandrastory is a truth state that varies.  Alexandrastory is usually false.
 Alexandrastory2 is a truth state that varies.  Alexandrastory2 is usually false.
@@ -18,7 +18,7 @@ lastdobiemess is a number that varies.
 
 [See Doberman file for collecting Alexandra.]
 
-the scent of Alexandra is "[if hp of Alexandra < 50][alexandrascent_bg][otherwise][alexandrascent_gg][end if]";
+the scent of Alexandra is "[if hp of Alexandra < 50][alexandrascent_bg][otherwise][alexandrascent_gg][end if]".
 
 Instead of conversing the Alexandra:
 	say "[if hp of Alexandra < 50][alexandratalk_bg][otherwise][alexandratalk_gg][end if]";
@@ -508,7 +508,7 @@ an everyturn rule:
 Section 6 - Police Station
 
 Police Station is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Police Station is "[policestationdesc]";
+The description of Police Station is "[policestationdesc]".
 the scent of Police Station is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
 PSdoor is a door.  North of Police Station is PSdoor.  PSdoor is dangerous.  North of PSdoor is Wandering the City.
@@ -1241,7 +1241,7 @@ name	desc	weight	object
 
 claw hammer is an armament. It is part of the player. It has a weapon "[one of]your hammer[or]your claw hammer[or]your carpenter's hammer[or]the hammer[or]the claw hammer[at random]". The weapon damage of claw hammer is 6. The weapon type of claw hammer is "Melee". It is not temporary.
 
-the scent of the claw hammer is "The sturdy hammer smells of metal and sweat.";
+the scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
 
 
 

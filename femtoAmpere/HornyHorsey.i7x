@@ -26,14 +26,14 @@ AFFECTION TABLE
 
 Section 0 - Variables and Items
 
-Ammy has a number called affection;
-affection of Ammy usually is 0;
+Ammy has a number called affection.
+affection of Ammy usually is 0.
 
-Ammy has a number called lastevent;
-lastevent of Ammy usually is 666;
+Ammy has a number called lastevent.
+lastevent of Ammy usually is 666.
 
-Ammy has a number called lastsexevent;
-lastsexevent of Ammy usually is 666;
+Ammy has a number called lastsexevent.
+lastsexevent of Ammy usually is 666.
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -71,12 +71,12 @@ the scent of Topless Lounge is "The thick air smells of alcohol and sugar from a
 
 
 Ammy's Flatlet is a room. [Ammy's Flatlet is south of Topless Lounge.]
-The description of Ammy's Flatlet is "This small flatlet is pretty clean, at least compared to the rest of the PALOMINO. It looks like it was used as a storage room in first place, still Ammy's living here now. A nice big bed in the middle of the room catches most of the attention, it looks comfortable and pretty royal actually.. well, at least compared to the usual ruins in the rest of this world - dark red pillows and blanked on top of white sheets along with a black metal frame.[line break]Along with a caged window on the upper corner through which one can see up to the street there is another door, probably leading outside. It must have at least five different locks on it. The rest of the room is pretty spartan. Nothing except a few dimmable lights, a small black counter next to the bed, a wardrobe and an empty storage shelf is visible along the concrete walls and the light wooden floor that makes funny sounds whenever you hear Ammy walking on it with her hooves.";
+The description of Ammy's Flatlet is "This small flatlet is pretty clean, at least compared to the rest of the PALOMINO. It looks like it was used as a storage room in first place, still Ammy's living here now. A nice big bed in the middle of the room catches most of the attention, it looks comfortable and pretty royal actually.. well, at least compared to the usual ruins in the rest of this world - dark red pillows and blanked on top of white sheets along with a black metal frame.[line break]Along with a caged window on the upper corner through which one can see up to the street there is another door, probably leading outside. It must have at least five different locks on it. The rest of the room is pretty spartan. Nothing except a few dimmable lights, a small black counter next to the bed, a wardrobe and an empty storage shelf is visible along the concrete walls and the light wooden floor that makes funny sounds whenever you hear Ammy walking on it with her hooves.".
 
 the scent of Ammy's Flatlet is "The small room surprisingly smells not like the rest of the club at all. It's smell reminds you of rose petals with a hint of sweets, even with the lack of air circulation the air seems pretty fresh.".
 
 'Employees Only' Door is a closed unopenable door. The 'Employees Only' Door is south of Topless Lounge and north of Ammy's Flatlet.
-The description of 'Employees Only' Door is "Hidden beyond some curtains there is a heavy wooden door with a big sign on it, reading 'Employees Only' and a heart drawn next to it with red paint or lipstick.";
+The description of 'Employees Only' Door is "Hidden beyond some curtains there is a heavy wooden door with a big sign on it, reading 'Employees Only' and a heart drawn next to it with red paint or lipstick.".
 
 
 
@@ -84,7 +84,7 @@ The description of 'Employees Only' Door is "Hidden beyond some curtains there i
 Section 2 - Ammy
 
 Ammy is a woman. Ammy is in Topless Lounge. 
-The description of Ammy is "[ammy_desc]";
+The description of Ammy is "[ammy_desc]".
 
 The conversation of Ammy is { " " }
 

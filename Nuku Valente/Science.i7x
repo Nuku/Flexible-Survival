@@ -8,7 +8,7 @@ Book - Science Advisor
 
 Nerd is a person. "A science advisor awaits your attention. They have a name, but most just call them the [bold type]nerd[roman type]. Perhaps you want to discuss [bold type]research[roman type].".
 Nerd is in Village center.
-The description of nerd is "[science advisor of tribe of player]";
+The description of nerd is "[science advisor of tribe of player]".
 
 After examining the nerd:
 	if progress of current of nerd < cost of current of nerd:

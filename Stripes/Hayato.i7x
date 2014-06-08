@@ -5,7 +5,7 @@ Version 3 of Hayato by Stripes begins here.
 Section 1 - Event
 
 Garage Demon is a situation.
-The sarea of Garage Demon is "Capitol";
+The sarea of Garage Demon is "Capitol".
 when play begins:
 	add Garage Demon to badspots of guy;
 	add Garage Demon to badspots of hellspawn;
@@ -82,9 +82,9 @@ to say halhistory:
 Section 2 - Location
 
 Disused Garage is a room. It is fasttravel. It is private.
-The description of Disused Garage is "[disusedgaragedesc]";
+The description of Disused Garage is "[disusedgaragedesc]".
 
-the scent of Disused Garage is "There is a lingering scent of oil hanging around the building.";
+the scent of Disused Garage is "There is a lingering scent of oil hanging around the building.".
 
 to say disusedgaragedesc:
 	say "     The old, single bay garage is build of cinder blocks and has seen better days.  While some of the damage is recent, it's clear that the place had fallen on hard times even before the outbreak.  Hayato's cleared out much of the space to make room for him in his makeshift living quarters.  Packed against the back wall are some cardboard boxes representing the oni's personal supplies.";
@@ -94,13 +94,13 @@ to say disusedgaragedesc:
 Section 3 - Hayato the Oni
 
 Hayato is a man.  Hayato is in Disused Garage.
-The description of Hayato is "[halonidesc]";
+The description of Hayato is "[halonidesc]".
 The conversation of Hayato is { "Hai!" }.
 Hayato has a number called hunger.
 
 understand "Hal" as Hayato.
 
-the scent of the Hayato is "There is a strong, masculine scent to your large oni friend.";
+the scent of the Hayato is "There is a strong, masculine scent to your large oni friend.".
 
 the fuckscene of Hayato is "[sexwithHayato]".
 
@@ -357,7 +357,7 @@ to say hayatosex5:
 Section 4 - Events
 
 Noh Mask is a situation.  Noh Mask is resolved.  The level of Noh Mask is 9.
-The sarea of Noh Mask is "Campus";
+The sarea of Noh Mask is "Campus".
 when play begins:
 	add Noh Mask to badspots of furry;
 	add Noh Mask to badspots of guy;
@@ -422,7 +422,7 @@ to say nohmaskanimebabe:
 
 
 Oni Lair is a situation.  Oni Lair is resolved.  The level of Oni Lair is 9.
-The sarea of Oni Lair is "Capitol";
+The sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to badspots of guy;
 	add Oni Lair to badspots of hellspawn;

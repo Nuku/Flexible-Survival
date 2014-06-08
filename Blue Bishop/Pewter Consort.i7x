@@ -5,8 +5,8 @@ Version 1 of Pewter Consort by Blue Bishop begins here.
 
 Section 1 - Monster Responses
 
-consortinsight is a number that varies; [Consort Insight, entails how much the player knows about the Pewter Consort and their perception]
-facecheck is a truth state that varies;
+consortinsight is a number that varies. [Consort Insight, entails how much the player knows about the Pewter Consort and their perception]
+facecheck is a truth state that varies.
 
 when play begins:
 	add { "Pewter Consort" } to infections of guy;
@@ -97,7 +97,7 @@ to say pewterdesc:
 
 Section 1.1 - Pewter Consort Bind
 
-pewtertorsosuppress is a truth state that varies;
+pewtertorsosuppress is a truth state that varies.
 
 to pewterbind:
 	now lustatt is libido of player;
@@ -196,23 +196,23 @@ to pewterbind:
 				next;
 			say "Invalid action.";
 			
-pewterheadcap is a number that varies; [Dictates, via scale, how many consorts might occupy a body region]
-pewterbodycap is a number that varies;
-pewtergenitalcap is a number that varies;
-pewterheadocc is a number that varies; [Indicates how many consorts are occupying a body region]
-pewterbodyocc is a number that varies;
-pewtercockocc is a number that varies;
-pewtercuntocc is a number that varies;
-pewterassocc is a number that varies;
-pewterheadvar1 is a number that varies; [Indicates how many consorts are attending/tounging a body region]
-pewterheadvar2 is a number that varies; [Indicates how many consorts are riding/fucking a body region]
-pewtercockvar1 is a number that varies; 
-pewtercockvar2 is a number that varies;
-pewtercuntvar1 is a number that varies;
-pewtercuntvar2 is a number that varies; 
-pewterassvar1 is a number that varies; 
-pewterassvar2 is a number that varies; 
-scaledr is a number that varies; [Scale Diminishing Return, ensures larger players aren't completely overwhelmed]
+pewterheadcap is a number that varies. [Dictates, via scale, how many consorts might occupy a body region]
+pewterbodycap is a number that varies.
+pewtergenitalcap is a number that varies.
+pewterheadocc is a number that varies. [Indicates how many consorts are occupying a body region]
+pewterbodyocc is a number that varies.
+pewtercockocc is a number that varies.
+pewtercuntocc is a number that varies.
+pewterassocc is a number that varies.
+pewterheadvar1 is a number that varies. [Indicates how many consorts are attending/tounging a body region]
+pewterheadvar2 is a number that varies. [Indicates how many consorts are riding/fucking a body region]
+pewtercockvar1 is a number that varies.
+pewtercockvar2 is a number that varies.
+pewtercuntvar1 is a number that varies.
+pewtercuntvar2 is a number that varies.
+pewterassvar1 is a number that varies.
+pewterassvar2 is a number that varies.
+scaledr is a number that varies. [Scale Diminishing Return, ensures larger players aren't completely overwhelmed]
 
 to pewterlustsate:
 	say "     Unable to hold back any longer, you cry out in bliss, ";

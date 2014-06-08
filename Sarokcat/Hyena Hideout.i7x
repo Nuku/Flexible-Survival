@@ -7,13 +7,13 @@ Section 1- Hyena Hideout
 
 Hyena Hideout is a room. It is fasttravel. It is private.
 
-The description of Hyena Hideout is "This large open building was obviously once a warehouse at one point, though much of whatever was once stored in here has long since been cleared out to make room for the hyena gang to set up shop. There are still several large crates and cargo containers scattered throughout the area, mostly used to divide the large space up into several smaller areas and semi private rooms.  The open space hasn[']t been left empty however, and numerous couches, mattresses, and rough tables scatter the area, most having obviously seen better days and looted to make the area more comfortable. The heady musk of numerous hyenas and sex permeates the area with its own unique perfume, making you feel both excited and strangely comfortable just from breathing it in.  Though obviously the large building could hold a large number of hyenas, you only see a moderate number of gang members here, most of the rest obviously wandering the city looking for new converts in their continuing membership drive.";
+The description of Hyena Hideout is "This large open building was obviously once a warehouse at one point, though much of whatever was once stored in here has long since been cleared out to make room for the hyena gang to set up shop. There are still several large crates and cargo containers scattered throughout the area, mostly used to divide the large space up into several smaller areas and semi private rooms.  The open space hasn[']t been left empty however, and numerous couches, mattresses, and rough tables scatter the area, most having obviously seen better days and looted to make the area more comfortable. The heady musk of numerous hyenas and sex permeates the area with its own unique perfume, making you feel both excited and strangely comfortable just from breathing it in.  Though obviously the large building could hold a large number of hyenas, you only see a moderate number of gang members here, most of the rest obviously wandering the city looking for new converts in their continuing membership drive.".
 
 instead of sniffing Hyena Hideout:
 	say "This place smells strongly of hyenas.  There have been many through here, much more than those you can see here right now.";
 
 Gang members is a man.
-The description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.";
+The description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.".
 The conversation of gang members is { "Yap!" }.
 Gang members is in Hyena hideout.
 
@@ -114,7 +114,7 @@ instead of fucking the gang members:
 
 
 Gina is a woman.
-The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.";
+The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.".
 The conversation of Gina is { "Stare!" }.
 Gina is in Hyena hideout.
 

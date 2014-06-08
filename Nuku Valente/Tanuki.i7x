@@ -21,9 +21,9 @@ understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ri
 
 There is a donation box and hammer and ornate bell in shrine.
 
-The description of ornate bell is "A small ornate bell.";
-The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.";
-The description of hammer is "A tiny black mallet on a string.";
+The description of ornate bell is "A small ornate bell.".
+The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.".
+The description of hammer is "A tiny black mallet on a string.".
 
 Instead of taking the ornate bell:
 	say "The bell is securely attached to the shrine.";

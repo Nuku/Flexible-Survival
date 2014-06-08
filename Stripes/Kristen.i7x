@@ -5,7 +5,7 @@ Version 2 of Kristen by Stripes begins here.
 Section 1 - Event
 
 FindingKristen is a situation.
-The sarea of FindingKristen is "Outside";
+The sarea of FindingKristen is "Outside".
 when play begins:
 	add FindingKristen to badspots of girl;
 	add FindingKristen to badspots of furry;
@@ -55,9 +55,9 @@ Instead of resolving FindingKristen:
 Section 2 - Kristen's Hideout
 
 Kristen's Hideout is a room.  It is fasttravel.  It is private.  It is sleepsafe.
-The description of Kristen's Hideout is "[krishideoutdesc]";
+The description of Kristen's Hideout is "[krishideoutdesc]".
 
-the scent of Kristen's Hideout is "[krishideoutscent]";
+the scent of Kristen's Hideout is "[krishideoutscent]".
 
 to say krishideoutscent:
 	if hp of Kristen < 12:
@@ -110,7 +110,7 @@ to say krishideoutdesc:
 Section 2 - Kristen
 
 Kristen is a woman.  Kristen is in Kristen's Hideout.
-The description of Kristen is "[kristendesc]";
+The description of Kristen is "[kristendesc]".
 The conversation of Kristen is { "Thanks." }.
 kristenmsg1 is a truth state that varies.  kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies.  kristenmsg2 is usually false.	[general info]
@@ -119,7 +119,7 @@ kristenmsg4 is a truth state that varies.  kristenmsg4 is usually false.	[K told
 kristenmsg5 is a truth state that varies.  kristenmsg5 is usually false.	[prompted for blouse?]
 kristentf3fuck is a truth state that varies.  kristentf3fuck is usually false.	[fucked Kristen at tf stage 3]
 
-the scent of Kristen is "[kristenscent]";
+the scent of Kristen is "[kristenscent]".
 
 to say kristenscent:
 	if hp of Kristen < 2:

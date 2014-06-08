@@ -575,7 +575,7 @@ A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
 A room can be sleepsafe.  A room is usually not sleepsafe.
 The player is wearing a watch.
-The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.";
+The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
@@ -624,7 +624,7 @@ East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately a
 East of library door is Grey Abbey Library.
 Inside of Grey Abbey Library is Bunker.
 The player is in Bunker.
-The marea of library door is "Outside";
+The marea of library door is "Outside".
 
 to say bunker desc:
 	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
@@ -654,7 +654,7 @@ to say abbey desc:
 
 Grey Abbey Library is below Grey Abbey 2F.
 Grey Abbey 2F is a room.  The description of Grey Abbey 2F is "[abbey 2F desc]".
-the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.";
+the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odour is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
 to say abbey 2F desc:
 	say "     The spacious second story of the library opens up to a balcony overlooking the lobby below, there a few cushioned chairs and a small sofa near the railing.  Opposite the seating area are a few more shelves of books, along with a few secluded desks to serve as quiet study places.";
@@ -671,7 +671,7 @@ North of Mall Foodcourt is Mall Atrium.
 Sewer Grating is a door. Sewer Grating is dangerous. 
 Down of Mall Foodcourt is Sewer Grating.
 Down of sewer grating is Sewers A7.
-The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.
+The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?". understand "grate" and "grating" as the sewer grating.
 ]
 
 Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
@@ -1089,7 +1089,7 @@ gryphon milk is a grab object. It is a part of the player. Understand "milk" as 
 distilled milk is a grab object. It is a part of the player.  it is not milky.
 
 
-The invent of the player is { "journal" };
+The invent of the player is { "journal" }.
 
 Table of Start Game
 title	subtable	description	toggle
@@ -6825,7 +6825,7 @@ instead of going through a dangerous door(called X):
 	[try looking.]
 
 
-gsgl is a number that varies. gsgl is usually 1;
+gsgl is a number that varies. gsgl is usually 1.
 
 to genderlockmenu:
 	now calcnumber is -1;

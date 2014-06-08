@@ -4,12 +4,12 @@ Version 1 of Sally by Stripes begins here.
 Section 1 - Sally the Huskybunny
 
 Sally is a woman.
-The description of Sally is "[sallydesc]";
+The description of Sally is "[sallydesc]".
 The conversation of Sally is { "Fuck me!" }.
 lastSallyfucked is a number that varies.  lastSallyfucked is normally 555.
 the icon of Sally is figure of Sally_icon.
 
-the scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.";
+the scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.".
 
 to say sallydesc:
 	say "     This creature, once the intellectual Dr Matt, is now nothing more than a horny slut and your personal toy.  The mouse's injection has left him a mindless, lustful creature eager for sex.  Sally, as you've decided to call her, is a cute and sexy huskybunny herm with no desires greater than satisfying her physical desires and yours.  The slutty hybrid has fluffy fur with husky markings and tail, but a bunny muzzle and ears.  Her body is something between the two, a sensual mix of canine and lapine, with lovely curves and big, rabbit footpaws.  As a herm, she has six large, perky breasts, with the upper pair being above-average in size and shrinking slightly for the subsequent two rows.  Her nine inch cock is almost constantly hard and both it and her wet pussy dribble with arousal.";

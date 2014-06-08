@@ -148,7 +148,7 @@ to say AndreMeeting:
 Section 2 - Felix, the centaur
 
 Felix is a man.  The hp of Felix is normally 0.
-The description of Felix is "[FelixDesc]";
+The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies.  lastFelixTalk is usually 555.	   	[turn-counter for talking delays (humanity restoration)]
 The icon of Felix is Figure of Felix_icon.
@@ -450,7 +450,7 @@ to say FelixSex6:    [Felix fucks Andre]
 Section 4 - Andre, the lizard
 
 Andre is a man.  The hp of Andre is normally 0.
-The description of Andre is "[AndreDesc]";
+The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies.  lastAndreTalk is usually 555.	   	[turn-counter for talking delays (humanity restoration)]
 The icon of Andre is Figure of Andre_icon.

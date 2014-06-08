@@ -9,24 +9,24 @@ when play begins:
 	add { "Peculiar Dragon" } to infections of guy;
 	add { "Peculiar Dragon" } to infections of furry;
 
-dorgr is text that varies; [A DORGER IS YOU]
-dorlastfed is a number that varies. dorlastfed is usually 555; [Doran Last Fed Timer]
-dorgenreg is a truth state that varies; [Doran Gender Regard. Boolean, false = male, true = female]
-dorrolereg is a number that varies. dorrolereg is usually 2; [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
-dorroleint is a number that varies. dorroleint is usually 2; [Doran Role Intensity. Numeric. 0 = full dominant, 1-3 = neutral, 4 = full submissive]
-dordomtop is a number that varies; [Doran Dominance Topic. Numeric. 0 = Player didn't submit, 1 = player did submit, 2 Doran's voluntary dominance revealed]
-dorfirsttalk is a truth state that varies. dorfirsttalk is usually false; [Flag to detect if the player's talked to Doran at least once]
-dorwassnub is a truth state that varies. dorwassnub is usually false; [Innoculous flag used to ward backend sex calculations and sex cooldown if you decide against having sex with Doran]
-dorfedtype is a number that varies. dorfedtype is usually 1; [Determines what kind of food Doran will give you, clever girl...]
+dorgr is text that varies. [A DORGER IS YOU]
+dorlastfed is a number that varies. dorlastfed is usually 555. [Doran Last Fed Timer]
+dorgenreg is a truth state that varies. [Doran Gender Regard. Boolean, false = male, true = female]
+dorrolereg is a number that varies. dorrolereg is usually 2. [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
+dorroleint is a number that varies. dorroleint is usually 2. [Doran Role Intensity. Numeric. 0 = full dominant, 1-3 = neutral, 4 = full submissive]
+dordomtop is a number that varies. [Doran Dominance Topic. Numeric. 0 = Player didn't submit, 1 = player did submit, 2 Doran's voluntary dominance revealed]
+dorfirsttalk is a truth state that varies. dorfirsttalk is usually false. [Flag to detect if the player's talked to Doran at least once]
+dorwassnub is a truth state that varies. dorwassnub is usually false. [Innoculous flag used to ward backend sex calculations and sex cooldown if you decide against having sex with Doran]
+dorfedtype is a number that varies. dorfedtype is usually 1. [Determines what kind of food Doran will give you, clever girl...]
 dorreq is an action applying to nothing. [Doran Request Command]
 dorrim is an action applying to nothing. [Hidden Request Tree for warding Rimjob scene]
-dorautint is a number that varies. dorautint is usually 0; [Doran Auto-Fire Intensity, 0 = Off, 1 = Strict, 2 = Loose]
-dorbb is a truth state that varies. dorbb is usually false; [Doran Blue-Balling, True indicates for the final sex roll to increase player libido instead of decrease]
-dorauto is a truth state that varies. dorauto is usually false; [Doran Automatic, True indicates that Doran initiated the sex himself for the purpose of the player-submissive scenes]
-dorrjd is a truth state that varies. dorrjd is usually false; [Doran Rimjob Disuasion, true indicates that the player does not want the aformentioned scene in their dom doran pool]
-dorrjdr is a truth state that varies. dorrjdr is usually false; [Doran Rimjob Disuasion Reveal, true indicates that the player's used the special interaction at least once once]
-dorautr is a truth state that varies. dorrjdr is usually false; [Doran Auto-fire Reveal, true indicates that the player's used this interaction at least once]
-dornpbb is a number that varies. dornpbb is usually 0; [Doran Non-Player Blue-Balling, used to indicate if Doran has received orgasm denial/neglect]
+dorautint is a number that varies. dorautint is usually 0. [Doran Auto-Fire Intensity, 0 = Off, 1 = Strict, 2 = Loose]
+dorbb is a truth state that varies. dorbb is usually false. [Doran Blue-Balling, True indicates for the final sex roll to increase player libido instead of decrease]
+dorauto is a truth state that varies. dorauto is usually false. [Doran Automatic, True indicates that Doran initiated the sex himself for the purpose of the player-submissive scenes]
+dorrjd is a truth state that varies. dorrjd is usually false. [Doran Rimjob Disuasion, true indicates that the player does not want the aformentioned scene in their dom doran pool]
+dorrjdr is a truth state that varies. dorrjdr is usually false. [Doran Rimjob Disuasion Reveal, true indicates that the player's used the special interaction at least once once]
+dorautr is a truth state that varies. dorrjdr is usually false. [Doran Auto-fire Reveal, true indicates that the player's used this interaction at least once]
+dornpbb is a number that varies. dornpbb is usually 0. [Doran Non-Player Blue-Balling, used to indicate if Doran has received orgasm denial/neglect]
 
 Section 1.1 - Doran Monster Responses
 
@@ -381,11 +381,11 @@ Section 3.0 - Doran NPC
 
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
-the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
+the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.".
 Doran is a man. Doran is in Rocky Outcropping.
-the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]";
-the description of Doran is "[doranlook]";
-the fuckscene of Doran is "[doransex]";
+the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
+the description of Doran is "[doranlook]".
+the fuckscene of Doran is "[doransex]".
 instead of sniffing Rocky Outcropping:
 	say "     It has the obvious scent of earth and burnt wood, which more than overpowers any scent the fastidious Doran leaves behind.";
 instead of sniffing Doran:
@@ -459,7 +459,7 @@ to say doransex:
 	otherwise:
 		say "[dorsexprot]"; [Invoke Doran Sex Protocol]
 
-dorneutroll is a number that varies. dorneutroll is usually 0; [Doran Neutral Roll. Doran decides which position he'll take after last sex. 1 = Dominant, 2 = Submissive]
+dorneutroll is a number that varies. dorneutroll is usually 0. [Doran Neutral Roll. Doran decides which position he'll take after last sex. 1 = Dominant, 2 = Submissive]
 	
 to say dorsexprot: [Doran Sex Protocol]
 	if dorneutroll is 0, now dorneutroll is a random number between 1 and 2; [Safeguard]
@@ -1262,9 +1262,9 @@ to say dordom_7: [Dom Doran Riding]
 			
 Section 3.1.2 - Doran Vore Protocol
 
-dorvorpcf is a truth state that varies. dorvorpcf is usually false; [Doran Vore Player Cum Filled, identifies player state for the vore pool]
-dorvornpcf is a truth state that varies. dorvorpcf is usually false; [Doran Vore Non-Player Cum Filled, identifies Doran state for the vore pool]
-dorvornpa is a truth state that varies. dorvornpa is usually false; [Doran Vore Non-Player Annoyed, idenfies Doran state for vore pool]
+dorvorpcf is a truth state that varies. dorvorpcf is usually false. [Doran Vore Player Cum Filled, identifies player state for the vore pool]
+dorvornpcf is a truth state that varies. dorvorpcf is usually false. [Doran Vore Non-Player Cum Filled, identifies Doran state for the vore pool]
+dorvornpa is a truth state that varies. dorvornpa is usually false. [Doran Vore Non-Player Annoyed, idenfies Doran state for vore pool]
 
 to dorvore: [Invocation of Doran Vore Protocol]
 	if waiterhater is 0:
@@ -1942,9 +1942,9 @@ to say doropt_0: [End]
 	
 Chapter 3.3.1 - Vore Option Extension
 
-dorvorreg is a number that varies. dorvorreg is usually 0; [Doran Vore Regard. 0 = Not revealed, 1 = Inactive, 2 = Active]
-dorvordur is a number that varies. dorvordur is usually 0; [Doran Vore Duration. 0 = Very Short, 1 = Short, 2 = Medium, 3 = Long] 
-dorvordis is a number that varies. dorvordis is usually 0; [Doran Vore Discharge. 0 = None/Implicit, 1 = Oral, 2 = Anal, 3 = Random] 
+dorvorreg is a number that varies. dorvorreg is usually 0. [Doran Vore Regard. 0 = Not revealed, 1 = Inactive, 2 = Active]
+dorvordur is a number that varies. dorvordur is usually 0. [Doran Vore Duration. 0 = Very Short, 1 = Short, 2 = Medium, 3 = Long] 
+dorvordis is a number that varies. dorvordis is usually 0. [Doran Vore Discharge. 0 = None/Implicit, 1 = Oral, 2 = Anal, 3 = Random] 
 
 to say doropt_4: [Doran Vore Extension]
 	if dorvorreg is 0:
@@ -2098,15 +2098,15 @@ to say doropt_4: [Doran Vore Extension]
 
 Chapter 3.3 - Doran Discussion Tree
 
-dorlastcuss is a number that varies. dorlastcuss is usually 555; [Doran Last Discussion]
-dorcusprog is a number that varies. dorcusprog is usually 0; [Doran Discussion Progression]
-dorcusexit is a number that varies. dorcusexit is usually 0; [Additional exit value for nested multiple-choice]
-dorcusexit2 is a number that varies. dorcusexit2 is usually 0; [Additional exit value for nested multiple-choice]
-dorcustv_1 is a number that varies. dorcustv_1 is usually 0; [Doran Discussion Temporary Number 1]
-[dorcustv_2 is a number that varies. dorcustv_2 is usually 0; [Doran Discussion Temporary Number 2]]
-[dorcustv_3 is a number that varies. dorcustv_3 is usually 0; [Doran Discussion Temporary Number 3]]
+dorlastcuss is a number that varies. dorlastcuss is usually 555. [Doran Last Discussion]
+dorcusprog is a number that varies. dorcusprog is usually 0. [Doran Discussion Progression]
+dorcusexit is a number that varies. dorcusexit is usually 0. [Additional exit value for nested multiple-choice]
+dorcusexit2 is a number that varies. dorcusexit2 is usually 0. [Additional exit value for nested multiple-choice]
+dorcustv_1 is a number that varies. dorcustv_1 is usually 0. [Doran Discussion Temporary Number 1]
+[dorcustv_2 is a number that varies. dorcustv_2 is usually 0. [Doran Discussion Temporary Number 2]]
+[dorcustv_3 is a number that varies. dorcustv_3 is usually 0. [Doran Discussion Temporary Number 3]]
 dorcus is an action applying to nothing.
-dorrprr is a number that varies. dorrprr is usually 0; [Doran RP Reveal Regard. Affected by player interaction in discussion]
+dorrprr is a number that varies. dorrprr is usually 0. [Doran RP Reveal Regard. Affected by player interaction in discussion]
 
 understand "discuss doran" as dorcus.
 understand "discuss with doran" as dorcus.
@@ -2560,11 +2560,11 @@ to say dorrpdsff: [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 
 Section 4.2 - Doran Roleplay Queries
 
-dorrpis is a number that varies. dorrpis is usually 0; [Doran Roleplay In Session. 0 = None, 1 to X = Identifies which roleplay is active]
-dorrp_tv1 is a number that varies. dorrp_tv1 is usually 0; [Doran Roleplay Temp Value 1. Use is contextual to the scene]
-dorrp_tv2 is a number that varies. dorrp_tv2 is usually 0; [Doran Roleplay Temp Value 2. Use is contextual to the scene]
-dorrp_tv3 is a number that varies. dorrp_tv3 is usually 0; [Doran Roleplay Temp Value 3. Use is contextual to the scene]
-dorrp_tv4 is a number that varies. dorrp_tv4 is usually 0; [Doran Roleplay Temp Value 4. Use is contextual to the scene]
+dorrpis is a number that varies. dorrpis is usually 0. [Doran Roleplay In Session. 0 = None, 1 to X = Identifies which roleplay is active]
+dorrp_tv1 is a number that varies. dorrp_tv1 is usually 0. [Doran Roleplay Temp Value 1. Use is contextual to the scene]
+dorrp_tv2 is a number that varies. dorrp_tv2 is usually 0. [Doran Roleplay Temp Value 2. Use is contextual to the scene]
+dorrp_tv3 is a number that varies. dorrp_tv3 is usually 0. [Doran Roleplay Temp Value 3. Use is contextual to the scene]
+dorrp_tv4 is a number that varies. dorrp_tv4 is usually 0. [Doran Roleplay Temp Value 4. Use is contextual to the scene]
 
 to say dorrpovb: [Doran RP: The Virile Beast Query]
 	say "     '[if dorrolereg > 0]Ah, [dorgr], I must caution that this puts them in a considerably submissive position, which might not be their thing[end if]";

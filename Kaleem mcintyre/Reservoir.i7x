@@ -76,7 +76,7 @@ PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
 Sanctuary is a situation. Sanctuary is resolved.
 
 
-The sarea of For Purity's Sake is "Reservoir";
+The sarea of For Purity's Sake is "Reservoir".
 
 Instead of resolving For Purity's Sake:
 	If resevquest is 0:
@@ -89,7 +89,7 @@ Instead of resolving For Purity's Sake:
 
 
 Technical Assistance is a situation.
-The sarea of Technical Assistance is a "Reservoir";
+The sarea of Technical Assistance is a "Reservoir".
 
 bookfind is a number that varies.
 
@@ -148,7 +148,7 @@ to say resevfight1:
 
 
 Slightly Sidetracked is a situation.
-The sarea of Slightly Sidetracked is "Reservoir";
+The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
@@ -195,7 +195,7 @@ Instead of resolving a Flight of stairs:
 
 ThreeDoors is a situation;
 
-The sarea of ThreeDoors is "Reservoir";
+The sarea of ThreeDoors is "Reservoir".
 
 ldoor is a number that varies.
 rdoor is a number that varies.
@@ -306,7 +306,7 @@ This is the doorcheck rule:
 Section 3 - Reservoir Fight (Preparation)
 
 The beast of the tainted waters is a situation.
-The sarea of The beast of the tainted waters is "Reservoir";
+The sarea of The beast of the tainted waters is "Reservoir".
 
 lastResevoirfix is a number that varies.
 
@@ -330,7 +330,7 @@ Instead of Resolving a The beast of the tainted waters:
 Section 4 - Reservoir (Fight)
 
 A Fight to remember is a situation.
-The sarea of A Fight to remember is "Reservoir";
+The sarea of A Fight to remember is "Reservoir".
 
 lastResevoirfix is a number that varies.
 oozing is a number that varies.
@@ -448,7 +448,7 @@ Instead of resolving a A Fight to remember:
 Section 5 - Water At Last
 
 PassionAfterTheBattle is a situation.
-The sarea of PassionAfterTheBattle is "Reservoir";
+The sarea of PassionAfterTheBattle is "Reservoir".
 
 waterworks is a number that varies.
 

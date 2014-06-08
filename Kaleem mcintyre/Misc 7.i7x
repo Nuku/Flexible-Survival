@@ -2,7 +2,7 @@ Version 2 of Misc 7 by Kaleem mcintyre begins here.
 [Version 2.1 - Horse Sense patched to allow avoidance - Stripes]
 
 Horse Sense is a situation.
-The sarea of Horse Sense is "Plains";
+The sarea of Horse Sense is "Plains".
 when play begins:
 	add Horse Sense to badspots of furry;
 	add Horse Sense to badspots of hermaphrodite;
@@ -25,7 +25,7 @@ Instead of Resolving a Horse Sense:
 
 
 Victim is a situation.  The level of Victim is 8.
-The sarea of Victim is "Red";
+The sarea of Victim is "Red".
 when play begins:
 	add Victim to badspots of furry;
 	add Victim to badspots of hermaphrodite;
@@ -57,7 +57,7 @@ Instead of Resolving a Victim:
 
 
 Runaway is a situation.
-The sarea of Runaway is "Beach";
+The sarea of Runaway is "Beach".
 
 Instead of Resolving a Runaway:
 	say "     Walking across the sands of the long stretch of beach that the city has to offer you find a curious sight of what looks like a normal person sitting by themselves while shuffling their bare feet across the pale sands. Curious, you go over to them and then grunt to catch their attention when you realize that, yes indeed, the other is a full on human. What you find when the other turns around is a freckled faced boy of about seventeen looking up and down your [bodyname of player] body somewhat curiously before he smiles up at you. 'Hello, come to watch the waves lap at the shore?' The young man says somewhat quietly. You look out at the small crashing waves and then turn back to the other to give a shake of your head. Telling them that you were actually curious about them and what they are doing here all alone you find yourself slightly taking a step back when the other chuckles somewhat angrily all of a sudden.";
@@ -73,7 +73,7 @@ Instead of Resolving a Runaway:
 
 
 Portrait is a situation.  The level of Portrait is 9.
-The sarea of Portrait is "Outside";
+The sarea of Portrait is "Outside".
 when play begins:
 	add Portrait to badspots of furry;
 	add Portrait to badspots of guy;
@@ -95,7 +95,7 @@ Instead of Resolving a Portrait:
 
 
 Hurting is a situation.
-The sarea of Hurting is "Hospital";
+The sarea of Hurting is "Hospital".
 when play begins:
 	add Hurting to badspots of furry;
 	add Hurting to badspots of guy;
@@ -123,7 +123,7 @@ Instead of Resolving a Hurting:
 
 
 Conchien is a situation.
-The sarea of Conchien is "Outside";
+The sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies.  beauceronmet is normally false.
 
 when play begins:
@@ -142,7 +142,7 @@ Instead of Resolving a Conchien:
 
 
 Chocolate Treat is a situation.
-The sarea of Chocolate Treat is "High";
+The sarea of Chocolate Treat is "High".
 
 when play begins:
 	add Chocolate Treat to badspots of furry;

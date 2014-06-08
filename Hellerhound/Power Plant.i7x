@@ -29,13 +29,13 @@ instead of resolving a Generator Parts:
 		now fixedgens is 1;
 
 [Scents of rooms]
-the scent of Plant Lobby is "The power plant lobby smells of smoke, ash and cum.";
+the scent of Plant Lobby is "The power plant lobby smells of smoke, ash and cum.".
 
-the scent of Control Room is "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
+the scent of Control Room is "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.".
 
-the scent of Plant Overview is "There is a faint scent of smoke coming from the power plant.";
+the scent of Plant Overview is "There is a faint scent of smoke coming from the power plant.".
 
-the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.";
+the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
 
 broken fence is a door. "Though the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
 Plant Lobby is a room. "Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.".
@@ -62,7 +62,7 @@ to say ControlPanelDesc:
 catwalk door is a door.
 catwalk door is lockable and locked.
 catwalk door is west of Control Room.
-The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.";
+The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
 the invent of control room is {"yellow helmet"}.
 
@@ -79,7 +79,7 @@ The descmod of yellow helmet is "A yellow protective helmet rests atop them, bea
 The slot of yellow helmet is "head". 
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
-The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.";
+The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
@@ -98,7 +98,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat Key
 
-the scent of cat key is "There is a faint scent of ozone lingering to the key fob.";
+the scent of cat key is "There is a faint scent of ozone lingering to the key fob.".
 
 the invent of Red Light District is {"Cat Key"}.
 

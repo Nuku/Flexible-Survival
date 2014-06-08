@@ -13,7 +13,7 @@ eggplanted is a number that varies.
 cuntsmall is a number that varies.
 hascunt is a number that varies.
 multicunt is a number that varies.
-thmpregdetect is a truth state that varies.  thmpregdetect is usually false;
+thmpregdetect is a truth state that varies.  thmpregdetect is usually false.
 
 
 to say horror victory:
@@ -380,7 +380,7 @@ When Play begins:
 basement portal is a door. basement portal is dangerous.
 Down of Trevor Labs Lobby is basement portal.
 Down of basement portal is dark basement.
-The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... "; understand "basement" and "portal" as the basement portal.
+The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement" and "portal" as the basement portal.
 
 
 [Edit this to have the correct Name as wall]

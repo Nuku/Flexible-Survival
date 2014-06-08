@@ -7,7 +7,7 @@ More Misc Events by Kaleem mcintyre begins here.
 Section 1- Unorthodox Sight
 
 Unorthodox Sight is a situation.
-The sarea of Unorthodox Sight is "Red";
+The sarea of Unorthodox Sight is "Red".
 when play begins:
 	add Unorthodox Sight to badspots of furry;
 	add Unorthodox Sight to badspots of guy;
@@ -27,7 +27,7 @@ Section 2 - Desperation
 Section 3 - Family
 
 Family is a situation.
-The sarea of Family is "Beach";
+The sarea of Family is "Beach".
 when play begins:
 	add Family to badspots of furry;
 	add Family to badspots of guy;
@@ -41,7 +41,7 @@ Instead of resolving a Family:
 Section 4 - Magic
 
 Magic is a situation.
-The sarea of Magic is "Mall";
+The sarea of Magic is "Mall".
 
 Instead of resolving a Magic:
 	say "Heading to the underground sanctum of the mall, aka the sewers, and vehemently wishing it was because you getting paid to see about a lost dog, you find yourself stopping dead in your tracks as you notice someone standing a fifteen feet away from where you are while holding a crystal ball into their hands. Blinking just to be sure that you are seeing right you find yourself going over to the other just in time to watch as the foot wide orb rises up into the air between the cloaked creature hands all the way until it is levitating in front of their unknown person's face. Seeing the other a lot clearer, once you've narrowed the distance between you both to a mere five feet, you find that you can't exactly make out what the other persona exactly is as the cloak and crystal ball hides the other's body and face, respectively, almost perfectly. Opening your mouth to speak you find yourself snapping your jaw shut when a single hand comes up and then waves a single gloved finger at you in admonishment. Not knowing what you did wrong you feel slightly chastised, that is, before the floating orbs comes directly over to hover unswervingly in front of your face.";
@@ -53,7 +53,7 @@ Instead of resolving a Magic:
 Section 5 - Auto Shop
 
 Auto Shop is a situation.
-The sarea of Auto Shop is "Red";
+The sarea of Auto Shop is "Red".
 when play begins:
 	add Auto Shop to badspots of furry;
 	add Auto Shop to badspots of guy;

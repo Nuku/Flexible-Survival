@@ -8,14 +8,14 @@ Section 1 - Monster Responses
 when play begins:
 	add ( "Snake" ) to infections of tailweapon;
 
-snakedomm is a number that varies. snakedomm is usually 0; [Snake Dom Memory. 0 = Nothing, 1 = lost once, 2 = TBM scene has fired at least once]
-snakesubm is a number that varies. snakesubm is usually 0; [Snake Sub Memory. 0 = Nothing, 1 = Player has made a choice after beating one]
-snakehijack is a truth state that varies. snakehijack is usually false; [Snake TBM Hijacking check, Causes the snake to interfere with player pregnancy]
-snakecap is a number that varies. snakecap is usually 0;
-snakeocc is a number that varies. snakeocc is usually 0;
-snakehijacktimer is a number that varies. snakehijacktimer is usually 300;
-fsnakevalid is a truth state that varies. fsnakevalid is usually false;
-msnakevalid is a truth state that varies. msnakevalid is usually false;
+snakedomm is a number that varies. snakedomm is usually 0. [Snake Dom Memory. 0 = Nothing, 1 = lost once, 2 = TBM scene has fired at least once]
+snakesubm is a number that varies. snakesubm is usually 0. [Snake Sub Memory. 0 = Nothing, 1 = Player has made a choice after beating one]
+snakehijack is a truth state that varies. snakehijack is usually false. [Snake TBM Hijacking check, Causes the snake to interfere with player pregnancy]
+snakecap is a number that varies. snakecap is usually 0.
+snakeocc is a number that varies. snakeocc is usually 0.
+snakehijacktimer is a number that varies. snakehijacktimer is usually 300.
+fsnakevalid is a truth state that varies. fsnakevalid is usually false.
+msnakevalid is a truth state that varies. msnakevalid is usually false.
 
 to say losetosnake:
 	theserpentchecks;

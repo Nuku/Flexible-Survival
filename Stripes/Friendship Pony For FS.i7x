@@ -423,10 +423,10 @@ to say fptailchange:
 
 pfpclist is a list of numbers that varies.  pfpclist is usually { 1, 2, 3, 4, 5, 6, 7, 8 }.
 pfptype is a number that varies. pfptype is usually 1.
-pfpskin is a text that varies.  pfpskin is normally "baby blue";
-pfpcock is a text that varies.  pfpcock is normally "blue";
-pfphair is a text that varies.  pfphair is normally "turquoise";
-pfpbootymark is a text that varies.  pfpbootymark is normally "a jar of cum";
+pfpskin is a text that varies.  pfpskin is normally "baby blue".
+pfpcock is a text that varies.  pfpcock is normally "blue".
+pfphair is a text that varies.  pfphair is normally "turquoise".
+pfpbootymark is a text that varies.  pfpbootymark is normally "a jar of cum".
 
 to ponystatuscheck:
 	if player is not fponybodied and player is not fponyfaced:
@@ -654,7 +654,7 @@ to say drinkponycider:
 	increase libido of player by 5;
 	decrease thirst of player by 8;
 
-the scent of pony cider is "The cider smells strongly of apples and equines.";
+the scent of pony cider is "The cider smells strongly of apples and equines.".
 
 
 Section 6 - Definitions

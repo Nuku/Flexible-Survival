@@ -7,9 +7,9 @@ Section 1- Tiger den environment
 
 Tiger den is a room. It is fasttravel. It is private
 
-The description of Tiger den is "Sparsely furnished, this large concrete basement bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it.  Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they seem to have placed in the empty building above, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid to cause trouble.";
+The description of Tiger den is "Sparsely furnished, this large concrete basement bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it.  Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they seem to have placed in the empty building above, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid to cause trouble.".
 
-the scent of Tiger den is "The enclosed basement hideout smells strongly of tigers.";
+the scent of Tiger den is "The enclosed basement hideout smells strongly of tigers.".
 
 
 
@@ -19,11 +19,11 @@ Lastchasefucked is a number that varies. Lastchasefucked is usually 250.
 chasefucked is a number that varies. chasefucked is usually 0.
 
 Chase is a man.
-The description of Chase is "The large striped tiger man you helped out earlier is hanging around near the side of the den, watching as several of the other tiger-like people here go about their business.  He's pretty fit looking and seems well at ease with his new form.  He seems strangely alluring, with a strong, masculine presence which you find attractive.";
+The description of Chase is "The large striped tiger man you helped out earlier is hanging around near the side of the den, watching as several of the other tiger-like people here go about their business.  He's pretty fit looking and seems well at ease with his new form.  He seems strangely alluring, with a strong, masculine presence which you find attractive.".
 The conversation of Chase is { "Mrowl, baby!" }.
 Chase is in Tiger den.
 
-the scent of Chase is "The tigerman smells strongly of male tiger[if cunts of player > 0 or lust of Chase > 0] and arousal[end if].";
+the scent of Chase is "The tigerman smells strongly of male tiger[if cunts of player > 0 or lust of Chase > 0] and arousal[end if].".
 
 instead of conversing the Chase:
 	if Chasetalk is 0:
@@ -127,7 +127,7 @@ Section 2- TigerVSTaur
 
 
 TigerVSTaur is a situation.  The level of TigerVSTaur is 9.
-The sarea of TigerVSTaur is "Zoo";
+The sarea of TigerVSTaur is "Zoo".
 when play begins:
 	add TigerVSTaur to badspots of hermaphrodite;
 	add TigerVSTaur to badspots of furry;

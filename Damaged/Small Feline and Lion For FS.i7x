@@ -9,10 +9,10 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
-Feline_type is a number that varies;
-Feline_meow is a number that varies;
-Feline_attached is a number that varies;
-Feline_encountered is a number that varies;
+Feline_type is a number that varies.
+Feline_meow is a number that varies.
+Feline_attached is a number that varies.
+Feline_encountered is a number that varies.
 
 
 to say cat att:

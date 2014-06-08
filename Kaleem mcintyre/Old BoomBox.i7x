@@ -77,7 +77,7 @@ Section 4 - Playing Music
 Boombox is a object.
 It is fixed in place.
 
-The description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, despite the age of the machine there is little wear and tear on the outside covering of the device. Perhaps whoever was keeping it kept the machine in secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?";
+The description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, despite the age of the machine there is little wear and tear on the outside covering of the device. Perhaps whoever was keeping it kept the machine in secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
 
 instead of sniffing BoomBox:
  say "The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";

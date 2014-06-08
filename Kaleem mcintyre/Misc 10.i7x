@@ -5,7 +5,7 @@ Section 1 - Mysterious Stranger
 
 Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 
-The sarea of Mysterious Stranger is "Outside";
+The sarea of Mysterious Stranger is "Outside".
 
 Instead of resolving a Mysterious Stranger:
 	Say "'Hey, you over there with the [facename of player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of a overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
@@ -45,7 +45,7 @@ Section 2 - Air Drop
 
 Air Drop is a situation. The level of Air Drop is 3.
 
-The sarea of Air Drop is "Outside";
+The sarea of Air Drop is "Outside".
 
 Instead of resolving a Air Drop:
 	Say "The whirling sound of a helicopter's blades spinning like mad catches the edge of your hearing and in looking skyward you find yourself noting a large whirlybird with a massive metal crate tied to a long wire flying overhead. Not sure what this is all about, but curious anyway you head off into the direction the helicopter is going. It takes you some time but eventually you end up trailing the helicopter all the way to a seemingly abandoned junkyard.";
@@ -63,7 +63,7 @@ Instead of resolving a Air Drop:
 Section 3 - Magical Girl
 
 Magical Girl is a situation. 
-The sarea of Magical Girl is "Outside";
+The sarea of Magical Girl is "Outside".
 When play begins:
 	Add Magical Girl to badspots of humorous;
 
@@ -109,7 +109,7 @@ Section 4 - Triton
 
 Triton is a situation. The level of Triton is 9.
 
-The sarea of Triton is "Beach";
+The sarea of Triton is "Beach".
 When play begins:
 	Add Triton to badspots of furry;
 	Add Triton to badspots of guy;
@@ -154,7 +154,7 @@ instead of sniffing trident:
 Section 5 - June Mermaid 
 
 June Mermaid is a situation.
-The sarea of June Mermaid is "Warehouse";
+The sarea of June Mermaid is "Warehouse".
 
 Instead of resolving a June Mermaid:
 	Say "Heading along one of the boardwalks of the warehouse district's north dock you come to find a young mermaid, you blink twice to be sure, but yes you are seeing a naked half female half fish woman, sitting along one of the lower docks talking to a young otter. The two seem to be chuckling over something, but you can't hear the conversation from where you are. Taking the time to watch the two of them you look to see the mermaid, with her long cerulean hair and ample bosom, as she leans over next to the otter, who is quite male from what your eyes can tell you of the other's gender, and then goes to town nuzzling the other somewhat fondly. It's only the sudden shout of someone calling out for someone else that breaks up this tender little moment.";
@@ -178,7 +178,7 @@ Instead of resolving a Anomaly:
 Section 7 - Free Catch!
 
 Free Catch is a situation.
-The sarea of Free Catch is "Warehouse";
+The sarea of Free Catch is "Warehouse".
 When play begins:
 	Add Free Catch to badspots of furry;
 
@@ -192,7 +192,7 @@ Instead of resolving a Free Catch:
 Section 8 - Rumors
 
 Rumors is a situation.
-The sarea of Rumors is "Warehouse";
+The sarea of Rumors is "Warehouse".
 
 Instead of resolving a Rumors:
 	Say "While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' A middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' The otter asks unimpressively. 'Well, rumor has it that they were in business long before the epidemic hit this side of the states.' The orca mutters somewhat quietly. 'Where'd you hear such a thing from.' The hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a serious of strange events started to take place down there.'";
@@ -204,7 +204,7 @@ Instead of resolving a Rumors:
 Section 9 - Diving contest
 
 Diving Contest is a situation.
-The sarea of Diving Contest is "Warehouse";
+The sarea of Diving Contest is "Warehouse".
 
 Instead of resolving a Diving Contest:
 	Say "Moving over to the pier and listening to several groups of mutants arguing with each other over who can dive the best you watch as a somewhat bored looking pirate shark comes over and then offers a challenge to the groups. The rules are simply: whoever can show off the best moves while diving gets to put their group's mark on a board at the front of the pier for this week and be named Diving Champs. This sets the respective groups on fire and soon the contest to see who can dive the best gets quickly under way. You don't stay to watch the show, but you do notice how everyone seems to be getting along better now since they have a way to exert some of their pent up aggressions with one another. Maybe this will be a key to helping to figure things out for later, you think before moving on.";
@@ -215,7 +215,7 @@ Instead of resolving a Diving Contest:
 Section 10 - Lackadaisical
 
 Lackadaisical is a situation.
-The sarea of Lackadaisical is "Warehouse";
+The sarea of Lackadaisical is "Warehouse".
 When play begins:
 	Add Lackadaisical to badspots of furry;
 

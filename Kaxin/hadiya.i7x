@@ -6,7 +6,7 @@ Version 2 of Hadiya by Kaxin begins here.
 Section 1 - The Situation
 
 Annoyed Hyena is a situation.
-The sarea of Annoyed Hyena is "Junkyard";
+The sarea of Annoyed Hyena is "Junkyard".
 when play begins:
 	add Annoyed Hyena to badspots of hermaphrodite;
 	add Annoyed Hyena to badspots of furry;
@@ -29,15 +29,15 @@ Section 2 - Hyena Shack
 
 Hyena Shack is a room. It is fasttravel. It is private.
 
-The description of Hyena Shack is "     A small looking wooden shack that she apparently built for herself.  It's good enough to keep her out of the cold, and the hyena scent radiating strongly from it seems to keep out anyone that doesn't want to regret their intrusion.  She's got quite a bit of stolen furniture though, as it's not like many people around are going to be objecting to it.  And of course, Hadiya herself is never far to be found, usually fixing something inside the shack that has broken or just reclining and getting ready for her prey. Currently she's just reclining on a large sofa, sprawled out and looking very lazy as usual.  She beckons you closer, seeing if you're dumb enough to actually do so.";
+The description of Hyena Shack is "     A small looking wooden shack that she apparently built for herself.  It's good enough to keep her out of the cold, and the hyena scent radiating strongly from it seems to keep out anyone that doesn't want to regret their intrusion.  She's got quite a bit of stolen furniture though, as it's not like many people around are going to be objecting to it.  And of course, Hadiya herself is never far to be found, usually fixing something inside the shack that has broken or just reclining and getting ready for her prey. Currently she's just reclining on a large sofa, sprawled out and looking very lazy as usual.  She beckons you closer, seeing if you're dumb enough to actually do so.".
 
-the scent of Hyena Shack is "This places smells quite strongly of hyena herm and male sex.";
+the scent of Hyena Shack is "This places smells quite strongly of hyena herm and male sex.".
 
 Section 3 - Hadiya
 
 Hadiya is a person.  Hadiya is in Hyena Shack.
-The description of Hadiya is "     A tall, obviously intimidating hyena.  The sharp, predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past.  Her shaggy fur about as well groomed as you can expect it to be in a situation like this.  Just reclining against one of benches in her home and giving the intruder a curious look.  She towers over you, and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to.  Though for now, it doesn't seem like she's in any hurry to actually use any of them.";
-The conversation of Hadiya is { "Bend over!" };
+The description of Hadiya is "     A tall, obviously intimidating hyena.  The sharp, predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past.  Her shaggy fur about as well groomed as you can expect it to be in a situation like this.  Just reclining against one of benches in her home and giving the intruder a curious look.  She towers over you, and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to.  Though for now, it doesn't seem like she's in any hurry to actually use any of them.".
+The conversation of Hadiya is { "Bend over!" }.
 
 instead of conversing Hadiya:
 	if hp of Hadiya is 0 or hp of Hadiya is 1:
@@ -51,7 +51,7 @@ instead of conversing Hadiya:
 	otherwise:
 		say "     [one of][if lastfuck of hadiya - turns < 4]'Why are you bothering to stick around when I'm already done with you for now?'[otherwise]'How about you come back later and I'll give you what I know you need,' she rumbles, rubbing her crotch.[otherwise if lastfuck of hadiya - turns < 12]'How about you bring that sexy ass of yours over here and maybe I'll give you what I know you need,' she rumbles, rubbing her crotch.[end if][or]'This pussy and cunt of mine feel nice,' she says, almost teasing you with her touches to them, 'but this new cock of mine is so much better.'[or]'You're turning out to be a fine little fucktoy, aren't you?  Such a good slut.'[or]'You need a good dose of hyena in you, don't you, bitch?' she asks, rubbing her crotch before flopping back onto a padded chair, laughing.[or]She pulls out a bottle of liquor from under a chair and slams down half of it with a satisfied 'Ahhh.'[or]'Turn around and let me see that bitch ass of yours.'[at random]";
 
-the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.";
+the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 
 hadiyafucked is a number that varies. hadiyafucked is usually 0.
 hadiyahyg is a truth state that varies.  hadiyahyg is normally false.

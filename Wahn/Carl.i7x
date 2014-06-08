@@ -50,8 +50,8 @@ Section 1 - Description
 
 Carl is a man. The hp of Carl is usually 0.
 The icon of Carl is Figure of CarlClothed_icon.
-The description of Carl is "[CarlDesc]";
-The conversation of Carl is { "Woof." };
+The description of Carl is "[CarlDesc]".
+The conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. [when he was brought in]
 lastfuck of Carl is usually 555.
 
@@ -66,7 +66,7 @@ to say CarlDesc:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";				
 	say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 		
-The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.";
+The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.".
 
 Section 2 - Talking
 

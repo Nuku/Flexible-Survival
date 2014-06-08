@@ -206,8 +206,8 @@ name	desc	weight	object
 Fish is a grab object. 
 
 Fish is infectious. The strain of Fish is "sea otter".
-usedesc of Fish is "[Fish]";
-The purified of fish is "food";
+usedesc of Fish is "[Fish]".
+The purified of fish is "food".
 
 To say Fish:
 	decrease the hunger of the player by 15;

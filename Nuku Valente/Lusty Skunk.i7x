@@ -7,9 +7,9 @@ Version 2 of Lusty Skunk by Nuku Valente begins here.
 Section 1 - The Situation
 
 Lusty Skunk is a situation.
-The sarea of Lusty Skunk is "Forest";
+The sarea of Lusty Skunk is "Forest".
 
-skrp is a number that varies. skrp is usually -1;
+skrp is a number that varies. skrp is usually -1.
 Lastskunkfuck is a number that varies. Lastskunkfuck is usually 250.
 skunkmulticock is a number that varies. skunkmulticock is usually 0.
 skunkfucked is a number that varies. skunkfucked is usually 0.

@@ -42,7 +42,7 @@ Version 1 of Thomas by Wahn begins here.
 Section 1 - Meeting Event
 
 Centaur Gangbang is a situation. The level of Centaur Gangbang is 5.
-The sarea of Centaur Gangbang is "Plains";
+The sarea of Centaur Gangbang is "Plains".
 when play begins:
 	add Centaur Gangbang to badspots of hermaphrodite;      [Thomas becomes a herm in/after this scene]
 	add Centaur Gangbang to badspots of guy;                [male centaurs]
@@ -135,7 +135,7 @@ to say RunFromCentaurs:
 Section 2 - Thomas, the herm centaur
 
 Thomas is a man.  The hp of Thomas is normally 0.
-The description of Thomas is "[ThomasDesc]";
+The description of Thomas is "[ThomasDesc]".
 The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies.  lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 ThomasSaved is a number that varies.  ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]

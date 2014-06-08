@@ -4,7 +4,7 @@ Section 1 - Researcher Studio
 
 Researcher Studio is a room. It is private. It is a fasttravel.
 
-The description of Researcher Studio is "A small two story home stands in the middle of the plains like some kind of bizarre guard post. Coming from out of the only chimney up on the roof is a thick line of grayish-white smoke filling up the surrounding area with a strong scent of sulfur, the likes of which is probably keeping away the mutants and other animals running around here. Over by the right side of the house sits is a glittering pool of pure water that glimmers almost ethereally as the wind ripples at its surface. On the other side of the house are large grooves of plants, herbs and fruits growing silently as if in wait to be picked, watered or otherwise pruned by the proprietor of the house.";
+The description of Researcher Studio is "A small two story home stands in the middle of the plains like some kind of bizarre guard post. Coming from out of the only chimney up on the roof is a thick line of grayish-white smoke filling up the surrounding area with a strong scent of sulfur, the likes of which is probably keeping away the mutants and other animals running around here. Over by the right side of the house sits is a glittering pool of pure water that glimmers almost ethereally as the wind ripples at its surface. On the other side of the house are large grooves of plants, herbs and fruits growing silently as if in wait to be picked, watered or otherwise pruned by the proprietor of the house.".
 
 instead of sniffing Researcher Studio:
 	say "Breathing in the time that mixture of scents you notice that the sharp tang of herbs, smoke, sweet fruit and something calming wafting throughout the air.";
@@ -15,7 +15,7 @@ North of Researcher Studio is MainRoom.
 Section 2 - Main Room
 
 MainRoom is a room.
-The description of MainRoom is "Inside of the main room of the studio the large expanse of space has been decorated to both look and feel comfortable as a large and plush beige sofa sits with fluffy green rug lying across the floor underneath legs of the couch. Over by a side door leading to an open kitchen sits a cedar table and black leather chair with a laptop quietly humming on top of the desk's surface. On the other side of the table there is a single door that has been kept open showing off Omio's bedroom. A pair of stairs at the back of the room leads up to a darkened area while opposite of said stairwell a single shut door looms almost arrogantly with a large deadbolt keeping the unknown area locked up tight. Relatively speaking the living space of the studio would look rather inconspicuous had it not been for the large cauldron boiling in the fireplace with grey smoke coming from out of the oversized black pot.";
+The description of MainRoom is "Inside of the main room of the studio the large expanse of space has been decorated to both look and feel comfortable as a large and plush beige sofa sits with fluffy green rug lying across the floor underneath legs of the couch. Over by a side door leading to an open kitchen sits a cedar table and black leather chair with a laptop quietly humming on top of the desk's surface. On the other side of the table there is a single door that has been kept open showing off Omio's bedroom. A pair of stairs at the back of the room leads up to a darkened area while opposite of said stairwell a single shut door looms almost arrogantly with a large deadbolt keeping the unknown area locked up tight. Relatively speaking the living space of the studio would look rather inconspicuous had it not been for the large cauldron boiling in the fireplace with grey smoke coming from out of the oversized black pot.".
 Omio is in MainRoom.
 
 instead of sniffing MainRoom:
@@ -34,7 +34,7 @@ Omiotalk is a number that varies.
 omq is a number that varies.
 
 Omio is a woman.
-The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more...cute in a girlish like way.";
+The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more...cute in a girlish like way.".
 The conversation of Omio is { "Research and Development!" }.
 
 instead of linkactioning Omio:
@@ -151,7 +151,7 @@ Section 5 - Bedroom
 
 Bedroom is a room.
 
-The description of Bedroom is "Omio's bedroom is unexpectedly bare, unlike the main room of the house. A large Japanese futon has been settled onto the hardwood floor back against the far wall of the room in-between the only two windows within the sleeping area. Said windows are framed by teal-blue curtains and from the way the linens sway with the rustling of the breeze it's easy to imagine Omio having pleasant dreams in here as the area feels somewhat harmonious...or maybe ethereal in nature. A small nightstand sits over by the left wall with a blue vase placed on top of the stand. A pink flower hangs sleepily from out of the cerulean urn. Above the nightstand hangs a large painting of a ferocious Chinese dragon."; 
+The description of Bedroom is "Omio's bedroom is unexpectedly bare, unlike the main room of the house. A large Japanese futon has been settled onto the hardwood floor back against the far wall of the room in-between the only two windows within the sleeping area. Said windows are framed by teal-blue curtains and from the way the linens sway with the rustling of the breeze it's easy to imagine Omio having pleasant dreams in here as the area feels somewhat harmonious...or maybe ethereal in nature. A small nightstand sits over by the left wall with a blue vase placed on top of the stand. A pink flower hangs sleepily from out of the cerulean urn. Above the nightstand hangs a large painting of a ferocious Chinese dragon.".
 Nightstand is in Bedroom. It is fixed in place.
 
 instead of sniffing Bedroom:
@@ -163,16 +163,16 @@ West of Bedroom is MainRoom.
 
 Section 6 - Nightstand
 
-The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old…very old. Maybe you could try and [bold type]open[roman type] it?";
+The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old…very old. Maybe you could try and [bold type]open[roman type] it?".
 
 instead of  sniffing Nightstand:
 	say "The nightstand smells old and somewhat musky."
 
 unlocknightstand is an action applying to nothing.
 
-Understand "unlock nightstand" as unlocknightstand;
-Understand "open nightstand" as unlocknightstand;
-Understand "open" as unlocknightstand;
+Understand "unlock nightstand" as unlocknightstand.
+Understand "open nightstand" as unlocknightstand.
+Understand "open" as unlocknightstand.
 
 Check unlocknightstand:
 	If Nightstand is not visible, say "ESP much?" instead;
@@ -189,9 +189,9 @@ Section 7 - Kitchen
 
 Kitchen is a room.
 
-The description of Kitchen is "Omio's kitchenette is made up of ashen walls with a white tiled floor housing a modern style stove and refrigerator with a single chrome sink resting next to said refrigerator. Large wooden cabinets sit on both the top and bottom sides of refrigerator and stove. More than likely the cupboards house a plentiful storage of food for Omio to cook with, yet from the lingering smells filling the area it would seem that the redhead prepares a lot more tea in here than food. Over by the side of the backdoor leading into the plains there stands a large dining table and two comfortable looking chairs with a Chinese styled tea set sitting atop the surface of the table.";
+The description of Kitchen is "Omio's kitchenette is made up of ashen walls with a white tiled floor housing a modern style stove and refrigerator with a single chrome sink resting next to said refrigerator. Large wooden cabinets sit on both the top and bottom sides of refrigerator and stove. More than likely the cupboards house a plentiful storage of food for Omio to cook with, yet from the lingering smells filling the area it would seem that the redhead prepares a lot more tea in here than food. Over by the side of the backdoor leading into the plains there stands a large dining table and two comfortable looking chairs with a Chinese styled tea set sitting atop the surface of the table.".
 
-The invent of Kitchen is { "water bottle" , "food" , "chips" , "tasty peach" };
+The invent of Kitchen is { "water bottle" , "food" , "chips" , "tasty peach" }.
 
 instead of sniffing Kitchen:
 	say "Omio's kitchen smells of herbs and spices all boiled together into various mixes to make soul calming tea."; 
@@ -203,7 +203,7 @@ Section 8 - VacantUpstairs
 
 VacantUpstairs is a room.
 
-The description of VacantUpstairs is "Nothing occupies the large space that once looked to have been a very large guest room. The hardwood floors have not a single speck of dust on them so Omio must use this area for something, though what this might be is unknown at the time. A single window looking out into the world at the end of the room lets the light from the[if daytimer is day] warm sunlight[otherwise] glowing stars and shining moon[end if]. Maybe you could [bold type]look out[roman type] the window to see the outside world?";
+The description of VacantUpstairs is "Nothing occupies the large space that once looked to have been a very large guest room. The hardwood floors have not a single speck of dust on them so Omio must use this area for something, though what this might be is unknown at the time. A single window looking out into the world at the end of the room lets the light from the[if daytimer is day] warm sunlight[otherwise] glowing stars and shining moon[end if]. Maybe you could [bold type]look out[roman type] the window to see the outside world?".
 
 instead of sniffing VacantUpstairs:
 	say "The empty room smells of…nothing? Not even dust, dirt, mold or spider webs. Wait? Do spider webs have a smell??";
@@ -215,7 +215,7 @@ Down of VacantUpstairs is MainRoom.
 
 Section 9 – Glass Window
 
-The description of Glass Window is "A glass window illuminates the [if daytimer is day]su[otherwise]moo[end if]nlight streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?";
+The description of Glass Window is "A glass window illuminates the [if daytimer is day]su[otherwise]moo[end if]nlight streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?".
 
 Instead of sniffing glass window:
 	say "The glass window smells like glass, grass, light and night.";
@@ -238,7 +238,7 @@ Section 10 - For the Future
 
 For the Future is a situation.
 
-The sarea of For the Future is "Plains";
+The sarea of For the Future is "Plains".
 When play begins:
 	add For the Future to badspots of furry;
 	add For the Future to badspots of girl;

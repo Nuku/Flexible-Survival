@@ -267,8 +267,8 @@ name	desc	weight	object
 "Musky Cock Flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	Musky Cock Flower
 
 Musky Cock Flower is a grab object.
-Musky Cock Flower has a usedesc "[facerape use]";
-Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant"
+Musky Cock Flower has a usedesc "[facerape use]".
+Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant".
 
 instead of sniffing Musky Cock Flower:
 	say "The strange blossom smells strongly of cum and male musk.";

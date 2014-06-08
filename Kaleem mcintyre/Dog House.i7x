@@ -8,7 +8,7 @@ Tyraffection is a number that varies.
 Homarusearch is a number that varies.
 darkdays is a number that varies.
 
-The sarea of DogHouse is "Warehouse";
+The sarea of DogHouse is "Warehouse".
 when play begins:
 	add DogHouse to badspots of furry;
 	add DogHouse to badspots of girl;

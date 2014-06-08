@@ -5,7 +5,7 @@ Section 1 - Apartment 319
 Apartment 319 is a situation.
 AptAid is a number that varies.
 
-The sarea of Apartment 319 is "High";
+The sarea of Apartment 319 is "High".
 When play begins:
 	Add Apartment 319 to badspots of hellspawn;
 	Add Apartment 319 to badspots of furry;

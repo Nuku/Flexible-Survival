@@ -180,7 +180,7 @@ to wolfmaninfect:
 Section 3 - Event and Wolfman Lair
 
 Entrance to the Lair is a situation. The level of Entrance to the Lair is 5.  Entrance to the Lair is resolved.
-The sarea of Entrance to the Lair is "Outside";
+The sarea of Entrance to the Lair is "Outside".
 
 Instead of resolving a Entrance to the Lair:
 	say "     Looking around a bit, you soon find the warehouse Septus mentioned. It's hard to miss, with a large wolf's head painted on the facade. As you come close to the building, two wolfmen guarding the front instantly spot you. One goes inside, the other stays at the entrance door and eyes you warily. Several minutes later, Septus comes out with the other wolfman, visibly perking up as he spots you. 'It's okay, guys. Our visitor is a friend.' He waves you closer, holding open the door to let you in.";
@@ -201,7 +201,7 @@ Instead of resolving a Entrance to the Lair:
 
 	
 Wolfman Lair is a room. It is fasttravel. It is private.
-The description of Wolfman Lair is "[lairdesc]";
+The description of Wolfman Lair is "[lairdesc]".
 
 to say lairdesc:
 	say "     The warehouse they made into their base is pretty large and surprisingly well equipped. Between improvised walls made from large boxes there are sections filled with exercise equipment, beds, supplies and whatnot. In the main area usually about a score of wolfmen is present, most of which are busy working out - accompanied by young human women cheering them on and doing some suggestive stretches in front of them - in the nude. When one of the wolves takes a break, they often get accompanied by one - or more - of the women to the adjoining sections. In which case lustful moans and howls soon follow[if hp of Septus >= 7 and hp of Septus < 50].  You can't help but smile as you look over at the great, growing team you've got[end if].";
@@ -226,7 +226,7 @@ Section 4 - Jennifer, the Cheerleader
 [Smells, Description, Conversation and NPC Interaction]
 
 Jennifer is a woman.  Jennifer is in Wolfman Lair.  The hp of Jennifer is normally 0.
-The description of Jennifer is "[Jenniferdesc]";
+The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
 lastJenniferfucked is a number that varies.  lastJenniferfucked is normally 555.
 Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
@@ -614,7 +614,7 @@ Section 5 - Septus, the wolfman talent scout
 
 
 Septus is a man.  Septus is in Wolfman Lair.  The hp of Septus is normally 100.
-The description of Septus is "[Septusdesc]";
+The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.
 lastSeptusfucked is a number that varies.  lastSeptusfucked is normally 555.

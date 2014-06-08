@@ -7,7 +7,7 @@ Version 2 of Mouse Taur by Nuku Valente begins here.
 Section 1 - The Situations	[two ways to meet Lisa now]
 
 Mouse Taur is a situation.
-The sarea of Mouse Taur is "Red";
+The sarea of Mouse Taur is "Red".
 mtrp is a number that varies.
 When play begins:
 	add "Mouse Taur" to infections of furry;
@@ -38,7 +38,7 @@ Instead of Resolving a Mouse Taur:
 
 [ New event added by Shadowwolf94]
 Find Porn Store is a situation.  The level of Find Porn Store is 5.
-The sarea of Find Porn Store is "Red";
+The sarea of Find Porn Store is "Red".
 When play begins:
 	add "Find Porn Store" to infections of furry;
 	add "Find Porn Store" to infections of girl;
@@ -62,10 +62,10 @@ Instead of Resolving a Find Porn Store:
 Section 2 - Porn Store and Lisa
 
 Porn Store is a room. It is fasttravel. It is private.
-The description of Porn Store is "[pornstoredesc]";
+The description of Porn Store is "[pornstoredesc]".
 
 Lisa is a person.  Lisa is in Porn Store.
-The description of Lisa is "A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
+The description of Lisa is "A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
@@ -128,8 +128,8 @@ Section 3 - Fucking
 
 mousefucking is an action applying to nothing.
 
-understand "fuck Lisa" as mousefucking;
-understand "fuck mouse" as mousefucking;
+understand "fuck Lisa" as mousefucking.
+understand "fuck mouse" as mousefucking.
 
 check mousefucking:
 	if Lisa is not visible, say "Who?" instead;

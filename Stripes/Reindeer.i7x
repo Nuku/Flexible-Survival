@@ -141,7 +141,7 @@ name	desc	weight	object
 
 egg nog is a grab object. It is a part of the player. egg nog is infectious.  understand "chicken milk" as egg nog.  The strain of egg nog is "Reindeer". egg nog is temporary.
 
-the scent of egg nog is "The egg nog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.";
+the scent of egg nog is "The egg nog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.".
 
 The usedesc of egg nog is "[nogging]";
 

@@ -4,7 +4,7 @@ Version 4 of Fucking by Nuku Valente begins here.
 Section 1 - Fucking action and table
 
 A person has a number called lastfuck.  lastfuck is normally 255.
-A person has a text called fuckscene.  fuckscene is normally "";
+A person has a text called fuckscene.  fuckscene is normally "".
 
 Fucking is an action applying to one thing.
 
@@ -56,7 +56,7 @@ Section 2 - Demonstration Example
 
 Testerbot is a person.
 [ Testerbot is in Primary Lab.	]			[Removed again - testing over]
-The description of Testerbot is "[testerbotdesc]";
+The description of Testerbot is "[testerbotdesc]".
 The conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is normally 555.
 
@@ -66,7 +66,7 @@ to say testerbotdesc:				[Description]
 instead of conversing the Testerbot:	[Talking]
 	say "[one of]'Why was I programmed to feel pain?'[or]'You organic creatures are disgusting.'[or]'Why do you lifeforms make so many fluids?'[or]'Why must you use me to satisfy your squishy, biological urges?'[or]'I am unfortunately programmed to submit to your repulsive, animal desires,'[at random] the robot complains.";
 
-the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for.  What a sad, sad life it leads.";	[Smell]
+the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for.  What a sad, sad life it leads.".	[Smell]
 
 the fuckscene of Testerbot is "[sexwithTesterbot]".		[Fucking]
 

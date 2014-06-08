@@ -6,7 +6,7 @@ Version 2 of Vanessa by Stripes begins here.
 Section 0 - Event
 
 Paratrooper is a situation.  Paratrooper is resolved.		[unlocked after 3rd stage of 'Military presence']
-The sarea of Paratrooper is "Plains";
+The sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to badspots of girl;
 
@@ -56,10 +56,10 @@ Instead of resolving a Paratrooper:
 Section 1 - Vanessa the Centaur
 
 Vanessa is a woman.
-The description of Vanessa is "[vanessadesc]";
+The description of Vanessa is "[vanessadesc]".
 The conversation of Vanessa is { "Neigh!" }.
 
-the scent of the Vanessa is "Vanessa smells softly of horses[if hp of Vanessa > 3] and arousal[end if].";
+the scent of the Vanessa is "Vanessa smells softly of horses[if hp of Vanessa > 3] and arousal[end if].".
 
 to say vanessadesc:
 	if hp of Vanessa is 1 or hp of Vanessa is 2:

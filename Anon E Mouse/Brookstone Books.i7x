@@ -10,7 +10,7 @@ Brookstone Books is a room. Brookstone Books entrance is a door. It is south of 
 Instead of examining the Brookstone Books entrance:
 	say "Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
 
-The description of Brookstone Books is "[bstonebooks]";
+The description of Brookstone Books is "[bstonebooks]".
 
 To say bstonebooks:
 	If findwires is 2 and fixedgens is 2:
@@ -21,7 +21,7 @@ To say bstonebooks:
 Beverly is in Brookstone Books.
 Bookshelves is in Brookstone Books.
 
-the scent of Brookstone Books is "The store smells of musty tomes mingling with the burning scented candles.";
+the scent of Brookstone Books is "The store smells of musty tomes mingling with the burning scented candles.".
 
 Section 2 - Beverly
 
@@ -29,10 +29,10 @@ Bevtalk is a number that varies.
 Bevkitty is a number that varies.
 
 Beverly is a woman.
-The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in colour, and seems to shine even in the low light. Pierced in her right grey ear are a couple of medium-sized gold hooped earrings.";
+The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in colour, and seems to shine even in the low light. Pierced in her right grey ear are a couple of medium-sized gold hooped earrings.".
 The conversation of Beverly is { "Squeak!" }.
 
-the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.";
+the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.".
 
 instead of conversing the Beverly:
 	if bevkitty is 0 and bevtalk is 2 and house cat is tamed:
@@ -71,17 +71,17 @@ Section 3 - Book Browsing
 
 Bookshelves is a man
 
-The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [bold type]browse[roman type] and [bold type]read[roman type] through.";
+The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [bold type]browse[roman type] and [bold type]read[roman type] through.".
 
-the scent of the bookshelves is "The books smell of musty tones mingling with the scent of new papers and the burning candles.";
+the scent of the bookshelves is "The books smell of musty tones mingling with the scent of new papers and the burning candles.".
 
 Browsebooks is an action applying to nothing.
-understand "browse books" as browsebooks;
-understand "browse a book" as browsebooks;
-understand "browse shelves" as browsebooks;
-understand "look through books" as browsebooks;
-understand "read books" as browsebooks;
-understand "read a book" as browsebooks;
+understand "browse books" as browsebooks.
+understand "browse a book" as browsebooks.
+understand "browse shelves" as browsebooks.
+understand "look through books" as browsebooks.
+understand "read books" as browsebooks.
+understand "read a book" as browsebooks.
 
 lastbookshelves is a number that varies.  lastbookshelves is usually 255.
 

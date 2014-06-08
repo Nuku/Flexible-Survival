@@ -4,7 +4,7 @@ Version 1 of infected pool for fs by Hellerhound begins here.
 Section 1 - Pure Pool
 
 Pure pool is a situation.
-The sarea of Pure Pool is "Park";
+The sarea of Pure Pool is "Park".
 purpol is a number that varies.
 purpolu is a number that varies.
 when play begins:

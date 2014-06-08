@@ -5,13 +5,13 @@ Version 3 of Skunk Pet by Sarokcat begins here.
 
 Section 1- Skunk kit
 
-skunk kit is a pet. The description of the skunk kit is "The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is it is already the size of a regular skunk or perhaps even slightly larger. The creature stares up at you adoringly however, with love in its eyes for its savior, exploring the world around it with the innocence of youth, how long that innocence will last though as it grows is anyone[']s guess, but for now its happy skunk-like antics bring a smile to your face.". skunk kit is a part of the player;
-The weapon damage of skunk kit is 6;
-The level of skunk kit is 1;
-The Dexterity of skunk kit is 13;
-The summondesc of skunk kit is "You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist its friend, the smell of skunk filling the area around you.";
-The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]all of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or] taking advantage of your foes distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or] Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards[or] The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]";
-the fuckscene of skunk kit is "The little skunk kit you[']ve rescued is too young and small for such perversions.";
+skunk kit is a pet. The description of the skunk kit is "The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is it is already the size of a regular skunk or perhaps even slightly larger. The creature stares up at you adoringly however, with love in its eyes for its savior, exploring the world around it with the innocence of youth, how long that innocence will last though as it grows is anyone[']s guess, but for now its happy skunk-like antics bring a smile to your face.". skunk kit is a part of the player.
+The weapon damage of skunk kit is 6.
+The level of skunk kit is 1.
+The Dexterity of skunk kit is 13.
+The summondesc of skunk kit is "You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist its friend, the smell of skunk filling the area around you.".
+The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]all of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or] taking advantage of your foes distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or] Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards[or] The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
+the fuckscene of skunk kit is "The little skunk kit you[']ve rescued is too young and small for such perversions.".
 
 instead of sniffing skunk kit:
 	say "The little guy smells of skunk, but that doesn[']t seem to bother you much at all.";
@@ -27,7 +27,7 @@ An everyturn rule:
 
 
 Lost skunk kit is a situation.
-The sarea of Lost skunk kit is "Forest";
+The sarea of Lost skunk kit is "Forest".
 when play begins:
 	add Lost skunk kit to badspots of girl;
 	add Lost skunk kit to badspots of furry;

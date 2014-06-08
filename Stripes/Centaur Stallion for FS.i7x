@@ -176,9 +176,9 @@ to say centaurhairuse:
 	otherwise:
 		infect "Centaur Mare";
 
-the scent of centaur cum is "The contents of the jar smell of men and horses, and musky, male arousal.";
+the scent of centaur cum is "The contents of the jar smell of men and horses, and musky, male arousal.".
 
-the scent of centaur hair is "The hairs smell of women and horses, and the dry plains outside the city.";
+the scent of centaur hair is "The hairs smell of women and horses, and the dry plains outside the city.".
 
 
 

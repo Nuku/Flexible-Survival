@@ -410,16 +410,16 @@ This is the demoncleansing rule:
 		
 Section 2 - Amulet, Pet & Sex
 
-demon brute is a pet.  demon brute is a part of the player;
+demon brute is a pet.  demon brute is a part of the player.
 understand "Brutus" as demon brute.
-The description of demon brute is "[DemonBrutePetDesc]";
+The description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
-The weapon damage of demon brute is 8;
-The level of demon brute is 4;
-The Dexterity of demon brute is 8;
-The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[otherwise]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, ok?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice, the demon answers 'Yes... master.'";
-The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]";
-the fuckscene of demon brute is "[sexwithdemonbrutepet]";
+The weapon damage of demon brute is 8.
+The level of demon brute is 4.
+The Dexterity of demon brute is 8.
+The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[otherwise]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, ok?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice, the demon answers 'Yes... master.'".
+The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
+the fuckscene of demon brute is "[sexwithdemonbrutepet]".
 
 to say DemonBrutePetDesc:
 	if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7: [cleansed]

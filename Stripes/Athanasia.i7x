@@ -69,7 +69,7 @@ phoenix egg is a grab object. it is part of the player. It is not temporary.
 instead of using phoenix egg:
 	say "     You look over the egg, trying to think of a hot place for it to hatch.";
 
-the scent of the phoenix egg is "     The egg smells faintly of ashes.";
+the scent of the phoenix egg is "     The egg smells faintly of ashes.".
 
 the phoenix egg has a truth state called shownermine.  shownermine of phoenix egg is normally false.
 [other show scenes could be created for other NPCs whom the player might show it to]
@@ -85,7 +85,7 @@ Section 3 - The Volcanic Cave
 Volcanic Cave is a room. "     Partway down the volcanic crater, this cave is filled with heat from the lava further down[if hp of Athanasia >= 5].  The cave is just as hot as before, but with Athanasia here it seems more bearable and only a mild inconvenience[otherwise].  You are hot and sweating, but managing to cope for the moment[end if].  It seems the passage this cave leads into goes much deeper, but the eruption has blocked it off.  The cave contains a few open pools of magma, though the air is a little clearer of noxious gasses.".
 down of A Volcanic Crater is Volcanic Cave.
 
-the scent of Volcanic Cave is "The smell of smoke, soot and volcanic gasses is particularly strong here.";
+the scent of Volcanic Cave is "The smell of smoke, soot and volcanic gasses is particularly strong here.".
 
 instead of going down from Volcanic Crater:
 	if hp of Athanasia < 2:
@@ -132,12 +132,12 @@ an everyturn rule:
 Section 4 - Athanasia
 
 Athanasia is a woman.
-The description of Athanasia is "[athanasiadesc]";
+The description of Athanasia is "[athanasiadesc]".
 The conversation of Athanasia is { "Burninate!" }.
 lastfuck of Athanasia is normally 555.
 The icon of Athanasia is Figure of Athanasia_icon.
 
-the scent of the Athanasia is "The phoenix smells of woodsmoke.";
+the scent of the Athanasia is "The phoenix smells of woodsmoke.".
 
 to say athanasiadesc:
 	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as as tall as a normal human being when upright.  She has rich red and golden plumage over her hawk-like body.  The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them.  Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side.  Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";

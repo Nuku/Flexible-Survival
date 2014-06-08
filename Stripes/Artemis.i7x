@@ -6,7 +6,7 @@ Version 4 of Artemis by Stripes begins here.
 Section 1 - Encounter
 
 Poor Kitty is a situation.
-The sarea of Poor Kitty is "Midway";
+The sarea of Poor Kitty is "Midway".
 when play begins:
 	add Poor Kitty to badspots of girl;
 	add Poor Kitty to badspots of furry;
@@ -50,16 +50,16 @@ Instead of resolving a Poor Kitty:
 
 Section 2 - Artemis
 
-rubber tigress is a pet.  rubber tigress is a part of the player;
+rubber tigress is a pet.  rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
-The description of rubber tigress is "[artemisdesc]";
-the scent of the rubber tigress is "The rubber tigress smells faintly of rubber in a pleasant way.";
-The weapon damage of rubber tigress is 5;
-The level of rubber tigress is 3;
-The Dexterity of rubber tigress is 16;
-The summondesc of rubber tigress is "The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over.  She purrs happily when you scritch her ears.";
-The assault of rubber tigress is "[artemisattack]";
-the fuckscene of rubber tigress is "You are unable to initiate pet sex with Artemis - yet.";
+The description of rubber tigress is "[artemisdesc]".
+the scent of the rubber tigress is "The rubber tigress smells faintly of rubber in a pleasant way."
+The weapon damage of rubber tigress is 5.
+The level of rubber tigress is 3.
+The Dexterity of rubber tigress is 16.
+The summondesc of rubber tigress is "The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over.  She purrs happily when you scritch her ears."
+The assault of rubber tigress is "[artemisattack]".
+the fuckscene of rubber tigress is "You are unable to initiate pet sex with Artemis - yet."
 templust is a number that varies.
 tempthirst is a number that varies.
 The rubber tigress has a number called cocks.

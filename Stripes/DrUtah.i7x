@@ -5,9 +5,9 @@ Version 2 of DrUtah by Stripes begins here.
 Section 1 - Paleontology Office
 
 Paleontology Office is a room. It is fasttravel. It is private.
-The description of Paleontology Office is "[paleodesc]";
+The description of Paleontology Office is "[paleodesc]".
 
-the scent of Paleontology Office is "The office smells of old books and older bones, but also of the wereraptor occupying it.";
+the scent of Paleontology Office is "The office smells of old books and older bones, but also of the wereraptor occupying it.".
 
 to say paleodesc:
 	if girl is not banned:
@@ -19,11 +19,11 @@ to say paleodesc:
 Section 2 - Dr Utah the Wereraptor
 
 Doctor Utah is a person.  Doctor Utah is in Paleontology Office.
-The description of Doctor Utah is "[utahdesc]";
+The description of Doctor Utah is "[utahdesc]".
 The conversation of Doctor Utah is { "Hiss!" }.
 drutah_msg1 is a truth state that varies.  drutah_msg1 is usually false.
 
-the scent of Doctor Utah is "[if daytimer is day]Dr. Utah smells faintly of hidden lust and power, revealing his wereraptor nature to you[otherwise]Dr. Utah smells of wereraptor lust and power.  It is quite exciting[end if].";
+the scent of Doctor Utah is "[if daytimer is day]Dr. Utah smells faintly of hidden lust and power, revealing his wereraptor nature to you[otherwise]Dr. Utah smells of wereraptor lust and power.  It is quite exciting[end if].".
 
 to say utahdesc:
 	if girl is not banned:

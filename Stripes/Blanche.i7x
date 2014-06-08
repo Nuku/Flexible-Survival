@@ -5,7 +5,7 @@ Version 1 of Blanche by Stripes begins here.
 Section 1 - Event
 
 Wolfrape is a situation.  The level of Wolfrape is 16.
-The sarea of Wolfrape is "Capitol";
+The sarea of Wolfrape is "Capitol".
 when play begins:
 	add Wolfrape to badspots of hermaphrodite;
 	add Wolfrape to badspots of girl;
@@ -44,9 +44,9 @@ Section 2 - Office Den
 
 
 Office Den is a room. It is fasttravel. It is private.
-The description of Office Den is "[officedendesc]";
+The description of Office Den is "[officedendesc]".
 
-the scent of Office Den is "Unlike the air outside, it's mostly free of the smell of soot and ash.  There is a strong, lupine smell in the air from Blanche.";
+the scent of Office Den is "Unlike the air outside, it's mostly free of the smell of soot and ash.  There is a strong, lupine smell in the air from Blanche."
 
 to say officedendesc:
 	say "     While the main floor is charred and ravaged, a service door leads to an undamaged basement office area.  While half of the basement holds the maintenance area for the small office building, the other half was converted into office space.  It looks like a couple of the desks and filing cabinets which were once here have been removed, making space for Blanche to set up her hidden living area.  There's some motivational posters and rather bland pieces of business art which the white wolf hasn't bothered to remove, or has left in an attempt to keep her spirits up.  She's set up a small mat she's found as her bed and stored her few supplies on a shelf.  While somewhat modest, at least it's secure and well camouflaged.";
@@ -55,11 +55,11 @@ to say officedendesc:
 Section 2 - Blanche the Wolf
 
 Blanche is a woman.  Blanche is in Office Den.
-The description of Blanche is "[blanchedesc]";
+The description of Blanche is "[blanchedesc]".
 The conversation of Blanche is { "Thanks." }.
 The icon of blanche is Figure of Blanche1_icon.
 
-the scent of Blanche is "She smells of wolf and half-hidden arousal.";
+the scent of Blanche is "She smells of wolf and half-hidden arousal."
 
 to say blanchedesc:
 	if hp of Blanche < 3:

@@ -6,7 +6,7 @@ Version 3 of Down Under Pub by Stripes begins here.
 Section 1 - Aussie Pub Event
 
 Aussie Pub is a situation.
-The sarea of Aussie Pub is "Red";
+The sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
@@ -276,7 +276,7 @@ instead of going east from Gillian's Flat:
 Section 5 - Gillian
 
 Gillian is a woman.  Gillian is in Gillian's Flat.
-The description of Gillian is "[gilliandesc]";
+The description of Gillian is "[gilliandesc]".
 The conversation of Gillian is { "Work!" }.
 the scent of the Gillian is "[gillianscent]".
 the fuckscene of Gillian is "[sexwithgillian]".

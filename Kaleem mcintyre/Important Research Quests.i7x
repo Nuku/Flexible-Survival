@@ -225,7 +225,7 @@ Section 2 - Friendship's Proof
 Friendship's Proof is a situation.
 
 Tpfs is a number that varies.
-The sarea of friendship's proof is "Warehouse";
+The sarea of friendship's proof is "Warehouse".
 
 Instead of resolving a Friendship's Proof:
 	if tpfs is 0:
@@ -339,7 +339,7 @@ Section 3 - Ouroboros
 
 Ouroboros is a situation.
 
-The sarea of Ouroboros is "Museum";
+The sarea of Ouroboros is "Museum".
 
 Instead of resolving a Ouroboros:
 	if omq < 10:

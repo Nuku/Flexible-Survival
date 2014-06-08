@@ -117,7 +117,7 @@ Instead of Resolving a Hyena Gang:
 Section 6- Locked utility room
 
 Locked utility room is a situation.
-The sarea of Locked utility room is "Mall";
+The sarea of Locked utility room is "Mall".
 LURM is a number that varies.
 when play begins:
 	add Locked utility room to badspots of guy;
@@ -149,7 +149,7 @@ Instead of Resolving a Transformed Seals:
 Section 8- Wrecked ships
 
 Wrecked ships is a situation.
-The sarea of Wrecked ships is "Beach";
+The sarea of Wrecked ships is "Beach".
 
 
 Instead of Resolving a Wrecked ships:
@@ -159,7 +159,7 @@ Instead of Resolving a Wrecked ships:
 Section 9- Dolphin lotion
 
 Dolphin lotion is a situation.
-The sarea of Dolphin lotion is "Beach";
+The sarea of Dolphin lotion is "Beach".
 
 
 Instead of Resolving a Dolphin lotion:
@@ -170,7 +170,7 @@ Instead of Resolving a Dolphin lotion:
 Section 10-  Broken fountain
 
 Broken fountain is a situation.
-The sarea of Broken fountain is "Park";
+The sarea of Broken fountain is "Park".
 
 Instead of Resolving a Broken fountain:
 	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area.  Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
@@ -183,7 +183,7 @@ Instead of Resolving a Broken fountain:
 Section 10-  Scenic View
 
 Scenic View is a situation.
-The sarea of Scenic View is "Park";
+The sarea of Scenic View is "Park".
 
 
 Instead of Resolving a Scenic View:
@@ -195,7 +195,7 @@ Instead of Resolving a Scenic View:
 Section 11-  Twisted grove
 
 Twisted grove is a situation.
-The sarea of Twisted grove is "Park";
+The sarea of Twisted grove is "Park".
 when play begins:
 	add Twisted grove to badspots of girl;
 	add Twisted grove to badspots of furry;
@@ -209,7 +209,7 @@ Instead of Resolving a Twisted grove:
 Section 12-  Ominous hole
 
 Ominous hole is a situation.
-The sarea of Ominous hole is "Park";
+The sarea of Ominous hole is "Park".
 
 Instead of Resolving a Ominous hole:
 	say "As you wander through the park you notice another survivor in the distance, quickly waving you begin to run towards each other. Suddenly the other survivor seems to disappear into thin air mid step, causing you to duck and look around.  When nothing else happens you cautiously approach the area you last saw the other person, only to find there seems to be a large hole dug there instead surrounded by a small mound of dirt, as if made by some burrowing creature of almost human size.  You would investigate further, but the loud moans and other noises coming from the hole tell you more then you probably wanted to know about whats happening, as well as the fact that you be seeing that person again.... as a person anyways.";
@@ -218,7 +218,7 @@ Instead of Resolving a Ominous hole:
 Section 13- squatters den
 
 squatters den is a situation.
-The sarea of squatters den is "Mall";
+The sarea of squatters den is "Mall".
 
 Instead of resolving a squatters den:
 	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too clean, you head on about your business.";
@@ -230,7 +230,7 @@ Instead of resolving a squatters den:
 Section 14- Leaking pipe
 
 leaking pipe is a situation.
-The sarea of leaking pipe is "Mall";
+The sarea of leaking pipe is "Mall".
 
 Instead of resolving a leaking pipe:
 	say "as you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways, the sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak.  As the containers are definitely overflowing whoever set them up obviously hasn't been back in a while. Sensing an opportunity you quickly gather up a couple of the full containers and place them in your pack, you then hurry along before someone comes looking for them. ";
@@ -279,7 +279,7 @@ Instead of Resolving a library visitor:
 Section 16- ruined supplies
 
 ruined supplies is a situation.
-The sarea of ruined supplies is "Mall";
+The sarea of ruined supplies is "Mall".
 
 
 Instead of resolving a ruined supplies:

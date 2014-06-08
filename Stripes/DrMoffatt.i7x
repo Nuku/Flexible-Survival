@@ -5,7 +5,7 @@ Version 2 of DrMoffatt by Stripes begins here.
 Section 1 - Event
 
 Another Doctor is a situation.
-The sarea of Another Doctor is "Hospital";
+The sarea of Another Doctor is "Hospital".
 when play begins:
 	add Another Doctor to badspots of hermaphrodite;
 	add Another Doctor to badspots of girl;
@@ -42,7 +42,7 @@ Instead of resolving a Another Doctor:
 Section 2 - Psych Department
 
 Psych Department is a room. It is fasttravel. It is private.
-The description of Psych Department is "[psychdesc]";
+The description of Psych Department is "[psychdesc]".
 
 to say psychdesc:
 	say "     The office of Dr. Moffatt in the Psychology department has been kept rather tidy though you're quite certain it's changed since the outbreak.  Aside from the usual desk, filing cabinet and assorted accoutrements, there are a few straight jackets left strewn around, a colourful array of sex toys standing upright on her desk and the remains of sticky stains on the floor and walls.  Speaking of the walls, there are several colourful crayon drawings of what must be the mephit doctor over the white paint.  Were it not for the clear emphasis on the skunk's giant assets, you'd think them drawn by a child.  There are a few ornamental skunks on her desk as well, though of a more mundane form than the hypersexualized scrawls.";
@@ -69,18 +69,18 @@ to say psychfirstarrival:
 		now battleground is "void";
 
 
-the scent of Psych Department is "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.";
+the scent of Psych Department is "The room smells strongly of its sexy skunk occupant, though there's traces of the scents of others, mainly mustelids, having been in here as well.".
 
 
 Section 3 - Doctor Moffatt
 
 Doctor Moffatt is a person.  Doctor Moffatt is in Psych Department.
-The description of Doctor Moffatt is "[drmoffattdesc]";
+The description of Doctor Moffatt is "[drmoffattdesc]".
 The conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
-the scent of Doctor Moffatt is "She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger.  She also has a pleasant, perfumed scent beneath that.";
+the scent of Doctor Moffatt is "She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger.  She also has a pleasant, perfumed scent beneath that.".
 
 to say drmoffattdesc:
 	say "     Doctor Moffatt, the shemale skunk, has a very striking appearance.  Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in colour like her nose and hair.  Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk.  She has a huge, fluffy tail, as long as she is tall and as wide as her hips.  And those hips are quite wide indeed.  The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs.";

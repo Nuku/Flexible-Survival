@@ -6,7 +6,7 @@ Version 4 of Food and Water Finding by Nuku Valente begins here.
 Section 1 - The Situation
 
 potential resources is a scavevent.
-The sarea of potential resources is "Allzones";
+The sarea of potential resources is "Allzones".
 
 Instead of resolving a potential resources:
 	let difficulty be a random number from 6 to 16;

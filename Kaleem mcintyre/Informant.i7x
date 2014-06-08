@@ -4,7 +4,7 @@ Section 1 - Informant
 
 Informant is a situation.  The level of Informant is 9.
 
-The sarea of Informant is "High";
+The sarea of Informant is "High".
 smf is a number that varies.
 when play begins:
 	add Informant to badspots of furry;
@@ -33,10 +33,10 @@ Instead of resolving a Informant:
 Section 2 - Agency
 
 Agency is a room. It is fasttravel. It is private.
-The description of Agency is "Back behind some of the less prominent buildings of the high rise there stands and old fashion deli that seems to be in good shape, despite the rough times the city is having. At the side of the deli a stone flight of stairs leads down to where a nondescript black door stands in wait for certain...irregular...customers. Pushing the door open you find a cool office with a fan swirling up on the ceiling filling out the strangely expansive room hidden from the rest of the world. A plush red carpet covers the floor of the room while a single desk and chair stands in front of three large bookcases filled to the brim with old tomes. A comfy looking couch sits to the left of the doorway while a gargantuan fish tank filled with multicoloured fish and turtles has been positioned onto the right side of the entryway. All in all the room both looks and feels like something pulled out of an old fashion detective novel, especially with the uninteresting door in the back that looks as though it hasn't seen much use in quite a while. Homaru sitting down at his desk looking over something.";
+The description of Agency is "Back behind some of the less prominent buildings of the high rise there stands and old fashion deli that seems to be in good shape, despite the rough times the city is having. At the side of the deli a stone flight of stairs leads down to where a nondescript black door stands in wait for certain...irregular...customers. Pushing the door open you find a cool office with a fan swirling up on the ceiling filling out the strangely expansive room hidden from the rest of the world. A plush red carpet covers the floor of the room while a single desk and chair stands in front of three large bookcases filled to the brim with old tomes. A comfy looking couch sits to the left of the doorway while a gargantuan fish tank filled with multicoloured fish and turtles has been positioned onto the right side of the entryway. All in all the room both looks and feels like something pulled out of an old fashion detective novel, especially with the uninteresting door in the back that looks as though it hasn't seen much use in quite a while. Homaru sitting down at his desk looking over something.".
 Homaru is in Agency.
 
-The invent of Agency is { "chips" , "water bottle" , "soda" };
+The invent of Agency is { "chips" , "water bottle" , "soda" }.
 
 Instead of sniffing the Agency:
 	say "The room smells of gathered information, deductive reasoning, unspoken secrets and...ham on rye?";
@@ -56,7 +56,7 @@ Save the Dame is a situation.
 Save the Dame is resolved.
 
 Homaru is a man.
-The description of Homaru is "A young man with spiky brown hair and black hooded coat on sits at his desk while [one of]going over some interesting looking notes[or]leafing through information on his computer[or]surveying files that look to be giving him a hard time[or]eating a sandwich[or]chuckling while reading a comic book[at random]. Homaru looks to be somewhere in his twenties, but the feel of the other man makes him seem as though he's about fifty or something. Sharp brown eyes filled with wisdom look up at you as you walk by Homaru and you find it hard not to freeze in place from the look given to you by those dark and seemingly ageless orbs.";
+The description of Homaru is "A young man with spiky brown hair and black hooded coat on sits at his desk while [one of]going over some interesting looking notes[or]leafing through information on his computer[or]surveying files that look to be giving him a hard time[or]eating a sandwich[or]chuckling while reading a comic book[at random]. Homaru looks to be somewhere in his twenties, but the feel of the other man makes him seem as though he's about fifty or something. Sharp brown eyes filled with wisdom look up at you as you walk by Homaru and you find it hard not to freeze in place from the look given to you by those dark and seemingly ageless orbs.".
 Homaru is in Agency.
 The conversation of Homaru is { "I'll find it out for you!" };
 

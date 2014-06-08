@@ -7,7 +7,7 @@ Version 1 of Candy Shop by Stripes begins here.
 Section 1 - Candy Shop event
 
 CandyShop is a situation.  The level of CandyShop is 9.
-The sarea of CandyShop is "Midway";
+The sarea of CandyShop is "Midway".
 sugarferretfight is a number that varies.
 
 when play begins:
@@ -77,7 +77,7 @@ Section 2 - Sweet Tooth
 
 Sweet Tooth is a room. "[Sweet Tooth scene]". It is unknown. It is fasttravel. It is private.
 
-Sweet Tooth has a number called lastcaffeine;
+Sweet Tooth has a number called lastcaffeine.
 randomferret is a list of numbers that varies.
 ferretvisit is a number that varies.
 

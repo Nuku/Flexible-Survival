@@ -8,12 +8,12 @@ Section 1 - private rooms
 
 Private club room is a room. 
 
-The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently.  The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...";
+The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently.  The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
 Janice is in Private club room.
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 SouthEast of Private club room is PALOMINO.
 
-the scent of Private club room is "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.";
+the scent of Private club room is "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.".
 
 
 Section 2 - Janice
@@ -23,10 +23,10 @@ Janicearoused is a number that varies.[not a needed number, but used to set diff
 Janicequest is a number that varies.[often used for quests or renamed to Janicequest, see boris for some good examples of this, totally unneeded if the npc doesn't have an associated quest.]
 
 Janice is a woman.
-The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
+The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 The conversation of Janice is { "Foxy!" }.
 
-the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.";
+the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.".
 
 the linkaction of Janice is "[janicelinkaction]".
 
@@ -261,7 +261,7 @@ It is not temporary.
 instead of using Janice's blouse:
 	say "The blouse is meant to be a gift for Kristen.  You should [bold type]give[roman type] it to her.";
 
-the scent of Janice's blouse is "The blouse smells faintly of the vixen's perfume.";
+the scent of Janice's blouse is "The blouse smells faintly of the vixen's perfume.".
 
 instead of trading Janice's blouse when the current action involves Kristen:
 	say "[Kristen-giveblouse]";

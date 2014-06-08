@@ -154,7 +154,7 @@ to say corotavenomuse:
 	say "     Feeling brave or foolish, you try drinking down the snake venom.  It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach.  You curl up in a ball of pain as the heat spreads, setting off something inside you.";
 	decrease hp of player by 10;
 
-the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.";
+the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 
 
 Section 5 - Endings

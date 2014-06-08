@@ -6,7 +6,7 @@ Version 2 of Honey by Stripes begins here.
 Section 1 - Encounter
 
 Smashed Hive is a situation.
-The sarea of Smashed Hive is "Park";
+The sarea of Smashed Hive is "Park".
 when play begins:
 	add Smashed Hive to badspots of girl;
 
@@ -139,15 +139,15 @@ to say beegirlsaved:
 
 Section 2 - Bee Girl Pet
 
-bee girl is a pet.  bee girl is a part of the player;
-The description of bee girl is "The bee drone has a youthful appearance despite her maturity.  Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress.  She has a small pair of insect arms at her sides, which can be used to hold small things.  The bee abdomen attached to her tight bottom lacks its stinger.";
-The weapon damage of bee girl is 3;
-The level of bee girl is 1;
-The Dexterity of bee girl is 16;
-The summondesc of bee girl is "Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
-The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]";
+bee girl is a pet.  bee girl is a part of the player.
+The description of bee girl is "The bee drone has a youthful appearance despite her maturity.  Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress.  She has a small pair of insect arms at her sides, which can be used to hold small things.  The bee abdomen attached to her tight bottom lacks its stinger.".
+The weapon damage of bee girl is 3.
+The level of bee girl is 1.
+The Dexterity of bee girl is 16.
+The summondesc of bee girl is "Buzzing cheerily at your call, the bumblebee drone flies over to join your side.".
+The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
 
-the scent of the bee girl is "Honey, unsurprisingly, smells of honey.";
+the scent of the bee girl is "Honey, unsurprisingly, smells of honey.".
 
 
 Section 3 - Sexxxings

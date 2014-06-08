@@ -6,7 +6,7 @@ Version 4 of Assorted Events by Stripes begins here.
 Section 1 - Ninjas?
 
 Fallen Kunoichi is a situation.
-The sarea of Fallen Kunoichi is "Museum";
+The sarea of Fallen Kunoichi is "Museum".
 when play begins:
 	add Fallen Kunoichi to badspots of furry;
 
@@ -27,7 +27,7 @@ bo staff is an armament. It is part of the player. It has a weapon "[one of]your
 
 
 Suddenly Ninjas is a situation.
-The sarea of Suddenly Ninjas is "Museum";
+The sarea of Suddenly Ninjas is "Museum".
 when play begins:
 	add Suddenly Ninjas to badspots of furry;
 	add Suddenly Ninjas to badspots of guy;
@@ -218,7 +218,7 @@ instead of resolving a Prank Aftermath:
 Section 4 - Park Events
 
 Lovers Bench is a situation.
-The sarea of Lovers Bench is "Park";
+The sarea of Lovers Bench is "Park".
 loversbench is a number that varies.
 when play begins:
 	add Lovers Bench to badspots of furry;
@@ -498,8 +498,8 @@ to say BenchDBFemaleSex: [FF Brutus/Player]
 
 
 PeachTree is a situation.  The level of PeachTree is 7.
-The sarea of PeachTree is "Park";
-peachtreefight is a number that varies;
+The sarea of PeachTree is "Park".
+peachtreefight is a number that varies.
 
 when play begins:
 	add PeachTree to badspots of hermaphrodite;
@@ -576,7 +576,7 @@ instead of sniffing tasty peach:
 Section 5 - State Fair Events
 
 Concession Stand is a situation.
-The sarea of Concession Stand is "Midway";
+The sarea of Concession Stand is "Midway".
 foodvendor is a number that varies.
 when play begins:
 	add Concession Stand to badspots of furry;
@@ -687,7 +687,7 @@ when play ends:
 
 
 Sweet Exchange is a situation.
-The sarea of Sweet Exchange is "Midway";
+The sarea of Sweet Exchange is "Midway".
 when play begins:
 	add Sweet Exchange to badspots of furry;
 	add Sweet Exchange to badspots of girl;
@@ -714,7 +714,7 @@ Instead of resolving a Sweet Exchange:
 
 
 Caught Glider is a situation.  Caught Glider is resolved.
-The sarea of Caught Glider is "Midway";
+The sarea of Caught Glider is "Midway".
 when play begins:
 	add Caught Glider to badspots of furry;
 	add Caught Glider to badspots of girl;
@@ -737,7 +737,7 @@ Instead of resolving a Caught Glider:
 Section 6 - Beach Events
 
 Beach Party is a situation.  The level of Beach Party is 5.
-The sarea of Beach Party is "Beach";
+The sarea of Beach Party is "Beach".
 when play begins:
 	add Beach Party to badspots of furry;
 	add Beach Party to badspots of girl;
@@ -807,7 +807,7 @@ Instead of resolving a Beach Party:
 Section 7 - Mall Events
 
 B&R is a situation.
-The sarea of B&R is "Mall";
+The sarea of B&R is "Mall".
 
 Instead of resolving a B&R:
 	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you.  Being cautious, you duck into the shadows and watch the pair approach.  They are an odd pair of big, muscled brutes carrying large weapons.  The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it.  His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses.  The other is a rhino in a yellow wife-beater and cargo pants with a bandoleer of bullets across his chest, as well as a grenade of his own.  While he clearly has a bit of a gut on him, his arms are even more muscled than his companion[apostrophe]s.";
@@ -818,7 +818,7 @@ Instead of resolving a B&R:
 Section 8 - Zoo Events
 
 Slumbering Giant is a situation.
-The sarea of Slumbering Giant is "Zoo";
+The sarea of Slumbering Giant is "Zoo".
 when play begins:
 	add Slumbering Giant to badspots of guy;
 
@@ -828,7 +828,7 @@ Instead of resolving a Slumbering Giant:
 
 
 My Own Zoo Playset is a situation.  The level of My Own Zoo Playset is 12.
-The sarea of My Own Zoo Playset is "Zoo";
+The sarea of My Own Zoo Playset is "Zoo".
 when play begins:
 	add My Own Zoo Playset to badspots of guy;
 
@@ -853,7 +853,7 @@ Instead of resolving a My Own Zoo Playset:
 Section 9 - Sealed Events
 
 Destroyed Records is a situation.
-The sarea of Destroyed Records is "Sealed";
+The sarea of Destroyed Records is "Sealed".
 
 Instead of resolving a Destroyed Records:
 	say "     Wandering through the darkened halls of the underground lab complex, your attention is drawn towards the stale smell of smoke and ashes.  Following your nose, you find your way into records room that's been purposefully destroyed.  There is a large char mark and a pile of ashes on the middle of the floor.  It seems someone, probably when things started to go downhill, decided to burn all the records of what was really going on down here.  You sift through the mess, finding the charred remains of what were probably once data CDs and DVDs among the mess.  You search through it carefully, but they were quite thorough and you're unable to find anything scraps of unburnt paper with more than a few legible letters on them.";

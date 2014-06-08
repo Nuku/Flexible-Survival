@@ -138,7 +138,7 @@ to say tastepixiedust:
 	say "     Looking at the sparkling powder, you dab your finger into it and give it a taste.  It is quite sweet on your tongue, though it also carries a faintly feminine flavour as well.  As you sample more of it, there's a growing tingling sensation on your tongue and you feel a little lighter on your feet.";
 	increase libido of player by 8;
 
-the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.";
+the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.".
 
 
 Section 4 - Endings

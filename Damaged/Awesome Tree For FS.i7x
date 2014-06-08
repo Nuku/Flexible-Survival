@@ -11,11 +11,11 @@ Section 1 - Monster Responses
 
 Section 2 - Monster Insertion
 
-Awesome_sex is a number that varies;
-Awesome_boredom is a number that varies;
-Awesome_counter is a number that varies;
-Awesome_forcesex is a number that varies;
-Awesome_noreward is a number that varies;
+Awesome_sex is a number that varies.
+Awesome_boredom is a number that varies.
+Awesome_counter is a number that varies.
+Awesome_forcesex is a number that varies.
+Awesome_noreward is a number that varies.
 to say infect:
 	infect;
 	
@@ -154,7 +154,7 @@ name	desc	weight	object
 "awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 "awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
-the scent of the awesome fruit is "[awesomefrscent]";
+the scent of the awesome fruit is "[awesomefrscent]".
 
 to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
@@ -162,7 +162,7 @@ to say awesomefrscent:
 	otherwise:
 		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
 
-the scent of the awesomer fruit is "[awesomerfrscent]";
+the scent of the awesomer fruit is "[awesomerfrscent]".
 
 to say awesomerfrscent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
@@ -170,7 +170,7 @@ to say awesomerfrscent:
 	otherwise:
 		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
 
-the scent of the awesomest fruit is "[awesomestfrscent]";
+the scent of the awesomest fruit is "[awesomestfrscent]".
 
 to say awesomestfrscent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
@@ -178,7 +178,7 @@ to say awesomestfrscent:
 	otherwise:
 		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
 
-the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
+the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 to say awesome bat proc:
 	choose row monster from the table of random critters;
@@ -194,8 +194,8 @@ The weapon type of awesome bat is "Melee". It is not temporary.
 
 
 
-awesomest fruit is a grab object;
-awesomest fruit has a usedesc "[awesomest fruit use]";
+awesomest fruit is a grab object.
+awesomest fruit has a usedesc "[awesomest fruit use]".
 
 To say awesomest fruit use:
 	let omonster be monster;
@@ -215,8 +215,8 @@ To say awesomest fruit use:
 		infect;
 	now monster is omonster;
 
-awesomer fruit is a grab object;
-awesomer fruit has a usedesc "[awesomer fruit use]";
+awesomer fruit is a grab object.
+awesomer fruit has a usedesc "[awesomer fruit use]".
 
 To say awesomer fruit use:
 	let omonster be monster;
@@ -236,8 +236,8 @@ To say awesomer fruit use:
 		infect;
 	now monster is omonster;
 	
-awesome fruit is a grab object;
-awesome fruit has a usedesc "[awesome fruit use]";
+awesome fruit is a grab object.
+awesome fruit has a usedesc "[awesome fruit use]".
 	
 To say awesome fruit use:
 	let omonster be monster;

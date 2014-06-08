@@ -228,7 +228,7 @@ When Play begins:
 Section 3 - Events
 
 History Lecture is a situation.			[repeatable event infecting with Spartan/Helot strains - source of it all]
-The sarea of History Lecture is "Campus";
+The sarea of History Lecture is "Campus".
 
 when play begins:
 	add History Lecture to badspots of guy;     

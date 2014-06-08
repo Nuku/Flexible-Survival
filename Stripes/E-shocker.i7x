@@ -7,7 +7,7 @@ Section 1 - Encounter
 
 Electric shockers is a situation.  The level of electric shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo";
+The sarea of Electric shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
@@ -52,7 +52,7 @@ electric prod is a grab object. It is part of the player. It is fast.  It is not
 
 [It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of electric prod is 22. The weapon type of electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.]
 
-the scent of the electric prod is "The electric stun rod smells faintly of ozone.";
+the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
 to say useelectricprod:
 	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
@@ -128,7 +128,7 @@ to say useelectricprod:
 [
 Electric shockers is a situation.  The level of electric shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo";
+The sarea of Electric shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 epcountdown is a number that varies.

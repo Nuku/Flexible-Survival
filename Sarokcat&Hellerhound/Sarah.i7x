@@ -92,7 +92,7 @@ Sarah is a woman.
 sarahtalk is a number that varies.
 sarahslut is a number that varies.
 shortonparts is a truth state that varies.  shortonparts is normally false.
-The description of Sarah is "A thin woman, with husky fur, a lolling tongue, and paws. There are white scar lines down her side where the huskies slashed her, and she has the slit of one of the feral bitches, just waiting to be filled. Her red collar stands out, with its leash ring on the back and the nameplate on front. [sarahslutstate][sarahpupstate]";
+The description of Sarah is "A thin woman, with husky fur, a lolling tongue, and paws. There are white scar lines down her side where the huskies slashed her, and she has the slit of one of the feral bitches, just waiting to be filled. Her red collar stands out, with its leash ring on the back and the nameplate on front. [sarahslutstate][sarahpupstate]".
 The conversation of Sarah is { "Woof!" }.
 
 instead of sniffing Sarah:

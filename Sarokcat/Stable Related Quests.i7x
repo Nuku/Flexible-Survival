@@ -7,7 +7,7 @@ Stable Related Quests by Sarokcat begins here.
 Section 1- Equineguardpost [onyx quest part 1]
 
 Equineguardpost is a situation.  Equineguardpost is resolved.  The level of Equineguardpost is 3.
-The sarea of Equineguardpost is "Stable";
+The sarea of Equineguardpost is "Stable".
 
 Instead of Resolving a Equineguardpost:
 	if xp of Onyx is 1:
@@ -42,8 +42,8 @@ Instead of Resolving a Equineguardpost:
 	
 Section 3-  Stablestoreroom [onyx quest part 2]
 
-Stablestoreroom is a situation.  Stablestoreroom is resolved;
-The sarea of Stablestoreroom is "Stable";
+Stablestoreroom is a situation.  Stablestoreroom is resolved.
+The sarea of Stablestoreroom is "Stable".
 
 Instead of Resolving a Stablestoreroom:
 	if xp of Onyx is 4:
@@ -70,7 +70,7 @@ Section 4-  ignoredmemo
 [Fancy intro quest]
 
 ignoredmemo is a situation.
-The sarea of ignoredmemo is "Stable";
+The sarea of ignoredmemo is "Stable".
 
 Instead of Resolving a ignoredmemo:
 	say "Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly, feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone called Fancy requesting help and materials from someone only noted as 'The Stablemaster'.  Leafing through the different requests, you find that the tone of them varies from pleading to demanding as this Fancy points out that the Stables is still somewhat a shambles, and while most of the employees are well trained enough not to comment, and they all love their jobs, she seems to feel that everyone would be much better off for a few repairs being made around the place. She also mentions that with the appropriate help she could do most of the simple stuff herself and with the mares when they aren[']t busy with clients. You find the situation seems a bit curious, and looking at all the obviously ignored memos, you find yourself wondering if maybe you should talk to this Fancy about her situation and see what she might be willing to offer for a bit of help.";
@@ -330,9 +330,9 @@ instead of sniffing medium sledge:
 Section 7-  horsepowering[Fancy quest part 3]
 
 horsepowering is a situation.
-The sarea of horsepowering is "Stable";
+The sarea of horsepowering is "Stable".
 
-generatorfixing is a number that varies;
+generatorfixing is a number that varies.
 
 
 
@@ -435,7 +435,7 @@ Instead of resolving a contract hyenegotiation:
 Section 10-  Horsepitfight[Fancy quest part 4b]
 
 Horsepitfight is a situation.
-The sarea of Horsepitfight is "Stable";
+The sarea of Horsepitfight is "Stable".
 	
 instead of resolving a  Horsepitfight:
 	if provingstallionhood is 2:
@@ -481,7 +481,7 @@ Section 11-  goldenfocushunt
 [Fancy quest part 5a]
 
 goldenfocushunt is a situation.
-The sarea of goldenfocushunt is "Museum";
+The sarea of goldenfocushunt is "Museum".
 	
 instead of resolving a goldenfocushunt:
 	if hellgatherquest is 2:

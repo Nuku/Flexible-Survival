@@ -6,7 +6,7 @@ Version 2 of Hobo by Stripes begins here.
 Section 1 - Encounter
 
 Mournful Dog is a situation.
-The sarea of Mournful Dog is "Hospital";
+The sarea of Mournful Dog is "Hospital".
 hdog is a number that varies.
 dogfoodcount is a number that varies.
 
@@ -74,17 +74,17 @@ Instead of resolving a Mournful Dog:
 
 Section 2 - Pet Data
 
-helper dog is a pet.  helper dog is a part of the player;
-The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles.";
-The weapon damage of helper dog is 6;
-The level of helper dog is 5;
-The Dexterity of helper dog is 15;
-The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.[hoboreset]";
-The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
+helper dog is a pet.  helper dog is a part of the player.
+The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles."
+The weapon damage of helper dog is 6.
+The level of helper dog is 5.
+The Dexterity of helper dog is 15.
+The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.[hoboreset]".
+The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]".
 
 the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
-the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
+the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.".
 
 
 Section 3 - Hobo Actions

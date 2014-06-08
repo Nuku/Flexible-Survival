@@ -164,7 +164,7 @@ to say silversemenuse:
 			break;
 	infect;
 
-the scent of silver semen is "The contents of the jar has a metallic smell to accompany the musky scent of semen.";
+the scent of silver semen is "The contents of the jar has a metallic smell to accompany the musky scent of semen.".
 
 [
 when play ends:

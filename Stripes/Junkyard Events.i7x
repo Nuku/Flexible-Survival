@@ -7,8 +7,8 @@ Version 1 of Junkyard Events by Stripes begins here.
 Section 1 - Goblin Trap
 
 Goblin Trap is a situation.  The level of Goblin Trap is 2.
-The sarea of Goblin Trap is "Junkyard";
-goblinfight is a number that varies;
+The sarea of Goblin Trap is "Junkyard".
+goblinfight is a number that varies.
 when play begins:
 	add Goblin Trap to badspots of guy;
 
@@ -30,7 +30,7 @@ Instead of resolving a Goblin Trap:
 Section 2 - Goblin Raiding Party
 
 Raiding Party is a situation.  The level of Raiding Party is 2.
-The sarea of Raiding Party is "Junkyard";
+The sarea of Raiding Party is "Junkyard".
 junknum is a number that varies.
 when play begins:
 	add Raiding Party to badspots of guy;
@@ -80,7 +80,7 @@ Instead of resolving a Raiding Party:
 Section 3 - Stripped Car
 
 Stripped Car is a situation.
-The sarea of Stripped Car is "Junkyard";
+The sarea of Stripped Car is "Junkyard".
 
 Instead of resolving a Stripped Car:
 	say "     You come across a stripped car that has been pulled across the pathway between the piles.  Wary of an ambush, you look around, but it seems no one is here.  Taking a closer look, stripped is the proper way to describe this car.  It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forcibly removed.  There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off.  Even the stereo is gone.  You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
@@ -91,7 +91,7 @@ Instead of resolving a Stripped Car:
 Section 4 - Scattered Trash
 
 Scattered Trash is a situation.
-The sarea of Scattered Trash is "Junkyard";
+The sarea of Scattered Trash is "Junkyard".
 when play begins:
 	add Scattered Trash to badspots of girl;
 	add Scattered Trash to badspots of furry;
@@ -127,7 +127,7 @@ Instead of resolving a Scattered Trash:
 Section 5 - Stray Cat
 
 Stray Cat is a situation.  The level of Stray Cat is 7.
-The sarea of Stray Cat is "Junkyard";
+The sarea of Stray Cat is "Junkyard".
 
 Instead of resolving a Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard.  It seems he wandered in here and has gotten lost.  Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly";

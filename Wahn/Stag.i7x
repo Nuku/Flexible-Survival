@@ -8,7 +8,7 @@ Section 1 - Dog-Walking Event
 [First meeting, the player can then peacefully chat with the stag guy or try to 'free' his pet, leading to combat and further hostile meetings...]
 
 Dog Walking is a situation. The level of Dog Walking is 7.
-The sarea of Dog Walking is "Warehouse";
+The sarea of Dog Walking is "Warehouse".
 when play begins:
 	add Dog Walking to badspots of guy;
 	add Dog Walking to badspots of furry;
@@ -230,8 +230,8 @@ Section 4 - Mike and Lea
 [ 100: lost to the leopardman gang                        ]
 
 Mike is a man. Mike is in Mike's Office.
-The description of Mike is "[MikeDesc]";
-The conversation of Mike is { "Oh, hello." };
+The description of Mike is "[MikeDesc]".
+The conversation of Mike is { "Oh, hello." }.
 lastfuck of Mike is usually 555.
 The icon of Mike is Figure of Mike_icon.
 
@@ -241,15 +241,15 @@ to say MikeDesc:
 	say "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 
 Mike's Home is a room. It is a fasttravel. It is private.
-The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbours didn't complain about noise. At the side of the house (north from you) is the back entrance to which Mike showed you where a key is hidden.";
+The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbours didn't complain about noise. At the side of the house (north from you) is the back entrance to which Mike showed you where a key is hidden.".
 
 North of Mike's Home is Mike's Office.
 Mike's Office is sleepsafe.
-The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum. [if hp of Mike < 5]Lea, Mike's transformed dog lies on it, whining pitifully.[end if]";
+The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum. [if hp of Mike < 5]Lea, Mike's transformed dog lies on it, whining pitifully.[end if]".
 
 East of Mike's Office is Dog Kennels.
 Dog Kennels is sleepsafe.
-The description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.";
+The description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
 
 instead of sniffing Mike:
 	say "     Mike has a nice smell, strong and masculine.";
@@ -457,8 +457,8 @@ instead of conversing Mike:
 		say "     Mike is not in a state when he should be able to talk - please report how you got this.";
 		
 Lea is a woman.  Lea is in Mike's Office.
-The description of Lea is "     Originally one of Mike's dogs, Lea now is a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with the pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if hp of Mike < 5]A deep gash from a leopardman's claw mark her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[otherwise if hp of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]";
-The conversation of Lea is { "Woof." };
+The description of Lea is "     Originally one of Mike's dogs, Lea now is a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with the pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if hp of Mike < 5]A deep gash from a leopardman's claw mark her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[otherwise if hp of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
+The conversation of Lea is { "Woof." }.
 lastfuck of Lea is usually 555.
 
 instead of fucking Lea:
@@ -479,8 +479,8 @@ Section 5 - Xerxes
 Chapter 1 - Xerxes Basics
 
 Xerxes is a man.
-The description of Xerxes is "[xerxesdesc]";
-The conversation of Xerxes is { "Woof." };
+The description of Xerxes is "[xerxesdesc]".
+The conversation of Xerxes is { "Woof." }.
 lastfuck of Xerxes is usually 555.
 lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
 hp of Xerxes is usually 0.
@@ -1038,8 +1038,8 @@ Section 6 - Helen
 Chapter 1 - Helen Basics
 
 Helen is a woman.
-The description of Helen is "[helendesc]";
-The conversation of Helen is { "Woof." };
+The description of Helen is "[helendesc]".
+The conversation of Helen is { "Woof." }.
 lastfuck of Helen is usually 555.
 lasthelentalk is a number that varies.  lasthelentalk is usually 555.
 hp of Helen is usually 0.
@@ -1604,8 +1604,8 @@ Section 7 - Ares
 Chapter 1 - Ares Basics
 
 Ares is a man.
-The description of Ares is "[AresDesc]";
-The conversation of Ares is { "Woof." };
+The description of Ares is "[AresDesc]".
+The conversation of Ares is { "Woof." }.
 lastfuck of Ares is usually 555.
 hp of Ares is usually 0.
 
@@ -2030,15 +2030,15 @@ to say AresXerxesParkFuck:
 							
 Chapter 3 - Pet Ares
 
-human dog is a pet. human dog is a part of the player;
+human dog is a pet. human dog is a part of the player.
 understand "ares" as human dog.
-The description of human dog is "[AresPetDesc]";
-The weapon damage of human dog is 8;
-The level of human dog is 10;
-The Dexterity of human dog is 10;
-The summondesc of human dog is "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position besides you and just a step ahead, ready to protect his bitch in any situation.";
-The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]";
-the fuckscene of human dog is "[SexWithAresPet]";
+The description of human dog is "[AresPetDesc]".
+The weapon damage of human dog is 8.
+The level of human dog is 10.
+The Dexterity of human dog is 10.
+The summondesc of human dog is "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position besides you and just a step ahead, ready to protect his bitch in any situation.".
+The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
+the fuckscene of human dog is "[SexWithAresPet]".
 
 to say AresPetDesc:
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.";

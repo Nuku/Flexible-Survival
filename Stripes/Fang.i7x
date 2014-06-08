@@ -6,7 +6,7 @@ Version 5 of Fang by Stripes begins here.
 Section 1 - Fang the Feral Wolf
 
 Fang is a person.
-The description of Fang is "[fangdesc]";
+The description of Fang is "[fangdesc]".
 The conversation of Fang is { "Grrrr!" }.
 lastFangfucked is a number that varies.  lastFangfucked is normally 555.
 libido of Fang is normally 0.		[represents status w/fucking Sandra - saved]
@@ -15,7 +15,7 @@ FangWS is a number that varies.
 FangToy is a truth state that varies.  FangToy is usually false.
 [See Feral Wolf file for collecting Fang.]
 
-the scent of the Fang is "[if hp of Fang is 3 or hp of Fang is 4]The scent of your alpha wolf is strong and exciting.[otherwise]The scarred wolf has an arousing male scent.[end if]";
+the scent of the Fang is "[if hp of Fang is 3 or hp of Fang is 4]The scent of your alpha wolf is strong and exciting.[otherwise]The scarred wolf has an arousing male scent.[end if]".
 
 to say fangdesc:
 	if hp of Fang is 3 or hp of Fang is 4:

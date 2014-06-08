@@ -6,7 +6,7 @@ Misc 6 by Kaleem mcintyre begins here.
 Section 1 - Pegasus
 
 Pegasus is a situation.
-The sarea of Pegasus is "Plains";
+The sarea of Pegasus is "Plains".
 
 Instead of resolving a Pegasus:
 	say "Walking along the dry plains you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on you tip your head up only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long azure coloured tail end whipping freely behind it's wide backside.";
@@ -15,7 +15,7 @@ Instead of resolving a Pegasus:
 Section 2 - Guess that Character One
 
 Guess that Character One is a situation.
-The sarea of Guess that Character One is "Campus";
+The sarea of Guess that Character One is "Campus".
 When play begins:
 	Add Guess that Character One to badspots of furry;
 	Add Guess that Character One to badspots of guy;
@@ -36,7 +36,7 @@ Section 3 - Guess that Character Two
 Section 4 - Guess that Character Three
 
 Guess that Character Three is a situation.
-The sarea of Guess that Character Three is "Red";
+The sarea of Guess that Character Three is "Red".
 When play begins:
 	Add Guess that Character Three to badspots of furry;
 	Add Guess that Character Three to badspots of hermaphrodite;

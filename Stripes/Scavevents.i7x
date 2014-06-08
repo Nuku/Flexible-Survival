@@ -9,7 +9,7 @@ Version 3 of Scavevents by Stripes begins here.
 Section 1 - Tight Fit
 
 Tight Fit is a scavevent.
-The sarea of Tight Fit is "Allzones";
+The sarea of Tight Fit is "Allzones".
 tightfitcount is a number that varies.
 
 Instead of resolving a Tight Fit:
@@ -94,7 +94,7 @@ Instead of resolving a Tight Fit:
 Section 2 - Protected Supplies
 
 Protected Supplies is a scavevent.
-The sarea of Protected Supplies is "Allzones";
+The sarea of Protected Supplies is "Allzones".
 
 Instead of resolving a Protected Supplies:
 	let y be "food";
@@ -195,7 +195,7 @@ Instead of resolving a Protected Supplies:
 Section 3 - Dropped Handbag
 
 Dropped Handbag is a scavevent.
-the sarea of Dropped Handbag is "Allzones";
+the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it.  Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.  Do you want to search it?  It doesn't seem like they'll be needing it anymore.";
@@ -233,7 +233,7 @@ Instead of resolving a Dropped Handbag:
 Section 4 - Dented Bike (by Wahn)
 
 Dented Bike is a scavevent.
-The sarea of Dented Bike is "Allzones";
+The sarea of Dented Bike is "Allzones".
 dentedbikecount is a number that varies.
 
 Instead of resolving a Dented Bike:
@@ -264,7 +264,7 @@ Instead of resolving a Dented Bike:
 Section 5 - Looted Supermarket (by Wahn)
 
 Looted Supermarket is a scavevent.
-The sarea of Looted Supermarket is "Allzones";
+The sarea of Looted Supermarket is "Allzones".
 supermarketcount is a number that varies.
 
 Instead of resolving a Looted Supermarket:
@@ -329,7 +329,7 @@ Instead of resolving a Looted Supermarket:
 Section 6 - Abandoned Cars (by Wahn)
 
 Abandoned Cars is a scavevent.
-The sarea of Abandoned Cars is "Allzones";
+The sarea of Abandoned Cars is "Allzones".
 
 Instead of resolving a Abandoned Cars:
 	say "You check out a few abandoned cars - looks like they were in a mid-size accident when the infection hit. They've all been looted - or just shredded inside and out by their changing owners. The trunk of one of them is still closed, and you soon learn why - it's been warped by the impact of another car and won't open.";
@@ -356,7 +356,7 @@ Instead of resolving a Abandoned Cars:
 Section 7 - Gryphon Milkman (by Wahn)
 
 Gryphon Milkman is a scavevent.
-The sarea of Gryphon Milkman is "Outside";
+The sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to badspots of furry;
 	add Gryphon Milkman to badspots of hermaphrodite;
@@ -372,7 +372,7 @@ Instead of resolving a Gryphon Milkman:
 Section 8 - Free Milk (by Wahn)
 
 Free Milk is a scavevent.
-The sarea of Free Milk is "Outside";
+The sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to badspots of furry;
 	add Free Milk to badspots of hermaphrodite;
@@ -386,7 +386,7 @@ Instead of resolving a Free Milk:
 Section 9 - Manna from Heaven (by Wahn)
 
 Manna from Heaven is a scavevent.
-The sarea of Manna from Heaven is "Outside";
+The sarea of Manna from Heaven is "Outside".
 
 Instead of resolving a Manna from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above.  It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her.  Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons.  Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands.  You quickly dash off with it before the harpies team up and attack you.";
@@ -564,7 +564,7 @@ Instead of resolving a Garden Veggies:
 Section 12 - Free Drink
 
 Free Drink is a scavevent.
-The sarea of Free Drink is "Campus";.
+The sarea of Free Drink is "Campus".
 when play begins:
 	add Free Drink to badspots of guy;
 
@@ -607,7 +607,7 @@ Instead of resolving a Free Drink:
 Section 13 - Liefeld's Disease
 
 DbLD is a scavevent.
-The sarea of DbLD is "Allzones";
+The sarea of DbLD is "Allzones".
 
 Instead of resolving a DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face.  It seems that some creature took rather violent exception to him from the signs of destruction all around.  The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was.  Whatever strange infection this unlucky person had, it really left him unable to fight.  Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet.  Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
@@ -634,7 +634,7 @@ the scent of shoulder pad is "The shoulder pad stinks of the '90s.".
 Section 14 - Hospital Scavenging
 
 Patient Rooms is a scavevent.
-The sarea of Patient Rooms is "Hospital";
+The sarea of Patient Rooms is "Hospital".
 patrooms is a number that varies.
 
 Instead of resolving a Patient Rooms:
@@ -712,7 +712,7 @@ Instead of resolving a Patient Rooms:
 Section 15 - Shattered House
 
 Shattered House is a scavevent.
-The sarea of Shattered House is "Allzones";
+The sarea of Shattered House is "Allzones".
 
 Instead of resolving a Shattered House:
 	say "     As you travel along, you are forced to cut down a side street to avoid a small cluster of creatures lustfully fucking in the road up ahead.  Down this street, you pass a few houses, including one that seems to have been partially blown out from the inside.  Given the lack of fire damage and excessive amounts of sticky fluids, you'd guess that whoever once lived in there became very large very quickly";
@@ -771,7 +771,7 @@ Instead of resolving a Shattered House:
 Section 16 - Abandoned Milk (by cmacleod42)
 
 	Abandoned Milk is a scavevent.
-	The sarea of Abandoned Milk is "Outside";
+	The sarea of Abandoned Milk is "Outside".
 	when play begins:
 		add Abandoned Milk to badspots of furry;
 		add Abandoned Milk to badspots of hermaphrodite;

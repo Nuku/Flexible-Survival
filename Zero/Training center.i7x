@@ -11,12 +11,12 @@ North of Training centre is Old Hall.
 North of Old Hall is Masters Room.
 East of Old Hall is Old Lounge.
 
-The description of Old Hall is "a hallway that looks like it should be condemed [line break] [if corgitalk is greater than 1]Max[otherwise]The angry corgi[end if] stormed down the eastern passage. [line break] you can also hear sounds of a orgy coming from the north";
-The description of Masters Room is "[meetthemaster]";
+The description of Old Hall is "a hallway that looks like it should be condemed [line break] [if corgitalk is greater than 1]Max[otherwise]The angry corgi[end if] stormed down the eastern passage. [line break] you can also hear sounds of a orgy coming from the north".
+The description of Masters Room is "[meetthemaster]".
 
-The description of Old Lounge is "[corgilounge]";
+The description of Old Lounge is "[corgilounge]".
 
-The description of Training centre is "a make shift prison cell, its bars have been torn apart by the enraged corgi ";
+The description of Training centre is "a make shift prison cell, its bars have been torn apart by the enraged corgi ".
 
 corgihelp is a number that varies. corgihelp is usually 0.
 mistresswon is a number that varies. mistresswon is usually 0.
@@ -52,7 +52,7 @@ to say corgilounge:
 Section 2-finding the Training centre
 
 Domincounter is a situation.
-The sarea of Domincounter is "Outside";
+The sarea of Domincounter is "Outside".
 when play begins:
 	add Domincounter to badspots of furry;
 	add Domincounter to badspots of guy;

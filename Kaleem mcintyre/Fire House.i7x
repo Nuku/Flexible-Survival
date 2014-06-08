@@ -6,7 +6,7 @@ Section 1 - FireStation
 
 Fire Station 86 is a room. It is fasttravel. 
 
-The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky messy of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up allowing you entrance. Entering into the cool building you find that the firehouse is exactly as you would have imagined it to be[otherwise]Wondering how Kenaz is doing you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].";
+The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky messy of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up allowing you entrance. Entering into the cool building you find that the firehouse is exactly as you would have imagined it to be[otherwise]Wondering how Kenaz is doing you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].".
 
 North of Fire Station 86 is Firehouse.
 
@@ -17,7 +17,7 @@ Section 1a - Firehouse
 
 KTO is a number that varies. 
 Up of Firehouse is Sleeping Quarters.
-The description of Firehouse is "[firehousedesc]";
+The description of Firehouse is "[firehousedesc]".
 
 To say firehousedesc:
 	If kto is 0:
@@ -53,7 +53,7 @@ Kenazfucked is a number that varies. Kenazfucked is usually 0.
 rsc is a number that varies.
 
 Kenaz is a man. Kenaz is in FireHouse. 
-The description of Kenaz is "[Kenazcurrentform]";
+The description of Kenaz is "[Kenazcurrentform]".
 The conversation of Kenaz is { "Be on alert!" }.
 
 instead of linkactioning Kenaz when rsc >= 2:
@@ -816,7 +816,7 @@ Section 6 - LowerFirePole
 
 LowerFirePole is in FireHouse.
 
-The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.";
+The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.".
 
 the scent of lowerfirepole is "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.".
 
@@ -847,7 +847,7 @@ Section 7 - Upstairs
 Down of Sleeping Quarters is Firehouse. UpperFirepole is in Sleeping Quarters.
 
 Sleeping Quarters is a room. 
-The description of Sleeping Quarters is "[SleepQuarters]"; 
+The description of Sleeping Quarters is "[SleepQuarters]".
 
 To say SleepQuarters:
 	if KTO is 0:
@@ -880,7 +880,7 @@ to say sleepingquartersscent:
 
 Section 8 - UpperFirePole
 
-The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].";
+The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].".
 
 check firepolesliding:
 	if location of player is not Sleeping Quarters and location of player is not Eastern Parapets and location of player is not Western Parapets:
@@ -968,7 +968,7 @@ Section 11 - OtherDals
 Kto is a number that varies.
 
 OtherDals is a man. 
-The description of OtherDals is "[Dalboys1]";
+The description of OtherDals is "[Dalboys1]".
 The conversation of OtherDals is { "Playtime!" }.
 
 To say Dalboys1:
@@ -1006,7 +1006,7 @@ Instead of conversing the OtherDals:
 Section 12 - DalmatianTroupe
 
 DalmatianTroupe is a man.	
-The description of DalmatianTroupe is "[Dalboys2]";
+The description of DalmatianTroupe is "[Dalboys2]".
 The conversation of DalmatianTroupe is { "YES SIR!" }.
 
 To say Dalboys2:
@@ -1045,7 +1045,7 @@ Section 13 -NeverNeverLand
 
 NeverNeverland is a room. It is unknown. It is private.
 
-The description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.";
+The description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.".
 
 
 Fire House ends here.

@@ -25,7 +25,7 @@ Version 1 of Lilith by Wahn begins here.
 Section 1 - Lilith, the succubus
 
 Lilith is a woman. Lilith is in Sacristy. The hp of Lilith is normally 0.
-The description of Lilith is "[LilithDesc]";
+The description of Lilith is "[LilithDesc]".
 The conversation of Lilith is { "Mew!" }.
 lastLilithTalk is a number that varies.  lastLilithTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]														
 LilithPregnancy is a number that varies.

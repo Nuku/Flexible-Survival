@@ -7,7 +7,7 @@ Version 2 of High Rise Events by Stripes begins here.
 Section 1- Rabid Lawyers
 
 Rabid Lawyers is a situation.
-The sarea of Rabid Lawyers is "High";
+The sarea of Rabid Lawyers is "High".
 when play begins:
 	add Rabid Lawyers to badspots of guy;
 	add Rabid Lawyers to badspots of furry;
@@ -23,7 +23,7 @@ Instead of resolving a Rabid Lawyers:
 Section 2- Pigging Out
 
 Pigging Out is a situation.  The level of Pigging Out is 3.
-The sarea of Pigging Out is "High";
+The sarea of Pigging Out is "High".
 restaurantpig is a number that varies.	[to be used at a later date]
 when play begins:
 	add Pigging Out to badspots of girl;
@@ -114,12 +114,12 @@ name	desc	weight	object
 
 cleaver is an armament. It is part of the player. It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]". The weapon damage of cleaver is 6. The weapon type of cleaver is "Melee". It is not temporary.
 
-the scent of the cleaver is "The heavy blade smells faintly of blood.";
+the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
 Small Park is a situation.
-The sarea of Small Park is "High";
+The sarea of Small Park is "High".
 when play begins:
 	add Small Park to badspots of girl;
 	add Small Park to badspots of guy;
@@ -221,7 +221,7 @@ to say doggyinfect:
 Section 4- Corporate Fat Cats
 
 Corporate Fat Cats is a situation.
-The sarea of Corporate Fat Cats is "High";
+The sarea of Corporate Fat Cats is "High".
 when play begins:
 	add Corporate Fat Cats to badspots of guy;
 	add Corporate Fat Cats to badspots of furry;
@@ -236,7 +236,7 @@ Instead of resolving a Corporate Fat Cats:
 Section 5- Veterinary Hospital
 
 Veterinary Hospital is a situation.
-The sarea of Veterinary Hospital is "High";
+The sarea of Veterinary Hospital is "High".
 doggyness is a number that varies.
 kittyness is a number that varies.
 when play begins:
@@ -400,7 +400,7 @@ to say randomvetfight:				[more suitable pets can be added]
 Section 6- Golf Store
 
 Golf Store is a situation.
-The sarea of Golf Store is "High";
+The sarea of Golf Store is "High".
 when play begins:
 	add Golf Store to badspots of furry;
 
@@ -417,13 +417,13 @@ name	desc	weight	object
 
 golf club is an armament. It is part of the player. It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]". The weapon damage of golf club is 5. The weapon type of golf club is "Melee". It is not temporary.
 
-the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.";
+the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
 
 
 Section 7- Electronics Store
 
 Electronics Store is a situation.
-The sarea of Electronics Store is "High";
+The sarea of Electronics Store is "High".
 when play begins:
 	add Small Park to badspots of humorous;
 
@@ -439,7 +439,7 @@ Instead of resolving a Electronics Store:
 Section 8 - Cameo
 
 Cameo is a situation.  The level of Cameo is 4.
-The sarea of Cameo is "High";
+The sarea of Cameo is "High".
 choclabfight is a number that varies.
 when play begins:
 	add Cameo to badspots of hermaphrodite;
@@ -552,7 +552,7 @@ Instead of resolving a Cameo:
 Section 9 - Raul's Wild Kingdom
 
 Wild Kingdom is a situation.
-The sarea of Wild Kingdom is "High";
+The sarea of Wild Kingdom is "High".
 
 Instead of resolving a Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out.  Inside you find the small place crammed full of animal people or all kinds.  A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade.  In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";

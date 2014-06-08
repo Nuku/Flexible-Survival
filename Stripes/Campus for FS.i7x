@@ -6,7 +6,7 @@ Version 1 of Campus for FS by Stripes begins here.
 Section 1 - Event Locating the Campus
 
 Reaching the College is a situation.  The level of Reaching the College is 6.
-The sarea of Reaching the College is "Outside";
+The sarea of Reaching the College is "Outside".
 
 Instead of Resolving a Reaching the College:
 	say "     Your meandering path through the city brings you into some new territory.  What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier.  Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings.  Just as you're recogn-[line break]";
@@ -42,7 +42,7 @@ Section 2 - Tenvale College Campus
 
 College Campus is a room. It is fasttravel.  It is private.
 
-The description of College Campus is "[campusdesc]";
+The description of College Campus is "[campusdesc]".
 
 to say campusdesc:
 	say "     Tenvale College stretches out before you.  Wedged into this section of the city that's grown denser around it, the college campus still have some green spaces between its numerous buildings.  The college is renown for its strong sports program, having a large sporting arena on the edge of campus.  This is shared between the city's professional teams and the college ones, though there are also outdoor fields for practice and smaller games.  There is also an olympic-sized swimming pool at the other side of the campus.  The classroom buildings and offices for the various departments and other programs are held in the various other buildings.";
@@ -55,7 +55,7 @@ South of Campus Grounds is Exploring the Campus.
 
 The marea of Campus Grounds is "Campus".
 
-the scent of College Campus is "[one of]You catch a whiff of sweat and arousal[or]You notice the strong scent of rabbits[or]Like elsewhere in the city, the scent of sex lingers in the air[at random].";
+the scent of College Campus is "[one of]You catch a whiff of sweat and arousal[or]You notice the strong scent of rabbits[or]Like elsewhere in the city, the scent of sex lingers in the air[at random].".
 
 
 Campus for FS ends here.

@@ -326,7 +326,7 @@ to say glowingemberuse:
 	attempttowait;
 	say "     You come to your senses some time later, glancing around you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
-the scent of glowing ember is "The small ember spells faintly smoky.";
+the scent of glowing ember is "The small ember spells faintly smoky.".
 
 Section 5 - Endings
 

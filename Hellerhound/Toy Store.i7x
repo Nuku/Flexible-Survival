@@ -5,7 +5,7 @@ when play begins:
 	add Toy Store to badspots of guy;
 	add Toy Store to badspots of furry;
 
-toystoreoverride is a truth state that varies. toystoreoverride is usually false;
+toystoreoverride is a truth state that varies. toystoreoverride is usually false.
 
 instead of resolving a toy store:
 	say "     You come across a store with gas lamps in the windows, and activity inside. You catch a flash of orange, but the windows are shaded, and you cannot really tell who or what is inside.";

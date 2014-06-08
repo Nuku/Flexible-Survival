@@ -10,9 +10,9 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Yamato Dragoness" } to infections of girl;
 
-YDSF is a number that varies; [Yamato Dragon Succumb Fate]
-FYDTBMM is a number that varies; [Female Yamato Dragon TBM Memory]
-FYDM is a number that varies; [Female Yamato Dragon Memory]
+YDSF is a number that varies. [Yamato Dragon Succumb Fate]
+FYDTBMM is a number that varies. [Female Yamato Dragon TBM Memory]
+FYDM is a number that varies. [Female Yamato Dragon Memory]
 
 to say Yamato Dragoness attack:
 	if HP of player > 0:
