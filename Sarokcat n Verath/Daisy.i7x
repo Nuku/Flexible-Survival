@@ -12,7 +12,7 @@ LastDaisyfucked is a number that varies. LastDaisyfucked is usually 250.
 Daisyfucked is a number that varies. Daisyfucked is usually 0.
 
 Daisy is a woman.[or woman]
-The description of Daisy is "[Daisydescribing]";
+The description of Daisy is "[Daisydescribing]".
 The conversation of Daisy is { "Ooo!" }.
 
 to say Daisydescribing:

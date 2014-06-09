@@ -179,37 +179,37 @@ The description of Throne Room is "[bcthroneroom]".
 BouncyCastleExit is a room.  "Leaving the bouncy castle."  BouncyCastleSlideExit is east of Eastern Parapets.  BouncyCastleSlideExit is west of Western Parapets.  BouncyCastleExit is north of Bouncy Castle.
 
 
-the scent of Bouncy Castle is "This place smells of rubber and the ocean.";
+the scent of Bouncy Castle is "This place smells of rubber and the ocean.".
 
-the scent of Fencing Room is "This place smells of rubber and the ocean.";
+the scent of Fencing Room is "This place smells of rubber and the ocean.".
 
-the scent of Bouncing Play Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.";
+the scent of Bouncing Play Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Ball Pit Room is "This place smells of rubber and the ocean.";
+the scent of Ball Pit Room is "This place smells of rubber and the ocean.".
 
-the scent of Toy Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.";
+the scent of Toy Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Great Hall is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.";
+the scent of Great Hall is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of King's Chambers is "This place smells of rubber and the ocean.";
+the scent of King's Chambers is "This place smells of rubber and the ocean.".
 
-the scent of Punching Pillars is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.";
+the scent of Punching Pillars is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Knight's Chambers is "This place smells of rubber and the ocean.";
+the scent of Knight's Chambers is "This place smells of rubber and the ocean.".
 
-the scent of Lower Tower is "This place smells of rubber and the ocean.";
+the scent of Lower Tower is "This place smells of rubber and the ocean.".
 
-the scent of Upper Tower is "This place smells of rubber and the ocean.";
+the scent of Upper Tower is "This place smells of rubber and the ocean.".
 
-the scent of Tower Turret is "This place smells of rubber and the ocean.";
+the scent of Tower Turret is "This place smells of rubber and the ocean.".
 
-the scent of Western Parapets is "This place smells of rubber and the ocean.";
+the scent of Western Parapets is "This place smells of rubber and the ocean.".
 
-the scent of Eastern Parapets is "This place smells of rubber and the ocean.";
+the scent of Eastern Parapets is "This place smells of rubber and the ocean.".
 
-the scent of Upper Hall is "This place smells of rubber and the ocean.";
+the scent of Upper Hall is "This place smells of rubber and the ocean.".
 
-the scent of Throne Room is "This place smells of rubber and the ocean.";
+the scent of Throne Room is "This place smells of rubber and the ocean.".
 
 
 Section 4 - Inside the Bouncy Castle
@@ -748,7 +748,7 @@ The placement of ducky swimring is "waist".
 The descmod of ducky swimring is "You are wearing your cute ducky inflatable around your waist.  Sure, it looks a little silly, but it's a mad world out there.".
 The slot of ducky swimring is "waist".
 
-the scent of ducky swimring is "The ducky smells of latex.";
+the scent of ducky swimring is "The ducky smells of latex.".
 
 
 Book 2 - The Tower

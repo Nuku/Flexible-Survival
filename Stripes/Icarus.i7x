@@ -6,7 +6,7 @@ Version 3 of Icarus by Stripes begins here.
 Section 1 - Icarus the Blue Chaffinch
 
 Icarus is a person.
-The description of Icarus is "[Icarusdesc]";
+The description of Icarus is "[Icarusdesc]".
 The conversation of Icarus is { "Wilder!" }.
 icarusscene1 is a truth state that varies.  icarusscene1 is usually false.
 icarusscene2 is a truth state that varies.  icarusscene2 is usually false.
@@ -17,7 +17,7 @@ icarus_cumstuff is a number that varies.
 
 [See Blue Chaffinch file for collecting Icarus.]
 
-the scent of Icarus is "[if hp of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused.[otherwise if facename of player is listed in infections of Avianpredlist]The blue songbird smells like prey.[otherwise]The blue songbird has a soft, pleasant scent.[end if]";
+the scent of Icarus is "[if hp of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused.[otherwise if facename of player is listed in infections of Avianpredlist]The blue songbird smells like prey.[otherwise]The blue songbird has a soft, pleasant scent.[end if]".
 
 
 to say Icarusdesc:

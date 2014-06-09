@@ -6,7 +6,7 @@ Park Events by Sarokcat begins here.
 Section 1- Poppies field
 
 Poppies field is a situation.
-The sarea of Poppies field is "Park";
+The sarea of Poppies field is "Park".
 when play begins:
 	add Poppies field to badspots of hermaphrodite;
 
@@ -39,7 +39,7 @@ Section 3- small fire
 Section 4 - fallen tree
 
 [fallen tree is a situation.  The level of fallen tree is 4.
-The sarea of fallen tree is "Park";
+The sarea of fallen tree is "Park".
 when play begins:
 	add fallen tree to badspots of girl;
 	add fallen tree to badspots of furry;
@@ -60,7 +60,7 @@ Instead of Resolving a fallen tree:
 Section 5- Poke trap
 
 [Poke trap is a situation.  The level of Poke trap is 4.
-The sarea of Poke trap is "Park";
+The sarea of Poke trap is "Park".
 when play begins:
 	add Poke trap to badspots of girl;
 	add Poke trap to badspots of furry;
@@ -86,7 +86,7 @@ Instead of Resolving a Poke trap:
 Section 6- Felinoid lair
 
 Felinoid lair is a situation.
-The sarea of Felinoid lair is "Park";
+The sarea of Felinoid lair is "Park".
 when play begins:
 	add Felinoid lair to badspots of girl;
 	add Felinoid lair to badspots of furry;

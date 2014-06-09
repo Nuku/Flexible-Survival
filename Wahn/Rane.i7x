@@ -18,7 +18,7 @@ Version 1 of Rane by Wahn begins here.
 Section 1 - Events
 
 Rooftop Rumble is a situation. The level of Rooftop Rumble is 7.
-The sarea of Rooftop Rumble is "Warehouse";
+The sarea of Rooftop Rumble is "Warehouse".
 
 Instead of resolving a Rooftop Rumble:
 	if hp of Rane is 0:
@@ -164,8 +164,8 @@ to say MeetRane:
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
 		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";	
 
-The blue Oni is a situation. The level of The blue Oni is 5. The blue Oni is resolved;
-The sarea of The blue Oni is "Park";
+The blue Oni is a situation. The level of The blue Oni is 5. The blue Oni is resolved.
+The sarea of The blue Oni is "Park".
 
 Instead of resolving a The blue Oni:
 	say "     As you move through the overgrown park's wilderness, you have an eye out for Rane, the blue oni whom you met in the warehouse district... without much success. Lots of trees and large bushes everywhere make it easy for someone to conceal himself in the woods, and you don't think there's much chance of finding the blue devil if he doesn't want to be spotted. A bit disappointed from the fruitless search, you wander back towards the entrance of the park - only to suddenly hear a voice from somewhere to the side: 'Hey there, sexy. Looking for anyone?'";
@@ -308,8 +308,8 @@ When Play begins:
 Section 2 - NPC
 
 Rane is a man. 
-The description of Rane is "[RaneDesc]";
-The conversation of Rane is { "Oh, hello." };
+The description of Rane is "[RaneDesc]".
+The conversation of Rane is { "Oh, hello." }.
 lastfuck of Rane is usually 555.
 
 to say RaneDesc:

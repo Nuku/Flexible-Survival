@@ -7,7 +7,7 @@ Section 1- State Fair enviornment
 
 State Fair is a room. It is fasttravel. 
 
-The description of State Fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up.  It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.";
+The description of State Fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up.  It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air.  Beneath those enticing scents there lies the strange scents of arousal, as if those musky scents are trying to hide beneath them.  Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
@@ -29,11 +29,11 @@ borisfucked is a number that varies. borisfucked is usually 0.
 BorisArtemistalk is a truth state that varies.  BorisArtemistalk is normally false.
 
 Boris the lion is a man.
-The description of Boris the lion is "Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair.  Even you recognize that the person is dressed up as  the (semi)famous Boris the lion suit.  Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn[']t a suit anymore, its Boris the lion!";
+The description of Boris the lion is "Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair.  Even you recognize that the person is dressed up as  the (semi)famous Boris the lion suit.  Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn[']t a suit anymore, its Boris the lion!".
 The conversation of Boris is { "Welcome!" }.
 Boris the lion is in State Fair.
 
-the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
+the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].".
 
 instead of conversing the Boris:
 	[puts Plush Lion as lead monster in case of impregnation]
@@ -169,7 +169,7 @@ when play ends:
 
 
 Carnival game is a man.
-The description of Carnival game is "standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.";
+The description of Carnival game is "standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
 Carnival game is in State Fair.
 
 instead of sniffing Carnival game:
@@ -181,10 +181,10 @@ gameplay is a number that varies. gameplay is usually 0.
 
 gameplay is an action applying to nothing.
 
-understand "use game" as gameplay;
-understand "try game" as gameplay;
-understand "play game" as gameplay;
-understand "win prize" as gameplay;
+understand "use game" as gameplay.
+understand "try game" as gameplay.
+understand "play game" as gameplay.
+understand "win prize" as gameplay.
 
 check gameplay:
 	if Carnival game is not visible, say "what?" instead;

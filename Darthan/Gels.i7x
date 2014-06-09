@@ -444,7 +444,7 @@ to say gel1:
 	otherwise:
 		infect "Pink Gel";
 
-the scent of pink gel is "The jello smells like strawberries.";
+the scent of pink gel is "The jello smells like strawberries.".
 
 [Blue Gel item.]
 Table of Game Objects (continued)
@@ -472,7 +472,7 @@ to say gel2:
 	otherwise:
 		infect "Blue Gel";
 
-the scent of blue gel is "The jello smells like blueberries.";
+the scent of blue gel is "The jello smells like blueberries.".
 
 [Purple Gel item.]
 Table of Game Objects (continued)
@@ -498,7 +498,7 @@ to say gel3:
 	otherwise:
 		infect "Purple Gel";
 
-the scent of purple gel is "The jello smells like grapes.";
+the scent of purple gel is "The jello smells like grapes.".
 
 
 Section 5 - Definitions

@@ -24,7 +24,7 @@ If guy, girl and hermaphrodite are banned, the player will be punished.]
 
 to say Otter attack:
 	if hp of player is greater than 0:
-		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you[apostrophe]ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
+		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you[']ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
 		now otterconsent is 1;
 		attempttowait;
 	if guy is banned and girl is banned and hermaphrodite is banned:		[HUH!  All banned!  Madness!]
@@ -117,7 +117,7 @@ to say Otter attack:
 
 [ [Otter loss] ]
 To say Otter loss:
-	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[apostrophe]t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[apostrophe]ll save you some fish![at random]'";
+	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[']t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[']ll save you some fish![at random]'";
 	
 
 to say otterstrike:
@@ -164,7 +164,7 @@ When Play begins:
 	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back a moment as [skin of player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink color as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink colour as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 16;					
@@ -206,8 +206,8 @@ name	desc	weight	object
 Fish is a grab object. 
 
 Fish is infectious. The strain of Fish is "sea otter".
-usedesc of Fish is "[Fish]";
-The purified of fish is "food";
+usedesc of Fish is "[Fish]".
+The purified of fish is "food".
 
 To say Fish:
 	decrease the hunger of the player by 15;

@@ -7,7 +7,7 @@ Version 1 of Stella by Stripes begins here.
 Section 0 - Event
 
 Eager Dal is a situation.
-The sarea of Eager Dal is "Red";
+The sarea of Eager Dal is "Red".
 when play begins:
 	add Eager Dal to badspots of hermaphrodite;
 	add Eager Dal to badspots of furry;
@@ -64,11 +64,11 @@ to say convincestella:
 Section 1 - Stella the Dalmatian
 
 Stella is a woman.
-The description of Stella is "[stelladesc]";
+The description of Stella is "[stelladesc]".
 The conversation of Stella is { "Try my dick!" }.
 StellaNPCInt is a text that varies.  StellaNPCInt is usually "AAAAAAAAAAAA".
 
-the scent of the Stella is "Stella smells of canine arousal, the scent of sex lingering around her always.";
+the scent of the Stella is "Stella smells of canine arousal, the scent of sex lingering around her always.".
 
 to say stelladesc:
 	say "     Once a female exchange student from England, she's been transformed into a herm dalmatian by the outbreak.  Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle.  Despite having a refined British accent, it seems like she's always been a bit of a ditzy slut even before coming here.  She's got shoulder-length white hair with a splash of black on her bangs.  She's wearing a pair of glasses in front of her bright, blue eyes.  She's got a somewhat larger than normal cock, canine in form and lacking in sheath or balls.  It grows from the top of her pussy, turning her clitoris into this dripping doggy dong she's so proud of.";

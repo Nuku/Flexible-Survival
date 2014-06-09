@@ -6,7 +6,7 @@ Version 8 of Parasitic Plant For FS by xeylef begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 didsubmit is a number that varies.
 plantdefeat is a number that varies.
@@ -154,9 +154,9 @@ When Play begins:
 	now cock entry is "[if looknow is 1]tentacle cock[otherwise][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green colour!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like colour, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 14;
@@ -267,8 +267,8 @@ name	desc	weight	object
 "Musky Cock Flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	Musky Cock Flower
 
 Musky Cock Flower is a grab object.
-Musky Cock Flower has a usedesc "[facerape use]";
-Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant"
+Musky Cock Flower has a usedesc "[facerape use]".
+Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant".
 
 instead of sniffing Musky Cock Flower:
 	say "The strange blossom smells strongly of cum and male musk.";

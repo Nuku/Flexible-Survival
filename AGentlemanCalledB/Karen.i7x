@@ -3,7 +3,7 @@ Karen by AGentlemanCalledB begins here.
 Section 1 - Karen
 
 Karen is a woman.
-The description of Karen is "[Karendescribing]";
+The description of Karen is "[Karendescribing]".
 The conversation of Karen is { "Karentalk" }.
 KarenTimer is a number that Varies.
 
@@ -14,7 +14,7 @@ the linkaction of Karen is "Possible Actions: [link]talk[as]talk Karen[end link]
 to say Karendescribing:
 	say "     Looking over Karen you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart shaped tag that has her name engraved on it.";
 
-the scent of Karen is "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.";
+the scent of Karen is "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.".
 
 KarenTalking is an action applying to nothing.
 Understand "talk Karen" as KarenTalking.
@@ -63,21 +63,21 @@ carry out KarenFucking:
 
 Section 2 - Karen as a pet 
 
-Retriever Girl is a pet. Retriever Girl is a part of the player;
-The description of Retriever Girl is "[RetrieverGirldesc]";
-The weapon damage of Retriever Girl is 7;
-The level of Retriever Girl is 5;
-The Dexterity of Retriever Girl is 18;
-The summondesc of Retriever Girl is "Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
-The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].";
-the fuckscene of retriever girl is "[sexwithpetkaren]";
+Retriever Girl is a pet. Retriever Girl is a part of the player.
+The description of Retriever Girl is "[RetrieverGirldesc]".
+The weapon damage of Retriever Girl is 7.
+The level of Retriever Girl is 5.
+The Dexterity of Retriever Girl is 18.
+The summondesc of Retriever Girl is "Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.".
+The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].".
+the fuckscene of retriever girl is "[sexwithpetkaren]".
 
 the linkaction of Retriever Girl is "Possible Actions: [link]talk[as]talk karen[end link], [link]smell[as]smell Retriever Girl[end link], [link]fuck[as]fuck karen[end link][line break]";
 
 to say RetrieverGirldesc:
 	say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";
 
-the scent of Retriever Girl is "     Karen has a light scent of an aroused female canine.";
+the scent of Retriever Girl is "     Karen has a light scent of an aroused female canine.".
 
 to say sexwithpetkaren:
 	say "Karen's not quite ready for more sex yet after her experience as Rex's pet.";
@@ -85,7 +85,7 @@ to say sexwithpetkaren:
 Section 3- Karen Quest
 
 Forgotten Past is a situation. Forgotten Past is Resolved.
-The sarea of Forgotten Past is "Campus";
+The sarea of Forgotten Past is "Campus".
 
 Instead of resolving a Forgotten Past:
 	if HP of Karen is 7 and companion of player is Retriever Girl:

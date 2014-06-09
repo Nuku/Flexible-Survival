@@ -308,7 +308,7 @@ to say eatcheese:
 		increase morale of player by 1;
 		decrease morale of player by 3;
 
-the scent of cheese is "The cheese smells quite delicious.";
+the scent of cheese is "The cheese smells quite delicious.".
 
 
 Section 6 - Endings

@@ -128,7 +128,7 @@ Psionic Larva is a grab object.
 Psionic Larva is infectious. The strain of Psionic Larva is "Feral Shaft Beasts".
 the usedesc of Psionic Larva is "You take the larva, and while the musk of it is strong enough to make you think of... completely unrelated things, you bite on it's head and waste no time in devouring your 'snack', surprisingly, it has a really good.. tangy.. familiar taste...[line break]";
 
-the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.";
+the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.".
 
 
 [ Edit this to have the correct Name as wall]

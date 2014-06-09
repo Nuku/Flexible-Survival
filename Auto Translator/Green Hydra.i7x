@@ -1,4 +1,4 @@
-Green Hydra for FS by Auto Translator begins here. 
+Green Hydra by Auto Translator begins here. 
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Green Hydra to Flexible Survival."

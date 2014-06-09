@@ -11,7 +11,7 @@ blood pill	1	"blood pill"
 
 
 
-addicted is a number that varies;
+addicted is a number that varies.
 addictlefttime is a number that varies.
 currentaddictionspeed is a number that varies.
 addictname is a text that varies.
@@ -34,7 +34,7 @@ before using a grab object (called X):
 			say "ERROR: ADDICTION NOT FOUND";
 			
 
-withdrawel is a number that varies;
+withdrawel is a number that varies.
 an everyturn rule:
 	if addicted is 1:
 		decrease addictlefttime by 1;
@@ -65,7 +65,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "blood pill"	"A pill you got from some strange street."	1	blood pill
 
-the scent of blood pill is "The strange pill has a harsh, metallic scent.";
+the scent of blood pill is "The strange pill has a harsh, metallic scent."
 
 
 blood pill is a grab object. It is a part of the player. It is temporary. Understand "pill" as blood pill.

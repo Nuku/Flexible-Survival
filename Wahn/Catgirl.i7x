@@ -82,7 +82,7 @@ When Play begins:
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";
 	now skin change entry is "short black fur sprouts all over your body";
 	now ass change entry is "it becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
-	now cock change entry is "it takes on a more feline shape, turning deep red in color and developing lots of tiny spines";
+	now cock change entry is "it takes on a more feline shape, turning deep red in colour and developing lots of tiny spines";
 	now str entry is 12;
 	now dex entry is 22;
 	now sta entry is 14;

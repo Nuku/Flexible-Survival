@@ -9,10 +9,10 @@ Section 1 - Event
 Section 2 - Gwen the Foal
 
 Gwen is a woman.
-The description of Gwen is "[gwendesc]";
+The description of Gwen is "[gwendesc]".
 The conversation of Gwen is { "Mama!" }.
 the fuckscene of Gwen is "[sexwithGwen]".
-the scent of the Gwen is "Gwen smells of horses.";
+the scent of the Gwen is "Gwen smells of horses.".
 
 to say gwendesc:
 	if hp of Gwen < 3:

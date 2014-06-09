@@ -12,11 +12,11 @@ The Mysterious Shop is a room. The Mysterious Shop entrance is a door. It is sou
 Instead of searching The Mysterious Shop entrance:
 	say "With the windows of the shop blacked out, all you can make out through the entrance is [the other side of The Mysterious Shop entrance].";
 
-The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, this strange shop seems to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...";
+The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, this strange shop seems to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...".
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
 
-the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.";
+the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.".
 
 section 2- Nermine
 
@@ -35,7 +35,7 @@ wrlastNermine is a number that varies. wrlastNermine is normally 255.
 angryhorguth is a number that varies.
 
 Nermine is a woman.
-The description of Nermine is "[Nerminedescribing]";
+The description of Nermine is "[Nerminedescribing]".
 The conversation of Nermine is { "Mysteeerious!" }.
 
 the linkaction of Nermine is "[nerminelinkaction]".
@@ -46,7 +46,7 @@ to say nerminelinkaction:
 	otherwise:
 		say "Possible Actions: [link]talk[as]talk Nermine[end link], [link]smell[as]smell Nermine[end link], [link]fuck[as]fuck Nermine[end link][line break]";
 
-the scent of Nermine is "Nermine smells like a female jackal. Her scent is subtle and alluring.";
+the scent of Nermine is "Nermine smells like a female jackal. Her scent is subtle and alluring.".
 
 to say Nerminedescribing:
 	if rarequesting is 13:
@@ -419,12 +419,12 @@ to say NermineSucksJ:
 
 nerminehelping is an action applying to nothing.
 
-understand "help me" as nerminehelping;
-understand "nermine help" as nerminehelping;
-understand "ask nermine for help" as nerminehelping;
-understand "help nermine" as nerminehelping;
-understand "helping nermine" as nerminehelping;
-understand "ask for help" as nerminehelping;
+understand "help me" as nerminehelping.
+understand "nermine help" as nerminehelping.
+understand "ask nermine for help" as nerminehelping.
+understand "help nermine" as nerminehelping.
+understand "helping nermine" as nerminehelping.
+understand "ask for help" as nerminehelping.
 
 check nerminehelping:
 	if Nermine is not visible, say "You certainly do need help, possibly psychiatric help, but sadly there isn't anyone here who can help you." instead;
@@ -522,24 +522,24 @@ when play begins:
 	now bargainbinusagetotal is 0;
 
 Bargain Bin is a man.
-The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?";
+The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?".
 
 the linkaction of Bargain Bin is "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
 
-the scent of bargain bin is "The bargain bin smells like omens and mysteries... at a discount price.";
+the scent of bargain bin is "The bargain bin smells like omens and mysteries... at a discount price.".
 
 strangebottledrink is a number that varies.
 bargainbinusagetotal is a number that varies.
 
 bargainhunting is an action applying to nothing.
 
-understand "hunt bargain" as bargainhunting;
-understand "hunt bin" as bargainhunting;
-understand "buy bargain" as bargainhunting;
-understand "sort bin" as bargainhunting;
-understand "sort bargain bin" as bargainhunting;
-understand "sort bargain" as bargainhunting;
-understand "hunting bargain" as bargainhunting;
+understand "hunt bargain" as bargainhunting.
+understand "hunt bin" as bargainhunting.
+understand "buy bargain" as bargainhunting.
+understand "sort bin" as bargainhunting.
+understand "sort bargain bin" as bargainhunting.
+understand "sort bargain" as bargainhunting.
+understand "hunting bargain" as bargainhunting.
 
 check bargainhunting:
 	if Bargain Bin is not visible, say "what?" instead;
@@ -945,7 +945,7 @@ name	desc	weight	object
 
 Jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as Jackal totem. 
 
-the scent of jackal totem is "The totem smells like hot sand.";
+the scent of jackal totem is "The totem smells like hot sand.".
 
 The usedesc of Jackal totem is "[jackaltotemmagic].";
 
@@ -1042,8 +1042,8 @@ Instead of Resolving a Strangeshop:
 
 
 Bacchus wine is a situation. The level of Bacchus wine is 4.
-The Sarea of Bacchus wine is "Museum";
-winefound is a number that varies;
+The Sarea of Bacchus wine is "Museum".
+winefound is a number that varies.
 when play begins:
 	add Bacchus wine to badspots of guy;
 
@@ -1086,8 +1086,8 @@ Instead of resolving a Bacchus wine:
 
 
 Stolen artifacts is a situation.
-The Sarea of Stolen artifacts is "Museum";
-Hyenatrailing is a number that varies;
+The Sarea of Stolen artifacts is "Museum".
+Hyenatrailing is a number that varies.
 
 Instead of resolving a Stolen artifacts:
 	if rarequesting is 8:
@@ -1112,7 +1112,7 @@ Instead of conversing the Valerie while Hyenatrailing is 1:
 	now Hyenatrailing is 2;
 
 Alternative entry is a situation. The level of Alternative entry is 8.
-The Sarea of Alternative entry is "Museum";
+The Sarea of Alternative entry is "Museum".
 when play begins:
 	add Alternative entry to badspots of guy;
 	add Alternative entry to badspots of furry;
@@ -1211,8 +1211,8 @@ Instead of resolving a Hyena Challenging:
 
 
 Anubis statue is a situation.
-The Sarea of Anubis statue is "Museum";
-statuequest is a number that varies;
+The Sarea of Anubis statue is "Museum".
+statuequest is a number that varies.
 
 Instead of resolving a Anubis statue:
 	if statuequest is 0:
@@ -1233,8 +1233,8 @@ Instead of resolving a Anubis statue:
 
 
 Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
-The Sarea of Bestial Pheromones is "Zoo";
-anubisrequest is a number that varies;
+The Sarea of Bestial Pheromones is "Zoo".
+anubisrequest is a number that varies.
 when play begins:
 	add Bestial Pheromones to badspots of girl;
 	add Bestial Pheromones to badspots of furry;
@@ -1265,7 +1265,7 @@ Instead of resolving a Bestial Pheromones:
 
 
 Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
-The Sarea of Twisted fruit grove is "Park";
+The Sarea of Twisted fruit grove is "Park".
 Felinoidrescued is a number that varies.
 Vinetrapped is a number that varies.
 when play begins:
@@ -1351,11 +1351,11 @@ Section 6- Rare Item case
 
 
 Rare Counter is a man.
-The description of Rare Counter is "This Glass counter seems to hold several of the finer pieces in the store, some very fancy bits of art and some finely carved gems resting next to unusual porcelain dolls and ancient looking scrolls. It also seems to be missing several pieces, or at least there are several empty spots sitting open and waiting for something to be placed there, maybe you should Talk over it to Nermine for some more information about it...";
+The description of Rare Counter is "This Glass counter seems to hold several of the finer pieces in the store, some very fancy bits of art and some finely carved gems resting next to unusual porcelain dolls and ancient looking scrolls. It also seems to be missing several pieces, or at least there are several empty spots sitting open and waiting for something to be placed there, maybe you should Talk over it to Nermine for some more information about it...".
 The conversation of Rare Counter is { "Treasure!" }.
 Rare Counter is in The Mysterious Shop.
 
-the scent of Rare Counter is "You smell the items on the counter and a shiver runs down your spine. There is something strange and mysterious to these items and they should be handled with care.";
+the scent of Rare Counter is "You smell the items on the counter and a shiver runs down your spine. There is something strange and mysterious to these items and they should be handled with care.".
 
 Rarequesting is a number that varies.
 
@@ -1477,7 +1477,7 @@ strange ankh is a grab object. It is part of the player. Understand "ankh" and "
 
 The usedesc of strange ankh is "[jackalankhmagic].";
 
-the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.";
+the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.".
 
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
@@ -1579,17 +1579,17 @@ Section 8- Strange doll
 
 
 strange doll is a pet. "The strange looking doll that you found in the bargain bin of the unusual shop, the small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still just looking at the little thing manages to bring a smile to your face.". 
-strange doll is a part of the player;
-The weapon damage of strange doll is 7;
-The level of strange doll is 1;
-The Dexterity of strange doll is 10;
-The summondesc of strange doll is "You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.";
-The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or] taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]";
+strange doll is a part of the player.
+The weapon damage of strange doll is 7.
+The level of strange doll is 1.
+The Dexterity of strange doll is 10.
+The summondesc of strange doll is "You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.".
+The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or] taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]".
 the fuckscene of strange doll is "The little doll doesn't respond to your strange offer.".
 
 dollfound is a number that varies.
 
-the scent of strange doll is "The strange doll smells strangely like you.";
+the scent of strange doll is "The strange doll smells strangely like you.".
 
 when play ends:
 	if strange doll is tamed:

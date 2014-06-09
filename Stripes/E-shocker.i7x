@@ -7,7 +7,7 @@ Section 1 - Encounter
 
 Electric shockers is a situation.  The level of electric shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo";
+The sarea of Electric shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
@@ -29,7 +29,7 @@ Instead of Resolving a Electric shockers:
 	otherwise if Electricprodstatus is 3 and carried of electric prod > 0:
 		now electric prod is fast;
 		increase eprecharge by 1;
-		say "     Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semi-functional electric prod[if eprecharge is 1], and while you aren't sure how much longer it can last, you are at least pretty sure that you can return here and fix it again should that happen[otherwise if eprecharge is 2], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining[otherwise],  and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to[end if].";
+		say "     Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semi-functional electric prod[if eprecharge is 1], and while you aren't sure how much longer it can last, you are at least pretty sure that you can return here and fix it again should that happen[otherwise if eprecharge is 2], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining[otherwise], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to[end if].";
 		now eptarget is ( a random number between 5 and 10 ) - eprecharge;	[repairs are increasingly less effective]
 		if eprecharge >= 2:
 			now Electric Shockers is resolved;
@@ -52,7 +52,7 @@ electric prod is a grab object. It is part of the player. It is fast.  It is not
 
 [It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of electric prod is 22. The weapon type of electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.]
 
-the scent of the electric prod is "The electric stun rod smells faintly of ozone.";
+the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
 to say useelectricprod:
 	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
@@ -128,7 +128,7 @@ to say useelectricprod:
 [
 Electric shockers is a situation.  The level of electric shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo";
+The sarea of Electric shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 epcountdown is a number that varies.
@@ -149,7 +149,7 @@ Instead of Resolving a Electric shockers:
 		say "You find the shack where you managed to salvage your slightly damaged Electric weapon from again, and take a quick look around inside.  But just like before, all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing, you continue on your way.";
 	otherwise if Electricprodstatus is 3:
 		increase eprecharge by 2;
-		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semi-functional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[otherwise if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[otherwise],  and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to.[end if]";
+		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semi-functional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[otherwise if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[otherwise], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to.[end if]";
 		increase carried of electric prod by 1;
 		now epcountdown is 0;
 		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]

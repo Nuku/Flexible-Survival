@@ -6,13 +6,13 @@ Version 2 of Gryphon companion by Sarokcat begins here.
 
 Section 1- Gryphoness
 
-Gryphoness is a pet.  The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player;
-The weapon damage of Gryphoness is 5;
-The level of Gryphoness is 2;
-The Dexterity of Gryphoness is 10;
-The summondesc of Gryphoness is "[summongryphoness]";
-The assault of Gryphoness is "[gryphonessassault]";
-the fuckscene of gryphoness is "[sexwithgryphoness]";
+Gryphoness is a pet.  The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player.
+The weapon damage of Gryphoness is 5.
+The level of Gryphoness is 2.
+The Dexterity of Gryphoness is 10.
+The summondesc of Gryphoness is "[summongryphoness]".
+The assault of Gryphoness is "[gryphonessassault]".
+the fuckscene of gryphoness is "[sexwithgryphoness]".
 gryphoness has a number called knowpreg.
 
 understand "Denise" as gryphoness.
@@ -178,13 +178,13 @@ an everyturn rule:
 Section 3 - Events
 
 Lonely Gryphoness is a situation.
-The sarea of Lonely Gryphoness is "Outside";
+The sarea of Lonely Gryphoness is "Outside".
 when play begins:
 	add Lonely Gryphoness to badspots of hermaphrodite;
 	add Lonely Gryphoness to badspots of furry;
 
 Gryphoness nest is a situation.  Gryphoness nest is resolved.
-The sarea of Gryphoness nest is "Beach";
+The sarea of Gryphoness nest is "Beach".
 when play begins:
 	add Gryphoness nest to badspots of hermaphrodite;
 	add Gryphoness nest to badspots of furry;

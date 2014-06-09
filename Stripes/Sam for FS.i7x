@@ -5,7 +5,7 @@ Version 2 of Sam for FS by Stripes begins here.
 Section 1 - Event
 
 Another Researcher is a situation.
-The sarea of Another Researcher is "Outside";
+The sarea of Another Researcher is "Outside".
 when play begins:
 	add Another Researcher to badspots of furry;
 	add Another Researcher to badspots of guy;
@@ -39,7 +39,7 @@ Instead of resolving Another Researcher:
 Section 2 - Mini-Lab
 
 Mini-Lab is a room. It is fasttravel. It is private.
-The description of Mini-Lab is "[minilabdesc]";
+The description of Mini-Lab is "[minilabdesc]".
 The invent of Mini-Lab is { "cot" }.
 
 the scent of Mini-Lab is "[minilabscent]".
@@ -67,9 +67,9 @@ to say minilabdesc:
 Section 3 - Sam the Researcher
 
 Sam is a man.  Sam is in Mini-Lab.
-The description of Sam is "[samdesc]";
+The description of Sam is "[samdesc]".
 The conversation of Sam is { "Thanks." }.
-the scent of Sam is "[samscent]";
+the scent of Sam is "[samscent]".
 samformtalk is a truth state that varies.  samformtalk is normally false.
 
 to say samscent:

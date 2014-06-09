@@ -23,7 +23,7 @@ tyrdefeated is a number that varies.
 tyrtraining is a truth state that varies.  tyrtraining is usually false.
 
 Tyr is a man. 
-The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???";
+The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 The conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
 
@@ -439,7 +439,7 @@ FightPit is a room.
 Instead of sniffing FightPit:
 	Say "The fighting pit smells of blood, sweat, exertion mixed in with canine musk, spooge and female honey.";
 
-The description of FightPit is "The fighting is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighter are either sparing or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit several you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others...well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here!"; 
+The description of FightPit is "The fighting is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighter are either sparing or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit several you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others...well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here!".
 Receptionist is in FightPit.
 
 
@@ -450,7 +450,7 @@ Section 4 - Receptionist
 Receptionisttalk is a number that varies.
 
 Receptionist is a man.
-The description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With grey fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, chubby black furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?";
+The description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With grey fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, chubby black furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?".
 The conversation of Receptionist is { "Everyone Have Fun Today!" }.
 Receptionist is in FightPit.
 
@@ -473,7 +473,7 @@ Instead of conversing the Receptionist:
 		decrease libido of player by 25;
 		if libido of player < 0, now libido of player is 0;
 	if Receptionisttalk is 1:
-		say "[one of]'Hello, are you looking to fight today?'[or]'I hope you find today more joyous than yesterday!' Kris giggles at you.[or]'May you days be bright, young one.' Kris pops a hand over his muzzle after saying this and then giggles shyly.[or]'I wonder how the others are doing?'[or]'I hope Vis is getting alone well 'Va.'[or]'I miss Shimi's songs.'[or]Kris is drawing in a coloring book and barely notices you.[or]Kris is playing with a yo-yo.[or]Kris is watching the fights with rapt attention.[or]Kris looks sleepy.[or]Kris seems to be thinking up something important.[or]Kris is so cute you just want to hug him![or]'If you need to get some problems off of your chest try and talk with Tyr, he's surprisingly good at mediating conflicts.'[or]Kris yawns and then yips cutely.[at random]";
+		say "[one of]'Hello, are you looking to fight today?'[or]'I hope you find today more joyous than yesterday!' Kris giggles at you.[or]'May you days be bright, young one.' Kris pops a hand over his muzzle after saying this and then giggles shyly.[or]'I wonder how the others are doing?'[or]'I hope Vis is getting alone well 'Va.'[or]'I miss Shimi's songs.'[or]Kris is drawing in a colouring book and barely notices you.[or]Kris is playing with a yo-yo.[or]Kris is watching the fights with rapt attention.[or]Kris looks sleepy.[or]Kris seems to be thinking up something important.[or]Kris is so cute you just want to hug him![or]'If you need to get some problems off of your chest try and talk with Tyr, he's surprisingly good at mediating conflicts.'[or]Kris yawns and then yips cutely.[at random]";
 
 
 
@@ -590,7 +590,7 @@ Section 7 - LockerRoom
 
 LockerRoom is a room.
 
-The description of LockerRoom is "The room where the lockers are kept is rather comfy as the white walls surrounding the area offset the silver metal containers standing in two separate rows from one another. Inside of here you can both see and smell several different mutants all walking around. Some are conversing with each other while others are storing things inside of their respective lockers, but strangely none of them seem especially hostile or lustful towards one another. Maybe releasing some excess aggression in the pit has calmed down their raging hormones?";
+The description of LockerRoom is "The room where the lockers are kept is rather comfy as the white walls surrounding the area offset the silver metal containers standing in two separate rows from one another. Inside of here you can both see and smell several different mutants all walking around. Some are conversing with each other while others are storing things inside of their respective lockers, but strangely none of them seem especially hostile or lustful towards one another. Maybe releasing some excess aggression in the pit has calmed down their raging hormones?".
 
 Instead of sniffing LockerRoom: 
 	say "The locker room smells of fresh polish, multiple mutants, sweat, testosterone, estrogen, and other varying scents. Though strangely, no trace of cum or female juice can be found within here.";

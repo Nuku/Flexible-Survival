@@ -6,7 +6,7 @@ Warehouse Events by StripeGuy begins here.
 Section 1-  dock team
 
 dock team is a situation.
-The sarea of dock team is "Warehouse";
+The sarea of dock team is "Warehouse".
 
 Instead of Resolving a dock team:
 	say "The warehouse and dock district are weirdly contrasted with the wilds of the city. There is almost a bustle about them like in the days before the nanites, a bit more orderly and perhaps slightly less savage than some harder hit areas. Oh sure, there is a lot more sex and a bit of violence, but the docks were always a rough part of town and at least around here you might get a [']by your leave['] before a rough non-consensual fucking. You pause to admire a group of longshoremen, now longshore animalmen, all working in concert to move large crates of booty from a coast-raiding galley fresh from the limited expanse of the military-cordoned nanite bubble. Despite the recent disasters, the beating human heart of greed drives a limping economy of scavenge and plunder old as time. Without power, even the loading and unloading has returned to ancient roots, the dockers working in teams with old fraying ropes and wooden pulleys. The survival of order and teamwork in the face of adversity is uplifting, and proof that humanity can overcome any obstacle with proper motivation. As you meditate on the scene, a line from an old song comes to mind, about some how some hungers are strong as the wind and tides. Something about a lust for treasure and the love of gold, you cannot quite recall.";
@@ -25,7 +25,7 @@ Instead of Resolving a dock team:
 Section 2-  Hidden Fucknest
 
 Hidden Fucknest is a scavevent. 
-The sarea of Hidden Fucknest is "Warehouse";
+The sarea of Hidden Fucknest is "Warehouse".
 
 
 Instead of Resolving a Hidden Fucknest:
@@ -73,7 +73,7 @@ instead of sniffing the belaying pin:
 Section 3-  FreshFish
 
 FreshFish is a situation.
-The sarea of FreshFish is "Warehouse";
+The sarea of FreshFish is "Warehouse".
 
 Instead of Resolving a FreshFish:
 	say "Amazingly, some sailing or oar-powered ships are still coming into the docks, bringing in [']scavenged['] supplies from coastal raids and trades among other things. Food, slaves, and other plunder feature prominently, with [']liberated['] military goods fetching a high price. There are pleasure boats, too, some still with high-class seeming occupants occasionally appearing. Not surprisingly, there are several fishing vessels that harvest what bounty is available inside the naval cordon thrown up by the military. One pulls right in next to you, dumping a massive load of fresh-caught sea-creatures onto its deck. You watch, amused, as the crew of tenrecs start sorting through the heap looking for anything that needs to be thrown back or fucked. Thinking on it, even with the diminished population, there just wouldn't be enough food in the city for everyone unless more came in from somewhere. Little wonder there is so much activity here. Maybe you could even snag some of that food for yourself, but are you daring enough to try scamming the tenrec fishermen out of some fish?";
@@ -96,7 +96,7 @@ Instead of Resolving a FreshFish:
 Section 4-  union break
 
 union break is a situation.
-The sarea of union break is "Warehouse";
+The sarea of union break is "Warehouse".
 
 Instead of Resolving a union break:
 	say "The docks are bustling, crates and muscle-powered cranes swinging everywhere, fresh-caught fish are flying too and fro, ships are tying off or casting off, and there is so much chatter and whistles! As if by magic, all that suddenly stops. Crates are set down, ropes left to hang, and all the people sudden congregate into tight knots. You casually saunter over to them, trying to ask questions while being subtle about it. A surly [one of]tenrec[or]serval[or]ox[or]gorilla[at random] [one of]draws deeply from his cigarette[or]puts away a porn mag[or]straightens their gear[or]stops chatting with a friend[at random] and answers you tersely. 'Union break.' Just as suddenly work stopped, the work kicks back in at the sound of a whistle. Cigarettes and cigars are snubbed out, dice get put away, and with a grumble everyone returns to their tasks.";
@@ -120,7 +120,7 @@ Instead of Resolving a union break:
 Section 5-  hot stepping
 
 hot stepping is a situation.
-The sarea of hot stepping is "Warehouse";
+The sarea of hot stepping is "Warehouse".
 
 Instead of Resolving a hot stepping:
 	say "Something catches your eyes as you roam the warehouse and dock district. A certain kind of stealthy movement, the kind that comes before an ambush. Sudden cautious, you decide it would be best to get out of there, and do it quickly! Glancing around, you take stock of your situation, eyeing escape routes. It might be tricky, but survival in the nanite-ravaged city has been anything but easy. Hard choices have to be made, and fast decisions! No time to think, just react - and so you spring into action!";
@@ -141,7 +141,7 @@ Instead of Resolving a hot stepping:
 Section 6-  crate shuffle
 
 crate shuffle is a situation.
-The sarea of crate shuffle is "Warehouse";
+The sarea of crate shuffle is "Warehouse".
 
 Instead of Resolving a crate shuffle:
 	say "The warehouses are not abandoned, in fact, new makeshift trading companies have sprung up from the brains of those businesspeople that didn't lose their minds after the disaster. Instead of cheap Chinese goods, cars, and fashion being brought in by massive barges, a combination of fishing, raiding, and trading ships powered by sail travel what parts of the coast and waterways that lie inside the military blockade. Food and other goods brought from the ships are traded for salvage from the city and service from those with little else to offer. It all drives a new kind of commerce that feels a bit more like an ancient bazaar than a modern port, complete with the sex, violence, and precarious amounts of order courtesy of organized beatings. It can be almost dizzying, seeing muscular fellows carting around hand-trucks and crates at remarkable speed and with a coordination that seems more mechanical than organic.";

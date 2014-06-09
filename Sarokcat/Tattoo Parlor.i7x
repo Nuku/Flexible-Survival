@@ -6,9 +6,9 @@ Section 1- Tattoo Parlor
 
 Tattoo Parlor is a room. It is fasttravel. It is private.
 
-The description of Tattoo Parlor is "The painted dragon tattoo parlor stands empty, though there are obviously signs someone had stockpiled food and water for quite a while, most of the food has obviously been eaten, and what water there is left is of dubious quality. Looking around you see signs that whoever was here last has only been gone for a couple of days at best, probably they were hiding here as long as they could before venturing out into the city when their supplies ran low. The tattoo parlor itself is both large and clean, rather reminiscent of a barber shop with its large mirrors, hair dying equipment, and adjustable couches.  Every bit of the walls not covered with mirrors, is devoted to all sorts of fantasy artwork, with everything from stylized dragons, to roaring felines, to biker gang symbols adorning the shop and displaying the different types of tattoos available.";
+The description of Tattoo Parlor is "The painted dragon tattoo parlor stands empty, though there are obviously signs someone had stockpiled food and water for quite a while, most of the food has obviously been eaten, and what water there is left is of dubious quality. Looking around you see signs that whoever was here last has only been gone for a couple of days at best, probably they were hiding here as long as they could before venturing out into the city when their supplies ran low. The tattoo parlor itself is both large and clean, rather reminiscent of a barber shop with its large mirrors, hair dying equipment, and adjustable couches.  Every bit of the walls not covered with mirrors, is devoted to all sorts of fantasy artwork, with everything from stylized dragons, to roaring felines, to biker gang symbols adorning the shop and displaying the different types of tattoos available.".
 
-The invent of Tattoo parlor is { "dirty water" , "dirty water" , "dirty water" };
+The invent of Tattoo parlor is { "dirty water" , "dirty water" , "dirty water" }.
 
 instead of sniffing Tattoo Parlor:
 	say "The tattoo parlor smells of smoke, alcohol and hyenas.";
@@ -17,7 +17,7 @@ instead of sniffing Tattoo Parlor:
 Section 2 - Finding the parlor
 
 tattoonpiercing is a situation.
-The sarea of tattoonpiercing is "Red";
+The sarea of tattoonpiercing is "Red".
 
 
 
@@ -33,7 +33,7 @@ Instead of resolving tattoonpiercing:
 
 
 Findingkara is a situation.  The level of findingkara is 9.
-The sarea of Findingkara is "Red";
+The sarea of Findingkara is "Red".
 
 Instead of resolving Findingkara:
 	if tattoohunter is 3:

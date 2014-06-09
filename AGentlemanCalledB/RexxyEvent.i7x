@@ -6,7 +6,7 @@ Section 1 - Event
 
 ForcedAdoption is a situation.
 
-The sarea of ForcedAdoption is "High";
+The sarea of ForcedAdoption is "High".
 when play begins:
 	add ForcedAdoption to badspots of guy;
 	add ForcedAdoption to badspots of girl;
@@ -46,8 +46,8 @@ name	desc	weight	object
 "Dog Treats"	"A brown paper bag, emblazoned with the logo of François['] bakery, full of deliscious, meaty smelling dog treats."	1	Dog Treats
 
 Dog Treats is a grab object. It is not temporary.
-Dog Treats has a usedesc "[GourmetDogTreatsUse]";
-the scent of Dog Treats is "	The Gourmet Treats have a rich, meaty aroma.";
+Dog Treats has a usedesc "[GourmetDogTreatsUse]".
+the scent of Dog Treats is "	The Gourmet Treats have a rich, meaty aroma.".
 
 To say GourmetDogTreatsUse:
 	say "     Peering into the bag you hungrily eye up the wonderful smelling treats, but keeping your plan to escape Rex in mind you quickly close up the bag again and stow it in your pack before your hunger gets the better of you.";
@@ -56,10 +56,10 @@ doggyboned is a number that varies. [Used to track uses of bone, after meeting R
 bonelust is a number that varies. [tracks time without using bone or fucking Rex, increases sanity loss over time]
 
 Dog Bone is a grab object.
-Dog Bone has a usedesc "[DogBoneUse]";
+Dog Bone has a usedesc "[DogBoneUse]".
 Dog Bone is infectious. The strain of Dog Bone is "retriever". It is not temporary.
 
-the scent of Dog Bone is "The bone shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.";
+the scent of Dog Bone is "The bone shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
 
 To say DogBoneUse:
 	if hp of Rex is 1:
@@ -120,20 +120,20 @@ Section 3 - Rex's Place
 
 Rex's Place is a room. It is fasttravel. It is private. 
 
-The description of Rex's Place is "     Crawling on all fours through the doggy door you find yourself in a small but surprisingly tidy single room home. There are even a few pictures still hanging from the walls, mostly featuring an attractive blonde woman and her large Golden Retriever. As you spot Rex sitting in the back with his happy retriever sexpet, there is little doubt in your mind as to what became of the woman in the pictures.";
+The description of Rex's Place is "     Crawling on all fours through the doggy door you find yourself in a small but surprisingly tidy single room home. There are even a few pictures still hanging from the walls, mostly featuring an attractive blonde woman and her large Golden Retriever. As you spot Rex sitting in the back with his happy retriever sexpet, there is little doubt in your mind as to what became of the woman in the pictures.".
 Rex is in Rex's Place.
 Karen is in Rex's Place.
 Treat Jar is in Rex's Place. 
 
-The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.";
-the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.";
+The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
+the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.".
 
 treatbegging is an action applying to nothing.
 
-Understand "beg Rex" as treatbegging;
-Understand "beg treat" as treatbegging;
-Understand "treat beg" as treatbegging;
-Understand "beg for treat" as treatbegging;
+Understand "beg Rex" as treatbegging.
+Understand "beg treat" as treatbegging.
+Understand "treat beg" as treatbegging.
+Understand "beg for treat" as treatbegging.
 
 Check Treatbegging:
 	If Treat jar is not visible, say "eh?" instead;
@@ -145,19 +145,19 @@ Carry out Treatbegging:
 	infect "Retriever";
 	decrease humanity of player by a random number between 4 and 8;
 
-the scent of Rex's Place is "The air here is thick with the scent of canine heat and sex.  You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drift into your mind as he eyes you intently.";
+the scent of Rex's Place is "The air here is thick with the scent of canine heat and sex.  You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drift into your mind as he eyes you intently.".
 
 Section 4 - Rex
 
 Rex is a man.
-The description of Rex is "[Rexdescribing]";
+The description of Rex is "[Rexdescribing]".
 The conversation of Rex is { "rextalk" }.
 lastfuck of Rex is normally 555.
 
 to say Rexdescribing:
 	say "     Lounging on a couch near the back of the room is a large retriever male. On the table beside him, you spot the doggy bone sextoy he took from you when you first met.  But as you begin to think of a way to get your prize back, you find you attention drawn to his large sheath doggy cock, your goal of getting the toy back slips from your mind as you begin to wonder how much more fun the real thing must be.";
 
-the scent of Rex is "     The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.";
+the scent of Rex is "     The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.".
 
 instead of conversing the Rex:
 	if hp of Karen is 3 and Dog Treats is owned:
@@ -297,13 +297,13 @@ Instead of fucking the Rex:
 [Section 5a - Karen
 
 Karen is a woman.
-The description of Karen is "[Karendescribing]";
+The description of Karen is "[Karendescribing]".
 The conversation of Karen is { "Karentalk" }.
 
 to say Karendescribing:
 	say "     Looking over Karen you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart shaped tag that has her name engraved on it.";
 
-the scent of Karen is "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.";
+the scent of Karen is "     Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.".
 
 instead of conversing the Karen:
 	if hp of Karen is 1:
@@ -320,13 +320,13 @@ Instead of fucking the Karen:
 
 Section 5b - Karen as pet [Temporary basic set-up]
 
-Retriever Girl is a pet. Retriever Girl is a part of the player;
-The description of Retriever Girl is "[RetrieverGirldesc]";
-The weapon damage of Retriever Girl is 7;
-The level of Retriever Girl is 5;
-The Dexterity of Retriever Girl is 18;
-The summondesc of Retriever Girl is "Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
-The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].";
+Retriever Girl is a pet. Retriever Girl is a part of the player.
+The description of Retriever Girl is "[RetrieverGirldesc]".
+The weapon damage of Retriever Girl is 7.
+The level of Retriever Girl is 5.
+The Dexterity of Retriever Girl is 18.
+The summondesc of Retriever Girl is "Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.".
+The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].".
 
 to say RetrieverGirldesc:
 	say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";

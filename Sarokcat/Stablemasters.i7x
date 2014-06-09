@@ -6,16 +6,16 @@ Section 1- Master's Office
 
 Master's Office is a room. It is fasttravel. It is private.
 
-The description of Master's Office is "This large and rather spacious room was once the [']office['] of the owner of the Stables Hotel, however now it is your new room and the centerpiece of your new kingdom.  The room itself was obviously once a suite for VIPs and dignitaries and is quite well furnished, though the previous Stablemaster obviously did plenty of redecorating during his time here. There are now several large mattresses and piles of cushions around the area, as well as a number of rather nice paintings and hangings adorning the walls, and thick plush carpeting covers the floor which actually makes things quite comfortable for your hooved feet.  Several new furnishings also are now in the public side of the large room however, a functional new desk with an in-box for reports that affect the Stables, as well as several overstuffed chairs sized for your new equine staff when you decide to meet them here. Although perhaps your favorite new furnishing is the former Stablemaster herself, the lovely little black equine looking especially fetching in her new sexy slave collar as she kneels off to the side of the room.";
+The description of Master's Office is "This large and rather spacious room was once the [']office['] of the owner of the Stables Hotel, however now it is your new room and the centerpiece of your new kingdom.  The room itself was obviously once a suite for VIPs and dignitaries and is quite well furnished, though the previous Stablemaster obviously did plenty of redecorating during his time here. There are now several large mattresses and piles of cushions around the area, as well as a number of rather nice paintings and hangings adorning the walls, and thick plush carpeting covers the floor which actually makes things quite comfortable for your hooved feet.  Several new furnishings also are now in the public side of the large room however, a functional new desk with an in-box for reports that affect the Stables, as well as several overstuffed chairs sized for your new equine staff when you decide to meet them here. Although perhaps your favorite new furnishing is the former Stablemaster herself, the lovely little black equine looking especially fetching in her new sexy slave collar as she kneels off to the side of the room.".
 Slutslave is in Master's Office.
 
 the linkaction of Slutslave is "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";
 
-the scent of Master's Office is "The Master's Office, your office, smells of equines and sex.";
+the scent of Master's Office is "The Master's Office, your office, smells of equines and sex.".
 
-the scent of Slutslave is "Your slutslave smells of horses, lust and sex.";
+the scent of Slutslave is "Your slutslave smells of horses, lust and sex.".
 
-The invent of Master's Office is { "chips" , "soda", "cot", "medkit" };
+The invent of Master's Office is { "chips" , "soda", "cot", "medkit" }.
 
 
 Section 2- Slutslave 
@@ -25,7 +25,7 @@ LastSlutslavefucked is a number that varies. LastSlutslavefucked is usually 250.
 Slutslavefucked is a number that varies. Slutslavefucked is usually 0.
 
 Slutslave is a man.[or woman]
-The description of Slutslave is "Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut['] though eventually she may earn a proper name instead. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all then a master... and she seems to enjoy her new lot in life quite a bit as well.  Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to Learn from Slut sometime, or maybe just spend some time enjoying Training your slave.";
+The description of Slutslave is "Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut['] though eventually she may earn a proper name instead. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all then a master... and she seems to enjoy her new lot in life quite a bit as well.  Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to Learn from Slut sometime, or maybe just spend some time enjoying Training your slave.".
 The conversation of Slutslave is { "Fuck me!" }.
 
 
@@ -57,12 +57,12 @@ Slutslavelearned is a number that varies. Slutslavelearned is usually 0.
 
 Slavelearning is an action applying to nothing.
 
-Understand "Learn from slut" as Slavelearning;
-Understand "Train slave" as Slavelearning;
-Understand "Train your slave" as Slavelearning;
-Understand "Learn from slave" as Slavelearning;
-Understand "Listen to slave" as Slavelearning;
-Understand "Train slut" as Slavelearning;
+Understand "Learn from slut" as Slavelearning.
+Understand "Train slave" as Slavelearning.
+Understand "Train your slave" as Slavelearning.
+Understand "Learn from slave" as Slavelearning.
+Understand "Listen to slave" as Slavelearning.
+Understand "Train slut" as Slavelearning.
 
 Check Slavelearning:
 	If Slutslave is not visible, say "huh?" instead;

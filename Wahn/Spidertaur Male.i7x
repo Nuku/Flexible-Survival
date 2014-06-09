@@ -294,7 +294,7 @@ Section 4 - NPC
 
 
 Spider's Web is a room. It is a fasttravel. Spider's Web is private. Spider's Web is sleepsafe.
-The description of Spider's Web is "[WebDesc]";
+The description of Spider's Web is "[WebDesc]".
 
 to say WebDesc:
 	say "     Aelias['] web lies in one of the abandoned buildings at the edge of the warehouse district. From the looks of it, it was a warehouse or industrial building itself at some point in the past, then got rebuilt into a loft-apartment. Now it has been transformed again, the spidertaur having removed all the furniture and building his home and love-nest in here. Between the hardwood floor and the thick wooden beams high on the ceiling, he's put up what must be hundreds if not thousands of thick silk strands, forming elaborate structures with flowing lines. Some are simply functional, like the storage cocoons stuck to the walls and ceiling, but others speak of Aelias artistic side - decorative objects dangling from the ceiling as well as geometric patterned webs stretched over one wall. And then there's of course the sex sling you've spent some quite pleasant time in before...";
@@ -304,8 +304,8 @@ Instead of sniffing Spider's Web:
 	
 Aelias is a man. 
 Aelias is in Spider's Web.
-The description of Aelias is "[AeliasDesc]";
-The conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." };
+The description of Aelias is "[AeliasDesc]".
+The conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.
 lastfuck of Aelias is usually 555.
 
 to say AeliasDesc:

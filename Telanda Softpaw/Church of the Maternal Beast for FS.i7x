@@ -33,7 +33,7 @@ to say publicbeachdesc:
 West of Beach Plaza is Public Beach.
 
 Unsupervised Beach is a door. "The beach continues along to the south, but is unsupervised.  Unlike here, you see few people around... perhaps for good reason." Unsupervised Beach is dangerous.
-The marea of Unsupervised Beach is "Beach";
+The marea of Unsupervised Beach is "Beach".
 
 South of Public Beach is Unsupervised Beach.
 South of Unsupervised Beach is UnsupBeach. [Check]
@@ -89,9 +89,9 @@ part 3.1 - Generic Definitions
 beachrape is a truth state that varies. beachrape is usually false.
 houndfromhell is a truth state that Varies. houndfromhell is usually false.
 
-understand "beach" as Beach Plaza;
-understand "church" as Beach Plaza;
-understand "board" as Notice Board;
+understand "beach" as Beach Plaza.
+understand "church" as Beach Plaza.
+understand "board" as Notice Board.
 
 to say beachrapetoggle:
 	now beachrape is True;
@@ -109,7 +109,7 @@ Instead of examining the Notice Board:
 
 part 3.3 - Confession Booth
 
-lastconfession is a number that varies. lastconfession is 248;
+lastconfession is a number that varies. lastconfession is 248.
 
 This is the church description rule:
 	say "     As you ask about the church, you hear a friendly little laugh from the other side of the booth.  'Indeed! That truly is the question we are asked most!' you sense the priestess smiling even though you cannot see her.";

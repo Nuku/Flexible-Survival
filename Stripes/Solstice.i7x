@@ -5,7 +5,7 @@ Version 2 of Solstice by Stripes begins here.
 Section 1 - Treasure Hunting
 
 Adventurer is a situation.  The level of Adventurer is 5.
-The sarea of Adventurer is "Outside";
+The sarea of Adventurer is "Outside".
 Adventurer is resolved.
 
 when play begins:
@@ -85,7 +85,7 @@ Instead of resolving Adventurer:
 
 
 Onyx Crow is a situation.  The level of Onyx Crow is 5.
-The sarea of Onyx Crow is "Museum";
+The sarea of Onyx Crow is "Museum".
 Onyx Crow is resolved.
 
 when play begins:
@@ -153,7 +153,7 @@ an everyturn rule:
 Section 2 - Solstice the Vulpogryph		[coming soon]
 
 Solstice is a woman.
-The description of Solstice is "[solsticedesc]";
+The description of Solstice is "[solsticedesc]".
 The conversation of Solstice is { "Treasure!" }.
 
 to say solsticedesc:
@@ -161,7 +161,7 @@ to say solsticedesc:
 
 the linkaction of Solstice is "Possible Actions: [link]talk[as]talk Solstice[end link], [link]smell[as]smell Solstice[end link], [link]fuck[as]fuck Solstice[end link], [link]lesson[as]lesson Solstice[end link][line break]";
 
-the scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.";
+the scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.".
 
 Instead of conversing Solstice:
 	say "[one of]'It's so nice being here with you, my sweety,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures.  We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if player is fullyvg]'You make such a sexy vulpogryph, my dear.  I knew you'd make a wonderful mate,' she purrs sensually as she runs her taloned paws over you.[otherwise if player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear.  You'll be my perfect mate,' she purrs sensually as she runs her taloned paws over you.[otherwise]'I think you'd look much better as a sexy vulpogryph like me, hon,' she purrs sensually as she runs her taloned paws over you.[end if][or]'Mmm... you should stay here with me, sexy.  We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";

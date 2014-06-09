@@ -11,7 +11,7 @@ name	desc	weight	object
 
 pepperspray is a grab object. It is a part of the player. It is fast. It is not temporary.
 
-the scent of the pepperspray is "Smelling the pepperspray canister makes your eyes water.";
+the scent of the pepperspray is "Smelling the pepperspray canister makes your eyes water.".
 
 to say pepperspraydrain:
 	now peppereyes is 3;

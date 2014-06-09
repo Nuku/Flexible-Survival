@@ -5,7 +5,7 @@ Section 1 - Mysterious Stranger
 
 Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 
-The sarea of Mysterious Stranger is "Outside";
+The sarea of Mysterious Stranger is "Outside".
 
 Instead of resolving a Mysterious Stranger:
 	Say "'Hey, you over there with the [facename of player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of a overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
@@ -45,7 +45,7 @@ Section 2 - Air Drop
 
 Air Drop is a situation. The level of Air Drop is 3.
 
-The sarea of Air Drop is "Outside";
+The sarea of Air Drop is "Outside".
 
 Instead of resolving a Air Drop:
 	Say "The whirling sound of a helicopter's blades spinning like mad catches the edge of your hearing and in looking skyward you find yourself noting a large whirlybird with a massive metal crate tied to a long wire flying overhead. Not sure what this is all about, but curious anyway you head off into the direction the helicopter is going. It takes you some time but eventually you end up trailing the helicopter all the way to a seemingly abandoned junkyard.";
@@ -63,7 +63,7 @@ Instead of resolving a Air Drop:
 Section 3 - Magical Girl
 
 Magical Girl is a situation. 
-The sarea of Magical Girl is "Outside";
+The sarea of Magical Girl is "Outside".
 When play begins:
 	Add Magical Girl to badspots of humorous;
 
@@ -71,7 +71,7 @@ Instead of resolving a Magical Girl:
 	Say "When out of the blue something falls onto your head you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
 	Say "Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[otherwise]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!'. The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if... Maybe you could perhaps shout the phrase out aloud just to see what happens? (Y=Yes, N=No)";
 	If player consents:
-		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow colored light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
+		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow coloured light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		Say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		now carried of Sailor Outfit is 1;
@@ -109,13 +109,13 @@ Section 4 - Triton
 
 Triton is a situation. The level of Triton is 9.
 
-The sarea of Triton is "Beach";
+The sarea of Triton is "Beach".
 When play begins:
 	Add Triton to badspots of furry;
 	Add Triton to badspots of guy;
 
 Instead of resolving a Triton:
-	Say "Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[otherwise]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you mind lulling you almost to sleep, however, before you can become to lost in all encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze colored trident free-floating like a abandoned surfboard along the waterline.";
+	Say "Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[otherwise]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you mind lulling you almost to sleep, however, before you can become to lost in all encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze coloured trident free-floating like a abandoned surfboard along the waterline.";
 	Say "Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[otherwise]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
 	Say "The instinctual need to run has your legs tensing and before you know it your trying to swim/run back to the shore, but before you can get too far you find the trident in your hands tugging you backwards to the way the sea dragons are. Blinking you look down at the weapon, then up to the oncoming dragons and then back to the beach. Maybe you should just toss the thing and continue that run you were trying to go for? (Y=Yes, N=No)";
 	If the player consents:
@@ -154,7 +154,7 @@ instead of sniffing trident:
 Section 5 - June Mermaid 
 
 June Mermaid is a situation.
-The sarea of June Mermaid is "Warehouse";
+The sarea of June Mermaid is "Warehouse".
 
 Instead of resolving a June Mermaid:
 	Say "Heading along one of the boardwalks of the warehouse district's north dock you come to find a young mermaid, you blink twice to be sure, but yes you are seeing a naked half female half fish woman, sitting along one of the lower docks talking to a young otter. The two seem to be chuckling over something, but you can't hear the conversation from where you are. Taking the time to watch the two of them you look to see the mermaid, with her long cerulean hair and ample bosom, as she leans over next to the otter, who is quite male from what your eyes can tell you of the other's gender, and then goes to town nuzzling the other somewhat fondly. It's only the sudden shout of someone calling out for someone else that breaks up this tender little moment.";
@@ -178,7 +178,7 @@ Instead of resolving a Anomaly:
 Section 7 - Free Catch!
 
 Free Catch is a situation.
-The sarea of Free Catch is "Warehouse";
+The sarea of Free Catch is "Warehouse".
 When play begins:
 	Add Free Catch to badspots of furry;
 
@@ -192,7 +192,7 @@ Instead of resolving a Free Catch:
 Section 8 - Rumors
 
 Rumors is a situation.
-The sarea of Rumors is "Warehouse";
+The sarea of Rumors is "Warehouse".
 
 Instead of resolving a Rumors:
 	Say "While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' A middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' The otter asks unimpressively. 'Well, rumor has it that they were in business long before the epidemic hit this side of the states.' The orca mutters somewhat quietly. 'Where'd you hear such a thing from.' The hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a serious of strange events started to take place down there.'";
@@ -204,7 +204,7 @@ Instead of resolving a Rumors:
 Section 9 - Diving contest
 
 Diving Contest is a situation.
-The sarea of Diving Contest is "Warehouse";
+The sarea of Diving Contest is "Warehouse".
 
 Instead of resolving a Diving Contest:
 	Say "Moving over to the pier and listening to several groups of mutants arguing with each other over who can dive the best you watch as a somewhat bored looking pirate shark comes over and then offers a challenge to the groups. The rules are simply: whoever can show off the best moves while diving gets to put their group's mark on a board at the front of the pier for this week and be named Diving Champs. This sets the respective groups on fire and soon the contest to see who can dive the best gets quickly under way. You don't stay to watch the show, but you do notice how everyone seems to be getting along better now since they have a way to exert some of their pent up aggressions with one another. Maybe this will be a key to helping to figure things out for later, you think before moving on.";
@@ -215,7 +215,7 @@ Instead of resolving a Diving Contest:
 Section 10 - Lackadaisical
 
 Lackadaisical is a situation.
-The sarea of Lackadaisical is "Warehouse";
+The sarea of Lackadaisical is "Warehouse".
 When play begins:
 	Add Lackadaisical to badspots of furry;
 

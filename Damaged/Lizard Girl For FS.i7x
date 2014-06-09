@@ -7,10 +7,10 @@ Version 8 of Lizard Girl For FS by Damaged begins here.
 Section 1 - Monster Responses
 
 
-lizgirlmarked is a number that varies;
-lizgirlimpreg is a number that varies;
-lizgirlinheat is a number that varies;
-lizgirlangry is a number that varies;
+lizgirlmarked is a number that varies.
+lizgirlimpreg is a number that varies.
+lizgirlinheat is a number that varies.
+lizgirlangry is a number that varies.
 
 
 to say lizgirl herm:

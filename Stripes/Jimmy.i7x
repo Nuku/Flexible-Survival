@@ -6,7 +6,7 @@ Section 1 - Event
 
 [Situation opened by Good Alexandra]
 Automaton Activity is a situation.  The level of Automaton Activity is 6.  It is resolved.
-The sarea of Automaton Activity is "Capitol";
+The sarea of Automaton Activity is "Capitol".
 
 instead of resolving Automaton Activity:
 	if hp of Jimmy is 0:
@@ -58,10 +58,10 @@ instead of resolving Automaton Activity:
 Section 2 - Jimmy the Corgi
 
 Jimmy is a man.
-The description of Jimmy is "[jimmydesc]";
+The description of Jimmy is "[jimmydesc]".
 The conversation of Jimmy is { "Yay!" }.
 
-the scent of the Jimmy is "Jimmy smells pleasantly of dog.";
+the scent of the Jimmy is "Jimmy smells pleasantly of dog.".
 
 to say jimmydesc:
 	if hp of Jimmy < 3:

@@ -5,7 +5,7 @@ Version 3 of Frank by Stripes begins here.
 Section 1 - Event and Comic Store
 
 Mephitness is a situation.  The level of Mephitness is 6.
-The sarea of Mephitness is "High";
+The sarea of Mephitness is "High".
 when play begins:
 	add Mephitness to badspots of guy;
 	add Mephitness to badspots of girl;
@@ -65,9 +65,9 @@ Instead of resolving a Mephitness:
 
 
 Comic Shop is a room. It is fasttravel. It is private.
-The description of Comic Shop is "[comicshopdesc]";
+The description of Comic Shop is "[comicshopdesc]".
 
-the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.";
+the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.".
 
 to say comicshopdesc:
 	say "     The shadowy comic shop is on the second floor of a run down building at the edge of the neighbourhood.  It is wedged between other similarly decrepit looking establishments.  Being behind a barred door and upstairs seems to have saved it from the lustful hordes of monsters.  The shop itself is fairly large, but there is little space to move.  There are shelves and displays everywhere for comics, manga and games, making it very difficult to navigate around inside.";
@@ -76,13 +76,13 @@ to say comicshopdesc:
 Section 2 - Frank the Skunk
 
 Frank is a man.  Frank is in Comic Shop.
-The description of Frank is "[frankdesc]";
+The description of Frank is "[frankdesc]".
 The conversation of Frank is { "NERD!" }.
 lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 franksex is a number that varies.
 frankmalesex is a number that varies.
 
-the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.";
+the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
 
 to say frankdesc:
 	say "     Frank is a heavy-set skunk fellow.  His encounter with the skunks seems to have slimmed him down a little, but he is still quite portly.  His black and white fur is thick and soft.  As he now has fur, he's forgone wearing clothes aside from a ballcap with the store logo on it.";

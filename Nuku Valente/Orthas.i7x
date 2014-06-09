@@ -8,7 +8,7 @@ The description of Orthas is "[orthasNPCdesc]".
 The conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
-the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of Orthas is 2 or hp of Orthas is 3].  She has a lingering scent of arousal hanging over her[otherwise if hp of Orthas is 4].  She has a strong scent of arousal and egg-laying hanging over her[end if].";
+the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of Orthas is 2 or hp of Orthas is 3].  She has a lingering scent of arousal hanging over her[otherwise if hp of Orthas is 4].  She has a strong scent of arousal and egg-laying hanging over her[end if].".
 
 the fuckscene of orthas is "[orthasfuck]".
 
@@ -154,7 +154,7 @@ to say orthas_task2_start:
 
 
 Orthas's House is a situation.  The level of Orthas's House is 5.  It is resolved.
-The sarea of Orthas's House is "Red";
+The sarea of Orthas's House is "Red".
 
 instead of resolving Orthas's House:
 	if hp of Orthas is not 5:
@@ -250,7 +250,7 @@ instead of using footlocker:
 	otherwise:
 		say "     The footlocker's locked.  You don't think Orthas would be pleased with you prying into her personal stuff.";
 
-the scent of the footlocker is "There's no particular scent to this.";
+the scent of the footlocker is "There's no particular scent to this.".
 
 crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
 

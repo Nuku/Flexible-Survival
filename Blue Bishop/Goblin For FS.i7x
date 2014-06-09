@@ -7,7 +7,7 @@ Version 2 of Goblin For FS by Blue Bishop begins here.
 Section 1 - Monster Responses
 
 gobgender is a number that varies.
-gobdem is a truth state that varies. gobdem is usually false;
+gobdem is a truth state that varies. gobdem is usually false.
 
 to say losetogoblin:
 	now goblinfight is 2;

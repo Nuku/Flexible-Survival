@@ -5,17 +5,17 @@ Version 1 of Sierrasaur by Blue Bishop begins here.
 
 Section 1 - Monster Responses
 
-sierrapure is a truth state that varies. sierrapure is usually false; [Used as shorthand to detect if the player is a pure sierran]
-sierramem is a number that varies. sierramem is usually 0; [Used to ward repitition of expository prose]
-sierramale is a truth state that varies. sierramale is usually false; [A trigger used as shorthand to determine if the player banned herms]
+sierrapure is a truth state that varies. sierrapure is usually false. [Used as shorthand to detect if the player is a pure sierran]
+sierramem is a number that varies. sierramem is usually 0. [Used to ward repitition of expository prose]
+sierramale is a truth state that varies. sierramale is usually false. [A trigger used as shorthand to determine if the player banned herms]
 
-lustatt is a number that varies. lustatt is usually 0;
-struggleatt is a number that varies. struggleatt is usually 0;
-bsextimer is a number that varies. bsextimer is usually 0;
-boundstate is a truth state that varies. boundstate is usually false;
-voreloss is a truth state that varies. voreloss is usually false;
-psycheadjust is a number that varies. psycheadjust is usually 0;
-lustadjust is a number that varies. lustadjust is usually 0;
+lustatt is a number that varies. lustatt is usually 0.
+struggleatt is a number that varies. struggleatt is usually 0.
+bsextimer is a number that varies. bsextimer is usually 0.
+boundstate is a truth state that varies. boundstate is usually false.
+voreloss is a truth state that varies. voreloss is usually false.
+psycheadjust is a number that varies. psycheadjust is usually 0.
+lustadjust is a number that varies. lustadjust is usually 0.
 
 to say losetosierra:
 	if hp of player > 0:
@@ -356,7 +356,7 @@ name	desc	weight	object
 "Earthen Seed"	"A small vial of peculiar, regenerative ejaculate"	1	Earthen Seed
 
 Earthen Seed is a grab object. It is a part of the player. Earthen Seed is infectious. The strain of Earthen Seed is "Sierrasaur".
-the scent of Earthen Seed is "The warm swill has a heady, masculine scent.";
+the scent of Earthen Seed is "The warm swill has a heady, masculine scent.".
 The usedesc of Earthen Seed is "[usesierraseed]";
 
 to say usesierraseed:		[only alters sizes, not gender]

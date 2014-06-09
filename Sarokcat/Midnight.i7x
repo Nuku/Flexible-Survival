@@ -10,7 +10,7 @@ Midnightmimiced is a number that varies. Midnightmimiced is usually 0.
 LastMidnightfucked is a number that varies. LastMidnightfucked is usually 250.
 
 Midnight is a man.[or woman]
-The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.";
+The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
 The conversation of Midnight is { "Mrowl!" }.
 
 instead of linkactioning Midnight:

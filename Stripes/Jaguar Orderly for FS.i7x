@@ -168,7 +168,7 @@ name	desc	weight	object
 libido suppressant is a grab object. It is a part of the player. It is fast.
 libsuppcount is a number that varies.
 
-the scent of the libido suppressant is "The libido suppressant smells of chemicals and medicine.";
+the scent of the libido suppressant is "The libido suppressant smells of chemicals and medicine.".
 
 the usedesc of libido suppressant is "[libsupp]".
 

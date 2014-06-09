@@ -6,7 +6,7 @@ Section 1 - FireStation
 
 Fire Station 86 is a room. It is fasttravel. 
 
-The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky messy of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up allowing you entrance. Entering into the cool building you find that the firehouse is exactly as you would have imagined it to be[otherwise]Wondering how Kenaz is doing you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].";
+The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky messy of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up allowing you entrance. Entering into the cool building you find that the firehouse is exactly as you would have imagined it to be[otherwise]Wondering how Kenaz is doing you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].".
 
 North of Fire Station 86 is Firehouse.
 
@@ -17,7 +17,7 @@ Section 1a - Firehouse
 
 KTO is a number that varies. 
 Up of Firehouse is Sleeping Quarters.
-The description of Firehouse is "[firehousedesc]";
+The description of Firehouse is "[firehousedesc]".
 
 To say firehousedesc:
 	If kto is 0:
@@ -53,7 +53,7 @@ Kenazfucked is a number that varies. Kenazfucked is usually 0.
 rsc is a number that varies.
 
 Kenaz is a man. Kenaz is in FireHouse. 
-The description of Kenaz is "[Kenazcurrentform]";
+The description of Kenaz is "[Kenazcurrentform]".
 The conversation of Kenaz is { "Be on alert!" }.
 
 instead of linkactioning Kenaz when rsc >= 2:
@@ -275,7 +275,7 @@ To say aidKenaz1:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		Say "By the thick sheath and heavy balls swaying between the former human woman's legs it would see that Kenaz wasn't just whistling Dixie here. A grunt from Othala makes your eyes snap up and you blush just in time to see the former female winking coyly at you. 'Hey,' Kenaz's voice has your [facename of player] face snapping back around to look at the other man. 'If you wouldn't mind could you go to find this feral Dalmatian and bringing it back here?' Immediately you ask Kenaz why he would want the thing brought here of all places.";
-		Say "'That's because,' Othala's voice ends up drawing your attention back towards her...him. 'the sexy Dal that bit me just so happens to be one of the firefighters from this station.' Asking Othala how she...he knows this you get a very...peculiar answer from the other. 'Because a little birdie literally told me so.' Othala shrugs at this point. Had this been any place but the town you live in you would have thought the other was crazy, but all things considered... 'Yeah, color me surprised, but after I got bit this huge hawk comes out of now to chase the furry brute off while this blonde wearing a hoodie shows up to patch my leg.'";
+		Say "'That's because,' Othala's voice ends up drawing your attention back towards her...him. 'the sexy Dal that bit me just so happens to be one of the firefighters from this station.' Asking Othala how she...he knows this you get a very...peculiar answer from the other. 'Because a little birdie literally told me so.' Othala shrugs at this point. Had this been any place but the town you live in you would have thought the other was crazy, but all things considered... 'Yeah, colour me surprised, but after I got bit this huge hawk comes out of now to chase the furry brute off while this blonde wearing a hoodie shows up to patch my leg.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		Say "Othala turns to the side slightly and then shows you a circular pattern of black spots framing her lower left calf muscle. 'Anyway,' The male Dal turns and then chuckles at the slightly lustful look you're giving him. 'long story short, the blonde said something about her tracking down a rouge mutant that's running around town biting people and subsequently turning them into mutants. At the time I couldn't have cared less, what with my leg bleeding like I had an artery burst, however, when the blonde said that the name Pertho I immediately started to grill her for info. As it turns out this [italic type]thing[roman type], whatever it is, is going around the city playing infecting people against their will. Sadly,' Othala turns his head to sigh at this.";
@@ -337,11 +337,11 @@ To say aidKenaz4:
 		say "Ears pulling up and then curling down, nose flattening onto the end of his face and growing dark, small strands - the beginnings of whiskers -  growing out of the side of his elongating face all mark the signs that Kenaz is about to become a canine anthromorph. The fact that the other's hair is pulling down the side of his head, growing thicker and more luxurious is of little consequence to all present as the superficial additions cannot outshine the fact that the grunting and whimpering firefighter on the floor is in utter agony because of his change. Hands spreading out onto the floor, pushing up because of new pads replacing the former soft palms belonging to Kenaz don't help to ease the transition for the other, especially not when these new paw pads introduce much thicker fingernails with them. The slight cracking of the bones of Kenaz's fingers makes some of the others turn their heads.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		Say "Dark fingernails scrapping against the concrete floor, the offset of black claws about to form, herald greater whimpers out of Kenaz as the man twists and turns around like mad as his body continues its transmogrification which, as a result, forces Othala and the others to back up to give the other much needed room. With his pants having been stripped free from his body you can see Kenaz's thighs and legs contorting and shifting as the firefighter's lower body gains canine-like attributes. Heels raising up as both feet begin to expand, the same as with the firefighter's hands, while toenails turn sickly black in color, only to then protrude out almost an inch a half from the man's foot make it clear that Kenaz is going to have a digitigrade stance once this is all over with. [if player is not purehuman]While you yourself have gone through the changes like these more often than not[otherwise]Despite knowing such changes are rampant out in the city[end if], it's something very unusual to see someone else go through them, especially in an almost violent sort of way as Kenaz is right now.";
+		Say "Dark fingernails scrapping against the concrete floor, the offset of black claws about to form, herald greater whimpers out of Kenaz as the man twists and turns around like mad as his body continues its transmogrification which, as a result, forces Othala and the others to back up to give the other much needed room. With his pants having been stripped free from his body you can see Kenaz's thighs and legs contorting and shifting as the firefighter's lower body gains canine-like attributes. Heels raising up as both feet begin to expand, the same as with the firefighter's hands, while toenails turn sickly black in colour, only to then protrude out almost an inch a half from the man's foot make it clear that Kenaz is going to have a digitigrade stance once this is all over with. [if player is not purehuman]While you yourself have gone through the changes like these more often than not[otherwise]Despite knowing such changes are rampant out in the city[end if], it's something very unusual to see someone else go through them, especially in an almost violent sort of way as Kenaz is right now.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		Say "When Kenaz turns over and then gets up onto his hands and knees you find your eyes pull themselves up to watch as a small nub grows out at the end of the other's tailbone. It takes only six seconds for that nub to push out into a thin, but fleshy tail and then another five seconds for small wisps of white fur to completely cover the swaying appendage. Eyes focused on Kenaz's new tail you almost miss the rest of the changes as the firefighter's spine pops and flexes while at the same time his chest and shoulders expand outwards with his newly acquired muscle mass.";
-		Say "A few more minutes of small, but important shifts all along Kenaz' now fully furred body, like the head of other man's cock tapering down to a pointed tip while his six inch shaft thickens and then lengthens to gain several more inches at the same time it grows dark crimson in color. A furry sheath forms at the lower end of Kenaz's cock, the perfect home for the new organ the firefighter now has while at the same time Kenaz's balls expand slightly while growing furry as a veritable wave of white fur rushes over the former human's sac.";
+		Say "A few more minutes of small, but important shifts all along Kenaz' now fully furred body, like the head of other man's cock tapering down to a pointed tip while his six inch shaft thickens and then lengthens to gain several more inches at the same time it grows dark crimson in colour. A furry sheath forms at the lower end of Kenaz's cock, the perfect home for the new organ the firefighter now has while at the same time Kenaz's balls expand slightly while growing furry as a veritable wave of white fur rushes over the former human's sac.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "Soon though the changes come to a complete end, however, when they do Kenaz all but flops down onto the ground as his tired, sweat soaked form literally just gives up the fight in favor of the panting and drooling there onto the floor. Whimpering and shivering slightly you and Othala quickly kneel next to Kenaz to ask him if he's alright. 'Never...better...' The other says with more conviction anyone present thought should have been possible. A round of heartfelt chuckles resonate throughout the room at this point.";
@@ -485,7 +485,7 @@ to say aidKenaz7:
 	say "The last of the transformations taper off just as Kenaz thrust three of his fingers up into his fully formed snatch causing him to cum from two ends at once. Amazingly enough the Dal's pitch black cock doesn't just shot a load from up out of his balls, instead the now eight foot tall Dalmatian fired off several thick bullets of whitish-yellow cum so hard they when they hit the metal of the garage doors, which Kenaz just so happened to be facing, they actually caused the metal give slightly. Of course the now giant sized Dalmatian didn't notice this however, because just as soon as he came the fully changed firefighter howled his climax to the top of the ceiling as he wildly rocked his hips forward to aid the end of his orgasm. His cunt wasn't left out of the christening of his new growth because just as the fifth shot of cum blasted out of Kenaz's cock a literally fountain of clear nectar flooded out from the Dalmatian new pussy forming a small lake appear on the concrete.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "It took maybe two minutes for Kenaz to lower his head back down from singing his praise to the sky, another couple of seconds for the other to release his fingers from around his onyx colored shaft while at the same time unsheathing his much thicker digits from inside of his feminine folds, and then another minute before anybody could think to say anything. Othala, ever the leader, was the one first who chose to speak.";
+	say "It took maybe two minutes for Kenaz to lower his head back down from singing his praise to the sky, another couple of seconds for the other to release his fingers from around his onyx coloured shaft while at the same time unsheathing his much thicker digits from inside of his feminine folds, and then another minute before anybody could think to say anything. Othala, ever the leader, was the one first who chose to speak.";
 	say "'Kenaz...this might be a dumb question, but are you still you?' Nobody moved as the eight foot Dal turned his head to look at the six foot something spotted firefighter. Yet when Kenaz next spoke all present knew that another big change was in the wind. 'Go get me a mop, bucket and rag so I can clean this mess up.' It was the fact that Kenaz wasn't asking please that made the room go silent. Even Pertho stifled a whimper as he felt the rolling command wash over his furry backside. 'Did I stutter or didn't you hear me?' Kenaz next asked and like a flash Othala was gone to get the materials that had been requ...demanded. 'Don't the lot of you have something else to be doing with yourselves?'";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -816,7 +816,7 @@ Section 6 - LowerFirePole
 
 LowerFirePole is in FireHouse.
 
-The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.";
+The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.".
 
 the scent of lowerfirepole is "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.".
 
@@ -847,7 +847,7 @@ Section 7 - Upstairs
 Down of Sleeping Quarters is Firehouse. UpperFirepole is in Sleeping Quarters.
 
 Sleeping Quarters is a room. 
-The description of Sleeping Quarters is "[SleepQuarters]"; 
+The description of Sleeping Quarters is "[SleepQuarters]".
 
 To say SleepQuarters:
 	if KTO is 0:
@@ -880,7 +880,7 @@ to say sleepingquartersscent:
 
 Section 8 - UpperFirePole
 
-The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].";
+The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].".
 
 check firepolesliding:
 	if location of player is not Sleeping Quarters and location of player is not Eastern Parapets and location of player is not Western Parapets:
@@ -968,7 +968,7 @@ Section 11 - OtherDals
 Kto is a number that varies.
 
 OtherDals is a man. 
-The description of OtherDals is "[Dalboys1]";
+The description of OtherDals is "[Dalboys1]".
 The conversation of OtherDals is { "Playtime!" }.
 
 To say Dalboys1:
@@ -1006,7 +1006,7 @@ Instead of conversing the OtherDals:
 Section 12 - DalmatianTroupe
 
 DalmatianTroupe is a man.	
-The description of DalmatianTroupe is "[Dalboys2]";
+The description of DalmatianTroupe is "[Dalboys2]".
 The conversation of DalmatianTroupe is { "YES SIR!" }.
 
 To say Dalboys2:
@@ -1045,7 +1045,7 @@ Section 13 -NeverNeverLand
 
 NeverNeverland is a room. It is unknown. It is private.
 
-The description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.";
+The description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.".
 
 
 Fire House ends here.

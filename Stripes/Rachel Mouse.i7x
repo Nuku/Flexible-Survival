@@ -6,7 +6,7 @@ Version 1 of Rachel Mouse by Stripes begins here.
 Section 1 - Encounter
 
 Quiet Apartment Building is a situation.
-The sarea of Quiet Apartment Building is "Red";
+The sarea of Quiet Apartment Building is "Red".
 when play begins:
 	add Quiet Apartment Building to badspots of hermaphrodite;
 	add Quiet Apartment Building to badspots of furry;
@@ -128,13 +128,13 @@ to say fullmousification:
 
 Section 2 - Mouse Girl Pet
 
-mouse girl is a pet.  mouse girl is a part of the player;
+mouse girl is a pet.  mouse girl is a part of the player.
 The description of mouse girl is "[racheldesc]".
-The weapon damage of mouse girl is 5;
-The level of mouse girl is 3;
-The Dexterity of mouse girl is 15;
-The summondesc of mouse girl is "Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
-The assault of mouse girl is "[rachelattack]";
+The weapon damage of mouse girl is 5.
+The level of mouse girl is 3.
+The Dexterity of mouse girl is 15.
+The summondesc of mouse girl is "Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you."
+The assault of mouse girl is "[rachelattack]".
 the fuckscene of mouse girl is "[sexwithmousegirl]".
 rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.

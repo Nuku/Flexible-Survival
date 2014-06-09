@@ -5,7 +5,7 @@ Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
-Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading further away from the town." Abandoned Lot is fasttravel.
+Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading further away from the town." Abandoned Lot is fasttravel.
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it.[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside.[end if]";
 
@@ -120,7 +120,7 @@ Chapter 2 - Storage Room and Steven
 
 Section 1 - The environment
 
-The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of color or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
+The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of colour or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
 
 South of the Warehouse Door is the Storage Room.
 
@@ -399,7 +399,7 @@ To stevenjunkfuck:
 		infect "red horse";
 		now laststevenfuck is turns;
 
-stevenfuckcount is a number that varies;
+stevenfuckcount is a number that varies.
  
  to say stevenride:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";

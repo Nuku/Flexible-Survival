@@ -127,7 +127,7 @@ When Play begins:
 	now cock entry is "sleek and curving cetacean";
 	now face change entry is "your skull reshape into something smoother and more aquadynamic, drawing into a blunt rounded muzzle. Your larger mouth fills with many small but very sharp teeth. You feel a strange sensation and realize you are now breathing through a hole atop your head";
 	now body change entry is "as you suddenly grow to a height of almost ten feet you feel all the muscles in your torso swell with new power. While you can feel great strength locked in your muscles, you still bear the sleek form of a swimmer.  As these changes pass to your arms and legs, webbing grows thick between your fingers and toes";
-	now skin change entry is "your hide thickens, but becomes sleek and highly aquadynamic.  Dark patches color your skin, while other parts begin to pale. Soon you sport the rather distinctive patterning of a killer whale across your entire body";
+	now skin change entry is "your hide thickens, but becomes sleek and highly aquadynamic.  Dark patches colour your skin, while other parts begin to pale. Soon you sport the rather distinctive patterning of a killer whale across your entire body";
 	now ass change entry is "as your ass becomes dense with muscle to drive the strong orca tail that grows behind you to help propel you through the water";
 	now cock change entry is "it becomes narrow, but with a sleek and curving shape.  It now emerges from a slit at your groin and your balls have been mostly pulled into your body as well, so your waist may be smooth and streamlined while swimming";
 	now str entry is 18;

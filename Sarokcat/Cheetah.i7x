@@ -105,7 +105,7 @@ to say drinkcheetahmilk:
 	increase libido of player by 5;
 	if thirst of player < 0, now thirst of player is 0;
 
-the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.";
+the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.".
 
 Section 3 - Heat Table
 

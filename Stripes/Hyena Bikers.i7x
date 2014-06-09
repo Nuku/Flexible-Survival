@@ -8,7 +8,7 @@ Version 2 of Hyena Bikers by Stripes begins here.
 Section 1- Core Event Tree
 
 Hyena Bikers is a situation.
-The sarea of Hyena Bikers is "High";
+The sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to badspots of guy;
 	add Hyena Bikers to badspots of hermaphrodite;
@@ -420,7 +420,7 @@ instead of sniffing tire iron:
 Section 5 - Grant
 
 Grant is a man.
-The description of Grant is "[grantdesc]";
+The description of Grant is "[grantdesc]".
 The conversation of Grant is { "Cool!" }.
 The icon of Grant is figure of Grant_icon.
 granttalk is a number that varies.

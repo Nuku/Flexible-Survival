@@ -6,7 +6,7 @@ Version 3 of Down Under Pub by Stripes begins here.
 Section 1 - Aussie Pub Event
 
 Aussie Pub is a situation.
-The sarea of Aussie Pub is "Red";
+The sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
@@ -28,7 +28,7 @@ Instead of resolving a Aussie Pub:
 			otherwise:						[ FEMALE! ]
 				say "     After a long bout of teasing while you enjoy the meal you've been given, you pull the doe up into your arms.  You run your hands over each other's body, playing with her breasts and sucking her nipples.  She calls over to the bartender for something she calls her [']double-duty['], which turns out to be a double-ended dildo that she's soon sharing with you, much to the enjoyment of the crowd.  The other patrons near you slap your back in encouragement, joking about how she likes to break in every newcomer.  From what you can gather, seeing how your focus is always drawn back to the buxom doe in your lap, is that you're managing to last longer than most.  You are eventually struck by a thunderous orgasm that leaves your head spinning for a few minutes.";
 			attempttowait;
-			say "     Once she's done with you, she gives you a kiss and heads off to deal with the other patrons, who seem to be happy to trade a delay in service for her usual sex show.  You're informed by a friendly joey in the next booth that they have a generator hooked up for power and they've syphoned gas from the nearby station to run it.  'Just like Mad Max', he says with a laugh.  You carouse with them for hours, a romp of drinking, singing and sex.";
+			say "     Once she's done with you, she gives you a kiss and heads off to deal with the other patrons, who seem to be happy to trade a delay in service for her usual sex show.  You're informed by a friendly joey in the next booth that they have a generator hooked up for power and they've siphoned gas from the nearby station to run it.  'Just like Mad Max', he says with a laugh.  You carouse with them for hours, a romp of drinking, singing and sex.";
 			project the figure of DUP_FloorShow_icon;
 			say "     The main attraction comes as you're finishing up a fulfilling fuck under a strong, masculine boomer who plows you good and hard. From somewhere in the back, probably having been locked in a store room, a dog-eared man is dragged out.  He's got a collar and leash on and nothing else.  He's spread across a table and held down, with many of the roos taking turns to fuck him, changing him more and more into another kangaroo like yourselves.  Once the buck atop you has filled you with his cream, you're off like a shot to screw the increasingly willing hybrid, caught up in the moment with the lascivious roos.";
 			if cocks of player > 0:				[ MALE/HERM! ]	
@@ -201,7 +201,7 @@ to say roopubsex1:
 
 
 to say roopubsex2:
-	say "     The slender, girly joey rubs his body against yours, letting his paws wander down to you cock and stroking it, eagerness in his eyes as he looks over your [cock size desc of player] [cock of player] penis.  You stroke his cute body and soft fur as you consider what you'd like to do with this eager young guy.  He licks his lips and moans softly as you give his rear a squeeze.   He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer. ([link]Y=oral[as]y[end link], [link]N=anal[as]n[end link])";
+	say "     The slender, girly joey rubs his body against yours, letting his paws wander down to you cock and stroking it, eagerness in his eyes as he looks over your [cock size desc of player] [cock of player] penis.  You stroke his cute body and soft fur as you consider what you'd like to do with this eager young guy.  He licks his lips and moans softly as you give his rear a squeeze.  He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer. ([link]Y=oral[as]y[end link], [link]N=anal[as]n[end link])";
 	if the player consents:
 		say "     Rubbing a paw through his long, curly headfur, you gently guide the roo's muzzle down to your throbbing cock.  As his lips slide around it and his tongue sets to work, you are quite pleased with your decision.  Clearly not unfamiliar with the act, he starts giving you a fine blowjob.  His tongue slides along the underside and over your glans repeatedly while his muzzle bobs over your [cockname of player] shaft.  You rub his head and shoulders as you lean back to enjoy the slow, sensual sucking.  Feeling his paws on one of your large, roo feet, he caresses your paw and brings it to press against his cock, moaning softly as he slides his leaking member against it.  After a long and enjoyable blowjob, you pull the roo's head down over your cock and send your hot seed down his throat.  He's set off as well, spraying his load onto your long paw, though he's good enough to lick it all clean afterwards, forcing you to stifle your giggles as his tongue plays between your toes while the others around tease you and crack jokes.";
 	otherwise:
@@ -217,7 +217,7 @@ to say roopubsex3:
 
 
 to say roopubsex4:
-	say "     The sexy jill in your arms has smaller breasts compared to the other roos girls around and wears her hair short.  Her paw moves quickly [if cocks of player > 0]past your cock [end if]to your wet snatch, teasing your sensitive folds.  Pulling you up from your seat, she gives the [if hp of Gillian < 4]the serving girl's[otherwise]Gillian's[end if] ass a swat, eliciting a giggling moan as she clears the table quickly.  Your lover of the moment pushes you up to lay back on the sturdy table before climbing atop it as well,  Bringing her groin to your face, she presents her pussy to you even as she dives in and starts licking at yours lustfully.  You decide to slip a pair of fingers into her and start licking and kissing her clit.  Clearly enjoying what you're doing, she works your snatch all the more eagerly[if cocks of player > 0].  She even gingerly takes hold of your cock and gives it a few light strokes, but her focus is clearly on your womanly parts[end if].  The others around the table watch the show happily, holding their drinks as you two roll around on the table for a while, swapping positions a few times before finishing as you started, with her hot juices flowing down over your paw and face as she laps up yours as your both cum loudly.";
+	say "     The sexy jill in your arms has smaller breasts compared to the other roos girls around and wears her hair short.  Her paw moves quickly [if cocks of player > 0]past your cock [end if]to your wet snatch, teasing your sensitive folds.  Pulling you up from your seat, she gives the [if hp of Gillian < 4]the serving girl's[otherwise]Gillian's[end if] ass a swat, eliciting a giggling moan as she clears the table quickly.  Your lover of the moment pushes you up to lay back on the sturdy table before climbing atop it as well.  Bringing her groin to your face, she presents her pussy to you even as she dives in and starts licking at yours lustfully.  You decide to slip a pair of fingers into her and start licking and kissing her clit.  Clearly enjoying what you're doing, she works your snatch all the more eagerly[if cocks of player > 0].  She even gingerly takes hold of your cock and gives it a few light strokes, but her focus is clearly on your womanly parts[end if].  The others around the table watch the show happily, holding their drinks as you two roll around on the table for a while, swapping positions a few times before finishing as you started, with her hot juices flowing down over your paw and face as she laps up yours as your both cum loudly.";
 
 
 to say roopubsex5:
@@ -233,11 +233,11 @@ to say roofloorshow:
 	if randomgender is 2, say "[randomdesc2]";		[female creature list from Strange Sluts]
 	let newgender be a random number between 1 and 5;
 	say "     It seems you've picked a fortunate time to come as another floor show starts up shortly after you finish up.  Another partially changed human is brought in for the group, this one a [if randomgender is 1]man[otherwise]woman[end if] with the head and paws of a [slutname].  [if randomgender is 1]He[otherwise]She[end if] is naked and trying to cover up with [if randomgender is 1]his paws as best he can[otherwise]her paws as best she can[end if], but the roos bringing in the new playtoy don't allow it, showing their prize off before laying [if randomgender is 1]him[otherwise]her[end if] down on the fucking table and taking turns.";
-	say "     After several boomers and jills have had their chance, you get to move in and take a turn, finding they're well on their way to becoming another [if newgender < 3]sexy boomer[otherwise if newgender > 3]sexy jill[otherwise]sexy roo herm[end if].  Caught up in the excitement as you are, ";
+	say "     After several boomers and jills have had their chance, you get to move in and take a turn, finding they're well on their way to becoming another sexy [if newgender < 3]boomer[otherwise if newgender > 3]jill[otherwise]roo herm[end if].  Caught up in the excitement as you are, you eagerly move in to take your turn riding ";
 	if cocks of player > 0 and newgender > 2:
-		say "you eagerly move in to take your turn riding her.  Lining your cock up, you sink it into the increasingly eager roo slut's dripping and well-used snatch, pounding away at her.  She moans and writhes on the pleasure, changing further as you add your thick seed to the mix already filling her.  When finished, you move around to let her lick you clean even as the next boomer moves up to take your place.";
+		say "her.  Lining your cock up, you sink it into the increasingly eager roo slut's dripping and well-used snatch, pounding away at her.  She moans and writhes on the pleasure, changing further as you add your thick seed to the mix already filling her.  When finished, you move around to let her lick you clean even as the next boomer moves up to take your place.";
 	otherwise if cunts of player > 0 and newgender < 4:
-		say "you eagerly move in to take your turn riding [if newgender < 3]his[otherwise]her[end if] new roo cock.  With a moan of pleasure, you sink down onto it and bounce eagerly on your powerful legs until finally [if newgender < 3]he[otherwise]she[end if] can't hold back and a load of creamy roo cum blasts from their swelling balls.  When finished, you move around to let [if newgender < 3]him lick his semen[otherwise]her lick her semen[end if] from your recently creamed pussy, smiling at how eager they are to lap it up, even as the next jill moves in to take your place.";
+		say "[if newgender < 3]his[otherwise]her[end if] new roo cock.  With a moan of pleasure, you sink down onto it and bounce eagerly on your powerful legs until finally [if newgender < 3]he[otherwise]she[end if] can't hold back and a load of creamy roo cum blasts from their swelling balls.  When finished, you move around to let [if newgender < 3]him lick his semen[otherwise]her lick her semen[end if] from your recently creamed pussy, smiling at how eager they are to lap it up, even as the next jill moves in to take your place.";
 	otherwise if cocks of player > 0:
 		say "you stride up to his face, presenting your throbbing cock to him.  He moans softly and dives his reforming muzzle over it.  So far gone in his lustful transformation, he sets to licking and sucking at your cock hungrily.  You grin and rub his head and growing roo ears as you pump into his changing muzzle, unleashing your thick roo seed down his throat to join the many other loads he's swallowed in his bloated tummy.  As you move back, another jill moves in to ride his growing roo cock.";
 	otherwise:
@@ -276,7 +276,7 @@ instead of going east from Gillian's Flat:
 Section 5 - Gillian
 
 Gillian is a woman.  Gillian is in Gillian's Flat.
-The description of Gillian is "[gilliandesc]";
+The description of Gillian is "[gilliandesc]".
 The conversation of Gillian is { "Work!" }.
 the scent of the Gillian is "[gillianscent]".
 the fuckscene of Gillian is "[sexwithgillian]".
@@ -287,7 +287,7 @@ to say gillianscent:
 
 to say gilliandesc:
 	say "     Gillian is the sexy kangaroo doe working as a waitress in the pub downstairs.  Standing almost six and a half feet tall after her transformation into a red kangaroo, she's also got a curvy hips and a long, thick tail as well.  She's often got a happy grin on her face with a lustful glint in her eye as she looks back at you.  You find her quite pretty, her human-marsupial body and muzzled face [if player is redroobodied]making her very attractive to your new form[otherwise]giving her an exotic beauty that always manages to get you aroused[end if].";
-	say "     Whether because it's the only one she has that'll fit her new body or just because she likes it, she wears her skimpy waitress outfit even during her off hours.  It's comprised of a tight top that can only partially cover her bouyant breasts and a low-cut mini-skirt.  You're intimately aware that she never wears anything under the skirt, as she prefers being ready for immediate access.";
+	say "     Whether because it's the only one she has that'll fit her new body or just because she likes it, she wears her skimpy waitress outfit even during her off hours.  It's comprised of a tight top that can only partially cover her buoyant breasts and a low-cut mini-skirt.  You're intimately aware that she never wears anything under the skirt, as she prefers being ready for immediate access.";
 
 instead of conversing Gillian:
 	if hp of Gillian < 4:

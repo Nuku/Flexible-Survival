@@ -5,7 +5,7 @@ Version 1 of Velos by Blue Bishop begins here.
 Section 1 - Event
 
 Strange Serpent is a situation.  The minscore of Strange Serpent is 200.
-The sarea of Strange Serpent is "Mall";
+The sarea of Strange Serpent is "Mall".
 
 Instead of resolving Strange Serpent:
 	if hp of Velos is 0 or hp of Velos is 1:
@@ -91,7 +91,7 @@ Instead of resolving Strange Serpent:
 Section 2 - Velos the AssSSSSssserpent
 
 Velos is a person.
-The description of Velos is "[velosdesc]";
+The description of Velos is "[velosdesc]".
 The conversation of Velos is { "Snipe." }.
 velospostmusings is a list of numbers that varies.  velospostmusings is usually {}.
 vpostmusenum is a number that varies.
@@ -102,7 +102,7 @@ velosapology is a truth state that varies.  velosapology is usually false.
 velosheadstalk is a truth state that varies.  velosheadstalk is usually false.
 
 
-the scent of Velos is "[one of]Velos, thankfully, has little odour about him.[or]The strange serpent doesn't have much of a scent, surprisingly.[or]Velos, thankfully, has little odour about him.[or]The strange serpent doesn't have much of a scent, surprisingly.[or]He smells slightly of discomfort, incited by you always sniffing at him.[stopping]";
+the scent of Velos is "[one of]Velos, thankfully, has little odour about him.[or]The strange serpent doesn't have much of a scent, surprisingly.[or]Velos, thankfully, has little odour about him.[or]The strange serpent doesn't have much of a scent, surprisingly.[or]He smells slightly of discomfort, incited by you always sniffing at him.[stopping]".
 
 instead of linkactioning Velos:
 	say "Possible Actions: [link]talk[as]talk Velos[end link], [link]smell[as]smell Velos[end link], [link]fuck[as]fuck Velos[end link], [link]muse[as]muselist[end link][line break]";
@@ -459,7 +459,7 @@ to say valeriemusing:
 
 Part 9 - Fang
 
-the vmusings of Fang is "[fangmusing]";
+the vmusings of Fang is "[fangmusing]".
 fangvelos1 is a truth state that varies.  fangvelos1 is normally false.
 
 to say fangmusing:

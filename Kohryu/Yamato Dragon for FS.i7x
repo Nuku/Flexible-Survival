@@ -10,10 +10,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Yamato Dragon" } to infections of guy;
 
-MYDTBMM is a number that varies; [Male Yamato Dragon TBM Memory]
-MYDAM is a number that varies; [Male Yamato Dragon Anal Memory]
-MYDGM is a number that varies; [Male Yamato Dragon Gimmick Memory]
-ydcolour is a number that varies;
+MYDTBMM is a number that varies. [Male Yamato Dragon TBM Memory]
+MYDAM is a number that varies. [Male Yamato Dragon Anal Memory]
+MYDGM is a number that varies. [Male Yamato Dragon Gimmick Memory]
+ydcolour is a number that varies.
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Yamato Dragon attack:
@@ -253,6 +253,7 @@ Section 2 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -312,8 +313,8 @@ name	desc	weight	object
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
 dragon scale is a grab object. It is a part of the player. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
-the scent of dragon scale is "The yellow scale smells strange and otherworldly.";
-The usedesc of dragon scale is "[usedragonscale]";
+the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
+The usedesc of dragon scale is "[usedragonscale]".
 
 to say usedragonscale:		[only alters sizes, not gender]
 	choose row monster from table of random critters;
@@ -335,8 +336,8 @@ to say usedragonscale:		[only alters sizes, not gender]
 	say "     Following the strange urge you have, press the large scale to your chest.  As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
 dragon hair is a grab object. It is a part of the player. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
-the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.";
-The usedesc of dragon hair is "[usedragonhair]";
+the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
+The usedesc of dragon hair is "[usedragonhair]".
 
 to say usedragonhair:
 	choose row monster from table of random critters;

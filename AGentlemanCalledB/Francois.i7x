@@ -5,7 +5,7 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 Section 1 - Event
 
 Gourmet Treats is a situation. The level of Gourmet Treats is 8.
-The sarea of Gourmet Treats is "High";
+The sarea of Gourmet Treats is "High".
 
 when play begins:
 	add Gourmet Treats to badspots of guy;       [random encounter may involve male opponents]
@@ -142,7 +142,7 @@ to say BakeryChocLab:
 Section 2 - Location
 
 Bone-Appetit is a room. It is fasttravel. It is private.
-The description of Bone-Appetit is "[BoneAppetitdesc]";
+The description of Bone-Appetit is "[BoneAppetitdesc]".
 
 instead of sniffing Bone-Appetit:
 	say "     Despite the lack of any product on display the small bakery still has a strangely warm meaty aroma [if facename of player is listed in infections of Caninelist]that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.";
@@ -156,15 +156,15 @@ to say BoneAppetitdesc:
 Section 3 - François
 
 François is a man. François is in Bone-Appetit.
-The description of François is "[Françoisdesc]";
+The description of François is "[Françoisdesc]".
 The conversation of François is { "Numnum!" }.
 understand "Francis" as François.
 understand "Francois" as François.
 Françoistalk1 is a truth state that varies.  Françoistalk1 is normally false.
 
-the linkaction of François is "Possible Actions: [link]talk[as]talk François[end link], [link]smell[as]smell François[end link], [link]fuck[as]fuck François[end link], [link]Bake[as]Bake François[end link][line break]";
+the linkaction of François is "Possible Actions: [link]talk[as]talk François[end link], [link]smell[as]smell François[end link], [link]fuck[as]fuck François[end link], [link]Bake[as]Bake François[end link][line break]".
 
-the scent of François is "     François has a light male musk, difficult to catch over the smells pervading the bakery.";
+the scent of François is "     François has a light male musk, difficult to catch over the smells pervading the bakery.".
 
 to say Françoisdesc:
 	say "     François, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short stocky canine body and face are covered with a thick mottled coat of fur made up of several different colours and patterns, there even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency, while still allowing his long tail to flit about unhindered.";
@@ -864,8 +864,8 @@ name	desc	weight	object
 "Cheesecake"	"A wedge of rich strawberry cheesecake."	1	Cheesecake
 
 Boysenberry Blossom is a grab object. It is a part of the player.
-Boysenberry Blossom has a usedesc "[Boysenberry Blossom Use]";
-the scent of Boysenberry Blossom is "The small pastry has a wonderful fruity smell you can't quite put your finger on.";
+Boysenberry Blossom has a usedesc "[Boysenberry Blossom Use]".
+the scent of Boysenberry Blossom is "The small pastry has a wonderful fruity smell you can't quite put your finger on.".
 
 to say Boysenberry Blossom Use:
 	say "Biting into the Boysenberry Blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
@@ -885,8 +885,8 @@ to say Boysenberry Blossom Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 Bleuettonne is a grab object. It is a part of the player.
-Bleuettonne has a usedesc "[Bleuettonne Use]";
-the scent of Bleuettonne is "The small candy carries the deep, rich scent of chocolate.";
+Bleuettonne has a usedesc "[Bleuettonne Use]".
+the scent of Bleuettonne is "The small candy carries the deep, rich scent of chocolate.".
 
 to say Bleuettonne Use:
 	say "     You bite into the Bleuettonne, and find your mouth filled with a burst of blueberry jelly, more then you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
@@ -906,8 +906,8 @@ to say Bleuettonne Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 Crème Abondante is a grab object. It is a part of the player.
-Crème Abondante has a usedesc "[Crème Abondante Use]";
-the scent of Crème Abondante is "The pink pastry smells of fresh strawberry and rich creme.";
+Crème Abondante has a usedesc "[Crème Abondante Use]".
+the scent of Crème Abondante is "The pink pastry smells of fresh strawberry and rich creme.".
 understand "Creme Abondante" as Crème Abondante.
 
 to say Crème Abondante Use:
@@ -932,8 +932,8 @@ to say Crème Abondante Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 Muffin Muffin is a grab object. It is a part of the player.
-Muffin Muffin has a usedesc "[Muffin Muffin Use]";
-the scent of Muffin Muffin is "The pink muffin carries a fruity aroma that seems to change with each breath.";
+Muffin Muffin has a usedesc "[Muffin Muffin Use]".
+the scent of Muffin Muffin is "The pink muffin carries a fruity aroma that seems to change with each breath.".
 
 to say Muffin Muffin Use:
 	say "     Biting into the muffin you find a sweet pink jelly fruit filling hidden inside, working your tongue into the opening, you lick the sweet treat out of the depths of the muffin before finishing it[run paragraph on]";
@@ -955,8 +955,8 @@ to say Muffin Muffin Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 Lollicock is a grab object. It is a part of the player.
-Lollicock has a usedesc "[Lollicock Use]";
-the scent of Lollicock is "The Lollicock has a sweet aroma with a hint of male arousal.";
+Lollicock has a usedesc "[Lollicock Use]".
+the scent of Lollicock is "The Lollicock has a sweet aroma with a hint of male arousal.".
 
 to say Lollicock Use:
 	let LollicockDildo be 0;
@@ -991,8 +991,8 @@ to say Lollicock Use:
 	if hunger of player < 0, now hunger of player is 0;
 
 dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
-The usedesc of dragon moelleux is "[dragonmoelleuxuse]";
-the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.";
+The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
+the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
 to say dragonmoelleuxuse:
 	if inafight is 1:
@@ -1028,8 +1028,8 @@ to say dragonmoelleuxuse:
 		say "     That's probably not a good idea right now.";
 
 fizz-aux-pommes is a grab object. It is a part of the player. it is not temporary. it is fast.
-The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]";
-the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.";
+The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
+the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
 	if inafight is 1:
@@ -1044,8 +1044,8 @@ to say fizz-aux-pommesuse:
 		say "That's probably not a good idea right now.";
 		
 vin-coeur is a grab object. It is a part of the player. it is not temporary. it is fast.
-The usedesc of vin-coeur is "[vin-coeuruse]";
-the scent of vin-coeur is "     rich and heavy (temporary desc!)";
+The usedesc of vin-coeur is "[vin-coeuruse]".
+the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
 to say vin-coeuruse:
 	if inafight is 1:
@@ -1060,8 +1060,8 @@ to say vin-coeuruse:
 		say "That's probably not a good idea right now.";
 
 Gingerbread is a grab object. It is a part of the player.
-Gingerbread has a usedesc "[Gingerbread Use]";
-the scent of Gingerbread is "The gingerbread cookie smells like cinnimon and ginger.";
+Gingerbread has a usedesc "[Gingerbread Use]".
+the scent of Gingerbread is "The gingerbread cookie smells like cinnimon and ginger.".
 
 to say Gingerbread Use:
 	say "You bite into the cookie with a satisfying crunch, devouring the small gingerbread man in a few quick bites.";
@@ -1080,8 +1080,8 @@ to Gingerbreadinfect:
 	now non-infectious entry is true;
 
 Cheesecake is a grab object. It is a part of the player. it is not temporary.
-Cheesecake has a usedesc "[Cheesecake Use]";
-the scent of Cheesecake is "The cheesecake has a rich, sweet scent of strawberry.";
+Cheesecake has a usedesc "[Cheesecake Use]".
+the scent of Cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 
 to say Cheesecake Use:
 	if carried of cheesecake > 1:

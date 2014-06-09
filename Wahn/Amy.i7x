@@ -69,8 +69,8 @@ Version 1 of Amy by Wahn begins here.
 
 Amy is a woman. The hp of Amy is usually 0.
 The icon of Amy is Figure of Amy_icon.
-The description of Amy is "[AmyDesc]";
-The conversation of Amy is { "Woof." };
+The description of Amy is "[AmyDesc]".
+The conversation of Amy is { "Woof." }.
 lastfuck of Amy is usually 555.
 AmyNewPuppies is a number that varies. AmyNewPuppies is usually 0.
 lastAmySpotted is a number that varies. lastAmySpotted is usually 255.
@@ -108,7 +108,7 @@ to say AmyDesc:
 		otherwise if Libido of Amy > 1:
 			say "     On and around the mattress that serves as Amy's bedding, her [Libido of Amy] puppies caper about, playing with each other and exploring for new interesting things. Their mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with the next litter[end if] is quite busy riding herd on them all, but also immensely happy at having these children.";
 		
-The scent of Amy is "     Amy smells a bit of husky - and a ready and fertile one at that. The scent makes you pretty horny - especially after she licks your face when you come close to smell her.";
+The scent of Amy is "     Amy smells a bit of husky - and a ready and fertile one at that. The scent makes you pretty horny - especially after she licks your face when you come close to smell her.".
 
 An everyturn rule:
 	if Lust of Amy is 1:

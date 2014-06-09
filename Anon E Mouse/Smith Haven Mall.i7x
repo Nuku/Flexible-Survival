@@ -22,7 +22,7 @@ Instead of examining the Mall Food Court entrance:
 
 Section 2 - Mall Lot North
 
-The description of Smith Haven Mall Lot North is  "[mallnorthlot]";
+The description of Smith Haven Mall Lot North is  "[mallnorthlot]".
 
 To say mallnorthlot:
 	If daytimer is day:
@@ -35,11 +35,11 @@ To say mallnorthlot:
 East of Smith Haven Mall Lot North is Smith Haven Mall Lot East.
 West of Smith Haven Mall Lot North is Smith Haven Mall Lot West.
 
-the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.";
+the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.".
 	
 Section 3 - Mall Lot East
 
-The description of Smith Haven Mall Lot East is "[malleastlot]";
+The description of Smith Haven Mall Lot East is "[malleastlot]".
 
 To say malleastlot:
 	If daytimer is day:
@@ -51,11 +51,11 @@ To say malleastlot:
 	
 South of Smith Haven Mall Lot East is Smith Haven Mall Lot South.
 
-the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.";
+the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.".
 	
 Section 4 - Mall Lot West
 
-The description of Smith Haven Mall Lot West is "[mallwestlot]";
+The description of Smith Haven Mall Lot West is "[mallwestlot]".
 
 To say mallwestlot:
 	If daytimer is day:
@@ -67,11 +67,11 @@ To say mallwestlot:
 	
 South of Smith Haven Mall Lot West is Smith Haven Mall Lot South.
 
-the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.";
+the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.".
 	
 Section 5 - Mall Lot South
 
-The description of Smith Haven Mall Lot South is "[mallsouthlot]";
+The description of Smith Haven Mall Lot South is "[mallsouthlot]".
 
 To say mallsouthlot:
 	If daytimer is day:
@@ -85,11 +85,11 @@ To say mallsouthlot:
 East of Smith Haven Mall Lot South is Smith Haven Mall Lot East.
 West of Smith Haven Mall Lot South is Smith Haven Mall Lot West.
 	
-the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.";
+the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
 	
 Section 6 - Mall Foyer
 
-The description of Mall Foyer is "[mallfoyer]";
+The description of Mall Foyer is "[mallfoyer]".
 
 To say mallfoyer:
 	If findwires is 2 and fixedgens is 2:
@@ -101,11 +101,11 @@ To say mallfoyer:
 		
 South of Mall Foyer is Mall Atrium.
 
-the scent of Mall Foyer is "The foyer smells heavy of male musk due to the wolverines.";
+the scent of Mall Foyer is "The foyer smells heavy of male musk due to the wolverines.".
 	
 Section 7 - Mall Atrium
 
-The description of Mall Atrium is "[mallatrium]";
+The description of Mall Atrium is "[mallatrium]".
 
 To say mallatrium:
 	If findwires is 2 and fixedgens is 2:
@@ -119,11 +119,11 @@ East of Mall Atrium is Mall East Wing.
 South of Mall Atrium is Mall Foodcourt.
 West of Mall Atrium is Mall West Wing.
 
-[the scent of Mall Atrium is "The atrium smells of old, standing water coming from the fountain.";	]
+[the scent of Mall Atrium is "The atrium smells of old, standing water coming from the fountain.".	]
 	
 Section 8 - Mall East Wing
 
-The description of Mall East Wing is "[malleastwing]";
+The description of Mall East Wing is "[malleastwing]".
 
 To say malleastwing:
 	If findwires is 2 and fixedgens is 2:
@@ -133,11 +133,11 @@ To say malleastwing:
 	Otherwise:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles, lanterns, and occasional computer tablets being used. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets and smartphones some of the rats have.";
 
- the scent of Mall East Wing is "It smells like the mallrats.";
+ the scent of Mall East Wing is "It smells like the mallrats.".
 	
 Section 9 - Mall Food Court
 
-The description of Mall Foodcourt is "[mfcourt]";
+The description of Mall Foodcourt is "[mfcourt]".
 
 To say mfcourt:
 	If findwires is 2 and fixedgens is 2:
@@ -150,13 +150,13 @@ To say mfcourt:
 
 East of Mall Foodcourt is Mall Restroom.
 
-the scent of the Mall Foodcourt is "It smells a little like old, rotting food.";
+the scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
 
 The invent of Mall FoodCourt is { "chair", "food" }.
 	
 Section 10 - Mall West Wing
 
-The description of Mall West Wing is "[mallwestwing]";
+The description of Mall West Wing is "[mallwestwing]".
 
 To say mallwestwing:
 	If findwires is 2 and fixedgens is 2:
@@ -166,7 +166,7 @@ To say mallwestwing:
 	Otherwise:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles and lanterns spread about. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets some of the rats have.";
 
-the scent of Mall West Wing is "It smells like the mall rats milling about.";
+the scent of Mall West Wing is "It smells like the mall rats milling about.".
 	
 Section 11 - Mall Restroom
 
@@ -178,7 +178,7 @@ The Sewer entrance is below Mall Restroom and above Sewers A7. The Sewer entranc
 Instead of examining the Sewer entrance:
 	say "Through the hole, you see [the other side of the Sewer entrance].";
 
-The description of Mall Restroom is "[mallrestroom]";
+The description of Mall Restroom is "[mallrestroom]".
 
 To say mallrestroom:
 	If findwires is 2 and fixedgens is 2:
@@ -186,7 +186,7 @@ To say mallrestroom:
 	Otherwise:
 		say "     With just the light of you lantern, it[']s hard to see very far around you, and it[']s hard to shake the feeling that you are not alone in the dark. You hear occasionally coming from the sewers [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]a loud splash[or]the squeaking of rusty hinges[at random].";
 
-the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.";
+the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.".
 
 
 

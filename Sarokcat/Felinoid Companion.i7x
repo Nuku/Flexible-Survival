@@ -5,15 +5,15 @@ Version 2 of Felinoid companion by Sarokcat begins here.
 
 Section 1- Felinoid companion
 
-Felinoid companion is a pet. The description of Felinoid companion is "The golden Felinoid that you rescued is lean and powerful as it stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course it still doesn't seem to have recovered completely from its ordeal, and is thus more then content to let you take the lead in combat and in your travels around the city. Of course you can't help but wonder just how the large cat sees you and why it bothers following you around. Whether it sees you more as a friend or companion, or as a potential mate...". Felinoid companion is a part of the player;
-The weapon damage of Felinoid companion is 9;
-The level of Felinoid companion is 6;
-The Dexterity of Felinoid companion is 15;
-The summondesc of Felinoid companion is "Turning to look around, you spot the large Felinoid from the park lurking quite a ways behind you, obviously keeping an eye on you from a distance. Feeling a smile tugging at your face, you gesture several times for him to approach, and after a minute, the injured Felinoid seems to get the idea as he pads forward and rubs up against you in greeting, obviously looking forward to exploring with you.";
-The assault of Felinoid companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]The Felinoid rubs up against your opponent, distracting them greatly![or]The Felinoid's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or] Your ally manages to grab onto your opponent,  providing you with an opening![or]The Felinoid companion charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The Felinoid you helped returns the favor by running in and tripping your opponent up![or]The Felinoid pounces on your opponent, trying to wrestle them to the ground.[at random]";
-the fuckscene of felinoid companion is "[sexwithfelinoidpet]";
+Felinoid companion is a pet. The description of Felinoid companion is "The golden Felinoid that you rescued is lean and powerful as it stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course it still doesn't seem to have recovered completely from its ordeal, and is thus more then content to let you take the lead in combat and in your travels around the city. Of course you can't help but wonder just how the large cat sees you and why it bothers following you around. Whether it sees you more as a friend or companion, or as a potential mate...". Felinoid companion is a part of the player.
+The weapon damage of Felinoid companion is 9.
+The level of Felinoid companion is 6.
+The Dexterity of Felinoid companion is 15.
+The summondesc of Felinoid companion is "Turning to look around, you spot the large Felinoid from the park lurking quite a ways behind you, obviously keeping an eye on you from a distance. Feeling a smile tugging at your face, you gesture several times for him to approach, and after a minute, the injured Felinoid seems to get the idea as he pads forward and rubs up against you in greeting, obviously looking forward to exploring with you.".
+The assault of Felinoid companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]The Felinoid rubs up against your opponent, distracting them greatly![or]The Felinoid's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or] Your ally manages to grab onto your opponent,  providing you with an opening![or]The Felinoid companion charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The Felinoid you helped returns the favor by running in and tripping your opponent up![or]The Felinoid pounces on your opponent, trying to wrestle them to the ground.[at random]".
+the fuckscene of felinoid companion is "[sexwithfelinoidpet]".
 
-the scent of felinoid companion is "Your felinoid companion smells strong and masculine[if cunts of player > 0].  It is quite arousing[end if].";
+the scent of felinoid companion is "Your felinoid companion smells strong and masculine[if cunts of player > 0].  It is quite arousing[end if].".
 
 
 Section 2 - Felinoid companion sex
@@ -161,7 +161,7 @@ to say felinoidpet_puren:
 Section 3 - Situation
 
 Injured Felinoid is a situation.  The level of Injured Felinoid is 6.
-The sarea of Injured Felinoid is "Park";
+The sarea of Injured Felinoid is "Park".
 when play begins:
 	add Injured Felinoid to badspots of guy;
 	add Injured Felinoid to badspots of furry;

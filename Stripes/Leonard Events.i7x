@@ -8,7 +8,7 @@ Section 0 - Den Events
 
 Part 0 - Core Event System
 
-lastdenevent is a number that varies.  lastdenevent is usually 255;
+lastdenevent is a number that varies.  lastdenevent is usually 255.
 leosupplies is a number that varies.
 leodenlist is a list of numbers that varies.  leodenlist is usually { 1, 2 }.
 leodinner is a truth state that varies.  leodinner is usually false.
@@ -449,7 +449,7 @@ leonardwrdesk is a truth state that varies.  leonardwrdesk is normally false.
 leonardcabinet is a truth state that varies.  leonardcabinet is normally false.
 
 PridePark is a situation.  PridePark is resolved.
-The sarea of PridePark is "Park";
+The sarea of PridePark is "Park".
 
 Instead of resolving PridePark:
 	if leoparklist is not empty and a random chance of 2 in 5 succeeds:	[unique situations]
@@ -903,7 +903,7 @@ The placement of bulletproof vest is "body".
 The descmod of bulletproof vest is "You are wearing the bulletproof vest you were given.".
 The slot of bulletproof vest is "body".
 
-the scent of bulletproof vest is "The bulletproof vest has picked up a bit of your scent, but is otherwise odourless.";
+the scent of bulletproof vest is "The bulletproof vest has picked up a bit of your scent, but is otherwise odourless.".
 
 
 Leonard Events ends here.

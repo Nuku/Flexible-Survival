@@ -6,7 +6,7 @@ Sugar Feud by AGentlemanCalledB begins here.
 See also; "Sweet Exchange", "Caught Glider" - Stripes\assorted events]
 
 Sugar Shack is a situation.
-The sarea of Sugar Shack is "Midway";
+The sarea of Sugar Shack is "Midway".
 when play begins:
 	add Sugar Shack to badspots of furry;
 	add Sugar Shack to badspots of girl;

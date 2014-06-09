@@ -76,7 +76,7 @@ PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
 Sanctuary is a situation. Sanctuary is resolved.
 
 
-The sarea of For Purity's Sake is "Reservoir";
+The sarea of For Purity's Sake is "Reservoir".
 
 Instead of resolving For Purity's Sake:
 	If resevquest is 0:
@@ -89,7 +89,7 @@ Instead of resolving For Purity's Sake:
 
 
 Technical Assistance is a situation.
-The sarea of Technical Assistance is a "Reservoir";
+The sarea of Technical Assistance is a "Reservoir".
 
 bookfind is a number that varies.
 
@@ -148,7 +148,7 @@ to say resevfight1:
 
 
 Slightly Sidetracked is a situation.
-The sarea of Slightly Sidetracked is "Reservoir";
+The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
@@ -183,7 +183,7 @@ The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls."; 
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls."; 
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are you not found by anymore mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
@@ -195,7 +195,7 @@ Instead of resolving a Flight of stairs:
 
 ThreeDoors is a situation;
 
-The sarea of ThreeDoors is "Reservoir";
+The sarea of ThreeDoors is "Reservoir".
 
 ldoor is a number that varies.
 rdoor is a number that varies.
@@ -306,7 +306,7 @@ This is the doorcheck rule:
 Section 3 - Reservoir Fight (Preparation)
 
 The beast of the tainted waters is a situation.
-The sarea of The beast of the tainted waters is "Reservoir";
+The sarea of The beast of the tainted waters is "Reservoir".
 
 lastResevoirfix is a number that varies.
 
@@ -330,7 +330,7 @@ Instead of Resolving a The beast of the tainted waters:
 Section 4 - Reservoir (Fight)
 
 A Fight to remember is a situation.
-The sarea of A Fight to remember is "Reservoir";
+The sarea of A Fight to remember is "Reservoir".
 
 lastResevoirfix is a number that varies.
 oozing is a number that varies.
@@ -448,7 +448,7 @@ Instead of resolving a A Fight to remember:
 Section 5 - Water At Last
 
 PassionAfterTheBattle is a situation.
-The sarea of PassionAfterTheBattle is "Reservoir";
+The sarea of PassionAfterTheBattle is "Reservoir".
 
 waterworks is a number that varies.
 

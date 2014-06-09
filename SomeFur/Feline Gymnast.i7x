@@ -237,7 +237,7 @@ When Play begins:
 	now body change entry is "a sudden weight is lifted from your shoulders. Looking down, you notice you have become much thinner, and your muscles have a much smoother tone to them";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "luxurious blue fur begins growing over your body";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel your body shift forwards to accommodate for some added weight. Looking back you notice a long, cat-like tail growing, swaying to help you regain your lost balance.";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its color shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "small bumps form on it, protruding out into odd barbs. Its colour shifts to a brighter shade of pink as flesh grows around the base, forming a sheath that it eventually settles down into";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;                     [ These are now the creature's stats... ]
 	now dex entry is 18;                     [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14;                     [ These values may be used as part of alternate combat.]

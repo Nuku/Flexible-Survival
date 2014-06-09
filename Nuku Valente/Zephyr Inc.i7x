@@ -97,7 +97,7 @@ Carry out vialselling:
 
 Section 4 - Purchasing from Zephyr
 
-The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]";
+The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]".
 
 Instead of smelling the price sign:
 	say "The price sign has little in the way of scent of its own.";

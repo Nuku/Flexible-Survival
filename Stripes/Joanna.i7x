@@ -6,7 +6,7 @@ Version 4 of Joanna by Stripes begins here.
 Section 1 - Event
 
 Overrun Garden is a situation.  The level of Overrun Garden is 10.
-The sarea of Overrun Garden is "High";
+The sarea of Overrun Garden is "High".
 joannafight is a number that varies.
 when play begins:
 	add Overrun Garden to badspots of hermaphrodite;
@@ -109,11 +109,11 @@ to say losejoannafight:
 Section 2 - Flower Garden
 
 Flower Garden is a room. It is fasttravel. It is private.  It is sleepsafe.
-The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.";
-lastflowersmell is a number that varies.  lastflowersmell is normally 555;
+The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.".
+lastflowersmell is a number that varies.  lastflowersmell is normally 555.
 Skyscrapers2 is a door.  "Leaving here to the east heads back into the High Rise District.".
 Skyscrapers2 is west of Financial Sector and east of Flower Garden.  It is dangerous.
-the marea of Skyscrapers2 is "High";
+the marea of Skyscrapers2 is "High".
 
 the scent of Flower Garden is "[flowergardenscent]".
 
@@ -132,7 +132,7 @@ to say flowergardenscent:
 Section 3 - Joanna the Kinkajou-Plant
 
 Joanna is a woman.  Joanna is in Flower Garden.
-The description of Joanna is "[joannadesc]";
+The description of Joanna is "[joannadesc]".
 The conversation of Joanna is { "Sunshine!" }.
 lastjoannajuice is a number that varies.  lastjoannajuice is normally 555.
 joannatalk is a number that varies.
@@ -540,7 +540,7 @@ joannadogsaved is a truth state that varies.  joannadogsaved is normally false.
 joannaharoldtalk is a number that varies.
 
 Dog Chase is a situation.  The level of Dog Chase is 2.
-The sarea of Dog Chase is "Outside";
+The sarea of Dog Chase is "Outside".
 when play begins:
 	add Dog Chase to badspots of furry;
 	add Dog Chase to badspots of guy;

@@ -18,7 +18,7 @@ The description of Andrew is "     [one of]S[or]Adjusting the sizable bulge in h
 The conversation of Andrew is { "Sex?" }.
 the icon of Andrew is figure of Andrew_icon;
 
-the scent of Andrew is "Andrew is saturated with the scent of male lust, both his and that of many others.";
+the scent of Andrew is "Andrew is saturated with the scent of male lust, both his and that of many others.".
 
 Instead of conversing the Andrew:
 	if hp of Andrew is 0:

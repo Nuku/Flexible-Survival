@@ -2,7 +2,7 @@ Version 2 of Underground Events by Wahn begins here.
 [ Version 2 - Captive Breeding with a male version ]
 
 Captive Breeding is a situation.
-The sarea of Captive Breeding is "Sealed";
+The sarea of Captive Breeding is "Sealed".
 
 when play begins:
 	add Captive Breeding to badspots of girl;
@@ -116,7 +116,7 @@ to say cuckold choice male:
 				say "     The cock in your hand shows no sign of going soft and his balls seem as full as ever, so you continue on jerking him off to another climax, and another. Finally, when he's splattered in cum all over, his shaft goes soft and with a satisfied sigh the man's head sinks back against the wall in exhausted sleep.";
 			
 Trashed Refuge is a situation.
-The sarea of Trashed Refuge is "Sealed";
+The sarea of Trashed Refuge is "Sealed".
 
 when play begins:
 	add Trashed Refuge to badspots of girl;     
@@ -188,7 +188,7 @@ Instead of resolving a Trashed Refuge:
 		now Trashed Refuge is resolved;								
 
 Hidden Sublevel is a situation.
-The sarea of Hidden Sublevel is "Sealed";
+The sarea of Hidden Sublevel is "Sealed".
 
 Instead of resolving a Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
@@ -198,14 +198,14 @@ Instead of resolving a Hidden Sublevel:
 	now Holding Cell Four is unresolved;
 	
 Failed Experiments is a situation. Failed Experiments is resolved.
-The sarea of Failed Experiments is "Sealed";
+The sarea of Failed Experiments is "Sealed".
 
 Instead of resolving a Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, over animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
 	
 Mindshield Storage is a situation. Mindshield Storage is resolved.
-The sarea of Mindshield Storage is "Sealed";
+The sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
 
@@ -245,8 +245,8 @@ The slot of mindshield helmet is "head".
 		
 
 Holding Cell Four is a situation. Holding Cell Four is resolved.
-The sarea of Holding Cell Four is "Sealed";
-CellFourVisits is a number that varies;
+The sarea of Holding Cell Four is "Sealed".
+CellFourVisits is a number that varies.
 
 Instead of resolving a Holding Cell Four:		[repeatable event]
 	if CellFourVisits is 3:  [the thought eater checks out who's been visiting his slave]

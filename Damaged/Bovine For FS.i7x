@@ -8,11 +8,11 @@ Version 9 of Bovine For FS by Damaged begins here.
 Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
-Mooing is a number that varies;
-CowKiller is a number that varies;
-Mooed is a number that varies;
-Bovine_type is a number that varies; [0 = not chosen, 1 = cow, 2 = bull]
-Bull_run is a number that varies;
+Mooing is a number that varies.
+CowKiller is a number that varies.
+Mooed is a number that varies.
+Bovine_type is a number that varies. [0 = not chosen, 1 = cow, 2 = bull]
+Bull_run is a number that varies.
 
 
 Section 2 - Monster Insertion
@@ -290,7 +290,7 @@ name	desc	weight	object
 
 cow milk is a grab object.  it is part of the player.  it is milky.  cow milk is infectious. The strain of cow milk is "Bovine".
 
-the scent of cow milk is "The cow milk smells delicious and mouth watering.";
+the scent of cow milk is "The cow milk smells delicious and mouth watering.".
 
 the usedesc of cow milk is "[cow milk use]";
 

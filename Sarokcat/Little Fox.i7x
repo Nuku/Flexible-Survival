@@ -4,19 +4,19 @@ Little Fox by Sarokcat begins here.
 
 Section 1-Little fox
 
-Little fox is a pet. The description of the little fox is "The little fox is so cute and friendly! It has a cute little fox face with eyes that shine with love as they stare at you. Its lithe and quick body is almost constantly in motion as it explores the world around you.". little fox is a part of the player;
-The weapon damage of little fox is 4;
-The level of little fox is 1;
-The Dexterity of little fox is 10;
-The summondesc of little fox is "Wriggling its way out of your pack, the cute little fox looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
-The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]";
+Little fox is a pet. The description of the little fox is "The little fox is so cute and friendly! It has a cute little fox face with eyes that shine with love as they stare at you. Its lithe and quick body is almost constantly in motion as it explores the world around you.". little fox is a part of the player.
+The weapon damage of little fox is 4.
+The level of little fox is 1.
+The Dexterity of little fox is 10.
+The summondesc of little fox is "Wriggling its way out of your pack, the cute little fox looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.".
+The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]".
 The fuckscene of little fox is "The little fox kit is both too small and too young for such shenanigans.  There are plenty of fox-people running around; go find some of them if that's what you're into.".
 
 instead of sniffing Little fox:
 	say "The little fox has the scent of normal vulpine musk.";
 
 Abandoned Fox is a situation.
-The sarea of Abandoned Fox is "Park";
+The sarea of Abandoned Fox is "Park".
 
 Instead of resolving Abandoned Fox:
 	say "Traveling through the park you hear a strange soft noise coming from one of the nearby bushes, it sounds almost like something small calling out. Do you investigate?";

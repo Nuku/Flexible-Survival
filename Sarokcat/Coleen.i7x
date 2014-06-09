@@ -54,7 +54,7 @@ Coleenslut is a number that varies.
 Coleenspray is a number that varies.
 
 Coleen is a woman.
-The description of Coleen is "[Collenstatus]";
+The description of Coleen is "[Collenstatus]".
 The conversation of Coleen is { "Woof!" }.
 the linkaction of Coleen is "[coleenlinkaction]".
 
@@ -232,9 +232,9 @@ Section 4 - Restorative Spray
 
 Coleenspraying is an action applying to nothing.
 
-Understand "Spray me" as Coleenspraying;
-Understand "Coleen spray" as Coleenspraying;
-Understand "Spray Coleen" as Coleenspraying;
+Understand "Spray me" as Coleenspraying.
+Understand "Coleen spray" as Coleenspraying.
+Understand "Spray Coleen" as Coleenspraying.
 
 check Coleenspraying:
 	if Coleen is not visible, say "How?" instead;

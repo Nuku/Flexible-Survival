@@ -208,7 +208,7 @@ to say crushedcandiesuse:
 	increase morale of player by 1;
 	increase libido of player by 8;
 
-the scent of crushed candies is "The crumbled candy smelly unsurprisingly sweet.";
+the scent of crushed candies is "The crumbled candy smelly unsurprisingly sweet.".
 
 Section 4 - Endings [Awaiting sugar ferret tie ins]
 

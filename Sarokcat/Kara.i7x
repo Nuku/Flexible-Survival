@@ -11,10 +11,10 @@ Karafucked is a number that varies. Karafucked is usually 0.
 karahbtalk is a truth state that varies.  karahbtalk is normally false.
 
 Kara is a woman.[or woman]
-The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..";
+The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..".
 The conversation of Kara is { "Yip!" }.
 
-the scent of Kara is "Kara smells like an aroused hyena herm.";
+the scent of Kara is "Kara smells like an aroused hyena herm.".
 
 the linkaction of Kara is "Possible Actions: [link]talk[as]talk Kara[end link], [link]smell[as]smell Kara[end link], [link]fuck[as]fuck Kara[end link][if karatalk > 0], [link]tattoo me[end link], [link]pierce me[end link][end if][line break]";
 
@@ -108,8 +108,8 @@ to say karasex1:
 
 Tattooplayer is an action applying to nothing.
 
-understand "Tattoo me" as Tattooplayer;
-understand "get Tattoo" as Tattooplayer;  
+understand "Tattoo me" as Tattooplayer.
+understand "get Tattoo" as Tattooplayer.  
 
 check Tattooplayer:
 	if Kara is not visible, say "There is a little more to getting a tattoo then drawing pictures on your body and poking yourself with a sharp pointy object, though you can feel free to do that to yourself if you want, but if you actually want a real tattoo you will need to find someone who knows how to make one." instead;
@@ -214,8 +214,8 @@ piercingquest is a number that varies.
 
 Pierceplayer is an action applying to nothing.
 
-understand "Pierce me" as Pierceplayer;
-understand "get piercing" as Pierceplayer;  
+understand "Pierce me" as Pierceplayer.
+understand "get piercing" as Pierceplayer.  
 
 check Pierceplayer:
 	if Kara is not visible, say "There is a little more to getting a piercing then just poking holes in your body and sticking things in them, though you can feel free to do that to yourself if you want, but if you actually want a real and useful piercing, you will need to find someone who knows how to do so properly." instead;

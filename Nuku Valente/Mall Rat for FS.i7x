@@ -1,3 +1,4 @@
+Mall Rat For FS by Nuku Valente begins here.
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Mall Rat to Flexible Survival."

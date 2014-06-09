@@ -117,7 +117,7 @@ Section 3 - Events
 
 [ Event by Wahn]
 Hunted Survivor is a situation.
-The sarea of Hunted Survivor is "Sealed";
+The sarea of Hunted Survivor is "Sealed".
 
 when play begins:
 	add Hunted Survivor to badspots of guy;

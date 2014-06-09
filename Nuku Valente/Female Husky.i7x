@@ -27,7 +27,7 @@ to say huskywinner:
 
 
 to say femalehuskydesc:
-	say "A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore.";
+	say "A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy coloured tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore.";
 
 
 Section 2 - Monster Insertion
@@ -45,9 +45,9 @@ When Play begins:
 	now victory entry is "[huskywinner]";
 	now desc entry is "[femalehuskydesc]";
 	now face entry is "slim, feminine muzzle and perky, overlarge ears over a canine";
-	now body entry is "[if latexhuskymode is true]that of a quadrupedal dog with paw-like feet and hands[otherwise]that of a bipedal dog, with digitigrade legs and paw-like hands[end if]";
-	now skin entry is "[if latexhuskymode is true]smooth and shiny latex of black and white for[otherwise][one of]soft white fur[or]dense white fur[at random] over your[end if]";
-	now tail entry is "[if latexhuskymode is true]You have a curved husky tail made of smooth latex[otherwise]You have a long and fluffy dog[apostrophe]s tail swaying behind you[end if].";
+	now body entry is "that of a [if latexhuskymode is true]quadrupedal dog with paw-like feet and[otherwise]bipedal dog, with digitigrade legs and paw-like[end if] hands";
+	now skin entry is "[if latexhuskymode is true]smooth and shiny latex of black and white for[otherwise][one of]soft[or]dense[at random] white fur over your[end if]";
+	now tail entry is "You have a [if latexhuskymode is true]curved husky tail made of smooth latex[otherwise]long and fluffy dog[']s tail swaying behind you[end if].";
 	now cock entry is "[if latexhuskymode is true][one of]latex[or]doggy[or]canine[or]knotted[at random][otherwise][one of]canine[or]knotted[or]bright red doggy[or]bestial[at random][end if]";
 	now face change entry is "[if latexhuskymode is true]it reflows into the smooth, husky head you had before.  Your long, rubbery tongue hangs from your mouth, dripping with oily drool[otherwise]your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment[end if]";
 	now body change entry is "[if latexhuskymode is true]your arms and legs grow malleable and turn into doggy legs for your increasingly canine body.  Soon enough you're back to the quadrupedal husky form you had earlier.  It will be a struggle to stand or use your hands now, but being a doggy feels so much better anyhow[otherwise]your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw-like and your hands become somewhat paw-like[end if]";

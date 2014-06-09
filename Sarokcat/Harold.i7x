@@ -15,10 +15,10 @@ tattoohunter is a number that varies.
 Harold is in The PALOMINO.
 
 Harold is a man.
-The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hooflike hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.";
+The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hooflike hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of colour every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The conversation of Harold is { "Glug glug!" }.
 
-the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.";
+the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.".
 
 
 Section 2 - Conversation
@@ -53,7 +53,7 @@ instead of conversing the Harold:
 			say "     'Well friend, just because things didn't quite work out the way I would have liked them, it doesn't mean I don't owe ya for all your help looking for my friend.  Why don't ya show me that list of yours there, and we can see what I've got,' the unicorn barkeep says with a broad smile and a nod of his head as you approach him about the ingredients.  He wanders off into a narrow back room for a while, only to return with a small pouch full of some unknown items.  'Well, here ya go.  These should be what ya want.  Gave ya all of the stock I was saving, since I didn't know how much you would need.  And if ya need anything else, you be sure to come visit Harold ok?' the rather saucy unicorn says with a sly wink as you tuck the pouch away and prepare to head back to Nermine with your findings.";
 			now hellgatherquest is 5;
 	otherwise if Haroldtalk is 2 and a random chance of 2 in 5 succeeds:
-		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation coloring his voice.  Confused, you cock an eyebrow at the large stallion.  'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is.  The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
+		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation colouring his voice.  Confused, you cock an eyebrow at the large stallion.  'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is.  The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
 		attempttowait;
 		say "     Harold turns his gaze towards some of the predators in the club and you quickly come to understand the unspoken message. 'I know this not your problem, but I also know you travel outside a lot, so if you could snag maybe ten things of food and maybe ten liters of water, then I'd be really indebted to you.' Letting the other man know that you'll see what you can do, you receive a somber nod from Harold before the bartender pulls himself to stand in his usual upright position back behind his bar.  'Ok. And thanks.'  You nod and then turn to leave from the bar to go about your way.";
 		now Haroldtalk is 3;
@@ -271,18 +271,18 @@ Drink bar is in The PALOMINO.
 
 
 Drink bar is a man.
-The description of Drink bar is "[drinkbardesc]";
+The description of Drink bar is "[drinkbardesc]".
 
 to say drinkbardesc:
 	say "     This well-stocked bar is full of a number of drinks you have never seen before.  Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed.  A small sign on the bar lists the available drinks.  To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit.  The list of drinks is as follows:";
 	say "     [link]Equestrian Ale[as]order Equestrian Ale[end link], [link]Black Wolf Beer[as]order Black Wolf Beer[end link], [link]Cheetah Chaser[as]order Cheetah Chaser[end link], [link]Succubi Delight[as]order Succubi Delight[end link], [link]Gryphon Gulp[as]order Gryphon Gulp[end link], [link]Satyr Special[as]order Satyr Special[end link], [link]Panda Pint[as]order Panda Pint[end link], [link]Harpy Heaven[as]order Harpy Heaven[end link], [link]Jaguar Lager[as]order Jaguar Lager[end link], [link]Sabre Savager[as]order Sabre Savager[end link], [link]Chocolate Rum[as]order Chocolate Rum[end link], [link]Tigress Tequila[as]order Tigress Tequila[end link], and [link]Zebra Vodka[as]order Zebra Vodka[end link].";
 
-the scent of Drink bar is "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.";
+the scent of Drink bar is "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.".
 
 Aledrinking is an action applying to nothing.
 
-understand "Order Equestrian Ale" as Aledrinking;
-understand "Order Ale" as Aledrinking;  
+understand "Order Equestrian Ale" as Aledrinking.
+understand "Order Ale" as Aledrinking.
 
 check Aledrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -301,8 +301,8 @@ carry out Aledrinking:
 
 Beerdrinking is an action applying to nothing.
 
-understand "Order Black wolf beer" as Beerdrinking;
-understand "Order beer" as Beerdrinking;  
+understand "Order Black wolf beer" as Beerdrinking.
+understand "Order beer" as Beerdrinking.
 
 check Beerdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -321,8 +321,8 @@ carry out Beerdrinking:
 
 Chaserdrinking is an action applying to nothing.
 
-understand "Order Cheetah Chaser" as Chaserdrinking;
-understand "Order Chaser" as Chaserdrinking;  
+understand "Order Cheetah Chaser" as Chaserdrinking.
+understand "Order Chaser" as Chaserdrinking.
 
 check Chaserdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -344,8 +344,8 @@ carry out Chaserdrinking:
 
 Delightdrinking is an action applying to nothing.
 
-understand "Order Succubi Delight" as Delightdrinking;
-understand "Order Delight" as Delightdrinking;  
+understand "Order Succubi Delight" as Delightdrinking.
+understand "Order Delight" as Delightdrinking.
 
 check Delightdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -365,8 +365,8 @@ carry out Delightdrinking:
 
 Gryphondrinking is an action applying to nothing.
 
-understand "Order Gryphon gulp" as Gryphondrinking;
-understand "Order gulp" as Gryphondrinking;  
+understand "Order Gryphon gulp" as Gryphondrinking.
+understand "Order gulp" as Gryphondrinking.
 
 check Gryphondrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -385,8 +385,8 @@ carry out Gryphondrinking:
 
 Heavendrinking is an action applying to nothing.
 
-understand "Order Harpy Heaven" as Heavendrinking;
-understand "Order Heaven" as Heavendrinking;  
+understand "Order Harpy Heaven" as Heavendrinking.
+understand "Order Heaven" as Heavendrinking.
 
 check Heavendrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -406,8 +406,8 @@ carry out Heavendrinking:
 
 Specialdrinking is an action applying to nothing.
 
-understand "Order Satyr Special" as Specialdrinking;
-understand "Order Special" as Specialdrinking;  
+understand "Order Satyr Special" as Specialdrinking.
+understand "Order Special" as Specialdrinking.
 
 check Specialdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -428,8 +428,8 @@ carry out Specialdrinking:
 
 Pintdrinking is an action applying to nothing.
 
-understand "Order Panda Pint" as Pintdrinking;
-understand "Order Pint" as Pintdrinking;  
+understand "Order Panda Pint" as Pintdrinking.
+understand "Order Pint" as Pintdrinking.
 
 check Pintdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -450,8 +450,8 @@ carry out pintdrinking:
 
 Lagerdrinking is an action applying to nothing.
 
-understand "Order Jaguar Lager" as Lagerdrinking;
-understand "Order Lager" as Lagerdrinking;  
+understand "Order Jaguar Lager" as Lagerdrinking.
+understand "Order Lager" as Lagerdrinking.
 
 check Lagerdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -472,8 +472,8 @@ carry out Lagerdrinking:
 
 Sabredrinking is an action applying to nothing.
 
-understand "Order Sabre Savager" as Sabredrinking;
-understand "Order Savager" as Sabredrinking;  
+understand "Order Sabre Savager" as Sabredrinking.
+understand "Order Savager" as Sabredrinking.
 
 check Sabredrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -493,8 +493,8 @@ carry out Sabredrinking:
 
 Rumdrinking is an action applying to nothing.
 
-understand "Order Chocolate Rum" as Rumdrinking;
-understand "Order Rum" as Rumdrinking;  
+understand "Order Chocolate Rum" as Rumdrinking.
+understand "Order Rum" as Rumdrinking.
 
 check Rumdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -514,8 +514,8 @@ carry out Rumdrinking:
 
 Vodkadrinking is an action applying to nothing.
 
-understand "Order Zebra Vodka" as Vodkadrinking;
-understand "Order Vodka" as Vodkadrinking;  
+understand "Order Zebra Vodka" as Vodkadrinking.
+understand "Order Vodka" as Vodkadrinking.
 
 check Vodkadrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -535,8 +535,8 @@ carry out Vodkadrinking:
 
 Tequiladrinking is an action applying to nothing.
 
-understand "Order Tigress Tequila" as Tequiladrinking;
-understand "Order Tequila" as Tequiladrinking;  
+understand "Order Tigress Tequila" as Tequiladrinking.
+understand "Order Tequila" as Tequiladrinking.
 
 check Tequiladrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;

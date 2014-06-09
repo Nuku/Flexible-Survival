@@ -8,7 +8,7 @@ Section 1 - Zephias the spidertaur
 [  2: player learned that Julio is gay and doesn't fuck women            ]
 
 Zephias is a man.
-The description of Zephias is "[Zephiasdesc]";
+The description of Zephias is "[Zephiasdesc]".
 The conversation of Zephias is { "Meep!" }.
 
 instead of sniffing Zephias:
@@ -24,7 +24,7 @@ instead of conversing Zephias:
 Section 2 - Events
 
 Captured Soldier is a situation. Captured Soldier is resolved.
-The sarea of Captured Soldier is "Warehouse";
+The sarea of Captured Soldier is "Warehouse".
 
 when play begins:
 	add Captured Soldier to badspots of guy;     

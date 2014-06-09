@@ -113,7 +113,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Goo Girl":
 		if humanity of player < 10:
-			say "With a body of jello, your prospects of benevolent rescue are slim, not that you feel much urge for that anymore anyway. You descend into the darkness and [apostrophe]greet[apostrophe] those foolish enough to follow. Your undulating form and increasingly skillful teases draw a few more curious souls to your bosom than might otherwise be tempted to go looking.";
+			say "With a body of jello, your prospects of benevolent rescue are slim, not that you feel much urge for that anymore anyway. You descend into the darkness and [']greet['] those foolish enough to follow. Your undulating form and increasingly skillful teases draw a few more curious souls to your bosom than might otherwise be tempted to go looking.";
 			if cunt length of player is greater than 20:
 				say "One day you capture a woman poking around. You wrestle her to the ground and draw her up into your greedy form. The experience is like one extended orgasm, and her every struggling motion is a spike of sensation. You keep her inside for a month before you release her, but by then the damage was done. What emerged was another goo creature like yourself, and she no longer wished to leave. You grew to enjoy the company.";
 		otherwise:

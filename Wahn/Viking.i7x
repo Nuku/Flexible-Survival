@@ -585,7 +585,7 @@ Section 3 - Events
 
 	
 Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is resolved.
-The sarea of Chieftain's Challenge is "Beach";
+The sarea of Chieftain's Challenge is "Beach".
 		 
 Instead of resolving a Chieftain's Challenge:		
 	if the player is not facially human or the player is not bodily human or the player is not skintone human:     [they see the player as a monster]
@@ -720,7 +720,7 @@ to say VikingPublicSex:
 Section 4 - Viking Ship
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
-The description of Viking Ship is "[VShipDesc]";
+The description of Viking Ship is "[VShipDesc]".
 
 to say VShipDesc:
 	if daytimer is day:
@@ -739,7 +739,7 @@ instead of navigating Viking Ship:
 	
 down from Viking Ship is Sonya's Cabin.
 Sonya's Cabin is a room. 
-The description of Sonya's Cabin is "[SCDesc]";
+The description of Sonya's Cabin is "[SCDesc]".
 
 to say SCDesc:
 	say "     Sonya's cabin is relatively big - being the chieftain's daughter has its perks - and sports a bed big enough for two, covered in soft furs. You can see that it's bolted to the wooden floorboards, just like the two chests that stand against the opposite wall. Not much for loose clutter, these vikings - those three items are the only furniture in here. But then, that's just a sensible thing to do, avoiding things being thrown around in a storm... and also allowing to do all kinds of sexy stuff in the bed without it knocking against the neighbouring cabin wall.";
@@ -783,7 +783,7 @@ If you can add Sonya to the viking longboat, along with discussion topics and a 
 
 Sonya is a woman.  The hp of Sonya is normally 0. 
 Sonya is in Sonya's Cabin.
-The description of Sonya is "[SonyaDesc]";
+The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.
 
 instead of sniffing Sonya:

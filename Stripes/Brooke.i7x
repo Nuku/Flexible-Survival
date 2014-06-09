@@ -16,7 +16,7 @@ The icon of Brooke is Figure of Brooke_icon.
 to say brookedesc:
 	say "     Among the people dancing at the club, this otter catches your eye.  Perhaps its his lovely, cream coloured fur, or his pretty-boy face.  It might be the way he moves his slender and flexible body to the music in a way all his own.  Or maybe the colourful bracelets glowing in the blacklight.  No, if you must be honest with yourself, it's totally that plump sheath, heavy balls and tight booty of his.  For while he wears a tight black t-shirt, numerous bracelets and anklets, he's nude from the waist down.  And from the way he's moving that rudder-like tail of his, he has no problem raising it and showing off his toned rear to the nearby guys.";
 
-the scent of Brooke is "Brooke carries a medley of musky male scents upon him.";
+the scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 
 
 Section 2 - Conversation

@@ -16,26 +16,26 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 Section 2 - Variable and constant definitions
 
-ButterflyForeplay is a truth state that varies. ButterflyForeplay is usually False;
-ButterflyRaped is a number that varies. ButterflyRaped is usually 0;
-ButterflyPregnant is a truth state that varies. ButterflyPregnant is usually False;
-ButterflyBreastDesc is a text that varies. ButterflyBreastDesc is usually "cute and buoyant B-cup";
-ButterflyNegligeeTorn is a truth state that varies. ButterflyNegligeeTorn is usually False;
-ButterflyLikesYou is a truth state that varies. ButterflyLikesYou is usually False;
-ButterflyLove is a truth state that varies. ButterflyLove is usually False;
-ButterflyRevenge is a truth state that varies. ButterflyRevenge is usually False;
-ButterflyProcreated is a truth state that varies; ButterflyProcreated is usually False;
-ButterflyPantiesFound is a truth state that varies; ButterflyPantiesFound is usually False;
-ButterflyTummy is a text that varies. ButterflyTummy is usually "";
-ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0;
-ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True;
-ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
+ButterflyForeplay is a truth state that varies. ButterflyForeplay is usually False.
+ButterflyRaped is a number that varies. ButterflyRaped is usually 0.
+ButterflyPregnant is a truth state that varies. ButterflyPregnant is usually False.
+ButterflyBreastDesc is a text that varies. ButterflyBreastDesc is usually "cute and buoyant B-cup".
+ButterflyNegligeeTorn is a truth state that varies. ButterflyNegligeeTorn is usually False.
+ButterflyLikesYou is a truth state that varies. ButterflyLikesYou is usually False.
+ButterflyLove is a truth state that varies. ButterflyLove is usually False.
+ButterflyRevenge is a truth state that varies. ButterflyRevenge is usually False.
+ButterflyProcreated is a truth state that varies. ButterflyProcreated is usually False.
+ButterflyPantiesFound is a truth state that varies. ButterflyPantiesFound is usually False.
+ButterflyTummy is a text that varies. ButterflyTummy is usually "".
+ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0.
+ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True.
+ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]".
 ButterflyBaby is a person.
-The butterflybaby has a text called bodyname. Bodyname is usually "human";
-The butterflybaby has a text called facename. Facename is usually "human";
-The butterflybaby has a text called skinname. Skinname is usually "human";
-The butterflybaby has a text called cockname. cockname is usually "human";
-The butterflybaby has a text called tailname. Tailname is usually "human";
+The butterflybaby has a text called bodyname. Bodyname is usually "human".
+The butterflybaby has a text called facename. Facename is usually "human".
+The butterflybaby has a text called skinname. Skinname is usually "human".
+The butterflybaby has a text called cockname. cockname is usually "human".
+The butterflybaby has a text called tailname. Tailname is usually "human".
 
 ButterflyBaby has a number called Gestation.
 

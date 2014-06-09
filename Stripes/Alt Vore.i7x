@@ -21,7 +21,7 @@ when play begins:
 Section 1 - Event
 
 Inner Predator is a scavevent.  The level of Inner Predator is 4.
-The sarea of Inner Predator is "Allzones";
+The sarea of Inner Predator is "Allzones".
 when play begins:
 	add Inner Predator to badspots of furry;
 

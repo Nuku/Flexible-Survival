@@ -209,7 +209,7 @@ to say elkantleruse:
 		now sex entry is "Female";
 	infect;
 
-the scent of elk antler is "It has a strong, musky scent.";
+the scent of elk antler is "It has a strong, musky scent.".
 
 Section 5 - Endings
 

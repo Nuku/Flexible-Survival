@@ -7,7 +7,7 @@ Section 1- Museum environment
 
 Museum Foyer is a room. It is fasttravel. 
 
-The description of Museum Foyer is "[museumdesc]";
+The description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
 	if hp of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;		[Solstice's quest available after visiting the Museum]
@@ -24,7 +24,7 @@ East of Museum entry is Museum interior.
 The marea of Museum entry is "Museum".
 
 Valerie is a woman.
-The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body.  You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.";
+The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body.  You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.".
 The conversation of Valerie is { "Riddle me this!" }.
 Valerie is in Museum Foyer.
 
@@ -51,13 +51,13 @@ riddlesphinx is a number that varies. riddlesphinx is usually 0.
 
 riddlesphinxing is an action applying to nothing.
 
-understand "answer riddles" as riddlesphinxing;
-understand "riddle valerie" as riddlesphinxing;
-understand "play riddles" as riddlesphinxing;
-understand "riddle sphinx" as riddlesphinxing;
-understand "answer riddle" as riddlesphinxing;
-understand "try riddle" as riddlesphinxing;
-understand "answer valerie" as riddlesphinxing;
+understand "answer riddles" as riddlesphinxing.
+understand "riddle valerie" as riddlesphinxing.
+understand "play riddles" as riddlesphinxing.
+understand "riddle sphinx" as riddlesphinxing.
+understand "answer riddle" as riddlesphinxing.
+understand "try riddle" as riddlesphinxing.
+understand "answer valerie" as riddlesphinxing.
 
 check riddlesphinxing:
 	if Valerie is not visible, say "Who you are looking for is the real riddle here?" instead;
