@@ -41,6 +41,7 @@ To say a/an (T - text):
 	
 To end the game saying (T - text):
 	end the story saying T;
+	
 
 Instead of sniffing something (called x):
 	if the scent of x is "":
@@ -52,6 +53,9 @@ To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
+
+To change the current menu to (X - table name):
+	now the current menu is x;
 
 to clear the screen and hyperlink list:
 	clear the screen;
@@ -1885,7 +1889,7 @@ to ban menu:
 		now title entry is "Begin Game";
 		now description entry is "Begin Game";
 		now toggle entry is flag ban rule;
-		change the current menu to table of Combat Items;
+		now the current menu is table of Combat Items;
 		carry out the displaying activity;
 
 This is the flag ban rule:
@@ -4338,7 +4342,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	change the text of the player's command to x;
+	now  the text of the player's command is x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	otherwise:
