@@ -65,7 +65,7 @@ Instead of resolving a Pigging Out:
 				challenge "Messy Pig";
 				if lost is 1:
 					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
-					infect "Messy Pig";    [extra infection]
+					infect "Messy Pig"; [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
 				otherwise:
@@ -83,7 +83,7 @@ Instead of resolving a Pigging Out:
 			challenge "Messy Pig";
 			if lost is 1:
 				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
-				infect "Messy Pig";    [extra infection]
+				infect "Messy Pig"; [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
 			otherwise:
@@ -149,13 +149,13 @@ to say dogparksearch:
 		increase carried of pepperspray by 1;
 		increase score by 5;
 	if T is 3:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
 		challenge "German Shepherd";
 	if T is 4:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  Your search turns up nothing of value, but you are getting ready to leave, you spot a large collie-like creature charging into the park.  It sniffs around eagerly, clearly drawn by the scent of so many canines.  Finding the park empty, it is clearly disappointed.  That is, until it finds you.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  Your search turns up nothing of value, but you are getting ready to leave, you spot a large collie-like creature charging into the park.  It sniffs around eagerly, clearly drawn by the scent of so many canines.  Finding the park empty, it is clearly disappointed.  That is, until it finds you.";
 		challenge "Shemale Smooth Collie";
 	if T is 5:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach the far corner of the park, you are spotted by a husky female with the last tatters of her expensive dress still on her and a pearl necklace.  As she bounds towards you, you note that the scent of sex is thick around her.  She was likely very recently transformed and is lost in her new animalistic needs.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach the far corner of the park, you are spotted by a husky female with the last tatters of her expensive dress still on her and a pearl necklace.  As she bounds towards you, you note that the scent of sex is thick around her.  She was likely very recently transformed and is lost in her new animalistic needs.";
 		challenge "Female Husky";
 	if T is 6:
 		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While flipping through a pile of clothes and items, you spot a dog collar.  Making the mistake of picking it up, you find it sticky with something that runs down your arm.  You toss down the cum-slick collar, but it is too late.";
@@ -197,7 +197,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and nine;  [adjust this for new dogs]
+	let tempnum  be a random number between one and nine; [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
 	if tempnum is 2:
@@ -337,7 +337,7 @@ to say vetsearch:
 			say "     You look at the cans of pet food briefly, then turn and continue searching.  You haven't sunk that low yet.  A quick look around the rest of the room finds nothing else of interest.  Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			increase score by 1;
 	if T is 3 or T is 4 or T is 5 or T is 6 or T is 7:		[high chance of random 'pet' fight]
-		say "      You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
 		say "[randomvetfight]";
 		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet's office are getting to you and you leave before you succumb entirely.";
 	if T is 8:

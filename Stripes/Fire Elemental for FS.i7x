@@ -25,7 +25,7 @@ to say losetofireelemental:
 		otherwise if cunts of player > 0:
 			say "     She gently pushes you to the ground and swings her cunt over your face, pressing it against your lips while her own buries itself in your crotch, her hot, deft tongue and supple lips working over your [if cunts of player is 2]pair of cunts[otherwise if cunts of player > 2]many cunts[otherwise]cunt[end if] with plenty of zeal, sending hot waves of pleasure through you.  And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 		otherwise:
-			say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dextrous tongue working at yours with a passion.  Your flames blend with hers as your passionate heat grows and grows.  After awhile, she leaves you there in your daze and heads off, continuing her wandering.";
+			say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dexterous tongue working at yours with a passion.  Your flames blend with hers as your passionate heat grows and grows.  After awhile, she leaves you there in your daze and heads off, continuing her wandering.";
 	otherwise if bodyname of player is "Flaming Lynx" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now.  She reaches down, running her fiery hands over your flaming body as if petting you.  'Come, fiery beast, let us fight no longer.  Instead, seek to satisfy the burning needs inside me,' she adds with a purr as her hand slides down between your legs.";
 		if cocks of player > 0 and cock length of player > 15:
@@ -67,7 +67,7 @@ to say fireelsex:
 	otherwise if cunts of player > 0:
 		say "     She gently pushes you to the ground and swings her cunt over your face, pressing it against your lips while her own buries itself in your crotch, her hot, deft tongue and supple lips working over your [if cunts of player is 2]pair of cunts[otherwise if cunts of player > 2]many cunts[otherwise]cunt[end if] with plenty of zeal. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 	otherwise:
-		say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dextrous tongue working at yours with a passion. After awhile, she leaves you there in your daze and heads off, continuing her wandering.";
+		say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dexterous tongue working at yours with a passion. After awhile, she leaves you there in your daze and heads off, continuing her wandering.";
 
 
 to say beatthefireelemental:
@@ -124,7 +124,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
  	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sensual[or]lithe[at random]";
 	now type entry is "[one of]elemental[or]humanoid[at random]";
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
