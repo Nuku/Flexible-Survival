@@ -6708,6 +6708,7 @@ Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
 
 
+
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
