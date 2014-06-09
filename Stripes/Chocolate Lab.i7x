@@ -277,7 +277,7 @@ this is the Choclab piggyback rule:
 			now battleground is "void";
 			now labhost is 3;
 			attempttowait;
-			end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			stop the action;
 	if labtimerB > 0:
 		decrease labtimerB by 1;

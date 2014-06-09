@@ -4677,7 +4677,7 @@ carry out early birding:
 		stop the action;
 	decrease the score by 100;
 	now quitter is 1;
-	end the game saying "You waited for rescue.";
+	end the story saying "You waited for rescue.";
 
 Punying is an action applying to nothing.
 understand "Puny" as punying.
@@ -5035,7 +5035,7 @@ This is the turnpass rule:
 			decrease the morale of the player by ( hunger of the player minus 30 ) divided by 5;
 		if hunger of player is greater than 99:
 			now hp of player is -9999;
-			end the game saying "You have died of hunger.";
+			end the story saying "You have died of hunger.";
 		if thirst of player is greater than 90:
 			say "You will die if you don't drink something soon.";
 		otherwise if thirst of player is greater than 50:
@@ -5048,7 +5048,7 @@ This is the turnpass rule:
 			decrease the morale of the player by ( thirst of the player minus 30 ) divided by 5;
 		if thirst of player is greater than 99:
 			now hp of player is -9999;
-			end the game saying "You have died of thirst.";
+			end the story saying "You have died of thirst.";
 		if hunger of player is greater than 50 or thirst of player is greater than 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
 		let maxmorale be ( the charisma of the player plus the perception of the player );
@@ -5208,11 +5208,11 @@ This is the turnpass rule:
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
 	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
-		end the game saying "Your mind is lost to the infection.";
+		end the story saying "Your mind is lost to the infection.";
 	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
-		end the game saying "You survived until the rescue came.";
+		end the story saying "You survived until the rescue came.";
 	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;

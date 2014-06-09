@@ -744,7 +744,7 @@ Instead of resolving Concert Hall:
 			if cock length of player < 4, now cock length of player is 4;
 			if cock width of player < 4, now cock width of player is 4;
 		if libido of player < 10, now libido of player is 10;
-		end the game saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
+		end the story saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;
@@ -885,7 +885,7 @@ Instead of resolving Hunting Prides:
 			now cock width of player is 0;
 		if libido of player < 30, now libido of player is 30;
 		attempttowait;
-		end the game saying "Having been defeated by the hunting pride of feline girls, you are made to join their pride.";
+		end the story saying "Having been defeated by the hunting pride of feline girls, you are made to join their pride.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;

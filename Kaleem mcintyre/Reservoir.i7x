@@ -368,7 +368,7 @@ Instead of resolving a A Fight to remember:
 					now bodydesc of player is "gleatinous";
 					now bodytype of player is "ooze";
 					now the daycycle of player is 0;
-					end the game saying "You have been absorbed by the blob creature.";
+					end the story saying "You have been absorbed by the blob creature.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
@@ -404,7 +404,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
 						now the daycycle of player is 0;
-						end the game saying "You have been absorbed by the blob creature.";
+						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
@@ -435,7 +435,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
 						now the daycycle of player is 0;
-						end the game saying "You have been absorbed by the blob creature.";
+						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;

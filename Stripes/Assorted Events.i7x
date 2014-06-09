@@ -649,7 +649,7 @@ Instead of resolving a Concession Stand:
 				now bodydesc of player is "malleable";
 				now bodytype of player is "ever-changing";
 				now the daycycle of player is 0;
-				end the game saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
+				end the story saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
 				now battleground is "void";
 				wait for any key;
 				now skipturnblocker is 1;
@@ -792,7 +792,7 @@ Instead of resolving a Beach Party:
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";
 			attempttowait;
-			end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+			end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 			now battleground is "void";
 			wait for any key;
 			now skipturnblocker is 1;

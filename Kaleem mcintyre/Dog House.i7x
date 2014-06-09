@@ -201,7 +201,7 @@ Instead of resolving DogHouse:
 					now bodydesc of player is "animalistic";
 					now bodytype of player is "canine";
 					now the daycycle of player is 0;
-					end the game saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0] losing any masculinity you might have had[otherwise]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
+					end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0] losing any masculinity you might have had[otherwise]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
@@ -219,7 +219,7 @@ Instead of resolving DogHouse:
 				now bodydesc of player is "animalistic";
 				now bodytype of player is "canine";
 				now the daycycle of player is 0;
-				end the game saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0]losing any masculinity you might have had[otherwise]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
+				end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0]losing any masculinity you might have had[otherwise]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;

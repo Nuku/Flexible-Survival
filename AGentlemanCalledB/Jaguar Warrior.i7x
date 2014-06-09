@@ -542,7 +542,7 @@ instead of resolving Feline Relief:
 			now tailname of player is "Rubber Sex Doll";
 			now cockname of player is "Rubber Sex Doll";
 			now humanity of player is 0;
-			end the game saying "You are transformed into a Rubber Sex Doll by the latex mistresses.";
+			end the story saying "You are transformed into a Rubber Sex Doll by the latex mistresses.";
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19: [player defeats all three mistresses]
 			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple the the new additions the rubber girls brought back with them before quickly departing the store.";
 			now HP of Tehuantl is 14;

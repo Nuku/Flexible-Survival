@@ -110,7 +110,7 @@ Instead of resolving Spiritual Love:
 			now bodydesc of player is "animalistic";
 			now bodytype of player is "lupine";
 			now the daycycle of player is 0;
-			end the game saying "You submitted to the spiritual wolf, becoming his loving mate.";
+			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;

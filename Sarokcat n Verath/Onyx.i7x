@@ -238,7 +238,7 @@ Instead of fucking the Onyx:
 				now bodydesc of player is "sultry";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
 				now the daycycle of player is 0;
-				end the game saying "You become another mareslut at the Stables and Onyx's special plaything.";
+				end the story saying "You become another mareslut at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 			otherwise:						[MALE SUCCUMB]
 				say "     'Ah! I knew my slut would return to his stallion soon enough.  You just can't help but lust after my rod, now can you?' Onyx says with a smirk on his equine muzzle as he reaches out and strokes your body with his hand teasingly, making you moan almost automatically as your well-trained body responds submissively to his touch. 'Now it's time for the real fun though, isn't it slut?' he says teasingly as he rubs your ass with his powerful hands, making you moan with desire at your stallion's touch, the scent of his heady musk filling your head, and reminding you of just how good it feels to submit and let him have his way with you. Your head swimming with lust, you pant eagerly as he slowly pulls you into the room he once occupied and pushes you face down onto the bed. Your thoughts already filling with images of the handsome black stallion fucking your increasingly eager body, you spread yourself for him eagerly as he climbs up onto the bed on top of you.  His hands gather yours up and pin them above your head as his thick black and pink rod rubs up against your backside. 'What a good little slutty colt you make.  You want my cock so bad don't you, little slut?' he says teasingly as he shifts his weight above you, and you find yourself moaning and nodding eagerly, your back passage feeling horribly empty and needy as feel his amazingly sexy stallionhood pulsing against you and soaking your lower back with his musky pre.";
@@ -252,7 +252,7 @@ Instead of fucking the Onyx:
 				now bodydesc of player is "feminine";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
 				now the daycycle of player is 0;
-				end the game saying "You become another slutty stallionboi at the Stables and Onyx's special plaything.";
+				end the story saying "You become another slutty stallionboi at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 		otherwise if Onyxmareslut > 0 or onyxboislut > 0:	[For slut values of 1 and a slut value of 2 when gender doesn't match]
 			now lastfuck of onyx is turns;

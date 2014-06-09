@@ -203,7 +203,7 @@ instead of conversing the Rex:
 				say "[fullRetrieverTF]";
 				now hp of Rex is 49;
 				now humanity of player is 0;
-				end the game saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
+				end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
@@ -215,7 +215,7 @@ instead of conversing the Rex:
 			say "     Realizing his intent the retriever bitch that has been slowly taking control of your mind snaps to the forefront, consuming you entirely. You pad over to Rex happily and kneel down in front of him, allowing him to affix the collar around your neck, once down he pets the top of your head softly as your look up at your new master and smile, already imagining the new life ahead of you.";
 			say "[fullRetrieverTF]";
 			now hp of Rex is 10;
-			end the game saying "     Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
+			end the story saying "     Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;
@@ -282,7 +282,7 @@ Instead of fucking the Rex:
 				say "     All your other concerns seam to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return to him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 				now hp of Rex is 10;
 			say "[fullRetrieverTF]";
-			end the game saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
+			end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;

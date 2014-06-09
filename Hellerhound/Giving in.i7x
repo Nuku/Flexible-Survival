@@ -38,6 +38,6 @@ an everyturn rule:
 		decrease score by 200;
 		if humanity of player < 0:
 			now givingupton is 0;
-			end the game saying "You gave in to your infection.";
+			end the story saying "You gave in to your infection.";
 
 Giving in ends here.

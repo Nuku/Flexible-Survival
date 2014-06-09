@@ -279,7 +279,7 @@ Instead of resolving a Veterinary Hospital:
 				follow the sex change rule;
 				follow the sex change rule;
 				attempttowait;
-				end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
@@ -539,7 +539,7 @@ Instead of resolving a Cameo:
 		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants.  You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";
 		if humanity of player < 10:
 			say ".  You flow into the shape of a flowing, chocolate dog and head out after them with a wet yip, having lost too much of yourself to them and succumbing to the bizarre, confectionary infection.  When you catch up to them, they grin and give you slobbery, chocolatey licks and nuzzles, welcoming you into the pack.";
-			end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;

@@ -118,7 +118,7 @@ instead of resolving sword nest:
 					repeat with T running from one to 15:
 						randominfect;
 					now the humanity of the player is 0;
-					end the game saying "Your humanity submits to the sludge nanites, and you go feral.";
+					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
