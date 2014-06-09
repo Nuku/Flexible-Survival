@@ -119,7 +119,7 @@ To show menu contents:
 		let __x be the chosen letter;
 		if __x is a number listed in the Table of Menu Commands
 		begin;
-			consider the effect entry; 
+			follow the effect entry; 
 			if temporary depth > menu depth
 			begin;
 				now __index is 1; 
