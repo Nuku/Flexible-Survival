@@ -89,7 +89,7 @@ to say latexfoxdesc:
 	otherwise if cunts of player > 0:
 		now sex entry is "Female";
 	otherwise:
-		now sex entry is "Both";
+		now sex entry is "Male";
 	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[otherwise]dim[end if] light. Loudly squeaking and creaking as the creature approach, he appears very eager to see you, his blatant arousal exposed against the open air.";
 
 
@@ -104,8 +104,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Fox";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "MISSING TEXT";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at your [bodydesc of player] body with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of your [bodytype of player] form with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[mimpregchance][end if][at random]";					[ Text when monster wins.  Change 'template' as above. ]
+	now defeated entry is "[latexfoxdefeat]";				[ Text when monster loses.  Change 'template' as above. ]
+	now victory entry is "[latexfoxvictory]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "You encounter a creature made of glistening latex. It is largely red in colour, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry.";						[ Description of the creature when you encounter it. ]
 	now face entry is "mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous";	[ Body Description, format as the text "Your body is (your text)." ]
