@@ -2029,7 +2029,10 @@ Carry out reciting:
 			increase zeta by 58;
 		otherwise if upit is 2:
 			increase zeta by 160;  
-		if Z+zeta is:
+		let current be 0;
+		increase current by z;
+		increase current by zeta;
+		if current is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
@@ -3802,8 +3805,8 @@ Carry out reciting:
 			-- 206: [FionaCarlStatus]
 				if the player's command matches "[number]":
 					now FionaCarlStatus is the number understood;																	
-		if upit is 1, decrease z by 58;
-		if upit is 2, decrease z by 160;
+		if upit is 1, decrease zeta by 58;
+		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;

@@ -2339,7 +2339,7 @@ carry out Inventorying:
 	sort the table of game objects in sortname order;	]
 	let jblouse be 0;
 	if demon seed is owned, now dseed is 1;
-	if Janice's blouse is owned, now jblouse be 1;
+	if Janice's blouse is owned, now jblouse is 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
@@ -5648,7 +5648,7 @@ This is the male choice rule:
 	now the cock width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 0;
-	change the current menu to table of Basic Actions;
+	now  the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
 	follow the final stats rule;
@@ -5660,7 +5660,7 @@ This is the female choice rule:
 	now the cunt width of the player is 4;
 	now the breasts of the player is 2;
 	now the breast size of the player is 2;
-	change the current menu to table of Basic Actions;
+	now the current menu is table of Basic Actions;
 	say "You are a woman.";
 	wait for any key;
 	follow the final stats rule;

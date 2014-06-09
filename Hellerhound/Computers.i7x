@@ -31,7 +31,8 @@ A data storage device is a kind of thing.
 	The specification of an extension port is "A generic kind suitable for implementing DVD or CDs, flash drives, etc."
 
 Setting action variables for an actor inserting a data storage device into a computer when the second noun incorporates exactly one extension port (called target port) (this is the guess a sensible port rule):
-	change the second noun to the target port.
+	now the second noun is the target port.
+[	change the second noun to the target port.]
 	
 Instead of an actor inserting something which is not a data storage device into an extension port (this is the restrict extension port usage rule):
 	if the actor is not the player:
@@ -161,11 +162,11 @@ Check someone text-searching (this is the block others searching for text rule):
 
 Setting action variables for consulting something which is part of a computer (called target) about the topic understood (this is the consult no peripherals rule):
 	if the controlling program of the target is software:
-		change the noun to the controlling program of the target. [Converts LOOK UP BALLOON ON KEYBOARD to LOOK UP BALLOON ON GOOGLE]
+		now the noun is the controlling program of the target. [Converts LOOK UP BALLOON ON KEYBOARD to LOOK UP BALLOON ON GOOGLE]
 
 Setting action variables for consulting a computer about the topic understood (this is the consult only software rule):
 	if the controlling program of the noun is software:
-		change the noun to the controlling program of the noun. [Converts LOOK UP BALLOON ON COMPUTER to LOOK UP BALLOON ON GOOGLE]
+		now the noun is the controlling program of the noun. [Converts LOOK UP BALLOON ON COMPUTER to LOOK UP BALLOON ON GOOGLE]
 
 Report consulting a search engine about the topic understood (this is the list search hits rule):
 	let result count be 0;
@@ -319,7 +320,7 @@ Carry out email-replying (this is the mark messages replied rule):
 	repeat with chosen software running through visible email programs:
 		if the topic understood is a topic listed in the message table of the chosen software:
 			if there is an arrival time entry: 
-				change the answered entry to true;
+				now the answered entry is true;
 				rule succeeds.
 
 Report email-replying (this is the standard report replying to email rule):
@@ -356,7 +357,7 @@ Understand the commands "key" and "input" as "type".
 
 Rule for supplying a missing second noun while typing the topic understood on (this is the guess a keyboard while typing rule):
 	if the player can touch a keyboard (called target):
-		change the second noun to the target;
+		now the second noun is the target;
 	otherwise:
 		say "You'll have to specify what you want to type on." instead.
 
@@ -364,15 +365,15 @@ Rule for supplying a missing second noun while typing the topic understood on (t
 Setting action variables for an actor typing the topic understood on something which is not a keyboard (this is the adjust to correct keyboard rule):
 	if the second noun is a computer:
 		let the relevant keyboard be a random keyboard which is part of the second noun;
-		change the second noun to the relevant keyboard;
+		now the second noun is the relevant keyboard;
 	otherwise if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant keyboard be a random keyboard which is part of the relevant computer;
-		change the second noun to the relevant keyboard;
+		now the second noun is the relevant keyboard;
 
 Setting action variables for an actor typing the topic understood on something (this is the find correct software rule):
 	if the second noun is keyboard:
-		change the computer in question to a random computer which incorporates the second noun;
-		change the software in question to the controlling program of the computer in question. [This kicks the logic back up to chapter 3.]
+		now the computer in question is a random computer which incorporates the second noun;
+		now the software in question is the controlling program of the computer in question. [This kicks the logic back up to chapter 3.]
 
 Check an actor typing  the topic understood on something which is not a keyboard (this is the reject typing on non-keyboards rule):
 	if the actor is the player:
@@ -399,7 +400,7 @@ Contentlessly typing is an action applying to one thing.
 
 Rule for supplying a missing noun while contentlessly typing (this is the guess a keyboard while contentlessly typing rule):
 	if the player can touch a keyboard (called target):
-		change the noun to the target;
+		now the noun is the target;
 	otherwise:
 		say "You'll have to specify what you want to type." instead.
 
@@ -417,7 +418,7 @@ Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text
 
 Rule for supplying a missing second noun while selecting the topic understood with (this is the guess a selection device while selecting rule):
 	if the player can touch a selection device (called target):
-		change the second noun to the target;
+		now the second noun is the target;
 	otherwise:
 		say "You'll have to specify what you want to click with." instead.
 
@@ -427,15 +428,15 @@ The selecting it with action has an object called the selected software in quest
 Setting action variables for an actor selecting the topic understood with something which is not a selection device (this is the adjust to correct selection device rule):
 	if the second noun is a computer:
 		let the relevant selection device be a random selection device which is part of the second noun;
-		change the second noun to the relevant selection device;
+		now the second noun is the relevant selection device;
 	otherwise if the second noun is something which is part of a computer (called the relevant computer):
 		let the relevant selection device be a random selection device which is part of the relevant computer;
-		change the second noun to the relevant selection device;
+		now the second noun is the relevant selection device;
 
 Setting action variables for an actor selecting the topic understood with something (this is the find correct selection device software rule):
 	if the second noun is a selection device:
-		change the selected computer in question to a random computer which incorporates the second noun;
-		change the selected software in question to the controlling program of the selected computer in question. [This kicks the logic back up to chapter 3.]
+		now the selected computer in question is a random computer which incorporates the second noun;
+		now the selected software in question is the controlling program of the selected computer in question. [This kicks the logic back up to chapter 3.]
 
 Check an actor selecting the topic understood with something when the second noun is not a selection device (this is the click only with mice rule):
 	if the actor is the player:
@@ -496,7 +497,7 @@ An input handling rule for an email program (called chosen software) (this is th
 	if the topic understood is a topic listed in the message table of the chosen software:
 		if there is an arrival time entry:
 			say "[description entry][paragraph break]";
-			change the read entry to true;
+			now the read entry is true;
 			rule succeeds;
 	say "No such message is available.";
 	rule fails.
