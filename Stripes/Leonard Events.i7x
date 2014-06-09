@@ -286,6 +286,7 @@ to say leodenspecial2:
 Part 10 - Supply Delivery
 
 to say leosupplyscene:
+	let leosupplies be 0;
 	if leosupplies is 0, let leosupplies be a random number between 1 and 2;
 	say "     After being welcomed by your mate, you [one of]settle in to take a short break before getting into the reason for your visit[or]enjoy a pleasant snuggling with the sexy lion[or]enjoy some relaxing attention from the cute maids[or]enjoy a pleasant chat with Leonard[cycling].  At this time, a heavily-laden lioness in a red cap arrives at the den.  One of the maids assists her in removing the heavy pack, full of [if leosupplies is 1]foodstuffs[otherwise]bottled water[end if], and carry it inside.  After a cursory examination by a pleased Leonard, he gives some to you before the pack is sent off to the pantry to be stocked[if leonardcaraway is true] by a very pleased Caraway[end if].";
 	say "     You both thank the kitty for her efforts, the den being in need of more supplies due to the addition of the maids.  The little lioness purrs happily at the praise, especially when Leonard's paw drifts down to her rear.  With his gentle touch, he guides her ";

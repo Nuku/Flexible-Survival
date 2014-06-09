@@ -1487,7 +1487,7 @@ to wyvernkinlustcheck:
 			if wyvkin2att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin2att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin2att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin2att is 4:
@@ -1535,7 +1535,7 @@ to wyvernkinlustcheck:
 			if wyvkin3att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin3att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin3att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin3att is 4:
@@ -1583,7 +1583,7 @@ to wyvernkinlustcheck:
 			if wyvkin4att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin4att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin4att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin4att is 4:

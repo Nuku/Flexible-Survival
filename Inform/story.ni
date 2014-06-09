@@ -53,6 +53,8 @@ To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
+	
+
 
 To change the current menu to (X - table name):
 	now the current menu is x;
@@ -4342,7 +4344,7 @@ To get a number:
 	numberfy playerinput;
 
 to numberfy (x - a snippet):
-	now  the text of the player's command is x;
+	change  the text of the player's command to x;
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	otherwise:

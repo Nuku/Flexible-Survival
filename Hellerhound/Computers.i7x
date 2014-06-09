@@ -248,7 +248,7 @@ To say options-list of (chosen program - an enumerated multiple-choice program):
 	say "The following options are visible on the screen:[paragraph break]";
 	let N be 1;
 	repeat through the options table of the chosen program:
-		change the index entry to N;
+		now the index entry is N;
 		increase N by 1;
 		say "[index entry]: [title entry][line break]";
 	say "[run paragraph on]". 
@@ -288,7 +288,7 @@ topic	message	arrival time	read	answered	description
 To deliver (chosen message - text) to (chosen program - an email program):
 	repeat through the message table of the chosen program:
 		if message entry is chosen message: 
-			change the arrival time entry to the time of day; 
+			now the arrival time entry is the time of day; 
 			if the player can see the chosen program:
 				say "[new mail message of the chosen program][paragraph break]";
 

@@ -234,7 +234,7 @@ to Hellhound infect female:
 	clear the screen;
 	say "     You wake up several hours later with your clothing torn to ribbons and slimy, yellow-tinged seed forming a puddle between your legs.  Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it.  Somehow you've been brought back to the bunker, and true to the demon dog's words, you no longer show any signs of the infection.  You seem to have been completely restored to a human form... except for one place.  Between your legs is a lewd dripping demon bitch twat, swollen and puffy, leaking the hellhound's piss and cum as you hear a chuckle in your mind.  'Such a pretty bitch you are.  Please, go out and enjoy yourself.  You are now immune to the changes, just as I promised, as one of us.  You will easily return to the form you want to hold, with one or two things that can't be hidden.  Such are the rules, there must always be SOME kind visible proof or our infernal origins.  Return to me once you a properly... ready,' the voice says, fading out and leaving you alone with your thoughts in the bunker.";
 	say "     Your insides clench with a fiery heat, longing to have a litter of hellhound pups gestating inside you.";
-	if Humanity of player > 50 then now humanity of player is 50;
+	if Humanity of player > 50, now humanity of player is 50;
 	now skin of player is "smooth";
 	now face of player is "leather dog collar around your neck, and a charmingly human";
 	now tail of player is "";
@@ -270,7 +270,7 @@ to Hellhound infect male:
 	clear the screen;
 	say "     You wake up several hours later, your clothing torn to ribbons.  Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it.  Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection.  You seem to have been completely restored to a human form... except for one place.  Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together.  As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy.  But you're not quite up to the task yet.  You are not ready to be a male in my pack.  Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
 	say "     An unholy urge fills you as rub at yourself through your pants.  Females, bitches -  you need to fill them with your seed.";
-	if Humanity of player > 50 then now humanity of player is 50;
+	if Humanity of player > 50, now humanity of player is 50;
 	now skin of player is "smooth";
 	now face of player is "leather dog collar around your neck, and a charmingly human";
 	now tail of player is "";
