@@ -1,7 +1,7 @@
 Alpha Fang Scenes by Nuku Valente begins here.
 "Adds another scene to Fang"
 
-Every turn when in Grey Abbey Library and fang is visible:
+Every turn when the player is in Grey Abbey Library and fang is visible:
 	if hp of fang is 3 or hp of fang is 4:
 		let x be 0;
 	otherwise:

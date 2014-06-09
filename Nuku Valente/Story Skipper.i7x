@@ -2013,6 +2013,7 @@ Carry out reciting:
 [	say "Current restoration string: [X][line break]";  ]
 	let lev be the level of the player;
 	let upit be 0;
+	let zeta be 0;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
@@ -2025,10 +2026,10 @@ Carry out reciting:
 			next;		
 		change the text of the player's command to b;
 		if upit is 1:
-			increase z by 58;
+			increase zeta by 58;
 		otherwise if upit is 2:
-			increase z by 160;  
-		if Z is:
+			increase zeta by 160;  
+		if Z+zeta is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;

@@ -336,7 +336,7 @@ instead of sniffing the Retriever Girl:
 
 Section 6 - Rex Pet Events
 
-Every turn when in Rex's Place and Rex is visible:
+Every turn when the player is in Rex's Place and Rex is visible:
 	if hp of Rex > 9:
 		if lastfuck of Rex - turns > 14:
 			say "[RexPetLongWait]";

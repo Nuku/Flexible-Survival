@@ -21,19 +21,14 @@ use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
 use MAX_ARRAYS of 1600.
 Use MAX_ZCODE_SIZE of 1000000.
-Use maximum indexed text length of at least 2000.
+Use maximum text length of at least 2000.
+Use Scoring.
 [ End compiler settings. ]
 
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 include FS Graphics by Nuku Valente.
-
-[Absolute value]
-To decide which number is the absolute value of (N - a number):
-	if N is less than 0:
-		let N be 0 minus N;
-	decide on N.
 
 To say a/an (T - text):
 	let Txt be indexed text;
@@ -43,6 +38,9 @@ To say a/an (T - text):
 	otherwise:
 		say "a ";
 	say T.
+	
+To end the game saying (T - text):
+	end the story saying T;
 
 Instead of sniffing something (called x):
 	if the scent of x is "":
@@ -2290,11 +2288,10 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	repeat with x running from 1 to the number of entries in vials of player:
+	repeat with x running from the number of entries in vials of player to 1:
 		if t in lower case is entry x in vials of player in lower case:
 			now target is entry x in vials of player;
 			remove entry x from vials of player;
-			decrease x by 1;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
@@ -2302,7 +2299,7 @@ Carry out vialalldropping:
 		say "You chuck all your [target] vials away.";
 
 
-understand the command "set inventory columns" and "inventory columns" and "set inventory" and "set columns" as something new.
+[understand the command "set inventory columns" and "inventory columns" and "set inventory" and "set columns" as something new.]
 
 settinginvcolumns is an action applying to nothing.
 
@@ -2340,8 +2337,9 @@ carry out Inventorying:
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;	]
-	if demon seed is owned, let dseed be 1;
-	if Janice's blouse is owned, let jblouse be 1;
+	let jblouse be 0;
+	if demon seed is owned, now dseed is 1;
+	if Janice's blouse is owned, now jblouse be 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
@@ -2409,7 +2407,7 @@ Definition: A grab object (called D) is fiveowned:
 		if the carried of D is greater than 4, yes;
 	no;
 
-understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.
+[understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.]
 
 VialInventorying is an action applying to nothing.
 
@@ -7516,7 +7514,7 @@ When play begins:
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
-	change the right hand status line to "[list of valid directions]";
+	now the right hand status line is "[list of valid directions]";
 	say "Before the game begins...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if player consents:
