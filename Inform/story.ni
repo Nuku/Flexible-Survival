@@ -33,7 +33,7 @@ include FS Graphics by Nuku Valente.
 To decide which number is the absolute value of (N - a number):
 	if N is less than 0:
 		let N be 0 minus N;
-	decide on N.
+	decide on N. [enable this to compile on older versions of inform]
 	
 To say a/an (T - text):
 	let Txt be indexed text;
@@ -1168,7 +1168,7 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 		
 Table of random critters
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp (a number)	lev (a number)	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot (text)	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 "Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
 
 understand the command "feed" as something new.
@@ -6474,54 +6474,105 @@ Include Sugar Feud by AGentlemanCalledB.
 Include Satyr Frat by Wahn.
 
 
+
 [Monsters/Infections]
+Include Wyvern For Fs by Damaged.
+Include Candy Striper by Stripes.
+Include Equine for FS by Nuku Valente.
+Include Demon Brute For Fs by Leo X.
+Include Awesome Tree For Fs by Damaged.
+Include Centaur by Hellerhound.
+Include Skunk For Fs by Damaged.
+Include Skunkbeast Lord by Stripes.
+Include Mental Mouse For Fs by Stripes.
+Include Sierrasaur by Blue Bishop.
+Include Lusty Skunk by Nuku Valente.
+Include Tigress Hooker for FS by Stripes.
+Include Parasitic Plant For Fs by Xeylef.
+Include Alpha Husky by Sarokcat.
+Include Ash Dragator for FS by Sweraptor.
+Include Hyena Matriarch by Sarokcat.
+Include Bald Eagle For Fs by Stripes.
+Include Jaguar Orderly For Fs by Stripes.
+Include Wolverine Guard for FS by Stripes.
+Include Kangaroo by batroo.
+Include Ewe by Sarokcat.
+Include Ram by Sarokcat.
+Include Naughty Nurse by Stripes.
+Include Sabretooth by Sarokcat.
+Include Anime Babe for FS by Stripes.
+Include Small Feline And Lion For Fs by Damaged.
+Include Spidergirl For Fs by Tentacle Specialist.
+Include Bottlenose Toy For Fs by Stripes.
+Include otter by Nuku Valente.
+Include Sugar Glider by AGentlemanCalledB.
+Include Slutrat by Nuku Valente.
+Include Mall Rat For Fs by Stripes.
+Include Random Tentacle Horror For Fs by Kazard.
+Include Mismatched Chimera For Fs by Stripes.
+Include Rubber Tigress by Sarokcat.
+Include Ash Drakenoid by Sweraptor.
+Include Vulpogryph For Fs by Stripes.
+Include Cerberus For Fs by Stripes.
+Include Cheetah by Sarokcat.
+Include Rhino For Fs by Stripes.
+Include Gels by Darthan.
+Include Pirate Shark by Sarokcat.
+Include Bear For Fs by Nuku Valente.
+Include Hulking Cheerleader by Wahn.
+Include Friendship Pony for FS by Stripes.
+Include Satyr by Sarokcat.
+Include Centaur Stallion For Fs by Stripes.
+Include Orc by Wahn.
+Include Tiger Cop for FS by stripes.
+Include Spidertaur Male by Wahn.
+Include Butterfly for FS by mirumu.
+Include Viking by Wahn.
+Include Wolfman by Wahn.
+Include Gator by Nuku Valente.
+Include Margay For Fs by Stripes.
+Include Xeno for FS by Stripes.
+Include Alien Felinoid For FS by Damaged.
+Include Jaguar Warrior by AGentlemanCalledB.
+Include Catgirl by Wahn.
+Include Male Peacock for FS By Lago Moro.
+Include Cute Chinchilla Girl For FS by Trav.
+Include Fire Sprite by AGentlemanCalledB.
+Include sprite by Nuku Valente.
+Include Reindeer by Stripes.
+Include Snake For Fs by Stripes.
+Include Feral Wolf for FS by Shadowwolf94.
+Include Panther Taur by Nuku Valente.
+Include Chocolate Lab by Stripes.
+Include Leopardman by Sarokcat.
+Include jackalman by Sarokcat.
+Include Twisted Pimp by Sarokcat.
+Include Amazonian for FS by Stripes.
+Include Pewter Consort By Blue Bishop.
+Include Queen Bee for FS by Stripes.
 Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.
 Include Goo Girl by Nuku Valente.
 Include Latex Fox by Nuku Valente.
 Include Hermaphrodite Gryphon by Nuku Valente.
 Include Drone Wasp by Nuku Valente.
-Include Panther Taur by Nuku Valente.
 Include Blob by Kaleem Mcintyre.
 Include Great Dane Rouge by Kaleem Mcintyre.
-Include Wolfman by Wahn.
-Include Chocolate Lab by Stripes.
-Include Skunkbeast Lord by Stripes.
 Include Hyperskunk for FS by Stripes.
 Include Female Husky by Nuku Valente.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
-Include Equine for FS by Nuku Valente.
 Include Ashen Breeder For Fs by Stripes.
 Include Lizard Girl For Fs by Damaged.
-Include Skunk For Fs by Damaged.
 Include Random Shemale Smooth Collie For Fs by Voldine.
-Include Alien Felinoid For FS by Damaged.
 Include Bovine For Fs by Damaged.
-Include Small Feline And Lion For Fs by Damaged.
-Include Random Tentacle Horror For Fs by Kazard.
-Include Demon Brute For Fs by Leo X.
-Include Parasitic Plant For Fs by Xeylef.
-Include Awesome Tree For Fs by Damaged.
 Include Herm Hyena for FS by Anony Mouse.
-Include Wyvern For Fs by Damaged.
 Include Cannon by Hiccup.
-Include Spidergirl For Fs by Tentacle Specialist.
-Include Bear For Fs by Nuku Valente.
 Include Pit Bull For FS by Ilovecock.
 Include Painted Wolf Herm by Kyvi Stormbreaker.
-Include Lusty Skunk by Nuku Valente.
-Include Gator by Nuku Valente.
 Include MothGirl for Fs by Soren.
-Include otter by Nuku Valente.
-Include Ash Drakenoid by Sweraptor.
-Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
-Include Tigress Hooker for FS by Stripes.
-Include Tiger Cop for FS by stripes.
-Include Wolverine Guard for FS by Stripes.
-Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
 Include Feral Shaft Beast for FS by Dragonflayer.
 Include Wrestling Wolf For Fs by Volcblaze.
@@ -6530,64 +6581,40 @@ Include Mareslut by Sarokcat.
 Include Stallionboi by Sarokcat n Verath.
 Include Donkeyman by Sarokcat n Verath.
 Include Horseman by Sarokcat n Verath.
-Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
-Include Slutrat by Nuku Valente.
-Include Cute Chinchilla Girl For FS by Trav.
 Include Feline Gymnast by SomeFur.
-Include Ewe by Sarokcat.
-Include Ram by Sarokcat.
 Include Teddy Bear by Sarokcat.
-Include Hyena Matriarch by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Plush Lion by Sarokcat.
-Include Rubber Tigress by Sarokcat.
-Include Satyr by Sarokcat.
 Include Greek Nymph by Sarokcat.
 Include Panda by Sarokcat.
 Include Gazelle by Sarokcat.
 Include Zebra by Sarokcat.
-Include Cheetah by Sarokcat.
 Include Tiger by Sarokcat.
 Include Tigertaur by Sarokcat.
 Include Sphinx by Sarokcat.
-Include Pirate Shark by Sarokcat.
-Include Sabretooth by Sarokcat.
 Include Jackalboy by Sarokcat.
 Include Wolftaur by Sarokcat.
-Include jackalman by Sarokcat.
 Include Panther Herm by Sarokcat.
 Include Succubus by Sarokcat.
-Include Twisted Pimp by Sarokcat.
-Include Alpha Husky by Sarokcat.
-Include Leopardman by Sarokcat.
 Include Hawkman by sarokcat.
 Include Unicorn by Sarokcat.
 Include Arctic Fox by Sarokcat.
 Include Nightmare by Sarokcat.
 Include Mannequin by Wahn.
-Include Spidertaur Male by Wahn.
-Include Catgirl by Wahn.
 Include Sand Man by Wahn.
 Include Naiad by Wahn.
 Include Furling by Wahn.
 Include Spartan by Wahn.
 Include Helot by Wahn.
-Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
-Include Male Peacock for FS By Lago Moro.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
-Include Centaur by Hellerhound.
 Include Dryad for FS by Hellerhound.
 Include Latex Wolf for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
-Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
 Include Fennec For Fs by Stripes.
-Include Jaguar Orderly For Fs by Stripes.
-Include Mismatched Chimera For Fs by Stripes.
-Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
 Include Albino Mouse by Stripes.
@@ -6596,7 +6623,6 @@ Include Flaming Lynx for FS by Stripes.
 Include Komodo Dragon for FS by Stripes.
 Include Beaver for FS by Stripes.
 Include Giant for FS by Stripes.
-Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
 Include Dragontaur for FS by Stripes.
@@ -6604,7 +6630,6 @@ Include Vixentaur for FS by Stripes.
 Include Dracovixentaur for FS by Stripes.
 Include Flesh Blob for FS by Stripes.
 Include Corrupted Spawner for FS by Stripes.
-Include Queen Bee for FS by Stripes.
 Include Salamander by Stripes.
 Include Inflatable Vulpine for FS by Stripes.
 [Include Strange Slut by Zero.]
@@ -6614,53 +6639,39 @@ Include Messy Pig for Fs by anonymous.
 Include Piggy by Stripes.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
-Include Margay For Fs by Stripes.
 Include Megakitty For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
-Include Cerberus For Fs by Stripes.
 Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
-Include Rhino For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
 Include Squid For Fs by Stripes.
 Include Centaur Mare For Fs by Stripes.
-Include Centaur Stallion For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.
-Include Snake For Fs by Stripes.
-Include Bald Eagle For Fs by Stripes.
 Include Wildcat For Fs by Stripes.
 Include Goblin For FS by Blue Bishop.
 Include Junkman For FS by Stripes.
 Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
-Include Bottlenose Toy For Fs by Stripes.
-Include Mental Mouse For Fs by Stripes.
-Include Vulpogryph For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
-Include Mall Rat For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
 Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
-Include Anime Babe for FS by Stripes.
 Include Hentai Fan for FS by Stripes.
-Include Amazonian for FS by Stripes.
 Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
-Include Xeno for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
 Include Corota for FS by Stripes.
 Include Ocelot for FS by Stripes.
 Include Blue Chaffinch for FS by Stripes.
-Include Friendship Pony for FS by Stripes.
 Include Latex Ermine for FS by Stripes.
 Include Hydra Beast for FS by Stripes.
 Include Red Oni for FS by Stripes.
@@ -6670,7 +6681,6 @@ Include Magic Drake by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
-Include Hulking Cheerleader by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.
 Include Pegasus by Kaleem mcintyre.
@@ -6680,32 +6690,23 @@ Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
 Include Goat Janitor by McRabid.
-Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
-Include Fire Sprite by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
-Include Sugar Glider by AGentlemanCalledB.
 Include Cum Girl by AGentlemanCalledB.
 Include Francois Infections by AGentlemanCalledB.
-Include Jaguar Warrior by AGentlemanCalledB.
 Include Pink Poodle by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
-Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
 Include Tenrec by StripeGuy.
 Include Yuppie Mink by StripeGuy.
 Include Caveman by TheRecipe.
-Include Viking by Wahn.
 Include Seraphim by Wahn.
 Include Cowboy Cuntboy by Wahn.
 Include Thought Eater by Wahn.
 Include Batcubus for FS by Blaydrex.
-Include Sierrasaur by Blue Bishop.
-Include Pewter Consort By Blue Bishop.
-Include Orc by Wahn.
 Include Horse-Hung Nerd by Wahn.
 Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
