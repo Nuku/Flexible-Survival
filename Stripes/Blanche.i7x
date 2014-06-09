@@ -43,7 +43,7 @@ Instead of resolving Wolfrape:
 Section 2 - Office Den
 
 
-Office Den is a room. It is fasttravel. It is private.
+Office Den is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Office Den is "[officedendesc]";
 
 the scent of Office Den is "Unlike the air outside, it's mostly free of the smell of soot and ash.  There is a strong, lupine smell in the air from Blanche.";
