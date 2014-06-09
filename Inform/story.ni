@@ -21,8 +21,8 @@ use MAX_ACTIONS of 320.
 use MAX_VERBS of 330.
 use MAX_ARRAYS of 1600.
 Use MAX_ZCODE_SIZE of 1000000.
-Use maximum text length of at least 2000.
-Use Scoring.
+Use maximum indexed text length of at least 2000.
+[Use Scoring.]
 [ End compiler settings. ]
 
 Include Basic Help Menu by Emily Short.
@@ -30,6 +30,11 @@ Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 include FS Graphics by Nuku Valente.
 
+To decide which number is the absolute value of (N - a number):
+	if N is less than 0:
+		let N be 0 minus N;
+	decide on N.
+	
 To say a/an (T - text):
 	let Txt be indexed text;
 	let Txt be T;
