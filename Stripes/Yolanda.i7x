@@ -169,6 +169,7 @@ to say yolandaspecial01:
 		say "[yolandaspecial01m]";
 	otherwise:
 		say "[yolandaspecial01f]";
+	now yolandatreasure is true;
 
 to say yolandaspecial01m:
 	say "     The raven turns herself around and raises her tailfeathers.  You're given a good view of her dark-skinned pussy nestled in her feathers.  While tossing aside your gear, she wags her rear end enticingly, helping you to get hard.  Soon you're ready to go and move in behind her, lining up your shaft with her cloacal cunny.  You run your hands through her soft feathers as you sink your [cock of player] shaft into her slick hole[if cock length of player > 24].  Given your immense size, she's quite tight and you tease that she'd best be prepared to become one well-stuffed bird[otherwise if cock length of player > 12].  Given your large size, she's quite snug and you tease that she'd best be prepared become a stuffed bird[otherwise].  You slide easily into her warm cloaca[end if], to which she responds with a sharp caw.";
