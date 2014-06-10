@@ -47,7 +47,7 @@ instead of sniffing Reservoir Main Pathway:
 	if waterworks is 0:
 		say "The main pathway smells like cum, piss, other bodily fluids as well as something...pervasive like...sorrow?";
 	otherwise if waterworks > 0:
-		say "A clean scent prevades the area of the pathway of the reservoir. The place feels much more lively now. Happy even...";
+		say "A clean scent pervades the area of the pathway of the reservoir. The place feels much more lively now. Happy even...";
 
 The marea of Reservoir Main Pathway entry is "Reservoir".
 
@@ -76,11 +76,11 @@ PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
 Sanctuary is a situation. Sanctuary is resolved.
 
 
-The sarea of For Purity's Sake is "Reservoir";
+The sarea of For Purity's Sake is "Reservoir".
 
 Instead of resolving For Purity's Sake:
 	If resevquest is 0:
-		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nauseas that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch."; 
+		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nausea that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch."; 
 		say "This small dilemma frustrates you for a moment before you calm yourself down and realize that if there is something that you can do then you'll just have to do it to the best of your own natural ability. Come what may you can't make the situation any worse than it already is.";
 		now resevquest is 1;
 		increase score by 2;
@@ -89,7 +89,7 @@ Instead of resolving For Purity's Sake:
 
 
 Technical Assistance is a situation.
-The sarea of Technical Assistance is a "Reservoir";
+The sarea of Technical Assistance is a "Reservoir".
 
 bookfind is a number that varies.
 
@@ -148,11 +148,11 @@ to say resevfight1:
 
 
 Slightly Sidetracked is a situation.
-The sarea of Slightly Sidetracked is "Reservoir";
+The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
-		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familair sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee."; 
+		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee."; 
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
 		say "[resevfight2]";
 		say "[resevfight2]";
@@ -183,7 +183,7 @@ The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls."; 
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls."; 
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are you not found by anymore mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
@@ -195,7 +195,7 @@ Instead of resolving a Flight of stairs:
 
 ThreeDoors is a situation;
 
-The sarea of ThreeDoors is "Reservoir";
+The sarea of ThreeDoors is "Reservoir".
 
 ldoor is a number that varies.
 rdoor is a number that varies.
@@ -250,7 +250,7 @@ This is the doorcheck rule:
 						now ldoor is 1;
 						now doorsearch is 1;
 					otherwise:
-						say "Bumping into the door with your miniscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right? (Y=Yes, N= No)";
+						say "Bumping into the door with your minuscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right? (Y=Yes, N= No)";
 						if player consents:
 							follow the turnpass rule;
 							wait for any key;
@@ -303,10 +303,10 @@ This is the doorcheck rule:
 
 
 
-Section 3 - Reservoir Fight (Preperation)
+Section 3 - Reservoir Fight (Preparation)
 
 The beast of the tainted waters is a situation.
-The sarea of The beast of the tainted waters is "Reservoir";
+The sarea of The beast of the tainted waters is "Reservoir".
 
 lastResevoirfix is a number that varies.
 
@@ -330,7 +330,7 @@ Instead of Resolving a The beast of the tainted waters:
 Section 4 - Reservoir (Fight)
 
 A Fight to remember is a situation.
-The sarea of A Fight to remember is "Reservoir";
+The sarea of A Fight to remember is "Reservoir".
 
 lastResevoirfix is a number that varies.
 oozing is a number that varies.
@@ -368,7 +368,7 @@ Instead of resolving a A Fight to remember:
 					now bodydesc of player is "gleatinous";
 					now bodytype of player is "ooze";
 					now the daycycle of player is 0;
-					end the game saying "You have been absorbed by the blob creature.";
+					end the story saying "You have been absorbed by the blob creature.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
@@ -404,7 +404,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
 						now the daycycle of player is 0;
-						end the game saying "You have been absorbed by the blob creature.";
+						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
@@ -435,7 +435,7 @@ Instead of resolving a A Fight to remember:
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
 						now the daycycle of player is 0;
-						end the game saying "You have been absorbed by the blob creature.";
+						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
@@ -448,7 +448,7 @@ Instead of resolving a A Fight to remember:
 Section 5 - Water At Last
 
 PassionAfterTheBattle is a situation.
-The sarea of PassionAfterTheBattle is "Reservoir";
+The sarea of PassionAfterTheBattle is "Reservoir".
 
 waterworks is a number that varies.
 

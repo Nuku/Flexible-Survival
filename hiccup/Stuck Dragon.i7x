@@ -5,7 +5,7 @@ Version 4 of Stuck Dragon by hiccup begins here.
 Section 1 - Finding the Building
 
 Find Building is a situation.
-the sarea of Find Building is "Mall";
+the sarea of Find Building is "Mall".
 
 After resolving a find building, try looking;
 
@@ -17,10 +17,10 @@ Instead of Resolving a Find Building:
 	now Find Building is Resolved;
 	
 Isolated Street is a room. It is fasttravel. It is private. Inside from the Isolated Street is a room called Old Building.
-The description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemned for as long as you can remember, so you have no idea what this building was used for.";
+The description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemned for as long as you can remember, so you have no idea what this building was used for.".
 
 Old Building is a room.
-The description of Old Building is "[dragonessbldg]";
+The description of Old Building is "[dragonessbldg]".
 
 to say dragonessbldg:
 	say "[dragonessupdate]     There are small piles of useless junk and debris scattered around inside the old building.  There is a fine layer of dust is on almost every surface in sight";
@@ -58,7 +58,7 @@ lastChristyfucked is a number that varies.  lastChristyfucked is normally 300.
 NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
 dragoness is in Old Building.  dragoness is a person.
-The description of dragoness is "[dragonessdesc]";
+The description of dragoness is "[dragonessdesc]".
 The conversation of dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
 
@@ -167,7 +167,7 @@ to say dragonesssex:
 Section 3 - Bypass the Blocked Door
 
 Another Ladder is a situation.
-the sarea of Another Ladder is "Mall";
+the sarea of Another Ladder is "Mall".
 
 After resolving a another ladder, try looking;
 
@@ -183,9 +183,9 @@ Instead of Resolving a Another Ladder:
 		now Another Ladder is Resolved;
 
 Back Alley is a room. It is fasttravel. It is private. Inside from the Back Alley is a room called Back Room.
-The description of Back Alley is "You're standing in an alley behind an old building.  It's the same old building that you found earlier.  Debris and wrecked cars have cut off this area from the rest of the city.  There is a side entrance to the old building here.  It looks like you've found the way around the blocked doorway.  Hopefully the dragoness has not yet been found.";
+The description of Back Alley is "You're standing in an alley behind an old building.  It's the same old building that you found earlier.  Debris and wrecked cars have cut off this area from the rest of the city.  There is a side entrance to the old building here.  It looks like you've found the way around the blocked doorway.  Hopefully the dragoness has not yet been found.".
 
-Back Room is a room.  The description of Back Room is "[backroomdesc]";
+Back Room is a room.  The description of Back Room is "[backroomdesc]".
 
 to say backroomdesc:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
@@ -205,7 +205,7 @@ instead of sniffing Back Room:
 
 Section 4 - Trapped Dragon Front
 
-Christy is a woman.  Christy is in Back Room.  The description of Christy is "[christydesc]";
+Christy is a woman.  Christy is in Back Room.  The description of Christy is "[christydesc]".
 The conversation of Christy is { "Rawr!" }.
 
 to say christydesc:
@@ -244,9 +244,9 @@ Instead of conversing the Christy:
 
 DragonFreeing is an action applying to nothing.
 
-understand "free dragon" as dragonfreeing;
-understand "free dragoness" as dragonfreeing;
-understand "free Christy" as dragonfreeing;
+understand "free dragon" as dragonfreeing.
+understand "free dragoness" as dragonfreeing.
+understand "free Christy" as dragonfreeing.
 
 check dragonfreeing:
 	if dragoness is visible, say "Not here.  You should go to the other side of the door." instead;
@@ -277,7 +277,7 @@ Carry out dragonfreeing:
 
 Section 5 - Small Dark Room and Egg
 
-Small Dark Room is a room.  The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides.  You should try to [link]STRUGGLE[end link] to get out.";
+Small Dark Room is a room.  The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides.  You should try to [link]STRUGGLE[end link] to get out.".
 dragontype is a number that varies.
 
 instead of sniffing Small Dark Room:
@@ -285,8 +285,8 @@ instead of sniffing Small Dark Room:
 
 DragonHatching is an action applying to nothing.
 
-understand "struggle" as dragonhatching;
-understand "struggle to get out" as dragonhatching;
+understand "struggle" as dragonhatching.
+understand "struggle to get out" as dragonhatching.
 
 check dragonhatching:
 	if the location of player is not Small Dark Room, say "That verb does not make sense in this context." instead;
@@ -766,7 +766,7 @@ Instead of resolving Dragon Prey:
 		say "     'I'm going to keep making a big, wonderful egg out of you until you learn to be a good, willing dragon toy for me,' she rumbles in pleasure as she pushes you in further.  'And then you'll be my good, willing dragon toy and you'll [bold type]want[roman type] me to keep making a big, wonderful egg out of you.  Mmm... doesn't that sound like fun,' she moans as more quivers of pleasure run through her cunt and you're pulled deeper, forced right back into her womb to become another egg for her.  This happens over and over again, so often that you quickly lose count as you become a lustful servant to your big and beautiful mistress.";
 		now hp of Christy is 99;
 		now humanity of player is 0;
-		end the game saying "You have become Christy's first slutty dragon pet.";
+		end the story saying "You have become Christy's first slutty dragon pet.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;

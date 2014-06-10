@@ -7,7 +7,7 @@ Version 5 of Candy Striper by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 nocandycoonsex is a number that varies.
 coonstatus is a number that varies.
@@ -47,8 +47,9 @@ to say losetocandycoon:
 
 
 to say beatthecandycoon:
-	if nocandycoonsex > 2:
+	if nocandycoonsex > 2 and ( the remainder after dividing nocandycoonsex by 5 is not 0 ):
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts as you have in the past.";
+		increase nocandycoonsex by 1;
 	otherwise if libido of player < 30:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	otherwise:
@@ -115,7 +116,7 @@ When Play begins:
    now libido entry is 50;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "healing booster";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 10;        [ Chance of loot dropping 0-100 ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
    now type entry is "[one of]coon-like[or]raccoon[at random]";
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -127,16 +128,16 @@ When Play begins:
 
 Section 3 - Raccoon Pet
 
-pink raccoon is a pet.  pink raccoon is a part of the player;
-The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail.  He looks at you with mindless adoration, now a loyal and obedient pet and plaything.";
-The weapon damage of pink raccoon is 4;
-The level of pink raccoon is 2;
-The Dexterity of pink raccoon is 14;
-The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close.  He churrs happily, ready and eager to obey.";
-The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them.  He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]";
-the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]";
+pink raccoon is a pet.  pink raccoon is a part of the player.
+The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail.  He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
+The weapon damage of pink raccoon is 4.
+The level of pink raccoon is 2.
+The Dexterity of pink raccoon is 14.
+The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close.  He churrs happily, ready and eager to obey.".
+The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them.  He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
+the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
 
-the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that."; 
+the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
 
 to say sexwithpinkraccoonpet:
 	[puts Raccoon as lead monster in case of impregnation]
@@ -280,7 +281,7 @@ to say coonpreg:
 Section 4 - Raccoon at Bunker
 
 Candy is a man.
-The description of Candy is "[coondesc]";
+The description of Candy is "[coondesc]".
 The conversation of Candy is { "Cock!" }.
 The icon of Candy is figure of Candy_icon.
 candytalk is a number that varies.
@@ -288,7 +289,7 @@ lastCandyfucked is a number that varies.  lastCandyfucked is normally 555.
 coonsex is a number that varies.
 [ lust of Candy controls his interaction w/Fang]
 
-the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex.";
+the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex."
 
 to say coondesc:
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if hp of Sven is 10]coaxes your feline pet into some more playtime[otherwise]masturbates furiously until the room smells of cotton candy from his sweet cum[end if].  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";
@@ -417,7 +418,7 @@ to say sexwithcandy_02:
 			say "     Before jumping into the sex, he buries his muzzle betwene your cheeks and licks at your tight ring.  His tongue sends shivers of pleasure up your spine as he slathers your hole with his saliva.  After getting the crinkled hole nice and wet, he squirms it right into your rectum to further prep you.  The soft licking has you moaning and very eager for the main event by the time he pulls his muzzle back.";
 		otherwise:
 			say " as he takes a moment to spread some of the lube across your pucker as well.";
-		say "     Once ready, the girly raccoon moves in behind you, lining up his six-inch stiffy with your back door.  He eases into you with a soft churr of delight.  His paws caress your sides and back while thrusting away steadily at your ass.  At first, he shifts his positon often, working to find the perfect angle and motion to please you.";
+		say "     Once ready, the girly raccoon moves in behind you, lining up his six-inch stiffy with your back door.  He eases into you with a soft churr of delight.  His paws caress your sides and back while thrusting away steadily at your ass.  At first, he shifts his position often, working to find the perfect angle and motion to please you.";
 		say "     Being a practiced veteran at fucking asses, he has plenty of endurance, letting him fuck you for a long time, rarely needing to slow down or pause.  At those times, he reaches around to stroke your manhood, rubs your balls or kneads your bottom.  You end up quick worked up near the end of it and are almost begging for him to cum in you.  Probably knowing how far he's pushed you, he throws himself into pounding your ass extra hard for a messy finish that has you both crying out in release as semen is sown in your clenching anus and across his cot.[mimpregchance]";
 	infect;
 	now libido of player is ( libido of player + 1 ) / 3;
@@ -432,7 +433,7 @@ to say sexwithcandy_03:
 
 to say sexwithcandy_04:
 	if bodyname of player is "Raccoon":
-		say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it.  He lets his little claws run over your shapely curves and girly body with churrs of delight.  His fluffy tail brushes across your legs, caressing them.  'You look so sexy like this, sweety.  I'm glad you appreciate it.  You certainly look adorably sexy like this; it gets me so hard,' he addds with a nibble to your ear as he grinds against you.";
+		say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it.  He lets his little claws run over your shapely curves and girly body with churrs of delight.  His fluffy tail brushes across your legs, caressing them.  'You look so sexy like this, sweety.  I'm glad you appreciate it.  You certainly look adorably sexy like this; it gets me so hard,' he adds with a nibble to your ear as he grinds against you.";
 	say "     Deciding you'd like a taste of the girly coon's cock, you go down on your knees and flip up his short skirt.  He giggles cutely, mock-blushing as you run your eyes over the bulge in his panties.  Pulling his underwear down, his erection pops free.  Taking a moment to lick your lips, you plunge your mouth over the hot pink rod and start sucking.";
 	say "     Your mouth and tongue work over the cute cock, lapping up Candy's faintly sweet pre.  You tease the coonboi's nuts in your palm, enjoying his moans and churrs of pleasure.  When the raccoon cums, it is with spurts of cotton candy flavoured semen.  Enjoying the sugary treat, you lick and suck for all he'll give before releasing him from your mouth.";
 	increase libido of player by 10;

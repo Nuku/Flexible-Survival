@@ -10,10 +10,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Yamato Dragon" } to infections of guy;
 
-MYDTBMM is a number that varies; [Male Yamato Dragon TBM Memory]
-MYDAM is a number that varies; [Male Yamato Dragon Anal Memory]
-MYDGM is a number that varies; [Male Yamato Dragon Gimmick Memory]
-ydcolour is a number that varies;
+MYDTBMM is a number that varies. [Male Yamato Dragon TBM Memory]
+MYDAM is a number that varies. [Male Yamato Dragon Anal Memory]
+MYDGM is a number that varies. [Male Yamato Dragon Gimmick Memory]
+ydcolour is a number that varies.
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Yamato Dragon attack:
@@ -42,7 +42,7 @@ to say Yamato Dragon attack:
 		say "     It goes on for what seems like forever, [if cocks of player > 2]exposed cocks unable to offer reprieve against the dragon's grip until[otherwise if cocks of player is 2]exposed cock unable to offer reprieve against the dragon's grip until[otherwise]too dazed by this circumstance to fully appreciate when[end if] his flow finally dies down. His dick remains hard against you, however, as to ensure that you retain his load; often you orgasm, the attempt rebuked and having your load sent back to you, [if cockname of player is listed in infections of Internallist]pinned downed by the weight of your bloated frame[otherwise]weighed down by your painfully overstuffed sack[end if].";
 		if waiterhater is 0, wait for any key;
 		if "Horny Bastard" is listed in feats of player:
-			say "     You think that he might be done, but this brief rest is enough time for him to be stricken by another otherworldly influence. He pushs you to the ground, prior exhaustion dissipating in the wake of a renewed, manic need.";
+			say "     You think that he might be done, but this brief rest is enough time for him to be stricken by another otherworldly influence. He pushes you to the ground, prior exhaustion dissipating in the wake of a renewed, manic need.";
 			say "     '[one of]I-it's not enough[or]More, more[or]No[at random]! [one of]I'm not done with you yet[or]You need more[or]You thought we were done? Ha[at random]!' He retorts, mad with lust, his thrusting motion commencing one more. So sensitive, as you are, your orgasm almost immediately, but it is ultimately for naught, as your confines have grown tight once more--so much so that little might escape.";
 			say "     It's too much, you fear you might pass out if not that your demented captor finds bliss once more, second load bloating your beleaguered [if cockname of player is listed in infections of Internallist]form[otherwise]package[end if] further. Though perhaps not as impressive in volume, you find yourself unable to find fault in that, hot, thick slime churning inside you at such an excess. The prior ritual repeats as his fervor descends once more, thankfully for good this time.";
 			if waiterhater is 0, wait for any key;
@@ -101,7 +101,7 @@ to say Yamato Dragon attack:
 			say " his dick within the depths of[if cunts of player > 1]one of your exposed portals[otherwise]your exposed portal[end if]. Slowly, you must watch on as his dick's pointed tip sinks past your hole's slicked lips, spreading the beleaguered thing with such a persistent dedication in spite of the [if cunt width of player > 20]slowly[otherwise]quickly[end if] rising intensity you must abide in the wake of this continued intrusion.";
 			say "     His flesh quickly descending further upon your depths, it goes on seemingly without end";
 			if MYDGM is 0:
-				say ". It appears he commands some otherworld attribute, able to submerge his organ in spite your [if cunt width of player < 10]very apparent[otherwise]prior[end if] limitations[if cunt width of player < 20], splitting your vulnerable cunt to extents beyond any prior comprehension[end if]";
+				say ". It appears he commands some otherworldly attribute, able to submerge his organ in spite your [if cunt width of player < 10]very apparent[otherwise]prior[end if] limitations[if cunt width of player < 20], splitting your vulnerable cunt to extents beyond any prior comprehension[end if]";
 				now MYDGM is 1;
 			otherwise:
 				say ", each ridge grinding across your [if cunt width of player < 20]quickly [end if]stuffed cunt with an aching excess";
@@ -122,7 +122,7 @@ to say Yamato Dragon attack:
 				otherwise if cunt width of player < 15:
 					increase cunt width of player by 1;
 		otherwise:
-			say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is night]n[otherwise]br[end if]ight sky, his taloned legs pull you to his scaled, male vent, elucidating on your imposed [if hp of player > 0 or player is submissive]task. Obligingly[otherwise]punishment. Reluctantly[end if], you offer up your tongue as tribute to the dragon's emergent cock, hard scaling parting way to soft, masculine flesh, inviting your organ's slick caress.";
+			say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is day]br[otherwise]n[end if]ight sky, his taloned legs pull you to his scaled, male vent, elucidating on your imposed [if hp of player > 0 or player is submissive]task. Obligingly[otherwise]punishment. Reluctantly[end if], you offer up your tongue as tribute to the dragon's emergent cock, hard scaling parting way to soft, masculine flesh, inviting your organ's slick caress.";
 			say "     '[one of]Yes[or]Ah[or]Mm[at random]... [one of]You will learn your place, whelp[or]You have but a taste of what I offer you[or]This is your natural appointment, under me as you are now[at random].' His remark is punctuated by the feel of his talon";
 			If cocks of player > 0 or cunts of player > 0:
 				say "[if cocks of player > 2]s, gripping two of your now-hardening, [cock size desc of player] cocks, a circumstance somewhat unsettling now that his sole hold on you is by your most sensitive organs[otherwise if cocks of player is 2]s, gripping both of your now-hardening, [cock size desc of player] cocks, a circumstance somewhat unsettling now that his sole hold on you is by your most sensitive organs[otherwise if cocks of player is 1]'s grip, latched onto your now-hardening, [cock size desc of player] cock, the other holding your similarly serpentine torso in place[otherwise if cunts of player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your exposed cunts[otherwise]'s grip on your diminutive frame, freeing one to briefly tease your exposed cunt[end if]. Eclipsing you in size, as he does, you can't help but shudder at the overwhelming sensation of his tongue's reciprocation across [if cocks of player > 1]one of your cock's length[otherwise if cocks of player is 1]the length of your cock[otherwise]your vulnerable surface[end if].";
@@ -160,19 +160,19 @@ to say Yamato Dragon attack:
 			say "     '[one of]Yes, yes[or]Take it[or]N-nghn[at random]! [one of]Take every last inch[or]You will sleeve the whole of me[or]Take all of it[at random]!' Lust-laden cries echoing through the [if showlocale is true]park[otherwise]area[end if], his torment drives you into arousal, [if cocks of player is 0 and cunts of player is 0]much in spite your lack of outlet[otherwise if hp of player < 1 and player is not submissive]much in spite your better judgment[otherwise]forcing you to moan under the oppressive weight of his wanton need[end if].";
 			say "     In due time you must abide his inevitable bliss, the beast stretching the limits of his twisted penetration [if scalevalue of player is 3]to their maximum[otherwise]far[end if], stomach's cock-shaped bulge quickly rounded out in the wake of his torrential flood of cum";
 			if MYDAM is 0 and player is not twistcapped:
-				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise]cunt[sfn] dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]your weakened protests left disregarded[end if], his sexual fluids [if scalevalue of player is 3]immediately[otherwise]quickly[end if] begins to sputter from your excessively stuffed hole, drenching your immensely sore backside until he finally subsides.";
+				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]your weakened protests left disregarded[end if], his sexual fluids [if scalevalue of player is 3]immediately[otherwise]quickly[end if] begins to sputter from your excessively stuffed hole, drenching your immensely sore backside until he finally subsides.";
 				say "     His cock gradually softening, clearly sated, he lets go of you, causing you to fall to the ground once more, the wet sound of his organ escaping you followed by an audible splash as you land in a pool of the dragon's seed below, its depth exacerbated as your leaking hole expands it. Your assailant can't help but laugh at you in your pitiful state before he flies off. It takes you a long time to gain your mental faculties--let alone walk--and gather your things, departing from this exhausting circumstance.[mimpregchance]";
 			otherwise if MYDAM is 1 and player is not twistcapped:
-				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise]cunt[sfn] dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]your weakened protests left disregarded[end if], his sexual fluids [if scalevalue of player is 3]quickly[otherwise]eventually[end if] begins to sputter from your excessive stuffed hole, drenching your sore backside until he finally subsides.";
+				say ". Beleaguered cries, [if cocks of player > 1]cocks spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]your weakened protests left disregarded[end if], his sexual fluids [if scalevalue of player is 3]quickly[otherwise]eventually[end if] begins to sputter from your excessive stuffed hole, drenching your sore backside until he finally subsides.";
 				say "     His cock gradually softening, clearly sated, he lets go of you, causing you to fall to the ground once more, the wet sound of his organ escaping you followed by an audible splash as you land in a pool of the dragon's seed below, its depth exacerbated as your leaking hole expands it. Your assailant can't help but laugh at you in your pitiful state before he flies off. You don't nearly take as long to recover this time--though you'll still be walking funny for a while--and gather your things, departing from this tiring circumstance.[mimpregchance]";
 			otherwise if MYDAM is 2 and player is not twistcapped:
-				say ". Beleaguered cries, [if cocks of player > 1]cocks eagerly spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock eagerly spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise]cunt[sfn] eagerly dripping down across your crotch and the dragon's scales in the wake of his release[otherwise] your protests muffled by your own tainted lust[end if], his sexual fluids [if scalevalue of player is 3]eventually[otherwise]slowly[end if] begins to sputter from your excessively stuffed hole, painting your sore backside until he finally subsides.";
+				say ". Beleaguered cries, [if cocks of player > 1]cocks eagerly spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock eagerly spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] eagerly dripping down across your crotch and the dragon's scales in the wake of his release[otherwise] your protests muffled by your own tainted lust[end if], his sexual fluids [if scalevalue of player is 3]eventually[otherwise]slowly[end if] begins to sputter from your excessively stuffed hole, painting your sore backside until he finally subsides.";
 				say "     His cock gradually softening, clearly sated, he lets go of you, causing you to fall to the ground once more, the wet sound of his organ escaping you followed by a slight splash as you land in a puddle of the dragon's seed below, no doubt made shallow by your increasingly adept retention. Your assailant can't help but somewhat amused as he watches you slowly struggle to your feet before departing. By now you feel completely used to this twisted circumstance--[if hp of player < 1 and player is not submissive]thought you'd much rather not be[otherwise]bloated belly notwithstanding[end if]--and you move to gather your things before departing.[mimpregchance]";
 				if waiterhater is 0, wait for any key;
 				say "     After some time you realize that your escapades with the massive dragon has had some permanent effect on you. Your anal ring feels permanently stretchier, though how far this effect extends onto other monsters is beyond you.";
 				if "Twisted Capacity" is not listed in feats of player, add "Twisted Capacity" to feats of player;
 			otherwise if MYDAM is 3 or player is twistcapped:
-				say ". Wanton moans, [if cocks of player > 1]cocks eagerly spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock eagerly spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise]cunt[sfn] eagerly dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]elicited by your tainted lust[end if], belly [if scalevalue of player is 3]quickly[otherwise]gradually[end if] bloating as you abide every last drop of his release, finding yourself lost in a stupor of this twisted hunger.";
+				say ". Wanton moans, [if cocks of player > 1]cocks eagerly spending their [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cocks of player > 0]cock eagerly spending its [cum load size of player] load across your torso and the dragon's scales in the wake of his release[otherwise if cunts of player > 0]cunt[sfn] eagerly dripping down across your crotch and the dragon's scales in the wake of his release[otherwise]elicited by your tainted lust[end if], belly [if scalevalue of player is 3]quickly[otherwise]gradually[end if] bloating as you abide every last drop of his release, finding yourself lost in a stupor of this twisted hunger.";
 				say "     His cock gradually softening, clearly sated, before he sets you down on the ground once more. Your assailant seems both very pleased with himself and with his exceptional little cum dumpster, thick tongue offering you a slight show of affection before departing. It takes you awhile to recover from your bloated and fatigued self, but in due time you find your clarity and gather your things, departing once more.[mimpregchance]";
 			if MYDAM < 3, increase MYDAM by 1;
 		otherwise if cunts of player > 0 and a random chance of 1 in 2 succeeds:
@@ -253,6 +253,7 @@ Section 2 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
@@ -312,8 +313,8 @@ name	desc	weight	object
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
 dragon scale is a grab object. It is a part of the player. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
-the scent of dragon scale is "The yellow scale smells strange and otherworldly.";
-The usedesc of dragon scale is "[usedragonscale]";
+the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
+The usedesc of dragon scale is "[usedragonscale]".
 
 to say usedragonscale:		[only alters sizes, not gender]
 	choose row monster from table of random critters;
@@ -335,8 +336,8 @@ to say usedragonscale:		[only alters sizes, not gender]
 	say "     Following the strange urge you have, press the large scale to your chest.  As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
 dragon hair is a grab object. It is a part of the player. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
-the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.";
-The usedesc of dragon hair is "[usedragonhair]";
+the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
+The usedesc of dragon hair is "[usedragonhair]".
 
 to say usedragonhair:
 	choose row monster from table of random critters;

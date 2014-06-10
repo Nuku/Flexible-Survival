@@ -18,7 +18,7 @@ to say losetocorota:
 	choose row monster from the table of random critters;
 	if a random chance of 3 in 5 succeeds:
 		if cocks of player > 0:
-			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form.  Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can.  'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue.  Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs.  Bringing their head up to smile at you, again with that feral look, you can see a venom of a different color than normal dripping from their fangs.";
+			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form.  Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can.  'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue.  Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs.  Bringing their head up to smile at you, again with that feral look, you can see a venom of a different colour than normal dripping from their fangs.";
 			say "     You don't have long to consider what they did before your length explodes to full, veins bulging as it's forced to be ready for the serpent creature.  Too weak to crawl away, too tired to push them off, you're forced to watch as they spread their lower lips before spearing themselves on your cock[if cock length of player > 12], your head forced rapidly past their cervix into their waiting womb[end if].  Bouncing up and down on you pole, 'poison' no longer necessary to keep you readied, you are stuck for some time with nothing but the wet squelching noises and the corota's impassioned hisses to distract you.";
 			say "     Eventually, body's betrayal complete, you give the corota their much desired seed, balls swollen by the venom forcing them into crazed overproduction along with your regular load amount.  The milking goes on for almost five minutes, and you don't want to consider how much of your mass was [']recycled['] for their pleasure while you watch their belly slowly bloat wider and wider.  When the flow finally comes to a halt, you feel more spent than you have ever felt before.  The corota doesn't even seem to give you a cursory look as they waddle off, their footfalls followed by the sound of an occasional wet impact as thick wads of spunk fall between their legs.";
 			increase thirst of player by 5;
@@ -43,7 +43,7 @@ to say losetocorota:
 
 
 to say beatthecorota:
-	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily.  It uses its four arms to block further blows as it retreats a few steps.  'Good fight,' it hisses respectfully.  'I give... for now.'  With that, it turns and flaps it wings, taking to the air in a burst of dusty air.  You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
+	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily.  It uses its four arms to block further blows as it retreats a few steps.  'Good fight,' it hisses respectfully.  'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air.  You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
 
 
 to say corotadesc:
@@ -91,7 +91,7 @@ When Play begins:
 	now hp entry is 68;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 9;			[Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 8;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
@@ -105,7 +105,7 @@ When Play begins:
 	now loot entry is "corota venom";	[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]serpentine[or]slender[or]flexible[at random]";
 	now type entry is "[one of]hybrid[or]serpentine[or]chimera[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -154,7 +154,7 @@ to say corotavenomuse:
 	say "     Feeling brave or foolish, you try drinking down the snake venom.  It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach.  You curl up in a ball of pain as the heat spreads, setting off something inside you.";
 	decrease hp of player by 10;
 
-the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.";
+the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 
 
 Section 5 - Endings

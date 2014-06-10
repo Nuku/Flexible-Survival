@@ -5,7 +5,7 @@ Version 4 of Sven by Stripes begins here.
 Section 1 - Event and Hideaway
 
 Hidden Kitty is a situation.  The level of Hidden Kitty is 5.
-The sarea of Hidden Kitty is "Red";
+The sarea of Hidden Kitty is "Red".
 when play begins:
 	add Hidden Kitty to badspots of guy;
 	add Hidden Kitty to badspots of furry;
@@ -23,9 +23,9 @@ Instead of resolving a Hidden Kitty:
 	Now Hidden Kitty is resolved;
 
 Sven's Place is a room. It is fasttravel. It is private.
-The description of Sven's Place is "[svenplacedesc]";
+The description of Sven's Place is "[svenplacedesc]".
 
-the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if hp of Sven > 3]former [end if]occupant[if hp of Sven is 99].  The scent of snow leopard sex from the cum is strong[end if].";
+the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if hp of Sven > 3]former [end if]occupant[if hp of Sven is 99].  The scent of snow leopard sex from the cum is strong[end if].".
 
 to say svenplacedesc:
 	if hp of Sven < 4:
@@ -41,7 +41,7 @@ to say svenplacedesc:
 Section 2 - Sven the Snowmeow
 
 Sven is a man.  Sven is in Sven's Place.  The hp of Sven is normally 0.
-The description of Sven is "[svendesc]";
+The description of Sven is "[svendesc]".
 The conversation of Sven is { "Mew!" }.
 lastSvenfucked is a number that varies.  lastSvenfucked is normally 555.
 lastSvendrink is a number that varies.  lastSvendrink is normally 555.
@@ -484,7 +484,7 @@ Svetlana is a woman.  The description of Svetlana is "[svetlanadesc]".
 The conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
-the scent of the svetlana is "Svetlana smells of aroused female snow leopard.  Lisa's scent clings to her as well.";
+the scent of the svetlana is "Svetlana smells of aroused female snow leopard.  Lisa's scent clings to her as well.".
 
 to say svetlanadesc:
 	if hp of Sven < 53:

@@ -6,7 +6,7 @@ Version 1 of Matriarch NPC by Stripes begins here.
 Section 1 - Matriarch
 
 Matriarch is a person.
-The description of Matriarch is "[matriarchdesc]";
+The description of Matriarch is "[matriarchdesc]".
 The conversation of Matriarch is { "Good girl!" }.
 
 the scent of the Matriarch is "[matriarchscent]".

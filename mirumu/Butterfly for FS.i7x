@@ -16,26 +16,26 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 Section 2 - Variable and constant definitions
 
-ButterflyForeplay is a truth state that varies. ButterflyForeplay is usually False;
-ButterflyRaped is a number that varies. ButterflyRaped is usually 0;
-ButterflyPregnant is a truth state that varies. ButterflyPregnant is usually False;
-ButterflyBreastDesc is a text that varies. ButterflyBreastDesc is usually "cute and buoyant B-cup";
-ButterflyNegligeeTorn is a truth state that varies. ButterflyNegligeeTorn is usually False;
-ButterflyLikesYou is a truth state that varies. ButterflyLikesYou is usually False;
-ButterflyLove is a truth state that varies. ButterflyLove is usually False;
-ButterflyRevenge is a truth state that varies. ButterflyRevenge is usually False;
-ButterflyProcreated is a truth state that varies; ButterflyProcreated is usually False;
-ButterflyPantiesFound is a truth state that varies; ButterflyPantiesFound is usually False;
-ButterflyTummy is a text that varies. ButterflyTummy is usually "";
-ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0;
-ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True;
-ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
+ButterflyForeplay is a truth state that varies. ButterflyForeplay is usually False.
+ButterflyRaped is a number that varies. ButterflyRaped is usually 0.
+ButterflyPregnant is a truth state that varies. ButterflyPregnant is usually False.
+ButterflyBreastDesc is a text that varies. ButterflyBreastDesc is usually "cute and buoyant B-cup".
+ButterflyNegligeeTorn is a truth state that varies. ButterflyNegligeeTorn is usually False.
+ButterflyLikesYou is a truth state that varies. ButterflyLikesYou is usually False.
+ButterflyLove is a truth state that varies. ButterflyLove is usually False.
+ButterflyRevenge is a truth state that varies. ButterflyRevenge is usually False.
+ButterflyProcreated is a truth state that varies. ButterflyProcreated is usually False.
+ButterflyPantiesFound is a truth state that varies. ButterflyPantiesFound is usually False.
+ButterflyTummy is a text that varies. ButterflyTummy is usually "".
+ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0.
+ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True.
+ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]".
 ButterflyBaby is a person.
-The butterflybaby has a text called bodyname. Bodyname is usually "human";
-The butterflybaby has a text called facename. Facename is usually "human";
-The butterflybaby has a text called skinname. Skinname is usually "human";
-The butterflybaby has a text called cockname. cockname is usually "human";
-The butterflybaby has a text called tailname. Tailname is usually "human";
+The butterflybaby has a text called bodyname. Bodyname is usually "human".
+The butterflybaby has a text called facename. Facename is usually "human".
+The butterflybaby has a text called skinname. Skinname is usually "human".
+The butterflybaby has a text called cockname. cockname is usually "human".
+The butterflybaby has a text called tailname. Tailname is usually "human".
 
 ButterflyBaby has a number called Gestation.
 
@@ -631,6 +631,7 @@ before using a grab object(called x):
 		say "You cannot use the [x] here.";
 		stop the action;
 	if x is testosterone pill:
+		say "[line break]";
 		if cunts of player is greater than 0:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[if cunts of player is greater than 1]s[end if]. [if gestation of child is greater than 0]Your lower belly quivers causing you to feel ill. [end if]Are you sure to still want to use it?";
 			if the player consents:
@@ -666,7 +667,7 @@ to say testosterone pill use:
 		now cock length of player is 6;
 		now cock width of player is 4;
 		follow the cock descr rule;
-		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext]cock, pulsing in excitement. As your vaginal passage closes, some new [ball size] [if cockname of player is listed in infections of internallist]forming inside you[otherwise]then pop out underneath your new manhood[end if]. ";
 	otherwise if cocks of player > 0:				[MALE]
 		now cunts of player is 0;
 		now cunt width of player is 0;
@@ -683,11 +684,11 @@ to say testosterone pill use:
 		now cocks of player is 1;
 		now cock length of player is 6;
 		now cock width of player is 4;
-		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [ball size] [if cockname of player is listed in infections of internallist]form inside you[otherwise]then pop out underneath your new manhood[end if]. ";
 	if breast size of player is greater than 0:
 		now breast size of player is 0;
 		say "With the feel of a popping balloon your breasts deflate leaving you with a flat yet muscular chest. ";
-	if gestation of child is greater than 0:
+	if gestation of child is greater than 0 and the player is not mpreg_ok:
 		let infection be "";
 		now the child is not born;
 		now the gestation of child is 0;

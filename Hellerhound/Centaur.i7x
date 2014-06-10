@@ -13,17 +13,17 @@ Section 1 - Dry Plains
 understand "plains" as Dry Plains.
 
 
-Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoof prints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake levelled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.";
+Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoof prints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake leveled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of wandering the plains.
 Wandering the plains is a room.
 
-the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
 Section 2 - Tainted Centaur Event
 
 Apple Tree is a situation.  The level of Apple Tree is 6.
-The sarea of Apple Tree is "Plains";
+The sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.
 when play begins:
 	add Apple Tree to badspots of guy;
@@ -71,7 +71,7 @@ name	desc	weight	object
 
 fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
-the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.";
+the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.".
 
 Section 4 - Monster Responses
 

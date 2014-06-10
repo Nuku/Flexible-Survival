@@ -5,12 +5,12 @@ Version 9 of Wyvern For FS by Damaged begins here.
 
 Section 1 - Monster Responses
 
-WYVGEN is a number that varies; [Wyvern Gender, 0 = male, 1 = female]
-WYVLEV is a number that varies; [Wyvern Level, 0 = low, 1 = high]
-WYVSF is a number that varies. WYVSF is usually 0; [Wyvern Succumb Fate, 0 = not chosen, 1 = male, 2 = random, 3 = female]
-ghis is text that varies. ghis is usually "their"; [Gender text nodule, entails his/her/their]
-ghe is text that varies. ghe is usually "it";	[Gender text nodule, entails he/she/it]
-ghim is text that varies. ghim is usually "it"; [Gender text nodule, entails him/her/it]
+WYVGEN is a number that varies. [Wyvern Gender, 0 = male, 1 = female]
+WYVLEV is a number that varies. [Wyvern Level, 0 = low, 1 = high]
+WYVSF is a number that varies. WYVSF is usually 0. [Wyvern Succumb Fate, 0 = not chosen, 1 = male, 2 = random, 3 = female]
+ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
+ghe is text that varies. ghe is usually "it".	[Gender text nodule, entails he/she/it]
+ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
 wyvorgyroll is a number that varies. 
 wyvernbias is a number that varies. [Used in recording player bias for wyvern. 1 = all female, 2 = female bias, 3 = ambivalent, 4 = male bias, 5 = all male]
 
@@ -821,9 +821,9 @@ to wyvore:
 				next;
 			say "Invalid action.";
 			
-boundsegment is a number that varies;
-boundmod is a number that varies;
-boundcounter is a number that varies;
+boundsegment is a number that varies.
+boundmod is a number that varies.
+boundcounter is a number that varies.
 
 to wyvhumanityroll:
 	now tempnum is ((hunger of player + thirst of player) / 2) / 10;
@@ -928,21 +928,21 @@ to wyvernkinroll:
 				otherwise:
 					now wyvkin3gen is 1;
 			
-wyvkin1gen is a number that varies;
-wyvkin2gen is a number that varies;
-wyvkin3gen is a number that varies;
-wyvkin4gen is a number that varies;
-wyvkinocc is a number that varies;
-wyvkin1att is a number that varies;
-wyvkin2att is a number that varies;
-wyvkin3att is a number that varies;
-wyvkin4att is a number that varies;
-wyvkinatt is a number that varies;
-wyvkin1lib is a number that varies;
-wyvkin2lib is a number that varies;
-wyvkin3lib is a number that varies;
-wyvkin4lib is a number that varies;
-wyvkinassign is a number that varies;
+wyvkin1gen is a number that varies.
+wyvkin2gen is a number that varies.
+wyvkin3gen is a number that varies.
+wyvkin4gen is a number that varies.
+wyvkinocc is a number that varies.
+wyvkin1att is a number that varies.
+wyvkin2att is a number that varies.
+wyvkin3att is a number that varies.
+wyvkin4att is a number that varies.
+wyvkinatt is a number that varies.
+wyvkin1lib is a number that varies.
+wyvkin2lib is a number that varies.
+wyvkin3lib is a number that varies.
+wyvkin4lib is a number that varies.
+wyvkinassign is a number that varies.
 
 to wyvorgy:
 	now lustatt is libido of player;
@@ -1222,7 +1222,7 @@ to wyvernheadapply:
 			say " moves to climb up on you, her oozing, bestial cunt grinding insistently against your face. [if scalevalue of player < 4]Quite a lot to take all at once[otherwise]Showing absolutely no restraint[end if], your face is smeared with her tainted honey, making it very difficult to think straight.";
 	increase pewterheadocc by 1;
 
-pewterheadvar3 is a number that varies;
+pewterheadvar3 is a number that varies.
 
 to wyvernbodyapply:
 	increase pewterbodyocc by 1;
@@ -1487,7 +1487,7 @@ to wyvernkinlustcheck:
 			if wyvkin2att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin2att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin2att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin2att is 4:
@@ -1535,7 +1535,7 @@ to wyvernkinlustcheck:
 			if wyvkin3att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin3att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin3att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin3att is 4:
@@ -1583,7 +1583,7 @@ to wyvernkinlustcheck:
 			if wyvkin4att is 1:
 				say "! Their continued, fierce tonguing of your quickly strained maw is more than enough to set them off, the beast's idle grinding against you quickly slicked by the feel of their hot [if wyvkin3gen is 1]cum[otherwise]sex[end if]";
 			otherwise if wyvkin4att is 2:
-				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[otherwise] before the flow finally subsides";
+				say "! A sudden flood of the beast's virile cum flooding your stuffed maw, [if scalevalue of player < 4]quickly overwhelmed and sputtering from you[otherwise]forcing you to swallow down every last drop[end if] before the flow finally subsides";
 			otherwise if wyvkin4att is 3:
 				say "! A sudden wave of bestial honey assaulting your face, driving you to swallow down the ensuing flood out of fear you might drown in it, [if scalevalue of player < 4]quickly overwhelming your smaller form[otherwise]your senses lost in a haze of the monster's sex[end if]";
 			otherwise if wyvkin4att is 4:
@@ -1680,7 +1680,7 @@ to wyverndisengage:
 				decrease pewtergenitalcap by 1;
 				now tempnum is 0;
 				
-tempnum2 is a number that varies;
+tempnum2 is a number that varies.
 
 to wyvernmatron:
 	if a random chance of tempnum2 in 14 succeeds:
@@ -1890,7 +1890,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Wyvern Goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	Wyvern Goop
 
-the scent of Wyvern Goop is "      The sticky gel has an acrid, spicy scent.";
+the scent of Wyvern Goop is "      The sticky gel has an acrid, spicy scent.".
 
 To say wyvern goop use:
 	say "     Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";
@@ -1903,7 +1903,7 @@ To say wyvern goop use:
 	decrease humanity of player by 4;
 	increase libido of player by 1;
 	
-Wyvern Goop is a grab object. Wyvern Goop is infectious. The strain of Wyvern is "Wyvern";
-Wyvern Goop has a usedesc "[wyvern goop use]";
+Wyvern Goop is a grab object. Wyvern Goop is infectious. The strain of Wyvern is "Wyvern".
+Wyvern Goop has a usedesc "[wyvern goop use]".
 
 Wyvern For FS ends here.

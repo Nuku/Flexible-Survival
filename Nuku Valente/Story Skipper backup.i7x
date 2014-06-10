@@ -1,17 +1,17 @@
-Story Skipper by Nuku Valente begins here.
+Story Skipper backup by Nuku Valente begins here.
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
 instead of sniffing Trixie:
 	say "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
 
-The description of trixie is "[trixiedesc]";
+The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it[apostrophe]s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let[apostrophe]s skip to the good stuff!'.";
 	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
 
 To say magic word:
 	if wrcursestatus is 5:
@@ -1181,7 +1181,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies.  restoreletter is normally "0";
+restoreletter is a text that varies.  restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;

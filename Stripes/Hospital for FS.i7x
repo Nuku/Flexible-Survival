@@ -13,7 +13,7 @@ hospstairs is a number that varies.
 
 City Hospital is a room. It is fasttravel.
 
-The description of City Hospital is "     The exterior of the hospital is quite disheveled.  It seems like a large number of people were here when the outbreak started.  You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike.  You have to wonder if it is wise to investigate here further[if hospquest > 0].  But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated.  And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].[line break]     Inside the lobby, there are further signs of the chaos of transformations while staff tried to figure out what was happening.  The waiting area is presently clear of people and creatures, through there is a lot of scattered clothes, as well as gurneys, crutches and other medical items.  In some cases, these are piled up in an attempt to barricade the doors.  It appears that searching will have another difficulty to it, as you won't be able to simply follow the hospital floor plans[if hospquest > 0] to that corner[end if].[line break]     From the shadows of one hall, you catch the glimpse of a strange, misshapen form before it slips further into the shadows of the hospital, away from the emergency lighting.  It moved quite unevenly on its two malformed legs.  Perhaps this place will be even more disturbing than the others you've searched before and you may want to rethink coming here.";
+The description of City Hospital is "     The exterior of the hospital is quite disheveled.  It seems like a large number of people were here when the outbreak started.  You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike.  You have to wonder if it is wise to investigate here further[if hospquest > 0].  But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated.  And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].[line break]     Inside the lobby, there are further signs of the chaos of transformations while staff tried to figure out what was happening.  The waiting area is presently clear of people and creatures, through there is a lot of scattered clothes, as well as gurneys, crutches and other medical items.  In some cases, these are piled up in an attempt to barricade the doors.  It appears that searching will have another difficulty to it, as you won't be able to simply follow the hospital floor plans[if hospquest > 0] to that corner[end if].[line break]     From the shadows of one hall, you catch the glimpse of a strange, misshapen form before it slips further into the shadows of the hospital, away from the emergency lighting.  It moved quite unevenly on its two malformed legs.  Perhaps this place will be even more disturbing than the others you've searched before and you may want to rethink coming here.".
 
 Hospital Halls is a door. "To the north are a pair of double-doors leading into the hospital.". It is dangerous. 
 
@@ -22,14 +22,14 @@ North of Hospital Halls is Hospital interior.
 
 The marea of Hospital Halls is "Hospital".
 
-the scent of City Hospital is "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.";
+the scent of City Hospital is "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.".
 
 
 Section 2 - Hospital Events
 
 
 Hung Like A is a situation.
-The sarea of Hung Like A is "Hospital";
+The sarea of Hung Like A is "Hospital".
 
 Instead of resolving a Hung Like A:
 	say "     You come across an examination room that has several patient charts tossed on a rumpled bed.  You glance over them quickly, finding them all mention cases of 'strange growths' and 'physiological anomalies' found in patients.  Those timestamped as the later ones even start commenting on the strange frequency of such occurrences the preliminary examiner's found that evening.  The last one talks about a patient with growing hair spreading over his body along with the stiffening of his fingers and nails.  It ends with the doctor's rough scrawls about the patient being hung like a horse, that it's so good and how she's letting him take her like his mare so she can properly test it.";
@@ -38,10 +38,11 @@ Instead of resolving a Hung Like A:
 
 
 Pharmaceutical Storage is a situation.
-The sarea of Pharmaceutical Storage is "Hospital";
+The sarea of Pharmaceutical Storage is "Hospital".
 
 Instead of resolving a Pharmaceutical Storage:
 	say "     You manage to find the hospital's pharmaceutical storage room.  It has clearly been gone through already by someone, as the shelves are barren.  There are a few sticky stains and scattered bottles on the floor you carefully avoid stepping on.  Carefully, you poke through the remaining items to see if anything useful remains among the last scattered samples and bottles.";
+	say "[drugsearch]";
 	say "[drugsearch]";
 	say "[drugsearch]";
 	increase hospnav by 1;
@@ -50,44 +51,50 @@ Instead of resolving a Pharmaceutical Storage:
 	now Pharmaceutical Storage is resolved;
 
 to say drugsearch:
-	let T be a random number between 1 and 11;
+	let T be a random number between 1 and 13;
 	if T is 1:
 		say "     You find a medkit.";
 		increase carried of medkit by 1;
 	if T is 2 or T is 3:
-		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?[line break]";
+		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?";
 		increase hasparts by 1;
 	if T is 4:
 		say "     You find a testosterone pill still in the sample pack.";
 		increase carried of testosterone pill by 1;
 	if T is 5:
+		say "     You find an estrogen pill still in the sample pack.";
+		increase carried of estrogen pill by 1;
+	if T is 6:
+		say "     You find an odd pill labelled as being [']estosterogen['] still in its sample pack.";
+		increase carried of estosterogen pill by 1;
+	if T is 7:
 		say "     You find a cock pill still in the sample pack.";
 		increase carried of cock pill by 1;
-	if T is 6:
+	if T is 8:
 		say "     You find a birth control pill still in the sample pack.";
 		increase carried of birth control pill by 1;
-	if T is 7:
+	if T is 9:
 		say "     You find a fertility enhancement pill still in the sample pack.";
 		increase carried of fertile pill by 1;
-	if T is 8:
+	if T is 10:
 		say "     You find a strange, blood red pill.";
 		increase carried of blood pill by 1;
-	if T is 9 or T is 10:
-		say "     You find a small syringe with clear, blue fluid in it and labeled as a [']healing booster['].";
+	if T is 11 or T is 12:
+		say "     You find a small syringe with clear, blue fluid in it and labelled as a [']healing booster['].";
 		increase carried of healing booster by 1;
-	if T is 11:
-		say "     You find a small syringe with cloudy, orange fluid in it and labeled as a [']libido suppressant['].";
+	if T is 13:
+		say "     You find a small syringe with cloudy, orange fluid in it and labelled as a [']libido suppressant['].";
 		increase carried of libido suppressant by 1;
 
 
 Ambulance Dock is a situation.
-The sarea of Ambulance Dock is "Hospital";
+The sarea of Ambulance Dock is "Hospital".
 
 Instead of resolving a Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance.  The only one here has been crashed into the dock.  Stepping over to it, you look in the open back.  Unsurprisingly, there is a huge, sticky mess in there.  Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital.  You consider searching in there for something that could still be usable, but it seems like a risky venture.  Do you proceed? (Y/N)";
 	if the player consents:
 		if a random chance of 2 in 3 succeeds:
-			say "     You have a little luck while searching, managing to find a partially salvageable medkit from the mess.  It's only partially complete and will need some more parts to be usable.    Maybe someone could put them together?  Your search did unfortunately get quite a bit of that cum on you though.";
+			say "     You have a little luck while searching, managing to find a partially salvageable medkit from the mess.  It's only partially complete and will need some more parts to be usable.  Maybe someone could put them together?  Your search did unfortunately get quite a bit of that cum on you though.";
 			increase hasparts by 1;
 		otherwise:
 			say "     You are successfully able to retrieve a medical kit from the mess.  Having been covered by the shock blanket before the fluids started flying, it is undamaged and still usable.  What luck!  Your search did unfortunately get quite a bit of that cum on you though.";
@@ -102,7 +109,7 @@ Instead of resolving a Ambulance Dock:
 
 
 Operating Room is a situation.
-The sarea of Operating Room is "Hospital";
+The sarea of Operating Room is "Hospital".
 
 Instead of resolving a Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you.  You duck back quickly before they spot you and dive quietly into the nearest room.  As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms.  Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
@@ -120,11 +127,11 @@ name	desc	weight	object
 
 bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary.  The objsize of bonesaw is 2.
 
-the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.";
+the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 
 Staff Lounge is a situation.
-The sarea of Staff Lounge is "Hospital";
+The sarea of Staff Lounge is "Hospital".
 when play begins:
 	add Staff Lounge to badspots of guy;
 	add Staff Lounge to badspots of furry;
@@ -141,7 +148,7 @@ Instead of resolving a Staff Lounge:
 
 
 Interruption is a situation.
-The sarea of Interruption is "Hospital";
+The sarea of Interruption is "Hospital".
 
 Instead of resolving a Interruption:
 	say "     While moving through the halls of the hospital, you poke into the patient rooms on each side, taking a quick glance for anything of interest.  At one, you are surprised to find a large jaguar with one of the vixen nurses in his lap, riding his hard cock.  He starts to growl and rise as he notices you, but the nurse, not seeing you, rides him harder and gives him a lustful kiss.  He purrrumbles as he settles back down, eyes closed as they kiss.  You decide to slip quietly back out of the room to leave the couple to their fun.";
@@ -150,7 +157,7 @@ Instead of resolving a Interruption:
 
 
 Maternity Ward is a situation.
-The sarea of Maternity Ward is "Hospital";
+The sarea of Maternity Ward is "Hospital".
 
 Instead of resolving a Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
@@ -164,7 +171,7 @@ Instead of resolving a Maternity Ward:
 
 
 Radiology is a situation.  The level of Radiology is 5.
-The sarea of Radiology is "Hospital";
+The sarea of Radiology is "Hospital".
 when play begins:
 	add Radiology to badspots of girl;
 	add Radiology to badspots of guy;
@@ -245,7 +252,7 @@ to say hospfight4:		[no Raccoon, flags handled internally]
 
 
 Pathology is a situation.  The level of Pathology is 5.
-The sarea of Pathology is "Hospital";
+The sarea of Pathology is "Hospital".
 when play begins:
 	add Pathology to badspots of girl;
 	add Pathology to badspots of guy;
@@ -268,7 +275,7 @@ Instead of resolving a Pathology:
 
 
 Cafeteria is a situation.
-The sarea of Cafeteria is "Hospital";
+The sarea of Cafeteria is "Hospital".
 
 Instead of resolving a Cafeteria:
 	say "     As you are passing through the dark halls of the hospital, you can hear quite a bit of noise from down one hall.  Approaching cautiously, you glance down and see leads to a pair of doors marked 'Cafeteria'.  You approach cautiously, glancing between the doors and the hall behind you.  At the doors, you peek through the window and see quite a few of the hospital's animal staff inside.";
@@ -283,17 +290,17 @@ Instead of resolving a Cafeteria:
 
 
 Chaplaincy is a situation.
-The sarea of Chaplaincy is "Hospital";
+The sarea of Chaplaincy is "Hospital".
 
 instead of resolving Chaplaincy:
-	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members.  Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here.  Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else.  You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-ladden clothes.  You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused.  In the end, he must have decided to give into his urges rather than keep denying them.  You pick it up and store it away.  Perhaps it will be useful for you in a moment of need.";
+	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members.  Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here.  Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else.  You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes.  You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused.  In the end, he must have decided to give into his urges rather than keep denying them.  You pick it up and store it away.  Perhaps it will be useful for you in a moment of need.";
 	increase carried of libido suppressant by 1;
 	increase score by 5;
 	now Chaplaincy is resolved;
 
 
 Records Room is a situation.  The level of Records Room is 5.
-The sarea of Records Room is "Hospital";
+The sarea of Records Room is "Hospital".
 when play begins:
 	add Radiology to badspots of girl;
 	add Radiology to badspots of guy;
@@ -313,7 +320,7 @@ instead of resolving Records Room:
 
 
 Surrounding Area is a situation.
-The sarea of Surrounding Area is "Hospital";
+The sarea of Surrounding Area is "Hospital".
 
 instead of resolving Surrounding Area:
 	say "     Deciding to take a some time to check out the neighbourhood around the hospital, you proceed away from the large building and into the nearby residential area.  As you cautiously move around the houses, a few things stand out right away.  The doors to the homes are open or are broken into.  A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well.  But far more telling is the fact that it is far too quiet.  The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time.  Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here.  It becomes increasingly disconcerting for you.";
@@ -322,7 +329,7 @@ instead of resolving Surrounding Area:
 
 
 Stairwell is a situation.
-The sarea of Stairwell is "Hospital";
+The sarea of Stairwell is "Hospital".
 
 Instead of resolving a Stairwell:
 	if a random chance of 1 in 2 succeeds:
@@ -360,9 +367,9 @@ The description of Locked stairwell is "Off to one side are a pair of heavy, met
 
 Up of Locked stairwell is Hidden Lab
 
-The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].";
+The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
 
-the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.";
+the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
 
 [Message indicating progress]
 to say hospprogress:
@@ -382,7 +389,7 @@ to say hospprogress:
 
 Finding a Way in is a situation.
 Finding a Way in is resolved.		[unable to do this until activated]
-The sarea of Finding a Way in is "Hospital";
+The sarea of Finding a Way in is "Hospital".
 
 
 Instead of resolving a Finding a Way in:
@@ -404,12 +411,12 @@ understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 Doctor Mouse has a number called progress.
 
-The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about three feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
+The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about three feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
 The icon of Doctor Mouse is the figure of DrMouse_icon.
 
 The conversation of Doctor Mouse is { "Squeak!" }.
 
-the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
+the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.".
 
 the linkaction of Doctor Mouse is "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link][if hospquest >= 14], [link]volunteer[end link][end if][line break]";
 
@@ -551,13 +558,13 @@ It is not temporary.
 instead of using scientific device:
 	say "     You don't really know what it's for, but Dr Mouse says he needs it for something.";
 
-the scent of the scientific device is "     The large electronic device smells faintly of ozone and magic smoke.  Hopefully it still works.";
+the scent of the scientific device is "     The large electronic device smells faintly of ozone and magic smoke.  Hopefully it still works.".
 
 
 to say hospquestpt2:
 	say "     'I have a lot of samples and tests I would like to run.  Many of my projects and analyses have been unable to progress without proper instrumentation.  I will need some time to run more tests before I can gain more information. I'm all abuzz with excitement; I want to tackle it all right away.  No sleep for me tonight,' he adds with a chuckle.";
 	say "     'But as I promised, I do have a few things for you.'  He heads over to one of the cabinets under the work bench and digs around, pushing some of the items aside as he digs around.  'I set this aside for you if you were successful.  I know it's not much, but I expect to deliver better once my results start reaching fruition.'  From the back, he pulls out a large beaker with a bottle of water and two syringes sitting in it.";
-	say "     'These are healing boosters and a libido suppressant that I created some time ago.  The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  The other contains a cocktail of anaphrodiasiacs meant to help curb your arousal, for at time at least.  They should both be most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
+	say "     'These are healing boosters and a libido suppressant that I created some time ago.  The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  The other contains a cocktail of anaphrodisiacs meant to help curb your arousal, for at time at least.  They should both be most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
 	delete scientific device;
 	increase carried of healing booster by 1;
 	increase carried of libido suppressant by 1;
@@ -613,7 +620,7 @@ to say hospquestpt6:
 		say "     Please remember, I need you to obtain three samples from those rubbery felines, so I can be certain to have enough to obtain results.  Please make your way to the State Fair and try to collect some.";
 	if carried of Tiger patch >= 3:
 		decrease carried of Tiger patch by 3;
-		say "     Good work!  I shall set to work on these right away.   And while I work on that, I do have another project for you.  I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
+		say "     Good work!  I shall set to work on these right away.  And while I work on that, I do have another project for you.  I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
 		say "     I have just obtained word that the museum contains a pair of prehistoric creatures.  Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes.  The reports from the hospital creatures are somewhat unspecific, but there appears to be a armoured, dinosaur-like creature and several smilodons.  I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter.  I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out.  There is a jackal shopkeeper who has set herself up in the mall.  She has a package for me.  The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
 		now nerminepackage is 1;
@@ -970,7 +977,7 @@ to say hosptfscene:
 	now facename of player is name entry;
 	now face of player is face entry;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "          'We shall now move on to the head,' he states, motioning for the orderly to step up.  He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head.  As a burning sensation courses through your head, the doctor discusses how [face change entry].  As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
+	say "     'We shall now move on to the head,' he states, motioning for the orderly to step up.  He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head.  As a burning sensation courses through your head, the doctor discusses how [face change entry].  As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
 	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
 		sort table of random critters in random order;
 		now monster is 1;
@@ -980,7 +987,7 @@ to say hosptfscene:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest.  'Before we continue with the patient's body, we shall deal with his epidermal layer.'  The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is.  Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body.  You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you.  Shivers of pleasure run all over your skin as [skin change entry].";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges.  They pay particular attention to your genitals, ending shivers of delight through you despite, or perhaps because of, your current situation.  They giggle and tease you, much to the delight of several in the audience members.";
+	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges.  They pay particular attention to your genitals, sending shivers of delight through you despite, or perhaps because of, your current situation.  They giggle and tease you, much to the delight of several of the audience members.";
 	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching.  It seems that some have become rather aroused by your transformation.  Several of the female nurses are riding the laps of the jaguars while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast.  Catching your eyes on her, she even winks at you.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if hospfight is 2:		[Dr Mouse is monstrous]
@@ -1090,10 +1097,10 @@ to say tlabsbigfight:
 	project the icon of Sally;
 	say "     You can see that he's becoming some strange hybrid of husky and rabbit, with a cute, rabbit-like muzzle and ears, but a coat of fluffy fur and curled tail like a husky.  As six breasts with perky nipples start to form on his chest and a wet slit grows in under his fuzzy sheath, the struggles to get away start to become lustful grinding against your body as the hormones course through her system, clouding the doctor's judgement.";
 	attempttowait;
-	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door slams open almost off its hinges as an angry dragon bursts in.  She growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
+	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door slams open almost off its hinges as an angry dragon bursts in.  Orthas growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
 	if Susan is visible:
 		attempttowait;
-		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as Orthas shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
+		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as the dragoness shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
 	now fightstatus is 3;
 	now inasituation is true;
 	challenge "Dragon";
@@ -1148,12 +1155,12 @@ to say tlloss:
 to say tlvictory:
 	if cocks of player > 0:
 		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body.  'No, I need... mustn't give... but so good.  Why did I ever... ngg... but my work...'  Deciding to make the decision for her, you push the horny hybrid onto one of the tables and tease her six breasts.  The transformed doctor releases a soft yip and pants, reaching for your stiff penis despite the conflict in her failing mind.";
-		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her.  Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken.  'Oh my god, yes!' she cries in ecstacy.  The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it.  You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
+		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her.  Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken.  'Oh my god, yes!' she cries in ecstasy.  The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it.  You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
 		attempttowait;
 		say "     Pinned to the table beneath you, the transformed doctor moans and yips as you fuck her good and hard, fulfilling the instinctual needs that are rapidly becoming all she knows.  You grin as you watch her, once a brilliant scientist, become a mindless sextoy as you screw her.  Her cute, rabbitty face smiles up at you and her husky tail wags happily as she's quite literally fucked senseless.";
 	otherwise:
 		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body.  'No, I need... mustn't give... but so good.  Why did I ever... ngg... but my work...'  Deciding to make the decision for her, you push the horny hybrid down to the floor, straddle and tease her six breasts.  The transformed doctor releases a soft yip and pants, grinding her stiff cock up against you.";
-		say "     Happy to oblige, you line up your pussy with her cock, then slowly slide it into you.  Dr Matt arches her back and moans loudly, releasing a spurt of cum from her canine cock, but remaining quite hard and starting to thrust up into you.  'Oh my god, yes!' she cries in ecstacy.  The lustful huskybunny's cock throbs inside you, pulsing with excitement as her slutty body responds automatically to the hot grip of a pussy around it.";
+		say "     Happy to oblige, you line up your pussy with her cock, then slowly slide it into you.  Dr Matt arches her back and moans loudly, releasing a spurt of cum from her canine cock, but remaining quite hard and starting to thrust up into you.  'Oh my god, yes!' she cries in ecstasy.  The lustful huskybunny's cock throbs inside you, pulsing with excitement as her slutty body responds automatically to the hot grip of a pussy around it.";
 		attempttowait;
 		say "     Pinned to the floor beneath you, the transformed doctor moans and yips as you fuck her good and hard, fulfilling the instinctual needs that are rapidly becoming all she knows.  You grin as you watch her, once a brilliant scientist, become a mindless sextoy as you ride her canine cock.  Her cute, rabbitty face smiles up at you and her husky tail wags happily as she's quite literally fucked senseless.";
 	if susan is visible:
@@ -1251,14 +1258,14 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 
 
 Loading Dock is a room.
-The description of Loading Dock is "This loading dock is discretely placed behind and down the hill from Trevor Labs.  The security gate outside it has been broken open.  From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed.  Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like.  Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.";
+The description of Loading Dock is "This loading dock is discretely placed behind and down the hill from Trevor Labs.  The security gate outside it has been broken open.  From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed.  Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like.  Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
 
 undergroundlab is a door. undergroundlab is dangerous.
 Down of Loading Dock is undergroundlab.
 Down of undergroundlab is darkbasement2.
-The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armoured and sealed.  Thankfully, the security card you found opens it.";
+The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armoured and sealed.  Thankfully, the security card you found opens it.".
 
-the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time."; 
+the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
 
 aroundthehill is a door.  east from Loading Dock is aroundthehill.
 east of aroundthehill is darkbasement2.
@@ -1321,7 +1328,7 @@ Instead of conversing the Valerie while hospquest is 8 and valhosp is 0 and valt
 	now valhosp is 1;
 
 Dinosaur Nest is a situation.
-The sarea of Dinosaur Nest is "Museum";
+The sarea of Dinosaur Nest is "Museum".
 Dinosaur Nest is resolved.		[unable to do this until activated]
 nesteddino is a number that varies.
 dinonest is a number that varies.
@@ -1421,7 +1428,7 @@ Instead of conversing the Ronda Mallrat while nerminepackage > 0 and rondahosp i
 ]
 
 Viking Longboat is a situation.
-The sarea of Viking Longboat is "Museum";
+The sarea of Viking Longboat is "Museum".
 Viking Longboat is resolved.		[unable to do this until activated]
 lbfight is a number that varies.
 longboatfind is a number that varies.
@@ -1467,7 +1474,7 @@ name	desc	weight	object
 
 spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
 
-the scent of the spear is "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.";
+the scent of the spear is "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.".
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	increase carried of package by 1;
@@ -1490,7 +1497,7 @@ It is not temporary.
 instead of using package:
 	say "     You ponder the old box, string-tied box in your hands, wondering what the doctor's receiving.";
 
-the scent of the package is "The old box smells of dust and times long past that may never have been at all.";
+the scent of the package is "The old box smells of dust and times long past that may never have been at all.".
 
 
 Section 8 - Endings

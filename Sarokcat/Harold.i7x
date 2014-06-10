@@ -15,10 +15,10 @@ tattoohunter is a number that varies.
 Harold is in The PALOMINO.
 
 Harold is a man.
-The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hooflike hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.";
+The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hooflike hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of colour every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The conversation of Harold is { "Glug glug!" }.
 
-the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.";
+the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.".
 
 
 Section 2 - Conversation
@@ -53,7 +53,7 @@ instead of conversing the Harold:
 			say "     'Well friend, just because things didn't quite work out the way I would have liked them, it doesn't mean I don't owe ya for all your help looking for my friend.  Why don't ya show me that list of yours there, and we can see what I've got,' the unicorn barkeep says with a broad smile and a nod of his head as you approach him about the ingredients.  He wanders off into a narrow back room for a while, only to return with a small pouch full of some unknown items.  'Well, here ya go.  These should be what ya want.  Gave ya all of the stock I was saving, since I didn't know how much you would need.  And if ya need anything else, you be sure to come visit Harold ok?' the rather saucy unicorn says with a sly wink as you tuck the pouch away and prepare to head back to Nermine with your findings.";
 			now hellgatherquest is 5;
 	otherwise if Haroldtalk is 2 and a random chance of 2 in 5 succeeds:
-		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation coloring his voice.  Confused, you cock an eyebrow at the large stallion.  'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is.  The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
+		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation colouring his voice.  Confused, you cock an eyebrow at the large stallion.  'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is.  The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
 		attempttowait;
 		say "     Harold turns his gaze towards some of the predators in the club and you quickly come to understand the unspoken message. 'I know this not your problem, but I also know you travel outside a lot, so if you could snag maybe ten things of food and maybe ten liters of water, then I'd be really indebted to you.' Letting the other man know that you'll see what you can do, you receive a somber nod from Harold before the bartender pulls himself to stand in his usual upright position back behind his bar.  'Ok. And thanks.'  You nod and then turn to leave from the bar to go about your way.";
 		now Haroldtalk is 3;
@@ -180,7 +180,7 @@ to say haroldmalesex:
 		if libido of player > 100, now libido of player is 100;
 	otherwise if remainder after dividing libido of harold by 3 is 2:	[anal]
 		say "     'Looking for more, are you?' he says with a chuckle.  'I guess I'm just going to have to show these girly boys here how to properly pound an ass.'  And with that, he pulls you around behind the bar and bends you over it, facing the rather surprised group of patrons around.  Harold takes a moment to get his stiff cock lined up with your ass, grinding it against your butt a few times[if libido of harold is 2].  'I've only done this with that horny black wolf before, so just bear with me while I get started,' he whispers to you as he lets some of his pre dribble onto your asshole[otherwise].  The unicorn takes his time to get started, letting some of his pre dribble onto your asshole[end if].  After he's satisfied you're lubed up and ready, he slowly drives his cock into your rear, making you both nicker in pleasure.  Turning your head back, you nuzzle and share a kiss with him, which seems to make his colourful horn scintillate even more, though that may just be the flashing lights of the club.";
-		say "     As the amazed patrons watch, Harold pounds away at your ass, pumping his exquisite cock into you again and again, filling you with great pleasure.  Despite his inexperience with anal sex, he does an excellent job at it, filling you with waves of pleasure with each thrust.  His equine cock feels so good in you, like you belong beneath this virile male.  The feel of his flared cock sliding along your inner walls, the rubbing against your prostate, the medial ring slipping in and out of you - it all sends shivers of delight through you which leave you gripping the bar tightly for support.  The excitement of getting publically fucked on the bar, right in front of the others, also is a great thrill.";
+		say "     As the amazed patrons watch, Harold pounds away at your ass, pumping his exquisite cock into you again and again, filling you with great pleasure.  Despite his inexperience with anal sex, he does an excellent job at it, filling you with waves of pleasure with each thrust.  His equine cock feels so good in you, like you belong beneath this virile male.  The feel of his flared cock sliding along your inner walls, the rubbing against your prostate, the medial ring slipping in and out of you - it all sends shivers of delight through you which leave you gripping the bar tightly for support.  The excitement of getting publicly fucked on the bar, right in front of the others, also is a great thrill.";
 		if libido of harold is 2:							[add-on scene]
 			say "     While getting fucked by the horny unicorn, you catch sight of [if hp of Andrew > 0]Andrew[otherwise]a black wolf[end if] running over to the DJ and excitedly gesticulating in your direction.  You think little of it, but as the current song fades out early, only to be replaced by a chorus of 'Always, I want to be with you.  And make believe with you.  And live in harmony, harmony, harmony...' fading in instead, you realize what that was all about.  Atop you, Harold groans, but ends up just pounding you all the harder, much to your enjoyment.";
 		say "     Harold gives you a wonderful, thorough fucking before finally cumming hard while pumping his hand over your dick.  As the stallion's thick, ample load is pumped into you, you feel a rush of pleasure and cum hard as well.  You can hear your seed splashing into an ice bucket, possibly to be made into another of the unicorn's strange drink concoctions.  As Harold pulls out of you, there's some teasing and solicitations from the others, but he threatens to cut them off from drinks and they give up pretty quick.[mimpregchance][mimpregchance]";
@@ -206,7 +206,7 @@ to say haroldmalesex:
 			say "     [special-style-1][playernum][roman type] vs [special-style-2][haroldnum][roman type]: ";
 			if playernum >= haroldnum:		[player wins]
 				say "[if playernum is haroldnum]Tie![otherwise]Win![end if]";
-				say "     You and Harold start taking drinks together while balancing the shot glasses on the back of your hands.  It's a little tricky, but you manage to keep them steady.  As the contest progresses, it gets harder for you.  Even though the nanites help you deal with the alcohol, it is a lot of shots in quick succession and makes you progressively unsteadier.  Just as you think you're not going to be able to last much longer, [if playernum is haroldnum]you both make it through all the drinks on the table.  You both stare at the empty shot glasses for a moment before Harold starts to laugh.  'Now that's pretty impressive of you.  Not many can keep up with me.  I guess you deserve a prize for that,' he says with a smile[otherwise]you are saved when Harold's equine muzzle bumps his glass of the back of his hand.  He chuckles and concedes defeat[end if], rising a bit unsteadily at first to lean on the bar while motioning for you to join him behind it.";
+				say "     You and Harold start taking drinks together while balancing the shot glasses on the back of your hands.  It's a little tricky, but you manage to keep them steady.  As the contest progresses, it gets harder for you.  Even though the nanites help you deal with the alcohol, it is a lot of shots in quick succession and makes you progressively unsteadier.  Just as you think you're not going to be able to last much longer, you [if playernum is haroldnum]both make it through all the drinks on the table.  You both stare at the empty shot glasses for a moment before Harold starts to laugh.  'Now that's pretty impressive of you.  Not many can keep up with me.  I guess you deserve a prize for that,' he says with a smile[otherwise]are saved when Harold's equine muzzle bumps his glass of the back of his hand.  He chuckles and concedes defeat[end if], rising a bit unsteadily at first to lean on the bar while motioning for you to join him behind it.";
 				say "[dc_fuckHarold]";
 			otherwise:
 				say "     You and Harold start taking drinks together while balancing the shot glasses on the back of your hands.  It's a little tricky, but you manage to keep them steady.  As the contest progresses, it gets harder for you.  Even though the nanites help you deal with the alcohol, you're dumping a lot of it in quickly and you get you progressively unsteadier.  Your [bodyname of player] hand ends up wobbling too much as you try to bring it to your mouth and the small glass tumbles off.  With the drink spilled and Harold smiling at you with his gleaming equine teeth, you've lost and have ended up being the unicorn's ride again.";
@@ -239,9 +239,9 @@ to say dc_fuckharold:
 	now libido of player is ( libido of player + libido of player + 50 ) / 3;
 
 to say dc_fuckedbyharold:
-	say "     You're rather disapponted that you won't get to fuck the unicorn, but hurry around the bar regardless, eager to have him buried inside you again.  He bends you over the bar and grinds his cock between your ass cheeks, letting his precum leak down between them.  After smearing some precum over your asshole and more across his equine manhood, he gets them lined up and starts pushing into you with no more preamble.  'Mmmm... to the victor go the spoils,' he nickers, kneading your ass firmly.  In his alcohol-fueled eagerness, he doesn't hold back, driving the full length of his horse cock into you, grinning as you nicker and moan as he takes you.";
-	say "     As the patrons around the bar enjoy the finale to the drinking contest they've been eagerly watching, you moan louder and grind back onto Harold's cock all the harder, eager to give them a good show.  The feel of his pulsing shaft inside you is exquisite - so large and virile, like some divine stud - filling you with waves of pleasure with each thrust.  The feel of his flared cock sliding along your inner walls, the rubbing against your prostate, the medial ring slipping in and out of you - it all sends shivers of delight through you which leave you gripping the bar tightly for support.  The excitement of getting publically fucked on the bar, right in front of the others, only makes it all the better.";
-	say "     The fucking you recieve from him is wilder and rougher than usual, but is nothing but bliss all the same.  The stallion pumps frantically at your cock as well, getting you to empty your balls into one of his buckets.  Feeling your ass clenching and squeezing around him as you cum's enough to set him off and you're treated to the hot rush of his thick semen claiming your ass again.  You're suffused with a rush of pleasure and start cumming all over again.  You collapse onto the bar with a soft moan as your stallion stud pulls out.  There's a few teasing comments thrown around, mainly directed at the loser, including many requests to have sloppy seconds.  You smile at these, but are too worn out for more right now.[mimpregchance][mimpregchance]";
+	say "     You're rather disappointed that you won't get to fuck the unicorn, but hurry around the bar regardless, eager to have him buried inside you again.  He bends you over the bar and grinds his cock between your ass cheeks, letting his precum leak down between them.  After smearing some precum over your asshole and more across his equine manhood, he gets them lined up and starts pushing into you with no more preamble.  'Mmmm... to the victor go the spoils,' he nickers, kneading your ass firmly.  In his alcohol-fueled eagerness, he doesn't hold back, driving the full length of his horse cock into you, grinning as you nicker and moan as he takes you.";
+	say "     As the patrons around the bar enjoy the finale to the drinking contest they've been eagerly watching, you moan louder and grind back onto Harold's cock all the harder, eager to give them a good show.  The feel of his pulsing shaft inside you is exquisite - so large and virile, like some divine stud - filling you with waves of pleasure with each thrust.  The feel of his flared cock sliding along your inner walls, the rubbing against your prostate, the medial ring slipping in and out of you - it all sends shivers of delight through you which leave you gripping the bar tightly for support.  The excitement of getting publicly fucked on the bar, right in front of the others, only makes it all the better.";
+	say "     The fucking you receive from him is wilder and rougher than usual, but is nothing but bliss all the same.  The stallion pumps frantically at your cock as well, getting you to empty your balls into one of his buckets.  Feeling your ass clenching and squeezing around him as you cum's enough to set him off and you're treated to the hot rush of his thick semen claiming your ass again.  You're suffused with a rush of pleasure and start cumming all over again.  You collapse onto the bar with a soft moan as your stallion stud pulls out.  There's a few teasing comments thrown around, mainly directed at the loser, including many requests to have sloppy seconds.  You smile at these, but are too worn out for more right now.[mimpregchance][mimpregchance]";
 	now libido of player is ( libido of player + libido of player + 50 ) / 3;
 
 
@@ -271,18 +271,18 @@ Drink bar is in The PALOMINO.
 
 
 Drink bar is a man.
-The description of Drink bar is "[drinkbardesc]";
+The description of Drink bar is "[drinkbardesc]".
 
 to say drinkbardesc:
 	say "     This well-stocked bar is full of a number of drinks you have never seen before.  Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed.  A small sign on the bar lists the available drinks.  To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit.  The list of drinks is as follows:";
 	say "     [link]Equestrian Ale[as]order Equestrian Ale[end link], [link]Black Wolf Beer[as]order Black Wolf Beer[end link], [link]Cheetah Chaser[as]order Cheetah Chaser[end link], [link]Succubi Delight[as]order Succubi Delight[end link], [link]Gryphon Gulp[as]order Gryphon Gulp[end link], [link]Satyr Special[as]order Satyr Special[end link], [link]Panda Pint[as]order Panda Pint[end link], [link]Harpy Heaven[as]order Harpy Heaven[end link], [link]Jaguar Lager[as]order Jaguar Lager[end link], [link]Sabre Savager[as]order Sabre Savager[end link], [link]Chocolate Rum[as]order Chocolate Rum[end link], [link]Tigress Tequila[as]order Tigress Tequila[end link], and [link]Zebra Vodka[as]order Zebra Vodka[end link].";
 
-the scent of Drink bar is "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.";
+the scent of Drink bar is "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.".
 
 Aledrinking is an action applying to nothing.
 
-understand "Order Equestrian Ale" as Aledrinking;
-understand "Order Ale" as Aledrinking;  
+understand "Order Equestrian Ale" as Aledrinking.
+understand "Order Ale" as Aledrinking.
 
 check Aledrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -301,8 +301,8 @@ carry out Aledrinking:
 
 Beerdrinking is an action applying to nothing.
 
-understand "Order Black wolf beer" as Beerdrinking;
-understand "Order beer" as Beerdrinking;  
+understand "Order Black wolf beer" as Beerdrinking.
+understand "Order beer" as Beerdrinking.
 
 check Beerdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -321,8 +321,8 @@ carry out Beerdrinking:
 
 Chaserdrinking is an action applying to nothing.
 
-understand "Order Cheetah Chaser" as Chaserdrinking;
-understand "Order Chaser" as Chaserdrinking;  
+understand "Order Cheetah Chaser" as Chaserdrinking.
+understand "Order Chaser" as Chaserdrinking.
 
 check Chaserdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -344,8 +344,8 @@ carry out Chaserdrinking:
 
 Delightdrinking is an action applying to nothing.
 
-understand "Order Succubi Delight" as Delightdrinking;
-understand "Order Delight" as Delightdrinking;  
+understand "Order Succubi Delight" as Delightdrinking.
+understand "Order Delight" as Delightdrinking.
 
 check Delightdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -365,8 +365,8 @@ carry out Delightdrinking:
 
 Gryphondrinking is an action applying to nothing.
 
-understand "Order Gryphon gulp" as Gryphondrinking;
-understand "Order gulp" as Gryphondrinking;  
+understand "Order Gryphon gulp" as Gryphondrinking.
+understand "Order gulp" as Gryphondrinking.
 
 check Gryphondrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -385,8 +385,8 @@ carry out Gryphondrinking:
 
 Heavendrinking is an action applying to nothing.
 
-understand "Order Harpy Heaven" as Heavendrinking;
-understand "Order Heaven" as Heavendrinking;  
+understand "Order Harpy Heaven" as Heavendrinking.
+understand "Order Heaven" as Heavendrinking.
 
 check Heavendrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -406,8 +406,8 @@ carry out Heavendrinking:
 
 Specialdrinking is an action applying to nothing.
 
-understand "Order Satyr Special" as Specialdrinking;
-understand "Order Special" as Specialdrinking;  
+understand "Order Satyr Special" as Specialdrinking.
+understand "Order Special" as Specialdrinking.
 
 check Specialdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -428,8 +428,8 @@ carry out Specialdrinking:
 
 Pintdrinking is an action applying to nothing.
 
-understand "Order Panda Pint" as Pintdrinking;
-understand "Order Pint" as Pintdrinking;  
+understand "Order Panda Pint" as Pintdrinking.
+understand "Order Pint" as Pintdrinking.
 
 check Pintdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -450,8 +450,8 @@ carry out pintdrinking:
 
 Lagerdrinking is an action applying to nothing.
 
-understand "Order Jaguar Lager" as Lagerdrinking;
-understand "Order Lager" as Lagerdrinking;  
+understand "Order Jaguar Lager" as Lagerdrinking.
+understand "Order Lager" as Lagerdrinking.
 
 check Lagerdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -472,8 +472,8 @@ carry out Lagerdrinking:
 
 Sabredrinking is an action applying to nothing.
 
-understand "Order Sabre Savager" as Sabredrinking;
-understand "Order Savager" as Sabredrinking;  
+understand "Order Sabre Savager" as Sabredrinking.
+understand "Order Savager" as Sabredrinking.
 
 check Sabredrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -493,8 +493,8 @@ carry out Sabredrinking:
 
 Rumdrinking is an action applying to nothing.
 
-understand "Order Chocolate Rum" as Rumdrinking;
-understand "Order Rum" as Rumdrinking;  
+understand "Order Chocolate Rum" as Rumdrinking.
+understand "Order Rum" as Rumdrinking.
 
 check Rumdrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -514,8 +514,8 @@ carry out Rumdrinking:
 
 Vodkadrinking is an action applying to nothing.
 
-understand "Order Zebra Vodka" as Vodkadrinking;
-understand "Order Vodka" as Vodkadrinking;  
+understand "Order Zebra Vodka" as Vodkadrinking.
+understand "Order Vodka" as Vodkadrinking.
 
 check Vodkadrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -535,8 +535,8 @@ carry out Vodkadrinking:
 
 Tequiladrinking is an action applying to nothing.
 
-understand "Order Tigress Tequila" as Tequiladrinking;
-understand "Order Tequila" as Tequiladrinking;  
+understand "Order Tigress Tequila" as Tequiladrinking.
+understand "Order Tequila" as Tequiladrinking.
 
 check Tequiladrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
@@ -546,7 +546,7 @@ carry out Tequiladrinking:
 	if lastDrinkserved - turns is less than 6:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly.  'Sorry friend, I can only give you so much at a time.  It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea.  'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while.  We have to be careful how much we give out in a day.'  He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	otherwise:
-		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch.  It isn't long before he sets a small glass of orange tequila in front of you.  'That will put whiskers on ya,' he says with a broad grin.  'Might loosen ya up some, too.' Harold adds with amusement as he goes back to tending the bar, shooting you an occasional amused glance as you raise your glass.  Eying the tequila suspiciously, you shrug as you pick up the glass and take a big drink.  The tequila burns harshly as it goes down, the liquor carrying an even stronger bite then regular tequila, but with a strangely pleasant aftertaste.  Realizing you have drained your glass, you set it back down on the bar, gasping slightly as the liquor hits your system, making you feel nice and warm as it loosens you up.  Grinning happily, you note that the canny bartender already has another glass set out on the bar for you.  Snagging the fresh glass, you quickly drink some more of the powerful liquor, feeling it loosen you right up as it makes your body tingle with excitement.  The drink makes you feel nice and sexy, and perhaps even a little bit slutty, as you grin longingly as you look around the room.  You enjoy the sights of so many different, horny beasts having fun.  You find yourself wondering just what some of the horny dancers would give to have fun with you as well.  The thought of selling your body for the night seeming strangely alluring even as your body shifts and changes on the outside to match your new, sexy and slutty inside.";
+		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch.  It isn't long before he sets a small glass of orange tequila in front of you.  'That will put whiskers on ya,' he says with a broad grin.  'Might loosen ya up some, too.' Harold adds with amusement as he goes back to tending the bar, shooting you an occasional amused glance as you raise your glass.  Eyeing the tequila suspiciously, you shrug as you pick up the glass and take a big drink.  The tequila burns harshly as it goes down, the liquor carrying an even stronger bite then regular tequila, but with a strangely pleasant aftertaste.  Realizing you have drained your glass, you set it back down on the bar, gasping slightly as the liquor hits your system, making you feel nice and warm as it loosens you up.  Grinning happily, you note that the canny bartender already has another glass set out on the bar for you.  Snagging the fresh glass, you quickly drink some more of the powerful liquor, feeling it loosen you right up as it makes your body tingle with excitement.  The drink makes you feel nice and sexy, and perhaps even a little bit slutty, as you grin longingly as you look around the room.  You enjoy the sights of so many different, horny beasts having fun.  You find yourself wondering just what some of the horny dancers would give to have fun with you as well.  The thought of selling your body for the night seeming strangely alluring even as your body shifts and changes on the outside to match your new, sexy and slutty inside.";
 		infect "Tigress Hooker";
 		infect "Tigress Hooker";
 		decrease humanity of player by 5;

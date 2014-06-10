@@ -6,7 +6,7 @@ Sugar Feud by AGentlemanCalledB begins here.
 See also; "Sweet Exchange", "Caught Glider" - Stripes\assorted events]
 
 Sugar Shack is a situation.
-The sarea of Sugar Shack is "Midway";
+The sarea of Sugar Shack is "Midway".
 when play begins:
 	add Sugar Shack to badspots of furry;
 	add Sugar Shack to badspots of girl;
@@ -51,7 +51,7 @@ Instead of resolving a Sugar Shack:
 			now humanity of player is 0;
 			now battleground is "void";
 			attempttowait;
-			end the game saying "Having succumb to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
+			end the story saying "Having succumb to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 		otherwise:
 			say "     Spent, you collapse atop your lover as the last of your changes ripple down your legs, encouraged by the sticky nectars coating your thighs. The sugar glider hugs you tightly in a loving embrace that spans most of your body thanks to the soft membrane between her arms and legs. She nuzzles gently against your [if cocks of player > 0]face and licks you cheek softly[otherwise]tail[end if] with a sigh of contentment as your transformation comes to and end. As you bask in the afterglow of your sweet, sugary sex your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Even as the sugar induced fog starts to recede in the wake of your climax, your mouth waters at the thought of that sweet, sweet treat. Will you give in to the urge to go back for more?";
 			if the player consents:
@@ -59,7 +59,7 @@ Instead of resolving a Sugar Shack:
 				now humanity of player is 0;
 				now battleground is "void";
 				attempttowait;
-				end the game saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
+				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			otherwise:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";
 				decrease hunger of player by 3;

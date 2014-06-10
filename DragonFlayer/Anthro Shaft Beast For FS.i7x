@@ -169,7 +169,7 @@ Psionic Egg is a grab object.
 Psionic Egg is infectious. The strain of Psionic Egg is "Anthro Shaft Beast".
 the usedesc of Psionic Egg is "You hold the egg tightly in your hands, and as you look at it you hear a beautiful enthralling voice calling out at you, when you come to your senses, the egg has melted and it's now being absorbed by your skin...[line break]";
 
-the scent of Psionic Egg is "The purple, fleshy egg has the musky scent of sex lingering over it.";
+the scent of Psionic Egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 
 
 [ Edit this to have the correct Name as wall]

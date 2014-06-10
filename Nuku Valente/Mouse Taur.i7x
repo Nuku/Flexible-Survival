@@ -7,7 +7,7 @@ Version 2 of Mouse Taur by Nuku Valente begins here.
 Section 1 - The Situations	[two ways to meet Lisa now]
 
 Mouse Taur is a situation.
-The sarea of Mouse Taur is "Red";
+The sarea of Mouse Taur is "Red".
 mtrp is a number that varies.
 When play begins:
 	add "Mouse Taur" to infections of furry;
@@ -20,7 +20,7 @@ Instead of Resolving a Mouse Taur:
 		say "A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth, 'Hello', she says, 'I was watching you roam around and thought you might like some company.'";
 		attempttowait;
 		if cocks of player is greater than 0 and cunts of player is less than 1:
-			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[apostrophe]m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
+			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[']m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
 		if cunts of player is greater than 0 and cocks of player is greater than 0:
 			say "'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression, 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
 		if cunts of player is greater than 0 and cocks of player is less than 1:
@@ -38,7 +38,7 @@ Instead of Resolving a Mouse Taur:
 
 [ New event added by Shadowwolf94]
 Find Porn Store is a situation.  The level of Find Porn Store is 5.
-The sarea of Find Porn Store is "Red";
+The sarea of Find Porn Store is "Red".
 When play begins:
 	add "Find Porn Store" to infections of furry;
 	add "Find Porn Store" to infections of girl;
@@ -62,10 +62,10 @@ Instead of Resolving a Find Porn Store:
 Section 2 - Porn Store and Lisa
 
 Porn Store is a room. It is fasttravel. It is private.
-The description of Porn Store is "[pornstoredesc]";
+The description of Porn Store is "[pornstoredesc]".
 
 Lisa is a person.  Lisa is in Porn Store.
-The description of Lisa is "A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
+The description of Lisa is "A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.".
 The conversation of Lisa is { "Squeak!" }.
 
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
@@ -97,10 +97,10 @@ to say pornstoredesc:
 		say "     'How does this sound?  Since they're probably not coming back, I could sell them off to you and your kitty.'  Artemis mrowls eagerly and nuzzles against your hip, purring loudly, clearly seeking to endear herself to you to get her desired treats.  'But since money's no good and I won't take those silly freecred, I guess you can maybe do me a favour instead to pay for it.  Not that kind of favour,' she adds quickly.";
 		attempttowait;
 		if hellspawn is not banned:
-			say "     'There's been some succubi in the area who have been harassing my store.  And it's too bad, too.  They look like they'd be a lot of fun if they'd just be more neighbourly,' adds whistfully, licking her lips at the thought of those sexy females.  'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it.  If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.'  Artemis ignores the final comment, mewling again and purring happily.  You pet her head and agree to Lisa's deal.";
+			say "     'There's been some succubi in the area who have been harassing my store.  And it's too bad, too.  They look like they'd be a lot of fun if they'd just be more neighbourly,' adds wistfully, licking her lips at the thought of those sexy females.  'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it.  If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.'  Artemis ignores the final comment, mewling again and purring happily.  You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount1 is 1;
 		otherwise:
-			say "     'There's been some kangaroo girls in the area who have been harassing my store.  And it's too bad, too.  They look like they'd be a lot of fun if they'd just be more neighbourly,' adds whistfully, licking her lips at the thought of those sexy females.  'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it.  If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.'  Artemis ignores the final comment, mewling again and purring happily.  You pet her head and agree to Lisa's deal.";
+			say "     'There's been some kangaroo girls in the area who have been harassing my store.  And it's too bad, too.  They look like they'd be a lot of fun if they'd just be more neighbourly,' adds wistfully, licking her lips at the thought of those sexy females.  'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it.  If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.'  Artemis ignores the final comment, mewling again and purring happily.  You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount2 is 1;
 		now hp of rubber tigress is 9;
 
@@ -128,8 +128,8 @@ Section 3 - Fucking
 
 mousefucking is an action applying to nothing.
 
-understand "fuck Lisa" as mousefucking;
-understand "fuck mouse" as mousefucking;
+understand "fuck Lisa" as mousefucking.
+understand "fuck mouse" as mousefucking.
 
 check mousefucking:
 	if Lisa is not visible, say "Who?" instead;
@@ -150,7 +150,7 @@ To mousefuck:
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
-	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn[apostrophe]t new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
+	say "Lisa looks you over a moment before lifting her shoulders. 'I live in a porn shop. A little play isn[']t new, right?' She moves up to you and runs soft hands across your front and sides, 'Come with me into the back, and be naked when you do it.' She saunters off into her private backroom, through a curtain of hanging beads that softly clack with the sound of jostled wood behind her. ";
 	if a random number from 1 to 2 is 1: [ Aggressive]
 		if the cunts of the player is 0: [ oral ]
 			if cocks of the player is 0: [You are not ready]
@@ -214,9 +214,9 @@ To mousefuck:
 		if the player consents:
 			increase mousefucked by 1;
 			if the cunts of player is 0: [ Have player eat her out ]
-				say "'There you are, well, see anything you would like?' the mouse asks you over her shoulder. In the middle of a pile of pillows she sits, coyly looking over her shoulder, her rear prominently on display for you. Eyes wide at the sight, you pad forward, one paw reaching instinctively to rub at that perfect, mousy, rear. 'Have a taste, it won't bite.' she says, breaking you of your trance, making you smile as you lean down. The smell reaches you and, feeling  little light headed, you snake out your tongue as you lean into her, lapping at her outer lips.[line break][line break]'Oh yes, that[apostrophe]s wonderful dear, right, right, oh yes right there.' she murmurs delightfully as you warm to the task. Working your fingers around her you hold her open as you begin to work your tongue deeper and deeper, delving for the source of the amazingly flavored honey that greets your sense of taste at every lick. As you continue, you find the little places that seem to make her quiver, taking stock of them as it were. Without warning the mouse you begin to play at each of them, changing the order, again and again. All too soon a mousy scream can be heard and your whole face becomes damp with her discharge. 'Oh... oh yes dear, come, let me clean you up.' she urges, helping you into a cuddle as she turns, lapping at your face, 'Let me take good care of you.' she adds with a smile, tongue pausing for just a moment to speak.[line break][line break]";
+				say "'There you are, well, see anything you would like?' the mouse asks you over her shoulder. In the middle of a pile of pillows she sits, coyly looking over her shoulder, her rear prominently on display for you. Eyes wide at the sight, you pad forward, one paw reaching instinctively to rub at that perfect, mousy, rear. 'Have a taste, it won't bite.' she says, breaking you of your trance, making you smile as you lean down. The smell reaches you and, feeling  little light headed, you snake out your tongue as you lean into her, lapping at her outer lips.[line break][line break]'Oh yes, that[']s wonderful dear, right, right, oh yes right there.' she murmurs delightfully as you warm to the task. Working your fingers around her you hold her open as you begin to work your tongue deeper and deeper, delving for the source of the amazingly flavored honey that greets your sense of taste at every lick. As you continue, you find the little places that seem to make her quiver, taking stock of them as it were. Without warning the mouse you begin to play at each of them, changing the order, again and again. All too soon a mousy scream can be heard and your whole face becomes damp with her discharge. 'Oh... oh yes dear, come, let me clean you up.' she urges, helping you into a cuddle as she turns, lapping at your face, 'Let me take good care of you.' she adds with a smile, tongue pausing for just a moment to speak.[line break][line break]";
 			otherwise: [ Have her eat out player ]
-				say "'Well aren[apostrophe]t you just a cutie?' the mouse exclaims, seeing you sway slowly into the room. The mouse-taur is watching you from a big pile of pillows in one corner, seeing you notice her she smiles widely, 'Well? Come on over, I don't bite unless you ask nicely.' she says, beckoning you over. An urge, a need, compels you to disrobe for her and in moments every last stitch of clothing is on the floor.[line break][line break]";
+				say "'Well aren[']t you just a cutie?' the mouse exclaims, seeing you sway slowly into the room. The mouse-taur is watching you from a big pile of pillows in one corner, seeing you notice her she smiles widely, 'Well? Come on over, I don't bite unless you ask nicely.' she says, beckoning you over. An urge, a need, compels you to disrobe for her and in moments every last stitch of clothing is on the floor.[line break][line break]";
 				if the cocks of player is 0:
 					say "'Perfect.' the mouse utters, one paw raised and reaching for your own hand, seeming to draw your own up, meeting it, taking it.[line break][line break]";
 				otherwise:
@@ -239,9 +239,9 @@ Section 4 - Endings
 When play ends:
 	if mousefucked is greater than 1 and humanity of the player > 9:
 		increase score by 5;
-		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of wierd cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
+		say "     You receive an occasional letter or call from Lisa.  It turns out she made it through alright and has joined up with a group called the [']Prometheans['].  It sounds like some kind of weird cult thing, but at least she is happy and safe. You remain good pen pals with the mousetaur you met in that fallen city";
 		if mousespot is greater than 0:
-			say ".  She writes that you remain to be the only male she's ever laid with that didn[apostrophe]t become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe.... They say it is never too late.";
+			say ".  She writes that you remain to be the only male she's ever laid with that didn[']t become a female afterwards.  After many years of exchanged letters, she admits that she misses the moment and wishes she had stayed closer at your side.  Maybe.... They say it is never too late.";
 			increase score by 10;
 		otherwise:
 			say ".";

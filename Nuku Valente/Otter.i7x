@@ -7,7 +7,7 @@ Version 2 of Otter by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 Otterdefeat is a number that varies.
 Otterconsent is a number that varies.
 
@@ -16,7 +16,7 @@ Anal play scenes will not occur if the player is set as Less Anal.
 If guy is banned, the male interplay scenes are removed from the sex.  Female scenes will instead be more likely (75% chance each).
 If girl is banned, the female interplay scenes are removed from the sex.  Male scenes will instead be more likely (75% chance each).
 A male otter may ride the player's cock if guy is not banned, but the female is more common (75%) unless female is banned.
-An otter (75% male/25% female unless banned) may rim the player if they're not recieving anal sex and if the player is set for More Anal.
+An otter (75% male/25% female unless banned) may rim the player if they're not receiving anal sex and if the player is set for More Anal.
 If girl or guy is banned, direct reference to that gender is removed from combat.
 If both guy and girl are banned, then they will show as normal during combat.
 If both guy and girl is banned, a special case is reached, with a unique herm otter coming in for the sex.
@@ -24,7 +24,7 @@ If guy, girl and hermaphrodite are banned, the player will be punished.]
 
 to say Otter attack:
 	if hp of player is greater than 0:
-		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you[apostrophe]ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
+		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you[']ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
 		now otterconsent is 1;
 		attempttowait;
 	if guy is banned and girl is banned and hermaphrodite is banned:		[HUH!  All banned!  Madness!]
@@ -39,7 +39,7 @@ to say Otter attack:
 			attempttowait;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing her bosom and hard prick against you.  But it is not hir cock that needs attention, but hir pussy, which shi brings into position over your shaft before sinking down onto it.  Feeling hir pussy sliding over you, you can't help but moan loudly.  With hir arms around your chest, shi starts riding your cock slowly, letting you enjoy every sensual moment.";
 			attempttowait;
-			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in synch with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
+			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in sync with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
 			attempttowait;
 			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When your release finally comes, you blast your heavy load, emptying your overfilled balls into hir.  Shi clenches hir pussy down firmly around you, keeping all of your cum inside, letting it fill hir with your heat even as a strange heat grows in your loins in response.  When you are spent, shi eases hirself off of you and nibbles your ear lightly before swimming away.";
 			attempttowait;
@@ -48,7 +48,7 @@ to say Otter attack:
 			attempttowait;
 			say "     Sensing your readiness, shi presses hir chest to yours, rubbing hir bosom and hard prick against you.  You want to feel that cock in you so badly and shi happily obliges, bringing hir shaft into position before sinking it slowly into you.  Feeling hir hard member sliding into you, you can't help but moan loudly.  With hir arms around your chest, shi starts thrusting into you slowly, letting you enjoy every sensual moment.";
 			attempttowait;
-			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in synch with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
+			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess.  As you grow more in sync with the beautiful herm atop you, you become aware that must be watch shi is.  Your leader and holy figure.  Shi must be divine to make you feel this wonderful.";
 			attempttowait;
 			say "     You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with hir.  When hir release finally comes, shi blasts hir heavy load into you, emptying hir potent seed into your womb.  You moan and tremble as the heat of hir cum fills you, flowing out to warm your whole body as you are wracked with a series of powerful orgasms.  The multiple orgasms leave you spent and panting in the water as shi eases hirself out of you.  Shi nibbles your ear lightly before swimming away.[impregchance][impregchance]";	[2x chance impreg]
 		say "     The other otters pull you to shore, leaving you to recover on the beach, still buzzing with a wicked afterglow.  Shi said nothing, but you can feel shi wants you to join them and part of you longs to do it so you can be with hir again.";
@@ -117,7 +117,7 @@ to say Otter attack:
 
 [ [Otter loss] ]
 To say Otter loss:
-	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[apostrophe]t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[apostrophe]ll save you some fish![at random]'";
+	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[']t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[']ll save you some fish![at random]'";
 	
 
 to say otterstrike:
@@ -164,7 +164,7 @@ When Play begins:
 	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back a moment as [skin of player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink color as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink colour as it develops bumps not seen on human members, oozing softly with excitement"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 16;					
@@ -206,8 +206,8 @@ name	desc	weight	object
 Fish is a grab object. 
 
 Fish is infectious. The strain of Fish is "sea otter".
-usedesc of Fish is "[Fish]";
-The purified of fish is "food";
+usedesc of Fish is "[Fish]".
+The purified of fish is "food".
 
 To say Fish:
 	decrease the hunger of the player by 15;

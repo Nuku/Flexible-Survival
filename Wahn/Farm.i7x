@@ -16,7 +16,7 @@ when play begins:
 Section 1 - Events
 
 Cow Hunting is a situation. The level of Cow Hunting is 5.
-The sarea of Cow Hunting is "Plains";
+The sarea of Cow Hunting is "Plains".
 when play begins:
 	add Cow Hunting to badspots of hermaphrodite;      [Cuntboy cowboy]
 
@@ -63,7 +63,7 @@ Instead of resolving a Cow Hunting:
 	now Cow Hunting is resolved;     [event resolved, either peacefully or through combat]
 	
 Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
-The sarea of Missing Cow is "Plains";
+The sarea of Missing Cow is "Plains".
 
 Instead of resolving a Missing Cow:
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she's minding getting fucked by him - in fact, the sounds she makes seem rather pleased.";
@@ -121,16 +121,16 @@ to say WendyGryphonAftermath:
 Section 2 - Farm Rooms
 
 McDermott Farm Entrance is a room. It is a fasttravel. It is private.
-The description of McDermott Farm Entrance is "     You're standing at entrance of a mid-sized farm, on the cracked asphalt that's left of a road leading here. Seems almost like the nanites enhanced grass to actively seek out and grow into and through human works to destroy them. Or at least try to - things on the other side of the long fence dividing the farm from the rest of the plains look pretty intact - which might have something to do with the two anthro horses with scythes you see working their way along, cutting down any sign of encroaching creeping grass. A sign on the archway over the road tells you that this is the 'McDermott Farm', in existence since 1792.";
+The description of McDermott Farm Entrance is "     You're standing at entrance of a mid-sized farm, on the cracked asphalt that's left of a road leading here. Seems almost like the nanites enhanced grass to actively seek out and grow into and through human works to destroy them. Or at least try to - things on the other side of the long fence dividing the farm from the rest of the plains look pretty intact - which might have something to do with the two anthro horses with scythes you see working their way along, cutting down any sign of encroaching creeping grass. A sign on the archway over the road tells you that this is the 'McDermott Farm', in existence since 1792.".
 
 Instead of sniffing McDermott Farm Entrance:
 	say "     The scent of freshly cut grass hangs in the air.";
 	
 North of McDermott Farm Entrance is Central Farm Square.
-The description of Central Farm Square is "     You're on the central square between the different parts of the farm. Around you to the northwest is a big, pretty old farm house. Then to the west a large barn and besides that in the southwest another building that looks like it's the worker barracks. To the north you can see a fenced paddock, to the east a fairly large milking shed and between them a path that leads to the northeast. Finally, to the south is the archway that marks the entrance to the farm and through which you could leave again.";
+The description of Central Farm Square is "     You're on the central square between the different parts of the farm. Around you to the northwest is a big, pretty old farm house. Then to the west a large barn and besides that in the southwest another building that looks like it's the worker barracks. To the north you can see a fenced paddock, to the east a fairly large milking shed and between them a path that leads to the northeast. Finally, to the south is the archway that marks the entrance to the farm and through which you could leave again.".
 
 East of Central Farm Square is Milking Shed Main Room.
-The description of Milking Shed Main Room is "[MShedDesc]";
+The description of Milking Shed Main Room is "[MShedDesc]".
 
 to say MShedDesc:
 	if daytimer is day: 
@@ -139,7 +139,7 @@ to say MShedDesc:
 		say "     You're in a big room that stretches for the full length of this building, making out at least half of its size all on its own. There is a whole row of milking stalls in here, all of them equipped with tubes and suction apparatuses. At night, they sit silent and unused, empty until the cows get back in them the next day.";
 
 Northwest of Central Farm Square is Farmhouse Main Room.
-The description of Farmhouse Main Room is "     You're in the main room on the ground floor of the farmhouse, which is pretty big and includes a living and dining area, with the kitchen visible through an open archway in the back. This place has a certain rustic charm, with wooden walls and old but well-made looking furniture. Several comfy leather couches stand around a coffee table in the front half of the room, angled towards a fireplace and a large plasma television on the adjoining wall.";
+The description of Farmhouse Main Room is "     You're in the main room on the ground floor of the farmhouse, which is pretty big and includes a living and dining area, with the kitchen visible through an open archway in the back. This place has a certain rustic charm, with wooden walls and old but well-made looking furniture. Several comfy leather couches stand around a coffee table in the front half of the room, angled towards a fireplace and a large plasma television on the adjoining wall.".
 
 Instead of sniffing Farmhouse Main Room:
 	say "     The comfortable scents of wood and the leather couches hang in the air.";
@@ -155,10 +155,10 @@ to say BarracksDesc:
 		say "     Corbin's children bounce around in here too, the little tykes being pretty active and curious about everything. Thankfully, the workers treat them well, even playing with them or teaching them all kinds of stuff.";
 
 Northeast of Central Farm Square is Farm Pathway.
-The description of Farm Pathway is "     Between the long milking shed in the south and the fenced paddock in the west, northwest and north, this pathway leads from the central farm square in the southwest to a rather large green meadow in the east.";
+The description of Farm Pathway is "     Between the long milking shed in the south and the fenced paddock in the west, northwest and north, this pathway leads from the central farm square in the southwest to a rather large green meadow in the east.".
 
 East of Farm Pathway is Sheep Meadow SW.
-The description of Sheep Meadow SW is "     You're in the southwestern corner of an enormous meadow, still green in contrast to the dry grassland outside the farm. White shapes of sheep trot around in the distance, peacefully grazing.";
+The description of Sheep Meadow SW is "     You're in the southwestern corner of an enormous meadow, still green in contrast to the dry grassland outside the farm. White shapes of sheep trot around in the distance, peacefully grazing.".
 
 to say MeadowSWDesc:
 	say "     You're in the southwestern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south, it stretches out further to the north, northeast and east. A path to the west leads back to the main farm buildings.";
@@ -168,7 +168,7 @@ to say MeadowSWDesc:
 		say "     At night, everything is still and quiet out here.";
 		
 East of Sheep Meadow SW is Sheep Meadow SE.
-The description of Sheep Meadow SE is "[MeadowSEDesc]";
+The description of Sheep Meadow SE is "[MeadowSEDesc]".
 
 to say MeadowSEDesc:
 	say "     You're in the southeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south and and bounded by a long fence to the east, it stretches out further to the west, northwest and north.";
@@ -178,7 +178,7 @@ to say MeadowSEDesc:
 		say "     Looks like all the sheep came together here as a herd to rest for the night. They're standing in a big bunch close to the wall of the milking shed.";   
 		
 North of Sheep Meadow SE is Sheep Meadow NE.
-The description of Sheep Meadow NE is "[MeadowNEDesc]";
+The description of Sheep Meadow NE is "[MeadowNEDesc]".
 
 to say MeadowNEDesc:
 	say "     You're in the northeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Here, the long fence bounding the meadow makes a turn, not only restricting the way east, but also northeast and north. It stretches further to the south and west, fencing in the whole area.";
@@ -188,7 +188,7 @@ to say MeadowNEDesc:
 		say "     At night, everything is still and quiet out here.";   
 		
 West of Sheep Meadow NE is Sheep Meadow NW.
-The description of Sheep Meadow NW is "[MeadowNWDesc]";
+The description of Sheep Meadow NW is "[MeadowNWDesc]".
 
 to say MeadowNWDesc:
 	say "     You're in the northwestern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Here, the long fence bounding the meadow on the north side meets the fence of the paddock to the west, with the rest of the meadow stretching to the east, southeast and south.";
@@ -202,13 +202,13 @@ Southeast of Sheep Meadow NW is Sheep Meadow SE.
 North of Sheep Meadow SW is Sheep Meadow NW.
 	
 The Barn Door is a door.
-The description of Barn Door is "The barn has a big set of wooden double doors, which don't even have a lock or anything, just a latch to hold them closed.";
+The description of Barn Door is "The barn has a big set of wooden double doors, which don't even have a lock or anything, just a latch to hold them closed.".
 understand "door" as the Barn Door.
 east of Barn Door is Central Farm Square.
 west of Barn Door is McDermott Barn.
 
 McDermott Barn is a room.
-The description of McDermott Barn is "[BarnDesc]";
+The description of McDermott Barn is "[BarnDesc]".
 
 to say BarnDesc:
 	if daytimer is day: 
@@ -217,13 +217,13 @@ to say BarnDesc:
 		say "     You're in a large barn with many stalls for animals along the walls. They hold mostly cows, but also a few horses, all of them just standing there, sleeping. In the back of the room, there is a ladder leading up to a large hayloft.";
 		
 Up of McDermott Barn is Barn Hayloft.
-The description of Barn Hayloft is "     The hayloft is pretty big and... filled with hay. Lots and lots of hay, piled up nearly to the ceiling. From time to time, something rustles somewhere inside. Who knows what's hiding here...";
+The description of Barn Hayloft is "     The hayloft is pretty big and... filled with hay. Lots and lots of hay, piled up nearly to the ceiling. From time to time, something rustles somewhere inside. Who knows what's hiding here...".
 
 Mustang Paddock is a room.
-The description of Mustang Paddock is "     This large fenced area is the paddock of the wild mustang the farm got just before the nanite catastrophe. He's overpowered multiple persons trying to break him in for riding since then, transforming them into new mares for himself, whom you can see further back in the paddock. In the front bit, where you are, there is no one except the mustang himself, who quickly trots over to you.";
+The description of Mustang Paddock is "     This large fenced area is the paddock of the wild mustang the farm got just before the nanite catastrophe. He's overpowered multiple persons trying to break him in for riding since then, transforming them into new mares for himself, whom you can see further back in the paddock. In the front bit, where you are, there is no one except the mustang himself, who quickly trots over to you.".
 		
 The Mustang Paddock Gate is a door.
-The description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Seems like someone really doesn't want those horses to get out.";
+The description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Seems like someone really doesn't want those horses to get out.".
 understand "gate" as the Mustang Paddock Gate.
 south of Mustang Paddock Gate is Central Farm Square.
 north of Mustang Paddock Gate is Mustang Paddock.
@@ -261,7 +261,7 @@ Section 3 - NPCs
 [ CorbinPregCounter - timer for the next birth (48h from start)         ]
 
 Corbin is a man. The hp of Corbin is normally 0. Corbin is in Worker Barracks.
-The description of Corbin is "[CorbinDesc]";
+The description of Corbin is "[CorbinDesc]".
 The conversation of Corbin is { "Mew!" }.
 CorbinPregnancy is a number that varies.    [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 CorbinKidCounter is a number that varies.
@@ -700,7 +700,7 @@ to say CorbinSex6:    [Corbin milked]
 [   5: player helped Shawn & Duke and got rewarded                             ]
 
 Anthony is a man.  The hp of Anthony is normally 0. Anthony is in Farmhouse Main Room.
-The description of Anthony is "[AnthonyDesc]";
+The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_icon.
 
@@ -801,7 +801,7 @@ to say AnthonyRewardSex:
 		say "     Arousal quickly mounting higher and higher from Anthony's gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, and moments later a feeling of bliss floods your body and you shake in orgasm. He continues pleasing you until your climax abates, then sits down on the couch next to you. 'Hmm, you're tasty' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";			
 
 Wendy is a woman.  The hp of Wendy is normally 0. 
-The description of Wendy is "[WendyDesc]";
+The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 
 instead of sniffing Wendy:
@@ -838,7 +838,7 @@ instead of fucking the Wendy:
 [   2: Sheep Meadow SE                                                  ]
 
 Duke is a man. The hp of Duke is normally 0. 
-The description of Duke is "[DukeDesc]";
+The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 	
 instead of sniffing Duke:
@@ -1135,7 +1135,7 @@ to say DukeSex5:    [Player fucked in the ass]
 	say "     With both of you having gotten off, Duke just puts his arms around your body to hold you and pulls you down to lie on the grass as you wait for his knot to go down. He nuzzles against your neck from behind and whispers 'Thanks for letting me fuck you. I really could get used to this too...'";
 		
 Shawn is a man. The hp of Shawn is normally 0. 
-The description of Shawn is "[ShawnDesc]";
+The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 	
 instead of sniffing Shawn:

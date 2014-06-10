@@ -5,7 +5,7 @@ Section 1- Corgi quest
 maxq is a number that varies.  maxq is usually 0.
 
 Meeting the corgi is a situation.
-The sarea of Meeting the corgi is "Outside";
+The sarea of Meeting the corgi is "Outside".
 when play begins:
 	add Meeting the corgi to badspots of furry;
 	add Meeting the corgi to badspots of guy;
@@ -30,7 +30,7 @@ Instead of resolving Meeting the corgi:
 		say "Looking around, you spot the remains of some recent activity in the form of sticky messes littered about.  Their scent is strong, making you think of those strong dominators you've seen around.  It seems a few of them found and made more of those strange sluts out of their victims.  There is something strange about their behaviour.  Perhaps you should have a couple of encounters with them to investigate further.  Some 'domincounters' as it were.";
 			
 pendant hunting is a situation.
-The sarea of pendant hunting is "Outside";
+The sarea of pendant hunting is "Outside".
 	
 Instead of resolving pendant hunting:
 	if maxq is 1:
@@ -56,7 +56,7 @@ lastcorgifucked is a number that varies.  lastcorgifucked is usually 130.
 understand "corgi" as Max.
 understand "max" as Max.
 
-The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ";
+The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ".
 
 The conversation of Max is { "Stuff!" }.
 
@@ -119,14 +119,14 @@ instead of conversing the Max:
 Section 3- corgitrading
 
 corgi trade is a person. 
-The description of corgi trade is "Max is willing to trade some of his supplies for yours mayby you shouls TRADE or GIVE MAX some food and water?";
+The description of corgi trade is "Max is willing to trade some of his supplies for yours mayby you shouls TRADE or GIVE MAX some food and water?".
 
 corgigiving is an action applying to nothing.
 
-understand "give max" as corgigiving;
-understand "give corgi" as corgigiving;
-understand "trade corgi" as corgigiving;
-understand "trade max" as corgigiving;
+understand "give max" as corgigiving.
+understand "give corgi" as corgigiving.
+understand "trade corgi" as corgigiving.
+understand "trade max" as corgigiving.
 
 check corgigiving:
 	if Max is not visible, say "you cant do this here" instead;
@@ -194,7 +194,7 @@ lastkitsufucked is a number that varies.  lastkitsufucked is usually 130.
 understand "kitsune" as Miles.
 understand "miles" as Miles.
 
-The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ";
+The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ".
 
 The conversation of Miles is { "Stuff!" }.
 

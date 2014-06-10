@@ -8,7 +8,7 @@ The description of Orthas is "[orthasNPCdesc]".
 The conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
-the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of Orthas is 2 or hp of Orthas is 3].  She has a lingering scent of arousal hanging over her[otherwise if hp of Orthas is 4].  She has a strong scent of arousal and egg-laying hanging over her[end if].";
+the scent of orthas is "Orthas smells like a strong, powerful dragoness[if hp of Orthas is 2 or hp of Orthas is 3].  She has a lingering scent of arousal hanging over her[otherwise if hp of Orthas is 4].  She has a strong scent of arousal and egg-laying hanging over her[end if].".
 
 the fuckscene of orthas is "[orthasfuck]".
 
@@ -60,7 +60,7 @@ after going down from 2F Trevor Labs when the hp of doctor matt is greater than 
 			fight;
 			say "Seemingly as soon as you're finished with the first creature who entered, another one pounds at the door with force and gets inside!";
 			fight;
-			say "After a while, the surrounding area around the lab seems to calm down. It doesn't take too long for Orthas to return from downstairs --- but she looks dishevelled, lost, and confused. Quickly rushing to her aid, you help her over to the lounge area where she spends much of her time. As she looks up at you, you begin to realize that she is flushed and looking at you with what you can only assume is lust. It is somewhat similar to the lust-addled looks you've gotten from other infected creatures out in the city. She licks her lips and eyes you closely, looking over your body, and sniffing closely at you, and you're not totally sure why.";
+			say "After a while, the surrounding area around the lab seems to calm down. It doesn't take too long for Orthas to return from downstairs --- but she looks disheveled, lost, and confused. Quickly rushing to her aid, you help her over to the lounge area where she spends much of her time. As she looks up at you, you begin to realize that she is flushed and looking at you with what you can only assume is lust. It is somewhat similar to the lust-addled looks you've gotten from other infected creatures out in the city. She licks her lips and eyes you closely, looking over your body, and sniffing closely at you, and you're not totally sure why.";
 			say "'Mmm.. you smell really good,' she says, her eyes looking at you with a gaze positively filled with lust. 'I know I'm not looking my best... but you don't want to have a romp with me, do you?' She smiles at you widely --- you can practically smell the heat coming off of her. (Y/N?)";
 			if the player consents:
 				say "She lets out a toothy grin, as she reaches up with strong arms and pulls you down into a kiss. Her long tongue wraps around yours, as her other hand rubs over your body, which already has begun to respond to her actions. She pulls off the kiss after a moment, and rips off the rest of her clothes, what's left after her visit to the basement. Her body is toned and athletic, looking practically amazonian to your own lust-filled eye. Her hands caress every part of your body for a moment, before assisting you out of your own clothes.";
@@ -154,7 +154,7 @@ to say orthas_task2_start:
 
 
 Orthas's House is a situation.  The level of Orthas's House is 5.  It is resolved.
-The sarea of Orthas's House is "Red";
+The sarea of Orthas's House is "Red".
 
 instead of resolving Orthas's House:
 	if hp of Orthas is not 5:
@@ -250,7 +250,7 @@ instead of using footlocker:
 	otherwise:
 		say "     The footlocker's locked.  You don't think Orthas would be pleased with you prying into her personal stuff.";
 
-the scent of the footlocker is "There's no particular scent to this.";
+the scent of the footlocker is "There's no particular scent to this.".
 
 crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
 
@@ -351,7 +351,7 @@ to say orthasfuck:
 
 Section 5 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Dragon" } to infections of furry;

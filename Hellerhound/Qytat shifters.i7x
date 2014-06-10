@@ -16,6 +16,6 @@ to say shiftingroom:
 	say "As you walk towards the tent to the north, you see a bunch of muddy footprints leading inside. You follow, but the mud seems to have been cleaned from in here, since the whole room is pristine. The acrid tang of nanites no longer permeates the air here, and the soft bluish glow warms you.";
 	now shiftable is 2;
 
-the scent of shifting room is "The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.";
+the scent of shifting room is "The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
 
 Qytat shifters ends here.

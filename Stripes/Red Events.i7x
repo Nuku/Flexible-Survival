@@ -11,7 +11,7 @@ Section 1 - Leather Wolves
 Section 2 - Fetish Store
 
 Fetish Store is a situation.
-The sarea of Fetish Store is "Red";
+The sarea of Fetish Store is "Red".
 
 Instead of resolving a Fetish Store:
 	say "     You come across a sex and fetish shop, which has clearly been ransacked by the sex-crazed mob.  After cautiously glancing around, you slip inside to see if you can find anything of use.  Sidestepping toppled displays, broken glass and sticky puddles, you quickly see that the sextoys and lube have all been taken.  Any remaining kinkwear is damaged beyond usability or soaked in cum.  This place has been stripped cleaner than any place you[']ve examined to date.  But fortune smiles upon you just a little before you head out and you spot something sticking out from under one of the toppled shelves.  Moving the shelf aside, you see it is a small riding crop.  Rather than leaving empty-handed, you decide to keep it and slip back outside to continue searching.";
@@ -26,12 +26,12 @@ name	desc	weight	object
 
 riding crop is an armament. It is part of the player. It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]". The weapon damage of riding crop is 4. The weapon type of riding crop is "Melee". It is not temporary. the objsize of riding crop is 2.
 
-the scent of the riding crop is "The riding crop smells of leather and discipline.";
+the scent of the riding crop is "The riding crop smells of leather and discipline.".
 
 Section 3 - Raided Corner Store
 
 Raided Corner Store is a situation.  The level of Raided Corner Store is 3.
-The sarea of Raided Corner Store is "Red";
+The sarea of Raided Corner Store is "Red".
 when play begins:
 	add Raided Corner Store to badspots of hermaphrodite;
 	add Raided Corner Store to badspots of furry;
@@ -68,7 +68,7 @@ Section 4 - Aussie Pub
 Section 5 - Flooded Street
 
 Flooded Street is a situation.  The level of Flooded Street is 3.
-The sarea of Flooded Street is "Red";
+The sarea of Flooded Street is "Red".
 when play begins:
 	add Flooded Street to badspots of guy;
 	add Flooded Street to badspots of humorous;
@@ -93,8 +93,8 @@ Instead of resolving a Flooded Street:
 Section 6 - Strip Bar
 
 Strip Bar is a situation.
-The sarea of Strip Bar is "Red";
-stripbarcounter is a number that varies;
+The sarea of Strip Bar is "Red".
+stripbarcounter is a number that varies.
 when play begins:
 	add Strip Bar to badspots of hermaphrodite;
 	add Strip Bar to badspots of furry;
@@ -167,7 +167,7 @@ to say stripbarsearch:
 Section 7 - Evangelist
 
 Evangelist is a situation.
-The sarea of Evangelist is "Red";
+The sarea of Evangelist is "Red".
 when play begins:
 	add Evangelist to badspots of girl;
 	add Evangelist to badspots of guy;
@@ -264,7 +264,7 @@ to say orgyoutcome:
 Section 8 - Business as Usual
 
 Business as Usual is a situation.
-The sarea of Business as Usual is "Red";
+The sarea of Business as Usual is "Red".
 when play begins:
 	add Business as Usual to badspots of furry;
 

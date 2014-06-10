@@ -6,7 +6,7 @@ Version 7 of Equine For FS by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 equinoiddefeat is a number that varies.
 equinoidstatus is a number that varies.
 
@@ -66,7 +66,7 @@ When Play begins:
 	now body change entry is "you swell with the appearance of muscles and height, growing taller by the moment."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "coarse black fur spreads rapidly over your form."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a short, straw like, black tail emerges from above your ass, flicking lightly."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "Your shaft twitches with sudden arrousal as the end flattens in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "Your shaft twitches with sudden arousal as the end flattens in an equine manner, forming the reverse bell shape endemic of the species and tinting a mottled pink and black."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
 	now dex entry is 12;
 	now sta entry is 14;					
@@ -109,7 +109,7 @@ when play ends:
 			otherwise:
 				say "     Following a compulsion, you seek out other horses in the park, and are soon welcomed into the herd proper.  Together, you defend the park against interlopers, be they mutant or human.  The exception are the bees; they're tolerated for their benefit to the local flora and their delicious honey.  There are some city horses as well that come by from time to time.  They seem friendly enough at first, but when the herd members who go with them don't return, or have been reduced to horny sluts who will no longer fight, the interlopers are no longer permitted to come.  They send raids from time to time, but the herd knows the park forests well and survives with only a few losses.";
 		otherwise:
-			say "     There is some confusion at first when your equinoid body is brought in, for there are several strains of equines and proper classification is slow.  It seems ones like you are rare, few leaving the park where they're established.  Once that's resolved, it goes much more smoothly, as you're not considered a dangerous strain.  A movie producer spots you on TV as you are released and hires you immediately to play a minotaur-like creature in his upcoming movie.  It turns out to be [one of]big blockbuster[or]lukewarm summer movie[or]big flop[at random] and provides some cash to start a new, peaceful life.  Eventually becoming a naturalist, you study nature and, using your movie experience as a hoofhold, you get your own nature show[if intelligence of player > 15 and charisma of player > 15] that lasts several seasons.  It does rather well, being insightful and intelligent while also well-presented and entertaining[otherwise] for a brief time[end if].";
+			say "     There is some confusion at first when your equinoid body is brought in, for there are several strains of equines and proper classification is slow.  It seems ones like you are rare, few leaving the park where they're established.  Once that's resolved, it goes much more smoothly, as you're not considered a dangerous strain.  A movie producer spots you on TV as you are released and hires you immediately to play a minotaur-like creature in his upcoming movie.  It turns out to be [one of]big blockbuster[or]lukewarm summer movie[or]big flop[at random] and provides some cash to start a new, peaceful life.  Eventually becoming a naturalist, you study nature and, using your movie experience as a hoofhold, you get your own nature show [if intelligence of player > 15 and charisma of player > 15]that lasts several seasons.  It does rather well, being insightful and intelligent while also well-presented and entertaining[otherwise]for a brief time[end if].";
 			
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -123,7 +123,7 @@ instead of sniffing lucky horseshoe:
 the usedesc of lucky horseshoe is "[lucky horseshoe use]";
 
 to say lucky horseshoe use:
-	say "You hurl the horse shoe over your left shoulder and don[apostrophe]t look back, hoping for the best.";
+	say "You hurl the horse shoe over your left shoulder and don[']t look back, hoping for the best.";
 	if a random chance of 5 in 100 succeeds:
 		say "As you walk away, you trip over something!";
 		sort table of random critters in random order;

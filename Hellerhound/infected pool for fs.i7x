@@ -4,7 +4,7 @@ Version 1 of infected pool for fs by Hellerhound begins here.
 Section 1 - Pure Pool
 
 Pure pool is a situation.
-The sarea of Pure Pool is "Park";
+The sarea of Pure Pool is "Park".
 purpol is a number that varies.
 purpolu is a number that varies.
 when play begins:
@@ -58,12 +58,12 @@ instead of resolving a pure pool:
 				if cockname of player is "Wyvern":
 					say "You could help resolve the situation by corrupting the pond yourself. Do you wish to?";
 					if the player consents:
-						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
+						say "You begin stroking your [cock of player] [if cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[otherwise][one of]cock[or]penis[or]shaft[or]maleness[at random][end if], moaning as you do so. By the time the wyverns turn around and notice you, you are about to blow your load.";
 						if a random chance of one in 2 succeeds:
 							say "They begin stroking as well, rushing to come before you.";
 						otherwise:
 							say "They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
+						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penise[or]shaft[or]malenesse[at random]s[otherwise][one of]cock[or]penis[or]shaft[or]maleness[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
 						now purpol is 4;
 						now purpolu is 1;
 				otherwise:

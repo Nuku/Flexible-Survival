@@ -2,7 +2,7 @@ Gryphons Plot for fs by Hellerhound begins here.
 [Version 1.1 - Some rewriting and expansion by Wahn]
 
 Gryphons plot is a situation.  The level of Gryphons plot is 2.
-the sarea of gryphons plot is "Outside";
+the sarea of gryphons plot is "Outside".
 milsave is a number that varies.
 when play begins:
 	add Gryphons plot to badspots of hermaphrodite;

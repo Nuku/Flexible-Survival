@@ -9,8 +9,8 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
-catnum is a number that varies;
-mateable is a number that varies;
+catnum is a number that varies.
+mateable is a number that varies.
 
 to say felinoid attack:
 	if hp of player > 0:

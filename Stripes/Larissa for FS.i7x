@@ -34,9 +34,9 @@ to say larissaview:
 
 Larissa has a list of text called vials.
 
-The description of Larissa is "[larissadesc]";
+The description of Larissa is "[larissadesc]".
 
-the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
+the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.".
 
 the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if hp of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
 
@@ -273,7 +273,7 @@ to say Larissasex_MM:
 
 
 to say Larissasex_FF:
-	say "     The female [form of Larissa] pushes you down onto the cot and snuggles up beside you on it, running her [handform of Larissa] over your [bodydesc of player] body as she does.  You pull her into a kiss and slide a hand between her legs, sliding your fingers over her [cunt size desc of larissa] [bodytype of larissa] pussy.  This draws a moan from her and she gives your ass a firm squeeze, kissing you even harder before moving her [handform of Larissa] to your dripping folds.  Soon you're fingering one another frantically, rubbing over those wet lips, sensitive clits and clenching inner walls[if breast size of larissa > 0].  You move your mouth to her [breast size desc of Larissa] breasts, kissing at them and sucking on her hard nipples.  She gives delightful cries and her pussy quivers when you nibble on them.  You continue to lavish attention upon one another until finally you both have cum several times, ending with a final powerful orgasm that leaves you both panting on the bed in each others['] arms.  When you've had a chance to recover and clean up, you both head back out and the [form of Larissa] returns to her desk with a contented smile on her face.".;
+	say "     The female [form of Larissa] pushes you down onto the cot and snuggles up beside you on it, running her [handform of Larissa] over your [bodydesc of player] body as she does.  You pull her into a kiss and slide a hand between her legs, sliding your fingers over her [cunt size desc of larissa] [bodytype of larissa] pussy.  This draws a moan from her and she gives your ass a firm squeeze, kissing you even harder before moving her [handform of Larissa] to your dripping folds.  Soon you're fingering one another frantically, rubbing over those wet lips, sensitive clits and clenching inner walls[if breast size of larissa > 0].  You move your mouth to her [breast size desc of Larissa] breasts, kissing at them and sucking on her hard nipples.  She gives delightful cries and her pussy quivers when you nibble on them.  You continue to lavish attention upon one another until finally you both have cum several times, ending with a final powerful orgasm that leaves you both panting on the bed in each others['] arms.  When you've had a chance to recover and clean up, you both head back out and the [form of Larissa] returns to her desk with a contented smile on her face.".
 
 
 to say Larissasex_taurfun:
@@ -341,20 +341,20 @@ Section 5 - Transformation Mechanics
 
 Part 0 - Variables
 
-Larissa has a text called body. Body of Larissa is usually "charmingly human";
-Larissa has a text called skin. Skin of Larissa is usually "evenly tanned skin";
-Larissa has a text called Cock. Cock of Larissa is usually "[one of]normal[or]human[or]pink[at random]";
-Larissa has a text called face. Face of Larissa is usually "pretty and human";
-Larissa has a text called tail. tail of Larissa is usually "";
+Larissa has a text called body. Body of Larissa is usually "charmingly human".
+Larissa has a text called skin. Skin of Larissa is usually "evenly tanned skin".
+Larissa has a text called Cock. Cock of Larissa is usually "[one of]normal[or]human[or]pink[at random]".
+Larissa has a text called face. Face of Larissa is usually "pretty and human".
+Larissa has a text called tail. tail of Larissa is usually "".
 Larissa has a truth state called tailed.  tailed is usually false.
 Larissa has a truth state called winged.  winged is usually false.
-Larissa has a text called infname. infname is usually "human";
-Larissa has a text called form. form is usually "human";
-Larissa has a text called handform. handform is usually "hand";
-Larissa has a text called footform. footform is usually "foot";
-Larissa has a text called mouth. Mouth is usually "mouth";
-Larissa has a text called tftext. tftext is usually "";
-Larissa has a text called generallook. generallook is usually "cute";
+Larissa has a text called infname. infname is usually "human".
+Larissa has a text called form. form is usually "human".
+Larissa has a text called handform. handform is usually "hand".
+Larissa has a text called footform. footform is usually "foot".
+Larissa has a text called mouth. Mouth is usually "mouth".
+Larissa has a text called tftext. tftext is usually "".
+Larissa has a text called generallook. generallook is usually "cute".
 Larissa has text called Cock Size Desc.
 Larissa has text called Cunt Size Desc.
 Larissa has text called Breast Size Desc.
@@ -367,13 +367,13 @@ Larissa has a number called Cock Width.
 Larissa has a number called Cunt length.  Cunt length of Larissa is usually 6.
 Larissa has a number called Cunt width.  Cunt width of Larissa is usually 3.
 Larissa has a number called scalevalue.  The scalevalue is usually 3.
-Larissa has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]";
-Larissa has a text called bodytype.  The bodytype is usually "human";
-Larissa has a text called subjpro_cap.  The subjpro_cap is usually "She";
-Larissa has a text called subjpro.  The subjpro is usually "she";
-Larissa has a text called possadj_cap.  The possadj_cap is usually "Her";
-Larissa has a text called possadj.  The possadj is usually "her";
-Larissa has a text called objpro.  The objpro is usually "her";
+Larissa has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".
+Larissa has a text called bodytype.  The bodytype is usually "human".
+Larissa has a text called subjpro_cap.  The subjpro_cap is usually "She".
+Larissa has a text called subjpro.  The subjpro is usually "she".
+Larissa has a text called possadj_cap.  The possadj_cap is usually "Her".
+Larissa has a text called possadj.  The possadj is usually "her".
+Larissa has a text called objpro.  The objpro is usually "her".
 Larissa has a number called daycycle.
 Larissa has a number called bodycat.
 Larissa has a number called lasttf.  Lasttf is normally 255.

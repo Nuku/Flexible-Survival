@@ -5,7 +5,7 @@ Version 2 of Zigor by Stripes begins here.
 Section 0 - Event	[Transposed from Red Events]
 
 Leather Wolves is a situation.
-The sarea of Leather Wolves is "Red";
+The sarea of Leather Wolves is "Red".
 when play begins:
 	add Leather Wolves to badspots of girl;
 	add Leather Wolves to badspots of guy;
@@ -25,9 +25,9 @@ Instead of resolving a Leather Wolves:
 Section 1 - Leather Store
 
 Cuero Lobo is a room. It is fasttravel. It is private.
-The description of Cuero Lobo is "[cuerolobodesc]";
+The description of Cuero Lobo is "[cuerolobodesc]".
 
-the scent of Cuero Lobo is "The store smells of cured leather, oil and lupine arousal.";
+the scent of Cuero Lobo is "The store smells of cured leather, oil and lupine arousal.".
 
 to say cuerolobodesc:
 	if hp of Zigor is 0:
@@ -41,11 +41,11 @@ to say cuerolobodesc:
 Section 2 - Zigor the Leather Wolf
 
 Zigor is a man.  Zigor is in Cuero Lobo.
-The description of Zigor is "[zigordesc]";
+The description of Zigor is "[zigordesc]".
 The conversation of Zigor is { "Hola!" }.
 The icon of Zigor is Figure of Zigor_icon.
 
-the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.";
+the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 
 to say zigordesc:
 	say "     Zigor the leather wolf has the build of an average, fit human being, but altered to have lupine features, most prominently his head, hands, feet and tail.  Given that he's wearing/bonded to a leather outfit that covers most of him, you can only see portions of his pelt.  His fur contains a mix of grey, black, brown and rust colours that make him stand out from the other wolves you've seen.  The leather portions of his hide cover his chest, legs and forearms.  It is made of black leather with even some metal rings and straps built into it as well as a separate leather patch that partially covers his plump, pierced sheath.  The wolf has a rich, sensual voice and speaks with a distinctly Spanish accent that turns you on every time you hear it.";

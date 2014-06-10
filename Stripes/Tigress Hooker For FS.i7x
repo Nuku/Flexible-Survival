@@ -519,7 +519,7 @@ It is not temporary.
 instead of using motel key:
 	say "You fiddle with the motel key.  You look it over, but find no indication which motel it is for or where to find it.";
 
-the scent of motel key is "Motel keys smell of cheap perfume and one night stands.";
+the scent of motel key is "Motel keys smell of cheap perfume and one night stands.".
 
 [ Edit this to have the correct Name as well]
 Tigress Hooker For FS ends here.

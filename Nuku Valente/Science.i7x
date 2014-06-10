@@ -8,7 +8,7 @@ Book - Science Advisor
 
 Nerd is a person. "A science advisor awaits your attention. They have a name, but most just call them the [bold type]nerd[roman type]. Perhaps you want to discuss [bold type]research[roman type].".
 Nerd is in Village center.
-The description of nerd is "[science advisor of tribe of player]";
+The description of nerd is "[science advisor of tribe of player]".
 
 After examining the nerd:
 	if progress of current of nerd < cost of current of nerd:
@@ -98,7 +98,7 @@ The nerd has a research called current.
 cur is a text that varies.
 
 Local Survey is a Research.
-The description of it is "Surveying our immediate sorroundings will better prepare us for the unexpected(Perception +5%)".
+The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected(Perception +5%)".
 The cost of it is 30.
 The completion of it is Local Survey Rule.
 

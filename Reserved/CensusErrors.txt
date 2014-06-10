@@ -1,4 +1,3 @@
-Green Hydra.i7x by Auto Translator - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Green Hydra For Fs by Auto Translator')<br>
 d - non-folder found where author folders should be<br>
 Adam.png by Figures - title contains a full stop<br>
 Amy.png by Figures - title contains a full stop<br>
@@ -100,6 +99,4 @@ Zigor_ig.jpg by Figures - title contains a full stop<br>
 Story.ni by Flexible Infection - title contains a full stop<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
-Mall Rat for FS.i7x by Nuku Valente - appears not to be an extension (its first line does not end 'begin(s) here', as extension titling lines must)<br>
-Story Skipper backup.i7x by Nuku Valente - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Story Skipper by Nuku Valente')<br>
 Template For FS.i7x - non-folder found where author folders should be<br>

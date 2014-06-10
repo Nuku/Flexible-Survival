@@ -5,7 +5,7 @@ Version 3 of Frank by Stripes begins here.
 Section 1 - Event and Comic Store
 
 Mephitness is a situation.  The level of Mephitness is 6.
-The sarea of Mephitness is "High";
+The sarea of Mephitness is "High".
 when play begins:
 	add Mephitness to badspots of guy;
 	add Mephitness to badspots of girl;
@@ -19,10 +19,10 @@ Instead of resolving a Mephitness:
 			say "     Yelling for their attention, you charge the skunks.  Seeing their skunkbeast [if cocks of player is 0 and cunts of player is 0]lady[otherwise]lord[end if] approaching and demanding their attention, the girls quickly shove the poor fellow away.  Running up to you, they start to lavish attention upon you, kissing and stroking you in welcome while telling you proudly how they caught a big meanie who tried to make fun of one of your skunkbeasts.  To placate them, you tell the girls how pleased you are with them and that you'll enjoy dealing with him shortly, but first you want to reward them all for their fine service.  They giggle happily at this, giving you more passionate kisses.";
 			if cocks of player > 0:
 				say "     Picking one of the girls, you get her to lie on her back.  Lining up your cock, you drive it into her wet pussy and fuck her.  Her cries of pleasure are lustful and loud as you pound into her with an animalist need[if skrp is 1].  The skunk head joined to you happily french-kisses the girl at you drive your leaking shaft into her muff[end if][if cunts of player > 0].  The other girls lavish attention upon your pussy and balls, licking your dripping folds and stroking your cum-filled orbs[otherwise].  The other girls lavish attention upon your balls, rubbing your cum-filled orbs[end if].";
-				say "     After blasting your hot load into her, another swaps into position, this time on all fours and stuff her full of a fresh load of skunk semen as well.  As you're mounting the third, you notice the first two have returned to their original victim and are having some fun with him.  One girl's riding his cock while the other has pressed his growing muzzle to her creamy muff, forcing him to eat your hot load from her overflowing pussy.  You are too lost in your lustful, skunkbeast instincts to stop this and are even proud of them as you watch him continue to change, skunk fur spreading across his body and his cock turning a lustruous ebon.";
+				say "     After blasting your hot load into her, another swaps into position, this time on all fours and stuff her full of a fresh load of skunk semen as well.  As you're mounting the third, you notice the first two have returned to their original victim and are having some fun with him.  One girl's riding his cock while the other has pressed his growing muzzle to her creamy muff, forcing him to eat your hot load from her overflowing pussy.  You are too lost in your lustful, skunkbeast instincts to stop this and are even proud of them as you watch him continue to change, skunk fur spreading across his body and his cock turning a lustrous ebon.";
 				say "     It's only once you finish with the third girl that you come to your senses enough to order the girls off of him and back to the woods.  They seem a little disappointed, but you growl firmly, reminding them that you said you'd wanted him for yourself.  They scurry off, still leaking skunkbeast cum from their pussies as they leave.  Once they're out of sight, you turn your attention to their victim.  He is a little wary at first, but smiles and thanks you for your help as he recognizes that you don't mean him any harm.  He seems to still be at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
 			otherwise:
-				say "     Picking one of the girls, you get her to lick and stroke your dripping pussy, lavishing attention upon your needy sex.  The other two latch onto nipples and start nursing, licking and suckling to get their fill of your milk.  You moan in pleasure, telling your sexy girls again how pleased you are with them and their wonderful, talented paws and muzzles, riding through several orgasms as they nurse from you.  Eventually you realize that there's a fourth muzzle, the girls having brought over their victim to nurse from you as well.  You are too lost in your lustful, skunkbeast instincts to stop this and moan loudly as he continues to change, skunk fur spreading across his body and his cock turning a lustruous ebon.";
+				say "     Picking one of the girls, you get her to lick and stroke your dripping pussy, lavishing attention upon your needy sex.  The other two latch onto nipples and start nursing, licking and suckling to get their fill of your milk.  You moan in pleasure, telling your sexy girls again how pleased you are with them and their wonderful, talented paws and muzzles, riding through several orgasms as they nurse from you.  Eventually you realize that there's a fourth muzzle, the girls having brought over their victim to nurse from you as well.  You are too lost in your lustful, skunkbeast instincts to stop this and moan loudly as he continues to change, skunk fur spreading across his body and his cock turning a lustrous ebon.";
 				say "     It's only once you have another crashing orgasm that you come to your senses enough to order the girls off of him pull his muzzle away from your dripping nipple.  They seem a little disappointed, but you growl firmly, reminding them that you said you'd wanted him for yourself.  They scurry off, disappointed by obedient.  Once they're out of sight, you turn your attention to their victim.  He is a little wary at first, but smiles and thanks you for your help as he recognizes that you didn't mean him any harm.  He seems to still be at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
 			say "     'Thanks again for the help back there.  They got a little upset when I threw a can of tomato juice onto one of those big beasts.  Stupid coyote didn't know what he was talking about.  Been chasing and throwing goo at me almost the whole way back to my store.  Almost made it, too.  Never would have been able to run that far before this whole crazy thing started.'  He only stops talking when he pulls a big bottle of cola from his pack and starts downing it.  He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.  The stairwell is a little difficult for your large body to navigate, but you manage to get inside.";
 			wait for any key;
@@ -65,9 +65,9 @@ Instead of resolving a Mephitness:
 
 
 Comic Shop is a room. It is fasttravel. It is private.
-The description of Comic Shop is "[comicshopdesc]";
+The description of Comic Shop is "[comicshopdesc]".
 
-the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.";
+the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.".
 
 to say comicshopdesc:
 	say "     The shadowy comic shop is on the second floor of a run down building at the edge of the neighbourhood.  It is wedged between other similarly decrepit looking establishments.  Being behind a barred door and upstairs seems to have saved it from the lustful hordes of monsters.  The shop itself is fairly large, but there is little space to move.  There are shelves and displays everywhere for comics, manga and games, making it very difficult to navigate around inside.";
@@ -76,13 +76,13 @@ to say comicshopdesc:
 Section 2 - Frank the Skunk
 
 Frank is a man.  Frank is in Comic Shop.
-The description of Frank is "[frankdesc]";
+The description of Frank is "[frankdesc]".
 The conversation of Frank is { "NERD!" }.
 lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 franksex is a number that varies.
 frankmalesex is a number that varies.
 
-the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.";
+the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
 
 to say frankdesc:
 	say "     Frank is a heavy-set skunk fellow.  His encounter with the skunks seems to have slimmed him down a little, but he is still quite portly.  His black and white fur is thick and soft.  As he now has fur, he's forgone wearing clothes aside from a ballcap with the store logo on it.";

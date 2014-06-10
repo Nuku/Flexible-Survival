@@ -8,7 +8,7 @@ Version 1 of Campus Events by Stripes begins here.
 Section 1 - Marching Band
 
 Marching Band is a situation.
-The sarea of Marching Band is "Campus";
+The sarea of Marching Band is "Campus".
 
 Instead of resolving a Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up.  A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate.  You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band.  They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires.  But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
@@ -19,7 +19,7 @@ Instead of resolving a Marching Band:
 Section 2 - Art Department
 
 Arts Department is a situation.  The level of Arts Department is 3.
-The sarea of Arts Department is "Campus";
+The sarea of Arts Department is "Campus".
 when play begins:
 	add Arts Department to badspots of girl;
 	add Arts Department to badspots of furry;
@@ -37,7 +37,7 @@ Section 3 - Phi Iota Gamma
 Section 4 - Languages Department
 
 Languages Department is a situation.
-The sarea of Languages Department is "Campus";
+The sarea of Languages Department is "Campus".
 
 Instead of resolving a Languages Department:
 	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly.  Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other.  You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied.  You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
@@ -47,7 +47,7 @@ Instead of resolving a Languages Department:
 Section 5 - Wandering the Campus
 
 Wandering the Campus is a situation.  The level of Wandering the Campus is 9.
-The sarea of Wandering the Campus is "Campus";
+The sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
 campuswanderfight is a number that varies.
 when play begins:
@@ -107,7 +107,7 @@ Instead of resolving a Wandering the Campus:
 Section 6 - Anime Club
 
 Anime Club is a situation.  the level of Anime Club is 12.
-The sarea of Anime Club is "Campus";
+The sarea of Anime Club is "Campus".
 animeclubfight is a truth state that varies.  animeclubfight is usually false.
 
 when play begins:
@@ -158,11 +158,11 @@ Instead of resolving a Anime Club:
 to say animeclublost:
 	setmonster "Hentai Fan";
 	if cocks of player > 0:
-		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock.  She works eagerly to suck you off, her tongue playfully sliding over your shaft [if cunts of player > 1]while the hentai fan pushes squirming tentacles into your pussies[otherwise if cunts of player is 1]while the hentai fan pushes a squirming tentacle into your pussy[otherwise if anallevel > 1]as the hentai fan pushes a squriming tentacle into your ass, fucking you with it[otherwise]as she kneads your balls[end if].  The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully.  Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
+		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock.  She works eagerly to suck you off, her tongue playfully sliding over your shaft [if cunts of player > 1]while the hentai fan pushes squirming tentacles into your pussies[otherwise if cunts of player is 1]while the hentai fan pushes a squirming tentacle into your pussy[otherwise if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[otherwise]as she kneads your balls[end if].  The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully.  Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	otherwise if cunts of player > 0:
-		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty spreads your legs and your pussy's lips.  With yourself spread open, the hentai fan shoves a tentacle cock into your cunt[sfn], stuffing your needy hole[sfn] just like you're seeing on the screen.  The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully.   Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
+		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty spreads your legs and your pussy's lips.  With yourself spread open, the hentai fan shoves a tentacle cock into your cunt[sfn], stuffing your needy hole[sfn] just like you're seeing on the screen.  The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully.  Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	otherwise:
-		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty rubs sadly over your bare goin and pushes you into a knealing position.  She keeps your head pointed towards the television as she uses her other hand to guide a tentacle cock to your ass.  You groan softly in kinky pleasure as it pushes into your anus and starts to fuck you.  The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully.  Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
+		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty rubs sadly over your bare groin and pushes you into a kneeling position.  She keeps your head pointed towards the television as she uses her other hand to guide a tentacle cock to your ass.  You groan softly in kinky pleasure as it pushes into your anus and starts to fuck you.  The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully.  Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	if cunts of player > 0:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up.  Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize[if cunts of player > 1].  He fills your other juicy holes and your mouth with tentacle cocks[otherwise if anallevel > 1].  He crams a tentacle cock into your ass and another down your throat[otherwise].  He gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention.  After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.[impregchance][impregchance]";
 	otherwise if cocks of player > 0:

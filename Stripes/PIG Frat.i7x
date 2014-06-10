@@ -8,7 +8,7 @@ piginitiation is a number that varies.
 Section 1 - Initial Event
 
 Frat House is a situation.  The level of Frat House is 3.
-The sarea of Frat House is "Campus";
+The sarea of Frat House is "Campus".
 when play begins:
 	add Frat House to badspots of girl;
 	add Frat House to badspots of furry;
@@ -24,9 +24,9 @@ Instead of resolving a Frat House:
 Section 2 - Phi Iota Gamma Frat House
 
 Phi Iota Gamma is a room. It is fasttravel. It is private.
-The description of Phi Iota Gamma is "[phiiotagammadesc]";
+The description of Phi Iota Gamma is "[phiiotagammadesc]".
 
-the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pigs and sex.";
+the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pigs and sex.".
 
 [Note: See Philip for the other half of gaining access.]
 
@@ -167,11 +167,11 @@ to say pig_fratinitiation:
 Section 4 - Frat Members
 
 frat members is a person.
-The description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house.  Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender.  Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies.  Despite, or perhaps because of, their messy and crude behaviour, a part of you finds joining in on their fun quite appealing.";
+The description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house.  Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender.  Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies.  Despite, or perhaps because of, their messy and crude behaviour, a part of you finds joining in on their fun quite appealing.".
 The conversation of frat members is { "Oink!" }.
 frat members is in Phi Iota Gamma.
 
-the scent of frat members is "The frat members all smell of pigs, beer and sex.";
+the scent of frat members is "The frat members all smell of pigs, beer and sex.".
 
 instead of conversing the frat members:
 	say "     You try to chat with some of the members, but they aren't really interested in talking about much aside from beer and sex.";

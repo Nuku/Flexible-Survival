@@ -8,7 +8,7 @@ when play begins:
 	add { "Furling" } to infections of furry;		
 				
 Cheerleader vs Furling is a situation. The level of Cheerleader vs Furling is 5.
-The sarea of Cheerleader vs Furling is "Campus";
+The sarea of Cheerleader vs Furling is "Campus".
 when play begins:
 	add Cheerleader vs Furling to badspots of hermaphrodite;		[shemale vs cuntboy]
 	add Cheerleader vs Furling to badspots of furry;			[Furling]

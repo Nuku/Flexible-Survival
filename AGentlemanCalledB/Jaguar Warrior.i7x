@@ -214,10 +214,10 @@ An everyturn rule:
 Section 4 - Tehuantl
 
 Tehuantl is a person.
-The description of Tehuantl is "[Tehuantldesc]";
+The description of Tehuantl is "[Tehuantldesc]".
 The conversation of Tehuantl is { "Me-ow!" }.
 the fuckscene of Tehuantl is "[Tehuantlsex]".
-the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you of the wilds.";
+the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you of the wilds.".
 
 to say Tehuantldesc:
 	say "     Tehuantl is an exotic looking female jaguar, with wide hips, long legs and an alluring figure. Her long dark hair, which match the black rosettes in her golden yellow fur, is tied up in a long ponytail which reaches down to the middle of her back.";
@@ -517,7 +517,7 @@ to say TehuantlHeatIntro:
 Section 7 - Event
 
 Feline Relief is a situation. Feline Relief is resolved.
-The sarea of Feline Relief is "Red"; 
+The sarea of Feline Relief is "Red".
 
 instead of resolving Feline Relief:
 	if hp of Tehuantl is 12:
@@ -542,7 +542,7 @@ instead of resolving Feline Relief:
 			now tailname of player is "Rubber Sex Doll";
 			now cockname of player is "Rubber Sex Doll";
 			now humanity of player is 0;
-			end the game saying "You are transformed into a Rubber Sex Doll by the latex mistresses.";
+			end the story saying "You are transformed into a Rubber Sex Doll by the latex mistresses.";
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19: [player defeats all three mistresses]
 			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple the the new additions the rubber girls brought back with them before quickly departing the store.";
 			now HP of Tehuantl is 14;

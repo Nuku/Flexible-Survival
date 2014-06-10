@@ -53,7 +53,7 @@ to say WaitLineBreak:   [little bit of often used code]
 Section 1 - Meeting Event
 
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
-The sarea of Barricaded Lockerroom is "Campus";
+The sarea of Barricaded Lockerroom is "Campus".
 when play begins:
 	add Barricaded Lockerroom to badspots of hermaphrodite;      [cuntboy, later a fight against a hulking cheerleader]
 
@@ -82,7 +82,7 @@ Instead of resolving a Barricaded Lockerroom:
 		now Barricaded Lockerroom is resolved;
 
 Sports Arena Lockerroom is a room. It is fasttravel. It is private.
-The description of Sports Arena Lockerroom is "[lroomdesc]";
+The description of Sports Arena Lockerroom is "[lroomdesc]".
 
 instead of sniffing Sports Arena Lockerroom:
 	say "You don't smell anything noteworthy. With a nanite virus apocalypse going on right outside the door, there haven't been any large numbers of sweaty athletes in here for some time now.";
@@ -116,7 +116,7 @@ Section 2 - Eric the Cuntboy Athlete
 [Smells, Description, Conversation and NPC Interaction]
 
 Eric is a man.  Eric is in Sports Arena Lockerroom.  The hp of Eric is normally 0.
-The description of Eric is "[Ericdesc]";
+The description of Eric is "[Ericdesc]".
 The conversation of Eric is { "Mew!" }.
 lastEricfucked is a number that varies.  lastEricfucked is normally 555.
 

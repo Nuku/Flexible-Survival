@@ -9,24 +9,24 @@ when play begins:
 	add { "Peculiar Dragon" } to infections of guy;
 	add { "Peculiar Dragon" } to infections of furry;
 
-dorgr is text that varies; [A DORGER IS YOU]
-dorlastfed is a number that varies. dorlastfed is usually 555; [Doran Last Fed Timer]
-dorgenreg is a truth state that varies; [Doran Gender Regard. Boolean, false = male, true = female]
-dorrolereg is a number that varies. dorrolereg is usually 2; [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
-dorroleint is a number that varies. dorroleint is usually 2; [Doran Role Intensity. Numeric. 0 = full dominant, 1-3 = neutral, 4 = full submissive]
-dordomtop is a number that varies; [Doran Dominance Topic. Numeric. 0 = Player didn't submit, 1 = player did submit, 2 Doran's voluntary dominance revealed]
-dorfirsttalk is a truth state that varies. dorfirsttalk is usually false; [Flag to detect if the player's talked to Doran at least once]
-dorwassnub is a truth state that varies. dorwassnub is usually false; [Innoculous flag used to ward backend sex calculations and sex cooldown if you decide against having sex with Doran]
-dorfedtype is a number that varies. dorfedtype is usually 1; [Determines what kind of food Doran will give you, clever girl...]
+dorgr is text that varies. [A DORGER IS YOU]
+dorlastfed is a number that varies. dorlastfed is usually 555. [Doran Last Fed Timer]
+dorgenreg is a truth state that varies. [Doran Gender Regard. Boolean, false = male, true = female]
+dorrolereg is a number that varies. dorrolereg is usually 2. [Doran Role Regard. Numeric, 0 = Dominant Doran, 1 = Random/Neutral (Not implemented in base), 2 = Submissive Doran]
+dorroleint is a number that varies. dorroleint is usually 2. [Doran Role Intensity. Numeric. 0 = full dominant, 1-3 = neutral, 4 = full submissive]
+dordomtop is a number that varies. [Doran Dominance Topic. Numeric. 0 = Player didn't submit, 1 = player did submit, 2 Doran's voluntary dominance revealed]
+dorfirsttalk is a truth state that varies. dorfirsttalk is usually false. [Flag to detect if the player's talked to Doran at least once]
+dorwassnub is a truth state that varies. dorwassnub is usually false. [Innoculous flag used to ward backend sex calculations and sex cooldown if you decide against having sex with Doran]
+dorfedtype is a number that varies. dorfedtype is usually 1. [Determines what kind of food Doran will give you, clever girl...]
 dorreq is an action applying to nothing. [Doran Request Command]
 dorrim is an action applying to nothing. [Hidden Request Tree for warding Rimjob scene]
-dorautint is a number that varies. dorautint is usually 0; [Doran Auto-Fire Intensity, 0 = Off, 1 = Strict, 2 = Loose]
-dorbb is a truth state that varies. dorbb is usually false; [Doran Blue-Balling, True indicates for the final sex roll to increase player libido instead of decrease]
-dorauto is a truth state that varies. dorauto is usually false; [Doran Automatic, True indicates that Doran initiated the sex himself for the purpose of the player-submissive scenes]
-dorrjd is a truth state that varies. dorrjd is usually false; [Doran Rimjob Disuasion, true indicates that the player does not want the aformentioned scene in their dom doran pool]
-dorrjdr is a truth state that varies. dorrjdr is usually false; [Doran Rimjob Disuasion Reveal, true indicates that the player's used the special interaction at least once once]
-dorautr is a truth state that varies. dorrjdr is usually false; [Doran Auto-fire Reveal, true indicates that the player's used this interaction at least once]
-dornpbb is a number that varies. dornpbb is usually 0; [Doran Non-Player Blue-Balling, used to indicate if Doran has received orgasm denial/neglect]
+dorautint is a number that varies. dorautint is usually 0. [Doran Auto-Fire Intensity, 0 = Off, 1 = Strict, 2 = Loose]
+dorbb is a truth state that varies. dorbb is usually false. [Doran Blue-Balling, True indicates for the final sex roll to increase player libido instead of decrease]
+dorauto is a truth state that varies. dorauto is usually false. [Doran Automatic, True indicates that Doran initiated the sex himself for the purpose of the player-submissive scenes]
+dorrjd is a truth state that varies. dorrjd is usually false. [Doran Rimjob Disuasion, true indicates that the player does not want the aformentioned scene in their dom doran pool]
+dorrjdr is a truth state that varies. dorrjdr is usually false. [Doran Rimjob Disuasion Reveal, true indicates that the player's used the special interaction at least once once]
+dorautr is a truth state that varies. dorrjdr is usually false. [Doran Auto-fire Reveal, true indicates that the player's used this interaction at least once]
+dornpbb is a number that varies. dornpbb is usually 0. [Doran Non-Player Blue-Balling, used to indicate if Doran has received orgasm denial/neglect]
 
 Section 1.1 - Doran Monster Responses
 
@@ -215,17 +215,17 @@ Section 1.2 - Doran Monster Sex Pool
 to say dorvic_1: [fuck the dragon]
 	say "     You suggest, rather bluntly, that he bend over and offer himself to you. The dragon, particularly excited by your blunt request, turns around, [if scalevalue of player < 4]lowering himself to the ground before [end if]hiking his tail over to leave your entry unexposed. Shapely ass revealed before you, he's already quite aroused by the prospect of your imminent abuse. Knotted, fleshy, and impressive dick and ample, scaled balls exposed to the open air.";
 	say "     'My victor ought not worry for my welfare, abuse me as much as it pleases them.' It's glaringly obvious by now that this beast is very heavily inclined towards submission. You expose your [cock size desc of player] dick[smn] before him, [if cock length of player > 17]a very eager look in his eyes at the prospect of getting[otherwise]clearly eager to be[end if] impaled by [if cocks of player > 1]one of those things[otherwise]such a thing[end if].";
-	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if cocks of player > 1]one of [end if] your [if cock length of player > 17]impressive [end if]tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
+	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if cocks of player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if cocks of player > 1] one of[end if] your[if cock length of player > 17] impressive[end if] tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
 	if cock length of player > 17:
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' Is his reply, and with a bit of work and pre's slick lubrication his tight tailpipe grows progressively willing to take your sizeable tool[if cockname of player is listed in infections of knotlist], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	otherwise:
 		say "     He shows absolutely no difficulty in abiding your member[if cockname of player is listed in infections of knotlist], even tying its knot almost immediately[end if]. He doesn't seem to mind your ease, and is more inclined to revel in your exploitation of his form, supple abyss almost overwhelming in how assertively it milks the organ. 'Harder, harder!' Is his demand, greedy for your abuse, as you're compelled to start fucking him proper.";
-	say "     [If scalevalue of player > 3]Body visibly rocking against each successive thrust[otherwise]Larger body barely moved by[end if] each successive thrust, [if cockname of player is not listed in infections of internallist]your balls audibly slap against him, a wordless remark on your rising, wanton fervor[otherwise]overtaken by your rising, wanton fervor[end if]. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
+	say "     [If scalevalue of player > 3]Body visibly rocking against each successive thrust[otherwise]Larger body barely moved by[end if] each successive thrust, [if cockname of player is not listed in infections of internallist]your balls audibly slap against him, a wordless remark on[otherwise]overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
 	say "     'P-please, fill me with C-cum...!' At the very cusp of your bliss, you maintain enough control to determine if you'd like to pull out at the last second, shall you? Else you will give the greedy dragon what he wants.";
 	if player consents:
 		say "     Before you are completely overtaken, you wrench your [cock size desc of player] cock from the beast, quickly jacking it[if cocks of player > 2] and one of its brothers[otherwise if cocks of player is 2] and its brother[end if] off before you cry out, coating his ass[if scalevalue of player > 3] and back[end if] with gouts of your thick, virile seed";
 	otherwise:
-		say "     Succumbing to your tainted urges, [if cockname of player is listed in infections of knotlist and cock length of player > 17]you make one final push, tying yourself with the beast before you cry out[otherwise if cockname of player is listed in infections of knotlist]you soon cry out, tying your cock within him one final time[otherwise]you soon cry out, hilting your cock within him[end if], gouts of your thick, virile seed flooding his depths[if cocks of player > 2], its brothers staining his behind[otherwise if cocks of player is 2], its brother staining his behind[end if]";
+		say "     Succumbing to your tainted urges, you [if cockname of player is listed in infections of knotlist and cock length of player > 17]make one final push, tying yourself with the beast before you cry out[otherwise if cockname of player is listed in infections of knotlist]soon cry out, tying your cock within him one final time[otherwise]soon cry out, hilting your cock within him[end if], gouts of your thick, virile seed flooding his depths[if cocks of player > 2], its brothers staining his behind[otherwise if cocks of player is 2], its brother staining his behind[end if].";
 	say ". It takes you some time to recover, eventually [if scalevalue of player < 4]climbing[otherwise]pulling yourself[end if] off. The dragon lays there for a bit, panting himself in the wake of being ravaged. He eventually does crawl back to his feet, looking satisfied.";
 	say "     'I rather enjoyed that, victor! Perhaps they would be interested in another go sometimes down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, his prior poise somewhat diminished under the exhausted weight of his cum-stained[if cock length of player > 17] and no doubt quite sore[end if] form.";
@@ -240,10 +240,10 @@ to say dorvic_2: [oral cock]
 		if player consents:
 			say "     Right at the very last second, you pull your dick free of the beast, your dick[smn] soon erupting thereafter upon his unsuspecting face. Trapped in the throes of his own bliss, he can only regard the demeaning act with a wanton embrace, form a writhing and twitching mess as he lets you stain the beast with your [cum load size of player] load. When all is said is done he's a shameful sight, wallowing in a puddle of his own spunk.";
 		otherwise:
-			say "     Soon thereafter your [if cocks of player > 1]dicks erupt[otherwise]dick erupts[end if], flooding the dragon's maw with your virile seed as he's caught between swallowing down your [cum load size of player] payload and the throes of his own bliss, allowing you watch the beast's writhing, twitching form as [if cocks of player > 2]your unattended organs stain the ground, mixing with[otherwise if cocks of player is 2]your unattended organ stains the ground, mixing with[otherwise]he wallows in a puddle of[end if] his own spunk.";
+			say "     Soon thereafter your dick[if cocks of player > 1]s erupt[otherwise] erupts[end if], flooding the dragon's maw with your virile seed as he's caught between swallowing down your [cum load size of player] payload and the throes of his own bliss, allowing you watch the beast's writhing, twitching form as [if cocks of player > 2]your unattended organs stain the ground, mixing with[otherwise if cocks of player is 2]your unattended organ stains the ground, mixing with[otherwise]he wallows in a puddle of[end if] his own spunk.";
 	otherwise:
-		say "     You choose to disallow such an act, to which he concedes with little further thought on the matter, maw enveloping your cock a second time, his endeavours now much more deliberate. Dexterous, slick appendage eager to wrap around your [cock size desc of player] tool, he exhibits a voracious desire to satisfy your need[if cock length of player < 17], frequently pushing the limits of his endurance to engulf your impressive dick[end if]. He retains a very methodical, calculated pace,[if cocks of player > 2] occasionally switching to one of your other dicks to keep you sensitive to his tongue's influence,[otherwise if cocks of player > 1] occasionally switching to the other dick in his grip to keep you sensitive to his tongue's influence,[otherwise if cunts of player > 1]occasionally stopping only to offer some passing affection to one of your cunts,[otherwise if cunts of player is 1]occasionally stopping only to offer some passing affection to your cunt,[end if] audible moans escaping your lips as you're rapidly pushed ever-closer to bliss.";
-		say "     The air is filled with the sound of the dragon's wet affection for but a few minutes before he drives you to orgasm, organ[smn] erupting against his tongue[if cocks of player > 1] and talon[end if]. With a disciplined determination, he milks you dry of every last drop of your [cum load size of player] payload, [if cocks of player > 2]talon bunching up at your second dick's head that he might lick it clean when he concludes with the first, though he is not so dexterous that he can stop the others from spilling all over the ground[otherwise if cocks of player is 2]talon bunching up at your second dick's head that he might lick it clean when he is concludes with the first[otherwise]licking it clean once you might offer no more for him[end if][if cock width of player > 24], he doesn't seem even remotely phased by the amount you offer him; rather, he'd be quite jovial over it, reveling in your excess[end if].";
+		say "     You choose to disallow such an act, to which he concedes with little further thought on the matter, maw enveloping your cock a second time, his endeavours now much more deliberate. Dexterous, slick appendage eager to wrap around your [cock size desc of player] tool, he exhibits a voracious desire to satisfy your need[if cock length of player < 17], frequently pushing the limits of his endurance to engulf your impressive dick[end if]. He retains a very methodical, calculated pace[if cocks of player > 2], occasionally switching to one of your other dicks to keep you sensitive to his tongue's influence[otherwise if cocks of player > 1], occasionally switching to the other dick in his grip to keep you sensitive to his tongue's influence[otherwise if cunts of player > 1], occasionally stopping only to offer some passing affection to one of your cunts[otherwise if cunts of player is 1], occasionally stopping only to offer some passing affection to your cunt[end if], audible moans escaping your lips as you're rapidly pushed ever-closer to bliss.";
+		say "     The air is filled with the sound of the dragon's wet affection for but a few minutes before he drives you to orgasm, organ[smn] erupting against his tongue[if cocks of player > 1] and talon[end if]. With a disciplined determination, he milks you dry of every last drop of your [cum load size of player] payload, [if cocks of player > 2]talon bunching up at your second dick's head that he might lick it clean when he concludes with the first, though he is not so dexterous that he can stop the others from spilling all over the ground[otherwise if cocks of player is 2]talon bunching up at your second dick's head that he might lick it clean when he is concludes with the first[otherwise]licking it clean once you might offer no more for him[end if][if cock width of player > 24]. He doesn't seem even remotely phased by the amount you offer him; rather, he'd be quite jovial over it, reveling in your excess[end if].";
 	say "     'Alright, I certainly hope my victor was pleased...' It takes him a moment to recover, cleaning himself off and regaining what composure might have slipped from him prior. 'That was satisfying! Perhaps you would be interested in another go sometimes down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 
@@ -262,7 +262,7 @@ to say dorvic_3: [oral cunt]
 		otherwise:
 			say "     It's not long before you finally cry out in bliss, supple passage tightening against the dragon's tongue[if cocks of player > 0], cock[smn] erupting into the open air, staining your crotch and the floor with your seed. He's clearly caught between attending you and being in the throes of his own bliss, allowing you watch his writhing, twitching form as the beast's dick unloads impotently into the ground, wallowing in a puddle of his own spunk.";
 	otherwise:
-		say "     You choose to disallow such an act, to which he concedes with little further thought on the matter, maw enveloping your pussy a second time, his endeavours now much more deliberate. Dexterous, slick appendage eager to dive within your [cunt size desc of player] depths, he exhibits a voracious desire to satisfy your need[if cunt length of player > 17], your ease of access only compelling his fervour further[end if]. He retains a very methodical, calculated pace,[if cocks of player > 1] occasionally stopping only to offer some passing affection to one of your dicks,[otherwise if cocks of player is 1] occasionally stopping only to offer some passing affection to your dick,[otherwise if cunts of player > 2] occasionally switching to attend one of your other cunts to keep you sensitive to his influence,[otherwise if cunts of player is 2] occasionally switching to your other cunt to keep you sensitive to his influence[end if] audible moans escaping your lips as you're rapidly pushed ever-closer to bliss.";
+		say "     You choose to disallow such an act, to which he concedes with little further thought on the matter, maw enveloping your pussy a second time, his endeavours now much more deliberate. Dexterous, slick appendage eager to dive within your [cunt size desc of player] depths, he exhibits a voracious desire to satisfy your need[if cunt length of player > 17], your ease of access only compelling his fervour further[end if]. He retains a very methodical, calculated pace[if cocks of player > 1], occasionally stopping only to offer some passing affection to one of your dicks[otherwise if cocks of player is 1], occasionally stopping only to offer some passing affection to your dick[otherwise if cunts of player > 2], occasionally switching to attend one of your other cunts to keep you sensitive to his influence[otherwise if cunts of player is 2], occasionally switching to your other cunt to keep you sensitive to his influence[end if], audible moans escaping your lips as you're rapidly pushed ever-closer to bliss.";
 		say "     The air is filled with the sound of the dragon's wet affection for but a few minutes before he drives you to orgasm, feminine portal tightening around his tongue[if cocks of player > 0] as your cock[smn] erupt, staining yourself with your [cum load size of player] payload[end if]. With a disciplined dedication, he licks you clean until it is barren with naught but a thin veneer of his saliva.";
 	say "     'Alright, I certainly hope my victor was pleased...' It takes him a moment to recover, cleaning himself off and regaining what composure might have slipped from him prior. 'That was satisfying! Perhaps my victor would be interested in another go sometime down the line?' He goes on to explain where he resides. Apparently there's a cave within [bold type]Rocky Outcropping[roman type] not far from here, and his instructions are clear enough that you should have no issue getting there. 'Doran's the name, by the way.'";
 	say "     Finished, he turns to depart in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
@@ -381,11 +381,11 @@ Section 3.0 - Doran NPC
 
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
-the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
+the description of Rocky Outcropping is "	 The cavernous alcove, of which Doran resides in, is quite large and spacious for the dragon. You find it littered with various bits and baubles he's no doubt stumbled upon and collected for his amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[otherwise]Faint starlight creeps in from the outside, though the main source of illumination remains his roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.".
 Doran is a man. Doran is in Rocky Outcropping.
-the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]";
-the description of Doran is "[doranlook]";
-the fuckscene of Doran is "[doransex]";
+the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
+the description of Doran is "[doranlook]".
+the fuckscene of Doran is "[doransex]".
 instead of sniffing Rocky Outcropping:
 	say "     It has the obvious scent of earth and burnt wood, which more than overpowers any scent the fastidious Doran leaves behind.";
 instead of sniffing Doran:
@@ -459,7 +459,7 @@ to say doransex:
 	otherwise:
 		say "[dorsexprot]"; [Invoke Doran Sex Protocol]
 
-dorneutroll is a number that varies. dorneutroll is usually 0; [Doran Neutral Roll. Doran decides which position he'll take after last sex. 1 = Dominant, 2 = Submissive]
+dorneutroll is a number that varies. dorneutroll is usually 0. [Doran Neutral Roll. Doran decides which position he'll take after last sex. 1 = Dominant, 2 = Submissive]
 	
 to say dorsexprot: [Doran Sex Protocol]
 	if dorneutroll is 0, now dorneutroll is a random number between 1 and 2; [Safeguard]
@@ -1262,9 +1262,9 @@ to say dordom_7: [Dom Doran Riding]
 			
 Section 3.1.2 - Doran Vore Protocol
 
-dorvorpcf is a truth state that varies. dorvorpcf is usually false; [Doran Vore Player Cum Filled, identifies player state for the vore pool]
-dorvornpcf is a truth state that varies. dorvorpcf is usually false; [Doran Vore Non-Player Cum Filled, identifies Doran state for the vore pool]
-dorvornpa is a truth state that varies. dorvornpa is usually false; [Doran Vore Non-Player Annoyed, idenfies Doran state for vore pool]
+dorvorpcf is a truth state that varies. dorvorpcf is usually false. [Doran Vore Player Cum Filled, identifies player state for the vore pool]
+dorvornpcf is a truth state that varies. dorvorpcf is usually false. [Doran Vore Non-Player Cum Filled, identifies Doran state for the vore pool]
+dorvornpa is a truth state that varies. dorvornpa is usually false. [Doran Vore Non-Player Annoyed, idenfies Doran state for vore pool]
 
 to dorvore: [Invocation of Doran Vore Protocol]
 	if waiterhater is 0:
@@ -1942,9 +1942,9 @@ to say doropt_0: [End]
 	
 Chapter 3.3.1 - Vore Option Extension
 
-dorvorreg is a number that varies. dorvorreg is usually 0; [Doran Vore Regard. 0 = Not revealed, 1 = Inactive, 2 = Active]
-dorvordur is a number that varies. dorvordur is usually 0; [Doran Vore Duration. 0 = Very Short, 1 = Short, 2 = Medium, 3 = Long] 
-dorvordis is a number that varies. dorvordis is usually 0; [Doran Vore Discharge. 0 = None/Implicit, 1 = Oral, 2 = Anal, 3 = Random] 
+dorvorreg is a number that varies. dorvorreg is usually 0. [Doran Vore Regard. 0 = Not revealed, 1 = Inactive, 2 = Active]
+dorvordur is a number that varies. dorvordur is usually 0. [Doran Vore Duration. 0 = Very Short, 1 = Short, 2 = Medium, 3 = Long] 
+dorvordis is a number that varies. dorvordis is usually 0. [Doran Vore Discharge. 0 = None/Implicit, 1 = Oral, 2 = Anal, 3 = Random] 
 
 to say doropt_4: [Doran Vore Extension]
 	if dorvorreg is 0:
@@ -2098,15 +2098,15 @@ to say doropt_4: [Doran Vore Extension]
 
 Chapter 3.3 - Doran Discussion Tree
 
-dorlastcuss is a number that varies. dorlastcuss is usually 555; [Doran Last Discussion]
-dorcusprog is a number that varies. dorcusprog is usually 0; [Doran Discussion Progression]
-dorcusexit is a number that varies. dorcusexit is usually 0; [Additional exit value for nested multiple-choice]
-dorcusexit2 is a number that varies. dorcusexit2 is usually 0; [Additional exit value for nested multiple-choice]
-dorcustv_1 is a number that varies. dorcustv_1 is usually 0; [Doran Discussion Temporary Number 1]
-[dorcustv_2 is a number that varies. dorcustv_2 is usually 0; [Doran Discussion Temporary Number 2]]
-[dorcustv_3 is a number that varies. dorcustv_3 is usually 0; [Doran Discussion Temporary Number 3]]
+dorlastcuss is a number that varies. dorlastcuss is usually 555. [Doran Last Discussion]
+dorcusprog is a number that varies. dorcusprog is usually 0. [Doran Discussion Progression]
+dorcusexit is a number that varies. dorcusexit is usually 0. [Additional exit value for nested multiple-choice]
+dorcusexit2 is a number that varies. dorcusexit2 is usually 0. [Additional exit value for nested multiple-choice]
+dorcustv_1 is a number that varies. dorcustv_1 is usually 0. [Doran Discussion Temporary Number 1]
+[dorcustv_2 is a number that varies. dorcustv_2 is usually 0. [Doran Discussion Temporary Number 2]]
+[dorcustv_3 is a number that varies. dorcustv_3 is usually 0. [Doran Discussion Temporary Number 3]]
 dorcus is an action applying to nothing.
-dorrprr is a number that varies. dorrprr is usually 0; [Doran RP Reveal Regard. Affected by player interaction in discussion]
+dorrprr is a number that varies. dorrprr is usually 0. [Doran RP Reveal Regard. Affected by player interaction in discussion]
 
 understand "discuss doran" as dorcus.
 understand "discuss with doran" as dorcus.
@@ -2560,11 +2560,11 @@ to say dorrpdsff: [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 
 Section 4.2 - Doran Roleplay Queries
 
-dorrpis is a number that varies. dorrpis is usually 0; [Doran Roleplay In Session. 0 = None, 1 to X = Identifies which roleplay is active]
-dorrp_tv1 is a number that varies. dorrp_tv1 is usually 0; [Doran Roleplay Temp Value 1. Use is contextual to the scene]
-dorrp_tv2 is a number that varies. dorrp_tv2 is usually 0; [Doran Roleplay Temp Value 2. Use is contextual to the scene]
-dorrp_tv3 is a number that varies. dorrp_tv3 is usually 0; [Doran Roleplay Temp Value 3. Use is contextual to the scene]
-dorrp_tv4 is a number that varies. dorrp_tv4 is usually 0; [Doran Roleplay Temp Value 4. Use is contextual to the scene]
+dorrpis is a number that varies. dorrpis is usually 0. [Doran Roleplay In Session. 0 = None, 1 to X = Identifies which roleplay is active]
+dorrp_tv1 is a number that varies. dorrp_tv1 is usually 0. [Doran Roleplay Temp Value 1. Use is contextual to the scene]
+dorrp_tv2 is a number that varies. dorrp_tv2 is usually 0. [Doran Roleplay Temp Value 2. Use is contextual to the scene]
+dorrp_tv3 is a number that varies. dorrp_tv3 is usually 0. [Doran Roleplay Temp Value 3. Use is contextual to the scene]
+dorrp_tv4 is a number that varies. dorrp_tv4 is usually 0. [Doran Roleplay Temp Value 4. Use is contextual to the scene]
 
 to say dorrpovb: [Doran RP: The Virile Beast Query]
 	say "     '[if dorrolereg > 0]Ah, [dorgr], I must caution that this puts them in a considerably submissive position, which might not be their thing[end if]";

@@ -23,7 +23,7 @@ Section 2 - Pig Pen
 
 Pig Pen is a room. It is fasttravel. It is private.
 
-The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.";
+The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.".
 
 instead of sniffing Pig Pen:
 	say "This place smells like a sty.  Oh... wait... yeah.";
@@ -39,9 +39,9 @@ lastPhilipfucked is a number that varies.  lastPhilipfucked is usually 800.
 lust of philip is 255.
 
 Philip is a man.
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet.  He is extremely fat with a bald head, floppy ears, and an upturned nose.  Flies are constantly buzzing around him, enticed by his foul odour.  He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm.  Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe.  He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.";
+The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet.  He is extremely fat with a bald head, floppy ears, and an upturned nose.  Flies are constantly buzzing around him, enticed by his foul odour.  He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm.  Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe.  He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
 Philip is in Pig Pen.
-The conversation of Philip is { "Oink!" };
+The conversation of Philip is { "Oink!" }.
 
 instead of conversing Philip:
 	if piginitiation is 2:
@@ -79,13 +79,13 @@ the linkaction of Philip is "Possible Actions: [link]talk[as]talk Philip[end lin
 
 Pigfeeding is an action applying to nothing.
 
-understand "feed Philip" as pigfeeding;
-understand "feed pig" as pigfeeding;
-understand "feed the pig" as pigfeeding;
-understand "feed hungry boar man" as pigfeeding;
-understand "feed the hungry boar man" as pigfeeding;
-understand "feed boar" as pigfeeding;
-understand "feed the boar" as pigfeeding;
+understand "feed Philip" as pigfeeding.
+understand "feed pig" as pigfeeding.
+understand "feed the pig" as pigfeeding.
+understand "feed hungry boar man" as pigfeeding.
+understand "feed the hungry boar man" as pigfeeding.
+understand "feed boar" as pigfeeding.
+understand "feed the boar" as pigfeeding.
 
 check pigfeeding:
 	if Philip is not visible, say "Who?" instead;
@@ -183,13 +183,13 @@ To pigfeed:
 
 Mudwrestling is an action applying to nothing.
 
-understand "wrestle Philip" as Mudwrestling;
-understand "wrestle pig" as Mudwrestling;
-understand "wrestle the pig" as Mudwrestling;
-understand "wrestle hungry boar man" as Mudwrestling;
-understand "wrestle the hungry boar man" as Mudwrestling;
-understand "wrestle boar" as Mudwrestling;
-understand "wrestle the boar" as Mudwrestling;
+understand "wrestle Philip" as Mudwrestling.
+understand "wrestle pig" as Mudwrestling.
+understand "wrestle the pig" as Mudwrestling.
+understand "wrestle hungry boar man" as Mudwrestling.
+understand "wrestle the hungry boar man" as Mudwrestling.
+understand "wrestle boar" as Mudwrestling.
+understand "wrestle the boar" as Mudwrestling.
 
 check Mudwrestling:
 	if Philip is not visible, say "Who?" instead;

@@ -99,7 +99,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
-		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player);
+		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player)  [to the nearest whole number];
 	if weapon object of player is bo staff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
@@ -821,7 +821,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
-		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
+		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
 		increase hp of player by 5;
 		now velossavedyes is true;
 		now velossaved is true;
@@ -1113,7 +1113,7 @@ to win:
 				now ubprompted is true;			[player will be prompted for ub]
 	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]supress (0)[as]0[end link] the urge?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you.  Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry].  Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>[run paragraph on]";
@@ -1295,12 +1295,12 @@ Chapter 0 - Definition of entries
 
 [ DEFINITIONS OF ENTRIES:
 name:			The name of the rule.  Must be matched exactly by the altcombat entry of the critter.
-combat:		This is the basic rule to be followed when a monster counter-attacks, preceeded only by the continous entry and _replacing_ the
+combat:		This is the basic rule to be followed when a monster counter-attacks, preceded only by the continuous entry and _replacing_ the
 			standard retaliation rule entirely.  There should always be a rule in this field.
 preattack:		This rule is followed at the very start of the 'to retaliate' feature, but can be called by other combat rules as well.  It is meant
 			for effects that take place before a normal attack and occurs _before_ a player's avoidance check.
 postattack:		This rule is followed at the very end of the 'to retaliate' feature, but again can be called by other combat rules as well.  It is
-			meant for effects that take place after a normal attack.  This could be as simple as bragging, to poisoining a player (to be managed
+			meant for effects that take place after a normal attack.  This could be as simple as bragging, to poisoning a player (to be managed
 			by the playerpoisoned rule) and so on.
 altattack1:		This is an alternate, dexterity-based attack the creature will sometimes use.  These can be attacks w/effects, different damage,
 			armour piercing, etc...
@@ -1313,9 +1313,9 @@ continuous:		This rule takes place before any and all combat rules.  It is much 
 			being used.  Good for enemy regen, player hp drain, player libido boosting, etc... that happens every turn.
 altstrike:		This rule replaces the standard dexterity to-hit attempt by the monster (ex: using Int, Char, etc...)
 
-While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defence, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independantly before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
+While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defense, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independently before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
 
-As there are all rules, they need not be resticted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
+As there are all rules, they need not be restricted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
 
 A note on alternate attacks: This is the 'damage' portion of a dexterity strike replaced.  If you need non-dexterity attacks, go to the combat entry/altstrike entry.  If you need more than 2 alternate attacks, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
 
@@ -1584,6 +1584,13 @@ this is the firebreath rule:
 				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven.  You suffer [special-style-2][dam][roman type] damage!";
 			otherwise:
 				say "[one of]The salamander[or]The fiery amphibian[or]The lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you.  You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
+		otherwise if name entry is "Magic Drake":
+			if fbhit is 2:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise if fbhit is 1:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames.  You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it.  The strange fire is both burning hot and also strangely arousing.  It saps some of your strength to fight on.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames.  Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		otherwise:
 			if fbhit is 2:
 				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";

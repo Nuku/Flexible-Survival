@@ -6,7 +6,7 @@ Version 4 of Food and Water Finding by Nuku Valente begins here.
 Section 1 - The Situation
 
 potential resources is a scavevent.
-The sarea of potential resources is "Allzones";
+The sarea of potential resources is "Allzones".
 
 Instead of resolving a potential resources:
 	let difficulty be a random number from 6 to 16;
@@ -204,7 +204,7 @@ Instead of resolving a potential resources:
 
 
 to say scavsex_f01:
-	say "     Deciding that there's worse ways to get by, you drop to your knees and bury your face between her legs.  She moans and giggles as you lick her pussy.  Her friends, watching nearby, giggle as well and move in closer to enjoy the show.  Knowing your reward is on the line, you work to make it speedy but pleasurable.  You stuff a pair of fingers into her [one of]dripping[or]quivering[or]furry[or]scaly[or]super-wide[or]tentacle-rimmed[as decreasingly likely outcomes] vagina while your tongue sets to lashing across her clit.  In a few minutes, you've got her pressing your face to her groin while she cums with a loud cry of ecstacy.";
+	say "     Deciding that there's worse ways to get by, you drop to your knees and bury your face between her legs.  She moans and giggles as you lick her pussy.  Her friends, watching nearby, giggle as well and move in closer to enjoy the show.  Knowing your reward is on the line, you work to make it speedy but pleasurable.  You stuff a pair of fingers into her [one of]dripping[or]quivering[or]furry[or]scaly[or]super-wide[or]tentacle-rimmed[as decreasingly likely outcomes] vagina while your tongue sets to lashing across her clit.  In a few minutes, you've got her pressing your face to her groin while she cums with a loud cry of ecstasy.";
 	say "     When released, you gasp to catch your breath after being smothered against her crotch.  Her excess juices run down your chin and neck";
 
 to say scavsex_m01:

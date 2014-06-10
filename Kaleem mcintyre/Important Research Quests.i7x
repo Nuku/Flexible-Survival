@@ -141,7 +141,7 @@ Instead of resolving Important Treasure:
 								say "'If it wasn't for Greg...I'd think I have...' You press your head up over the top of the iguana's chin to stop him before he could finish that statement. Whatever the other was going to say...it wasn't worth voicing since it was lost in a past best left forgotten.";
 								if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 								if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
-								say "Minutes later the iguana's partner shows up and you hand the no longer shivering reptile back to the older raptor. You don't stick around to hear what was completely said between the two, but you do hear something about [']choices['] and [']future['] and [']a better way than this['] before  you can no longer hear the voices of the two reptiles.";
+								say "Minutes later the iguana's partner shows up and you hand the no longer shivering reptile back to the older raptor. You don't stick around to hear what was completely said between the two, but you do hear something about [']choices['] and [']future['] and [']a better way than this['] before you can no longer hear the voices of the two reptiles.";
 								now opcl is 4;
 								increase score by 20;
 							otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -192,7 +192,7 @@ Instead of resolving Important Treasure:
 		now opcl is 5;
 		increase score by 7;
 	otherwise if opcl is 5:
-		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure colored eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
+		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure coloured eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "Assuming that this is the package that Omio had been expecting you thank the blonde and then turn to go about your way. However, you find yourself pausing midstep when you hear the other woman speak up suddenly. 'You should go see about them.' Tilting your head to the side you ask the female who she's talking about. 'The two lizards. They need some help right about now, so go and see them.'[line break]"; 
@@ -225,7 +225,7 @@ Section 2 - Friendship's Proof
 Friendship's Proof is a situation.
 
 Tpfs is a number that varies.
-The sarea of friendship's proof is "Warehouse";
+The sarea of friendship's proof is "Warehouse".
 
 Instead of resolving a Friendship's Proof:
 	if tpfs is 0:
@@ -303,7 +303,7 @@ Instead of resolving a Friendship's Proof:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
 		say "'You!? What are you doing here!?' Dan asks while curling the twin sets of arms he possesses over across his chest and abdomen, respectfully. Telling him that you...just came by because of the shouting you look at Greg carefully to see what the other will do next. 'uhm...this is kinda a private party so could you...maybe get lost?' The tone of the iguana makes you give the other man a [']look['], but before you can say anything Greg is moving like a shot towards his partner.[line break]";
-		say "Charging before the other can reach Dan you throw all of your weight into the raptor forcing him to crash hard into the concrete ground underneath both of your feet. The needle that he had in his hand is set free when the raptor's scaled hand flies open against his command. The glass rolls sloppily across the ground before crashing into the side of a pole where it smashes into a hundred different pieces. The contents therein, which were clear white in color, unhurriedly evaporate against the ground just as Greg shouts his dismay to the world.";
+		say "Charging before the other can reach Dan you throw all of your weight into the raptor forcing him to crash hard into the concrete ground underneath both of your feet. The needle that he had in his hand is set free when the raptor's scaled hand flies open against his command. The glass rolls sloppily across the ground before crashing into the side of a pole where it smashes into a hundred different pieces. The contents therein, which were clear white in colour, unhurriedly evaporate against the ground just as Greg shouts his dismay to the world.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "'Son of a bitch! Look at what you made me do!' The raptor hisses into your face and then swipes his claws at your face with the full intention of gouging your eyes out. Ducking quickly enough so that you can save your vision you kick yourself away from the pissed off lizard before he can try to strike a second time. 'Greg stop!' Dan's voice seems to draw the raptor back from his furious daze as the trench coat wearing detective turns to regard his partner somewhat incredulously.[line break]";
@@ -339,13 +339,13 @@ Section 3 - Ouroboros
 
 Ouroboros is a situation.
 
-The sarea of Ouroboros is "Museum";
+The sarea of Ouroboros is "Museum".
 
 Instead of resolving a Ouroboros:
 	if omq < 10:
 		say "Walking through the somewhat quiet halls of the museum you find yourself passing by a impressive looking medallion with a snake circled around itself nibbling at its tail. A coy smile tugs at your lips as you wonder why someone would draw a serpent doing such a thing before you shrug and then move on about your way.";
 	otherwise if omq is 10:
-		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea. But then again wouldn't a good fight make this capper all more interesting? (Y=Fight Wolverine, N=Think up a plan)[line break]";
+		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea. But then again wouldn't a good fight make this caper all more interesting? (Y=Fight Wolverine, N=Think up a plan)[line break]";
 		if player consents:
 			say "Deciding just to plow your way through you step up to the wolverine and tell it that you'll be taking that medallion back behind him. The dark eyes of the guard animal narrow at you dangerously and the wolverine is quick to step up to meet your challenge![line break]";
 			challenge "Wolverine Guard";

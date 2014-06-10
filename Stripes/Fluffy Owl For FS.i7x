@@ -97,7 +97,7 @@ When Play begins:
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
 	now loot entry is "distilled milk";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 28;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]light[or]winged[as decreasingly likely outcomes]";
 	now type entry is "[one of]avian[or]owl-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

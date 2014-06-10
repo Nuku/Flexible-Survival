@@ -105,7 +105,7 @@ to say usetouskyquill:
 	say "     You fiddle briefly with the large tousky quill and end up pricking yourself with it.  Ouch!  Dropping it, you suck on your poked finger.  Your mind becomes clouded, making you muddle-headed and giddy about everything.";
 	increase morale of player by 1;
 
-the scent of tousky quill is "The colourful quill's scent muddles your mind, making you feel stupid and giddy.";
+the scent of tousky quill is "The colourful quill's scent muddles your mind, making you feel stupid and giddy.".
 
 [
 when play ends:

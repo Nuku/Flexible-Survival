@@ -4,7 +4,7 @@ Version 1 of David by Wahn begins here.
 Section 1 - Events
 
 Captured Demon is a situation.
-The sarea of Captured Demon is "Red";
+The sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to badspots of guy;            [male soldier, demon brute]
 	add Captured Demon to badspots of hellspawn;      [demon brute]
@@ -43,7 +43,7 @@ Instead of resolving a Captured Demon:
 
 
 Thankful Soldier is a situation. Thankful Soldier is resolved.  [meeting the guy from 'Captured Demon' again - if you saved him]
-The sarea of Thankful Soldier is "Outside";
+The sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to badspots of guy;            [male soldier]
 	
@@ -221,13 +221,13 @@ Section 2 - NPC
 [ 100: demon brute pet's slave - in the amulet                          ]
 
 David is a man.
-The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]";
-The conversation of David is { "Oh, hello." };
+The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [hp of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
+The conversation of David is { "Oh, hello." }.
 lastfuck of David is usually 555.
 The icon of David is Figure of David_icon.
 DavidBunkerEntry is a number that varies.
 
-The scent of David is "     David has a nice masculine human smell.";
+The scent of David is "     David has a nice masculine human smell.".
 
 Instead of fucking David:
 	if(lastfuck of David - turns < 5):

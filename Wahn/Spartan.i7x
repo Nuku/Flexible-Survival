@@ -11,7 +11,7 @@ Section 1 - Monster Responses
 to say Spartan wins:
 	if hp of player > 0:		[player submits]
 		if bodyname of player is "Spartan" and facename of player is "Spartan" and cunts of player is 0:			[Spartans, but not herms and females]
-			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red color fading as he touches it and the material ripping easily in his hands.";
+			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red colour fading as he touches it and the material ripping easily in his hands.";
 			say "[line break]";
 			say "     Forcefully pulling your head to his crotch, the Spartan thrusts his cock into your mouth, fucking your face without restraint or mercy. He pumps in and out, pushing deep until your nose touches his pubic hair and his shaft is in your throat. As you have to cough a bit from the rough treatment, he just keeps going, shoving his cock down your throat and angrily saying 'Yeah, choke on it - you should have thought twice about donning that disguise!' Both hands on your head, he holds you tight, his thick shaft in your throat and cutting off your breathing. Only when you start feeling woozy and see stars does he release you to collapse at his feet, gasping for air.";
 			say "[WaitLineBreak]";
@@ -228,7 +228,7 @@ When Play begins:
 Section 3 - Events
 
 History Lecture is a situation.			[repeatable event infecting with Spartan/Helot strains - source of it all]
-The sarea of History Lecture is "Campus";
+The sarea of History Lecture is "Campus".
 
 when play begins:
 	add History Lecture to badspots of guy;     

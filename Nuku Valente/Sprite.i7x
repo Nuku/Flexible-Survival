@@ -7,7 +7,7 @@ Version 2 of Sprite by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 Spritedefeat is a number that varies.
 Spriteconsent is a number that varies.
 
@@ -21,7 +21,7 @@ to say Sprite attack:
 		say "You look down to see [(cunt length of player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[impregchance]";
 		wait for any key;
 	otherwise if "MPreg" is listed in feats of player and cunts of player is 0 and a random chance of 1 in 2 succeeds:
-		say "One of the sprites caresses your rear, nuzzling and kissing at it.  'Mmm... there's something special about this spritely boy, girls.  There's a nice, warm womb in him,' she giggles.  That said, she starts rubbing at your back passage, working your anus open.  You moan softly as she starts squirming her way inside.  She's followed by [if scalevalue of player is 1]another[otherwise][scalevalue] others[end if].  They slip in smoothly, wings buzzing[if cocks of player > 0] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
+		say "One of the sprites caresses your rear, nuzzling and kissing at it.  'Mmm... there's something special about this spritely boy, girls.  There's a nice, warm womb in him,' she giggles.  That said, she starts rubbing at your back passage, working your anus open.  You moan softly as she starts squirming her way inside.  She's followed by [if scalevalue of player is 1]another[otherwise][scalevalue]others[end if].  They slip in smoothly, wings buzzing[if cocks of player > 0] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
 		wait for any key;
@@ -31,7 +31,7 @@ to say Sprite attack:
 			if cocks of player is greater than 1:
 				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [ball size] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
 		otherwise:
-			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[apostrophe]t plan to let this go to waste...'";
+			say "One of the largest sprites there descends in front of you with a disturbing smile, 'You will make such a pretty sprite,' she says as she grabs your [cock of player] cock and strokes it slowly, 'But before then, I don[']t plan to let this go to waste...'";
 			wait for any key;
 			say "She guides your cock to her hairless entrance and thrusts her hips forward, taking you deeply even as you spread her quite wide on your tool. She squeals and shudders around you, working herself deeper and deeper until you are hilted in her willing form, like a tiny hot vice that ripples and pulls at your cock urgently.";
 			if cocks of player is greater than 1:
@@ -138,7 +138,7 @@ to say tastepixiedust:
 	say "     Looking at the sparkling powder, you dab your finger into it and give it a taste.  It is quite sweet on your tongue, though it also carries a faintly feminine flavour as well.  As you sample more of it, there's a growing tingling sensation on your tongue and you feel a little lighter on your feet.";
 	increase libido of player by 8;
 
-the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.";
+the scent of pixie dust is "Taking a careful sniff of the powder, you catch a faintly feminine scent coming from it.".
 
 
 Section 4 - Endings
@@ -152,7 +152,7 @@ when play ends:
 				say "Your memories of your old life begin to fade away and you take off in a sudden buzz, flying around the city in search of... something, but you never quite find it. It's quite a surprise when a net falls down on you a few days later and you're hauled out of the city. Your captor proves to be reasonably kind, but never treats you as more than an interesting and delicate-looking animal, despite your protests.";
 		otherwise:
 			if Spriteconsent is 1:
-				say "Great glows of bright colors emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
+				say "Great glows of bright colours emanate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
 			otherwise:
 				say "You are picked up by the rescuers just moments before you start to shrink down the rest of the way to Sprite size. You have a hard time getting a job being so small, at least until that advertising firm found you. You did quite well as a model, where scale meant a lot less. Besides, how could Sprite resist using you?";
 

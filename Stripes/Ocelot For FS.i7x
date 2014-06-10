@@ -264,6 +264,7 @@ to say ocelotdesc:
 		now sex entry is "Male";
 	now ocelotsize is 0;	[only small one for now]
 	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover.  Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws.  This small fellow is short and slender, maybe around five feet tall.  His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well.  The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average sized package.  In it, he looks like someone's boytoy kitty slave.  He shifts from foot to foot, preparing to strike.";
+	let debit be 0;
 	if hardmode is true and level of player > 3, let debit be level of player - 3;	[one level behind player]
 	now hp entry is 22 + ( debit * 3 );
 	now monsterhp is 22 + ( debit * 3 );

@@ -84,7 +84,7 @@ Version 3 of Elijah by Wahn begins here.
 Section 1 - Meeting Event
 
 Angel vs Demons is a situation. The level of Angel vs Demons is 10.
-The sarea of Angel vs Demons is "Red";
+The sarea of Angel vs Demons is "Red".
 when play begins:
 	add Angel vs Demons to badspots of guy;       [Elijah is male]
 	add Angel vs Demons to badspots of hellspawn; [demons everywhere - he might even become one]
@@ -120,7 +120,7 @@ Instead of resolving a Angel vs Demons:
 	Now Angel vs Demons is resolved;
 
 Burned-Out Chapel is a room. It is fasttravel.
-The description of Burned-Out Chapel is "[chapelplacedesc]";
+The description of Burned-Out Chapel is "[chapelplacedesc]".
 
 instead of sniffing Burned-Out Chapel:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if hp of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
@@ -136,31 +136,31 @@ to say chapelplacedesc:
 		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, there is a horrible sticky mess of ash and demonic cum. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
 
 Northeast of Burned-Out Chapel is Sacristy.
-The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles besides it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...";
+The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles besides it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
 
 Section 2 - Elijah the Seraphim
 
 [Smells, Description, Conversation]
 
 Elijah is a man. The hp of Elijah is normally 0.
-The description of Elijah is "[Elijahdesc]";
+The description of Elijah is "[Elijahdesc]".
 The conversation of Elijah is { "Mew!" }.
 lastElijahfucked is a number that varies.  lastElijahfucked is normally 555.
 NPCintCounter is a number that varies.  NPCintCounter is normally 555.
-npcEint is an indexed text that varies. npcEint is normally "0000000000000N";	[SAVING]
-Elijah has a text called Char-A.  Char-A of Elijah is normally "0";	[Candy]
-Elijah has a text called Char-B.  Char-B of Elijah is normally "0";	[Sarah]
-Elijah has a text called Char-C.  Char-C of Elijah is normally "0";	[Sven]
-Elijah has a text called Char-D.  Char-D of Elijah is normally "0";	[Felinoid]
-Elijah has a text called Char-E.  Char-E of Elijah is normally "0";	[Helper Dog]
-Elijah has a text called Char-F.  Char-F of Elijah is normally "0";	[Little Fox]
-Elijah has a text called Char-G.  Char-G of Elijah is normally "0";	[Gryphoness]
-Elijah has a text called Char-H.  Char-H of Elijah is normally "0";	[Cute Crab]
-Elijah has a text called Char-I.  Char-I of Elijah is normally "0";	[Fang]
-Elijah has a text called Char-J.  Char-J of Elijah is normally "0";	[Honey]
-Elijah has a text called Char-K.  Char-K of Elijah is normally "0";	[unassigned]
-Elijah has a text called Char-L.  Char-L of Elijah is normally "0";	[unassigned]
-Elijah has a text called Char-M.  Char-M of Elijah is normally "0";	[unassigned]
+npcEint is an indexed text that varies. npcEint is normally "0000000000000N".	[SAVING]
+Elijah has a text called Char-A.  Char-A of Elijah is normally "0".	[Candy]
+Elijah has a text called Char-B.  Char-B of Elijah is normally "0".	[Sarah]
+Elijah has a text called Char-C.  Char-C of Elijah is normally "0".	[Sven]
+Elijah has a text called Char-D.  Char-D of Elijah is normally "0".	[Felinoid]
+Elijah has a text called Char-E.  Char-E of Elijah is normally "0".	[Helper Dog]
+Elijah has a text called Char-F.  Char-F of Elijah is normally "0".	[Little Fox]
+Elijah has a text called Char-G.  Char-G of Elijah is normally "0".	[Gryphoness]
+Elijah has a text called Char-H.  Char-H of Elijah is normally "0".	[Cute Crab]
+Elijah has a text called Char-I.  Char-I of Elijah is normally "0".	[Fang]
+Elijah has a text called Char-J.  Char-J of Elijah is normally "0".	[Honey]
+Elijah has a text called Char-K.  Char-K of Elijah is normally "0".	[unassigned]
+Elijah has a text called Char-L.  Char-L of Elijah is normally "0".	[unassigned]
+Elijah has a text called Char-M.  Char-M of Elijah is normally "0".	[unassigned]
 honeygiven is a truth state that varies.  honeygiven is normally false.
 
 instead of sniffing Elijah:
@@ -327,7 +327,7 @@ Section 3 - Gathering (and other) Events
 [This event exists mainly to allow players with girl banned to have a means to find a honeycomb.]
 
 Sweet Surprise is a situation. Sweet Surprise is resolved.
-The sarea of Sweet Surprise is "Park";
+The sarea of Sweet Surprise is "Park".
 
 Instead of resolving a Sweet Surprise:
 	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up.  There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket.  The dishes and cutlery are scattered and all that remains of the food is crumbs.  An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it.  It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained.  You're about to leave when you spot their wicker basket knocked into the nearby bushes.  Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if hp of Elijah is 2].  Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
@@ -338,7 +338,7 @@ Instead of resolving a Sweet Surprise:
 [This event exists mainly to give players another means to obtain a healing booster.]
 
 Examination Room is a situation. Examination Room is resolved.  The level of Examination Room is 8.
-The sarea of Examination Room is "Hospital";
+The sarea of Examination Room is "Hospital".
 
 Instead of resolving a Examination Room:
 	say "     Coming across a set of examination rooms, you start searching them in the hopes of finding some useful supplies.  Unfortunately, it seems that they've already been searched and much of the useful items have already been gathered.  As you're ransacking a third of them in increasing frustration, you hear the door slam open as a jaguar dressed like an orderly comes striding in, clearly upset at having found you snooping around.";

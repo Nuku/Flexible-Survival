@@ -74,7 +74,7 @@ When Play begins:
 	now cock entry is "deep red with a canine knot towards the bottom";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body bends, and your spine and skull grow soft and reform, forcing you down onto all fours.  You can feel your insides churn and flow as if somehow melting together and changing as well"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it smoothes, becoming flawless, and growing a black rubbery layer as you watch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it smooths, becoming flawless, and growing a black rubbery layer as you watch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long tail mutates out, black and round, whipping back and forth with your emotions"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a knot forms on the base while a sheath forms towards the bottom, and it turns a deep red"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;

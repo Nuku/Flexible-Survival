@@ -91,7 +91,7 @@ carry out bfanditesting:
 This should be set whenever a player's body is changed.  It gives a general scale to a person's height and can be used for:
 - checking if a player can fit through small spaces.
 - making size comparisons between the player and monsters/NPCs.
-- making choses or for altering sex scenes based on character position.
+- making choices or for altering sex scenes based on character position.
 - affecting NPC/monster reactions: may find small players cute, big players scary, may not respect small players, etc...
 - could be given to an NPC who could be given different infections, allowing more customization of scenes.
 - affects the 'body size of player' variable statement, which can be used in descriptive scenes.  1 -> tiny, 2 -> small, 3 -> average, 4 -> large, 5 -> huge.
@@ -103,7 +103,7 @@ This should be set whenever a player's body is changed.  It gives an adjective t
 [ BODYTYPE: records the 'type entry' during infection.
 This should be set whenever a player's body is changed.  It is an adjective to describe the basic creature type the player's body represents.  Ex: human, feline, canine, ursine, bovine, insectoid, mustelid, robot, mutant, cyborg, humanoid, demi-human, etc... Expect it to be used in sentences such as: The lusty creature runs his paws over your [bodytype of player] body, looking over its prize. ]
 
-[ DAYCYCLE: records the 'nocturnal' entry as a number: 0 for no entry, 1 for false and 2 for true.  This may see future use to designate if a player has any hinderances during the day/night or to otherwise indicate how they feel about their activity level during those times of the day.  As the infection/body change scenes will all be getting the update to store the other data, this one may as well be made in advance. ]
+[ DAYCYCLE: records the 'nocturnal' entry as a number: 0 for no entry, 1 for false and 2 for true.  This may see future use to designate if a player has any hindrances during the day/night or to otherwise indicate how they feel about their activity level during those times of the day.  As the infection/body change scenes will all be getting the update to store the other data, this one may as well be made in advance. ]
 
 [-----------------------------------------------------------------------]
 
@@ -112,10 +112,10 @@ This should be set whenever a player's body is changed.  It is an adjective to d
 [ SCALE: A number between 1 and 5 to designate the scale of someone with this infection (from 1=tiny to 5=huge).  It should saved as the 'scalevalue of player' during body infection.  [scalevalue of player] or [body size of player] can be used to better personalize scenes with monsters/NPCs to a player's size.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.
 If this entry is not set on a creature, the game will default to '3', which is 'average'.]
 
-[ BODY DESCRIPTOR: A one-word adjective to describe the build or other qualities of the body bestowed by this infection.  It should be saved as 'bodydesc of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: fat, muscled, fit, burly, chubby, hump-backed, pot-bellied, slender, bony, twisted, deformed, etc...  Again, this should be just one-word, adjective entries, but use of [one of]fat[or]chubby[or]plump[at random] is perfectly acceptable.  If-conditions are trickier, as they'll work fine for the player, but won't if transfered onto an NPC.
+[ BODY DESCRIPTOR: A one-word adjective to describe the build or other qualities of the body bestowed by this infection.  It should be saved as 'bodydesc of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: fat, muscled, fit, burly, chubby, hump-backed, pot-bellied, slender, bony, twisted, deformed, etc...  Again, this should be just one-word, adjective entries, but use of [one of]fat[or]chubby[or]plump[at random] is perfectly acceptable.  If-conditions are trickier, as they'll work fine for the player, but won't if transferred onto an NPC.
 These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios.  If the body descriptor entry is not set, the game will default to saving the name entry in its place as a substitute. ]
 
-[ TYPE: A one-word adjective to generally designate the type of creature this is and this infection bestows.  It should be saved as 'bodytype of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: human, human-like, feline, canine, vulpine, lupine, robotic, cyborg, human, humanoid, demi-human, dwarven, simian, etc...  Again, this should be just one word, adjective entries, but use of [one of]equine[or]horse-like[at random] to create greater diversity is fine.  If-conditions are trickier, as they'll work fine for the player, but won't if transfered onto an NPC. 
+[ TYPE: A one-word adjective to generally designate the type of creature this is and this infection bestows.  It should be saved as 'bodytype of player' during body infection.  If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.  Examples include: human, human-like, feline, canine, vulpine, lupine, robotic, cyborg, human, humanoid, demi-human, dwarven, simian, etc...  Again, this should be just one word, adjective entries, but use of [one of]equine[or]horse-like[at random] to create greater diversity is fine.  If-conditions are trickier, as they'll work fine for the player, but won't if transferred onto an NPC. 
 These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios.  If the type entry is not set, the game will detault to saving the name entry in its place as a substitute. ]
 
 [ MAGIC: A truth state to designate whether this creature is a magical-type creature or not.  No immediate plans for use, but may be use later.  An unset creature is treated as non-magical. ]
@@ -138,12 +138,12 @@ carry out bfanditesting2:
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if there is no altcombat in row y of the table of random critters:
-			say "[name entry]:  [special-style-2]UNSET![roman type]";
+			say "[name entry]: [special-style-2]UNSET![roman type]";
 		otherwise:
 			if altcombat entry is "default":
-				say "[name entry]:  DEFAULT[line break]";
+				say "[name entry]: DEFAULT[line break]";
 			otherwise:
-				say "[name entry]:  [special-style-1][altcombat entry][roman type][line break]";
+				say "[name entry]: [special-style-1][altcombat entry][roman type][line break]";
 		if the remainder after dividing y by 20 is 0:
 			wait for any key;
 			say "[line break]";

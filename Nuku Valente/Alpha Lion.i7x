@@ -6,7 +6,7 @@ Table 20 - Lion Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"New senses and aromas assault you as your face pulls forward into a snout and is covered with tawny fur. Round responsive ears flicker above as you look at the world  with new eyes."	"You have the head of a lion."	"You are momentarily blinded as your lion's head changes."
 "chest"	"Tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front."	"You have the chest and back of a lion."	"You can feel your muscles shift in your lion's chest."
-"gut"	"Your stomach becomes well defined and powerful before itching reveals a thick carpet of fur that spreads out over it, soft and tan in color."	"You have a powerful lion belly, covered in light tan fur."	"Your stomach loses much of it's definition as it shifts."
+"gut"	"Your stomach becomes well defined and powerful before itching reveals a thick carpet of fur that spreads out over it, soft and tan in colour."	"You have a powerful lion belly, covered in light tan fur."	"Your stomach loses much of it's definition as it shifts."
 "pelvis"	"Fur creeps over your groin, engulfing your cock in a surge of pleasure as a large furry sheath wraps around it. Thoughts of breeding with one of the cat girls becomes stronger as your shaft projects strongly from your groin, your new leonine balls hanging heavily."	"You have a large, pink, leonine shaft that twitches eagerly to mate with the cat girls, or anything else really."	"Your large leonine shaft gives a final spurt of precum as it changes."
 "left upper arm"	"Fur spreads along your upper left arm as your muscles swell with  power."	"Your upper left arm is stronger and covered with tan fur."	"You feel weaker as your left upper arm changes."
 "left forearm"	"Your left forearm tingles as it becomes stronger and tan fur spreads out over it."	"Your left forearm is coated with tan fur and feels stronger."	"Fur falls from your feline forearm as it flexes."
@@ -80,13 +80,13 @@ The move rate of Alpha Lion is 3.
 
 The attack rate of Alpha Lion is 1.
 
-The pricolor of Alpha Lion is "tan".
+The pricolour of Alpha Lion is "tan".
 
-The seccolor of Alpha Lion is "dark brown".
+The seccolour of Alpha Lion is "dark brown".
 
-The bootcolor of Alpha Lion is "black".
+The bootcolour of Alpha Lion is "black".
 
-The haircolor of Alpha Lion is "dark brown".
+The haircolour of Alpha Lion is "dark brown".
 
 The hairstyle of Alpha Lion is "wild untamed".
 

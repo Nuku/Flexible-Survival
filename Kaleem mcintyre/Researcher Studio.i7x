@@ -4,7 +4,7 @@ Section 1 - Researcher Studio
 
 Researcher Studio is a room. It is private. It is a fasttravel.
 
-The description of Researcher Studio is "A small two story home stands in the middle of the plains like some kind of bizarre guard post. Coming from out of the only chimney up on the roof is a thick line of grayish-white smoke filling up the surrounding area with a strong scent of sulfur, the likes of which is probably keeping away the mutants and other animals running around here. Over by the right side of the house sits is a glittering pool of pure water that glimmers almost ethereally as the wind ripples at its surface. On the other side of the house are large grooves of plants, herbs and fruits growing silently as if in wait to be picked, watered or otherwise pruned by the proprietor of the house.";
+The description of Researcher Studio is "A small two story home stands in the middle of the plains like some kind of bizarre guard post. Coming from out of the only chimney up on the roof is a thick line of grayish-white smoke filling up the surrounding area with a strong scent of sulfur, the likes of which is probably keeping away the mutants and other animals running around here. Over by the right side of the house sits is a glittering pool of pure water that glimmers almost ethereally as the wind ripples at its surface. On the other side of the house are large grooves of plants, herbs and fruits growing silently as if in wait to be picked, watered or otherwise pruned by the proprietor of the house.".
 
 instead of sniffing Researcher Studio:
 	say "Breathing in the time that mixture of scents you notice that the sharp tang of herbs, smoke, sweet fruit and something calming wafting throughout the air.";
@@ -15,7 +15,7 @@ North of Researcher Studio is MainRoom.
 Section 2 - Main Room
 
 MainRoom is a room.
-The description of MainRoom is "Inside of the main room of the studio the large expanse of space has been decorated to both look and feel comfortable as a large and plush beige sofa sits with fluffy green rug lying across the floor underneath legs of the couch. Over by a side door leading to an open kitchen sits a cedar table and black leather chair with a laptop quietly humming on top of the desk's surface. On the other side of the table there is a single door that has been kept open showing off Omio's bedroom. A pair of stairs at the back of the room leads up to a darkened area while opposite of said stairwell a single shut door looms almost arrogantly with a large deadbolt keeping the unknown area locked up tight. Relatively speaking the living space of the studio would look rather inconspicuous had it not been for the large cauldron boiling in the fireplace with grey smoke coming from out of the oversized black pot.";
+The description of MainRoom is "Inside of the main room of the studio the large expanse of space has been decorated to both look and feel comfortable as a large and plush beige sofa sits with fluffy green rug lying across the floor underneath legs of the couch. Over by a side door leading to an open kitchen sits a cedar table and black leather chair with a laptop quietly humming on top of the desk's surface. On the other side of the table there is a single door that has been kept open showing off Omio's bedroom. A pair of stairs at the back of the room leads up to a darkened area while opposite of said stairwell a single shut door looms almost arrogantly with a large deadbolt keeping the unknown area locked up tight. Relatively speaking the living space of the studio would look rather inconspicuous had it not been for the large cauldron boiling in the fireplace with grey smoke coming from out of the oversized black pot.".
 Omio is in MainRoom.
 
 instead of sniffing MainRoom:
@@ -34,7 +34,7 @@ Omiotalk is a number that varies.
 omq is a number that varies.
 
 Omio is a woman.
-The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more...cute in a girlish like way.";
+The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry redhead you met on the plains earlier. Five foot five inches tall, with golden eyes and  a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around doing this, that or the other. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more...cute in a girlish like way.".
 The conversation of Omio is { "Research and Development!" }.
 
 instead of linkactioning Omio:
@@ -56,7 +56,7 @@ instead of conversing the Omio:
 		otherwise:
 			say "'Oh so you decided to come after all. Hmm, and here I was thinking that you wouldn't show up after my earlier lack of propriety towards you.' Omio looks at you with a rather hard, but curious edge in her eyes, but before you can think to ask what the problem is the strawberry redhead is shrugging her shoulders in an almost dismissive manner. 'If you'll sit on the couch and wait I'll bring that tea out so that we can have a drink together.' Not seeing that there is anything you can do, especially after Omio starts her forward path towards the kitchen area, you move over to sit down onto the plush sofa and then kick back to relax.";
 			say "Murmuring somewhat happily from the feel of material underneath your [tailname of player] rump you let your senses lull for a moment as you take in the energy of the room around you. Warm, comfortable and, above all, [italic type]safe[roman type], you relax for the first time in a long while as you wait for Omio to come back. Feeling the wind from the open patio door blowing and across your body you let your eyes flutter close without realizing it."; 
-			say "The smell of brewing tea underneath your nose wakes you from the short nap you didn't even realize you had started to take. Grunting quietly you look up just in time to see Omio playfully smiling at you while waving a porcelain cup underneath your face. 'Someone finds the place very comfortable I see.' Omio laughs as you blush while accepting the cup of tea from her. The redhead moves with a slow, but graceful air about herself as she amiably seats herself next to you on the sofa with her own cup placed gently onto her lap. Trying to concentrate more on the ceramic in your hand than the other woman you flush slightly as embarrassment colors your cheeks.";
+			say "The smell of brewing tea underneath your nose wakes you from the short nap you didn't even realize you had started to take. Grunting quietly you look up just in time to see Omio playfully smiling at you while waving a porcelain cup underneath your face. 'Someone finds the place very comfortable I see.' Omio laughs as you blush while accepting the cup of tea from her. The redhead moves with a slow, but graceful air about herself as she amiably seats herself next to you on the sofa with her own cup placed gently onto her lap. Trying to concentrate more on the ceramic in your hand than the other woman you flush slightly as embarrassment colours your cheeks.";
 			say "Stammering your thanks you let the warmth of the tea bask against your face -- from the smell you can tell that it's a mixture of peppermint and chamomile -- before happily downing the liquid. 'You're welcome and I do apologize for my seemingly odd behavior while back there with the centaur. I didn't mean to make you think I was some sort of freak or anything like that, although,' The redhead begins to chuckle somewhat to herself. 'Given what I do and where I am doing it, I may indeed be a bit a weird.' Sitting your now empty cup onto the floor you turn to ask the woman what she means.";
 			say "'Well, to be honest with you I'm a bit of a witch.' You blink and then look the other up and down while trying to imagine her as the stereotypical European styled spell caster and mystic. You just can't see it, but seeing your face taking on an inquisitive, if not confused, look Omio giggles and then shakes her head at you. 'Nonono! I'm not the black steeple crowned hat wearing, broomstick riding, black cat keeping witch that they like to play up on TV. I'm more of the medicine woman/holistic healer type[if intelligence of player < 16]. You nod in understanding to Omio. 'I'm so glad you understand what I'm talking about,' Omio chirps happily[otherwise]. You can only laugh nervously as you have no idea what she's talking about. 'Hehe, it's fine. Not many people do in this [']modern['] day and age when over the counter medicines are so cheap and easy to get.' Omio seems rather disappointed, but hides it well[end if].";
 			say "You ask the redhead what she's doing out here and how she's remained unaffected by the virus running around[if hp of Doctor Matt > 7]. 'Do you know what's really going on around here?' Omio asks and you nod your head as you give her some details of Dr. Matt's findings. The redhead blinks and then narrows her eyes as she looks at you with a somewhat dire look on her face[otherwise]. 'Do you know what's really going on around here?' You relay to Omio that it's just an out of control viral infection like the military says. The redhead shakes her head at you sadly[end if]."; 
@@ -122,7 +122,7 @@ carry out Omioteatime:
 		increase score by 1;
 	otherwise if TEA is 3:
 		say "Omio chuckles at you somewhat playfully before skipping her way into the kitchen to fix you your tea. Feeling slightly embarrassed by the girlishly way the other is behaving you drop yourself down onto the sofa and then hum to yourself in wonder. It's not but a few minutes later when Omio returns with two cups placed on a silver tray and goofy grin held tightly onto her face. 'Please enjoy this offered cup of chamomile, strawberry, pineapple mixed with rock sugar crystals.' You cautiously smile to the redhead and then carefully take one of the cups of tea."; 
-		say "Seeing Omio's bright golden eyes shining down at you from where she stands you flip your eyes to the steaming orangey colored liquid and then blow over it to cool it off. Opening your mouth and then flipping the ceramic cup upwards you swallow down the tea...and to your surprise you find that the taste is wonderful! The fruity taste mixed with the saccharine sweetness of the rock sugar has you chuckling despite not exactly feeling so giddy just a moment ago. Omio giggles herself and then sits down besides you with her own cup. Before long the two of your are snickering like two children sharing a secret as you look back and forth at each other from over the rims of your respective cups.";
+		say "Seeing Omio's bright golden eyes shining down at you from where she stands you flip your eyes to the steaming orangey coloured liquid and then blow over it to cool it off. Opening your mouth and then flipping the ceramic cup upwards you swallow down the tea...and to your surprise you find that the taste is wonderful! The fruity taste mixed with the saccharine sweetness of the rock sugar has you chuckling despite not exactly feeling so giddy just a moment ago. Omio giggles herself and then sits down besides you with her own cup. Before long the two of your are snickering like two children sharing a secret as you look back and forth at each other from over the rims of your respective cups.";
 		decrease thirst of player by 5;
 		decrease libido of player by 10;
 		increase humanity of player by 6;
@@ -136,7 +136,7 @@ carry out Omioteatime:
 		increase score by 1;
 	otherwise if TEA is 5:
 		say "Omio seems to be in somewhat of a sour mood, but that doesn't stop the redhead from smiling at you as she walks off to make that requested tea. Sitting back onto the redhead's plush sofa you wait quietly for the tea to be ready, silently you hope that the redhead will be in better spirits when she returns. When the smell of brewing herbs starts to waft throughout the air you find yourself humming pleasurably as the scent flows into you. When the redhead returns to the living room it's with two cups placed carefully onto a small tray perched in between her tanned hands. 'This is a mixed blend of peppermint and jasmine and sugar. I hope you like.' There's something in the redhead's words that make you nod somewhat hesitantly, before taking one of the twin porcelain cups.";
-		say "Sniffing the brew and then blowing over the steaming liquid you carefully lift the cup up to your lips and then take a sip. Though slightly bitter you find yourself not minding in the least as the sweet taste of the sugar that follows makes up for it. Omio chuckles when you smack your lips in delight of the sweet aftertaste. When you turn to regard the redhead you blush slightly when you notice her golden eyes gazing at you fondly. 'Thank you for having tea with me right now, I really appreciate the company.' Omio whispers before taking a swallow of her own teal colored drink.";
+		say "Sniffing the brew and then blowing over the steaming liquid you carefully lift the cup up to your lips and then take a sip. Though slightly bitter you find yourself not minding in the least as the sweet taste of the sugar that follows makes up for it. Omio chuckles when you smack your lips in delight of the sweet aftertaste. When you turn to regard the redhead you blush slightly when you notice her golden eyes gazing at you fondly. 'Thank you for having tea with me right now, I really appreciate the company.' Omio whispers before taking a swallow of her own teal coloured drink.";
 		decrease thirst of player by 5;
 		decrease libido of player by 5;
 		increase humanity of player by 5;
@@ -151,7 +151,7 @@ Section 5 - Bedroom
 
 Bedroom is a room.
 
-The description of Bedroom is "Omio's bedroom is unexpectedly bare, unlike the main room of the house. A large Japanese futon has been settled onto the hardwood floor back against the far wall of the room in-between the only two windows within the sleeping area. Said windows are framed by teal-blue curtains and from the way the linens sway with the rustling of the breeze it's easy to imagine Omio having pleasant dreams in here as the area feels somewhat harmonious...or maybe ethereal in nature. A small nightstand sits over by the left wall with a blue vase placed on top of the stand. A pink flower hangs sleepily from out of the cerulean urn. Above the nightstand hangs a large painting of a ferocious Chinese dragon."; 
+The description of Bedroom is "Omio's bedroom is unexpectedly bare, unlike the main room of the house. A large Japanese futon has been settled onto the hardwood floor back against the far wall of the room in-between the only two windows within the sleeping area. Said windows are framed by teal-blue curtains and from the way the linens sway with the rustling of the breeze it's easy to imagine Omio having pleasant dreams in here as the area feels somewhat harmonious...or maybe ethereal in nature. A small nightstand sits over by the left wall with a blue vase placed on top of the stand. A pink flower hangs sleepily from out of the cerulean urn. Above the nightstand hangs a large painting of a ferocious Chinese dragon.".
 Nightstand is in Bedroom. It is fixed in place.
 
 instead of sniffing Bedroom:
@@ -163,16 +163,16 @@ West of Bedroom is MainRoom.
 
 Section 6 - Nightstand
 
-The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old…very old. Maybe you could try and [bold type]open[roman type] it?";
+The description of Nightstand is "A small nightstand sits idly against the left side of the room. From the looks of the crafted wood the stand both looks and feels old…very old. Maybe you could try and [bold type]open[roman type] it?".
 
 instead of  sniffing Nightstand:
 	say "The nightstand smells old and somewhat musky."
 
 unlocknightstand is an action applying to nothing.
 
-Understand "unlock nightstand" as unlocknightstand;
-Understand "open nightstand" as unlocknightstand;
-Understand "open" as unlocknightstand;
+Understand "unlock nightstand" as unlocknightstand.
+Understand "open nightstand" as unlocknightstand.
+Understand "open" as unlocknightstand.
 
 Check unlocknightstand:
 	If Nightstand is not visible, say "ESP much?" instead;
@@ -189,9 +189,9 @@ Section 7 - Kitchen
 
 Kitchen is a room.
 
-The description of Kitchen is "Omio's kitchenette is made up of ashen walls with a white tiled floor housing a modern style stove and refrigerator with a single chrome sink resting next to said refrigerator. Large wooden cabinets sit on both the top and bottom sides of refrigerator and stove. More than likely the cupboards house a plentiful storage of food for Omio to cook with, yet from the lingering smells filling the area it would seem that the redhead prepares a lot more tea in here than food. Over by the side of the backdoor leading into the plains there stands a large dining table and two comfortable looking chairs with a Chinese styled tea set sitting atop the surface of the table.";
+The description of Kitchen is "Omio's kitchenette is made up of ashen walls with a white tiled floor housing a modern style stove and refrigerator with a single chrome sink resting next to said refrigerator. Large wooden cabinets sit on both the top and bottom sides of refrigerator and stove. More than likely the cupboards house a plentiful storage of food for Omio to cook with, yet from the lingering smells filling the area it would seem that the redhead prepares a lot more tea in here than food. Over by the side of the backdoor leading into the plains there stands a large dining table and two comfortable looking chairs with a Chinese styled tea set sitting atop the surface of the table.".
 
-The invent of Kitchen is { "water bottle" , "food" , "chips" , "tasty peach" };
+The invent of Kitchen is { "water bottle" , "food" , "chips" , "tasty peach" }.
 
 instead of sniffing Kitchen:
 	say "Omio's kitchen smells of herbs and spices all boiled together into various mixes to make soul calming tea."; 
@@ -203,7 +203,7 @@ Section 8 - VacantUpstairs
 
 VacantUpstairs is a room.
 
-The description of VacantUpstairs is "Nothing occupies the large space that once looked to have been a very large guest room. The hardwood floors have not a single speck of dust on them so Omio must use this area for something, though what this might be is unknown at the time. A single window looking out into the world at the end of the room lets the light from the[if daytimer is day] warm sunlight[otherwise] glowing stars and shining moon[end if]. Maybe you could [bold type]look out[roman type] the window to see the outside world?";
+The description of VacantUpstairs is "Nothing occupies the large space that once looked to have been a very large guest room. The hardwood floors have not a single speck of dust on them so Omio must use this area for something, though what this might be is unknown at the time. A single window looking out into the world at the end of the room lets the light from the[if daytimer is day] warm sunlight[otherwise] glowing stars and shining moon[end if]. Maybe you could [bold type]look out[roman type] the window to see the outside world?".
 
 instead of sniffing VacantUpstairs:
 	say "The empty room smells of…nothing? Not even dust, dirt, mold or spider webs. Wait? Do spider webs have a smell??";
@@ -215,7 +215,7 @@ Down of VacantUpstairs is MainRoom.
 
 Section 9 – Glass Window
 
-The description of Glass Window is "A glass window illuminates the [if daytimer is day]sunlight[otherwise]moonlight[end if] streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?";
+The description of Glass Window is "A glass window illuminates the [if daytimer is day]su[otherwise]moo[end if]nlight streaming from outside of the plains. Maybe you could [bold type]look out[roman type] to see the world around you?".
 
 Instead of sniffing glass window:
 	say "The glass window smells like glass, grass, light and night.";
@@ -238,7 +238,7 @@ Section 10 - For the Future
 
 For the Future is a situation.
 
-The sarea of For the Future is "Plains";
+The sarea of For the Future is "Plains".
 When play begins:
 	add For the Future to badspots of furry;
 	add For the Future to badspots of girl;
@@ -249,7 +249,7 @@ Instead of Resolving a For the Future:
 	challenge "Centaur Stallion";
 	if lost is 0:
 		say "Driving off the hybrid human/horse you pant slightly from the exertion before turning worriedly to look at the woman you just [']saved[']. What you come to find is an unimpressed strawberry redhead glowering at you in disapproval. 'Thanks a lot, whoever you are, you just managed to ruin the first lucky break I had at trying to talk one of those asses.' The redhead sighs before shaking her head in mild frustration and you quickly begin to wonder if saving this broad was the right move to make."; 
-		say "'Oh well,' the redheaded woman says as she lifts her face to look at you with the most stunning honey colored eyes you've seen before smiling impishly at you. 'I can understand what you were trying to do so I suppose I should thank you.' You wait for a second to hear this verbal show of gratitude, but it never comes. You give the woman, who looks about to be somewhere in her mid-twenties, a slightly questioning look. 'What?!' She says hotly. 'I already said [italic type]thank you[roman type]. What more do you want?'";
+		say "'Oh well,' the redheaded woman says as she lifts her face to look at you with the most stunning honey coloured eyes you've seen before smiling impishly at you. 'I can understand what you were trying to do so I suppose I should thank you.' You wait for a second to hear this verbal show of gratitude, but it never comes. You give the woman, who looks about to be somewhere in her mid-twenties, a slightly questioning look. 'What?!' She says hotly. 'I already said [italic type]thank you[roman type]. What more do you want?'";
 		say "Realizing that you've got a real piece of work on your hands you turn in preparation to go about your way when a hand grabs your shoulder in an effort to stop you. 'Waitwaitwait. That came out wrong. I'm sorry.' You turn to watch as the redhead takes a step back and then flushes while twiddling her fingers together in front of her face. 'Let me try again. My name is Omio and I am very pleased that you helped to save me from the [']danger['] I was in. In a show of gratitude I would like to invite you over to my humble abode just over by the way for some tea.";
 		say "Omio takes a small bow after she finishes speaking and then lifts herself up to smile nervously at you. You sense that the woman is sincere about her apology, but something about her just seems off to you. You flippantly tell the redhead that you [italic type]might[roman type] come by later, if you find the time. 'That's fine. I live just over by the small pond just north of here.' Omio points to someplace you can't see, but you get the general feel for the direction as you squint slightly. 'Anytime you can come by would be fine. And again, thank you.'";
 		say " After picking up a pack that you hadn't seen hiding in some of the knee tall grass behind her, you watch as the redhead goes about her way in silent grace. Taking care to watch her until this [']Omio['] becomes a small dot shrinking into the distance you find yourself wondering if you should take the redhead up on her offer for tea. She doesn't seem too bad, if just somewhat ill mannered, so maybe it might be worth the trouble after all? Also, there are some budding questions filling up your mind as you wonder how such a person has survived unchanged for so long. Maybe there is something to be learned from this woman? She said her place was a research studio... right? That shouldn't be too hard to find in the middle of the plains.";

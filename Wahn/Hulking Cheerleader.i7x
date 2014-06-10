@@ -88,9 +88,9 @@ When Play begins:
 	now skin entry is "light green, hairless";
 	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]green[or]human[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the beautiful features of a woman. Your hair adjusts to shoulder-length and takes on a blonde color"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the beautiful features of a woman. Your hair adjusts to shoulder-length and takes on a blonde colour"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a very tall form, ending up in a strongly muscled but still recognizably female shape. A very tight white crop top and skirt coalescence out of a cloud of nanites around your chest and hips";
-	now skin change entry is "it seems to soften and smooth out while taking on a light green color. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
+	now skin change entry is "it seems to soften and smooth out while taking on a light green colour. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
 	now cock change entry is "it becomes human-like, uncut and well-proportioned";
 	now str entry is 26;
@@ -116,7 +116,7 @@ When Play begins:
 	now libido entry is 80;          		  	[ Target libido the infection will rise towards. ]
 	now loot entry is "";           		    [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;      		    [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;            		 		[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;            		 		[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hulking[or]muscular[at random]";
 	now type entry is "human";
 	now magic entry is false;         		  [ Is this a magic creature? true/false (normally false) ]

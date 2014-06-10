@@ -15,7 +15,7 @@ Section 2 - The Pack
 Section 3 - Lady Surrounded by Butterflies
 
 Lady Surrounded by Butterflies is a situation.
-The sarea of Lady Surrounded by Butterflies is "Plains";
+The sarea of Lady Surrounded by Butterflies is "Plains".
 
 Instead of resolving a Lady Surrounded by Butterflies:
 	say "While making your way across the dry plains, you come across the mystical sight of a woman with long black hair being surrounded by butterflies. When her stray tresses begin to flutter through the air you lower your mouth in awe as you watch the woman stroke a tanned hand back behind her billowing hair. Then, before you can move some of the butterflies come over to playful dance alongside her hair. None of the insect-like creatures seem to be remotely interested in sexually trying to entice the woman into relieving herself from the black cowl she has wrapped around her figure. Instead the butterflies seem to be almost trying to make the woman smile as they circle around her, making her eyes track their movements as they move quickly back and forth before her face. This doesn't make the woman's lip rise from their downcast frowning, but her eyes do begin to twinkle slightly. The sight of several other butterflies coming over to aid their friends's efforts makes you feel something at peace on the inside as you continue to watch the other for several minutes before blinking as you notice the woman turning to start walking away. Thankfully though the woman and her butterfly entourage are moving opposite of where you are. Gulping and feeling like a voyeur you make your way about your business as swiftly as you can. The sight of the woman will stay with you a long while after though.";
@@ -28,7 +28,7 @@ Instead of resolving a Lady Surrounded by Butterflies:
 Section 4 - The Dorms Part One
 
 The Dorms Part One is a situation.
-The sarea of The Dorms Part One is "Campus";
+The sarea of The Dorms Part One is "Campus".
 
 Instead of resolving a The Dorms part one:
 	say "Going through the dormitory area of the college campus, you find yourself coming to a slow halt as you hear the rampant sounds of laughter coming from a slightly open doorway. Curious as to what the joke is you walk over to the slightly parted doorway and then push at the wood barrier carefully with your foot to get a better look inside. What you come to find is a small collective of half changed guys all piled around while playing video games together in front of a big screen TV. The dorm boys don't seem to be bothered by the fact that they are losing their humanity as the two collie boys nudging each another on the couch seem much more interested in whatever game their competing against. Back behind them two other students, a cougar and panther, respectfully, stand tall while pointing, jeering and laughing at their friend's antics. Seeing this you pull yourself away from your position by the door to walk away on down the hall. It feels good to know that some things will never change despite the epidemic going on.";
@@ -39,7 +39,7 @@ Instead of resolving a The Dorms part one:
 Section 5 - The Dorms Part Two
 
 The Dorms Part Two is a situation.
-The sarea of The Dorms Part Two is "Campus";
+The sarea of The Dorms Part Two is "Campus".
 
 Instead of resolving a The Dorms Part Two:
 	say "Moving throughout the dormitories, you stroll through the plush carpeted hallways until you hear the sounds of faint sobbing coming in through an open doorway making you stop in your tracks. Not really sure, but feeling as though you should go and have a look to see what the problem is you make your way over to the half open door and then stick your head inside of the room. What you see is a small puma girl being held in the arms of a larger Siberian tiger girl as the smaller feline cries and nuzzles her forming snout into her friend's shoulder. 'I-I can't go home like this, Carol!' The puma lifts her head to yowl up at the white tiger.";
@@ -53,7 +53,7 @@ Instead of resolving a The Dorms Part Two:
 Section 6 - The Dorms Part Three
 
 The Dorms Part Three is a situation.
-The sarea of The Dorms Part Three is "Campus";
+The sarea of The Dorms Part Three is "Campus".
 When play begins:
 	Add The Dorms Part Three to badspots of furry;
 	Add The Dorms Part Three to badspots of guy;
@@ -87,7 +87,7 @@ Instead of resolving a The Dorms Part Three:
 Section 6 - Training
 
 Training Room is a situation.
-The sarea of Training Room is "Campus";
+The sarea of Training Room is "Campus".
 When play begins:
 	Add Training Room to badspots of furry;
 	Add Training Room to badspots of guy
@@ -119,14 +119,14 @@ Instead of resolving a Training Room:
 			if libido of player > 100, now libido of player is 100; 
 			now Training Room is resolved;
 	otherwise:
-		say "Shaking your head you decide just to marvel at all the other sporty anthromorphs here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see everything here is as it should be, and will continue to be so with the wolverine guarding the place. So turning on your heel you tip your head to big male and then walk out without looking back.";
+		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see everything here is as it should be, and will continue to be so with the wolverine guarding the place. So turning on your heel you tip your head to big male and then walk out without looking back.";
 		Now Training Room is resolved;
 
 
 Section 7 - Janitor's Closet
 
 Janitor's Closet is a situation.
-The sarea of Janitor's Closet is "Campus";
+The sarea of Janitor's Closet is "Campus".
 When play begins:
 	Add Janitor's Closet to badspots of furry;
 	Add Janitor's Closet to badspots of guy
@@ -148,7 +148,7 @@ Instead of resolving a Janitor's Closet:
 Section 8 - Teachers Lounge
 
 Teachers Lounge is a situation.
-The sarea of Teachers Lounge is "Campus";
+The sarea of Teachers Lounge is "Campus".
 
 Instead of resolving a Teachers Lounge:
 	say "Hearing the voices of people talking, you find yourself heading turning to see a room marked Teacher's Lounge. Instantly your body freezes up as old memories of how you had been taught not to enter in a room marked with this title grab at your heart. However, being the older and much more mature person that you are you simply disregard these old feelings in favor of going into the room. Once you do however, you find several eyes immediately looking at you in confusion as the gathered group of staff turn to look at you. From what you can see most of the people here have already transformed into more animal-like figures though each and every one of them appear to be in complete control of themselves as no one is either naked or losing themselves into a rutting haze. You blink twice at seeing two giraffes are sitting on a large plush sofa off to the side while drinking something slightly steaming, probably coffee. When a large and bored looking skunk with a red stripe going down his tail grunts to get your attention you simply chuckle unsurely at the others and then nod to them before stepping back out of the room. Obviously the teachers were trying to get a small break in before having to go out to deal with their students. No sense in bothering them, right?";
@@ -159,7 +159,7 @@ Instead of resolving a Teachers Lounge:
 Section 9 - Roof Top
 
 Rooftop is a situation.
-The sarea of Rooftop is "Campus";
+The sarea of Rooftop is "Campus".
 
 Instead of resolving a Rooftop:
 	say "Trudging up several flights of stairs you find way up to the uppermost floor of the college's main building and then coming upon a metal door marked [']Roof[']. Smirking at the incredulity of someone needing to actually put a sign up on the only door at the top of the highest floor you throw open the barrier and then step outside. What you see when you head onto the roof make you freeze as you spy several students, some dressed in the college's standard issue uniforms, and some not, busying themselves with this or that or the other. From what you can see there are two gorillas are busily making out over by the left side of the roof's fence. One monkey guy is talking to a smiling and chuckling rat girl. A group of four of leather jacket clad wolves is busy playing cards over by the right side of the roof -- most of them are growling and baiting each other with snaps of their muzzles. And one lone female feline wearing a black miniskirt is smoking while looking up to the sky. From what you can see everyone is busy trying to either enjoy themselves or just trying to make the day pass by just a little quicker by ignoring the happenings around them. Deciding to do the same, since you are here and all, you unceremoniously walk over to an empty side of the roof and then grab the fence protecting you from stepping out over the edge of the building. Looking down at the world below you stare in awe at the large campus of the college as the wide open space stretching out for almost miles around you dominates your vision.";
@@ -189,14 +189,14 @@ to say special gift:
 Section 10 - Dog and Pony Show
 
 DogAndPony Show is a situation.
-The sarea of DogAndPony Show is "Campus";
+The sarea of DogAndPony Show is "Campus".
 When play begins:
 	Add DogAndPony Show to badspots of furry;
 	Add DogAndPony Show to badspots of guy;
 
 Instead of resolving a DogAndPony Show:
 	say "'I really wish the water would come on already!' A voice rumbles dangerously just as you pop your head into the laundry area nestled downstairs in the campus's main building basement. Having been wandering around all this time you had only come down here because you were wondering about the full extent of the campus and now it would see that your journey has led you to quite an interesting scene. Standing there in the middle of the large expanse of a room jam-packed washers and dryers is a naked shire horse leaning against up against the wall with his muscular arms crossed together over his impressive chest. Over on the left side of the stallion -- as you can tell the other is by the prodigious sheath and full testicles swaying between the horse's black legs -- is a smaller Doberman scowling at the now defunct washer machine. His clothes sit atop the unusable machine in a bright blue basket. 'Eric, there's nothing we can do about it right now.' The shire says before whinnying in mild vexation. 'Why don't you just go all natural like me and half the other students? It's not like it would be so wrong now with everyone being much more furry and whatnot.'";
-	say "The Doberman turns to regard the taller male and then shakes his head stubbornly. 'That might be good for you Carl, but the last thing I want is other's seeing how...meager...I am.' The Doberman blushed at this and the stallion couldn't help but laugh as he looked over the boxer short wearing canine. 'Eric, you're a dog, your junk is in your sheath nine times out of ten anyway, so not a lot of people are going to be able to see what you have down there. Not unless you excited by some hot eye candy, that is.' The last statement makes the Dobie duck his head and flick his ears somewhat in embarrassment. 'Hey, if you want I can make you feel better about this whole thing.' Carl says evenly as he walks over to stand behind the Eric. 'How so?' Before the Doberman could come to regret his words the big shire grabs the Doberman's clothesbasket, runs over to where the word TRASH is written onto the wall, opens the door to the garbage chute and then tosses the clothes inside. Once the dirty articles disappear down the void of the open doorway Carl kicks the garbage shoot close and then heads back over to the now stunned and sputtering Dobie. 'See, problem solved!'";
+	say "The Doberman turns to regard the taller male and then shakes his head stubbornly. 'That might be good for you Carl, but the last thing I want is other's seeing how...meager...I am.' The Doberman blushed at this and the stallion couldn't help but laugh as he looked over the boxer short wearing canine. 'Eric, you're a dog, your junk is in your sheath nine times out of ten anyway, so not a lot of people are going to be able to see what you have down there. Not unless you excited by some hot eye candy, that is.' The last statement makes the Dobie duck his head and flick his ears somewhat in embarrassment. 'Hey, if you want I can make you feel better about this whole thing.' Carl says evenly as he walks over to stand behind the Eric. 'How so?' Before the Doberman could come to regret his words the big shire grabs the Doberman's clothes basket, runs over to where the word TRASH is written onto the wall, opens the door to the garbage chute and then tosses the clothes inside. Once the dirty articles disappear down the void of the open doorway Carl kicks the garbage shoot close and then heads back over to the now stunned and sputtering Dobie. 'See, problem solved!'";
 	say "'Are you crazy! Those were some of my best clothes!' Eric shouts while growling at the bigger male. 'Well, you weren't going to wear them since they were dirty, right?' Carl winks and then whickers at his friend. 'Not the point! Now all I've got to wear is these boxers around the dorms and they can barely even... Carl why are you looking at me like that?' The Doberman took a few steps back from the shire as the bigger horse begins to advance on him. The slightly maniac look on the other's muzzle spoke volumes. 'Carl, don't you dare! Don't even think about it! Carl!! DON'T!!!' Before the Dobie can say anything else the stallion was diving for the other. Have a one-third ton sized horse flying towards him the Doberman stop dead in his tracks and this turns out to be exactly what the shire wants as he grapples the other to the floor, tears Eric's boxers shorts off of his black and brown hide and then proceeds to toss them casually over his shoulder. Now with the two of them naked the Doberman can only whimper and whine as Carl begins to touch and fondle him. 'See, my doggie's got a nice, thick bone ready to show the world' The shire speaks with both a tease and some adoration in his voice as he starts to pump Eric's sheath with one of his meaty hands. 'I so hate you right now.' The Dobie grunts and tries to snarl but his words were soon lost in a moan as he pumps his hips up and down into his [']boyfriend's['] hand. 'I know, but you'll be loving me in about the next ten seconds, so I really don't mind.' Carl snickers as he coaxes the fullness of his lover's cock out of the Dobie's sheath.";
 	say "Knowing where this was going you pull your head back from out of the doorway and then turn to leave about your way. An idle thought shoots through your mind over about what the Doberman meant when he called himself [']meager['] because from what you could see Eric was packing some serious heat in between his thighs. Maybe he's one of those insecure kinda guys, you think as you move along the downstairs area of the campus.";
 	increase score by 1;

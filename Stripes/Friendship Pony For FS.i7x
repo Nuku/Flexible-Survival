@@ -368,7 +368,7 @@ When Play begins:
 	now loot entry is "pony cider";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 22;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]smooth[or][if cocks of player > 0 and cunts of player is 0]stocky[otherwise]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -423,10 +423,10 @@ to say fptailchange:
 
 pfpclist is a list of numbers that varies.  pfpclist is usually { 1, 2, 3, 4, 5, 6, 7, 8 }.
 pfptype is a number that varies. pfptype is usually 1.
-pfpskin is a text that varies.  pfpskin is normally "baby blue";
-pfpcock is a text that varies.  pfpcock is normally "blue";
-pfphair is a text that varies.  pfphair is normally "turquoise";
-pfpbootymark is a text that varies.  pfpbootymark is normally "a jar of cum";
+pfpskin is a text that varies.  pfpskin is normally "baby blue".
+pfpcock is a text that varies.  pfpcock is normally "blue".
+pfphair is a text that varies.  pfphair is normally "turquoise".
+pfpbootymark is a text that varies.  pfpbootymark is normally "a jar of cum".
 
 to ponystatuscheck:
 	if player is not fponybodied and player is not fponyfaced:
@@ -654,7 +654,7 @@ to say drinkponycider:
 	increase libido of player by 5;
 	decrease thirst of player by 8;
 
-the scent of pony cider is "The cider smells strongly of apples and equines.";
+the scent of pony cider is "The cider smells strongly of apples and equines.".
 
 
 Section 6 - Definitions
@@ -699,7 +699,7 @@ when play ends:
 			say "     When the military comes to pick you up, a few of the tough soldiers can't help but chuckle and crack jokes between themselves at your strange, pony-like body[if player is fponyskinned].  Your booty mark of [pfpbootymark] is a particular source of amusement for them[end if].  You bear with it though, feeling friendly and good-natured about it, probably due to your imminent departure from the infected city.  It's a small price to pay for getting out of there safely even if not unchanged for your experience.";
 			say "     Your unusual form draws a different kind of attention from the military's scientists.  They are rather perplexed by some of your body's unusual abilities, such as how you can bend your limps like arms at some times but also use them to trot at others as well as your ability to manipulate objects despite having a flat, featureless hooves instead of hands at the end of your forelimbs[if pfptype is 4 and the player is fponyfaced].  You also start to get the hang of using your horn's magic during this time, but you take care not to show that off, lest you be subject to another battery of tests.  You instead save it for some discrete fun when you're alone and in need of a little telekinetic [']relief['][otherwise if pfptype is 3].  You also start to get the hang of using your tiny wings to fly.  You're not really sure how you're doing it, since they're clearly too small to support you, but as long as you don't think about it too hard, you manage to stay aloft[end if].  You get little in the way of answers to satisfy you, but you remain as pleasant as can be expected until some new surprise from the city distracts them and you're released.";
 			if pfptype is 4 and the player is fponyfaced:
-				say "     After your release, you put more work into perfecting your talent at using your horn to levitate and manipulate objects, eventually becoming quite talented at it.  As part of your practice, you try manipulating and carving clay, which you find an enjoyable passtime.  As your skill improves, so does your sculpted creations and they start to draw the attention of others.  While there's little demand for art in this new, chaotic world, you do well enough to make a living.  Sexual pieces and renditions of transformed models are certainly the most popular items, with the latter being particularly enjoyable for you as you do so enjoy making friends with your clients.  This keeps them coming back for more in more ways than one.";
+				say "     After your release, you put more work into perfecting your talent at using your horn to levitate and manipulate objects, eventually becoming quite talented at it.  As part of your practice, you try manipulating and carving clay, which you find an enjoyable pastime.  As your skill improves, so does your sculpted creations and they start to draw the attention of others.  While there's little demand for art in this new, chaotic world, you do well enough to make a living.  Sexual pieces and renditions of transformed models are certainly the most popular items, with the latter being particularly enjoyable for you as you do so enjoy making friends with your clients.  This keeps them coming back for more in more ways than one.";
 			otherwise if pfptype is 3:
 				say "     After your release, you put more work into perfecting your flying skills.  At first, you have a few close calls where you think about what you're doing too hard or remember that it's physically impossible and almost crash.  With this in mind, you mainly stick low to the ground over fields until you eventually are able to retain a proper mindset to sustain flight.";
 				say "     It is during one of your test flights to higher altitudes that you discover your flight comes with another unusual ability.  You'd decided to fly through a cloud but were surprised to find that it seemed poofy and fluffy in your presence.  Despite being only airborne water vapour, it can be even walked on.  With a little practice you learn how to push the clouds around, kick them to stimulate precipitation or to even prompt a lightning strike from a storm cloud.  As word starts to get around about your ability, you're hired by Zephyr to keep the skies around their helipad clear whenever they need it.  And working with the pilots, you make plenty of friends, many of whom are happy to get extra-friendly with their personal weatherman.";

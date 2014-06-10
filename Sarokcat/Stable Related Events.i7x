@@ -6,7 +6,7 @@ Stable Related Events by Sarokcat begins here.
 Section 1 - Kitchenkegger
 
 Kitchenkegger is a situation.
-The sarea of Kitchenkegger is "Stable";
+The sarea of Kitchenkegger is "Stable".
 when play begins:
 	add Kitchenkegger to badspots of guy;
 	add Kitchenkegger to badspots of furry;
@@ -27,7 +27,7 @@ Instead of Resolving a Kitchenkegger:
 Section 2 - Tack room
 
 Tack room is a situation.
-The sarea of Tack room is "Stable";
+The sarea of Tack room is "Stable".
 
 Instead of Resolving a Tack room:
 	say "Wandering through the narrow halls of the Stables, you come across a rather strangely marked room, labeled [']Tack room[']. Curiosity getting the better of you, you try the door and find it unlocked, a peek inside shows you a rather large room filled with all sorts of saddles and leather instruments lining the walls. The strong scent of well oiled and well used leather fills your nose as you wander carefully into the room, your eyes drawn to the many different types of harnesses and straps hung up carefully along the walls. As you continue to look around you find yourself noticing that more and more of these pieces of equipment are equally sized for usage on more than just horses, and you find yourself growing worried as you wander through the large array of bridles and blinders, as you find quite a few gags, whips, and breaking harnesses as well, and the mingled smell of equine sex underlying the scent of leather.";
@@ -48,10 +48,10 @@ Instead of Resolving a Tack room:
 Section 3 - Onyxroom
 
 Onyxroom is a situation.
-The sarea of Onyxroom is "Stable";
+The sarea of Onyxroom is "Stable".
 
 Instead of Resolving a Onyxroom:
-	say "Exploring deeper into the maze of halls and rooms of the converted hotel, you find yourself in another hallway much like the others. Checking to make sure you are alone you venture down the hallway noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the room's occupant. Halfway down the hall you see a name plate that reads [']Onyx[']. Taking a deep breath you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls along side reigns and bits, A large, old-fashioned horse collar hangs on another wall. On a stand sits an english saddle. Exploring further you find the closet is filled with fetish clothes and other outfits the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room you don't know if you should feel sorry for [if xp of Onyx > 0]the young man you met in the holding pens[otherwise]its eventual occupant[end if] or a little bit envious.";
+	say "Exploring deeper into the maze of halls and rooms of the converted hotel,ï¿½you find yourself in another hallway much like the others. Checking to make sure you are alone you venture down the hallway noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the room's occupant. Halfway down the hall you see a name plate that reads [']Onyx[']. Taking a deep breath you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls along side reigns and bits, A large, old-fashioned horse collar hangs on another wall. On a stand sits an english saddle. Exploring further you find the closet is filled with fetish clothes and other outfits the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room you don't know if you should feel sorry for [if xp of Onyx > 0]the young man you met in the holding pens[otherwise]its eventual occupant[end if] or a little bit envious.";
 	increase score by 1;
 	Now Onyxroom is resolved;
 
@@ -59,7 +59,7 @@ Instead of Resolving a Onyxroom:
 Section 4 - Unlucky elevator
 
 Unlucky elevator is a situation.
-The sarea of Unlucky elevator is "Stable";
+The sarea of Unlucky elevator is "Stable".
 
 Instead of Resolving a Unlucky elevator:
 	say "Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don[']t actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside you see that it seems to be a rather normal old style elevator, without much of use to be found in it, however you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
@@ -70,7 +70,7 @@ Instead of Resolving a Unlucky elevator:
 Section 5 - Lupine visit
 
 Lupine visit is a situation.
-The sarea of Lupine visit is "Stable";
+The sarea of Lupine visit is "Stable".
 
 Instead of Resolving a Lupine visit:
 	say "Traveling around the large building, you come across a pair of large horsemen escorting what appears to be a rather well-dressed wolfman carrying a briefcase through the halls. Quickly ducking into a dark corner, you hide as they pass by, the unusual sight of the horsemen escort, as well as the fact that the odd wolfman actually was bothering to wear clothes, makes you wonder just what was going on there. Shrugging, you chalk it up as just another strange happening in the city as you continue on your way with a bit more caution, just in case any more of those horsemen are nearby.";
@@ -81,7 +81,7 @@ Instead of Resolving a Lupine visit:
 Section 6 - Soldierstabling
 
 Soldierstabling is a situation.
-The sarea of Soldierstabling is "Stable";
+The sarea of Soldierstabling is "Stable".
 Soldierhorsetf is a number that varies.
 when play begins:
 	add Soldierstabling to badspots of girl;
@@ -121,7 +121,7 @@ Instead of Resolving a Soldierstabling:
 Section 7 - Satisfied customer
 
 Satisfied customer is a situation.
-The sarea of Satisfied customer is "Stable";
+The sarea of Satisfied customer is "Stable".
 when play begins:
 	add Satisfied customer to badspots of furry;
 
@@ -135,10 +135,10 @@ Section 8 - Hyenahorsemeet
 
 Hyenahorsemeet is a situation.
 hyenastabledeal is a number that varies.
-The sarea of Hyenahorsemeet is "Stable";
+The sarea of Hyenahorsemeet is "Stable".
 
 Instead of Resolving a Hyenahorsemeet:
-	say "As you wander down the halls of the hotel aimlessly, you hear a rather harsh burst of laughter in the distance, the unusual sound seeming rather out of place in the horses hotel. Deciding this bears further investigation, you carefully proceed in the direction you heard the sound coming from, coming at last to a small conference room which appears to be occupied. Peeking inside, you see a rather surreal sight, as you find several of those hyenas who are everywhere out on the streets, sitting down and talking rather animatedly with a couple of horsemen that appear to be rather more intelligent than the rest, while a rather large bull like man wearing a suit top, and with polished horns, leans back and listens with unconcealed amusement. You are too far away to catch more than a few snippets of their strange conversation, though the words, 'Territory,' 'Agreements', and 'Recruitment.' Seem to come up often enough for you to pick them up from even this far away. Realizing that several of the hyena gang members are meeting with the horses, [if hyg < 3]you find yourself shuddering as you realize all the ways this could be dangerous, especially given what appears to be the topic of the conversation.  Feeling very disturbed,[otherwise if matriarchowned is 1]you take note of the members in the room and how they are performing for you.  You are a little displeased that they would enter such important negotiations without informing their matriarch, but if they are successful, all will be forgiven.  Deciding not to upset the talks with your sudden arrival,[otherwise if matriarchdefeated is 2]you find yourself shuddering when you realize that several gang bitches like yourself could be given over to the Stables as part of the deal.  While part of you resists being separated from the pack, another part of you wants to give in and be used by the strong horses.  Not wanting to be seen and have the decision taken away from you,[otherwise]you are torn between your loyalties to the hyenas, a bond that urges obedience, and the thought of how dangerous such a pact of cooperation could be.  Unable to reconcile your conflicted loyalties,[end if] you carefully slip away from the door and back out into the hotel proper, before anyone can notice you there listening.";
+	say "As you wander down the halls of the hotel aimlessly, you hear a rather harsh burst of laughter in the distance, the unusual sound seeming rather out of place in the horses hotel. Deciding this bears further investigation, you carefully proceed in the direction you heard the sound coming from, coming at last to a small conference room which appears to be occupied. Peeking inside, you see a rather surreal sight, as you find several of those hyenas who are everywhere out on the streets, sitting down and talking rather animatedly with a couple of horsemen that appear to be rather more intelligent than the rest, while a rather large bull like man wearing a suit top, and with polished horns, leans back and listens with unconcealed amusement. You are too far away to catch more than a few snippets of their strange conversation, though the words, 'Territory,' 'Agreements', and 'Recruitment.' Seem to come up often enough for you to pick them up from even this far away. Realizing that several of the hyena gang members are meeting with the horses, you [if hyg < 3]find yourself shuddering as you realize all the ways this could be dangerous, especially given what appears to be the topic of the conversation.  Feeling very disturbed[otherwise if matriarchowned is 1]take note of the members in the room and how they are performing for you.  You are a little displeased that they would enter such important negotiations without informing their matriarch, but if they are successful, all will be forgiven.  Deciding not to upset the talks with your sudden arrival[otherwise if matriarchdefeated is 2]find yourself shuddering when you realize that several gang bitches like yourself could be given over to the Stables as part of the deal.  While part of you resists being separated from the pack, another part of you wants to give in and be used by the strong horses.  Not wanting to be seen and have the decision taken away from you[otherwise]are torn between your loyalties to the hyenas, a bond that urges obedience, and the thought of how dangerous such a pact of cooperation could be.  Unable to reconcile your conflicted loyalties[end if], you carefully slip away from the door and back out into the hotel proper, before anyone can notice you there listening.";
 	now hyenastabledeal is 1;
 	enable the Stables;
 	increase score by 1;
@@ -148,7 +148,7 @@ Instead of Resolving a Hyenahorsemeet:
 Section 9 - Waitingcustomer
 
 Waitingcustomer is a situation.
-The sarea of Waitingcustomer is "Stable";
+The sarea of Waitingcustomer is "Stable".
 
 Instead of Resolving a Waitingcustomer:
 	say "Heading through the mostly empty halls of the sex hotel, you find yourself coming across what appears to be a rather strange looking waiting room, with images of all kinds of sexy horses plastering the walls of the dimly lit room, and a number of benches and other areas set up to provide seating for those who aren[']t fully human anymore. As you look around, you shudder as you hear a noise from behind you, and realize that there was already a creature in here waiting their turn to have some fun, and as it draws closer you are pretty sure that it has decided that now that you are here it doesn[']t have to wait any longer. Cautiously you brace yourself as you turn around to face this new opponent.";
@@ -168,7 +168,7 @@ Instead of Resolving a Waitingcustomer:
 Section 10 - Videoshow
 
 Videoshow is a situation.
-The sarea of Videoshow is "Stable";
+The sarea of Videoshow is "Stable".
 
 Instead of Resolving a Videoshow:
 	say "Wandering around in the area near the entryway, you find yourself peeking through several doors marked 'Employees only', and eventually come across a strange room set up like a small theatre. Interestingly enough, you see that someone has managed to hook the room up to some source of power, and the projector seems ready and able to work at any time. A glance at the label on the film shows that it is labeled as 'Basic Training' which makes you rather curious about the contents.  Do you play the video?";
@@ -185,7 +185,7 @@ Instead of Resolving a Videoshow:
 Section 11 - Horsegarden
 
 Horsegarden is a situation.
-The sarea of Horsegarden is "Stable";
+The sarea of Horsegarden is "Stable".
 
 Instead of Resolving a Horsegarden:
 	say "Poking around on the ground floor of the hotel, you find a path leading out to a rather large enclosed inner garden, with a number of small tasty looking plants carefully maintained in neat little rows, and a small scenic looking pond positioned in the center of the picturesque grassy garden. You are about to wander out into the rather pleasant looking garden, when you note a small group of horses wandering over to the pond for a drink. You watch the horses carefully for a minute, the rather large beasts appearing to be almost completely normal animals, and you are about to relax when you catch the eye of one of the beasts and see a gleam of intelligence spark in those equine eyes. The horse gives a soft whicker, and soon the whole small herd are watching you with what you can only assume is anticipation as you stand there in the doorway. Looking at the obviously lusty beasts as they slowly start to make their way towards you, you find yourself thinking they are trying almost a little too hard to appear friendly and helpful as they approach. Realizing that several of the stallions are already obviously excited, you step back carefully and reach for the door, only to realize that one of the beasts was slowly creeping up along the wall while the others drew your attention, and is almost upon you. The horse leaps forward to try to snag you with his teeth, but you were far enough back to easily evade the beast, and you slam the door leading out to the garden in his face before quickly hurrying off. As you make your way back towards the entryway, you resolve to avoid the gardens in this place in the future, regardless of how tempting they may seem.";
@@ -196,7 +196,7 @@ Instead of Resolving a Horsegarden:
 Section 12 - Transformationledger
 
 Transformationledger is a situation.
-The sarea of Transformationledger is "Stable";
+The sarea of Transformationledger is "Stable".
 
 Instead of Resolving a Transformationledger:
 	say "While looking through the Stables['] halls, you find yourself at a room with a large desk and a large leather bound book sitting open atop it. Out of curiosity, you move into the room and start to thumb through the pages of the strange book, only to discover it's a record of the once human names and their new whorse names of many of the Stables['] occupants, along with the transformations of the whorses working there. The descriptions that stand out are the ones that seem to be special orders, like the horse hyena hybrid slut ordered by the hyena gang or the hawk horse hybrid. Shuddering at some of the descriptions and finding yourself aroused at others you flip to the last page before putting the book away and find your name listed in the last entry and next to it is the name Obsidian. Following that, you see the words new fetishes followed by leather, rubber, bondage... and an invoice that describes an outfit being made for you. With shaking hands you put the book down feeling slightly less human.";

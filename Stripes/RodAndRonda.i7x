@@ -16,7 +16,7 @@ to say roddesc:
 	otherwise:
 		say "     Rod has become a sexy slut rat.  She has curvy hips, a tight waist and large bosom.  She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch.  She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her.  She has black fur and a long, naked rat tail.  She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
 
-the scent of Rod is "[if hp of Ronda is not 100]Rod smells of rats and his mall home.[otherwise]Rod smells of slutty rats and sex.  Lots of sex.[end if]";
+the scent of Rod is "[if hp of Ronda is not 100]Rod smells of rats and his mall home.[otherwise]Rod smells of slutty rats and sex.  Lots of sex.[end if]".
 
 instead of conversing Rod Mallrat:
 	if tmapfound is 1:		[***needs Slut Rat version?]
@@ -107,7 +107,7 @@ to say sexwithRod:
 Section 2 - Ronda
 
 Ronda Mallrat is a person. "[if hp of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[otherwise if hp of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random].[otherwise if hp of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random].[end if]".
-The description of Ronda Mallrat is "[rondadesc]";
+The description of Ronda Mallrat is "[rondadesc]".
 The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
@@ -237,7 +237,7 @@ Chapter 2 - The Art Collector Event
 
 Art Collector is a situation.  The level of Art Collector is 9.
 Art Collector is resolved.
-The sarea of Art Collector is "High";
+The sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
 artattempt is a number that varies.

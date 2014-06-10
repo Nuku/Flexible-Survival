@@ -268,7 +268,7 @@ Or store it in an indexed text variable to do something with it later on:
 
 The situation where this might typically be useful is in executing a command as an implicit action. This is explained further in the example.
 
-The test "if text capturing is active" can be used to determing whether or text capturing is currently in progress. The phrases "start capturing text" and "stop capturing text" effectively make this check in any case, so that issuing "start capturing text" when text capturing is already active does nothing, as does "stop capturing text" when text capturing is not active.
+The test "if text capturing is active" can be used to determining whether or text capturing is currently in progress. The phrases "start capturing text" and "stop capturing text" effectively make this check in any case, so that issuing "start capturing text" when text capturing is already active does nothing, as does "stop capturing text" when text capturing is not active.
 
 LIMITATIONS
 

@@ -15,7 +15,7 @@ Instead of resolving a Guard Gryphon:
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center.  Shi is watching the sky from a rooftop, as if watching for others of hir kind in the air.";
 	challenge "Hermaphrodite Gryphon";
 	if lost is not 1:
-		say "     Curious about hir odd behaviour, you question the gryphoness about it.  At first, shi is tight-beaked about it, but when you quite literally grab hir by the balls, shi starts to talk.  The defeated gryphon tells shi's watching for new gryphons who've strayed away from the others in the city.  Shi's on duty to point them towards the location of a great staircase, ancient and powerful.  Shi says it leads to some thing or some place called Qytat a'th Lundrues.  Intrigued, you force hir to divulge that this ghostly staircase moves from time to time, but which comes to rest at the same spots.  Shi starts to describes two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city.  Before you can gain more specific information on all this, shi takes advantage of your interest by hir tale to pull free of you.  The gryphon scrambles to the edge of the building and leaps off, taking flight to escape you and leaving hir standard behind.  You watch hir leave, wondering if there is any truth to hir tale or if it is just madness from the infection.";
+		say "     Curious about hir odd behaviour, you question the gryphoness about it.  At first, shi is tight-beaked about it, but when you quite literally grab hir by the balls, shi starts to talk.  The defeated gryphon tells shi's watching for new gryphons who've strayed away from the others in the city.  Shi's on duty to point them towards the location of a great staircase, ancient and powerful.  Shi says it leads to some thing or some place called Qytat a'th Lundrues.  Intrigued, you force hir to divulge that this ghostly staircase moves from time to time, but which comes to rest at the same spots.  Shi starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city.  Before you can gain more specific information on all this, shi takes advantage of your interest in hir tale to pull free of you.  The gryphon scrambles to the edge of the building and leaps off, taking flight to escape you and leaving hir standard behind.  You watch hir leave, wondering if there is any truth to hir tale or if it is just madness from the infection.";
 		now findablestairs is 1;
 		change the up exit of Red Apartment to Staircase Entry;		[This opens then closes the entries...]
 		change the up exit of Green Apartment to Staircase Entry;		[...allowing them all to be listed... ]
@@ -60,16 +60,16 @@ to say brightflight:
 	otherwise:
 		say "There is nothing else interesting about it at the moment.";
 
-the scent of Red Apartment is "The area is smells faintly of those herm gryphons.";
+the scent of Red Apartment is "The area is smells faintly of those herm gryphons.".
 	
-the scent of Green Apartment is "The area is smells faintly of those herm gryphons.";
+the scent of Green Apartment is "The area is smells faintly of those herm gryphons.".
 	
-the scent of Bright Alley is "The area is smells faintly of those herm gryphons.";
+the scent of Bright Alley is "The area is smells faintly of those herm gryphons.".
 	
 
 Section 3 - The Moving Entrance
 
-staircaselocation is a number that varies.  staircaselocation is usually 0;
+staircaselocation is a number that varies.  staircaselocation is usually 0.
 shadowy is a number that varies.
 
 an everyturn rule:
@@ -117,16 +117,16 @@ Section 4 - Qytat a'th Lundrues - The City of the Flying
 
 Staircase Entry is a room. "     Now that you stand upon the staircase, you can see it much more clearly and it becomes solid to your eyes.  The staircase stands before you, the legendary path to Qytat a'th Lundrues, the city of the flying.  It is a blue silver of some higher element, and the stairs are floating, sliding a little with the slight breeze, but maintaining their orderly position. The stairs glow, and the warmth radiating from them makes you comforted and happy.  You can feel a faint, unseen wall around them which grows a translucent blue as the steps spiral up into the sky.  You have a feeling that this strange material is completely invisible from the outside.".
 
-Stairs is a room. "     The glowing steps extend above and behind you, spiralling upwards.  The faint blue material forming the concealing walls provides something to rest your hand against as you traverse the long staircase to the heavens.  Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.".
+Stairs is a room. "     The glowing steps extend above and behind you, spiraling upwards.  The faint blue material forming the concealing walls provides something to rest your hand against as you traverse the long staircase to the heavens.  Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.".
 
 Up from Staircase Entry is Stairs.
 
 City Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and there is nobody here that you can see.".
 
-the scent of Staircase Entry is "There is a strange, otherworldly scent here.";
-the scent of Stairs is "There is a strange, otherworldly scent here.";
-the scent of City Plaza is "This area is strong with the scent of those herm gryphons.  It seems you have indeed found their home.";
-the scent of Spiral Pattern is "There is a strange, otherworldly scent here.";
+the scent of Staircase Entry is "There is a strange, otherworldly scent here.".
+the scent of Stairs is "There is a strange, otherworldly scent here.".
+the scent of City Plaza is "This area is strong with the scent of those herm gryphons.  It seems you have indeed found their home.".
+the scent of Spiral Pattern is "There is a strange, otherworldly scent here.".
 
 
 Up from Stairs is City Plaza.

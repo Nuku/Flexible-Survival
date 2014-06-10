@@ -7,7 +7,7 @@ Version 2 of Dry Plains Events by Stripes begins here.
 Section 1- Creeping Grass
 
 Creeping Grass is a situation.
-The sarea of Creeping Grass is "Plains";
+The sarea of Creeping Grass is "Plains".
 
 Instead of resolving a Creeping Grass:
 	say "     As you check out a few fallen buildings, you notice that the rubble pile has already been partially covered by the dry grasses of the plains.  Somehow, despite their recent collapse, the plains are already starting to cover and reclaim them.  Checking more closely and prodding it with a stick, you can see that the grass roots, instead of burrowing into the soil, have climbed up the fallen beams and boards, spreading to grow fresh grass overtop of them.  Putting some weight on the covered spot, it breaks and crumbles easily, showing that the grasses are breaking down and destroying the ruins they cover.";
@@ -18,7 +18,7 @@ Instead of resolving a Creeping Grass:
 Section 2- Ranch House
 
 Ranch House is a situation.
-The sarea of Ranch House is "Plains";
+The sarea of Ranch House is "Plains".
 
 Instead of resolving a Ranch House:
 	say "     You come the ruins of what was probably a ranch house.  You search through the broken home, but find nothing of use or value.  Looking around, you see that some of the fence still stands and notice a second fallen structure.  Going over, you can quickly tell that this was once a small stable from the smell of horses hanging over it.  You take care where you step, avoiding the dark messes as well as the white ones from equine cum.  Hoofprints in the dirt around the stable head off into the plains where the transformed horses probably live now in some altered form.";
@@ -29,7 +29,7 @@ Instead of resolving a Ranch House:
 Section 3- Soaring Eagle
 
 Soaring Eagle is a situation.
-The sarea of Soaring Eagle is "Plains";
+The sarea of Soaring Eagle is "Plains".
 
 Instead of resolving a Soaring Eagle:
 	say "     Taking a short break under one of the rare trees on the plains, you spot a shadow drift across the ground.  Looking up, you spot an eagle high up in the sky.  As you watch it, you notice that it is not a normal eagle, but some kind of eagle man.  Deciding to take no risks, you wait in the shadow of the tree until he passes from sight.";
@@ -40,7 +40,7 @@ Instead of resolving a Soaring Eagle:
 Section 4- Partial Ruin
 
 Partial Ruin is a situation.  The level of Partial Ruin is 5.
-The sarea of Partial Ruin is "Plains";
+The sarea of Partial Ruin is "Plains".
 when play begins:
 	add Partial Ruin to badspots of hermaphrodite;
 	add Partial Ruin to badspots of furry;
@@ -70,7 +70,7 @@ Instead of resolving a Partial Ruin:
 Section 5- Hardware Store
 
 Hardware Store is a situation.
-The sarea of Hardware Store is "Plains";
+The sarea of Hardware Store is "Plains".
 
 Instead of resolving a Hardware Store:
 	say "     Coming across the remains of a hardware store, you are very hopeful to find something of use in it.  The rubble is difficult to move and the task quickly becomes both tiring and frustrating.  More and more as you work, you come to believe this place was picked completely clean before it collapsed.  While some parts are too buried to reach and check, those you can find yield nothing of value at all.  After a long and fruitless search, you grab the pack of nails you found and bash them into a board using a rock.  You wrap some fabric tape around the base to give you a better grip and end up with a crude spiked club.";
@@ -86,13 +86,13 @@ name	desc	weight	object
 
 spiked club is an armament. It is part of the player. It has a weapon "[one of]your spiked club[or]your pointed club[or]your improvised weapon[or]your large club[or]your spiked club with a heavy thump[or]your nail board[or]your spiked club, driving one of the nails into them[at random]". The weapon damage of spiked club is 6. The weapon type of spiked club is "Melee". It is not temporary. the objsize of spiked club is 4. the hitbonus of spiked club is -1.
 
-the scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.";
+the scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.".
 
 
 Section 6- Hunting Party
 
 Hunting Party is a situation.  The level of Hunting Party is 9.
-The sarea of Hunting Party is "Plains";
+The sarea of Hunting Party is "Plains".
 horsefight is a number that varies.
 when play begins:
 	add Hunting Party to badspots of guy;
@@ -120,7 +120,7 @@ Instead of resolving a Hunting Party:
 Section 7- Pit Trap
 
 Pit Trap is a situation.  The level of Pit Trap is 5.
-The sarea of Pit Trap is "Plains";
+The sarea of Pit Trap is "Plains".
 when play begins:
 	add Pit Trap to badspots of hermaphrodite;
 	add Pit Trap to badspots of furry;
@@ -197,7 +197,7 @@ to say prairiedogsex:
 Section 8 - Watering Hole
 
 Watering Hole is a situation.  The level of Watering Hole is 8.
-The sarea of Watering Hole is "Plains";
+The sarea of Watering Hole is "Plains".
 when play begins:
 	add Watering Hole to badspots of guy;
 	add Watering Hole to badspots of furry;
@@ -280,7 +280,7 @@ to say eaglefulltf:
 Section 9 - Treasure Hunters
 
 Treasure Hunters is a situation.
-The sarea of Treasure Hunters is "Plains";
+The sarea of Treasure Hunters is "Plains".
 when play begins:
 	add Treasure Hunters to badspots of hermaphrodite;
 	add Treasure Hunters to badspots of furry;

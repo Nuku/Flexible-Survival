@@ -24,7 +24,7 @@ to say equinoidcampinvite:
 Section 2 - Equinoid Camp
 
 Equinoid Camp is a room. It is fasttravel. It is private.
-The description of Equinoid Camp is "[equicampdesc]";
+The description of Equinoid Camp is "[equicampdesc]".
 
 the scent of Equinoid Camp is "The equinoid came smells strongly of the horse people living there.".
 
@@ -57,11 +57,11 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			if cocks of player > 0:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you.  The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs.  As she strokes your cock to erection, several more equinoids enter, strong warriors these.  They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
 				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure.  She's straddled your hips facing you and begins riding your [cock of player] cock while running her hands over your chest.  As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight.  You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
-				say "     Bathed, annointed and having consumated with the equinoids, you rise from the musky waters as one of them.  You feel much closer to this strong people.  Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature.  While a few of them move away, many great you as one of them now that you've been properly welcomed into the herd.";
+				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them.  You feel much closer to this strong people.  Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature.  While a few of them move away, many great you as one of them now that you've been properly welcomed into the herd.";
 			otherwise:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you.  The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs.  As she fingers your pussy, you can see her equine cock at the ready.  At this time, several more equinoids enter, strong warriors these.  They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure.  Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest.  As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight as your lover pumps her hot seed into you.  You can feel the equinoid seed soaking into you even as you're being bred by the lovely one you're riding.[impregchance]";
-				say "     Bathed, annointed and having consumated with the equinoids, you rise from the musky waters as one of them.  You feel much closer to this strong people.  Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature.  While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
+				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them.  You feel much closer to this strong people.  Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature.  While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			decrease humanity of player by 20;
 			now tailname of player is "black equinoid";
 			now facename of player is "black equinoid";
@@ -79,7 +79,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			if humanity of player < 10:
 				say "     Overwhelmed by your transition, thoughts of your old life fade away.  You choose to accept living in the peaceful village with the equinoids.  In time, the you and the others seem to forget that you were ever unwelcome and you live a simple life with the strong and beautiful equinoids.";
 				now equinoidstatus is 11;
-				end the game saying "You join the equinoid herd as another of their people.";
+				end the story saying "You join the equinoid herd as another of their people.";
 				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
@@ -112,14 +112,14 @@ to say equicampdesc:
 
 Section 2 - Equinoid Warrior Pet
 
-equinoid warrior is a pet.  equinoid warrior is a part of the player;
+equinoid warrior is a pet.  equinoid warrior is a part of the player.
 The description of equinoid warrior is "[lilianadesc]".
-The weapon damage of equinoid warrior is 7;
-The level of equinoid warrior is 3;
-The Dexterity of equinoid warrior is 12;
-The summondesc of equinoid warrior is "Liliana strides up to your side with a determined look on her equine face.";
-The assault of equinoid warrior is "[lilianaattack]";
-the fuckscene of equinoid warrior is "[sexwithliliana]";
+The weapon damage of equinoid warrior is 7.
+The level of equinoid warrior is 3.
+The Dexterity of equinoid warrior is 12.
+The summondesc of equinoid warrior is "Liliana strides up to your side with a determined look on her equine face.".
+The assault of equinoid warrior is "[lilianaattack]".
+the fuckscene of equinoid warrior is "[sexwithliliana]".
 
 understand "Liliana" as equinoid warrior.
 
@@ -129,7 +129,7 @@ to say lilianaattack:
 to say lilianadesc:
 	say "     This black equinoid may look a little younger than the others, but she's as much a warrior as the rest of her tribe.  Liliana has a tall, imposing figure with strong muscles and a glossy coat of black hair.  She has bright, hazel eyes and a pretty smile with white, flat teeth.  She's dressed in a simple robe that only covers but does not truly hide the shape of her muscled bosom or equine cock.";
 
-the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.";
+the scent of the equinoid warrior is "Liliana smells of the equinoids, reminding you of the herd.".
 
 to say sexwithliliana:
 	if lastfuck of equinoid warrior - turns < 4:

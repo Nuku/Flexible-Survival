@@ -6,7 +6,7 @@ Version 2 of Vanessa by Stripes begins here.
 Section 0 - Event
 
 Paratrooper is a situation.  Paratrooper is resolved.		[unlocked after 3rd stage of 'Military presence']
-The sarea of Paratrooper is "Plains";
+The sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to badspots of girl;
 
@@ -56,10 +56,10 @@ Instead of resolving a Paratrooper:
 Section 1 - Vanessa the Centaur
 
 Vanessa is a woman.
-The description of Vanessa is "[vanessadesc]";
+The description of Vanessa is "[vanessadesc]".
 The conversation of Vanessa is { "Neigh!" }.
 
-the scent of the Vanessa is "Vanessa smells softly of horses[if hp of Vanessa > 3] and arousal[end if].";
+the scent of the Vanessa is "Vanessa smells softly of horses[if hp of Vanessa > 3] and arousal[end if].".
 
 to say vanessadesc:
 	if hp of Vanessa is 1 or hp of Vanessa is 2:
@@ -133,7 +133,7 @@ to say vanessa_meredith_msg:
 	otherwise if hp of Meredith is 11:
 		say "     [one of]'My sweet Mare tells me she's ready to get pregnant[if cocks of player > 0].  I hope you'll be able to help her with that soon.[otherwise].  If you had a cock, I know you'd be the one she'd want to do it[end if],' she says with a smile.[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, it's great she's able to continue her research thanks to your help.  Not that I can understand most of what she's saying when she talks about her results, but with her ready to be knocked up, it'll sure be interesting to see.'[or]'I know Meredith getting infected was an accident, but we're both really happy with how things have turned out.  She's my cute Mare now and loving it.  And she should start having even more fun now that we've made sure she's ready to be bred like the horny mare she is.'[or]'Meredith's even more adorable now that she's my pretty Mare.'[or][if coleen is bunkered and ( coleenslut > 0 or coleenalpha > 0 or coleencollared > 0 )]Vanessa and Meredith are kneeling down on a blanket side by side with Coleen behind them.  The transformed soldiers are snuggled up quite intimately with the smaller centaur.  Vanessa has her arms around Mare, lightly nibbling at her neck while playing with her breasts.  Coleen meanwhile is lapping away at Mare's juicy cunt while she moans and nickers in pleasure, loving the attention from her protectors.[otherwise]Vanessa and Meredith are kneeling down on a blanket side by side.  The transformed soldier is cuddling the smaller centaur in her arms, lightly nibbling at her neck while playing with her breasts.  Mare moans softly at this, loving the attention from her larger protector.[end if][cycling]";
 	otherwise if hp of Meredith is 12:
-		say "     [one of]'My sweet Mare[if xp of Meredith is 0] tells me she's ready to get pregnant again[otherwise][']s pregnancy is just starting to show[otherwise] looks so lovely as a pregnant mare[end if],' she says with a smile.[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, it's great she's able to continue her research thanks to your help.  Not that I can understand most of what she's saying when she talks about her results, but they're certainly getting more interesting to watch.'[or]'I know Meredith getting infected was an accident, but we're both really happy with how things have turned out.  She's my cute Mare now and loving it.  And she should start having even more fun now that she's getting bred like the horny mare she is.'[or]'Meredith's even more adorable now that she's my pretty Mare.'[or][vanessa_meredith_pregmsg][in random order]";
+		say "     [one of]'My sweet Mare[if xp of Meredith is 0] tells me she's ready to get pregnant again[otherwise if xp of meredith is 1][']s pregnancy is just starting to show[otherwise] looks so lovely as a pregnant mare[end if],' she says with a smile.[or]'I'm glad we were able to get Meredith safely back here.  While I can't fulfill my orders to escort her around the city, it's great she's able to continue her research thanks to your help.  Not that I can understand most of what she's saying when she talks about her results, but they're certainly getting more interesting to watch.'[or]'I know Meredith getting infected was an accident, but we're both really happy with how things have turned out.  She's my cute Mare now and loving it.  And she should start having even more fun now that she's getting bred like the horny mare she is.'[or]'Meredith's even more adorable now that she's my pretty Mare.'[or][vanessa_meredith_pregmsg][in random order]";
 	otherwise if hp of meredith is 100:
 		say "ERROR-Vanessa-100M: You should not be able to discuss her with me.";
 		remove Meredith from play;

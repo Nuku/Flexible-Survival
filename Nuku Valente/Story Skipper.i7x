@@ -24,19 +24,19 @@ To savetrix:
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
+The scent of trixie is "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
-The description of trixie is "[trixiedesc]";
+The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let's skip to the good stuff!'.";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'  Hmmm.";
 	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word.   Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.'  That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word.... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word.  To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word.... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 [
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
 ]
 
 To say magic word:
@@ -1954,7 +1954,7 @@ To reciting2:
 
 
 savetrix2 is an action applying to nothing.
-understand "load game" as savetrix2;	
+understand "load game" as savetrix2.	
 
 Check savetrix2:
 	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
@@ -1993,7 +1993,7 @@ Carry out savetrix2:
 
 [
 testsven is an action applying to nothing.
-understand "tsven" as testsven;	
+understand "tsven" as testsven;.
 carry out testsven:
 	now hp of Sven is 4;
 	move Sven to Bunker;
@@ -2013,6 +2013,7 @@ Carry out reciting:
 [	say "Current restoration string: [X][line break]";  ]
 	let lev be the level of the player;
 	let upit be 0;
+	let zeta be 0;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
@@ -2025,10 +2026,13 @@ Carry out reciting:
 			next;		
 		change the text of the player's command to b;
 		if upit is 1:
-			increase z by 58;
+			increase zeta by 58;
 		otherwise if upit is 2:
-			increase z by 160;  
-		if Z is:
+			increase zeta by 160;  
+		let current be 0;
+		increase current by z;
+		increase current by zeta;
+		if current is:
 			-- 1:		[Strength]
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
@@ -3801,8 +3805,8 @@ Carry out reciting:
 			-- 206: [FionaCarlStatus]
 				if the player's command matches "[number]":
 					now FionaCarlStatus is the number understood;																	
-		if upit is 1, decrease z by 58;
-		if upit is 2, decrease z by 160;
+		if upit is 1, decrease zeta by 58;
+		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -3886,7 +3890,7 @@ Carry out reciting:
 	wait for any key;
 
 
-restoreletter is a text that varies.  restoreletter is normally "0";
+restoreletter is a text that varies.  restoreletter is normally "0".
 
 to npcEint-Restore:
 	npcEint-Read 1;

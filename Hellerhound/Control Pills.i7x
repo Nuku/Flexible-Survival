@@ -11,8 +11,8 @@ birth control pill is a grab object. It is a part of the player. The usedesc of 
 fertile pill is a grab object. It is a part of the player. The usedesc of fertile pill is "You pop the odd pill into your mouth, and swallow.[fertilepilluse]".
 
 [
-the scent of birth control pill is "";
-the scent of fertile pill is "";
+the scent of birth control pill is "".
+the scent of fertile pill is "".
 ]
 
 

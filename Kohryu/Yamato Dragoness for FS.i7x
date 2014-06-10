@@ -10,9 +10,9 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Yamato Dragoness" } to infections of girl;
 
-YDSF is a number that varies; [Yamato Dragon Succumb Fate]
-FYDTBMM is a number that varies; [Female Yamato Dragon TBM Memory]
-FYDM is a number that varies; [Female Yamato Dragon Memory]
+YDSF is a number that varies. [Yamato Dragon Succumb Fate]
+FYDTBMM is a number that varies. [Female Yamato Dragon TBM Memory]
+FYDM is a number that varies. [Female Yamato Dragon Memory]
 
 to say Yamato Dragoness attack:
 	if HP of player > 0:
@@ -53,7 +53,7 @@ to say Yamato Dragoness attack:
 			say "you cry out in orgasm, [if cocks of player > 0]your throbbing, sputtering cock[smn][otherwise]your audible bliss[end if] more than enough to bring her over the edge along with you. Your [if FYDTBMM is 0]uncertain[otherwise]inevitable[end if] fate is punctuated by your sudden disappearance, pulled into the depths of her voracious portal in the wake of her climax.";
 		otherwise:
 			say "she cries out in orgasm, the [if daytimer is night]night[otherwise]day[end if]'s light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this climax.";
-		say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you are finally granted the mercy of her comparatively less overbearing womb, revelling in this relief for but a moment before thought fades from you entirely. Outwardly, [if scalevalue of player > 3]the dragoness would no doubt look somewhat pregnant with your oversized form, though perhaps this serpentine creature perceives this as a mere badge, signifying her[otherwise]your captivity would be imperceivable, further punctuating this dragoness's[end if] physical prowess over you.";
+		say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you are finally granted the mercy of her comparatively less overbearing womb, reveling in this relief for but a moment before thought fades from you entirely. Outwardly, [if scalevalue of player > 3]the dragoness would no doubt look somewhat pregnant with your oversized form, though perhaps this serpentine creature perceives this as a mere badge, signifying her[otherwise]your captivity would be imperceivable, further punctuating this dragoness's[end if] physical prowess over you.";
 		infect;
 		if waiterhater is 0, wait for any key;
 		if ("Kinky" is listed in feats of player and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
@@ -147,7 +147,7 @@ to say Yamato Dragoness attack:
 				say ". Her exhausting grip never fails to relent until you are squeezed of every last drop.";
 			say "Twin fatigue the anchor that pulls you once more to the ground, she finally relinquishes you from her hold, rising once more into the air to depart in silence. Her influence has doubtlessly left an impression on you, though as you gather your things you do imagine that the more literal impression will fade once the soreness subsides.";
 		otherwise:
-			say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind in addition to this draconian captor. Exposed before the [if daytimer is night]n[otherwise]br[end if]ight sky, her taloned legs pull you to her scaled snatch, elucidating on your imposed [if hp of player > 0]task[otherwise]punishment[end if]. [if hp of player < 1 and player is not submissive]Reluctantly[otherwise]Obligingly[end if], you offer up your tongue as tribute to the dragoness's impressive cunt, hard scaling parting way to soft flesh, inviting your organ's slick intrusion.";
+			say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind in addition to this draconian captor. Exposed before the [if daytimer is day]br[otherwise]n[end if]ight sky, her taloned legs pull you to her scaled snatch, elucidating on your imposed [if hp of player > 0]task[otherwise]punishment[end if]. [if hp of player < 1 and player is not submissive]Reluctantly[otherwise]Obligingly[end if], you offer up your tongue as tribute to the dragoness's impressive cunt, hard scaling parting way to soft flesh, inviting your organ's slick intrusion.";
 			say "     '[one of]Yes[or]Ah[or]Mm[at random]... [one of]You will learn your place, whelp[or]You have but a taste of what I offer you[or]This is your natural appointment, under me as you are now[at random].' Her remark is punctuated by the feel of her talon";
 			if cocks of player > 0 or cunts of player > 0:
 				say "[if cocks of player > 2]s, gripping two of your now-hardening, [cock size desc of player] cocks, a circumstance somewhat unsettling now that her sole hold on you is with your most sensitive organs[otherwise if cocks of player is 2]s, gripping both of your now-hardening, [cock size desc of player] cocks, a circumstance somewhat unsettling now that her sole hold on you is with your most sensitive organs[otherwise if cocks of player is 1]'s grip, latched your now-hardening, [cock size desc of player] cock, the other holding your similarly serpentine torso in place[otherwise if cunts of player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your similar portals[otherwise]'s grip on your diminutive frame, freeing one to briefly tease your similar portal[end if]. Eclipsing you in size, as she does, you can't help but shudder at the overwhelming sensation of her tongue's reciprocation across [if cocks of player > 1]one of your cock's length[otherwise if cocks of player is 1]the length of your cock[otherwise]your vulnerable surface[end if].";
@@ -244,6 +244,7 @@ Section 2 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;

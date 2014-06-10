@@ -6,7 +6,7 @@ Version 2 of Central Library by Stripes begins here.
 Section 1 - Event
 
 Central Library is a situation.  The level of Central Library is 6.
-The sarea of Central Library is "High";
+The sarea of Central Library is "High".
 centrallib is a number that varies.
 libfight is a number that varies.
 harpyfight is a number that varies.
@@ -569,7 +569,7 @@ instead of using Wild Animals:
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 
-the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.";
+the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.".
 
 First Aid Manual is a grab object.  It is part of the player.  It is not temporary.
 
@@ -577,7 +577,7 @@ instead of using First Aid Manual:
 	say "     You pull out the book and flip through it, scanning through its procedures for dealing with various injuries.  It should be handy if you get hurt out in the city.";
 	say "     Keeping this book in your possession will increase your healing rate by 1 each turn and by 2 when using a healing item (unless superseded by the 'Expert Medic' feat).";
 
-the scent of First Aid Manual is "     It smells like an old book.";
+the scent of First Aid Manual is "     It smells like an old book.".
 
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning.  With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans.  This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.  Shall you relay this intelligence to the military?";

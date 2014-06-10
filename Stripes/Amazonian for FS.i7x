@@ -1,4 +1,5 @@
 Version 1 of Amazonian for FS by Stripes begins here.
+[ Version 1.2 - Estosterogen pill added ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Amazonian to Flexible Survival."
@@ -9,7 +10,17 @@ when play begins:
 noamazoniansex is a number that varies.
 
 to say losetoamazonian:
+	choose row monster from the table of random critters;
 	now noamazoniansex is 0;
+	if wslevel is 3 and a random chance of 1 in 3 succeeds:
+		if hp of player > 0:
+			say "     The amazonian woman grabs you roughly and slams you to the ground when you give up the fight early.  'What a useless, cowardly creature you are,' she growls with disdain.  'Why should I consent to [if cunts of player > 0]breeding such a feeble warrior[otherwise]taking one such as you as a mate[end if] if you will not struggle to the end?  You are naught but waste.'  And with that, she presses her foot down onto your gut and starts to urinate.  The hot stream splatters across your chest and face.  Digging her heel in harder, you groan in discomfort, which allows her piss to leak into your mouth, forcing you to taste the acrid liquid.";
+			say "     After her bladder is drained, she keeps you in place with her foot and strokes her throbbing erection.  Already quite aroused by her mistreatment of her cowardly foe, it doesn't take long before she cums.  Adding to the mess, you're covered in sticky splatters of her gooey semen.  'That is the only sample you'll get of my warrior seed.  Now away with you,' she snarls, giving you a harsh kick to the side.  You are forced to scramble away, wet and reeking of cum and urine.";
+			decrease hp of player by wdam entry;
+		otherwise:
+			say "     Defeated by the powerful amazonian, you are unable to resist when she grabs you and presses you up against a wall.  'You fought bravely, little [if cunts of player > 0]girl[otherwise]man[end if], but I am the greater warrior.  And now, to claim my prize,' she says with a lustful grin.  Baring your ass, she flips aside her loincloth to reveal her sixteen inch long cock and grind it between your cheeks.  '[if cunts of player > 0]And now to prove that I am better than any man[otherwise]And now I'll show you the only thing men are good for[end if].'  And with that, she thrusts her thick rod into your [if cunts of player > 0]juicy pussy[otherwise]tight asshole[end if].";
+			say "     [if cunts of player > 0]Your pussy is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your increasingly wet hole as you can't help but respond to the vigourous fucking you're receiving[otherwise]Your asshole is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your painfully stretched hole.  As the vigourous fucking continues, the discomfort fades and the pleasure of getting pounded in the ass grows to replace it[end if].  She keeps you pressed against the broken wall as she drives her pulsing rod into you again and again.  When she finally cums, she empties her hot seed inside you, [if cunts of player > 0]coating your womb in her virile sperm[otherwise]filling your bowels with her virile sperm[end if].";
+			say "     Once finished, she pulls out, but does not release you, instead grinding her semi-hard shaft messily against your rear.  'Mmm... I've found you to be a most enjoyable [if cunts of player > 0]mate[otherwise]plaything[end if].  Perhaps I might keep you for my harem.  Let me leave you with something to remind you to whom you belong,' she whispers softly as she licks along the edge of your ear.  You feel a heat wash across your ass, your nose catching the acrid scent of urine.  She's pissing on you, marking you as her property.  You wriggle and squirm, but her grip is strong and you're too worn from earlier to break free.  She chuckles as you try to resist, only growing more excited and you feel a surge in the flow of hot liquid.  You even feel a splatter of it spray against your creamy, leaking hole, staking her claim again on it.  When her bladder's drained, she releases you and drives you off, saying she looks forward to challenging you again soon.";
 	if hp of player > 0:
 		say "     Unwilling to continue to resist this powerful woman, you drop to your knees before her, intent on letting her have her way with you.  She seems displeased that you've given up so easily and pushes you roughly to the ground with her heel.  'Why should I [if cunts of player > 0]breed with one such a you if you will not fight to the last[otherwise]want one such as you as a mate if you will not fight to the last[end if]?' she growls.  'You are useless to me but as a means of amusement.'";
 		say "     With that said, she grabs your head and pushes your face to her loincloth, forcing you to take in the heady scent of her arousal.  Despite the short fight, it seems it's gotten her blood flowing and she needs some relief.  Pushing back the furry cloth, she frees her sixteen inch cock and presses it to your face, forcing you to take it in your mouth.  The scent of her pussy is there as well, but you are not allowed near it, instead forced to suck her off.";
@@ -91,10 +102,10 @@ When Play begins:
 	now cunt length entry is 16;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "estosterogen pill";			[ Loot monster drops, ]
+	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
  	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]amazonian[as decreasingly likely outcomes]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -102,6 +113,77 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Estosterogen Pill
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"estosterogen pill"	"This bi-colour pill has a pair of interconnected rings marked onto it, one with a cross and the other with a plus quartering them."	1	estosterogen pill
+
+estosterogen pill is a grab object. It is temporary. It is a part of the player.
+
+the usedesc of estosterogen pill is "[estosterogen pill use]";
+
+before using a grab object(called x):
+	if x is estosterogen pill:
+		say "[line break]";
+		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+			say "Your feat will not allow this to work.";
+			stop the action;
+		continue the action;
+
+to say estosterogen pill use:
+	if cunts of player > 0 and cocks of player > 0:		[HERM]
+		increase cock length of player by 2;
+		increase cock width of player by 1;
+		increase cunt length of player by 2;
+		increase cunt width of player by 1;
+		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly[run paragraph on]";
+		say ".  Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn].  Your balls plump up a little as well with a surge of added virility[run paragraph on]";
+		follow the cunt descr rule;
+		say ".  Even as this is occurring, you watch your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr][run paragraph on]";
+	otherwise if cunts of player > 0:				[FEMALE]
+		now cocks of player is 1;
+		now cock width of player is 6;
+		now cock length of player is 4;
+		increase cunt length of player by 2;
+		increase cunt width of player by 1;
+		follow the cunt descr rule;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  You watch as your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth[run paragraph on]";
+		say ".  As this is occurring, a twinge centred at your clit increases rapidly.  With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt that from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if][run paragraph on]";
+	otherwise if cocks of player > 0:				[MALE]
+		increase cock length of player by 2;
+		increase cock width of player by 1;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn].  Your balls plump up a little as well with a surge of added virility[run paragraph on]";
+		say ".  Even as this is occurring, you feel your bare groin clench as internal changes begin.  There comes a pulling sensation as a wet passage opens and flesh folds form around it.  Within moments, you have a wet pussy and needy little cunt between your legs as well[run paragraph on]";
+	otherwise:								[NEUTER]
+		now cocks of player is 1;
+		now cock width of player is 6;
+		now cock length of player is 4;
+		now cunts of player is 1;
+		now cunt length of player is 6;
+		now cunt width of player is 4;
+		say "You feel an aching warmth rush to your loins[run paragraph on]";
+		say ".  With your body in shock, you feel your bare groin clench as internal changes begin.  Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises.  Soon enough, you've grown a [cock size desc of player] [cock of player] cock and a [cunt size desc of player] cunt as your gender suddenly reverses from neither to both male and female in one[run paragraph on]";
+	if breasts of player is 0:
+		now breasts of player is 2;
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+	otherwise if breast size of player is 0:
+		now breast size of player is 2;
+		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+	otherwise:
+		increase breast size of player by 1;
+		if breast size of player > 10, increase breast size by 1;
+		if breast size of player > 26, now breast size of player is 26;
+		follow the breast descr rule;
+		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
 [

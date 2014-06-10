@@ -4,22 +4,22 @@ Exotic Bird by Sarokcat begins here.
 
 Section 1-Exotic Bird
 
-Exotic Bird is a pet. The description of the exotic bird is "This exotic bird is nice and happy now! You aren[apostrophe]t sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player;
-The weapon damage of Exotic Bird is 2;
-The level of Exotic Bird is 1;
-The Dexterity of Exotic Bird is 15;
-The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.";
-The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversary's face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]";
-The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.";
+Exotic Bird is a pet. The description of the exotic bird is "This exotic bird is nice and happy now! You aren[']t sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player.
+The weapon damage of Exotic Bird is 2.
+The level of Exotic Bird is 1.
+The Dexterity of Exotic Bird is 15.
+The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.".
+The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversary's face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]".
+The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.".
 
 instead of sniffing Exotic Bird:
 	say "It smells like an exotic bird with a faint, tropical scent to it.";
 
 
 Scared bird is a situation.
-The sarea of Scared bird is "Zoo";
+The sarea of Scared bird is "Zoo".
 Instead of resolving Scared bird:
-	say "Traveling along the zoo paths you hear a strange noise from up ahead, moving carefully to investigate the area where you heard the noise, you look around the tree there but don[apostrophe]t actually see anything, you are about to turn to leave when you hear the sound again from up in the branches.  Looking up you are surprised to see a rather scared looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you.  You realize it must have escaped from one of the exotic bird exhibits, and sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
+	say "Traveling along the zoo paths you hear a strange noise from up ahead, moving carefully to investigate the area where you heard the noise, you look around the tree there but don[']t actually see anything, you are about to turn to leave when you hear the sound again from up in the branches.  Looking up you are surprised to see a rather scared looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you.  You realize it must have escaped from one of the exotic bird exhibits, and sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
 		say "A quick glance shows you don't have any food with which to try and coax the bird down with.  You'll have to try it again later once you've found some food.";
 	otherwise:
@@ -36,9 +36,9 @@ Instead of resolving Scared bird:
 				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				now Scared bird is resolved;
 			otherwise:
-				say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry.  You obviously aren[apostrophe]t going to convince it to trust you right now, maybe you should try again later.";
+				say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry.  You obviously aren[']t going to convince it to trust you right now, maybe you should try again later.";
 		otherwise:
-			say "Deciding that you would[apostrophe]t have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
+			say "Deciding that you would[']t have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
 			now Scared bird is resolved;
 
 

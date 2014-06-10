@@ -6,7 +6,7 @@ Feral Shaft Beast For FS by DragonFlayer begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 
 when play begins:
 	add { "Feral Shaft Beast" } to infections of hermaphrodite;
@@ -64,7 +64,7 @@ When Play begins:
 	now skin entry is "purple, veiny and slick cock-like";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "Your tail is heavy and thick as one of your legs, slightly longer than one as well, the tip is a large swollen pointy cock head which is the size of your own penile head, the underside of the tail is covered with rows of breasts from it's base to the glans of the cock tip, the breasts being larger at the base and smaller around the tip.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "draconian shaped cock tip, as well as 8 small breasts along it's underside, proportional to the size of your tool, your manhood is also ridged along the sides and barbed all over the glans and edges, quite an interesting";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it pops and swells, pushing forward, your eyes close and cease to exist, along with your nose and ears, all facial features gone except for your lips which spread wider, your face pushing into a draconian snout, while the back of your head takes a penile approach with small barbs around the edges, a pair of foot-long cock shaped horns grow at the back of your head, each dripping heavily with male musk, just as your lips drooled with female juices, your tongue swells and pushes out like a powerful tendril, 2 feet long and thick as a golfball, drooling from the now swollen cock head at the tip, your neck swells and pulses as 4 rings of round bumps swell evenly along it, each bump taking the shape of grape sized clitorises"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it pops and swells, pushing forward, your eyes close and cease to exist, along with your nose and ears, all facial features gone except for your lips which spread wider, your face pushing into a draconian snout, while the back of your head takes a penile approach with small barbs around the edges, a pair of foot-long cock shaped horns grow at the back of your head, each dripping heavily with male musk, just as your lips drooled with female juices, your tongue swells and pushes out like a powerful tendril, 2 feet long and thick as a golf ball, drooling from the now swollen cock head at the tip, your neck swells and pulses as 4 rings of round bumps swell evenly along it, each bump taking the shape of grape sized clitorises"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it swells and pulse all over, moans escaping your lips as you rub your body in corrupted lust, your hands and feet swelling large, each finger and toe extending, pulsing and then growing into foot-long sized cocks, eight cunts swell and split open along your spine, your back dripping as they drooled heavily and then spread wide open to allow eight 5 feet long tentacles to slide out and wiggle around out of control, each thick as your old human arms, you fall on all four as your arms and legs change, along with your shoulders and rear to give you a feral stance, now you walk on your four legs"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it tingles and pulses as purple shades spread all over it, veins showing here and there and then you feel unbearable heat spread all over, your body releasing a thick layer of musky sweat that coats you from head to toe, making your skin glisten and drip"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it trembles and tickles, as you grow a massive cock tail and it curls up proudly, flopping down shortly after with the weight of the many rows of breasts spreading over it's underside, the cocktip swelling till it almost matches the size of your head and it's slit drools heavily immediately"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
@@ -128,7 +128,7 @@ Psionic Larva is a grab object.
 Psionic Larva is infectious. The strain of Psionic Larva is "Feral Shaft Beasts".
 the usedesc of Psionic Larva is "You take the larva, and while the musk of it is strong enough to make you think of... completely unrelated things, you bite on it's head and waste no time in devouring your 'snack', surprisingly, it has a really good.. tangy.. familiar taste...[line break]";
 
-the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.";
+the scent of Psionic Larva is "The wriggling grub has the musky scent of sex lingering over it.".
 
 
 [ Edit this to have the correct Name as wall]

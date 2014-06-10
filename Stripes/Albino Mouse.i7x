@@ -6,7 +6,7 @@ Version 1 of Albino Mouse by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Albino Mouse" } to infections of furry;
@@ -82,11 +82,11 @@ When Play begins:
 	now face change entry is "it deforms and reshapes itself into something more rodent-like.  You gain large ears and whiskers around your muzzle.  Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse.  At only about four feet tall, your stature matches your species.  Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft, white fur covers you"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "long, thin tail forms.  It is rodent-like and has pale, white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "long, thin tail forms.  It is rodent-like and has pale white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it turns a soft pink in colour.  It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 12;
-	now sta entry is 12;  
+	now sta entry is 12;
 	now per entry is 16;
 	now int entry is 24;
 	now cha entry is 20;
@@ -107,7 +107,7 @@ When Play begins:
 	now libido entry is 20;				[ Set to zero in this monster to control elsewhere ]
 	now loot entry is "";				[ Dropped item.  Key will be used later ]
 	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slender";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"Use [one of] to vary ]
 	now type entry is "musine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

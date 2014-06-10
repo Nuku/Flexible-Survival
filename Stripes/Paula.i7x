@@ -78,10 +78,10 @@ to say paula_saved:
 Section 1 - Paula the Vixen Nurse
 
 Paula is a woman.
-The description of Paula is "[pauladesc]";
+The description of Paula is "[pauladesc]".
 The conversation of Paula is { "Sexy treatment." }.
 
-the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.";
+the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.".
 
 to say pauladesc:
 	say "     Paula, thanks to her [']treatment['] back at the hospital, has become a vixen.  Like the nurses there, she has a coat of silvery fur covering her sexy figure.  But unlike them, she wears a more reserved nurse's outfit, mainly at Alexandra's insistence.  Of course, even that can't compete with such features as her twin rows of breasts and her tight bottom.  Nor does it prevent her from putting a bit of naughty teasing into her bedside manner.";

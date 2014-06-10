@@ -102,6 +102,9 @@ true - graphics shown
 false - graphics not shown
 NOTE: Because it is a truth state, these are the only two results possible.  Also, graphics may not appear in all play sources, such as in-browser mode.]
 
+invcolumns is usually 2.
+[invcolumns - the number of columns to be shown when presenting the inventory.  Ranges from 1 to 4.  Any other values will be corrected to 2.]
+
 [
 *** WARNING FOR DEVELOPERS: If you're going to update the values in this file to your own personal preferences, do NOT commit to Git Hub. ***
 ]

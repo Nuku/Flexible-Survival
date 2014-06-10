@@ -5,7 +5,7 @@ Beach Events by Sarokcat begins here.
 Section 1- Beach bum
 
 Beach bum is a situation.
-The sarea of Beach bum is "Beach";
+The sarea of Beach bum is "Beach".
 
 bbum is a number that varies.
 
@@ -71,7 +71,7 @@ Instead of resolving a Beach bum:
 Section 2- Flotsam bits
 
 Flotsam bits is a situation.
-The sarea of Flotsam bits is "Beach";
+The sarea of Flotsam bits is "Beach".
 
 Instead of resolving a Flotsam bits:
 	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you, and continue along the beach.";
@@ -80,7 +80,7 @@ Instead of resolving a Flotsam bits:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"flotsam club"	"A rough log of driftwood, polished smooth by the waves and somehow hardened in the salt water.  It is quite cumbersom and were it not lightened by its time in the sea, it would be too heavy to wield at all."	15	flotsam club
+"flotsam club"	"A rough log of driftwood, polished smooth by the waves and somehow hardened in the salt water.  It is quite cumbersome and were it not lightened by its time in the sea, it would be too heavy to wield at all."	15	flotsam club
 
 flotsam club is an armament. It is part of the player. It has a weapon "[one of]your giant club[or]your rough club[or]your flotsam log[or]your length of sea hardened wood[at random]". The weapon damage of flotsam club is 10. The weapon type of flotsam club is "Melee". It is not temporary. the objsize of flotsam club is 5. the hitbonus of flotsam club is -2.
 
@@ -90,7 +90,7 @@ instead of sniffing flotsam club:
 Section 3- Strange tide
 
 Strange tide is a situation.
-The sarea of Strange tide is "Beach";
+The sarea of Strange tide is "Beach".
 
 Instead of resolving a Strange tide:
 	say "Walking along the beach, you notice a strange roiling of the tide, not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together, realizing how vigorously whatever is down there must be moving you decide to continue on your way before it notices you.";
@@ -100,13 +100,13 @@ Instead of resolving a Strange tide:
 Section 4- Strange wave
 
 Strange wave is a situation.
-The sarea of Strange wave is "Beach";
+The sarea of Strange wave is "Beach".
 when play begins:
 	add Strange wave to badspots of girl;
 	add Strange wave to badspots of furry;
 
 Instead of resolving a Strange wave:
-	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[apostrophe]t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
+	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[']t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
 	infect "Feral Sea Dragon";
 	Now Strange wave is resolved;
 
@@ -114,10 +114,10 @@ Instead of resolving a Strange wave:
 Section 5- Smashed boat
 
 Smashed boat is a situation.
-The sarea of Smashed boat is "Beach";
+The sarea of Smashed boat is "Beach".
 
 Instead of resolving a Smashed boat:
-	say "As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[apostrophe]t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
+	say "As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[']t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
 	increase carried of food by 2;
 	increase carried of water bottle by 1;
 	say "You acquired quite a bit of food, but only a little water.";
@@ -127,7 +127,7 @@ Instead of resolving a Smashed boat:
 Section 6- Dragon voyeurism
 
 Dragon voyeurism is a situation.
-The sarea of Dragon voyeurism is "Beach";
+The sarea of Dragon voyeurism is "Beach".
 when play begins:
 	add Dragon voyeurism to badspots of girl;
 	add Dragon voyeurism to badspots of guy;
@@ -146,7 +146,7 @@ Instead of resolving a Dragon voyeurism:
 Section 7-  relaxing scene
 
 relaxing scene is a situation.
-The sarea of relaxing scene is "Beach";
+The sarea of relaxing scene is "Beach".
 
 Instead of resolving a relaxing scene:
 	say "Moving along down the silent beach, a glint on the water catches your attention,  you immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..";
@@ -157,7 +157,7 @@ Instead of resolving a relaxing scene:
 Section 8- Plundered boat
 
 Plundered boat is a situation.
-The sarea of Plundered boat is "Beach";
+The sarea of Plundered boat is "Beach".
 
 Instead of resolving a Plundered boat:
 	say "Walking along the beach, you come across a half sunk boat sticking out of the water, curiosity getting the best of you, you wade over to inspect the boat.  Hauling yourself aboard you immediately note signs of a struggle, it looks like several people tried to put up some kind of fight here, but there are no signs of either the winners or the losers. Moving around the boat, you note that someone appears to have already plundered the boat and taken anything of value, although you do find a bit of ripped cloth that looks like it might be from some sort of bandana, the black cloth appears to have the skull and bones of a pirate logo printed on it, although the skulls teeth are pointed and shark-like.  Shrugging and unable to find anything of use, you wade back to the beach and continue on your way.";
@@ -167,7 +167,7 @@ Instead of resolving a Plundered boat:
 Section 9- Tainted yacht
 
 Tainted yacht is a situation.
-The sarea of Tainted yacht is "Beach";
+The sarea of Tainted yacht is "Beach".
 when play begins:
 	add Tainted yacht to badspots of hermaphrodite;
 	add Tainted yacht to badspots of furry;
@@ -189,17 +189,17 @@ Instead of resolving a Tainted yacht:
 Section 10- Strange castle
 
 Strange castle is a situation.
-The sarea of Strange castle is "Beach";
+The sarea of Strange castle is "Beach".
 
 Instead of resolving a Strange castle:
-	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[apostrophe]t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.";
+	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[']t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.";
 	Now Strange castle is resolved;
 
 
 Section 11- otter view
 
 otter view is a situation.
-The sarea of otter view is "Beach";
+The sarea of otter view is "Beach".
 when play begins:
 	add otter view to badspots of furry;
 
@@ -211,19 +211,19 @@ Instead of resolving a otter view:
 Section 12- Cream stand
 
 Cream stand is a situation.  The level of Cream stand is 2.
-The sarea of Cream stand is "Beach";
+The sarea of Cream stand is "Beach".
 when play begins:
 	add Cream stand to badspots of hermaphrodite;
 	add Cream stand to badspots of furry;
 
 Instead of resolving a Cream stand:
-	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[apostrophe]t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";
+	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[']t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";
 	if player consents:
-		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[apostrophe]t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more then wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
+		say "Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream.  Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat.  The taste of the ice cream makes you wonder for a second, as it doesn[']t taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways.  Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more then wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
 		decrease hp of player by 20;
 		gryphonify;
 		challenge "Hermaphrodite Gryphon";
-		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here.  You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphons little trap.  Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
+		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here.  You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap.  Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
 	otherwise:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
@@ -233,21 +233,21 @@ Instead of resolving a Cream stand:
 Section 13- Lucky seashell
 
 Lucky seashell is a situation.
-The sarea of Lucky seashell is "Beach";
+The sarea of Lucky seashell is "Beach".
 
 Instead of resolving a Lucky seashell:
 	say "As you wander along the beach, you enjoy the feel of the sand underneath your feet and the beautiful sky overhead... until you nearly trip on something half buried in the sand. Cursing you look down and discover a large seashell was revealed when you nearly tripped over it, curiously you pick the shell up and marvel at the iridescent sheen of the shell. Just holding the thing makes you feel a bit better about things, who knows, maybe finding the shell means today will be a lucky day after all you think to yourself!";
 	let T be a random number between one and five;
 	Now Lucky seashell is resolved;
 	if T is 1:
-		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures.  And while you don[apostrophe]t actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
+		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures.  And while you don[']t actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
 		increase perception of player by 2;
 		say "your perception has increased by 2!";
 	otherwise if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		increase carried of water bottle by 1;
 	otherwise if T is 3:
-		say "Walking along the beach with the shell in hand, you can[apostrophe]t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[apostrophe]t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[apostrophe]t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[apostrophe]t a total loss";
+		say "Walking along the beach with the shell in hand, you can[']t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[']t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[']t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[']t a total loss";
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
 	otherwise if T is 4:

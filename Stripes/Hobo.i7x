@@ -6,7 +6,7 @@ Version 2 of Hobo by Stripes begins here.
 Section 1 - Encounter
 
 Mournful Dog is a situation.
-The sarea of Mournful Dog is "Hospital";
+The sarea of Mournful Dog is "Hospital".
 hdog is a number that varies.
 dogfoodcount is a number that varies.
 
@@ -74,17 +74,17 @@ Instead of resolving a Mournful Dog:
 
 Section 2 - Pet Data
 
-helper dog is a pet.  helper dog is a part of the player;
-The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles.";
-The weapon damage of helper dog is 6;
-The level of helper dog is 5;
-The Dexterity of helper dog is 15;
-The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.[hoboreset]";
-The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
+helper dog is a pet.  helper dog is a part of the player.
+The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles."
+The weapon damage of helper dog is 6.
+The level of helper dog is 5.
+The Dexterity of helper dog is 15.
+The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.[hoboreset]".
+The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]".
 
 the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
-the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
+the scent of helper dog is "Your helper dog smells like a normal dog, surprisingly given the circumstances.".
 
 
 Section 3 - Hobo Actions
@@ -188,7 +188,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As you give in to your feral instincts, your helper dog looks at you mournfully.  He then turns and wanders off to find another poor, needy soul to help.  Perhaps he will be more successful next time.";
 		otherwise:
-			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help.";   [The God-I'm-so-fucking-Canadian ending]
+			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help."; [The God-I'm-so-fucking-Canadian ending]
 
 
 Hobo ends here.

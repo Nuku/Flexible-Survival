@@ -6,7 +6,7 @@ Version 4 of Leonard by Stripes begins here.
 Section 1 - Event and Lion's Den
 
 Feline Friend is a situation.
-The sarea of Feline Friend is "Park";
+The sarea of Feline Friend is "Park".
 when play begins:
 	add Feline Friend to badspots of guy;
 	add Feline Friend to badspots of girl;
@@ -23,9 +23,9 @@ Instead of resolving a Feline Friend:
 
 
 Lion's Den is a room. It is fasttravel. It is private.
-The description of Lion's Den is "[lionsdendesc]";
+The description of Lion's Den is "[lionsdendesc]".
 
-the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.";
+the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.".
 
 to say lionsdendesc:
 	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if][if leonardcaraway is true] with Caraway working away happily in the kitchen[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
@@ -37,7 +37,7 @@ to say lionsdendesc:
 Section 2 - Leonard the Lion
 
 Leonard is a man.  Leonard is in Lion's Den.
-The description of Leonard is "[Leonarddesc]";
+The description of Leonard is "[Leonarddesc]".
 The conversation of Leonard is { "Tut Tut!" }.
 lastfuck of Leonard is normally 555.
 feline_status is a number that varies.
@@ -45,7 +45,7 @@ violinfound is a number that varies.
 leonardtimer is a number that varies.  leonardtimer is normally 255.
 feline_pride_defeat is a truth state that varies.  feline_pride_defeat is normally false.
 
-the scent of Leonard is "The feline smells strong and manly.";
+the scent of Leonard is "The feline smells strong and manly.".
 
 to say Leonarddesc:
 	say "     Leonard is a lion-man like those you've seen in the park, but well-groomed and well-mannered.  He has a strong, manly chest, which he loosely covers with his suit coat.  While it could probably close, it certainly seems more comfortable open.  He is covered in tawny fur and has a large, russet mane.  His lower body is unclothed, leaving his sheath and plump balls exposed.";
@@ -633,7 +633,7 @@ Section 4 - Finding a Violin
 Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
 
 Music Store is a situation.  The level of Music Store is 2.
-The sarea of Music Store is "Outside";
+The sarea of Music Store is "Outside".
 Music Store is resolved.
 violinspritefight is a truth state that varies.
 
@@ -669,7 +669,7 @@ Instead of resolving Music Store:
 Part 2 - Concert Hall
 
 Concert Hall is a situation.  The level of Concert Hall is 4.
-The sarea of Concert Hall is "High";
+The sarea of Concert Hall is "High".
 Concert Hall is resolved.
 
 Instead of resolving Concert Hall:
@@ -744,7 +744,7 @@ Instead of resolving Concert Hall:
 			if cock length of player < 4, now cock length of player is 4;
 			if cock width of player < 4, now cock width of player is 4;
 		if libido of player < 10, now libido of player is 10;
-		end the game saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
+		end the story saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;
@@ -770,7 +770,7 @@ It is not temporary.
 instead of using violin:
 	say "     You don't know how to play.  Besides, you don't want to risk damaging your gift for your lion lover.";
 
-the scent of the violin is "     The violin smells of polished wood.";
+the scent of the violin is "     The violin smells of polished wood.".
 
 
 Section 5 - Hunting Prides
@@ -782,7 +782,7 @@ instead of navigating Lion's Den while hp of Leonard >= 10 and hp of Leonard <= 
 		say "[leonardrivalfight]";
 
 Hunting Prides is a situation.  The level of Hunting Prides is 8.
-The sarea of Hunting Prides is "Park";
+The sarea of Hunting Prides is "Park".
 Hunting Prides is resolved.
 
 Instead of resolving Hunting Prides:
@@ -885,7 +885,7 @@ Instead of resolving Hunting Prides:
 			now cock width of player is 0;
 		if libido of player < 30, now libido of player is 30;
 		attempttowait;
-		end the game saying "Having been defeated by the hunting pride of feline girls, you are made to join their pride.";
+		end the story saying "Having been defeated by the hunting pride of feline girls, you are made to join their pride.";
 		now battleground is "void";
 		wait for any key;
 		follow the turnpass rule;

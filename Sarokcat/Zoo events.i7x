@@ -10,17 +10,17 @@ Section 1- Electric shockers
 Section 2-  Hyena cages
 
 Hyena cages is a situation.
-The sarea of Hyena cages is "Zoo";
+The sarea of Hyena cages is "Zoo".
 
 Instead of Resolving a Hyena cages:
-	say "You come across an enclosure that looks like it was burst open from the inside, taking a closer look you notice it looks almost like some of the bars were bitten clean through!  Taking a careful look at the plaque you find that this was actually once the hyena enclosure! Well now you know where all the hyena's wandering the city came from, and here you thought it was just the natural evolution of scavengers into scavenging hyenas.... still as you are about to leave you note from the 'fun facts' section that the hyena has one of the most powerful bites in the animal kingdom, strong enough even to chew through metal.... you resolve to be more careful next time you face one of the cackling beasts.";
+	say "You come across an enclosure that looks like it was burst open from the inside, taking a closer look you notice it looks almost like some of the bars were bitten clean through!  Taking a careful look at the plaque you find that this was actually once the hyena enclosure! Well now you know where all the hyena's wandering the city came from, and here you thought it was just the natural evolution of scavengers into scavenging hyenas... still as you are about to leave you note from the 'fun facts' section that the hyena has one of the most powerful bites in the animal kingdom, strong enough even to chew through metal... you resolve to be more careful next time you face one of the cackling beasts.";
 	Now Hyena cages is resolved;
 
 
 Section 3-  Pachyderm predicament
 
 Pachyderm predicament is a situation.
-The sarea of Pachyderm predicament is "Zoo";
+The sarea of Pachyderm predicament is "Zoo".
 when play begins:
 	add Pachyderm predicament to badspots of hermaphrodite;
 	add Pachyderm predicament to badspots of furry;
@@ -32,17 +32,17 @@ Instead of Resolving a Pachyderm predicament:
 Section 4-  Snake knot
 
 Snake knot is a situation.
-The sarea of Snake knot is "Zoo";
+The sarea of Snake knot is "Zoo".
 
 Instead of Resolving a Snake knot:
-	say "Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the room, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there were a few non snakes caught up in their mating knot at one point, though you are sure they are snakelike by now. Carefully you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them.....";
+	say "Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the room, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there were a few non snakes caught up in their mating knot at one point, though you are sure they are snakelike by now. Carefully you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
 	Now Snake knot is resolved;
 
 
 Section 5-  Useful pamphlet
 
 Useful pamphlet is a situation.
-The sarea of Useful pamphlet is "Zoo";
+The sarea of Useful pamphlet is "Zoo".
 
 Instead of Resolving a Useful pamphlet:
 	say "Wandering around the zoo, you come across an area dedicated to visitor information, you browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
@@ -55,7 +55,7 @@ Instead of Resolving a Useful pamphlet:
 Section 6-  Unidentified sex scene
 
 Unidentified sex scene is a situation.
-The sarea of Unidentified sex scene is "Zoo";
+The sarea of Unidentified sex scene is "Zoo".
 
 Instead of Resolving a Unidentified sex scene:
 	say "Traveling through the zoo area, you come to one of the resting areas, and thinking to take a short break you move closer.  Unfortunately it seems several other people or creatures were here before you, and it was obvious not much 'resting' occurred, although several of the participants were probably horizontal at one point.  Looking around you take in the splatters of cum from several unidentified participants, several articles of shed clothing tossed around haphazardly, and a variety of mixed animal prints tracked in the dirt.  You really aren't sure just who all or what all enjoyed themselves here, but they definitely had lots of fun.  Sighing, you leave without taking a rest, the scene making you too nervous, and aroused, to stay there any longer.";
@@ -67,21 +67,21 @@ Instead of Resolving a Unidentified sex scene:
 Section 7-  Grizzly gone
 
 Grizzly gone is a situation.
-The sarea of Grizzly gone is "Zoo";
+The sarea of Grizzly gone is "Zoo".
 
 Instead of Resolving a Grizzly gone:
 	say "Traveling through the zoo in search of anything of use, you come across a zookeepers hut it seems like something broke into, taking a chance you look inside, and see that most of the area seems to be empty and smelling of sex. About to leave you notice several hurried notes someone left, picking them up you begin to leaf through them.[line break].";
 	say "'The grizzly is gone from the enclosure this morning! No sign of it at all and the door was left wide open! What the hell happened last night, I need to ask the night watch...'[line break]";
 	say "'Holy shit, if anyone is reading this, I found the grizzly and watch out, He seems to be a size larger then he was yesterday! And god if he doesn't seem to be smarter now too! I locked him out of the shed and I should be safe in here.'[line break]";
 	say "I don't know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now... it smells kinda... good.  For some reason the shack seems to be a size too small now though...[line break]";
-	say "Grizzly so good,  grizzly cock is sized juuust right,'  The last note ends there, trailing off into an unrecognizable scrawl.";
+	say "Grizzly so good, grizzly cock is sized juuust right,'  The last note ends there, trailing off into an unrecognizable scrawl.";
 	Now Grizzly gone is resolved;
 
 
 Section 8-  Tasty Treats
 
 Tasty Treats is a situation.
-The sarea of Tasty Treats is "Zoo";
+The sarea of Tasty Treats is "Zoo".
 
 Instead of Resolving a Tasty Treats:
 	say "Wandering along the zoo pathways, you come across a zoo candy cart, stuffed full with plenty of still wrapped treats and snacks. After checking around to make sure it is safe, you take a short break to help yourself to several different delicious snacks, before moving on your way feeling happy and full.";
@@ -96,17 +96,17 @@ Section 9-  AngieTrapped
 Section 10-  Panda parade
 
 Panda parade is a situation.
-The sarea of Panda parade is "Zoo";
+The sarea of Panda parade is "Zoo".
 
 Instead of Resolving a Panda parade:
-	say "Traveling through the zoo, you stop as you see a white and black coloured bearlike man, tottering down one of the other paths, a zookeeper's hat still sitting jauntily atop the very well-endowed panda's head.  You back off out of sight of the panda as it trots past, seemingly intent on moving as fast as it can down the path.  You are about to come out of hiding, when another more beastial panda comes trotting down the path moving quickly, this one is obviously female and it quickly chases after the retreating male panda.  The second panda is swiftly followed by two more female pandas, each batting at each other as they try to get ahead, and finally one last slightly pandalike female trailing along after everyone else, the final one still kicking off its encumbering clothing as it continues to change into a full panda.  Slightly amused at the strange situation, you wait to be sure there aren't any more girl pandas chasing after the obviously very popular guy panda, before coming out of hiding and continuing on your way.";
+	say "Traveling through the zoo, you stop as you see a white and black coloured bearlike man, tottering down one of the other paths, a zookeeper's hat still sitting jauntily atop the very well-endowed panda's head.  You back off out of sight of the panda as it trots past, seemingly intent on moving as fast as it can down the path.  You are about to come out of hiding, when another more bestial panda comes trotting down the path moving quickly, this one is obviously female and it quickly chases after the retreating male panda.  The second panda is swiftly followed by two more female pandas, each batting at each other as they try to get ahead, and finally one last slightly pandalike female trailing along after everyone else, the final one still kicking off its encumbering clothing as it continues to change into a full panda.  Slightly amused at the strange situation, you wait to be sure there aren't any more girl pandas chasing after the obviously very popular guy panda, before coming out of hiding and continuing on your way.";
 	Now Panda parade is resolved;
 
 
 Section 11-  Petting zoo
 
 Petting zoo is a situation.
-The sarea of Petting zoo is "Zoo";
+The sarea of Petting zoo is "Zoo".
 
 Instead of Resolving a Petting zoo:
 	say "Traveling along the empty zoo paths, you come across the petting zoo area, thinking surely there can't be much threat there you decide to stop by and investigate for a minute.  Entering the petting zoo you are only slightly surprised to find the area empty, more surprising is the large amount of children's clothing and a number of backpacks scattered around on the ground, obviously there was a school bus visiting the area at some point recently.  You sigh as you look around, then give a halfhearted search of the backpacks lying around, you find several items of food and water, and decide to take them with you.  It doesn't count as taking candy from kids if they aren't around does it?";
@@ -118,7 +118,7 @@ Instead of Resolving a Petting zoo:
 Section 12-  Instructional video
 
 Instructional video is a situation.
-The sarea of Instructional video is "Zoo";
+The sarea of Instructional video is "Zoo".
 
 Instead of Resolving a Instructional video:
 	say "Coming across one of the zoo buildings in your wanderings, you try taking a look inside, and find a small open class like area, with several desks set up and a projector hooked up to a VCR.  Taking a look at the VCR it is labeled 'Animal Handling Training', feeling curious you push play and settle down to watch a bit.  Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble.  An hour later when the tape clicks off, you find yourself feeling much more confidant about your ability to deal with any animals or beasts that you might come across.";
@@ -129,7 +129,7 @@ Instead of Resolving a Instructional video:
 Section 13- Vet supplies
 
 Vet supplies is a situation.
-The sarea of Vet supplies is "Zoo";
+The sarea of Vet supplies is "Zoo".
 
 Instead of Resolving a Vet supplies:
 	say "Travelling down some of the zoo maintenance pathways, you come across a small veterinary bag, obviously used by one of the employees to treat the animals. Unfortunately for the employee involved, from the torn vegetation and scent of animal sex in the area, it looks like they were the one who got their 'treatment' today instead. Still deciding there might be something useful to you in the bag, you begin to sort through the various supplies inside. Strangely most of what seems to be contained within is a variety of animal hormone shots, and treatments for either male or female animals depending.  You think you could probably inject yourself with some of the animal hormone boosters, and the extra hormones could help you maintain your gender identity... but should you really be using medicine designed for animals? Do you inject yourself?";
@@ -144,8 +144,8 @@ Instead of Resolving a Vet supplies:
 		if player consents:
 			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
 			if "Female Preferred" is listed in feats of the player:
-				say "While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
-				decrease humanity of player by 40; 
+				say "While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more bestial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
+				decrease humanity of player by 40;
 			otherwise if "Male Preferred" is listed in feats of the player:
 				say "You can feel the female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
 				remove "Male Preferred" from feats of the player;
@@ -162,10 +162,10 @@ Instead of Resolving a Vet supplies:
 		otherwise:
 			say "Shifting your focus to the other pile, your look at the male hormones.  Shall you use the male ones?";
 			if the player consents:
-				say "Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone rushing through your body.";
+				say "Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone rushing through your body.";
 				if "Male Preferred" is listed in feats of the player:
-					say "While the testosterone running through your body rushes to your head, and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic then ever.";
-					decrease humanity of player by 40; 
+					say "While the testosterone running through your body rushes to your head, and makes you feel even more bestial then ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic then ever.";
+					decrease humanity of player by 40;
 				otherwise if "Female Preferred" is listed in feats of the player:
 					say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
 					Remove "Female Preferred" from feats of the player;
@@ -180,20 +180,20 @@ Instead of Resolving a Vet supplies:
 					decrease humanity of player by 20;
 					add "Male Preferred" to feats of the player;
 			otherwise:
-				say "Taking an assortment from both sets of treatments you have laid out, you slowly begin the process of injecting yourself with the chemicals.  Your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone and estrogen rushing through your body.";
+				say "Taking an assortment from both sets of treatments you have laid out, you slowly begin the process of injecting yourself with the chemicals.  Your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone and estrogen rushing through your body.";
 				if "Male Preferred" is listed in feats of the player:
-					say "While the medley of beastial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of male focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your male-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
+					say "While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of male focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your male-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
 					Remove "Male Preferred" from feats of the player;
 					add "Herm Preferred" to feats of the player;
 					decrease hp of player by 20;
 				otherwise if "Female Preferred" is listed in feats of the player:
-					say "While the medley of beastial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of female focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your female-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
+					say "While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of female focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your female-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
 					Remove "Female Preferred" from feats of the player;
 					add "Herm Preferred" to feats of the player;
 					decrease hp of player by 20;
 				otherwise if "Herm Preferred" is listed in feats of the player:
-					say "While the medley of hormones running through your body rushes to your head, and makes you feel even more beastial and lustful then ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be.  All the shots seem to do is make you feel more animalistic then ever.";
-					decrease humanity of player by 40; 
+					say "While the medley of hormones running through your body rushes to your head, and makes you feel even more bestial and lustful then ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be.  All the shots seem to do is make you feel more animalistic then ever.";
+					decrease humanity of player by 40;
 				otherwise:
 					say "You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendencies are enhanced and strengthened.  You feel both eager to breed and be bred as the chemicals react with and alter your body.  These changes shift you towards a dual-biased direction.  You feel very sure that you will be able to maintain a state of both male and female at once!";
 					decrease humanity of player by 20;
@@ -206,7 +206,7 @@ Instead of Resolving a Vet supplies:
 Section 14- Feeding time
 
 Feeding time is a situation.  The level of feeding time is 9.
-The sarea of Feeding time is "Zoo";
+The sarea of Feeding time is "Zoo".
 when play begins:
 	add Feeding time to badspots of hermaphrodite;
 	add Feeding time to badspots of furry;
@@ -233,14 +233,14 @@ Instead of Resolving a Feeding time:
 Section 15- Security Station
 
 Security Station is a situation.
-The sarea of Security Station is "Zoo";
+The sarea of Security Station is "Zoo".
 when play begins:
 	add Security Station to badspots of guy;
 	add Security Station to badspots of girl;
 	add Security Station to badspots of furry;
 
 Instead of Resolving a Security Station:
-	say "Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop.  Moving into the small security area, you note that it smells like beastial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can't stay in here for long without becoming even more aroused then usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over.  Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you...  Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
+	say "Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop.  Moving into the small security area, you note that it smells like bestial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can't stay in here for long without becoming even more aroused then usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over.  Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you...  Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
 	now libido of player is 100;
 	decrease humanity of player by 10;
 	Now Security Station is resolved;
@@ -249,7 +249,7 @@ Instead of Resolving a Security Station:
 Section 16- Broken fences
 
 Broken fences is a situation.
-The sarea of Broken fences is "Zoo";
+The sarea of Broken fences is "Zoo".
 
 Instead of Resolving a Broken fences:
 	say "While traveling through the zoo paths, you note a small broken area of the underbrush, and out of curiosity move a little closer to take a look.  Behind the foliage, you can see the back of one of the animal enclosures, a nice thick area of fence designed to keep the animals inside. Of course in this case you can see how this group of animals got out, as the fence has been broken and torn here where it isn't easily visible, leaving more then enough room for someone, or something, to slip into or out of the enclosure.  Examining the edges of the fence, you find yourself more then a little worried about encountering something able to do that kind of damage to the special cage fences, and decide to move along down the pathway quickly, just in case it might still be in the area.";
@@ -259,7 +259,7 @@ Instead of Resolving a Broken fences:
 Section 17- Wandering beasts
 
 Wandering beasts is a situation.
-The sarea of Wandering beasts is "Zoo";
+The sarea of Wandering beasts is "Zoo".
 
 Instead of Resolving a Wandering beasts:
 	say "While traveling through the zoo, you feel the hair on the back of you neck stand up, and feel like something large is coming your way. Feeling somewhat panicked, you waste no time in ducking down behind one of the bushes, doing your best to conceal yourself from whatever is coming your way.  You are just in time as you see a large group of different beasts come charging down the zoo pathways, obviously hot on the scent of a still changeable person.  You hold your breath as the small stampede passes, only letting it out after they have all passed by safely, sighing with relief as you step out of your impromptu hiding place.  Hearing a noise behind you, you realize that you started to relax too soon, as you turn and find yourself staring at one of the beasts that was straggling along behind the stampede!";
@@ -270,17 +270,17 @@ Instead of Resolving a Wandering beasts:
 Section 18- Roaming spots
 
 Roaming spots is a situation.
-The sarea of Roaming spots is "Zoo";
+The sarea of Roaming spots is "Zoo".
 
 Instead of Resolving a Roaming spots:
-	say "Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large Leopardman is slowly moving across the branches.  You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted Leopardman slowly shifts into the next tree.  You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.  You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there..."; 
+	say "Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large Leopardman is slowly moving across the branches.  You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted Leopardman slowly shifts into the next tree.  You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.  You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there...";
 	now Roaming spots is resolved;
 
 
 Section 19- Picture striping
 
 Picture striping is a situation.
-The sarea of Picture striping is "Zoo";
+The sarea of Picture striping is "Zoo".
 when play begins:
 	add Picture striping to badspots of guy;
 	add Picture striping to badspots of girl;
@@ -294,7 +294,7 @@ Instead of Resolving a Picture striping:
 Section 20- Lazy River		[Event by Shadowwolf94]
 
 Lazy River is a situation.
-The sarea of Lazy River is "Zoo";
+The sarea of Lazy River is "Zoo".
 when play begins:
 	add Lazy River to badspots of guy;
 	add Lazy River to badspots of furry;

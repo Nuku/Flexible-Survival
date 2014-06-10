@@ -18,7 +18,7 @@ to say losetoelk:
 		say ".  Standing overtop of you, he points his dick up at his own chest, unleashing a short spray of urine onto himself.  Some drips down onto you as the scent of his musk grows stronger in the air.  He then grabs your head and presses your face into his wet fur, forcing you to breath in his powerful scent.  It fills your senses, making you lose focus and grow increasingly aroused, becoming eager to submit to the rutting male's needs.";
 		increase libido of player by 8;
 	otherwise:
-		say ".  Standing overtop of you, he grabs your head roughly and presses your face to his strong chest, forcing you to breath in his powerful scent.  The musky odour of the elk fills your senses, making you lose focus and grow increasinly aroused.  You become eager to submit to the rutting male's needs.";
+		say ".  Standing overtop of you, he grabs your head roughly and presses your face to his strong chest, forcing you to breath in his powerful scent.  The musky odour of the elk fills your senses, making you lose focus and grow increasingly aroused.  You become eager to submit to the rutting male's needs.";
 		increase libido of player by 5;
 	if cunts of player > 0 and a random chance of 3 in 4 succeeds:
 		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass.  With a firm thrust, he drives his thick rod into your [if cunt width of player < 4]tight [end if]pussy[if cunt length of player < 12].  It is difficult to take his enlarged shaft at first, but you press back onto it regardless[otherwise].  Your [cunt size desc of player] cunt has little difficulty taking the cervine's shaft and you push back into his thrusts[end if], your body lusting for the musky elk.  His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but even that turns you on all the more in your present state.  Anything to get the virile male off so you can be seeded and bred by him, your horny body demands.";
@@ -94,7 +94,7 @@ to say beattheelk_2:	[ride him - vaginal]
 	now noelksex is 0;
 	say "     With a firm grip on his antlers, you twist him back around, forcing him over onto his back.  He gives a soft bleating sound but does not resist, his erection still hard and dribbling as you eye it with obvious hunger.  Taking it in hand, you climb overtop the defeated cervine and aim his enlarged manhood at your cunt.  You grind your pussy against it a few times to tantalize yourself before lowering down onto it, enjoying the lustful low he gives as you start to ride him.";
 	say "     His big cock pulses and throbs inside you[if cunt width of player < 4].  Being a tight fit, you have to take it slow at first, but your body soon adapts enough to cope[end if][if cunt length of player < 12].  While you can't get it all in despite your best efforts, you have a great time ride as much of it as you can force into your needy cunt[otherwise].  Your [cunt size desc of player] cunt has little difficulty taking his cervine shaft into you, allowing you to glide up and down its considerable length[end if].  You both end up moaning in pleasure as your vaginal walls squeeze and milk at his impressive rod.  The scent of rut hangs heavy in the air and you run your fingers through the thick fur of his chest.";
-	say "     When your climax comes, you push yourself down until his animalistic cock [if cunt length of player < 16]presses as deep into you as it can go.  Milked by your cunt to orgasm, his seed splashs against your cervix, fluid pressure building until it pushes past that final barrier and splatters up into your womb[otherwise]is buried fully inside you.  Milked by your cunt to orgasm, his seed sprays up and splashes against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[otherwise]in a failed attempt to breed you[end if].  You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth.  Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.";
+	say "     When your climax comes, you push yourself down until his animalistic cock [if cunt length of player < 16]presses as deep into you as it can go.  Milked by your cunt to orgasm, his seed splashes against your cervix, fluid pressure building until it pushes past that final barrier and splatters up into your womb[otherwise]is buried fully inside you.  Milked by your cunt to orgasm, his seed sprays up and splashes against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[otherwise]in a failed attempt to breed you[end if].  You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth.  Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.";
 
 
 to say beattheelk_3:	[ride him - anal]
@@ -170,7 +170,7 @@ When Play begins:
 	now loot entry is "elk antler";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 25;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
 	now type entry is "[one of]cervine[or]elk[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -209,7 +209,7 @@ to say elkantleruse:
 		now sex entry is "Female";
 	infect;
 
-the scent of elk antler is "It has a strong, musky scent.";
+the scent of elk antler is "It has a strong, musky scent.".
 
 Section 5 - Endings
 

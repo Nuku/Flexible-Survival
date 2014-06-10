@@ -5,8 +5,8 @@ Version 2 of Main Storyline by Stripes begins here.
 
 Section 0 - Dr Matt Salacious
 
-Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].";
-The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].";
+Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].".
+The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].".
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 understand "Left Behind Recording of Doctor Matt " as doctor matt.
@@ -427,7 +427,7 @@ Chapter 2 - The Situations
 Book 1 - Beach
 
 Beach Detector Site is a situation.  It is resolved.
-The sarea of Beach Detector Site is "Beach";
+The sarea of Beach Detector Site is "Beach".
 
 Instead of resolving a Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale.  It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
@@ -462,7 +462,7 @@ Instead of resolving a Beach Detector Site:
 Book 2 - Red Light District
 
 Red Light Detector Site is a situation.  It is resolved.
-The sarea of Red Light Detector Site is "Red";
+The sarea of Red Light Detector Site is "Red".
 
 Instead of resolving a Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighbourhood, you spot a large nightclub and sex show with a huge neon sign.  Somehow the neon outline of a 25 foot tall, big breasted woman is still lit, flashing along with the name of the club.  It certainly seems to the be the tallest spot around, the sign rising high above the three storey building, dwarfing all around it";
@@ -489,7 +489,7 @@ Instead of resolving a Red Light Detector Site:
 Book 3 - High Rise District
 
 High Rise Detector Site is a situation.  It is resolved.
-The sarea of High Rise Detector Site is "High";
+The sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
 Instead of resolving a High Rise Detector Site:
@@ -533,7 +533,7 @@ Instead of resolving a High Rise Detector Site:
 Book 4 - Park
 
 Park Detector Site is a situation.  It is resolved.
-The sarea of Park Detector Site is "Park";
+The sarea of Park Detector Site is "Park".
 
 Instead of resolving a Park Detector Site:
 	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements.  You somehow doubt sticking it in a tree will quite be enough to satisfy them.  As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park.  Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";

@@ -2,7 +2,7 @@ Version 10 of Soldier Events by Wahn begins here.
 [Version 10 - David+Brutus]
 
 Soldier Squad is a situation.
-The sarea of Soldier Squad is "Warehouse";
+The sarea of Soldier Squad is "Warehouse".
 when play begins:
 	add Soldier Squad to badspots of guy;       [male soldiers]
 	add Soldier Squad to badspots of girl;      [one changes into a female husky]
@@ -222,7 +222,7 @@ Instead of resolving a Soldier Squad:
 		Now Soldier Squad is resolved;  [for now]
 
 Human Urges is a situation.
-The sarea of Human Urges is "Red";
+The sarea of Human Urges is "Red".
 when play begins:
 	add Human Urges to badspots of guy;      [male soldier]
 	add Human Urges to badspots of girl;     [female soldier]
@@ -237,7 +237,7 @@ Instead of resolving a Human Urges:
 	now Human Urges is resolved;
 
 Soldiers & Snowmeows is a situation.
-The sarea of Soldiers & Snowmeows is "Red";
+The sarea of Soldiers & Snowmeows is "Red".
 when play begins:
 	add Soldiers & Snowmeows to badspots of guy;      [male soldier & snow leopard]
 	add Soldiers & Snowmeows to badspots of furry;    [snow leopard involved]	

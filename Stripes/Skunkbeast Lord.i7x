@@ -5,8 +5,8 @@ Version 1 of Skunkbeast Lord by Stripes begins here.
 Section 1 - Event
 
 Skunkbeast Battle is a situation.  The level of Skunkbeast Battle is 15.
-The sarea of Skunkbeast Battle is "Forest";
-skunkbeaststatus is a number that varies;
+The sarea of Skunkbeast Battle is "Forest".
+skunkbeaststatus is a number that varies.
 when play begins:
 	add Skunkbeast Battle to badspots of guy;
 	add Skunkbeast Battle to badspots of girl;
@@ -53,7 +53,7 @@ Instead of resolving a Skunkbeast Battle:
 			say "     The thick, musky seed soaks into you, flooding your mouth and nose, forcing you to swallow it down as you struggle to breathe.  Your body soaks up the infected cum, changing rapidly, gaining a sexy, womanly figure like the skunk girls around you[if cunts of player > 0 and cocks of player > 0].  Your ebon cock is stiff and leaking cum, but it is your hot, dripping pussy that aches for attention[otherwise if cocks of player > 0].  Your ebon, skunk cock is stiff and leaking cum[otherwise if cunts of player > 0].  Your pussy is hot and dripping, aching for attention[end if].  When the skunkbeast moves its paw to release you, your paws move to your groin, playing with yourself lustfully as your flesh becomes the same glossy black of the skunk girls.  As your transformation continues, you notice the skunkbeast lord, whom you are starting to identify as your master, still standing over you with his large, throbbing cock.  You are up in an instant, licking and kissing at it, lavishing attention upon that wonderful cock.  He permits you to service him like this for a few minutes before releasing a soft growl.  Obediently you turn and present yourself, raising your tail and letting your new lord and master mount you and mate you as he takes you as his latest fucktoy pet.";
 			if skunk kit is tamed:
 				say "     You briefly take notice of a small skunk kit running around.  It is soon taken into the arms of several of the skunk girls, who nurse it and lavish attention on it.  When you look over again later, it has grown considerably, well on its way to becoming a skunkbeast as it fucks one of the buxom skunks.  After you're bred several times by your new lord, he pushes you over to the new skunkbeast, allowing you to suck its cock for a tasty load of skunk cum while your lord mounts another of the new girls.";
-			end the game saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
+			end the story saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
 			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;
@@ -138,7 +138,7 @@ Instead of resolving a Skunkbeast Battle:
 				say "     Several of the skunk girls move in to lavish attention upon you, grooming your fur, stroking your face, licking your dripping pussy and teasing your clit[if skrp is 1].  The skunk head at your waist shares sexy kisses with the skunk girls as well and even has one of  them press her pussy to her muzzle to be eaten out[end if].  Several of the busty girls take turns suckling from your breasts, drawing out your milk.  Once they get you well and truly aching for it, you raise your tail and give it an enticing swish towards the waiting skunkbeasts.  They start to growl and scuffle playfully, vying for the right to mount you.  Eventually a winner is chosen and you moan loudly as his cock is pressed into your heated folds.  The others aren't left unsatisfied, with many other girls around eager to get their share of skunkbeast cock.  They mate loudly and wildly all around you, providing a lovely show that fills you with pride.";
 				say "     You get fucked good and hard by him, and several others, over the course of the wild orgy of skunk sex that's broken out to celebrate their victory over the mercenaries and the coronation of their new skunkbeast lady.  Eventually, the lustful fucking comes to an end and the skunks, satisfied (and in the case of all the girls, stuffed to overflowing with cum) disperse back into the woods.[impregchance]";
 			if humanity of player < 10:
-				end the game saying "Having become the new Skunkbeast Lord, you lose yourself to the infection.";
+				end the story saying "Having become the new Skunkbeast Lord, you lose yourself to the infection.";
 				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;

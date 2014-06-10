@@ -329,9 +329,9 @@ to fsdmvicmenu:
 			say "     You have some second thoughts and choose against having your way with the dragon, leaving him to go about your business once more."; [turn down]
 			now trixieexit is 1;
 
-fsdsub is a number that varies;
-[fsdmposture is a number that varies;]
-fsdbias is a number that varies;
+fsdsub is a number that varies.
+[fsdmposture is a number that varies.]
+fsdbias is a number that varies.
 
 to fsdmsubshift:
 	if fsdsub < 7:
@@ -754,7 +754,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
-boundmod2 is a number that varies;
+boundmod2 is a number that varies.
 
 Section 3 - Vore Bound State
 

@@ -7,7 +7,7 @@ Version 2 of High Rise Events by Stripes begins here.
 Section 1- Rabid Lawyers
 
 Rabid Lawyers is a situation.
-The sarea of Rabid Lawyers is "High";
+The sarea of Rabid Lawyers is "High".
 when play begins:
 	add Rabid Lawyers to badspots of guy;
 	add Rabid Lawyers to badspots of furry;
@@ -23,7 +23,7 @@ Instead of resolving a Rabid Lawyers:
 Section 2- Pigging Out
 
 Pigging Out is a situation.  The level of Pigging Out is 3.
-The sarea of Pigging Out is "High";
+The sarea of Pigging Out is "High".
 restaurantpig is a number that varies.	[to be used at a later date]
 when play begins:
 	add Pigging Out to badspots of girl;
@@ -65,7 +65,7 @@ Instead of resolving a Pigging Out:
 				challenge "Messy Pig";
 				if lost is 1:
 					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
-					infect "Messy Pig";    [extra infection]
+					infect "Messy Pig"; [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
 				otherwise:
@@ -83,7 +83,7 @@ Instead of resolving a Pigging Out:
 			challenge "Messy Pig";
 			if lost is 1:
 				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food.  She tosses it in a heap on the floor beside you.  With an oink, she drops down onto the floor next to the food and grabs you by the neck.  She buries your face between her legs, giving you a noseful of her strong scent and wet pussy.  As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger.  Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure.  With you to tend to her pussy, she can stuff food into her hungry maw with both hands.  After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
-				infect "Messy Pig";    [extra infection]
+				infect "Messy Pig"; [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
 			otherwise:
@@ -114,12 +114,12 @@ name	desc	weight	object
 
 cleaver is an armament. It is part of the player. It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]". The weapon damage of cleaver is 6. The weapon type of cleaver is "Melee". It is not temporary.
 
-the scent of the cleaver is "The heavy blade smells faintly of blood.";
+the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
 Small Park is a situation.
-The sarea of Small Park is "High";
+The sarea of Small Park is "High".
 when play begins:
 	add Small Park to badspots of girl;
 	add Small Park to badspots of guy;
@@ -149,13 +149,13 @@ to say dogparksearch:
 		increase carried of pepperspray by 1;
 		increase score by 5;
 	if T is 3:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
 		challenge "German Shepherd";
 	if T is 4:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  Your search turns up nothing of value, but you are getting ready to leave, you spot a large collie-like creature charging into the park.  It sniffs around eagerly, clearly drawn by the scent of so many canines.  Finding the park empty, it is clearly disappointed.  That is, until it finds you.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  Your search turns up nothing of value, but you are getting ready to leave, you spot a large collie-like creature charging into the park.  It sniffs around eagerly, clearly drawn by the scent of so many canines.  Finding the park empty, it is clearly disappointed.  That is, until it finds you.";
 		challenge "Shemale Smooth Collie";
 	if T is 5:
-		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach the far corner of the park, you are spotted by a husky female with the last tatters of her expensive dress still on her and a pearl necklace.  As she bounds towards you, you note that the scent of sex is thick around her.  She was likely very recently transformed and is lost in her new animalistic needs.";
+		say "     You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you approach the far corner of the park, you are spotted by a husky female with the last tatters of her expensive dress still on her and a pearl necklace.  As she bounds towards you, you note that the scent of sex is thick around her.  She was likely very recently transformed and is lost in her new animalistic needs.";
 		challenge "Female Husky";
 	if T is 6:
 		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While flipping through a pile of clothes and items, you spot a dog collar.  Making the mistake of picking it up, you find it sticky with something that runs down your arm.  You toss down the cum-slick collar, but it is too late.";
@@ -197,7 +197,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and nine;  [adjust this for new dogs]
+	let tempnum  be a random number between one and nine; [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
 	if tempnum is 2:
@@ -221,7 +221,7 @@ to say doggyinfect:
 Section 4- Corporate Fat Cats
 
 Corporate Fat Cats is a situation.
-The sarea of Corporate Fat Cats is "High";
+The sarea of Corporate Fat Cats is "High".
 when play begins:
 	add Corporate Fat Cats to badspots of guy;
 	add Corporate Fat Cats to badspots of furry;
@@ -236,7 +236,7 @@ Instead of resolving a Corporate Fat Cats:
 Section 5- Veterinary Hospital
 
 Veterinary Hospital is a situation.
-The sarea of Veterinary Hospital is "High";
+The sarea of Veterinary Hospital is "High".
 doggyness is a number that varies.
 kittyness is a number that varies.
 when play begins:
@@ -279,7 +279,7 @@ Instead of resolving a Veterinary Hospital:
 				follow the sex change rule;
 				follow the sex change rule;
 				attempttowait;
-				end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
@@ -337,7 +337,7 @@ to say vetsearch:
 			say "     You look at the cans of pet food briefly, then turn and continue searching.  You haven't sunk that low yet.  A quick look around the rest of the room finds nothing else of interest.  Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			increase score by 1;
 	if T is 3 or T is 4 or T is 5 or T is 6 or T is 7:		[high chance of random 'pet' fight]
-		say "      You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn't stay long, move quickly through the examination rooms.  There is a noise behind you and you turn around quickly to find one of the monsters behind you, perhaps it was once one of the humans who were here, or maybe even one of the animals.";
 		say "[randomvetfight]";
 		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet's office are getting to you and you leave before you succumb entirely.";
 	if T is 8:
@@ -400,7 +400,7 @@ to say randomvetfight:				[more suitable pets can be added]
 Section 6- Golf Store
 
 Golf Store is a situation.
-The sarea of Golf Store is "High";
+The sarea of Golf Store is "High".
 when play begins:
 	add Golf Store to badspots of furry;
 
@@ -417,13 +417,13 @@ name	desc	weight	object
 
 golf club is an armament. It is part of the player. It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]". The weapon damage of golf club is 5. The weapon type of golf club is "Melee". It is not temporary.
 
-the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.";
+the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
 
 
 Section 7- Electronics Store
 
 Electronics Store is a situation.
-The sarea of Electronics Store is "High";
+The sarea of Electronics Store is "High".
 when play begins:
 	add Small Park to badspots of humorous;
 
@@ -439,7 +439,7 @@ Instead of resolving a Electronics Store:
 Section 8 - Cameo
 
 Cameo is a situation.  The level of Cameo is 4.
-The sarea of Cameo is "High";
+The sarea of Cameo is "High".
 choclabfight is a number that varies.
 when play begins:
 	add Cameo to badspots of hermaphrodite;
@@ -539,7 +539,7 @@ Instead of resolving a Cameo:
 		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants.  You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";
 		if humanity of player < 10:
 			say ".  You flow into the shape of a flowing, chocolate dog and head out after them with a wet yip, having lost too much of yourself to them and succumbing to the bizarre, confectionary infection.  When you catch up to them, they grin and give you slobbery, chocolatey licks and nuzzles, welcoming you into the pack.";
-			end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;
@@ -552,7 +552,7 @@ Instead of resolving a Cameo:
 Section 9 - Raul's Wild Kingdom
 
 Wild Kingdom is a situation.
-The sarea of Wild Kingdom is "High";
+The sarea of Wild Kingdom is "High".
 
 Instead of resolving a Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out.  Inside you find the small place crammed full of animal people or all kinds.  A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade.  In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";

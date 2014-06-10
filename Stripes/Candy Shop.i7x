@@ -7,7 +7,7 @@ Version 1 of Candy Shop by Stripes begins here.
 Section 1 - Candy Shop event
 
 CandyShop is a situation.  The level of CandyShop is 9.
-The sarea of CandyShop is "Midway";
+The sarea of CandyShop is "Midway".
 sugarferretfight is a number that varies.
 
 when play begins:
@@ -77,7 +77,7 @@ Section 2 - Sweet Tooth
 
 Sweet Tooth is a room. "[Sweet Tooth scene]". It is unknown. It is fasttravel. It is private.
 
-Sweet Tooth has a number called lastcaffeine;
+Sweet Tooth has a number called lastcaffeine.
 randomferret is a list of numbers that varies.
 ferretvisit is a number that varies.
 
@@ -359,7 +359,7 @@ an everyturn rule:
 		if "Strong Psyche" is not listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 2;
 		if "Weak Psyche" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease humanity of player by 1;
 		if caffeinehigh of player <= 0 or bodyname of player is not "Sugar Ferret":
-			say "     You moan and shiver for a moment as the wild rush of energy that's filled you recently suddenly and burns out.  The manic excitement and unbridled stamina seems to leave you all at once[if player is sugarbodied].  The oversized claws on your hands retract, leaving you with cute little paws[end if][if player is sugarfaced].  Your eyes refocus as they return to their soft, indigo tone.  Your pointed teeth and the manic grin soon fade away as well[end if][if player is sugarskinned].  As you start to calm down, your fur loses its vibrant tone and befores a soft, pastel purple[end if].  As your twitchiness does away and you settle back down, you are left tired and longing to feel the rush of more caffeine.";
+			say "     You moan and shiver for a moment as the wild rush of energy that's filled you recently suddenly and burns out.  The manic excitement and unbridled stamina seems to leave you all at once[if player is sugarbodied].  The oversized claws on your hands retract, leaving you with cute little paws[end if][if player is sugarfaced].  Your eyes refocus as they return to their soft, indigo tone.  Your pointed teeth and the manic grin soon fade away as well[end if][if player is sugarskinned].  As you start to calm down, your fur loses its vibrant tone and becomes a soft, pastel purple[end if].  As your twitchiness does away and you settle back down, you are left tired and longing to feel the rush of more caffeine.";
 			say "     (With the caffeine buzz worn off, your stats have returned to normal, though you do feel weakened and tired.)[line break]";
 			now caffeinehigh of player is 0;
 			decrease intelligence of player by 2;

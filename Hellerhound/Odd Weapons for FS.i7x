@@ -20,15 +20,15 @@ Does the player mean grabbing the clean whip when the clean whip is visible: it 
 
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
-the scent of dirty whip is "The sticky whip smells of equine cum.";
+the scent of dirty whip is "The sticky whip smells of equine cum.".
 
 horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
 
-the scent of horse whip is "The horse whip smells of leather and oils.";
+the scent of horse whip is "The horse whip smells of leather and oils.".
 
 infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing". the objsize of infected sword is 4.
 
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.";
+the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
 	say "The sword sets the sides of the microwave on fire, and Matt rushes over and sprays it with the fire extinguisher. 'What are you doing?' he exclaims, 'Don't you know what happens when you put metal in the microwave?";
@@ -42,7 +42,7 @@ The placement of garbage can lid is "body".
 The descmod of garbage can lid is "You hold an aluminium garbage can lid in your off hand as an improvised shield.".
 The slot of garbage can lid is "shield".
 
-the scent of garbage can lid is "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
+the scent of garbage can lid is "A heavy scent of garbage fills your nose as you sniff your makeshift shield.".
 
 
 Section 1 - Garbage can lid
@@ -118,7 +118,7 @@ instead of resolving sword nest:
 					repeat with T running from one to 15:
 						randominfect;
 					now the humanity of the player is 0;
-					end the game saying "Your humanity submits to the sludge nanites, and you go feral.";
+					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
@@ -169,7 +169,7 @@ Section 3 - Dirty Whip
 
 Destroyed Bushes is a situation.
 the sarea of destroyed bushes is "Park".
-numwater is a number that varies;
+numwater is a number that varies.
 gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
