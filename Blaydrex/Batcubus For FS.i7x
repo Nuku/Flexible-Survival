@@ -30,7 +30,7 @@ to say beatthebatcubus:
 			if cunt width of player < 3 or cunt length of player < 6:
 				say "     Your eyes hone in on her perfect breasts. You can see small trails of milk leaking from her large nipples. You smirk as a nice thought comes to your mind. You want something to fill your cunt and womb, might as well try milk. You walk up to her and roughly grab her breast. She looks surprised, obviously not used to someone being so rough and forceful.Her milk leaks out more rapidly as a sign of her growing arousal. You push her breast against your cunt, her nipple and some breast going inside. You smile and squeeze, making her milk flood into your cunt. You whimper, your pussy drinking up all that delicious milk. After you finish emptying one breast you move to the next, until that one empties as well. You pop it free, milk pouring from your cunt. She smiles, something made her happy. She kisses your abdomen where your womb is. Your uterus feels strange and your body heats up. You drop to your knees as your pussy tightens, no more milk escaping from it. You go through an intense orgasm that lasts a while. When you come down you see some more milk leaking out, but not much. But something seems off. It is thicker and looks more like cum. Her kiss must have changed the milk to sperm.[impregchance]";
 			otherwise:
-				say "    Your eyes remain glued to her lovely lips covered with her purple lipstick. Something about them makes you just want to kiss them. She smiles and waits patiently for you to close in before kissing you passionately on the lips, making you more horny. You stand up and place your pussy near her lips. She kisses your pussy and clit lovingly before licking with passion. Her technique is incredible, quickly bringing you to the edge. You cant help but cum, covering her face in your juices. She waits a second and begins her assault again. Your sensitive pussy is even more sensitive, causing you to moan like a little whore. She makes you cum countless times before you drop out of exhaustion. She gets up and walks away, leaving you oddly more horny than when you started.";
+				say "    Your eyes remain glued to her lovely lips covered with her purple lipstick. Something about them makes you just want to kiss them. She smiles and waits patiently for you to close in before kissing you passionately on the lips, making you more horny. You stand up and place your pussy near her lips. She kisses your pussy and clit lovingly before licking with passion. Her technique is incredible, quickly bringing you to the edge. You can[']t help but cum, covering her face in your juices. She waits a second and begins her assault again. Your sensitive pussy is even more sensitive, causing you to moan like a little whore. She makes you cum countless times before you drop out of exhaustion. She gets up and walks away, leaving you oddly more horny than when you started.";
 
 Section 2 - Monster Insertion
 
@@ -79,7 +79,7 @@ When Play begins:
 	now libido entry is 80;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "batcubus milk";  [ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]elegant[cycling]";
 	now type entry is "[one of]bat[or]batty[or]bat-like[at random]";
 	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
@@ -112,7 +112,7 @@ Section 4 - Endings
 When play ends:
 	if bodyname of player is "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
 		if humanity of player < 10:
-			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends you lust soaring and you cant help but forget again and go look for relief you so desperately need.";
+			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends you lust soaring and you can[']t help but forget again and go look for relief you so desperately need.";
 		otherwise:
 			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
 			if cocks of player is greater than 0 and cunts of player is greater than 0:
