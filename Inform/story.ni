@@ -6523,7 +6523,7 @@ Include Hulking Cheerleader by Wahn.
 Include Friendship Pony for FS by Stripes.
 Include Satyr by Sarokcat.
 Include Centaur Stallion For Fs by Stripes.
-Include Orc by Wahn.
+Include Orc Infections by Wahn.
 Include Tiger Cop for FS by stripes.
 Include Spidertaur Male by Wahn.
 Include Butterfly for FS by mirumu.
@@ -6799,6 +6799,9 @@ Include Amy by Wahn.
 Include Carl by Wahn.
 Include HornyHorsey by femtoAmpere. 
 Include Rane by Wahn.
+Include Orc Lair by Wahn.
+Include Val by Wahn.
+Include Chris by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
