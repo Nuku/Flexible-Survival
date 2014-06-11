@@ -73,7 +73,7 @@ Instead of examining a screen which is part of a switched on computer (called th
 Carry out switching off a computer (this is the screen fades after shutdown rule):
 	let chosen screen be a random screen which is part of the noun;
 	repeat with item running through things which are part of the chosen screen:
-		remove the item from play.   
+		remove the item from play.
 
 Chapter 2 - Laptops
 
@@ -154,7 +154,7 @@ Understand "search for [text]" as text-searching when the player can see a switc
 
 Carry out text-searching the topic understood (this is the divert searching to input reply rule):
 	if a search engine (called the software x) is visible:
-		abide by the input handling rules for the software x.  
+		abide by the input handling rules for the software x.
 
 Check someone text-searching (this is the block others searching for text rule):
 	stop the action.
@@ -194,7 +194,7 @@ A password lock program is a kind of software. The software priority of a passwo
 Rewarding successful answering of something is an activity.
 
 Rule for rewarding successful answering of a password lock program (called chosen software) (this is the default password resolution rule):
-	say "[success of the chosen software][paragraph break]"; 
+	say "[success of the chosen software][paragraph break]";
 	let chosen computer be a random computer which is running the chosen software;
 	let the target screen be a random screen which is part of the chosen computer;
 	now the chosen software is not run by the chosen computer;
@@ -220,7 +220,7 @@ A multiple-choice program is a kind of software.
 The description of a multiple-choice program is usually "[options-list of the item described]".
 
 To say options-list of (chosen program - a multiple-choice program):
-	say "The following options are visible on the screen:[paragraph break]"; 
+	say "The following options are visible on the screen:[paragraph break]";
 	repeat through the options table of the chosen program:
 		say "[title entry][line break]";
 	say "[run paragraph on]".
@@ -273,7 +273,7 @@ To say inbox of (chosen email - an email program):
 				say "[line break]";
 				if the read entry is false:
 					say "[bold type]";
-				say "[arrival time entry]: ";
+				say "[arrival time entry]:";
 				say "[message entry]";
 				if answered entry is true:
 					say "(R)";
@@ -286,8 +286,8 @@ topic	message	arrival time	read	answered	description
 
 To deliver (chosen message - text) to (chosen program - an email program):
 	repeat through the message table of the chosen program:
-		if message entry is chosen message: 
-			change the arrival time entry to the time of day; 
+		if message entry is chosen message:
+			change the arrival time entry to the time of day;
 			if the player can see the chosen program:
 				say "[new mail message of the chosen program][paragraph break]";
 
@@ -295,7 +295,7 @@ Understand "read [text]" as email-reading when the player can see a switched on 
 
 Carry out email-reading the topic understood (this is the divert email reading to input reply rule):
 	if an email program (called the software x) is visible:
-		abide by the input handling rules for the software x.  
+		abide by the input handling rules for the software x.
 
 Check someone email-reading (this is the block others reading email rule):
 	stop the action.
@@ -311,14 +311,14 @@ Check someone email-replying (this is the block others replying to email rule):
 Check email-replying (this is the refuse to reply to nonexistent messages rule):
 	repeat with chosen software running through visible email programs:
 		if the topic understood is a topic listed in the message table of the chosen software:
-			if there is an arrival time entry: 
+			if there is an arrival time entry:
 				make no decision;
 	say "No such message is available." instead.
 
 Carry out email-replying (this is the mark messages replied rule):
 	repeat with chosen software running through visible email programs:
 		if the topic understood is a topic listed in the message table of the chosen software:
-			if there is an arrival time entry: 
+			if there is an arrival time entry:
 				change the answered entry to true;
 				rule succeeds.
 
@@ -330,7 +330,7 @@ Chapter 3 - Which Program Receives Input?
 To decide what object is the controlling program of (chosen computer - a computer):
 	let the chosen screen be a random screen that is part of the chosen computer;
 	repeat with item running through software which is part of chosen screen:
-		remove item from play; 
+		remove item from play;
 	if the chosen computer runs no software:
 		decide on nothing;
 	otherwise:
@@ -411,7 +411,7 @@ Section 2 - Selection with a Selection Device
 
 Understand "click on [text] with [a selection device]" or "select [text] with [a selection device]" or "pick [text] with [a selection device]" or "click [text] with [a selection device]" as selecting it with. 
 
-Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with.  Selecting it with is an action applying to a topic and one thing.
+Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with. Selecting it with is an action applying to a topic and one thing.
 
 Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text]" as selecting it with. 
 
@@ -492,7 +492,7 @@ An input handling rule for a multiple-choice program (called chosen software) (t
 An input handling rule for a search engine (called chosen software) (this is the consult software rule):
 	try consulting the chosen software about the topic understood instead.
 
-An input handling rule for an email program (called chosen software) (this is the read email rule): 
+An input handling rule for an email program (called chosen software) (this is the read email rule):
 	if the topic understood is a topic listed in the message table of the chosen software:
 		if there is an arrival time entry:
 			say "[description entry][paragraph break]";
@@ -507,7 +507,7 @@ Computers ends here.
 
 "Computers" implements a basic computer set-up. Implemented computers have peripherals: such as a screen and keyboard by default, and others optionally. They may run software; several types of default software are provided. They may also have data ports of various sorts, though the behavior of these ports is minimally elaborated here.
 
-"Computers" does not deal with power sources (either cords or batteries).  
+"Computers" does not deal with power sources (either cords or batteries).
 
 Chapter: Hardware
 
@@ -581,7 +581,7 @@ When the player uses a TYPE or CLICK ON command, the topic understood is passed 
 
 Section: Default software kinds
 
-Five types of software are provided by default: 
+Five types of software are provided by default:
 
 (1) a password lock program that renders the computer inoperable until the password is typed
 
@@ -779,14 +779,14 @@ We also want the computer to revert back to the operating system if switched off
 
 	This is the open-Mail rule:
 		repeat with item running through software run by the old PC:
-			now the software priority of item is 5; 
+			now the software priority of item is 5;
 		now the software priority of PC email is 1;
 		say "You select the mail.";
 		try examining PC email.
 		
 	This is the open-Browser rule:
 		repeat with item running through software run by the old PC:
-			now the software priority of item is 5; 
+			now the software priority of item is 5;
 		now the software priority of Goggle is 1;
 		say "You select the browser.";
 		try examining Goggle.
@@ -827,7 +827,7 @@ We also want the computer to revert back to the operating system if switched off
 		
 	To reset to operating system:
 		repeat with item running through software run by the old PC:
-			now the software priority of item is 5; 
+			now the software priority of item is 5;
 		now the software priority of PCOS is 1;
 			
 	After examining a quittable software (called chosen software):
