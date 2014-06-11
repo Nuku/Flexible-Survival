@@ -18,7 +18,7 @@ Version 1 of Val by Wahn begins here.
 [  4: kid born and taken while the player was out              ]
 		
 Val is a man.  The hp of Val is normally 0. 
-The description of Val is "[ValDesc]";
+The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
 ValPregnancy is a number that varies.

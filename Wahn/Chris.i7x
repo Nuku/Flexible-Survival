@@ -11,7 +11,7 @@ Version 1 of Chris by Wahn begins here.
 [   2: orc warrior                                 ]
 				
 Chris is a man.  The hp of Chris is normally 0. 
-The description of Chris is "[ChrisDesc]";
+The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 
 instead of sniffing Chris:
