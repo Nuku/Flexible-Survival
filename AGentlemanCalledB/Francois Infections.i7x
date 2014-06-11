@@ -1,4 +1,4 @@
-Version 1 of Francois Infections by AGentlemancalledB begins here.
+Version 1 of Francois Infections by AGentlemanCalledB begins here.
 [Version 1 - Adds Cheesecake and Gingerbread infections for use with Francois.]
 
 Section 1 - Monster Responses

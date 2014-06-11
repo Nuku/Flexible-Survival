@@ -1,4 +1,4 @@
-Version 1 of Timothy by SarokCat begins here.
+Version 1 of Timothy by Sarokcat begins here.
 [ Version 1 - Breakup of Zoo People file ]
 
 "Adds a herm gryphon breeder with room for company in her nest to Flexible Survival."

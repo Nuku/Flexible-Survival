@@ -1,4 +1,4 @@
-Version 3 of Pursuit of Science by Kaleem Mcintyre begins here.
+Version 3 of Pursuit of Science by Kaleem mcintyre begins here.
 [ Version 3 - Corrections made.  Quests functional (?) ]
 
 Section 1 - Questing Chain
