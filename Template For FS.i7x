@@ -32,8 +32,8 @@ when play begins:
 	add { "Template" } to infections of Knotlist;		[list of cock infections with a knot]
 	add { "Template" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]
 	add { "Template" } to infections of Internallist;	[list of infections w/internal male genitals]
-	add { "Template" } to infections of BarbedCocklist;	[List of creatures with a barbed cock]
-	add { "Template" } to infections of Firebreathlist;	[List of fire breathing creatures]
+	add { "Template" } to infections of BarbedCocklist;	[list of creatures with a barbed cock]
+	add { "Template" } to infections of Firebreathlist;	[list of fire breathing creatures]
 
 [Sample loss and victory text templates.]
 [Numerous other variations can be found in existing creature files.]
@@ -91,7 +91,7 @@ When Play begins:
 	now cock change entry is "it takes on a new, kinky form";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now sta entry is 12;			[ These values may be used as part of alternate combat. ]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
@@ -105,7 +105,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -113,7 +113,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "erudite";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "conceptual";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
