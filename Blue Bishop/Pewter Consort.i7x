@@ -306,7 +306,9 @@ to say pewtercharacterassess:
 					say "the tongue of one creature and the dick of another, left only with the taste of silvery pre and saliva";
 				otherwise if pewterheadvar1 is 2:
 					say "the tongue of two creatures, their slick writhing organs tormenting you in unison";
-			if (pewterbodyocc > 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc is 0) or (pewterbodyocc is 0 and pewtercockocc > 0 and pewtercuntocc is 0 and pewterassocc is 0) or (pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc > 0 and pewterassocc is 0) or (pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc > 0):
+			if (pewterbodyocc > 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc is 0) or (pewterbodyocc is 0 and pewtercockocc > 0 and pewtercuntocc is 0 and pewterassocc is 0):
+				say " and ";
+			otherwise fi (pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc > 0 and pewterassocc is 0) or (pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc > 0):
 				say " and ";
 			otherwise if pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc is 0:
 				say "";
