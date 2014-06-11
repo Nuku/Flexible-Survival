@@ -1,7 +1,7 @@
 huskies by Hellerhound begins here.
 
 Huskies is a species.
-The description of it is "They are slutty huskies, a beautiful anthro canine species that comes covered in soft, snowy fur. they have slim muzzles and perky, overly large ears along with a large, fluffy husky tail. The girl[apostrophe]s chests bear two firm and gropable C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. The females have creamy colored tummies that are slightly swollen as if they are barely pregnant, though that will probably change soon due to the aching need oozing from their swollen slits as it's obvious they've become nothing more than needy whores. Sexually, they come in male and female varieties. They average around five feet. They are very sexually active.".
+The description of it is "They are slutty huskies, a beautiful anthro canine species that comes covered in soft, snowy fur. They have slim muzzles and perky, overly large ears along with a large, fluffy husky tail. The girls['] chests bear two firm and gropable C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. The females have creamy colored tummies that are slightly swollen as if they are barely pregnant, though that will probably change soon due to the aching need oozing from their swollen slits as it's obvious they've become nothing more than needy whores. Sexually, they come in male and female varieties. They average around five feet. They are very sexually active.".
 The skin of it is "creamy white fur".
 The skinadj of it is "soft furry".
 The body of it is "slutty husky".
@@ -34,7 +34,7 @@ The Food of it is 40.
 The water of it is 20.
 The Diet of it is { "Meat"  }.
 The Perks of it is { "Hunter" }.
-The science advisor of it is "An odd looking  husky, this one seems to be one of the few that aren't totally submissive. She is definitely the smart one, as she is carrying a small clipboard much like yours, with a pen.".
+The science advisor of it is "An odd looking husky, this one seems to be one of the few that aren't totally submissive. She is definitely the smart one, as she is carrying a small clipboard much like yours, with a pen.".
 
 
 
