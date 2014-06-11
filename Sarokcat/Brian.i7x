@@ -1,4 +1,4 @@
-Version 2 of Brian by SarokCat begins here.
+Version 2 of Brian by Sarokcat begins here.
 [ Version 2 - Sex w/Brian - finally - added by Stripes]
 
 "Adds a single-mindedly determined rhino named Brian to Flexible Survival."

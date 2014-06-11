@@ -1,4 +1,4 @@
-Version 1 of Diego by SarokCat begins here.
+Version 1 of Diego by Sarokcat begins here.
 [ Version 1 - Breakup of Zoo People file ]
 
 "Adds a coyote named Diego to Flexible Survival."
