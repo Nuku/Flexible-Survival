@@ -14,7 +14,7 @@ instead of sniffing Pirate Island:
 
 
 Treasure cave is a man.
-The description of Treasure cave is "Not just one cave but a large series of caves that dot the shores of the island, they look like the perfect place for some suspicious pirate to have hidden some treasure.  Still the dark openings look ominous, and you can hear water sloshing within some of them occassionally, it will take a lot of bravery to explore these caves.  You will have to [']hunt for treasure['] in them.".
+The description of Treasure cave is "Not just one cave but a large series of caves that dot the shores of the island, they look like the perfect place for some suspicious pirate to have hidden some treasure.  Still the dark openings look ominous, and you can hear water sloshing within some of them occasionally, it will take a lot of bravery to explore these caves.  You will have to [']hunt for treasure['] in them.".
 Treasure cave is in Pirate Island.
 
 instead of linkactioning Treasure Cave when treasurefound is 0:
@@ -50,20 +50,20 @@ check treasurehunt:
 
 carry out treasurehunt:
 	if lasttreasurehunt - turns is less than 8:
-		say "Approaching the dark caves that dot the island, you realize that you still haven[apostrophe]t fully recovered from your last trip down into the darkness, and decide to come back again later...";
+		say "Approaching the dark caves that dot the island, you realize that you still haven[']t fully recovered from your last trip down into the darkness, and decide to come back again later...";
 		stop the action;
 	otherwise:
 		if treasurefound is 0:
 			now lasttreasurehunt is turns;
-			say "Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can[apostrophe]t wait to find it! With a grin on your face you pick a cave and stride forward!";
+			say "Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can[']t wait to find it! With a grin on your face you pick a cave and stride forward!";
 			if rarequesting is 5:
-				say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you,  the cave seems to be a Sea dragons lair!";
+				say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you.  The cave seems to be a Sea dragons lair!";
 				challenge "Feral Sea Dragon";
 				if lost is 1:
 					say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 					stop the action;
 				otherwise:
-					say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier.  Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did!  You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up.  Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won[apostrophe]t hurt once you get back to civilization either![line break]";
+					say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier.  Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did!  You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up.  Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won[']t hurt once you get back to civilization either![line break]";
 					say "Your xp has increased!";
 					increase xp of player by 50;
 					now treasurefound is 1;
@@ -84,7 +84,7 @@ carry out treasurehunt:
 					say "your dexterity has increased by 1!";
 					stop the action;
 				If T is 4:
-					say "Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock.  You lie there for a minute cursing at the dark hole, as your body aches with pain, slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now....";
+					say "Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock.  You lie there for a minute cursing at the dark hole, as your body aches with pain, slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";
 					decrease hp of player by 20;
 					stop the action;
 				if T is 5:
@@ -105,13 +105,13 @@ carry out treasurehunt:
 						say "You acquired some seafood!";	
 					stop the action;
 				if T is 6:
-					say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you,  the cave seems to be a Sea dragons lair!";
+					say "Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave.  Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you.  The cave seems to be a Sea dragons lair!";
 					challenge "Feral Sea Dragon";
 					if lost is 1:
 						say "Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
 						stop the action;
 					otherwise:
-						say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier.  Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did!  You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up.  Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won[apostrophe]t hurt once you get back to civilization either![line break]";
+						say "Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier.  Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did!  You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up.  Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won[']t hurt once you get back to civilization either![line break]";
 						say "Your xp has increased!";
 						increase xp of player by 50;
 						now treasurefound is 1;
@@ -121,7 +121,7 @@ carry out treasurehunt:
 					challenge "pirate shark";
 					challenge "pirate shark";
 					challenge "pirate shark";
-					say "After a long and exhausting time, the sharks have finally left, leaving you in the cave by yourself, sighing you lie down to rest for a minute, only to find something uncomfortable underneath you.  Glancing down, you realize they left behind the items they were dicing over!  While it may not be actual treasure, it certainly isn[apostrophe]t anything to sniff at you think as you tuck the items into your pack.";
+					say "After a long and exhausting time, the sharks have finally left, leaving you in the cave by yourself, sighing you lie down to rest for a minute, only to find something uncomfortable underneath you.  Glancing down, you realize they left behind the items they were dicing over!  While it may not be actual treasure, it certainly isn[']t anything to sniff at you think as you tuck the items into your pack.";
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
@@ -167,7 +167,7 @@ carry out treasurehunt:
 							infect "Feral Sea Dragoness";
 							infect "Feral Sea Dragoness";
 					otherwise:
-						say "Deciding that it probably isn[apostrophe]t treasure, you continue on your way.";
+						say "Deciding that it probably isn[']t treasure, you continue on your way.";
 					stop the action;
 				otherwise:
 					say "Wandering through the dark caves, you slip on one of the damp corridors and find yourself sliding out of control down a long ramp, the ramp twists and turns before depositing your screaming body in the sea at the coast of the island, as you sputter and look around for a way back to the beach, you spot something heading your way!";
@@ -205,7 +205,7 @@ Instead of resolving a Noteinbottle:
 
 [ - moved into Rod's dialog set
 Instead of conversing Rod Mallrat while tmapfound is 1:
-	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[apostrophe]ll be right back, dude.  I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder.   You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that[apostrophe]s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue whats on the island though,  but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever you're doing, it sounds kinda exciting.  Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court.  You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates!  And maybe some treasure too!";
+	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[']ll be right back, dude.  I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder.  You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that[']s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue whats on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever you're doing, it sounds kinda exciting.  Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court.  You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates!  And maybe some treasure too!";
 	increase tmapfound by 1;
 ]
 
@@ -216,7 +216,7 @@ boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle que
 
 Instead of resolving Findingboat:
 	if tmapfound is 2:
-		say "Wandering along the beach,  you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn[apostrophe]t go too far, they might be able to get you to the island shown on the map[if boatfound is 2]!  While your little dingy won't make to the island, one of these might be able to do the job[otherwise if boatfound is 1].  After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[end if].  Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
+		say "Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn[']t go too far, they might be able to get you to the island shown on the map[if boatfound is 2]!  While your little dingy won't make to the island, one of these might be able to do the job[otherwise if boatfound is 1].  After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[end if].  Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -227,7 +227,7 @@ Instead of resolving Findingboat:
 			if lost is 0:
 				challenge "pirate shark";
 				if lost is 0:
-					say "Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn[apostrophe]t seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
+					say "Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn[']t seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
 					Now Pirate Island is known;
 					Move player to Pirate Island;
 					now Findingboat is resolved;
@@ -236,12 +236,12 @@ Instead of resolving Findingboat:
 			if lost is 1:
 				say "Sadly, the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks, it looks like you will have to try again another time with a different boat...";
 		otherwise:
-			say "Sadly, you don[apostrophe]t manage to find any useful boats here right now, and sighing you are forced to continue on your way, maybe you will have better luck another time.";
+			say "Sadly, you don[']t manage to find any useful boats here right now, and sighing you are forced to continue on your way, maybe you will have better luck another time.";
 	otherwise if boatfound is 1:
-		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach.  It seems to have been here for a while, but still looks servicable.  You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to the bouncy castle you found.";
+		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach.  It seems to have been here for a while, but still looks serviceable.  You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to the bouncy castle you found.";
 		now boatfound is 2;
 	otherwise:
-		say "Traveling along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn[apostrophe]t be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
+		say "Traveling along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn[']t be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
 
 
 Pirate Island ends here.
