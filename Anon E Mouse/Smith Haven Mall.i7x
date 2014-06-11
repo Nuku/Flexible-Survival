@@ -26,7 +26,7 @@ The description of Smith Haven Mall Lot North is  "[mallnorthlot]".
 
 To say mallnorthlot:
 	If daytimer is day:
-		say "     You walk along the parking lot[apostrophe]s main access road into the mall[']s northern lot, peeping into a few of the cars as you go. There aren[']t as many cars on the north side of the mall as there is on the south side, but they all still show signs of the owners being assaulted and transformed into the various critters now running around the city. To the south you see the entrance into the mall's foyer, flanked on one side by the building for the Regal movie theaters and the other by the building for a super Target.";
+		say "     You walk along the parking lot[']s main access road into the mall[']s northern lot, peeping into a few of the cars as you go. There aren[']t as many cars on the north side of the mall as there is on the south side, but they all still show signs of the owners being assaulted and transformed into the various critters now running around the city. To the south you see the entrance into the mall's foyer, flanked on one side by the building for the Regal movie theaters and the other by the building for a super Target.";
 	otherwise if findwires is 2 and fixedgens is 2:
 		say "     You walk along the parking lot[']s illuminated main access road into the mall[']s northern lot, peeping into a few of the cars as you go. There aren[']t as many cars on the north side of the mall as there is on the south side, but they all still show signs of the owners being assaulted and transformed into the various critters now roaming around the city. The signs on the Regal movie theater and Target store are lit and to the south you see light coming from the entrance into the mall's foyer.";
 	otherwise:
