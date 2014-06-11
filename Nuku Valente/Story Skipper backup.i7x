@@ -8,10 +8,10 @@ instead of sniffing Trixie:
 The description of trixie is "[trixiedesc]".
 
 to say trixiedesc:
-	say "     Look, it[apostrophe]s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let[apostrophe]s skip to the good stuff!'.";
+	say "     Look, it[']s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let[']s skip to the good stuff!'.";
 	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
 
 To say magic word:
 	if wrcursestatus is 5:
@@ -688,7 +688,7 @@ Carry out reciting:
 						now carried of phoenix egg is 1;
 					if hp of Athanasia >= 3:
 						now lastfuck of Athanasia is turns;
-						now Government Assistance is resolved; 
+						now Government Assistance is resolved;
 						now Approaching the Capitol Building is known;
 					if hp of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
@@ -1450,8 +1450,8 @@ carry out Trixiecheck1:
 	say "Tail: [tailname of player]  Cock: [cockname of player][line break]";
 	say "Tanuki: [SatisfiedTanuki]   Hospquest: [hospquest][line break]";
 	say "Cocks x [cocks of player]   Breasts x [breasts of player]   Cunts x [cunts of player]   Breast size: [breast size of player][line break]";
-	say "COCK:   Length: [cock length of player]   Width: [cock width of player][line break]";
-	say "CUNT:   Length: [cunt length of player]   Width: [cunt width of player][line break]";
+	say "COCK: Length: [cock length of player]   Width: [cock width of player][line break]";
+	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
 	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
 	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[otherwise]0[end if][line break]";
 	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
