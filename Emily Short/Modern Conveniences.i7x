@@ -119,9 +119,9 @@ or create an
 
 sort of rule for those objects we want to describe specially; or, as the most extreme case, we might write a When play begins: ... rule to initialize the features of the generated objects, like so:
 
-	When play begins: 
-		let N be a random stove in the Industrial Kitchen; 
-		move the boiling pot to N; 
+	When play begins:
+		let N be a random stove in the Industrial Kitchen;
+		move the boiling pot to N;
 		change the description of N to...
 
 We can also, of course, use the appliances individually. In the end, the "kitchen" and "bathroom" room types are likely to be most useful when we want to include the standard props but not actually make them a critical part of the game; if stoves and sinks have more of a starring role in the production, we may be better off coding them or at the very least placing them by hand, as in
