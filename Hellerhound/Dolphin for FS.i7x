@@ -79,7 +79,7 @@ to say dolphin fuck:
 			increase the cunt width of the player by 1;
 		otherwise:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
-		if the cunt length of the player is less than 10:[wont go in far, must extend you]
+		if the cunt length of the player is less than 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, by it is cut off as she realizes she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles, and decides. She tells you 'I am going to have to lengthen you cunt, small one. It may hurt'";
 			say "She begins to slam her cock into you, and grunts when it smashes open your cervix.";
 			if the humanity of the player is less than 60:
@@ -89,7 +89,7 @@ to say dolphin fuck:
 			increase the cunt length of the player by 3;
 		if cunt length of the player is less than 10:[god, still too small]
 			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
-		otherwise if the cunt length of the player is less than 24:[wont go in far enough, will pry open womb for more space]
+		otherwise if the cunt length of the player is less than 24:[won't go in far enough, will pry open womb for more space]
 			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking.";
 			increase the cunt length of the player by 2;
 			if the cunt length of the player is less than 14:
@@ -175,7 +175,7 @@ When Play begins:
 	now loot entry is "dolphin milk";			[ Loot monster drops, ]
 	now lootchance entry is 75;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]aquatic[or]strong[at random]";
 	now type entry is "[one of]cetacean[or]dolphin-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
