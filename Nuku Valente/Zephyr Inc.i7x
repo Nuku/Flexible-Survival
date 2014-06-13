@@ -48,7 +48,7 @@ Carry out vialselling:
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
-		now q is x;
+		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
 			now found is 1;
