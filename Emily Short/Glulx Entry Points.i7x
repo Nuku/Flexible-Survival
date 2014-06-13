@@ -7,7 +7,7 @@ Version 10 of Glulx Entry Points (for Glulx only) by Emily Short begins here.
 Use authorial modesty.
 
 Section - Use option
-[As of version 10, Glulx Entry Points has a somewhat more flexible approach to event handling than did earlier versions: Whereas the latter consulted one of eight separate rulebooks depending on the event type, Glulx Input Loops passes the event type into a single parametrized rulebook. This means, for example, that we can have a general rule for event handling that fires no matter what the event, alongside the usual event-based rules.
+[As of version 10, Glulx Entry Points has a somewhat more flexible approach to event handling than did earlier versions: Whereas the latter consulted one of eight separate rulebooks depending on the event type, Glulx Input Loops passes the event type into a single parameterized rulebook. This means, for example, that we can have a general rule for event handling that fires no matter what the event, alongside the usual event-based rules.
 
 Many existing extensions are based on the older system, however, and we would break those extensions if we simply removed the older event-handling rulebooks. So, we retain those rulebooks. By default, Glulx Entry Points will still pass event-handling to those rulebooks. This means that existing code will continue to work as before, and we can also use the new parameterized rulebook if we like.
 
@@ -268,7 +268,7 @@ A command-showing rule (this is the print text to the input prompt rule):
 	say Glulx replacement command;
 	say roman type;
 
-To say input-style-for-Glulx: 
+To say input-style-for-Glulx:
 	(- glk_set_style(style_Input); -)
  
 
@@ -276,7 +276,7 @@ Section - Command pasting rules
 
 The command-pasting rules are a rulebook. 
 
-A command-pasting rule (this is the glue replacement command into parse buffer rule): 
+A command-pasting rule (this is the glue replacement command into parse buffer rule):
 	change the text of the player's command to the Glulx replacement command;
 	rule succeeds.
 

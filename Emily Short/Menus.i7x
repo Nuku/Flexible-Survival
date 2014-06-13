@@ -36,14 +36,14 @@ number	effect
 129	move up rule
 27	quit rule
 
-This is the quit rule:  
+This is the quit rule:
 	if the current menu is table of start game or current menu is the table of sex choice or current menu is the table of basic combat:
 		rule fails;
 	otherwise:
 		decrease the menu depth by 1;
 		rule succeeds. 
 
-This is the move down rule: 
+This is the move down rule:
 	if current menu selection is less than the number of filled rows in the current menu, increase current menu selection by 1;
 	reprint the current menu;
 	make no decision.
@@ -53,7 +53,7 @@ This is the move up rule:
 	reprint the current menu;
 	make no decision.
 
-This is the select rule:  
+This is the select rule:
 	choose row current menu selection in the current menu;
 	if there is a toggle entry
 	begin;
@@ -62,7 +62,7 @@ This is the select rule:
 		if there is a subtable entry
 		begin;
 			now the current menu title is title entry;
-			now the current menu selection is 1; 
+			now the current menu selection is 1;
 			now the current menu is subtable entry;
 			show menu contents;
 		otherwise;
@@ -92,7 +92,7 @@ To reprint (selected menu - a table-name):
 	clear only the main screen;
 	repeat through selected menu
 	begin;
-		if __index is current menu selection, say " >"; otherwise say "  ";
+		if __index is current menu selection, say " >"; otherwise say " ";
 		say " [title entry][line break]";
 		increase __index by 1;
 	end repeat;
@@ -107,34 +107,34 @@ To show menu contents:
 	let __index be 0;
 	while __index is not 1
 	begin;
-		now the current menu is the temporary menu; 
+		now the current menu is the temporary menu;
 		let __n be 0;
 		repeat through current menu
 		begin;
 			increase __n by 1;
 			if title entry is current menu title, now current menu selection is __n;
 		end repeat;
-		now the current menu title is the temporary title; 
+		now the current menu title is the temporary title;
 		reprint current menu;
 		let __x be the chosen letter;
 		if __x is a number listed in the Table of Menu Commands
 		begin;
-			follow the effect entry; 
+			follow the effect entry;
 			if temporary depth > menu depth
 			begin;
-				now __index is 1; 
+				now __index is 1;
 			end if;
 		end if;
 	end while.
 
-Rule for displaying (this is the basic menu contents rule): 
+Rule for displaying (this is the basic menu contents rule):
 	now current menu selection is 1;
 	show menu contents.
 
-Rule for constructing the status line while displaying (this is the constructing status line while displaying rule):  
+Rule for constructing the status line while displaying (this is the constructing status line while displaying rule):
 	if the endnode flag is 0,
 		fill status bar with Table of Deep Menu Status;
-	otherwise fill status bar with Table of Shallow Menu Status; 
+	otherwise fill status bar with Table of Shallow Menu Status;
 	rule succeeds.
 
 Table of Shallow Menu Status
@@ -155,7 +155,7 @@ hint	used
 
 To say known hints from (hint booklet - table-name):
 	let __index be 0;
-	clear only the main screen; 
+	clear only the main screen;
 	repeat through hint booklet
 	begin;
 		increase __index by 1;
@@ -169,26 +169,26 @@ To say known hints from (hint booklet - table-name):
 				say "[__index]/[number of rows in hint booklet]: [hint entry][paragraph break]";
 			end if;
 		end if;
-	end repeat; 
+	end repeat;
 	say "Press SPACE to return to the menu or H to reveal another hint."
 
 
-To say hints from (hint booklet - table-name): 
+To say hints from (hint booklet - table-name):
 	let __index be 0;
-	clear only the main screen; 
+	clear only the main screen;
 	repeat through hint booklet
 	begin;
 		increase __index by 1;
-		say "[__index]/[number of rows in hint booklet]: [hint entry][paragraph break]"; 
+		say "[__index]/[number of rows in hint booklet]: [hint entry][paragraph break]";
 		if there is a used entry
 		begin;
 			do nothing;
 		otherwise;
 			now used entry is turn count;
 			say "Press SPACE to return to the menu[if __index < number of rows in hint booklet] or H to reveal another hint[end if].";
-			make no decision; 
-		end if;  
-	end repeat; 
+			make no decision;
+		end if;
+	end repeat;
 	say "Press SPACE to return to the menu[if __index < number of rows in hint booklet] or H to reveal another hint[end if]."
 
 This is the hint toggle rule:
@@ -198,7 +198,7 @@ This is the hint toggle rule:
 	now the endnode flag is 1;
 	redraw status line;
 	now the endnode flag is 0;
-	say known hints from the subtable entry; 
+	say known hints from the subtable entry;
 	let __index be 0;
 	while __index < 1
 	begin;
@@ -335,7 +335,7 @@ For instance our Table of Options might look like this:
 	Asking for help is an action out of world.
 	
 	Carry out asking for help:
-		now the current menu is the Table of Options; 
+		now the current menu is the Table of Options;
 		carry out the displaying activity;
 		clear the screen;
 		try looking.

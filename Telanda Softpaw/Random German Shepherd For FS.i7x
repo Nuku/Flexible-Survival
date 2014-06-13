@@ -45,7 +45,7 @@ To say male shepherd rape:
 		if cunts of the player is 0 and "Male Preferred" is not listed in feats of player:	[male/neuter and player can become female]
 			say "He gives an extra little sniff, taking in your [if cocks of player > 0]male [end if]scent then chuckles as he licks your cheek.[line break]'Mmm bitch in spirit and mind, but not in body, it seems.  Don't worry, I can help solve that for you, make you into what you really are.'[line break]He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moving behind you.";
 			now fuckable is 2;
-		otherwise if cunts of player is 0 and "Male Preferred" is listed in feats of player:  [male/neuter and player can't become female]
+		otherwise if cunts of player is 0 and "Male Preferred" is listed in feats of player: [male/neuter and player can't become female]
 			say "He gives an extra little sniff, taking in your [if cocks of player > 0]male [end if]scent then chuckles as he licks your cheek.[line break]'No juicy pussy for your alpha, but I think I'll have fun making you my bitch all the same. You'll be begging me to fuck your ass in the end.' That said, he presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump.  Then satisfied that the 'foreplay' has been accomplished he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours. ";
 			now fuckable is 2;
 		else:	[females/herms]
@@ -142,7 +142,7 @@ When Play begins:
 	now face entry is "distinctly canine face, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
 	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
 	now skin entry is "coarse [gsdfurcolour]furred";
-	now tail entry is "Behind you is a new limb, whipping about expressively... and frequently betraying your mood is a dog[apostrophe]s tail.";
+	now tail entry is "Behind you is a new limb, whipping about expressively... and frequently betraying your mood is a dog[']s tail.";
 	now cock entry is "[if looknow is 1] surrounded in a tight[skin of player] sheath, protecting the wonderfully sensitive German Shepard cock residing within[otherwise]animalistic canine[end if]";
 	now face change entry is "Your face draws forward into a canine muzzle, which rapidly fills with teeth and a broad lolling tongue. at the same time your ears become more pointed and expressive and migrate towards the top of your now canine head";
 	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like with dull black claws in the tips";
@@ -172,7 +172,7 @@ When Play begins:
 	now libido entry is 5;              [ Amount libido goes up by if you submit or are defeated by this monster ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]animalistic[at random]";
 	now type entry is "canine";         [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]

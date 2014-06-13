@@ -29,7 +29,7 @@ Definition:  a person (called N) is injured if present health of N is less than 
 Definition:  a person (called N) is half dead if present health of N is less than (max health of N / 2).
 
 After printing the name of a dead person (called P) (this is the I see dead people rule):
-	if the person is dead for at least 1 turn and P is on-stage, say "[apostrophe]s dead body" instead.
+	if the person is dead for at least 1 turn and P is on-stage, say "[']s dead body" instead.
 
 Section 2 - Rules and Kinds
 
@@ -87,7 +87,7 @@ Check searching a person (called corpse) (this is the search a corpse rule):
 if the corpse is dead, say "You search [corpse][if the number of things carried by corpse is 0] but find nothing[otherwise] and find [the list of things carried by corpse][end if]." instead.
 
 Instead of taking inventory (this is the new inventory listing rule):
-if the number of things enclosed by the player is 0, say "You don[apostrophe]t seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
+if the number of things enclosed by the player is 0, say "You don[']t seem to have anything at the moment.[line break](Health: [present health of the player]/[max health of the player])[line break]" instead;
 say "You are carrying: [line break]"; list the contents of the player, with newlines, indented; say "(Health: [present health of the player]/[max health of the player])[line break]".
 
 Report examining a person (called victim) (this is the check NPC health rule):
@@ -187,11 +187,11 @@ Report shooting something (called the target) with something(called the boomstic
 		if the target is dead begin;
 			say "With one final shot from your [boomstick], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You shoot [the target] with your [boomstick]. [The target] jerks back from the impact. ([The target][apostrophe]s health: [present health of the target])[line break]";
+	say "You shoot [the target] with your [boomstick]. [The target] jerks back from the impact. ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report shooting something (called the target) with something(called the boomstick) (this is the report shooting non-people rule):
-	if the target is not a person, say "You shoot [the target] with your [boomstick]. Well, I hope that made you feel better. Hopefully shooting [the target] won[apostrophe]t attract any unwanted attention.".
+	if the target is not a person, say "You shoot [the target] with your [boomstick]. Well, I hope that made you feel better. Hopefully shooting [the target] won[']t attract any unwanted attention.".
 
 Check someone shooting something (called the target) with something (called the boomstick) (this is the others must have a projectile to shoot rule):
 	if the person asked does not carry a projectile begin;
@@ -220,7 +220,7 @@ Report someone shooting something (called the target) with something(called the 
 			say "[The person asked] shoots [printed name of the target], who drops to the ground, dead." instead;
 		end if;
 		if the target is not the player begin;
-			say "[The person asked] shoots, and [the target] jerks back from the impact. ([The target][apostrophe]s health: [present health of the target])[line break]";
+			say "[The person asked] shoots, and [the target] jerks back from the impact. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
 			say "[The person asked] shoots you! (Health: [present health of the player])[line break]";
@@ -287,11 +287,11 @@ Report stabbing something (called the target) with something(called the pigstick
 		if the target is dead begin;
 			say "With one final thrust of your [pigsticker], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You stab [the target] with your [pigsticker]. [The target] yells out in pain.  ([The target][apostrophe]s health: [present health of the target])[line break]";
+	say "You stab [the target] with your [pigsticker]. [The target] yells out in pain.  ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report stabbing something (called the target) with something(called the pigsticker) (this is the report stabbing non-people rule):
-	if the target is not a person, say "You stab [the target] with your [pigsticker]. Well, I hope that made you feel better. Hopefully stabbing [the target] won[apostrophe]t attract any unwanted attention.".
+	if the target is not a person, say "You stab [the target] with your [pigsticker]. Well, I hope that made you feel better. Hopefully stabbing [the target] won[']t attract any unwanted attention.".
 
 Check someone stabbing something (called the target) with something (called the pigsticker) (this is the others must have a blade to stab rule):
 	if the person asked does not carry a blade begin;
@@ -320,7 +320,7 @@ Report someone stabbing something (called the target) with something(called the 
 			say "[The person asked] stabs [printed name of the target], who drops to the ground, dead." instead;
 		end if;
 		if the target is not the player begin;
-			say "[The person asked] thrusts the [pigsticker] into [the target], who screams out in pain. ([The target][apostrophe]s health: [present health of the target])[line break]";
+			say "[The person asked] thrusts the [pigsticker] into [the target], who screams out in pain. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
 			say "[The person asked] stabs you! (Health: [present health of the player])[line break]";
@@ -387,11 +387,11 @@ Report clubbing something (called the target) with something(called the cudgel) 
 		if the target is dead begin;
 			say "With one final hit of your [cudgel], [printed name of the target] drops to the ground, dead." instead;
 		end if;
-	say "You club [the target] with your [cudgel]. [The target] yells out in pain.  ([The target][apostrophe]s health: [present health of the target])[line break]";
+	say "You club [the target] with your [cudgel]. [The target] yells out in pain.  ([The target][']s health: [present health of the target])[line break]";
 	end if.
 
 Report clubbing something (called the target) with something(called the cudgel) (this is the report clubbing non-people rule):
-	if the target is not a person, say "You club [the target] with your [cudgel]. Well, I hope that made you feel better. Hopefully clubbing [the target] won[apostrophe]t attract any unwanted attention.".
+	if the target is not a person, say "You club [the target] with your [cudgel]. Well, I hope that made you feel better. Hopefully clubbing [the target] won[']t attract any unwanted attention.".
 
 Check someone clubbing something (called the target) with something (called the cudgel) (this is the others must have a bludgeon to club rule):
 	if the person asked does not carry a bludgeon begin;
@@ -420,7 +420,7 @@ Report someone clubbing something (called the target) with something(called the 
 			say "[The person asked] clubs [printed name of the target], who drops to the ground, dead." instead;
 		end if;
 		if the target is not the player begin;
-			say "[The person asked] smashes the [cudgel] into [the target], who screams out in pain. ([The target][apostrophe]s health: [present health of the target])[line break]";
+			say "[The person asked] smashes the [cudgel] into [the target], who screams out in pain. ([The target][']s health: [present health of the target])[line break]";
 		end if;
 		if the target is the player begin;
 			say "[The person asked] clubs you! (Health: [present health of the player])[line break]";
@@ -520,7 +520,7 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 		Use no scoring.
 
 		When play begins:
-			say "A shady looking guy named Bob has convinced you to try your luck at shooting down six bottles with a cork gun. 'If you can do it, I[apostrophe]ll give you a teddy bear,' he promises."
+			say "A shady looking guy named Bob has convinced you to try your luck at shooting down six bottles with a cork gun. 'If you can do it, I[']ll give you a teddy bear,' he promises."
 
 		Shooting gallery is a room.
 		A bottle is a kind of thing.
@@ -529,7 +529,7 @@ Example: ** Shooting Gallery - Bob invites you to shoot bottles to win a prize! 
 		A cork gun is a fire arm in shooting gallery.
 		Bob is a man in shooting gallery.
 
-		Instead of shooting Bob with the cork gun, say "Bob gives you a frightening stare and says 'You wouldn[apostrophe]t stand a chance even if that thing were real!'".
+		Instead of shooting Bob with the cork gun, say "Bob gives you a frightening stare and says 'You wouldn[']t stand a chance even if that thing were real!'".
 
 		Instead of doing anything to Bob, say "He glares at you and says 'Just see if you can shoot all the bottles.'"
 
