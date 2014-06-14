@@ -15,15 +15,15 @@ to say slutdesc:
 	say "[masterofsluts]";
 	say "Walking down the street, you find yourself staring at a naked male [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
 
-to say slutydesc:
+to say sluttydesc:
 	now slutty is 0;
 	say "[randomdesc2]";
 	say "[masterofslutsfe]";
-	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
+	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]white, black studded[at random] collar. Unfortunately, it's staring back at you!";
 	
-to say masterofsluts:		
+to say masterofsluts:
 	if slutmaster is greater than 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] 
+		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...] 
 			choose row y in table of random critters;
 			if name entry is "Male Slut":
 				now monster is y;
@@ -33,9 +33,9 @@ to say masterofsluts:
 		follow the breast descr rule;
 		say "[defeated entry]";	
 
-to say masterofslutsfe:		
+to say masterofslutsfe:
 	if slutmaster is greater than 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] 
+		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...] 
 			choose row y in table of random critters;
 			if name entry is "Female Slut":
 				now monster is y;
@@ -45,7 +45,7 @@ to say masterofslutsfe:
 		follow the breast descr rule;
 		say "[defeated entry]";	
 
-to say randomdesc: 
+to say randomdesc:
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";
@@ -78,7 +78,7 @@ to say randomdesc:
 	if T is 15:
 		now slutname is "wolf";
 
-to say randomdesc2: 
+to say randomdesc2:
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";
@@ -130,7 +130,7 @@ to say tempting:
 		say "You are suddenly rushed by the slutty [slutname] and your mind becomes clouded in lust from the [slutname]'s cum![line break]";
 		now hp of player is 0;
 
-to say slutyattack:
+to say sluttyattack:
 	say "[one of]The [slutname] hits you in the gut with her fist![or]The [slutname] rushes at you, knocking you off balance![at random]";
 	if slutprotection is 0 and a random chance of 8 in 10 succeeds, say "[tempting2]";
 
@@ -154,18 +154,18 @@ to say slutvictory: [male]
 	say "Exhausted from the waves of physical and sexual attacks, you collapse, surrendering yourself to the male [slutname] who quickly strips you of any and all clothing.";
 	if cocks of player is greater than 0:
 		if cock length of player is less than 4:
-			if cunts of player is greater than 0:	[small cock + cunt]
+			if cunts of player is greater than 0: [small cock + cunt]
 				if a random chance of 1 in 6 succeeds:
 					say "The [slutname] mutters 'must... make... more... sluts... for... mas-... ter...' before he flips you over onto all fours and begins rubbing his dripping cock against your cunt.  You barely have time the think as the handsome [slutname] thrusts his shaft into your hole, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname].[line break][impregchance][cuntinc]";
 				otherwise:
 					say "Eyeing your [cock size desc of player] cock, the [slutname] gives you a pitying look while patting you on the head.  'Don't... worry... I... make... better...' [one of]the [slutname] whispers into your ear.  The [slutname] directs his muzzle over your [cunt size desc of player] cunt as it quickly grows wet.  He begins to lick and play with it while stroking your small cock.  In no time at all, you are lost in a haze of pleasure.[or]the [slutname] whispers into your ear.  The [slutname] directs his muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[or]the [slutname] whispers into your ear.  The [slutname] thrusts his cock in to your mouth sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the hot [slutname].[or] The [slutname] flips you over onto all fours and begins rubbing his dripping cock over your asshole.  You barely have time the think as the handsome [slutname] thrusts his shaft into your ass, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname].[or] The [slutname] rams his mouth to yours, giving you the most eager kiss of your life.  His dripping cock rubs against your [cock size desc of player] one, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the handsome [slutname].[at random][cockinc]";
 				say "By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
-			otherwise:						[small cock]
+			otherwise: [small cock]
 				say "Eyeing your [cock size desc of player] cock, the [slutname] gives you a pitying look while patting you on the head.  'Don't... worry... I... make... better...' [one of]the [slutname] whispers into your ear.  The [slutname] directs his muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[or]the [slutname] whispers into your ear.  The [slutname] thrusts his cock in to your mouth sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the hot [slutname].[or] The [slutname] flips you over onto all fours and begins rubbing his dripping cock over your asshole.  You barely have time the think as the handsome [slutname] thrusts his shaft into your ass, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname].[or] The [slutname] rams his mouth to yours, giving you the most eager kiss of your life.  His dripping cock rubs against your [cock size desc of player] one, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the handsome [slutname].[at random][line break]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.[cockinc]";
 		otherwise:
-			if cunts of player is greater than 0:	[cock and cunt]
+			if cunts of player is greater than 0: [cock and cunt]
 				say "[one of]The [slutname] mutters 'must... make... more... sluts... for... mas-... ter...' before he flips you over onto all fours and begins rubbing his dripping cock against your cunt.  You barely have time the think as the handsome [slutname] thrusts his shaft into your hole, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname].[impregchance][cuntinc][or]Eyeing you, the [slutname] directs his muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[or]Eyeing you, the [slutname] directs his muzzle over your [cunt size desc of player] cunt as it quickly grows wet.  He begins to lick and play with it while stroking your small cock.  In no time at all, you are lost in a haze of pleasure.[or]Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear.  The [slutname] thrusts his cock in to your mouth sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the hot [slutname].[or]Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear.  The [slutname] flips you over onto all fours and begins rubbing his dripping cock over your asshole.  You barely have time the think as the handsome [slutname] thrusts his shaft into your ass, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname].[or]Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear.  The [slutname] rams his mouth to yours, giving you the most eager kiss of your life.  His dripping cock rubs against your cock and cunt, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the handsome [slutname].[at random][line break]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
-			otherwise:						[cock]
+			otherwise: [cock]
 				say "Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear[one of].  The [slutname] thrusts his cock in to your mouth sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the hot [slutname][or].  The [slutname] directs his muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure[or].  The [slutname] flips you over onto all fours and begins rubbing his dripping cock over your asshole.  You barely have time the think as the handsome [slutname] thrusts his shaft into your ass, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname][or].  The [slutname] rams his mouth to yours, giving you the most eager kiss of your life.  His dripping cock rubs against your cock and cunt and spraying his seed across your belly, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the handsome [slutname][or].  The [slutname] starts to pound his ass onto your rapidly hardening cock, sending drops of the [slutname]'s cum all over your face.  As you taste the [slutname]'s cum, your mind begins to drift away from the waves of pleasure that are spreading through your body[at random].[line break]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
 	otherwise: [cunt]
 		if cunts of player is greater than 0:
@@ -173,24 +173,24 @@ to say slutvictory: [male]
 		otherwise: [none]
 			say "The [slutname] looks at your genderless form and gives you a pitying look while patting you on the head[one of].  The [slutname] suddenly thrusts his cock in to your mouth sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the hot [slutname][or].  The [slutname] flips you over onto all fours and begins rubbing his dripping cock over your asshole.  You barely have time the think as the handsome [slutname] thrusts his shaft into your ass, sending burning waves of lust through your body.  Your mind drifts off as you surrender yourself completely to the [slutname][or].  The [slutname] rams his mouth to yours, giving you the most eager kiss of your life.  His dripping cock rubs against your genderless groin and spraying his seed across your belly, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the handsome [slutname][at random].[line break]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.[one of][cuntinc][cuntinc][or][cockinc][cockinc][at random]";
 
-to say slutyvictory: [female]
+to say sluttyvictory: [female]
 	say "Exhausted from the waves of physical and sexual attacks, you collapse, surrendering yourself to the female [slutname] who quickly strips you of any and all clothing.";
 	if cocks of player is greater than 0:
 		if cock length of player is less than 4:
-			if cunts of player is greater than 0:		[small cock + cunt]
+			if cunts of player is greater than 0: [small cock + cunt]
 				say "Eyeing your [cock size desc of player] cock, the [slutname] gives you a pitying look while patting you on the head.  'Don't... worry... I... make... better...' ";
 				say "[one of]the [slutname] whispers into your ear.  The [slutname] directs her muzzle over your [cunt size desc of player] cunt as it quickly grows wet.  She begins to lick and play with it while stroking your small cock.  In no time at all, you are lost in a haze of pleasure[cuntinc][or]the [slutname] whispers into your ear.  The [slutname] directs her muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure[cockinc][or] The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your [cock size desc of player] one, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname][or] The [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname][cuntinc][at random].[line break]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
-			otherwise:							[small cock]
+			otherwise: [small cock]
 				say "Eyeing your [cock size desc of player] cock, the [slutname] gives you a pitying look while patting you on the head.  'Don't... worry... I... make... better...' [one of]the [slutname] whispers into your ear.  The [slutname] directs her muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[cockinc][line break][or] The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your [cock size desc of player] one, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname].[or] The [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname][cuntinc].[at random]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
 		otherwise:
-			if cunts of player is greater than 0:		[cock and cunt]
+			if cunts of player is greater than 0: [cock and cunt]
 				say "Eyeing you, [one of]the [slutname] directs her muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[or]the [slutname] starts to pound her dripping pussy onto your rapidly hardening cock, leaking her slick juices all over your groin.  Your mind soon begins to drift away from the waves of pleasure that are spreading through your body.[or]the [slutname] directs her muzzle over your [cunt size desc of player] cunt as it quickly grows wet.  She begins to lick and play with it while stroking your shaft.  In no time at all, you are lost in a haze of pleasure.[cuntinc][or]the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear.  The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your throbbing cock, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname].[or]the [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname][cuntinc].[at random]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
-			otherwise:							[cock]
+			otherwise: [cock]
 				say "Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear[one of].  The [slutname] directs her muzzle over your rapidly hardening [cock size desc of player] cock and begins to lick and suck at it.  In no time at all, you are lost in a haze of pleasure.[or].  The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your throbbing cock, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname].[or].  The [slutname] starts to pound her dripping pussy onto your rapidly hardening cock, leaking her slick juices all over your groin.  Your mind soon begins to drift away from the waves of pleasure that are spreading through your body.[or].  The [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname][cuntinc].[at random]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
 	otherwise:
-		if cunts of player is greater than 0:			[cunt]
+		if cunts of player is greater than 0: [cunt]
 			say "Eyeing you, the [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear[one of].  The [slutname] directs her muzzle over your [cunt size desc of player] cunt as it quickly grows wet.  She begins to lick and play with it while fingering your sensitive folds.  In no time at all, you are lost in a haze of pleasure[cuntinc].[or].  The [slutname] hugs your tightly, while whispering 'You... look... so... hot...' into your ear.  The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your own, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname][cuntinc].[or].  The [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname][cuntinc].[at random]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.";
-		otherwise:								[none]
+		otherwise: [none]
 			say "The [slutname] looks at your genderless form and gives you a pitying look while patting you on the head[one of].  The [slutname] rams her mouth to yours, giving you the most eager kiss of your life.  Her dripping pussy rubs against your genderless groin, sending burning waves of lust pulsing through your body.  Your mind drifts off as you surrender yourself completely to the beautiful [slutname].[or].  The [slutname] presses your face between her legs, pushing you to lick at her wet snatch.  Drawn in by the scent, you start licking and lapping up her juices.  Your mind goes hazy as burning waves of lust pulsing through your body and you surrender yourself completely to the beautiful [slutname].[at random]By the time you regain control of your body and mind, the hot [slutname] is patting you on the head and departing, leaving with the promise of returning soon and your cum-covered body to remember the [slutname] by.[one of][cuntinc][cuntinc][or][cockinc][cockinc][at random]";
 
 
@@ -207,16 +207,16 @@ to say slutdef:
 		say "exhausted the slut falls to the ground unconscious";
 	if slutmaster is greater than 0:
 		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
-	otherwise:	
+	otherwise:
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Male Slut";
 		
-to say slutydef:
+to say sluttydef:
 	if massdomfightwin is 1:
 		say "exhausted the slut falls to the ground unconscious";
 	if slutmaster is greater than 0:
 		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
-	otherwise:	
+	otherwise:
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Female Slut";
 
@@ -252,7 +252,7 @@ When Play begins:
 	now per entry is 3;
 	now int entry is 5;
 	now cha entry is 4;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;			[ How many HP has the monster got? ]
 	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
@@ -279,10 +279,10 @@ When Play begins:
 	add "Female Slut" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is "Female Slut";
-	now attack entry is "[slutyattack]";
-	now defeated entry is "[slutydef]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[slutyvictory]";
-	now desc entry is "[slutydesc]";
+	now attack entry is "[sluttyattack]";
+	now defeated entry is "[sluttydef]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[sluttyvictory]";
+	now desc entry is "[sluttydesc]";
 	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."] 
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."] 
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."] 
@@ -299,7 +299,7 @@ When Play begins:
 	now per entry is 3;
 	now int entry is 5;
 	now cha entry is 4;
-	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;			[ How many HP has the monster got? ]
 	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
@@ -341,20 +341,20 @@ now heat duration entry is 7; [ This is how many days of the cycle you are actua
 now trigger text entry is "Your body becomes overcome with desire, to suck, to submit, to please your master."; [ This is the text that is written to the screen when the player comes into heat]
 now inheat entry is "[sluttyheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 
-to say sluttyheat:  
+to say sluttyheat:
 	increase libido of player by 5;
 	if libido of player > 100, now libido of player is 100;
 	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
-		say "The desire to sumbit grows too strong for you to control and you begin searching for anything that can fuck you. Immediately upon on finding another lustful creature, you submit to it, offering yourself up to your temporary master.";
+		say "The desire to submit grows too strong for you to control and you begin searching for anything that can fuck you. Immediately upon on finding another lustful creature, you submit to it, offering yourself up to your temporary master.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
-		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
+		repeat with X running from 1 to number of filled rows in table of random critters: [ Loop through and select all monsters that appear "outside" ] 
 			choose row X from the table of random critters;
 			if there is no area entry, next;
 			if area entry is "Outside":
 				add X to hmonlist;
 		sort hmonlist in random order;
-		repeat with Z running through hmonlist:		[Pick one of the monsters at random]
+		repeat with Z running through hmonlist: [Pick one of the monsters at random]
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
