@@ -99,7 +99,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
 	if weapon object of player is unwieldy:
-		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player)  to the nearest whole number;
+		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player) to the nearest whole number;
 	if weapon object of player is bo staff:
 		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;

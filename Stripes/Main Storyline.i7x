@@ -33,13 +33,13 @@ Instead of conversing the doctor matt:
 		if scenario is "Researcher":
 			say "He looks you over a moment, 'You don[']t look nearly as lost and confused as most.' He turns back to his computer a moment, tapping quickly, 'Are you another researcher? Excellent. I[']m looking into a cure for this plague, but I haven[']t made much progress. But I did find something else...";
 		otherwise:
-			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
+			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[']t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[']m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[apostrophe]t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[apostrophe]ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
+		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[']t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[']ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'I haven[apostrophe]t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[apostrophe]ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[apostrophe]s already turning back to his monitors, not actually listening for your reply.";
+		say "'I haven[']t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[']ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[']s already turning back to his monitors, not actually listening for your reply.";
 		now hp of doctor matt is 1;
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
 		extend game by 16;
@@ -47,11 +47,11 @@ Instead of conversing the doctor matt:
 		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "'The first problem is a lack of test subjects. I can[apostrophe]t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
+		say "'The first problem is a lack of test subjects. I can[']t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
-		say "You get the idea you[apostrophe]ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
+		say "You get the idea you[']ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
 		now hp of doctor matt is 2;
 		now level of doctor matt is 0;
 		now hobo-grmilkhelp is turns;
@@ -104,8 +104,8 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.";
 		if deerconsent is 1:
-			say "'And she[apostrophe]s taken a fancy to you. This is good.";
-		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?' he adds.";
+			say "'And she[']s taken a fancy to you. This is good.";
+		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[']t want to, just talk to her and decide for yourself. Don[']t look at me that way. I can[']t very well do it from inside this suit, now can I?' he adds.";
 		now hp of doctor matt is 7;
 		increase score by 20;
 		extend game by 24;

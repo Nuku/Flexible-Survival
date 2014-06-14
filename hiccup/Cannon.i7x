@@ -5,7 +5,7 @@ Version 1 of Cannon by hiccup begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say cannon desc:
 	now cannonprep is 0;
 	if "Female Preferred" is listed in feats of player:		
@@ -27,7 +27,7 @@ to say cannon fire:		[outmoded, now uses alt-attack below]
 	otherwise if cannonprep is 2:
 		[Masturbate]
 		now cannonprep is 3;
-		say "The Cock Cannon[apostrophe]s arms start to stroke its penis shaped body.";
+		say "The Cock Cannon[']s arms start to stroke its penis shaped body.";
 	otherwise if cannonprep is 3:
 		[Fire]
 		now cannonprep is 0;
@@ -52,12 +52,12 @@ When Play begins:
 	now defeated entry is "The Cock Cannon goes flaccid and collapses to the ground."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[cannon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[cannon desc]";[ Description of the creature when you encounter it.]
-	now face entry is "purple colored, mushroom shaped head with no neck. It is devoid of any features except for a large slit at the top. You[apostrophe]re able to see and breathe through the slit despite the lack of a mouth or eyes on your";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "purple colored, mushroom shaped head with no neck. It is devoid of any features except for a large slit at the top. You[']re able to see and breathe through the slit despite the lack of a mouth or eyes on your";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "thick with no curves at all. It looks like the shaft of a penis";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "vein covered";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "Your ass has several long and curly hairs on it. The skin on your rear is also very wrinkly. The wrinkles and the hairs make your butt cheeks look like a giant ballsack.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "body length";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you[apostrophe]re able to see and breathe through it."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it turns purple. Your head swells out until it is shaped like the head of a mushroom. Your eyes, nose, and mouth disappear, leaving you momentarily blind and unable to breathe. A moment later, a large slit opens up on the top of your head and you[']re able to see and breathe through it."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it thickens and loses all of its curves and features until it looks like the shaft of a penis."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it becomes more sensitive to the slightest touch and large veins become visible beneath the skin."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it plumps up and sags down a little, while long and curly pubic hairs grow over it. It makes your butt cheeks look like a giant ballsack"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
@@ -72,7 +72,7 @@ When Play begins:
 	now hp entry is 20;				[ How many HP has the monster got? ]
 	now lev entry is 3;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 0;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Red";		[ Current options are 'Outside' and 'Mall' and 'Park' and 'Red'  Case sensitive]
+	now area entry is "Red";		[ Current options are 'Outside' and 'Mall' and 'Park' and 'Red' Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 50;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 35;		[ Size of balls apparently ;) sneaky Nuku]
@@ -86,7 +86,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]sexualized[or]phallic[or]twisted[at random]";
 	now type entry is "mutant";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -146,7 +146,7 @@ this is the cockcannon rule:
 			now cannonprep is 1;
 			say "[special-style-2]Hit[roman type]: The Cock Cannon pauses and seems to focus on you as it calculates the proper elevation, then lifts its mushroom shaped head up towards the sky.";
 		otherwise:
-			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to focus on you, but you manage to keep evading and it has trouble targetting you.";
+			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to focus on you, but you manage to keep evading and it has trouble targeting you.";
 	otherwise if cannonprep is 1:
 		if monsterhit is true:
 			now cannonprep is 2;

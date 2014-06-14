@@ -10,7 +10,7 @@ when play begins:
 	add { "Wrestling Wolf" } to infections of guy;
 	add { "Wrestling Wolf" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 wrestlingwolfdefeat is a number that varies.
 wwheal is a number that varies.
 wrwolfanal is a number that varies.
@@ -41,7 +41,7 @@ to say wrestlingwolfattack:
 		if a random chance of 1 in 3 succeeds: 	[impatient - rough fuck]
 			if cunts of player > 0:
 				if cunt length of player is less than 20 or cunt width of player is less than 15:
-					say "     Unable to stand up against the Wrestling Wolf's might you collapse to your knees in front of him. 'Tch I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his Wrestling Briefs. 'You know I think you need to understand just what kind of guy I am,'  he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.";
+					say "     Unable to stand up against the Wrestling Wolf's might you collapse to your knees in front of him. 'Tch I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his Wrestling Briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.";
 					say "     So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' He roars as he stuffs his Briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm, 'Just how strong was this guy' you wondered as he begins to finger your [cunt size desc of player] folds with his free paw 'You're a tight little bitch aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met 'Now this is gonna hurt,' he says placing both of his pawed hands on the your shoulders 'A lot.' And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream only to have your shouts muffled by the Wrestling Wolf's balled up briefs you were still gagging on.";
 					say "     'Oh, I bet that hurt didn't it? Well, it's only gonna get worse!' he growls as he grabs hold of your waist and slides you up to the tip of his shaft 'You see, when I get angry I like to get rough,' he said bringing you down his entire length, slamming you down onto the rim of his gigantic knot once more. He continues this for several minutes which to you feels like an eternity.  You eyes swell with tears from the sheer pain of the Wrestling Wolf's treatment.  He lifts you the very tip of his rod and tightens his hold on your waist.  'And nothing angers me more than when I fight someone not giving it their all,' he roars as he pulls you down, this time with much greater force and thrusting his hips up ramming you hard against his swelled knot.  The feeling of hitting home was too much for the Wolf as he explodes incredible waves of his hot seed into you.  Your belly expanding even farther to its limits from the Wolf's cum now filling your stomach.[impregchance]";
 					say "     He relaxes his hold on you which causes you to shoot of his shaft, landing outside of his ring. 'Opps, sorry about that!' he said falling onto his ass panting 'I just couldn't hold it in any longer. Guess you were just too small for me after all,' he said with a goofy smile on his face 'But as long as you remember to come back stronger I won't have to be that rough with ya. Oh, can I have my briefs back. They're kinda the only pair that'll fit me ever since I've changed.' You spit out the Wolf's briefs and toss it at the him before leaving the area. 'Thank ya, come back for another round ya hear!'";
@@ -49,8 +49,8 @@ to say wrestlingwolfattack:
 						if cunt width of player < 15, increase cunt width of player by 2;
 						if cunt length of player < 20, increase cunt length of player by 2;
 				otherwise:
-					say "     Unable to stand up against the Wrestling Wolf's might you collapse to your knees in front of him. 'Tch I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his Wrestling Briefs. 'You know I think you need to understand just what kind of guy I am,'  he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.";
-					say "     So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' He roars as he stuffs his Briefs down your throat.  You gag as you get a taste of his masculine musk stained into his briefs. You don[apostrophe]t have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm, 'Just how strong was this guy' you wondered as he begins to finger your [cunt size desc of player] folds with his free paw 'Your a tight little bitch aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met 'Now this is gonna hurt,' he says placing both of his pawed hands on the your shoulders 'A lot.'";
+					say "     Unable to stand up against the Wrestling Wolf's might you collapse to your knees in front of him. 'Tch I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his Wrestling Briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.";
+					say "     So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' He roars as he stuffs his Briefs down your throat.  You gag as you get a taste of his masculine musk stained into his briefs. You don[']t have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm, 'Just how strong was this guy' you wondered as he begins to finger your [cunt size desc of player] folds with his free paw 'Your a tight little bitch aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met 'Now this is gonna hurt,' he says placing both of his pawed hands on the your shoulders 'A lot.'";
 					say "     And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream only to have your shouts muffled by the Wrestling Wolf's balled up briefs you were still gagging on. 'Oh, I bet that hurt didn't it? Well, it's only gonna get worse!' he growls as he grabs hold of your waist and slides you up to the tip of his shaft 'You see, when I get angry I like to get rough,' he says bringing you down his entire length slam you down onto the rim of his gigantic knot once more. He continues this for several minutes which to you feels like an eternity.  You eyes swell with tears from the sheer pain of the Wrestling Wolf's treatment.  He lifts you the very tip of his rod and tightens his hold on your waist.  'And nothing angers me more than when I fight someone not giving it their all,' he roars as he pulls you down, this time with much greater force and thrusting his hips up, ramming you hard against his swelled knot.  Forcing his knot into you, the feeling of hitting home was too much for the Wolf as he explodes incredible waves of his hot seed into you.  Your belly expanding even farther to it's limits from the Wolf's cum now filling your stomach. [impregchance]";
 					say "     Afterwards, the wolf collapses right ontop of you as he begins to doze off. Your body still wreathing in pain from the assault, you begin to wonder why you're still conscious, probably has something to do with the nanites within you. Thinking that this is your chance to escape you try to struggle from under the Wrestling Wolf. But the massive form of the Wolf ontop of you was too heavy for you to lift let alone move from under of. Not only that but his knot was still inflated withing and you can do nothing but wait for it to deflate and hopes for it to deflate before the Wrestling Wolf wakes up.";
 					say "     After a while, not only has the Wolf's knot deflated enough for you to slip off of, he shifts in his sleep easing his massive body off of you. You take this chance to squeeze your way from under the Wolf. After finally freeing yourself your spit out the Wrestling Wolf's brief and escape from the his makeshift ring all while thinking that the next time you should put up a better fight lest you deal with another of his anger fueled treatments.";
@@ -132,7 +132,7 @@ When Play begins:
    now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
    now str entry is 24;
    now dex entry is 17;
-   now sta entry is 19;                    
+   now sta entry is 19;
    now per entry is 13;
    now int entry is 9;
    now cha entry is 14;
@@ -140,7 +140,7 @@ When Play begins:
    now hp entry is 150;            [ How many HP has the monster got? ]
    now lev entry is 15;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
    now wdam entry is 18;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Campus";    [ Current options are 'Outside' and 'Mall'  Case sensitive]
+   now area entry is "Campus";    [ Current options are 'Outside' and 'Mall' Case sensitive]
    now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
    now cock length entry is 0;        [ Length infection will make cock grow to if cocks]
    now cock width entry is 0;        [ Size of balls apparently ;) sneaky Nuku]
@@ -154,7 +154,7 @@ When Play begins:
    now loot entry is "";            [ Loot monster drops, ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefity[at random]";
    now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -220,7 +220,7 @@ to wwpowerslam:
 this is the wrwolfpose rule:
 	choose row monster from table of random critters;
 	if hp entry > ( monsterhp * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
-		say "    After his successful attack, [one of]the big wolf howls for the crowd[or]the powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]the wrestler finds a shirt from somewhere to tear from his body[or]the lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
+		say "     After his successful attack, [one of]the big wolf howls for the crowd[or]the powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]the wrestler finds a shirt from somewhere to tear from his body[or]the lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
 		increase monsterhp by ( hp entry / 12 );
 		increase wwheal by 1;
 

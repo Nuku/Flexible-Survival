@@ -24,15 +24,15 @@ To perform glulx hyperlink request:
 
 Include (-
  [ DoLink;
-	setlink(); 
+	setlink();
 	playHyperlink(gg_event-->2);
- ]; 
+ ];
 
 [ playHyperlink n;
 	(+ current link number +) = n;
 	if (n > 0) { 
 		glk_cancel_hyperlink_event(gg_mainwin);
-		FollowRulebook( (+ clicking hyperlink rules +) ); 
+		FollowRulebook( (+ clicking hyperlink rules +) );
 		SetLink();
 	};
 ];
@@ -47,7 +47,7 @@ The clicking hyperlink rules are a rulebook.
 
 Current link number is a number that varies.
 
-A clicking hyperlink rule (this is the default command replacement by hyperlinks rule):  
+A clicking hyperlink rule (this is the default command replacement by hyperlinks rule):
 	repeat through the Table of Hyperlink Glulx Replacement Commands:
 		if the current link number is linknum entry:
 			now the glulx replacement command is replacement entry;
@@ -76,11 +76,11 @@ We will also need to cause a result when the link is clicked; this is where the 
 
 ...and this would provide a reaction when that link is clicked. If we have a very large number of hyperlinks in our game, we might want to set up the links in a different way -- for instance, by building a table relating numbers to outcomes. This could also be done using a clicking hyperlink rule. In fact, this is so often what we want to do that our default clicking hyperlink rule says
 
-	A clicking hyperlink rule (this is the default command replacement by hyperlinks rule):  
+	A clicking hyperlink rule (this is the default command replacement by hyperlinks rule):
 		repeat through the Table of Hyperlink Glulx Replacement Commands
 		begin;
 			if the current link number is linknum entry
-			begin; 
+			begin;
 				change the glulx replacement command to replacement entry;
 				rule succeeds;
 			end if;

@@ -126,7 +126,7 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 Include (-
 
 [ YesOrNo i j;
-	PrintText((+ yes or no message +));
+	TEXT_TY_Say((+ yes or no message +));
 	for (::) {
 	#Ifdef TARGET_ZCODE;
 	      if (location == nothing || parent(player) == nothing) read buffer parse;
@@ -140,9 +140,13 @@ Include (-
 			i = parse-->1;
 			if (i == YES1__WD or YES2__WD or YES3__WD or '1//') rtrue;
 			if (i == NO1__WD or NO2__WD or NO3__WD or '2//') rfalse;
-	      }	      PrintText((+ yes or no message +));
+	      }
+		TEXT_TY_Say((+ yes or no message +));
+		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
+
+[ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
 The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
@@ -2223,7 +2227,7 @@ carry out vialing:
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
-		now q is x;
+		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
 			now found is 1;
@@ -2279,7 +2283,7 @@ Carry out vialdropping:
 	let z be 1;
 	let q be a topic;
 	repeat with x running through vials of player:
-		now q is x;
+		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
 			now found is 1;

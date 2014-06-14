@@ -10,7 +10,7 @@ A thing can be neuter. A thing is usually neuter.
 
 The prior named noun is a thing that varies. The prior named noun is yourself.
 
-After printing the name of something (called the target): 
+After printing the name of something (called the target):
 	mark target in output.
 
 To mark (target - a thing) in output:
@@ -23,12 +23,12 @@ To mark-future-plural:
 To mark-future-singular:
 	(- say__n = 29; -)
     
-To decide whether (item - an object) acts plural: 
+To decide whether (item - an object) acts plural:
 	if the item is plural-named or the item is ambiguously plural:
 		yes;
 	no.
 
-To say is-are: 
+To say is-are:
 	say is-are of prior named noun.
     
 To say is-are of (item - a thing):
@@ -73,131 +73,131 @@ To say ies of (item - a thing):
 	
 Section 2 - Pronouns
 
-To say that-those: 
+To say that-those:
     say that-those prior named noun.
 
-To say Cap that-those: 
+To say Cap that-those:
     say Cap that-those prior named noun.
     
-To say that-those of (item - a thing): 
+To say that-those of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
      if the item acts plural
     begin;
-    	say "those"; 
+    	say "those";
     otherwise if the item is the player;
 		 say "you";
 	otherwise if the item is male and item is not neuter;
    		say "he";
     otherwise if the item is female and item is not neuter;
     	say "she";
-    otherwise; 
+    otherwise;
     	say "that";
     end if.
 
-To say Cap that-those (item - a thing): 
+To say Cap that-those (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
      if the item acts plural
     begin;
-    	say "Those"; 
+    	say "Those";
     otherwise if the item is the player;
 		 say "You";
     otherwise if the item is male and item is not neuter;
    		say "He";
     otherwise if the item is female and item is not neuter;
     	say "She";
-    otherwise; 
+    otherwise;
     	say "That";
     end if.
    
-To say that-those (item - a thing): 
+To say that-those (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
      if the item acts plural
     begin;
-    	say "those"; 
+    	say "those";
     otherwise if the item is the player;
 		 say "you";
 	otherwise if the item is male and item is not neuter;
    		say "he";
     otherwise if the item is female and item is not neuter;
     	say "she";
-    otherwise; 
+    otherwise;
     	say "that";
     end if.
     
 
-To say Cap that-those of (item - a thing): 
+To say Cap that-those of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
      if the item acts plural
     begin;
-    	say "Those"; 
+    	say "Those";
     otherwise if the item is the player;
 		 say "You";
 	otherwise if the item is male and item is not neuter;
    		say "He";
     otherwise if the item is female and item is not neuter;
     	say "She";
-    otherwise; 
+    otherwise;
     	say "That";
     end if.
     
-To say it-they:  
+To say it-they:
 	say it-they of prior named noun.
 
-To say it-they of (item - a thing):  
+To say it-they of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
      if the item acts plural
     begin;
-    	say "they"; 
+    	say "they";
     otherwise if the item is the player;
 		 say "you";
 	otherwise if the item is male and item is not neuter;
    		say "he";
     otherwise if the item is female and item is not neuter;
     	say "she";
-    otherwise; 
+    otherwise;
     	say "it";
     end if.
     
 To say Cap it-they:
 	say Cap it-they of prior named noun.
 
-To say Cap it-they of (item - a thing):  
+To say Cap it-they of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "They"; 
+    	say "They";
     otherwise if the item is the player;
 		 say "You";
 	otherwise if the item is male and item is not neuter;
    		say "He";
     otherwise if the item is female and item is not neuter;
     	say "She";
-    otherwise; 
+    otherwise;
     	say "It";
     end if.
     
 To say its-their:
 	say its-their of prior named noun.
 	
-To say its-their of (item - a thing):   
+To say its-their of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "their"; 
+    	say "their";
     otherwise if the item is the player;
 		 say "your";
 	otherwise if the item is male and item is not neuter;
    		say "his";
     otherwise if the item is female and item is not neuter;
     	say "her";
-    otherwise; 
+    otherwise;
     	say "its";
     end if.
     
@@ -205,38 +205,38 @@ To say its-their of (item - a thing):
 To say Cap its-their:
 	say Cap its-their of prior named noun.
 	
-To say Cap its-their of (item - a thing):  
+To say Cap its-their of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "Their"; 
+    	say "Their";
     otherwise if the item is the player;
 		 say "Your";
 	otherwise if the item is male and item is not neuter;
    		say "His";
     otherwise if the item is female and item is not neuter;
     	say "Her";
-    otherwise; 
+    otherwise;
     	say "Its";
     end if.
     
-To say it-them: 
+To say it-them:
 	say it-them of prior named noun. 
 
-To say it-them of (item - a thing):   
+To say it-them of (item - a thing):
     now the prior named noun is the item;
 	mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "them"; 
+    	say "them";
     otherwise if the item is the player;
 		 say "you";
 	otherwise if the item is male and item is not neuter;
    		say "him";
     otherwise if the item is female and item is not neuter;
     	say "her";
-    otherwise; 
+    otherwise;
     	say "it";
     end if.
     
@@ -248,14 +248,14 @@ To say Cap it-them of (item - a thing):
 	mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "Them"; 
+    	say "Them";
     otherwise if the item is the player;
 		 say "You";
 	otherwise if the item is male and item is not neuter;
    		say "Him";
     otherwise if the item is female and item is not neuter;
     	say "Her";
-    otherwise; 
+    otherwise;
     	say "It";
     end if.
 	
@@ -268,14 +268,14 @@ To say its-theirs of (item - a thing):
   mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "theirs"; 
+    	say "theirs";
     otherwise if the item is the player;
 		 say "yours";
 	otherwise if the item is male and item is not neuter;
    		say "his";
     otherwise if the item is female and item is not neuter;
     	say "hers";
-    otherwise; 
+    otherwise;
     	say "its";
     end if.
   
@@ -287,14 +287,14 @@ To say Cap its-theirs of (item - a thing):
   mark prior named noun in output;
     if the item acts plural
     begin;
-    	say "Theirs"; 
+    	say "Theirs";
     otherwise if the item is the player;
 		 say "Yours";
 	otherwise if the item is male and item is not neuter;
    		say "His";
     otherwise if the item is female and item is not neuter;
     	say "Hers";
-    otherwise; 
+    otherwise;
     	say "Its";
     end if.
 
@@ -308,9 +308,9 @@ To say possessive of (item - a thing):
   begin;
   	say "your";
   otherwise if the item acts plural;
-  	say "[the item][apostrophe]";
+  	say "[the item][']";
   otherwise;
-  	say "[the item][apostrophe]s";
+  	say "[the item][']s";
   end if.
 
 To say Cap possessive:
@@ -323,9 +323,9 @@ To say Cap possessive of (item - a thing):
   begin;
   	say "Your";
   otherwise if the item acts plural;
-  	say "[The item][apostrophe]";
+  	say "[The item][']";
   otherwise;
-  	say "[The item][apostrophe]s";
+  	say "[The item][']s";
   end if.
     	
     
@@ -351,7 +351,7 @@ Include (-
 
 Use Manual Pronouns translates as (- Constant MANUAL_PRONOUNS; -) 
 
-To have the parser notice (o - an object): 
+To have the parser notice (o - an object):
 	if o is ambiguously plural, notice the plurality of o;
 	otherwise set pronouns from o
 

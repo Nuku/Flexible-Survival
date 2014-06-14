@@ -80,7 +80,7 @@ Instead of resolving a Captive rat:
 		challenge "Demon Brute";
 		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
 		challenge "Slut Rat";
-		say "After that last fight, you definitely have more questions than answers. Maybe you should ask Rod or Ronda back in the mall about the strange demon[apostrophe]s seed.";
+		say "After that last fight, you definitely have more questions than answers. Maybe you should ask Rod or Ronda back in the mall about the strange demon[']s seed.";
 	otherwise:
 		say "Discretion definitely being the better part of valor, you quickly hurry along the tunnels, ignoring the strange sounds.";
 	Now Captive rat is resolved;
@@ -117,7 +117,7 @@ Strange symbol is a situation.
 The sarea of Strange symbol is "Mall".
 
 Instead of resolving a Strange symbol:
-	say "Moving through the sewers, you notice a strange white symbol painted on the wall.  Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can[apostrophe]t seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human then when you started.";
+	say "Moving through the sewers, you notice a strange white symbol painted on the wall.  Moving closer to investigate, you note that the symbol almost seems to writhe and move out of the corner of your eyes. Finally getting to where you can stand in front of the symbol, you find you still can[']t seem to make heads or tails of the strange pattern, though the longer you stare at it the more it seems like you are just on the edge of figuring it out. You blink as you realize your eyes have gone heavy, and your brain feels somewhat fuzzy as well, you can almost swear that you hear dark whispers in the shadows surrounding you. You quickly realize that the strange symbol is doing something to you, and manage to drag yourself away from its fascinating lines and stumble away, feeling much less human then when you started.";
 	decrease humanity of player by 30;
 	Now Strange symbol is resolved;
 
@@ -159,7 +159,7 @@ Instead of resolving a Old rail system:
 		say "Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "Recovering from the unexpected encounter, you continue through the now open door.";
-	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of a old rail truck still sitting there on the turning section.  You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness.  Sadly the place is so old you don[apostrophe]t think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
+	Say "Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of a old rail truck still sitting there on the turning section.  You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness.  Sadly the place is so old you don[']t think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
 	Now Old rail system is resolved;
 
 
