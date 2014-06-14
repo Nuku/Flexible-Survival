@@ -550,8 +550,106 @@ to say sexwithKristen:
 	otherwise if hp of Kristen < 12:
 		say "[bracket]***Sorry, sex as human content not present at this time. - The Mgmt[close bracket][line break]";
 	otherwise if hp of Kristen >= 16:
-		say "[bracket]***Sorry, sex as vixen content coming soon. - The Mgmt[close bracket][line break]";
-[		now lastfuck of Kristen is turns;	]
+		say "[kristentfsexmenu]";
+
+
+to say kristentfsexmenu:
+	say "     Looking over the [if libido of Kristen is 2]beautiful[otherwise if libido of Kristen is 3]longing[otherwise]horny[end if] vixen, you decide you're in the mood for some sexual relief.  Her lovely body and lustful eagerness has several sexy possibilities run through your mind.  What kind of fun are you in the mood for this time?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her";
+		now sortorder entry is 1;
+		now description entry is "fuck the sexy fox";
+		choose a blank row in table of fucking options;
+		now title entry is "Blow job";
+		now sortorder entry is 2;
+		now description entry is "use her muzzle";
+	choose a blank row in table of fucking options;
+	now title entry is "Give cunnilingus";
+	now sortorder entry is 1;
+	now description entry is "eat her out";
+[		choose a blank row in table of fucking options;
+	now title entry is "69";
+	now sortorder entry is 2;
+	now description entry is "share some mutual oral pleasure";		]
+[		if Janice is visible and lastfuck of Janice - turns >= 6:
+		choose a blank row in table of fucking options;
+		now title entry is "Threesome w/Janice";
+		now sortorder entry is 9;
+		now description entry is "have a threesome with the vulpine hotties";		]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Fuck her":
+					say "[kristentfsex01]";
+				otherwise if nam is "Blow job":
+					say "[kristentfsex02]";
+				otherwise if nam is "Give cunnilingus":
+					say "[kristentfsex03]";
+				otherwise if nam is "69":
+					say "[kristentfsex04]";
+				otherwise if nam is "Threesome w/Janice":
+					say "[kristentfsex05]";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	now lastfuck of Kristen is turns;
+	wait for any key;
+	clear the screen and hyperlink list;
+
+to say kristentfsex01:
+	if libido of Kristen is 2:
+		say "     Putting your arms around the vixen, you offer her a good ole fucking to scratch that itch you're both feeling.  She smiles and gives you a quick kiss and squeezes your ass before flopping out across the divan, her body on wanton display.  'Come on then, loverboy.  You've got a sexy fox woman to satisfy,' she says with a rumble of arousal in her voice while teasing a finger along her folds.  Grinning, you grip your [cock of player] manhood and move atop her, brushing it across those damp petals before guiding it into your vulpine lover.";
+	otherwise if libido of Kristen is 3:
+		say "     Putting your arms around the vixen and running a hand along her inner thigh, you mumble sweet words about how beautiful she is and how you'd like to show her just how sexy you think she's become.  Feeling your erection pressed against her, she smiles and kisses you passionately, paws running along your sides.  She lays back across the divan and puts her body on wanton display for her sexy mate.  'Come on then, my mate.  I hope this sexy fox woman can satisfy you,' she says with a rumble of arousal in her voice while teasing a finger along her folds.  Grinning, you grip your [cock of player] manhood and move atop her, brushing it across those damp petals before guiding it into your vulpine lover.";
+	otherwise:
+		say "     Grabbing the vixen in your arms, you rub between her legs and give her ass a playful swat.  Pulling her to you, she can feel your throbbing manhood pressed against her and grinds back against it.  She smiles and gives you a wild, tongue-filled kiss while rubbing herself against your hard meat.  She spreads herself out across the divan in a wanton display, already fingering herself in anticipation of a much-needed fuck.  'Come on then, you horn dog.  You've got a slutty fox woman to satisfy,' she says with a rumble of arousal in her voice while pumping a few fingers wetly between her folds.  Grinning, you grip your [cock of player] manhood and move atop her, brushing it across those damp petals before guiding it into your vulpine plaything.";
+	say "     Your [cock size desc of player] cock slides into the vixen's pussy [if cock length of player < 8]with ease, her cunny welcoming your pulsing rod into it[otherwise if cock length of player < 16]slowly, her cunny stretching open to accommodate your pulsing rod inside it[otherwise]gradually, her cunny needing to stretch wide to accommodate your pulsing rod inside it[end if].  The vixen gives a long, satisfied sigh as you thrust into her; clearly she's been looking forward to this as much as you have[if cock length of player < 12].  Once fully buried in her[otherwise].  Once you've filled her with as much as she can take[end if], you draw back about halfway and start thrusting, pumping your meat into the moaning fox woman beneath you.";
+	if libido of Kristen is 2:
+		say "     Kristen gently rocks her hips up into your thrusts while running her paws over your [bodydesc of player] body.  You share several tender kisses while cupping one of her breasts in your hand.  Breaking off from the kissing, you move your head down to first lick and then suck at her nipple.  Teasing the bar piercing in it with your tongue gets her to give the most delightfully cute moans and yips.  Over time, your pace quickens as your mutual excitement grows until finally coming to a head.  You grunt and bite gently on her perky nip as you drive your [cock size desc of player] cock deep inside her and cum hard.  Blast after blast of your hot semen pumps into the lustful vixen and soon she's crying out in release as well[if cock width of player < 12].  You drain your balls painting her womb with your load[otherwise if cock width of player < 24].  You drain your balls stuffing her womb with your ample load[otherwise if cock width of player < 36].  You drain your balls stuffing her womb to overfilling with your impressive load[otherwise].  You drain your balls, stuffing her womb to the point of bloating her belly with your excessive load[end if].  After sex, you share some snuggles and kisses with the sated vixen.";
+	otherwise if libido of Kristen is 3:
+		say "     Kristen gently rocks her hips up into your thrusts while caressing her paws over your [bodydesc of player] body.  She kisses you repeatedly between moaning about how wonderful you are and how good you make her feel.  Having one hand already cupping a breast, when you break off from the kissing, you move your head down to first lick and then suck at her nipple.  Teasing the bar piercing in it with your tongue gets her to give the most delightfully cute moans and yips.  Over time, your pace quickens as your excitement grows until finally coming to a head.  You grunt and bite gently on her perky nip as you drive your [cock size desc of player] cock deep inside her and cum hard.  Blast after blast of your hot semen pumps into the lustful vixen and soon she's crying out in release as well[if cock width of player < 12].  You drain your balls painting her womb with your load[otherwise if cock width of player < 24].  You drain your balls stuffing her womb with your ample load[otherwise if cock width of player < 36].  You drain your balls stuffing her womb to overfilling with your impressive load[otherwise].  You drain your balls, stuffing her womb to the point of bloating her belly with your excessive load[end if].  After sex, the sated vixen snuggles up to you for some more loving kisses.";
+	otherwise:
+		say "     Kristen eagerly rocks her hips up into your thrusts while pawing over your [bodydesc of player] body.  You give her several rough kisses, pressing your tongue into her muzzle.  The horny vixen's tongue fences with yours while you grope one of her breasts in your hand.  Breaking off from the kissing, you move your head down to lick and suck at her nipple.  Teasing the bar piercing in it with your tongue gets her moaning and yipping in lustful delight.  Already fucking her at a quick pace, you pound into her harder as she wraps her legs around you and her cunny starts to clench and quiver in orgasm.  You grunt and bite firmly on her perky nip as you drive your [cock size desc of player] cock deep inside her and cum hard.  Blast after blast of your hot semen pumps into the lustful vixen and her orgasmic cries grow even louder[if cock width of player < 12].  You drain your balls painting her womb with your load[otherwise if cock width of player < 24].  You drain your balls stuffing her womb with your ample load[otherwise if cock width of player < 36].  You drain your balls stuffing her womb to overfilling with your impressive load[otherwise].  You drain your balls, stuffing her womb to the point of bloating her belly with your excessive load[end if].  Having thoroughly fucked your the vixen slut, you pull your sticky cock free of her gripping snatch and offer it up to her muzzle.  She stuffs it eagerly into her muzzle, licking your cum and her juices from it with a long moan while fingering her messy, leaking pussy.";
+
+to say kristentfsex02:
+	if libido of Kristen is 2:
+		say "     Kristen takes your [cock of player] cock in hand, pausing to admire her friend's tool before getting on her knees.  She gives your [cock size desc of player] manhood a few teasing licks while stroking it before accepting it into her warm muzzle.  Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod.  You run your fingers through her headfur as you savour the pleasure her muzzle brings";
+	otherwise if libido of Kristen is 3:
+		say "     Kristen takes your [cock of player] cock in hand, pausing to admire her mate's tool before getting on her knees.  She lavishes your [cock size desc of player] manhood with licks and nuzzles, letting your pre mark her fur before taking it eagerly into her warm muzzle.  Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod.  You caress her cheek and rub her ears affectionately as you savour the pleasure her muzzle brings";
+	otherwise:
+		say "     Kristen takes your [cock of player] cock in hand, pausing to admire her favourite lover's tool before getting on her knees.  She cannot restrain her eagerness with your [cock size desc of player] manhood offered up before her, taking it into her warm muzzle right away.  Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod.  You grip your fingers in her hair so you can thrust firmly int the slutty vixen's muzzle";
+	say "[if cunts of player > 0].  She even slips a few fingers into your juicy cunny, pushing into your feminine depths each time she sucks down hard[otherwise if cockname of player is not listed in infections of internallist].  She rubs a paw over your ballsac, kneading and caressing your orbs, longing for their contents[end if].";
+	say "     After enjoying the blow job for several minutes, you feel yourself getting close[if a random chance of libido of Kristen in 6 succeeds].  With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously.  With a loud groan, you empty your [cum load size of player] load across the sexy vixen's face while her tongue hangs out to catch what she can.  She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[otherwise].  Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan.  You empty your [cum load size of player] load into her muzzle for her to swallow down.  Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
+
+
+to say kristentfsex03:
+	if libido of Kristen is 2:
+		say "     In the mood to give Kristen some pleasure while grabbing a taste of vixen, you have her sit at the edge of one of the divans and approach her juicy cunny.  She smiles and spreads her legs.  'This is just what I need,' she moans as you first finger and then start licking her pussy";
+	otherwise if libido of Kristen is 3:
+		say "     In the mood to lavish some attention upon Kristen for a change (and hungry for a taste of vixen), you have her take a seat at the edge of one of the divans and approach her juicy cunny.  'Oh, such a [if cocks of player > 0]gentleman[otherwise]fine lover[end if].  You're so thoughtful,' she moans as you first finger and then start licking her pussy";
+	otherwise:
+		say "     Wanting a taste of the horny vixen, you grope her while getting her to sit at the edge of one of the divans.  Sitting between her legs, you finger her pussy like it belongs to you and start licking her juicy folds.  'Oh, I love it when you play with me,' she moans excitedly";
+	say ".  You work your fingers back and forth inside her, causing her cunt to quiver and her juices to flow.  You lick and kiss at her clit between lapping up her delicious fluids, rich with vulpine arousal.  Your tonguework soon has the beautiful vixen panting and moaning as you tease her g-spot at give her folds a light nibble.";
+	say "     The [if libido of Kristen is 2]lovely[otherwise if libido of kristen is 3]amorous[otherwise]slutty[end if] leans back and stretches with a long sigh of pleasure as you continue eating her out.  An upward glance reveals her cupping her beautiful bosom and teasing her pierced nipples.  The sight of her playing with her tits turns you on all the more and you slip out your fingers to dive your tongue, directly licking at her sensitive inner walls[if libido of Kristen is 2 or libido of Kristen is 3].  Caressing her ass[otherwise].  Grabbing and kneading her ass[end if], you press your lips to her labial folds and work your tongue as deep as you can until the vixen cries out in orgasmic release, soaking your tongue in her femme cum.  You lap up as much as you can get while her hips quiver, yiffing and moaning until she finally flops over onto the divan, flush and panting for breath.";
+
+to say kristentfsex04:
+	say "***";
+
+to say kristentfsex05:
+	say "***";
 
 
 Section 8 - Variable Charts
