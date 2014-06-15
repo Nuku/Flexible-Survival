@@ -81,7 +81,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -89,7 +89,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if infvulpstate <= 2][one of]inflatable[or]balloony[or]slender[or]sexy[or]plasticky[or]light[or]buoyant[at random][otherwise][one of]inflatable[or]balloony[or]plump[or]huggable[or]over-inflated[or]rounded[or]plasticky[or]light[or]buoyant[at random][end if]";
 	now type entry is "[one of]vulpine[or]foxish[or]inflatable[as decreasingly likely outcomes]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -107,9 +107,9 @@ to say infvulpbody:
 
 to say infvulpbodychange:
 	if infvulpstate <= 2:
-		say "it grows lighter and you giggle merrily for no reason.  As your insides are replaced with air, you gain [if cunts of player is 0]a slender physique[otherwise]lovely curves and a narrow waist[end if].  Your hands change, puffing up into cute paws and soon your feet do the same.  By the time it's over, your body is that of some kind of inflatable, balloon creature";
+		say "it grows lighter and you giggle merrily for no reason.  As your insides are replaced with air, you gain [if cunts of player is 0]a slender physique[otherwise]lovely curves and a narrow waist[end if].  Your hands change, puffing up into cute paws and soon your feet do the same.  By the time it's over, your body is that of some kind of inflatable balloon creature";
 	otherwise:
-		say "it grows lighter and you giggle merrily for no reason.  As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable.  Your hands change, puffing up into cute paws and soon your feet do the same.  By the time it's over, your body is that of some kind of inflatable, balloon creature";
+		say "it grows lighter and you giggle merrily for no reason.  As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable.  Your hands change, puffing up into cute paws and soon your feet do the same.  By the time it's over, your body is that of some kind of inflatable balloon creature";
 
 to say infvulp_reset:
 	now last_infvulp_airhead is turns;
