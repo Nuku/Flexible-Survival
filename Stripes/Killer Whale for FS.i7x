@@ -44,13 +44,13 @@ to say losetoorca:
 to say orcadefeatsex1:		[anal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva whilst it becomes fully engorged; eventually, your feel its immense length depart from your abused orifice before he indicates to you that he would abuse another.  He slides over top of you, his massive form pinning against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion.  With a sharp jab, you feel the flexible member invade your ass, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion.  Slickly sliding across the supple walls of your [bodytype of player] anus, the orcaman's impressive shaft probes your depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines.  Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and--as though like clockwork--the beast's on release felt apparent as his thick, virile cum floods the confines of your stomach.[mimpregchance]";
-	say "     Visibly bloated by such an impressive release, your feel the writhing orgam soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
+	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
 
 
 to say orcadefeatsex2:		[new vaginal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva whilst it becomes fully engorged; eventually, your feel its immense length depart from your abused orifice before he indicates to you that he would abuse another.  He slides over top of you, his massive form pinning against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion.  With a sharp jab, you feel the flexible member invade your pussy, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion.  Slickly sliding across the supple walls of your [bodytype of player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines.  Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and--as though like clockwork--the beast's own release felt apparent as his thick, virile cum floods the confines of your uterus.[impregchance]";
-	say "     Visibly bloated by such an impressive release, your feel the writhing orgam soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
+	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
 
 
 to say orcadefeatsex3:		[old vaginal sex]
@@ -132,11 +132,11 @@ When Play begins:
 	now cock change entry is "it becomes narrow, but with a sleek and curving shape.  It now emerges from a slit at your groin and your balls have been mostly pulled into your body as well, so your waist may be smooth and streamlined while swimming";
 	now str entry is 18;
 	now dex entry is 13;
-	now sta entry is 15;				
+	now sta entry is 15;
 	now per entry is 10;
 	now int entry is 10;
 	now cha entry is 16;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 7;			[Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -154,7 +154,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]sleek[or]powerful[at random]";
 	now type entry is "[one of]orca[or]cetacean[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

@@ -25,13 +25,13 @@ South of Hallway is Complex.
 North of Complex is Hallway.
 
 
-The description of Max's room is "Max's bedroom, its pretty big, when not in the gym, Max normally hangs out here".
+The description of Max's room is "Max's bedroom. It's pretty big. When not in the gym, Max normally hangs out here."
 
 
-The description of Miles' room is "Miles's bedroom. It's pretty big, with books and several strange artifacts scattered about.".
+The description of Miles' room is "Miles's bedroom. It's pretty big, with books and several strange artifacts scattered about."
 
-The description of Hallway is "a hallway that separates varies rooms. To the north is rec room, to the east it the Max’s room, and to the west is Miles's room.".
+The description of Hallway is "a hallway that separates various rooms. To the north is the rec room, to the east is Max’s room, and to the west is Miles's room."
 
-The description of Rec room is "a relaxation room. Miles and Max normally hang out here".
+The description of Rec room is "a relaxation room. Miles and Max normally hang out here."
 
 Complex ends here.

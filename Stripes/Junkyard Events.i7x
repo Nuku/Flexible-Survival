@@ -40,7 +40,7 @@ when play begins:
 Instead of resolving a Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline.  There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder.  You can tell there are several people laughing and they're getting closer.  Shall you stay and wait for them to see what's going on or shall you make your escape while you can? (Y=stay, N=flee)";
 	if the player consents:
-		say "     Without anywhere worthwhile to hide and watch, you stay in the middle of the path and try to look intimidating.  A few seconds later, some goblins come into view dragging something as they laugh cruelly to one another.  The trio stops as they notice you just as their burden comes into view.  Trapped in a net behind them is a tigress woman dressed in a skimpy outfit with mussed hair.  She is largely insensate right now, probably struck by one of the goblins when she started making noise.  With you barring their path, the goblin charges to defend their prize."; 
+		say "     Without anywhere worthwhile to hide and watch, you stay in the middle of the path and try to look intimidating.  A few seconds later, some goblins come into view dragging something as they laugh cruelly to one another.  The trio stops as they notice you just as their burden comes into view.  Trapped in a net behind them is a tigress woman dressed in a skimpy outfit with mussed hair.  She is largely insensate right now, probably struck by one of the goblins when she started making noise.  With you barring their path, the goblin charges to defend their prize.";
 		now goblinfight is 3;
 		challenge "Goblin";
 		if goblinfight is 1:
