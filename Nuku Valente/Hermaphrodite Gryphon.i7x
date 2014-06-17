@@ -60,7 +60,7 @@ To say gryphon lose:
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
 		otherwise if cocks of player is greater than 0 and cunt length of player is less than 6:
-			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation. You move to your knee's positioning your [cock size desc of player] member at your victims quivering slit.";
+			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation. You move to your knees, positioning your [cock size desc of player] member at your victims quivering slit.";
 			if cock length of player is less than 6:
 				say "With almost no effort Her massive pussy swallows your entire cock. With what could almost pass for a smirk, the gryphon squawks 'I guess you're just not Man enough...'. Anger and lust getting the better of you, you pull your cock out of her voluminous cunt and repositioning slightly you place the tip at the entrance to her back door. Her eyes going wide with fear, your prey is about to voice her dissent, but too late, your lust won't be denied. With some effort you push past her tightly clenched sphincter, drawing loud pained squawks from your victim. You start slowly fucking her tight asshole, in and out, gradually picking up speed. Eventually the gryphon's squawking changes pitch; however she felt before, she definitely seems to be enjoying this now.";
 			otherwise:
@@ -122,7 +122,7 @@ to say gryphonfuck2:
 	say "     The gryphon [one of]shoves you to the ground roughly and seems disappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs[or]pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off[at random].";
 
 to say gryphonfuck3:
-	say "     Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured,  keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
+	say "     Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured, keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
 
 
 to say gryphonfuck4:
@@ -178,7 +178,7 @@ When Play begins:
 	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 8;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 13;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 7;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -186,7 +186,7 @@ When Play begins:
 	now loot entry is "gryphon milk";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]alluring[or]curvaceous[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]gryphon[or]feline[or]hybrid[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

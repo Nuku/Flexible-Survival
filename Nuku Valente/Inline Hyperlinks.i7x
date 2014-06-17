@@ -1,6 +1,8 @@
 Version 3 of Inline Hyperlinks (for Glulx only) by Nuku Valente begins here.
 
-"Provides a simple, HTML-inspired syntax for adding hyperlinks within say phrases. No manual management of hyperlinks required. Requires Text Capture by Eric Eve. Works seamlessly with, but does not require, Flexible Windows. Made Originally by Erik Temple, hacked at by Nuku Valente."
+"Provides a simple, HTML-inspired syntax for adding hyperlinks within say phrases. No manual management of hyperlinks required. Requires Text Capture by Eric Eve. Works seamlessly with, but does not require, Flexible Windows."
+
+"modified from original 6F95 code by Erik Temple"
 
 Chapter 0 - Inclusions
 
@@ -15,7 +17,6 @@ When play begins:
 	request glulx hyperlink event in main window;
 	request glulx hyperlink event in status window.
 
-
 Section - Event handling
 
 A glulx hyperlink rule (this is the default inline hyperlink handling rule):
@@ -23,13 +24,10 @@ A glulx hyperlink rule (this is the default inline hyperlink handling rule):
 	unless the current hyperlink ID is 0:
 		cancel glulx hyperlink request in main window;[just to be safe]
 		cancel glulx hyperlink request in status window;[just to be safe]
-		cancel line input in main window;
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
-		cancel line input in main window;
 		request glulx hyperlink event in status window;
 	otherwise:
-		cancel line input in main window;
 		request glulx hyperlink event in main window.
 
 To request glulx hyperlink event in the/-- main window:
@@ -53,52 +51,56 @@ To decide which number is the link/-- number of the/-- selected/clicked hyperlin
 
 Section - Placing links
 
-The hyperlink list is a list of indexed texts variable.
+The hyperlink list is a list of texts variable.
 
-The hyperlinked text is an indexed text variable. The hyperlinked text is "".
-The hyperlinked command is an indexed text variable. The hyperlinked command is "".
+The hyperlinked text is a text variable. The hyperlinked text is "".
+The hyperlinked command is a text variable. The hyperlinked command is "".
 
-To say link:
-	if hypernull is 1:
-		continue the action;
+To say link -- beginning say_link -- running on:
 	now the hyperlinked text is "";
 	now the hyperlinked command is "";
+[	say "(start link)";	]
 	start capturing text.
-	
-To say as:
+
+To say as -- continuing say_link -- running on:
 	stop capturing text;
-	now the hyperlinked text is "[captured text]";
+	now the hyperlinked text is the substituted form of "[captured text]";
+[	say "(text [hyperlinked text])";	]
+[	say "(as)";	]
 	start capturing text;
-	
-To say end link:
+
+To say end link -- ending say_link -- running on:
 	let hyperlink index be a number;
 	stop capturing text;
-	if hypernull is 1:
-		continue the action;
-	if the hyperlinked text is "":
-		now the hyperlinked text is "[captured text]";
-	now the hyperlinked command is "[captured text]";
-	if the hyperlinked command is listed in the hyperlink list:
-		repeat with count running from 1 to the number of entries in the hyperlink list:
-			if entry (count) of the hyperlink list is hyperlinked command:
-				let hyperlink index be count;
-	otherwise unless the hyperlinked command is "":
+	if the hyperlinked text is empty:
+[		say "(no as)";	]
+		now the hyperlinked text is the substituted form of "[captured text]";
+	now the hyperlinked command is the substituted form of "[captured text]";
+[	say "(command [hyperlinked command])";	]
+[	say "(end link)";	]
+	let the hyperlink index be zero;
+	repeat with the count running from 1 to the number of entries in the hyperlink list:
+		if the hyperlinked command exactly matches the text entry (count) of the hyperlink list:
+[			say "(match: [hyperlinked command] and [entry (count) of the hyperlink list])";	]
+			let the hyperlink index be count;
+			break;
+	if the hyperlink index is zero and the hyperlinked command is not empty:
+[		say "(adding)";	]
 		add hyperlinked command to hyperlink list;
 		let hyperlink index be the number of entries of hyperlink list;
-	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
+[	say "(index [hyperlink index])";	]
+[	say "(text [hyperlinked text])";	]
+[	say "(command [hyperlinked command])";	]
+	if hypernull is 1:
+		say "[hyperlinked text]";
+	otherwise:
+		say "[set link (hyperlink index)][hyperlinked text][terminate link]";
 	
 To say set link (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
 To say terminate link:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink(0); -)
-
-To cancel line input in main window: 
-	(- glk_cancel_line_event(gg_mainwin, GLK_NULL);
-	glk_cancel_char_event(gg_mainwin); 
-	glk_cancel_char_event(gg_statuswin); 
-	glk_cancel_line_event(gg_statuswin, GLK_NULL);
-	-)
 
 
 Section - Processing hyperlinks
@@ -111,7 +113,6 @@ The current hyperlink ID is a number that varies.
 Section - Selecting replacement command
 
 A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
-	cancel line input in main window;
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
 
@@ -125,27 +126,28 @@ The hyperlink list is a list of indexed texts variable.
 The hyperlinked text is an indexed text variable. The hyperlinked text is "".
 The hyperlinked command is an indexed text variable. The hyperlinked command is "".
 
-To say link:
+To say link -- beginning say_link -- running on:
 	now the hyperlinked text is "";
 	now the hyperlinked command is "";
 	start capturing text.
 	
-To say as:
+To say as -- continuing say_link -- running on:
 	stop capturing text;
-	now the hyperlinked text is "[captured text]";
+	now the hyperlinked text is the substituted form of "[captured text]";
 	start capturing text;
 	
-To say end link:
+To say end link -- ending say_link -- running on:
 	let hyperlink index be a number;
 	stop capturing text;
-	if the hyperlinked text is "":
-		now the hyperlinked text is "[captured text]";
-	now the hyperlinked command is "[captured text]";
-	if the hyperlinked command is listed in the hyperlink list:
-		repeat with count running from 1 to the number of entries in the hyperlink list:
-			if entry (count) of the hyperlink list is hyperlinked command:
-				let hyperlink index be count;
-	otherwise unless the hyperlinked command is "":
+	if the hyperlinked text is empty:
+		now the hyperlinked text is the substituted form of "[captured text]";
+	now the hyperlinked command is the substituted form of "[captured text]";
+	let the hyperlink index be zero;
+	repeat with the count running from 1 to the number of entries in the hyperlink list:
+		if the hyperlinked command exactly matches the text entry (count) of the hyperlink list:
+			let the hyperlink index be count;
+			break;
+	if the hyperlink index is zero and the hyperlinked command is not empty:
 		add hyperlinked command to hyperlink list;
 		let hyperlink index be the number of entries of hyperlink list;
 	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
@@ -160,10 +162,8 @@ To say terminate link:
 Section - Code for selecting the replacement command (replaces Section - Selecting the replacement command in Flexible Windows by Jon Ingold)
 
 A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
-	cancel line input in main window;
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
-
 
 Chapter 3a - Debugging (not for release)
 
@@ -203,14 +203,12 @@ Chapter 4 - Manually reserving entries in the hyperlink list
 
 To reserve (N - a number) slots in/of/at the/-- beginning/-- of/-- the/-- hyperlink command/-- list:
 	if the number of entries of the hyperlink list is greater than 0:
-		say "***Error: Attempted to manually add entries to the hyperlink list when there are already entries present. The list must be empty in order to reserve slots. The best time to reserve entries is in the 'after starting the virtual machine' activity.";
+		say "*** Error: Attempted to manually add entries to the hyperlink list when there are already entries present. The list must be empty in order to reserve slots. The best time to reserve entries is in the 'after starting the virtual machine' activity.";
 		rule fails;
 	repeat with index running from 1 to N:
 		add "" to the hyperlink list.
 
-
 Inline hyperlinks ends here.
-
 
 ---- DOCUMENTATION ----
 
@@ -275,8 +273,9 @@ Section: Debugging
 
 If we are testing the game in the Inform IDE, or if we have included the Extended Debugging extension, we can type HYPERLINKS at the command line at any time to see the current list of hyperlinked commands and their numeric identifiers (used by Glulx to identify the link).
 
-
 Section: Change Log
+
+Version 3: Cleaned up and fixed for 6L02 by Daniel Stelzer.
 
 Version 2: Updated for 6F95. Now uses no deprecated features.
 
@@ -287,7 +286,7 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 
 	*: 	"Survival Mode"
 
-	Include Inline Hyperlinks by Erik Temple.
+	Include Inline Hyperlinks by Daniel Stelzer.
 
 	The Jungle is a room. "You are [swing state] from a thick, rope-like vine. Another dangles from the canopy twenty-five or so feet away. A thick jungle mist obscures the view beyond, as well as the forest floor."
 
@@ -315,7 +314,7 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 			now the player is hanging;
 		otherwise:
 			say "You release the vine and drop toward the jungle floor. Tumbling through the mist, you land hard on [one of]a thorn-tree; the baroque profusion of spines the size of railroad spikes ends your life[or]a massive hill of flesh-eating ants. They swarm over you before you can regain your feet[or]a path used exclusively by stampeding boars; a pack of the loathsome creatures happens to be passing[purely at random].";
-			end the game in death.
+			end the story.
 		
 	Understand "swing" as swinging.
 
@@ -329,7 +328,7 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 
 	*: "Maze"
 
-	Include Inline Hyperlinks by Erik Temple.
+	Include Inline Hyperlinks by Daniel Stelzer.
 
 	The printed name of a room is "Maze". The description of a room is usually "A maze of twisty little passages, all alike. Exits: [exits]".
 
@@ -338,7 +337,6 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 		if count is greater than 0:
 			repeat with destination running through adjacent rooms:
 				let the way be the best route from the location to the destination, using even locked doors;
-				let dir be indexed text;
 				let dir be "[way]";
 				let dir be "[dir]";
 				say "[link][way][as]go [dir][end link]";
@@ -349,7 +347,7 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 
 	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 
-	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the game in victory.
+	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the story finally.
 
 
 Example: ** Systematic Derangement of the Inner Compass - There may be times when we want a hyperlink to do something other than paste a straightforward command. In this example, which builds on the Maze example above, we set aside a few hyperlink ID numbers for manual use, and write a new hyperlink processing rule that will respond when hyperlinks with these IDs are activated. Other hyperlinks will react normally.
@@ -361,7 +359,7 @@ The player eventually recovers from the disorienting effects of the drug, and we
 	*: 	"Systematic Derangement of the Inner Compass"
 
 	Include Basic Screen Effects by Emily Short.
-	Include Inline Hyperlinks by Erik Temple.
+	Include Inline Hyperlinks by Daniel Stelzer.
 
 	Yourself can be deranged. The player is not deranged.
 
@@ -489,8 +487,4 @@ A companion rule for input redirects the player's typed direction command in the
 
 	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 
-	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the game in victory.
-
-
-
-
+	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the story finally.
