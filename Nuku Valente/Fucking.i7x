@@ -24,7 +24,7 @@ check fucking:
 			say "I don't see them around right now.  You'll have to call them over first." instead;
 
 Carry out fucking:
-	if fuckscene of noun is "":
+	if fuckscene of noun is empty:
 		if noun is a pet:
 			say "You cannot initiate sex with this companion.";
 		otherwise:
