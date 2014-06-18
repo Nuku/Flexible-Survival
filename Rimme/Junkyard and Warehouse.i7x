@@ -442,6 +442,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "red horse";
+	now attack entry is "nothing.";
+	now defeated entry is "nothing.";
+	now victory entry is "nothing.";
+	now desc entry is "nothing.";
 	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
@@ -463,9 +467,9 @@ When play begins:
 	now lev entry is 5;
 	now wdam entry is 7;
 	now area entry is "nowhere";
+	now cocks entry is 1;
 	now cock length entry is 15;
 	now cock width entry is 6;
-	now cocks entry is 1;
 	now breasts entry is 2;
 	now breast size entry is 4;
 	now male breast size entry is 0;
@@ -473,6 +477,7 @@ When play begins:
 	now cunt length entry is 15;
 	now cunt width entry is 7;
 	now libido entry is 40;
+	now loot entry is "";
 	now lootchance entry is 0;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
