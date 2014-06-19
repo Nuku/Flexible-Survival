@@ -88,25 +88,25 @@ instead of conversing Larissa:
 		if hp of doctor matt is not 17:
 			if zephyrtask is 0:
 				if furry is not banned and hermaphrodite is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those panther taur creatures have been harrassing us.'  She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs.  It's fondling its breasts and smiling lewdly at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those panther taur creatures have been harassing us.'  She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs.  It's fondling its breasts and smiling lewdly at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 1;
 					now zephyrpests is 0;
 				otherwise if furry is not banned and guy is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those German Shepherd creatures have been harrassing us.'  She holds a photo of a German Shepherd person with black and tan fur.  It's growling and making a rude gesture at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those German Shepherd creatures have been harassing us.'  She holds a photo of a German Shepherd person with black and tan fur.  It's growling and making a rude gesture at the camera.  'The guards are able drive them off easily enough, but it does upset the other customers.  We're in the business of helping you, but we'll need some help to do that.  If you could go beat up some of them around here, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 2;
 					now zephyrpests is 0;
 				otherwise if girl is not banned:
-					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those city sprite creatures have been harrassing us.'  She holds a photo of a cluster of fairy-winged girls hovering in the air.  Several of them are sticking out their tongues or otherwise making faces at the camera.  'The guards are able drive them back to that [bold type]urban forest[roman type] they live in, but they keep coming back.  They harass the customers and are destructive little pests.  We're in the business of helping you, but we'll need some help to do that.  If you could track them down and beat a few of them up, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
+					say "     She flips through a few papers on her desk, trying to find something.  'We've also been experiencing a bit of a pest problem.  Some of those city sprite creatures have been harassing us.'  She holds a photo of a cluster of fairy-winged girls hovering in the air.  Several of them are sticking out their tongues or otherwise making faces at the camera.  'The guards are able drive them back to that [bold type]urban forest[roman type] they live in, but they keep coming back.  They harass the customers and are destructive little pests.  We're in the business of helping you, but we'll need some help to do that.  If you could track them down and beat a few of them up, it might discourage them from coming around again.  We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 3;
 					now zephyrpests is 0;
 			otherwise if ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ) and zephyrpests >= 4:
-				say "     She sets down chips she's munching on.  'Thanks for your assistance with our pest problem.  Our records show that you've confronted and defeated several of them and they've stopped coming around here.  For your assistance, we'll be depositing [special-style-1]100[roman type] credits into your account on top of the standard reward you've been recieving.  Nice work, cute stuff.  What're you doing later?' she adds with a smile and a wink.  Cha-ching!";
+				say "     She sets down chips she's munching on.  'Thanks for your assistance with our pest problem.  Our records show that you've confronted and defeated several of them and they've stopped coming around here.  For your assistance, we'll be depositing [special-style-1]100[roman type] credits into your account on top of the standard reward you've been receiving.  Nice work, cute stuff.  What're you doing later?' she adds with a smile and a wink.  Cha-ching!";
 				now zephyrtask is 4;
 				now hp of Larissa is 1;
 				increase freecred by 100;
 				increase score by 20;
 			otherwise if a random chance of 1 in 3 succeeds and ( zephyrtask is 1 or zephyrtask is 2 or zephyrtask is 3 ):
-				say "    She taps away at her computer briefly.  'We're still having a problem with those pesky [if zephyrtask is 1]panther taurs[otherwise if zephyrtask is 2]German Shepherds[otherwise]city sprites[end if].  Please be on the lookout for them.  They're not that tough, but it's annoying to have them keep bothering us.  Beating them up a few times should make them less bold about attacking us.";
+				say "     She taps away at her computer briefly.  'We're still having a problem with those pesky [if zephyrtask is 1]panther taurs[otherwise if zephyrtask is 2]German Shepherds[otherwise]city sprites[end if].  Please be on the lookout for them.  They're not that tough, but it's annoying to have them keep bothering us.  Beating them up a few times should make them less bold about attacking us.";
 	otherwise if hp of Larissa is 1:
 		try Larissatfing;
 	otherwise if hp of Larissa is 2:
@@ -1155,7 +1155,7 @@ to say Larissaisnow-googirl:
 			now infname of Larissa is "Goo Girl";
 			now handform of Larissa is "flexible hand";
 			now footform of Larissa is "column of goo";
-			now skin of Larissa is "transluscent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
+			now skin of Larissa is "translucent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
 			now tail of Larissa is "";
 			now tailed of Larissa is false;
 			now winged of Larissa is false;
