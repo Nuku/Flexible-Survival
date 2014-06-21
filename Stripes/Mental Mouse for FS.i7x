@@ -206,7 +206,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 1;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 9;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
@@ -214,7 +214,7 @@ When Play begins:
 	now loot entry is "cheese";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 24;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvy[or]cute[at random]";
 	now type entry is "[one of]musine[or]mouse-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -316,7 +316,7 @@ Section 6 - Endings
 when play ends:
 	if bodyname of player is "Mental Mouse" or ( bodyname of player is "Albino Mouse" and mouse girl is tamed ):
 		if humanity of player is less than 10:
-			say "     Something seems to click inside you and the mouse-like call you've been hearing in your mind comes in loud and clear.  No longer resisting it, you welcome the other mice into your mind, feeling the joy and happiness of being united with them.   There was nothing to fear at all from it, a wonderful union of your mind to theirs.  As your own thoughts fade into the background - still there, but secondary - you follow their call back to the mouse nest.  Welcomed by the beautiful mice, you snuggle up with them and share in their company, thoughts and sensations as you make love together, truly together.";
+			say "     Something seems to click inside you and the mouse-like call you've been hearing in your mind comes in loud and clear.  No longer resisting it, you welcome the other mice into your mind, feeling the joy and happiness of being united with them.  There was nothing to fear at all from it, a wonderful union of your mind to theirs.  As your own thoughts fade into the background - still there, but secondary - you follow their call back to the mouse nest.  Welcomed by the beautiful mice, you snuggle up with them and share in their company, thoughts and sensations as you make love together, truly together.";
 		otherwise:
 			say "     You resist the call of the mouse collective until the military comes into the city to rescue what survivors they can find.  The call becomes more manageable once you are removed from the city, only troubling you at times in dreams.  You do feel a shadow of their minds within you after sex as well, the mouse hive-mind peeking in past your lowered defenses and sharing in the pleasure of your orgasm.  Your small, sexy body catches the eye of several lovers who find your appearance attractive.";
 			if facename of player is "Mental Mouse" and humanity of player < 40:

@@ -84,7 +84,7 @@ Instead of conversing the doctor matt:
 			stop the action;
 		extend game by 24;
 		increase score by 5;
-		say "'Simply amazing. There is no other word for it,' says Doctor matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
+		say "'Simply amazing. There is no other word for it,' says Doctor Matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
@@ -453,7 +453,7 @@ Instead of resolving a Beach Detector Site:
 			otherwise:
 				say "You manage to make it partway to the top on your first attempt, but slip as a large wave crashes against the spire and sends chilling water slamming against you.  You are bashed against the stone pillar and sent tumbling back down into the water.  You are scratched and bruised when you finally make it to the top on your second attempt.";
 				decrease hp of player by 20;
-			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilerating dive from the fifty foot spire into the water and swimming back to shore.";
+			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire.  Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place.  Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr.  Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
 			now Beach Detector Site is resolved;
 			say "[onelessndm]";

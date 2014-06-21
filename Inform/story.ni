@@ -49,7 +49,7 @@ To end the game saying (T - text):
 	
 
 Instead of sniffing something (called x):
-	if the scent of x is "":
+	if the scent of x is empty:
 		say "It smells pretty normal for a/an [x].";
 	otherwise:
 		say "[scent of x][line break]";
@@ -2369,7 +2369,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [name entry][end link]";
 				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [name entry][end link]";
-				if trade of object entry is "":
+				if trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
@@ -3042,7 +3042,7 @@ To process (X - a grab object):
 		delete x;
 	otherwise:
 		say "You use the [x]. ";
-	if usedesc of x is "":
+	if usedesc of x is empty:
 		now x is x;
 	otherwise:
 		say "[usedesc of x]";
@@ -3251,7 +3251,7 @@ To process (X - a grab object):
 			say "You stop using the [x].";
 			now x is not equipped;
 		otherwise:
-			if slot of x is "":
+			if slot of x is empty:
 				let zq be 0;
 			otherwise:
 				repeat with z running through equipped equipment:
@@ -3711,7 +3711,7 @@ Check Purifying:
    if the microwave is not visible, say "You see nothing to purify with." instead;
    
 Carry out Purifying:
-	if purified of noun is "":
+	if purified of noun is empty:
 		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let number be 0;
@@ -5501,7 +5501,7 @@ This is the self examine rule:
 		if weapon object of player is unwieldy:
 			say ".  Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[otherwise]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[otherwise if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[otherwise]somewhat unwieldy[end if] for you to use at the moment";
 		say ".[run paragraph on]";
-	if tail of player is "":
+	if tail of player is empty:
 		say "";
 	otherwise:
 		say " [tail of the player][run paragraph on]";
@@ -5510,8 +5510,8 @@ This is the self examine rule:
 		if placement of x is "end":
 			say " [descmod of x]";
 	say "[line break]";
-	if cocktext is not "":
-		if cunttext is "":
+	if cocktext is not empty:
+		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
 		otherwise:
 			say "A private peek shows that you [cocktext]";
