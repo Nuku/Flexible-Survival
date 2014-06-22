@@ -62,7 +62,7 @@ When Play begins:
 	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
@@ -70,7 +70,7 @@ When Play begins:
 	now loot entry is "rhino cum";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 42;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
 	now type entry is "rhino";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
