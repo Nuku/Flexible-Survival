@@ -5113,7 +5113,7 @@ This is the turnpass rule:
 					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is false]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 			otherwise:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
