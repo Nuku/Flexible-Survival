@@ -291,7 +291,7 @@ this is the monster combat mode rule:
 	let foundcom be 0;
 	if there is no altcombat in row monster of Table of Random Critters:
 		now searchparam is "default";	[no change]
-	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " ":
+	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " " or altcombat entry is empty:
 		now searchparam is "default";	[no change]
 	otherwise:
 		let searchparam be altcombat entry;

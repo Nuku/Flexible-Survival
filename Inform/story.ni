@@ -5113,7 +5113,7 @@ This is the turnpass rule:
 					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is false]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[otherwise]your oncoming pregnancy[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 			otherwise:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
@@ -6180,7 +6180,14 @@ to ratetheplayer:
 	say "[line break]";
 		
 when play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
+	if thirst of player >= 100 or hunger of player >= 100:	[blocking regular endings]
+		now bodyname of player is "starvation";
+		now facename of player is "starvation";
+		now skinname of player is "starvation";
+		now tailname of player is "starvation";
+		now cockname of player is "starvation";
+		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	otherwise:
