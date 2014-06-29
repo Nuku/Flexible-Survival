@@ -5496,6 +5496,8 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "waist":
 			say "  [descmod of x][run paragraph on]";
+	if "Angie's Mate" is listed in feats of player:
+		say "  Thin lines of healed claw-marks run down your back, marking you as Angie's mate.";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
