@@ -6180,7 +6180,14 @@ to ratetheplayer:
 	say "[line break]";
 		
 when play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
+	if thirst of player >= 100 or hunger of player >= 100:	[blocking regular endings]
+		now bodyname of player is "starvation";
+		now facename of player is "starvation";
+		now skinname of player is "starvation";
+		now tailname of player is "starvation";
+		now cockname of player is "starvation";
+		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	otherwise:
