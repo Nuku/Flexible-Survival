@@ -3568,7 +3568,7 @@ carry out grabbing something(called x):
 			now found is 1;
 			add q to the invent of the player;
 			remove entry number from invent of the location of the player;
-			say "You pick up the [q] and tuck it in your backpack.";
+			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
 		say "You don't see any [x] around here.";
