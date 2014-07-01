@@ -562,17 +562,22 @@ to say kristentfsexmenu:
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "fuck the sexy fox";
+		if libido of Kristen is 4:
+			choose a blank row in table of fucking options;
+			now title entry is "Against the wall";
+			now sortorder entry is 2;
+			now description entry is "pin her back to the wall and fuck her senseless";
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
-		now sortorder entry is 2;
+		now sortorder entry is 5;
 		now description entry is "use her muzzle";
 	choose a blank row in table of fucking options;
 	now title entry is "Give cunnilingus";
-	now sortorder entry is 1;
+	now sortorder entry is 6;
 	now description entry is "eat her out";
 [		choose a blank row in table of fucking options;
 	now title entry is "69";
-	now sortorder entry is 2;
+	now sortorder entry is 7;
 	now description entry is "share some mutual oral pleasure";		]
 [		if Janice is visible and lastfuck of Janice - turns >= 6:
 		choose a blank row in table of fucking options;
@@ -603,6 +608,8 @@ to say kristentfsexmenu:
 					say "[kristentfsex04]";
 				otherwise if nam is "Threesome w/Janice":
 					say "[kristentfsex05]";
+				otherwise if nam is "Against the wall":
+					say "[kristentfsex06]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Kristen is turns;
@@ -650,6 +657,12 @@ to say kristentfsex04:
 
 to say kristentfsex05:
 	say "***";
+
+to say kristentfsex06:
+	say "     Wanting another go at your slutty vixen's juicy cunt, you take her by the shoulders and push her back against the wall.  Pressing your mouth to hers, you kiss her while groping her ass.  Raising her leg around your hip, you get your erect manhood in position and thrust up into her hot, wet tunnel.  She gives a moan of pleasure and grips your tightly, her manicured claws digging into your shoulders as you boost her off the ground.  Now with both legs around your waist, you pound away at the moaning fox-woman's pussy.";
+	say "     Burying your face in her bosom, you lick and kiss at her furry breasts.  Lightly nibbling at her pierced nipples gets her moaning and yipping all the more.  And that reaction extends to her quivering cunny, which clenches down each time.  Janice watches on with amusement, trying to look regal as she lays on the divan all while frigging her dripping cunny frantically.";
+	say "     The two of you go at it like this for quite some time, pausing or adjusting the pace as needed to extend your frantic fucking.  Certainly the vixen is having trouble holding back, already having had a few quick orgasms and revving up for a big one.  Getting fucked like the first time you claimed her is clearly a big turn-on for the horny vixen.  And you're rapidly approaching the point of claiming her this way again.";
+	say "     By this point, the vixen's cunt is practically pulling and tugging at your cock with a need for the hot seed it can provide and your pulsing rod is more than willing to provide.  With a few hard slams, you drive yourself fully into her and groan loudly, unleashing your [cum load size of player] load into her needy womb[if cock width of player < 12].  Your hot output makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise if cock width of player < 24].  Your ample output makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise if cock width of player < 36].  Your impressive output stuffs her to overfilling and makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise].  Your excessive output stuffs her to the point of bloating her belly.  This makes the white fox cry out as her own orgasm can no longer be held back.  Her vagina unleashes a series of spasms that works to milk every last drop you can give, making her all the more rounded and overfull[end if].  Finished with her now, you let her drop to the floor and she lays there, panting against the wall as [if cock width of player < 24]a trickle[otherwise]a steady flow[end if] of your gooey semen leaks from her recently stuffed pussy.";
 
 
 Section 8 - Variable Charts
