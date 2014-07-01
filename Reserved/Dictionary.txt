@@ -1,4 +1,4 @@
-|Graham Nelson|Standard Rules|20140619230542/42560:Thu 19 June 2014 23:05|indexing|
+|Graham Nelson|Standard Rules|20140630105705/42560:Mon 30 June 2014 10:57|indexing|
 |Graham Nelson|Standard Rules|room|kind|
 |Graham Nelson|Standard Rules|thing|kind|
 |Graham Nelson|Standard Rules|direction|kind|
@@ -337,7 +337,7 @@
 |Graham Nelson|Standard Rules|VERBOSE room descriptions|use option|
 |Graham Nelson|Standard Rules|BRIEF room descriptions|use option|
 |Graham Nelson|Standard Rules|SUPERBRIEF room descriptions|use option|
-|Graham Nelson|English Language|20140619230542/2130:Thu 19 June 2014 23:05|indexing|
+|Graham Nelson|English Language|20140630105705/2130:Mon 30 June 2014 10:57|indexing|
 |Graham Nelson|English Language|grammatical tense|kind|
 |Graham Nelson|English Language|narrative viewpoint|kind|
 |Graham Nelson|English Language|grammatical case|kind|
@@ -359,22 +359,22 @@
 |Graham Nelson|English Language|neuter gender|value|
 |Graham Nelson|English Language|masculine gender|value|
 |Graham Nelson|English Language|feminine gender|value|
-|Emily Short|Basic Help Menu|20140619230542/2368:Thu 19 June 2014 23:05|indexing|
+|Emily Short|Basic Help Menu|20140630105705/2368:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Basic Help Menu|Verbosity|kind|
 |Emily Short|Basic Help Menu|brief|value|
 |Emily Short|Basic Help Menu|verbose|value|
 |Emily Short|Basic Help Menu|superbrief|value|
 |Emily Short|Basic Help Menu|Asking for help|action|
-|Emily Short|Menus|20140619230542/2045:Thu 19 June 2014 23:05|indexing|
+|Emily Short|Menus|20140630105705/2045:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Menus|Menu depth|value|
 |Emily Short|Menus|endnode flag|value|
 |Emily Short|Menus|current menu title|value|
 |Emily Short|Menus|Current menu|value|
 |Emily Short|Menus|Current menu selection|value|
-|Emily Short|Basic Screen Effects|20140619230542/2203:Thu 19 June 2014 23:05|indexing|
+|Emily Short|Basic Screen Effects|20140630105705/2203:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Basic Screen Effects|Status bar table|value|
 |Emily Short|Basic Screen Effects|Right alignment depth|value|
-|Nuku Valente|Fs Graphics|20140619230542/1616:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Fs Graphics|20140630105705/1616:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Fs Graphics|graphics|value|
 |Nuku Valente|Fs Graphics|Figure of title_graphic|value|
 |Nuku Valente|Fs Graphics|Figure of pixel|value|
@@ -467,14 +467,15 @@
 |Nuku Valente|Fs Graphics|graphicmoding|action|
 |Nuku Valente|Fs Graphics|artistcredits|action|
 |Nuku Valente|Fs Graphics|icon|property|
-|Eric Eve|Text Capture|20140619230542/1210:Thu 19 June 2014 23:05|indexing|
+|Eric Eve|Text Capture|20140630105705/1210:Mon 30 June 2014 10:57|indexing|
 |Eric Eve|Text Capture|maximum capture buffer length|use option|
-|Nuku Valente|Inline Hyperlinks|20140619230542/3961:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Inline Hyperlinks|20140630105705/3961:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Inline Hyperlinks|hyperlink list|value|
 |Nuku Valente|Inline Hyperlinks|hyperlinked text|value|
 |Nuku Valente|Inline Hyperlinks|hyperlinked command|value|
 |Nuku Valente|Inline Hyperlinks|current hyperlink ID|value|
-|Emily Short|Glulx Text Effects|20140619230542/1860:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Inline Hyperlinks|Previewing the hyperlink list|action|
+|Emily Short|Glulx Text Effects|20140630105705/1860:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Glulx Text Effects|Glulx color value|kind|
 |Emily Short|Glulx Text Effects|text-justification|kind|
 |Emily Short|Glulx Text Effects|special-style|kind|
@@ -508,8 +509,8 @@
 |Emily Short|Glulx Text Effects|fixed-width-font|value|
 |Emily Short|Glulx Text Effects|proportional-font|value|
 |Emily Short|Glulx Text Effects|assigned number|property|
-|Default Settings|Presets|20140619230542/156:Thu 19 June 2014 23:05|indexing|
-|Hellerhound|Shifting|20140619230542/1793:Thu 19 June 2014 23:05|indexing|
+|Default Settings|Presets|20140630105705/156:Mon 30 June 2014 10:57|indexing|
+|Hellerhound|Shifting|20140630105705/1793:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Shifting|Secure Area|situation|
 |Hellerhound|Shifting|halodestroyed|value|
 |Hellerhound|Shifting|dragatordefeated|value|
@@ -518,16 +519,16 @@
 |Hellerhound|Shifting|ttransform|value|
 |Hellerhound|Shifting|tmonster|value|
 |Hellerhound|Shifting|shifting|action|
-|Hellerhound|Qytat Shifters|20140619230542/217:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Qytat Shifters|20140630105705/217:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Qytat Shifters|Shifting Room|room|
 |Hellerhound|Qytat Shifters|shiftcatch|value|
-|Nuku Valente|Fucking|20140619230542/1785:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Fucking|20140630105705/1785:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Fucking|Testerbot|person|
 |Nuku Valente|Fucking|sextablerun|value|
 |Nuku Valente|Fucking|Fucking|action|
 |Nuku Valente|Fucking|lastfuck|property|
 |Nuku Valente|Fucking|fuckscene|property|
-|Telanda Softpaw|Needy Heat For Fs|20140619230542/1815:Thu 19 June 2014 23:05|indexing|
+|Telanda Softpaw|Needy Heat For Fs|20140630105705/1815:Mon 30 June 2014 10:57|indexing|
 |Telanda Softpaw|Needy Heat For Fs|heat enabled|value|
 |Telanda Softpaw|Needy Heat For Fs|animal heat|value|
 |Telanda Softpaw|Needy Heat For Fs|turns in heat|value|
@@ -536,7 +537,9 @@
 |Telanda Softpaw|Needy Heat For Fs|lastturn|value|
 |Telanda Softpaw|Needy Heat For Fs|heatform|value|
 |Telanda Softpaw|Needy Heat For Fs|heatlevel|value|
-|Telanda Softpaw|Church Of The Maternal Beast For Fs|20140619230542/11339:Thu 19 June 2014 23:05|indexing|
+|Telanda Softpaw|Needy Heat For Fs|showheat|action|
+|Telanda Softpaw|Needy Heat For Fs|setheat|action|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|20140630105705/11339:Mon 30 June 2014 10:57|indexing|
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|Beach Plaza|room|
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|Beach Exit|door|
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|Public Beach|room|
@@ -555,7 +558,10 @@
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|hellHoundLevel|value|
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|churchenter|value|
 |Telanda Softpaw|Church Of The Maternal Beast For Fs|lastchurchattempt|value|
-|Stripes|Wereraptor For Fs|20140619230542/15336:Thu 19 June 2014 23:05|indexing|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|blinkto|action|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|sethumanity|action|
+|Telanda Softpaw|Church Of The Maternal Beast For Fs|destZone|property|
+|Stripes|Wereraptor For Fs|20140630105705/15336:Mon 30 June 2014 10:57|indexing|
 |Stripes|Wereraptor For Fs|Paleontology Professor|situation|
 |Stripes|Wereraptor For Fs|Greenhouse|situation|
 |Stripes|Wereraptor For Fs|wolfsbane|Grab Object|
@@ -586,7 +592,7 @@
 |Stripes|Wereraptor For Fs|grhouse|value|
 |Stripes|Wereraptor For Fs|wrknifefight|value|
 |Stripes|Wereraptor For Fs|wrdinoskel|value|
-|Nuku Valente|Pets|20140619230542/756:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Pets|20140630105705/756:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Pets|Pet|kind|
 |Nuku Valente|Pets|Nullpet|Pet|
 |Nuku Valente|Pets|Cute Crab|Pet|
@@ -602,7 +608,7 @@
 |Nuku Valente|Pets|assault|property|
 |Nuku Valente|Pets|companion|property|
 |Nuku Valente|Pets|tamed|property|
-|Hellerhound|Computers|20140619230542/7913:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Computers|20140630105705/7913:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Computers|computer|kind|
 |Hellerhound|Computers|screen|kind|
 |Hellerhound|Computers|keyboard|kind|
@@ -641,7 +647,7 @@
 |Hellerhound|Computers|out of bounds response|property|
 |Hellerhound|Computers|message table|property|
 |Hellerhound|Computers|new mail message|property|
-|Nuku Valente|Feats|20140619230542/3488:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Feats|20140630105705/3488:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Feats|basic feats|featset|
 |Nuku Valente|Feats|fun feats|featset|
 |Nuku Valente|Feats|featunlock|value|
@@ -657,20 +663,20 @@
 |Nuku Valente|Feats|functional|adjective|
 |Nuku Valente|Feats|featgained|property|
 |Nuku Valente|Feats|functional|property|
-|Stripes|Pepperspray|20140619230542/403:Thu 19 June 2014 23:05|indexing|
+|Stripes|Pepperspray|20140630105705/403:Mon 30 June 2014 10:57|indexing|
 |Stripes|Pepperspray|pepperspray|Grab Object|
 |Stripes|Pepperspray|battleitem|value|
 |Stripes|Pepperspray|peppereyes|value|
-|Stripes|E-Shocker|20140619230542/1518:Thu 19 June 2014 23:05|indexing|
+|Stripes|E-Shocker|20140630105705/1518:Mon 30 June 2014 10:57|indexing|
 |Stripes|E-Shocker|Electric shockers|situation|
 |Stripes|E-Shocker|electric prod|Grab Object|
 |Stripes|E-Shocker|Electricprodstatus|value|
 |Stripes|E-Shocker|eptarget|value|
 |Stripes|E-Shocker|eprecharge|value|
 |Stripes|E-Shocker|eprodused|value|
-|Stripes|Masturbate|20140619230542/1706:Thu 19 June 2014 23:05|indexing|
+|Stripes|Masturbate|20140630105705/1706:Mon 30 June 2014 10:57|indexing|
 |Stripes|Masturbate|porn collection|Grab Object|
-|Stripes|Alt Combat|20140619230542/12556:Thu 19 June 2014 23:05|indexing|
+|Stripes|Alt Combat|20140630105705/12561:Mon 30 June 2014 10:57|indexing|
 |Stripes|Alt Combat|monstercom|value|
 |Stripes|Alt Combat|altattackmade|value|
 |Stripes|Alt Combat|combat abort|value|
@@ -708,7 +714,7 @@
 |Stripes|Alt Combat|firebreathcount|value|
 |Stripes|Alt Combat|firebreathready|value|
 |Stripes|Alt Combat|Retaliating|action|
-|Stripes|Alt Vore|20140619230542/7658:Thu 19 June 2014 23:05|indexing|
+|Stripes|Alt Vore|20140630105705/7658:Mon 30 June 2014 10:57|indexing|
 |Stripes|Alt Vore|VoreExclusion|marker|
 |Stripes|Alt Vore|Inner Predator|scavevent|
 |Stripes|Alt Vore|playercanvore|value|
@@ -720,8 +726,14 @@
 |Stripes|Alt Vore|ubchoice|value|
 |Stripes|Alt Vore|ubspecial1|value|
 |Stripes|Alt Vore|ubpreg|value|
-|Stripes|Bfandi|20140619230542/1923:Thu 19 June 2014 23:05|indexing|
-|Stripes|Parasite|20140619230542/6261:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bfandi|20140630105705/1923:Mon 30 June 2014 10:57|indexing|
+|Stripes|Bfandi|bfanditesting|action|
+|Stripes|Bfandi|bfanditesting2|action|
+|Stripes|Bfandi|bfanditesting3|action|
+|Stripes|Bfandi|bfanditesting4|action|
+|Stripes|Bfandi|bfanditesting5|action|
+|Stripes|Bfandi|bfanditesting6|action|
+|Stripes|Parasite|20140630105705/6261:Mon 30 June 2014 10:57|indexing|
 |Stripes|Parasite|Insect Hive|situation|
 |Stripes|Parasite|insectlarva|value|
 |Stripes|Parasite|larvacounter|value|
@@ -729,11 +741,11 @@
 |Stripes|Parasite|larvalaid|value|
 |Stripes|Parasite|larvaexpel|value|
 |Stripes|Parasite|libidomemory|value|
-|Wahn|Npc Debug|20140619230542/118:Thu 19 June 2014 23:05|indexing|
+|Wahn|Npc Debug|20140630105705/118:Mon 30 June 2014 10:57|indexing|
 |Wahn|Npc Debug|debugactive|value|
 |Wahn|Npc Debug|npcdebugmode|action|
 |Wahn|Npc Debug|turncountdisplay|action|
-|Nuku Valente|Zephyr Inc|20140619230542/1261:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Zephyr Inc|20140630105705/1261:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Zephyr Inc|Zephyr Lobby|room|
 |Nuku Valente|Zephyr Inc|price sign|backdrop|
 |Nuku Valente|Zephyr Inc|pistol|armament|
@@ -742,17 +754,17 @@
 |Nuku Valente|Zephyr Inc|pepped|value|
 |Nuku Valente|Zephyr Inc|Vialselling|action|
 |Nuku Valente|Zephyr Inc|ZephBuying|action|
-|Hiccup|Red Light|20140619230542/316:Thu 19 June 2014 23:05|indexing|
+|Hiccup|Red Light|20140630105705/316:Mon 30 June 2014 10:57|indexing|
 |Hiccup|Red Light|Entrance to the Red Light District|room|
 |Hiccup|Red Light|Investigate Red Light|door|
 |Hiccup|Red Light|Adult Shopping Center|room|
 |Hiccup|Red Light|Red Light Entrance|room|
 |Hiccup|Red Light|Side Street|room|
-|Batroo|High Rise District|20140619230542/299:Thu 19 June 2014 23:05|indexing|
+|Batroo|High Rise District|20140630105705/299:Mon 30 June 2014 10:57|indexing|
 |Batroo|High Rise District|Entrance to the High Rise District|room|
 |Batroo|High Rise District|Skyscrapers|door|
 |Batroo|High Rise District|Financial Sector|room|
-|Sarokcat|Stables Hotel|20140619230542/2878:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Stables Hotel|20140630105705/2878:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Stables Hotel|Stabled Situation|situation|
 |Sarokcat|Stables Hotel|Stables Hotel|room|
 |Sarokcat|Stables Hotel|Stable|room|
@@ -769,7 +781,7 @@
 |Sarokcat|Stables Hotel|Lastmarefed|value|
 |Sarokcat|Stables Hotel|marefed|value|
 |Sarokcat|Stables Hotel|Marefeeding|action|
-|Sarokcat|New Ewe Store|20140619230542/9518:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|New Ewe Store|20140630105705/9518:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|New Ewe Store|New Ewe Store|situation|
 |Sarokcat|New Ewe Store|Littlelostlamb|situation|
 |Sarokcat|New Ewe Store|New Ewe Storeroom|room|
@@ -780,7 +792,7 @@
 |Sarokcat|New Ewe Store|Lastewefuck|value|
 |Sarokcat|New Ewe Store|ramfucked|value|
 |Sarokcat|New Ewe Store|ewefucked|value|
-|Sarokcat|Hyena Hideout|20140619230542/10779:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Hyena Hideout|20140630105705/10779:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Hyena Hideout|Hyena Hideout|room|
 |Sarokcat|Hyena Hideout|Gang members|man|
 |Sarokcat|Hyena Hideout|Gina|woman|
@@ -790,7 +802,7 @@
 |Sarokcat|Hyena Hideout|Ginaslut|value|
 |Sarokcat|Hyena Hideout|Lastginafucked|value|
 |Sarokcat|Hyena Hideout|ginafucked|value|
-|Sarokcat|Museum|20140619230542/4002:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Museum|20140630105705/4002:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Museum|Museum Foyer|room|
 |Sarokcat|Museum|Museum entry|door|
 |Sarokcat|Museum|Museum interior|room|
@@ -801,7 +813,7 @@
 |Sarokcat|Museum|Lastsphinxfucked|value|
 |Sarokcat|Museum|riddlesphinx|value|
 |Sarokcat|Museum|riddlesphinxing|action|
-|Sarokcat|Tiger Den|20140619230542/6445:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Tiger Den|20140630105705/6445:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Tiger Den|Tiger den|room|
 |Sarokcat|Tiger Den|Chase|man|
 |Sarokcat|Tiger Den|TigerVSTaur|situation|
@@ -809,7 +821,7 @@
 |Sarokcat|Tiger Den|chasequest|value|
 |Sarokcat|Tiger Den|Lastchasefucked|value|
 |Sarokcat|Tiger Den|chasefucked|value|
-|Sarokcat|Pirate Island|20140619230542/3664:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Pirate Island|20140630105705/3664:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Pirate Island|Pirate Island|room|
 |Sarokcat|Pirate Island|Treasure cave|man|
 |Sarokcat|Pirate Island|Noteinbottle|situation|
@@ -820,11 +832,11 @@
 |Sarokcat|Pirate Island|tmapfound|value|
 |Sarokcat|Pirate Island|boatfound|value|
 |Sarokcat|Pirate Island|treasurehunt|action|
-|Sarokcat|Tattoo Parlor|20140619230542/2043:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Tattoo Parlor|20140630105705/2043:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Tattoo Parlor|Tattoo Parlor|room|
 |Sarokcat|Tattoo Parlor|tattoonpiercing|situation|
 |Sarokcat|Tattoo Parlor|Findingkara|situation|
-|Sarokcat|Stablemasters|20140619230542/3540:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Stablemasters|20140630105705/3540:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Stablemasters|Master's Office|room|
 |Sarokcat|Stablemasters|Slutslave|man|
 |Sarokcat|Stablemasters|Slutslavetalk|value|
@@ -833,7 +845,7 @@
 |Sarokcat|Stablemasters|lastSlutslavelearned|value|
 |Sarokcat|Stablemasters|Slutslavelearned|value|
 |Sarokcat|Stablemasters|Slavelearning|action|
-|Sweraptor|Approaching The Capitol Building For Fs|20140619230542/1580:Thu 19 June 2014 23:05|indexing|
+|Sweraptor|Approaching The Capitol Building For Fs|20140630105705/1580:Mon 30 June 2014 10:57|indexing|
 |Sweraptor|Approaching The Capitol Building For Fs|Government Assistance|situation|
 |Sweraptor|Approaching The Capitol Building For Fs|Approaching the Capitol Building|room|
 |Sweraptor|Approaching The Capitol Building For Fs|Charred Streets|room|
@@ -842,7 +854,7 @@
 |Sweraptor|Approaching The Capitol Building For Fs|Rusty Walkways|room|
 |Sweraptor|Approaching The Capitol Building For Fs|Fiery Ruins|door|
 |Sweraptor|Approaching The Capitol Building For Fs|Capitol Ruins|room|
-|Hellerhound|Underwater Zone For Fs|20140619230542/1427:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Underwater Zone For Fs|20140630105705/1427:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Underwater Zone For Fs|Gill Fruits Tree|situation|
 |Hellerhound|Underwater Zone For Fs|gill fruit|Grab Object|
 |Hellerhound|Underwater Zone For Fs|Sloping Sand|room|
@@ -851,7 +863,7 @@
 |Hellerhound|Underwater Zone For Fs|sea dragon cum|Grab Object|
 |Hellerhound|Underwater Zone For Fs|hasgills|value|
 |Hellerhound|Underwater Zone For Fs|swimtoing|action|
-|Hellerhound|Power Plant|20140619230542/2380:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Power Plant|20140630105705/2380:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Power Plant|Ravaged power plant|situation|
 |Hellerhound|Power Plant|Generator Parts|situation|
 |Hellerhound|Power Plant|Plant Lobby|room|
@@ -878,7 +890,7 @@
 |Hellerhound|Power Plant|computeron|value|
 |Hellerhound|Power Plant|activating|action|
 |Hellerhound|Power Plant|towerfixing|action|
-|Hellerhound|Zoo|20140619230542/7992:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Zoo|20140630105705/7992:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Zoo|Zoo Entrance|room|
 |Hellerhound|Zoo|Zoo Gates|door|
 |Hellerhound|Zoo|Zoo Parking|room|
@@ -908,7 +920,7 @@
 |Hellerhound|Zoo|cheetahmate|value|
 |Hellerhound|Zoo|cheetah_mpreg|value|
 |Hellerhound|Zoo|lastcheetahturns|value|
-|Hellerhound|Qytat A'th Lundrues|20140619230542/1616:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Qytat A'th Lundrues|20140630105705/1616:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Qytat A'th Lundrues|Guard Gryphon|situation|
 |Hellerhound|Qytat A'th Lundrues|Red Apartment|room|
 |Hellerhound|Qytat A'th Lundrues|Red Apt Exit|door|
@@ -923,16 +935,16 @@
 |Hellerhound|Qytat A'th Lundrues|findablestairs|value|
 |Hellerhound|Qytat A'th Lundrues|staircaselocation|value|
 |Hellerhound|Qytat A'th Lundrues|shadowy|value|
-|Stripes|Campus For Fs|20140619230542/1107:Thu 19 June 2014 23:05|indexing|
+|Stripes|Campus For Fs|20140630105705/1107:Mon 30 June 2014 10:57|indexing|
 |Stripes|Campus For Fs|Reaching the College|situation|
 |Stripes|Campus For Fs|College Campus|room|
 |Stripes|Campus For Fs|Campus Grounds|door|
 |Stripes|Campus For Fs|Exploring the Campus|room|
-|Stripes|Urban Forest For Fs|20140619230542/264:Thu 19 June 2014 23:05|indexing|
+|Stripes|Urban Forest For Fs|20140630105705/264:Mon 30 June 2014 10:57|indexing|
 |Stripes|Urban Forest For Fs|Urban Forest|room|
 |Stripes|Urban Forest For Fs|Forested Path|door|
 |Stripes|Urban Forest For Fs|Murky Forest|room|
-|Stripes|Hospital For Fs|20140619230542/28278:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hospital For Fs|20140630105705/28278:Mon 30 June 2014 10:57|indexing|
 |Stripes|Hospital For Fs|City Hospital|room|
 |Stripes|Hospital For Fs|Hospital Halls|door|
 |Stripes|Hospital For Fs|Hospital interior|room|
@@ -991,16 +1003,16 @@
 |Stripes|Hospital For Fs|rondahosp|value|
 |Stripes|Hospital For Fs|rodhosp|value|
 |Stripes|Hospital For Fs|progress|property|
-|Stripes|Equinoid Camp For Fs|20140619230542/4492:Thu 19 June 2014 23:05|indexing|
+|Stripes|Equinoid Camp For Fs|20140630105705/4492:Mon 30 June 2014 10:57|indexing|
 |Stripes|Equinoid Camp For Fs|Equinoid Camp|room|
 |Stripes|Equinoid Camp For Fs|equinoid warrior|Pet|
 |Stripes|Equinoid Camp For Fs|blequinoidbodied|adjective|
-|Stripes|Pig Frat|20140619230542/6252:Thu 19 June 2014 23:05|indexing|
+|Stripes|Pig Frat|20140630105705/6252:Mon 30 June 2014 10:57|indexing|
 |Stripes|Pig Frat|Frat House|situation|
 |Stripes|Pig Frat|Phi Iota Gamma|room|
 |Stripes|Pig Frat|frat members|person|
 |Stripes|Pig Frat|piginitiation|value|
-|Hellerhound|Medical Checkups|20140619230542/9042:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Medical Checkups|20140630105705/9050:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Medical Checkups|Pediatrics door|door|
 |Hellerhound|Medical Checkups|Pediatrics Lobby|room|
 |Hellerhound|Medical Checkups|Doctors Office|room|
@@ -1010,7 +1022,7 @@
 |Hellerhound|Medical Checkups|medeaget|value|
 |Hellerhound|Medical Checkups|medeaub|value|
 |Hellerhound|Medical Checkups|ovipregmedeatalk|value|
-|Rimme|Junkyard And Warehouse|20140619230542/8356:Thu 19 June 2014 23:05|indexing|
+|Rimme|Junkyard And Warehouse|20140630105705/8380:Mon 30 June 2014 10:57|indexing|
 |Rimme|Junkyard And Warehouse|Abandoned Lot|room|
 |Rimme|Junkyard And Warehouse|Warehouse Door|door|
 |Rimme|Junkyard And Warehouse|Lot Exit|door|
@@ -1044,7 +1056,7 @@
 |Rimme|Junkyard And Warehouse|facially human|adjective|
 |Rimme|Junkyard And Warehouse|skintone human|adjective|
 |Rimme|Junkyard And Warehouse|bodily human|adjective|
-|Sarokcat|State Fair|20140619230542/8156:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|State Fair|20140630105705/8156:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|State Fair|State Fair|room|
 |Sarokcat|State Fair|Midway|room|
 |Sarokcat|State Fair|Midway entry|door|
@@ -1060,7 +1072,7 @@
 |Sarokcat|State Fair|Lastgameplay|value|
 |Sarokcat|State Fair|gameplay|value|
 |Sarokcat|State Fair|gameplay|action|
-|Stripes|Down Under Pub|20140619230542/8593:Thu 19 June 2014 23:05|indexing|
+|Stripes|Down Under Pub|20140630105705/8593:Mon 30 June 2014 10:57|indexing|
 |Stripes|Down Under Pub|Aussie Pub|situation|
 |Stripes|Down Under Pub|Down Under Pub|room|
 |Stripes|Down Under Pub|Gillian's Flat|room|
@@ -1071,19 +1083,19 @@
 |Stripes|Down Under Pub|pubvisit|value|
 |Stripes|Down Under Pub|slutname|value|
 |Stripes|Down Under Pub|open|adjective|
-|Kaleem Mcintyre|Kitsune Hide Away|20140619230542/8705:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Kitsune Hide Away|20140630105705/8705:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Kitsune Hide Away|Foxy Hideaway|room|
 |Kaleem Mcintyre|Kitsune Hide Away|Kitsune|man|
 |Kaleem Mcintyre|Kitsune Hide Away|Kitsunetalk|value|
 |Kaleem Mcintyre|Kitsune Hide Away|Kitsunearoused|value|
 |Kaleem Mcintyre|Kitsune Hide Away|LastKitsunefucked|value|
-|Kaleem Mcintyre|Dog House|20140619230542/11489:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Dog House|20140630105705/11489:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Dog House|DogHouse|situation|
 |Kaleem Mcintyre|Dog House|Fin|value|
 |Kaleem Mcintyre|Dog House|Tyraffection|value|
 |Kaleem Mcintyre|Dog House|Homarusearch|value|
 |Kaleem Mcintyre|Dog House|darkdays|value|
-|Kaleem Mcintyre|Tyr's Club|20140619230542/20096:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Tyr's Club|20140630105705/20096:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Tyr's Club|Tyr's Club|room|
 |Kaleem Mcintyre|Tyr's Club|Tyr|man|
 |Kaleem Mcintyre|Tyr's Club|FightPit|room|
@@ -1095,7 +1107,7 @@
 |Kaleem Mcintyre|Tyr's Club|Receptionisttalk|value|
 |Kaleem Mcintyre|Tyr's Club|arenabattlecounter|value|
 |Kaleem Mcintyre|Tyr's Club|PitBattle|action|
-|Wahn|Farm|20140619230542/30312:Thu 19 June 2014 23:05|indexing|
+|Wahn|Farm|20140630105705/30312:Mon 30 June 2014 10:57|indexing|
 |Wahn|Farm|Cow Hunting|situation|
 |Wahn|Farm|Missing Cow|situation|
 |Wahn|Farm|McDermott Farm Entrance|room|
@@ -1122,7 +1134,7 @@
 |Wahn|Farm|CorbinKidCounter|value|
 |Wahn|Farm|CorbinPregCounter|value|
 |Wahn|Farm|CorbinImpregnatingCock|value|
-|Wahn|Camp Bravo|20140619230542/18511:Thu 19 June 2014 23:05|indexing|
+|Wahn|Camp Bravo|20140630105705/18511:Mon 30 June 2014 10:57|indexing|
 |Wahn|Camp Bravo|Red Light Requisition|situation|
 |Wahn|Camp Bravo|Trickster's Masterpiece|situation|
 |Wahn|Camp Bravo|Back at the Camp|situation|
@@ -1142,13 +1154,13 @@
 |Wahn|Camp Bravo|MovingOrwell|value|
 |Wahn|Camp Bravo|CampBravoWomenAllowed|value|
 |Wahn|Camp Bravo|ElainePregnant|value|
-|Drgryphon|Apocalypse Store|20140619230542/620:Thu 19 June 2014 23:05|indexing|
+|Drgryphon|Apocalypse Store|20140630105705/620:Mon 30 June 2014 10:57|indexing|
 |Drgryphon|Apocalypse Store|Clothing Store|scavevent|
 |Drgryphon|Apocalypse Store|Apocalypse Mini-Skirt|Equipment|
 |Drgryphon|Apocalypse Store|Apocalypse Shorts|Equipment|
 |Drgryphon|Apocalypse Store|Apocalypse Hoodie|Equipment|
 |Drgryphon|Apocalypse Store|Apocalypse Scarf|Equipment|
-|Kaleem Mcintyre|Researcher Studio|20140619230542/7855:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Researcher Studio|20140630105705/7855:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Researcher Studio|Researcher Studio|room|
 |Kaleem Mcintyre|Researcher Studio|MainRoom|room|
 |Kaleem Mcintyre|Researcher Studio|Omio|woman|
@@ -1166,7 +1178,7 @@
 |Kaleem Mcintyre|Researcher Studio|Omioteatime|action|
 |Kaleem Mcintyre|Researcher Studio|unlocknightstand|action|
 |Kaleem Mcintyre|Researcher Studio|Lookingoutwindow|action|
-|Kaleem Mcintyre|Warehouse District|20140619230542/1413:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Warehouse District|20140630105705/1413:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Warehouse District|Warehouse District|room|
 |Kaleem Mcintyre|Warehouse District|Boardwalk|door|
 |Kaleem Mcintyre|Warehouse District|Packaging Warehouse|room|
@@ -1174,7 +1186,7 @@
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouse|room|
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouses|room|
 |Kaleem Mcintyre|Warehouse District|S Harbor|room|
-|Kaleem Mcintyre|Pursuit Of Science|20140619230542/16111:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Pursuit Of Science|20140630105705/16111:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Pursuit Of Science|Dream of a Unicorn|situation|
 |Kaleem Mcintyre|Pursuit Of Science|leopard suit|Equipment|
 |Kaleem Mcintyre|Pursuit Of Science|lumpy box|Grab Object|
@@ -1197,10 +1209,10 @@
 |Kaleem Mcintyre|Pursuit Of Science|Bch|value|
 |Kaleem Mcintyre|Pursuit Of Science|Ointerrogate|value|
 |Kaleem Mcintyre|Pursuit Of Science|omioquesting|action|
-|Kaleem Mcintyre|Save The Dame|20140619230542/5966:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Save The Dame|20140630105705/5966:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Save The Dame|Save the Dame|situation|
 |Kaleem Mcintyre|Save The Dame|Kenaztalk|value|
-|Kaleem Mcintyre|Fire House|20140619230542/31382:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Fire House|20140630105705/31382:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Fire House|Fire Station 86|room|
 |Kaleem Mcintyre|Fire House|Firehouse|room|
 |Kaleem Mcintyre|Fire House|Sleeping Quarters|room|
@@ -1226,7 +1238,7 @@
 |Kaleem Mcintyre|Fire House|HelpingKenazOut|action|
 |Kaleem Mcintyre|Fire House|Firepolescaling|action|
 |Kaleem Mcintyre|Fire House|Firepolesliding|action|
-|Kaleem Mcintyre|Lizard Parlor|20140619230542/5670:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Lizard Parlor|20140630105705/5670:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Lizard Parlor|Lizard Parlor|room|
 |Kaleem Mcintyre|Lizard Parlor|Dan|man|
 |Kaleem Mcintyre|Lizard Parlor|Greg|man|
@@ -1238,16 +1250,16 @@
 |Kaleem Mcintyre|Lizard Parlor|Gregaroused|value|
 |Kaleem Mcintyre|Lizard Parlor|LastGregfucked|value|
 |Kaleem Mcintyre|Lizard Parlor|Gregfucked|value|
-|Kaleem Mcintyre|Apartment 319|20140619230542/7053:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Apartment 319|20140630105705/7053:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Apartment 319|Apartment 319|situation|
 |Kaleem Mcintyre|Apartment 319|AptAid|value|
-|Kaleem Mcintyre|Important Research Quests|20140619230542/12959:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Important Research Quests|20140630105705/12959:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Important Research Quests|Important Treasure|situation|
 |Kaleem Mcintyre|Important Research Quests|Friendship's Proof|situation|
 |Kaleem Mcintyre|Important Research Quests|Ouroboros|situation|
 |Kaleem Mcintyre|Important Research Quests|Special Delivery|situation|
 |Kaleem Mcintyre|Important Research Quests|Tpfs|value|
-|Kaleem Mcintyre|Reservoir|20140619230542/8279:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Reservoir|20140630105705/8279:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Reservoir|Reservoir|room|
 |Kaleem Mcintyre|Reservoir|Reservoir Main Pathway|room|
 |Kaleem Mcintyre|Reservoir|Reservoir Main Pathway entry|door|
@@ -1271,14 +1283,14 @@
 |Kaleem Mcintyre|Reservoir|descriptionmessage|value|
 |Kaleem Mcintyre|Reservoir|lastResevoirfix|value|
 |Kaleem Mcintyre|Reservoir|oozing|value|
-|Kaleem Mcintyre|Misc 4|20140619230542/5746:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 4|20140630105705/5746:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 4|Anal Probing|situation|
 |Kaleem Mcintyre|Misc 4|Birth|situation|
 |Kaleem Mcintyre|Misc 4|Girl Time|situation|
 |Kaleem Mcintyre|Misc 4|Snake Charmer|situation|
 |Kaleem Mcintyre|Misc 4|Spiritual Love|situation|
 |Kaleem Mcintyre|Misc 4|spiritlove|value|
-|Stripes|Main Storyline|20140619230542/12427:Thu 19 June 2014 23:05|indexing|
+|Stripes|Main Storyline|20140630105705/12427:Mon 30 June 2014 10:57|indexing|
 |Stripes|Main Storyline|Doctor Matt|person|
 |Stripes|Main Storyline|infection monitor|Grab Object|
 |Stripes|Main Storyline|Beach Detector Site|situation|
@@ -1295,7 +1307,7 @@
 |Stripes|Main Storyline|ndmhigh|value|
 |Stripes|Main Storyline|ndmLisa|value|
 |Stripes|Main Storyline|monitoring|action|
-|Stripes|Candy Shop|20140619230542/8329:Thu 19 June 2014 23:05|indexing|
+|Stripes|Candy Shop|20140630105705/8329:Mon 30 June 2014 10:57|indexing|
 |Stripes|Candy Shop|CandyShop|situation|
 |Stripes|Candy Shop|Sweet Tooth|room|
 |Stripes|Candy Shop|sugarferretfight|value|
@@ -1308,7 +1320,7 @@
 |Stripes|Candy Shop|sugartailed|adjective|
 |Stripes|Candy Shop|lastcaffeine|property|
 |Stripes|Candy Shop|caffeinehigh|property|
-|Stripes|Bouncy Castle|20140619230542/41100:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bouncy Castle|20140630105705/41100:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bouncy Castle|Snared Vixen|situation|
 |Stripes|Bouncy Castle|Bouncy Castle|room|
 |Stripes|Bouncy Castle|Fencing Room|room|
@@ -1358,14 +1370,15 @@
 |Stripes|Bouncy Castle|bcsliding|action|
 |Stripes|Bouncy Castle|dolchecklisting|action|
 |Stripes|Bouncy Castle|dolchecking|action|
-|Stripes|Sea Lion And Orca For Fs|20140619230542/1196:Thu 19 June 2014 23:05|indexing|
-|Hiccup|Random Events|20140619230542/716:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bouncy Castle|dolphincastletesting|action|
+|Stripes|Sea Lion And Orca For Fs|20140630105705/1196:Mon 30 June 2014 10:57|indexing|
+|Hiccup|Random Events|20140630105705/716:Mon 30 June 2014 10:57|indexing|
 |Hiccup|Random Events|Film|situation|
 |Hiccup|Random Events|Wet Clothes|situation|
 |Hiccup|Random Events|Politics|situation|
 |Hiccup|Random Events|Failed Survivor|situation|
 |Hiccup|Random Events|Tracks|situation|
-|Stripes|High Rise Events|20140619230542/10319:Thu 19 June 2014 23:05|indexing|
+|Stripes|High Rise Events|20140630105705/10319:Mon 30 June 2014 10:57|indexing|
 |Stripes|High Rise Events|Rabid Lawyers|situation|
 |Stripes|High Rise Events|Pigging Out|situation|
 |Stripes|High Rise Events|cleaver|armament|
@@ -1381,7 +1394,7 @@
 |Stripes|High Rise Events|doggyness|value|
 |Stripes|High Rise Events|kittyness|value|
 |Stripes|High Rise Events|choclabfight|value|
-|Stripes|Hyena Bikers|20140619230542/16202:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hyena Bikers|20140630105705/16202:Mon 30 June 2014 10:57|indexing|
 |Stripes|Hyena Bikers|Hyena Bikers|situation|
 |Stripes|Hyena Bikers|tire iron|armament|
 |Stripes|Hyena Bikers|Grant|man|
@@ -1392,7 +1405,7 @@
 |Stripes|Hyena Bikers|grantsex|value|
 |Stripes|Hyena Bikers|grantfucked|value|
 |Stripes|Hyena Bikers|bikedest|value|
-|Sarokcat|Stable Related Events|20140619230542/4945:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Stable Related Events|20140630105705/4945:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Stable Related Events|Kitchenkegger|situation|
 |Sarokcat|Stable Related Events|Tack room|situation|
 |Sarokcat|Stable Related Events|Onyxroom|situation|
@@ -1407,7 +1420,7 @@
 |Sarokcat|Stable Related Events|Transformationledger|situation|
 |Sarokcat|Stable Related Events|Soldierhorsetf|value|
 |Sarokcat|Stable Related Events|hyenastabledeal|value|
-|Stripes|Red Events|20140619230542/4695:Thu 19 June 2014 23:05|indexing|
+|Stripes|Red Events|20140630105705/4695:Mon 30 June 2014 10:57|indexing|
 |Stripes|Red Events|Fetish Store|situation|
 |Stripes|Red Events|riding crop|armament|
 |Stripes|Red Events|Raided Corner Store|situation|
@@ -1416,7 +1429,7 @@
 |Stripes|Red Events|Evangelist|situation|
 |Stripes|Red Events|Business as Usual|situation|
 |Stripes|Red Events|stripbarcounter|value|
-|Stripes|Dry Plains Events|20140619230542/6947:Thu 19 June 2014 23:05|indexing|
+|Stripes|Dry Plains Events|20140630105705/6947:Mon 30 June 2014 10:57|indexing|
 |Stripes|Dry Plains Events|Creeping Grass|situation|
 |Stripes|Dry Plains Events|Ranch House|situation|
 |Stripes|Dry Plains Events|Soaring Eagle|situation|
@@ -1428,7 +1441,7 @@
 |Stripes|Dry Plains Events|Watering Hole|situation|
 |Stripes|Dry Plains Events|Treasure Hunters|situation|
 |Stripes|Dry Plains Events|horsefight|value|
-|Stripes|Junkyard Events|20140619230542/2561:Thu 19 June 2014 23:05|indexing|
+|Stripes|Junkyard Events|20140630105705/2561:Mon 30 June 2014 10:57|indexing|
 |Stripes|Junkyard Events|Goblin Trap|situation|
 |Stripes|Junkyard Events|Raiding Party|situation|
 |Stripes|Junkyard Events|Stripped Car|situation|
@@ -1436,7 +1449,7 @@
 |Stripes|Junkyard Events|Stray Cat|situation|
 |Stripes|Junkyard Events|goblinfight|value|
 |Stripes|Junkyard Events|junknum|value|
-|Stripes|Campus Events|20140619230542/3524:Thu 19 June 2014 23:05|indexing|
+|Stripes|Campus Events|20140630105705/3524:Mon 30 June 2014 10:57|indexing|
 |Stripes|Campus Events|Marching Band|situation|
 |Stripes|Campus Events|Arts Department|situation|
 |Stripes|Campus Events|Languages Department|situation|
@@ -1445,7 +1458,7 @@
 |Stripes|Campus Events|campuswander|value|
 |Stripes|Campus Events|campuswanderfight|value|
 |Stripes|Campus Events|animeclubfight|value|
-|Stripes|Leonard Events|20140619230542/27478:Thu 19 June 2014 23:05|indexing|
+|Stripes|Leonard Events|20140630105705/27478:Mon 30 June 2014 10:57|indexing|
 |Stripes|Leonard Events|PridePark|situation|
 |Stripes|Leonard Events|bulletproof vest|Equipment|
 |Stripes|Leonard Events|lastdenevent|value|
@@ -1459,20 +1472,20 @@
 |Stripes|Leonard Events|leoparklist|value|
 |Stripes|Leonard Events|leonardwrdesk|value|
 |Stripes|Leonard Events|leonardcabinet|value|
-|Stripes|Latex Quad Husky|20140619230542/1554:Thu 19 June 2014 23:05|indexing|
+|Stripes|Latex Quad Husky|20140630105705/1554:Mon 30 June 2014 10:57|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
-|Stripes|Ceoutside|20140619230542/6834:Thu 19 June 2014 23:05|indexing|
+|Stripes|Ceoutside|20140630105705/6834:Mon 30 June 2014 10:57|indexing|
 |Stripes|Ceoutside|Consolidated Events Outside CEO1|situation|
 |Stripes|Ceoutside|Consolidated Events Outside CEO2|situation|
 |Stripes|Ceoutside|ceoutside1list|value|
 |Stripes|Ceoutside|ceoutside2list|value|
-|Stripes|Cepark|20140619230542/3172:Thu 19 June 2014 23:05|indexing|
+|Stripes|Cepark|20140630105705/3172:Mon 30 June 2014 10:57|indexing|
 |Stripes|Cepark|Consolidated Events Park CEP1|situation|
 |Stripes|Cepark|Consolidated Events Park CEP2|situation|
 |Stripes|Cepark|cepark1list|value|
 |Stripes|Cepark|cepark2list|value|
-|Sarokcat|New Events|20140619230542/6229:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|New Events|20140630105705/6229:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|New Events|Military presence|situation|
 |Sarokcat|New Events|Abandonedplayer|situation|
 |Sarokcat|New Events|Hyena Gang|situation|
@@ -1492,7 +1505,7 @@
 |Sarokcat|New Events|HYG|value|
 |Sarokcat|New Events|LURM|value|
 |Sarokcat|New Events|libvis|value|
-|Sarokcat|Fair Events|20140619230542/4062:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Fair Events|20140630105705/4062:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Fair Events|floating balloons|situation|
 |Sarokcat|Fair Events|Game crazy|situation|
 |Sarokcat|Fair Events|fair food cart|scavevent|
@@ -1506,7 +1519,7 @@
 |Sarokcat|Fair Events|Rubber tigerchase|situation|
 |Sarokcat|Fair Events|Lion modifying|situation|
 |Sarokcat|Fair Events|Locked lockers|situation|
-|Sarokcat|Mall Events|20140619230542/1941:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Mall Events|20140630105705/1941:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Mall Events|Tight space|situation|
 |Sarokcat|Mall Events|Strange echo|situation|
 |Sarokcat|Mall Events|Sewer worker|situation|
@@ -1516,7 +1529,7 @@
 |Sarokcat|Mall Events|Strange symbol|situation|
 |Sarokcat|Mall Events|Goo Gathering|situation|
 |Sarokcat|Mall Events|Old rail system|situation|
-|Sarokcat|Beach Events|20140619230542/3900:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Beach Events|20140630105705/3900:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Beach Events|Beach bum|situation|
 |Sarokcat|Beach Events|Flotsam bits|situation|
 |Sarokcat|Beach Events|flotsam club|armament|
@@ -1532,11 +1545,11 @@
 |Sarokcat|Beach Events|Cream stand|situation|
 |Sarokcat|Beach Events|Lucky seashell|situation|
 |Sarokcat|Beach Events|bbum|value|
-|Sarokcat|Park Events|20140619230542/2101:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Park Events|20140630105705/2101:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Park Events|Poppies field|situation|
 |Sarokcat|Park Events|Felinoid lair|situation|
 |Sarokcat|Park Events|lairconsent|value|
-|Sarokcat|Museum Events|20140619230542/1269:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Museum Events|20140630105705/1269:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Museum Events|Sealed wing|situation|
 |Sarokcat|Museum Events|Moving painting|situation|
 |Sarokcat|Museum Events|Updating artwork|situation|
@@ -1547,13 +1560,13 @@
 |Sarokcat|Museum Events|Missing lamp|situation|
 |Sarokcat|Museum Events|Night Watchmen Uniform|situation|
 |Sarokcat|Museum Events|Art appreciation|situation|
-|Stripes|Museum Rounds For Fs|20140619230542/10243:Thu 19 June 2014 23:05|indexing|
+|Stripes|Museum Rounds For Fs|20140630105705/10243:Mon 30 June 2014 10:57|indexing|
 |Stripes|Museum Rounds For Fs|mrevents|value|
 |Stripes|Museum Rounds For Fs|mre01|value|
 |Stripes|Museum Rounds For Fs|mre02|value|
 |Stripes|Museum Rounds For Fs|mre04|value|
 |Stripes|Museum Rounds For Fs|museumrounding|action|
-|Sarokcat|Zoo Events|20140619230542/5334:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Zoo Events|20140630105705/5334:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Zoo Events|Hyena cages|situation|
 |Sarokcat|Zoo Events|Pachyderm predicament|situation|
 |Sarokcat|Zoo Events|Snake knot|situation|
@@ -1572,7 +1585,7 @@
 |Sarokcat|Zoo Events|Roaming spots|situation|
 |Sarokcat|Zoo Events|Picture striping|situation|
 |Sarokcat|Zoo Events|Lazy River|situation|
-|Sarokcat|Stable Related Quests|20140619230542/12373:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Stable Related Quests|20140630105705/12373:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Stable Related Quests|Equineguardpost|situation|
 |Sarokcat|Stable Related Quests|Stablestoreroom|situation|
 |Sarokcat|Stable Related Quests|ignoredmemo|situation|
@@ -1587,7 +1600,7 @@
 |Sarokcat|Stable Related Quests|generatorfixing|value|
 |Sarokcat|Stable Related Quests|provingstallionhood|value|
 |Sarokcat|Stable Related Quests|hellgatherquest|value|
-|Blue Bishop|Capitol Events|20140619230542/2293:Thu 19 June 2014 23:05|indexing|
+|Blue Bishop|Capitol Events|20140630105705/2293:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Capitol Events|dragatorspot|situation|
 |Blue Bishop|Capitol Events|whelpspot|situation|
 |Blue Bishop|Capitol Events|Ashen Nest|situation|
@@ -1595,7 +1608,7 @@
 |Blue Bishop|Capitol Events|Failed Escape|situation|
 |Blue Bishop|Capitol Events|Charred Pickets|situation|
 |Blue Bishop|Capitol Events|whelpspotnum|value|
-|Stripeguy|Warehouse Events|20140619230542/2981:Thu 19 June 2014 23:05|indexing|
+|Stripeguy|Warehouse Events|20140630105705/2981:Mon 30 June 2014 10:57|indexing|
 |Stripeguy|Warehouse Events|dock team|situation|
 |Stripeguy|Warehouse Events|Hidden Fucknest|scavevent|
 |Stripeguy|Warehouse Events|belaying pin|armament|
@@ -1603,21 +1616,21 @@
 |Stripeguy|Warehouse Events|union break|situation|
 |Stripeguy|Warehouse Events|hot stepping|situation|
 |Stripeguy|Warehouse Events|crate shuffle|situation|
-|Hellerhound|Infected Pool For Fs|20140619230542/751:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Infected Pool For Fs|20140630105705/751:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Infected Pool For Fs|Pure pool|situation|
 |Hellerhound|Infected Pool For Fs|purpol|value|
 |Hellerhound|Infected Pool For Fs|purpolu|value|
-|Hellerhound|Hyena Situations|20140619230542/568:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Hyena Situations|20140630105705/568:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Hyena Situations|Intact Fountain|situation|
-|Hellerhound|Catapult Encounter|20140619230542/626:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Catapult Encounter|20140630105705/626:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Catapult Encounter|Loaded Catapult|situation|
 |Hellerhound|Catapult Encounter|catafire|value|
 |Hellerhound|Catapult Encounter|gotcatares|value|
 |Hellerhound|Catapult Encounter|catadiff|value|
-|Hellerhound|Toy Store|20140619230542/552:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Toy Store|20140630105705/552:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Toy Store|Toy Store|situation|
 |Hellerhound|Toy Store|toystoreoverride|value|
-|Stripes|Assorted Events|20140619230542/23764:Thu 19 June 2014 23:05|indexing|
+|Stripes|Assorted Events|20140630105705/23764:Mon 30 June 2014 10:57|indexing|
 |Stripes|Assorted Events|Fallen Kunoichi|situation|
 |Stripes|Assorted Events|bo staff|armament|
 |Stripes|Assorted Events|Suddenly Ninjas|situation|
@@ -1644,9 +1657,9 @@
 |Stripes|Assorted Events|lbcomplist|value|
 |Stripes|Assorted Events|peachtreefight|value|
 |Stripes|Assorted Events|foodvendor|value|
-|Nuku Valente|Food And Water Finding|20140619230542/2241:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Food And Water Finding|20140630105705/2241:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Food And Water Finding|potential resources|scavevent|
-|Stripes|Scavevents|20140619230542/9026:Thu 19 June 2014 23:05|indexing|
+|Stripes|Scavevents|20140630105705/9026:Mon 30 June 2014 10:57|indexing|
 |Stripes|Scavevents|Tight Fit|scavevent|
 |Stripes|Scavevents|Protected Supplies|scavevent|
 |Stripes|Scavevents|Dropped Handbag|scavevent|
@@ -1671,11 +1684,11 @@
 |Stripes|Scavevents|gardenveg|value|
 |Stripes|Scavevents|lastgardenveg|value|
 |Stripes|Scavevents|patrooms|value|
-|Nuku Valente|Combat Helmet|20140619230542/438:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Combat Helmet|20140630105705/438:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Combat Helmet|combat helmet|Equipment|
 |Nuku Valente|Combat Helmet|lost gear|situation|
 |Nuku Valente|Combat Helmet|lgnumber|value|
-|Hellerhound|Odd Weapons For Fs|20140619230542/1873:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Odd Weapons For Fs|20140630105705/1873:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Odd Weapons For Fs|dirty whip|armament|
 |Hellerhound|Odd Weapons For Fs|horse whip|armament|
 |Hellerhound|Odd Weapons For Fs|infected sword|armament|
@@ -1688,7 +1701,7 @@
 |Hellerhound|Odd Weapons For Fs|fellforward|value|
 |Hellerhound|Odd Weapons For Fs|numwater|value|
 |Hellerhound|Odd Weapons For Fs|gotwhip|value|
-|Hellerhound|Control Pills|20140619230542/628:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Control Pills|20140630105705/628:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Control Pills|birth control pill|Grab Object|
 |Hellerhound|Control Pills|fertile pill|Grab Object|
 |Hellerhound|Control Pills|Porn Store|room|
@@ -1698,10 +1711,10 @@
 |Hellerhound|Control Pills|steriletime|value|
 |Hellerhound|Control Pills|wasfertile|value|
 |Hellerhound|Control Pills|wassterile|value|
-|Hellerhound|Giving In|20140619230542/233:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Giving In|20140630105705/233:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Giving In|givingupton|value|
 |Hellerhound|Giving In|givingup|action|
-|Hellerhound|Addiction|20140619230542/489:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Addiction|20140630105705/489:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Addiction|blood pill|Grab Object|
 |Hellerhound|Addiction|addicted|value|
 |Hellerhound|Addiction|addictlefttime|value|
@@ -1715,15 +1728,15 @@
 |Hellerhound|Addiction|inert|adjective|
 |Hellerhound|Addiction|addictive|property|
 |Hellerhound|Addiction|inert|property|
-|Hellerhound|Smell|20140619230542/1166:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Smell|20140630105705/1166:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Smell|Mall Atrium|room|
 |Hellerhound|Smell|dirty bottle|thing|
 |Hellerhound|Smell|sniffing|action|
 |Hellerhound|Smell|heresniffing|action|
-|Mirumu|Inventory Management Enhancements For Fs|20140619230542/325:Thu 19 June 2014 23:05|indexing|
+|Mirumu|Inventory Management Enhancements For Fs|20140630105705/325:Mon 30 June 2014 10:57|indexing|
 |Mirumu|Inventory Management Enhancements For Fs|masslittering|action|
 |Mirumu|Inventory Management Enhancements For Fs|criminallittering|action|
-|Nuku Valente|Story Skipper|20140619230542/24416:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Story Skipper|20140630105705/24458:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Story Skipper|Trixie|person|
 |Nuku Valente|Story Skipper|trixsavetext1|value|
 |Nuku Valente|Story Skipper|trixsavetext2|value|
@@ -1736,7 +1749,9 @@
 |Nuku Valente|Story Skipper|File of invsave|value|
 |Nuku Valente|Story Skipper|savetrix2|action|
 |Nuku Valente|Story Skipper|Reciting|action|
-|Stripes|Settings Menus|20140619230542/4130:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Story Skipper|trixiecheck1|action|
+|Nuku Valente|Story Skipper|trixiecheck2|action|
+|Stripes|Settings Menus|20140630105705/4130:Mon 30 June 2014 10:57|indexing|
 |Stripes|Settings Menus|weakwilled|value|
 |Stripes|Settings Menus|trixiecheating|action|
 |Stripes|Settings Menus|analadjusting|action|
@@ -1745,7 +1760,7 @@
 |Stripes|Settings Menus|oviadjusting|action|
 |Stripes|Settings Menus|Flagadjusting|action|
 |Stripes|Settings Menus|huntinglisting|action|
-|Stripes|Central Library|20140619230542/8837:Thu 19 June 2014 23:05|indexing|
+|Stripes|Central Library|20140630105705/8837:Mon 30 June 2014 10:57|indexing|
 |Stripes|Central Library|Central Library|situation|
 |Stripes|Central Library|Wild Animals|Grab Object|
 |Stripes|Central Library|First Aid Manual|Grab Object|
@@ -1761,7 +1776,7 @@
 |Stripes|Central Library|mouseintel|value|
 |Stripes|Central Library|hyenaintel|value|
 |Stripes|Central Library|deweying|action|
-|Anon E Mouse|Smith Haven Mall|20140619230542/4505:Thu 19 June 2014 23:05|indexing|
+|Anon E Mouse|Smith Haven Mall|20140630105705/4505:Mon 30 June 2014 10:57|indexing|
 |Anon E Mouse|Smith Haven Mall|Smith Haven Mall Lot North|room|
 |Anon E Mouse|Smith Haven Mall|Smith Haven Mall Lot East|room|
 |Anon E Mouse|Smith Haven Mall|Smith Haven Mall Lot South|room|
@@ -1773,7 +1788,7 @@
 |Anon E Mouse|Smith Haven Mall|Mall West Wing|room|
 |Anon E Mouse|Smith Haven Mall|Mall Restroom|room|
 |Anon E Mouse|Smith Haven Mall|Sewer entrance|door|
-|Anon E Mouse|Brookstone Books|20140619230542/6286:Thu 19 June 2014 23:05|indexing|
+|Anon E Mouse|Brookstone Books|20140630105705/6286:Mon 30 June 2014 10:57|indexing|
 |Anon E Mouse|Brookstone Books|Brookstone Books|room|
 |Anon E Mouse|Brookstone Books|Brookstone Books entrance|door|
 |Anon E Mouse|Brookstone Books|Beverly|woman|
@@ -1792,32 +1807,32 @@
 |Anon E Mouse|Brookstone Books|myseread|value|
 |Anon E Mouse|Brookstone Books|hfgbread|value|
 |Anon E Mouse|Brookstone Books|Browsebooks|action|
-|Kaleem Mcintyre|Kitsune|20140619230542/6973:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Kitsune|20140630105705/6973:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Kitsune|Strange Fox|situation|
 |Kaleem Mcintyre|Kitsune|star bell|Grab Object|
 |Kaleem Mcintyre|Kitsune|strange bell|situation|
 |Kaleem Mcintyre|Kitsune|KTP|value|
-|Kaleem Mcintyre|Old Boombox|20140619230542/7248:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Old Boombox|20140630105705/7248:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Old Boombox|Old Record Store|situation|
 |Kaleem Mcintyre|Old Boombox|Boombox|thing|
 |Kaleem Mcintyre|Old Boombox|musicmessage|value|
 |Kaleem Mcintyre|Old Boombox|BoomBoxPlay|action|
-|Kaleem Mcintyre|Little Old Woman|20140619230542/1618:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Little Old Woman|20140630105705/1618:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Little Old Woman|Defenseless old lady|situation|
-|Kaleem Mcintyre|Extra Added Scenes|20140619230542/1665:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Extra Added Scenes|20140630105705/1665:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Extra Added Scenes|Wish|situation|
 |Kaleem Mcintyre|Extra Added Scenes|Loving Bond|situation|
 |Kaleem Mcintyre|Extra Added Scenes|Challenge of the Alphas|situation|
-|Kaleem Mcintyre|More Misc Events|20140619230542/2311:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|More Misc Events|20140630105705/2311:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|More Misc Events|Unorthodox Sight|situation|
 |Kaleem Mcintyre|More Misc Events|Family|situation|
 |Kaleem Mcintyre|More Misc Events|Magic|situation|
 |Kaleem Mcintyre|More Misc Events|Auto Shop|situation|
-|Kaleem Mcintyre|Misc 3|20140619230542/3302:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 3|20140630105705/3302:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 3|Jam Session|situation|
 |Kaleem Mcintyre|Misc 3|Friendship|situation|
 |Kaleem Mcintyre|Misc 3|Dragon Boy|situation|
-|Kaleem Mcintyre|Misc Scene 5|20140619230542/6398:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc Scene 5|20140630105705/6398:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc Scene 5|Lady Surrounded by Butterflies|situation|
 |Kaleem Mcintyre|Misc Scene 5|Dorms Part One|situation|
 |Kaleem Mcintyre|Misc Scene 5|Dorms Part Two|situation|
@@ -1827,13 +1842,13 @@
 |Kaleem Mcintyre|Misc Scene 5|Teachers Lounge|situation|
 |Kaleem Mcintyre|Misc Scene 5|Rooftop|situation|
 |Kaleem Mcintyre|Misc Scene 5|DogAndPony Show|situation|
-|Kaleem Mcintyre|Misc 6|20140619230542/2766:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 6|20140630105705/2766:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 6|Pegasus|situation|
 |Kaleem Mcintyre|Misc 6|Guess that Character One|situation|
 |Kaleem Mcintyre|Misc 6|Guess that Character Three|situation|
 |Kaleem Mcintyre|Misc 6|Scopaesthesia|situation|
 |Kaleem Mcintyre|Misc 6|scopnum|value|
-|Kaleem Mcintyre|Misc 7|20140619230542/5554:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 7|20140630105705/5554:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 7|Horse Sense|situation|
 |Kaleem Mcintyre|Misc 7|Victim|situation|
 |Kaleem Mcintyre|Misc 7|Runaway|situation|
@@ -1842,7 +1857,7 @@
 |Kaleem Mcintyre|Misc 7|Conchien|situation|
 |Kaleem Mcintyre|Misc 7|Chocolate Treat|situation|
 |Kaleem Mcintyre|Misc 7|beauceronmet|value|
-|Kaleem Mcintyre|Misc 8|20140619230542/5340:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 8|20140630105705/5340:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 8|Old Tale|situation|
 |Kaleem Mcintyre|Misc 8|Peace|situation|
 |Kaleem Mcintyre|Misc 8|Champion|situation|
@@ -1851,7 +1866,7 @@
 |Kaleem Mcintyre|Misc 8|Controversy|situation|
 |Kaleem Mcintyre|Misc 8|Dr Feel Good|situation|
 |Kaleem Mcintyre|Misc 8|doctor's uniform|Equipment|
-|Kaleem Mcintyre|Misc 9|20140619230542/3621:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 9|20140630105705/3621:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 9|Hanu|situation|
 |Kaleem Mcintyre|Misc 9|Clotho|situation|
 |Kaleem Mcintyre|Misc 9|Atropis|situation|
@@ -1861,7 +1876,7 @@
 |Kaleem Mcintyre|Misc 9|Red cap|Equipment|
 |Kaleem Mcintyre|Misc 9|Silver dress|Equipment|
 |Kaleem Mcintyre|Misc 9|fashionfight|value|
-|Kaleem Mcintyre|Misc 10|20140619230542/2885:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Misc 10|20140630105705/2885:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Misc 10|Magical Girl|situation|
 |Kaleem Mcintyre|Misc 10|Sailor Outfit|Equipment|
 |Kaleem Mcintyre|Misc 10|Triton|situation|
@@ -1872,19 +1887,19 @@
 |Kaleem Mcintyre|Misc 10|Rumors|situation|
 |Kaleem Mcintyre|Misc 10|Diving Contest|situation|
 |Kaleem Mcintyre|Misc 10|Lackadaisical|situation|
-|Kaleem Mcintyre|How High|20140619230542/3622:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|How High|20140630105705/3622:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|How High|How High|situation|
-|Kaleem Mcintyre|Disorganization|20140619230542/6216:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Disorganization|20140630105705/6216:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Disorganization|Disorganization|situation|
 |Kaleem Mcintyre|Disorganization|DRS|value|
-|Wahn|Soldier Events|20140619230542/12924:Thu 19 June 2014 23:05|indexing|
+|Wahn|Soldier Events|20140630105705/12924:Mon 30 June 2014 10:57|indexing|
 |Wahn|Soldier Events|Soldier Squad|situation|
 |Wahn|Soldier Events|Human Urges|situation|
 |Wahn|Soldier Events|Soldiers & Snowmeows|situation|
 |Wahn|Soldier Events|SquadEncounters|value|
 |Wahn|Soldier Events|SnowmeowSoldierStatus|value|
-|Darthan|Endings|20140619230542/5984:Thu 19 June 2014 23:05|indexing|
-|Wahn|Underground Events|20140619230542/10923:Thu 19 June 2014 23:05|indexing|
+|Darthan|Endings|20140630105705/5984:Mon 30 June 2014 10:57|indexing|
+|Wahn|Underground Events|20140630105705/10923:Mon 30 June 2014 10:57|indexing|
 |Wahn|Underground Events|Captive Breeding|situation|
 |Wahn|Underground Events|Trashed Refuge|situation|
 |Wahn|Underground Events|Hidden Sublevel|situation|
@@ -1896,11 +1911,11 @@
 |Wahn|Underground Events|AbandonedRoomStatus|value|
 |Wahn|Underground Events|MSStorageVisited|value|
 |Wahn|Underground Events|CellFourVisits|value|
-|Agentlemancalledb|Sugar Feud|20140619230542/2880:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Sugar Feud|20140630105705/2880:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Sugar Feud|Sugar Shack|situation|
-|Wahn|Satyr Frat|20140619230542/3355:Thu 19 June 2014 23:05|indexing|
+|Wahn|Satyr Frat|20140630105705/3355:Mon 30 June 2014 10:57|indexing|
 |Wahn|Satyr Frat|SatyrFratPartyStage|value|
-|Damaged|Wyvern For Fs|20140619230542/24843:Thu 19 June 2014 23:05|indexing|
+|Damaged|Wyvern For Fs|20140630105705/24843:Mon 30 June 2014 10:57|indexing|
 |Damaged|Wyvern For Fs|WYVGEN|value|
 |Damaged|Wyvern For Fs|WYVLEV|value|
 |Damaged|Wyvern For Fs|WYVSF|value|
@@ -1930,7 +1945,7 @@
 |Damaged|Wyvern For Fs|pewterheadvar3|value|
 |Damaged|Wyvern For Fs|tempnum2|value|
 |Damaged|Wyvern For Fs|callwyvernbias|action|
-|Stripes|Candy Striper|20140619230542/15673:Thu 19 June 2014 23:05|indexing|
+|Stripes|Candy Striper|20140630105705/15673:Mon 30 June 2014 10:57|indexing|
 |Stripes|Candy Striper|pink raccoon|Pet|
 |Stripes|Candy Striper|Candy|man|
 |Stripes|Candy Striper|nocandycoonsex|value|
@@ -1938,17 +1953,17 @@
 |Stripes|Candy Striper|candytalk|value|
 |Stripes|Candy Striper|lastCandyfucked|value|
 |Stripes|Candy Striper|coonsex|value|
-|Nuku Valente|Equine For Fs|20140619230542/2934:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Equine For Fs|20140630105705/2934:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Equine For Fs|lucky horseshoe|Grab Object|
 |Nuku Valente|Equine For Fs|equinoiddefeat|value|
 |Nuku Valente|Equine For Fs|equinoidstatus|value|
-|Leo X|Demon Brute For Fs|20140619230542/45725:Thu 19 June 2014 23:05|indexing|
+|Leo X|Demon Brute For Fs|20140630105705/45725:Mon 30 June 2014 10:57|indexing|
 |Leo X|Demon Brute For Fs|demon tooth|Grab Object|
 |Leo X|Demon Brute For Fs|demon brute|Pet|
 |Leo X|Demon Brute For Fs|demon seed|Grab Object|
 |Leo X|Demon Brute For Fs|DBCaptureQuestVar|value|
 |Leo X|Demon Brute For Fs|DemonBruteStatus|value|
-|Damaged|Awesome Tree For Fs|20140619230542/2125:Thu 19 June 2014 23:05|indexing|
+|Damaged|Awesome Tree For Fs|20140630105705/2125:Mon 30 June 2014 10:57|indexing|
 |Damaged|Awesome Tree For Fs|awesome fruit|Grab Object|
 |Damaged|Awesome Tree For Fs|awesomer fruit|Grab Object|
 |Damaged|Awesome Tree For Fs|awesomest fruit|Grab Object|
@@ -1958,7 +1973,7 @@
 |Damaged|Awesome Tree For Fs|Awesome_counter|value|
 |Damaged|Awesome Tree For Fs|Awesome_forcesex|value|
 |Damaged|Awesome Tree For Fs|Awesome_noreward|value|
-|Hellerhound|Centaur|20140619230542/4935:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Centaur|20140630105705/4935:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Centaur|Dry Plains|room|
 |Hellerhound|Centaur|Plains Door|door|
 |Hellerhound|Centaur|wandering the plains|room|
@@ -1966,20 +1981,20 @@
 |Hellerhound|Centaur|fresh apple|Grab Object|
 |Hellerhound|Centaur|centaurmate|value|
 |Hellerhound|Centaur|compressedcock|value|
-|Damaged|Skunk For Fs|20140619230542/3751:Thu 19 June 2014 23:05|indexing|
+|Damaged|Skunk For Fs|20140630105705/3751:Mon 30 June 2014 10:57|indexing|
 |Damaged|Skunk For Fs|Skunk Goo|Grab Object|
 |Damaged|Skunk For Fs|skunkready|value|
 |Damaged|Skunk For Fs|Skunk_type|value|
 |Damaged|Skunk For Fs|skunkfight|value|
-|Stripes|Skunkbeast Lord|20140619230542/14420:Thu 19 June 2014 23:05|indexing|
+|Stripes|Skunkbeast Lord|20140630105705/14420:Mon 30 June 2014 10:57|indexing|
 |Stripes|Skunkbeast Lord|Skunkbeast Battle|situation|
 |Stripes|Skunkbeast Lord|skunkbeaststatus|value|
-|Stripes|Mental Mouse For Fs|20140619230542/6267:Thu 19 June 2014 23:05|indexing|
+|Stripes|Mental Mouse For Fs|20140630105705/6267:Mon 30 June 2014 10:57|indexing|
 |Stripes|Mental Mouse For Fs|cheese|Grab Object|
 |Stripes|Mental Mouse For Fs|mousecurse|value|
 |Stripes|Mental Mouse For Fs|mousevic|value|
 |Stripes|Mental Mouse For Fs|mousecounter|value|
-|Blue Bishop|Sierrasaur|20140619230542/7561:Thu 19 June 2014 23:05|indexing|
+|Blue Bishop|Sierrasaur|20140630105705/7561:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Sierrasaur|Earthen Seed|Grab Object|
 |Blue Bishop|Sierrasaur|sierrapure|value|
 |Blue Bishop|Sierrasaur|sierramem|value|
@@ -1991,7 +2006,7 @@
 |Blue Bishop|Sierrasaur|voreloss|value|
 |Blue Bishop|Sierrasaur|psycheadjust|value|
 |Blue Bishop|Sierrasaur|lustadjust|value|
-|Nuku Valente|Lusty Skunk|20140619230542/4267:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Lusty Skunk|20140630105705/4267:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Lusty Skunk|Lusty Skunk|situation|
 |Nuku Valente|Lusty Skunk|skrp|value|
 |Nuku Valente|Lusty Skunk|Lastskunkfuck|value|
@@ -2000,7 +2015,7 @@
 |Nuku Valente|Lusty Skunk|skunksister|value|
 |Nuku Valente|Lusty Skunk|skunkspot|value|
 |Nuku Valente|Lusty Skunk|Skunkform|action|
-|Stripes|Tigress Hooker For Fs|20140619230542/16516:Thu 19 June 2014 23:05|indexing|
+|Stripes|Tigress Hooker For Fs|20140630105705/16516:Mon 30 June 2014 10:57|indexing|
 |Stripes|Tigress Hooker For Fs|motel key|Grab Object|
 |Stripes|Tigress Hooker For Fs|tempnum|value|
 |Stripes|Tigress Hooker For Fs|tigresswinner|value|
@@ -2008,7 +2023,7 @@
 |Stripes|Tigress Hooker For Fs|tigressclient|value|
 |Stripes|Tigress Hooker For Fs|stiffedpayment|value|
 |Stripes|Tigress Hooker For Fs|mqfightresult|value|
-|Xeylef|Parasitic Plant For Fs|20140619230542/10221:Thu 19 June 2014 23:05|indexing|
+|Xeylef|Parasitic Plant For Fs|20140630105705/10221:Mon 30 June 2014 10:57|indexing|
 |Xeylef|Parasitic Plant For Fs|Musky Cock Flower|Grab Object|
 |Xeylef|Parasitic Plant For Fs|didsubmit|value|
 |Xeylef|Parasitic Plant For Fs|plantdefeat|value|
@@ -2021,59 +2036,59 @@
 |Xeylef|Parasitic Plant For Fs|keeptail|value|
 |Xeylef|Parasitic Plant For Fs|keepbody|value|
 |Xeylef|Parasitic Plant For Fs|keepcock|value|
-|Sarokcat|Alpha Husky|20140619230542/7722:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Alpha Husky|20140630105705/7722:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Alpha Husky|husky gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
-|Sweraptor|Ash Dragator For Fs|20140619230542/2687:Thu 19 June 2014 23:05|indexing|
+|Sweraptor|Ash Dragator For Fs|20140630105705/2687:Mon 30 June 2014 10:57|indexing|
 |Sweraptor|Ash Dragator For Fs|ash dragon heart|Grab Object|
 |Sweraptor|Ash Dragator For Fs|dragatordefeat|value|
-|Sarokcat|Hyena Matriarch|20140619230542/6690:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Hyena Matriarch|20140630105705/6690:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Hyena Matriarch|matriarchdefeated|value|
 |Sarokcat|Hyena Matriarch|matriarchowned|value|
-|Stripes|Bald Eagle For Fs|20140619230542/2624:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bald Eagle For Fs|20140630105705/2624:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bald Eagle For Fs|eagle feather|Grab Object|
 |Stripes|Bald Eagle For Fs|eagledefeatnum|value|
 |Stripes|Bald Eagle For Fs|noeaglesex|value|
-|Stripes|Jaguar Orderly For Fs|20140619230542/5316:Thu 19 June 2014 23:05|indexing|
+|Stripes|Jaguar Orderly For Fs|20140630105705/5316:Mon 30 June 2014 10:57|indexing|
 |Stripes|Jaguar Orderly For Fs|libido suppressant|Grab Object|
 |Stripes|Jaguar Orderly For Fs|libsuppcount|value|
-|Stripes|Wolverine Guard For Fs|20140619230542/3720:Thu 19 June 2014 23:05|indexing|
+|Stripes|Wolverine Guard For Fs|20140630105705/3720:Mon 30 June 2014 10:57|indexing|
 |Stripes|Wolverine Guard For Fs|wolvloc|value|
 |Stripes|Wolverine Guard For Fs|wolvfightresult|value|
-|Batroo|Kangaroo|20140619230542/2324:Thu 19 June 2014 23:05|indexing|
+|Batroo|Kangaroo|20140630105705/2328:Mon 30 June 2014 10:57|indexing|
 |Batroo|Kangaroo|kangaroodefeat|value|
 |Batroo|Kangaroo|rkrcheck|value|
 |Batroo|Kangaroo|redroobodied|adjective|
-|Sarokcat|Ewe|20140619230542/5460:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Ram|20140619230542/5216:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Ewe|20140630105705/5460:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Ram|20140630105705/5216:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Ram|Tainted wool|Grab Object|
 |Sarokcat|Ram|ramconsent|value|
-|Stripes|Naughty Nurse|20140619230542/5991:Thu 19 June 2014 23:05|indexing|
+|Stripes|Naughty Nurse|20140630105705/5991:Mon 30 June 2014 10:57|indexing|
 |Stripes|Naughty Nurse|healing booster|Grab Object|
 |Stripes|Naughty Nurse|vixgender|value|
-|Sarokcat|Sabretooth|20140619230542/5782:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Sabretooth|20140630105705/5782:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Sabretooth|Chipped tooth|Grab Object|
-|Stripes|Anime Babe For Fs|20140619230542/9930:Thu 19 June 2014 23:05|indexing|
+|Stripes|Anime Babe For Fs|20140630105705/9930:Mon 30 June 2014 10:57|indexing|
 |Stripes|Anime Babe For Fs|sticky sushi|Grab Object|
 |Stripes|Anime Babe For Fs|noanimebabesex|value|
 |Stripes|Anime Babe For Fs|animebabebodied|adjective|
-|Damaged|Small Feline And Lion For Fs|20140619230542/9976:Thu 19 June 2014 23:05|indexing|
+|Damaged|Small Feline And Lion For Fs|20140630105705/9976:Mon 30 June 2014 10:57|indexing|
 |Damaged|Small Feline And Lion For Fs|Feline_type|value|
 |Damaged|Small Feline And Lion For Fs|Feline_meow|value|
 |Damaged|Small Feline And Lion For Fs|Feline_attached|value|
 |Damaged|Small Feline And Lion For Fs|Feline_encountered|value|
-|Tentacle Specialist|Spidergirl For Fs|20140619230542/3182:Thu 19 June 2014 23:05|indexing|
+|Tentacle Specialist|Spidergirl For Fs|20140630105705/3182:Mon 30 June 2014 10:57|indexing|
 |Tentacle Specialist|Spidergirl For Fs|spider webbing|Grab Object|
-|Stripes|Bottlenose Toy For Fs|20140619230542/11560:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bottlenose Toy For Fs|20140630105705/11560:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bottlenose Toy For Fs|dolphinmode|value|
 |Stripes|Bottlenose Toy For Fs|dolphinflatablefight|value|
 |Stripes|Bottlenose Toy For Fs|dolinfloss|value|
-|Nuku Valente|Otter|20140619230542/4232:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Otter|20140630105705/4232:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Otter|Fish|Grab Object|
 |Nuku Valente|Otter|Otterdefeat|value|
 |Nuku Valente|Otter|Otterconsent|value|
-|Agentlemancalledb|Sugar Glider|20140619230542/5384:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Sugar Glider|20140630105705/5384:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Sugar Glider|crushed candies|Grab Object|
 |Agentlemancalledb|Sugar Glider|nosugarglidersex|value|
 |Agentlemancalledb|Sugar Glider|sugarglidernote|value|
@@ -2082,7 +2097,7 @@
 |Agentlemancalledb|Sugar Glider|sugarglidercocked|adjective|
 |Agentlemancalledb|Sugar Glider|sugarglidertailed|adjective|
 |Agentlemancalledb|Sugar Glider|sugargliderfaced|adjective|
-|Nuku Valente|Slutrat|20140619230542/13837:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Slutrat|20140630105705/13837:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Slutrat|SlutRat Den|room|
 |Nuku Valente|Slutrat|ratdartboard|thing|
 |Nuku Valente|Slutrat|Pool Hall|situation|
@@ -2096,13 +2111,13 @@
 |Nuku Valente|Slutrat|ratdarts|action|
 |Nuku Valente|Slutrat|visittimes|property|
 |Nuku Valente|Slutrat|pooltable|property|
-|Stripes|Mall Rat For Fs|20140619230542/1872:Thu 19 June 2014 23:05|indexing|
+|Stripes|Mall Rat For Fs|20140630105705/1872:Mon 30 June 2014 10:57|indexing|
 |Stripes|Mall Rat For Fs|mallratfaced|adjective|
 |Stripes|Mall Rat For Fs|mallratskinned|adjective|
 |Stripes|Mall Rat For Fs|mallratbodied|adjective|
 |Stripes|Mall Rat For Fs|mallratcocked|adjective|
 |Stripes|Mall Rat For Fs|mallrattailed|adjective|
-|Kazard|Random Tentacle Horror For Fs|20140619230542/9727:Thu 19 June 2014 23:05|indexing|
+|Kazard|Random Tentacle Horror For Fs|20140630105705/9727:Mon 30 June 2014 10:57|indexing|
 |Kazard|Random Tentacle Horror For Fs|basement portal|door|
 |Kazard|Random Tentacle Horror For Fs|dark basement|room|
 |Kazard|Random Tentacle Horror For Fs|tentsubmit|value|
@@ -2113,7 +2128,7 @@
 |Kazard|Random Tentacle Horror For Fs|hascunt|value|
 |Kazard|Random Tentacle Horror For Fs|multicunt|value|
 |Kazard|Random Tentacle Horror For Fs|thmpregdetect|value|
-|Stripes|Mismatched Chimera For Fs|20140619230542/3122:Thu 19 June 2014 23:05|indexing|
+|Stripes|Mismatched Chimera For Fs|20140630105705/3122:Mon 30 June 2014 10:57|indexing|
 |Stripes|Mismatched Chimera For Fs|bodyselector|value|
 |Stripes|Mismatched Chimera For Fs|headdata|value|
 |Stripes|Mismatched Chimera For Fs|larmdata|value|
@@ -2123,20 +2138,20 @@
 |Stripes|Mismatched Chimera For Fs|llegdata|value|
 |Stripes|Mismatched Chimera For Fs|rlegdata|value|
 |Stripes|Mismatched Chimera For Fs|breastdata|value|
-|Sarokcat|Rubber Tigress|20140619230542/4015:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Rubber Tigress|20140630105705/4015:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Rubber Tigress|Tiger patch|Grab Object|
-|Sweraptor|Ash Drakenoid|20140619230542/3042:Thu 19 June 2014 23:05|indexing|
+|Sweraptor|Ash Drakenoid|20140630105705/3042:Mon 30 June 2014 10:57|indexing|
 |Sweraptor|Ash Drakenoid|blanchefight|value|
-|Stripes|Vulpogryph For Fs|20140619230542/899:Thu 19 June 2014 23:05|indexing|
-|Stripes|Cerberus For Fs|20140619230542/7809:Thu 19 June 2014 23:05|indexing|
+|Stripes|Vulpogryph For Fs|20140630105705/899:Mon 30 June 2014 10:57|indexing|
+|Stripes|Cerberus For Fs|20140630105705/7809:Mon 30 June 2014 10:57|indexing|
 |Stripes|Cerberus For Fs|cerbfight|value|
 |Stripes|Cerberus For Fs|cerberusarousal|value|
 |Stripes|Cerberus For Fs|cerbmaulcount|value|
-|Sarokcat|Cheetah|20140619230542/6013:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Cheetah|20140630105705/6013:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Cheetah|cheetah milk|Grab Object|
-|Stripes|Rhino For Fs|20140619230542/1795:Thu 19 June 2014 23:05|indexing|
+|Stripes|Rhino For Fs|20140630105705/1795:Mon 30 June 2014 10:57|indexing|
 |Stripes|Rhino For Fs|rhino cum|Grab Object|
-|Darthan|Gels|20140619230542/8299:Thu 19 June 2014 23:05|indexing|
+|Darthan|Gels|20140630105705/8299:Mon 30 June 2014 10:57|indexing|
 |Darthan|Gels|pink gel|Grab Object|
 |Darthan|Gels|blue gel|Grab Object|
 |Darthan|Gels|purple gel|Grab Object|
@@ -2145,15 +2160,15 @@
 |Darthan|Gels|gelbodied|adjective|
 |Darthan|Gels|gelcocked|adjective|
 |Darthan|Gels|geltailed|adjective|
-|Sarokcat|Pirate Shark|20140619230542/4905:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Pirate Shark|20140630105705/4905:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Pirate Shark|pirate bandana|Grab Object|
 |Sarokcat|Pirate Shark|nopiratesharksex|value|
-|Nuku Valente|Bear For Fs|20140619230542/2893:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Bear For Fs|20140630105705/2893:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Bear For Fs|honeycomb|Grab Object|
 |Nuku Valente|Bear For Fs|ursinedefeat|value|
-|Wahn|Hulking Cheerleader|20140619230542/3983:Thu 19 June 2014 23:05|indexing|
+|Wahn|Hulking Cheerleader|20140630105705/3983:Mon 30 June 2014 10:57|indexing|
 |Wahn|Hulking Cheerleader|CheerleaderFirstEncounter|value|
-|Stripes|Friendship Pony For Fs|20140619230542/6910:Thu 19 June 2014 23:05|indexing|
+|Stripes|Friendship Pony For Fs|20140630105705/6910:Mon 30 June 2014 10:57|indexing|
 |Stripes|Friendship Pony For Fs|pony cider|Grab Object|
 |Stripes|Friendship Pony For Fs|rfponytype|value|
 |Stripes|Friendship Pony For Fs|rfponycolour1|value|
@@ -2176,17 +2191,17 @@
 |Stripes|Friendship Pony For Fs|fponybodied|adjective|
 |Stripes|Friendship Pony For Fs|fponycocked|adjective|
 |Stripes|Friendship Pony For Fs|fponytailed|adjective|
-|Sarokcat|Satyr|20140619230542/4983:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Satyr|20140630105705/4983:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Satyr|Satyr Wine|Grab Object|
 |Sarokcat|Satyr|beatsatyr|value|
-|Stripes|Centaur Stallion For Fs|20140619230542/3355:Thu 19 June 2014 23:05|indexing|
+|Stripes|Centaur Stallion For Fs|20140630105705/3355:Mon 30 June 2014 10:57|indexing|
 |Stripes|Centaur Stallion For Fs|centaur cum|Grab Object|
 |Stripes|Centaur Stallion For Fs|centaur hair|Grab Object|
-|Wahn|Orc Infections|20140619230542/7497:Thu 19 June 2014 23:05|indexing|
+|Wahn|Orc Infections|20140630105705/7497:Mon 30 June 2014 10:57|indexing|
 |Wahn|Orc Infections|orc brew|Grab Object|
 |Wahn|Orc Infections|orc cum|Grab Object|
 |Wahn|Orc Infections|OrcCocked|adjective|
-|Stripes|Tiger Cop For Fs|20140619230542/14702:Thu 19 June 2014 23:05|indexing|
+|Stripes|Tiger Cop For Fs|20140630105705/14702:Mon 30 June 2014 10:57|indexing|
 |Stripes|Tiger Cop For Fs|Policeman|situation|
 |Stripes|Tiger Cop For Fs|Police Car|room|
 |Stripes|Tiger Cop For Fs|Sgt Marks|man|
@@ -2197,13 +2212,13 @@
 |Stripes|Tiger Cop For Fs|nsgained|value|
 |Stripes|Tiger Cop For Fs|mqpickup|value|
 |Stripes|Tiger Cop For Fs|sgtmarkstalk|value|
-|Wahn|Spidertaur Male|20140619230542/18993:Thu 19 June 2014 23:05|indexing|
+|Wahn|Spidertaur Male|20140630105705/18993:Mon 30 June 2014 10:57|indexing|
 |Wahn|Spidertaur Male|spidertaur hair|Grab Object|
 |Wahn|Spidertaur Male|silk hammock|Grab Object|
 |Wahn|Spidertaur Male|Spider's Web|room|
 |Wahn|Spidertaur Male|Aelias|man|
 |Wahn|Spidertaur Male|SpidertaurRelationship|value|
-|Mirumu|Butterfly For Fs|20140619230542/20322:Thu 19 June 2014 23:05|indexing|
+|Mirumu|Butterfly For Fs|20140630105705/20322:Mon 30 June 2014 10:57|indexing|
 |Mirumu|Butterfly For Fs|ButterflyBaby|person|
 |Mirumu|Butterfly For Fs|testosterone pill|Grab Object|
 |Mirumu|Butterfly For Fs|pristine negligee|Grab Object|
@@ -2227,7 +2242,16 @@
 |Mirumu|Butterfly For Fs|ButterflyAttire|value|
 |Mirumu|Butterfly For Fs|bmagic|value|
 |Mirumu|Butterfly For Fs|bcupsize|value|
-|Wahn|Viking|20140619230542/28227:Thu 19 June 2014 23:05|indexing|
+|Mirumu|Butterfly For Fs|ButterflyDebug|action|
+|Mirumu|Butterfly For Fs|givebpill|action|
+|Mirumu|Butterfly For Fs|butterflyprocreated|action|
+|Mirumu|Butterfly For Fs|spawnbutterfly|action|
+|Mirumu|Butterfly For Fs|impregbutterfly|action|
+|Mirumu|Butterfly For Fs|movetobstore|action|
+|Mirumu|Butterfly For Fs|resetbutterfly|action|
+|Mirumu|Butterfly For Fs|bsave|action|
+|Mirumu|Butterfly For Fs|brestoring|action|
+|Wahn|Viking|20140630105705/28227:Mon 30 June 2014 10:57|indexing|
 |Wahn|Viking|Chieftain's Challenge|situation|
 |Wahn|Viking|Viking Ship|room|
 |Wahn|Viking|Sonya's Cabin|room|
@@ -2241,7 +2265,7 @@
 |Wahn|Viking|VikingKidCounter|value|
 |Wahn|Viking|VikingPregCounter|value|
 |Wahn|Viking|VikingUltimatum|value|
-|Wahn|Wolfman|20140619230542/29658:Thu 19 June 2014 23:05|indexing|
+|Wahn|Wolfman|20140630105705/29658:Mon 30 June 2014 10:57|indexing|
 |Wahn|Wolfman|sports drink|Grab Object|
 |Wahn|Wolfman|Entrance to the Lair|situation|
 |Wahn|Wolfman|Wolfman Lair|room|
@@ -2252,26 +2276,26 @@
 |Wahn|Wolfman|Jenniferpregnant|value|
 |Wahn|Wolfman|Jenniferwolves|value|
 |Wahn|Wolfman|lastSeptusfucked|value|
-|Nuku Valente|Gator|20140619230542/4707:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Gator|20140630105705/4707:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Gator|Gator Den|room|
 |Nuku Valente|Gator|gatordefeat|value|
 |Nuku Valente|Gator|gatorconsent|value|
-|Stripes|Margay For Fs|20140619230542/5916:Thu 19 June 2014 23:05|indexing|
+|Stripes|Margay For Fs|20140630105705/5916:Mon 30 June 2014 10:57|indexing|
 |Stripes|Margay For Fs|margay milk|Grab Object|
 |Stripes|Margay For Fs|margaydancecount|value|
 |Stripes|Margay For Fs|margayubed|value|
 |Stripes|Margay For Fs|margaymet|value|
-|Stripes|Xeno For Fs|20140619230542/4271:Thu 19 June 2014 23:05|indexing|
+|Stripes|Xeno For Fs|20140630105705/4271:Mon 30 June 2014 10:57|indexing|
 |Stripes|Xeno For Fs|acid milk|Grab Object|
 |Stripes|Xeno For Fs|xenofaced|adjective|
 |Stripes|Xeno For Fs|xenoskinned|adjective|
 |Stripes|Xeno For Fs|xenobodied|adjective|
 |Stripes|Xeno For Fs|xenococked|adjective|
 |Stripes|Xeno For Fs|xenotailed|adjective|
-|Damaged|Alien Felinoid For Fs|20140619230542/4469:Thu 19 June 2014 23:05|indexing|
+|Damaged|Alien Felinoid For Fs|20140630105705/4469:Mon 30 June 2014 10:57|indexing|
 |Damaged|Alien Felinoid For Fs|catnum|value|
 |Damaged|Alien Felinoid For Fs|mateable|value|
-|Agentlemancalledb|Jaguar Warrior|20140619230542/15322:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Jaguar Warrior|20140630105705/15322:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Jaguar Warrior|Jaguar Headdress|Equipment|
 |Agentlemancalledb|Jaguar Warrior|Tehuantl|person|
 |Agentlemancalledb|Jaguar Warrior|Feline Relief|situation|
@@ -2279,28 +2303,28 @@
 |Agentlemancalledb|Jaguar Warrior|TehuantlStatus|value|
 |Agentlemancalledb|Jaguar Warrior|TehuantlTimer|value|
 |Agentlemancalledb|Jaguar Warrior|TehuantlSnowStatus|value|
-|Wahn|Catgirl|20140619230542/8907:Thu 19 June 2014 23:05|indexing|
+|Wahn|Catgirl|20140630105705/8907:Mon 30 June 2014 10:57|indexing|
 |Wahn|Catgirl|CatgirlFucked|value|
 |Wahn|Catgirl|LastCatgirlFuck|value|
 |Wahn|Catgirl|FionaFangStatus|value|
 |Wahn|Catgirl|FionaCarlStatus|value|
-|Lago Moro|Male Peacock For Fs|20140619230542/2500:Thu 19 June 2014 23:05|indexing|
+|Lago Moro|Male Peacock For Fs|20140630105705/2500:Mon 30 June 2014 10:57|indexing|
 |Lago Moro|Male Peacock For Fs|peacock feather|Grab Object|
 |Lago Moro|Male Peacock For Fs|peacockcontrol|value|
-|Trav|Cute Chinchilla Girl For Fs|20140619230542/2562:Thu 19 June 2014 23:05|indexing|
+|Trav|Cute Chinchilla Girl For Fs|20140630105705/2562:Mon 30 June 2014 10:57|indexing|
 |Trav|Cute Chinchilla Girl For Fs|tuft of chin fur|Grab Object|
 |Trav|Cute Chinchilla Girl For Fs|chindem|value|
-|Agentlemancalledb|Fire Sprite|20140619230542/5026:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Fire Sprite|20140630105705/5026:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Fire Sprite|glowing ember|Grab Object|
 |Agentlemancalledb|Fire Sprite|FireSpritemode|value|
-|Nuku Valente|Sprite|20140619230542/3110:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Sprite|20140630105705/3110:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Sprite|pixie dust|Grab Object|
 |Nuku Valente|Sprite|Spritedefeat|value|
 |Nuku Valente|Sprite|Spriteconsent|value|
-|Stripes|Reindeer|20140619230542/4588:Thu 19 June 2014 23:05|indexing|
+|Stripes|Reindeer|20140630105705/4588:Mon 30 June 2014 10:57|indexing|
 |Stripes|Reindeer|egg nog|Grab Object|
 |Stripes|Reindeer|heatturnskipper|value|
-|Stripes|Snake For Fs|20140619230542/5759:Thu 19 June 2014 23:05|indexing|
+|Stripes|Snake For Fs|20140630105705/5759:Mon 30 June 2014 10:57|indexing|
 |Stripes|Snake For Fs|snakedomm|value|
 |Stripes|Snake For Fs|snakesubm|value|
 |Stripes|Snake For Fs|snakehijack|value|
@@ -2309,25 +2333,25 @@
 |Stripes|Snake For Fs|snakehijacktimer|value|
 |Stripes|Snake For Fs|fsnakevalid|value|
 |Stripes|Snake For Fs|msnakevalid|value|
-|Shadowwolf94|Feral Wolf For Fs|20140619230542/7441:Thu 19 June 2014 23:05|indexing|
+|Shadowwolf94|Feral Wolf For Fs|20140630105705/7441:Mon 30 June 2014 10:57|indexing|
 |Shadowwolf94|Feral Wolf For Fs|wolf cum|Grab Object|
 |Shadowwolf94|Feral Wolf For Fs|fangcount|value|
 |Shadowwolf94|Feral Wolf For Fs|FeralWolfdefeat|value|
-|Nuku Valente|Panther Taur|20140619230542/2551:Thu 19 June 2014 23:05|indexing|
-|Stripes|Chocolate Lab|20140619230542/9004:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Panther Taur|20140630105705/2551:Mon 30 June 2014 10:57|indexing|
+|Stripes|Chocolate Lab|20140630105705/9004:Mon 30 June 2014 10:57|indexing|
 |Stripes|Chocolate Lab|labhost|value|
 |Stripes|Chocolate Lab|labtimerA|value|
 |Stripes|Chocolate Lab|labtimerB|value|
-|Sarokcat|Leopardman|20140619230542/6078:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Leopardman|20140630105705/6078:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Leopardman|Spotted fur|Grab Object|
-|Sarokcat|Jackalman|20140619230542/2595:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Twisted Pimp|20140619230542/5696:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Jackalman|20140630105705/2595:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Twisted Pimp|20140630105705/5696:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Twisted Pimp|estrogen pill|Grab Object|
 |Sarokcat|Twisted Pimp|twpimploss|value|
-|Stripes|Amazonian For Fs|20140619230542/3786:Thu 19 June 2014 23:05|indexing|
+|Stripes|Amazonian For Fs|20140630105705/3786:Mon 30 June 2014 10:57|indexing|
 |Stripes|Amazonian For Fs|estosterogen pill|Grab Object|
 |Stripes|Amazonian For Fs|noamazoniansex|value|
-|Blue Bishop|Pewter Consort|20140619230542/9239:Thu 19 June 2014 23:05|indexing|
+|Blue Bishop|Pewter Consort|20140630105705/9239:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Pewter Consort|consortinsight|value|
 |Blue Bishop|Pewter Consort|facecheck|value|
 |Blue Bishop|Pewter Consort|pewtertorsosuppress|value|
@@ -2348,262 +2372,263 @@
 |Blue Bishop|Pewter Consort|pewterassvar1|value|
 |Blue Bishop|Pewter Consort|pewterassvar2|value|
 |Blue Bishop|Pewter Consort|scaledr|value|
-|Stripes|Queen Bee For Fs|20140619230542/1544:Thu 19 June 2014 23:05|indexing|
+|Stripes|Queen Bee For Fs|20140630105705/1544:Mon 30 June 2014 10:57|indexing|
 |Stripes|Queen Bee For Fs|queenbeecocked|adjective|
-|Blaydrex|Saber Kitty|20140619230542/2300:Thu 19 June 2014 23:05|indexing|
+|Blaydrex|Saber Kitty|20140630105705/2300:Mon 30 June 2014 10:57|indexing|
 |Blaydrex|Saber Kitty|smilodon cum|Grab Object|
-|Nuku Valente|Naga|20140619230542/4308:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Goo Girl|20140619230542/3916:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Naga|20140630105705/6026:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Naga|nagawarning|value|
+|Nuku Valente|Goo Girl|20140630105705/3916:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Goo Girl|goocolour|value|
-|Nuku Valente|Latex Fox|20140619230542/3556:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Hermaphrodite Gryphon|20140619230542/4567:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Drone Wasp|20140619230542/1817:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Latex Fox|20140630105705/3556:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Hermaphrodite Gryphon|20140630105705/4567:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Drone Wasp|20140630105705/1817:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Drone Wasp|dronevict|value|
-|Kaleem Mcintyre|Blob|20140619230542/1095:Thu 19 June 2014 23:05|indexing|
-|Kaleem Mcintyre|Great Dane Rouge|20140619230542/8043:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Blob|20140630105705/1095:Mon 30 June 2014 10:57|indexing|
+|Kaleem Mcintyre|Great Dane Rouge|20140630105705/8043:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Great Dane Rouge|bandage|Grab Object|
-|Stripes|Hyperskunk For Fs|20140619230542/2671:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Female Husky|20140619230542/2755:Thu 19 June 2014 23:05|indexing|
-|Kohryu|Yamato Dragon For Fs|20140619230542/11449:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hyperskunk For Fs|20140630105705/2671:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Female Husky|20140630105705/2755:Mon 30 June 2014 10:57|indexing|
+|Kohryu|Yamato Dragon For Fs|20140630105705/11449:Mon 30 June 2014 10:57|indexing|
 |Kohryu|Yamato Dragon For Fs|dragon scale|Grab Object|
 |Kohryu|Yamato Dragon For Fs|dragon hair|Grab Object|
 |Kohryu|Yamato Dragon For Fs|MYDTBMM|value|
 |Kohryu|Yamato Dragon For Fs|MYDAM|value|
 |Kohryu|Yamato Dragon For Fs|MYDGM|value|
 |Kohryu|Yamato Dragon For Fs|ydcolour|value|
-|Kohryu|Yamato Dragoness For Fs|20140619230542/6934:Thu 19 June 2014 23:05|indexing|
+|Kohryu|Yamato Dragoness For Fs|20140630105705/6934:Mon 30 June 2014 10:57|indexing|
 |Kohryu|Yamato Dragoness For Fs|YDSF|value|
 |Kohryu|Yamato Dragoness For Fs|FYDTBMM|value|
 |Kohryu|Yamato Dragoness For Fs|FYDM|value|
-|Stripes|Ashen Breeder For Fs|20140619230542/5241:Thu 19 June 2014 23:05|indexing|
-|Damaged|Lizard Girl For Fs|20140619230542/3598:Thu 19 June 2014 23:05|indexing|
+|Stripes|Ashen Breeder For Fs|20140630105705/5241:Mon 30 June 2014 10:57|indexing|
+|Damaged|Lizard Girl For Fs|20140630105705/3598:Mon 30 June 2014 10:57|indexing|
 |Damaged|Lizard Girl For Fs|lizgirlmarked|value|
 |Damaged|Lizard Girl For Fs|lizgirlimpreg|value|
 |Damaged|Lizard Girl For Fs|lizgirlinheat|value|
 |Damaged|Lizard Girl For Fs|lizgirlangry|value|
-|Voldine|Random Shemale Smooth Collie For Fs|20140619230542/9671:Thu 19 June 2014 23:05|indexing|
+|Voldine|Random Shemale Smooth Collie For Fs|20140630105705/9671:Mon 30 June 2014 10:57|indexing|
 |Voldine|Random Shemale Smooth Collie For Fs|colliedefeat|value|
-|Damaged|Bovine For Fs|20140619230542/5331:Thu 19 June 2014 23:05|indexing|
+|Damaged|Bovine For Fs|20140630105705/5331:Mon 30 June 2014 10:57|indexing|
 |Damaged|Bovine For Fs|cow milk|Grab Object|
 |Damaged|Bovine For Fs|Mooing|value|
 |Damaged|Bovine For Fs|CowKiller|value|
 |Damaged|Bovine For Fs|Mooed|value|
 |Damaged|Bovine For Fs|Bovine_type|value|
 |Damaged|Bovine For Fs|Bull_run|value|
-|Anony Mouse|Herm Hyena For Fs|20140619230542/3567:Thu 19 June 2014 23:05|indexing|
-|Hiccup|Cannon|20140619230542/1771:Thu 19 June 2014 23:05|indexing|
+|Anony Mouse|Herm Hyena For Fs|20140630105705/3567:Mon 30 June 2014 10:57|indexing|
+|Hiccup|Cannon|20140630105705/1771:Mon 30 June 2014 10:57|indexing|
 |Hiccup|Cannon|cannonprep|value|
-|Ilovecock|Pit Bull For Fs|20140619230542/9602:Thu 19 June 2014 23:05|indexing|
+|Ilovecock|Pit Bull For Fs|20140630105705/9602:Mon 30 June 2014 10:57|indexing|
 |Ilovecock|Pit Bull For Fs|pitbullgender|value|
-|Kyvi Stormbreaker|Painted Wolf Herm|20140619230542/4675:Thu 19 June 2014 23:05|indexing|
+|Kyvi Stormbreaker|Painted Wolf Herm|20140630105705/4675:Mon 30 June 2014 10:57|indexing|
 |Kyvi Stormbreaker|Painted Wolf Herm|wolfhermvictory|value|
 |Kyvi Stormbreaker|Painted Wolf Herm|wolfhermdefeat|value|
-|Soren|Mothgirl For Fs|20140619230542/3672:Thu 19 June 2014 23:05|indexing|
+|Soren|Mothgirl For Fs|20140630105705/3672:Mon 30 June 2014 10:57|indexing|
 |Soren|Mothgirl For Fs|cock pill|Grab Object|
 |Soren|Mothgirl For Fs|mothgirlnosex|value|
 |Soren|Mothgirl For Fs|Mothdefeat|value|
-|Tunalord Sefont|Feral Sea Dragon|20140619230542/21640:Thu 19 June 2014 23:05|indexing|
+|Tunalord Sefont|Feral Sea Dragon|20140630105705/21640:Mon 30 June 2014 10:57|indexing|
 |Tunalord Sefont|Feral Sea Dragon|twistfsdfeedmemory|value|
 |Tunalord Sefont|Feral Sea Dragon|MFSDUBM|value|
 |Tunalord Sefont|Feral Sea Dragon|fsdsub|value|
 |Tunalord Sefont|Feral Sea Dragon|fsdbias|value|
 |Tunalord Sefont|Feral Sea Dragon|boundmod2|value|
-|Tunalord Sefont|Feral Sea Dragoness|20140619230542/17274:Thu 19 June 2014 23:05|indexing|
+|Tunalord Sefont|Feral Sea Dragoness|20140630105705/17274:Mon 30 June 2014 10:57|indexing|
 |Tunalord Sefont|Feral Sea Dragoness|fsddom|value|
 |Tunalord Sefont|Feral Sea Dragoness|lastfsdfeeding|value|
 |Tunalord Sefont|Feral Sea Dragoness|fsdfeedmemory|value|
 |Tunalord Sefont|Feral Sea Dragoness|FFSDUBM|value|
 |Tunalord Sefont|Feral Sea Dragoness|FSDOPEN|value|
-|Dragonflayer|Anthro Shaft Beast For Fs|20140619230542/4997:Thu 19 June 2014 23:05|indexing|
+|Dragonflayer|Anthro Shaft Beast For Fs|20140630105705/4997:Mon 30 June 2014 10:57|indexing|
 |Dragonflayer|Anthro Shaft Beast For Fs|Psionic Egg|Grab Object|
-|Dragonflayer|Feral Shaft Beast For Fs|20140619230542/3928:Thu 19 June 2014 23:05|indexing|
+|Dragonflayer|Feral Shaft Beast For Fs|20140630105705/3928:Mon 30 June 2014 10:57|indexing|
 |Dragonflayer|Feral Shaft Beast For Fs|Psionic Larva|Grab Object|
-|Volcblaze|Wrestling Wolf For Fs|20140619230542/6404:Thu 19 June 2014 23:05|indexing|
+|Volcblaze|Wrestling Wolf For Fs|20140630105705/6404:Mon 30 June 2014 10:57|indexing|
 |Volcblaze|Wrestling Wolf For Fs|wrestlingwolfdefeat|value|
 |Volcblaze|Wrestling Wolf For Fs|wwheal|value|
 |Volcblaze|Wrestling Wolf For Fs|wrwolfanal|value|
 |Volcblaze|Wrestling Wolf For Fs|wrwolfbeaten|value|
 |Volcblaze|Wrestling Wolf For Fs|wrwolfseen|value|
-|Sarokcat N Verath|Donkeywoman|20140619230542/2952:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Mareslut|20140619230542/4031:Thu 19 June 2014 23:05|indexing|
-|Sarokcat N Verath|Stallionboi|20140619230542/3755:Thu 19 June 2014 23:05|indexing|
-|Sarokcat N Verath|Donkeyman|20140619230542/7452:Thu 19 June 2014 23:05|indexing|
-|Sarokcat N Verath|Horseman|20140619230542/4339:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Harpy|20140619230542/3184:Thu 19 June 2014 23:05|indexing|
+|Sarokcat N Verath|Donkeywoman|20140630105705/2952:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Mareslut|20140630105705/4031:Mon 30 June 2014 10:57|indexing|
+|Sarokcat N Verath|Stallionboi|20140630105705/3755:Mon 30 June 2014 10:57|indexing|
+|Sarokcat N Verath|Donkeyman|20140630105705/7452:Mon 30 June 2014 10:57|indexing|
+|Sarokcat N Verath|Horseman|20140630105705/4339:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Harpy|20140630105705/3184:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Harpy|Harpydefeat|value|
 |Nuku Valente|Harpy|Harpyconsent|value|
-|Somefur|Feline Gymnast|20140619230542/6626:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Teddy Bear|20140619230542/4528:Thu 19 June 2014 23:05|indexing|
+|Somefur|Feline Gymnast|20140630105705/6626:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Teddy Bear|20140630105705/4528:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Teddy Bear|teddyvored|value|
 |Sarokcat|Teddy Bear|noteddybearsex|value|
-|Sarokcat|Alpha Wolf|20140619230542/7967:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Alpha Wolf|20140630105705/7967:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Alpha Wolf|Alpha Wolfdefeat|value|
 |Sarokcat|Alpha Wolf|alphawolfbeaten|value|
 |Sarokcat|Alpha Wolf|alphawolfreplaced|value|
-|Sarokcat|Plush Lion|20140619230542/5472:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Plush Lion|20140630105705/5472:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Plush Lion|plushleoloss|value|
 |Sarokcat|Plush Lion|plionvored|value|
 |Sarokcat|Plush Lion|plionvic|value|
 |Sarokcat|Plush Lion|noplionsex|value|
-|Sarokcat|Greek Nymph|20140619230542/2671:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Greek Nymph|20140630105705/2671:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Greek Nymph|beatgrnymph|value|
-|Sarokcat|Panda|20140619230542/3235:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Gazelle|20140619230542/3894:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Panda|20140630105705/3235:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Gazelle|20140630105705/3894:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Gazelle|gazellesbeaten|value|
-|Sarokcat|Zebra|20140619230542/7493:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Zebra|20140630105705/7493:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Zebra|zebra fur|Grab Object|
 |Sarokcat|Zebra|ZebraLossCount|value|
-|Sarokcat|Tiger|20140619230542/2815:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Tigertaur|20140619230542/3940:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Sphinx|20140619230542/3000:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Jackalboy|20140619230542/2189:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Wolftaur|20140619230542/7954:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Panther Herm|20140619230542/4813:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Succubus|20140619230542/6804:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Hawkman|20140619230542/3213:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Tiger|20140630105705/2815:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Tigertaur|20140630105705/3940:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Sphinx|20140630105705/3000:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Jackalboy|20140630105705/2189:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Wolftaur|20140630105705/7954:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Panther Herm|20140630105705/4813:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Succubus|20140630105705/6804:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Hawkman|20140630105705/3213:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Hawkman|nohawkmansex|value|
 |Sarokcat|Hawkman|hawkmanbeaten|value|
-|Sarokcat|Unicorn|20140619230542/2430:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Arctic Fox|20140619230542/2454:Thu 19 June 2014 23:05|indexing|
-|Sarokcat|Nightmare|20140619230542/3765:Thu 19 June 2014 23:05|indexing|
-|Wahn|Mannequin|20140619230542/1597:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Unicorn|20140630105705/2430:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Arctic Fox|20140630105705/2454:Mon 30 June 2014 10:57|indexing|
+|Sarokcat|Nightmare|20140630105705/3765:Mon 30 June 2014 10:57|indexing|
+|Wahn|Mannequin|20140630105705/1597:Mon 30 June 2014 10:57|indexing|
 |Wahn|Mannequin|MannequinFirstEncounter|value|
-|Wahn|Sand Man|20140619230542/5293:Thu 19 June 2014 23:05|indexing|
+|Wahn|Sand Man|20140630105705/5293:Mon 30 June 2014 10:57|indexing|
 |Wahn|Sand Man|SandManFirstEncounter|value|
-|Wahn|Naiad|20140619230542/4068:Thu 19 June 2014 23:05|indexing|
-|Wahn|Furling|20140619230542/3813:Thu 19 June 2014 23:05|indexing|
+|Wahn|Naiad|20140630105705/4068:Mon 30 June 2014 10:57|indexing|
+|Wahn|Furling|20140630105705/3813:Mon 30 June 2014 10:57|indexing|
 |Wahn|Furling|Cheerleader vs Furling|situation|
 |Wahn|Furling|red fur|Grab Object|
-|Wahn|Spartan|20140619230542/11267:Thu 19 June 2014 23:05|indexing|
+|Wahn|Spartan|20140630105705/11267:Mon 30 June 2014 10:57|indexing|
 |Wahn|Spartan|History Lecture|situation|
 |Wahn|Spartan|pita bread|Grab Object|
-|Wahn|Helot|20140619230542/9514:Thu 19 June 2014 23:05|indexing|
+|Wahn|Helot|20140630105705/9514:Mon 30 June 2014 10:57|indexing|
 |Wahn|Helot|FuckedBySpartan|value|
-|Sweraptor|Ash Whelp For Fs|20140619230542/2452:Thu 19 June 2014 23:05|indexing|
+|Sweraptor|Ash Whelp For Fs|20140630105705/2452:Mon 30 June 2014 10:57|indexing|
 |Sweraptor|Ash Whelp For Fs|whelpdefeat|value|
-|Hellerhound|Gryphons Plot For Fs|20140619230542/1552:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Gryphons Plot For Fs|20140630105705/1552:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Gryphons Plot For Fs|Gryphons plot|situation|
 |Hellerhound|Gryphons Plot For Fs|milsave|value|
-|Hellerhound|Dolphin For Fs|20140619230542/3706:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Dolphin For Fs|20140630105705/3706:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Dolphin For Fs|dolphin milk|Grab Object|
 |Hellerhound|Dolphin For Fs|dolphindefeat|value|
 |Hellerhound|Dolphin For Fs|dolphinconsent|value|
 |Hellerhound|Dolphin For Fs|dolphinwantmate|value|
 |Hellerhound|Dolphin For Fs|dolphintricked|value|
-|Hellerhound|Dryad For Fs|20140619230542/1675:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Dryad For Fs|20140630105705/1675:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Dryad For Fs|dryad cum|Grab Object|
-|Hellerhound|Latex Wolf For Fs|20140619230542/4582:Thu 19 June 2014 23:05|indexing|
+|Hellerhound|Latex Wolf For Fs|20140630105705/4582:Mon 30 June 2014 10:57|indexing|
 |Hellerhound|Latex Wolf For Fs|lwcounter|value|
-|Tentabear|Hermaphrodite Latex Vixen For Fs|20140619230542/5353:Thu 19 June 2014 23:05|indexing|
+|Tentabear|Hermaphrodite Latex Vixen For Fs|20140630105705/5353:Mon 30 June 2014 10:57|indexing|
 |Tentabear|Hermaphrodite Latex Vixen For Fs|hermlvmeet|value|
 |Tentabear|Hermaphrodite Latex Vixen For Fs|hermlvconsent|value|
-|Lago Moro|Rabbit Pack For Fs|20140619230542/1977:Thu 19 June 2014 23:05|indexing|
-|Stripes|Fennec For Fs|20140619230542/4022:Thu 19 June 2014 23:05|indexing|
+|Lago Moro|Rabbit Pack For Fs|20140630105705/1977:Mon 30 June 2014 10:57|indexing|
+|Stripes|Fennec For Fs|20140630105705/4022:Mon 30 June 2014 10:57|indexing|
 |Stripes|Fennec For Fs|fennec semen|Grab Object|
-|Stripes|Triceratops For Fs|20140619230542/2553:Thu 19 June 2014 23:05|indexing|
-|Stripes|Siamese Cats|20140619230542/7420:Thu 19 June 2014 23:05|indexing|
+|Stripes|Triceratops For Fs|20140630105705/2553:Mon 30 June 2014 10:57|indexing|
+|Stripes|Siamese Cats|20140630105705/7420:Mon 30 June 2014 10:57|indexing|
 |Stripes|Siamese Cats|Siamgender|thing|
 |Stripes|Siamese Cats|siamesegender|value|
 |Stripes|Siamese Cats|malecathp|value|
 |Stripes|Siamese Cats|femalecathp|value|
-|Stripes|Albino Mouse|20140619230542/1342:Thu 19 June 2014 23:05|indexing|
-|Stripes|Cat Ninjas|20140619230542/3791:Thu 19 June 2014 23:05|indexing|
-|Stripes|Flaming Lynx For Fs|20140619230542/4824:Thu 19 June 2014 23:05|indexing|
-|Stripes|Komodo Dragon For Fs|20140619230542/5708:Thu 19 June 2014 23:05|indexing|
-|Stripes|Beaver For Fs|20140619230542/7996:Thu 19 June 2014 23:05|indexing|
+|Stripes|Albino Mouse|20140630105705/1342:Mon 30 June 2014 10:57|indexing|
+|Stripes|Cat Ninjas|20140630105705/3791:Mon 30 June 2014 10:57|indexing|
+|Stripes|Flaming Lynx For Fs|20140630105705/4824:Mon 30 June 2014 10:57|indexing|
+|Stripes|Komodo Dragon For Fs|20140630105705/5708:Mon 30 June 2014 10:57|indexing|
+|Stripes|Beaver For Fs|20140630105705/7996:Mon 30 June 2014 10:57|indexing|
 |Stripes|Beaver For Fs|nobeaversex|value|
-|Stripes|Giant For Fs|20140619230542/4405:Thu 19 June 2014 23:05|indexing|
+|Stripes|Giant For Fs|20140630105705/4405:Mon 30 June 2014 10:57|indexing|
 |Stripes|Giant For Fs|giantheight|value|
-|Stripes|Snow Leopard For Fs|20140619230542/7249:Thu 19 June 2014 23:05|indexing|
+|Stripes|Snow Leopard For Fs|20140630105705/7249:Mon 30 June 2014 10:57|indexing|
 |Stripes|Snow Leopard For Fs|nosnowmeowsex|value|
-|Stripes|Grey Squirrel For Fs|20140619230542/1724:Thu 19 June 2014 23:05|indexing|
-|Stripes|Dragontaur For Fs|20140619230542/5120:Thu 19 June 2014 23:05|indexing|
+|Stripes|Grey Squirrel For Fs|20140630105705/1724:Mon 30 June 2014 10:57|indexing|
+|Stripes|Dragontaur For Fs|20140630105705/5120:Mon 30 June 2014 10:57|indexing|
 |Stripes|Dragontaur For Fs|dragontaurcatch|value|
-|Stripes|Vixentaur For Fs|20140619230542/5360:Thu 19 June 2014 23:05|indexing|
+|Stripes|Vixentaur For Fs|20140630105705/5360:Mon 30 June 2014 10:57|indexing|
 |Stripes|Vixentaur For Fs|vixentaurcatch|value|
-|Stripes|Dracovixentaur For Fs|20140619230542/6258:Thu 19 June 2014 23:05|indexing|
+|Stripes|Dracovixentaur For Fs|20140630105705/6258:Mon 30 June 2014 10:57|indexing|
 |Stripes|Dracovixentaur For Fs|DVtaurcatch|value|
-|Stripes|Flesh Blob For Fs|20140619230542/3265:Thu 19 June 2014 23:05|indexing|
-|Stripes|Corrupted Spawner For Fs|20140619230542/2196:Thu 19 June 2014 23:05|indexing|
+|Stripes|Flesh Blob For Fs|20140630105705/3265:Mon 30 June 2014 10:57|indexing|
+|Stripes|Corrupted Spawner For Fs|20140630105705/2196:Mon 30 June 2014 10:57|indexing|
 |Stripes|Corrupted Spawner For Fs|corrvicchange1|value|
 |Stripes|Corrupted Spawner For Fs|corrvicchange2|value|
-|Stripes|Salamander|20140619230542/1523:Thu 19 June 2014 23:05|indexing|
-|Stripes|Inflatable Vulpine For Fs|20140619230542/1578:Thu 19 June 2014 23:05|indexing|
+|Stripes|Salamander|20140630105705/1523:Mon 30 June 2014 10:57|indexing|
+|Stripes|Inflatable Vulpine For Fs|20140630105705/1578:Mon 30 June 2014 10:57|indexing|
 |Stripes|Inflatable Vulpine For Fs|last_infvulp_airhead|value|
 |Stripes|Inflatable Vulpine For Fs|infvulpstate|value|
-|Telanda Softpaw|Random German Shepherd For Fs|20140619230542/7111:Thu 19 June 2014 23:05|indexing|
+|Telanda Softpaw|Random German Shepherd For Fs|20140630105705/7111:Mon 30 June 2014 10:57|indexing|
 |Telanda Softpaw|Random German Shepherd For Fs|fuckable|value|
 |Telanda Softpaw|Random German Shepherd For Fs|gsd attack|value|
 |Telanda Softpaw|Random German Shepherd For Fs|Shepherdslut|value|
-|Anonymous|Messy Pig For Fs|20140619230542/3179:Thu 19 June 2014 23:05|indexing|
+|Anonymous|Messy Pig For Fs|20140630105705/3179:Mon 30 June 2014 10:57|indexing|
 |Anonymous|Messy Pig For Fs|messypigaltorgasm|value|
-|Stripes|Piggy|20140619230542/829:Thu 19 June 2014 23:05|indexing|
-|Nuku Valente|Elf|20140619230542/3820:Thu 19 June 2014 23:05|indexing|
+|Stripes|Piggy|20140630105705/829:Mon 30 June 2014 10:57|indexing|
+|Nuku Valente|Elf|20140630105705/3820:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Elf|elfenc|value|
 |Nuku Valente|Elf|Elfdefeat|value|
-|Stripes|Cougar|20140619230542/2269:Thu 19 June 2014 23:05|indexing|
+|Stripes|Cougar|20140630105705/2269:Mon 30 June 2014 10:57|indexing|
 |Stripes|Cougar|cougarfight|value|
-|Stripes|Megakitty For Fs|20140619230542/3167:Thu 19 June 2014 23:05|indexing|
+|Stripes|Megakitty For Fs|20140630105705/3167:Mon 30 June 2014 10:57|indexing|
 |Stripes|Megakitty For Fs|MKunleashed|value|
 |Stripes|Megakitty For Fs|MKmet|value|
 |Stripes|Megakitty For Fs|MKloss|value|
 |Stripes|Megakitty For Fs|MKwin|value|
 |Stripes|Megakitty For Fs|lastMKoutcome|value|
-|Stripes|Clockwork Fox For Fs|20140619230542/4369:Thu 19 June 2014 23:05|indexing|
+|Stripes|Clockwork Fox For Fs|20140630105705/4369:Mon 30 June 2014 10:57|indexing|
 |Stripes|Clockwork Fox For Fs|cfgmode|value|
-|Stripes|Killer Whale For Fs|20140619230542/4049:Thu 19 June 2014 23:05|indexing|
+|Stripes|Killer Whale For Fs|20140630105705/4049:Mon 30 June 2014 10:57|indexing|
 |Stripes|Killer Whale For Fs|orcadom|value|
 |Stripes|Killer Whale For Fs|orcafdom|value|
-|Stripes|Rodeo Clown For Fs|20140619230542/4189:Thu 19 June 2014 23:05|indexing|
-|Stripes|Fluffy Owl For Fs|20140619230542/2972:Thu 19 June 2014 23:05|indexing|
-|Stripes|Siren For Fs|20140619230542/4567:Thu 19 June 2014 23:05|indexing|
+|Stripes|Rodeo Clown For Fs|20140630105705/4189:Mon 30 June 2014 10:57|indexing|
+|Stripes|Fluffy Owl For Fs|20140630105705/2972:Mon 30 June 2014 10:57|indexing|
+|Stripes|Siren For Fs|20140630105705/4567:Mon 30 June 2014 10:57|indexing|
 |Stripes|Siren For Fs|charcounter|value|
 |Stripes|Siren For Fs|sirenfight|value|
-|Stripes|Werewolf Costume For Fs|20140619230542/3622:Thu 19 June 2014 23:05|indexing|
+|Stripes|Werewolf Costume For Fs|20140630105705/3622:Mon 30 June 2014 10:57|indexing|
 |Stripes|Werewolf Costume For Fs|werewolfcostumenosex|value|
-|Stripes|Hippo Strongman For Fs|20140619230542/1687:Thu 19 June 2014 23:05|indexing|
-|Stripes|Squid For Fs|20140619230542/2770:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hippo Strongman For Fs|20140630105705/1687:Mon 30 June 2014 10:57|indexing|
+|Stripes|Squid For Fs|20140630105705/2770:Mon 30 June 2014 10:57|indexing|
 |Stripes|Squid For Fs|squidcolour|value|
-|Stripes|Centaur Mare For Fs|20140619230542/1794:Thu 19 June 2014 23:05|indexing|
-|Stripes|Prairie Dog For Fs|20140619230542/1958:Thu 19 June 2014 23:05|indexing|
-|Stripes|Wildcat For Fs|20140619230542/4155:Thu 19 June 2014 23:05|indexing|
-|Blue Bishop|Goblin For Fs|20140619230542/15498:Thu 19 June 2014 23:05|indexing|
+|Stripes|Centaur Mare For Fs|20140630105705/1794:Mon 30 June 2014 10:57|indexing|
+|Stripes|Prairie Dog For Fs|20140630105705/1958:Mon 30 June 2014 10:57|indexing|
+|Stripes|Wildcat For Fs|20140630105705/4155:Mon 30 June 2014 10:57|indexing|
+|Blue Bishop|Goblin For Fs|20140630105705/15498:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Goblin For Fs|gobgender|value|
 |Blue Bishop|Goblin For Fs|gobdem|value|
-|Stripes|Junkman For Fs|20140619230542/2360:Thu 19 June 2014 23:05|indexing|
-|Stripes|Trash Coon For Fs|20140619230542/2744:Thu 19 June 2014 23:05|indexing|
+|Stripes|Junkman For Fs|20140630105705/2360:Mon 30 June 2014 10:57|indexing|
+|Stripes|Trash Coon For Fs|20140630105705/2744:Mon 30 June 2014 10:57|indexing|
 |Stripes|Trash Coon For Fs|notrashcoonsex|value|
-|Stripes|Snow Bat For Fs|20140619230542/5907:Thu 19 June 2014 23:05|indexing|
+|Stripes|Snow Bat For Fs|20140630105705/5907:Mon 30 June 2014 10:57|indexing|
 |Stripes|Snow Bat For Fs|nightcheck|value|
 |Stripes|Snow Bat For Fs|snowbatfight|value|
-|Stripes|Psycho Weasel For Fs|20140619230542/4353:Thu 19 June 2014 23:05|indexing|
+|Stripes|Psycho Weasel For Fs|20140630105705/4353:Mon 30 June 2014 10:57|indexing|
 |Stripes|Psycho Weasel For Fs|weaselcount|value|
 |Stripes|Psycho Weasel For Fs|weaselcolour|value|
-|Stripes|Incubus For Fs|20140619230542/8466:Thu 19 June 2014 23:05|indexing|
+|Stripes|Incubus For Fs|20140630105705/8466:Mon 30 June 2014 10:57|indexing|
 |Stripes|Incubus For Fs|incubusnosex|value|
-|Stripes|Bunny Jock For Fs|20140619230542/3564:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bunny Jock For Fs|20140630105705/3564:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bunny Jock For Fs|bunnyjocknosex|value|
-|Stripes|Mammoth For Fs|20140619230542/2436:Thu 19 June 2014 23:05|indexing|
-|Stripes|Black Wolf For Fs|20140619230542/824:Thu 19 June 2014 23:05|indexing|
-|Stripes|Latex Mistress For Fs|20140619230542/3069:Thu 19 June 2014 23:05|indexing|
+|Stripes|Mammoth For Fs|20140630105705/2436:Mon 30 June 2014 10:57|indexing|
+|Stripes|Black Wolf For Fs|20140630105705/824:Mon 30 June 2014 10:57|indexing|
+|Stripes|Latex Mistress For Fs|20140630105705/3069:Mon 30 June 2014 10:57|indexing|
 |Stripes|Latex Mistress For Fs|ltxmfaced|adjective|
 |Stripes|Latex Mistress For Fs|ltxmskinned|adjective|
 |Stripes|Latex Mistress For Fs|ltxmbodied|adjective|
 |Stripes|Latex Mistress For Fs|ltxmcocked|adjective|
 |Stripes|Latex Mistress For Fs|ltxmtailed|adjective|
-|Stripes|Math Teacher For Fs|20140619230542/3146:Thu 19 June 2014 23:05|indexing|
-|Stripes|Dark Elf For Fs|20140619230542/3352:Thu 19 June 2014 23:05|indexing|
-|Stripes|Automaton For Fs|20140619230542/2488:Thu 19 June 2014 23:05|indexing|
+|Stripes|Math Teacher For Fs|20140630105705/3146:Mon 30 June 2014 10:57|indexing|
+|Stripes|Dark Elf For Fs|20140630105705/3352:Mon 30 June 2014 10:57|indexing|
+|Stripes|Automaton For Fs|20140630105705/2488:Mon 30 June 2014 10:57|indexing|
 |Stripes|Automaton For Fs|silver semen|Grab Object|
 |Stripes|Automaton For Fs|autogender|value|
 |Stripes|Automaton For Fs|metalskin|value|
 |Stripes|Automaton For Fs|playermetalskin|value|
-|Stripes|Hentai Fan For Fs|20140619230542/783:Thu 19 June 2014 23:05|indexing|
-|Stripes|Quilled Tousky For Fs|20140619230542/1966:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hentai Fan For Fs|20140630105705/783:Mon 30 June 2014 10:57|indexing|
+|Stripes|Quilled Tousky For Fs|20140630105705/1966:Mon 30 June 2014 10:57|indexing|
 |Stripes|Quilled Tousky For Fs|tousky quill|Grab Object|
-|Stripes|Giraffe For Fs|20140619230542/2893:Thu 19 June 2014 23:05|indexing|
+|Stripes|Giraffe For Fs|20140630105705/2893:Mon 30 June 2014 10:57|indexing|
 |Stripes|Giraffe For Fs|nogiraffesex|value|
-|Stripes|Bird Of Paradise For Fs|20140619230542/3404:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bird Of Paradise For Fs|20140630105705/3404:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bird Of Paradise For Fs|nobirdofparadisesex|value|
 |Stripes|Bird Of Paradise For Fs|bopseen|value|
 |Stripes|Bird Of Paradise For Fs|bopdefeated|value|
@@ -2613,23 +2638,23 @@
 |Stripes|Bird Of Paradise For Fs|bopbodied|adjective|
 |Stripes|Bird Of Paradise For Fs|bopcocked|adjective|
 |Stripes|Bird Of Paradise For Fs|boptailed|adjective|
-|Stripes|Fire Elemental For Fs|20140619230542/4712:Thu 19 June 2014 23:05|indexing|
+|Stripes|Fire Elemental For Fs|20140630105705/4712:Mon 30 June 2014 10:57|indexing|
 |Stripes|Fire Elemental For Fs|fireskinned|adjective|
-|Stripes|Corota For Fs|20140619230542/2973:Thu 19 June 2014 23:05|indexing|
+|Stripes|Corota For Fs|20140630105705/2973:Mon 30 June 2014 10:57|indexing|
 |Stripes|Corota For Fs|corota venom|Grab Object|
-|Stripes|Ocelot For Fs|20140619230542/12282:Thu 19 June 2014 23:05|indexing|
+|Stripes|Ocelot For Fs|20140630105705/12282:Mon 30 June 2014 10:57|indexing|
 |Stripes|Ocelot For Fs|ocelotchoice|value|
 |Stripes|Ocelot For Fs|ocelotsize|value|
 |Stripes|Ocelot For Fs|noocelotbtsex|value|
 |Stripes|Ocelot For Fs|noocelotldsex|value|
 |Stripes|Ocelot For Fs|ocelotbodied|adjective|
-|Stripes|Blue Chaffinch For Fs|20140619230542/4721:Thu 19 June 2014 23:05|indexing|
+|Stripes|Blue Chaffinch For Fs|20140630105705/4721:Mon 30 June 2014 10:57|indexing|
 |Stripes|Blue Chaffinch For Fs|nobluechaffinchsex|value|
 |Stripes|Blue Chaffinch For Fs|bluechaffrape|value|
-|Stripes|Latex Ermine For Fs|20140619230542/3997:Thu 19 June 2014 23:05|indexing|
+|Stripes|Latex Ermine For Fs|20140630105705/3997:Mon 30 June 2014 10:57|indexing|
 |Stripes|Latex Ermine For Fs|erminecolour|value|
 |Stripes|Latex Ermine For Fs|nolatexerminesex|value|
-|Stripes|Hydra Beast For Fs|20140619230542/13720:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hydra Beast For Fs|20140630105705/13720:Mon 30 June 2014 10:57|indexing|
 |Stripes|Hydra Beast For Fs|hydraheadcount|value|
 |Stripes|Hydra Beast For Fs|hydraheadcheck1|value|
 |Stripes|Hydra Beast For Fs|hydraheadcheck2|value|
@@ -2637,47 +2662,47 @@
 |Stripes|Hydra Beast For Fs|hydraheadregrowth|value|
 |Stripes|Hydra Beast For Fs|hydramaulcount|value|
 |Stripes|Hydra Beast For Fs|hydrafaced|adjective|
-|Stripes|Red Oni For Fs|20140619230542/2385:Thu 19 June 2014 23:05|indexing|
+|Stripes|Red Oni For Fs|20140630105705/2385:Mon 30 June 2014 10:57|indexing|
 |Stripes|Red Oni For Fs|redonicocked|adjective|
 |Stripes|Red Oni For Fs|redonibodied|adjective|
-|Stripes|Elk For Fs|20140619230542/4056:Thu 19 June 2014 23:05|indexing|
+|Stripes|Elk For Fs|20140630105705/4056:Mon 30 June 2014 10:57|indexing|
 |Stripes|Elk For Fs|elk antler|Grab Object|
 |Stripes|Elk For Fs|noelksex|value|
 |Stripes|Elk For Fs|elkfaced|adjective|
-|Stripes|Voodoo Gecko For Fs|20140619230542/10339:Thu 19 June 2014 23:05|indexing|
+|Stripes|Voodoo Gecko For Fs|20140630105705/10339:Mon 30 June 2014 10:57|indexing|
 |Stripes|Voodoo Gecko For Fs|gecko cum|Grab Object|
 |Stripes|Voodoo Gecko For Fs|vgeckoanal|value|
 |Stripes|Voodoo Gecko For Fs|vgeckoloss|value|
 |Stripes|Voodoo Gecko For Fs|vgeckobeaten|value|
 |Stripes|Voodoo Gecko For Fs|vgeckoboost|value|
-|Stripes|Magic Drake|20140619230542/6549:Thu 19 June 2014 23:05|indexing|
+|Stripes|Magic Drake|20140630105705/6549:Mon 30 June 2014 10:57|indexing|
 |Stripes|Magic Drake|mdasslevel|value|
 |Stripes|Magic Drake|mdrakeloss|value|
 |Stripes|Magic Drake|mdrakebeaten|value|
 |Stripes|Magic Drake|mdrakeanal|value|
-|Stripes|Horny Doctor For Fs|20140619230542/11359:Thu 19 June 2014 23:05|indexing|
+|Stripes|Horny Doctor For Fs|20140630105705/11359:Mon 30 June 2014 10:57|indexing|
 |Stripes|Horny Doctor For Fs|hdmode|value|
 |Stripes|Horny Doctor For Fs|hdform|value|
 |Stripes|Horny Doctor For Fs|hdformname|value|
-|Stripes|Fruit Bat For Fs|20140619230542/4338:Thu 19 June 2014 23:05|indexing|
+|Stripes|Fruit Bat For Fs|20140630105705/4338:Mon 30 June 2014 10:57|indexing|
 |Stripes|Fruit Bat For Fs|frbatbeaten|value|
-|Wahn|Elven Hunter For Fs|20140619230542/5545:Thu 19 June 2014 23:05|indexing|
+|Wahn|Elven Hunter For Fs|20140630105705/5545:Mon 30 June 2014 10:57|indexing|
 |Wahn|Elven Hunter For Fs|lembas bread|Grab Object|
-|Wahn|Human Infections|20140619230542/1529:Thu 19 June 2014 23:05|indexing|
-|Kaleem Mcintyre|Reptaur|20140619230542/10548:Thu 19 June 2014 23:05|indexing|
-|Kaleem Mcintyre|Pegasus|20140619230542/7930:Thu 19 June 2014 23:05|indexing|
+|Wahn|Human Infections|20140630105705/1529:Mon 30 June 2014 10:57|indexing|
+|Kaleem Mcintyre|Reptaur|20140630105705/10548:Mon 30 June 2014 10:57|indexing|
+|Kaleem Mcintyre|Pegasus|20140630105705/7930:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Pegasus|Pegasus Quill|Grab Object|
-|Kaleem Mcintyre|Gargoyle|20140619230542/4667:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Gargoyle|20140630105705/4667:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Gargoyle|firstgarg|value|
-|Kaleem Mcintyre|Manticore|20140619230542/8693:Thu 19 June 2014 23:05|indexing|
-|Kaleem Mcintyre|Minotaur|20140619230542/6495:Thu 19 June 2014 23:05|indexing|
-|Kaleem Mcintyre|Dalmatian|20140619230542/4017:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Manticore|20140630105705/8693:Mon 30 June 2014 10:57|indexing|
+|Kaleem Mcintyre|Minotaur|20140630105705/6495:Mon 30 June 2014 10:57|indexing|
+|Kaleem Mcintyre|Dalmatian|20140630105705/4017:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Dalmatian|dalskinned|adjective|
-|Kaleem Mcintyre|Behemoth|20140619230542/9705:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Behemoth|20140630105705/9705:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Behemoth|behemoth horn|Grab Object|
-|Mcrabid|Goat Janitor|20140619230542/3531:Thu 19 June 2014 23:05|indexing|
-|Darthan|Coyote|20140619230542/1091:Thu 19 June 2014 23:05|indexing|
-|Agentlemancalledb|Mushroom Men|20140619230542/3303:Thu 19 June 2014 23:05|indexing|
+|Mcrabid|Goat Janitor|20140630105705/3531:Mon 30 June 2014 10:57|indexing|
+|Darthan|Coyote|20140630105705/1091:Mon 30 June 2014 10:57|indexing|
+|Agentlemancalledb|Mushroom Men|20140630105705/3303:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Mushroom Men|MMC|value|
 |Agentlemancalledb|Mushroom Men|MMP|value|
 |Agentlemancalledb|Mushroom Men|SporeCloud|value|
@@ -2686,45 +2711,45 @@
 |Agentlemancalledb|Mushroom Men|mushroombodied|adjective|
 |Agentlemancalledb|Mushroom Men|mushroomcocked|adjective|
 |Agentlemancalledb|Mushroom Men|mushroomtailed|adjective|
-|Agentlemancalledb|Retriever|20140619230542/4556:Thu 19 June 2014 23:05|indexing|
-|Agentlemancalledb|Cum Girl|20140619230542/2048:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Retriever|20140630105705/4556:Mon 30 June 2014 10:57|indexing|
+|Agentlemancalledb|Cum Girl|20140630105705/2048:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Cum Girl|cumgirlfed|value|
-|Agentlemancalledb|Francois Infections|20140619230542/1791:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Francois Infections|20140630105705/1791:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Francois Infections|Cheesecakemode|value|
 |Agentlemancalledb|Francois Infections|Cheesecakeskinned|adjective|
 |Agentlemancalledb|Francois Infections|Cheesecakebodied|adjective|
-|Agentlemancalledb|Pink Poodle|20140619230542/4452:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Pink Poodle|20140630105705/4452:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Pink Poodle|HeatedPoodle|value|
 |Agentlemancalledb|Pink Poodle|nopoodlesex|value|
 |Agentlemancalledb|Pink Poodle|poodleapproved|value|
-|Stripes|Doberman For Fs|20140619230542/16640:Thu 19 June 2014 23:05|indexing|
+|Stripes|Doberman For Fs|20140630105705/16640:Mon 30 June 2014 10:57|indexing|
 |Stripes|Doberman For Fs|dobieresist|value|
 |Stripes|Doberman For Fs|dobielibido|value|
-|Stripes|Sugar Ferret For Fs|20140619230542/3176:Thu 19 June 2014 23:05|indexing|
+|Stripes|Sugar Ferret For Fs|20140630105705/3176:Mon 30 June 2014 10:57|indexing|
 |Stripes|Sugar Ferret For Fs|sugferretjoke|value|
-|Stripeguy|Badger|20140619230542/3082:Thu 19 June 2014 23:05|indexing|
-|Stripeguy|Opossum Sailor|20140619230542/2901:Thu 19 June 2014 23:05|indexing|
-|Stripeguy|Tenrec|20140619230542/7314:Thu 19 June 2014 23:05|indexing|
-|Stripeguy|Yuppie Mink|20140619230542/4481:Thu 19 June 2014 23:05|indexing|
+|Stripeguy|Badger|20140630105705/3082:Mon 30 June 2014 10:57|indexing|
+|Stripeguy|Opossum Sailor|20140630105705/2901:Mon 30 June 2014 10:57|indexing|
+|Stripeguy|Tenrec|20140630105705/7314:Mon 30 June 2014 10:57|indexing|
+|Stripeguy|Yuppie Mink|20140630105705/4481:Mon 30 June 2014 10:57|indexing|
 |Stripeguy|Yuppie Mink|ymgmode|value|
-|Therecipe|Caveman|20140619230542/2542:Thu 19 June 2014 23:05|indexing|
-|Wahn|Seraphim|20140619230542/404:Thu 19 June 2014 23:05|indexing|
-|Wahn|Cowboy Cuntboy|20140619230542/1968:Thu 19 June 2014 23:05|indexing|
+|Therecipe|Caveman|20140630105705/2542:Mon 30 June 2014 10:57|indexing|
+|Wahn|Seraphim|20140630105705/404:Mon 30 June 2014 10:57|indexing|
+|Wahn|Cowboy Cuntboy|20140630105705/1968:Mon 30 June 2014 10:57|indexing|
 |Wahn|Cowboy Cuntboy|cowboy milk|Grab Object|
-|Wahn|Thought Eater|20140619230542/8367:Thu 19 June 2014 23:05|indexing|
+|Wahn|Thought Eater|20140630105705/8367:Mon 30 June 2014 10:57|indexing|
 |Wahn|Thought Eater|tentacle tip|Grab Object|
-|Blaydrex|Batcubus For Fs|20140619230542/2766:Thu 19 June 2014 23:05|indexing|
+|Blaydrex|Batcubus For Fs|20140630105705/2766:Mon 30 June 2014 10:57|indexing|
 |Blaydrex|Batcubus For Fs|batcubus milk|Grab Object|
-|Wahn|Horse-Hung Nerd|20140619230542/5513:Thu 19 June 2014 23:05|indexing|
+|Wahn|Horse-Hung Nerd|20140630105705/5513:Mon 30 June 2014 10:57|indexing|
 |Wahn|Horse-Hung Nerd|NerdMeetings|value|
-|Ursaomega|Grizzly Bear|20140619230542/4339:Thu 19 June 2014 23:05|indexing|
-|Ursaomega|Impala|20140619230542/4841:Thu 19 June 2014 23:05|indexing|
+|Ursaomega|Grizzly Bear|20140630105705/4339:Mon 30 June 2014 10:57|indexing|
+|Ursaomega|Impala|20140630105705/4841:Mon 30 June 2014 10:57|indexing|
 |Ursaomega|Impala|impalamode|value|
-|Ursaomega|Feral Gryphon|20140619230542/2633:Thu 19 June 2014 23:05|indexing|
-|Ursaomega|Shadow Beast|20140619230542/5601:Thu 19 June 2014 23:05|indexing|
+|Ursaomega|Feral Gryphon|20140630105705/2633:Mon 30 June 2014 10:57|indexing|
+|Ursaomega|Shadow Beast|20140630105705/5601:Mon 30 June 2014 10:57|indexing|
 |Ursaomega|Shadow Beast|Hunted Survivor|situation|
 |Ursaomega|Shadow Beast|ShadowBeastEventState|value|
-|Blue Bishop|Velos|20140619230542/16658:Thu 19 June 2014 23:05|indexing|
+|Blue Bishop|Velos|20140630105705/16658:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Velos|Strange Serpent|situation|
 |Blue Bishop|Velos|Velos|person|
 |Blue Bishop|Velos|Doctor Moffatt|person|
@@ -2756,7 +2781,7 @@
 |Blue Bishop|Velos|vmusings|property|
 |Blue Bishop|Velos|vmusedone|property|
 |Blue Bishop|Velos|mused|property|
-|Blue Bishop|Doran|20140619230542/59181:Thu 19 June 2014 23:05|indexing|
+|Blue Bishop|Doran|20140630105705/59181:Mon 30 June 2014 10:57|indexing|
 |Blue Bishop|Doran|Rocky Outcropping|room|
 |Blue Bishop|Doran|Outcropping Exit|door|
 |Blue Bishop|Doran|Doran|man|
@@ -2797,7 +2822,7 @@
 |Blue Bishop|Doran|dorreq|action|
 |Blue Bishop|Doran|dorrim|action|
 |Blue Bishop|Doran|dorcus|action|
-|Hiccup|Stuck Dragon|20140619230542/21942:Thu 19 June 2014 23:05|indexing|
+|Hiccup|Stuck Dragon|20140630105705/21942:Mon 30 June 2014 10:57|indexing|
 |Hiccup|Stuck Dragon|Find Building|situation|
 |Hiccup|Stuck Dragon|Isolated Street|room|
 |Hiccup|Stuck Dragon|Old Building|room|
@@ -2813,15 +2838,15 @@
 |Hiccup|Stuck Dragon|dragontype|value|
 |Hiccup|Stuck Dragon|DragonFreeing|action|
 |Hiccup|Stuck Dragon|DragonHatching|action|
-|Stripes|Drmoffatt|20140619230542/17405:Thu 19 June 2014 23:05|indexing|
+|Stripes|Drmoffatt|20140630105705/17405:Mon 30 June 2014 10:57|indexing|
 |Stripes|Drmoffatt|Another Doctor|situation|
 |Stripes|Drmoffatt|Psych Department|room|
 |Stripes|Drmoffatt|wrcurseMoffatt|value|
-|Stripes|Drutah|20140619230542/6800:Thu 19 June 2014 23:05|indexing|
+|Stripes|Drutah|20140630105705/6800:Mon 30 June 2014 10:57|indexing|
 |Stripes|Drutah|Paleontology Office|room|
 |Stripes|Drutah|Doctor Utah|person|
 |Stripes|Drutah|drutah_msg1|value|
-|Stripes|Rodandronda|20140619230542/12136:Thu 19 June 2014 23:05|indexing|
+|Stripes|Rodandronda|20140630105705/12136:Mon 30 June 2014 10:57|indexing|
 |Stripes|Rodandronda|Rod Mallrat|person|
 |Stripes|Rodandronda|Ronda Mallrat|person|
 |Stripes|Rodandronda|lizard juice|Grab Object|
@@ -2829,15 +2854,16 @@
 |Stripes|Rodandronda|artleopardfight|value|
 |Stripes|Rodandronda|artattempt|value|
 |Stripes|Rodandronda|rondafight|value|
-|Stripes|Lucy|20140619230542/7827:Thu 19 June 2014 23:05|indexing|
+|Stripes|Lucy|20140630105705/7827:Mon 30 June 2014 10:57|indexing|
 |Stripes|Lucy|Lucy|woman|
 |Stripes|Lucy|Memories of the Mall|situation|
-|Stripes|Larissa For Fs|20140619230542/21192:Thu 19 June 2014 23:05|indexing|
+|Stripes|Larissa For Fs|20140630105705/21192:Mon 30 June 2014 10:57|indexing|
 |Stripes|Larissa For Fs|Larissa|woman|
 |Stripes|Larissa For Fs|zephyrtask|value|
 |Stripes|Larissa For Fs|zephyrpests|value|
 |Stripes|Larissa For Fs|lar_tfcost|value|
 |Stripes|Larissa For Fs|Larissatfing|action|
+|Stripes|Larissa For Fs|Larissatesting|action|
 |Stripes|Larissa For Fs|tailed|property|
 |Stripes|Larissa For Fs|winged|property|
 |Stripes|Larissa For Fs|infname|property|
@@ -2862,9 +2888,9 @@
 |Stripes|Larissa For Fs|possible_forms_herm|property|
 |Stripes|Larissa For Fs|possible_forms_hellspawn|property|
 |Stripes|Larissa For Fs|possible_forms_humorous|property|
-|Stripes|Matriarch Npc|20140619230542/5809:Thu 19 June 2014 23:05|indexing|
+|Stripes|Matriarch Npc|20140630105705/5809:Mon 30 June 2014 10:57|indexing|
 |Stripes|Matriarch Npc|Matriarch|person|
-|Nuku Valente|Tanuki|20140619230542/2084:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Tanuki|20140630105705/2084:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Tanuki|Shrine|room|
 |Nuku Valente|Tanuki|donation box|thing|
 |Nuku Valente|Tanuki|hammer|thing|
@@ -2880,7 +2906,7 @@
 |Nuku Valente|Tanuki|breastgrowing|action|
 |Nuku Valente|Tanuki|breastshrinking|action|
 |Nuku Valente|Tanuki|Demand|property|
-|Nuku Valente|Mouse Taur|20140619230542/6479:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Mouse Taur|20140630105705/6479:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Mouse Taur|Mouse Taur|situation|
 |Nuku Valente|Mouse Taur|Find Porn Store|situation|
 |Nuku Valente|Mouse Taur|mtrp|value|
@@ -2890,13 +2916,13 @@
 |Nuku Valente|Mouse Taur|lisaartemiscount1|value|
 |Nuku Valente|Mouse Taur|lisaartemiscount2|value|
 |Nuku Valente|Mouse Taur|mousefucking|action|
-|Nuku Valente|Deer|20140619230542/6694:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Deer|20140630105705/6694:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Deer|Susan|person|
 |Nuku Valente|Deer|unusual creature|situation|
 |Nuku Valente|Deer|deer Den|room|
 |Nuku Valente|Deer|deerconsent|value|
 |Nuku Valente|Deer|deerhappy|value|
-|Kaleem Mcintyre|Informant|20140619230542/5140:Thu 19 June 2014 23:05|indexing|
+|Kaleem Mcintyre|Informant|20140630105705/5140:Mon 30 June 2014 10:57|indexing|
 |Kaleem Mcintyre|Informant|Informant|situation|
 |Kaleem Mcintyre|Informant|Agency|room|
 |Kaleem Mcintyre|Informant|Homaru|man|
@@ -2909,16 +2935,16 @@
 |Kaleem Mcintyre|Informant|Homarusearching|value|
 |Kaleem Mcintyre|Informant|Delaymilitary|action|
 |Kaleem Mcintyre|Informant|Homarusearching|action|
-|Verath|Lance|20140619230542/586:Thu 19 June 2014 23:05|indexing|
+|Verath|Lance|20140630105705/586:Mon 30 June 2014 10:57|indexing|
 |Verath|Lance|Lance|man|
 |Verath|Lance|Lancetalk|value|
-|Verath|Palomino|20140619230542/2743:Thu 19 June 2014 23:05|indexing|
+|Verath|Palomino|20140630105705/2743:Mon 30 June 2014 10:57|indexing|
 |Verath|Palomino|Palomino|room|
 |Verath|Palomino|Palomino Exit|door|
-|Verath|Tristian|20140619230542/6849:Thu 19 June 2014 23:05|indexing|
+|Verath|Tristian|20140630105705/6849:Mon 30 June 2014 10:57|indexing|
 |Verath|Tristian|Tristian|man|
 |Verath|Tristian|Tristbrother|situation|
-|Sarokcat N Verath|Fancy|20140619230542/12044:Thu 19 June 2014 23:05|indexing|
+|Sarokcat N Verath|Fancy|20140630105705/12044:Mon 30 June 2014 10:57|indexing|
 |Sarokcat N Verath|Fancy|Nightmare Vial|Grab Object|
 |Sarokcat N Verath|Fancy|Fancytalk|value|
 |Sarokcat N Verath|Fancy|Fancyaroused|value|
@@ -2928,13 +2954,13 @@
 |Sarokcat N Verath|Fancy|Nightmareslavery|value|
 |Sarokcat N Verath|Fancy|Nightmaremastery|value|
 |Sarokcat N Verath|Fancy|nightmaretf|value|
-|Sarokcat N Verath|Daisy|20140619230542/2602:Thu 19 June 2014 23:05|indexing|
+|Sarokcat N Verath|Daisy|20140630105705/2602:Mon 30 June 2014 10:57|indexing|
 |Sarokcat N Verath|Daisy|Daisytalk|value|
 |Sarokcat N Verath|Daisy|Daisyaroused|value|
 |Sarokcat N Verath|Daisy|Daisyquest|value|
 |Sarokcat N Verath|Daisy|LastDaisyfucked|value|
 |Sarokcat N Verath|Daisy|Daisyfucked|value|
-|Sarokcat N Verath|Onyx|20140619230542/25994:Thu 19 June 2014 23:05|indexing|
+|Sarokcat N Verath|Onyx|20140630105705/25994:Mon 30 June 2014 10:57|indexing|
 |Sarokcat N Verath|Onyx|onyxdma|value|
 |Sarokcat N Verath|Onyx|onyxdmc|value|
 |Sarokcat N Verath|Onyx|onyxdmra|value|
@@ -2942,11 +2968,11 @@
 |Sarokcat N Verath|Onyx|Onyxmareslut|value|
 |Sarokcat N Verath|Onyx|Onyxboislut|value|
 |Sarokcat N Verath|Onyx|femonyxq|value|
-|Sarokcat|Brian|20140619230542/4944:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Brian|20140630105705/4944:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Brian|Briantalk|value|
 |Sarokcat|Brian|LastBrianfucked|value|
 |Sarokcat|Brian|Brianfucked|value|
-|Sarokcat|Diego|20140619230542/8634:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Diego|20140630105705/8634:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Diego|Diegotalk|value|
 |Sarokcat|Diego|Coyotetricks|value|
 |Sarokcat|Diego|Diegochanged|value|
@@ -2956,7 +2982,7 @@
 |Sarokcat|Diego|LastDiegofucked|value|
 |Sarokcat|Diego|Diegofucked|value|
 |Sarokcat|Diego|Diegotricking|action|
-|Sarokcat|Timothy|20140619230542/17215:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Timothy|20140630105705/17215:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Timothy|Gryphon nest|room|
 |Sarokcat|Timothy|Timothy|man|
 |Sarokcat|Timothy|Timothytalk|value|
@@ -2966,7 +2992,7 @@
 |Sarokcat|Timothy|LastTimothyfucked|value|
 |Sarokcat|Timothy|Timothyfucked|value|
 |Sarokcat|Timothy|Timothymilking|action|
-|Sarokcat&hellerhound|Sarah|20140619230542/12660:Thu 19 June 2014 23:05|indexing|
+|Sarokcat&hellerhound|Sarah|20140630105705/12660:Mon 30 June 2014 10:57|indexing|
 |Sarokcat&hellerhound|Sarah|Husky Pack|situation|
 |Sarokcat&hellerhound|Sarah|Medkit Parts|situation|
 |Sarokcat&hellerhound|Sarah|Pet Shop|situation|
@@ -2978,7 +3004,7 @@
 |Sarokcat&hellerhound|Sarah|lastsarahfucked|value|
 |Sarokcat&hellerhound|Sarah|sarahpregnant|value|
 |Sarokcat&hellerhound|Sarah|Sarahpups|value|
-|Sarokcat|Nermine|20140619230542/62089:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Nermine|20140630105705/62089:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Nermine|Mysterious Shop|room|
 |Sarokcat|Nermine|Mysterious Shop entrance|door|
 |Sarokcat|Nermine|Bargain Bin|man|
@@ -3020,23 +3046,24 @@
 |Sarokcat|Nermine|testnermine|action|
 |Sarokcat|Nermine|nerminehelping|action|
 |Sarokcat|Nermine|bargainhunting|action|
-|Sarokcat|Lindsey|20140619230542/9479:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Lindsey|20140630105705/9479:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Lindsey|Lindsey|man|
 |Sarokcat|Lindsey|Lindseytalk|value|
 |Sarokcat|Lindsey|Lindseyaroused|value|
 |Sarokcat|Lindsey|Lindseyfound|value|
 |Sarokcat|Lindsey|LastLindseyfucked|value|
 |Sarokcat|Lindsey|Lindseyfucked|value|
-|Sarokcat|Angie|20140619230542/22425:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Angie|20140630105705/31972:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Angie|AngieTrapped|situation|
 |Sarokcat|Angie|catnip|Grab Object|
 |Sarokcat|Angie|Zoo Giftshop|room|
+|Sarokcat|Angie|feline porn|Grab Object|
 |Sarokcat|Angie|Angie|woman|
 |Sarokcat|Angie|AngieHappy|value|
 |Sarokcat|Angie|AngieTalk|value|
 |Sarokcat|Angie|AngieAroused|value|
 |Sarokcat|Angie|LastAngieLearned|value|
-|Sarokcat|Midnight|20140619230542/6927:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Midnight|20140630105705/10369:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Midnight|Midnight|man|
 |Sarokcat|Midnight|FindingMidnight|situation|
 |Sarokcat|Midnight|Lastmidnightmimiced|value|
@@ -3044,7 +3071,7 @@
 |Sarokcat|Midnight|LastMidnightfucked|value|
 |Sarokcat|Midnight|midnightsighted|value|
 |Sarokcat|Midnight|Midnightmimicking|action|
-|Sarokcat|Harold|20140619230542/13810:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Harold|20140630105705/13810:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Harold|Drink bar|man|
 |Sarokcat|Harold|Haroldtalk|value|
 |Sarokcat|Harold|Haroldaroused|value|
@@ -3067,7 +3094,7 @@
 |Sarokcat|Harold|Rumdrinking|action|
 |Sarokcat|Harold|Vodkadrinking|action|
 |Sarokcat|Harold|Tequiladrinking|action|
-|Sarokcat|Kara|20140619230542/9336:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Kara|20140630105705/9336:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Kara|Kara|woman|
 |Sarokcat|Kara|Karatalk|value|
 |Sarokcat|Kara|LastKarafucked|value|
@@ -3080,7 +3107,7 @@
 |Sarokcat|Kara|piercesave|value|
 |Sarokcat|Kara|Tattooplayer|action|
 |Sarokcat|Kara|Pierceplayer|action|
-|Sarokcat|Janice|20140619230542/7843:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Janice|20140630105705/7843:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Janice|Private club room|room|
 |Sarokcat|Janice|Janice|woman|
 |Sarokcat|Janice|Janice's blouse|Grab Object|
@@ -3089,7 +3116,7 @@
 |Sarokcat|Janice|Janicequest|value|
 |Sarokcat|Janice|Lastvixenposing|value|
 |Sarokcat|Janice|Vixenposing|action|
-|Stripes|Kristen|20140619230542/20934:Thu 19 June 2014 23:05|indexing|
+|Stripes|Kristen|20140630105705/20934:Mon 30 June 2014 10:57|indexing|
 |Stripes|Kristen|FindingKristen|situation|
 |Stripes|Kristen|Kristen's Hideout|room|
 |Stripes|Kristen|Kristen|woman|
@@ -3099,7 +3126,7 @@
 |Stripes|Kristen|kristenmsg4|value|
 |Stripes|Kristen|kristenmsg5|value|
 |Stripes|Kristen|kristentf3fuck|value|
-|Nuku Valente|Alex|20140619230542/11376:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Alex|20140630105705/11376:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Alex|Alex's Condo|room|
 |Nuku Valente|Alex|Meet Alex|situation|
 |Nuku Valente|Alex|Find Lorenda|situation|
@@ -3112,13 +3139,13 @@
 |Nuku Valente|Alex|gettinglee|value|
 |Nuku Valente|Alex|Lisacheat|value|
 |Nuku Valente|Alex|alextalk|property|
-|Kaxin|Hadiya|20140619230542/5980:Thu 19 June 2014 23:05|indexing|
+|Kaxin|Hadiya|20140630105705/5980:Mon 30 June 2014 10:57|indexing|
 |Kaxin|Hadiya|Annoyed Hyena|situation|
 |Kaxin|Hadiya|Hyena Shack|room|
 |Kaxin|Hadiya|Hadiya|person|
 |Kaxin|Hadiya|hadiyafucked|value|
 |Kaxin|Hadiya|hadiyahyg|value|
-|Nuku Valente|Desperate Bunny|20140619230542/9553:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Desperate Bunny|20140630105705/9553:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Desperate Bunny|Needy Rabbit Girl|situation|
 |Nuku Valente|Desperate Bunny|Rabbit Den|room|
 |Nuku Valente|Desperate Bunny|NGRP|value|
@@ -3126,7 +3153,7 @@
 |Nuku Valente|Desperate Bunny|rabbitmulticock|value|
 |Nuku Valente|Desperate Bunny|rabbitfucked|value|
 |Nuku Valente|Desperate Bunny|rabbitsister|value|
-|Nuku Valente|Hyper Squirrel|20140619230542/10269:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Hyper Squirrel|20140630105705/10269:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Hyper Squirrel|Hyper Squirrel Girl|situation|
 |Nuku Valente|Hyper Squirrel|Squirrel Den|room|
 |Nuku Valente|Hyper Squirrel|Snow|person|
@@ -3140,7 +3167,7 @@
 |Nuku Valente|Hyper Squirrel|improved|adjective|
 |Nuku Valente|Hyper Squirrel|smither|property|
 |Nuku Valente|Hyper Squirrel|improved|property|
-|Hiccup|Hungry Boar Man|20140619230542/14083:Thu 19 June 2014 23:05|indexing|
+|Hiccup|Hungry Boar Man|20140630105705/14083:Mon 30 June 2014 10:57|indexing|
 |Hiccup|Hungry Boar Man|Hungry Piggy|situation|
 |Hiccup|Hungry Boar Man|Pig Pen|room|
 |Hiccup|Hungry Boar Man|HBMR|value|
@@ -3150,27 +3177,27 @@
 |Hiccup|Hungry Boar Man|lastPhilipfucked|value|
 |Hiccup|Hungry Boar Man|Pigfeeding|action|
 |Hiccup|Hungry Boar Man|Mudwrestling|action|
-|Nuku Valente|Orthas|20140619230542/10727:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Orthas|20140630105705/10727:Mon 30 June 2014 10:57|indexing|
 |Nuku Valente|Orthas|Orthas|person|
 |Nuku Valente|Orthas|Orthas's House|situation|
 |Nuku Valente|Orthas|footlocker|Grab Object|
 |Nuku Valente|Orthas|crossbow|armament|
-|Stripes|Sven|20140619230542/28584:Thu 19 June 2014 23:05|indexing|
+|Stripes|Sven|20140630105705/28584:Mon 30 June 2014 10:57|indexing|
 |Stripes|Sven|Hidden Kitty|situation|
 |Stripes|Sven|Sven's Place|room|
 |Stripes|Sven|Svetlana|woman|
 |Stripes|Sven|lastSvenfucked|value|
 |Stripes|Sven|lastSvendrink|value|
-|Stripes|Frank|20140619230542/5697:Thu 19 June 2014 23:05|indexing|
+|Stripes|Frank|20140630105705/5697:Mon 30 June 2014 10:57|indexing|
 |Stripes|Frank|Mephitness|situation|
 |Stripes|Frank|Comic Shop|room|
 |Stripes|Frank|lastFrankfucked|value|
 |Stripes|Frank|franksex|value|
 |Stripes|Frank|frankmalesex|value|
-|Stripes|Sally|20140619230542/3283:Thu 19 June 2014 23:05|indexing|
+|Stripes|Sally|20140630105705/3283:Mon 30 June 2014 10:57|indexing|
 |Stripes|Sally|Sally|woman|
 |Stripes|Sally|lastSallyfucked|value|
-|Stripes|Alexandra|20140619230542/37543:Thu 19 June 2014 23:05|indexing|
+|Stripes|Alexandra|20140630105705/37543:Mon 30 June 2014 10:57|indexing|
 |Stripes|Alexandra|Alexandra|person|
 |Stripes|Alexandra|Police Station|room|
 |Stripes|Alexandra|PSdoor|door|
@@ -3232,14 +3259,14 @@
 |Stripes|Alexandra|lockered|adjective|
 |Stripes|Alexandra|policed|property|
 |Stripes|Alexandra|lockered|property|
-|Stripes|Jimmy|20140619230542/3513:Thu 19 June 2014 23:05|indexing|
+|Stripes|Jimmy|20140630105705/3513:Mon 30 June 2014 10:57|indexing|
 |Stripes|Jimmy|Automaton Activity|situation|
 |Stripes|Jimmy|Jimmy|man|
-|Stripes|Paula|20140619230542/4616:Thu 19 June 2014 23:05|indexing|
+|Stripes|Paula|20140630105705/4616:Mon 30 June 2014 10:57|indexing|
 |Stripes|Paula|Paula|woman|
 |Stripes|Paula|lastPaulahealing|value|
 |Stripes|Paula|paulahealing|action|
-|Stripes|Icarus|20140619230542/24693:Thu 19 June 2014 23:05|indexing|
+|Stripes|Icarus|20140630105705/24693:Mon 30 June 2014 10:57|indexing|
 |Stripes|Icarus|Icarus|person|
 |Stripes|Icarus|icarusscene1|value|
 |Stripes|Icarus|icarusscene2|value|
@@ -3247,32 +3274,32 @@
 |Stripes|Icarus|ttIcarus|value|
 |Stripes|Icarus|icarussex6_variant|value|
 |Stripes|Icarus|icarus_cumstuff|value|
-|Stripes|Hayato|20140619230542/16605:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hayato|20140630105705/16605:Mon 30 June 2014 10:57|indexing|
 |Stripes|Hayato|Garage Demon|situation|
 |Stripes|Hayato|Disused Garage|room|
 |Stripes|Hayato|Hayato|man|
 |Stripes|Hayato|Noh Mask|situation|
 |Stripes|Hayato|Oni Lair|situation|
-|Stripes|Zigor|20140619230542/12609:Thu 19 June 2014 23:05|indexing|
+|Stripes|Zigor|20140630105705/12609:Mon 30 June 2014 10:57|indexing|
 |Stripes|Zigor|Leather Wolves|situation|
 |Stripes|Zigor|Cuero Lobo|room|
 |Stripes|Zigor|Zigor|man|
-|Stripes|Yolanda|20140619230542/3854:Thu 19 June 2014 23:05|indexing|
+|Stripes|Yolanda|20140630105705/3854:Mon 30 June 2014 10:57|indexing|
 |Stripes|Yolanda|Raven Nest|room|
 |Stripes|Yolanda|Yolanda|woman|
 |Stripes|Yolanda|yolandaqytat|value|
 |Stripes|Yolanda|yolandatreasure|value|
 |Stripes|Yolanda|jbfound|value|
-|Stripes|Fang|20140619230542/20149:Thu 19 June 2014 23:05|indexing|
+|Stripes|Fang|20140630105705/20149:Mon 30 June 2014 10:57|indexing|
 |Stripes|Fang|lastFangfucked|value|
 |Stripes|Fang|FangWS|value|
 |Stripes|Fang|FangToy|value|
 |Stripes|Fang|ffrivalry|value|
-|Stripes|Blanche|20140619230542/4579:Thu 19 June 2014 23:05|indexing|
+|Stripes|Blanche|20140630105705/4579:Mon 30 June 2014 10:57|indexing|
 |Stripes|Blanche|Wolfrape|situation|
 |Stripes|Blanche|Office Den|room|
 |Stripes|Blanche|Blanche|woman|
-|Stripes|Joanna|20140619230542/16610:Thu 19 June 2014 23:05|indexing|
+|Stripes|Joanna|20140630105705/16610:Mon 30 June 2014 10:57|indexing|
 |Stripes|Joanna|Overrun Garden|situation|
 |Stripes|Joanna|Flower Garden|room|
 |Stripes|Joanna|Skyscrapers2|door|
@@ -3290,7 +3317,7 @@
 |Stripes|Joanna|plantbodied|adjective|
 |Stripes|Joanna|plantcocked|adjective|
 |Stripes|Joanna|planttailed|adjective|
-|Stripes|Solstice|20140619230542/8408:Thu 19 June 2014 23:05|indexing|
+|Stripes|Solstice|20140630105705/8408:Mon 30 June 2014 10:57|indexing|
 |Stripes|Solstice|Adventurer|situation|
 |Stripes|Solstice|Onyx Crow|situation|
 |Stripes|Solstice|Crow Artifact|Grab Object|
@@ -3306,7 +3333,7 @@
 |Stripes|Solstice|vgtailed|adjective|
 |Stripes|Solstice|partvg|adjective|
 |Stripes|Solstice|fullyvg|adjective|
-|Stripes|Leonard|20140619230542/34060:Thu 19 June 2014 23:05|indexing|
+|Stripes|Leonard|20140630105705/34060:Mon 30 June 2014 10:57|indexing|
 |Stripes|Leonard|Feline Friend|situation|
 |Stripes|Leonard|Lion's Den|room|
 |Stripes|Leonard|Music Store|situation|
@@ -3323,22 +3350,23 @@
 |Stripes|Leonard|felinebodied|adjective|
 |Stripes|Leonard|felinecocked|adjective|
 |Stripes|Leonard|felinetailed|adjective|
-|Stripes|Athanasia|20140619230542/12738:Thu 19 June 2014 23:05|indexing|
+|Stripes|Athanasia|20140630105705/12738:Mon 30 June 2014 10:57|indexing|
 |Stripes|Athanasia|Captured Bird|situation|
 |Stripes|Athanasia|FireAndIce|situation|
 |Stripes|Athanasia|phoenix egg|Grab Object|
 |Stripes|Athanasia|Volcanic Cave|room|
 |Stripes|Athanasia|shownermine|property|
-|Stripes|Newt|20140619230542/5271:Thu 19 June 2014 23:05|indexing|
+|Stripes|Newt|20140630105705/5271:Mon 30 June 2014 10:57|indexing|
 |Stripes|Newt|Newt|woman|
-|Stripes|Andrew|20140619230542/9517:Thu 19 June 2014 23:05|indexing|
+|Stripes|Andrew|20140630105705/9517:Mon 30 June 2014 10:57|indexing|
 |Stripes|Andrew|Private Booths|room|
 |Stripes|Andrew|Andrew|man|
 |Stripes|Andrew|randomcolourlist|value|
-|Stripes|Brooke|20140619230542/5292:Thu 19 June 2014 23:05|indexing|
+|Stripes|Andrew|andrewtesting|action|
+|Stripes|Brooke|20140630105705/5292:Mon 30 June 2014 10:57|indexing|
 |Stripes|Brooke|Brooke|man|
 |Stripes|Brooke|brookeandrewtalk|value|
-|Stripes|Sam For Fs|20140619230542/32861:Thu 19 June 2014 23:05|indexing|
+|Stripes|Sam For Fs|20140630105705/32861:Mon 30 June 2014 10:57|indexing|
 |Stripes|Sam For Fs|Another Researcher|situation|
 |Stripes|Sam For Fs|Mini-Lab|room|
 |Stripes|Sam For Fs|Sam|man|
@@ -3346,27 +3374,27 @@
 |Stripes|Sam For Fs|minilabfight|value|
 |Stripes|Sam For Fs|featherready|value|
 |Stripes|Sam For Fs|monstermemory|value|
-|Stripes|Mack For Fs|20140619230542/8222:Thu 19 June 2014 23:05|indexing|
+|Stripes|Mack For Fs|20140630105705/8222:Mon 30 June 2014 10:57|indexing|
 |Stripes|Mack For Fs|Finding Mack|situation|
 |Stripes|Mack For Fs|Nutso Factory|room|
 |Stripes|Mack For Fs|Macadamia|man|
 |Stripes|Mack For Fs|roasted nuts|Grab Object|
-|Stripes|Meredith|20140619230542/22011:Thu 19 June 2014 23:05|indexing|
+|Stripes|Meredith|20140630105705/22011:Mon 30 June 2014 10:57|indexing|
 |Stripes|Meredith|Meredith|woman|
 |Stripes|Meredith|meredith_coleen_fun1|value|
 |Stripes|Meredith|meredith_anal|value|
 |Stripes|Meredith|meredith_vanessa_fun1|value|
 |Stripes|Meredith|meredith_vanessa_fun2|value|
-|Stripes|Stella|20140619230542/3936:Thu 19 June 2014 23:05|indexing|
+|Stripes|Stella|20140630105705/3936:Mon 30 June 2014 10:57|indexing|
 |Stripes|Stella|Eager Dal|situation|
 |Stripes|Stella|Stella|woman|
 |Stripes|Stella|StellaNPCInt|value|
 |Stripes|Stella|laststellamove|value|
 |Stripes|Stella|stellamoving|action|
-|Stripes|Bubble|20140619230542/7339:Thu 19 June 2014 23:05|indexing|
+|Stripes|Bubble|20140630105705/7339:Mon 30 June 2014 10:57|indexing|
 |Stripes|Bubble|Bubble|person|
-|Nuku Valente|Alpha Fang Scenes|20140619230542/2497:Thu 19 June 2014 23:05|indexing|
-|Wahn|Elijah|20140619230542/57096:Thu 19 June 2014 23:05|indexing|
+|Nuku Valente|Alpha Fang Scenes|20140630105705/2497:Mon 30 June 2014 10:57|indexing|
+|Wahn|Elijah|20140630105705/57096:Mon 30 June 2014 10:57|indexing|
 |Wahn|Elijah|Angel vs Demons|situation|
 |Wahn|Elijah|Burned-Out Chapel|room|
 |Wahn|Elijah|Sacristy|room|
@@ -3390,12 +3418,12 @@
 |Wahn|Elijah|Char-K|property|
 |Wahn|Elijah|Char-L|property|
 |Wahn|Elijah|Char-M|property|
-|Wahn|Eric|20140619230542/58138:Thu 19 June 2014 23:05|indexing|
+|Wahn|Eric|20140630105705/58138:Mon 30 June 2014 10:57|indexing|
 |Wahn|Eric|Barricaded Lockerroom|situation|
 |Wahn|Eric|Sports Arena Lockerroom|room|
 |Wahn|Eric|Eric|man|
 |Wahn|Eric|lastEricfucked|value|
-|Wahn|Stag|20140619230542/67154:Thu 19 June 2014 23:05|indexing|
+|Wahn|Stag|20140630105705/67154:Mon 30 June 2014 10:57|indexing|
 |Wahn|Stag|Dog Walking|situation|
 |Wahn|Stag|Mike|man|
 |Wahn|Stag|Mike's Office|room|
@@ -3409,7 +3437,7 @@
 |Wahn|Stag|lastxerxestalk|value|
 |Wahn|Stag|lasthelentalk|value|
 |Wahn|Stag|HelenPregnant|value|
-|Wahn|Thomas|20140619230542/14137:Thu 19 June 2014 23:05|indexing|
+|Wahn|Thomas|20140630105705/14137:Mon 30 June 2014 10:57|indexing|
 |Wahn|Thomas|Centaur Gangbang|situation|
 |Wahn|Thomas|Thomas|man|
 |Wahn|Thomas|lastThomasTalk|value|
@@ -3418,7 +3446,7 @@
 |Wahn|Thomas|FelixSaved|value|
 |Wahn|Thomas|ThomasQuestVar|value|
 |Wahn|Thomas|ThomasPregnancy|value|
-|Agentlemancalledb|Rexxyevent|20140619230542/15088:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Rexxyevent|20140630105705/15088:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Rexxyevent|ForcedAdoption|situation|
 |Agentlemancalledb|Rexxyevent|Dog Treats|Grab Object|
 |Agentlemancalledb|Rexxyevent|Dog Bone|Grab Object|
@@ -3429,7 +3457,7 @@
 |Agentlemancalledb|Rexxyevent|doggyboned|value|
 |Agentlemancalledb|Rexxyevent|bonelust|value|
 |Agentlemancalledb|Rexxyevent|treatbegging|action|
-|Agentlemancalledb|Francois|20140619230542/19401:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Francois|20140630105705/19401:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Francois|Gourmet Treats|situation|
 |Agentlemancalledb|Francois|Bone-Appetit|room|
 |Agentlemancalledb|Francois|François|man|
@@ -3449,32 +3477,32 @@
 |Agentlemancalledb|Francois|Francois_Discovered|value|
 |Agentlemancalledb|Francois|Francoismixcleaned|value|
 |Agentlemancalledb|Francois|françoisbaking|action|
-|Agentlemancalledb|Karen|20140619230542/1730:Thu 19 June 2014 23:05|indexing|
+|Agentlemancalledb|Karen|20140630105705/1730:Mon 30 June 2014 10:57|indexing|
 |Agentlemancalledb|Karen|Retriever Girl|Pet|
 |Agentlemancalledb|Karen|Forgotten Past|situation|
 |Agentlemancalledb|Karen|KarenTimer|value|
 |Agentlemancalledb|Karen|KarenTalking|action|
 |Agentlemancalledb|Karen|KarenFucking|action|
-|Wahn|Felix|20140619230542/10876:Thu 19 June 2014 23:05|indexing|
+|Wahn|Felix|20140630105705/10876:Mon 30 June 2014 10:57|indexing|
 |Wahn|Felix|Felix|man|
 |Wahn|Felix|Andre|man|
 |Wahn|Felix|lastFelixTalk|value|
 |Wahn|Felix|lastAndreTalk|value|
-|Ursaomega|Campus Gym|20140619230542/9010:Thu 19 June 2014 23:05|indexing|
+|Ursaomega|Campus Gym|20140630105705/9010:Mon 30 June 2014 10:57|indexing|
 |Ursaomega|Campus Gym|Working Out|situation|
 |Ursaomega|Campus Gym|Campus Gym|room|
 |Ursaomega|Campus Gym|Randy|man|
 |Ursaomega|Campus Gym|lastworkout|value|
 |Ursaomega|Campus Gym|workoutprice|value|
 |Ursaomega|Campus Gym|wrestlechance|value|
-|Wahn|Lilith|20140619230542/18760:Thu 19 June 2014 23:05|indexing|
+|Wahn|Lilith|20140630105705/18760:Mon 30 June 2014 10:57|indexing|
 |Wahn|Lilith|Lilith|woman|
 |Wahn|Lilith|lastLilithTalk|value|
 |Wahn|Lilith|LilithPregnancy|value|
 |Wahn|Lilith|LilithKidCounter|value|
 |Wahn|Lilith|LilithPregCounter|value|
 |Wahn|Lilith|AtticusCounter|value|
-|Sarokcat|Coleen|20140619230542/29857:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Coleen|20140630105705/29857:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Coleen|Womanfruittree|situation|
 |Sarokcat|Coleen|Coleen|woman|
 |Sarokcat|Coleen|Coleendeclined|value|
@@ -3486,12 +3514,12 @@
 |Sarokcat|Coleen|Coleenspray|value|
 |Sarokcat|Coleen|LastColeenfucked|value|
 |Sarokcat|Coleen|Coleenspraying|action|
-|Stripes|Vanessa|20140619230542/13747:Thu 19 June 2014 23:05|indexing|
+|Stripes|Vanessa|20140630105705/13747:Mon 30 June 2014 10:57|indexing|
 |Stripes|Vanessa|Paratrooper|situation|
 |Stripes|Vanessa|Vanessa|woman|
-|Stripes|Gwen|20140619230542/2435:Thu 19 June 2014 23:05|indexing|
+|Stripes|Gwen|20140630105705/2435:Mon 30 June 2014 10:57|indexing|
 |Stripes|Gwen|Gwen|woman|
-|Wahn|Nadia|20140619230542/19514:Thu 19 June 2014 23:05|indexing|
+|Wahn|Nadia|20140630105705/19514:Mon 30 June 2014 10:57|indexing|
 |Wahn|Nadia|Nadia|woman|
 |Wahn|Nadia|Bird Troubles|situation|
 |Wahn|Nadia|Lost Chick|situation|
@@ -3507,17 +3535,17 @@
 |Wahn|Nadia|NadiaintCounter|value|
 |Wahn|Nadia|lastNadiaSpotted|value|
 |Wahn|Nadia|npcNadiaint|value|
-|Wahn|Zephias|20140619230542/8152:Thu 19 June 2014 23:05|indexing|
+|Wahn|Zephias|20140630105705/8152:Mon 30 June 2014 10:57|indexing|
 |Wahn|Zephias|Zephias|man|
 |Wahn|Zephias|Captured Soldier|situation|
-|Wahn|David|20140619230542/32859:Thu 19 June 2014 23:05|indexing|
+|Wahn|David|20140630105705/32859:Mon 30 June 2014 10:57|indexing|
 |Wahn|David|Captured Demon|situation|
 |Wahn|David|Thankful Soldier|situation|
 |Wahn|David|David|man|
 |Wahn|David|TSEventCounter|value|
 |Wahn|David|LastTSEvent|value|
 |Wahn|David|DavidBunkerEntry|value|
-|Wahn|Amy|20140619230542/47758:Thu 19 June 2014 23:05|indexing|
+|Wahn|Amy|20140630105705/47761:Mon 30 June 2014 10:57|indexing|
 |Wahn|Amy|Amy|woman|
 |Wahn|Amy|AmyNewPuppies|value|
 |Wahn|Amy|lastAmySpotted|value|
@@ -3528,10 +3556,10 @@
 |Wahn|Amy|SnowAmySex|value|
 |Wahn|Amy|IcarusAmySex|value|
 |Wahn|Amy|AlexandraAmySex|value|
-|Wahn|Carl|20140619230542/30783:Thu 19 June 2014 23:05|indexing|
+|Wahn|Carl|20140630105705/30783:Mon 30 June 2014 10:57|indexing|
 |Wahn|Carl|Carl|man|
 |Wahn|Carl|CarlLibraryEntry|value|
-|Femtoampere|Hornyhorsey|20140619230542/10738:Thu 19 June 2014 23:05|indexing|
+|Femtoampere|Hornyhorsey|20140630105705/10738:Mon 30 June 2014 10:57|indexing|
 |Femtoampere|Hornyhorsey|Ammy|woman|
 |Femtoampere|Hornyhorsey|black bra|Grab Object|
 |Femtoampere|Hornyhorsey|Topless Lounge|room|
@@ -3540,11 +3568,11 @@
 |Femtoampere|Hornyhorsey|affection|property|
 |Femtoampere|Hornyhorsey|lastevent|property|
 |Femtoampere|Hornyhorsey|lastsexevent|property|
-|Wahn|Rane|20140619230542/19392:Thu 19 June 2014 23:05|indexing|
+|Wahn|Rane|20140630105705/19392:Mon 30 June 2014 10:57|indexing|
 |Wahn|Rane|Rooftop Rumble|situation|
 |Wahn|Rane|blue Oni|situation|
 |Wahn|Rane|Rane|man|
-|Wahn|Orc Lair|20140619230542/42361:Thu 19 June 2014 23:05|indexing|
+|Wahn|Orc Lair|20140630105705/42361:Mon 30 June 2014 10:57|indexing|
 |Wahn|Orc Lair|Orcish Slave Raid|situation|
 |Wahn|Orc Lair|Orc Lair Side Entrance|room|
 |Wahn|Orc Lair|Dark Hallway 2|room|
@@ -3575,42 +3603,42 @@
 |Wahn|Orc Lair|LockerLooting|action|
 |Wahn|Orc Lair|CellUnlocking|action|
 |Wahn|Orc Lair|CellEscape|action|
-|Wahn|Val|20140619230542/4384:Thu 19 June 2014 23:05|indexing|
+|Wahn|Val|20140630105705/4384:Mon 30 June 2014 10:57|indexing|
 |Wahn|Val|Val|man|
 |Wahn|Val|ValPregCounter|value|
 |Wahn|Val|ValPregnancy|value|
-|Wahn|Chris|20140619230542/7550:Thu 19 June 2014 23:05|indexing|
+|Wahn|Chris|20140630105705/7550:Mon 30 June 2014 10:57|indexing|
 |Wahn|Chris|Chris|man|
-|Sarokcat|Gryphon Companion|20140619230542/13604:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Gryphon Companion|20140630105705/13604:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Gryphon Companion|Gryphoness|Pet|
 |Sarokcat|Gryphon Companion|Lonely Gryphoness|situation|
 |Sarokcat|Gryphon Companion|Gryphoness nest|situation|
 |Sarokcat|Gryphon Companion|gryphoncomforted|value|
 |Sarokcat|Gryphon Companion|knowpreg|property|
-|Sarokcat|Little Fox|20140619230542/1047:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Little Fox|20140630105705/1047:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Little Fox|Little fox|Pet|
 |Sarokcat|Little Fox|Abandoned Fox|situation|
-|Sarokcat|Felinoid Companion|20140619230542/12498:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Felinoid Companion|20140630105705/12498:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Felinoid Companion|Felinoid companion|Pet|
 |Sarokcat|Felinoid Companion|Injured Felinoid|situation|
-|Sarokcat|Kitty Cat|20140619230542/1956:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Kitty Cat|20140630105705/1956:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Kitty Cat|house cat|Pet|
 |Sarokcat|Kitty Cat|Lost house cat|situation|
-|Sarokcat|Skunk Pet|20140619230542/3702:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Skunk Pet|20140630105705/3702:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Skunk Pet|skunk kit|Pet|
 |Sarokcat|Skunk Pet|Lost skunk kit|situation|
 |Sarokcat|Skunk Pet|littlelostskunk|value|
-|Sarokcat|Exotic Bird|20140619230542/1069:Thu 19 June 2014 23:05|indexing|
+|Sarokcat|Exotic Bird|20140630105705/1069:Mon 30 June 2014 10:57|indexing|
 |Sarokcat|Exotic Bird|Exotic Bird|Pet|
 |Sarokcat|Exotic Bird|Scared bird|situation|
-|Stripes|Rachel Mouse|20140619230542/5754:Thu 19 June 2014 23:05|indexing|
+|Stripes|Rachel Mouse|20140630105705/5754:Mon 30 June 2014 10:57|indexing|
 |Stripes|Rachel Mouse|Quiet Apartment Building|situation|
 |Stripes|Rachel Mouse|mouse girl|Pet|
 |Stripes|Rachel Mouse|rachelfuck|value|
-|Stripes|Honey|20140619230542/5153:Thu 19 June 2014 23:05|indexing|
+|Stripes|Honey|20140630105705/5153:Mon 30 June 2014 10:57|indexing|
 |Stripes|Honey|Smashed Hive|situation|
 |Stripes|Honey|bee girl|Pet|
-|Stripes|Artemis|20140619230542/51075:Thu 19 June 2014 23:05|indexing|
+|Stripes|Artemis|20140630105705/51075:Mon 30 June 2014 10:57|indexing|
 |Stripes|Artemis|Poor Kitty|situation|
 |Stripes|Artemis|rubber tigress|Pet|
 |Stripes|Artemis|cup stack|Grab Object|
@@ -3620,7 +3648,7 @@
 |Stripes|Artemis|artemisstatefairrt|value|
 |Stripes|Artemis|cuptrick|value|
 |Stripes|Artemis|lastArtemisglomp|value|
-|Stripes|Hobo|20140619230542/3108:Thu 19 June 2014 23:05|indexing|
+|Stripes|Hobo|20140630105705/3108:Mon 30 June 2014 10:57|indexing|
 |Stripes|Hobo|Mournful Dog|situation|
 |Stripes|Hobo|helper dog|Pet|
 |Stripes|Hobo|hdog|value|
@@ -3635,7 +3663,7 @@
 |Stripes|Hobo|hobo-medical-gift|value|
 |Stripes|Hobo|hobo-grmilk|value|
 |Stripes|Hobo|hobo-grmilkhelp|value|
-|Emily Short|Glulx Entry Points|20140619230542/1138:Thu 19 June 2014 23:05|indexing|
+|Emily Short|Glulx Entry Points|20140630105705/1138:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Glulx Entry Points|g-event|kind|
 |Emily Short|Glulx Entry Points|Current glulx rock|value|
 |Emily Short|Glulx Entry Points|Current glulx rock-ref|value|
@@ -3652,7 +3680,7 @@
 |Emily Short|Glulx Entry Points|independent of the player|adjective|
 |Emily Short|Glulx Entry Points|dependent on the player|adjective|
 |Emily Short|Glulx Entry Points|direct event handling|use option|
-|Emily Short|Plurality|20140619230542/2271:Thu 19 June 2014 23:05|indexing|
+|Emily Short|Plurality|20140630105705/2271:Mon 30 June 2014 10:57|indexing|
 |Emily Short|Plurality|prior named noun|value|
 |Emily Short|Plurality|ordinarily enumerated|adjective|
 |Emily Short|Plurality|ordinarily enumerated|property|

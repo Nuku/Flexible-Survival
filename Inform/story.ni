@@ -3568,7 +3568,7 @@ carry out grabbing something(called x):
 			now found is 1;
 			add q to the invent of the player;
 			remove entry number from invent of the location of the player;
-			say "You pick up the [q] and tuck it in your backpack.";
+			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
 		say "You don't see any [x] around here.";
@@ -5496,6 +5496,8 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "waist":
 			say "  [descmod of x][run paragraph on]";
+	if "Angie's Mate" is listed in feats of player:
+		say "  Thin lines of healed claw-marks run down your back, marking you as Angie's mate.";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:

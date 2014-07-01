@@ -375,6 +375,8 @@ To reciting2:
 						Now AngieTrapped is resolved;
 					if AngieHappy is 2:
 						increase carried of catnip by 1;
+					if AngieHappy is 4 and "Angie's Mate" is not listed in feats of player:
+						add "Angie's Mate" to feats of player;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
@@ -2332,6 +2334,8 @@ Carry out reciting:
 						Now AngieTrapped is resolved;
 					if AngieHappy is 2:
 						increase carried of catnip by 1;
+					if AngieHappy is 4 and "Angie's Mate" is not listed in feats of player:
+						add "Angie's Mate" to feats of player;
 			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;

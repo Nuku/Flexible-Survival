@@ -82,7 +82,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if Angiearoused is 3:
+	if Angiearoused is 50:
 		if bodyname of player is "Pantherherm":
 			if humanity of player is less than 10:
 				if cocks of player is greater than 0:
@@ -122,7 +122,4 @@ when play ends:
 					say "     When the military finally rescue you from the city, you make sure to let them know about Angie and her large feline friend back at the zoo, however, you learn later that when the soldiers finally arrived at the gift shop, the two of them were nowhere to be found. Settling into your new life outside the city, you sometimes find yourself wondering if the two of them ever made it out of the city, or if they are still hiding somewhere in the quarantined urban maze. Wherever they are, you are sure they are enjoying their changes thoroughly as a happily mated pair of panther herms...";
 
 
-
-
-[ Edit this to have the correct Name as wall]
 Panther Herm ends here.
