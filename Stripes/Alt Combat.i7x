@@ -105,6 +105,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if weapon object of player is chair and name entry is "Wrestling Wolf":
 		increase plhitbonus by 2;
+	if weapon object of player is riding crop and ( bodyname of player is "Latex Mistress" or player is dominant ):
+		increase plhitbonus by 2;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
