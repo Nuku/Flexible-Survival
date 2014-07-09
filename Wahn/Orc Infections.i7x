@@ -3,6 +3,8 @@ Version 1 of Orc Infections by Wahn begins here.
 
 "Adds an Orc creature to Flexible Survivals Wandering Monsters table"
 
+OrcSpecialFightNumber is a number that varies.
+
 Section 1 - Monster Responses
 
 when play begins:
@@ -52,6 +54,14 @@ to say OrcVictorious:
 			now battleground is "void";	[blocks a random fight after this]
 			move player to Slave Cell 2;
 		decrease humanity of player by 5;
+	otherwise:  [in an event]
+		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
+			say "[MulFuck2]";		
+		otherwise:
+			say "<special fight loss 2>";
+		now inasituation is false;
+		now OrcSpecialFightNumber is 0;
+		
 		
 to say OrcBeaten:
 	if inasituation is false:
@@ -64,6 +74,22 @@ to say OrcBeaten:
 		otherwise:
 			say "     [line break]";
 			say "     You walk away after checking him over for loot.";
+	otherwise:  [in an event]
+		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
+			say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
+			say "     [line break]";
+			if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure::
+				say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so (Y), or do you just leave (N)?";				
+				if player consents:
+					say "[MulAnal]";
+				otherwise:
+					say "     Shaking off the urge to pound into him hard, you check the orc for loot, then leave the room.";							
+			otherwise:
+				say "     Shaking off the funny feeling you get at the thought that he was ready to fuck you with that massive pole, you check the orc for loot, then leave the room.";	
+		otherwise:
+			say "<special fight victory 2>";
+		now inasituation is false;
+		now OrcSpecialFightNumber is 0;			
 
 to say BeatenOrcSexMenu:
 	blank out the whole of table of fucking options;
@@ -158,11 +184,15 @@ to say BeatenOrcSex4:	  [fuck him]
 	say "     Exhausted but happy, you pull out of your toy orc's well-bred hole, then stand up on somewhat weak knees. After collecting your clothes and gear, you give the orc an affectionate pat on his sticky chest, then walk away, leaving the panting brute to pick himself and come to terms with being fucked on his own.";		
 	
 to say OrcDesc:
-	if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
-		say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is.' he ways in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
-	otherwise:	
-		say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
-
+	if inasituation is false:
+		if player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
+			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is.' he ways in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
+		otherwise:	
+			say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
+	otherwise:  [in an event]
+		if OrcSpecialFightNumber is 1:
+			say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";
+		
 Section 2 - Monster Insertion
 
 Table of random critters (continued)

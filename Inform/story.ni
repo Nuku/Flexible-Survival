@@ -6721,6 +6721,7 @@ Include Shadow Beast by UrsaOmega.
 
 
 
+
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
@@ -6808,6 +6809,7 @@ Include Rane by Wahn.
 Include Orc Lair by Wahn.
 Include Val by Wahn.
 Include Chris by Wahn.
+Include NPC Interactions by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
