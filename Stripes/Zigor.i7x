@@ -44,6 +44,8 @@ Zigor is a man.  Zigor is in Cuero Lobo.
 The description of Zigor is "[zigordesc]".
 The conversation of Zigor is { "Hola!" }.
 The icon of Zigor is Figure of Zigor_icon.
+zigseat is a number that varies.		[seat configuration: 0 = normal, 1 = taur]
+zigorcycle is a truth state that varies.  zigorcycle is usually false.  [Monitors if Zigor's training has been cycled.]
 
 the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 
@@ -104,18 +106,9 @@ to say sexwithZigor:
 			now hp of Zigor is 11;
 		otherwise if hp of Zigor is 11:			[orgy/gangbang]
 			say "[zigor_S2_03_MM]";
-			now hp of Zigor is 9;
-[			now hp of Zigor is 12;	]
+			now hp of Zigor is 12;
 		otherwise if hp of Zigor is 12:
-			[Zigor rides player's cock on rack]
-			[offer to give you something special]
-			if the player consents:
-				say "***";
-				[grand finale]
-			otherwise:
-				[whipped again for not accepting the training enough]
-				say "***";
-				now hp of Zigor is 9;		[reset cycle]
+			say "[zigor_S2_04_MM]";
 		now lastfuck of Zigor is turns;
 
 
@@ -268,8 +261,79 @@ to say zigor_S2_03_MM:	[stage 3 - gangbang/orgy - Mx7]
 	if player is mpreg_able, impregnate with "Leather Wolf";		[guaranteed mpreg if possible] 
 
 
+to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
+	now zigseat is 0;
+	if bodyname of player is listed in infections of taurlist:
+		now zigseat is 1;
+	say "     Taken down into Zigor's private playroom once again, you are led to an unusual [if zigseat is 1]bench designed for taurs[otherwise]chair[end if], one that you don't see here during your normal visits.  Built of strong metal and padded with leather, he motions with a crop for you to take a seat.  Obediently, you sit in the raised [if zigseat is 1]bench[otherwise]chair[end if], letting him strap down your wrists, ankles and waist with leather buckles.";
+	say "     'Your training has been coming along well, mi cachorro,' he says as he brings his dark manhood to your lips.  After slapping your cheek with his meat, he makes a slight motion with his paw, granting you permission to start sucking, which you do without even thinking.  You work your tongue and palate over his lupine shaft, eager to please him.  After letting you go down on his cock for a few minutes, he has you stop.  You give a little whine of disappointment, but obey.";
+	say "     'Si.  Very good,' he rumbles in your ear, his rich accent smooth and suave as he reinforces his work by taking your [cock of player] cock in hand and stroking your stiff erection.  His confident, controlling touch feels so good.  Your shaft throbs and drools pre freely.  'It feels good to obey your master, does it not?' he rumbles, letting the crop run along your penis from base to shaft.  You nod quickly in response, both from your enjoyment and to avoid punishment.  Though the prospect of punishment makes you all the more aroused somehow.";
+[	if zigorcycle is true:
+		say "***offer again.";
+	otherwise:						]
+	if 1 is 1:
+		say "     'I have prepared something for you, carino.  I know you've taken an interest in our wares here and I have said our supplies are low, but as your master, I feel you've earned a special reward.'  From a case you failed to notice earlier, he pulls out something made of black leather with a jingle straps and buckles.  Holding it up for you to get a good look at it, you can see it is a leather mask, lupine in shape and similar to those you've seen on his wolf staff upstairs.  There's spaces for eye holes and ear slits, but most of the rest is leather.  Even the muzzle is encased and sealed with a zipper.  Permeated with the scents of leather and sex, you can tell there will be no turning back from this.  But a part of you - trained and conditioned by the wolf - longs for this.  Shall you accept?";
+	if the player consents:
+		say "     Succumbing to the temptation, you accept the gift, asking your master to put it on.  With a toothy, predatory smile, he places it on your head.  'That's a good pup,' he rumbles sexily as the buckles are snapped and straps tightened.  Inside, the leather is smooth and soft, like the best of suede.  The mask doesn't really fit right, loose in spots and tight in others, but that is soon to change... or rather you are.";
+		say "     The leather, having been treated and tanned with your semen mixed into the dye, bonds readily with your skin.  And the lupine scent of your master is there as well, his contribution making your body change.  Your face forms a muzzle that fits snugly in its new housing and then merges with it.  You can feel the tight leather around your muzzle, now a part of it.  Even the cool metal zipper sealing it shut and the d-rings are a part of you.  Your vision blurs briefly and your ears ring as they shift as well.  Wolf ears poke from the gaps for them and you open your new, lupine eyes to look at the world differently.";
+		if zigseat is 0:
+			say "     But the transformation only starts there.  Zigor's paw finds its way back to your cock, stroking it as it changes, forming a lupine sheath and knot as well as a leather scrotal sac to cradle your [ball size].  Your body becomes fit and firmly muscled under a layer of fur and leather.  Much of your chest is covered with the cured black smoothness, though your nipples are left exposed with large o-rings encircling your areolae.  Your leathery sections include straps and buckles built in to harness or restrain you as desired by your Iberian master.  The thought of being tied up so directly - so intimately - makes you release a muffled moan through the enclosing mask.";
+			say "     This transformation continues to spread to your limbs.  Your forearms and wrists gain leather guards that can double as restraints.  Your legs are more covered, with assless chaps and ankle cuffs adorning them.  You feel a swell of power inside you, restrained and controlled by your bonds and your master's will.  The sensation fills you with a rush of excitement that bursts forth from your cock as a powerful orgasm.";
+		otherwise if zigseat is 1:
+			say "     But the transformation only starts there.  Zigor's paw finds its way back to your cock, stroking it as it changes, forming a lupine sheath and knot as well as a leather scrotal sac to cradle your [ball size].  Your body becomes fit and firmly muscled under a layer of fur and leather.  Much of your humanoid chest is covered with the cured black smoothness, though your nipples are left exposed with large o-rings encircling your areolae.  Your leathery sections include straps and buckles built in to harness or restrain you as desired by your Iberian master.  The thought of being tied up so directly - so intimately - makes you release a muffled moan through the enclosing mask.";
+			say "     This transformation continues to spread to your tauric body and limbs.  Your lower body takes on a decidedly lupine shape with much more of it covered in fur, though there is a prominent, saddle-like structure that forms on the back of it.  Its formation is accompanied by a strange bulging on your upper back as leather-clad handles grow out from just under your shoulders.  Your forearms and wrists gain leather guards that can double as restraints.  Your legs are more covered, with assless chaps and ankle cuffs adorning them.  You feel a swell of power inside you, restrained and controlled by your bonds and your master's will.  The sensation fills you with a rush of excitement that bursts forth from your cock as a powerful orgasm.";
+		say "     Zigor seems quite pleased with his work, inspecting your altered form as an artist appraises his masterpiece.  You are looked over with critical detail as his paws roam over you.  The living leather can feel his touch as much as your furred skin, though each is delightfully different.  And while some minor facets do not satisfy him as he tugs on some of your straps and examines the contours of your seams between fur and hide, he seems overall satisfied with his newest leather creation and pet.  This critical inspection with its mix of evaluating and sensual touches also provides time to recover from your orgasm and to become hard all over again.";
+		say "     Releasing you from the [if zigseat is 1]bench[otherwise]chair[end if] now that you're fully transformed, he orders you to your knees to suck his throbbing cock.  You do this with a lustful eagerness made all the faster from your desire to obey your lupine master, but can only release a muffled whimper and rub your muzzled snout against his meat.  You struggle to open the zipper, but it won't move for you - a part of you knowing only those permitted by your master can do so.  You whimper all the louder, the strong scent of his cock right there, leaking through your nose holes, but denied to you.";
+		say "     Zigor grins at your dilemma and growls for you to get on all fours, smacking your furry bottom with the crop.  You're given several more hard swats, a delightful punishment for being unable to orally satisfy the alpha wolf.  Taking a moment to lubricate your tight, leathery tailhole with some leather oil, he pushes a vibrating plug into your ass.  While the wide toy buzzes away softly, keeping you at a fixed level of arousal, he secures your ankles and knees to the floor and your wrists to long chains from the ceiling.  With you now kneeling upright, he moves in behind you and replaces the butt plug with his big, lupine cock.  He pushes that mighty rod of his deep into your bowels with a satisfied rumble that makes you so happy deep inside.";
+		say "     The dominant wolf takes his sweet time enjoying his new prize pet, his paws moving sensually over every part of you.  The seams between leather and fur prove to be particularly sensitive, giving you both the smoothness of the oiled hide and the soft brush across fur.  He takes great pleasure in savouring his first fuck to claim this new body of yours.  It feels like hours that he's fucking you, taking pauses to inflict the delightful pain of his crop, whip and others while the vibrating toy keeps you aroused, but longing for the proper fullness of his wolfhood inside you.  Eventually though, his pace switches to a wild and frantic pounding that has him bury and lock his thick knot inside you, fucking you to a muffled (on your part), howling climax that leaves you leaking wolf cum from your battered asshole.";
+		say "     When his knot finally goes down and he pulls out, hot lupine seed drains from your abused hole and pools beneath you.  You're left suspended like that, your master leaving you tied up in the dark basement while he returns to his atelier.  He eventually returns much later with the other dominant wolves to show them his newest creation and sex pet, each of them quite enjoying the opportunity to examine the artisan's newest work.  Together they put you through your paces, fucking you multiple times while praising Zigor's craftsmanship even while punishing you for every minor flaw or imperfect attempt to satisfy them.  You prove to be quite responsive to this treatment and are a great hit with the wolves, if the strength and volume of their orgasms are to be any true judge[if zigseat is 1].  They seem quite excited at having a tauric leather wolf to join their pack's sex slaves[end if].  You are left aching and satisfied by the end of it, additionally pleased that you are deemed ready to be brought upstairs and put to work with the others in the leatherwork shop.";
+		say "     You are his sex slave and his property now - and nothing could please you more than that.";
+		now humanity of player is 0;
+		now bodyname of player is "Leather Wolf";
+		now facename of player is "Leather Wolf";
+		now skinname of player is "Leather Wolf";
+		now tailname of player is "Leather Wolf";
+		now cockname of player is "Leather Wolf";
+		now body of player is "[if zigseat is 0]muscled and toned, though much of this is concealed by your leathery bondage suit[otherwise]that of a tauric wolf, muscled and toned, though much of this is concealed by your leathery bondage suit[end if].  It is adorned with several buckles and straps, perfect for restraining or harnessing you as your master sees fit[if zigseat is 1].  Your build-in bondage gear includes a black saddle and handles just beneath your shoulders[end if]";
+		now face of player is "almost entirely covered by a muzzled mask of leather, with only your wolf ears and eyes visible through it.  Lupine in shape and bonded to your head, it is as much a part of you as the rest of your leather-bound skin";
+		now skin of player is "black leather and lupine furred";
+		now tail of player is "You have a fluffy wolf tail protruding from just above your furry ass.  Even it has a few bands of leather and metal loops on it to tie it up so your ebon tailhole cannot be covered.";
+		now cock of player is "lupine";
+		if zigseat is 1:
+			now scalevalue of player is 4;
+			now bodydesc of player is "tauric";
+		otherwise:
+			now scalevalue of player is 3;
+			now bodydesc of player is "strong";
+		now bodytype of player is "lupine";
+		now the daycycle of player is 0;
+		end the story saying "You have been turned into Zigor's latest leather wolf plaything.";
+		now battleground is "void";
+		wait for any key;
+		now skipturnblocker is 1;
+		follow the turnpass rule;
+		stop the action;
+	otherwise:
+		say "     Zigor's gaze turns into a steely glare as he whips the leather mask aside.  'And here I had hoped you were ready to accept your place here, but clearly not.  How disappointing,' he says, leaning in to growl that last word into your ear as he throws a lever on the [if zigseat is 1]bench-like[otherwise]chair-like[end if].  Pulling on it sets some gears in motion and there is the soft hiss of compressed air running to the pistons built into it.  This causes your seat to lurch, your body to pitch forward and your limbs to be spread at an uncomfortable angle.  'I do not like to be disappointing,' he growls.  'Clearly your training needs more [']reinforcement['].'  And with that final word, he yanks on the lever again, this time driving the apparatus to twist your limbs at a painful angle all while raising your ass end into the air[if zigseat is 0].  The wolf unlatches and flips the seat out of the way, leaving him with direct access to your puckered ring[otherwise].  The wolf gives your raised rear a hard slap with his paw, it now angled up, giving him direct access to your puckered ring[end if].  With no more preamble, he presses his hefty lupine prick to your back door and drives hard into you, burying more than half of it in a sudden, stinging thrust.";
+		say "     'You should appreciate the time I am spending on you, bobo.  I have a store to run and many other leather bitches eager for their master's cock,' he rumbles as he drives the rest of his mighty manhood into you with another authoritative thrust.  Grabbing a different lever this time, he gives it a yank down several notches.  This twists your limbs, rotating them within their already uncomfortable position.  After sending this fresh jolt of pain through you, he starts pounding away before even your stretchable ass can quite adjust to the rapid penetration.  Your body rapidly returns to full arousal, the pain and the pleasure becoming blurred, your body simply aching for more stimulation.  You begin to look forward to the next click of the levers almost as much as you are to the firm smash of his knot against your spreading hole.";
+		say "     While you can tell the wolf was looking forward to taking his time enjoying fucking you, his anger has driven him to take you hard and fast.  Despite your painful position, you do your best to drag it out for him, holding back your own release so he might be sated.  Eventually though, you can't resist any longer and you beg him to knot you.  Grabbing your twisted shoulders, he yanks hard and drives his bulging knot into you with a howl.  The hot rush of his seed pours into you with steady, rhythmic bursts that leave you full and leaking.  Your dangling cock twitches wildly, splattering your own load across the floor as you give a long, moaning cry.";
+		say "     'Perhaps there is still hope for you, mi cachorro.  I want you to come back soon to renew your training.'  Popping his half-deflated knot from your hole releases a gush of gooey wolf seed.  He has you lick his sticky prick clean before pulling a release on the contraption holding you.  Your twisted body drops to the sticky floor in a heap.  You're left alone in your mess with only the slow clicking as the machine ratchets back gradually, one click every few seconds.  It takes a few minutes before returning to its original, [if zigseat is 1]bench-like[otherwise]chair-like[end if] configuration.  Between the torture [if zigseat is 1]bench[otherwise]chair[end if] and the violent fucking, it is many more before you're recovered enough to stand and stagger your way back upstairs.";
+		now hp of Zigor is 9;		[reset cycle]
+		now zigorcycle is true;
+		now zigseat is 1;
+
 to say randomwolfgimp:
 	say "[one of]Miguel[or]Emilio[or]Fernando[or]Javier[in random order]";
+
+[
+when play ends:
+	if bodyname of player is "Leather Wolf":
+		say "***Claimed as Zigor's sex slave.";
+		if zigseat is 0:
+			say "***Normal version ending.";
+		otherwise:
+			say "***Taur version ending.";+
+]
 
 [      hp of Zigor      ]
 [ 0 = not been to store ]
@@ -278,6 +342,8 @@ to say randomwolfgimp:
 [ 3 = session 1         ]
 [ 4 = session 2         ]
 [ 4 = session 3+        ]
+[ 12 = had orgy session - leather gear next ]
+[ 13 = game over as leather pet ]
 
 [      xp of Zigor      ]
 [ 0 = no anal training  ]

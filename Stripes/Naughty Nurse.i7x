@@ -6,7 +6,7 @@ Version 2 of Naughty Nurse by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 vixgender is a number that varies.
 
@@ -20,7 +20,7 @@ to say losetovixennurse:
 		If cocks of player > 0:
 			say "     The vixen nurse pushes you down as you stop struggling.  Climbing over you, her paws go to your crotch and grab your cock.  With an adept paw, she gets you fully hard before moving to line it up with her wet slit.  She sinks herself slowly down over your cock and moans.  She kneads her paws over your chest as her bubble butt bounces in your lap.  While she rides you, her silvery body and her white and black outfit become your entire, monochrome word of ecstasy.  That one spot of red on her cap is the only colour in your vision until finally you climax.  Your vision is then awash in a blur of colours as you pump your hot seed into her before finally sagging back onto the floor with a sigh of pleasure.  She smiles down at her happy patient and leaves you there.";
 		otherwise if cunts of player > 0:
-			say "     The vixen nurse pushes you down as you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  Her milk has a mild, medicinal taste that clouds your judgement and makes you increasingly aroused.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers her patient to the floor and leaves you there, still licking your lips."; 
+			say "     The vixen nurse pushes you down as you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  Her milk has a mild, medicinal taste that clouds your judgement and makes you increasingly aroused.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers her patient to the floor and leaves you there, still licking your lips.";
 		otherwise:
 			say "     Unable to quite believe it at first, the vixen nurse rubs your bare groin several times.  'Oh, you definitely need some special treatment, my dear,' she says with concern.  Pushing you gently to the ground, she straddles your face and presses her hot, dripping pussy to your mouth.  With her juices running across your lips, you can't help but start lapping across her folds.  After a few tentative licks, your lust grows as your self-restraint fades and soon you're worming your tongue into her quivery cunny in search of more.  'Yes!  Yes!  Drink up and you'll feel so much better in no time,' she pants, grinding down onto your tongue until she climaxes in a rush of musky fluids.  You're left panting and a little dazed as your head spins and colours dance in your eyes.  As you try to recover from this, she makes sure your comfortable before leaving you there.";
 	otherwise if vixgender is 1:
@@ -57,7 +57,7 @@ to say losetovixennurse:
 to say beatthevixennurse:
 	choose row monster from the table of random critters;
 	if libido of player > 29 or "Dominant" is listed in feats of player:
-		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying half-heartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
+		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying halfheartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
 		if the player consents:
 			if cocks of player > 0:
 				say "     Not wanting to waste such a fine prize, you shove her forward and force her to bend over one of the patient's beds.  You run a hand over her skirted bottom, giving it a squeeze before pulling it up to reveal her tight rump[if vixgender is 1], her dripping puss and her ballsac[otherwise] and her dripping puss[end if] to you.  Keeping one on her back to keep her in place, you slide the other over her rear, then between her legs to tease her wet slit.  She moans and wiggles her rear invitingly.";
@@ -134,29 +134,29 @@ When Play begins:
    now cock change entry is "it takes on a steely-gray colour.  Changing shape, it becomes pointed at the glans with a knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 12;
    now dex entry is 14;
-   now sta entry is 10;                    
+   now sta entry is 10;
    now per entry is 12;
    now int entry is 15;
    now cha entry is 18;
-   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 36;            [ How many HP has the monster got? ]
-   now lev entry is 4;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 5;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 0;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 0;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 4;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 4;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 60;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "healing booster";            [ Dropped item.  Key will be used later ]
-   now lootchance entry is 20;        [ Chance of loot dropping 0-100 ]
+   now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now hp entry is 36;	[ How many HP has the monster got? ]
+   now lev entry is 4;	[ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 5;	[Amount of Damage monster Does when attacking.]
+   now area entry is "Hospital";	[ Location of monster, in this case the City Hospital]
+   now cocks entry is 0;	[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 0;	[ Length infection will make cock grow to if cocks]
+   now cock width entry is 0;	[ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 4;	[ Number of Breasts infection will give you. ]
+   now breast size entry is 4;	[Size of breasts infection will try to attain ]
+   now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1;	[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12;	[ Length of female sex  infection will attempt to give you. ]
+   now cunt width entry is 5;	[ Width of female sex  infection will try and give you ]
+   now libido entry is 60;	[ Set to zero in this monster to control elsewhere ]
+   now loot entry is "healing booster";	[ Dropped item.  Key will be used later ]
+   now lootchance entry is 20;	[ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3;	[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
    now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

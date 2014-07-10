@@ -52,7 +52,7 @@ When Play begins:
 	now desc entry is "[queenbeedesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, beautiful and regal in appearance, with large, dark eyes and lips as sweet and golden as honey.  Your flowing hair is yellow and black and has a pair of long antennae rising from them";
 	now body entry is "slender and [if cunts of player > 0]feminine with its slender waist and curving hips, making you a striking figure of womanly beauty.  At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers.  Around your neck is a collared puff of golden-orange fur.  Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak[otherwise]effeminate with its slender waist and curving hips.  At your side are a pair of smaller, insectile arms suitable for holding small items and caressing tightly held lovers.  Around your neck is a collared puff of golden-orange fur.  Along with the pair of gossamer wings, glimmering like crystal, that rest against your back, it looks very much like a regal cloak.  All in all, you look very much the sexy [']queen['] bee[end if]";
-	now skin entry is "stylishly placed chitin that gives the look of elbow-length gloves, knee-high boots and a skimpy [if cunts of player is 0 and cocks of player > 0]speedo[otherwise]bikini[end if] at your waist.  More plating at your torso accentuates your [if breast size of player > 0]bosom[otherwise]flat chest[end if].  Aside from a few other patches, you are covered in golden-bronze tanned";  
+	now skin entry is "stylishly placed chitin that gives the look of elbow-length gloves, knee-high boots and a skimpy [if cunts of player is 0 and cocks of player > 0]speedo[otherwise]bikini[end if] at your waist.  More plating at your torso accentuates your [if breast size of player > 0]bosom[otherwise]flat chest[end if].  Aside from a few other patches, you are covered in golden-bronze tanned";
 	now tail entry is "Resting lightly against your rear is a large, striped bee abdomen, complete with stinger.";
 	now cock entry is "[one of]armour-protected[or]honeyed[or]golden[at random]";
 	now face change entry is "your vision blurs.  Something in your eyes change and colours seem more vibrant, standing out against the duller browns and greys of the city.  As your marvelling at what you see, your face shifts form, becoming beautiful and feminine.  Long, thick flowing hair of bright yellow and deep black sprouts from your head and washes down to your shoulders in seconds.  A tingle runs through your mind as insectile antennae are added";
@@ -76,7 +76,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 6;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 5;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -84,7 +84,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of][if cunts of player > 0]feminine[otherwise]effeminate[end if][or]slender[or]idealized[or]elegant[or][if cunts of player > 0]womanly[otherwise]effeminate[end if][or]sexy[or]beautiful[or]regal[cycling]";
 	now type entry is "[one of]apian[or]bee-like[or]insectile[as decreasingly likely outcomes]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

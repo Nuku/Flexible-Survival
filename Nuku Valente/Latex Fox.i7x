@@ -65,7 +65,7 @@ to latexfoxdefeatsex:
 		if cock length of player is less than 6:
 			say ". Your diminutive [cock of player] cock slips right into the fox's waiting asshole. With little effort you start pistoning away, what you lack in size you are more than making up for in force and speed.";
 		otherwise if cock length of player is less than 10:
-			say ". Your [cock of player] cock slides into the fox with little effort, the tight well lubed hole seems to suck you in even deeper as the Fox whimpers in pleasure.";
+			say ". Your [cock of player] cock slides into the fox with little effort, the tight well lubed hole seems to suck you in even deeper as the fox whimpers in pleasure.";
 		otherwise if cock length of player is less than 15:
 			say ". You place the head of your ample [cock of player] cock at the Foxes dribbling asshole slowly increasing the pressure. With a small yelp from the Fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
 		otherwise:
@@ -133,7 +133,7 @@ When Play begins:
 	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 5;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -141,8 +141,8 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]altered[or]animalistic[or]vulpine[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]altered[or]animalistic[or]vulpine[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
 	now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]

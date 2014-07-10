@@ -66,13 +66,13 @@ instead of conversing the Doctor Medea:
 				now hp of doctor medea is 2;
 			otherwise if medeaget is 2 or medeaget is 3:
 				say "     'I cannot help you.  I specialize in childbirth and minor illnesses.  As the latter are not occurring with the nanite plague.  Maybe I could help if you were a female?'";
-				say "     She pauses and ponders for a moment.  'There is another possibility as well.  With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I had just started to look into those possibilities.  Perhaps you might be interested in becoming my test subject for this.  Thankfully, you've already obtained the medical supplies I'd requested earlier.  I now just need you to obtain some more specialized equipment.  Your best chance of locating it would be at either the Pediatrics Ward or the Obstetrics Department of the City Hospital for these supplies I require.'";
+				say "     She pauses and ponders for a moment.  'There is another possibility as well.  With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I had just started to look into those possibilities.  Perhaps you might be interested in becoming my test subject for this.  Thankfully, you've already obtained the medical supplies I'd requested earlier.  I now just need you to obtain some more specialized equipment.  Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
 				now Obstetrics Department is unresolved;
 				now hp of doctor medea is 3;
 				if medeaget is 2, now medeaget is 3;
 		otherwise if hp of Doctor Medea is 2:
 			if medeaget is 2:
-				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul.  'Yes, it seems you've obtained everything I'd listed.  We're halfway there, now.  For the procedure itself, I will also be needing some more specialized equipment.  Your best chance of locating it would be at either the Pediatrics Ward or the Obstetrics Department of the City Hospital for these supplies I require.";
+				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul.  'Yes, it seems you've obtained everything I'd listed.  We're halfway there, now.  For the procedure itself, I will also be needing some more specialized equipment.  Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.";
 				now Obstetrics Department is unresolved;
 				now hp of doctor medea is 3;
 				now medeaget is 3;

@@ -17,7 +17,7 @@ to say losetoreindeer:
 		if cunt length of player < 12:
 			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed sprays into you moments later, filling your womb with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.[impregchance]";
 		otherwise:
-			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheaths his cock entirely in your depths and climax[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.[impregchance]";
+			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheaths his cock entirely in your depths and climaxes[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.[impregchance]";
 	otherwise:
 		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His cock fills you nice and deep, but isn't painful to take at all.";
 		say "     You leak precum onto the cold ground, only feeling the heat of your strong buck atop you.  When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer.  This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground, but filled with warmth and happiness.";
@@ -115,7 +115,7 @@ When Play begins:
 	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 4;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
@@ -123,7 +123,7 @@ When Play begins:
 	now loot entry is "egg nog";		[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or]festive[at random]";
 	now type entry is "[one of]caribou[or]reindeer[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

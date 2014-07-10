@@ -105,6 +105,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if weapon object of player is chair and name entry is "Wrestling Wolf":
 		increase plhitbonus by 2;
+	if weapon object of player is riding crop and ( bodyname of player is "Latex Mistress" or player is dominant ):
+		increase plhitbonus by 2;
 	if weapon object of player is journal:
 		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
@@ -291,7 +293,7 @@ this is the monster combat mode rule:
 	let foundcom be 0;
 	if there is no altcombat in row monster of Table of Random Critters:
 		now searchparam is "default";	[no change]
-	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " ":
+	otherwise if altcombat entry is "" or altcombat entry is "default" or altcombat entry is " " or altcombat entry is empty:
 		now searchparam is "default";	[no change]
 	otherwise:
 		let searchparam be altcombat entry;

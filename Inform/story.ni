@@ -49,7 +49,7 @@ To end the game saying (T - text):
 	
 
 Instead of sniffing something (called x):
-	if the scent of x is "":
+	if the scent of x is empty:
 		say "It smells pretty normal for a/an [x].";
 	otherwise:
 		say "[scent of x][line break]";
@@ -2369,7 +2369,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [name entry][end link]";
 				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [name entry][end link]";
-				if trade of object entry is "":
+				if trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
@@ -3042,7 +3042,7 @@ To process (X - a grab object):
 		delete x;
 	otherwise:
 		say "You use the [x]. ";
-	if usedesc of x is "":
+	if usedesc of x is empty:
 		now x is x;
 	otherwise:
 		say "[usedesc of x]";
@@ -3251,7 +3251,7 @@ To process (X - a grab object):
 			say "You stop using the [x].";
 			now x is not equipped;
 		otherwise:
-			if slot of x is "":
+			if slot of x is empty:
 				let zq be 0;
 			otherwise:
 				repeat with z running through equipped equipment:
@@ -3568,7 +3568,7 @@ carry out grabbing something(called x):
 			now found is 1;
 			add q to the invent of the player;
 			remove entry number from invent of the location of the player;
-			say "You pick up the [q] and tuck it in your backpack.";
+			say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
 	if found is 0:
 		say "You don't see any [x] around here.";
@@ -3711,7 +3711,7 @@ Check Purifying:
    if the microwave is not visible, say "You see nothing to purify with." instead;
    
 Carry out Purifying:
-	if purified of noun is "":
+	if purified of noun is empty:
 		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let number be 0;
@@ -5113,7 +5113,7 @@ This is the turnpass rule:
 					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
-				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]your oncoming pregnancy[otherwise]what feels like an egg growing inside you[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[otherwise]your oncoming pregnancy[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 			otherwise:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
@@ -5503,7 +5503,7 @@ This is the self examine rule:
 		if weapon object of player is unwieldy:
 			say ".  Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[otherwise]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[otherwise if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[otherwise]somewhat unwieldy[end if] for you to use at the moment";
 		say ".[run paragraph on]";
-	if tail of player is "":
+	if tail of player is empty:
 		say "";
 	otherwise:
 		say " [tail of the player][run paragraph on]";
@@ -5512,8 +5512,8 @@ This is the self examine rule:
 		if placement of x is "end":
 			say " [descmod of x]";
 	say "[line break]";
-	if cocktext is not "":
-		if cunttext is "":
+	if cocktext is not empty:
+		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
 		otherwise:
 			say "A private peek shows that you [cocktext]";
@@ -6182,7 +6182,14 @@ to ratetheplayer:
 	say "[line break]";
 		
 when play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
+	if thirst of player >= 100 or hunger of player >= 100:	[blocking regular endings]
+		now bodyname of player is "starvation";
+		now facename of player is "starvation";
+		now skinname of player is "starvation";
+		now tailname of player is "starvation";
+		now cockname of player is "starvation";
+		say "     You have perished from [if hunger of player >= 100 and thirst of player >= 100]starvation and thirst[otherwise if hunger of player >= 100]starvation[otherwise]thirst[end if] and are no more.  Your body becomes a meal for another of the more predatory creatures roaming the city.";
+	otherwise if humanity of the player is less than 10 and hp of the player is greater than 0:
 		if bodyname of player is "Dragoness" and hp of doctor matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	otherwise:

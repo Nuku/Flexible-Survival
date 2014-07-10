@@ -35,7 +35,7 @@ to say beattherodeoclown:
 		say "     Having beaten the strange person, she moans and drops to the ground, making a show of having lost.  'Oh no!  The wild bull will gore me now with its horn!  Mah poor, vulnerable body!'  Her clothes become undone in her squirming, exposing her large breasts, above average and fully hard cock and her very large and dripping pussy.  She fingers the last almost eagerly as if trying to entice you to take advantage of her after beating her.  It's almost as if she wanted to lose.";
 		if libido of player > 25:
 			say "     Feeling rather horny at this wanton display from a (mostly) human creature, you find yourself compelled to sate your lusts upon her body as she so clearly desires.  Pushing her down, she giggles a little and moans about her terrible fate.  Getting into it, you pin her down, mostly for show, and drive your hard cock fully into her in one hard thrust.  Her wide, ample pussy, able take the biggest and wildest of bulls to satisfy them, spreads easily for you[if cock length of player > 18 or cock width of player > 12].  Your huge cock stuffs her nice and full, stretching her flexible flesh around it and being so full only seems to make her more excited and horny[end if].  You bang away at her hard and fast as her stretchy cunt grips around your penis, squeezing around it as she moans at each thrust.  As you fuck her, she wriggles under you, telling you to 'Fuck me hard, you big bull' and 'Mmm... mah wild steer!'";
-			say "     Your hands move from her shoulders to her tits, stroking and teasing her large nipples.  You play with them lightly at first, but after she squeezes her hands over yours, you play roughly with breasts, squeezing them hard and pinching her nipples firmly.  The rough treatment excites her all the more and soon milk's squirting from her nipples as if you were milking a cow.  As streams of her milk sprays onto you both, her cock throbs and starts spurting its thicker, white fluid across her body.  The sight of all this, after the hard pounding you've been giving her wet pussy pushes you over the edge and you unleash your hot cum into her a few thrusts later with a groan of ecstacy[if cock width of player > 12].  Your oversized balls pump their hot load into her, bloating her tummy delightfully full and plump with your semen[end if].  When you finally come down from your powerful orgasm, you release her and get up, leaving the exhausted herm in a messy puddle of fluids.";
+			say "     Your hands move from her shoulders to her tits, stroking and teasing her large nipples.  You play with them lightly at first, but after she squeezes her hands over yours, you play roughly with breasts, squeezing them hard and pinching her nipples firmly.  The rough treatment excites her all the more and soon milk's squirting from her nipples as if you were milking a cow.  As streams of her milk sprays onto you both, her cock throbs and starts spurting its thicker, white fluid across her body.  The sight of all this, after the hard pounding you've been giving her wet pussy pushes you over the edge and you unleash your hot cum into her a few thrusts later with a groan of ecstasy[if cock width of player > 12].  Your oversized balls pump their hot load into her, bloating her tummy delightfully full and plump with your semen[end if].  When you finally come down from your powerful orgasm, you release her and get up, leaving the exhausted herm in a messy puddle of fluids.";
 		otherwise:
 			say "     Tired from the conflict and only mildly aroused by her display, you manage to turn away and head off, leaving the frustrated herm behind.  Perhaps she'll have better luck with the next creature she finds.";
 			increase libido of player by a random number between 3 and 8;
@@ -99,7 +99,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 12;		[ Width of female sex the infection will try to give a player. ]
@@ -107,7 +107,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]flexible[at random]";
 	now type entry is "human-like";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

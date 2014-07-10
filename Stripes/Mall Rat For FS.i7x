@@ -28,7 +28,7 @@ When Play begins:
 	now skin entry is "well-groomed brown fur across your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a long and slender rat's tail growing from your backside.  You've found and hung some shiny hoops and bangles from it.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]human[or]pink[purely at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head fills with thoughs of just hanging out with your friends at the mall as a long, ratty muzzle forms on your face";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your head fills with thoughts of just hanging out with your friends at the mall as a long, ratty muzzle forms on your face";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body shifts, becoming tall and slender with a [if cunts of player > 0]shapely[otherwise]handsome[end if] figure.  Your hands and feet turn into nimble, rat-like paws with small claws at the fingertips.  You find raiding a trendy store for some sweet threads to wear jumping much higher on your priority list of things to do during the apocalypse.  And maybe some of those sweet sneakers with blinkers";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "creamy-brown fur spreads across your body.  You're quite pleased to see that despite it having just grown in, it's already well groomed (except for a few stylish ruffles)";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long and slender rat tail grows from your rear.  It is pink, hairless and definitely in need of some accessories";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
@@ -49,7 +49,7 @@ When Play begins:
 	now cock width entry is 8;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 6;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
@@ -58,7 +58,7 @@ When Play begins:
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;
-	now body descriptor entry is "[one of]slender[or]cool[as decreasingly likely outcomes]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]cool[as decreasingly likely outcomes]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"  Use [one of] to vary ]
 	now type entry is "[one of]mallrat[or]rat[or]murine[or]ratty[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
@@ -105,7 +105,7 @@ when play ends:
 					otherwise:
 						say ".";
 				otherwise:
-					say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of finding someplace to settle down that'd be cooler than a dingy old bunker, your wanderings bring you to a large mall.  Entering the shopping plaze, you are pleased to find other rats already living there.  They turn out to be a great bunch of cool dudes and pretty girls for you to hang around with and you soon settle in there to stay, having found a new home for an awesome mall rat like you.";
+					say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of finding someplace to settle down that'd be cooler than a dingy old bunker, your wanderings bring you to a large mall.  Entering the shopping plaza, you are pleased to find other rats already living there.  They turn out to be a great bunch of cool dudes and pretty girls for you to hang around with and you soon settle in there to stay, having found a new home for an awesome mall rat like you.";
 			otherwise:
 				say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of the sweet mall and your even sweeter girlfriend waiting for you there, you make your way back there to join the rats in their happy life of coolness and relaxing.  You and Lucy get along wonderfully, making what everyone agrees is a cute couple.  But that doesn't stop either of you from continuing your horny habits of sleeping around, Lucy with many of the other mall rats and you with many of the mall's visitors and those you meet on your new much-rarer excursions out into the city.  Usually, you only do these when one of the rats really needs something done out in the city";
 				if hp of Ronda > 0:
