@@ -296,11 +296,11 @@ to say beatthemagicdrake:
 								say ".  The dragoness is quite upset by your actions.  'You're being a very -ngg- naughty familiar.  I'll definitely need to punish -grunt- punish you severely -oof- as soon as I can get up,' she growls as she fails to rise and stop you.";
 							say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your rear";
 							if mdstaffaction is 1:
-								decrease mdasslevel by 1;
-								say ".  This comes with a drop in pressure on your hips as your bottom shrinks down.  The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[otherwise if mdasslevel is 3]plump rear[otherwise if mdasslevel is 4]large ass[otherwise]huge bottom[end if] that feels a little more manageable for you to deal with.";
-							otherwise if mdstaffaction is 2:
 								increase mdasslevel by 1;
 								say ".  This causes it to swell and inflate, rounding out further until it becomes [if mdasslevel is 3]sexily plump[otherwise if mdasslevel is 4]quite large[otherwise if mdasslevel is 5]rather huge[otherwise]titanically huge[end if].  Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
+							otherwise if mdstaffaction is 2:
+								decrease mdasslevel by 1;
+								say ".  This comes with a drop in pressure on your hips as your bottom shrinks down.  The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[otherwise if mdasslevel is 3]plump rear[otherwise if mdasslevel is 4]large ass[otherwise]huge bottom[end if] that feels a little more manageable for you to deal with.";
 							otherwise:
 								say ".  This power makes your ass quiver and your spine throb.  Within a few minutes, the reptilian ass and tail you had before have returned, [if mdasslevel is 2]round[otherwise if mdasslevel is 3]plump[otherwise if mdasslevel is 4]large[otherwise if mdasslevel is 5]huge[otherwise]enormous[end if] and beautiful to the whistling dragoness.";
 						say "     Now done, for better or for ill, you drop the spent staff and leave the grounded and bottom-heavy dragoness struggling to roll herself over so she can get up.";
