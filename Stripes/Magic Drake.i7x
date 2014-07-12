@@ -277,6 +277,7 @@ to say beatthemagicdrake:
 								if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 							otherwise:
 								say ".  The tingly energy floods your senses and flows into you, causing your head to transform.  You can feel your cranium pulse and throb, building up until there comes a loud snap.  More pops and snaps follow as your head shifts and reshapes itself.  A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
+								choose row monster from the table of random critters;
 								now facename of player is "Magic Drake";
 								now face of player is face entry;
 							say ".  The dragoness laughs at your feeble attempt to use her magic.";

@@ -66,6 +66,8 @@ Instead of conversing the Zigor:
 		say "     [one of]'I named my store [italic type][']Cuero Lobo['][roman type], or [']Leather Wolf['], because I thought it evoked strength and power.  Little did I know I'd one day become a [italic type]cuero lobo[roman type] myself to make it all the more fitting.'[or]'This is one item that customers particularly enjoy,' he says, pointing to one of the photos on the wall, showing some very kinky leather gear trussing up a [one of]man[or]woman[at random] while they are disciplined and fucked.  'I would love to see you in one of those someday,' he adds with a sensual rumble and a hard squeeze of your ass.[or]'You should join me for another personal session with my collection downstairs,' he says in that sensual voice of his.[or]'We are working hard to restock our wares, but the demand is so high now.'[or][if the player is submissive]'Someone like you was meant to enjoy all the painful delights of my private collection, carino***,' he says in that sexy accent of his while grabbing your ass[otherwise]'I look forward to having you for another session with the painful delights of my private collection, carino***,' he says in that sexy accent of his while grabbing your ass[end if].  The offer is very tempting, your body longing for more of the wolf's tough love.[or][or]'That first night was such fun.  So many eager customers coming in here, trying out our wares right in the store.  You should have been there.  It would have been nice to see them all taking turns with you,' he says with a toothy grin.[or]Zigor runs his eyes up and down you.  'Mmm... I have trouble deciding what to [if a random chance of 1 in 3 succeeds]tie you up in next[otherwise if a random chance of 1 in 2 succeeds]strike you with next[otherwise]train you with next[end if], mi mascota,' he says with a with a rather predatory smile.[at random]";
 
 
+Section 3 - Sex Mechanics
+
 the fuckscene of Zigor is "[sexwithZigor]".
 
 to say sexwithZigor:
@@ -111,6 +113,8 @@ to say sexwithZigor:
 			say "[zigor_S2_04_MM]";
 		now lastfuck of Zigor is turns;
 
+
+Section 4 - Sex w/Zigor - Stage 1
 
 to say zigor_S1_00_MM:	[stage 1 intro - padded bench/riding crop - MM]
 	say "     Deciding to accept Zigor's offer, you tell him you'd like to view his collection.  Smiling at this, he flips the open sign to closed and calls out for [randomwolfgimp] to come out and watch the store.  A few moments later another leather wolf arrives from the back of the store.  He is almost completely covered in leather fetish gear, to the point of even having a lupine gimp mask fused over his face.  His amber eyes spare you only a momentary glance before standing silently on watch in the room.  Surprised by his appearance, you turn your gaze from him only when Zigor calls for you to follow him through another door and down the stairwell.";
@@ -164,6 +168,8 @@ to say zigor_S1_analtraining:
 		now xp of Zigor is 4;
 		now hp of Zigor is 8;
 
+
+Section 4 - Sex w/Zigor - Stage 2
 
 to say zigor_S2_00_MM:	[stage 2 - suspended/whip/gag/vibrator - MM]
 	say "     Once inside, he shoves you face first against a wall hard enough to bruise you.  As he pulls your arms upright, he grinds himself against you, rubbing that leather covered bulge in his crotch against you.  He shackles your wrists together with leather manacles separated by only a short length of chain.  'And now that your training has come along, it's time to progress to more [']intense['] training,' he says with a sensual, intense growl and [if breasts of player > 0]pinches your nipples[otherwise]digging his claws into your ass[end if].  Reaching down to rub your [cock of player] erection, he licks your ear.  'With some more discipline, I'm sure I can bring the very best out of you,' he rumbles in that sensual accent of his.  His paw shifts to your balls, giving them a painful squeeze.  As you cry out, a ball gag is jammed into your mouth and tied firmly.  'As delightful as your cries are, I'm not in the mood for them today.'";
@@ -325,15 +331,14 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 to say randomwolfgimp:
 	say "[one of]Miguel[or]Emilio[or]Fernando[or]Javier[in random order]";
 
-[
+
 when play ends:
 	if bodyname of player is "Leather Wolf":
-		say "***Claimed as Zigor's sex slave.";
-		if zigseat is 0:
-			say "***Normal version ending.";
-		otherwise:
-			say "***Taur version ending.";+
-]
+		say "     You join Zigor's personal collection of sex slaves as his new favourite.  You and the others labour silently in his atelier, making new kinky leather creations for his customers and the other dominant wolves.  Being Zigor's favourite is a mixed blessing, with him giving more of his particular brand of rough love to you than the others[if zigseat is 1].  You are also particularly popular with the other doms, your master recieving frequent requests from them to play with his special taur plaything[end if].  And should your master's other subs be jealous of your status, nothing is ever said by the other muzzled subs.";
+		say "     At first, you're only vaguely aware of the military incursion into the city as an increase in the workload imposed on all of you.  Your master becomes quite focused on his workshop and quite strict about every precious scrap from the dwindling supplies being used.  The [']grand re-opening['] coincides with the army entering the area and your suave master is able to coax some soldiers into sampling his wares.  As well, the other doms are [']aggressively forward['] in their insistence that the soldiers they run into be brought to the shop as well.  From there, it is easy for one of the lupine doms to entice them into becoming another sub for them.  With this surge in numbers, the leather wolves spread out, many of them forming franchise outlets for Zigor's particular brand of lupine apparel or setting up supply chains to ensure a fresh supply of tanned hide for your master's atelier.";
+		if zigseat is 1:
+			say "     As these new locations open, your true purpose is revealed.  Your strong, tauric body is lashed to a wooden cart and you are made to pull supplies and complete product runs to and from the main store.  It is a tough task, but one your well-disciplined mind and body accept as your proper place.  It also comes with the added perks of the lashings of the driver and their lustful thanks during and after the long hauls.  At those rare times that the other creatures of the city threaten the wolves['] territory and the leatherworking den, you are ridden out by your master as his epic steed as he leads the pack into battle like a noble Spanish general.";
+
 
 [      hp of Zigor      ]
 [ 0 = not been to store ]
