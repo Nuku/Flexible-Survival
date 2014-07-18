@@ -213,7 +213,7 @@ to say stellasex4:
 	say "***missionary";
 
 to say stellasex5:
-	say "     Suggesting that she take you in the ass, she grins and strokes her swelling penis.  '[if cunts of player > 0]Ooo!  Kinky girl!  I like that[otherwise]MMmm!  Sounds good.  Bend over and lemme at that arse of yours[end if],' she says in her cheerful British accent.  Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position.  She rubs the pointed, drooling tip against your pucker, letting her pre lube you up a little as she gets your back passage to ease open.  As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
+	say "     Suggesting that she take you in the ass, she grins and strokes her swelling penis.  '[if cunts of player > 0]Ooo!  Kinky girl!  I like that[otherwise]Mmmm!  Sounds good.  Bend over and lemme at that arse of yours[end if],' she says in her cheerful British accent.  Dropping to your knees and raising your ass, she gives your butt a playful grab before moving her canine cock into position.  She rubs the pointed, drooling tip against your pucker, letting her pre lube you up a little as she gets your back passage to ease open.  As she mounts you, she leans overtop you, licking and nibbling at your ears and the back of your neck.";
 	say "     Panting with her tongue hanging out, the horny herm drives her animal cock into you again and again.  She fucks you well, clearly having learned a lot on how to please a lover from having been boned herself so often[if breast size of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your chest, caressing your breasts.  Her groping, while eager, is still tender and includes a lot of teasing of your nipples to heighten your own enjoyment[otherwise if cocks of player > 0 and a random chance of 1 in 3 succeeds].  Supporting herself with one arm, she brings her other paw to your crotch, stroking your [cock of player] shaft.  She works over your manhood with the practiced skill of someone who's handled plenty of men in the past[end if].  She keeps a nice, brisk pace[if cocks of player > 0], grinding her throbbing cock against your prostate with every thrust, and[otherwise],[end if] then easing off before you can get too excited.  For a while, she draws it out like this, but eventually her own lusts win over and she starts banging away at you hard and fast, panting heavily as her canine urges take over.";
 	say "     With a final, hard thrust, she pops her growing knot into you, tying her pulsing, cum-spurting rod inside you.  Her canine seed, copious for one with no ballsac, splashes [if cocks of player > 0]against your prostate[otherwise]around inside your bowels[end if].  As it builds up, having nowhere else to go, it can only flow deeper into you.  While waiting for her extended climax to end and her knot to go down, she snuggles with you, her paws roaming over your [bodytype of player] body appreciatively.[mimpregchance]";
 
@@ -243,12 +243,12 @@ to stellainfect:
 		now breasts entry is tempnum;
 
 
-[  hp of Stella       ]
-[ overall status       ]
-[ 0 = not met          ]
+[  hp of Stella     ]
+[ overall status     ]
+[ 0 = not met     ]
 [ 1 = failed invite    ]
-[ 2 = rescued          ]
-[ 3 = talked           ]
-[ 4 = had sex          ]
+[ 2 = rescued     ]
+[ 3 = talked     ]
+[ 4 = had sex     ]
 
 Stella ends here.
