@@ -1,12 +1,16 @@
 Version 1 of Cannon by hiccup begins here.
-[Version 1.1 - Alt attack tweaked - Stripes]
+[Version 1.2 - Alt attack tweaked again + CV loss - Stripes]
 
 "Adds a Cock Cannon to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
+cclosscount is a number that varies.
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
 to say cannon desc:
+	now cclosttarget is false;
+	now ccmiss is 0;
 	now cannonprep is 0;
 	if "Female Preferred" is listed in feats of player:		
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must not like what it sees, because it immediately turns around and leaves. The creature won't fight you if you have the Female Preferred feat.[combat abort]";
@@ -35,8 +39,20 @@ to say cannon fire:		[outmoded, now uses alt-attack below]
 		now hp of player is 0;
 
 to say cannon attack:
-	if "Female Preferred" is not listed in feats of player:
-		say " You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot.  The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen. Its job completed, the Cock Cannon leaves.";
+	increase cclosscount by 1;
+	if "Female Preferred" is listed in feats of player:
+		say "ERROR - The Cock Cannon should not fight a player with the Female Preferred feat.";
+	otherwise:
+		if cclosscount < 3 or cclosscount is even or scalevalue of player > 4 or vorelevel is 1:
+			say "     You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot.  The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen.  Its job completed, the Cock Cannon leaves.";
+		otherwise:
+			say "     Tilting itself forward, the penile creature aims the crown of its head at you and unloads with a powerful blast.  The torrent of sticky white cum soaks your [bodytype of player] body from head to foot.  The blast is so large it even as it knocks you to the ground, leaving you dazed and soaked in semen.  The over-excited creature continues to ejaculate on you, firing several more blasts that batter you, dousing you in its load.  It only stops once fully drained, wobbling unsteadily now that its ballast-filled balls are empty.";
+			say "     Staggering up to you, it grabs you with its hands and leans forward.  As the yawning cumslit is aimed at you once again, you can do little to resist, only half aware of what's going on and too stunned by the repeated shelling.  But rather than fire again, it instead pulls your head into its, stuffing you into its wide cum slit.  You squirm and struggle feebly, but this seems to only encourage the strange beast as it pushes first your head and then your shoulders down into its cock-like body.  It is a slow process[if scalevalue of player > 2], especially at first,[end if] but the slick load clinging to you all over helps lubricate your passage.  Once your shoulders are going down, it has an easier time of it, standing back up and sliding your [bodydesc of player] form down into itself.";
+			say "     The way its cum tunnel squeezes around you and the pervasive scent and taste of semen become increasingly enjoyable for you and soon you're swallowing down as much of it as you can get even as you're consumed by the walking penis monster[if cocks of player > 0 or cunts of player > 0].  Wriggling now with pleasure as you're pulled in, you cum hard, overcome by the oddly arousing experience[end if].  Sliding further in has you deposited in its warm, heavy ballsac where you are bundled up in a gooey chamber filled with its seed.  The thick, musky air makes you woozy even as you continue shovelling handfuls of its load into your mouth until you finally pass out in its testicle.";
+			say "     Awareness only starts to return in the form of a throbbing around you and the heavy squeezing of the sac enclosing you.  Just as you're realizing your current situation, the pressure around you builds up quickly and you are ejected along with a gooey wad of the mutant's semen, launched as a cum-soaked missile at its next victim.  You crash into some [one of]canine[or]feline[or]reptile[or]equine[or]bunny[or]rodent[or]humanoid[as decreasingly likely outcomes] creature, bowling it over.  By the time you recover from the crash, your target has already started to change, becoming increasingly phallic and making it hard to identify who or what he or she once was.  You get up quickly and make your messy escape before you have to deal with another of those penile cannons.";
+			infect;
+			infect;
+
 	
 Section 2 - Monster Insertion
 
@@ -104,6 +120,8 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 cannonprep is a number that varies. cannonprep is usually 0.
+ccmiss is a number that varies.
+cclosttarget is a truth state that varies.  cclosttarget is usually false.
 
 this is the cockcannon rule:
 	choose row monster from table of Random Critters;
@@ -152,13 +170,23 @@ this is the cockcannon rule:
 			now cannonprep is 2;
 			say "[special-style-2]Hit[roman type]: The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction and is now locked onto you.";
 		otherwise:
-			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to make adjustements for the wind conditions, but your constant harassment and evasion slows it down.";
+			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to make adjustments for the wind conditions, but your constant harassment and evasion slows it down.";
+			increase ccmiss by 1;
+			if ccmiss > 2 and cclosttarget is false:
+				say "Your continued resistance frustrates it, forcing it to reposition and reacquire targetting.";
+				now cclosttarget is true;
+				decrease cannonprep by 1;
 	otherwise if cannonprep is 2:
 		if monsterhit is true:
 			now cannonprep is 3;
 			say "[special-style-2]Hit[roman type]: The Cock Cannon's arms start to stroke its penis-shaped body, increasing its visible size and arousal.  Precum starts to flow steadily from the top of its phallic head.";
 		otherwise:
 			say "[special-style-1]Miss[roman type]: The Cock Cannon attempts to pleasure itself, running its hands over its body, but with little success for now.";
+			increase ccmiss by 1;
+			if ccmiss > 4 and cclosttarget is false:
+				say "One of your continued swings bumps it, forcing it to recalculate its aim.";
+				now cclosttarget is true;
+				decrease cannonprep by 1;
 	otherwise if cannonprep is 3:
 		if monsterhit is true:
 			now cannonprep is 0;
@@ -166,6 +194,11 @@ this is the cockcannon rule:
 			now libido of player is 110;
 		otherwise:
 			say "[special-style-1]Miss[roman type]: The Cock Cannon continues to stroke and rub itself, trying unsuccessfully to get itself off.";
+			increase ccmiss by 1;
+			if ccmiss > 5 and cclosttarget is false:
+				say "Your continued evasion frustrates it, making its full-body erection wane a little as it tries to remain on target.";
+				now cclosttarget is true;
+				decrease cannonprep by 1;
 	now peppereyes is 0;
 	if hp of the player is greater than 0 and libido of player < 110:
 		[wait for any key;]
@@ -179,7 +212,7 @@ this is the cockcannon rule:
 when play ends:
 	if bodyname is "Cock Cannon":
 		if humanity of player is less than 10:
-			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky until it is too late.";
+			say "Lost to your new instincts, you spend the next several days looking for victims to transform. Then the military arrives. Following a compulsion, you climb onto the roof of the nearest building and start stroking your penis shaped body as fast as you can... The military soldiers don't notice the blobs of cum falling out of the sky from you and the rest of the penile artillery until it is too late.";
 		otherwise:
 			say "After being rescued by the military, you have trouble fitting in with the rest of society due to the fact that your body is shaped like a giant penis. But then you discover that the infection left many women with pussies so large that nobody could fill them but you...";
 		

@@ -1,5 +1,5 @@
 Version 9 of Bovine For FS by Damaged begins here.
-[ Version 9.1 - Heat updated to expanded heat system - Stripes ]
+[ Version 9.2 - Bull CV victory - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Bovine to Flexible Survivals Wandering Monsters table"
@@ -43,9 +43,12 @@ to say infect:
 	infect;
 
 to say bull vict:
+	let antimoo be 16 - Mooing;
+	if Mooing > 15:
+		now antimoo is 1;
 	if CowKiller > 0:
 		if cunts of player > 0:
-			say "The big bull grunts fiercely, breathing hard after its maddened fight. It prods you with its sharp horns until you huddle on all fours.[line break]Without any warning, you feel the animal's huge member thrust into you, feeling like it will split you in half. Your cries, when you hear them, sound almost the same as the cow you remember hurting as you try in vain to brace yourself against the crazed beasts rutting. It makes a bellowing cry as you feel its burning seed pour into you, filling you out, making you look, if not a little, then very pregnant.[line break]Finally done with you, and calming after its release, it wanders off to graze.";
+			say "The big bull grunts fiercely, breathing hard after its maddened fight. It prods you with its sharp horns until you huddle on all fours.[line break]Without any warning, you feel the animal's huge member thrust into you, feeling like it will split you in half. Your cries, when you hear them, sound almost the same as the cow you remember hurting as you try in vain to brace yourself against the crazed beast's rutting. It makes a bellowing cry as you feel its burning seed pour into you, filling you out, making you look, if not a little, then very pregnant.[line break]Finally done with you, and calming after its release, it wanders off to graze.";
 			say "It seems the scent of your fucking has covered completely whatever smell that remained on you of the bovine cow attack from earlier.";
 			infect;
 			now CowKiller is 0;
@@ -56,6 +59,12 @@ to say bull vict:
 			say "The huge beast bellows one last time and flies at you, its head crashing hard into your side. Your cry then reminds you of the Cow you remember striking down.[line break][infect][line break]The bull seems to have calmed, it wanders off to graze.";
 			say "your blood seems to have covered the scent of the bovine cow attack from earlier.";
 			decrease CowKiller by 1;
+	otherwise if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and ( a random chance of antimoo in 20 succeeds or cunts of player is 0 ) and scalevalue of player < 4:
+		say "     The bull snorts after knocking you down and stomps overtop of you.  Its cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face[if hp of player > 0].  Feeling arousal[otherwise].  Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes its large cock forward.  The thick cock slams into you and stretches surprisingly wide, engulfing your whole head.  Your initial shock allows the beast a chance to press its advantage and its cock gulps around you, pulling in your shoulders as well.  Surrounded by the hot, squeezing flesh of its bestial manhood, you are assaulted by the strong, musky scent of its virility.  Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel.  More and more of your [bodytype of player] body is drawn into that bulging bovine penis.";
+		say "     You are eventually deposited into its ballsac and left to bathe in its virile semen while its cum factories churn away.  You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside.  As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen.  Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax.  She licks you clean, her sloppy tongue getting as much of bovine seed as she can get before you make your getaway.";
+		say "[mooplus]";
+		infect;
+		infect;
 	otherwise:
 		if Mooing < 1:
 			say "The bull seems to lose interest in you and wanders off to find some grass to eat.";
