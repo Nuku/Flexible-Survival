@@ -30,14 +30,14 @@ to say losetosnowbat:
 				say ".  His endeavour is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper.  You quickly feel his cock drives into [if cunts of player > 1]one of your cunts[otherwise]your cunt[end if].";
 			otherwise:
 				say ".  Skipping ceremony, he thrusts his barbed rod into [if cunts of player > 1]one of your cunts[otherwise]your cunt.";
-			say "     [if cocks of player > 1]Cocks grown hard from his wanton assault, they grind unabided against the ground.  [otherwise if cocks of player > 0]Cock grown hard from his wanton assault, it grinds unabided against the ground.  [end if][if scalevalue of player > 3]Panting with arousal, his hands tease what they can of the side of your [body size of player] [bodydesc of player] torso.  His payment in blood having its toll on you, you [otherwise]Panting with arousal, his hands tease your [bodydesc of player] form.  He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating ferfor until he releases a loud, screeching moan, an audible illustration of his cum flooding your depths.[impregchance]";
+			say "     [if cocks of player > 1]Cocks grown hard from his wanton assault, they grind unabided against the ground.  [otherwise if cocks of player > 0]Cock grown hard from his wanton assault, it grinds unabided against the ground.  [end if][if scalevalue of player > 3]Panting with arousal, his hands tease what they can of the side of your [body size of player] [bodydesc of player] torso.  His payment in blood having its toll on you, you [otherwise]Panting with arousal, his hands tease your [bodydesc of player] form.  He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your depths.[impregchance]";
 		otherwise:
 			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your [if scalevalue of player > 3]back[otherwise]ass[end if], illustrating his desire to have you sate another hunger";
 			If scalevalue of player > 3:
 				say ".  His endeavour is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper.  You quickly feel his barbed rod flood the depths of your anal ring.";
 			otherwise:
 				say ". Skipping ceremony, he thrusts his cock into your anal ring.";
-			say "     [if cocks of player > 1]Cocks grown hard from his wanton assault, they grind unabided against the ground.  [otherwise if cocks of player > 0]Cock grown hard from his wanton assault, it grinds unabided against the ground.  [end if][if scalevalue of player > 3]Panting with arousal, his hands tease what they can of the side of your [body size of player] [bodydesc of player] torso.  His payment in blood having its toll on you, you [otherwise]Panting with arousal, his hands tease your [bodydesc of player] form.  He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating ferfor until he releases a loud, screeching moan, an audible illustration of his cum flooding your bowels.[mimpregchance]";
+			say "     [if cocks of player > 1]Cocks grown hard from his wanton assault, they grind unabided against the ground.  [otherwise if cocks of player > 0]Cock grown hard from his wanton assault, it grinds unabided against the ground.  [end if][if scalevalue of player > 3]Panting with arousal, his hands tease what they can of the side of your [body size of player] [bodydesc of player] torso.  His payment in blood having its toll on you, you [otherwise]Panting with arousal, his hands tease your [bodydesc of player] form.  He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your bowels.[mimpregchance]";
 		say "     Overwhelmed, [if cocks of player > 1]your cocks fire off their load into the dirt, causing you to pass out[otherwise if cocks of player > 0]your cock fires off its load into the dirt, causing you to pass out[otherwise]you pass out[end if]; eventually, you awake. Now abandoned, exhausted, and thirsty, you gather yourself before slowly going back on your way.";
 	otherwise:
 		say "     Having bested you, the snow bat grabs you roughly and pulls you into his arms.  You squirm at his rough treatment, but he grips you all the tighter, folding his bat wings around you as well.  Surrounded by his scent and hearing him purring softly, you can't help but moan a little as he nuzzles at your neck.  He runs a long, slender and rough tongue along your throat before he sinks his teeth into it, making you moan again.";
@@ -147,7 +147,7 @@ When Play begins:
 	now cock width entry is 10;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 6;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
@@ -155,7 +155,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]broad-shouldered[or]muscled[at random]";
 	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
