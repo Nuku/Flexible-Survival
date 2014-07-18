@@ -19,7 +19,7 @@ to say losetosquid:
 	if hp of player > 0:
 		say "     You stand down and throw your hands up in submission against the tentacled lady.  Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
 	otherwise:
-		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand.  She then roughly exonerates your clothing from its beleaguered owner, it's lewd intent made transparent to your vulnerable form.";
+		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand.  She then roughly exonerates your clothing from its beleaguered owner, its lewd intent made transparent to your vulnerable form.";
 	if cocks of player > 0:
 		say "     Partially engulfed in a writhing mass of tentacles, the girl descends her torso upon your crotch, the soft and affection caress of these appendages quickly influencing you into arousal, and though you cannot see past the mess of flesh you doubtlessly feel your [cock size desc of player] rod engulfed in the folds of the slinky creature's tight cunt[if cocks of player > 2].  In addition to the assault on your single organ, she's not one to let your additional equipment go neglected, and proceeds to let a couple tentacles attend to these tools, her proceeding kneads and strokes exasperated by the suctioned surface of such dextrous limbs[otherwise if cocks of player is 2].  In addition to the assault on your single organ, she's not one to let your second rod go neglected, and proceeds to let a tentacle wrap around its length, her proceeding kneads and strokes exasperated by the suctioned surface of such a dextrous limb[end if].";
 	if cunts of player > 0:
@@ -93,7 +93,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 16;
 	now cha entry is 10;
-	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 32;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 4;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 6;			[Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -111,7 +111,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]soft[or]flexible[or]boneless[at random]";
 	now type entry is "[one of]cephalopod[or]squid-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
