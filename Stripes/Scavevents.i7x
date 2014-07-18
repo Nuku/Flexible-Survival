@@ -46,7 +46,7 @@ Instead of resolving a Tight Fit:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	say "Always on the lookout for more supplies, you spot a tight [one of]crawlspace[or]hole[or]drainage pipe[at random] that looks like its recently been disturbed.  Heading over to check it out, your suspicions were correct and you spot a [y] that someone has stashed at the far end of the dark tunnel.";
+	say "Always on the lookout for more supplies, you spot a tight [one of]crawlspace[or]hole[or]drainage pipe[at random] that looks like it's recently been disturbed.  Heading over to check it out, your suspicions were correct and you spot a [y] that someone has stashed at the far end of the dark tunnel.";
 	if companion of player is bee girl:
 		say "Honey buzzes up to you and grabs your hand as you're pondering going in after it.  'I can get it for you, honeybunch.'  And with that, the small bee girl folds in her wings and wriggles into the tunnel and back out, used to negotiating the narrow tunnels of the hive.  She hands the [y] to you with a smile.";
 		add y to invent of player;
@@ -250,7 +250,7 @@ Instead of resolving a Dented Bike:
 			say "You spot something under one of the shredded rags - it's an unopened bottle of water in a holder on the bike's frame!  ";
 			increase carried of water bottle by 1;
 		otherwise if t is 2:
-			say "You see a water bottle poke out from under one of the wheels. It's sports cap seems to have popped off during whatever happened here and part of the contents have run out. You look around a bit until you find it, then wipe the cap off as good as you can and put it back on the bottle.  ";
+			say "You see a water bottle poke out from under one of the wheels. Its sports cap seems to have popped off during whatever happened here and part of the contents have run out. You look around a bit until you find it, then wipe the cap off as good as you can and put it back on the bottle.  ";
 			increase carried of dirty water by 1;
 		otherwise:
 			say "A small bulge in one piece of the shredded clothing attracts your attention. It's the pocket of a jacket, revealing a tasty chocolate bar.  ";
@@ -278,7 +278,7 @@ Instead of resolving a Looted Supermarket:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice is greater than difficulty:
-			say "As you turn to head out of the store, you spot something interesting from the corner of your eye. There's a tin can that seems to have fallen down and rolled under a shelf - you pick it up and see it's [one of]dog food[or]cat food[at random].  Not your first choice for a meal, but hey - it's in a sealed container so it'll be infection free!";
+			say "As you turn to head out of the store, you spot something interesting from the corner of your eye. There's a tin can that seems to have fallen down and rolled under a shelf - you pick it up and see it's [one of]dog[or]cat[at random] food.  Not your first choice for a meal, but hey - it's in a sealed container so it'll be infection free!";
 		otherwise:
 			say "You continue looking elsewhere for supplies, but aren't able to find any on this trip.";
 	otherwise if t is 2:
@@ -493,7 +493,7 @@ Instead of resolving a Plains Scavenging:
 			add y to invent of player;
 		otherwise if companion of player is Gryphoness:
 			let gryphlets be libido of gryphoness / 4;
-			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
+			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2] from you and your gryphlet children[end if].";
 			add y to invent of player;
 		otherwise:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
@@ -585,7 +585,7 @@ Instead of resolving a Free Drink:
 			say "     Do you go with the satyrs?";
 			if player consents:
 				say "     [line break]";
-				say "     [Satyr Frat Party]";  [Further content in Wahn/Satyr Frat.i7x]
+				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			otherwise:
 				say "     [line break]";
 				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
@@ -729,10 +729,10 @@ Instead of resolving a Shattered House:
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
-			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you manage to lift up the rubble with some effort and retrieving a single water bottle that's not been crushed before an ominious creaking sound ends you back before more of the house collapses.";
+			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you manage to lift up the rubble with some effort and retrieving a single water bottle that's not been crushed before an ominous creaking sound ends you back before more of the house collapses.";
 			increase carried of water bottle by 1;
 		otherwise:
-			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominious creaking sound ends you back before more of the house collapses.";
+			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominous creaking sound ends you back before more of the house collapses.";
 	otherwise if x is 4:
 		say ".";
 		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
@@ -778,7 +778,7 @@ Section 16 - Abandoned Milk (by cmacleod42)
 
 	Instead of resolving a Abandoned Milk:
 		say "Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
-		say "On the bench you see an empty milk bottle lying on it's side. You also see an intact a milk bottle standing there - and it's full!  Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
+		say "On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full!  Walking over to the bench, you take the bottle, it has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.  You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
 		increase carried of gryphon milk by 1;
 		now Abandoned Milk is resolved;
 
