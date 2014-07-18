@@ -73,7 +73,7 @@ to say beatthesugarferret:
 		now sugarferretfight is 1;
 		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples.  When the last of them dealt with, you have a brief moment to take in what's happening.";
 	otherwise:
-		say "     Managing to daze several of the ferrets, the others retreat with their fallen comerades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if cunts of player > 0]She[otherwise]He[end if] plays too rough![at random]' as they leave.  Victorious over the manic tube-rats, you are free to get on with your plans.  ";
+		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if cunts of player > 0]She[otherwise]He[end if] plays too rough![at random]' as they leave.  Victorious over the manic tube-rats, you are free to get on with your plans.  ";
 
 
 to say sugarferretdesc:
@@ -141,7 +141,7 @@ When Play begins:
 	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 7;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;		[ Width of female sex the infection will try to give a player. ]
@@ -149,7 +149,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]flexible[at random]";
 	now type entry is "[one of]mustelid[or]ferrety[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -169,7 +169,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the sugferret rule:		[continuous temptation]
 	choose row monster from table of random critters;
 	if bodyname of player is "Sugar Ferret":
-		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation.  If you give in, you could have more soda with them and have some fun...[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp...[or]'Yay!  Playtime!' one of the ferrets calls out...[or]'Weeee!  PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give into the manic energy filling you as well...[or]'Join us for some fun!  Come!  We've got sugar!' one of them says in a tempting manner.  'Yeah,' another pipes up, 'we'll share!'  Your ferrety impulses do find the offer alluring...[at random]";
+		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation.  If you give in, you could have more soda with them and have some fun[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp[or]'Yay!  Playtime!' one of the ferrets calls out[or]'Weeee!  PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give into the manic energy filling you as well[or]'Join us for some fun!  Come!  We've got sugar!' one of them says in a tempting manner.  'Yeah,' another pipes up, 'we'll share!'  Your ferrety impulses do find the offer alluring[at random]...";
 		let targetnum be 200 + humanity of player + ( plmindbonus * 3 ) - libido of player - ( caffeinehigh of player * 2 );
 		let tempnum be a random number between 1 and ( 200 + ( monmindbonus * 3 ) );
 		say "1-200: [tempnum] vs [targetnum]: ";
