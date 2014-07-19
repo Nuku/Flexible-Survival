@@ -56,7 +56,10 @@ to say OrcVictorious:
 		decrease humanity of player by 5;
 	otherwise:  [in an event]
 		if OrcSpecialFightNumber is 1:   [fighting Mul in the hallway in front of the Observation room]
-			say "[MulFuck2]";		
+			if MulAnalAcceptance > 1 and cocks of player > 0 and a random chance of 1 in 2 succeeds:
+				say "[MulAnalRide]";
+			otherwise:				
+				say "[MulFuck2]";		
 		otherwise:
 			say "<special fight loss 2>";
 		now inasituation is false;
