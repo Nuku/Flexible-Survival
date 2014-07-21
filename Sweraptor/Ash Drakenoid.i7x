@@ -56,9 +56,9 @@ When Play begins:
 	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and viciously clawed.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "The Drakenoid groans in pain and she slumps over onto the ground. Immediately she begins to try and crawl away from you towards rubble where she may be able to hide.";
 	now victory entry is "[Ash Drakenoid attack]";
-	now desc entry is "[Ash Drakenoid desc]"; 
-	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
-	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
+	now desc entry is "[Ash Drakenoid desc]";
+	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head";
+	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight";
 	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";
 	now tail entry is "You have a long prehensile tail trailing behind you. Despite its flexibility it is extremely tough and it ends with a sharp point.";
 	now cock entry is "[one of]cruelly barbed ash dragon[or]glowing ash dragon impregnator[at random]";
@@ -91,7 +91,7 @@ When Play begins:
 	now loot entry is "ash dragon heart";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";
 	now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
