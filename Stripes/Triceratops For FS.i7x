@@ -6,7 +6,7 @@ Version 1 of Triceratops For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Triceratops" } to infections of girl;
@@ -38,7 +38,7 @@ to say beatthetric:
 	otherwise if cocks of player > 0 and libido of player > 49:
 		say "     The strong female falls to her knees, no longer able to keep fighting.  With a moan, she runs her paws over her body and slides open her dress, exposing her large bosom to you.  She coos softly as she sways her body, tempting you to finish your dance with her.";
 		if the player consents:
-			say "     You stride over to her and pull out your cock, which has gotten quite hard as you watched her tease herself.  She takes it in one paw and starts licking at it with her broad tongue.   You let her suck on it a little before pulling back and guiding her to lay on her back.  She slides out of the rest of her funky dress with a sensual wiggle, exposing her large, wet pussy for you.";
+			say "     You stride over to her and pull out your cock, which has gotten quite hard as you watched her tease herself.  She takes it in one paw and starts licking at it with her broad tongue.  You let her suck on it a little before pulling back and guiding her to lay on her back.  She slides out of the rest of her funky dress with a sensual wiggle, exposing her large, wet pussy for you.";
 			say "     You line yourself up and sink down into her and start thrusting.  You pound away at her, making her moan and wiggle beneath you.  She moves to a beat that you can't hear and that you can't quite follow.  Her inner walls squeeze and tug at your cock with her motions, coaxing a hot load of your cum from you after a good, long fuck.  She moans in climax as well, but seems a little unsatisfied.  But you are, so you leave the dinosaur to continue on your way.";
 		otherwise:
 			say "     You leave the Cretaceous beauty and continue on your way.";
@@ -76,7 +76,7 @@ When Play begins:
    now cock change entry is "it grows sensual ridges and takes on an animalistic, saurian shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;
    now dex entry is 14;
-   now sta entry is 20;                    
+   now sta entry is 20;
    now per entry is 10;
    now int entry is 8;
    now cha entry is 12;
@@ -98,7 +98,7 @@ When Play begins:
    now loot entry is "";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]strong[or]flexible[or]saurian[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
    now type entry is "saurian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
