@@ -43,7 +43,7 @@ to say losetowolverine:
 	otherwise if libfight is 1:
 		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
 	otherwise if wrknifefight is false:
-		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilently guarding.";
+		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if hp of player > 0, now hp of player is hp of player / 2;
 
 
@@ -197,7 +197,7 @@ when play ends:
 			otherwise if hp of doctor matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military.  You wait impatiently for your release, always on edge and feeling that there's something you should be doing.  You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection.  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			otherwise:
-				say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there[']s something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funnelled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompany him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
+				say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there[']s something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompany him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 
 [ Edit this to have the correct Name as well]
 Wolverine Guard For FS ends here.
