@@ -96,14 +96,14 @@ When Play begins:
 	now cock width entry is 6;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 5;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 10;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
 	now loot entry is "dirty water";	[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 13;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fat[or]pudgy[or]hefty[or]bulky[at random]";
 	now type entry is "[one of]raccoon[or]coon-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -117,7 +117,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As your human mind falters, it is filled with a longing for trash and scavenging.  You find your way to the city mall and set up your home among the many dumpsters behind the food court.  Several of the rats who live there become friends with you, though only a few are willing to have a romp with you in the messy trash, much preferring their clean stores and mall.  They try to encourage you to come in and live with them, but you much prefer your messy home, though you'll go through the trouble of cleaning up (a little) to visit on occasion.";
 		otherwise:
-			say "     You manage to maintain your sanity during your time in the city until rescue from the military arrives.  You join the others in their holding area and have to wait through testing and processing.  [if coonstatus > 0]While the pink raccoon is distracting the guards at night, [otherwise]During this time, [end if]you do manage to slip away at night on occasion, drawn to the dumpsters behind the mess hall.  You rummage around in them happily, unable to stop yourself.  When you get caught one night by one of the mess officers, you are able to convince him to not call the MPs in exchange for a blow job.  After that, he stops by every night during your nocturnal visits to enjoy another blow job.  You are happy to see his balls and cock swelling and gaining gray fur after a few quickies with you[if cunts of player > 0].  And after a few nights, its on to him fucking you roughly in the dumpster and his changes progress further[otherwise].  His changes continue to progress over the next week or so until finally there no hiding them[end if].  After that, there's another messy coon in the waiting area with you.  He's not at all upset with this, enjoying the pleasures of his new form and joining you in sneaking off to the dumpsters at night.";
+			say "     You manage to maintain your sanity during your time in the city until rescue from the military arrives.  You join the others in their holding area and have to wait through testing and processing.  [if coonstatus > 0]While the pink raccoon is distracting the guards at night[otherwise]During this time[end if], you do manage to slip away at night on occasion, drawn to the dumpsters behind the mess hall.  You rummage around in them happily, unable to stop yourself.  When you get caught one night by one of the mess officers, you are able to convince him to not call the MPs in exchange for a blow job.  After that, he stops by every night during your nocturnal visits to enjoy another blow job.  You are happy to see his balls and cock swelling and gaining gray fur after a few quickies with you.  [if cunts of player > 0]And after a few nights, its on to him fucking you roughly in the dumpster and his changes progress further[otherwise]His changes continue to progress over the next week or so until finally there no hiding them[end if].  After that, there's another messy coon in the waiting area with you.  He's not at all upset with this, enjoying the pleasures of his new form and joining you in sneaking off to the dumpsters at night.";
 			if cunts of player > 0:
 				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can.  Soon enough, your belly grows full with kits and your have lots of scruffy coons running around the place.  You are happy to stay home and raise them while your mate runs a greasy diner.";
 			otherwise:
