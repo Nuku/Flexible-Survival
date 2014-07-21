@@ -16,7 +16,7 @@ heatlevel is a number that varies. heatlevel is usually 2.  [This is used to den
 
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
-"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening.  Glancing down to see your sex become swollen and red as your body advertises it's fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need.  Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
+"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening.  Glancing down to see your sex become swollen and red as your body advertises its fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need.  Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
 "Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp.  As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs.  Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp.  As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass.  Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if cocks of player > 0]male [end if]heat overtakes you."
 
 [  note -
@@ -146,7 +146,7 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
-					choose a row with a infect name of (cockname of player) in Table of infection heat; 
+					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
 						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
@@ -200,7 +200,7 @@ This is the check heat rule:
 				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
-						choose row 1 in table of infection heat; 
+						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
 					choose a row 1 in Table of infection heat;
 				if turns in heat is greater than (heat cycle entry times 8):
@@ -231,9 +231,9 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
-					choose a row with a infect name of (cockname of player) in Table of infection heat; 
+					choose a row with a infect name of (cockname of player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
-						choose row 1 in table of infection heat; 
+						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
 					choose a row 1 in Table of infection heat;
 				if turns in heat is greater than (heat cycle entry times 8):
