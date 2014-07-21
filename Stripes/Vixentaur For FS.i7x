@@ -93,7 +93,7 @@ When Play begins:
 	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 8;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 15;		[ Width of female sex the infection will try to give a player. ]
