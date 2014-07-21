@@ -37,12 +37,12 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	add "Ash Whelp" to infections of guy;
 	now name entry is "Ash Whelp";
-	now attack entry is "[one of]The whelp rushes at you, clawing and scratching viciously.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[or]The creature flies at your legs, nipping and biting at them.[at random]"; 
+	now attack entry is "[one of]The whelp rushes at you, clawing and scratching viciously.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[or]The creature flies at your legs, nipping and biting at them.[at random]";
 	now defeated entry is "Crying mournfully the whelp loses its strength to fly and falls to the ground with a thud. where it does not stir again.";
 	now victory entry is  "You sink to your knees, wounded badly. The Whelp chirps in triumph and approaches you slowly...[whelp attack]";
 	now desc entry is "[whelp desc]";
-	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
-	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
+	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head";
+	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight";
 	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";
 	now tail entry is "You have a long prehensile tail trailing behind you. Despite its flexibility it is extremely tough and it ends with a sharp point.";
 	now cock entry is "[one of]cruelly barbed ash dragon[or]glowing ash dragon impregnator[at random]";
@@ -75,7 +75,7 @@ When Play begins:
 	now lootchance entry is 10;		[ Chance of loot dropping 0-100 ]
 	now loot entry is "ash dragon heart";
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";
 	now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
