@@ -160,7 +160,7 @@ to say wrvict1:		[ride the male]
 	say "     Keeping the male pinned down with your clawed hands, you grind your hips down onto his with a triumphant roar.  You rub down onto his hard shaft and push yourself down onto it, roaring together as he penetrates you.  You ride him rough and hard, your claws digging into his shoulders as you enjoy your fallen prey's saurian shaft inside you.  You feel of it pushing into you each time you press yourself down is just what your wereraptor body needs to satisfy its lustful desires.  You nip and lick at one another while in the throws of wild, primitive lust until you cry out again, cumming hard as his saurian seed fills your womb.";
 
 to say wrvict2:		[fuck the male]
-	say "     With the other wereraptor pinned beneath you, you grind your hard cock against his rear with a triumphant roar.  Having defeated him and proven yourself the stronger of the two males, he is forced to spread his legs and raise his tail like a female, submitting to your dominance.  Grabbing his shoulders with your clawed hands, you climb atop him and drive your pulsing rod into him, making you both roar in pleasure.  You thrust into him rough and hard, your claws digging into him as you fuck him with a primitive, beastial lust.  You nip and lick along his neck, panting heavily as you fuck him in this display of feral dominance.  When your pleasures peak, you drive hard into him one last time and unleash your hot seed, filling his bowels with your virile seed as you grind your cock deep inside him.  This sets your fallen prey off as well, having him spend his seed across the ground.";
+	say "     With the other wereraptor pinned beneath you, you grind your hard cock against his rear with a triumphant roar.  Having defeated him and proven yourself the stronger of the two males, he is forced to spread his legs and raise his tail like a female, submitting to your dominance.  Grabbing his shoulders with your clawed hands, you climb atop him and drive your pulsing rod into him, making you both roar in pleasure.  You thrust into him rough and hard, your claws digging into him as you fuck him with a primitive, bestial lust.  You nip and lick along his neck, panting heavily as you fuck him in this display of feral dominance.  When your pleasures peak, you drive hard into him one last time and unleash your hot seed, filling his bowels with your virile seed as you grind your cock deep inside him.  This sets your fallen prey off as well, having him spend his seed across the ground.";
 
 to say wrvict3:		[69 w/male]
 	if cocks of player > 0:		[male/herm]
@@ -235,7 +235,7 @@ When Play begins:
 	now victory entry is "[losetowereraptor]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[wereraptordesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "[if wrcurseactivity is true]animalistic head of a raptor with piercing yellow eyes and[otherwise]a humanoid face with saurian features.  It has yellow eyes and is[end if] covered in [if cocks of player > 0 and cunts of player > 0]dark crimson[otherwise if cunts of player > 0]black[otherwise if cocks of player > 0]green[otherwise]pale grey[end if] scales";
-	now body entry is "[if wrcurseactivity is true]shaped like some kind of human-velociraptor hybrid.  You are hunched over, balancing on your powerful hind legs.  Your arms have a strong tendancy to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch.  Your hands and feet now only possess three digits each[otherwise]roughly human in shape, but with taloned hands and feet.  Aside from a tendency to fold your arms up against your chest, you carry yourself mostly like any other person[end if]";
+	now body entry is "[if wrcurseactivity is true]shaped like some kind of human-velociraptor hybrid.  You are hunched over, balancing on your powerful hind legs.  Your arms have a strong tendency to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch.  Your hands and feet now only possess three digits each[otherwise]roughly human in shape, but with taloned hands and feet.  Aside from a tendency to fold your arms up against your chest, you carry yourself mostly like any other person[end if]";
 	now skin entry is "deep blue and [if cocks of player > 0 and cunts of player > 0]dark crimson[otherwise if cunts of player > 0]black[otherwise if cocks of player > 0]green[otherwise]pale grey[end if] scales";
 	now tail entry is "Growing out from the base of your spine, you have a long, thick tail like that of a lizard or dinosaur.";
 	now cock entry is "[one of]slender[or]reptilian[or]saurian[or]tapered[purely at random]";
@@ -260,7 +260,7 @@ When Play begins:
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 3;		[ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 5;		[ Width of female sex the infection will try to give a player. ]
@@ -268,7 +268,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]animalistic[purely at random]";
 	now type entry is "[one of]wereraptor[or]raptor[or]saurian[or]reptilian[purely at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -409,7 +409,7 @@ to wrcursesave:
 			break;
 	if wrcursestatus is 2 or wrcursestatus is 3:
 		if wrcursestatus is 2:
-			say "     Feeling a surge of pain from the wounds in your shoulders that makes you feel dizzy and ill, you stumble outside to get some fresh air.  There, out in the moonlight, you feel a rush of power surging through you and your eyes turn yellow and slitted.  You stagger and fall, writhing on the ground as a rush of transformation unlike anything you've felt before surges through you.  As you stare up the moon and the instinctual urges threaten to overtake you, you realize this is no normal infection, but a strange lycanthopy.  You are becoming a wereraptor.";
+			say "     Feeling a surge of pain from the wounds in your shoulders that makes you feel dizzy and ill, you stumble outside to get some fresh air.  There, out in the moonlight, you feel a rush of power surging through you and your eyes turn yellow and slitted.  You stagger and fall, writhing on the ground as a rush of transformation unlike anything you've felt before surges through you.  As you stare up the moon and the instinctual urges threaten to overtake you, you realize this is no normal infection, but a strange lycanthropy.  You are becoming a wereraptor.";
 			say "     As your new lycanthropic changes begin, your current form is suppresed for your wild, nocturnal form";
 		otherwise if wrcursestatus is 3:
 			say "     Unable to hold them back, there comes the familiar surge of pain from your raptor wounds.  You feel yourself changing with the coming of the night.  Your body changes, transforming into a lycanthropic raptor once more";
@@ -654,7 +654,7 @@ Instead of resolving Getting the Knife:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "[wrgetknife]";
 		otherwise:
-			say "     Driven off by the lumbering monstrocity, you will have to try coming back another time if you want to try getting the knife.";
+			say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
 	otherwise:
 		[puts Doberman as lead monster for check]
 		repeat with y running from 1 to number of filled rows in table of random critters:
@@ -684,7 +684,7 @@ to say wrgetknife:
 	let bonus be ( intelligence of player + perception of player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
 	if bonus + dice is greater than 18:
-		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]:  ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		say "You are about to head out when you realize that you're about to walk away from this collection of antiquities without even checking out any of the others.  Just because Nermine doesn't want any of them doesn't mean they can't be of use to you.  You flip through the auction list.  It appears the items come from an estate sale and while most of them are nothing of interest to you, one of the photos catches your eye.  Finding the crate, you break into it and pull out the torso mannequin with a chainmail vest on it.  Now that might come in handy, you muse as you head out, feeling a little closer to being rid of your cursed affliction.";
 		increase score by 20;
 		increase carried of chainmail vest by 1;
