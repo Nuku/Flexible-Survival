@@ -36,7 +36,7 @@ to say Palominoattack:
 		say "how the heck did you find me hiding here?";
 
 To say Palominoloss:
-	say "how the heck did you manage to get this, that's the real riddle I suppose..'";
+	say "how the heck did you manage to get this, that's the real riddle I suppose...'";
 
 
 Table of random critters (continued)
@@ -85,7 +85,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fit[or]toned[at random]";
 	now type entry is "equine";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -99,7 +99,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Palomino":
 		if humanity of player is less than 10:
-			say "     Surrendering to the infection, you finally realize that you want nothing more then to be a lovely little slutty pony for your handsome male stallion.  Wasting no time, you run on your new equine feet back to the club where your new master is waiting.  Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on.  You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper!  You love the feeling of showing off your handsome [if cocks of player > 0 and cunts of player > 0]herm[otherwise if cocks of player > 0]male[otherwise if cunts of player is 0]female[otherwise]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
+			say "     Surrendering to the infection, you finally realize that you want nothing more then to be a lovely little slutty pony for your handsome male stallion.  Wasting no time, you run on your new equine feet back to the club where your new master is waiting.  Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on.  You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper!  You love the feeling of showing off your handsome [if cocks of player > 0 and cunts of player > 0]herm[otherwise if cocks of player > 0]male[otherwise if cunts of player > 0]female[otherwise]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
 			if cocks of player > 0:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind.  Your first night is a tremendous success, though the best part is how happy your dominant stud is with you afterwards.  You wake up from a night of wonderful sex to find several new piercings for you to wear to demonstrate who you belong to, as well as his tag hanging from your collar.  Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons, and dancing with your mate and several other strippers afterwards.";
 			otherwise if cunts of player > 0:
