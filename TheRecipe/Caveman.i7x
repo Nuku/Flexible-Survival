@@ -100,7 +100,7 @@ When Play begins:
 	now loot entry is "";             [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]prehistoric[or]slouching[or]muscled[or]rugged[or]brutish[at random]";
 	now type entry is "[one of]caveman[or]hominid[or]cromagnon[as decreasingly likely outcomes]";
 	now magic entry is false;         [ Is this a magic creature? true/false (normally false) ]
