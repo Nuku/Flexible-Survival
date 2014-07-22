@@ -36,7 +36,7 @@ to say losetogrizzly:
 to say beatthegrizzly:
 	say "     The grizzly collapses before you, breathing heavily from your fight. You can see the grizzly's ursine cock peeking out of his furry sheath - it looks like he's up for some more fun. Do you take advantage of the big bear?";
 	if cunts of player > 0 and cocks of player > 0:
-		say "    Would you like to [link]mount the grizzly's ass (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], take him [link]in your pussy (3)[as]3[end link], take him [link]in your ass (4)[as]4[end link] or [link]leave (0)[as]0[end link]?";
+		say "     Would you like to [link]mount the grizzly's ass (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], take him [link]in your pussy (3)[as]3[end link], take him [link]in your ass (4)[as]4[end link] or [link]leave (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 4:
 			say "Choice? (0-4)>[run paragraph on]";
@@ -52,7 +52,7 @@ to say beatthegrizzly:
 		otherwise:
 			say "     You decide against fucking the bear right now, walking away from his defeated form.";
 	otherwise if cunts of player > 0:
-		say "    Would you like to take him [link]in your pussy (1)[as]1[end link], take him [link]in your ass (2)[as]2[end link] or [link]leave (0)[as]0[end link]?";
+		say "     Would you like to take him [link]in your pussy (1)[as]1[end link], take him [link]in your ass (2)[as]2[end link] or [link]leave (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 2:
 			say "Choice? (0-2)>[run paragraph on]";
@@ -64,7 +64,7 @@ to say beatthegrizzly:
 		otherwise:
 			say "     You decide against fucking the bear right now, walking away from his defeated form.";
 	otherwise:
-		say "    Would you like to [link]mount the grizzly's ass (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], take him [link]in your ass (3)[as]3[end link] or [link]leave (0)[as]0[end link]?";
+		say "     Would you like to [link]mount the grizzly's ass (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], take him [link]in your ass (3)[as]3[end link] or [link]leave (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
@@ -141,7 +141,7 @@ When Play begins:
 	now cock width entry is 12;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;		[ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;		[ Depth in inches of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width in inches of female sex the infection will try to give a player. ]
@@ -149,7 +149,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]grizzly[or]bearlike[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -166,14 +166,14 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Grizzly":
 		if humanity of player is less than 10:
-			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one concious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes to heavy to lift. Before you slip into unconciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
-			 say "     You wake up in a goverment holding facility, where you are poked and prodded (under heavy restraint and anathesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidely ursine lifestyle of mostly eating and sleeping.";
+			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one conscious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes to heavy to lift. Before you slip into unconsciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
+			 say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
 			if cunts of player > 0:
-				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing between your legs and in your womb, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees under the grizzly getting filled with bear cum. You rub a paw over your stomach contendedly, looking forward to raising your new cubs after the next hibernation.";
+				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing between your legs and in your womb, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees under the grizzly getting filled with bear cum. You rub a paw over your stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
 			otherwise if cocks of player > 0 and "Mpreg" is not listed in the feats of the player:
 				say "     One hot summer day, you run into a rare sight - another grizzly bear! A fertile female one, at that. You feel a need growing between your legs and in your balls, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees behind the grizzly, filling her womb up with your virile bear cum. You rub her stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
 			otherwise if "Mpreg" is listed in the feats of the player:
-				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing in your rear, a need you've been ignoring during your time in the wild. The bear is hostile at first, but after a brief period of wary sniffing he realizes you're just another female and then you're on your hands and knees under the grizzly getting filled with bear cum. You try to get the other grizzly to reciprocate, but he's having none of it - maybe next time. You rub a paw over your stomach contendedly, looking forward to raising your new cubs after the next hibernation.";
+				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing in your rear, a need you've been ignoring during your time in the wild. The bear is hostile at first, but after a brief period of wary sniffing he realizes you're just another female and then you're on your hands and knees under the grizzly getting filled with bear cum. You try to get the other grizzly to reciprocate, but he's having none of it - maybe next time. You rub a paw over your stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
 			otherwise:
 				say "";
 		otherwise:
