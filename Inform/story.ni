@@ -1995,6 +1995,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Comic Shop[close bracket][as]nav Comic Shop[end link] ";
 		if Isolated Street is known:
 			say "| [link][bracket]Isolated Street[close bracket][as]nav Isolated Street[end link] ";
+		if K9 Vans is known:
+			say "| [link][bracket]K9 Vans[close bracket][as]nav K9 Vans[end link] ";
 		if Kristen's Hideout is known:
 			say "| [link][bracket]Kristen's Hideout[close bracket][as]nav Kristen's Hideout[end link] ";
 		if Lingerie Store is known:
@@ -6792,6 +6794,7 @@ Include Mack for FS by Stripes.
 Include Meredith by Stripes.
 Include Stella by Stripes.
 Include Bubble by Stripes.
+Include G-Shep Squad by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
