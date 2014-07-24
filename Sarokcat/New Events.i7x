@@ -82,8 +82,8 @@ Instead of Resolving a Hyena Gang:
 		Increase hyg by 1;
 	otherwise if hyg is 2:
 		say "As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area.  Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you, and quickly prepare for a fight, only to realize it doesn[']t show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.[line break] 'Hey don[']t worry,' the hyena says as she draws closer, making you nervous, 'I[']m not here for a fight, but we[']ve noticed you near our turf and looking at our signage before,' he says with a gesture at the graffiti, 'So I thought I[']d come over and offer you a chance to join on up,";
-		if the bodyname of the player is "herm hyena":
-			say "'Besides, it looks like you would fit right in around here already,' the hyena says as shi eyes your hyenalike frame, 'What do you say to giving us a try?'";
+		if the bodyname of the player is "Herm Hyena":
+			say "'Besides, it looks like you would fit right in around here already,' the hyena says as shi eyes your hyena-like frame, 'What do you say to giving us a try?'";
 			If player consents:
 				say "'Great! I[']ll, just go and let the others know to keep an eye out for you!  You should come back in a little bit' Shi says, with a toothy smile, 'but first.' Shi says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react shi puts you back down and gives you a big grin, before heading back towards the hyena territory.  Glancing over her shoulder she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
 				hyenaify;
