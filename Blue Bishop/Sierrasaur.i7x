@@ -1,5 +1,5 @@
 Version 1 of Sierrasaur by Blue Bishop begins here.
-[ Version 1 - First content phase of Sierrasaur ]
+[ Version 1.1 - Bound State Update ]
 
 "Adds an Sierrasaur creature to Flexible Survivals Wandering Monsters table"
 
@@ -37,31 +37,49 @@ to say losetosierra:
 	otherwise:
 		sierrasex;
 
+boundrecover is a truth state that varies. boundrecover is usually false.
+recoverchance is a number that varies. recoverchance is usually -1.
+enduring is a truth state that varies. enduring is usually false.
+obliging is a truth state that varies. obliging is usually false.
+
+to checkboundrecover:
+	if boundrecover is false, increase recoverchance by 1;
+	if a random chance of recoverchance in 9 succeeds:
+		now boundrecover is true;
+		now recoverchance is -1;
+
 to sierrabind:
 	now lustatt is libido of player;
 	now calcnumber is -1;		
 	let trixieexit be 0;
 	while trixieexit is 0:
+		if hp of player > 0 or humanity of player < 50:
+			now obliging is true;
 		if bodyname of player is "Sierrasaur" and player is pure:
 			now sierrapure is true;
 		otherwise:
 			now sierrapure is false;
+		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
 			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if cocks of player > 0]jerk yourself off[otherwise]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if cocks of player > 0]unloading your [cum load size of player] load against the firm flesh[otherwise if cunts of player > 0]cunt throbbing firmly against the firm flesh[otherwise]a particularly trying task given your lack of outlet[end if][if cocks of player > 0 and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
-			decrease libido of player by (libido of player / 10) + 1;
-			if libido of player < 0, now libido of player is 0;
+			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
-		if a random chance of 4 in 5 succeeds:
+			if enduring is true:
+				decrease humanity of player by 8 + (psycheadjust * 2);
+			otherwise:
+				decrease humanity of player by 15 + (psycheadjust * 5);
+		if a random chance of 4 in 5 succeeds and enduring is false:
 			increase hunger of player by 1;
 			increase thirst of player by 2;
 		otherwise:
 			increase thirst of player by 1;
-		say "     [one of]Your surroundings subtly churn and heave in abiding you, the wet sound of these barely yielding walls rubbing together almost all you can hear while you're blanketed in a shroud of utter darkness[or]Your surroundings hot and firm against you, the lack of much air doesn't prove to be too much of a problem, though this doesn't diminish the issue of your slowly degrading mind and body[or]Barely able to move around within this slick prison, you can faintly hear the beat of the twisted beast's heart in the distance, though you can't effectively pinpoint where it's coming from, or even up from down[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, lest you [bold type]A[roman type]bide these questionable circumstances.[line break]";
+		now enduring is false;
+		say "     [one of]Your surroundings subtly churn and heave in abiding you, the wet sound of these barely yielding walls rubbing together almost all you can hear while you're blanketed in a shroud of utter darkness[or]Your surroundings hot and firm against you, the lack of much air doesn't prove to be too much of a problem, though this doesn't diminish the issue of your slowly degrading mind and body[or]Barely able to move around within this slick prison, you can faintly hear the beat of the twisted beast's heart in the distance, though you can't effectively pinpoint where it's coming from, or even up from down[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link]Abide[as]2[end link][line break][run paragraph on]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[otherwise]Abide[end if][as]2[end link][line break][run paragraph on]";
+		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][otherwise]-[end if][if struggleatt > 0][bold type]X[roman type][otherwise]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of player < 1:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -126,31 +144,101 @@ to sierrabind:
 					now trixieexit is 1;
 					follow the turnpass rule;
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "2" or keychar in lower case matches the text "abide" or keychar in lower case exactly matches the text " ":
+			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
-				say "     You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-				say "[line break]";
-				if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
-					sierrasex;
-					if bodyname of player is "Sierrasaur" and player is pure:
-						if a random chance of 1 in 5 succeeds:
+				if obliging is true:
+					say "     You're driven to submit to your current circumstance, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
+					say "[line break]";
+					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
+						increase lustatt by 7 + (lustadjust * 2);
+						sierrasex;
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
 							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					now bsextimer is 0;
-					if bodyname of player is "Sierrasaur", decrease humanity of player by 1;
-					if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
-					decrease humanity of player by 3 + psycheadjust;
+						now bsextimer is 0;
+					otherwise:
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						increase lustatt by 14 + (lustadjust * 2);
+					if a random chance of 2 in 3 succeeds, increase bsextimer by 1;
 				otherwise:
-					if bodyname of player is "Sierrasaur" and player is pure:
-						if a random chance of 1 in 5 succeeds:
+					say " You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
+					say "[line break]";
+					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
+						sierrasex;
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
 							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase lustatt by 7 + (lustadjust * 2);
-					if bodyname of player is "Sierrasaur", decrease humanity of player by 1;
-					if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
-					decrease humanity of player by 3 + psycheadjust;
+						now bsextimer is 0;
+					otherwise:
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						increase lustatt by 7 + (lustadjust * 2);
+				if bodyname of player is "Sierrasaur", decrease humanity of player by 1;
+				if facename of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
+				decrease humanity of player by 3 + psycheadjust;
+				increase bsextimer by 1;
+				wait for any key;
+				next;
+			otherwise:
+				now enduring is true;
+				if boundrecover is true:
+					say "[line break]";
+					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+					say "[line break]";
+					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
+						sierrasex;
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						now bsextimer is 0;
+						increase humanity of player by 3;
+						if humanity of player > 100, now humanity of player is 100;
+					otherwise:
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						increase lustatt by 5 + (lustadjust * 2);
+						increase humanity of player by 3;
+						if humanity of player > 100, now humanity of player is 100;
+					now boundrecover is false;
+				otherwise:
+					say "[line break]";
+					say "     You fight to maintain clarity while stuck in these confines, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
+					say "[line break]";
+					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
+						sierrasex;
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						now bsextimer is 0;
+						if bodyname of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
+						decrease humanity of player by 2 + psycheadjust;
+					otherwise:
+						if bodyname of player is "Sierrasaur" and player is pure:
+							if a random chance of 1 in 5 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						increase lustatt by 5 + (lustadjust * 2);
+						if bodyname of player is "Sierrasaur" and "Strong Psyche" is not listed in feats of player, decrease humanity of player by 1;
+						decrease humanity of player by 2 + psycheadjust;
 				increase bsextimer by 1;
 				wait for any key;
 				next;
@@ -172,7 +260,11 @@ to sierrasex:
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
+			if boundstate is true:
+				if enduring is true:
+					decrease humanity of player by 8 + (psycheadjust * 2);
+				otherwise:
+					decrease humanity of player by 15 + (psycheadjust * 5);
 		otherwise:
 			say ". Causing your [if cocks of player > 0]cock[smn] to ooze meekly[otherwise]feminine meekly tightening around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
 		say "     Assailed with a flood the beast's virile seed[if boundstate is true] -- the volume of which more substantive than what you guess is normal --[otherwise],[end if] [if hp of player < 1]struggling impotently under its hold[otherwise if sierrapure is true]eager to be filled to brim by your larger kin's seed[otherwise]filling your womb to the very brim[end if][if sierrapure is false and scalevalue of player < 4], quickly sputtering from your hole[end if]. [if boundstate is true and sierrapure is true]Clearly, it's used this opportunity to also sustain its twisted offspring[otherwise if boundstate is true]The way it feels being pumped full of that slick fluid, you can guess that this was an excuse to sustain you[otherwise]Oddly enough, being pumped full of that slick fluid has an oddly filling and satisfying effect on you, from what you can feel[end if]. The loud, wet sound of the beast pulling his still-hard dick from your hole, a trail of cum in its wake. [impregchance][line break]";
@@ -186,7 +278,11 @@ to sierrasex:
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
+			if boundstate is true:
+				if enduring is true:
+					decrease humanity of player by 8 + (psycheadjust * 2);
+				otherwise:
+					decrease humanity of player by 15 + (psycheadjust * 5);
 		otherwise:
 			say ". Causing your [if cocks of player > 0]cock[smn] to ooze meekly[otherwise if cunts of player > 0]neglected, feminine portal[sfn] to ooze meekly[otherwise]supple hole to meekly squeeze around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
 		say "     Assailed with a flood the beast's virile seed[if boundstate is true] -- the volume of which more substantive than what you guess is normal --[otherwise],[end if] [if hp of player < 1]struggling impotently under its hold[otherwise if sierrapure is true]Eager to be filled to brim by your larger kin's seed[otherwise]filling your bowels to the very brim[end if][if sierrapure is false and scalevalue of player < 4], quickly sputtering from your hole[end if]. [if boundstate is true and sierrapure is true]Clearly, it's used this opportunity to also sustain its twisted offspring[otherwise if boundstate is true]The way it feels being pumped full of that slick fluid, you can guess that this was an excuse to sustain you[otherwise]Oddly enough, being pumped full of that slick fluid has an oddly filling and satisfying effect on you, from what you can feel[end if]. The loud, wet sound of the beast pulling his still-hard dick from your hole, a trail of cum in its wake. [mimpregchance] [line break]";
@@ -206,7 +302,11 @@ to sierrasex:
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;
 			if struggleatt > 0, decrease struggleatt by 1;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
+			if boundstate is true:
+				if enduring is true:
+					decrease humanity of player by 8 + (psycheadjust * 2);
+				otherwise:
+					decrease humanity of player by 15 + (psycheadjust * 5);
 		otherwise:
 			say ". Causing your cock to spurt weakly into the beast's tight depths, the reptile not seeming all that interested in getting you off properly and subsequently leaving you still lust-addled";
 		say ". [if sierrapure is true and boundstate is true]Clearly, your larger kin wishes to bathe its smaller occupant, making you awash in its rejuvenating effects[otherwise if boundstate is true and sierramem is 2]The sexual fluids seem to have a rejuvenating effect as the wash over you, clearly indicating that it used this act to sustain its prisoner[otherwise if sierramem is 2]Oddly, the sexual fluids feel a bit rejuvenating when partially coated in it[otherwise if boundstate is true]Bathing you in its sexual fluids, it gives its prisoner a moment to bask in its rejuvinating effects[otherwise]Bathing you in its sexual fluids, it gives you a moment to bask in its rejuvinating effects[end if]. Finally satisfied, it pulls itself free of you, the loud, wet sound of its departure filling the air briefly.";
@@ -240,7 +340,11 @@ to sierrasex:
 			decrease libido of player by (libido of player / 10);
 			if libido of player < 0, now libido of player is 0;
 			now lustatt is libido of player;
-			if boundstate is true, decrease humanity of player by 15 + (psycheadjust * 5);
+			if boundstate is true:
+				if enduring is true:
+					decrease humanity of player by 8 + (psycheadjust * 2);
+				otherwise:
+					decrease humanity of player by 15 + (psycheadjust * 5);
 		otherwise:
 			say ". Aching with need after the whole ordeal, it takes you a moment to calm down, the beast patiently giving you a moment to catch your breath.";
 	if boundstate is false:
@@ -308,7 +412,7 @@ When Play begins:
 	now victory entry is "[losetosierra]";	
 	now desc entry is "[sierradesc]";
 	now face entry is "a wide set, distinctly [one of]reptilian[or]saurian[at random] build";
-	now body entry is "a bulky, stout, and feral frame. Naturally inclined to make you stand on all fours, you're at least smaller than your proper kin and still able to articulate, "; 
+	now body entry is "a bulky, stout, and feral frame. Naturally inclined to make you stand on all fours, you're at least smaller than your proper kin and still able to articulate"; 
 	now skin entry is "a light brown, [one of]tough[or]rhino-hard[at random] hide for";  
 	now tail entry is "You're adorned in a stubby, wide tail, that isn't of much real use to you."; 
 	now cock entry is "[one of]bunt[or]bestial[at random], always at least partially eager";
