@@ -1323,7 +1323,7 @@ to wyvernheadapply:
 			say " moves to climb up on you, her oozing, bestial cunt grinding insistently against your face. [if scalevalue of player < 4]Quite a lot to take all at once[otherwise]Showing absolutely no restraint[end if], your face is smeared with her tainted honey, making it very difficult to think straight.";
 	increase pewterheadocc by 1;
 
-pewterheadvar3 is a number that varies;
+pewterheadvar3 is a number that varies.
 
 to wyvernbodyapply:
 	increase pewterbodyocc by 1;
@@ -1809,7 +1809,7 @@ to wyverndisengage:
 				decrease pewtergenitalcap by 1;
 				now tempnum is 0;
 				
-tempnum2 is a number that varies;
+tempnum2 is a number that varies.
 
 to wyvernmatron:
 	if a random chance of tempnum2 in 14 succeeds:

@@ -17,7 +17,7 @@ pewtercuntocc is a number that varies.
 pewterassocc is a number that varies.
 pewterheadvar1 is a number that varies. [Indicates how many consorts are attending/tounging a body region]
 pewterheadvar2 is a number that varies. [Indicates how many consorts are riding/fucking a body region]
-pewtercockvar1 is a number that varies;.
+pewtercockvar1 is a number that varies.
 pewtercockvar2 is a number that varies.
 pewtercuntvar1 is a number that varies.
 pewtercuntvar2 is a number that varies. 
@@ -114,7 +114,7 @@ to say pewterdesc:
 
 Section 1.1 - Pewter Consort Bind
 
-pewtertorsosuppress is a truth state that varies;
+pewtertorsosuppress is a truth state that varies.
 
 to pewterbind:
 	now lustatt is libido of player;
