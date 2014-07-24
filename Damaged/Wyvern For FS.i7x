@@ -173,7 +173,7 @@ to say WYVVIC:
 			say "     Thick, warm goo slowly beginning to envelope you, [if hp of player < 1 and player is not submissive]you're instinctively driven to try and pull yourself free with little success[otherwise]compelling you to writhe and twist against its touch[end if], acrid substance soon clinging to your every inch before you feel it gradually harden, encasing you entirely. Your confines are quickly pulled upright and moved around, the wyvern apparently fussing over its shape before she relents. Muffled, bestial groans emitted from your captor, you're forced to watch through your translucent prison as the [if daytimer is day]daylight[otherwise]night's lights[end if] becomes eclipsed by utter darkness, an overwhelming heat enveloping you before you black out.";
 			infect;
 			if waiterhater is 0, wait for any key;
-			if a random chance of wyvorgyroll in 1 succeeds: [6]
+			if a random chance of wyvorgyroll in 6 succeeds:
 				wyvorgy;
 				now wyvorgyroll is 1;
 				if "Kinky" is listed in feats of player, increase wyvorgyroll by 1;
