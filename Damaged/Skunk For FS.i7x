@@ -8,7 +8,7 @@ Version 10 of Skunk For FS by Damaged begins here.
 Section 1 - Monster Responses
 
 skunkready is a number that varies.
-Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if its a 2 its a skunkbeast...]
+Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if it's a 2 it's a skunkbeast...]
 skunkfight is a number that varies.
 
 to say skunk vict:
@@ -94,7 +94,7 @@ to say skunk_attack:
 
 to say sblvictorysex:
 	now fightoutcome is 11;
-	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your beastial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[otherwise]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if cocks of player is 0 and cunts of player is 0].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
+	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your bestial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[otherwise]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if cocks of player is 0 and cunts of player is 0].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
 	if cocks of player > 0 or cunts of player > 0:		[not neuter]
 		let randomskunksex be a list of numbers;
 		if cocks of player > 0, add 1 to randomskunksex;
@@ -181,7 +181,7 @@ When Play begins:
 	now cock change entry is "it seems unneeded"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;
-	now sta entry is 14;                    
+	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
@@ -203,7 +203,7 @@ When Play begins:
 	now loot entry is "Skunk Goo";            [- Loot monster drops, -]
 	now lootchance entry is 70;        [- Chance of loot dropping 0-100 -]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]slender[or]sensual[or]curvaceous[at random]";
 	now type entry is "[one of]skunk[or]mephit[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -276,7 +276,7 @@ When Play begins:
 	now infect name entry is "Skunk";	[ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
-	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move.";  [ This is the text that is written to the screen when the player comes into heat]
+	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
 	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[skunk in heat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
