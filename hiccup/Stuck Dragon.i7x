@@ -67,7 +67,7 @@ instead of sniffing dragoness:
 
 Instead of conversing the Dragoness:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
-	if NoIntroduction is 0: 
+	if NoIntroduction is 0:
 		say "     'Hello? Is someone back there?' the large dragoness calls out from the other side of the blocked doorway.  'Please tell me that you're not one of those mindless... sexy... beasts... here to violate me while I'm helplessly trapped here.'  Her rear end wiggles, her tail arches up and her pussy drips all the more at her words, winking with need to be filled.";
 		now NoIntroduction is 1;
 	otherwise if lust of Christy is 0 and libido of Christy is 0:
@@ -310,7 +310,7 @@ to say dragonchange:
 		now cockname of player is "Slutty Dragoness";
 		now skinname of player is "Slutty Dragoness";
 		now scalevalue of player is 5;
-		now bodydesc of player is "[one of]fecund[or]beastial[at random]";
+		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now the daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
@@ -386,7 +386,7 @@ to say dragonchange:
 		now cockname of player is "Horny Dragon";
 		now skinname of player is "Horny Dragon";
 		now scalevalue of player is 5;
-		now bodydesc of player is "beastial";
+		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
 		now the daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
@@ -742,7 +742,7 @@ Instead of resolving Dragon Prey:
 		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]: ";
 		if playernum >= 15:
 			say "You quickly start to apologize to Christy with as much sincerity as you can muster under the rather frightening circumstances.  You tell her that you're sorry that you upset her and that you didn't mean for her to be hurt.  You go on to add that you realized what you were doing was wrong, which is why you went looking for a way to free her.  You confess that you've really started to care for her and that you didn't want to hurt her feeling by telling her that it has been you before.  You add that she's such a kind and loving soul that you didn't want to hurt her any more than you already had.";
-			say "     She seems moved by your confession and eventually releases you, nuzzling against you as tears run down her scaly cheeks as you stand back up.  'I'm glad you... *sniff* ... decided to apologize... *sob* ... I don't really want to think about what I might have done otherwise.  You... you were my hero,' she says with a growl at the end, knocking you back several feet onto the ground.  'I don't want to ever see you again,' she says, choking back another sob before turning and flying off.";
+			say "     She seems moved by your confession and eventually releases you, nuzzling against you as tears run down her scaly cheeks as you stand back up.  'I'm glad you... *sniff*... decided to apologize... *sob*... I don't really want to think about what I might have done otherwise.  You... you were my hero,' she says with a growl at the end, knocking you back several feet onto the ground.  'I don't want to ever see you again,' she says, choking back another sob before turning and flying off.";
 			say "     You are saddened at the loss of your friend and lover, having destroyed what was once a beautiful and enjoyable relationship with your deception and base lusts.  Still on the ground where she knocked you down, you watch her fly away, listening to her angry roars as she blasts great gouts of fire into the air to vent her emotions.  Seeing these volatile outbursts, you can see how things may have gone much worse for you.";
 			if morale of player > 20:
 				now morale of player is morale of player / 2;
