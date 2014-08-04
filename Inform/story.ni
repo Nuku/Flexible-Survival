@@ -6775,6 +6775,7 @@ Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
 Include Paula by Stripes.
+Include Master Mind by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.

@@ -518,6 +518,10 @@ Police Lockerroom is a room.  It is sleepsafe.  Police Lockerroom is east of Pol
 The description of Police Lockerroom is "[policelockerdesc]".
 The scent of Police Lockerroom is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
+Cell Block A is a room.  It is sleepsafe.  Cell Block A is down from Police Station.
+The description of Cell Block A is "[CellBlockAdesc]".
+The scent of Cell Block A is "Despite the cleanup, there's still a lingering scent of sweat, sex and other less pleasant odours.".
+
 to say policestationdesc:
 	if hp of Alexandra is 50:
 		say "     The directions from Alexandra lead you down a side street just off from a major intersection.  While there's some mutant activity along those streets, the side street is thankfully bare of trouble.  Clearly the policewoman's presence has at least driven off the feral creatures right around the station for the moment.";
@@ -537,8 +541,16 @@ to say policelockerdesc:
 	if paula is lockered:
 		say "     Paula's converted a small corner of this room into her nurse's station.  The medical supplies, which she's put herself in charge of, are secured in some lockers to prevent misuse.  She's also set aside a cot to use as her examination table.";
 
+to say CellBlockAdesc:
+	if hp of Alexandra < 57:
+		say "     This area shows a lot of damage and it's easy to get why.  With the cops bringing in sex-crazed victims and adding them to their existing prisoners, eventually some powerful transformations would arise and the monstrous inmates broke out.  Bars are bent, cell doors are ripped open or torn off completely and cum stains are everywhere, stinking up the place with the heady musk of sex along with other, less pleasant odours.";
+	otherwise:
+		say "     This area still shows a fair bit of damage after the breakout of sex-crazed creatures.  Not much can be done to repair the cells, but some are sturdy and can be locked up.  The area's also received a cleaning, though not nearly as thorough as the other parts of the police station.  There are no infectious cum pools left, though their scent and that of other unpleasant things still linger in the air down here.";
+	if Master Mind is imprisoned:
+		say "     The gold-skinned, dome-headed automaton stands silently in one of the locked cells.  She is confined on her own and is occasionally provided with food and water from the station's supplies.  The small cot in the cell seems unused, the prisoner never seeming to need sleep, instead standing or sitting in silence, her electronic brain quietly blinking with the random lights of thought.";
 
-A person can be policed. A person can be lockered. A person is usually not policed. A person is usually not lockered.
+
+A person can be policed. A person can be lockered. A person can be imprisoned. A person is usually not policed. A person is usually not lockered. A person is usually not imprisoned.
 
 Definition: A person(Called X) is policed:
 	If x is the player, no;
@@ -550,6 +562,12 @@ Definition: A person(Called X) is lockered:
 	If x is the player, no;
 	if x is Velos, no;
 	if the location of x is Police Lockerroom, yes;
+	no;
+
+Definition: A person(Called X) is imprisoned:
+	If x is the player, no;
+	if x is Velos, no;
+	if the location of x is Cell Block A, yes;
 	no;
 
 
@@ -615,6 +633,8 @@ to say alexandratalk_gg1:
 		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
 	otherwise if hp of Alexandra is 56:
 		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Thanks again for those supplies.  It should make things a lot easier once people start taking shelter here.'[at random]";
+	otherwise if hp of Alexandra is 60:
+		say "     [one of]'It's good to see a friendly face from time to time,' she says, her tail wagging.[or]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for making the effort to talk to me.  I might've gone over the edge and permanently become a crazy police dog or something if not for you to talk to.'[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centred around where that infection first broke out or they were first able to breed more of themselves.'[or]'Let me know if you find anyone else out there.  I could use some good news.'[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[or]'Thanks again for those supplies.  It should make things a lot easier once people start taking shelter here.'[or]'Thanks for your help with catching that automaton woman.  I haven't been able to get any useful information out of her yet, but she should start talking eventually.'[or]'I haven't been able to get anything out of that smug android yet, but I'll keep at it.  And I'll keep an eye out for others like her, too.  If we get them, the others can't organize.'[at random]";
 	otherwise:
 		say "     [one of]'Grab a seat,' she adds, waving a paw to a stray office chair before sitting at her desk again.[or]'I've had to drive off a few creatures that've come poking around here.  Things have been pretty quiet lately, so it must be helping.'[or]'Thanks for all your help around here.  I don't think I'd have been able to pull this off alone.  You've been a good friend,' she says with a smile and a funny look before turning her attention to some of her notes.[or]'It's been hard to deal with this sex-crazed city at times.  The urges you get, you know,' she says.  You can see her squeezing her legs together and grinding her thighs against one another, the passing scent of canine arousal in the air.[or]Alexandra gives you a report on recent activity around the police station.[or]'You need to be careful out there.  There's some people out there who seem sane enough at first, but they've lost their minds and become horny, feral mutants.  Just because someone can talk to you doesn't mean they're sane or safe.'[or]'I've noticed that there's different mutants in different parts of the city.  They're probably centered around where that infection first broke out or they were first able to breed more of themselves.'[or]'Good work finding survivors.  If you locate others, don't forget that this is a safe place for them.  We'd be happy for more company here,' she says with a grin.[or]'Don't forget that the military's going to be coming in to help us as soon as they can mobilize.  We just need to hold out until then.'[or]You chat with Alexandra for a while, telling her some of the stuff you've encountered out in the city.[at random]";
 [		say "***";		]
@@ -735,6 +755,8 @@ to say alexandra_supplies:
 [ 56 = Both given ]
 [ 57 = Brought in a survivor (Jimmy) ]
 [ 58 = Medical supplies (and Paula?) ]
+[ 59 = Unsuccessful Automaton attempt ]
+[ 60 = Master Mind captured ]
 
 [ lust of Alexandra ]
 [ 0 = not preggers ]
@@ -968,6 +990,10 @@ to AlexandraTaskChat:
 		add { 52, 52, 52, 52, 52, 52 } to AlexandraTask;
 	if hp of Alexandra >= 56 and lastPolicePatrol - turns < 8:
 		add { 53 } to AlexandraTask;
+	if hp of Alexandra is 58:
+		add { 54, 54, 54, 54, 54, 54 } to AlexandraTask;
+	if hp of Alexandra is 59:
+		add { 54, 54, 54 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
 		say "[alexandratalk_gg1]";
@@ -991,6 +1017,7 @@ to AlexandraTaskChat:
 		if entry 1 of AlexandraTask is 51, say "[A_Task51]";	[Police Extra 1 - Repairs]
 		if entry 1 of AlexandraTask is 52, say "[A_Task52]";	[Police Quest 2 - Med supplies/Paula]
 		if entry 1 of AlexandraTask is 53, say "[A_Task53]";	[Police Extra 2 - Patrols]
+		if entry 1 of AlexandraTask is 54, say "[A_Task54]";	[Police Quest 3 - Automatons 2]
 		
 
 
@@ -1285,6 +1312,142 @@ to say A_Task53:	[Patrols]
 	now lastPolicePatrol is turns;
 	if fightoutcome >= 20 and fightoutcome < 100, decrease lastPolicePatrol by 8;	[player lost/fled = added delay before asked to patrol again]
 
+
+auto2entry is a number that varies.
+
+to say A_Task54:	[Automatons 2]
+	setmonster "Automaton";
+	choose row monster from the table of random critters;
+	let autopath be 0;
+	if hp of Alexandra is 58:
+		say "     Alexandra looks a little concerned as she approaches you.  'Now that things are a bit more in order around here, I want to get back to the problem of those automatons.  With everything going on, I know there are worse threats out there, but I just can't stand the idea of citizens being rendered into mindless robots.  And while they seem mindless, their activities do show some patterns and organization.  Whether that's just [']programming['] making it seem that way or some hidden plan, I can't tell.  I know I've asked a lot of you, but I want you to come with me to press further into their territory.";
+		say "     You nod and agree, knowing this is important to her and not wanting her to risk going out on her own against them.  Taking a few minutes, you both gather your gear and prepare to head out, leaving [if Paula is policed]Paula and [end if]Jimmy to keep an eye on the place.  The two of you head off, making the trek through the city to the area around the capitol.  The dark, dismal streets of the area are marked by devastation and home to monstrous creatures.  You and Alexandra have to move cautiously, working to avoid these fearsome beasts.  Thankfully, aside from some minor harassments, you manage to make it into the automaton territory without distraction.";
+		say "     Taking a vantage point in a burned-out building, you observe the comings and goings on the automatons.  At first, you don't really see the patterns Alexandra's mentioned, but after a while, you begin to notice some groups of them following repeating paths.  'They're on patrol?' you ask quietly.  The doberwoman nods.";
+		say "     'Same groups, same paths - like clockwork.  And the patterns and groups are different each time I've come to monitor them, so it's not just them locked into a routine.  And it's always around this one cluster of buildings.  Let's watch a little longer to get the pattern down and then we'll try getting past them.'  You nod and continue your observation, trying to your best to work out the patrol patterns, looking for an opening.";
+	otherwise:
+		say "     Alexandra comes up to you with that look on her face.  Knowing she wants to check out the automatons again, you agree to go with her to investigate.  Leaving [if Paula is policed]Paula and [end if]Jimmy in charge, the two of you head off.  The two of you make it to the edge of the ash-clogged streets the automatons are patrolling.  Taking your vantage point again, you monitor their movements, trying to find an upcoming break you can exploit to get inside.  The groups and routes seem to have changed, perhaps each group having a route they've locked themselves into following.  Regardless, the precision of their patterns is your potential way in, if you can predict when there will be an opening long enough to get through.";
+	attempttowait;
+	if "Stealth" is listed in feats of player:
+		say "     With your adeptness at moving stealthily, you're able to spot an opening.  Moving around to one side of the area, the two of you follow a path of debris and buildings that allow you to get near the patrol perimeter without being seen.  From there, it's just a matter of waiting for a gap and slipping past the patrols.";
+		now autopath is 1;
+	otherwise:
+		let bonus be ( perception of player + intelligence of player - 20 ) / 2;
+		let dice be a random number from 1 to 20;
+		say "Per+Int - You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		if bonus + dice is greater than 15:
+			say "It takes some time and observation to find a moment when the two of you will be able to sneak past.  The patrols are very tightly regimented, often having a third group passing the other end of the alleyways you might consider taking.  You are able to find what you hope is a good opportunity to breach the perimeter and Alexandra agrees.  Taking her paw in yours, you rush to get into position, as it'll be a brief window that won't synch up again for a long time.  As you get near, the two of you drop into the shadows and get a little closer.  As the two groups pass by each other and move apart, you head on through the opening.  You then hurry around the corner and into cover moments before another patrol turns down the alleyway you just vacated.  It was close, but you made it.";
+			now autopath is 1;
+		otherwise:
+			say "You perceive what appears to be a way through the patrols during a break that'll open up and Alexandra agrees.  Taking her paw in yours, you rush to get into position, as it'll be a brief window that won't synch up again for a long time.  As you get near, the two of you drop into the shadows and get a little closer.  As the two groups pass by each other and move apart, you head on through the opening.  But you only make it around one building before another patrol's route passes to cover that opening.  Spotting you, they move towards you swiftly.  You'll have to fight.";
+			challenge "Automaton";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     You and Alexandra are able to incapacitate two of the patrol group, but the noise has alerted the others to your presence.  With the element of surprise gone, you won't be able to fight them all.  Hearing them marching steadily towards you, the two of you head for the closest open path and make a run for it.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+				say "     With you defeated, Alexandra's left to struggle another to other two automatons while the victor assaults you.  By the time she's free to assist you, the other patrols are quite near and the two of you have to make a run for it before you're penned in completely.  Taking the closest open path, you make your escape.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			otherwise:			[fled]
+				say "     Having already failed from the moment you were spotted, you see little point in staying to fight the automatons closing in on you.  Dodging out of the fight, you call for Alexandra to follow you.  The two of you head for the closest open path and make a run for it.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			decrease morale of player by 5;
+			increase auto2entry by 2;
+			now hp of Alexandra is 59;
+	if autopath is 1:
+		say "     Having gotten past the outer patrols, you move around the area, doing your best to evade the patrols inside the perimeter.  Quick glances through windows shows you groups of automatons standing silently, inactive and unmoving, usually in neat, orderly rows.  It is a little unnerving, like they're puppets without strings or wind-up dolls waiting to be turned on.  Others move around the buildings in their robotic gait, stiffly completing its current task.";
+		say "     As you progress further into the cluster of office buildings, the patrols suddenly get denser and the two of you find yourselves with a patrol approaching from around both corners.  With no other option, you are only left with up.  There's been some light damage to the wall of the office building you've just reached.  It may provide enough hand holds to reach the service ladder up to the rooftop, if you two can make it there quickly enough.";
+		let bonus be ( dexterity of player - 10 ) / 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		if bonus + dice is greater than 15:
+			say "With a helpful boost from Alexandra and some climbing, you're able to reach the bottom of the service ladder.  Getting a good grip on it, you hold out your other hand, helping the policewoman up for the second half of her own climb.  You scale the ladder as quickly and as quietly as you can manage, thankfully making it up to the roof before the automatons on patrol turn the corner.";
+			now autopath is 2;
+		otherwise:
+			now autopath is 0;
+			say "Getting a helpful boost from Alexandra, you try to climb the rough wall.  But just as you're grabbing hold of the bottom rung, the automaton patrol clears the corner.  Spotting you, their slow march changes to a stiff run.  Faced with no choice but to fight, you jump back down to assist Alexandra, hoping to dispatch a few of the guards quickly so you might make your escape.";
+			challenge "Automaton";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     You and Alexandra are able to incapacitate two of the patrol group, but the noise has alerted the others to your presence.  With the element of surprise gone, you won't be able to fight them all.  Hearing them marching steadily towards you, the two of you head for the closest open path and make a run for it.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+				say "     With you defeated, Alexandra's left to struggle another to other two automatons while the victor assaults you.  By the time she's free to assist you, the other patrols are quite near and the two of you have to make a run for it before you're penned in completely.  Taking the closest open path, you make your escape.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			otherwise:			[fled]
+				say "     Having already failed from the moment you were spotted, you see little point in staying to fight the automatons closing in on you.  Dodging out of the fight, you call for Alexandra to follow you.  The two of you head for the closest open path and make a run for it.  You are pursued for some distance before finally losing them.  With the creatures on alert, you see little point in trying again right now and instead make your way back to the police station with lowered spirits.";
+			decrease morale of player by 5;
+			increase auto2entry by 2;
+			now hp of Alexandra is 59;
+			increase auto2entry by 3;
+			now hp of Alexandra is 59;
+	if autopath is 2:
+		say "     You both peer over the edge, staying low, to watch the patrol pass and look for your next opportunity to continue out[if daytimer is day].  You notice that there is a skylight built into the roof you're on[otherwise].  You notice some illumination coming from a skylight built into the roof you're on[end if].  Motioning to Alexandra, the two of you head over to it.  Looking down through the skylight, you spot something that definitely catches your attention.";
+		say "     While the small conference room has mostly been stripped bare, there remains a desk at one end with a figure behind it.  Illuminated by the light of several monitors, this golden female is clearly different from the others in the room with her.  Aside from wearing a silvery jumpsuit that leaves little of her sexy body to the imagination, the top of her skull is a glass dome enclosing a computerized brain of circuits, wires and blinking lights.  From the way she directs the others around the room with only the occasional hand motion and static modem hisses, you can tell there's something more to this one and perhaps you'll even be able to get some answers by questioning one like her.";
+		say "     You're in the midst of telling Alexandra this when you are cut short as the canine's becoming rapidly agitated.  Looking back inside, you see a pair of the automatons pulling a half-transformed human toward the glass-domed leader.  Having risen from her desk, she approaches the dazed but still struggling guy.  Placing her hands on each side of his head, the lights in her head blink rapidly.  He stiffens and the progression of his skin turning silvery accelerates, his transformation rapid and relentless.  A glow fills his eyes and they turn to the mindless lights of an automaton before he's released.";
+		say "     Alexandra, by this point, is searching the skylight frantically for a means to open it.  Finally, in her frustration and hurry to rescue a victim you know already to be lost, she breaks the glass with her nightstick and jumps in.  Dropping from over 10 feet, she slams atop one of the automatons, knocking it to the floor.  'Stop!  Police!' the doberwoman cop growls.  There is a brief moment of surprise on the unusual female's face before her expression returns to the dispassionate norm of the automatons.";
+		say "     'So you are the meat bitch who has been snooping around here.'  Her voice is cold and has an edge of disdain in its otherwise dispassionate tone.  'This saves me from sending others to track you down.'  With a motion and a burst of fax machine noises, she directs the others to attack.  By this point, you're already dropping down into the room, having climbed into the opening left by the doberwoman to ensure a safe drop.  Fighting side by side, you and Alexandra face off against the automatons moving in to attack.";
+		challenge "Automaton";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     Having disabled one of them, you have only a moment before another of them is moving in to face you.  A quick glance to Alexandra shows that she's doing well also.  The dome-headed female has moved back behind the desk, staying out of the immediate fighting area while the other automatons try to restrain you.";
+			challenge "Automaton";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Having knocked down the second automaton, you grab the last one Alexandra's dealing with from behind, leaving her the chance to sock the blue-skinned woman in the jaw, knocking her out.  With all but the glass-domed female incapacitated for the moment, the two of you turn you attention to this advanced model.";
+				say "     With a burst of fax machine noises, she laughs stiffly as the lights in her dome do some rapid flashing.  'I can deal with you two meatbags myself.  All organics will fa-' she starts to say, cut off by Alexandra pulling out her pistol and pointing it at squarely at her chest.";
+				say "     'You are under arrest for attacks upon citizens and wilfully spreading the infection with the intent to enslave and cause harm,' the doberwoman growls.  'Come quietly.  We've got a nice cell waiting for you at our shelter.  You're going to come with us and answer some questions.'";
+				say "     The robotized woman looks you both up and down.  'You think to arrest me?' she asks, surprise creeping into her otherwise toneless voice.  'Truly and not as some euphemism for sex either?  Intriguing.  But how do you intend to accomplish this?' she enquires, only to have Alexandra wave her gun at her again.  'Ah.  Yes.  Violence.'  The lights under her dome do some rapid bursts, as if calculating.  'Very well.  As I cannot hope to beat you in combat, I am then to be your prisoner.'  She raises her arms into the air, her lights settling into a steady series of pulsing.";
+				say "     After handcuffing her arms behind her back while being read her rights by the policewoman, the two of you escort her at gunpoint from the room and out of the building.  At first, you're unsure how you'll be able to keep from being spotted by patrols, but you find the area easier to sneak out of than into.  With the threat of the gun trained on her back, your gold-skinned prisoner remains silent though her computerized brain continues to blink and flicker with activity.  You feel at ease after crossing out of the patrolled area and getting some distance from the other automatons.  Only then does the elation of having captured one of these advanced automatons begin to slowly set in and it's difficult to contain your excitement.  And the view of her sexy body and backside the whole way back to the police station doesn't help your [']excitement['] level either.";
+				increase morale of player by 3;
+				move Master Mind to Cell Block A;
+				increase score by 25;
+				now hp of Alexandra is 60;
+		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+			say "     Still in a bit of a daze after the assault by the automaton, you are pinned down by a pair of them while Alexandra barks wildly for you to keep fighting.  But with you down, she is soon surrounded and pulled to the ground by the unrelenting machine men.  You are shocked out of your stupor when the elite female steps grabs the doberwoman's head, initiating her rapid transformation.  She snarls and snaps a few times, but the fight goes out of her rapidly as the life fades from her eyes and is replaced by a dull red glow.  Her muzzle and canine face melts away, turning into that of a pretty woman which might even be her true human face.  But it is without emotion or will on that steely face.";
+			say "     Their leader then turns to you, hands moving to cradle your head.  You scream and then, it is over.";
+			say "000100011111000110000100011011010100100101011100110010101010000011110100101010010101001010100101010101001110010101001010010101010010101010100100101001010101001001111100100100101010100101010010010010101011010101001100110010100101010110101110110101101110110101110111001001111100111010101000010101010110010100100001010101101110100010100101001011111001010100101001010100101010101101000001011011010101010100101101010101010101010101010101010101001111101010100101010101001000101010101010001011010101010101010111101010101010101010100101010101010101000101010101001010101111100100011010100010010000010100101001010101010101011010101010101111101000110101010010101010001010101010101010101010101110001101010100010101110101011010101001011110100100110111001010001111010101010101010101010101010100011111001010010100100101010010001010010101010101011010010101010101010010111010001111100101010111001111000101010101010100101010101010101010101010010101010101011010100101010001101010010101111010000101010101010101101111001010101010001001010100101000010101010101010010001001001001010101010101010101010101010101010100111101000101010101010010101011101010000101001010101010001010101010101001001010101001010101001010111001001010110101010100101010101010100010101010101010101010101010010101001010100101010100101010101001010101001010111100101010101010101010001010101010101010010101010101010101010101010101010101010101110000101010101010101010101001010101010010101010101010100101010001110110011001010101010101010101010010101010101001010101010100110101010010101010101010101010100101010101011101101010010010101010100101010101010101011010101010100101110010101010...";
+			now humanity of player is 9;
+			now tailname of player is "Automaton";
+			now facename of player is "Automaton";
+			now skinname of player is "Automaton";
+			now bodyname of player is "Automaton";
+			now cockname of player is "Automaton";
+			attributeinfect;
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
+			if libido of player < 60, now libido of player is 60;
+			now automatonending is 1;
+			attempttowait;
+			end the story saying "You have been automatized.";
+			now battleground is "void";
+			wait for any key;
+			now skipturnblocker is 1;
+			follow the turnpass rule;
+			stop the action;
+		if fightoutcome >= 30:							[fled]
+			say "     Finding yourself in a losing battle, you weave and edge backwards, then make a break for the door.  You call for Alexandra to fall back as well, but she's too deeply into the fight to get away.  You hesitate for a moment, but with automatons moving steadily towards you, you are now cut off from her and have to make a break for it.  Running down the hallway, you search for a way out.  As you're pulling open one door, then comes a loud, growling snarl that is cut off.  There's nothing to be done now but escape.  Reaching an emergency exit, you pull open the door, only to be confronted by a patrol group waiting right there.  You turn around, but the metal men pursuing you have barred that end of the hall as well.  Your attempts to fight are futile, their greater numbers bearing you down.  At some point during the orgy centred upon you, the glass-domed elite comes up, cradling your head even as you're [if cocks of player > 0]fucking a bronze female[otherwise]being fucked by a bronze male[end if].  And then it is over.";
+			say "000100011111000110000100011011010100100101011100110010101010000011110100101010010101001010100101010101001110010101001010010101010010101010100100101001010101001001111100100100101010100101010010010010101011010101001100110010100101010110101110110101101110110101110111001001111100111010101000010101010110010100100001010101101110100010100101001011111001010100101001010100101010101101000001011011010101010100101101010101010101010101010101010101001111101010100101010101001000101010101010001011010101010101010111101010101010101010100101010101010101000101010101001010101111100100011010100010010000010100101001010101010101011010101010101111101000110101010010101010001010101010101010101010101110001101010100010101110101011010101001011110100100110111001010001111010101010101010101010101010100011111001010010100100101010010001010010101010101011010010101010101010010111010001111100101010111001111000101010101010100101010101010101010101010010101010101011010100101010001101010010101111010000101010101010101101111001010101010001001010100101000010101010101010010001001001001010101010101010101010101010101010100111101000101010101010010101011101010000101001010101010001010101010101001001010101001010101001010111001001010110101010100101010101010100010101010101010101010101010010101001010100101010100101010101001010101001010111100101010101010101010001010101010101010010101010101010101010101010101010101010101110000101010101010101010101001010101010010101010101010100101010001110110011001010101010101010101010010101010101001010101010100110101010010101010101010101010100101010101011101101010010010101010100101010101010101011010101010100101110010101010...";
+			now humanity of player is 9;
+			now tailname of player is "Automaton";
+			now facename of player is "Automaton";
+			now skinname of player is "Automaton";
+			now bodyname of player is "Automaton";
+			now cockname of player is "Automaton";
+			attributeinfect;
+			now tail of player is tail entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now body of player is body entry;
+			now cock of player is cock entry;
+			if libido of player < 60, now libido of player is 60;
+			now automatonending is 1;
+			attempttowait;
+			end the story saying "You have been automatized.";
+			now battleground is "void";
+			wait for any key;
+			now skipturnblocker is 1;
+			follow the turnpass rule;
+			stop the action;
+	follow the turnpass rule;
+
+[
+	successful = now hp of Alexandra is 60;
+	unsuccessful (stat checks) = now hp of Alexandra is 59;
+]
 
 Section 11 - Endings
 
