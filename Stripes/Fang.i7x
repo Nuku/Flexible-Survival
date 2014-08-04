@@ -90,7 +90,7 @@ to say fangsex:
 		now sortorder entry is 3;
 		now description entry is "Mount the big wolf to show him who's alpha.";
 		now toggle entry is fangsexy rule;
-	if libido of fang > 2 and lastrabbitfuck - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker :
+	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker :
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 5;
@@ -144,8 +144,8 @@ to say fangsex4:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going outside from Bunker while ( lastrabbitfuck - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
-	now lastrabbitfuck is turns;
+instead of going outside from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
+	now lastfuck of Sandra is turns;
 	now lastfangfucked is turns;
 	move player to Grey Abbey Library;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again.  Once again, there's[otherwise].  There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her.  Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1].  They are alone in here right now, or at least so they think[end if][if libido of Fang is 1].  With a few quiet whispers,[otherwise].  It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard.  After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
@@ -188,7 +188,7 @@ to say fangsandratongue:
 	say "     Moving in front of them, you bring your dripping cunt to Fang's muzzle.  The wolf needs no prompting and dives his tongue into your crotch, licking at your pussy before diving his tongue into you.  His lupine tongue slides around inside you, lapping up your aroused juices as you watch them fucking.  'Oh, that looks so hot,' the bunny moans between increasingly hard thrusts.  'I've got to give that tongue a try sometime.'  Excited by your juices, the wolf pounds at the bunny harder and harder until he manages, with a pop, to push his knot into her and tie them together so he can fill her with his semen.  'Oh yes,' she cries, 'Gimme that knot, you wild wolf!'  As the wolf licks at you, you imagine the bunny girl stuffed with wolf cum or even better, growing cubs inside her, and it become too much for you to hold back longer and soon enough cumming hard as well, soaking the wolf's muzzle.";
 
 to say fangsandrasex:
-	now lastrabbitfuck is turns;
+	now lastfuck of Sandra is turns;
 	increase lust of Fang by 1;
 	say "     Recalling that you haven't spent time with Sandra in a while, you lead Fang over to one of the side rooms before poking your head in the bunker long enough to call the bunny girl over[if ( number of booked people + number of bunkered people ) > 4 and libido of Fang > 5].  The others smile, having picked up on what's going on, but saying nothing as she heads out to join you[otherwise if ( number of bunkered people + number of booked people ) > 4].  The others inside glance over for a moment, but largely ignore the brief intrusion and the bunny girl's exit[otherwise].  The bunny girl exits the bunker to come join you[end if].  Once in the side room, the bunny girl [if libido of Fang > 5]grins playfully and[otherwise]blushes a little to find Fang there, but[end if] rushes over to hug the big wolf around the neck.  You slip off your pack and clothes, smiling to see that Sandra's already got her paw at the wolf's hard cock.  Clearly she's been looking forward to this as much as your guard wolf has.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
