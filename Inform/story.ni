@@ -6729,6 +6729,8 @@ Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
+Include Hermaid for FS by Xenophiliac.
+Include Monkey King by Kln.
 
 
 
@@ -6777,6 +6779,7 @@ Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
 Include Paula by Stripes.
+Include Master Mind by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.

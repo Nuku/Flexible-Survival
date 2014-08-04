@@ -12,6 +12,7 @@ when play begins:
 autogender is a number that varies.
 metalskin is a number that varies.  metalskin is normally 1.
 playermetalskin is a number that varies.  playermetalskin is normally 1.
+automatonending is a number that varies.
 
 to say losetoautomaton:
 	if autogender is 1:
