@@ -1,4 +1,4 @@
-Hermaid For FS by Xenophiliac begins here.
+Hermaid by Xenophiliac begins here.
 
 "Adds a Template creature to Flexible Survivals Warehouse table"
 
@@ -157,4 +157,4 @@ when play ends:
 		otherwise:
 			say "     Soon enough, the military rolls through in an attempt to contain the situation that has arisen. You present yourself to the military patrols, and after a few tense moments with guns pointed in your direction, you eventually convince the soldiers that you are not feral, and are led through quarantine. You pass through quarantine after multitudes of tests, and emerge back into sane society. Quickly putting your picturesque body to use, you find yourself a job as a professional model, and you soon become the newest craze, with people across the world lining up to see you, and millions of people wanting to be you. You live out the remainder of your long live in luxury, happy as you could be.";
 			
-Hermaid For FS ends here.
+Hermaid ends here.
