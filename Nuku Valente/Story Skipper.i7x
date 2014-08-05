@@ -1059,6 +1059,8 @@ To reciting2:
 						otherwise:
 							now Police Station is unknown;
 							move Alexandra to Grey Abbey Library;
+						if hp of Alexandra >= 60:
+							now Master Mind is in Cell Block A;
 					if hp of Alexandra is 3 and hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
@@ -3004,6 +3006,8 @@ Carry out reciting:
 						otherwise:
 							now Police Station is unknown;
 							move Alexandra to Grey Abbey Library;
+						if hp of Alexandra >= 60:
+							now Master Mind is in Cell Block A;
 					if hp of Alexandra is 3 and hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
