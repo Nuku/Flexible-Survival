@@ -127,7 +127,7 @@ carry out browsebooks:
 		if morale of player < 0:
 			now morale of player is ( 2 * morale of player / 3 );
 		otherwise:
-			increase morale by 2;
+			increase morale of player by 2;
 		Follow the turnpass rule;
 	otherwise If X is 4:
 		If "Expert Hunter" is listed in feats of player:

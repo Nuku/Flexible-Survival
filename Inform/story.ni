@@ -5485,6 +5485,8 @@ This is the self examine rule:
 		otherwise:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[otherwise if libido of player <= 50]wet with your juices[otherwise if libido of player <= 75]hot and dripping juices[otherwise]drooling musky nectar down your thighs[end if]. ";
 	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	if rabbitified is true:
+		say " A pair of white, occasionally twitching rabbit ears spring from your head, replacing what ears you might've had before.[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
@@ -6727,6 +6729,8 @@ Include Grizzly Bear by UrsaOmega.
 Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
+Include Hermaid by Xenophiliac.
+Include Monkey King by Kln.
 
 
 
@@ -6775,6 +6779,7 @@ Include Sally by Stripes.
 Include Alexandra by Stripes.
 Include Jimmy by Stripes.
 Include Paula by Stripes.
+Include Master Mind by Stripes.
 Include Icarus by Stripes.
 Include Hayato by Stripes.
 Include Zigor by Stripes.
