@@ -42,11 +42,11 @@ Version 5 of Eric by Wahn begins here.
 [   4: Player told him that they're okay with it                     ]
 [  99: the player stopped the Felinoid from fucked him               ]
 
-	
-to say WaitLineBreak:   [little bit of often used code]
+
+to say WaitLineBreak: [little bit of often used code]
 	if waiterhater is 0:
 		wait for any key; [skips waiting if it's not wanted]
-		if hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
 	otherwise:
 		say "[line break]"; [people who don't want to wait at least get a break]
 
@@ -55,7 +55,7 @@ Section 1 - Meeting Event
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
 The sarea of Barricaded Lockerroom is "Campus".
 when play begins:
-	add Barricaded Lockerroom to badspots of hermaphrodite;      [cuntboy, later a fight against a hulking cheerleader]
+	add Barricaded Lockerroom to badspots of hermaphrodite; [cuntboy, later a fight against a hulking cheerleader]
 
 Instead of resolving a Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the doorhandle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";
@@ -69,7 +69,7 @@ Instead of resolving a Barricaded Lockerroom:
 			if bodyname of player is "Furling":
 				say "[line break]     After some quick talking, you almost had him convinced, but then he opens the door a bit more and peeks outside. After a short gasp from behind the door, it gets slammed shut again, with noises of something heavy pushed against it for good measure. 'Ah, you're one of them - go away, creature!'";
 				say "     Hm, sounds like he really doesn't like your current looks. Maybe you should try this again in a different shape...";
-			otherwise:	
+			otherwise:
 				say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 				move player to Sports Arena Lockerroom;
@@ -88,26 +88,26 @@ instead of sniffing Sports Arena Lockerroom:
 	say "You don't smell anything noteworthy. With a nanite virus apocalypse going on right outside the door, there haven't been any large numbers of sweaty athletes in here for some time now.";
 
 to say lroomdesc:
-	if (hp of Eric is 0):                         [Starting state]
+	if (hp of Eric is 0): [Starting state]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and the row of lockers pulled in front of the door should keep out all but the most determined intruders.";
 		say "[line break]";
 		say "     Eric has sat down on one of the benches in the room and is looking over to you attentively.";
-	otherwise if (hp of Eric > 0) and (hp of Eric < 100):   [Eric was brought to the bunker after a quick stop here, something followed the scent]
+	otherwise if (hp of Eric > 0) and (hp of Eric < 100): [Eric was brought to the bunker after a quick stop here, something followed the scent]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Eric's former camp has been ransacked, the towels of the improvised bed strewn about among empty bottles, energy bar wrappers and ripped clothing. Looks like something followed the scent trail left when you brought Eric back from his encounter with Stacy and was a bit annoyed that he wasn't still here.";
-	otherwise if (hp of Eric is 100):                       [Eric never came back from Stacy's dorm]
+	otherwise if (hp of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's lockerroom of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
 instead of going inside from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Bunker;
 	if debugactive is 1:
-		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";	
+		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
 	now libido of Eric is 1;
-	
+
 instead of navigating Sports Arena Lockerroom while (libido of Eric is 0 and bodyname of player is "Furling"):
 	move player to Sports Arena Lockerroom;
 	if debugactive is 1:
-		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";	
+		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	say "     As you enter the lockerroom and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies in the dorm after they transformed.'";
 	now libido of Eric is 1;
 
@@ -121,45 +121,45 @@ The conversation of Eric is { "Mew!" }.
 lastEricfucked is a number that varies.  lastEricfucked is normally 555.
 
 instead of sniffing Eric:
-	if thirst of Eric is 0:    [Starting state]
+	if thirst of Eric is 0: [Starting state]
 		say "Eric has a pretty nice, masculine smell. Although there's a slight undertone of something else.";
-	if (thirst of Eric is 1):    [pussy revealed]
+	if (thirst of Eric is 1): [pussy revealed]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a slight hint of the state of his female genitalia - fertile and ready.";
-	if (thirst of Eric is 11):   [pregnant]
+	if (thirst of Eric is 11): [pregnant]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a slight hint of the state of his female genitalia - it's notably different than when you first met him. Could it be he's expecting?";
-	if (thirst of Eric is 21):   [now with a horse-cock]
+	if (thirst of Eric is 21): [now with a horse-cock]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of animal-like musk, a bit like a horse.";
-	if (thirst of Eric is 31):   [now with a satyr-cock]
+	if (thirst of Eric is 31): [now with a satyr-cock]
 		say "Eric has a pretty nice, masculine smell. Underlying that, there's a hint of a stronger, satyr-like musk.";
 
 to say ericdesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric] <- DEBUG[line break]";	
-	if (hp of Eric is 0):   [starting state]
+		say "DEBUG -> HP: [hp of Eric], THIRST: [thirst of Eric], LIBIDO: [libido of Eric], LUST: [lust of Eric], LEVEL: [level of Eric] <- DEBUG[line break]";
+	if (hp of Eric is 0): [starting state]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     At the moment, he's sitting on one of the benches of the lockerroom in the Tenvale campus sports arena, watching you attentively. His gaze moves over to the barricaded door from time to time, just to check it's still secure.";
-	otherwise if ((hp of Eric is 1) or (hp of Eric is 20)):   [pussy revealed, in the bunker, virgin]
+	otherwise if ((hp of Eric is 1) or (hp of Eric is 20)): [pussy revealed, in the bunker, virgin]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     At the moment, he's sitting on a camp bed in the bunker, watching you a bit apprehensively. Looks like he feels uncomfortable at you knowing his gender state.";
-	otherwise if (hp of Eric is 10):   [pussy accepted, in the bunker]
+	otherwise if (hp of Eric is 10): [pussy accepted, in the bunker]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a shy smile, then goes on with his exercises.";
-	otherwise if (hp of Eric is 11):   [pussy accepted, in the bunker, had sex with the player]
+	otherwise if (hp of Eric is 11): [pussy accepted, in the bunker, had sex with the player]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a seductive smile, doing some suggestive stretches before he goes on with his exercises.";
-	otherwise if hp of Eric is 21 or hp of Eric is 31:   [now with horsecock/satyrcock, in the bunker]
+	otherwise if hp of Eric is 21 or hp of Eric is 31: [now with horsecock/satyrcock, in the bunker]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if hp of Eric is 21]horse's[otherwise if hp of Eric is 31]satyr's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a shy smile, then goes on with his exercises.";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [now with horsecock/satyrcock, in the bunker, had sex with the player]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [now with horsecock/satyrcock, in the bunker, had sex with the player]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. He looks fully human, but you know that he's packing a [if hp of Eric is 22]horse's[otherwise if hp of Eric is 32]satyr's[end if] cock and balls inside his shorts. His unlined face has a boyish charm to it and he often smiles while talking. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's lived himself in in the bunker by now, and it looks like he has gone out and brought some more of his stuff in here in the meantime. Besides his camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when he goes outside. You often see him stretching and working out - like right now for example, as you stop and watch him move his inviting lithe body. Eric notices you standing there, and gives you a wink and a smile smile, rubbing the bulge in his pants suggestively before going on with his exercises.";
-	otherwise if (hp of Eric is 99):   [pussy revealed, in the bunker, fucked]
+	otherwise if (hp of Eric is 99): [pussy revealed, in the bunker, fucked]
 		say "     Eric is a college age young man with ginger hair, light skin and quite a few freckles. Or at least he looks like it - you know better that he's got a pussy hidden away under his shorts. His unlined face has a bit of a wary expression on it, as he watches you and wonders when he'll be fucked next. He's wearing a black t-shirt and red running shorts, showing his runner's build - nicely muscled legs and upper body, while still being lithe and lean overall. His left underarm is bandaged.";
 		say "			[line break]";
 		say "     He's taken the camp bed farthest from yours in the bunker and does his best not to attract your attention.";
@@ -167,18 +167,18 @@ to say ericdesc:
 		say "ERROR-Eric-100A: He should be being impregnated by his hulk girlfriend by now! Please report what you did to see this.";
 
 instead of conversing the Eric:
-	if (hp of Eric is 0):   [starting state]
+	if (hp of Eric is 0): [starting state]
 		say "     Eric tells you what happened to him when the plague hit - with people shifting all around and his best friend taking a bite out of his arm, he moved in here and barricaded himself in. Since then, he's only left a few times, sneaking outside at night when most creatures are sleeping to gather some supplies. You in turn tell him of all the things you've seen and witnessed out in the city, making him go pale as he listens.";
 		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I sneaked away before it noticed me. Please, help me save her from there!'";
-		if the player consents:   [going on a rescue mission]
+		if the player consents: [going on a rescue mission]
 			say "     Eric arms himself with a baseball bat and you move out together, mostly staying behind buildings and sneaking through the bushes. It goes pretty well, until you arrive at one of the main thoroughfare of the campus and have to step onto a large open area to move on. You almost make it, then hear a female voice behind you. Turning around, you see a succubus and incubus stand there, eying you like pieces of meat.";
 			say "     'It's just like you promised Aidan - a whole campus of pretty young things ripe for the plucking. How about you take that one,' she says with a nod to you, '- and I ride the redhead.'";
 			challenge "Incubus";
-			if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     The incubus leaves you lying on the ground as he struts off with his demonic partner. You collect your strewn-about belongings and are joined by Eric a moment later, who got pulled behind a bush and is looking a bit disheveled. He says 'Let's get out of here.' and leads on towards your goal.";
-			otherwise if fightoutcome >= 30:														[fled]
+			otherwise if fightoutcome >= 30: [fled]
 				say "     Running as fast as you can, you lead the incubus for a chase over the campus grounds until you finally manage to shake him. Finally coming back to the scene of your confrontation, you find Eric crawling out of a bush, looking a bit disheveled. He says 'Let's get out of here.' and leads on towards your goal.";
-			otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]
+			otherwise if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Having beaten the incubus, you look around where the succubus and Eric are. There's some movement in the bushes in one direction, so you rush over there and find Eric half-dressed with the succubus running her hands all over him. She whirls around as she notices you, hissing at the distraction. As she comes closer, you ready yourself for an attack - and then Eric hits her with his bat from behind, ending the fight early. He says 'Let's get out of here.' and leads on towards your goal.";
 				increase score by 10;
 			say "[line break]";
@@ -188,7 +188,7 @@ instead of conversing the Eric:
 			say "     A scowl on her face, the former Stacy steps over your prone body and grabs Eric by the neck, holding him up in front of her face. 'Now listen you little - I know exactly...' suddenly she stops and sniffs the air, then lowers her head to Eric's crotch. 'Wait a minute - what's this? You're a girl now? Then I do know a way you can make it up to me - I'll take your virginity and forget about you and that bitch.' You see her cock lengthen and fill out a bit from below. Laying Eric down on the bed, Stacy just rips off his clothing, revealing his lean physique - and a pussy where his cock and balls should be. She holds him down with one hand, the other rubbing his pussy lips, making him moan at the unfamiliar sensations.";
 			say "     [WaitLineBreak]";
 			say "     Your head clears a bit and the stars in front of your eyes vanish. With Stacy the cheerleader hulk distracted, now would be a good time to take her on and save Eric from the tender mercies of the girlfriend he intended to rescue. Or you could just stay right here and watch - on the floor right behind Stacy, you got a ringside seat for the action. Her cock is long enough that you could reach out and touch it, and you got a nice sight of Eric's pussy at the edge of the bed from here. (Y = save him; N = watch them) ";
-			if the player consents:   [save him]
+			if the player consents: [save him]
 				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
 				if CheerleaderFirstEncounter is 0:
 					now CheerleaderFirstEncounter is 2;
@@ -197,8 +197,8 @@ instead of conversing the Eric:
 				otherwise:
 					now CheerleaderFirstEncounter is 2;
 					challenge "Hulking Cheerleader";
-					now CheerleaderFirstEncounter is 1;			
-				if fightoutcome >= 20 and fightoutcome <= 29:								[lost]
+					now CheerleaderFirstEncounter is 1;
+				if fightoutcome >= 20 and fightoutcome <= 29 [lost]
 					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";
 					say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
 					say "     Not much later, Eric gasps as he has his first female orgasm, and you see his pussy juices glistening on Stacy's thrusting cock. She stops for a moment and looks down at the writhing cuntboy, then starts up again, harder and faster than before.";
@@ -208,16 +208,16 @@ instead of conversing the Eric:
 					say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 					now hp of Eric is 100;
 					remove Eric from play;
-				otherwise if fightoutcome >= 30:														[fled]
+				otherwise if fightoutcome >= 30: [fled]
 					say "     Taking your legs under your arms, you just run, though as you dash along the corridor you notice Stacy isn't following you. Judging from the loud moans audible from her room, she's too busy fucking Eric... you're pretty sure you lost him for good and won't be seeing the handsome athlete again.";
 					now hp of Eric is 100;
 					remove Eric from play;
-				otherwise if fightoutcome >= 10 and fightoutcome <= 19:  		[won]					
-					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";	      
-					if the player consents:   [take advantage and take him to the bunker]
+				otherwise if fightoutcome >= 10 and fightoutcome <= 19: [won]
+					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";
+					if the player consents: [take advantage and take him to the bunker]
 						say "     [line break]";
 						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
-						if(cocks of player > 0):
+						if (cocks of player > 0):
 							say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. Running your hands over his muscular legs, you arrive at his drippingly wet pussy and push two fingers inside, making him moan as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. You aim your manhood at his moist folds, rubbing its tip against his pussy lips, then push forward, sinking your shaft into his body until you reach his maidenhead and stop for a moment.";
 							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but soon the pleasure able feelings of your hard member rubbing his insides outweigh the pain and he starts moaning again with lust. Holding his legs up with your hands you thrust in and out, revelling in his tight embrace around your shaft as you make a real woman - or rather cuntboy - out of him.";
 							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around your thrusting cock. You stop for a moment and look down at the writhing cuntboy you're inside of, then start up again, harder and faster than before.";
@@ -236,7 +236,7 @@ instead of conversing the Eric:
 						now thirst of Eric is 1;
 						move Eric to bunker;
 						move player to bunker;
-					otherwise:                [really save him]
+					otherwise: [really save him]
 						say "     [line break]";
 						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German Shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent besides you as he thinks about what happened to him.";
@@ -244,8 +244,8 @@ instead of conversing the Eric:
 						now thirst of Eric is 1;
 						move Eric to bunker;
 						move player to bunker;
-			otherwise:                [watch them fuck]
-				say "     Having been hit by her once already, you decide you want to avoid that from happening again - and have some fun in the meantime. You silently crawl a bit closer and sit on the floor from where you have a nice view.";	      
+			otherwise: [watch them fuck]
+				say "     Having been hit by her once already, you decide you want to avoid that from happening again - and have some fun in the meantime. You silently crawl a bit closer and sit on the floor from where you have a nice view.";
 				say "     [WaitLineBreak]";
 				say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
 				say "     Not much later, Eric gasps as he has his first female orgasm, and you see his pussy juices glistening on Stacy's thrusting cock. She stops for a moment and looks down at the writhing cuntboy, then starts up again, harder and faster than before.";
@@ -254,24 +254,24 @@ instead of conversing the Eric:
 				say "     [WaitLineBreak]";
 				say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 				now hp of Eric is 100;
-				remove Eric from play;     
-		otherwise:   [try it later]
+				remove Eric from play;
+		otherwise: [try it later]
 			say "     Eric looks visibly deflated as you decline. 'Oh... if you change your mind, I'll be here. But we really should hurry - who knows what's happening to Stacy...'";
-	otherwise if (hp of Eric is 1):   [virgin in the bunker]
+	otherwise if (hp of Eric is 1): [virgin in the bunker]
 		say "     You sit down beside Eric on a camp bed and talk to him, trying to get him to open up about his... gender issues. He's very embarrassed about it all, rubbing his bandaged arm absentmindedly as he stockingly says 'After Danny bit me and nothing strange happened, I first thought I was immune to whatever is doing all this. But then later, as I was running away from him and through the chaos out in the campus, there was a wrenching feeling inside me and I fell down as my cock vanished and a vagina and womb formed.'";
 		say "     'I hid in the lockerroom and tried to ignore it, hoping something could be done if the military or someone came - but with what happened with Stacy - I'm not sure if I can do that any longer. The feelings I had were... strange and amazing, and I couldn't do anything to resist them. If you hadn't pulled her off me in time...";
 		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer. (Y = you'll search a cure; N = he should accept it) ";
-		if player consents:   [search for a cure]
+		if player consents: [search for a cure]
 			say "     [line break]";
 			say "     You tell Eric that you'll have an eye out for a way to make him a man again. Maybe the cum of some creature that's fully male and still somewhat human would do the trick... and there surely will be centaurs or satyrs or something of the like in this city by now.";
 			now hp of Eric is 20;
-		otherwise:            [make him accept his pussy]
+		otherwise: [make him accept his pussy]
 			say "     [line break]";
 			say "     Putting a hand on Eric's arm, you tell him to accept what happened to him and be grateful that he's still human. You remind him how good he felt when Stacy rubbed his pussy, so maybe he could try it with someone he trusts...";
 			now hp of Eric is 10;
-	otherwise if (hp of Eric is 10):   [accepted his pussy]
+	otherwise if (hp of Eric is 10): [accepted his pussy]
 		say "     He says 'Having a pussy still feels strange to me. Since that thing with Stacy, it keeps getting moist and swollen all the time.'";
-	otherwise if (hp of Eric is 11):   [accepted his pussy, had sex with player]
+	otherwise if (hp of Eric is 11): [accepted his pussy, had sex with player]
 		if lust of Eric is 2:
 			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], talk him into getting fucked by David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
 			now calcnumber is 0;
@@ -282,17 +282,17 @@ instead of conversing the Eric:
 					break;
 				otherwise:
 					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into getting fucked by David or [link]3[end link] to break off talking.";
-			if calcnumber is 1:								[chat]
+			if calcnumber is 1: [chat]
 				say "     He says 'Being part woman is better than I expected. Thank you for helping me accept this new me.' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";
-			otherwise if calcnumber is 2:			[convince him for sex with David]
+			otherwise if calcnumber is 2: [convince him for sex with David]
 				say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's sensitive pussy lips, you explain that David is a really good friend of yours and... - you push a finger into Eric's vagina, making him gasp in lust - ...that you'd really like the three of you to have some fun together.";
 				say "     With that, you add another finger, pushing them in and out of Eric's hole and stroking his inner passage. Making out with him as you fondle Eric, you drive his arousal higher and higher, ask if he'd like to have some fun with David too, speeding up your manual stimulation of his pussy even more as you do so. 'Yes. Yes. YESSS.' your hot little cuntboy gasps as you drive him over the edge to orgasm, his femcum running down over your fingers. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";
 				now lust of Eric is 3;
-			otherwise:												[break off]
-				say "     You wave Eric off and turn away.";					
+			otherwise: [break off]
+				say "     You wave Eric off and turn away.";
 		otherwise:
 			say "     He says 'Being part woman is better than I expected. Thank you for helping me accept this new me.' then steps closer, running a hand over your arm and whispers in your ear 'I can barely wait for our next round in bed. I love being with you.'";
-	otherwise if (hp of Eric is 20):   [hoping for a cure]
+	otherwise if (hp of Eric is 20): [hoping for a cure]
 		if centaur cum is not owned and Satyr Wine is not owned:
 			say "     He says 'Do you think you'll have something to cure me soon? You said something about centaurs and satyrs the last time. Please hurry, I don't know how long I can hold out any more. Since that thing with Stacy, my pussy keeps getting moist and swollen all the time.'";
 		otherwise if centaur cum is owned and Satyr Wine is owned:
@@ -319,9 +319,9 @@ instead of conversing the Eric:
 				say "[satyrwine_eric]";
 			otherwise:
 				say "     Uncertain about trying out some infected substance, you let him know that you're still looking.  He seems a little disappointed, but nods and tells you to keep looking.  You recall considering finding some centaurs as well.  Perhaps they might have something.  Though if you're not certain about giving him one of them, you muse on instead just helping him to accept his new form.";
-	otherwise if hp of Eric is 21 or hp of Eric is 31:   [now with a horsecock/satyrcock]
+	otherwise if hp of Eric is 21 or hp of Eric is 31: [now with a horsecock/satyrcock]
 		say "     He says 'Man, this cock is something else. A bit strange that it's not human, but it's thicker and longer than my old one was. Thank you for this. Would you maybe want to try it out with me?'";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [now with a horsecock/satyrcock, had sex with the player]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [now with a horsecock/satyrcock, had sex with the player]
 		if lust of Eric is 2:
 			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], talk him into fucking David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
 			now calcnumber is 0;
@@ -332,20 +332,20 @@ instead of conversing the Eric:
 					break;
 				otherwise:
 					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into fucking David or [link]3[end link] to break off talking.";
-			if calcnumber is 1:								[chat]
+			if calcnumber is 1: [chat]
 				say "     He smiles, giving you an embrace and a quick kiss on the lips. 'How about another round in bed? I still can't get over this amazing cock you got me.'";
-			otherwise if calcnumber is 2:			[convince him for sex with David]
+			otherwise if calcnumber is 2: [convince him for sex with David]
 				say "     You hug Eric close to you and give him a kiss. Then you ask him what he thinks of David, if he finds him attractive. 'Sure, he's handsome, but I already have you.' Eric answers and gives you a peck on the lips. Smiling, you run a hand down Eric's flat chest, pushing it under the band of his shorts. As you start to fondle Eric's manhood, you explain that David is a really good friend of yours and... - Eric's cock by now has filled out a bit and come from its sheath, allowing you to grab it and jerk your hand up and down its length - ...that you'd really like the three of you to have some fun together.";
 				say "     With that, you speed up jerking him a bit, and move your other hand to stroke his balls. Making out with him as you fondle Eric, you drive his arousal higher and higher, then ask if he'd like to have some fun with David too, speeding up your manual stimulation even more as you do so. 'Yes. Yes. YESSS.' your [if hp of Eric is 22]horse[otherwise if hp of Eric is 32]satyr[end if]-hung athlete gasps as you drive him over the edge to orgasm and he shoots long strings of cum down the left leg of his shorts. After catching his breath a moment later, Eric says 'Yes. Whatever you want. That soldier friend of yours really is quite a looker, now that I think of it...'";
 				if lust of David is 0:
 					say "     [line break]";
 					say "     Ok, that's Eric taken care of - ready and willing to have a go fucking David. But you really should break the soldier boy in yourself before you try arranging him to take Eric's [if hp of Eric is 22]horsemeat[otherwise]satyr cock[end if] ...";
 				now lust of Eric is 3;
-			otherwise:												[break off]
-				say "     You wave Eric off and turn away.";					
+			otherwise: [break off]
+				say "     You wave Eric off and turn away.";
 		otherwise:
 			say "     He smiles, giving you an embrace and a quick kiss on the lips. 'How about another round in bed? I still can't get over this amazing cock you got me.'";
-	otherwise if (hp of Eric is 99):   [cuntboy, taken advantage of]
+	otherwise if (hp of Eric is 99): [cuntboy, taken advantage of]
 		if lust of Eric is 2:
 			say "     So what do you want? Just chat a bit [link](1)[as]1[end link], tell him your plan to get him fucked by David [link](2)[as]2[end link] or not say anything after all [link](3)[as]3[end link]?";
 			now calcnumber is 0;
@@ -356,19 +356,19 @@ instead of conversing the Eric:
 					break;
 				otherwise:
 					say "Invalid choice.  Type [link]1[end link] to chat, [link]2[end link] to talk him into getting fucked by David or [link]3[end link] to break off talking.";
-			if calcnumber is 1:								[chat]
+			if calcnumber is 1: [chat]
 				say "     He looks at you with a resigned expression, saying [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
-			otherwise if calcnumber is 2:			[tell him the plan for sex with David]
+			otherwise if calcnumber is 2: [tell him the plan for sex with David]
 				say "     You pull Eric close and kiss him aggressively. Then you tell him that it's time that he starts putting out for your friends too. David for example. Eric looks flustered, and tries to pull away, but you hold him tight. 'But - I thought it'd be only you, for letting me stay here.' Informing him that he thought wrong, you say that bitches like him are meant to be fucked by everyone - and that he can't say he doesn't like getting fucked, with how loud he moans each time. With that, you put your hand in his shorts and stick two fingers in Eric's already moist pussy. Pushing them in and out of Eric's hole and stroking his inner passage, you watch him bite his lip, then give up on that and openly moan in lust, closing his eyes as he gives in to the feelings.";
 				say "     [line break]";
 				say "     Fondling Eric, you drive his arousal higher and higher until he's close to orgasm, then... stop. The cuntboy's eyes find yours and give you a pleading look as he begs 'Please, get me off. I need it!' Having him right where you wanted now, you ask him if he'll obey and let David fuck him too. When Eric quickly nods, you resume your manual stimulation of his pussy and soon drive the hot little cuntboy over the edge to orgasm, with his femcum running down over your fingers.";
 				say "     Bringing your wet hand up to Eric's mouth to have him lick off his own juices, you explain your plan to him. As David might have some hangups about fucking him, you'll put him on a bed, blindfold him and get him all hot and ready - and then Eric will come over and mount his shaft. Eric finishes cleaning your hand, then nods submissively.";
 				now lust of Eric is 3;
-			otherwise:												[break off]
-				say "     You wave Eric off and turn away.";					
-		otherwise:		
+			otherwise: [break off]
+				say "     You wave Eric off and turn away.";
+		otherwise:
 			say "     He looks at you with a resigned expression, saying [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
-	otherwise if (hp of Eric is 100):   [lost to cheerleader girlfriend]
+	otherwise if (hp of Eric is 100): [lost to cheerleader girlfriend]
 		say "ERROR-Eric-100B: He shouldn't be available to talk any longer! Please report how you got to this message.";
 
 to say centaurcum_eric:
@@ -391,24 +391,24 @@ Section 3 - Fucking Eric
 Instead of fucking the Eric:
 	if hp of Eric is 21 or hp of Eric is 22:
 		setmonster "Centaur Stallion";
-		choose row monster from the table of random critters;		
+		choose row monster from the table of random critters;
 	otherwise if hp of Eric is 31 or hp of Eric is 32:
 		setmonster "Satyr";
 		choose row monster from the table of random critters;
-	if (hp of Eric is 0):   [virgin - in the lockerroom]
-		if(cocks of player > 0):
+	if (hp of Eric is 0): [virgin - in the lockerroom]
+		if (cocks of player > 0):
 			say "     As you approach Eric and ask him if he wants some fun, his gaze drops down to your crotch and he hesitates. Swallowing hard and turning rather red in the face, he then shakes his head, saying 'I - I can't - I mean - I'm not gay. But thanks for the offer.'";
-		otherwise if(cunts of player > 0):
+		otherwise if (cunts of player > 0):
 			say "     Eric approaches you smiling as you make him an offer for some good time together. But then suddenly, he remembers something and his face turns red in embarrassment. Stuttering 'I - I'm sorry, I'm not in the mood.' he steps back, turning away from you.";
-	otherwise if (hp of Eric is 1):   [virgin in the bunker]
+	otherwise if (hp of Eric is 1): [virgin in the bunker]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. Maybe you should talk to him about it a bit first.";
-	otherwise if (hp of Eric is 10):   [virgin, accepted being a cuntboy]
-		if(cocks of player > 0):
+	otherwise if (hp of Eric is 10): [virgin, accepted being a cuntboy]
+		if (cocks of player > 0):
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. When you come back up for air, you look deep into his eyes and say 'Please let me be your first - I'll be careful and go slow.' There's only a short moment of hesitation, then Eric nods and leans his head forward to kiss you back.";
 			say "     You two make out for a moment, holding on to each other. In between playful tongue-wrestling, you let your hands wander all over him, feeling up his slender but muscled body and giving the nice firm buns of his ass a slight squeeze. No matter what he may be packing inside his shorts, Eric still has the build of a young male athlete. Eager to get get to know him more intimately, you grab him by the hand and lead him to your bunk.";
 			say "     Eric quickly takes off his shoes and socks, then pulls off his shirt and throws it aside, revealing a nicely defined chest. You follow suit, rapidly sliding off your own clothing, then step close to your waiting partner. Running your hands over his chest, you make him gasp for a second as you brush over his nipples. Seems like your handsome cuntboy has gotten quite sensitive there. With a smile on your face you lean down and run your tongue over his chest, then circle each of his nipples with its tip and finally suck on them. Making Eric pant in lust is a lot of fun, and with your nose pressed against his warm skin you also take a deep breath of his masculine scent with its underlying female note.";
 			say "     [WaitLineBreak]";
-			say "     Feeling Eric's readiness to move on, you soon push him back softly to make him sit, then lie on your camp bed. Then you move your hands to the band of his shorts, pulling them down over his long runner's legs as he raises his ass a bit to let the fabric slide over it. Under them, a flimsy white tanga comes into view, making Eric show a moment of embarrassment again as he says 'My old briefs were too... roomy ... in the front.' You lean in for a quick kiss, telling him 'You look really hot in them.' and then slide the thin underwear off him too.";
+			say "     Feeling Eric's readiness to move on, you soon push him back softly to make him sit, then lie on your camp bed. Then you move your hands to the band of his shorts, pulling them down over his long runner's legs as he raises his ass a bit to let the fabric slide over it. Under them, a flimsy white tanga comes into view, making Eric show a moment of embarrassment again as he says 'My old briefs were too... roomy... in the front.' You lean in for a quick kiss, telling him 'You look really hot in them.' and then slide the thin underwear off him too.";
 			say "     Now fully naked, Eric looks up from the bed to you, his yes inevitably drawn to your by now rock-hard cock. With an inviting smile he spreads his legs for you, the lips of his slightly swollen pussy glistening with his female juices. Eagerly, you climb on the bed with him, stroking his smooth legs as you kneel between them. Eric gasps as your dick touches his pussy the first time, followed by rapid panting as you rub up and down against its folds. Then you put your cockhead against his opening and slowly push forward, moaning in lust yourself as his nether lips spread for you, enveloping your shaft in a warm tight embrace.";
 			say "     Sliding deeper into him, your progress soon meets resistance as your cock pushes against a soft flexible barrier inside him - Eric's hymen. You lean down and put your arms around him then find his lips with yours and give him a deep kiss. While distracting him with some playful tongue-wrestling, you push forward with your hips, increasing the pressure until you break through the thin flesh and make a real woman - or rather cuntboy - out of him.";
 			say "     [WaitLineBreak]";
@@ -417,31 +417,31 @@ Instead of fucking the Eric:
 			say "     Your cock still inside him, the two of you move to lie on your sides on the bed, holding each other and reveling in post-coital bliss. Lying there, Eric softly strokes your side and says 'That was amazing - thank you.'";
 			now hp of Eric is 11;
 			now thirst of Eric is 11;
-		otherwise:  
+		otherwise:
 			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to lose his virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck him with.";
-	otherwise if (hp of Eric is 11):   [cuntboy repeat sex]
+	otherwise if (hp of Eric is 11): [cuntboy repeat sex]
 		if (lastEricfucked - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, he says 'I love you baby, but I need some rest in between. Can we play another time?' He gives you a soft kiss on the lips as you nod, already thinking about what you want to do with him later.";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns; 
-	otherwise if (hp of Eric is 20):   [virgin, hoping for a cure]
+			now lastEricfucked is turns;
+	otherwise if (hp of Eric is 20): [virgin, hoping for a cure]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. 'I- I thought you were going to get me a cure? Or did you check and there no way to fix this? I worry I might get stuck like this if I - you know - use it...'";
 		say "     Do you want to tell Eric to hold out a little longer and that you'll find him something to make him a man again? Or should he learn to accept his new shape? (Y = hold out; N = accept the pussy)";
-		if player consents:   [search for a cure]
+		if player consents: [search for a cure]
 			say "     You exchange some calming words with Eric, telling him that you'll of course find a cure for him. He nods to you then goes back to his camp bed to lie down, still looking a bit worried.";
-		otherwise:		        [make him accept being a cuntboy]
+		otherwise: [make him accept being a cuntboy]
 			say "     You calmly tell Eric that there is no sure way back for him and that it might be best to accept what he's become. His face falls as you say that, his expression showing disappointment and fear. To cheer him up a bit again, you remind him how good he felt when Stacy rubbed his pussy, to which he reluctantly agrees. Best to give him some time to think about it - maybe he'll be ready for some fun later.";
 			now hp of Eric is 10;
-	otherwise if (hp of Eric is 21):   [male with virgin horse-cock]
+	otherwise if (hp of Eric is 21): [male with virgin horse-cock]
 		say "     Stepping up to Eric, you lower your hand to the front of his shorts and rub against the bulge in its fabric, feeling his balls and flaccid cock. It doesn't stay that way for long though, growing into a truly impressive trouser snake as his body reacts to your touch.";
 		say "     'Why don't we take this bad boy for a little spin - make you a real man again.' you tell him as you slide your hand under the band of his shorts and grab grab hold of his thick cock. Eric can only pant and nod eagerly as you fondle the organ where all the blood for his brain went. With a big smile on your face you lead him to his bed and peel all clothing off Eric's athletic human body.";
 		say "     Well, mostly human - the cock between his legs looks like it belongs to a horse... it's pretty long, with an animalistic pattern of black and white and shows a band of skin around the lower third that must be Eric's equine sheath. The tip flares outwards proudly at the end, making you wonder how it will compare to a human manhood. Two massive black balls hang below it, looking ready to deliver a deluge of cum.";
 		say "     [WaitLineBreak]";
 		say "     Eager to take the virginity of Eric's new equipment, you softly push him down to lie on the bed and grab hold of his horsecock with both hands. It's an impressive piece of anatomy, firm and warm in your hands as you stroke up and down on it. Not wanting to wait any longer, you quickly remove your clothes, then climb up on the bed with Eric.";
-		if cocks of player > 0 and cunts of player > 0:   [herms may choose]
+		if cocks of player > 0 and cunts of player > 0: [herms may choose]
 			say "     Kneeling over him with your legs both sides of his hips, you feel the warmth radiating off his proudly erect cock. What do you want to use to deflower Eric? (Y = pussy, N = ass)";
 			if player consents:
 				say "     You grab hold of his thick shaft and hold it up so the flared head strokes your nether lips and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
@@ -455,40 +455,40 @@ Instead of fucking the Eric:
 				say "     [WaitLineBreak]";
 				say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some urges from the centaur donor of his 'cure'. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, having a mind-blowing orgasm that makes you spray your load all over the sheets of the bunk. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[mimpregchance]";
 				say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise if cocks of player > 0:    [male]
+		otherwise if cocks of player > 0: [male]
 			say "     You grab hold of his thick shaft and hold it up so the flared head strokes against your asshole and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Let's ride, horseboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the length and girth his horsecock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a horsecock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some urges from the centaur donor of his 'cure'. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, having a mind-blowing orgasm that makes you spray your load all over the sheets of the bunk. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[mimpregchance]";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise if cunts of player > 0:    [female]      
+		otherwise if cunts of player > 0: [female]
 			say "     You grab hold of his thick shaft and hold it up so the flared head strokes your nether lips and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Let's ride, horseboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the length and girth his horsecock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a horsecock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some urges from the centaur donor of his 'cure'. With a satisfied grunt, Eric mounts your pussy from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your pussy hard and deep. You climax from this animalistic fuck, having a mind-blowing orgasm that leaves your pussy dripping with female juices. Not too long after, Eric follows suit, filling your womb with a massive load of his fertile seed.[fimpregchance]";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise:                           [neuter]
+		otherwise: [neuter]
 			say "     You grab hold of his thick shaft and hold it up so the flared head strokes against your asshole and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Let's ride, horseboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the length and girth his horsecock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a horsecock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some urges from the centaur donor of his 'cure'. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking from the pleasant sensations. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 22;
-	otherwise if (hp of Eric is 22):   [male with horse-cock repeats]
+	otherwise if (hp of Eric is 22): [male with horse-cock repeats]
 		if (lastEricfucked - turns < 6):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I need a break. With the size of this bad boy you've gotten me, I get a bit woozy if I use it too many hours a day. There's only so much blood to go around in a man, you know...'";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns; 
-	otherwise if (hp of Eric is 31):   [male with virgin satyr-cock]
+			now lastEricfucked is turns;
+	otherwise if (hp of Eric is 31): [male with virgin satyr-cock]
 		say "     Stepping up to Eric, you lower your hand to the front of his shorts and rub against the bulge in its fabric, feeling his balls and flaccid cock. It doesn't stay that way for long though, growing into a truly impressive trouser snake as his body reacts to your touch.";
 		say "     'Why don't we take this bad boy for a little spin - make you a real man again.' you tell him as you slide your hand under the band of his shorts and grab grab hold of his thick cock. Eric can only pant and nod eagerly as you fondle the organ where all the blood for his brain went. With a big smile on your face you lead him to his bed and peel all clothing off Eric's athletic human body.";
 		say "     Well, mostly human - the cock between his legs looks like it belongs to a satyr... it's pretty long, with an animalistic shape and scent, and shows a bundle of red-furred skin around the lower third that must be Eric's goat-like sheath. The tip comes to a bit of a point, jutting forwards proudly at the end, making you wonder how it will compare to a human manhood. Two massive balls, also covered in red fur, hang below it, looking ready to deliver a deluge of cum.";
 		say "     [WaitLineBreak]";
 		say "     Eager to take the virginity of Eric's new equipment, you softly push him down to lie on the bed and grab hold of his satyrcock with both hands. It's an impressive piece of anatomy, firm and warm in your hands as you stroke up and down on it. Not wanting to wait any longer, you quickly remove your clothes, then climb up on the bed with Eric.";
-		if cocks of player > 0 and cunts of player > 0:   [herms may choose]
+		if cocks of player > 0 and cunts of player > 0: [herms may choose]
 			say "     Kneeling over him with your legs both sides of his hips, you feel the warmth radiating off his proudly erect cock. What do you want to use to deflower Eric? (Y = pussy, N = ass)";
 			if player consents:
 				say "     You grab hold of his thick shaft and hold it up so the leaking head strokes your nether lips and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
@@ -502,49 +502,49 @@ Instead of fucking the Eric:
 				say "     [WaitLineBreak]";
 				say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some added virility from the satyr wine. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, having a mind-blowing orgasm that makes you spray your load all over the sheets of the bunk. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[mimpregchance]";
 				say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise if cocks of player > 0:    [male]
+		otherwise if cocks of player > 0: [male]
 			say "     You grab hold of his thick shaft and hold it up so the leaking head strokes against your asshole and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Give it to me, satyrboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the added length his satyrcock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a goat cock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some added virility from the satyr wine. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, having a mind-blowing orgasm that makes you spray your load all over the sheets of the bunk. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[mimpregchance]";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise if cunts of player > 0:    [female]      
+		otherwise if cunts of player > 0: [female]
 			say "     You grab hold of his thick shaft and hold it up so the leaking head strokes your nether lips and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Give it to me, satyrboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the added length his satyrcock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a goat cock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some added virility from the satyr wine. With a satisfied grunt, Eric mounts your pussy from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your pussy hard and deep. You climax from this animalistic fuck, having a mind-blowing orgasm that leaves your pussy dripping with female juices. Not too long after, Eric follows suit, filling your womb with a massive load of his fertile seed.[fimpregchance]";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
-		otherwise:                           [neuter]
+		otherwise: [neuter]
 			say "     You grab hold of his thick shaft and hold it up so the leaking head strokes against your asshole and slowly lower yourself on it, gasping as he enters your body. It's just amazing to feel his animalistic member slide up against your insides, which has both of you moaning and panting in lust. Then, as he bottoms out and you feel his massive balls against your skin, you lean down and give him a deep kiss.";
 			say "     Sitting back up, you moan 'Give it to me, satyrboy.' and start sliding up and down on Eric's long shaft. With its inhuman shape and the added length his satyrcock has, you get rubbed in spots you barely know you had and have a very pleasant sensation of fullness. Below you, Eric is panting and moaning deeply, obviously overwhelmed by the novel experience of fucking with a goat cock. He grabs your hips, pulling you down harder against himself with each slide down and meeting your hips with an upwards thrust of his own.";
 			say "     [WaitLineBreak]";
 			say "     After a pleasant time riding his cock, Eric pulls you to a stop with his cock buried all the way inside you and asks you to get on all fours on the bunk. Looks like he's inherited some added virility from the satyr wine. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he bottoms out inside you. Then he starts all-out rutting, his shaft sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking from the pleasant sensations. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[mimpregchance]";
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 32;
-	otherwise if hp of Eric is 32:   [male with satyr-cock repeats]
+	otherwise if hp of Eric is 32: [male with satyr-cock repeats]
 		if lastEricfucked - turns < 6:
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I should take a break. While this thing is really randy, it might be trouble if I keep fucking over and over.  It feels like I just might never want to stop the party if I go too often, you know...'";
 		otherwise:
 			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns; 
-	otherwise if (hp of Eric is 99):   [sex slave cuntboy repeats]
+			now lastEricfucked is turns;
+	otherwise if (hp of Eric is 99): [sex slave cuntboy repeats]
 		if (lastEricfucked - turns < 3):
 			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes and takes a step back, an annoyed look on his face. 'Again? Can't you at least let me have some breaks? I'm not a blow-up-doll you can use any time you like, you know...' He stomps off to his bed to sulk.";
 		otherwise:
 			say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
 			wait for any key;
 			say "[EricSexMenu]";
-			now lastEricfucked is turns;    
+			now lastEricfucked is turns;
 
 to say EricSexMenu:
 	if hp of Eric is 21 or hp of Eric is 22:
 		setmonster "Centaur Stallion";
-		choose row monster from the table of random critters;		
+		choose row monster from the table of random critters;
 	otherwise if hp of Eric is 31 or hp of Eric is 32:
 		setmonster "Satyr";
-		choose row monster from the table of random critters;	
+		choose row monster from the table of random critters;
 	blank out the whole of table of fucking options;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
@@ -557,19 +557,19 @@ to say EricSexMenu:
 		now title entry is "Suck Eric's cock";
 		now sortorder entry is 2;
 		now description entry is "Put Eric's [if hp of Eric is 22]long horsecock[otherwise if hp of Eric is 32]musky satyrcock[end if] in your mouth.";
-		now toggle entry is EricSex rule;		
+		now toggle entry is EricSex rule;
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put his mouth to good use.";
 		now toggle entry is EricSex rule;
-	if (hp of Eric is 11 or hp of Eric is 99):		
+	if (hp of Eric is 11 or hp of Eric is 99):
 		choose a blank row in table of fucking options;
 		now title entry is "Finger his pussy";
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Eric's pussy to make him cum.";
-		now toggle entry is EricSex rule;		
+		now toggle entry is EricSex rule;
 	if ((hp of Eric is 11 or hp of Eric is 99) and cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
@@ -594,36 +594,36 @@ to say EricSexMenu:
 		now sortorder entry is 8;
 		now description entry is "Ride Eric's long cock.";
 		now toggle entry is EricSex rule;
-	if lust of Eric is 3 and hp of Eric is 99 and hp of David is 4 and lastfuck of David - turns >= 6:	[Eric ready for sex with David, sex-slave cuntboy, David in the bunker and ready]
+	if lust of Eric is 3 and hp of Eric is 99 and hp of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, sex-slave cuntboy, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick David into fucking Eric";
 		now sortorder entry is 9;
 		now description entry is "Make the cuntboy ride David's cock.";
 		now toggle entry is EricSex rule;
-	if lust of Eric is 3 and (hp of Eric is 22 or hp of Eric is 32) and hp of David is 4 and lastfuck of David - turns >= 6 and lust of David > 0:	[Eric ready for sex with David, non-virgin male, David in the bunker and ready, David ass fucked before]
+	if lust of Eric is 3 and (hp of Eric is 22 or hp of Eric is 32) and hp of David is 4 and lastfuck of David - turns >= 6 and lust of David > 0: [Eric ready for sex with David, non-virgin male, David in the bunker and ready, David ass fucked before]
 		choose a blank row in table of fucking options;
 		now title entry is "Have Eric fuck David";
 		now sortorder entry is 10;
 		now description entry is "Make the soldier boy ride Eric's [if hp of Eric is 22]horsecock.[otherwise if hp of Eric is 32]satyr cock.[end if]";
 		now toggle entry is EricSex rule;
-	if lust of Eric is 3 and hp of Eric is 11 and hp of David is 4 and lastfuck of David - turns >= 6:	[Eric ready for sex with David, non-virgin cuntboy, David in the bunker and ready]
+	if lust of Eric is 3 and hp of Eric is 11 and hp of David is 4 and lastfuck of David - turns >= 6: [Eric ready for sex with David, non-virgin cuntboy, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Have David fuck Eric's pussy";
 		now sortorder entry is 11;
 		now description entry is "Make the soldier boy fuck Eric.";
 		now toggle entry is EricSex rule;
-	if lust of Eric is 4 and hp of David is 4 and lastfuck of David - turns >= 6:		[David+Eric had sex, David in the bunker and ready]
+	if lust of Eric is 4 and hp of David is 4 and lastfuck of David - turns >= 6: [David+Eric had sex, David in the bunker and ready]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with David and Eric";
 		now sortorder entry is 12;
 		now description entry is "Have some fun with both of them together.";
 		now toggle entry is EricSex rule;
-	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and hp of Eric is 99) and cocks of player > 0 or cunts of player > 0):		[either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
+	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and hp of Eric is 99) and cocks of player > 0 or cunts of player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with the felinoid and Eric";
 		now sortorder entry is 13;
 		now description entry is "Have some fun with both of them together.";
-		now toggle entry is EricSex rule;		
+		now toggle entry is EricSex rule;
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -640,7 +640,7 @@ This is the EricSex rule:
 		if (nam is "Have him blow your cock"):
 			say "[EricSex1]";
 		if (nam is "Suck Eric's cock"):
-			say "[EricSex2]";	
+			say "[EricSex2]";
 		otherwise if (nam is "Have him lick your pussy"):
 			say "[EricSex3]";
 		otherwise if (nam is "Finger his pussy"):
@@ -648,65 +648,65 @@ This is the EricSex rule:
 		otherwise if (nam is "Fuck his pussy"):
 			say "[EricSex5]";
 		otherwise if (nam is "Let him fuck your pussy"):
-			say "[EricSex6]";		
+			say "[EricSex6]";
 		otherwise if (nam is "Take Eric's ass"):
 			say "[EricSex7]";
 		otherwise if (nam is "Let him fuck your ass"):
 			say "[EricSex8]";
 		otherwise if (nam is "Trick David into fucking Eric"):
-			say "[EricSex9]";			
+			say "[EricSex9]";
 		otherwise if (nam is "Have Eric fuck David"):
-			say "[EricSex10]";			
+			say "[EricSex10]";
 		otherwise if (nam is "Have David fuck Eric's pussy"):
-			say "[EricSex11]";			
+			say "[EricSex11]";
 		otherwise if (nam is "Threesome with David and Eric"):
-			say "[EricSex12]";						
+			say "[EricSex12]";
 		otherwise if (nam is "Threesome with the felinoid and Eric"):
-			say "[EricSex13]";						
+			say "[EricSex13]";
 		wait for any key;
 
-to say EricSex1:    [cock sucked by Eric]
-	if(hp of Eric is 11):  						[cuntboy repeat sex]
+to say EricSex1: [cock sucked by Eric]
+	if (hp of Eric is 11): [cuntboy repeat sex]
 		say "     Staying right where you are, you give Eric's shoulders a soft push to make him crouch down before you. Pulling down your rapidly hardening cock, you stroke it a few times and then hold it out for him.";
 		say "     Eric licks it, then takes it into his mouth without any hesitation, clearly eager to satisfy your lust. Him looking up at you adoringly with your manhood sliding in and out of his mouth is quite a sight. You stroke his neck, then run your hand through his red hair and grab hold of his head. Pulling his mouth deeper onto your shaft, you start fucking his face, going slow at first for him to get used to it, then speed up and go deeper and deeper.";
 		say "			[WaitLineBreak]";
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust. He might be new to sucking cocks, but having been a male himself not too long ago, he clearly knows how to please you orally. And he's very eager and willing to learn, even going for a few deep throat moments after taking deep breaths.";
 		say "     With such a handsome cuntboy eager to please, it doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He sticks it out for a moment for you to see your white load, then closes his mouth and swallows it all down. Standing up, he puts his arms around you and gives you a quick kiss, leaving you with a warm feeling and the taste of cum on your lips.";
-	otherwise if hp of Eric is 32 and cockname of player is "Satyr":	[satyr-cock Eric + satyr-cock player]
+	otherwise if hp of Eric is 32 and cockname of player is "Satyr": [satyr-cock Eric + satyr-cock player]
 		say "     Even as you're guiding Eric down towards your crotch, he starts to sniff, catching the scent of your musky cock, which excites something in him.  Face to face with your throbbing satyr maleness, he licks his lips.  'Oh, is this for me?' he asks with a growing smile on his face.";
 		say "     Taking it in hand, he rubs his other hand over your balls and starts sliding his slick tongue across your glans.  You don't think he had any gay encounters before all this, but with everything else that happened to him and now a satyr cock much like his own in front of him, he doesn't hesitate to throw himself into sucking you off.  Him looking up at you adoringly with your manhood sliding in and out of his mouth is quite a sight.  You stroke his neck, then run your hand through his red hair and grab hold of his head. Pulling his mouth deeper onto your shaft, you start fucking his face, going slow at first for him to get used to it, then speed up and go deeper and deeper.";
 		say "			[WaitLineBreak]";
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust.  He might be new to sucking cocks, but he clearly knows how to please a man orally from his own experiences as the receiver.  And he's very eager and willing to learn doing it himself, even going for a few deep throat moments after taking deep breaths.";
 		say "     With such a handsome guy eager to please, it doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue.  He sticks it out for a moment for you to see your white load, then closes his mouth and swallows it all down.  'Mmm... almost as good as a fine wine,' he says with a laugh as he stands up.  He puts his arms around you and gives you a quick kiss, leaving you with a warm feeling and the taste of cum on your lips.";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [male with horse-cock/satyr-cock repeats]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male with horse-cock/satyr-cock repeats]
 		say "     Staying right where you are, you give Eric's shoulders a soft push to make him crouch down before you. Pulling down your rapidly hardening cock, you stroke it a few times and then hold it out for him.";
 		say "     He looks at it for a second, then takes it into his hand and slowly runs his tongue over the head. You don't think he had any gay encounters before all this, but with being a woman in between and you saving his bacon, he's clearly willing to try anything with you now. After getting over the first moment of restraint, he jumps right into the action, licking your shaft and then taking it into his mouth. Him looking up at you adoringly with your manhood sliding in and out of his mouth is quite a sight. You stroke his neck, then run your hand through his red hair and grab hold of his head. Pulling his mouth deeper onto your shaft, you start fucking his face, going slow at first for him to get used to it, then speed up and go deeper and deeper.";
 		say "			[WaitLineBreak]";
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust. He might be new to sucking cocks, but he clearly knows how to please a man orally from his own experiences as the receiver. And he's very eager and willing to learn doing it himself, even going for a few deep throat moments after taking deep breaths.";
-		say "     With such a handsome guy eager to please, it doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He sticks it out for a moment for you to see your white load, then closes his mouth and swallows it all down. Standing up, he puts his arms around you and gives you a quick kiss, leaving you with a warm feeling and the taste of cum on your lips.";		  
-	otherwise if(hp of Eric is 99):   [sex slave cuntboy]
+		say "     With such a handsome guy eager to please, it doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He sticks it out for a moment for you to see your white load, then closes his mouth and swallows it all down. Standing up, he puts his arms around you and gives you a quick kiss, leaving you with a warm feeling and the taste of cum on your lips.";
+	otherwise if (hp of Eric is 99): [sex slave cuntboy]
 		say "     Staying right where you are, you push down on Eric's shoulders and make him kneel in front of you. Pulling down your rapidly hardening cock, you stroke it a few times and then hold it out for him.";
 		say "     He looks hesitantly at it until you reach out and grab his head, pulling him towards your crotch. You push against his lips with the tip of your cock, then hear a soft sigh as he opens his mouth and takes you in. You don't think he had any gay encounters before all this and you have to remind him not to touch your rod with his teeth, but soon you got him sucking on your cock correctly. Seeing your manhood sliding in and out of his mouth gives you a sense of power that fuels your rising lust, making you grab his head tightly with both your hands and start face-fucking him. Pulling his mouth deeper onto your shaft, there is a moment or two in which he gags for air, but soon he gets used to it and you can slide deep inside his throat.";
 		say "			[WaitLineBreak]";
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust. He might be new to sucking cocks, but he'll learn over time and you get off on making him do it.";
-		say "     It doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He starts turning his head to spit it out, but you grab him and order him to swallow it all. After having him stick out his tongue so you can check it's all gone, you give him a pat on his head, saying 'Good boy. I'll teach you to behave properly yet.'";		  
+		say "     It doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He starts turning his head to spit it out, but you grab him and order him to swallow it all. After having him stick out his tongue so you can check it's all gone, you give him a pat on his head, saying 'Good boy. I'll teach you to behave properly yet.'";
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex2:    [sucking Eric's cock]
-	if hp of Eric is 22:					[male with horse-cock repeats]
+to say EricSex2: [sucking Eric's cock]
+	if hp of Eric is 22: [male with horse-cock repeats]
 		say "     Pulling him into a tight embrace, your then let your hand wander down his body until it reaches his crotch. You stroke his already quite large bulge through the fabric for a moment, then push your hands under his shirt and pull it over his head. Hooking your hands over the bands of his shorts and briefs, you pull them down in one go. Now fully naked, Eric looks delicious to your eyes, with his lithe human body and large equine cock and balls.";
 		say "     Eagerly you kneel down, taking his manhood in both hands and lick over its wide flared head. He throws his head back and moans 'Yes! Suck it please - I need it.' Grinning, you give him a few more slow strokes up and down his long shaft until he's almost shaking with arousal, then slide your lips over his horsecock. Sucking on his erect member, you get a taste of his pre-cum and smell the animal-like musk of his crotch. It makes you want more, and you go faster and faster, soon bobbing rapidly up and down on his cock.";
 		say "			[WaitLineBreak]";
 		say "     At some point, Eric takes over and holds your head while face-fucking his cock in and out of you - but you don't really care, totally concentrated on the feeling of him sliding in and out of your throat and the taste of him. You reach up, taking hold of his large balls with your hands and massage them softly, making Eric grunt in pleasure. After a short while and a bit of oral attention more, you feel the balls pulse in your hands as Eric blows his load deep into your mouth, the first blast going right down your throat into your stomach. Then he pulls back a bit and shoots thick ropes of cum onto your tongue, filling your mouth with its animalistic taste.";
 		say "     You softly suck on him and run your tongue over his cock as it shoots more cum, then pull off it when he stops and stand up. Running a hand through Eric's red hair, you pull him close and start making out with him. His eyes widen a bit when you push some of his cum into his mouth with your tongue, but he takes it in stride, continuing your kissing and wrestling your tongue with his own. As you pull back for some air, he smiles at you, pushing out his cum-covered tongue then demonstratively swallows what you gave him. Looks like he likes the taste himself.";
-	otherwise if hp of Eric is 32 and facename of player is "Greek Nymph":		[satyr-cock Eric + satyr+cock player]
+	otherwise if hp of Eric is 32 and facename of player is "Greek Nymph": [satyr-cock Eric + satyr+cock player]
 		say "     Pulling him into a tight embrace, your then let your hand wander down his body until it reaches his crotch.  As you're stroking the growing bulge through the fabric for a moment, he pulls you into a wild, passionate kiss, his tongue diving into your mouth and his hands reaching down to grab your ass.  'Oh, you have such a pretty face,' he says when the kiss is finally broken.  Grinning, you respond that it'll look even prettier with his cock between your lips, which has him laugh.  Having divested him of his shorts and briefs during the long kiss, you eye his satyr cock with a growing hunger and lust, wanting to taste that throbbing goat meat and suck those hefty, red-furred balls of his dry.";
 		say "     Eagerly you kneel down, taking his manhood in both hands and lick over its dribbling head, lusting after the taste of it.  He throws his head back and moans 'Oh yes!  Suck it please - I want those beautiful lips aroooohhh yeah!'  Unable to hold back any longer, you're stuffing it into your mouth even before he's had a chance to finish talking.  Sucking on his erect member, you get a taste of his pre-cum and smell the virile musk of his crotch.  Thirsty for more and wanting the even richer finish you know is coming, you go faster and faster, soon bobbing rapidly up and down on his cock.";
 		say "			[WaitLineBreak]";
 		say "     At some point, Eric takes over and holds your head with one hand so he can increase the pace while while face-fucking his cock in and out of you.  His other hand runs lightly over your lovely, nymph-like face and through your long, flowing hair.  Wildly excited by the taste and feel of his cock sliding in and out of your mouth and throat, you reach up and take hold of his large balls with both hands.  Massaging them softly and reaching back to rub at his taint, you draw a long moan of pleasure out of Eric.  After a short while and a bit of oral attention more, you feel the balls pulse in your hands as Eric blows his load deep into your mouth, the first blast going right down your throat into your stomach.  He then pulls back a bit and shoots thick ropes of cum onto your tongue, filling your mouth with its musky taste[if cunts of player > 0 or cocks of player > 0].  This sends one of your hands down between your legs so you can masturbate yourself to a moaning orgasm just as he's about to finish up, exciting a few extra spurts out of him[end if].";
 		say "     You make sure to lick his cock clean of every drop of that strong, virile cum of his, finding its taste incredibly exciting to your palate.  Only once you've gotten it all do you reluctantly release it and stand up.  Running a hand over Eric's chest, [if a random chance of 1 in 2 succeeds]you move in to kiss him again, but then turn away at the last moment on an impulse and dash away giggling[otherwise]you are surprised when Eric grabs you and presses your body and lips to his, kissing your beautiful, nymph face with another, wild and untamed kiss.  When he releases you, you giggle softly and he chuckles, giving your ass a swat as you go[end if].";
-	otherwise if hp of Eric is 32:			[male with satyr-cock repeats]
+	otherwise if hp of Eric is 32: [male with satyr-cock repeats]
 		say "     Pulling him into a tight embrace, your then let your hand wander down his body until it reaches his crotch. You stroke his already growing bulge through the fabric for a moment, then push your hands under his shirt and pull it over his head. Hooking your hands over the bands of his shorts and briefs, you pull them down in one go. Now fully naked, Eric looks delicious to your eyes, with his lithe human body and throbbing satyr cock to go with his hefty, red-furred balls.";
 		say "     Eagerly you kneel down, taking his manhood in both hands and lick over its dribbling head. He throws his head back and moans 'Yes! Suck it please - I need it.' Grinning, you give him a few more slow strokes up and down his throbbing shaft until he's almost shaking with arousal, then slide your lips over his satyrcock. Sucking on his erect member, you get a taste of his pre-cum and smell the virile musk of his crotch. It makes you want more, and you go faster and faster, soon bobbing rapidly up and down on his cock.";
 		say "			[WaitLineBreak]";
@@ -715,31 +715,31 @@ to say EricSex2:    [sucking Eric's cock]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
-to say EricSex3:    [cunt licked by Eric]
-	if(hp of Eric is 11):   					[cuntboy repeat sex]
+to say EricSex3: [cunt licked by Eric]
+	if (hp of Eric is 11): [cuntboy repeat sex]
 		say "     Strolling towards the bed you slide off your clothing, then lie down on it and spread your legs, telling Eric to give you pleasure with his tongue. He kneels down in front of the bed and moves one hand forward to spread your nether lips, then licks over them. 'Stacy always said I'm good at oral sex. And I... practiced a bit with my own...'";
 		say "     And it's true - your eager cuntboy licks and fondles your sex expertly, making you moan in rising arousal. Looks like becoming a woman has given him an insight on the whole matter. After a quite pleasurable time where he rubs erogenous zones inside your pussy you barely knew existed, you moan loudly and orgasm, dripping female juices over his fingers. Eric keeps going, fondling your lips as you shiver in pleasure and slurps up your femcum. Finally he stands up again, giving you a kiss tasting of your own pussy juice.";
-	otherwise if hp of Eric is 32 and cockname of player is "Greek Nymph":   [satyr-cock Eric + nymph-cunt player]
+	otherwise if hp of Eric is 32 and cockname of player is "Greek Nymph": [satyr-cock Eric + nymph-cunt player]
 		say "     Strolling towards the bed you slide off your clothing, then lie down on it and spread your legs, telling Eric to give you pleasure with his tongue.  He kneels down in front of the bed and moves one hand forward to spread your nether lips, moaning softly in anticipation as he takes in your scent, something about it is particularly exciting for him.  Without further delay, he dives in, licking at your pussy wildly, though with considerable skill as well.";
 		say "     Your eager runner licks and fondles your sex with excessive zeal, making you moan in rising arousal at his performance.  It's clear he's had plenty of practice at this as is quite good, as that shines through even given his wild enthusiasm for eating you out.  Between his clear lust for your juices and his personal experience by having a pussy of his own for a while, you find yourself having several powerful, crashing orgasms as he licks, kisses, rubs, nibbles and a startling array of other sensual touches up your erogenous zones.  By the time you can take no more, your thighs and his face are soaked in your juices and he's stroked himself to orgasm twice as well.  You have to push him away for him to finally stop, though he makes a show of licking your femcum from his lips.";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:	[male with horse-cock/satyr-cock repeats]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male with horse-cock/satyr-cock repeats]
 		say "     Strolling towards the bed you slide off your clothing, then lie down on it and spread your legs, telling Eric to give you pleasure with his tongue. He kneels down in front of the bed and moves one hand forward to spread your nether lips, then expertly licks over them. 'Stacy always said I'm good at oral sex. And I... practiced a bit before you made me a man again.";
 		say "     And it's true - your eager runner licks and fondles your sex expertly, making you moan in rising arousal. Looks like his short stint as a woman has given him an insight on the whole matter. After a quite pleasurable time where he rubs erogenous zones inside your pussy you barely knew existed, you moan loudly and orgasm, dripping female juices over his fingers. Eric keeps going, fondling your lips as you shiver in pleasure and slurps up your femcum. Finally he stands up again, giving you a kiss tasting of your own pussy juice.";
-	otherwise if(hp of Eric is 99):	[sex slave cuntboy]
+	otherwise if (hp of Eric is 99): [sex slave cuntboy]
 		say "     Strolling towards the bed you slide off your clothing, then lie down on it and spread your legs, ordering Eric to come over and get licking. He reluctantly kneels down in front of the bed, looking at your pussy. Not wanting for him to make up his mind, you just grab his head, pushing him down to your crotch and holding him there until he opens up and starts licking your folds.";
 		say "     Despite the slow start, he gets more into servicing you pretty soon, licking and fondling your female sex. And he's rather good at it too - looks like becoming a woman has given him an insight on the whole matter. After a quite pleasurable time where he rubs erogenous zones inside your pussy you barely knew existed, you moan loudly and orgasm, dripping female juices over his fingers. Eric keeps going, fondling your lips as you shiver in pleasure and slurps up your femcum. You look down at him kneeling in front of you, then run a hand over your cunt and rub in the female juices all over Eric's face. 'Just admit to yourself that you like it.'";
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
-to say EricSex4:    [Eric's cunt licked/fingered]
-	if(hp of Eric is 11):   					[cuntboy repeat sex]
+to say EricSex4: [Eric's cunt licked/fingered]
+	if (hp of Eric is 11): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips.";
 		say "			[WaitLineBreak]";
 		say "     Kneeling down, you give him a careful lick and taste his juices, then really go to town on him - licking and fondling his female bits until he's panting and squirming in arousal, his hands grabbing the sheets tightly. You keep going for quite a bit until suddenly he gives a lustful scream and orgasms, dripping femcum from his spread pussy. You sit beside him on the camp bed, softly stroking his body as he rides out the sexual high. When he finally comes down to normal a while later, he pulls you down to lie beside him and gives you a kiss. 'If I had known it'd be like this, I'd have jumped you the moment you came to me. Who wouldn't want to be a woman with you...'";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [male with horse-cock/satyr-cock repeats]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male with horse-cock/satyr-cock repeats]
 		say "ERROR-Eric-1D: This option shouldn't be available since he has no cunt in the current form. Please report how you got to this message.";
-	otherwise if(hp of Eric is 99):   [sex slave cuntboy]
+	otherwise if (hp of Eric is 99): [sex slave cuntboy]
 		say "     Deciding your cuntboy needs a bit of help accepting his womanhood, you pull him along to the bed and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bed on his back and tell him to spread his legs.";
 		say "     Between them, his pussy comes into sight, moisture glistening between its swollen lips. Looks like your cuntboy is about ready...";
 		say "			[WaitLineBreak]";
@@ -747,8 +747,8 @@ to say EricSex4:    [Eric's cunt licked/fingered]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex5:    [Eric's pussy fucked by player]
-	if(hp of Eric is 11): 					  [cuntboy repeat sex]
+to say EricSex5: [Eric's pussy fucked by player]
+	if (hp of Eric is 11): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips.";
 		say "			[WaitLineBreak]";
@@ -756,9 +756,9 @@ to say EricSex5:    [Eric's pussy fucked by player]
 		say "     Following your handsome cuntboy's needful request, you aim your shaft and push forward, giving both your bodies the unity they craved for. As you sink deeper inside him, you lean down and make out with Eric, moaning into each other's mouth when you bottom out inside him. With the warm, tight hole around your cock, all restraint is soon forgotten and you start fucking him hard and deep. Eric gives lustful grunts to accompany the sound of your hips slapping against his crotch and wraps his arms and legs around you in an intimate embrace.";
 		say "			[WaitLineBreak]";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bed together in each other's arms. Eric gives you a soft kiss on the lips, murmuring 'I love you.' before dozing off. You kiss his forehead and wish you could stay like this forever, your arms around him and your softening cock still inside his cum-filled pussy. With a last thought you imagine your cum exploring his womb for an egg to create life with, then fall asleep yourself.";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [male with horse-cock/satyr-cock repeats]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male with horse-cock/satyr-cock repeats]
 		say "ERROR-Eric-[hp of Eric]D: This option shouldn't be available since he has no cunt in the current form. Please report how you got to this message.";
-	otherwise if(hp of Eric is 99):   [sex slave cuntboy repeats]
+	otherwise if (hp of Eric is 99): [sex slave cuntboy repeats]
 		say "     Deciding it's time to fuck your cuntboy, you pull him along to the bed and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bed on his back and tell him to spread his legs. Between them, his pussy comes into sight, moisture glistening between its swollen lips. Looks like your cuntboy is about ready to be used...";
 		say "     Quickly stripping off your own clothing, you climb on the bed with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that inviting pussy open to you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly spreads his pussy lips. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
 		say "			[WaitLineBreak]";
@@ -766,8 +766,8 @@ to say EricSex5:    [Eric's pussy fucked by player]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex6:    [player's pussy fucked by Eric]
-	if(hp of Eric is 22):						[male with horse-cock repeats]
+to say EricSex6: [player's pussy fucked by Eric]
+	if (hp of Eric is 22): [male with horse-cock repeats]
 		say "     Pulling him into a tight embrace, your then let your hand wander down his body until it reaches his crotch. You stroke his already quite large bulge through the fabric for a moment, then push your hands under his shirt and pull it over his head. Hooking your hands over the bands of his shorts and briefs, you pull them down in one go. Now fully naked, Eric looks delicious to your eyes, with his lithe human body and large equine cock and balls.";
 		say "     Taking him by the hand, you lead him to your bed and quickly strip off your own clothing, then lie back on the bed and spread your legs invitingly. Not having to be asked twice, Eric eagerly joins you on the bed, kneeling between your legs. He takes his massive horsecock in one hand, guiding it towards your nether lips and rubs the flared head of his cock against them. Encouraged by your lustful moans, he aims right at your pussy and pushes forward, your folds stretching wide around his thick blunt-tipped maleness.";
 		say "			[WaitLineBreak]";
@@ -775,7 +775,7 @@ to say EricSex6:    [player's pussy fucked by Eric]
 		say "     Looks like he's inherited some urges from the centaur donor of his 'cure'... but hey, it's been amazing fucking him so far, so you readily roll over and get on all fours when he pulls out of you. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he sinks his shaft all the way inside. Then he starts all-out rutting, the thick horsecock sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking from the pleasant sensations. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[fimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
-	otherwise if hp of Eric is 32 and bodyname of player is "Greek Nymph":		[satyr-cock Eric + nymph-body player]
+	otherwise if hp of Eric is 32 and bodyname of player is "Greek Nymph": [satyr-cock Eric + nymph-body player]
 		say "     With Eric in your tight embrace, his hands roam over your nymph body.  With a quick glance into each others['] eyes, you rush to pull off the others['] clothes, both of you lusting for the same thing and unable to get naked fast enough.  His shirt, shorts and briefs all come off quickly, baring his lithe human body and throbbing satyr cock with its hefty, red-furred balls.  Just the sight of it makes you wet between the legs.";
 		say "     Unable to suppress a nymph-like giggle, you take his hand in your and lead him quickly to your bed with an almost dance-like grace.  Laughing a little at your excitement, he pulls you into a kiss, dropping you both onto the bed as he lustfully gropes you while rolling into position.  Breaking the wild kiss for a moment, he smiles down at you as he guides his throbbing satyrcock towards your nether lips and rubs the dribbling head of his cock against them.  Not wanting to wait any longer, you grab his hips with your delicate hands and pull him eagerly forward.  Certainly not lacking eagerness of his own, he thrusts forward into you, your folds spreading open for his long, capric maleness.";
 		say "			[WaitLineBreak]";
@@ -783,19 +783,19 @@ to say EricSex6:    [player's pussy fucked by Eric]
 		say "     It seems he's inherited some added virility from the satyr wine, as you both go at it for a long time.  His first orgasm only stops him for a short while before his flagging cock is growing hard again and he's pounding into your creamy pussy once more.  He rolls over onto his back and lets you ride in his lap, his eyes leeringly looking over your shapely form as you ride him to another climax.  The feel of a fresh load of his satyr cum pumping into you from those large balls of his has you moaning loudly, your pussy quivering and flowing with femcum as you orgasm again.[fimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you quick kiss before pulling out and stepping away.  'That was wonderful, but I... I should go, before go at it again.  If I keep at it, it feels like I might never want to stop.'  A little disappointed that your snuggling with him has to be cut short, you nod and smile, telling him that you'll be looking forward to the next time he's ready for more.";
-	otherwise if hp of Eric is 32:				[male with satyr-cock repeats]
+	otherwise if hp of Eric is 32: [male with satyr-cock repeats]
 		say "     Pulling him into a tight embrace, you then let your hand wander down his body until it reaches his crotch. You stroke his already growing bulge through the fabric for a moment, then push your hands under his shirt and pull it over his head. Hooking your hands over the bands of his shorts and briefs, you pull them down in one go. Now fully naked, Eric looks delicious to your eyes, with his lithe human body and throbbing satyr cock to go with his hefty, red-furred balls.";
 		say "     Taking him by the hand, you lead him to your bed and quickly strip off your own clothing, then lie back on the bed and spread your legs invitingly. Not having to be asked twice, Eric eagerly joins you on the bed, kneeling between your legs. He takes his throbbing satyrcock in one hand, guiding it towards your nether lips and rubs the dribbling head of his cock against them. Encouraged by your lustful moans, he aims right at your pussy and pushes forward, your folds stretching wide around his long, capric maleness.";
 		say "			[WaitLineBreak]";
-		say "     It's just amazing how good he makes you feel with his long, inhumanly-shaped cock. He fucks you with regular strokes, plunging deep inside you while his hands stroke your body. Then, after a while he leans down to make out with you, his cock all the way inside as he wrestles your tongue with his. Coming up for air, he moans 'Get on all fours please - I want to fuck you from behind.'";		  
+		say "     It's just amazing how good he makes you feel with his long, inhumanly-shaped cock. He fucks you with regular strokes, plunging deep inside you while his hands stroke your body. Then, after a while he leans down to make out with you, his cock all the way inside as he wrestles your tongue with his. Coming up for air, he moans 'Get on all fours please - I want to fuck you from behind.'";
 		say "     Looks like he's inherited some added virility from the satyr wine... but hey, it's been amazing fucking him so far, so you readily roll over and get on all fours when he pulls out of you. With a satisfied grunt, Eric mounts your ass from behind, just as his body is telling him it's supposed to go. He puts his arms around you, feeling up your chest and kissing your neck as he sinks his shaft all the way inside. Then he starts all-out rutting, the pulsing satyrcock sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking from the pleasant sensations. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed.[fimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
-to say EricSex7:    [fucking Eric's ass]
-	if(hp of Eric is 11):   					[cuntboy repeat sex]
+to say EricSex7: [fucking Eric's ass]
+	if (hp of Eric is 11): [cuntboy repeat sex]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the panties off his body, revealing his swollen pussy with its open, glistening lips - and below that, his tight pucker, winking invitingly from between his butt-cheeks.";
 		say "			[WaitLineBreak]";
@@ -804,17 +804,17 @@ to say EricSex7:    [fucking Eric's ass]
 		say "     With your handsome cuntboy now ready for it, you aim your shaft and push forward, giving both your bodies the unity they crave for. As you sink deeper inside him, you lean down and make out with Eric, moaning into each other's mouth when you bottom out inside his tight ass. With the warm hole around your cock, all restraint is soon forgotten and you start fucking him hard and deep. Eric gives lustful grunts to accompany the sound of your hips slapping against his and wraps his arms and legs around you in an intimate embrace.";
 		say "			[WaitLineBreak]";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bed together in each other's arms. Eric gives you a soft kiss on the lips, murmuring 'I love you.' before dozing off. You kiss his forehead and wish you could stay like this forever, your arms around him and your softening cock still inside his cum-filled hole. Then you too fall asleep.";
-	otherwise if hp of Eric is 32 and cockname of player is "Satyr":   [satyr-cock Eric + satyr-cock player]
+	otherwise if hp of Eric is 32 and cockname of player is "Satyr": [satyr-cock Eric + satyr-cock player]
 		say "     Taking Eric by the hand, you lead him over to his bed with barely restrained excitement.  Quite hard at the prospect of fucking the sexy guy, you run your hands over the firm muscles of his chest before quickly reaching lower to yank down his shorts and briefs before pushing him down onto the bed.  With his athletic ass on display, your satyr cock throbs and pulses, spurting precum across it as you climb onto the bunk behind him.  Laughing a little, he moves into position, bracing his legs and offering up his rear end before he even quite knows what he's doing.  The sight of it with his ponderous, red-furred balls and the tip of his hard, satyr shaft showing behind them is a delightful sight.";
 		say "     Wasting little time, you move a little closer and line your throbbing shaft up with his tight pucker.  Realizing what's coming, he moans softly and chews at his lip, nodding.  While you don't think he had any gay encounters with anal sex before all this, between his transitory gender confusion, your having saved his bacon and the lustful needs of his satyr cock, he's more than willing to go ahead with it now.  After letting a few more spurts of precum get your satyrboy ready, you grab his muscled buttocks in both hands and spread them while pushing forward firmly.";
 		say "     With your handsome, athletic friend ready for it, you aim your shaft and push forward, giving both your bodies what they crave. As you sink deeper inside him, you lean down and put your arms around Eric, running your hands over his strong, still-clothed chest and kiss at his neck, moaning about what a good, tight fuck he is.  He blushes at this, but smiles and grinds back against you all the harder.  And speaking of hard, when you reach under him and take a hold of his satyr cock, it is rigid and throbbing, leaking precum in spurts with every thrust into his sexy bottom.  With the warm hole around your capric cock, all restraint is soon forgotten and you start fucking him hard and deep.  Eric gives lustful grunts to accompany the sound of your hips slapping against his while you stroke his own pulsing meat.";
 		say "			[WaitLineBreak]";
 		say "     You fuck each other like wild, lustful creatures for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your fertile seed, then make out a bit until you're ready to go on.  It's a wild ride, but finally - after he and you have come three times - you come to lie on the bed together in each other's arms.  Eric gives you a lustful kiss while his hands run over your body and down to the throbbing cock that's given him such pleasure.  'That... that was... I'd never have believed something like that could feel so good before all of this started.  I love you,' he adds before dozing off.  Grabbing his creamy ass, you hold him tight and feel your cock twitch a little.  You drift off looking forward to the next time you can do this again with him.";
-	otherwise if hp of Eric is 22 or hp of Eric is 32:   [male with horse-cock/satyr-cock repeats]
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male with horse-cock/satyr-cock repeats]
 		say "     Taking Eric by the hand, you lead him over to his bed and push your hands under his shirt. Feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for his shorts, which you slide down his long runner's legs, stroking over his skin as you go. Now your handsome athlete is almost naked before you, just wearing white briefs, bulging at the front with his cock and balls.";
-		if hp of Eric is 22:			[horsecock]
+		if hp of Eric is 22: [horsecock]
 			say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his briefs with your fingers, making him moan needily and the bulge grow a bit. Looks like your horseboy is about ready... you pull the briefs off his body, freeing the long horsecock and his large round balls - and below that, revealing his tight pucker, winking invitingly from between his butt-cheeks.";
-		otherwise if hp of Eric is 32:	[satyrcock]
+		otherwise if hp of Eric is 32: [satyrcock]
 			say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his briefs with your fingers, making him moan needily and the bulge grow a bit. Looks like your satyrboy is about ready... you pull the briefs off his body, freeing the erect satyrcock and his large, red-furred balls - and below that, revealing his tight pucker, winking invitingly from between his butt-cheeks.";
 		say "			[WaitLineBreak]";
 		say "     Quickly stripping off your own clothing, you climb on the bed with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that eager expression on his face. You barely manage to control the impulse to just plunge in and take him then and there, instead going slow and rubbing the tip of your cock up and down the crack of his ass.";
@@ -822,7 +822,7 @@ to say EricSex7:    [fucking Eric's ass]
 		say "     With your handsome athlete ready for it, you aim your shaft and push forward, giving both your bodies what they crave for. As you sink deeper inside him, you lean down and make out with Eric, moaning into each other's mouth when you bottom out inside his tight ass. With the warm hole around your cock, all restraint is soon forgotten and you start fucking him hard and deep. Eric gives lustful grunts to accompany the sound of your hips slapping against his and wraps his arms and legs around you in an intimate embrace.";
 		say "			[WaitLineBreak]";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bed together in each other's arms. Eric gives you a soft kiss on the lips, murmuring 'I love you.' before dozing off. You kiss his forehead and wish you could stay like this forever, your arms around him and your softening cock still inside his cum-filled hole. Then you too fall asleep.";
-	otherwise if(hp of Eric is 99):   [sex slave cuntboy repeats]
+	otherwise if (hp of Eric is 99): [sex slave cuntboy repeats]
 		say "     Deciding it's time to fuck your cuntboy, you pull him along to the bed and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bed on his back and tell him to spread his legs. Between them, his pussy comes into sight, moisture glistening between its swollen lips - and below, a tight pucker winks invitingly at you. Looks like your cuntboy is about ready to be used...";
 		say "     Quickly stripping off your own clothing, you climb on the bed with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that tight ass ready for you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly pops through his pucker and invades his asshole. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
 		say "			[WaitLineBreak]";
@@ -830,8 +830,8 @@ to say EricSex7:    [fucking Eric's ass]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
-to say EricSex8:    [player's ass fucked by Eric]
-	if hp of Eric is 22:  						[male with horse-cock repeats]
+to say EricSex8: [player's ass fucked by Eric]
+	if hp of Eric is 22: [male with horse-cock repeats]
 		say "     Giving him a smile, you move over to his camp bed and do a little strip-show, pulling off your clothes and doing some poses. Then you climb on the bed, resting on all fours and wiggle your ass at Eric invitingly. 'Want a ride, horseboy?'";
 		say "			[WaitLineBreak]";
 		say "     He looks a bit dumbstruck at you for a second, then has to bend over to take the strain off his rapidly growing erection trapped inside his shorts. You don't think he had any gay encounters before all this, but after the temporary gender confusion and new urges to mount anyone from behind he inherited from the centaur donor of his 'cure', it seems his body is ready for it. And with the fun you're having together and him being incredibly thankful for saving him, you're sure he'll get over his last hangups soon too. After getting over the first moment of restraint, he almost rips his shirt off, then slides down his shorts and undies to free the massive erection dangling between his legs.";
@@ -839,7 +839,7 @@ to say EricSex8:    [player's ass fucked by Eric]
 		say "     Grunting in satisfaction of mounting someone from behind, he puts his arms around you, feeling up your chest and kissing your neck as he sinks his shaft all the way inside. Then he starts all-out rutting, the thick horsecock sliding in and out of your tight hole in hard and deep moves. You quickly climax from this animalistic fuck, your body shaking as you [if cocks of player > 0]shoot spurt after spurt of cum onto the sheets[otherwise if cunts of player > 0]drip a copious amount of femcum onto the sheets[otherwise]have an orgasm.[end if]. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed from his large horse balls.[mimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bed together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
-	otherwise if hp of Eric is 32 and bodyname of player is "Satyr":			[satyr-cock Eric + satyr-body player]
+	otherwise if hp of Eric is 32 and bodyname of player is "Satyr": [satyr-cock Eric + satyr-body player]
 		say "     Feeling an rush of eager, wild excitement running through you, you strip quickly in front of him, putting your satyr-like body on display for him.  Seeing the growing bulge in his shorts, you grin and climb onto his cot, waving your ass invitingly at him.  'Climb on, satyrboy?' you ask with a laugh.";
 		say "			[WaitLineBreak]";
 		say "     Hardly aware of what he's doing at first, he yanks down his shorts and briefs to free his hard, satyr cock.  While you don't think he had any gay encounters before all this, between everything that's been happening to him and all you've done for him (including giving him that hard, throbbing cock that you now so clearly desire), he hardly hesitates as realizes what's being offered.  His restraint only lasting a moment, he reaches out runs his hands over your satyr body as he gets you to back that ass up to the edge of the cot.";
@@ -847,7 +847,7 @@ to say EricSex8:    [player's ass fucked by Eric]
 		say "     Grunting in satisfaction of mounting someone from behind, he puts his arms around you, feeling up your chest and kissing your neck as he pounds away at you with wild abandon.  During this all-out rutting, the throbbing satyr cock slides in and out of your tight hole in hard and deep moves.  You quickly climax from this animalistic fuck, your body shaking as you [if cocks of player > 0]shoot spurt after spurt of cum onto the sheets[otherwise if cunts of player > 0]drip a copious amount of femcum onto the sheets[otherwise]have an orgasm of full-bodied pleasure[end if]. Not too long after, Eric follows suit, filling your hole with a massive load of his fertile seed from his large goat balls.  Holding his cock deep inside you, he pauses for a few breaths while his cum trickles deeper inside you before starting up again.  Soon enough, he's going at you full tilt again and you're moaning and laughing lustfully beneath him as he does.  It's only after another heavy load of satyr cum in your ass that he pulls out, yanking out quickly and pumping his throbbing cock to spray the rest of his semen across your well-used ass.[mimpregchance]";
 		say "			[WaitLineBreak]";
 		say "     With his hand sliding along your sexy body, he moves around in front of you.  In between panting for breath, he gives you quick kiss before patting your sticky ass lightly and stepping away.  'That was wonderful, but I... I should go, before go at it again.  If I keep at it, it feels like I might never want to stop.'  A little disappointed that your snuggling with him has to be cut short, you nod and smile, telling him that you'll be looking forward to the next time he's ready for more.";
-	otherwise if hp of Eric is 32:			[satyr Eric repeats]
+	otherwise if hp of Eric is 32: [satyr Eric repeats]
 		say "     Giving him a smile, you move over to his camp bed and do a little strip-show, pulling off your clothes and doing some poses. Then you climb on the bed, resting on all fours and wiggle your ass at Eric invitingly. 'Climb on, satyrboy?'";
 		say "			[WaitLineBreak]";
 		say "     He looks a bit dumbstruck at you for a second, then has to bend over to take the strain off his rapidly growing erection trapped inside his shorts. You don't think he had any gay encounters before all this, but after the temporary gender confusion and new urges to mount anyone from behind he inherited from his satyr cock, it seems his body is ready for it. And with the fun you're having together and him being incredibly thankful for saving him, you're sure he'll get over his last hangups soon too. After getting over the first moment of restraint, he almost rips his shirt off, then slides down his shorts and undies to free the massive erection dangling between his legs.";
@@ -858,8 +858,8 @@ to say EricSex8:    [player's ass fucked by Eric]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 
-to say EricSex9:	    [trick David into fucking submissive Eric]
-	if(hp of Eric is 99):   					[sex-slave cuntboy]
+to say EricSex9: [trick David into fucking submissive Eric]
+	if (hp of Eric is 99): [sex-slave cuntboy]
 		say "     Deciding it's the right time for your little switch & fuck plan, you meet Eric's eyes with a meaningful glance and nod over to David. The submissive cuntboy gives a sigh, then lowers a hand to his crotch to play with himself and get ready for a fuck. Good - you make a last stop to pick up the ribbons of soft fabric you cut a shawl from library lost and found into, then walk over to David.";
 		say "			[WaitLineBreak]";
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready and itching to get going.";
@@ -877,8 +877,8 @@ to say EricSex9:	    [trick David into fucking submissive Eric]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
-to say EricSex10:  	  [have Eric fuck David's ass  - first time]
-	if(hp of Eric is 21 or hp of Eric is 22):  [horse-hung Eric]
+to say EricSex10: [have Eric fuck David's ass  - first time]
+	if (hp of Eric is 21 or hp of Eric is 22): [horse-hung Eric]
 		say "     You ask Eric if he's ready for some fun with David. He smiles, nodding before giving you a quick kiss on the lips. While groping his crotch through the fabric of his trousers, you tell him to come over and join the two of you when you got David ready. Then you saunter over to David's camp bed, where the soldier boy is just taking a nap.";
 		say "     Carefully pulling the blanket from the bed, you reveal David's sleeping body, clad in just a t-shirt and some boxer briefs. He looks pretty hot, lying there peacefully. Sitting next to him on the bed, you softly stroke his arm, then tuck up the shirt a bit and reveal his well-defined abs. David stirs a bit, maybe from the colder air touching him, then calms down again, still asleep. Moving your hand down, you stroke the inside of his legs, then softly fondle his cock and balls through his undies. A small moan escapes from the sleeping man and you feel his cock getting noticeably harder under your fingers. You'd bet that you just put an interesting turn in whatever he is dreaming about...";
 		say "			[WaitLineBreak]";
@@ -893,7 +893,7 @@ to say EricSex10:  	  [have Eric fuck David's ass  - first time]
 		say "			[WaitLineBreak]";
 		say "     What a hot show. You leave the two of them alone to lie together on the bed, kissing and still connected by Eric's slowly softening cock...";
 		now lust of Eric is 4;
-	otherwise if hp of Eric is 31 or hp of Eric is 32:	[satyr-hung Eric]
+	otherwise if hp of Eric is 31 or hp of Eric is 32: [satyr-hung Eric]
 		say "     You ask Eric if he's ready for some fun with David. He smiles, nodding before giving you a quick kiss on the lips. While groping his crotch through the fabric of his trousers, you tell him to come over and join the two of you when you got David ready. You then saunter over to David's camp bed, where the soldier boy is just taking a nap.";
 		say "     Carefully pulling the blanket from the bed, you reveal David's sleeping body, clad in just a t-shirt and some boxer briefs. He looks pretty hot, lying there peacefully. Sitting next to him on the bed, you softly stroke his arm, then tuck up the shirt a bit and reveal his well-defined abs. David stirs a bit, maybe from the colder air touching him, then calms down again, still asleep. Moving your hand down, you stroke the inside of his legs, then softly fondle his cock and balls through his undies. A small moan escapes from the sleeping man and you feel his cock getting noticeably harder under your fingers. You'd bet that you just put an interesting turn in whatever he is dreaming about...";
 		say "			[WaitLineBreak]";
@@ -911,8 +911,8 @@ to say EricSex10:  	  [have Eric fuck David's ass  - first time]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex11:   	[have David fuck Eric's pussy - first time]
-	if(hp of Eric is 11):  [cuntboy Eric]
+to say EricSex11: [have David fuck Eric's pussy - first time]
+	if (hp of Eric is 11): [cuntboy Eric]
 		say "     You ask Eric if he's ready for some fun with David. He smiles, nodding before giving you another quick kiss on the lips. Taking Eric by the hand, you lead him over to David's camp bed and push your hands under his shirt. After feeling up his firm chest muscles for a moment, next you take hold of the shirt and pull it off him. Then it's time for the shorts, which you slide down his long runner's legs, stroking over his soft skin as you go. Now your handsome athlete is almost naked before you and an interestedly watching David, just wearing a skimpy white tanga already showing a little damp spot at the front.";
 		say "     Running your hands over his body, you pull Eric in for another quick kiss, then softly push him backwards against the bed and make him lie down on it. You stroke over the thin fabric of his panties with your fingers, making him moan needily. Looks like your cuntboy is about ready... you pull the wisp of fabric off his body, revealing a ready pussy with open, glistening lips. Turning to David, whose looks are just roaming over Eric's naked body and his moist opening, you if he'd like to show your friend a good time. Explaining that he's just waiting for David's cock, you emphasize it by stroking Eric's sensitive pussy lips, making him moan loudly.";
 		say "			[WaitLineBreak]";
@@ -927,29 +927,29 @@ to say EricSex11:   	[have David fuck Eric's pussy - first time]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex12:   	[threesome with David+Eric]		
-	if hp of Eric is 11:							[cuntboy Eric]
+to say EricSex12: [threesome with David+Eric]
+	if hp of Eric is 11: [cuntboy Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, David is sitting on one of the unused beds with his back to you, reading a book.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a small black tanga. Then even that is slid down his long runner's legs - albeit slower, to give you a bit of a show. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where David is sitting. He takes care to stay behind the soldier, out of sight, and David doesn't notice anything until the cuntboy climbs on the bed behind him.";
 		say "			[WaitLineBreak]";
-		say "     Feeling the mattress give a bit, David looks over his shoulder. He starts saying 'Hey Eric -' until words fail him as his eyes wander lower, taking in the cuntboy athlete's nakedness. Eric doesn't really give David any time to recover his wits, moving besides him and going in for a deep kiss. Finding himself in a surprise makeout session, the book in the soldier's hands just gets dropped on the ground besides the bed, instantly forgotten as he reaches out to touch Eric's body. Swinging a leg on David's other side, Eric straddles his hips, then takes hold of the edge of David's t-shirt and peels it off him. Pushing against the young man's naked chest, Eric makes him lay back on the bed, then leans forward too for even more playful kissing.";		
+		say "     Feeling the mattress give a bit, David looks over his shoulder. He starts saying 'Hey Eric -' until words fail him as his eyes wander lower, taking in the cuntboy athlete's nakedness. Eric doesn't really give David any time to recover his wits, moving besides him and going in for a deep kiss. Finding himself in a surprise makeout session, the book in the soldier's hands just gets dropped on the ground besides the bed, instantly forgotten as he reaches out to touch Eric's body. Swinging a leg on David's other side, Eric straddles his hips, then takes hold of the edge of David's t-shirt and peels it off him. Pushing against the young man's naked chest, Eric makes him lay back on the bed, then leans forward too for even more playful kissing.";
 		say "     Getting pretty aroused by watching your two friends go at it, you decide it's time to join in. Stepping up to the bed, you kneel between David's legs and start rubbing his crotch through the tented fabric of his pants. Wow, he's really got a hardon going there, leaking precum to create a damp spot on the trousers. Happy to lend a helping hand, you undo the button and zipper of David's pants, pulling them open to free his raging boner. Taking hold of the long shaft, you stroke it a few times, then rub it against Eric's soft skin before you finally position the tip between the cuntboy's dripping pussy lips. Following an instinct as old as the human race, David thrusts upward with a lust-filled moan, burying his cock deep inside Eric's body. After that, all out fucking ensures, with Eric riding the hard shaft inside his pussy and David grinding up against him.";
 		say "			[WaitLineBreak]";
 		if cocks of player > 0:
 			say "     [EricSex12_12_Male]";
 		otherwise:
-			say "     [EricSex12_12_Fondling]";					
-	otherwise if hp of Eric is 22 or hp of Eric is 32:		[male Eric]
+			say "     [EricSex12_12_Fondling]";
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, David is sitting on one of the unused beds with his back to you, reading a book.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a pair of black briefs, bulging at the front. Then even those are slid down his long runner's legs - albeit slower, to give you a bit of a show - revealing his already pretty hard [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] and his large balls. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where David is sitting. He takes care to stay behind the soldier, out of sight, and David doesn't notice anything until the college athlete climbs on the bed behind him.";
 		say "			[WaitLineBreak]";
-		say "     Feeling the mattress give a bit, David looks over his shoulder. He starts saying 'Hey Eric -' until words fail him as his eyes wander lower, taking in the young man's nakedness. Eric doesn't really give David any time to recover his wits, moving besides him and going in for a deep kiss. Finding himself in a surprise makeout session, the book in the soldier's hands just gets dropped on the ground besides the bed, instantly forgotten as he reaches out to touch Eric's body. Swinging a leg on David's other side, Eric straddles his hips, then takes hold of the edge of David's t-shirt and peels it off him. Pushing against the young man's naked chest, Eric makes him lay back on the bed, then leans forward too for even more playful kissing.";		
+		say "     Feeling the mattress give a bit, David looks over his shoulder. He starts saying 'Hey Eric -' until words fail him as his eyes wander lower, taking in the young man's nakedness. Eric doesn't really give David any time to recover his wits, moving besides him and going in for a deep kiss. Finding himself in a surprise makeout session, the book in the soldier's hands just gets dropped on the ground besides the bed, instantly forgotten as he reaches out to touch Eric's body. Swinging a leg on David's other side, Eric straddles his hips, then takes hold of the edge of David's t-shirt and peels it off him. Pushing against the young man's naked chest, Eric makes him lay back on the bed, then leans forward too for even more playful kissing.";
 		say "     Getting pretty aroused by watching your two friends go at it, you decide it's time to join in. Stepping up to the bed, you kneel between David's legs and start rubbing his crotch through the tented fabric of his pants. Wow, he's really got a hardon going there, leaking precum to create a damp spot on the trousers. Happy to lend a helping hand, you undo the button and zipper of David's pants, pulling them open to free his raging boner. After quickly removing his shoes and socks, you slide off his pants the rest of the way, leaving the soldier boy in delicious nakedness. Spreading his legs a bit further, you lean forward, bringing your face to his bubble butt, and start licking and teasing David's hole with your tongue. Soon he's pretty wet and relaxed, ready to be fucked.";
 		if cocks of player > 0:
 			say "     [EricSex12_22_32_Male]";
 		otherwise:
-			say "     [EricSex12_22_32_Female]";					
-	otherwise if hp of Eric is 99:		[sex slave cuntboy Eric]
+			say "     [EricSex12_22_32_Female]";
+	otherwise if hp of Eric is 99: [sex slave cuntboy Eric]
 		say "     Moving a hand down to Eric's crotch, you stroke your fingers over his sensitive pussy lips, making him moan before he can stop himself. Pushing two fingers inside, you fondle him a bit. Soon Eric is panting in lust, his female parts ready and dripping. Then... you just stop. Pushing aside his hand trying to touch his pussy softly, but firmly, you leave him wait for a moment, a pleading look in his eyes. Good, that should do it. Running a finger along Eric's jawline, you turn his head a bit so he looks towards the far side of the room. There, David is sitting on one of the unused beds with his back to you, reading a book. Whispering to Eric to go offer himself to him, you step back to watch.";
 		say "     There's a moment of hesitation with Eric biting his lip, then the need to get fucked wins out inside him and he walks over towards David. The young soldier gets wide eyes as a naked Eric steps into his line of sight, then sits on his lap and says '...I need someone inside me. Please - fuck me.' As David opens his mouth to say something, Eric moves in to kiss him. Hungrily making out with the young soldier, he swings around his leg to straddle his lap, Eric's crotch rubbing up against David's quickly growing bulge. You step closer, taking David's hand and putting it on Eric's tight asscheek. You egg him on a little to give the cuntboy what he needs, just like last time...";
 		say "			[WaitLineBreak]";
@@ -961,7 +961,7 @@ to say EricSex12:   	[threesome with David+Eric]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex12_12_Male:		[cuntboy Eric, male/herm player]
+to say EricSex12_12_Male: [cuntboy Eric, male/herm player]
 	say "     What shall it be you want to do with your two boys? Get into Eric's vagina in a double-penetration [link](1)[as]1[end link], fuck Eric's ass [link](2)[as]2[end link], fuck David's ass [link](3)[as]3[end link] or maybe fondle David's hole as he fucks Eric [link](4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -971,25 +971,25 @@ to say EricSex12_12_Male:		[cuntboy Eric, male/herm player]
 			break;
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to double-penetrate Eric's vagina, [link]2[end link] to fuck Eric in the ass, [link]3[end link] to fuck David in the ass or [link]4[end link] to finger-fuck David's hole.";
-	if calcnumber is 1:								[double vaginal]
+	if calcnumber is 1: [double vaginal]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Resisting the urge to just take him then and there, you lean over Eric, running your hands up along his sides and planting a line of kisses on his spine. Finally you're holding him from behind, your arms around his chest and your cock resting hotly against his back. You ask Eric if you can do a double penetration with David, but he's too blissed out from getting fucked to even notice your words. Only when you playfully lick and nibble his earlobe does he really listen to your repeated question. Between his moans, he answers 'Go ahead. *pant* I trust you, you're my rescuing hero, remember?'";
 		say "     Taking hold of your shaft with one hand, you aim your erection a bit lower, then slowly push into the cuntboy's pussy besides David. All three of you gasp and moan at the incredible sensations of the double penetration course through your bodies, with David's and your cocks rubbing up against each other and both of them stretching out Eric's pussy. You give them a moment to get used to the feeling, then start thrusting in and out, reveling in the tightness of Eric's hole. When David resumes thrusting too, your cocks rub against each other, giving another bit of extra stimulation.";
 		say "			[WaitLineBreak]";
 		say "     With the three of you fucking each other in a wild threesome, the arousal of everyone involved soon mounts higher and higher. David is the first one to pass the point of no return, suddenly stiffening under Eric, with his cock pulsing against yours as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's stretched hole, now wet and slippery with his femcum and David's load. The thought of your soldier friend's cum lubing your cock as it pounds into the cuntboy athlete's hole makes your lust go into overdrive. After just a few more thrusts you come, pumping your seed into Eric's body to join and mingle with David's.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. David moves his head to the side a bit to look at you over Eric's shoulder, then gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips and him addressing you with 'Come on, join us on the bed.' After you step back a bit to give them room to move, David lies down lengthwise on the bed, with Eric on top of him and enough room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
-	otherwise if calcnumber is 2:			[fuck Eric's ass]
+	otherwise if calcnumber is 2: [fuck Eric's ass]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Taking hold of it with one hand, you aim your erection up a bit, then slowly push forward against the cuntboy's pucker. After a moment's resistance, it yields to your invading member, allowing you to slide inside his warm inner passage. Eric's hole stretched tight around your shaft gives you an incredible feeling, and the two of you moan in unison as you sink deeper and deeper. Suddenly you feel movement bump and rub against your cock - that must be David, his erection pumping in and out of Eric's other hole. So hot, to be able to feel him through the walls of Eric's insides.";
 		say "			[WaitLineBreak]";
 		say "     With the two of you fucking the Eric front and back, the arousal of everyone involved soon mounts higher and higher. David is the first one to pass the point of no return, suddenly stiffening under Eric, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's asshole, eager to fill him with another load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting into Eric's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. David moves his head to the side a bit to look at you over Eric's shoulder, then gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips and him addressing you with 'Come on, join us on the bed.' After you step back a bit to give them room to move, David lies down lengthwise on the bed, with Eric on top of him and enough room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
-	otherwise if calcnumber is 3:			[fuck David's ass]
-		if lust of David is 0: 	[anal virgin]
+	otherwise if calcnumber is 3: [fuck David's ass]
+		if lust of David is 0: [anal virgin]
 			say "     After pulling off his shoes and socks you reach for David's hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked. Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but your true target lies somewhere else. Raising David's legs, you spread them and bend your knees a little bit, rubbing your hard [cock of player] cock against his virgin bottom.";
 			say "     This is such a nice opportunity to break him in for some good fucking that only just manage to hold back from plunging right in. Leaning forward to look at David around Eric's body on top of him, you ask him if you can fuck his ass. He doesn't really look at you, lying back on the mattress and moaning in lust - but he does nod and reach down to hold his legs up. Perfect. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps as his hole is spread for the first time by your invading member, but soon starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
-			now lust of David is 1; 	[anally de-virginized]
-		otherwise: 
+			now lust of David is 1; [anally de-virginized]
+		otherwise:
 			say "     After pulling off his shoes and socks you reach for David's hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked. Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but your true target lies somewhere else. Raising David's legs, you spread them and bend your knees a little bit, rubbing your hard [cock of player] cock against his bottom.";
 			say "     You can't wait to get back into this nice and tight soldier ass. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps in lust as his hole is spread by your invading member, then starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
 		say "			[WaitLineBreak]";
@@ -997,66 +997,66 @@ to say EricSex12_12_Male:		[cuntboy Eric, male/herm player]
 		say "     Being penetrated at the same time as sliding into a pussy with his own cock has David pretty hot and bothered, and before too much longer, he moans 'I'm gonna... cummMMM!' He grabs Eric's hips to pull him tight against his crotch as his whole body shudders when spurt after spurt of cum shoot out of his cock and into Eric's waiting pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. Meanwhile, your thrusting member being gripped by David's twitching anal muscles gives you the last bit of stimulation you needed too. Shoving your cock in all the way as you feel the need to cum rise inside your balls, a massive load of cum blasts through your shaft and into David's hole.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside David. The solder moves his head to the side a bit to look at you over Eric's shoulder, then gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips and him addressing you with 'Come on, join us on the bed.' After you step back a bit to give them room to move, David lies down lengthwise on the bed, with Eric on top of him and enough room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
-	otherwise:												[fondle David's ass]
+	otherwise: [fondle David's ass]
 		say "     [EricSex12_12_Fondling]";
-	
-to say EricSex12_12_Fondling:	[cuntboy Eric]
+
+to say EricSex12_12_Fondling: [cuntboy Eric]
 	say "			[WaitLineBreak]";
-	if cocks of player > 0:		[male player]
+	if cocks of player > 0: [male player]
 		say "     You decide to give your soldier-boy a little bit of anal attention. After pulling off David's shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked, an arousing sight to which you start jerking your erect manhood. Looking up at Eric sliding himself up and down on David's hard shaft, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. That's so hot - pumping your fingers up and down over the hard shaft of your cock, you soon reach the point of no return yourself, spraying long strings of cum on the ground.";
 		say "     After David finishes cumming in the cuntboy athlete's vagina and has time to catch his breath, he gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips. Not wanting to leave you out, he then moves to lie lengthwise on the bed, with Eric lying on top of him and room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
-	otherwise if cunts of player > 0:		[female player]
+	otherwise if cunts of player > 0: [female player]
 		say "     You decide to give your soldier-boy a little bit of anal attention. After pulling off David's shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked, an arousing sight to which you start fingering yourself. Looking up at Eric sliding himself up and down on David's manhood, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. That's so hot - you wish it was you with David's cock inside you. Pumping your caressing fingers in and out of your own cunt, you soon orgasm, imagining you're feeling David's shaft move inside you.";
 		say "     After David finishes cumming in the cuntboy athlete's vagina and has time to catch his breath, he gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips. Not wanting to leave you out, he then moves to lie fully on the bed, with Eric lying on top of him and room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
-	otherwise:								[neuter player]
+	otherwise: [neuter player]
 		say "     You decide to give your soldier-boy a little bit of anal attention. After pulling off his shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked. Looking up at Eric sliding himself up and down on David's manhood, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body.";
 		say "     After David finishes cumming in the cuntboy athlete's vagina and has time to catch his breath, he gives a satisfied chuckle and says 'Man, you two are quite something.' followed by a long kiss on Eric's lips. Not wanting to leave you out, he then moves to lie fully on the bed, with Eric lying on top of him and room for you next to them. You eagerly join them, alternating in making out with both. Soon, this leads over to all of you cuddling in post-coital contentment.";
 
-to say EricSex12_22_32_Male:			[horse-hung Eric, male/herm player]
+to say EricSex12_22_32_Male: [horse-hung Eric, male/herm player]
 	say "     So who shall be the lucky guy plunging his manhood into David's tight hole? Do you want to do it (Y), or do you offer Eric the privilege (N)?";
-	if player consents:			[player fucks David]
+	if player consents: [player fucks David]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but your true target lies somewhere else. Raising David's legs, you spread them and bend your knees a little bit, rubbing your hard [cock of player] cock against his ready bottom. You can't wait any longer to get back into this nice and tight soldier ass. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps in lust as his hole is spread by your invading member, then starts moaning loudly as you sink yourself deeper and deeper, rubbing against his prostrate.";
 		say "			[WaitLineBreak]";
 		say "     As you start pounding David's ass with deep thrusts, Eric raises his upper body, then moves over to kneel on the bed besides David. Watching you fuck the soldier boy for a a moment, he runs both his hands over his long [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if], taking up the drop of precum glistening at its tip and licking it off his finger. Then he leans forward, stealing a quick kiss from you before saying 'You look really hot, fucking him. Would we make it a chain thing? I'd love to give you a ride on my little pony too, you know...'";
 		say "     [line break]";
 		say "     Do you want him to fuck your ass while you do David (Y), or would you rather see the two of them 69 (N)? ";
-		if player consents:		[Eric fucks player, who fucks David]
+		if player consents: [Eric fucks player, who fucks David]
 			say "     As you give him your ok, a lustful gleam begins to full Eric's eyes. Smiling, the gives you another peck on the lips, then jumps off the bed to move behind you. As you fuck David, you can feel Eric's hands on your cheeks, softly squeezing and spreading them, then rubbing the flared head of his cock up and down your crack. Using the copious amounts of precum leaking from his cockhead, he lubes your hole, then presses his shaft against your ready pucker and slides into your body. The large head and impressive length of the cock makes you moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
 			say "			[WaitLineBreak]";
 			say "     Being the center of a fuck sandwich quickly has you pretty hot and bothered, and before too much longer, you moan 'I'm gonna... cummMMM!' Grabbing David's hips, you grind your crotch against his ass, plunging your manhood as deep into the soldier boy as you can as the first spurt of your seed starts filling his hole. With your whole body shuddering in the grip of orgasm and twitching anal muscles flexing around Eric's shaft, it's not much of a surprise that the college athlete soon follows you to the point of no return. Giving a need-filled grunt as his large balls start churning out spurt after spurt of cum, Eric wraps his arms around you from behind and holds you tight. [mimpregchance]";
 			say "			[WaitLineBreak]";
 			say "     Keeping your position for a moment, you two ride out your orgasms, filling David's and your asshole with quite a bit of cum. After the last blasts of cum are shot and you've had time to catch your breaths, the three of you disengage. With David the odd man out, still sporting a furiously hard cock, Eric and you decide to take care of him - together. Moving the young soldier to the center of the bed, you kneel down left and right of him lick his shaft with both your tongues. As wound up as David already is, it doesn't take much more of this until he suddenly gasps and long strings of cum blast from his erection, splattering Eric's and your face, plus David's crotch with white fluid. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
-		otherwise:						[player fucks David, David + Eric 69]
+		otherwise: [player fucks David, David + Eric 69]
 			say "     Not in the mood to get fucked right now, you distract Eric by taking his hand and putting it on David's hard cock, then ask him to give your friend a little attention instead and that David would surely want to suck you off in turn. Then you thrust into him again hard, making his answer a gasped moan. 'Sur- AH - aaah *pant* -sure.' With that, Eric moves to kneel over David's head, his long [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] dangling into the soldier's face who grabs it with both hands, jerking its shaft and licking the flared head. A satisfied grin on his face, Eric then leans forward to rest on all fours above David's body and takes the other man's shaft into his own mouth, bobbing up and down on it.";
 			say "			[WaitLineBreak]";
-			say "     Being fucked and sucked off at the same time, it doesn't take too much longer until David's arousal peaks. With his lips tightly wrapped around Eric's [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft, David gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Looking down, you can see the soldier's balls twitch as they deliver blast after blast to paint Eric's tonsils white. Before you know it, looking at the hot little scene while David's anal muscles twitch and flex around your invading member drives you over the cliff to orgasm yourself. Holding on to David's legs tightly, you throw back your head in a lustful gasp, the first spurt of cum already shooting deep inside your friend's ass. Then a second shot follows, and a third, fourth, ... filling the young man with your seed.";
+			say "     Being fucked and sucked off at the same time, it doesn't take too much longer until David's arousal peaks. With his lips tightly wrapped around Eric's [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft, David gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Looking down, you can see the soldier's balls twitch as they deliver blast after blast to paint Eric's tonsils white. Before you know it, looking at the hot little scene while David's anal muscles twitch and flex around your invading member drives you over the cliff to orgasm yourself. Holding on to David's legs tightly, you throw back your head in a lustful gasp, the first spurt of cum already shooting deep inside your friend's ass. Then a second shot follows, and a third, fourth... filling the young man with your seed.";
 			say "			[WaitLineBreak]";
-			say "     Keeping your position for a moment, you two ride out your orgasms, the last little spurts of cum splashing into Eric's mouth and David's ass. After you've had time to catch your breaths, the David and you turn to Eric, the odd man out, still sporting a furiously hard cock. Deciding to take care of him together, you have him get on his back in the center of the bed, then kneel down left and right of him lick his shaft with both your tongues. As wound up as Eric already is, it doesn't take much more of this until he suddenly gasps and long strings of cum blast from the flared head of his [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft, splattering David's and your face, plus Eric's crotch with white fluid. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";			
-	otherwise:							[Eric fucks David]
+			say "     Keeping your position for a moment, you two ride out your orgasms, the last little spurts of cum splashing into Eric's mouth and David's ass. After you've had time to catch your breaths, the David and you turn to Eric, the odd man out, still sporting a furiously hard cock. Deciding to take care of him together, you have him get on his back in the center of the bed, then kneel down left and right of him lick his shaft with both your tongues. As wound up as Eric already is, it doesn't take much more of this until he suddenly gasps and long strings of cum blast from the flared head of his [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft, splattering David's and your face, plus Eric's crotch with white fluid. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
+	otherwise: [Eric fucks David]
 		say "     Standing up from between David's legs, your hard [cock of player] cock bumps against Eric's bottom. Seductive too, but let's not get ahead of things. Leaning over your handsome college athlete, you plant a line of small kisses up his back, then whisper in his ear that David's ass is ready for his cock. Eric nods at you over his shoulder, then turns back to David and asks 'Can I fuck you? It was soo good last time.' Giving a slight moan as he thinks back to their first fuck, David sighs 'Sure. Ride me with your big cock.'";
 		say "     You readily step back and make room for Eric to get up from the bed and take your place between David's legs. Cupping his large balls with one hand, he grabs his long [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft with the other and guides it to David's hole. With a deep moan from both of them, the flared head of the [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] pushes through the young soldier's pucker, then slides deeper into his body. It leaves you almost spellbound to watch Eric's nonhuman shaft pushing further inside David's tight passage, stretching it tightly around his girth. Then, after he bottoms out and his balls touch David's ass, Eric pulls back most of the way and thrusts back in, fucking your friend with deep strokes.";
 		say "     [line break]";
 		say "     Though you could almost just stand back and watch them go at it, your own erection demands some attention. What do you want to do now? Fuck Eric while he shafts David (Y), or rather get into some nice 69 action with David (N)? ";
-		if player consents:		[player fucks Eric, who fucks David]
+		if player consents: [player fucks Eric, who fucks David]
 			say "     Moving up behind Eric, you put your hands on his firm ass, softly squeezing his cheeks and spreading them, then rub the head of your [cock of player] cock up and down his crack. With all the precum you're leaking from the cockhead, it's easy to lube up his hole, then press forward against the college athlete's ready pucker and slid into his body. Your shaft spreading his passage tight around its girth makes your handsome friend moan and scream in lust, all restraint lost in the pleasure at fucking and being fucked at the same time.";
 			say "			[WaitLineBreak]";
 			say "     Being the center of a fuck sandwich quickly has Eric pretty hot and bothered, and before too much longer, he moans 'I'm gonna... cummMMM!' Grabbing David's hips, he grinds his crotch against the soldier boy's ass, plunging his manhood as deep as he can. His whole body twitches with each burst of cum spraying into David's back passage. Even the muscles inside of his ass flex rhythmically with his orgasm, gripping tightly around your shaft and driving your arousal up to and over the point of no return. Giving a lust-filled grunt, your balls start churning out spurt after spurt of cum to fill up Eric's asshole.";
 			say "			[WaitLineBreak]";
-			say "     Keeping your position for a moment, you two ride out your orgasms, filling David's and Eric's holes with quite a bit of cum. After the last blasts are shot and you've had time to catch your breaths, the three of you disengage. With David the odd man out, still sporting a furiously hard cock, Eric and you decide to take care of him - together. Moving the young soldier to the center of the bed, you kneel down left and right of him lick his shaft with both your tongues. As wound up as David already is, it doesn't take much more of this until he suddenly gasps and long strings of cum blast from his erection, splattering Eric's and your face, plus David's crotch with white fluid. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";		
-		otherwise:						[Eric fucks David, player+David 69]
+			say "     Keeping your position for a moment, you two ride out your orgasms, filling David's and Eric's holes with quite a bit of cum. After the last blasts are shot and you've had time to catch your breaths, the three of you disengage. With David the odd man out, still sporting a furiously hard cock, Eric and you decide to take care of him - together. Moving the young soldier to the center of the bed, you kneel down left and right of him lick his shaft with both your tongues. As wound up as David already is, it doesn't take much more of this until he suddenly gasps and long strings of cum blast from his erection, splattering Eric's and your face, plus David's crotch with white fluid. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
+		otherwise: [Eric fucks David, player+David 69]
 			say "     In the mood for some nice oral action, you move to kneel over David's head, leaving your [cock of player] dangling into the soldier's face. He happily takes hold of it, stroking your shaft and licking over the tip. A satisfied grin on your face, you lean forward to rest on all fours above David's body and take the young man's shaft into your own mouth, bobbing up and down on it.";
 			say "			[WaitLineBreak]";
 			say "     Being fucked and sucked off at the same time, it doesn't take too much longer until David's arousal peaks. With his lips tightly wrapped around your [cock of player] shaft, David gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. You can see the soldier's balls twitch as the first blast of cum shoots into your mouth, then again and again. Eagerly swallowing your friend's seed, you move a hand to cup is balls and feel them twitch as he continues cumming. Hearing a gasped 'I'm coming.' from above, you see Eric grind his hips against David's ass, his cock doing slight jerks as cum blasts through it and into David. As he continues shooting for quite a bit, Eric starts up slow thrusts again, his shaft coming out of the soldier's hole covered in white cum.";
 			say "			[WaitLineBreak]";
 			say "     Keeping their position for a moment, the two of them ride out their orgasms, the last little spurts of cum splashing into David's ass and your mouth. After they've had time to catch their breaths, David and Eric turn to you, the odd man out, still sporting a furiously hard cock. Deciding to take care of you together, they have you get on his back in the center of the bed, then kneel down left and right of lick your shaft with both their tongues. As wound up as you already are, it doesn't take much more of this until you feel a tingling feeling rise in your balls and long strings of cum blast from your cock, splattering David and Eric's faces and your crotch. After licking up the cum off each other and making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
 			
-to say EricSex12_22_32_Female:			[male Eric, female player]			
+to say EricSex12_22_32_Female: [male Eric, female player]
 	say "     Standing up from between David's legs, your ogle Eric's tight bottom for a moment, then shake out of it - it's time for fucking. Leaning over your handsome college athlete, you plant a line of small kisses up his back, then whisper in his ear that David's ass is ready for his cock. Eric nods at you over his shoulder, then turns back to David and asks 'Can I fuck you? It was soo good last time.' Giving a slight moan as he thinks back to their first fuck, David sighs 'Sure. Ride me with your big cock.'";
 	if hp of Eric is 22: [horse-hung]
 		say "     You readily step back and make room for Eric to get up from the bed and take your place between David's legs. Cupping his large balls with one hand, he grabs his long [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] shaft with the other and guides it to David's hole. With a deep moan from both of them, the flared head of the [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] pushes through the young soldier's pucker, then slides deeper into his body. It leaves you almost spellbound to watch Eric's nonhuman shaft pushing further inside David's tight passage, stretching it tightly around his girth. Then, after he bottoms out and his balls touch David's ass, Eric pulls back most of the way and thrusts back in, fucking your friend with deep strokes.";
@@ -1064,22 +1064,22 @@ to say EricSex12_22_32_Female:			[male Eric, female player]
 		say "     You readily step back and make room for Eric to get up from the bed and take your place between David's legs. Cupping his large balls with one hand, he grabs his erect shaft with the other and guides it to David's hole. With a deep moan from both of them, the head of the satyr cock pushes through the young soldier's pucker, then slides deeper into his body. It leaves you almost spellbound to watch Eric's nonhuman shaft pushing further inside David's tight passage, stretching it tightly around his girth. Then, after he bottoms out and his balls touch David's ass, Eric pulls back most of the way and thrusts back in, fucking your friend with deep strokes.";
 	say "     [line break]";
 	say "     Though you could almost just stand back and watch them go at it, your own aroused body demands some attention. What do you want to do now? Climb on David's shaft and ride it with your pussy (Y), or rather get into some nice 69 action with David (N)? ";
-	if player consents: 					[Eric fucks David, David fucks player pussy]
+	if player consents: [Eric fucks David, David fucks player pussy]
 		setmonster "human";
 		choose row monster from the table of random critters;
 		say "     Feeling a deep need to be filled with a hard cock, you get on the bed and straddle David's hips, sinking your pussy over his hard shaft. It feels great to have him inside you, his penis rubbing against your sensitive inner walls. Breathing deeply, you start sliding up and down, slow at first, then getting faster and faster as you fuck yourself on his erection.";
 		say "			[WaitLineBreak]";
 		say "     Being fucked in the ass and taking your pussy at the same time, it doesn't take too much longer until David's arousal peaks. Moaning loudly, he grips your hips tightly, pulling them down against his hips just as his cock erupts with a huge load, sending burst after burst of cum deep into your body. [fimpregchance] With David's body shaking with each spurt of cum, his anal muscles flexing around Eric's [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if], he does take the college athlete right with him over the edge. Hearing a gasped 'I'm coming.' from behind, you feel Eric wrap his arms around you to hold on to something as he grinds his hips against David's ass and fills the young soldier with his seed.";
 		say "			[WaitLineBreak]";
-		say "     Keeping their position for a moment, the two of them ride out their orgasms, the last little spurts of cum splashing into David's ass and your vagina. After they've had time to catch their breaths, David and Eric turn to you, the odd woman out, still furiously aroused. Deciding to take care of you together, they have you get on his back in the center of the bed, then kneel down left and right and alternate licking your pussy. As wound up as you already are, it doesn't take much more of this until you orgasm, squirting a fair bit of femcum your two boys eagerly lap up. After making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";						
-	otherwise:										[Eric fucks David, David + player 69]
+		say "     Keeping their position for a moment, the two of them ride out their orgasms, the last little spurts of cum splashing into David's ass and your vagina. After they've had time to catch their breaths, David and Eric turn to you, the odd woman out, still furiously aroused. Deciding to take care of you together, they have you get on his back in the center of the bed, then kneel down left and right and alternate licking your pussy. As wound up as you already are, it doesn't take much more of this until you orgasm, squirting a fair bit of femcum your two boys eagerly lap up. After making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
+	otherwise: [Eric fucks David, David + player 69]
 		say "     In the mood for some nice oral action, you move to kneel over David's head, leaving your moist pussy just above his face. He happily starts licking you, playing with your clit with his tongue and fingers. A satisfied grin on your face, you lean forward to rest on all fours above David's body and take the young man's shaft into your own mouth, bobbing up and down on it.";
 		say "			[WaitLineBreak]";
 		say "     Being fucked and sucked off at the same time, it doesn't take too much longer until David's arousal peaks. With his lips pressed against your pussy and his tongue wriggling in your vagina, David gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. You can see the soldier's balls twitch as the first blast of cum shoots into your mouth, then again and again. Eagerly swallowing your friend's seed, you move a hand to cup is balls and feel them twitch as he continues cumming. Hearing a gasped 'I'm coming.' from above, you see Eric grind his hips against David's ass, his cock doing slight jerks as cum blasts through it and into David. As he continues shooting for quite a bit, Eric starts up slow thrusts again, his shaft coming out of the soldier's hole covered in white cum.";
 		say "			[WaitLineBreak]";
-		say "     Keeping their position for a moment, the two of them ride out their orgasms, the last little spurts of cum splashing into David's ass and your mouth. After they've had time to catch their breaths, David and Eric turn to you, the odd woman out, still furiously aroused. Deciding to take care of you together, they have you get on his back in the center of the bed, then kneel down left and right and alternate licking your pussy. As wound up as you already are, it doesn't take much more of this until you orgasm, squirting a fair bit of femcum your two boys eagerly lap up. After making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";						
-		
-to say EricSex12_99_Male:			[sex slave Eric, male/herm player]
+		say "     Keeping their position for a moment, the two of them ride out their orgasms, the last little spurts of cum splashing into David's ass and your mouth. After they've had time to catch their breaths, David and Eric turn to you, the odd woman out, still furiously aroused. Deciding to take care of you together, they have you get on his back in the center of the bed, then kneel down left and right and alternate licking your pussy. As wound up as you already are, it doesn't take much more of this until you orgasm, squirting a fair bit of femcum your two boys eagerly lap up. After making out a bit more, all of you end up cuddling on the bed in post-coital contentment.";
+
+to say EricSex12_99_Male: [sex slave Eric, male/herm player]
 	say "     What shall it be you want to do with your two boys? Get into Eric's vagina in a double-penetration [link](1)[as]1[end link], fuck Eric's ass [link](2)[as]2[end link], fuck David's ass [link](3)[as]3[end link] or maybe fondle David's hole as he fucks Eric [link](4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -1089,51 +1089,51 @@ to say EricSex12_99_Male:			[sex slave Eric, male/herm player]
 			break;
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to double-penetrate Eric's vagina, [link]2[end link] to fuck Eric in the ass, [link]3[end link] to fuck David in the ass or [link]4[end link] to finger-fuck David's hole.";
-	if calcnumber is 1:								[double vaginal]
+	if calcnumber is 1: [double vaginal]
 		say "     Quickly stripping off your clothes, you step up to them. Putting a hand on Eric's back, you push his upper body forward until he's lying on top of David's chest. As the boys start kissing, you move a bit closer and stand between David's legs, your hard [cock of player] cock bumping against Eric's bottom. Taking hold of it with one hand, you aim your erection a bit lower, then push into the cuntboy's pussy besides David. All three of you gasp and moan at the incredible sensations of the double penetration course through your bodies, with David's and your cocks rubbing up against each other and both of them stretching out Eric's pussy. You give them a moment to get used to the feeling, then start thrusting in and out, reveling in the tightness of Eric's hole. When David resumes thrusting too, your cocks rub against each other, giving another bit of extra stimulation.";
 		say "			[WaitLineBreak]";
 		say "     With the three of you fucking each other in a wild threesome, the arousal of everyone involved soon mounts higher and higher. David is the first one to pass the point of no return, suddenly stiffening under Eric, with his cock pulsing against yours as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's stretched hole, now wet and slippery with his femcum and David's load. The thought of your soldier friend's cum lubing your cock as it pounds into the cuntboy's hole makes your lust go into overdrive. After just a few more thrusts you come, pumping your seed into Eric's body to join and mingle with David's.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. After catching your breath, you pull out and give your pet cuntboy a playful slap on the ass, then go to freshen up a bit. David meanwhile stands up with his arms around Eric, holding him, and carries him over to his nearby bed where they lie down together to cuddle and rest in post-coital contentment.";
-	otherwise if calcnumber is 2:			[fuck Eric's ass]
+	otherwise if calcnumber is 2: [fuck Eric's ass]
 		say "     Quickly stripping off your clothes, you step up to them. Putting a hand on Eric's back, you push his upper body forward until he's lying on top of David's chest. As the boys start kissing, you move a bit closer and stand between David's legs, your hard [cock of player] cock bumping against Eric's bottom. Taking hold of it with one hand, you aim your erection up a bit, then push forward against the cuntboy's pucker. After a moment's resistance, it yields to your invading member, allowing you to slide inside his warm inner passage. Eric's hole stretched tight around your shaft gives you an incredible feeling, and the two of you moan in unison as you sink deeper and deeper. Suddenly you feel movement bump and rub against your cock - that must be David, his erection pumping in and out of Eric's other hole. So hot, to be able to feel him through the walls of the cuntboy's insides.";
 		say "			[WaitLineBreak]";
 		say "     With the two of you fucking the Eric front and back, the arousal of everyone involved soon mounts higher and higher. David is the first one to pass the point of no return, suddenly stiffening under Eric, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's asshole, eager to fill him with another load of cum. After just a few more thrusts you come, pumping your seed into Eric's body.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. After catching your breath, you pull out and give your pet cuntboy a playful slap on the ass, then go to freshen up a bit. David meanwhile stands up with his arms around Eric, holding him, and carries him over to his nearby bed where they lie down together to cuddle and rest in post-coital contentment.";
-	otherwise if calcnumber is 3:			[fuck David's ass]
+	otherwise if calcnumber is 3: [fuck David's ass]
 		say "     Quickly stripping off your clothes, you step up to them and kneel between David's legs. After pulling off his shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked, an arousing sight to which you start jerking your erect manhood.";
-		if lust of David is 0: 	[anal virgin]
+		if lust of David is 0: [anal virgin]
 			say "     Putting your other hand on Eric's back, you push his upper body forward until he's lying on top of David's chest. As the boys start kissing, you move a bit closer and raise David's legs, spreading them as your hard [cock of player] cock bumps against his virgin bottom. This is such a nice opportunity to break him in for some good fucking that you just can't wait to get into him. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps as his hole is spread for the first time by your invading member, but soon starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
-			now lust of David is 1; 	[anally de-virginized]
-		otherwise: 
+			now lust of David is 1; [anally de-virginized]
+		otherwise:
 			say "     Putting your other hand on Eric's back, you push his upper body forward until he's lying on top of David's chest. As the boys start kissing, you move a bit closer and raise David's legs, spreading them as your hard [cock of player] cock bumps against his bottom. You can't wait to get back into his nice and tight soldier ass. Taking hold of your shaft with one hand, you aim it a bit lower, then push in against his pucker. David gasps in lust as his hole is spread by your invading member, then starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
 		say "			[WaitLineBreak]";
 		say "     Pounding David's ass with deep thrusts, you revel in the moans, gasps and slapping noises of your hips against his ass filling the whole bunker. Who'd have thought that post-apocalyptic survival would be like this? Fucking the tight hole of a handsome man as your submissive cuntboy rides his cock - hell yeah, you'd pick this any day against your 'normal' life before. But moving your thoughts back to the thing at hand - or rather the hole you're balls deep in - you decide to change your rhythm of thrusts to match Eric's sliding up and down.";
 		say "     Being penetrated at the same time as sliding into a pussy with his own cock has David pretty hot and bothered, and before too much longer, he moans 'I'm gonna... cummMMM!' He grabs Eric's hips to pull him tight against his crotch as his whole body shudders when spurt after spurt of cum shoot out of his cock and into Eric's waiting pussy. Getting bred by the young man, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to David's chest as the orgasm makes him writhe in pleasure. Meanwhile, your thrusting member being gripped by David's twitching anal muscles gives you the last bit of stimulation you needed too. Shoving your cock in all the way as you feel the need to cum rise inside your balls, a massive load of cum blasts through your shaft and into David's hole.";
 		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside David. After catching your breath, you pull out and give your pet cuntboy a playful slap on the ass, then go to freshen up a bit. David meanwhile stands up with his arms around Eric, holding him, and carries him over to his nearby bed where they lie down together to cuddle and rest in post-coital contentment.";
-	otherwise:												[fondle David's ass]
-		say "     [EricSex12_99_Fondling]";		
-			
-to say EricSex12_99_Fondling:	[sex slave Eric]
-	if cocks of player > 0:		[male player]
+	otherwise: [fondle David's ass]
+		say "     [EricSex12_99_Fondling]";
+
+to say EricSex12_99_Fondling: [sex slave Eric]
+	if cocks of player > 0: [male player]
 		say "     Quickly stripping off your clothes, you step up to them and kneel between David's legs. After pulling off his shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked, an arousing sight to which you start jerking your erect manhood. Looking up at Eric sliding himself up and down on David's hard shaft, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. That's so hot - pumping your fingers up and down over the hard shaft of your cock, you soon reach the point of no return yourself, spraying long strings of cum on the ground.";
 		say "     After David finishes cumming in the cuntboy's vagina and has time to catch his breath, he stands up with his arms around Eric, his shaft still deep inside the cuntboy. He carries him over to his nearby bed where they lie down together to cuddle and rest in post-coital contentment.";
-	otherwise if cunts of player > 0:		[female player]
+	otherwise if cunts of player > 0: [female player]
 		say "     Quickly stripping off your clothes, you step up to them and kneel between David's legs. After pulling off his shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked, an arousing sight to which you start fingering yourself. Looking up at Eric sliding himself up and down on David's manhood, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. That's so hot - you wish it was you with David's cock inside you. Pumping your caressing fingers in and out of your own cunt, you soon orgasm, imagining you're feeling David's shaft move inside you.";
 		say "     After David finishes cumming in the cuntboy's vagina and has time to catch his breath, he stands up with his arms around Eric, his shaft still deep inside the cuntboy. He carries him over to his nearby bed where they lie down together to cuddle and rest in post-coital contentment.";
-	otherwise:								[neuter player]
+	otherwise: [neuter player]
 		say "     Quickly stripping off your clothes, you step up to them and kneel between David's legs. After pulling off his shoes and socks you reach for his hips, grabbing the sides of his open pants, then pull them down over his legs. Now both your cuntboy and soldier friend are completely naked. Looking up at Eric sliding himself up and down on David's manhood, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger penetrates David's rear entrance, causing him to gasp in between his moans at fucking Eric.";
 		say "			[WaitLineBreak]";
 		say "     Slowly fingering the young man, you wait till you hear Eric's pants come faster and faster, showing he's getting close, then push deeper and caress David's prostrate. With you carefully giving him some extra stimulation, you manage to push David over the edge to orgasm just as Eric reaches his climax too, making them come at the same time. Satisfied, you cup David's balls with your other hand, feeling them pulse and twitch as they deliver his fertile seed deep into Eric's body. After he finishes cumming and has time to catch his breath, David stands up with his arms around Eric, his shaft still deep inside the cuntboy. He carries him over to his nearby bed where they lie down together.";
 
-to say EricSex13:   	[threesome with Felinoid+Eric]		
-	if hp of Eric is 11:							[cuntboy Eric]
+to say EricSex13: [threesome with Felinoid+Eric]
+	if hp of Eric is 11: [cuntboy Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, your felinoid companion is lounging on his side on one of the unused beds, his golden eyes opening from time to time to look around, then closing again as he goes back to dozing peacefully.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a small black tanga. Then even that is slid down his long runner's legs - albeit slower, to give you a bit of a show. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where the felinoid is lying.";
 		say "			[WaitLineBreak]";
@@ -1146,8 +1146,8 @@ to say EricSex13:   	[threesome with Felinoid+Eric]
 		if cocks of player > 0:
 			say "     [EricSex13_12_Male]";
 		otherwise:
-			say "     [EricSex13_12_Female]";					
-	otherwise if hp of Eric is 22 or hp of Eric is 32:		[male Eric]
+			say "     [EricSex13_12_Female]";
+	otherwise if hp of Eric is 22 or hp of Eric is 32: [male Eric]
 		say "     Running a hand through Eric's red hair, you give him a deep kiss, after which you ask if he'd like to mix things up a bit this time. Smiling at his curious expression, you run a finger along Eric's jawline, turning his head a bit so he looks towards the far side of the room. There, your felinoid companion is lounging on his side on one of the unused beds, his golden eyes opening from time to time to look around, then closing again as he goes back to dozing peacefully.";
 		say "     A boyish grin spreads over Eric's face as he nods, then pulls his shirt over his head and throws it over to his bunk. After kicking off his shoes, Eric's shorts follow the t-shirt, leaving him standing before you in only a pair of black briefs, bulging at the front. Then even those are slid down his long runner's legs - albeit slower, to give you a bit of a show - revealing his already pretty hard [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] and his large balls. Stepping up to you, he strokes your [skin of player] skin and proceeds to strip you too, sensuously caressing your body while removing of any clothing you might have. When the two of you are naked, Eric raises a finger to his lips, then quietly walks over to where the felinoid is lying.";
 		say "			[WaitLineBreak]";
@@ -1160,8 +1160,8 @@ to say EricSex13:   	[threesome with Felinoid+Eric]
 		if cocks of player > 0:
 			say "     [EricSex13_22_32_Male]";
 		otherwise:
-			say "     [EricSex13_22_32_Female]";					
-	otherwise if hp of Eric is 99:		[sex slave cuntboy Eric]
+			say "     [EricSex13_22_32_Female]";
+	otherwise if hp of Eric is 99: [sex slave cuntboy Eric]
 		say "     Moving a hand down to Eric's crotch, you stroke your fingers over his sensitive pussy lips, making him moan before he can stop himself. Pushing two fingers inside, you fondle him a bit. Soon Eric is panting in lust, his female parts ready and dripping. Then... you just stop. Pushing aside his hand trying to touch his pussy softly, but firmly, you leave him wait for a moment, a pleading look in his eyes. Good, that should do it. Running a finger along Eric's jawline, you turn his head a bit so he looks towards the far side of the room. There, your felinoid companion is lounging on his side on one of the unused beds, his golden eyes opening from time to time to look around, then closing again as he goes back to dozing peacefully. Whispering to Eric to go offer himself to him, you step back to watch.";
 		say "     There's a moment of hesitation with Eric biting his lip, then the need to get fucked wins out inside him and he quietly walks over to where the felinoid is lying. He starts rubbing the big cat's belly fur, which quickly is answered by a resounding purr from the big beast. Then he slowly moves one of his stroking hands lower and lower until he reaches the felinoid's crotch and cups the feline's furry balls, gently massaging them. Coming fully awake now, the large cat raises his head and looks down on Eric, then sniffs the air (no doubt full of the scent of the little slut's dripping pussy) and gives a pleased growl.";
 		say "			[WaitLineBreak]";
@@ -1175,7 +1175,7 @@ to say EricSex13:   	[threesome with Felinoid+Eric]
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-to say EricSex13_12_Male:	[cuntboy Eric]
+to say EricSex13_12_Male: [cuntboy Eric]
 	say "     [line break]";
 	say "     What shall it be you want to do with your cuntboy and felinoid friends? Fuck Eric's ass [link](1)[as]1[end link], or rather the felinoid's ass [link](2)[as]2[end link], maybe get a blowjob from Eric [link](3)[as]3[end link] or present your manhood to the felinoid to have him lick it [link](4)[as]4[end link]?";
 	now calcnumber is 0;
@@ -1187,28 +1187,28 @@ to say EricSex13_12_Male:	[cuntboy Eric]
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to fuck Eric's ass, [link]2[end link] to fuck the felinoid in the ass, [link]3[end link] to get a blowjob from Eric or [link]4[end link] to have the felinoid lick your cock.";
 	say "     [line break]";
-	if calcnumber is 1:								[fuck Eric]
+	if calcnumber is 1: [fuck Eric]
 		say "     Getting on the bed between the felinoid's legs, you snake your arms around Eric from behind, caressing his smooth chest. As the cuntboy athlete eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck him in the ass. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry belly while raising his ass a bit for you. Who could resist such an alluring display? You're almost twitching with the need and desire to fuck your handsome friend when you take hold of your manhood and line it up with his butt. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it it finally yields to your invading member.";
 		say "			[WaitLineBreak]";
 		say "     Grunting in satisfaction, you thrust deeper into your human friend, revelling in the sensations of his insides gripping your shaft tightly. You keep still a while longer, just resting your cock inside him to give Eric a time to get used to it - then suddenly he starts rocking back and forth, fucking himself on your and the felinoid's cocks at the same time. As he moves, you feel movement bump and rub against your cock - that must be the felinoid, his erection pumping in and out of Eric's other hole. So hot, to be able to feel him through the walls of Eric's insides.";
 		say "     With the two of you balls deep inside Eric as he fucks himself on your cocks, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to the felinoid's soft belly fur as the orgasm makes him writhe in pleasure. You speed up your own thrusts into Eric's asshole, eager to fill him with another load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting into Eric's body.";
-		say "			[WaitLineBreak]";		
+		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Eric lying on the feline's chest. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
-	otherwise if calcnumber is 2:								[fuck felinoid]
+	otherwise if calcnumber is 2: [fuck felinoid]
 		say "     Getting on the bed between the felinoid's legs, you snake your arms around Eric from behind, caressing his smooth chest. As the cuntboy athlete eagerly leans into your touch, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid in the ass and he should distract the big kitty a bit. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry chest while stroking him with his hands and pumping his own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under the felinoid's tail. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
 		say "			[WaitLineBreak]";
 		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in the felinoid's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking the felinoid's ass while Eric fucks fucks himself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's pussy. Getting bred by the large beast, his body being filled with fertile cum, drives Eric to climax just a moment later. He gasps in lust, holding on to the felinoid's soft belly-fur as the orgasm makes him writhe in pleasure. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into the felinoid's body.";
 		say "			[WaitLineBreak]";
-		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Eric lying on the great beast's chest. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";		
-	otherwise if calcnumber is 3:								[BJ from Eric]
+		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Eric lying on the great beast's chest. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
+	otherwise if calcnumber is 3: [BJ from Eric]
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Eric and hold out your hard [cock of player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to grasp your cock and fondle your balls. Your eager cuntboy friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
 		say "			[WaitLineBreak]";
 		say "     Taking the felinoid's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. With his lips tightly wrapped around your [cock of player] shaft, the cuntboy athlete gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Eric's face, neck and chest. The now pretty splattered human gives you a broad smile, then reaches up to pull you down to his level and kiss him, after which you proceed to lick your own cum off him and share its taste while making out.";
 		say "			[WaitLineBreak]";
 		say "     Keeping his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him, Eric eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
-	otherwise if calcnumber is 4:								[BJ from felinoid]
+	otherwise if calcnumber is 4: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then hold out your hard [cock of player] shaft to him. The large cat looks at you with his golden eyes, then down at Eric riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
 		say "			[WaitLineBreak]";
 		say "     While you're getting head from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
@@ -1216,17 +1216,17 @@ to say EricSex13_12_Male:	[cuntboy Eric]
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
-to say EricSex13_12_Female:	[cuntboy Eric]
+to say EricSex13_12_Female: [cuntboy Eric]
 	say "     Your pussy is almost dripping with arousal and you're ready to have someone lick it - though who shall it be? Eric (Y) or the felinoid (N)?";
-	if player consents:								[BJ from Eric]
-		say "     [line break]";		
+	if player consents: [BJ from Eric]
+		say "     [line break]";
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Eric and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to touch your privates, softly brushing against your clit. Your eager cuntboy friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
 		say "			[WaitLineBreak]";
 		say "     Taking the felinoid's shaft deep in his pussy while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. After another lick that makes you shudder with need, the cuntboy athlete gives a loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Eric's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Eric's pussy. The handsome cuntboy lowers his hand to the height of his belly button, revelling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Eric in the chest to run down over his smooth skin and more of it dripping down on the felinoid's belly-fur. Your human friend gives you a broad smile, then reaches up to pull you down to his level and kiss him.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
-	otherwise:								[BJ from felinoid]
+	otherwise: [BJ from felinoid]
 		say "     [line break]";
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
@@ -1235,7 +1235,7 @@ to say EricSex13_12_Female:	[cuntboy Eric]
 		say "			[WaitLineBreak]";
 		say "     Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
-to say EricSex13_22_32_Male:	[male Eric]
+to say EricSex13_22_32_Male: [male Eric]
 	say "     [line break]";
 	say "     What shall it be you want to do with your cuntboy and felinoid friends? Get Eric's [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] inside you [link](1)[as]1[end link], or rather fuck the felinoid's ass yourself [link](2)[as]2[end link], maybe get a blowjob from Eric [link](3)[as]3[end link] or present your manhood to the felinoid to have him lick it [link](4)[as]4[end link]?";
 	now calcnumber is 0;
@@ -1247,28 +1247,28 @@ to say EricSex13_22_32_Male:	[male Eric]
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to get fucked by Eric, [link]2[end link] to fuck the felinoid in the ass, [link]3[end link] to get a blowjob from Eric or [link]4[end link] to have the felinoid lick your cock.";
 	say "     [line break]";
-	if calcnumber is 1:								[get fucked by Eric]
+	if calcnumber is 1: [get fucked by Eric]
 		say "     Getting on the bed, you climb on top of the felinoid, lying down lengthwise on him with your front on his belly. That puts you in direct contact with his warm, soft-furred and purr-rumbling chest, poking him in the belly with your hard cock, while your ass is just in the right height for Eric to enjoy. Your human friend runs his hands over your lower back and cups the globes of your ass, giving them an affectionate squeeze before he takes hold of your hips and pulls you towards him until you can feel the hot length of his [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] erection against your crack. After rubbing it against you for a moment, Eric takes hold of his shaft and puts the precum-slick tip against your pucker, then slowly increases the pressure until he pops past the muscle, stretching your insides with his invading member.";
 		say "			[WaitLineBreak]";
 		say "     Panting in lust, your well-hung friend nevertheless takes his time as he sinks himself deeper into you, allowing you to relax and stretch to be able to take his big cock. Some time later, after he's finally made it all the way in and you have gotten used to the comfortable well-stuffed feeling, he pants 'I can't take much more of this. Are you ready for me to fuck you now?' Before you've done much more than start to nod, he's already pulling back out a bit, moaning as he impales his own ass on the felinoid's shaft in the same stroke, then thrusts deep into you. Eric gasps at the sensations of being the middle part of a fuck-sandwich, the rhythmic thrusts of his hips sliding his own hole up and down a hard cock while he's fucking you.";
 		say "     With the Eric grinding against you and the felinoid, the arousal of everyone involved quickly mounts higher and higher and the bunker is filled with grunts, moans and pants. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's asshole. Getting bred by the large beast, his body being filled with a big load of feline cum, drives Eric to climax just a moment later. He gasps in lust, holding on to your hips tightly as he explodes into you, spurt after spurt of his warm cum filling your hole to the brink. As close as all this hot action has brought you to your own orgasm, it takes only a moment of grinding your hips against the furry body under you before you come, squirting your seed into the felinoid's soon soaked fur.[mimpregchance]";
-		say "			[WaitLineBreak]";		
+		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you rest for a moment against the felinoid's chest, then get off of him and the wet patch of fur you were lying on. Eric stays sitting on the big cat's hips a bit longer, watching you get up with the feline's hard cock still inside him. Eric gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching out to pull your lips to his for a kiss. After a while longer in this position, he too gets off your beastly companion, sinking down on the bed beside him and coming to a rest against the large cat's flank. Pressed against his warm fur and with an arm and a leg still draped over him, he dozes off in exhaustion.";
-	otherwise if calcnumber is 2:								[fuck felinoid]
+	otherwise if calcnumber is 2: [fuck felinoid]
 		say "     Getting on the bed between the felinoid's legs, you snake your arms around Eric from behind, caressing his smooth chest before sliding your hands down to his crotch. As as you take hold of his big [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] cock, you plant a line of little kisses from his neck up to his right earlobe, playfully nibbling at it before you whisper that you want to fuck the felinoid and he should distract the big kitty a bit. The young man looks back and gives you a smile over his shoulder, then leans forward, stretching his upper body out over the felinoid's furry chest while stroking him with his hands and pumping his own hips rapidly up and down on the big cat's hard shaft. At the same time, you take hold of your own cock and line it up with the tight hole under the felinoid's tail. Moving forward, you press the cockhead against his pucker, first lightly, then a bit harder until it finally yields to your erect member.";
 		say "			[WaitLineBreak]";
 		say "     Before he realizes what's happening and can do much more than start a surprised rumble in his throat, you're balls-deep in the felinoid's ass, hitting sensitive spots that make him purr even louder than before. Grunting in satisfaction, you thrust deeper into your feline friend, revelling in the sensations of his insides gripping your shaft tightly. You start sliding in and out of his hole while putting your hands on the big cat's muscular hind legs. Holding on to them as you pound the felinoid's ass, you find a rhythm with Eric, slamming into his furry butt just as Eric pulls up and vice versa. It's an amazing feeling to be moving in concert with your two companions, all of you in a lust-filled haze.";
 		say "     With you fucking the felinoid's ass while Eric fucks fucks himself on his cock, the arousal of everyone involved soon mounts higher and higher. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's asshole. Getting bred by the large beast, his body being filled with feline cum, drives Eric to climax just a moment later. He gasps in lust, gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur. Meanwhile, you speed up your own thrusts into the big cat's asshole, eager to fill him with your own load of cum. After just a few more thrusts you come, a huge load boiling up from your balls and shooting deep into the felinoid's body.";
 		say "			[WaitLineBreak]";
-		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr going through Eric and yourself. Your human friend gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";		
-	otherwise if calcnumber is 3:								[BJ from Eric]
+		say "     Exhausted by the hot fuck, you rest for a moment against Eric's back, your slowly softening shaft still inside the big feline under him. The felinoid meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr going through Eric and yourself. Your human friend gives a satisfied sigh, then says 'Man, you two are quite something.' while reaching back and stroking your side lovingly. After a while longer in this position, gently touching each other, an exhausted Eric sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
+	otherwise if calcnumber is 3: [BJ from Eric]
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Eric and hold out your hard [cock of player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his asshole while he reaches out to grasp your cock and fondle your balls. Your eager friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
 		say "			[WaitLineBreak]";
 		say "     Taking the felinoid's shaft in his butt while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. With his lips tightly wrapped around your [cock size desc of player] [cock of player] shaft, the young athlete gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur, Eric's inner muscles twitch with each spurt, which causes the felinoid to follow him into climax only moments later. The big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting deep into Eric's asshole.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Eric's face, neck and chest. The now pretty splattered human gives you a broad smile, then reaches up to pull you down to his level and kiss him, after which you proceed to lick your own cum off him and share its taste while making out.";
 		say "			[WaitLineBreak]";
 		say "     Keeping his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him, Eric eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
-	otherwise if calcnumber is 4:								[BJ from felinoid]
+	otherwise if calcnumber is 4: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then hold out your hard [cock of player] shaft to him. The large cat looks at you with his golden eyes, then down at Eric riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
 		say "			[WaitLineBreak]";
 		say "     While you're getting head from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the young athlete rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur, Eric's inner muscles twitch with each spurt, which causes the felinoid to follow him into climax only moments later. The big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting deep into Eric's asshole.";
@@ -1276,7 +1276,7 @@ to say EricSex13_22_32_Male:	[male Eric]
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him, before eventually sliding off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
-to say EricSex13_22_32_Female:	[male Eric]
+to say EricSex13_22_32_Female: [male Eric]
 	say "     [line break]";
 	say "     What shall it be you want to do with your cuntboy and felinoid friends? Get Eric's [if hp of Eric is 22]horsecock[otherwise if hp of Eric is 32]satyrcock[end if] inside you [link](1)[as]1[end link], maybe get a bit of oral attention from Eric [link](23)[as]2[end link] or present your pussy to be licked by the felinoid [link](3)[as]3[end link]?";
 	now calcnumber is 0;
@@ -1287,22 +1287,22 @@ to say EricSex13_22_32_Female:	[male Eric]
 			break;
 		otherwise:
 			say "Invalid choice.  Type [link]1[end link] to get fucked by Eric, [link]2[end link] to get a some oral attention from Eric, or [link]3[end link] to have the felinoid lick your pussy.";
-	say "     [line break]";			
-	if calcnumber is 1:								[get fucked by Eric]
+	say "     [line break]";
+	if calcnumber is 1: [get fucked by Eric]
 		say "     Getting on the bed, you climb on top of the felinoid, lying down lengthwise on him with your front on his belly. That puts you in direct contact with his warm, soft-furred and purr-rumbling chest, while your hips are just in the right height for Eric to enjoy. Your human friend runs his hands over your lower back and cups the globes of your ass, giving them an affectionate squeeze before he takes hold of your hips and pulls you towards him until you can feel the hot length of his [if hp of Eric is 22]equine[otherwise if hp of Eric is 32]caprine[end if] erection against your crack. After rubbing it against you for a moment, Eric takes hold of his shaft and guides it down between your legs, brushing its precum-slick tip over your pussy lips before nudging them apart with his shaft and stretching your insides with his invading member.";
 		say "			[WaitLineBreak]";
 		say "     Panting in lust, your well-hung friend nevertheless takes his time as he sinks himself deeper into you, allowing you to relax and stretch to be able to take his big cock. Some time later, after he's finally made it all the way in and you have gotten used to the comfortable well-stuffed feeling, he pants 'I can't take much more of this. Are you ready for me to fuck you now?' Before you've done much more than start to nod, he's already pulling back out a bit, moaning as he impales his own ass on the felinoid's shaft in the same stroke, then thrusts deep into you. Eric gasps at the sensations of being the middle part of a fuck-sandwich, the rhythmic thrusts of his hips sliding his own hole up and down a hard cock while he's fucking you.";
 		say "     With the Eric grinding against you and the felinoid, the arousal of everyone involved quickly mounts higher and higher and the bunker is filled with grunts, moans and pants. The felinoid is the first one to pass the point of no return, suddenly stiffening under Eric and giving a satisfied roar, with his cock pulsing as spurt after spurt of his seed is shot deep into Eric's asshole. Getting bred by the large beast, his body being filled with a big load of feline cum, drives Eric to climax just a moment later. He gasps in lust, holding on to your hips tightly as he explodes into you, spurt after spurt of his warm cum splashing into your womb. The feeling of this attractive male's fertile seed filling you, trying to impregnate you with his child, gives you the last little push you needed yourself. Panting as the orgasm hits you, you dig your hands into the felinoid's fur and grip him tightly as you writhe in pleasure.[fimpregchance]";
-		say "			[WaitLineBreak]";		
+		say "			[WaitLineBreak]";
 		say "     Exhausted by the hot fuck, you stay lying on top of the felinoid, resting against his broad and soft-furred chest. Eric stays sitting on the big cat's hips a bit longer, stroking his hands slowly over your lower back and hips with the feline's hard cock still inside him. Finally he gives a satisfied sigh, then says 'Man, you two are quite something.' and sinks down on the bed besides your beastly companion, coming to a rest against the large cat's flank. Pressed against its warm fur, he dozes off in exhaustion.";
-	otherwise if calcnumber is 2:								[BJ from Eric]
+	otherwise if calcnumber is 2: [BJ from Eric]
 		say "     Stepping up to stand on the bed, your feet left and right of the felinoid's body, you smile down at Eric and demonstratively rub over your pussy lips, holding them apart for him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his asshole while he reaches out to touch your privates, softly brushing against your clit. Your eager friend licks his lips, then gets to work eating you out, taking great care in teasing your most sensitive spots. After a moment of giving you his full attention, he starts sliding up and down on the felinoid's erection once again, timing it with licking you.";
 		say "			[WaitLineBreak]";
-		say "     Taking the felinoid's shaft deep in his hole while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. After another lick that makes you shudder with need, the young athlete gives a loud moan from his throat, a shudder running through his whole body as he comes. Gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur, Eric's inner muscles twitch with each spurt, which causes the felinoid to follow him into climax only moments later. The big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting deep into Eric's asshole.";	
+		say "     Taking the felinoid's shaft deep in his hole while he gives oral to you, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Eric's arousal peaks. After another lick that makes you shudder with need, the young athlete gives a loud moan from his throat, a shudder running through his whole body as he comes. Gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur, Eric's inner muscles twitch with each spurt, which causes the felinoid to follow him into climax only moments later. The big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting deep into Eric's asshole.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you put your fingers to work on your pussy in earnest, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, a squirt of femcum hitting Eric in the chest to run down over his smooth skin and more of it dripping down on the felinoid's belly-fur. Your human friend gives you a broad smile, then reaches up to pull you down to his level and kiss him.";
 		say "			[WaitLineBreak]";
 		say "     One kiss follows another and Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
-	otherwise if calcnumber is 3:								[BJ from felinoid]
+	otherwise if calcnumber is 3: [BJ from felinoid]
 		say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then get on the bed to kneel over his head. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 		say "			[WaitLineBreak]";
 		say "     While you're getting oral attention from the large beast, Eric rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Eric's arousal peaks. Panting unintelligible sounds in his lust, the young athlete rises up and slams himself down on the hard erection under him one last time, a shudder running through his whole body as he comes. Gripping his erection tightly as it explodes with blasts of cum that splatter all over the felinoid's soft belly-fur, Eric's inner muscles twitch with each spurt, which causes the felinoid to follow him into climax only moments later. The big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting deep into Eric's asshole.";
@@ -1310,28 +1310,28 @@ to say EricSex13_22_32_Female:	[male Eric]
 		say "			[WaitLineBreak]";
 		say "     Eric keeps his position for a while longer, straddling the felinoid's hips with the beast's softening shaft inside him. He eventually slides off the felinoid to the side, coming to rest against the large cat's flank. There he rests, pressed against the loudly purring feline's warm body and with an arm and a leg still draped over him. Sadly, there isn't any more room on the bed, with the large shape of the felinoid and your handsome cuntboy already on it, so you leave them to cuddle and rest and go to collect your clothes.";
 
-to say EricSex13_99_Male:	[sex slave Eric]
+to say EricSex13_99_Male: [sex slave Eric]
 	say "     Moving into position behind the felinoid, you run your hands through the soft fur on his lower back, then aim your erection at the tight hole under his tail. Grabbing the big cat's hips tightly, you slam forward, burying your cock to the hilt in his warm, tight cave. Roaring at the sudden anal intrusion, the felinoid stops thrusting into Eric for a moment, looking back over his shoulder with partly bared teeth. That doesn't last long, though - moving in and out of his hole, your shaft stimulates his sensitive prostrate, and soon your big cat is purring in satisfaction and fucking your cuntboy slut again.";
 	say "     [WaitLineBreak]";
 	say "     True to form for a cock-hungry cuntboy bitch, Eric is the first to cum, writhing under the felinoid as he gushes femcum to soak into the mattress between his legs. The human's pussy twitching around your feline companion's spined shaft is enough to take him over the edge right with him, making the felinoid roar in satisfaction as he blasts his fertile load into the cuntboy's womb. Eager to join the two of them in their release, you speed up your own thrusts into the felinoid's ass, slamming into him hard again and again until you soon climax, filling his butt with your cum.";
-	say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch the felinoid's pink pucker snap shut before any of your seed can leak out. The big cat pulls out of Eric and gives his freshly bred pussy a sniff, then throws himself on top of the bed with him, coming to lie on his side with the cuntboy held against his belly with both front legs. Looks like he's trying to claim the little slut as his own now.";	
+	say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch the felinoid's pink pucker snap shut before any of your seed can leak out. The big cat pulls out of Eric and gives his freshly bred pussy a sniff, then throws himself on top of the bed with him, coming to lie on his side with the cuntboy held against his belly with both front legs. Looks like he's trying to claim the little slut as his own now.";
 
-to say EricSex13_99_Female:	[sex slave Eric]
+to say EricSex13_99_Female: [sex slave Eric]
 	say "     Stepping up to stand against the head end of the bed, you give the felinoid's chin an affectionate scratch, then spread your pussy lips and start rubbing yourself right in front of him. His long whiskers tickle against your legs as the large cat nuzzles upwards into your groin, sniffing your moist and ready pussy. Then he starts to lick you, his rough tongue carefully lapping over sensitive flesh and seeking out your clit.";
 	say "			[WaitLineBreak]";
 	say "     While you're getting some oral attention, Eric is fucked hard and deep by the felinoid, and true to form for a cock-hungry cuntboy bitch, the young athlete is the first to cum. Writhing under the felinoid as he gushes femcum to soak into the mattress between his legs, the human gasps and pants loudly, his hands rubbing the big cat's belly. The wet pussy twitching around your feline companion's spined shaft is enough to take him over the edge right with Eric, making the felinoid roar in satisfaction as he blasts his fertile load into the cuntboy's womb. Eager to join the two of them in their release, you put your fingers to work on your pussy in earnest. It's not much longer before your frantic movements push you over the edge and you come, a squirt of femcum hitting the felinoid's muzzle and more of it dripping down on the mattress of the bed. The big cat gives a pleased rumble, licking it off his muzzle and lapping at your crotch a few times to get a bit more of a taste.";
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):	
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";		
-	if hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32:    [had sex with the player]
+		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";
+	if hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32: [had sex with the player]
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
 		say "     [line break]";
 		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
-		if player consents:  [follow]
+		if player consents: [follow]
 			say "     [line break]";
 			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
 			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
@@ -1361,17 +1361,17 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 				say "     Deciding that this has gone far enough, you dash forward, grabbing Eric by the shoulder and pulling him up to stand. With your hand on the young man's arm, you walk him a few steps away from the musky cloud of scent around the felinoid and softly slap his cheeks several times as he breathes in fresh air. Finally shaking out of it, his eyes focus on you after the last slap and he says 'Hey, what are you doing? I was just... looking for books and... then... I -'";
 				say "     Eric's brows draw together as he mentally puzzles together the last five minutes of time and turns in confusion to you. While you explain about the felinoid's charm and the effects of his musk, the two of you hear a disappointed growl from the large cat, who gives Eric a last look before stalking off, trying to act as if he hadn't planned to do anything with the human.";
 				now level of Eric is 99;
-		otherwise:   [leave it]
+		otherwise: [leave it]
 			say "     [line break]";
 			say "     Oh well, it would happen at some point no matter what you do. It's not like you've got the time to constantly watch over what the felinoid is doing anyways. Some short time later, you hear lust-filled growls and pants sound from somewhere between the bookshelves, culminating in a satisfied roar not long after.";
 			now level of Eric is 1;
 			now lastfuck of Eric is turns;
-	otherwise if hp of Eric is 99:    [sex slave cuntboy]
-		say "     As you enter the library, you see Eric walk in between two of the long shelves, furtively looking over his shoulder towards the bunker entrance without noticing you in the other direction. Now that you think of it, he seems to be up here quite a bit. You guess that he's trying to avoid getting noticed (and fucked) by you, reading in the quiet corners of the library instead.";		
+	otherwise if hp of Eric is 99: [sex slave cuntboy]
+		say "     As you enter the library, you see Eric walk in between two of the long shelves, furtively looking over his shoulder towards the bunker entrance without noticing you in the other direction. Now that you think of it, he seems to be up here quite a bit. You guess that he's trying to avoid getting noticed (and fucked) by you, reading in the quiet corners of the library instead.";
 		say "     While you're still debating the thought of going after him and fucking him right now in your own mind, you you see the large shape of your felinoid companion silently stalk after Eric. Knowing the large cat's libido-driven behaviour, you see where this might lead...";
 		say "     [line break]";
 		say "     Do you want to go after them to see what happens and maybe do something about it (Y), or do you just leave them to it and turn to other things (N)?";
-		if player consents:  [follow]
+		if player consents: [follow]
 			say "     [line break]";
 			say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, still checking out books and being totally oblivious to the felinoid stalking him. Then the large cat catches up with him, rubbing his flank against the human athlete's hips and making a resounding purring sound in his throat. Eric is easily taken in by the felinoid's affectionate behaviour, petting the large creature as he circles him, rubbing up against Eric's body and flirting his long tail in front of the human's face.";
 			say "     Soon Eric crouches down, his hands busy rubbing the felinoid's belly fur and behind his ears in something of a trance. He brushes his cheek against the large cat's soft fur and breathes in deep, now completely succumbing to his pheromone-laden scent. A low and throaty sound comes from the felinoid, almost a feline chuckle, then he bumps Eric with his shoulder, making him fall forward on all fours.";
@@ -1399,7 +1399,7 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 						now lastfuck of Eric is turns;
 					otherwise:
 						say "     Nah, it's more fun to dominate the little bitch when he's not zonked out and realizes what's happening to him. You just walk off and leave him to recover on his own.";
-		otherwise:   [leave it]
+		otherwise: [leave it]
 			say "     [line break]";
 			say "     Oh well, it would happen at some point no matter what you do. Let the big kitty have some fun with your little cuntboy bitch too. Some short time later, you hear lust-filled growls and pants sound from somewhere between the bookshelves, culminating in a satisfied roar not long after.";
 			now level of Eric is 1;
@@ -1408,8 +1408,8 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";		
-	if hp of Eric is 11:    [cuntboy Eric]
+		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";
+	if hp of Eric is 11: [cuntboy Eric]
 		say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Eric - with your felinoid companion on top of him, mounting the smaller human and rapidly thrusting his hips at him. Seems like the big cat managed to put your friend under his influence again - though maybe this time Eric went to seek the feline out - after all, the young athlete is on his hands and knees on one of the mattresses from the cots in the bunker below, which he must have dragged up here for just this purpose...";
 		say "     [line break]";
 		say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the mattress to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
@@ -1421,16 +1421,16 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 		say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious who's doing whom, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Eric - with your felinoid companion on top of him, mounting the smaller human and rapidly thrusting his hips at him. Seems like the big cat managed to put your friend under his influence again - though maybe this time Eric went to seek the feline out - after all, the young athlete is on his hands and knees on one of the mattresses from the cots in the bunker below, which he must have dragged up here for just this purpose...";
 		say "     [line break]";
 		say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's asshole relentlessly, until finally the young athlete's moans and pants rise up to a climactic shout and his satyr cock starts blasting heavy squirts of cum all over the floor under him. Visibly satisfied in making his partner come, the felinoid isn't far behind, burying his hard cock all the way in his human partner's butt and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
-	otherwise if hp of Eric is 99:    [sex slave cuntboy]
+	otherwise if hp of Eric is 99: [sex slave cuntboy]
 		say "     As you enter the library, you hear moaning and lust-filled growls coming from somewhere behind one of the back shelves. Curious, you go to check it out. Walking over until you see the space behind the long bookshelf, you spot Eric - with your felinoid companion on top of him, mounting the smaller human and rapidly thrusting his hips at him. Seems like the big cat managed to catch your little cuntboy getting books again and took advantage of the situation. And just like the slut he is, Eric succumbed to the felinoid's influence and let the feline mount him.";
 		say "     [line break]";
 		say "     The animalistic coupling of the felinoid and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
 	now lastfuck of Eric is turns;
-			
+
 instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and hp of Eric < 99):
 	move player to Bunker;
 	if debugactive is 1:
-		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";		
+		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";
 	say "     As you come down the stairs into the bunker, Eric almost jumps up from where he was sitting on his cot and rushes over to you, his cheeks red with embarrassment. Before you can so much as ask what's wrong, he gushes forth with 'I'm sorry. I- I had sex with your felinoid companion. Something just came over me and I let him mount and fuck me! Can you ever forgive me for this?' His somewhat teary eyes seek out yours and take on a hopeful look as he realizes how calmly you're taking this (you did already know and didn't stop the felinoid from fucking him after all).";
 	say "     So, what do you tell him? That there's no shame in having some fun, even without you and with... exotic partners (Y)? Or do you just console him and tell him to avoid the felinoid in the future (N)?";
 	if player consents: [more felinoid scenes]
@@ -1444,7 +1444,7 @@ instead of going inside from Grey Abbey Library while (Level of Eric > 0 and Lev
 		otherwise:
 			say "     [line break]";
 			say "     Smiling at Eric and encouraging him to have some more fun with the felinoid whenever he wants, you chat with him a short while, then turn to other things. The by now pretty wound up young athlete meanwhile makes a beeline for his bunk, no doubt to jerk off and deal with his built-up lust.";
-	otherwise:  [no further felinoid scenes]
+	otherwise: [no further felinoid scenes]
 		say "     [line break]";
 		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's partly your fault for bringing the felinoid here with you (and letting him fuck Eric, but he doesn't need to know that). Telling Eric just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave him to get back to his bunk.";
 		now Level of Eric is 99;
@@ -1454,12 +1454,12 @@ Section 5 - Endings
 when play ends:
 	if (hp of Eric is 0) and Sports Arena Lockerroom is known:
 		if humanity of player < 10:
-			let t be 0;	[do nothing, player succumbed and unaware of Eric's fate.]
+			let t be 0; [do nothing, player succumbed and unaware of Eric's fate.]
 		otherwise:
-			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. There you meet Eric again, still rather distraught that he couldn't save or even find his girlfriend. Later, when it's time for prodding and probing you survivors, there's a bit of a commotion after Eric gets called into the examination room. Several doctors and scientists are called in and Eric gets moved to another wing of the facility and you don't see him again after that. You wonder what's so special about him.";	
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. There you meet Eric again, still rather distraught that he couldn't save or even find his girlfriend. Later, when it's time for prodding and probing you survivors, there's a bit of a commotion after Eric gets called into the examination room. Several doctors and scientists are called in and Eric gets moved to another wing of the facility and you don't see him again after that. You wonder what's so special about him.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 1 or hp of Eric is 10 or hp of Eric is 20)): [cuntboy virgin Eric]
 		if (humanity of player < 10):
-			if (cocks of player > 0): 
+			if (cocks of player > 0):
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the virgin Eric you know is waiting there for you. Coming in at night, you're on his bed and plunge your shaft inside him before he even knows you're there. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
 			otherwise:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, a pack of huskies sniff him out and he's wrestled down by several females and brought before their alpha male. The horny dog-morph forcefully takes his virginity, then breeds him at least three times a day for weeks. When some soldiers finally come by and save Eric from captivity, he's already showing a quite visible baby bump from the litter of four half-human puppies growing inside him.";
@@ -1467,7 +1467,7 @@ when play ends:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He meets you at a bar for a drink, thanking you again for saving him and taking him in during the time in the city. Then he moves back to his family's farm in the hinterland to take some quiet time to come to terms with being a woman now.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 11)): [cuntboy Eric]
 		if (humanity of player < 10):
-			if (cocks of player > 0): 
+			if (cocks of player > 0):
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump Eric before he realizes anything is amiss. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Having fallen in love with you before the infection wiped away your sanity, he hesitates a long time but finally decides he can't stay with you. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
 			otherwise:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. On one of the trips, a pack of huskies sniff him out and he's wrestled down by several females and brought before their alpha male. The horny dog-morph forcefully takes his pussy, then breeds him at least three times a day for weeks. When some soldiers finally come by and save Eric from captivity, he's already showing a quite visible baby bump from the litter of four half-human puppies growing inside him.";
@@ -1476,7 +1476,7 @@ when play ends:
 			say "     When he's finally released, he throws his arms around you and kisses you deeply as he comes out of the exit where you're waiting for him. Taking your hand and guiding it to his belly, he says 'I didn't want to say it on the phone, so... you're going to be a father. I'm pregnant.' He look of apprehension at your reaction quickly vanishes as you smile happily and give him another kiss. You walk away from the holding facility hand in hand, thoughts wandering to where to put a nursery in a shared home.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 21)): [horsecocked virgin Eric]
 		if (humanity of player < 10):
-			if (cocks of player > 0): 
+			if (cocks of player > 0):
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the thick horsecock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
 			otherwise:
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening horsecock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
@@ -1486,7 +1486,7 @@ when play ends:
 			say "     You visit Eric and the farm from time to time after that and see several horses bellies bulge with pregnancies over the coming months. Most are the results of normal equine couplings, but the two mares you had with you on that camping trip later give birth to two beautiful centaur foals, a boy and a girl, making Eric a very proud father.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 22)): [horsecocked Eric]
 		if (humanity of player < 10):
-			if (cunts of player > 0): 
+			if (cunts of player > 0):
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening horsecock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
 			otherwise:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the thick horsecock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
@@ -1497,7 +1497,7 @@ when play ends:
 			say "     From then on, you return to the farm from time to time, having amazing sex as the mare's pheromones put Eric's libido into overdrive. He also keeps on fucking both Claire and Brenda, your 'special' mares from that first night. After a while, their bellies start swelling in obvious pregnancies, and about ten months later, two beautiful little centaur foals are born. With Eric's son and daughter joining the family, you think it's about time to add a stable to your own house back home and move them and their mothers there...";
 	otherwise if Eric is in the bunker and hp of Eric is 31: [satyr virgin Eric]
 		if humanity of player < 10:
-			if cocks of player > 0: 
+			if cocks of player > 0:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the virile satyrcock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
 			otherwise:
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening satyrcock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
@@ -1506,7 +1506,7 @@ when play ends:
 			say "     At one particularly lively club, you lose track of your friend for a while, but are too drunk yourself to really worry about it.  It's not until some time later that you spot him in a secluded, shadowy corner with a very hot chick, banging away at her quite vigorously.  Catching sight of you, he grins and winks, flashing for you to give him another five.  About twenty minutes later, he and his new girlfriend join you in a booth, snuggling and kissing as they fill you in.  It seems she was in the city as well during the outbreak.  Once a guy, she ran afoul of some voluptuous women at the museum and transformed into a sexy nymph like them.  Had it not been for a timely interruption by a sudden and heated battle between some amazons and ninjas, she'd not have made her escape at all.  Feeling a strong connection to one another and able to sympathize with the plights each other has been through, they make for a very happy couple.";
 	otherwise if Eric is in the bunker and hp of Eric is 32: [satyr Eric]
 		if humanity of player < 10:
-			if cunts of player > 0: 
+			if cunts of player > 0:
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening horsecock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
 			otherwise:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the virile satyrcock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
@@ -1516,17 +1516,17 @@ when play ends:
 			say "     Going from club to club, Eric drinks and parties very heartily.  He sneaks off with you for sex at least once at every stop and usually manages to snag a quick fuck from some other lover while he's there as well.  Enjoying yourself as well, you're often there beside him with some lover of the moment.  Eric's good looks and growing confidence make him very popular, and your sure his strong, virile musk doesn't hurt his chances either.  Eric becomes quite the party animal, very popular and always fun to go hang out with, though he's often a little sauced as well.  But even then, he's still always able to attract a few lovers for you both the share in some secluded spot whenever you go out on the town together.";
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 99)): [sex slave cuntboy]
 		if (humanity of player < 10):
-			if (cocks of player > 0): 
+			if (cocks of player > 0):
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump Eric. Coming in at night, you're on his bed and plunge your shaft inside him before he even knows you're there. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
 			otherwise:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, a hermaphrodite gryphon spots him from the air and swoops down on him. Quickly overpowering the cuntboy, sie then takes him to her nest on top of a nearby building and fucks him hard and often, filling his womb with hir eggs. When some soldiers finally come by several weeks later and save Eric from captivity, he's holding two speckled eggs warm with a few blankets, another one almost ready inside his bulging belly.";
 		otherwise:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He seeks you out one night, knocking at your door. A bit hesitantly he says 'Please fuck me, I - I need it - and you.' and opens up his coat, showing he's naked beneath. You wave him inside, then close the door and guide your submissive cuntboy towards the bedroom...";
-	otherwise if (hp of Eric is 100):	 [Stacy's girlfriend now]
+	otherwise if (hp of Eric is 100): [Stacy's girlfriend now]
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
 	otherwise if Sports Arena Lockerroom is known:
 		say "ERROR-Eric-[hp of Eric]E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
-			
+
 
 Eric ends here.

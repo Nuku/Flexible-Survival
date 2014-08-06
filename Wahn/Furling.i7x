@@ -4,14 +4,14 @@ Version 1 of Furling by Wahn begins here.
 "Adds a Furling to Flexible Survivals Wandering Monsters table"
 
 when play begins:
-	add { "Furling" } to infections of hermaphrodite;	[Cuntboy]
-	add { "Furling" } to infections of furry;		
-				
+	add { "Furling" } to infections of hermaphrodite; [Cuntboy]
+	add { "Furling" } to infections of furry;
+
 Cheerleader vs Furling is a situation. The level of Cheerleader vs Furling is 5.
 The sarea of Cheerleader vs Furling is "Campus".
 when play begins:
-	add Cheerleader vs Furling to badspots of hermaphrodite;		[shemale vs cuntboy]
-	add Cheerleader vs Furling to badspots of furry;			[Furling]
+	add Cheerleader vs Furling to badspots of hermaphrodite; [shemale vs cuntboy]
+	add Cheerleader vs Furling to badspots of furry; [Furling]
 
 Instead of resolving a Cheerleader vs Furling:
 	say "     As you're exploring the college campus, you suddenly hear crashing noises from inside the building right next to you - one of the male dormitories. Hurriedly throwing yourself behind a nearby hedge, you peek out between its branches. Hm, now it's still agai- your thought is interrupted by the noisy crunch of splintering wood. A large green figure is thrown through the entrance door and lands out on the sidewalk, right in front of your hedge.";
@@ -26,16 +26,16 @@ Instead of resolving a Cheerleader vs Furling:
 Section 1 - Monster Responses
 
 to say Furling wins:
-	if (cocks of player > 0): 	[male]
+	if (cocks of player > 0): [male]
 		say "     Pulling off your clothes with barely any regard for not ripping them, the furling exposes your crotch. Looking at your [cock of player] manhood, he gives a satisfied growl, then sweeps you off your feet and lowers you to the ground. Holding you down with a large hand on your chest, he then brings his head to your crotch and starts licking your balls and cock. Despite a moment of apprehension as you see how many sharp teeth he has, your shaft quickly hardens under the furling's oral stimulation and careful sucking.";
 		say "     Then suddenly, the maned head pulls up to look down into your face. 'Fuck - now!' an order is given, and the furling gets up to stand over you, pulling aside his loincloth to reveal a moist and dripping pussy between his legs. Then the large beast lowers himself onto your rigidly standing erection, his pussy enveloping your manhood in a warm and tight cave. What follows is a pretty wild and unrestrained coupling, mostly on the part of your former opponent, who aggressively fucks himself on your pole. Though that doesn't mean you don't get off on this too and thrust up against your dominating partner's pussy.";
 		say "     The thrusting and grinding gets harder and faster until you just can't hold out any more. Grunting in satisfaction, you thrust up one last time, then start blowing your load, with spurt after spurt of fertile seed shooting into your larger partner's womb. Then suddenly you hear a crunching sound left and right of your head. Looking over, you realize it's the furling's claws digging into the concrete floor as he holds on too tight when he joins you in his own mind-blowing orgasm. He stays like that for a moment to catch his breath, your hard shaft still inside his pussy. Then the muscled cuntboy pulls off and stands up. Giving you a last look [if scalevalue of player < 4]from high above[end if], he says, 'Felt good. Nice guy.' Then he stalks off, leaving you lying there.";
-	otherwise:  								[female + neuter]
+	otherwise: [female + neuter]
 		say "     Pulling off your clothes with barely any regard for not ripping them, the furling exposes your crotch. Looking at your [if cunts of player is 0]nonexistent [end if]genitals, he growls, 'Useless!' Then he gives you a shove, landing you prone on the ground. With an annoyed grunt, the large creature stalks off.";
 
 To say Furling loses:
-	say "     Rather roughed up, the furry beast takes a reeling step towards you ...and then falls over backwards. He lies in front of you on his back for a moment, silently moaning, then shakes his head and starts taking account of all his bruises, gingerly touching them. Given your current position and the way it came to lie when he fell, you can see up the furling's loose loincloth - showing you that even though 'he' is otherwise looking male, there's a moist and swollen pussy between his legs.";
-	if cocks of player > 0:			[male+herm]
+	say "     Rather roughed up, the furry beast takes a reeling step towards you... and then falls over backwards. He lies in front of you on his back for a moment, silently moaning, then shakes his head and starts taking account of all his bruises, gingerly touching them. Given your current position and the way it came to lie when he fell, you can see up the furling's loose loincloth - showing you that even though 'he' is otherwise looking male, there's a moist and swollen pussy between his legs.";
+	if cocks of player > 0: [male+herm]
 		say "     So what shall it be you do next? You could take the opportunity to fuck him here and now [link](1)[as]1[end link], fondle his pussy [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -45,22 +45,22 @@ To say Furling loses:
 				break;
 			otherwise:
 				say "Invalid choice.  Type [link]1[end link] to fuck him, [link]2[end link] to fondle his pussy or [link]3[end link] to leave.";
-		if calcnumber is 1:								[fuck him]
+		if calcnumber is 1: [fuck him]
 			say "     Taking off your clothes, you grab hold of your already growing erection and stroke it until it's fully hard. Then you kneel between your furry opponent's legs and pull up his loincloth to expose his ready and dripping pussy. As you bring your hand to it, stroking and spreading the sensitive pussy lips, the large creature raises its head to look at you and gives a needful croon.";
 			if scalevalue of player > 3:
 				say "     Without any more hesitation, you bring your hard cock to the furling's opening, then thrust inside him, filling his warm cave with your manhood. Being inside him is better than you could have dreamed, with his juicy cunt tightly gripping your shaft, and satisfied moans inviting you to fuck him harder and deeper. Burying your hands in the furling's soft fur, you grip his muscled body tightly and really start going at it, pulling back and slamming forward until your hips meet. All bruises forgotten, your large partner wraps his arms and legs around you, holding and stroking your body as you fuck his pussy.";
 			otherwise:
-				say "     Without any more hesitation, you bring your hard cock to the furling's opening, then thrust inside him, filling his warm cave with your manhood. Being inside him is better than you could have dreamed, with his juicy cunt tightly gripping your shaft, and satisfied moans inviting you to fuck him harder and deeper. Burying your hands in the furling's soft fur, you grip his muscled body tightly and really start going at it, pulling back and slamming forward until your hips meet. The furling looks at you and reaches out with a strong arm to caress you while murmuring 'So small - but soo good.' All bruises forgotten, your large partner then wraps his legs around you, pulling you even tighter in with each of your thrusts.";				
+				say "     Without any more hesitation, you bring your hard cock to the furling's opening, then thrust inside him, filling his warm cave with your manhood. Being inside him is better than you could have dreamed, with his juicy cunt tightly gripping your shaft, and satisfied moans inviting you to fuck him harder and deeper. Burying your hands in the furling's soft fur, you grip his muscled body tightly and really start going at it, pulling back and slamming forward until your hips meet. The furling looks at you and reaches out with a strong arm to caress you while murmuring 'So small - but soo good.' All bruises forgotten, your large partner then wraps his legs around you, pulling you even tighter in with each of your thrusts.";
 			say "     Rutting on the ground like mating beasts, the two of you make quite a bit of noise and it's a wonder that doesn't attract any opportunistic creatures - especially as the furling orgasms, giving a loud lust-filled roar as his pussy starts to drip with femcum. You're not far behind, thrusting deep inside him one last time as your hard shaft starts pulsing with spurt after spurt of your fertile seed. Breathing hard, you lean forward to rest on your furling's muscled chest, hands stroking his soft fur. Accompanied by a satisfied hum, your sexual partner strokes your back and says, 'Nice man. Make me feel good.' Followed by more humming and stroking.";
 			say "     After lying there with you against his chest for a while longer, the furling takes hold of you and rolls over so you're on the bottom now, then stands up and walks away.";
-		otherwise if calcnumber is 2:			[stroking his pussy]
+		otherwise if calcnumber is 2: [stroking his pussy]
 			say "     Kneeling between your furry opponent's legs, you pull up his loincloth to expose his ready and dripping pussy. As you bring your hand to it, stroking and spreading the sensitive pussy lips, the large creature raises its head to look at you and gives a needful croon.";
 			say "     Without any more hesitation, you put two fingers against the wet opening between his pussy lips and push them into his inner passage. The furling immediately starts moaning loudly as you finger him, and between the gasps and moans you think you heard him say, 'More.' So you add another finger. It's a strangely arousing feeling to have three fingers in the tight, warm and very wet pussy of this large furry beast. Stimulating him a bit more and seeing him take three, then four fingers without any problems, you wonder if you could...";
 			say "     You can, as it turns out - your whole hand slips into the furling's pussy with a wet slurp, kicking your furry partner's gasps and moans into a whole new gear. Stroking and fondling the inner passage of your former opponent with all of your fingers, it doesn't take long until you drive him over the edge. Trembling and moaning, the large creature orgasms, his femcum running down your arm to create a small puddle on the ground. A strange scraping noise has you look up for a second, but it turns out only to be the furling's claws digging shallow lines into the concrete below as he holds on to it too tightly.";
 			say "     Pulling your hand out of his pussy, you wipe it dry against the furling's legfur, then stand up. With the large beast still panting softly and mumbling, 'Nice woman. Make me feel good.' You leave him there and walk away.";
-		otherwise:												[leave]
+		otherwise: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised furling behind alone.";
-	otherwise:													[female + neuter]
+	otherwise: [female + neuter]
 		say "     So what shall it be you do next? You could give him some relief by stroking his pussy [link](1)[as]1[end link] or just leave [link](2)[as]2[end link].";
 		if player consents:
 			say "     Kneeling between your furry opponent's legs, you pull up his loincloth to expose his ready and dripping pussy. As you bring your hand to it, stroking and spreading the sensitive pussy lips, the large creature raises its head to look at you and gives a needful croon.";
@@ -72,7 +72,7 @@ To say Furling loses:
 
 to say FurlingDesc:
 	say "     A pretty large humanoid creature crosses your path and stops to look at you with bright orange eyes. They belong to an otherwise human-looking face with unlined features like a young man's and surrounded by a thick mane of reddish hair. Although covered by thick orange-red fur, his powerful build and strong muscles are easily recognizable. Add long claws on hands and feet to that and you know you have to watch yourself with one of these critters.";
-	say "     He wears nothing but a loincloth made from a shredded football shirt - who knows if that's from before the person's transformation ...or the remains of his last meal.";
+	say "     He wears nothing but a loincloth made from a shredded football shirt - who knows if that's from before the person's transformation... or the remains of his last meal.";
 	say "     [line break]";
 	say "     While you're still studying his appearance, the furry beast suddenly roars, 'You're mine!' Just before he pounces on you.";
 
@@ -123,7 +123,7 @@ When Play begins:
 	now libido entry is 80;				[ Target libido the infection will rise towards. ]
 	now loot entry is "red fur";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 30;			[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]muscular[at random]";
 	now type entry is "humanoid";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
