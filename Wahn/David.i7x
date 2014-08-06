@@ -41,7 +41,6 @@ Instead of resolving a Captured Demon:
 			increase score by 5;
 	now Captured Demon is resolved;
 
-
 Thankful Soldier is a situation. Thankful Soldier is resolved. [meeting the guy from 'Captured Demon' again - if you saved him]
 The sarea of Thankful Soldier is "Outside".
 when play begins:
@@ -847,13 +846,13 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 	say "     [line break]";
-	say "			[DavidEricTalk]";
+	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
 	if player is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		say "     [line break]";
-		say "			[DavidEricTalk]";
+		say "     [DavidEricTalk]";
 	
 instead of going to Bunker while hp of David is 4 and libido of David < 53 and companion of player is demon brute: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
@@ -1142,7 +1141,7 @@ to say DavidSex6: [Sven's ass gets fucked by David]
 			say "     [line break]";
 			if lust of David is 0: [anal virgin]
 				say "     Your eyes on the shapely form of David's bubble butt, you get on the bed behind him. Then you move a bit closer and cup his firm cheeks, spreading them a bit as your hard [cock of player] cock bumps against his virgin hole. This is such a nice opportunity to break David in for some good fucking that you just can't wait to get into him. Taking hold of your shaft with one hand, you line it up with his pucker, then push in against the soldier's body. Soon the muscle yields and you pop in, becoming the first man to explore his delightfully tight depths. David gasps as his hole is spread for the first time by your invading member, but soon starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
-				now lust of David is 1; 	[anally de-virginized]
+				now lust of David is 1; [anally de-virginized]
 			otherwise:
 				say "     Your eyes on the shapely form of David's bubble butt, you get on the bed behind him. Then you move a bit closer and cup his firm cheeks, spreading them a bit as your hard [cock of player] cock bumps against his hole. You can't wait to get back into his nice and tight soldier ass. Taking hold of your shaft with one hand, you line it up with his pucker, then push in against the soldier's body. David gasps in lust as his hole is spread by your invading member, then starts moaning even louder than before as you sink yourself deeper and deeper, rubbing against his prostrate.";
 			say "     Pounding David's ass with deep thrusts, you revel in the moans, gasps and slapping noises of your hips against his ass filling the whole bunker. Who'd have thought that post-apocalyptic survival would be like this? Fucking the tight hole of a handsome man while he himself is balls deep in a hot little catboy who's your pet - hell yeah, you'd pick this any day against your 'normal' life before. But moving your thoughts back to the thing at hand - or rather the hole you're balls deep in - you decide to change your rhythm of thrusts to match David's, moving in unison as the three of you fuck.";
