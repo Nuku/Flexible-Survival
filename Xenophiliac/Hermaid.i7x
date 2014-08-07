@@ -97,6 +97,13 @@ to say HermaidNeutLoss:
 	say "     With a quiet sigh, the Hermaid lazily pulls out of your cum-stuffed belly, nuzzling the nape of your neck tenderly before plunging inaudibly under the waves. You float on the surface of the waves for some time, reclaiming your senses. You swim slowly to the nearest dock, and haul yourself onto the wooden deck. Hoisting yourself onto your feet and trudging back into the city, there's a part of you that wishes you could remain with the beautiful Hermaid.";
 	
 to say Hermaiddesc:
+	choose row monster from table of random critters:
+		if "Male Preferred" is listed in feats of player;
+			now sex entry is "Male";
+		otherwise if "Female Preferred" is listed in feats of player:
+			now sex entry is "Female";
+		otherwise:
+			now sex entry is "Both";
 	say "     As you trudge through the empty and desolate buildings lining the shore, a quiet splash breaks the silence, resounding through the buildings. Something inescapably pulls you to the water's edge to investigate what might have made that sound - and suddenly find yourself pulled over the edge and underwater by unseen hands. Breaking free from the incorporeal hand's grip, you flounder frantically until you reach the surface again. Looking around, there is no trace of who attacked you - until a large splash resonates behind you and someone surfaces from the depths. It is a stunningly beautiful sea woman, smiling at you, revealing her razor-sharp teeth.";
 	say "[line break]";
 	if bodyname of player is "Hermaid":
