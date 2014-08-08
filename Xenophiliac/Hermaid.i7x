@@ -9,27 +9,36 @@ when play begins:
    add { "Hermaid" } to infections of Tailweapon;
    add { "Hermaid" } to infections of Internallist; 
 
+HermaidSub is a number that varies.
+
 to say losetoHermaid:
-	say "	Your attacker lures you into throwing a hit, but quickly counters and lands a punch across your head, sending your head spinning and stopping you from thinking for a few moments. As you recover yourself, you find that the beautiful creature has you wrapped in her arms, stopping you from escaping."; 
+	if hp of player > 0:
+		now HermaidSub is 1;
+	otherwise:
+		now HermaidSub is 0;
+	if HermaidSub is 1:
+		say "     Putting up your hands in a sign of surrender, the herm croons joyously at your clear submission. Swimming tantalizingly towards you, you soon find yourself wrapped up in the pretty herms arms, and you can feel lust building in your body. You find yourself tentatively looking forward to what the herm has in store for you.";
+	otherwise:
+		say "     Your attacker lures you into throwing a hit, but quickly counters and lands a punch across your head, sending your head spinning and stopping you from thinking for a few moments. As you recover yourself, you find that the beautiful creature has you wrapped in her arms, stopping you from escaping."; 
 	say "[WaitLineBreak]";
 	if cocks of player > 0 and cunts of player is 0:
-		say "	[HermaidMaleLoss]";
+		say "     [HermaidMaleLoss]";
 	otherwise if cunts of player > 0 and cocks of player is 0:
-		say "	[HermaidFemLoss]";
+		say "     [HermaidFemLoss]";
 	otherwise if cunts of player > 0 and cocks of player > 0:
-		say "	The seafaring herm looks at you thoughtfully, as if considering what to do with you. After a moment, she nods to herself and smiles.";
+		say "     The seafaring herm looks at you thoughtfully, as if considering what to do with you. After a moment, she nods to herself and smiles.";
 		say "[WaitLineBreak]";
-		say "	[one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
+		say "     [one of][HermaidFemLoss][or][HermaidMaleLoss][at random]";
 	otherwise:
-		say "	[HermaidNeutLoss]";
+		say "     [HermaidNeutLoss]";
 
 to say beattheHermaid:
-	say "	You land one last hit on the creature, sending her reeling backwards, and stunning her temporarily. She flounders around, trying to get back into fighting condition.";
+	say "     You land one last hit on the creature, sending her reeling backwards, and stunning her temporarily. She flounders around, trying to get back into fighting condition.";
 	say "[WaitLineBreak]";
 	if a random number between 40 and 120 < libido of player:
-		say "	The beautiful sea creature looks to have let her guard down, and the battle has awakened some primal urges within you. Do you act on them?";
+		say "     The beautiful sea creature looks to have let her guard down, and the battle has awakened some primal urges within you. Do you act on them?";
 		if the player consents:
-			say "	You wrap your arms around the beautiful creature, holding her tightly, and blocking off any chance of escape. She jumps at the sudden contact and looks at you in fear. When she notes the lustful look in your eyes, however, she smiles seductively at you, and runs her hands sensually over your body.";
+			say "     You wrap your arms around the beautiful creature, holding her tightly, and blocking off any chance of escape. She jumps at the sudden contact and looks at you in fear. When she notes the lustful look in your eyes, however, she smiles seductively at you, and runs her hands sensually over your body.";
 			say "[WaitLineBreak]";
 			if cunts of player > 0 and cocks of player is 0:
 				say "	[HermaidFemVic]";
@@ -38,15 +47,15 @@ to say beattheHermaid:
 			otherwise if cunts of player > 0 and cocks of player > 0:
 				say "	You can use either your cock or cunt for this scene. Which one do you want to use? (Y for cock, N for pussy)";
 				if the player consents:
-					say "	[HermaidMaleVic]";
+					say "     [HermaidMaleVic]";
 				otherwise:
-					say "	[HermaidFemVic]";
+					say "     [HermaidFemVic]";
 			otherwise:
-				say "	[HermaidNeutVic]";
+				say "     [HermaidNeutVic]";
 		otherwise:
-			say "	You consider having some extracurricular fun with the beautiful herm, but you decide against it. You quickly climb back onto the docks and continue onwards, as you hear the Hermaid dive back into the water.";
+			say "     You consider having some extracurricular fun with the beautiful herm, but you decide against it. You quickly climb back onto the docks and continue onwards, as you hear the Hermaid dive back into the water.";
 	otherwise:
-		say "	Taking advantage of the lapse in the Hermaids attention, you quickly swim to the edge of the nearby dock and pull yourself up. Shaking yourself off and draining your backpack of water, you don't look back as the Hermaid glares holes into the back of your head, before the herm dives down beneath the sea.";
+		say "     Taking advantage of the lapse in the Hermaids attention, you quickly swim to the edge of the nearby dock and pull yourself up. Shaking yourself off and draining your backpack of water, you don't look back as the Hermaid glares holes into the back of your head, before the herm dives down beneath the sea.";
 	
 to say HermaidFemVic:
 	say "     You move one of your hands around the Hermaid's hips, and swivel yourself around to face her. She leans in to kiss you, and you eagerly return her offer as she draws you into her prodigious bosom. She slowly draws her hands across your skin, holding you in a tight, loving embrace. You both break free of the kiss as you wrap your arms and legs around the beautiful creature, allowing her to support you, which she does easily. You feel something poking at your thighs, and the woman in front of you smiles knowingly as you both get ready for the main course. She runs her hands over your back as she lines her tapered cock up with your [cunt size desc of player] cunt.";
@@ -113,11 +122,10 @@ to say Hermaiddesc:
 	otherwise:
 		now sex entry is "Both";
 	say "     As you trudge through the empty and desolate buildings lining the shore, a quiet splash breaks the silence, resounding through the buildings. Something inescapably pulls you to the water's edge to investigate what might have made that sound - and suddenly find yourself pulled over the edge and underwater by unseen hands. Breaking free from the incorporeal hand's grip, you flounder frantically until you reach the surface again. Looking around, there is no trace of who attacked you - until a large splash resonates behind you and someone surfaces from the depths. It is a stunningly beautiful sea woman, smiling at you, revealing her razor-sharp teeth.";
-	say "[line break]";
 	if bodyname of player is "Hermaid":
-		say "     The mer-woman coos delightfully when she sees that you are one of them. She genuinely smiles at you, expecting you to wilfully embrace her. When you take a defensive posture, however, a pouty expression forms on her face, and prepares to fight you.";
+		say "     The mer-woman coos delightfully when she sees that you look like her. She genuinely smiles at you, expecting you to wilfully embrace her. When you take a defensive posture, however, a pouty expression forms on her face, and prepares herself to fight you.";
 	otherwise:
-		say "     The sea-dweller before you smiles seductively at you, and waves her impressive bosom at you, clearly attempting to entice you. However, when you prepare yourself to fight her, she takes on an angered look, and readies herself to face you.";
+		say "     The sea-dweller before you smiles seductively, waving her impressive bosom at you, doing her best to entice you. However, when you prepare yourself to fight her, she takes on an angered look, and readies herself to face you.";
 	say "[WaitLineBreak]";
 	say "     This creature is a relatively close comparison to mermaids of yore, that many seafaring men have spoke of. She has the body of a flawless human woman, with beautifully sculpted facial features that complement the voluptuous, buxom chest that she presents. Her lower body consists of two finned legs, with her webbed feet being reminiscent of flippers. Long, flowing hair grows off of her head, dark-blue and matching the ocean. Solid, dark-[one of]green[or]blue[or]purple[at random] eyes stare at you, reminding you of the dark fathoms of the deep oceans. Her finned arms and webbed hands end in sharp claws, easily able to hurt or maim someone. Between her legs lie her genitals, with both the male and female parts residing within separate genital slits. As she becomes aroused at the prospect of a conflict, she begins to sprout a foot-long tapered cock, while her feminine opening begins to drool lubricant.";
 
