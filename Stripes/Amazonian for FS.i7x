@@ -180,7 +180,7 @@ to say estosterogen pill use:
 		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
 	otherwise:
 		increase breast size of player by 1;
-		if breast size of player > 10, increase breast size by 1;
+		if breast size of player > 10, increase breast size of player by 1;
 		if breast size of player > 26, now breast size of player is 26;
 		follow the breast descr rule;
 		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
