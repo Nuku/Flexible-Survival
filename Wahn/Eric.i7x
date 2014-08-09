@@ -198,7 +198,7 @@ instead of conversing the Eric:
 					now CheerleaderFirstEncounter is 2;
 					challenge "Hulking Cheerleader";
 					now CheerleaderFirstEncounter is 1;
-				if fightoutcome >= 20 and fightoutcome <= 29 [lost]
+				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";
 					say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
 					say "     Not much later, Eric gasps as he has his first female orgasm, and you see his pussy juices glistening on Stacy's thrusting cock. She stops for a moment and looks down at the writhing cuntboy, then starts up again, harder and faster than before.";
