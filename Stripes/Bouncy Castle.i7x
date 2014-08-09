@@ -1362,12 +1362,12 @@ to dolboundstate:
 					next;
 			
 
-cheatcheat is an action applying to nothing;
+[cheatcheat is an action applying to nothing;
 
 understand "cheat" as cheatcheat;
 
 carry out cheatcheat:
-	say "[dolcheckA]";
+	say "[dolcheckA]";]
 
 to say bottlestrugglebar:
 	say "[if boundmod > 1]}[end if][if boundmod > 0]}[end if] ";
