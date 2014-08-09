@@ -942,7 +942,7 @@ to say bcchairfight:
 			let chairnum be 175;
 			if hardmode is true, increase chairnum by level of player;
 			let chairnum be a random number between 1 and chairnum;
-[			say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
+[			say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";] [Threshold]
 			if playernum >= chairnum:
 				now bcchairescape is 2;
 [				say " [special-style-1]Success[roman type].";]
@@ -1174,11 +1174,11 @@ to dolboundstate:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself quickly overtaken by lust, the tight latex clinging to your [if cocks of player > 0]dick[smn], squeezing your bliss out of you, the warm, wet feel of your [cum load size of player] load quickly drenching your groin until it's absorbed by[otherwise if cunts of player > 0]crotch, squeezing your bliss out of you, the warm, wet feel of your honey quickly drenching your groin until it's absorbed by[otherwise]genderless croch, forcing you to writhe in insatiable need against[end if] the twisted material";
+			say "     Finding yourself quickly overtaken by lust, the tight vinyl clinging to your [if cocks of player > 0]dick[smn], squeezing your bliss out of you, the warm, wet feel of your [cum load size of player] load quickly drenching your groin until it's absorbed by[otherwise if cunts of player > 0]crotch, squeezing your bliss out of you, the warm, wet feel of your honey quickly drenching your groin until it's absorbed by[otherwise]genderless croch, forcing you to writhe in insatiable need against[end if] the twisted material";
 			if partialengulf is 1:
 				say ". Exploiting you moment of weakness, the dolphin suit pulls you back within its embrace, forcing you to struggle free of its hold once more.";
 			otherwise:
-				say ". Panting against the latex prison, its grip on you tightens ever further, eager to keep you within its twisted embrace.";
+				say ". Panting against the vinyl prison, its grip on you tightens ever further, eager to keep you within its twisted embrace.";
 			now partialengulf is 0;
 			now lustatt is libido of player;
 			if enduring is true:
@@ -1191,86 +1191,73 @@ to dolboundstate:
 		otherwise:
 			now partialengulf is 1; [player is partially engulfed]
 		now enduring is false;
-		if partialengulf is 0:
-			say "     Enveloped entirely within the latex suit's confines, your vision blurred and tinted green through the eyes of this form-fitting attire. [one of]You can barely move, aroused, [if cocks of player > 0][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[otherwise]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]These tight, movement-restricting walls command such an overwhelming influence on your arousal, barely able to hold yourself back[or]The sounds of your moans and panting muffled and vibrating against the constricting walls, forcing you to face your intense need[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself free, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.";
-		otherwise:
-			say "     Partially within the latex suit's confines, its grip on you still remains very tight. [one of]Your lower torso can barely, [if cocks of player > 0][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[otherwise]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]Even as you start to free yourself, these confines still command an overwhelming influence on your arousal, barely able to hold yourself back[or]Loudly moaning and panting against the open air, you don't imagine this partial freedom will last very long[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.";
-		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[otherwise]Abide[end if][as]2[end link][line break][run paragraph on]";
-		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break][run paragraph on]";
-		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle: [bottlestrugglebar][line break][run paragraph on]";
-		if humanity of player < 1:
-			say "     You moan and squirm within the dolphin suit, lost in the lust of the physical pleasure it's providing when you feel something touch the outside of the suit.  Looking through the green eyes, you can see one of the dolphin girls has come along and you can hear others playing in the water outside.  The hope that she's here to play with you pops into your mind.  Her fin-hands slide over the suit, opening it a little to adjust its position.  She even slides off the head to give you a kiss before helpfully fitting the breather on properly and sliding the head back overtop of you so you can see properly[if cocks of player > 0 or cunts of player > 0].";
-			say "     She rubs firmly over your groin as she zips you back up, making you cum again.  Once you're well-fitted into the inflatable dolphin suit, you are delighted as she pulls you by the suit's handles into the water.  She and the other dolphin girls giggle happily, swimming and playing around you.  The motion of the strange suit riding the rolling ocean waves sends shocks of pleasure through your body, and the pleasure only intensifies when the one who found you grabs the toy's handles and pulls herself out of the water to ride atop it.  The dolphin girl rides the toy for some time, stroking and hugging it's vinyl exterior, each motion sending another echo of pleasure through you.";
-			say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if cocks of player > 0 or cunts of player > 0].  You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if].  With you safely aboard, the excited girls resume their giggling playtime with you as their new toy.  The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit.";
-			say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind you're soon able to focus on nothing but the excitement around you.  Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore.  With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
-			now dolinfloss is -100;
-			now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
-			now tailname of player is "Bottlenose Toy";
-			now facename of player is "Bottlenose Toy";
-			now skinname of player is "Bottlenose Toy";
-			now bodyname of player is "Bottlenose Toy";
-			now cockname of player is "Bottlenose Toy";
-			now tail of player is "You have a buoyant, inflatable dolphin tail.";
-			now face of player is "that of a cute, smiling dolphin";
-			now skin of player is "smooth and green plastic, stretched and shaped with visible seams";
-			now body of player is "shaped like an inflatable dolphin water toy.  You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
-			now cock of player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating.  It leaks a clear, slick lubricant as precum";
-			now scalevalue of player is 3;
-			now bodydesc of player is "inflatable";
-			now bodytype of player is "dolphin";
-			now the daycycle of player is 0;
-			now breasts of player is 2;
-			now breast size of player is 0;
-			if hellHoundLevel is 0:
-				follow the sex change rule;
-				follow the sex change rule;
-			if libido of player < 60, now libido of player is 60;
-			now humanity of player is 0;
-			now battleground is "void";
-			now combat abort is 1;
-			attempttowait;
-			now trixieexit is 1;
-			end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
-		otherwise if boundmod > 2:
+		if boundmod > 2 and humanity of player > 0:
 			say "     After [if dolphinbundle is 0]a very brief[otherwise if dolphinbundle is 1]a brief[otherwise]some[end if] while you[if dolphinbundle < 2][']re ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[otherwise] manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
 			if dolphinbundle < 2, increase dolphinbundle by 1;
 			cleanboundmemory;
 			now trixieexit is 1;	
 		otherwise:
-			let k be 0;
-			now keychar is "INVALID";
-			change the text of the player's command to "";
-			while keychar is "INVALID":
-				now k is the chosen letter;
-				translate k;
-				if the player's command matches "[number]":
-					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
-				[if struggleatt < (dolphinbundle + 1):
-					increase struggleatt by 1;]
-				if struggleatt < (dolphinbundle + 1):
-					increase struggleatt by 1;
-					say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random]";
-					if struggleatt is dolphinbundle:
-						say ". You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hell bent on keeping a hold on you and maintaining its toxic influence...";
-					otherwise:
-						say ".";
+			if partialengulf is 0:
+				say "     Enveloped entirely within the vinyl suit's confines, your vision blurred and tinted green through the eyes of this form-fitting attire. [one of]You can barely move, aroused, [if cocks of player > 0][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[otherwise]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]These tight, movement-restricting walls command such an overwhelming influence on your arousal, barely able to hold yourself back[or]The sounds of your moans and panting muffled and vibrating against the constricting walls, forcing you to face your intense need[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself free, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			otherwise:
+				say "     Partially within the vinyl suit's confines, its grip on you still remains very tight. [one of]Your lower torso can barely, [if cocks of player > 0][cock size desc of player] dick[smn] grinding firmly against the precum-slicked[otherwise]sweat-slicked body grinding against the slippery[end if] walls, you can barely contain yourself[or]Even as you start to free yourself, these confines still command an overwhelming influence on your arousal, barely able to hold yourself back[or]Loudly moaning and panting against the open air, you don't imagine this partial freedom will last very long[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if], or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
+			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[otherwise]Abide[end if][as]2[end link][line break][run paragraph on]";
+			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break][run paragraph on]";
+			say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle: [bottlestrugglebar][line break][run paragraph on]";
+			if humanity of player < 1:
+				say "     You moan and squirm within the dolphin suit, lost in the lust of the physical pleasure it's providing when you feel something touch the outside of the suit.  Looking through the green eyes, you can see one of the dolphin girls has come along and you can hear others playing in the water outside.  The hope that she's here to play with you pops into your mind.  Her fin-hands slide over the suit, opening it a little to adjust its position.  She even slides off the head to give you a kiss before helpfully fitting the breather on properly and sliding the head back overtop of you so you can see properly[if cocks of player > 0 or cunts of player > 0].";
+				say "     She rubs firmly over your groin as she zips you back up, making you cum again.  Once you're well-fitted into the inflatable dolphin suit, you are delighted as she pulls you by the suit's handles into the water.  She and the other dolphin girls giggle happily, swimming and playing around you.  The motion of the strange suit riding the rolling ocean waves sends shocks of pleasure through your body, and the pleasure only intensifies when the one who found you grabs the toy's handles and pulls herself out of the water to ride atop it.  The dolphin girl rides the toy for some time, stroking and hugging it's vinyl exterior, each motion sending another echo of pleasure through you.";
+				say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if cocks of player > 0 or cunts of player > 0].  You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if].  With you safely aboard, the excited girls resume their giggling playtime with you as their new toy.  The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit.";
+				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind you're soon able to focus on nothing but the excitement around you.  Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore.  With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
+				now dolinfloss is -100;
+				now non-infectious entry is true;			[prevents regular dolphin girl infection from occurring]
+				now tailname of player is "Bottlenose Toy";
+				now facename of player is "Bottlenose Toy";
+				now skinname of player is "Bottlenose Toy";
+				now bodyname of player is "Bottlenose Toy";
+				now cockname of player is "Bottlenose Toy";
+				now tail of player is "You have a buoyant, inflatable dolphin tail.";
+				now face of player is "that of a cute, smiling dolphin";
+				now skin of player is "smooth and green plastic, stretched and shaped with visible seams";
+				now body of player is "shaped like an inflatable dolphin water toy.  You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
+				now cock of player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating.  It leaks a clear, slick lubricant as precum";
+				now scalevalue of player is 3;
+				now bodydesc of player is "inflatable";
+				now bodytype of player is "dolphin";
+				now the daycycle of player is 0;
+				now breasts of player is 2;
+				now breast size of player is 0;
+				if hellHoundLevel is 0:
+					follow the sex change rule;
+					follow the sex change rule;
+				if libido of player < 60, now libido of player is 60;
+				now humanity of player is 0;
+				now battleground is "void";
+				now combat abort is 1;
+				attempttowait;
+				now trixieexit is 1;
+				end the game saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
+			otherwise:
+				let k be 0;
+				now keychar is "INVALID";
+				change the text of the player's command to "";
+				while keychar is "INVALID":
+					now k is the chosen letter;
+					translate k;
+					if the player's command matches "[number]":
+						now keychar is "[number understood]";
+				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
 					say "[line break]";
-					if bodyname of player is "Bottlenose Toy":
-						if a random chance of 1 in 3 succeeds:
-							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase libido of player by 2;
-					if libido of player > 100, now libido of player is 99;
-					decrease humanity of player by 4 + psycheadjust;
-					increase lustatt by 35 + (lustadjust * 5);
-				otherwise:
-					increase boundmod by 1;
-					if boundmod < 3:
-						say "     You try to peel the suit off of you, [one of]tainted apperal clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
+					[if struggleatt < (dolphinbundle + 1):
+						increase struggleatt by 1;]
+					if struggleatt < (dolphinbundle + 1):
+						increase struggleatt by 1;
+						say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random]";
+						if struggleatt is dolphinbundle:
+							say ". You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hell bent on keeping a hold on you and maintaining its toxic influence...";
+						otherwise:
+							say ".";
 						say "[line break]";
 						if bodyname of player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
@@ -1282,91 +1269,105 @@ to dolboundstate:
 						decrease humanity of player by 4 + psycheadjust;
 						increase lustatt by 35 + (lustadjust * 5);
 					otherwise:
-						say "     After [if dolphinbundle is 0]a very brief[otherwise if dolphinbundle is 1]a brief[otherwise]some[end if] while you[if dolphinbundle < 2]'re ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[otherwise] manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
+						increase boundmod by 1;
+						if boundmod < 3:
+							say "     You try to peel the suit off of you, [one of]tainted apperal clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
+							say "[line break]";
+							if bodyname of player is "Bottlenose Toy":
+								if a random chance of 1 in 3 succeeds:
+									infect;
+							otherwise if a random chance of 2 in 3 succeeds:
+								infect;
+							increase libido of player by 2;
+							if libido of player > 100, now libido of player is 99;
+							decrease humanity of player by 4 + psycheadjust;
+							increase lustatt by 35 + (lustadjust * 5);
+						otherwise:
+							say "     After [if dolphinbundle is 0]a very brief[otherwise if dolphinbundle is 1]a brief[otherwise]some[end if] while you[if dolphinbundle < 2]'re ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[otherwise] manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
+							say "[line break]";
+							if dolphinbundle < 2, increase dolphinbundle by 1;
+							cleanboundmemory;
+							wait for any key;
+							now trixieexit is 1;
+					if dolphinbundle is 0:
+						increase boundmod by 1;
+					otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
+						increase boundmod by 1;
+					wait for any key;
+					next;
+				otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+					say "[line break]";
+					if obliging is true:
+						say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of player] form[at random].";
 						say "[line break]";
-						if dolphinbundle < 2, increase dolphinbundle by 1;
-						cleanboundmemory;
-						wait for any key;
-						now trixieexit is 1;
-				if dolphinbundle is 0:
-					increase boundmod by 1;
-				otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
-					increase boundmod by 1;
-				wait for any key;
-				next;
-			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
-				if obliging is true:
-					say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of player] form[at random].";
-					say "[line break]";
-					if bodyname of player is "Bottlenose Toy":
-						if a random chance of 1 in 3 succeeds:
+						if bodyname of player is "Bottlenose Toy":
+							if a random chance of 1 in 3 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
 							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase libido of player by 2;
-					if libido of player > 100, now libido of player is 99;
-					decrease humanity of player by 4 + psycheadjust;
-					increase lustatt by 60 + (lustadjust * 10);
+						increase libido of player by 2;
+						if libido of player > 100, now libido of player is 99;
+						decrease humanity of player by 4 + psycheadjust;
+						increase lustatt by 60 + (lustadjust * 10);
+					otherwise:
+						say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of player] form[at random].";
+						say "[line break]";
+						if bodyname of player is "Bottlenose Toy":
+							if a random chance of 1 in 3 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
+							infect;
+						increase libido of player by 2;
+						if libido of player > 100, now libido of player is 99;
+						decrease humanity of player by 4 + psycheadjust;
+						increase lustatt by 35 + (lustadjust * 5);
+					if dolphinbundle is 0:
+						increase boundmod by 1;
+					otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
+						increase boundmod by 1;
+					wait for any key;
+					next;
 				otherwise:
-					say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of player] form[at random].";
+					now enduring is true;
 					say "[line break]";
-					if bodyname of player is "Bottlenose Toy":
-						if a random chance of 1 in 3 succeeds:
+					if boundrecover is true:
+						increase humanity of player by 3;
+						if humanity of player > 100, now humanity of player is 100;
+						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+						say "[line break]";
+						if bodyname of player is "Bottlenose Toy":
+							if a random chance of 1 in 3 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
 							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase libido of player by 2;
-					if libido of player > 100, now libido of player is 99;
-					decrease humanity of player by 4 + psycheadjust;
-					increase lustatt by 35 + (lustadjust * 5);
-				if dolphinbundle is 0:
-					increase boundmod by 1;
-				otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
-					increase boundmod by 1;
-				wait for any key;
-				next;
-			otherwise:
-				now enduring is true;
-				say "[line break]";
-				if boundrecover is true:
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
-					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					say "[line break]";
-					if bodyname of player is "Bottlenose Toy":
-						if a random chance of 1 in 3 succeeds:
+						increase lustatt by 20 + (lustadjust * 3);
+						now boundrecover is false;
+					otherwise:
+						say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
+						say "[line break]";
+						if bodyname of player is "Bottlenose Toy":
+							if a random chance of 1 in 3 succeeds:
+								infect;
+						otherwise if a random chance of 2 in 3 succeeds:
 							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase lustatt by 20 + (lustadjust * 3);
-					now boundrecover is false;
-				otherwise:
-					say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
-					say "[line break]";
-					if bodyname of player is "Bottlenose Toy":
-						if a random chance of 1 in 3 succeeds:
-							infect;
-					otherwise if a random chance of 2 in 3 succeeds:
-						infect;
-					increase libido of player by 1;
-					if libido of player > 100, now libido of player is 99;
-					decrease humanity of player by 2;
-					increase lustatt by 20 + (lustadjust * 3);
-				if dolphinbundle is 0:
-					increase boundmod by 1;
-				otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
-					increase boundmod by 1;
-				wait for any key;
-				next;
+						increase libido of player by 1;
+						if libido of player > 100, now libido of player is 99;
+						decrease humanity of player by 2;
+						increase lustatt by 20 + (lustadjust * 3);
+					if dolphinbundle is 0:
+						increase boundmod by 1;
+					otherwise if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
+						increase boundmod by 1;
+					wait for any key;
+					next;
 			
 
-[cheatcheat is an action applying to nothing;
+cheatcheat is an action applying to nothing;
 
 understand "cheat" as cheatcheat;
 
 carry out cheatcheat:
-	say "[dolcheckA]";]
+	say "[dolcheckA]";
 
 to say bottlestrugglebar:
 	say "[if boundmod > 1]}[end if][if boundmod > 0]}[end if] ";
@@ -1378,7 +1379,7 @@ to say bottlestrugglebar:
 		say "[close bracket][if struggleatt > 0]X[otherwise]-[end if][bracket]";
 	say " [if boundmod > 0]{[end if][if boundmod > 1]{[end if]";
 
-to say dolcheckA:		[empty] [Potential Commission BluB]
+to say dolcheckA:		[empty] 
 	[puts Bottlenose Toy as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
@@ -1396,7 +1397,6 @@ to say dolcheckA:		[empty] [Potential Commission BluB]
 	otherwise:					[lost to released toy dolphin - D]
 		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement.  Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate.  It makes a grab for you and wraps itself partially over you before you have a chance to react.  Moving under its own power, the strange suit tries to envelop you within itself.  Shall you resist?";
 		now dolcastlefight is 0;
-	[the above segment can be preserved, and used as a context for abide/oblige, as well as giving a bonus struggle point BB]
 	if player consents:
 		now struggleatt is 1;
 		now tempnum2 is 0;
@@ -1494,7 +1494,7 @@ to say dolcheckB:		[free victim]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it.  It takes a little time to find it, having partially melded itself shut, but you manage to start working it open.  As you begin to get it open, it starts to shift and move with the struggles of someone inside.  Your hopes are quickly dashed as a gray, flippered paw pushes free and the leopard seal inside starts to force its way to freedom.  Pulling the breathing piece from its mouth, the anthropomorphic seal gasps for fresh air.  'Ahhh!  Gimme out of here!'  The inflatable suit seems to struggle against its victim's escape attempt, but can't stop him (you realize as you spot his sheath) as you aid in his escape.";
 	say "     As the seal gets out further, he starts squeezing on the inflatable dolphin, pushing the air out of it until it eventually sags to the colourful floor.  You are given a kiss and a grope by the seal.  'Thanks, hon,' he rumbles.  'I'd thank you properly, but I'm not sticking around here.  Mmm... too bad, too.  I think you'd make a lovely seal cow.  Oh well, plenty of others to find and breed,' he adds before leaping from the doorway and making a rush for the slide.  As you watch, he swims quickly out to sea, probably off to find an unprotected town to infect.  Uncertain how you feel about that, having saved him from the dolphin girls only to put others at risk of becoming seals.  Brushing your fingertips across your lips, remembering his kiss, you can't help but find the way his form cuts through the water sexy.  Certainly they'd be better off as seals than some of the other infections you've encountered.";
 	increase score by 10;
-	increase libido by 10;
+	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
 
 
