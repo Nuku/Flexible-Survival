@@ -143,11 +143,11 @@ When Play begins:
    now defeated entry is "[beattheHermaid]";            
    now victory entry is "[losetoHermaid]";               
    now desc entry is "[Hermaiddesc]";                  
-   now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[at random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
+   now face entry is "that of a human woman, with beauty only before captured in the greatest of artworks. Deep, solid [one of]green[or]blue[or]purple[sticky random] eyes complement the flowing, dark blue hair that hangs to your shoulders, while your sculpted face could knock anyone off their feet";
    now body entry is "one that even a professional model would be jealous of. Your lithe, curvy form is one that artists can only dream of, while your hips and chest could give plastic surgeons a run for their money. Your finned arms and webbed hands seem out of place compared to the rest of your body, but are well-suited for swimming through the depths of the sea. Even your finned legs have morphed into a form more suitable for swimming, with your webbed feet allowing you to swim gracefully through the seas"; 
    now skin entry is "light-blue, moist";
    now tail entry is "Sprouting from your backside is a dolphins tail, complete with dual tail flukes.";
-   now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[as decreasingly likely outcomes]";                  
+   now cock entry is "[one of]tapered[or]dolphin-esque[or]cetacean[sticky random]";                  
    now face change entry is "your skull cracks and reforms, shifting beneath your skin. Pain wracks your body as this occurs, and you can feel the shifting bones rearranging. Thankfully, the pain soon subsides, and you're able to recover. You find a mirror and look at yourself, and are shocked at the changes in your appearance. Your face now resembles that of a beautiful human woman, and is stunningly picturesque. Dark, beautiful eyes peer out of perfectly sculpted sockets, with dark-blue hair waving gracefully in the wind as your features reshape to suit the appearance of a Hermaid";
    now body change entry is "your chest and hips protrude out a small amount, and your stomach slims down, giving yourself a superstar look, while also incurring a great deal of pain in the process. Your hands and arms tingle as one long fin grows down your arm, stopping at your wrist. Your fingers and hands reshape, becoming more claw-like and fully webbed as, finally, these changes cease, and you observe your sleek hermaid body";
    now skin change entry is "it turns a light shade of blue, and begins to feel moist to the touch as a layer of moisture forms on your skin";
@@ -201,11 +201,21 @@ name		desc	weight	object
 "hermaid kelp"		"A still-moist piece of sea kelp, used as an ingredient in some aquatic recipes."	1	hermaid kelp
 
 hermaid kelp is a grab object.
-hermaid kelp is infectious. The strain of hermaid kelp is "Hermaid".
-the usedesc of hermaid kelp is "[HKelpUse]";
+It is temporary. 
+it is part of the player.
+the usedesc of hermaid kelp is "[HKelpUse]".
 
 to say HKelpUse:
 	say "You run the moist piece of plant through your hands for a few moments, noting the leafy feel and grainy texture. Giving it only a moments thought, you roll up the leaf and pop it into your mouth. Chewing on the leaf, you find that it tastes remarkably like lettuce, but with a slightly salty taste.";
+	setmonster "Hermaid";
+	choose row monster from the table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise:
+		now sex entry is "Both";
+	infect;
 	
 the scent of hermaid kelp is "As you smell the sea leaf, your nostrils are assaulted with the scents of the sea; the smell of salt water and fish overwhelms your senses, and reminds you of a time where you stood at the edge of the water, looking wordlessly into the vast ocean before you.".
 
