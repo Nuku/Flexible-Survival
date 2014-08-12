@@ -802,21 +802,21 @@ to say EscapeOption4:
 			say "     After the three of them are out and away, having throwing the cell door closed behind them, you stand up from the leather bench, wet and sticky with cum as you are. They must have forgotten that the lock isn't working anymore - or maybe they're just trusting the intoxicating effects of the orc cum to keep you docile. No matter what, you jump at the opportunity this gives you, snatching up your clothes and gear, then stepping out of the cell.";
 		-- 2:
 			say "     Digging around in the remains of what the people dragged in here had with them, you manage to find several hairpins and bits of wire that you then stuff into the keyhole. With all that stuff in there, you're pretty sure the key won't fit anymore. Not long afterwards, your captors return, or at least one of them is. He comes to stand in front of the steel bars and eyes you with a lusty grin, then reaches to open the door and finds out the key doesn't work.";
-			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orcs to satisfy...";
+			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orc to satisfy...";
 			say "     [line break]";
 			say "[KoghhFuck1]";
 			say "     [line break]";
 			say "     After he's out and away, having throwing the cell door closed behind them, you stand up from the leather bench. Koghh must totally have forgotten that the lock isn't working anymore - or maybe he's just trusting you to be a docile little slave. No matter what, you jump at the opportunity this gives you, snatching up your clothes and gear, then stepping out of the cell.";
 		-- 3:
 			say "     Digging around in the remains of what the people dragged in here had with them, you manage to find several hairpins and bits of wire that you then stuff into the keyhole. With all that stuff in there, you're pretty sure the key won't fit anymore. Not long afterwards, your captors return, or at least one of them is. He comes to stand in front of the steel bars and eyes you with a lusty grin, then reaches to open the door and finds out the key doesn't work.";
-			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orcs to satisfy...";
+			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orc to satisfy...";
 			say "     [line break]";
 			say "[YaturFuck1]";
 			say "     [line break]";
 			say "     After he's out and away, having throwing the cell door closed behind them, you stand up from the leather bench. Yatur must totally have forgotten that the lock isn't working anymore - or maybe he's just trusting you to be a docile little slave. No matter what, you jump at the opportunity this gives you, snatching up your clothes and gear, then stepping out of the cell.";
 		-- 4:
 			say "     Digging around in the remains of what the people dragged in here had with them, you manage to find several hairpins and bits of wire that you then stuff into the keyhole. With all that stuff in there, you're pretty sure the key won't fit anymore. Not long afterwards, your captors return, or at least one of them is. He comes to stand in front of the steel bars and eyes you with a lusty grin, then reaches to open the door and finds out the key doesn't work.";
-			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orcs to satisfy...";
+			say "     'Bah - stupid lock. Wrong time to be stuck - I wanna fuck!' he growls, grabs the door and wrenches it open, completely breaking the lock in the process. That worked just like you planned - though before you can use the now easily opened door to get out of here, there's still a horny orc to satisfy...";
 			say "     [line break]";
 			say "[MulFuck1]";
 			say "     [line break]";
