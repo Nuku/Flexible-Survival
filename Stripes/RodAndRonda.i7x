@@ -400,7 +400,7 @@ to say helpingrod:
 		now hp of Ronda is 10;
 		move Ronda to Mall Atrium;
 		increase score by 50;
-		say "     Eventually forced to swallow, Ronda releases a muffled gasp as you keep your hand over her mouth and she starts to thrash.  Her almost manages to push you off, the renewed strength from her fear only held in check by her lack of control of her changing body.  As the potion takes effect, Ronda begins to shrink down a little and the harsher features of her slut rat face diminish, starting to look more like her old self.";
+		say "     Eventually forced to swallow, Ronda releases a muffled gasp as you keep your hand over her mouth and she starts to thrash.  She almost manages to push you off, the renewed strength from her fear only held in check by her lack of control of her changing body.  As the potion takes effect, Ronda begins to shrink down a little and the harsher features of her slut rat face diminish, starting to look more like her old self.";
 		say "     As clarity and recognition return to her eyes, she stops struggling and looks around, taking in her surroundings as if for the first time.  You whisper firmly that you're rescuing her from some dangerous creatures and she's got to be quiet as they're still around here.  Cautiously, you take your hands from her and thankfully she doesn't scream.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -453,7 +453,7 @@ to say helpingrod:
 			say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him.  'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
 		if calcnumber is 3:
 			say "     You shake your head and tell them that you'd not want to get in the way of their loving reunion and head out, hearing Rod start moaning again as Ronda turns her full attention back on buggering her boyfriend.";
-		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to  them.  Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts.  (Food, chips and a can of soda obtained.)[line break]";
+		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to them.  Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts.  (Food, chips and a can of soda obtained.)[line break]";
 		increase carried of food by 1;
 		increase carried of chips by 1;
 		increase carried of soda by 1;
