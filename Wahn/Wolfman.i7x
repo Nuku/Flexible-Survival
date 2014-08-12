@@ -41,7 +41,7 @@ To say Septus loses:
 to say Wolfmandesc:
 	choose row monster from the table of random critters;
 	if hp of Septus is 100:
-		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the numbers 07.";
+		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";
 		say "     He nods his lupine head at you, saying 'I'm Septus, the talent scout of the Fairhaven Wolves. You don't look half bad - but are you worth joining the best football team of this changed world?' He gives you a toothy grin, then pounces at you.";		
 		now hp of Septus is 0;
 	otherwise if hp of Septus is 6:
@@ -80,7 +80,7 @@ to say Wolfmandesc:
 		now fightoutcome is 19;
 		now combat abort is 1;
 	otherwise:
-		say "     Before you is the strong, muscled wolf you've seen before with 07 emblazoned in red right into his black-furred chest.  Septus, the well-toned wolfman talent scout rushes at you, growling [one of]'Let's see what you're made of!'[or]'Let's spar a bit.'[or]'Time for some endurance training.'[at random]";
+		say "     Before you is the strong, muscled wolf you've seen before with 7 emblazoned in red right into his black-furred chest.  Septus, the well-toned wolfman talent scout rushes at you, growling [one of]'Let's see what you're made of!'[or]'Let's spar a bit.'[or]'Time for some endurance training.'[at random]";
 
 to say fw_attack:
 	if hp of Septus is 6:
@@ -253,7 +253,7 @@ to say JenniferTalkMenu:
 	now title entry is "Chat with her";
 	now sortorder entry is 1;
 	now description entry is "Just talk a bit with Jennifer";
-	if hp of Septus < 50:
+	if hp of Septus < 50 and "Cheerbreeder" is not listed in feats of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to join the cheer-leading squad";
 		now sortorder entry is 98;
