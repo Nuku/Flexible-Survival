@@ -6731,7 +6731,7 @@ Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
 Include Hermaid by Xenophiliac.
 Include Monkey King by Kln.
-
+Include Gorilla by Wahn.
 
 
 
