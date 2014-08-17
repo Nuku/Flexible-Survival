@@ -1,5 +1,5 @@
 Version 5 of Stuck Dragon by hiccup begins here.
-[Version 5.0 - Basic male TG for Christy - no sex yet - Stripes]
+[Version 5.1 - Base level sex - Stripes]
 
 Section 1 - Finding the Building
 
@@ -191,8 +191,10 @@ to say backroomdesc:
 	say "     There are small piles of useless junk and debris scattered around inside the old building.  A fine layer of dust is on almost every surface in sight";
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by the front half of a large dragoness. You can't see the rear of her body, because it's on the other side of the doorway.  There are several bottles of water and packages of food next to the dragoness, which explains why she didn't die of hunger or thirst while being trapped here.";
+	otherwise if hp of Christy < 50:
+		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of debris when the doorway collapsed[if lust of Christy > 2 and lust of Christy < 6].  There is are several huge eggs on the ground in an improvised nest constructed by the dragoness in her new lair[otherwise if lust of Christy > 5].  There [dragoneggsfull] on the ground in an improvised nest constructed by the dragoness in her new lair[end if].";
 	otherwise:
-		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of debris when the doorway collapsed[if lust of Christy > 2 and lust of Christy < 6].  There is are several huge eggs on the ground in an improvised nest by dragoness has constructed in her new lair[otherwise if lust of Christy > 5].  There [dragoneggsfull] on the ground in an improvised nest by dragoness has constructed in her new lair[end if].";
+		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by a pile of debris when the doorway collapsed[if lust of Christy > 2 and lust of Christy < 6].  There are several huge eggs on the ground in an improvised nest constructed by the dragon in his new lair[otherwise if lust of Christy > 5].  There [dragoneggsfull] on the ground in an improvised nest constructed by the dragon in his new lair[end if].";
 
 
 instead of sniffing Back Alley:
@@ -207,6 +209,9 @@ Section 4 - Trapped Dragon Front
 Christy is a woman.  Christy is in Back Room.  The description of Christy is "[christydesc]".
 The conversation of Christy is { "Rawr!" }.
 christysausage is a truth state that varies.  christysausage is usually false.
+mchristytop is a truth state that varies.  mchristytop is usually false.
+mchristybottom is a truth state that varies.  mchristybottom is usually false.
+
 
 to say christydesc:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
@@ -252,9 +257,9 @@ Instead of conversing the Christy:
 	otherwise if hp of Christy is 50:
 		say "     '[one of]Thanks again for freeing me, can I fuck you now?  Gah!  I didn't mean to say that![or]Now I'm stuck with the opposite problem; before I wanted to be filled so bad, but now my... new parts... feel so full and need to be drained.'[or]Damn it, it feels like these balls of mine are in constant need of being drained now!'[or]There's no way they'll let me back into the nunnery like this.  That does sound like it could be fun though.  No!  Bad Christy!  Bad!' she chastises herself.[or]Must think of anything except... hot... wonderful... sex.'[or]First that hot sauce and then that sausage - I'm with spicy foods.  I'd rather have some hot meat anyhow.  Oh, why do I keep saying stuff like that?'[or]This has been such a strange experience for me.  I mean, look at this big, hard cock of mine.  Seems a shame to have it go to waste though.  I'd sure like to give it a try - just to see.  Ack!  No, I didn't mean that.'[or][christytalk01][or][if libido of Christy > 0]Why don't you take a turn being loaded full of eggs?  You know you'll love it.  Ack!  I didn't mean that.'[otherwise]Why don't we see what this big boy can do?  You know you'll love it.  Ack!  I didn't mean that.'[end if][or]Oh, my next confession's going to be a long, strange one.'[in random order]";
 	otherwise if hp of Christy is 51:
-		say "***male christy - sexed up once.";
+		say "***male christy - had oral again.  More dialog to come.";
 	otherwise if hp of Christy is 52:
-		say "***male christy - sexed up 2+.";
+		say "***male christy - had fucking sex.  More dialog to come.";
 
 
 to say christytalk01:
@@ -465,7 +470,7 @@ Instead of fucking the Christy:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
 	now tempnum is 0;
 	if hp of Christy is 0 or hp of Christy is 1:
-		say "     You're at the wrong end to do something like that to the big dragoness.  Besides, you suspect she's rather be freed... to start, at least.";
+		say "     You're at the wrong end to do something like that to the big dragoness.  Besides, you suspect she'd rather be freed... to start, at least.";
 	otherwise if hp of Christy >= 50:
 		say "[maleChristysex]";
 	otherwise if libido of Christy is odd:		[still waiting after female sex]
@@ -1001,13 +1006,102 @@ to say dragonchange2:
 Section 13 - Sex w/Male Christy
 
 to say maleChristysex:
-	say "[bracket]Sex w/male Christy coming soon.[close bracket][line break]";
-[	say "***sex w/Male Christy";
-	if hp of Christy is 50:
-		say "***First time fun w/male Christy.";
+	if lastfuck of Christy - turns < 8:
+		say "     You've played around with Christy recently and his balls still need a little while to fill back up completely.  It'll be much easier to coax the reluctant dragon into some fun if those big nuts of his are in need of another draining.";
+	otherwise if cocks of player is 0 and cunts of player is 0:
+		say "     Somehow you've ended up without a gender despite having been able to completely swap the dragoness's around?  Perhaps you'd best settle yourself before going after him.";
+	otherwise if hp of Christy is 50:
+		say "     You move up beside the large dragon and rub against him, making him rumble softly softly. You scritch over his scaly side, exciting him further.  'Mmm... that feels so good, but there's somewhere else that'll feel even better,' he says with a rumble, rocking his hips to make his cock and balls sway.  'Oh, I mean... I don't want to impose, but they've been feeling so full.  And I know you'll make me feel good.'";
+		say "     You nod and start moving back and under him, rubbing his belly on your way to that expanding cock.  You start by taking it in hand and running your fingers along its throbbing meat, caressing those ridges.  This gets him rumbling all the louder and a thick gob of precum drools from his shaft.  You press your fingers into the gooey mess and spread it over the stiff shaft, making it sheen with his musky pre.  You then press your mouth to his cum slit and start slurping up the dragon pre.  Its taste is strong and exciting, making you want his cum all the more.";
+		say "[mchristy_oral0]";
 		now hp of Christy is 51;
+	otherwise if hp of Christy is 51:
+		say "     You move up beside the large dragon and rub against him, making him rumble softly softly. You scritch over his scaly side, exciting him further.  'Mmm... that feels so good, but I've got something else for you to rub,' he says before catching himself.  'Oh, I mean... ah, I really shouldn't...' he says, trailing off as you continue, watching his engorging cock stiffen further in response.  You nuzzle him and whisper that you could make him feel much better, give him the relief he needs.";
+		say "     'My balls feel so full and heavy.  I know I shouldn't ask, but can you help me drain them again?'  You do your best not to grin, that being your plan all along.  Instead you give him a nuzzle and move back to his pulsing manhood.";
+		say "     As before, you start by running your hands along it, butting at those delightful ridges.  This gets him rumbling all the louder and precum leaks forth from its tip.  Licking your lips at the sight of this, you press them around his cum-slit and start slurping up the dragon pre.  Its taste is strong and exciting, a testament to the horny dragon's virility.  Tasting it only makes you want his cum more.  But how to get it?  Shall you...";
+		if cocks of player > 0 and cock length of player > 4:	[cock of adequate size]
+			say "[link]suck him off (1)[as]1[end link], bend over to [link]get fucked (2)[as]2[end link] or resist this temptation and [link]fuck him instead (3)[as]3[end link]?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				say "[mchristy_oral0]";
+			otherwise if calcnumber is 2:
+				say "[mchristy_top0]";
+				now hp of Christy is 52;
+			otherwise if calcnumber is 3:
+				say "[mchristy_bottom0]";
+				now hp of Christy is 52;
+		otherwise:
+			say "[link]suck him off (Y)[as]y[end link] or bend over to [link]get fucked (N)[as]n[end link]?";
+			if the player consents:
+				say "[mchristy_oral0]";
+			otherwise:
+				say "[mchristy_top0]";
+				now hp of Christy is 52;
+	otherwise if hp of Christy is 52:
+		say "[bracket]More sex w/male Christy coming soon.  Repeating previous content for now.[close bracket][line break]";	[***]
+		say "     You move up beside the large dragon and rub against him, making him rumble softly softly. You scritch over his scaly side, exciting him further.  'Mmm... that feels so good, but I've got something else for you to rub,' he says before catching himself.  'Oh, I mean... ah, I really shouldn't...' he says, trailing off as you continue, watching his engorging cock stiffen further in response.  You nuzzle him and whisper that you could make him feel much better, give him the relief he needs.";
+		say "     'My balls feel so full and heavy.  I know I shouldn't ask, but can you help me drain them again?'  You do your best not to grin, that being your plan all along.  Instead you give him a nuzzle and move back to his pulsing manhood.";
+		say "     As before, you start by running your hands along it, butting at those delightful ridges.  This gets him rumbling all the louder and precum leaks forth from its tip.  Licking your lips at the sight of this, you press them around his cum-slit and start slurping up the dragon pre.  Its taste is strong and exciting, a testament to the horny dragon's virility.  Tasting it only makes you want his cum more.  But how to get it?  Shall you...";
+		if cocks of player > 0 and cock length of player > 4:	[cock of adequate size]
+			say "[link]suck him off (1)[as]1[end link], bend over to [link]get fucked (2)[as]2[end link] or resist this temptation and [link]fuck him instead (3)[as]3[end link]?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				say "[mchristy_oral0]";
+			otherwise if calcnumber is 2:
+				say "[mchristy_top0]";
+				now hp of Christy is 52;
+			otherwise if calcnumber is 3:
+				say "[mchristy_bottom0]";
+				now hp of Christy is 52;
+		otherwise:
+			say "[link]suck him off (Y)[as]y[end link] or bend over to [link]get fucked (N)[as]n[end link]?";
+			if the player consents:
+				say "[mchristy_oral0]";
+			otherwise:
+				say "[mchristy_top0]";
+				now hp of Christy is 52;
+
+
+to say mchristy_oral0:
+	say "     Hungry for another meal of the dragon's thick, spicy cum, you start rubbing your [bodydesc of player] body against that mighty shaft.  The feel of those ridges across your chest[if breasts of player > 0 and breast size of player > 4] and between your boobs[end if] excites you all the more.  Your hands reach further back, rubbing over the smooth scales of Christy's ballsac.  It may just be your excitement, but those orbs feel large, heavy and hot with the semen you crave.";
+	say "     All of this has poor Christy rumbling and panting, the flow of pre steadily increasing.  You work your tongue and lips across his glans and into his cum slit, enjoying the dragon's moans as you tease him.  His cock throbs with the slow, strong beat of the dragon's big heart and his meaty hips rock as he resists thrusting that giant pillar of flesh into you.  With him so worked up and you driving him wild, you build him up to a big blast of dragon seed that floods your mouth to the point of overflowing and splatters your face and upper body with the rest of it.  It fills your senses of taste and smell with its spicy flavour, rich with virility.  You gulp down as much as you can, your belly left rounded with your sticky meal.";
+	now tempnum is 0;
+	say "[dragonchange2]";
+
+to say mchristy_top0:
+	say "     Wanting more from the dragon this time, you make sure to get him well and truly worked up first.  By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against the drooling glans.  He looks down at you in surprise, the desire to mount you clearly showing even as he tries to hold back.";
+	if cunts of player > 0:
+		say "     'Ohhh, I so want to fill you with eggs[if lust of Christy > 0] for a change[end if],' he rumbles.  'But I'm so big.  I guess since I've got this big guy, it'd be a waste to not give it a try at least once, as long as you're sure.'  You nod eagerly even as his body's already moving atop you, the dragon's throbbing cock more than ready.  'Well, I'm sure you're going to look so hot when you're filled with my eggs.  Eep!  I mmmm...' he starts to interject, but gets cut off as his thick manhood pushes its way into you.";
+		say "     Wanting more from the dragon this time, you make sure to get him well and truly worked up first.  By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against that drooling glans.  He looks down at you in surprise, the desire to mount you clearly showing even as he tries to hold back.  'But I'm so big.  I don't want to hurt you.  I guess since I've got this big guy, it'd be a waste to not give it a try at least once.'  You heartily agree, telling him it'll be fine and that it'll be a chance to see how the other half lives.  At this point, even just talking about it has gotten him aroused further the tip of his cock begins to make its way into your heated cunny.";
+		say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of player] body a chance to adjust[if cunt length of player < 30].  Even with this, it is a little uncomfortable at first before your nanine-infused tissue stretches and accepts it[otherwise].  You hardly need it though, your oversized cunt hungrily welcoming it in[end if].  He is so large that [if scalevalue of player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat.  You are so filled that your [body size of player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[otherwise if scalevalue of player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[otherwise if scalevalue of player is 4]your torso bulges prominently thanks to the phallic intruder[otherwise]your belly has a marked, phallic bulge showing[end if].  By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
+		say "     His first few thrusts are slow and cautious, too much so for your now overloaded libido and you push back, urging him for more.  His excessive restraint begins to waiver and his pace picks up, drawing a long moan from you as those pleasure-giving ridges slide in and out past your sensitive folds and clit.  Your cunt clenches and squeezes around his meat each time this happens, bringing greater pleasure to the randy red dragon.";
+		say "     '[if lust of player > 0 and the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with -ohhh- some eggs for a change[otherwise if lust of Christy > 0 and the player is impreg_able]Oh, I think -mmm- someone's looking forward to being the one filled with -ohhh- some eggs for a change[otherwise if the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with some eggs[otherwise if the player is impreg_now]Oh, I think -mmm- someone's looking forward to being filled with -ohhh- some eggs real soon[otherwise]Oh, I hope you have room for more, because I'm going to fill you with so much cum[end if],' he rumbles lewdly, scarcely able to resist voicing his dirty thoughts by this point.  And true to his word, the dragon's climax comes with a roar of release soon after.  Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of player < 4]so much that you bloat and swell from his prodigious output[otherwise]so much that your belly plumps considerably from the addition his prodigious output[end if].  You cry out in climactic release as well, those titanic blasts filling your womb and gushing out around your stretched cunny driving you over the edge.  After he's done, [if scalevalue of player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[otherwise]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[fimpregchance]";
+		if ( dragontype is odd and (bodyname of player is not "Slutty Dragoness" or facename of player is not "Slutty Dragoness" or cockname of player is not "Slutty Dragoness" or skinname of player is not "Slutty Dragoness" or tailname of player is not "Slutty Dragoness") ) or ( dragontype is even and dragontype > 0 and (bodyname of player is not "Horny Dragon" or facename of player is not "Horny Dragon" or cockname of player is not "Horny Dragon" or skinname of player is not "Horny Dragon" or tailname of player is not "Horny Dragon") ):
+			say "[dragonchange]";
 	otherwise:
-		say "***Sex menu w/male Christy.";		]
+		say "     'But that'd be so hot.  I mean, it's a sin, isn't it?  Such a naughty, dirty sin.  Oh, I'm such a bad nun,' he rumbles, shaking his head even as his body is already moving atop you, the dragon's throbbing cock more than ready.  'Well, I guess I really do need a draining and you'll look so hot stuffed full of my cum.  Eep!  I mmmm...' he starts to interject, but gets cut off as his thick manhood pushes its way into you.";
+		say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of player] body a chance to adjust[if the player is not twistcapped].  Even with this, it is quite uncomfortable at first before your nanine-infused tissue stretches and accepts it[otherwise].  You hardly need it though, your well-stretched asshole hungrily welcoming it in[end if].  He is so large that [if scalevalue of player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat.  You are so filled that your [body size of player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[otherwise if scalevalue of player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[otherwise if scalevalue of player is 4]your torso bulges prominently thanks to the phallic intruder[otherwise]your belly has a marked, phallic bulge showing[end if].  By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
+		say "     His first few thrusts are slow and cautious, too much so for your now overloaded libido and you push back, urging him for more.  His excessive restraint begins to waiver as the sinful delight of anal sex tempts him and his pace picks up, drawing a whimpering moan from you as those pleasure-giving ridges slip past your anus and rub against your prostate with every slide in and out.  Your rectal walls squeeze and milk at his meat each time this happens, exciting the randy red dragon all the more.";
+		say "     'Ohhh, you're so nice and tight.  Who wouldn't want to fuck a hot ass like yours?  I can tell I'm going to be filling you up so nice and full reeeeal soon,' he rumbles lewdly, no longer willing or able to stop himself from voicing his dirty thoughts by this point.  And true to his word, the dragon's climax comes with a roar of release soon after.  Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of player < 4]so much that you bloat and swell from his prodigious output[otherwise]so much that your belly plumps considerably from the addition his prodigious output[end if].  You cry out in climactic release as well, those titanic blasts filling your belly and gushing out around your stretched asshole driving you over the edge.  After he's done, he pants and stays buried inside you for a while, too drained to pull out.  Eventually though [if scalevalue of player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[otherwise]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[mimpregchance]";
+		if ( dragontype is odd and (bodyname of player is not "Slutty Dragoness" or facename of player is not "Slutty Dragoness" or cockname of player is not "Slutty Dragoness" or skinname of player is not "Slutty Dragoness" or tailname of player is not "Slutty Dragoness") ) or ( dragontype is even and dragontype > 0 and (bodyname of player is not "Horny Dragon" or facename of player is not "Horny Dragon" or cockname of player is not "Horny Dragon" or skinname of player is not "Horny Dragon" or tailname of player is not "Horny Dragon") ):
+			say "[dragonchange]";
+	now mchristytop is true;
+
+
+to say mchristy_bottom0:
+	say "Having reached your decision, you know you'll need to work the dragon up to the point he can no longer resist your advances if you want to enact your plans of mounting him.  To this end, you continue groping and licking his large shaft, all the while letting his pre drool down onto your [cock of player] cock in preparation[if lust of christy > 0 or libido of christy > 0].  Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but the thought of reminding Christy that he was once a submissive dragoness bottom urges you on[otherwise].  Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but remembering how eager he was to be mounted as a dragoness urges you on[end if].  Soon his cock is pulsing all the harder and his rumbling is deep and heavy with lust.";
+	say "     Once you've got him in this state, you move back behind him.  Still rubbing those hefty balls of his with one hand, you bring the other to his crinkled hole[if anallevel is 3], rubbing its warm flesh as you give it a slow lick[end if].  He starts with surprise at this unexpected shift in focus, though his rear grinds back against your touch.  'Wha- what are you -ohh- doing back there?  It feels good though and soooo naughty,' he rumbles.  As anticipated, the randy red dragon is too worked up at this point to object and you start working your [if anallevel is 3]tongue and [end if]fingers into his relaxing back door.";
+	say "     Once you've gotten his hole sufficiently prepared, you bring your [cock size desc of player] cock into position[if scalevalue of player < 3], having to partially climb atop him and cling to his raised tail to do so[otherwise if scalevalue of player is 3], having to subtly guide his hips lower so you can get lined up[otherwise], leaning your [body size of player] chest across his back as get lined up[end if].  If Christy has anything to say about this, it gets lost in the long, rumbly moan of pleasure as you slide your pre-slickened member into his meaty rump.  Though from the way his ass presses back into your thrust, it's clear the dragon's body is more than happy to have you pushing deep into him[if libido of christy > 0] once again[end if].  Gripping his wide bottom, you start thrusting, pumping your [cock of player] rod into him slowly at first[if cock length of player < 20], not that there's much need given the size of his red tailstar[otherwise], his large red tailstar rapidly adjusting[end if].";
+	say "     The hot flesh of the red dragon's anus squeezes and tugs at your meat, encouraging you on in its demands for a thorough fucking.  Not one to disappoint, you pound away at him, enjoying the soft, slutty moans and rumbles of pleasure coming from the horny male.  The former dragoness, clearly still longing to be fucked and filled as much as before, is lost in lustful ecstasy.  You can hear the wet slap of his erect member against his underbelly with each rock of his hips.  'Give it to me.  Oh, I'm such a bad nun, but fuck my ass hard and deep,' he pants.  His rectal walls clench down around you harder, pulling at your pounding member until you can take no more and provide him with the hot creamy blasts of your seed.  You pump your [cum load size of player] load into him, painting the dragon's bowels with your semen.  Christy roars partway through your orgasm as he cums hard, anus gripping your cock and pumping it for even more.  His own balls throb and pulse, draining themselves into a messy pool beneath the well-fucked dragon.";
+	say "     It takes you a while to recover from the powerful orgasm and slip your spent shaft free of the dragon's creamy bottom[if cock width of player < 20].  A trickle of your gooey load leaks from his messy hole and you can't resist giving him a brief fingering to hear him moan[otherwise].  A rivulet of your gooey load flows gradually from his messy hole and you can't resist giving him a brief fingering to hear him moan[end if].  'Oh, that feels so nice.  Such a delightfully naughty surprise.  I'm such a bad nun though,' he sighs even as he wiggles his ass to better enjoy the feel of your seed pooled inside his ass.";
+	now mchristybottom is true;
+
 
 
 Section 14 - Heat Table
@@ -1135,6 +1229,9 @@ Section 15 - Guide to Christy Stats
 [ 6 = oral twice ]
 [ 7 = UB'd again ]
 [ 8 = made up    ]
+[ 50 = TG to male ]
+[ 51 = oral again ]
+[ 52 = fucked ]
 [ 90 = banished  ]
 [ 99 = made into egg slave ]
 [ 100 = gone     ]
@@ -1172,7 +1269,7 @@ Section 16 - Endings
 
 When play ends:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
-	if hp of Christy < 90:
+	if hp of Christy < 50:
 		if NoIntroduction is 1:
 			if bodyname of player is "Slutty Dragoness":
 				if humanity of player is less than 10:
@@ -1195,6 +1292,9 @@ When play ends:
 					say "     After you freed her from the doorway where you found her, Christy's eggs eventually hatch.  Caring for her children helps to mellow out her lust enough for her to learn how to control it[if hp of Christy >= 7], more or less[end if].  Her children grow up to be fine dragons and she loves them dearly, even after they start kidnapping princesses[if dragonessfuck is 2 and hp of Christy is not 8].  She never discovers that you were the one who knocked her up before freeing her[end if][if humanity of player > 9 and hp of Christy > 3].  Her dragon offspring permit you to visit the dragoness from time to time and she eagerly accepts your lustful advances now[end if][if humanity of player > 9 and hp of Christy >= 7 and dragontype > 0].  While you don't enter her womb again, preferring to stay as you are, you do help her introduce some [']new friends['] her offspring have found to this unusual pleasure, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
 				otherwise:
 					say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3].  You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if][if humanity of player > 9 and hp of Christy >= 7 and dragontype > 0].  You sometimes even get the special treat of helping her intimately introduce one of her eager fans to her womb, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
+	otherwise if hp of Christy < 90:	[male Christy endings]
+		let bb be 0;	[do nothing placeholder]
+		[ say "***Endings for male Christy to be added later";	]
 	otherwise if hp of Christy is 90 or hp of Christy is 100:
 		if humanity of player >= 10:
 			say "     You don't ever see Christy again, though you're pretty sure you hear about her from time to time, as news of large and lustful dragons crop up from time to time that fit her description rather well.  It seems her and her offspring have become quite the scourge, ravaging their territory for food and snatching up victims and kidnapping princesses.  These princesses are eventually returned, but full of eggs, only to be captured again and again a few months later.  Many brave warriors go out to vanquish this great beast, but are never heard from again save for rumours that they've become lustful pets of their would-be adversary.  It seems the dragon doesn't take kindly at all to [']heroes['].";
