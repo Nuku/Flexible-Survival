@@ -100,4 +100,3 @@
 <p class="hangingin2"><b>Story.ni by Flexible Society Main File</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Story.ni by Inform</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Template For FS.i7x</b> - non-folder found where author folders should be</p>
-<p class="hangingin2"><b>Foul Scuttler.i7x by Xenophiliac</b> - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Outerling by Xenophiliac')</p>
