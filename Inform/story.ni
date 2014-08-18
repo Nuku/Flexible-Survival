@@ -6730,6 +6730,7 @@ Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
 Include Hermaid by Xenophiliac.
+Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
 
@@ -6825,6 +6826,7 @@ Include Orc Lair by Wahn.
 Include Val by Wahn.
 Include Chris by Wahn.
 Include NPC Interactions by Wahn.
+Include Pretty Kitty by Xenophiliac.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
