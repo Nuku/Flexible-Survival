@@ -89,6 +89,7 @@ to say OrcBeaten:
 					say "     Shaking off the urge to pound into him hard, you check the orc for loot, then leave the room.";							
 			otherwise:
 				say "     Shaking off the funny feeling you get at the thought that he was ready to fuck you with that massive pole, you check the orc for loot, then leave the room.";	
+			now lastfuck of Mul is turns;
 		otherwise if OrcSpecialFightNumber is 2:
 			say "<special fight victory 2>";
 		now inasituation is false;

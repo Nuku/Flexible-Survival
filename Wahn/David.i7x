@@ -991,7 +991,7 @@ instead of going to Bunker while hp of David is 4 and libido of David < 53 and c
 			say "     They stay in that tight hug for a moment, David pressed against Brutus chest, his arms not even close long enough to reach around the demon's wide chest. Then suddenly, Brutus clears his throat, his face taking on an interesting shade of embarrassed purple as he lets the young soldier in his arms go. As David steps away, you see the demon's cock in a quite aroused state, hanging where it must have pressed right against David. With you standing right next to them, both the soldier and the demon seem to come to the decision to ignore the last bit at the same time, resulting in a somewhat awkward 'See ya.' and 'Sure, friend.'";
 		now libido of David is 53;
 			
-instead of going to Bunker while hp of David is 4 and libido of David is 57: [David wants Brutus to get out more]
+instead of going to Bunker while hp of David is 4 and (libido of David > 56 and libido of David < 80): [David wants Brutus to get out more]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DAVID/BRUTUS TRIP INTERACTION";
@@ -1016,7 +1016,7 @@ instead of going to Bunker while hp of David is 4 and companion of player is dem
 			say "     As you walk into the bunker with Brutus in tow, you run into David just on his way up to the library to return a book and grab a new one. He gives the both of you a friendly smile, greeting you and giving Brutus a clap on the arm, squeezing it affectionately as he says 'Nice to see you, big guy.' Then he moves on, walking up the stairs and returning some time later with something new to read.";
 		otherwise: [Brutus is rather more obvious]
 			say "     As you walk into the bunker with Brutus in tow, the large demon makes a beeline for David, who was just [one of]reading a book[or]sorting through his supplies[or]cleaning his weapon[or]making his bed[or]folding his clothes[at random]. With a loud 'Hello, my friend!' he pulls the young soldier into a tight embrace, the smaller human pressed against his muscled chest. Watching them, you notice the demon's hand cupping David's ass as he holds him. Putting the man down a moment later, Brutus walks back to you and takes his usual place - behind your shoulder on the right side.";
-	otherwise if libido of David is 57: [the player talked with them both about each other]
+	otherwise if libido of David > 56 and libido of David < 80: [the player talked with them both about each other]
 		if a random chance of 1 in 2 succeeds: [David greets the player and Brutus]
 			say "     As you walk into the bunker with Brutus in tow, you run into David just on his way up to the library to return a book and grab a new one. He gives the both of you a friendly smile, greeting you and giving Brutus a clap on the arm, squeezing it affectionately as he says 'Nice to see you, big guy.' Though David doesn't stop with that and proceeds to stroke his hand over Brutus wide and muscular chest, finally reaching up for his shoulder to pull the tall demon down a bit and give him a kiss. With a flirty 'See you later' and a slap on your infernal companion's ass, David then moves on, walking up the stairs and returning some time later with something new to read.";
 		otherwise: [Brutus is rather more obvious]
