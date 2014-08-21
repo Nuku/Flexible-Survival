@@ -363,6 +363,13 @@ SpikedCollarObtain is an action applying to nothing.
 FuzzyCollarObtain is an action applying to nothing.
 NametagCollarObtain is an action applying to nothing.
 
+check SpikedCollarObtain:
+	if Collar Rack is not visible, say "Unfortunately, you can't make collars out of air." instead;
+check FuzzyCollarObtain:
+	if Collar Rack is not visible, say "Unfortunately, you can't make collars out of air." instead;
+check NametagCollarObtain:
+	if Collar Rack is not visible, say "Unfortunately, you can't make collars out of air." instead;
+
 understand "black spiked" as SpikedCollarObtain.
 understand "black spiked collar" as SpikedCollarObtain.
 understand "buy black spiked" as SpikedCollarObtain.
