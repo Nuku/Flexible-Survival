@@ -1,5 +1,5 @@
 Version 2 of Kristen by Stripes begins here.
-[ Version 2.3 - Infection final ]
+[ Version 2.4 - Another post-TF sex scene - loving Kristen special ]
 "Adds an Arctic Fox named Kristen to the Flexible Survival game."
 
 Section 1 - Event
@@ -567,6 +567,11 @@ to say kristentfsexmenu:
 			now title entry is "Against the wall";
 			now sortorder entry is 2;
 			now description entry is "pin her back to the wall and fuck her senseless";
+		if libido of Kristen is 3:
+			choose a blank row in table of fucking options;
+			now title entry is "Cock worship + sex";
+			now sortorder entry is 2;
+			now description entry is "enjoy some oral attention from your loving mate before fucking her";
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
@@ -575,7 +580,7 @@ to say kristentfsexmenu:
 	now title entry is "Give cunnilingus";
 	now sortorder entry is 6;
 	now description entry is "eat her out";
-[		choose a blank row in table of fucking options;
+[	choose a blank row in table of fucking options;
 	now title entry is "69";
 	now sortorder entry is 7;
 	now description entry is "share some mutual oral pleasure";		]
@@ -610,6 +615,8 @@ to say kristentfsexmenu:
 					say "[kristentfsex05]";
 				otherwise if nam is "Against the wall":
 					say "[kristentfsex06]";
+				otherwise if nam is "Cock worship + sex":
+					say "[kristentfsex07]";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Kristen is turns;
@@ -663,6 +670,15 @@ to say kristentfsex06:
 	say "     Burying your face in her bosom, you lick and kiss at her furry breasts.  Lightly nibbling at her pierced nipples gets her moaning and yipping all the more.  And that reaction extends to her quivering cunny, which clenches down each time.  Janice watches on with amusement, trying to look regal as she lays on the divan all while frigging her dripping cunny frantically.";
 	say "     The two of you go at it like this for quite some time, pausing or adjusting the pace as needed to extend your frantic fucking.  Certainly the vixen is having trouble holding back, already having had a few quick orgasms and revving up for a big one.  Getting fucked like the first time you claimed her is clearly a big turn-on for the horny vixen.  And you're rapidly approaching the point of claiming her this way again.";
 	say "     By this point, the vixen's cunt is practically pulling and tugging at your cock with a need for the hot seed it can provide and your pulsing rod is more than willing to provide.  With a few hard slams, you drive yourself fully into her and groan loudly, unleashing your [cum load size of player] load into her needy womb[if cock width of player < 12].  Your hot output makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise if cock width of player < 24].  Your ample output makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise if cock width of player < 36].  Your impressive output stuffs her to overfilling and makes the white fox cry out as her own orgasm can no longer be held back.  This sets her vagina into a series of spasms that works to milk every last drop you can give[otherwise].  Your excessive output stuffs her to the point of bloating her belly.  This makes the white fox cry out as her own orgasm can no longer be held back.  Her vagina unleashes a series of spasms that works to milk every last drop you can give, making her all the more rounded and overfull[end if].  Finished with her now, you let her drop to the floor and she lays there, panting against the wall as [if cock width of player < 24]a trickle[otherwise]a steady flow[end if] of your gooey semen leaks from her recently stuffed pussy.";
+
+to say kristentfsex07:
+	say "     Pulling Kristen into your arms, you hug her close, telling her you want to spend some time with your special vixen.  She releases a pleased yip as you give her bottom a squeeze.  Her tail flags up and she rubs her body eagerly against yours, her soft-furred bosom pressed [if breast size of player > 0]against your own[otherwise]to your chest[end if].  With loving affection in her eyes, she presses her muzzle to your lips and kisses you passionately.";
+	say "     'Oh, my wonderful mate.  Here, have a seat so I might please you.'  Moving to her knees between your bent legs, she nuzzles at your loins.  Moaning as she scents your manhood, she places one paw on your [if cockname of player is not listed in infections of InternalList]balls[otherwise]hip[end if] even as the other moves between her legs.  She starts with a few slow licks along your length before lavishing it with attention.  She works her tongue agilely over every square centimeter of your [cock size desc of player] shaft as she worships it lustfully while fingering her dripping cunny.";
+	say "     In time, the tonguework grows more heated and soon enough she's plunging her muzzle down over your erect penis.  She licks and sucks at it, swallowing down your precum and searching for more.  Her tongue rubs across your shaft and glans in her quest to pleasure you.  Her muzzle is warm and wet, a delight around your [cock of player] rod[if cockname of player is not listed in infections of InternalList] while she caresses your balls[end if].";
+	say "     As good as this blow job is, you don't want to miss out on the opportunity to mate with the amorous vixen.  With some reluctance, you guide her head back and, after thanking her for her wonderful work, tell her to lay down across the divan so you might fuck her.  She smiles happily and, pulling her fingers from her dripping snatch with a wet slurp, moves to lay back on the plush lounger.  She smiles up at you, runs her paws over her sexy body and spreads her legs, wet fingers now holding her snatch open in lustful invitation.  And while you need no further enticement at this point, the sight is still a beautiful and sexy one.";
+	say "     Moving overtop of your vulpine mate, you run your hands through her ivory fur.  You lean in and kiss her even as you're sliding your [cock of player] cock into her wet and heated snatch[if cock length of player < 8]with ease.  Her cunny welcomes your pulsing rod into it, eager to have her mate inside her[otherwise if cock length of player < 16]steadily.  Her dripping cunny stretches open, slick and ready to accommodate your pulsing rod inside it[otherwise]slowly.  Her cunny needs to stretch wide to accommodate your pulsing rod inside it, but is slick and ready thanks to her preparatory fingering[end if].   The vixen releases a deep moan of pleasure into the kiss as you thrust into her[if cock length of player < 12].  Once fully hilted in her[otherwise].  Once you've filled her with as much as she can take[end if], you ease your hips back and start thrusting, pumping your meat into the moaning fox woman while she hugs you tightly.";
+	say "     'Oh yes, baby.  That feels so good.  I love you so much.  Mmm... fuck me, my studly mate,' she yips, grinding her hips into your thrusts.  She pants heavily, already quite worked up from the fun earlier and you're also getting close to finishing.  You do your best to hold out for the eager vixen while giving her the lustful pounding she desires.  With one hand on her tit and the other supporting yourself, you fondle her breast and tease her nipple, loving the yips and whimpers of delight as you play with her piercing.  This all soon proves to be too much for the lovely vulpine and she arches her back with a loud yiff of orgasmic release.  Feeling her cunt squeezing and spasming around your shaft builds your excitement even higher and you fuck her all the more eagerly.  With her orgasm waning, you reach your climax and shoot your hot seed into her, setting off a second climax in the female.  The scents and sounds of sex are thick in the air as you pump [if cock width of player < 24]every drop of your [cum load size of player] load into her[otherwise]as much of your [cum load size of player] load as you can into her, the excess gushing out around your pulsing manhood[end if].";
+	say "     After your lustful mating is done, the two of you cuddle for some time.  Janice, who's been watching with an eager grin and a paw between her thighs, joins the two of you for some snuggling and heavy petting once your special couples-time is over.";
 
 
 Section 8 - Variable Charts
