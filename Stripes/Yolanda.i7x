@@ -1,5 +1,5 @@
 Version 1 of Yolanda by Stripes begins here.
-[Version 1.1 - Varied sex while suspended]
+[Version 1.2 - Jewelry box & key fob specials]
 
 "Adds a dominant Raven NPC named Yolanda to the Flexible Survival game."
 
@@ -22,6 +22,7 @@ The description of Yolanda is "[yolandadesc]".
 The conversation of Yolanda is { "Caw!" }.
 yolandaqytat is a truth state that varies.  yolandaqytat is usually false.
 yolandatreasure is a truth state that varies.  yolandatreasure is usually false.
+yolandakeyfob is a truth state that varies.  yolandakeyfob is usually false.
 
 to say yolandadesc:
 	say "     Upon casual examination, Yolanda appears to be a normal raven, but enlarged to human scale and wearing some golden jewelry.  Keeping to the posture of a bird most of the time, it takes a while to realize that she can take on a more human posture when she feels it's necessary and even has small, taloned hands hidden under her wings['] primary feathers.  She has sharp eyes, a sharper beak and an even sharper tongue.";
@@ -36,16 +37,17 @@ Instead of conversing the Yolanda:
 		say "     Introducing yourself to the raven, she looks you up and down with a sideways, avian stare.  'Oh sure, just come barging right in.  With manners like that, you're either a looter or some sex fiend.  Probably both, with my luck.'  You try to explain that you're a survivor looking for others until rescue, but the bird just gives you a sharp, laughing caw!  'You'll be waiting a long time for that, honey.  If they haven't gotten off of their asses yet, I doubt they're going to bother trying at this point.";
 		say "     'Now, back to the current matter... the name's Yolanda and I ain't in the mood to be raisin['] my tail to just anyone who comes wandering in here.  I get hassled enough by those pesky gryphons who keep popping up around here as it is.'  She pauses to look you over with an avian, sideways stare.  'That said, should you be looking to take a turn on bottom... then I think something might be arranged...' she says with a faint grin in her voice, pulling the corner of a blanket off of an assorted box of leather straps and strap-ons.";
 		now hp of Yolanda is 1;
+		now Raven Key Fob is unresolved;
 	otherwise if yolandaqytat is false and a random chance of 1 in 3 succeeds:
 		say "     'Those blue gryphon herms are always showing up around here.  Those feather-brains have gotten some fool notion in their heads that there's something special around here.  As far as I can tell, they're the only ones around here who're [']special[']... in the Olympic sense.'";
 		if findablestairs is 1:
 			say "     Mentioning that you heard something about that from one of them acting as a guide for the others, she caws and rolls her eyes.  'Great!  Now they're telling others to come around here to bug me[if hp of Yolanda > 1].  Well, at least you've been able to provide some amusement[end if].'";
 		otherwise:
-			say "     Inquiring for more details on what the gryphons are doing, she shakes her head.  'I'm not really sure.  All I ever get out of them is nonsense.  Some foolishness about a crazy [bold type]guard gryphon[roman type] who told them about a special stairwell.  And so they keep looking in this here and come up to my apartment to harass me.  Damn pests, most of them.'";
+			say "     Inquiring for more details on what the gryphons are doing, she shakes her head.  'I'm not really sure.  All I ever get out of them is nonsense.  Some foolishness about a crazy [bold type]guard gryphon[roman type] who told them about a special stairwell.  And when they come looking for it, they keep coming into my building and going up the stairs straight to my apartment to harass me.  Damn pests, most of them.'";
 		now yolandaqytat is true;
-[	otherwise if jbfound < 2 and Jewelry Box is unresolved and a random chance of 1 in 3 succeeds:
+	otherwise if jbfound < 2 and Jewelry Box is unresolved and a random chance of 1 in 3 succeeds:
 		say "     'I've got a nice collection of pretties, don't you think?  I'm sure it's all because of some compulsion from being a raven, but that doesn't make them any less lovely,' she muses, holding up a pearl necklace in her talons.  'Besides, if you're right and we do actually get rescued, it won't hurt to have a few things to ensure I'm comfortable.  Should you come across anything particularly nice, be sure to keep me in mind,' she says, brushing a wing sensually along your side.  'A [bold type]jewelry box[roman type] would be a good place to start.  That's where I got most of these.'";
-		now jbfound is 1;		]
+		now jbfound is 1;
 	otherwise:
 		say "     [one of]'You say [']Nevermore['] and I'll peck out your gizzard.'[or]'If you want to be rewarded with a chance to be on top, be on the lookout for some more pretties for my collection.'[or]'I keep seeing those pesky blue gryphons around here.  They're occasionally amusing when I'm willing to put up with their foolishness.'[or]'I've got the place all to myself these days... aside from the occasional nosey visitor,' she adds, giving you a steely gaze.[or]'After the outbreak, I pecked through the other apartments for what I needed.  I'm pretty well off for supplies and even got myself a nice, shiny collection,' she adds, shifting her pile of jewelry and junk with one foot as she admires her trinkets.'[or]'Maybe you can be of some use to me.  Bring me some nice trinkets if you happened to find any.'[or]Setting down a shiny marble she was admiring, she rakes her shiny collection a little closer.[or]'I've already gone through the other apartments a couple of times.  That's how I put together my collections,' she says, glancing from her pile of shiny trinkets and box of sex toys.  'Some of them were mine, obviously, but it's not like anyone's going to be back for theirs, so why should they go to waste?'[at random]";
 
@@ -88,11 +90,16 @@ to say sexwithYolanda:
 			now title entry is "Pirate gold reward";
 			now sortorder entry is 10;
 			now description entry is "trade a piece of pirate gold for some special fun";
-[		if jbfound is 2:
+		if jbfound is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Jewelry box reward";
 			now sortorder entry is 11;
-			now description entry is "give her the jewelry box you found";		]
+			now description entry is "give her the jewelry box you found";
+		if yolandakeyfob is true:
+			choose a blank row in table of fucking options;
+			now title entry is "Key fob reward";
+			now sortorder entry is 12;
+			now description entry is "give her the raven key fob you found";
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -119,6 +126,8 @@ to say sexwithYolanda:
 						say "[yolandaspecial01]";
 					otherwise if nam is "Jewelry box reward":
 						say "[yolandaspecial02]";
+					otherwise if nam is "Key fob reward":
+						say "[yolandaspecial03]";
 			otherwise:
 				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 		if hp of Yolanda is 1, now hp of Yolanda is 2;
@@ -270,17 +279,46 @@ to say yolandaspecial01f:
 
 
 to say yolandaspecial02:
-	say "***jewelry box";
+	say "     Yolanda tries to appear disinterested when you first reveal the jewelry box to her, but you can see the gleam of interest in her eye.  'Oh, a jewelry box.  I've already got a few of those,' she says, motioning to a few scattered among her collection of shiny objects.  'But I guess another one wouldn't hurt.  I'll just set it here and you can have a little fun as a reward.  How does a turn on top sound to you?'  She turns around and raises her tailfeathers and she puts her new acquisition in the center of her collection, giving you an enticing view of her cloacal cunny as she does.  With thoughts of sex clouding your judgement, you agree to the trade - as long as you can take her on her back.  Eager to get the ornate box and its shiny contents for her collection, she agrees with little reluctance.";
+	if cocks of player > 0:
+		say "[yolandaspecial02m]";
+	otherwise:
+		say "[yolandaspecial02f]";
 	now jbfound is 3;
+
+to say yolandaspecial02m:
+	say "     As requested, the raven rolls onto her back a bit clumsily.  With her spindly avian legs in the air, she makes a come-hither motion with her talons.  You're given a fine view of her damp pussy nestled in her feathers.  You toss aside your gear as quickly as you can, quickly growing hard at the sight of the black beauty on display for you.  You run your hands through her soft feathers and sink your [cock of player] shaft into her slick hole[if cock length of player > 24].  Given your immense size, she's quite tight and you tease about how you're looking forward to stuffing the sexy bird until she's full[otherwise if cock length of player > 12].  Given your large size, she's quite snug and you tease her about how you're looking forward to stuffing the sexy bird[otherwise].  You slide easily into her warm cloaca[end if], to which she responds with a sharp caw.";
+	say "     Sinking fully into her, you lean overtop of the raven and run your hands through her soft feathers, rubbing the bird's chest as you gently hold her down while fucking her zealously.  Despite her preference as the one topping, she's certainly enjoying her turn on the bottom and being pinned on her back makes it even kinkier for your avian lover.  She releases soft caws and moans as you pound away, her thin legs waving in the air as you thrust.  Her inner walls are flexible, but strong, allowing you to thrust easily into her, but then gripping and squeezing tightly at your manhood once inside her.  The two of you go at it like this for some time, eventually culminating in a sticky release that leaves you both flopped out in her nest and panting heavily.";
+
+to say yolandaspecial02f:
+	say "     Yolanda selects a ridged dildo to be mounted on the strap-on harness she provides you.  The toy is a deep blue in colour and eight inches long.  After tossing aside your gear quickly, you make a show of teasing it across your own juicy folds as the raven rolls onto her back a bit clumsily.  With her spindly avian legs in the air, she makes a come-hither motion with her talons.  You're given a fine view of her damp pussy nestled in her feathers while you put on the harness.  This one comes with a short dildo on your end to slip into your vagina while you wear it.  Now ready to go, you run your hands through her soft feathers and sink the ridged rod into her slick hole.  You take your time mounting her, popping one ring after the other into her, enjoying each little caw she makes as you push what must be one of her favourite toys into her cloacal cunny.";
+	say "     After sinking fully into her, you lean overtop of the raven and run your hands through her soft feathers, rubbing the bird's chest as you gently hold her down while fucking her zealously.  Despite her preference as the one topping, she's certainly enjoying her turn on the bottom and being pinned on her back makes it even kinkier for your avian lover.  She releases soft caws and moans as you pound away, her thin legs waving in the air as you thrust.  Her inner walls are flexible, but strong, allowing you to thrust easily into her, but then gripping and squeezing tightly at the ridged toy once inside her.  This causes it the short dong inside you to shift and slide, ensuring you recieve your due pleasure as well.  The two of you go at it like this for some time, eventually culminating in a sticky release that leaves you both flopped out in her nest and panting heavily.";
+
+
+to say yolandaspecial03:
+	say "     At first, Yolanda seems disinterested in the jingly set of keys you pull out.  'Oh, that's no big deal.  I've already got plenty of key rings.  They're shiny, but nothing special.  I have enough of them.'  Showing her the small raven figurine attached to it does get her to give them a second look though.  'Hmmm... that's interesting at least.  I guess it's not so bad.  I can put some of my shinier keys on it and get rid of the ones that aren't so pretty.  I guess you deserve a little reward for it.  I'll let you fuck me, but I'm still going to be top for this one.'  Feeling that's an adequate trade, you agree and toss the keys and fob onto her collection.";
+	if cocks of player > 0:
+		say "[yolandaspecial03m]";
+	otherwise:
+		say "[yolandaspecial03f]";
+	now yolandakeyfob is true;
+
+to say yolandaspecial03m:
+	say "     The raven motions with one wing for you to get down on the cushions.  You toss aside your gear and flop out on the bird's plush nest.  This gives you a good view between her legs as she strides overtop of you, her dark-skinned pussy nestled in her feathers.  Using one of her avian feet, she takes hold of your cock and gives it a few strokes to make sure it's good and hard for her before lining herself over it.  As she settles atop you, you bring your hands to her feathered body even, holding her as she sinks down onto your [cock of player] shaft[if cock length of player > 24].  Given your immense size, she's quite tight and she takes her time settling into place on your throbbing roost[otherwise if cock length of player > 12].  Given your large size, she's quite snug and she eases herself into place on your throbbing roost[otherwise].  She slides easily into place on your throbbing roost[end if] with a caw of delight.";
+	say "     Nestling down onto your pulsing rod, she stays like that for a little while, just wriggling her hips lightly over you to keep you hard.  You moan and run your fingers through her dark feathers, finding them soft and smooth to the touch.  After a little while, she starts riding your cock, bobbing her avian body to slide her hot pussy over your manhood.  Despite her preference to be the one doing the fucking, she seems to be quite enjoying having her cloaca stuffed, releasing soft caws and moans as she rides you.  Her dominant streak comes through as she nips at you with her beak, grinding down onto you harder as she does.  Her inner walls are flexible, but strong, allowing her to ride your rod easily, but then gripping and squeezing tightly at your manhood once inside her.  The two of you go at it like this for some time, eventually culminating in a sticky release that leaves you both flopped out in her nest and panting heavily.";
+
+to say yolandaspecial03f:
+	say "     The raven motions with one wing for you to get down on the cushions while rooting through her box of toys.  You toss aside your gear and flop out onto the bird's plush nest only to have her drop a strap-on harness and toy into your lap.  Putting it on and securing the dildo, you end up with a phallic perch for the lustful bird.  As she settles atop you, you bring your hands to her feathered body even, holding her as she sinks down onto your faux cock with a caw of delight.";
+	say "     Nestling down onto the strap-on, she stays like that for a little while, just wriggling her hips lightly over it, roosting on the latex toy.  Feeling the textured pad of the harness rub against your folds as she does this, you moan and run your fingers through her dark feathers, finding them soft and smooth to the touch.  After a little while, she starts riding the toy, bobbing her avian body to slide her hot pussy over it.  Despite her preference to be the one doing the fucking, she seems to be quite enjoying having her cloaca stuffed, releasing soft caws and moans as she rides you.  Her dominant streak comes through as she nips at you with her beak, grinding down onto you harder as she does.  Her inner walls are flexible, but strong, allowing her to ride the dildo easily, but then gripping and squeezing tightly at it once inside her.  This allows her to grind the harness against your pussy and clit by rocking her avian hips down firmly against yours.  The two of you go at it like this for some time, eventually culminating in a sticky release that leaves you both flopped out in her nest and panting heavily.";
 
 
 Section 4 - Events
 
 jbfound is a number that varies.
-[
+
 Jewelry Box is a scavevent.
 when play begins:
-	add Jewelry Box to badspots of female;
+	add Jewelry Box to badspots of girl;
 	add Jewelry Box to badspots of furry;
 
 Instead of resolving a Jewelry Box:
@@ -297,18 +335,29 @@ Instead of resolving a Jewelry Box:
 	if fightoutcome >= 10 and fightoutcome <= 19:			[player won]
 		say "     Defeating and driving off the mutant, you check to make sure nothing else has been attracted by the noise before giving the remainder of the house a quick search.  Unfortunately it seems that someone (possibly your recent opponent) has already consumed any supplies that were here.";
 		if jbfound < 2:
-			say "     While performing your search, you do come across something of interest though.  In the master bedroom, you find a jewelry box on the dresser.  It is quite ornate, which is what catches your eye at first.  Checking inside, you find several rings and necklaces.  Feeling a little greedy and making the excuse that the owner's either infected or dead, you tuck it into your pack and head out.";
+			say "     While performing your search, you do come across something of interest though.  In the master bedroom, you find a jewelry box on the dresser.  It is quite ornate, which is what catches your eye at first.  Checking inside, you find several rings, earrings and necklaces - some even with pearls or gemstones.  Feeling a little greedy and making the excuse that the owner's either infected or dead, you tuck it into your pack and head out.";
 			now jbfound is 2;
 		now Jewelry Box is resolved;
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
 		say "     After your defeat and the consequences thereof, you stagger out of the house, giving up on scavenging for the moment.  You make your way back to someplace more familiar and safer to rest and recover.";
 	otherwise:									[player fled]
 		say "     After making your escape, you give up on scavenging for now and head back to safer territory to rest and recover.";
-]
+
+
+Raven Key Fob is a scavevent.  Raven Key Fob is resolved.
+
+Instead of resolving a Raven Key Fob:
+	say "     Hoping to find some supplies, you check through some cars in the street.  From the looks of it, the drivers either abandoned their vehicles or (in the case of a few) transformed while inside them.  In the latter, you find scraps of clothes and messy, musky stains, but little of use.  You start to suspect some enterprising survivor or hungry mutant has already gone through these vehicles when you get lucky and find one that still has a small backpack in the passenger's seat.  Opening it up, you go through it and find an assortment of stuff you don't need, but also a bottle of water.  You're about to take it and go when you notice that the keys are still in the ignition.  You decide to give it a shot, but find the car completely dead.  The key fob does catch your eye though, being a shiny black bird about two inches long.  You grab it and stuff it away in a pocket of your backpack, thinking Yolanda the raven might like it.";
+	now yolandakeyfob is true;
+	increase carried of water bottle by 1;
+	increase score by 5;
+	now Raven Key Fob is resolved;
+
 
 [ hp of Yolanda                      ]
 [ 0 = Nothing                        ]
 [ 1 = Talked w/her                   ]
+[   + Raven Key Fob unresolved       ]
 [ 2 = Had sex - no bondage           ]
 [ 3 = Had sex - bondage              ]
 
@@ -328,11 +377,11 @@ pyrite (Museum)
 light-up toy/ball (State Fair)
 ]
 
-[
 when play ends:
-	if jbfound is 2:
-		say "***jewelry box in player possession";
+	if jbfound is 2 and humanity of player >= 10:		[Jewelry box ending add-on]
+		say "     When you leave the city, you hang onto the jewelry box and its contents.  Suspected of having looted it, you concoct a tale about how it was originally your great-grandmother's and eventually your mother's.  She'd taken it with her when escaping her house, but ended up succumbing to the infection, taken down by some of those huskies.  You fake a few tears and choke out that it's the only memento of your family you've got left.  And while not everyone buys it, there is no real proof otherwise and they've got much more important things to deal with than some jewelry.  You do have to grease the occasional palm with something from the box, but you manage to keep most of it by the time you're released.  It makes for a good source of starting cash as you try to get your new life started[if cunts of player > 0].  You even keep a few of the nicest pieces for yourself to wear[end if].";
 
+[
 when play ends:
 	if hp of Yolanda > 1:
 		say "***";
