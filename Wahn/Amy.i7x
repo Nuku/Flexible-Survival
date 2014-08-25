@@ -141,7 +141,7 @@ instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - 
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
 	now lastAmySpotted is turns;
-	if AmyMaturityCounter > 16:		[child-like]
+	if AmyMaturityCounter > 16: [child-like]
 		say "     As you come out of the bunker, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
 	otherwise if AmyMaturityCounter > 8:
 		say "     As you come out of the bunker, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
@@ -150,10 +150,16 @@ instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - 
 				
 instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotted - turns > 3):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
 	now lastAmySpotted is turns;
-	if AmyMaturityCounter > 16:		[child-like]
+	if AmyMaturityCounter > 16: [child-like]
 		say "     As you enter the library, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
 	otherwise if AmyMaturityCounter > 8:
 		say "     As you enter the library, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
@@ -176,17 +182,29 @@ instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) a
 		
 instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
 	now lastAmySpotted is turns;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA TEACHING WALKIN [line break]";
 	if Char-C of Nadia is "0":
 		now Char-C of Nadia is "1";
-		say "[npcNadiaintUpdate]";	
+		say "[npcNadiaintUpdate]";
 	move player to Grey Abbey Library;
 	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colourful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
 			
 instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
 	now lastNadiaSpotted is turns;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA PREG WALKIN [line break]";
 	move player to Grey Abbey Library;
@@ -239,6 +257,12 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 			
 instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;

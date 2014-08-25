@@ -117,12 +117,24 @@ When Play begins:
 
 instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;		
 	if debugactive is 1:
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
 	say "[FionaRepeatMeeting]";
@@ -198,6 +210,12 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and Fang is in Gre
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
@@ -231,6 +249,12 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatu
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
@@ -273,6 +297,12 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatu
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey Library;
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";		
 	say "[FionaCarlRepeatFuck]";

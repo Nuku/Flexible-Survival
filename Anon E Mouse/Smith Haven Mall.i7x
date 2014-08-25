@@ -15,6 +15,11 @@ Mall East Wing is a room.
 Mall West Wing is a room.
 Mall Restroom is a room.
 
+Southeast of Smith Haven Mall Lot North is Smith Haven Mall Lot East.
+Southwest of Smith Haven Mall Lot North is Smith Haven Mall Lot West.
+Southwest of Smith Haven Mall Lot East is Smith Haven Mall Lot South.
+Southeast of Smith Haven Mall Lot West is Smith Haven Mall Lot South.
+
 Instead of examining the Mall Foyer entrance:
 	say "Through the glass doors, you make out [the other side of the Mall Foyer entrance].";
 Instead of examining the Mall Food Court entrance:
@@ -32,9 +37,6 @@ To say mallnorthlot:
 	otherwise:
 		say "     You carefully make your way along the dark parking lot[']s main access road, staying alert for any traps or surprises. Of what you can see, there aren[']t as many cars on this side of the mall as compared to the south side, but there is still signs of the former owners['] fates. To the south you can just discern the glass door entrance to the mall[']s foyer in the low light.";
 
-East of Smith Haven Mall Lot North is Smith Haven Mall Lot East.
-West of Smith Haven Mall Lot North is Smith Haven Mall Lot West.
-
 the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.".
 	
 Section 3 - Mall Lot East
@@ -48,8 +50,6 @@ To say malleastlot:
 		say "     Being careful of the shadows casted by the parking lot lights, you walk along the lot[']s main access road into the mall[']s east lot. When you finally make it, of what you can see, there is even more parked and wrecked cars with their doors opened and ripped clothing strewn about, caked in what you assume is dried cum. The sign on the side of the Sears building is illuminated as well as the sign on the side of the 24-7 Fitness building sitting on the southeast corner of the parking lot.";
 	Otherwise:
 		say "     You slowly and carefully make your way along the dark parking lot[']s main access road, watching all around you for anything that might surprise you. Finally making it to the east lot, you can just make out more of the same destruction that was in the north lot. Remembering that there is supposed to be a gym in the mall[']s east lot, you continue walking until you are able to just discern a large building to the southeast.";
-	
-South of Smith Haven Mall Lot East is Smith Haven Mall Lot South.
 
 the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.".
 	
@@ -65,8 +65,6 @@ To say mallwestlot:
 	Otherwise:
 		say "     You slowly and carefully make your way along the dark parking lot[']s main access road, keeping an eye peeled for anything that might try to surprise you. Finally making it to the west lot, it's hard to tell if there is anything much different. You find on the northwest corner of the lot what looks like a large gasoline station with a convenience store. The lingering scent of gasoline wafting towards you on the breeze confirms it. Curiosity spurning you on, you continue exploring the west lot until spotting a building, which you know is the China South Buffet.";
 	
-South of Smith Haven Mall Lot West is Smith Haven Mall Lot South.
-
 the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.".
 	
 Section 5 - Mall Lot South
@@ -80,10 +78,6 @@ To say mallsouthlot:
 		say "     Walking into Smith Haven Mall[']s vast southern parking lot, with the lot lights illuminating the area you see most of the devastating results of the infection having run rampant. Dotted about the lot are not only parked vehicles with either open doors, broken windows, or both, but also several wrecked vehicles, either smashed into other vehicles or hung up in planters. Scraps of ripped clothing caked in dried fluids litter the ground around the vehicles and about the lot. To the north you can see light coming from the entrance to the mall[']s food court. Just inside the glass doors you are able to see some activity on the other side of them. Looking to the east and to the west just shows more of the same, though off in the distance of the mall[']s west lot you spot the lights of a gas station.";
 	Otherwise:
 		say "     By what you can see around you in the dark, you[']re pretty sure you[']re in Smith Haven Mall[']s vast parking lot. The full, pregnant, moon hanging in the night sky brilliantly casts it[']s light upon a good portion of the mall[']s lot. With the stars dancing along with the moon in the night sky and the eerie silence of the abandoned cars you can see, the devastation around you is almost serene. To the east and west you know the parking lot continues and ahead of you is the entrance to the mall[']s food court.";
-
-
-East of Smith Haven Mall Lot South is Smith Haven Mall Lot East.
-West of Smith Haven Mall Lot South is Smith Haven Mall Lot West.
 	
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
 	
