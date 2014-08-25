@@ -1061,7 +1061,7 @@ To reciting2:
 							move Alexandra to Grey Abbey Library;
 						if hp of Alexandra >= 60:
 							now Master Mind is in Cell Block A;
-					if hp of Alexandra is 3 and hp of Alexandra is 5:
+					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
@@ -3008,7 +3008,7 @@ Carry out reciting:
 							move Alexandra to Grey Abbey Library;
 						if hp of Alexandra >= 60:
 							now Master Mind is in Cell Block A;
-					if hp of Alexandra is 3 and hp of Alexandra is 5:
+					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
 						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
