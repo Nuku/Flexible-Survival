@@ -4730,7 +4730,10 @@ check resting:
 		say "You have nothing to rest on.";
 		stop the action;
 	if companion of player is not rubber tigress:
-		if there is a dangerous door in the location of the player and location of player is not sleepsafe:
+		if ( there is a dangerous door in the location of the player or the location of player is fasttravel ) and location of player is not sleepsafe:
+			let l be a random visible dangerous door;
+			if l is not nothing, now battleground is the marea of l;
+			if l is nothing, now battleground is "Outside";	[***]
 			say "...";
 			attempttowait;
 			let intodds be 3;
