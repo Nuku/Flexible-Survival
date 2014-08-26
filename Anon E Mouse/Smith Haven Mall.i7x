@@ -38,7 +38,7 @@ To say mallnorthlot:
 		say "     You carefully make your way along the dark parking lot[']s main access road, staying alert for any traps or surprises. Of what you can see, there aren[']t as many cars on this side of the mall as compared to the south side, but there is still signs of the former owners['] fates. To the south you can just discern the glass door entrance to the mall[']s foyer in the low light.";
 
 the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.".
-	
+
 Section 3 - Mall Lot East
 
 The description of Smith Haven Mall Lot East is "[malleastlot]".
@@ -47,12 +47,12 @@ To say malleastlot:
 	If daytimer is day:
 		say "     You walk along the parking lot[']s main access road into the mall[']s east lot, checking some of the cars for anything useful. When you finally make it, all you can see is even more parked and wrecked cars with their doors opened and ripped clothing, some purses, and shopping bags, strewn about, caked in what you assume is dried cum. There is a huge building sitting on the southeast corner of the lot, 24-7 Fitness blazoned across the top of it in red letters.";
 	otherwise if findwires is 2 and fixedgens is 2:
-		say "     Being careful of the shadows casted by the parking lot lights, you walk along the lot[']s main access road into the mall[']s east lot. When you finally make it, of what you can see, there is even more parked and wrecked cars with their doors opened and ripped clothing strewn about, caked in what you assume is dried cum. The sign on the side of the Sears building is illuminated as well as the sign on the side of the 24-7 Fitness building sitting on the southeast corner of the parking lot.";
+		say "     Being careful of the shadows cast by the parking lot lights, you walk along the lot[']s main access road into the mall[']s east lot. When you finally make it, of what you can see, there is even more parked and wrecked cars with their doors opened and ripped clothing strewn about, caked in what you assume is dried cum. The sign on the side of the Sears building is illuminated as well as the sign on the side of the 24-7 Fitness building sitting on the southeast corner of the parking lot.";
 	Otherwise:
 		say "     You slowly and carefully make your way along the dark parking lot[']s main access road, watching all around you for anything that might surprise you. Finally making it to the east lot, you can just make out more of the same destruction that was in the north lot. Remembering that there is supposed to be a gym in the mall[']s east lot, you continue walking until you are able to just discern a large building to the southeast.";
 
 the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.".
-	
+
 Section 4 - Mall Lot West
 
 The description of Smith Haven Mall Lot West is "[mallwestlot]".
@@ -64,9 +64,9 @@ To say mallwestlot:
 		say "     With the parking lot lights illuminating the area, you walk along the parking lot[']s main access road into the mall[']s west lot. Finally making it, you look around as best as you can and find that it[']s just more of the same, the carnage of rampant sex on all the vehicles. The sign on the side of the JCPenney[']s building is lit and all the lights are on at the large gas station sitting on the northwest corner of the lot. When you pause long enough, you can smell the lingering scent of gasoline wafting towards you on the breeze. In the southwest part of the lot you can see another building with some lights on. The illuminated sign sitting on the edge of its roof reads as China South Buffet.";
 	Otherwise:
 		say "     You slowly and carefully make your way along the dark parking lot[']s main access road, keeping an eye peeled for anything that might try to surprise you. Finally making it to the west lot, it's hard to tell if there is anything much different. You find on the northwest corner of the lot what looks like a large gasoline station with a convenience store. The lingering scent of gasoline wafting towards you on the breeze confirms it. Curiosity spurning you on, you continue exploring the west lot until spotting a building, which you know is the China South Buffet.";
-	
+
 the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.".
-	
+
 Section 5 - Mall Lot South
 
 The description of Smith Haven Mall Lot South is "[mallsouthlot]".
@@ -78,9 +78,9 @@ To say mallsouthlot:
 		say "     Walking into Smith Haven Mall[']s vast southern parking lot, with the lot lights illuminating the area you see most of the devastating results of the infection having run rampant. Dotted about the lot are not only parked vehicles with either open doors, broken windows, or both, but also several wrecked vehicles, either smashed into other vehicles or hung up in planters. Scraps of ripped clothing caked in dried fluids litter the ground around the vehicles and about the lot. To the north you can see light coming from the entrance to the mall[']s food court. Just inside the glass doors you are able to see some activity on the other side of them. Looking to the east and to the west just shows more of the same, though off in the distance of the mall[']s west lot you spot the lights of a gas station.";
 	Otherwise:
 		say "     By what you can see around you in the dark, you[']re pretty sure you[']re in Smith Haven Mall[']s vast parking lot. The full, pregnant, moon hanging in the night sky brilliantly casts it[']s light upon a good portion of the mall[']s lot. With the stars dancing along with the moon in the night sky and the eerie silence of the abandoned cars you can see, the devastation around you is almost serene. To the east and west you know the parking lot continues and ahead of you is the entrance to the mall[']s food court.";
-	
+
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
-	
+
 Section 6 - Mall Foyer
 
 The description of Mall Foyer is "[mallfoyer]".
@@ -92,11 +92,11 @@ To say mallfoyer:
 		say "     Your footsteps echo off the marble floor as you walk into the foyer. There are only some small, empty shops that once served up a quick bite to eat or a cup of coffee. With the area illuminated by sunlight streaming into the foyer through the glass entrance doors, you can see that a former coffee shop had been converted into a makeshift guard house, [one of]two[or]three[or]five[at random] wolverines watching you intently as you walk by.";
 	Otherwise:
 		say "     Your footsteps echo off the marble floor as you walk into the foyer. With it being dark outside right now, the only light in the area is coming from a few lanterns sitting on tables in a coffee shop. You see sitting around them [one of]two[or]three[or]four[at random] wolverines, all of them watching as you walk by the shop.";
-		
+
 South of Mall Foyer is Mall Atrium.
 
 the scent of Mall Foyer is "The foyer smells heavy of male musk due to the wolverines.".
-	
+
 Section 7 - Mall Atrium
 
 The description of Mall Atrium is "[mallatrium]".
@@ -114,7 +114,7 @@ South of Mall Atrium is Mall Foodcourt.
 West of Mall Atrium is Mall West Wing.
 
 [the scent of Mall Atrium is "The atrium smells of old, standing water coming from the fountain.".	]
-	
+
 Section 8 - Mall East Wing
 
 The description of Mall East Wing is "[malleastwing]".
@@ -128,7 +128,7 @@ To say malleastwing:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles, lanterns, and occasional computer tablets being used. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets and smartphones some of the rats have.";
 
  the scent of Mall East Wing is "It smells like the mallrats.".
-	
+
 Section 9 - Mall Food Court
 
 The description of Mall Foodcourt is "[mfcourt]".
@@ -148,7 +148,7 @@ East of Mall Foodcourt is Mall Restroom.
 the scent of the Mall Foodcourt is "It smells a little like old, rotting food.".
 
 The invent of Mall FoodCourt is { "chair", "food" }.
-	
+
 Section 10 - Mall West Wing
 
 The description of Mall West Wing is "[mallwestwing]".
@@ -162,7 +162,7 @@ To say mallwestwing:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles and lanterns spread about. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets some of the rats have.";
 
 the scent of Mall West Wing is "It smells like the mall rats milling about.".
-	
+
 Section 11 - Mall Restroom
 
 Before going from Mall Foodcourt to Mall Restroom, say "     A wolverine sitting on a chair outside of the restroom facility looks up at you when you approach, his hackles standing on end. When you show him you[']re no harm, he calms and settles back into his seat. [one of]'I would suggest that you don[']t go in there. Part of the floor gave way and opened up into the utility tunnels and sewers. Now we need to stand guard against anything coming up out of there and getting into the mall. If you[']re still determined to go looking around in there, I won[']t stop you.' When you tell him you[']re still going in, he shrugs and hands you a lantern. 'Go ahead and take this then and be careful.'[or]'It[']s a right mess in thar. Part of tha['] floor opened up to the sew[']rs so we hafta watch fer anythin['] poppin['] up from them. Ya[']ll sure you wanna go scurryin['] about in thar?' When you nod your head, he shrugs then hands you a lantern. ‘Don[']t say ah didn['] warn ya…'[at random] Taking the lantern, you head into the restroom and find that it[']s in shambles. It seems a portion of it has been destroyed, what were once walls now just piles of rubble. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. Curiosity driving you, you carefully make your way deeper inside until finding a fairly large hole in the floor.";
