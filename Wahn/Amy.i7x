@@ -149,13 +149,8 @@ instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - 
 		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 				
 instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotted - turns > 3):
+	say "[NavCheck]";
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
 	now lastAmySpotted is turns;
@@ -181,13 +176,8 @@ instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) a
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 		
 instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck]";
 	now lastAmySpotted is turns;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA TEACHING WALKIN [line break]";
 	if Char-C of Nadia is "0":
@@ -198,13 +188,8 @@ instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and 
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
 			
 instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
+	say "[NavCheck]";
 	now lastNadiaSpotted is turns;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA PREG WALKIN [line break]";
 	move player to Grey Abbey Library;
@@ -256,13 +241,8 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 			say "     'All right then, I'll give it a try.' Amy sounds pretty unsure, though.";	
 			
 instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
+	say "[NavCheck]";
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;

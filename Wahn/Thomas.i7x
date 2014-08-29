@@ -416,6 +416,7 @@ to say ThomasTalk9:
 	increase libido of Thomas by 1;    [Sandy]
 					
 instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas < 10 and ThomasSaved - turns > 10):
+	say "[NavCheck]";
 	move player to Dry Plains;
 	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a teenage centaur. 'Please, can you help me save him? We can't let him get caught by that!'";
 	say "     [line break]";	
@@ -438,6 +439,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 		increase libido of Thomas by 20;
 	
 instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thomas is 11 or libido of Thomas is 21) and SandySaved - turns > 10):
+	say "[NavCheck]";
 	move player to Dry Plains;
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
 	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if libido of Thomas is 1 or libido of Thomas is 21]Sandy and sends her away so she'll be safe[otherwise if libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers 'Eight, at least.' '...centaurs coming in. We really could use your help.'";

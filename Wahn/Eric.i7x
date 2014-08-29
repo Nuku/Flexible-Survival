@@ -105,6 +105,7 @@ instead of going inside from the Grey Abbey Library while (libido of Eric is 0 a
 	now libido of Eric is 1;
 
 instead of navigating Sports Arena Lockerroom while (libido of Eric is 0 and bodyname of player is "Furling"):
+	say "[NavCheck]";
 	move player to Sports Arena Lockerroom;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
@@ -1324,6 +1325,7 @@ to say EricSex13_99_Female: [sex slave Eric]
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
+	say "[NavCheck]";
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";
@@ -1406,6 +1408,7 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			now lastfuck of Eric is turns;
 			
 instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck]";
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";

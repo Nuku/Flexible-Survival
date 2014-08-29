@@ -734,6 +734,7 @@ Instead of sniffing Viking Ship:
 	say "     The air smells salty in your nose, no wonder - you're on a ship.";
 
 instead of navigating Viking Ship:
+	say "[NavCheck]";	
 	say "     Making your way to the right spot on the beach, you signal the Viking ship out before the coast and soon get picked up by a muscled Viking who rows a boat to the beach and back.[line break]";
 	move player to Viking Ship;
 	

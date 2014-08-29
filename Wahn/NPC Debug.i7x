@@ -39,4 +39,12 @@ understand "currentturn" as turncountdisplay.
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]";
 
+to say NavCheck:
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if location of player is Grey Abbey Library:
+		say "You're already here.";
+		stop the action;
+
 NPC Debug ends here.
