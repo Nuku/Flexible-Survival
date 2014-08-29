@@ -65,7 +65,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "head"	"Your head regains it's human form, you hope you can keep it this time."	"Pure human head."	"Your human head changes"
 "chest"	"Your chest returns to normal."	"Pure human chest."	"Your human chest changes"
 "gut"	"Your beer belly returns, drat."	"Pure human belly."	"Your human belly changes"
-"pelvis"	"You once more have a human penis."	"Pure human crotch."	"Your human hips and groin changes"
+"pelvis"	"You once more have a human [if playerfemale is 1]vagina[otherwise]penis[end if]."	"Pure human crotch."	"Your human hips and groin changes"
 "left upper arm"	"Your left upper arm returns to normal."	"Pure human left upper arm."	"Your human left upper arm changes"
 "left forearm"	"Your left forearm returns to normal."	"Pure human left forearm."	"Your human left forearm changes"
 "left hand"	"Your left hand returns to normal."	"Pure human left hand."	"Your human left hand changes"
@@ -79,7 +79,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right shin returns to normal."	"Pure human right shin."	"Your human right shin changes"
 "right foot" 	"Your right foot returns to normal."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear returns to normal."	"Pure human rear."	"Your human rear changes"
-"full" 	"human"	"You're just an ordinary guy."	--
+"full" 	"human"	"You're just an ordinary [if playerfemale is 1]gal[otherwise]guy[end if]."	--
 
 Table Female Human - Template			
 Segment	Shift Text	Desc Text	Unshift Text
@@ -1472,6 +1472,7 @@ Book 3 - Behavior
 
 ychecker is an infection model that varies.
 The Targetx is a thing variable.
+playerfemale is a number that varies. playerfemale is usually 0.
 xcheckerx is a number that varies.
 XcheckerX is 0.
 
@@ -2178,7 +2179,24 @@ A thing has a table-name called TF table.  The TF table of a thing is usually Ta
 A thing is either benign or not benign.  A thing is usually not benign.
 A thing is either selected or not selected.  A thing is usually not selected.
 
-Definition: A thing (called N) is infected if ( the TF table of N is not Table 0 and the tf table of N is not table female human ) or the tf table of n is not the tf table of ctype of n.
+Definition: a thing (called N) is infected:
+	if the tf table of n is not the tf table of ctype of n:
+		yes;
+	if the tf table of N is table 0:
+		no;
+	if the tf table of N is table female human:
+		no;
+	yes;
+
+[Definition: a thing (called N) is infected:
+	if the tf table of n is not the tf table of ctype of n:
+		yes;
+	if the tf table of N is table 0:
+		no;
+	if the tf table of N is table female human:
+		no;
+	yes;]
+	
 
 To infect (subject - a body part) with (infector - a thing):
 	if ctype of subject is immune:
@@ -2381,7 +2399,7 @@ To TF (subject - a person): [transforms people into monsters]
 		now the willpower of pc is the willpower of n;
 		stop the action;
 	otherwise;
-		if the tf table of n is not table 0, now the humanity of subject is 0;
+		if the tf table of n is not table 0 and the tf table of n is not table female human, now the humanity of subject is 0;
 	end if;
 	if ctype of subject is pacified begin;
 		now subject is pacified;
@@ -2905,7 +2923,7 @@ if the tf table of the pelvis is table husky, yes;
 if the tf table of the pelvis is table demonic mouse, yes;
 if the tf table of the pelvis is table kangaroo, yes;
 if the tf table of the pelvis is table were fennec, yes;
-if the tf table of the pelvis is table female human, yes;
+if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
 if the rabbit vagina is touchable, yes;
 if the feline torso is a part of the rear, yes;
 if the tf table of the pelvis is table otter and the destined femininity of the player is 1, yes;
@@ -2951,7 +2969,8 @@ yes;
 
 Definition: a person (called N) is unchanged:
 	if the tf table of N is table 0, yes;
-	if the tf table of ctype of n is not table 0, no;
+	if the tf table of N is table female human, yes;
+	if the tf table of ctype of n is not table 0 and the tf table of ctype of n is not table female human, no;
 	If N is the player:
 		if there are no visible not infected body parts:
 			no;
@@ -2985,7 +3004,7 @@ if the tf table of the pelvis is table icat, no;
 if the tf table of the pelvis is table rogue, no;
 if the tf table of the pelvis is table harpy, no;
 if the tf table of the pelvis is table husky, no;
-if the tf table of the pelvis is table female human, no;
+if the tf table of the pelvis is table 0 and playerfemale is 1, no;
 if the tf table of the pelvis is table tree, no;
 if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
@@ -3208,7 +3227,7 @@ if the tf table of pelvis is table huge dragoness begin;
 	stop the action;
 end if;
 let Z be a pelvis;
-If the tf table of noun is table 0 begin;
+If the tf table of noun is table 0 or the tf table of noun is table female human begin;
 	say "The [printed name of noun] looks confused at your advances."; 
 	if a random chance of willpower of the noun in 20 succeeds begin;
 		say "They resist the urge to play with you and struggle to get away.";
@@ -3252,11 +3271,11 @@ if ( the noun is female or the noun is neuter ) and zoidberg is 0 begin;
 			increase the pregnant of noun by 1;
 		end if;
 		now the noun is fertilized;
-		if the tf table of pelvis is not table 0 and the tf table of noun is table 0 begin;
+		if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0 begin;
 			infect the noun with pelvis;
 		end if;
 		if the TF table of pelvis is not tf table of noun begin;
-			if tf table of pelvis is table 0 begin;
+			if tf table of pelvis is table 0 or tf table of pelvis is table female human begin;
 				infect Z with the noun;
 				if the tf table of ctype of noun is table horse mare begin;
 					grow horse cock from pelvis;
@@ -3264,7 +3283,7 @@ if ( the noun is female or the noun is neuter ) and zoidberg is 0 begin;
 			end if;
 		otherwise;
 			now Z is a random not infected exposed body part;
-				if Z is not nothing and tf table of noun is not table 0, infect Z with the noun;
+				if Z is not nothing and tf table of noun is not table 0 and tf table of noun is not table female human, infect Z with the noun;
 			if pregnant of noun is 0 begin;
 				if the mother of the noun is greater than 0 and the ctype of noun is cat girl and a random chance of willpower of ctype of the player in 20  succeeds begin;
 					try examining the player;
@@ -4799,9 +4818,7 @@ After reading a command when the turn count is 1: [continues getting input for s
 					say "Ok, you are a male.";
 				otherwise;
 					say "Ok, you are a female.";
-						repeat with u running through visible body parts begin;
-							now the tf table of u is table female human;
-						end repeat;
+						now playerfemale is 1;
 				end if;
 				now Startcount is 5;
 				say "Do you want items to be randomized? 1 for yes, 0 for no.";
@@ -4886,7 +4903,7 @@ The destined masculinity of the player is a number that varies.
 The destined femininity of the player is a number that varies.
 
  When play begins:
-	now the right hand status line is "[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";
+[	now the right hand status line is "[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";]
 	repeat with x running through infection models begin;
 		now x is a part of pelvis;
 	end repeat;
@@ -5493,7 +5510,7 @@ Every turn while the head is infected: [end game conditions]
 	otherwise if loss switch is "mixed tf";
 		now xcheckerx is 0;
 		repeat with N running through body parts begin;
-			if the TF table of N is Table 0 begin;
+			if the TF table of N is Table 0 or the tf table of N is table female human begin;
 				now xcheckerx is 1;
 			end if;
 		end repeat;
@@ -6327,13 +6344,27 @@ Definition: a direction (called D) is valid if the room D from the location of t
 
 Table of Fancy Status
 left	central	right
-" Location: [the player's surroundings]"	""	"[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]"
+" Location: [the player's surroundings]"	"P:[number of body parts - number of infected body parts]"	"[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]"
 " Exits: [list of valid directions]"	""	"[time of day]"
 [" You are:[Player_Status], [Player_Gender_Status]"	""	""]
 
 The first for constructing the status line rule:
 	fill status bar with Table of Fancy Status;
 	rule succeeds.
+
+Every turn:
+	let z be 0;
+	let q be 0;
+	repeat with x running through body parts:
+		increase z by 1;
+		say "[X] is a bodypart ";
+		if x is infected:
+			say "and is infected.";
+		otherwise:
+			say "and is not infected.";
+			increase q by 1;
+	say "There are [Z] bodyparts, of which [Q] are not infected.";
+
 
 [
 Chapter - Toggling text map view (in place of Chapter - Hacking Automap in Glimmr Automap by Erik Temple)
