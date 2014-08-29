@@ -2847,6 +2847,10 @@ Carry out offering a person (called the victim): [attempts to infect person]
 		say "You can't offer yourself!";
 		stop the action;
 	end if;
+	if the tf table of pelvis is table 0 begin;
+		say "You can't quite bring yourself to do that...";
+		stop the action;
+	end if;
 	if the ctype of pelvis is uberfox begin;
 		if the humanity of victim is less than 1 begin;
 			say "You approach [victim] and try to sway them with your pheromones, but they seem unswayed entirely. Maybe they're just not human enough.";
