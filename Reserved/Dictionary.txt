@@ -10,9 +10,6 @@
 |Emily Short|Menus|current menu title|value|
 |Emily Short|Menus|Current menu|value|
 |Emily Short|Menus|Current menu selection|value|
-|Emily Short|Basic Screen Effects|20140828104030/2203:Thu 28 August 2014 10:40|indexing|
-|Emily Short|Basic Screen Effects|Status bar table|value|
-|Emily Short|Basic Screen Effects|Right alignment depth|value|
 |Nuku Valente|Fs Graphics|20140828104030/1616:Thu 28 August 2014 10:40|indexing|
 |Nuku Valente|Fs Graphics|graphics|value|
 |Nuku Valente|Fs Graphics|Figure of title_graphic|value|
@@ -3406,9 +3403,6 @@
 |Jon Ingold|Flexible Windows|g-required|property|
 |Jon Ingold|Flexible Windows|g-unrequired|property|
 |Jon Ingold|Flexible Windows|no status line|use option|
-|Erik Temple|Glulx Status Window Control|20140828183802/2019:Thu 28 August 2014 18:38|indexing|
-|Erik Temple|Glulx Status Window Control|status window position|value|
-|Erik Temple|Glulx Status Window Control|status window background reversed|value|
 |Emily Short|Glulx Entry Points|20140828183802/1138:Thu 28 August 2014 18:38|indexing|
 |Emily Short|Glulx Entry Points|g-event|kind|
 |Emily Short|Glulx Entry Points|Current glulx rock|value|
@@ -3426,7 +3420,10 @@
 |Emily Short|Glulx Entry Points|independent of the player|adjective|
 |Emily Short|Glulx Entry Points|dependent on the player|adjective|
 |Emily Short|Glulx Entry Points|direct event handling|use option|
-|Emily Short|Glulx Text Effects|20140828183802/1860:Thu 28 August 2014 18:38|indexing|
+|Erik Temple|Glulx Status Window Control|20140828203759/2019:Thu 28 August 2014 20:37|indexing|
+|Erik Temple|Glulx Status Window Control|status window position|value|
+|Erik Temple|Glulx Status Window Control|status window background reversed|value|
+|Emily Short|Glulx Text Effects|20140828203759/1860:Thu 28 August 2014 20:37|indexing|
 |Emily Short|Glulx Text Effects|Glulx color value|kind|
 |Emily Short|Glulx Text Effects|text-justification|kind|
 |Emily Short|Glulx Text Effects|special-style|kind|
@@ -3460,7 +3457,7 @@
 |Emily Short|Glulx Text Effects|fixed-width-font|value|
 |Emily Short|Glulx Text Effects|proportional-font|value|
 |Emily Short|Glulx Text Effects|assigned number|property|
-|Graham Nelson|Standard Rules|20140828190748/42560:Thu 28 August 2014 19:07|indexing|
+|Graham Nelson|Standard Rules|20140828204130/42560:Thu 28 August 2014 20:41|indexing|
 |Graham Nelson|Standard Rules|room|kind|
 |Graham Nelson|Standard Rules|thing|kind|
 |Graham Nelson|Standard Rules|direction|kind|
@@ -3803,7 +3800,7 @@
 |Graham Nelson|Standard Rules|VERBOSE room descriptions|use option|
 |Graham Nelson|Standard Rules|BRIEF room descriptions|use option|
 |Graham Nelson|Standard Rules|SUPERBRIEF room descriptions|use option|
-|Graham Nelson|English Language|20140828190748/2130:Thu 28 August 2014 19:07|indexing|
+|Graham Nelson|English Language|20140828204130/2130:Thu 28 August 2014 20:41|indexing|
 |Graham Nelson|English Language|grammatical tense|kind|
 |Graham Nelson|English Language|narrative viewpoint|kind|
 |Graham Nelson|English Language|grammatical case|kind|
@@ -3825,10 +3822,13 @@
 |Graham Nelson|English Language|neuter gender|value|
 |Graham Nelson|English Language|masculine gender|value|
 |Graham Nelson|English Language|feminine gender|value|
-|Nuku Valente|Dragon Babe|20140828190748/1355:Thu 28 August 2014 19:07|indexing|
+|Emily Short|Basic Screen Effects|20140828204130/2203:Thu 28 August 2014 20:41|indexing|
+|Emily Short|Basic Screen Effects|Status bar table|value|
+|Emily Short|Basic Screen Effects|Right alignment depth|value|
+|Nuku Valente|Dragon Babe|20140828204130/1355:Thu 28 August 2014 20:41|indexing|
 |Nuku Valente|Dragon Babe|Purple Egg|kind|
 |Nuku Valente|Dragon Babe|dragon babe|Infection Model|
-|Nuku Valente|Fox Taur|20140828190748/2030:Thu 28 August 2014 19:07|indexing|
+|Nuku Valente|Fox Taur|20140828204130/2030:Thu 28 August 2014 20:41|indexing|
 |Nuku Valente|Fox Taur|Fox Taur|Infection Model|
 |Nuku Valente|Fox Taur|Milking Machine|thing|
 |Nuku Valente|Fox Taur|Using|action|

@@ -6332,7 +6332,7 @@ left	central	right
 [" You are:[Player_Status], [Player_Gender_Status]"	""	""]
 
 The first for constructing the status line rule:
-[	fill status bar with Table of Fancy Status;]
+	fill status bar with Table of Fancy Status;
 	rule succeeds.
 
 [
@@ -6447,10 +6447,13 @@ Figure of Black 14 is the file "black_14.png".
 Figure of Black 15 is the file "black_15.png".
 Figure of Black 16 is the file "black_16.png".
 
+Include Basic Screen Effects by Emily Short.
+
+[Include Glulx Status Window Control by Erik Temple.]
+
 [Book - Flexible Windows support
 
 Include Flexible Windows by Jon Ingold.
-Include Glulx Status Window Control by Erik Temple.
 
 The side-window is a text-buffer g-window spawned by the main-window.
 The measurement of the side-window is 30.
@@ -6779,6 +6782,7 @@ Every turn when the startcount is 5:
 
 
 ]]
+
 Book - Enhanced commands / items
 
 Part - Enhanced basic actions
