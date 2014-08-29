@@ -159,17 +159,17 @@ Current graphlink is an object that varies. [The current graphlink is either tex
 A clicking graphlink rule (this is the default command replacement by graphlinks rule):
 	if the click hit a hot link:
 		#if utilizing Glimmr debugging;
-		let graph-x be current graphlink x as a fixed point number;
-		let graph-y be current graphlink y as a fixed point number;
-		say "[>console][GGH]Mouse input received on element [i][current graphlink][/i] in window [i][current graphlink window][/i]: ([current graphlink x], [current graphlink y]), approximately equivalent to canvas ([(graph-x real minus the x-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer], [(graph-y real minus the y-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer]).[<]";
+		let graph-x be current graphlink x + 0.0;
+		let graph-y be current graphlink y + 0.0;
+		say "[>console][GGH]Mouse input received on element [i][current graphlink][/i] in window [i][current graphlink window][/i]: ([current graphlink x], [current graphlink y]), approximately equivalent to canvas ([(graph-x minus the x-offset of the current graphlink window) divided by the scaling factor of the current graphlink window to the nearest whole number], [(graph-y minus the y-offset of the current graphlink window) divided by the scaling factor of the current graphlink window to the nearest whole number]).[<]";
 		#end if;
 		follow the graphlink processing rules for the current graphlink;
 		rule succeeds;
 	otherwise:
 		#if utilizing Glimmr debugging;
-		let graph-x be current graphlink x as a fixed point number;
-		let graph-y be current graphlink y as a fixed point number;
-		say "[>console][GGH]Mouse input received in window [i][current graphlink window][/i] (no link triggered): ([current graphlink x], [current graphlink y]), approximately equivalent to canvas ([(graph-x real minus the x-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer], [(graph-y real minus the y-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer]).[<]";
+		let graph-x be current graphlink x + 0.0;
+		let graph-y be current graphlink y + 0.0;
+		say "[>console][GGH]Mouse input received in window [i][current graphlink window][/i] (no link triggered): ([current graphlink x], [current graphlink y]), approximately equivalent to canvas ([(graph-x minus the x-offset of the current graphlink window) divided by the scaling factor of the current graphlink window to the nearest whole number], [(graph-y minus the y-offset of the current graphlink window) divided by the scaling factor of the current graphlink window to the nearest whole number]).[<]";
 		#end if;
 		now glulx replacement command is "".
 
@@ -414,7 +414,7 @@ The report coordinates rule is listed before the default command replacement by 
 A clicking graphlink rule when coordinate-trace is true (this is the report coordinates rule):
 	let graph-x be current graphlink x as a fixed point number;
 	let graph-y be current graphlink y as a fixed point number;
-	say "[line break]Window coordinates of mouse input ([current graphlink window]): ([current graphlink x],[current graphlink y])[line break]Approximate canvas coordinates: ([(graph-x real minus the x-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer],[(graph-y real minus the y-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window as an integer])[line break]";
+	say "[line break]Window coordinates of mouse input ([current graphlink window]): ([current graphlink x],[current graphlink y])[line break]Approximate canvas coordinates: ([(graph-x real minus the x-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window to the nearest whole number],[(graph-y real minus the y-offset of the current graphlink window) real divided by the scaling factor of the current graphlink window to the nearest whole number])[line break]";
 	continue the action.
 
 

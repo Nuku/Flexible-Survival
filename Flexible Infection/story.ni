@@ -11,6 +11,9 @@ Use fast route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 Use MAX_OBJ_PROP_COUNT of 128.
+Use MAX_SYMBOLS of 30000.
+use MAX_STATIC_DATA of 380000.
+use MAX_NUM_STATIC_STRINGS of 30000.
 [Use Max_EXPRESSION_NODES of 200.]
 
 
@@ -38,7 +41,7 @@ A person can be stunned. A person is usually not stunned.
 normal man is a human.
 Normal man is fearful.
 PC is a human.
-The description of human is "Just a regular human being. But for how long?";
+The description of human is "Just a regular human being. But for how long?".
 centaur is an infection model.
 centaur is male.
 The tf table of human is table 0.
@@ -46,7 +49,7 @@ A thing has an infection model called ctype. The ctype of a person is usually no
 The ctype of the player is usually PC.
 A person has text called female name.
 A person has text called male name.
-The printed name of yourself is "you";
+The printed name of yourself is "you".
 An infection model is either male or female. An infection model is usually male.
 An infection model is either neuter or singlesexed. An infection model is usually singlesexed.
 A thing has a text called female sex. A thing has a text called male sex. A thing has a text called herm sex.
@@ -77,6 +80,27 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right foot" 	"Your right foot returns to normal."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear returns to normal."	"Pure human rear."	"Your human rear changes"
 "full" 	"human"	"You're just an ordinary guy."	--
+
+Table Female Human - Template			
+Segment	Shift Text	Desc Text	Unshift Text
+"head"	"Your head regains it's human form, you hope you can keep it this time."	"Pure human head."	"Your human head changes"
+"chest"	"Your chest returns to normal."	"Pure human chest."	"Your human chest changes"
+"gut"	"Your beer belly returns, drat."	"Pure human belly."	"Your human belly changes"
+"pelvis"	"You once more have a human vagina."	"Pure human crotch."	"Your human hips and groin changes"
+"left upper arm"	"Your left upper arm returns to normal."	"Pure human left upper arm."	"Your human left upper arm changes"
+"left forearm"	"Your left forearm returns to normal."	"Pure human left forearm."	"Your human left forearm changes"
+"left hand"	"Your left hand returns to normal."	"Pure human left hand."	"Your human left hand changes"
+"right upper arm"	"Your right upper arm returns to normal."	"Pure human right upper arm."	"Your human right upper arm changes"
+"right forearm"	"Your right forearm returns to normal."	"Pure human right forearm."	"Your human right forearm changes"
+"right hand"	"Your right hand returns to normal."	"Pure human right hand."	"Your human right hand changes"
+"left thigh"	"Your left thigh returns to normal."	"Pure human left thigh."	"Your human left thigh changes"
+"left shin"	"Your left shin returns to normal."	"Pure human left shin."	"Your human left shin changes"
+"left foot"	"Your left foot returns to normal."	"Pure human left foot."	"Your human left foot changes"
+"right thigh"	"Your right thigh returns to normal."	"Pure human right thigh."	"Your human right thigh changes"
+"right shin"	"Your right shin returns to normal."	"Pure human right shin."	"Your human right shin changes"
+"right foot" 	"Your right foot returns to normal."	"Pure human right foot."	"Your human right foot changes"
+"rear" 	"Your rear returns to normal."	"Pure human rear."	"Your human rear changes"
+"full" 	"human"	"You're just an ordinary gal."	--
 
 Section - Demon Mouse
 
@@ -1540,7 +1564,7 @@ Understand the command "end" as something new.
  understand "end" as ending.
  
  carry out ending:
-	end the game saying "You ended it early.";
+	end the story saying "You ended it early.";
 	
  Understand the command "give" as something new. 
 giving is an action applying to two things.
@@ -1947,9 +1971,10 @@ A thing is either pacified or not pacified.  A thing is usually not pacified.
 
 
 	
-Definition: a thing is out of play:
-	if it is in the holdingpen then decide yes;
-	if it is off-stage then decide yes;
+Definition: a thing (called cur) is out of play:
+	if cur is in the holdingpen:
+		decide yes;
+	if cur is off-stage, decide yes;
 	decide no;
 
 Every turn when an on-stage monster is a predator:
@@ -2076,7 +2101,10 @@ Every turn:
 			let R be the location of N;
 			let P be a random IC room that is not R;
 			repeat with Z running through rooms that are adjacent to R begin;
-				if an unchanged person is in Z, change P to Z;
+				if an unchanged person is in Z begin;
+					move N to Z;
+					break;
+				end if;
 			end repeat;
 			let the way be the best route from R to P, using doors;
 			if ctype of N is herder begin;
@@ -2150,7 +2178,7 @@ A thing has a table-name called TF table.  The TF table of a thing is usually Ta
 A thing is either benign or not benign.  A thing is usually not benign.
 A thing is either selected or not selected.  A thing is usually not selected.
 
-Definition: A thing (called N) is infected if the TF table of N is not Table 0 or the tf table of n is not the tf table of ctype of n.
+Definition: A thing (called N) is infected if ( the TF table of N is not Table 0 and the tf table of N is not table female human ) or the tf table of n is not the tf table of ctype of n.
 
 To infect (subject - a body part) with (infector - a thing):
 	if ctype of subject is immune:
@@ -2199,9 +2227,9 @@ To infect (subject - a body part) with (infector - a thing):
 			choose row with Segment of the tag of the subject in the TF table of the infector;	
 			if the subject is visible and there is a shift text entry, say "[shift text entry][line break]";
 			if the subject is not visible, say "Your [subject] feels strange.[line break]";
-			change the desc of the subject to the desc text entry;
-			change the description of the subject to the desc text entry;
-			change the TF table of the subject to the TF table of the infector;
+			now the desc of the subject is the desc text entry;
+			now the description of the subject is the desc text entry;
+			now the TF table of the subject is the TF table of the infector;
 			repeat with N running through infection models:
 				if the tf table of n is the tf table of the infector:
 					[now the ctype of subject is n;]
@@ -2877,6 +2905,7 @@ if the tf table of the pelvis is table husky, yes;
 if the tf table of the pelvis is table demonic mouse, yes;
 if the tf table of the pelvis is table kangaroo, yes;
 if the tf table of the pelvis is table were fennec, yes;
+if the tf table of the pelvis is table female human, yes;
 if the rabbit vagina is touchable, yes;
 if the feline torso is a part of the rear, yes;
 if the tf table of the pelvis is table otter and the destined femininity of the player is 1, yes;
@@ -2956,6 +2985,7 @@ if the tf table of the pelvis is table icat, no;
 if the tf table of the pelvis is table rogue, no;
 if the tf table of the pelvis is table harpy, no;
 if the tf table of the pelvis is table husky, no;
+if the tf table of the pelvis is table female human, no;
 if the tf table of the pelvis is table tree, no;
 if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
@@ -3003,13 +3033,15 @@ if the tf table of pelvis is table 14 begin;
 	repeat with U running through skunkie persons in the location of the player begin;
 		if a random chance of 1 in willpower of ctype of the player succeeds begin;
 			say "     The large skunk snuffles at the air for something, deciding you're what he's looking for it seems.  A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down.  The thick shaft parts your new black-furred slit, and pounds you wildly![line break]     The wild beast uses you for his own pleasure, as your body betrays you, a low groan rising in your throat.  You find yourself pushing back, panting, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more.";
-			if the tf table of gut is table 14 then now the desc of gut is "Your belly seems stretched, the hot bestial cum refusing to settle inside as memories of the rutting skunkbeast flash through your mind.";
+			if the tf table of gut is table 14 begin;
+				now the desc of gut is "Your belly seems stretched, the hot bestial cum refusing to settle inside as memories of the rutting skunkbeast flash through your mind.";
+			end if;
 			Increase the skunkpregnant of the player by 2;
 			decrease the reflex of the player by a random number from 0 to 0.;
 			choose row with Segment of "full" in table 14;
-			change desc text entry to "You are a female anthro skunk.  Your belly has swollen quite a bit, however, from a very rough mating that you got from a horny beast.  It feels difficult to stand on two legs, and it's getting more and more tempting to drop to all fours.[if skunkpregnant of player is greater than 0] The massive amount of goo still inside you makes you shudder, and something tells you that there's going to be a lot more four-legged giant skunks soon...[end if]";
+			now desc text entry is "You are a female anthro skunk.  Your belly has swollen quite a bit, however, from a very rough mating that you got from a horny beast.  It feels difficult to stand on two legs, and it's getting more and more tempting to drop to all fours.[if skunkpregnant of player is greater than 0] The massive amount of goo still inside you makes you shudder, and something tells you that there's going to be a lot more four-legged giant skunks soon...[end if]";
 			choose row with Segment of "gut" in table 14;
-			change desc text entry to "Your belly sloshes a bit as you walk, and the sensations remind you of the beast that filled you with his seed.  For some reason, you have a growing desire to let yourself be dragged down to all fours and join him as his pet bitch.";
+			now desc text entry is "Your belly sloshes a bit as you walk, and the sensations remind you of the beast that filled you with his seed.  For some reason, you have a growing desire to let yourself be dragged down to all fours and join him as his pet bitch.";
 			if the tf table of gut is not table 14, infect gut with U;
 		end if;
 	end repeat;
@@ -3091,13 +3123,15 @@ if the the tf table of pelvis is table 21 begin;
 				remove H from play;
 			end if;
 			say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.[line break]     As you recover from the pleasure of it, the lion man snuggles, caressing your chest with his broad paws and rocking against you a few moments longer before he rises and releases you to your feet, wobbly though they may be.";
-			if the tf table of gut is table 21 then now the desc of gut is "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
+			if the tf table of gut is table 21 begin;
+				now the desc of gut is "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
+			end if;
 			Increase the pregnant of the player by 1;
 			decrease the reflex of the player by a random number from 0 to 0.;
 			choose row with Segment of "full" in table 21;
-			change desc text entry to "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front.[if pregnant of player is greater than 0] You look as if you are about eight months pregnant, with a huge furry belly that juts out in front of you proudly.[end if]";
+			now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front.[if pregnant of player is greater than 0] You look as if you are about eight months pregnant, with a huge furry belly that juts out in front of you proudly.[end if]";
 			choose row with Segment of "gut" in table 21;
-			change desc text entry to "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
+			now desc text entry is "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
 			if the tf table of gut is not table 21, infect gut with U;
 		end if;
 	end if;
@@ -3107,20 +3141,20 @@ Section - Sex/Cat Girl
 
 [general kissing]
 
-Female sex of things is usually "[if the player is butch]     You lean her back and begin to piston into her juicy depths with increasing lust. Soon you are both trembling with building tension. As you spill your essence into her body, she squeals in delight and holds close to you for a few moments, holding your cock deep inside of her.[end if][if player is femme and player is not butch]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[end if][if the player is not butch and the player is not femme]Though you lack genitals of your own, you eagerly push her back and dive between her legs, licking and nibbling at her until she's crying with pleasure, rocking against your face as you work at her.[end if]";
+Female sex of things is usually "[if the player is butch]     You lean her back and begin to piston into her juicy depths with increasing lust. Soon you are both trembling with building tension. As you spill your essence into her body, she squeals in delight and holds close to you for a few moments, holding your cock deep inside of her.[end if][if player is femme and player is not butch]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[end if][if the player is not butch and the player is not femme]Though you lack genitals of your own, you eagerly push her back and dive between her legs, licking and nibbling at her until she's crying with pleasure, rocking against your face as you work at her.[end if]".
 
-female sex of irish cat is "[if player is femme]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise if noun is compatible]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[otherwise]As she approaches you, the Irish Cat fills up a mug full of beer and shoves it into your hands as she slowly drops her miniskirt to the ground to reveal her dripping wet Aqua blue pussy to you. Her paws grip your shoulders softly as you drink the beer you feel her slowly plunge your cock deep into her wonderfully tight pussy, her vaginal walls tug and massage at your shaft as she continues to ride you slowly and hard. Really drawing it out as her double-C cup breasts bounced and moved softly inside of her outfit, the mug falling from your hands as you place them on her hips firmly. It is all just moments later when you cum hard into the Irish Cats aqua colored pussy and drain your load into her womb. After you finish blowing your load into her, she gives you a deep kiss on the lips as she orgasms all over your cock and balls. Getting off of you as she saunters off.[end if]";
-male sex of irish cat is "[if noun is female]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[end if]";
-male sex of things is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into his form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling him back against your rocking motions until you fill his bowels with thick gouts of seed, groaning with relief.[end if][if player is not butch]You approach the [printed name of noun] and reach for their cock, but they refuse you, instead grabbing at your hips and moving into position against you. Soon they are pistoning against you, rocking deeper with every stroke along your sensitive loins as you both sing in pleasure. You can feel his seed spraying deep into your waiting womb as your body shudders in climax.[end if]";
-female sex of momma nido is "[if player is butch][one of]The matronly looking creature looks at you as you approach with your jutting cock. She smiles and extends her hands to you. You move into her embrace eagerly, grinding your arousal to her urgently. She makes soft soothing sounds at you as she leans you back slowly, then swats you firmly on the ass, [apostrophe]Naughty boy, you will not play with mother like that,[apostrophe] she chastises with a grin. She slides up against you and starts to stroke over your excited pole, bringing you to full hardness, then keeping you on the edge as she coos into your ear. Your body trembles as your seed begins to spill wildly, spraying across the both of you before she finally releases you.[or]You sneak up behind [Noun], hoping to catch her by surprise. Just as you move to leap at her, her thick tail slices across the ground and you're sent sprawling. She is on you in a flash, pulling your rump into her lap and starting to smack it with the flesh of her palm, bringing shameful burning stinging to your butt as she dispenses maternal justice. Only after it feels like you're glowing red does she flip you over and cradle you like a baby against her curvaceous form, slowly stroking your member hard, then to bursting, letting you spray your hot cum across yourself as her soft fingers work at you.[at random][otherwise]You approach [Noun] and smile at her, and she smiles back. As if sensing your urge, she reaches for your hips and pulls you closer, [apostrophe]I know you're becoming a big girl, but I can not fulfill you that way. Lay back and I will put that fire out for a little while.[apostrophe] She soon has you on your back and her soft fingers are flicking over your netherlips, teasing and taunting you to a fever pitch as she plays you like an instrument. Your body goes rigid as you reach climax, then another, trembling under her unending assault on your cunt, smearing your flowing honey across your form as she works. Eventually, with your body limp and sated, she rises, looking satisfied.[end if]";
-female sex of coyote is "[if noun is compatible][one of][Noun] barks softly at you and you freeze in place as if struck with lightning. She approaches and runs her soft hands over your sides, crossing together at your cock. As she slowly strokes along it, your body begins to relax, the effects of her bark wearing off. You lean in and lick at her snout, and she returns the favor, then she shoves. You are soon on your back, with her settling on top of you, guiding your cock into her waiting wet depths. She begins to moan and pant, long tongue dangling, as she rides you energetically. You watch her many breasts jiggle with every bounce and reach, caressing and stroking at them until climax strikes. You grab for her hips and pull her down into a thrust, locking your knot in her and filling her as you both howl your pleasure.[or]You approach [noun] with a grin and bark at her. She yips in return, then goes to all fours, raising her tail at you and wagging her bottom. You need no further permission, and leap atop her, grabbing her shoulders and starting to pound into her body. Her curvy form bounces and jostles with each motion as the both of you groan and pant with delight. You slide in closer to her, letting your large balls slap against her as your hands explore the soft warmth of her many breasts. Your knot pops into her, making your motions shorter, sharper, then the bliss hits peak. You howl as you fire thick jets of seed into her waiting cunt.[at random][otherwise if noun is neuter and noun is not tauric]You feel uncertain a moment, approaching something that has the curves you lust for, and a cock as well, but the lust wins out. You grab [noun] and lick her cheek before you thrust right up into her without foreplay. She takes it with grace, grabbing your ass firmly and driving her thick cock against your belly. You rock against one another with increasing anxiety until you both release in powerful torrents. Seed flowing into her womb as hers splatters messily over your belly.[otherwise]You creep up on [Noun] from behind before hugging from behind and shoving your large cock into their waiting passage. You begin to pant as you casually rape them, though they seem to be growing warm to the attention as it goes on. They do make a delightful yelp as your swollen knot is forced into them, then your seed flows, rushing deep within their trembling body.[end if]";
+female sex of irish cat is "[if player is femme]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise if noun is compatible]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[otherwise]As she approaches you, the Irish Cat fills up a mug full of beer and shoves it into your hands as she slowly drops her miniskirt to the ground to reveal her dripping wet Aqua blue pussy to you. Her paws grip your shoulders softly as you drink the beer you feel her slowly plunge your cock deep into her wonderfully tight pussy, her vaginal walls tug and massage at your shaft as she continues to ride you slowly and hard. Really drawing it out as her double-C cup breasts bounced and moved softly inside of her outfit, the mug falling from your hands as you place them on her hips firmly. It is all just moments later when you cum hard into the Irish Cats aqua colored pussy and drain your load into her womb. After you finish blowing your load into her, she gives you a deep kiss on the lips as she orgasms all over your cock and balls. Getting off of you as she saunters off.[end if]".
+male sex of irish cat is "[if noun is female]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax.[otherwise]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. you get up and saunter off calmly.[end if]".
+male sex of things is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into his form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling him back against your rocking motions until you fill his bowels with thick gouts of seed, groaning with relief.[end if][if player is not butch]You approach the [printed name of noun] and reach for their cock, but they refuse you, instead grabbing at your hips and moving into position against you. Soon they are pistoning against you, rocking deeper with every stroke along your sensitive loins as you both sing in pleasure. You can feel his seed spraying deep into your waiting womb as your body shudders in climax.[end if]".
+female sex of momma nido is "[if player is butch][one of]The matronly looking creature looks at you as you approach with your jutting cock. She smiles and extends her hands to you. You move into her embrace eagerly, grinding your arousal to her urgently. She makes soft soothing sounds at you as she leans you back slowly, then swats you firmly on the ass, [apostrophe]Naughty boy, you will not play with mother like that,[apostrophe] she chastises with a grin. She slides up against you and starts to stroke over your excited pole, bringing you to full hardness, then keeping you on the edge as she coos into your ear. Your body trembles as your seed begins to spill wildly, spraying across the both of you before she finally releases you.[or]You sneak up behind [Noun], hoping to catch her by surprise. Just as you move to leap at her, her thick tail slices across the ground and you're sent sprawling. She is on you in a flash, pulling your rump into her lap and starting to smack it with the flesh of her palm, bringing shameful burning stinging to your butt as she dispenses maternal justice. Only after it feels like you're glowing red does she flip you over and cradle you like a baby against her curvaceous form, slowly stroking your member hard, then to bursting, letting you spray your hot cum across yourself as her soft fingers work at you.[at random][otherwise]You approach [Noun] and smile at her, and she smiles back. As if sensing your urge, she reaches for your hips and pulls you closer, [apostrophe]I know you're becoming a big girl, but I can not fulfill you that way. Lay back and I will put that fire out for a little while.[apostrophe] She soon has you on your back and her soft fingers are flicking over your netherlips, teasing and taunting you to a fever pitch as she plays you like an instrument. Your body goes rigid as you reach climax, then another, trembling under her unending assault on your cunt, smearing your flowing honey across your form as she works. Eventually, with your body limp and sated, she rises, looking satisfied.[end if]".
+female sex of coyote is "[if noun is compatible][one of][Noun] barks softly at you and you freeze in place as if struck with lightning. She approaches and runs her soft hands over your sides, crossing together at your cock. As she slowly strokes along it, your body begins to relax, the effects of her bark wearing off. You lean in and lick at her snout, and she returns the favor, then she shoves. You are soon on your back, with her settling on top of you, guiding your cock into her waiting wet depths. She begins to moan and pant, long tongue dangling, as she rides you energetically. You watch her many breasts jiggle with every bounce and reach, caressing and stroking at them until climax strikes. You grab for her hips and pull her down into a thrust, locking your knot in her and filling her as you both howl your pleasure.[or]You approach [noun] with a grin and bark at her. She yips in return, then goes to all fours, raising her tail at you and wagging her bottom. You need no further permission, and leap atop her, grabbing her shoulders and starting to pound into her body. Her curvy form bounces and jostles with each motion as the both of you groan and pant with delight. You slide in closer to her, letting your large balls slap against her as your hands explore the soft warmth of her many breasts. Your knot pops into her, making your motions shorter, sharper, then the bliss hits peak. You howl as you fire thick jets of seed into her waiting cunt.[at random][otherwise if noun is neuter and noun is not tauric]You feel uncertain a moment, approaching something that has the curves you lust for, and a cock as well, but the lust wins out. You grab [noun] and lick her cheek before you thrust right up into her without foreplay. She takes it with grace, grabbing your ass firmly and driving her thick cock against your belly. You rock against one another with increasing anxiety until you both release in powerful torrents. Seed flowing into her womb as hers splatters messily over your belly.[otherwise]You creep up on [Noun] from behind before hugging from behind and shoving your large cock into their waiting passage. You begin to pant as you casually rape them, though they seem to be growing warm to the attention as it goes on. They do make a delightful yelp as your swollen knot is forced into them, then your seed flows, rushing deep within their trembling body.[end if]".
 [male sex of coyote is "";]
-male sex of felitaur is "[if noun is tauric and noun is male]You approach [Noun] and seize his rear hips, drawing him back as you rear up and slide onto his back. Your lower breasts tingle with delight as they brush against his back and your cock slips free. He wriggles under you almost nervously as you line up your huge member, then push it into his waiting pucker. The fit is quite tight, almost too much, but he loosens with every push, and the two of you begin to rock together before you make a mess of the area, seed firing so thickly that it back washes over your own balls and the ground beneath your legs.[end if][if noun is not tauric and noun is male]You grab for them and they resist, grabbing at your own breasts. They bite and nibble at the great spheres, making you mewl and purr with pleasure. Your milk, unbidden, spills out from your excited teats, leaking down your front and across [Noun]'s chest. [Noun]'s arousal pushes up against your sexless frontgroin and you growl, nudging him forward and swinging around, offering your vast rump to him. He moves up and takes a hold of your rear hips, pushing himself into you and starting to rut, rocking with you until warmth rushes out into your waiting womb.[end if]";
-female sex of felitaur is "[if noun is neuter and noun is tauric]You smile at [Noun] knowingly and she smiles back. With barely a hint of foreplay, she turns and raises her tail for you, and you are on her, sliding your breast filled underbelly along her top until your top breasts mash against her upper torso. You hug her from behind, caressing her own breasts as your shaft pistons smoothly in and out of her form. You sing loud feral cries of bliss together as your body's move in heavenly union before you are both sent to shuddering spasm, her womb filled with your offering.[end if][if noun is neuter and noun is not tauric]How curious, [Noun] is a hermaphrodite like you, but missing mass. You approach her carefully, nuzzling into her cheeks, caressing her breasts and rubbing your own against her. Soon she is warmed up and submits to being laid down. You clamber over her, rubbing your big breasts against her front as you sink wetly into her waiting snatch. [Noun]'s cock drives up through your lower belly breasts, rocking with you. When you hit peak, so does [Noun], painting your great breasts with big gobs of fertile seed as you pump your own deep into her.[end if][if noun is tauric and noun is female][end if][if noun is not tauric and noun is female]You approach [Noun], rubbing over your breasts lightly before you are close enough to caress [Noun]'s, purring at her. She reaches to return the favor, exploring one another quietly as your shaft spills to the air, becoming long and hard. She notices the huge member and nods at you. You guide her to all fours and slip in over her, moving her body into the channel between your large lower breasts and easing your hungry member into her eager cunt. You begin to pound against her, giving her a thorough breeding as your large balls tense, spilling seed into her slickened, hot tunnel, mewling with satisfaction.[end if]";
-male sex of uberfox is "You are just about ready to mount [noun] when some terrible new instinct siezes you. You slowly step off of [noun] and back away, growling. Your sexual lust snuffed like a candle for a moment. It seems you just can't force yourself upon things.";
-female sex of uberfox is "[if noun is compatible][one of]You and [Noun] approach one another eagerly and snuffle across snout and necks as nips are exchanged. She rolls over onto her back and you slide up on top of her. Your breasts mash against hers in a burst of pleasure as you dip your snout between her hindlegs and begin slurping at her cock. Your own is engulfed in her snout and the bliss only increases. You seal to one another, licking, drooling and growling mutual affections until seed is sprayed wildly across tongue and snout.[or][Noun] notices your attention and snarls before dashing off. You are left dejected, ears drooping a moment before something lands on your back. Something heavy, but soft. Breasts run along your fur and you shiver, glancing over shoulder to see [Noun] mounting you. Thick fox cock pushes into your new vulva and you two are soon rocking against one another as eager lovers, howling your pleasure and spreading your pheromones to the dismay of any humans nearby. When [Noun] hits peak, you feel his knot slam into you, a moment of pain before warmth floods into your womb and soft shudders of delight rock your form.[or]You bury your nose under [Noun]'s tail a moment, snuffing at them before pulling yourself up on top. They arch their back as your breasts slide along it and you sink your teeth into their neck from behind. Your shaft thrusts into their sopping wet cunt and you rock against then, drawing out yelps and yips of rising intensity before your balls clench and you force your knot into the bitch, flooding them with your virile seed.[or][Noun] presses her snout to yours. Tongues flick out against one another as you kiss one another in a bestial way, pressing closer and closer until you roll onto your side and she slides up beside you, grabbing at you with her paws clumsily as you start to grind together. Thick organs press up into the abundant, soft, breast flesh of the other as you begin to titfuck together, whining and growling between tough, loving nips across neck and cheeks. [Noun] shudders, then howls, spraying your front with sticky seed. You roll over on top of her, rocking all the harder before your own tool stiffens, and you return the favor, painting her with thick gobs of fox cream.[at random][otherwise]You approach [Noun], tails flagged, eager to show them just how you want to make love to them, but then your shaft goes soft and your mind goes blank. You find yourself unable to complete the act, left standing there a moment or two in frustration.[end if]";
-male sex of centauress is "[if noun is tauric]You turn and present your rump towards [Noun], shaking it slowly as they step up behind you. Their weight is delicious on your back, but nothing compared to the delight of feeling them pressing into your hungry cunt. Your body does not consume this male, no, there are other uses for nice stiff members. You start to drive back against [Noun], and he thrusts all the harder into you, moving against one another in lustful dancing. Your hoofs clop as you get better footing. As the tension hits breaking point, his seed gushes out into you in powerful waves, leaving you floating in place a moment, dizzy with pleasure.[otherwise]You suddenly grab at [noun] and hoist them up against your upper chest. You wrap delicate fingers around his shaft, stroking it towards hardness as he is lifted just high enough to drive that member into the deep soft channel of your breasts. He needs little further prompting and begins to rock against you, making love to your jiggling breasts as your hands support his ass and fingers squeeze gently at him. As he rises swiftly towards release, he grabs at your higher, larger, breasts, pinching and caressing as he moans, spraying your front with thick gobs of seed, raining down between your breasts and across your chin. You set the pleasured male back to the ground, patting [noun] on the head.[end if]";
-female sex of centauress is "[if noun is not tauric]You approach [Noun] and reach for them. Your soft hands trail along your sensitive curves as you smile at them. As they become relaxed, you lift them into the air and put your warm tongue to work, flicking over nipples, then down over belly, giving a playful nip as they are raised higher still. Soon their groin is level with your face, and you nuzzle into them, licking and nibbling at them, driving wild moans from [Noun] as they wriggle in your grasp and grab at your hair. With a sudden ecstatic squeal from them, you set their still quivering form back to the ground.[otherwise][Noun] marches up to you and you reach out for them, soon hugging tightly to their front, mashing chests together as your hands wander the back of their upper torso. Tongues dance in frantic kisses as you purr and coo to one another, cuddling affectionately without regard for what's going on around.[end if]";
+male sex of felitaur is "[if noun is tauric and noun is male]You approach [Noun] and seize his rear hips, drawing him back as you rear up and slide onto his back. Your lower breasts tingle with delight as they brush against his back and your cock slips free. He wriggles under you almost nervously as you line up your huge member, then push it into his waiting pucker. The fit is quite tight, almost too much, but he loosens with every push, and the two of you begin to rock together before you make a mess of the area, seed firing so thickly that it back washes over your own balls and the ground beneath your legs.[end if][if noun is not tauric and noun is male]You grab for them and they resist, grabbing at your own breasts. They bite and nibble at the great spheres, making you mewl and purr with pleasure. Your milk, unbidden, spills out from your excited teats, leaking down your front and across [Noun]'s chest. [Noun]'s arousal pushes up against your sexless frontgroin and you growl, nudging him forward and swinging around, offering your vast rump to him. He moves up and takes a hold of your rear hips, pushing himself into you and starting to rut, rocking with you until warmth rushes out into your waiting womb.[end if]".
+female sex of felitaur is "[if noun is neuter and noun is tauric]You smile at [Noun] knowingly and she smiles back. With barely a hint of foreplay, she turns and raises her tail for you, and you are on her, sliding your breast filled underbelly along her top until your top breasts mash against her upper torso. You hug her from behind, caressing her own breasts as your shaft pistons smoothly in and out of her form. You sing loud feral cries of bliss together as your body's move in heavenly union before you are both sent to shuddering spasm, her womb filled with your offering.[end if][if noun is neuter and noun is not tauric]How curious, [Noun] is a hermaphrodite like you, but missing mass. You approach her carefully, nuzzling into her cheeks, caressing her breasts and rubbing your own against her. Soon she is warmed up and submits to being laid down. You clamber over her, rubbing your big breasts against her front as you sink wetly into her waiting snatch. [Noun]'s cock drives up through your lower belly breasts, rocking with you. When you hit peak, so does [Noun], painting your great breasts with big gobs of fertile seed as you pump your own deep into her.[end if][if noun is tauric and noun is female][end if][if noun is not tauric and noun is female]You approach [Noun], rubbing over your breasts lightly before you are close enough to caress [Noun]'s, purring at her. She reaches to return the favor, exploring one another quietly as your shaft spills to the air, becoming long and hard. She notices the huge member and nods at you. You guide her to all fours and slip in over her, moving her body into the channel between your large lower breasts and easing your hungry member into her eager cunt. You begin to pound against her, giving her a thorough breeding as your large balls tense, spilling seed into her slickened, hot tunnel, mewling with satisfaction.[end if]".
+male sex of uberfox is "You are just about ready to mount [noun] when some terrible new instinct siezes you. You slowly step off of [noun] and back away, growling. Your sexual lust snuffed like a candle for a moment. It seems you just can't force yourself upon things.".
+female sex of uberfox is "[if noun is compatible][one of]You and [Noun] approach one another eagerly and snuffle across snout and necks as nips are exchanged. She rolls over onto her back and you slide up on top of her. Your breasts mash against hers in a burst of pleasure as you dip your snout between her hindlegs and begin slurping at her cock. Your own is engulfed in her snout and the bliss only increases. You seal to one another, licking, drooling and growling mutual affections until seed is sprayed wildly across tongue and snout.[or][Noun] notices your attention and snarls before dashing off. You are left dejected, ears drooping a moment before something lands on your back. Something heavy, but soft. Breasts run along your fur and you shiver, glancing over shoulder to see [Noun] mounting you. Thick fox cock pushes into your new vulva and you two are soon rocking against one another as eager lovers, howling your pleasure and spreading your pheromones to the dismay of any humans nearby. When [Noun] hits peak, you feel his knot slam into you, a moment of pain before warmth floods into your womb and soft shudders of delight rock your form.[or]You bury your nose under [Noun]'s tail a moment, snuffing at them before pulling yourself up on top. They arch their back as your breasts slide along it and you sink your teeth into their neck from behind. Your shaft thrusts into their sopping wet cunt and you rock against then, drawing out yelps and yips of rising intensity before your balls clench and you force your knot into the bitch, flooding them with your virile seed.[or][Noun] presses her snout to yours. Tongues flick out against one another as you kiss one another in a bestial way, pressing closer and closer until you roll onto your side and she slides up beside you, grabbing at you with her paws clumsily as you start to grind together. Thick organs press up into the abundant, soft, breast flesh of the other as you begin to titfuck together, whining and growling between tough, loving nips across neck and cheeks. [Noun] shudders, then howls, spraying your front with sticky seed. You roll over on top of her, rocking all the harder before your own tool stiffens, and you return the favor, painting her with thick gobs of fox cream.[at random][otherwise]You approach [Noun], tails flagged, eager to show them just how you want to make love to them, but then your shaft goes soft and your mind goes blank. You find yourself unable to complete the act, left standing there a moment or two in frustration.[end if]".
+male sex of centauress is "[if noun is tauric]You turn and present your rump towards [Noun], shaking it slowly as they step up behind you. Their weight is delicious on your back, but nothing compared to the delight of feeling them pressing into your hungry cunt. Your body does not consume this male, no, there are other uses for nice stiff members. You start to drive back against [Noun], and he thrusts all the harder into you, moving against one another in lustful dancing. Your hoofs clop as you get better footing. As the tension hits breaking point, his seed gushes out into you in powerful waves, leaving you floating in place a moment, dizzy with pleasure.[otherwise]You suddenly grab at [noun] and hoist them up against your upper chest. You wrap delicate fingers around his shaft, stroking it towards hardness as he is lifted just high enough to drive that member into the deep soft channel of your breasts. He needs little further prompting and begins to rock against you, making love to your jiggling breasts as your hands support his ass and fingers squeeze gently at him. As he rises swiftly towards release, he grabs at your higher, larger, breasts, pinching and caressing as he moans, spraying your front with thick gobs of seed, raining down between your breasts and across your chin. You set the pleasured male back to the ground, patting [noun] on the head.[end if]".
+female sex of centauress is "[if noun is not tauric]You approach [Noun] and reach for them. Your soft hands trail along your sensitive curves as you smile at them. As they become relaxed, you lift them into the air and put your warm tongue to work, flicking over nipples, then down over belly, giving a playful nip as they are raised higher still. Soon their groin is level with your face, and you nuzzle into them, licking and nibbling at them, driving wild moans from [Noun] as they wriggle in your grasp and grab at your hair. With a sudden ecstatic squeal from them, you set their still quivering form back to the ground.[otherwise][Noun] marches up to you and you reach out for them, soon hugging tightly to their front, mashing chests together as your hands wander the back of their upper torso. Tongues dance in frantic kisses as you purr and coo to one another, cuddling affectionately without regard for what's going on around.[end if]".
 
 Does the player mean kissing an infection model: it is very unlikely.
 
@@ -3143,7 +3177,7 @@ if the noun is the player begin;
 	let P be a random not infected body part;
 	if the player is butch and the player is femme begin;
 		say "You take a moment to explore you enhanced sexuality, stroking your rock hard member with one hand while the other explores wantonly across your eager feminine entrance. The world seems forgotten for one blissful moment as you yelp, spraying seed and oozing honey from your twin sexes as climax rocks your form.";
-		if P is not nothing and the tf table of pelvis is not table 0 begin;
+		if P is not nothing and the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human begin;
 			say "Some of your heated fluids drip onto your [P] and it changes.";
 			infect P with pelvis;
 		end if;
@@ -3151,7 +3185,7 @@ if the noun is the player begin;
 		if the player is femme begin;
 			say "You run eager hands down to your hot and needing lips, gently stirring yourself to rapture. As your clit begins to throb, you bring a thumb up to slowly tease over it, pressing a finger teasingly into your sopping wet hole. Heedless of what's around you, you shudder and wail with a sudden intense climax.";
 			let P be a random not infected hand;
-			if P is not nothing and the tf table of pelvis is not table 0 begin;
+			if P is not nothing and the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human begin;
 				say "Some of your heated fluids drip onto your [P] and it changes.";
 				infect P with pelvis;
 			end if;
@@ -3197,7 +3231,7 @@ if ( the noun is female or the noun is neuter ) and zoidberg is 0 begin;
 	say "     [Noun] leans in against the kisses, feeling over your body eagerly[if the player is femme], brushing against your pussy eagerly[end if][if the player is butch], grinding herself against your cock wantonly[end if].";
 ]	if the pelvis is secret begin;
 		say "She notices that you have something covering your groin and she can do little more than paw at you wantingly.";
-		if the tf table of pelvis is not the tf table of the noun and tf table of pelvis is table 0, infect pelvis with noun;
+		if the tf table of pelvis is not the tf table of the noun and ( tf table of pelvis is table 0 or tf table of pelvis is table female human), infect pelvis with noun;
 		stop the action;
 	end if;
 	let zeptoid be 1;
@@ -3237,7 +3271,7 @@ if ( the noun is female or the noun is neuter ) and zoidberg is 0 begin;
 					say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
 					if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 					now altending is 1;
-					end the game saying "You escaped the infection alive but forever changed.";
+					end the story saying "You escaped the infection alive but forever changed.";
 					stop the action;
 				end if;
 			end if;
@@ -3261,7 +3295,7 @@ if the noun is male or the noun is neuter begin;
 		say "You take the helpless mortal and taunt him with the sinful appeals of your new body. As his hand grab clumsily over your furry form, you move  to disrobe him, whispering sweet nothings even as demonic energy builds within you. When he has lost all control, and is rutting with you wildly, you draw upon him, snatching his vital force to flow rapidly into your body. Your senses go white as the curse is sealed within you, and your patron whispers into your large ears, calling for you to return to the netherworlds.";
 		increase corruption by 1;
 		now altending is 1;
-		end the game saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
+		end the story saying "As the victim of your urges squirms in torment, the earth splits asunder beneath you, drawing you down through lava forged caverns. Scrambling against the sides that batter against your form does little to slow your descent, landing heavily in an ornate pentagram. Your mistress stands just outside it, taller than the other mice, more a rat, tall and wicked. She reaches through the circle and grabs you by the back of your neck before you can recover and affixes a sold gold collar around your neck.[line break][line break]'You, my newest pet, will serve me well. Fear not, I am a benign prince, as demons go. If you bring me souls of the human kind, I will reward you and treasure you.'[line break][line break]Her words are sweet and soothing, the pain of the fall fading away as she pets over you slowly, rekindling the sinful flames of your lust. You are soon sent back to the mortal world, visiting dreams, or on lucky occasions, answering the call of naive sorcerers. Each mortal you seduce wins favor of your mistress. There are worse jobs to have.";
 		stop the action;
 	end if;
 	if corruption is 6, stop the action;
@@ -3308,7 +3342,7 @@ if the noun is male or the noun is neuter begin;
 		end if;
 	end if;
 end if;
-if the tf table of pelvis is not table 0 and the tf table of noun is table 0 begin;
+if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0 begin;
 	infect the noun with pelvis;
 end if;
  
@@ -3323,7 +3357,9 @@ end if;
 say "     The cat girl is all too eager to be affectionate with you, accepting your advance and taking you into her furry embrace with a loud purr." ;
 if pelvis is secret begin;
 	say "     The cat girl notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
-	if the tf table of pelvis is not table 20 then infect pelvis with noun;
+	if the tf table of pelvis is not table 20 begin;
+		infect pelvis with noun;
+	end if;
  	stop the action;
 end if;
 if mouse cock is visible begin;
@@ -3349,7 +3385,7 @@ if the TF table of pelvis is table 20 or lioness cock is a part of the pelvis or
 				say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
 				if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 				now altending is 1;
-				end the game saying "You escaped the infection alive but forever changed.";
+				end the story saying "You escaped the infection alive but forever changed.";
 				stop the action;
 			end if;
 			now pregnant of noun is 1;
@@ -3374,7 +3410,7 @@ every turn while corruption is 5 and mouse cock is not visible:
 let q be a random number from 1 to 200;
 if willpower of ctype of the player is greater than q begin;
 	now altending is 1;
-	end the game saying "The burning urges within you cool, then die, leaving you shaken but still... yourself. At least mentally. Though you remain a red furred mouse, you feel you have passed some divine test, and have escaped the grasp of hell's minions, for today. Hope swelling in your new chest, you begin to flee the city. You are stopped by armed forces with automated weaponry, but a flash of bright white light whisks you safely to a far remote town. There, you are taken in by a priest who has had a vision of your coming.[line break][line break]Either in proving in God's humor, or in defiance of it, you become the priest's closest companion and play thing. He never marries, but you two are close enough to consider it the same. All is well until he dies of old age, and you feel as young as ever.";
+	end the story saying "The burning urges within you cool, then die, leaving you shaken but still... yourself. At least mentally. Though you remain a red furred mouse, you feel you have passed some divine test, and have escaped the grasp of hell's minions, for today. Hope swelling in your new chest, you begin to flee the city. You are stopped by armed forces with automated weaponry, but a flash of bright white light whisks you safely to a far remote town. There, you are taken in by a priest who has had a vision of your coming.[line break][line break]Either in proving in God's humor, or in defiance of it, you become the priest's closest companion and play thing. He never marries, but you two are close enough to consider it the same. All is well until he dies of old age, and you feel as young as ever.";
 end if;
 if an unchanged npc person is visible and a random chance of 1 in willpower of ctype of the player plus 5 succeeds begin;
 	say "The urge becomes too great, and you quickly approach the closest male,";
@@ -3416,7 +3452,9 @@ end if;
 say "     Delighted by your approach, the herm squirrel wraps her arms around you and presses her face and yours firmly together, kissing very passionately! Her breasts and cock grind against you, the girl horny from the encounter, and her soft big belly swells a little bit in her happiness." ;
 if pelvis is secret begin;
 	say "     The herm squirrel notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
-	if the tf table of pelvis is not table 55 then infect pelvis with noun;
+	if the tf table of pelvis is not table 55 begin;
+		infect pelvis with noun;
+	end if;
  	stop the action;
 end if;
 if mouse cock is visible begin;
@@ -3442,7 +3480,7 @@ if the TF table of pelvis is table 55 or lioness cock is a part of the pelvis or
 				say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
 				if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 				now altending is 1;
-				end the game saying "You escaped the infection alive but forever changed.";
+				end the story saying "You escaped the infection alive but forever changed.";
 				stop the action;
 			end if;
 			now pregnant of noun is 1;
@@ -3477,8 +3515,8 @@ end if;
 Section - Sex/Felinoid
 
 every turn:
-if a not out of play monster is heavy begin;
-	repeat with N running through heavy monster person begin;
+if a not out of play person is heavy begin;
+	repeat with N running through heavy person begin;
 		if the pregnant of N is not 0 and ctype of n is not sterile begin;
 			increase the pregnant of N by a random number from 1 to 3;
 			if the pregnant of N is greater than 30 and the ctype of N is semifertile and N is not fertilized, now the pregnant of N is 30;
@@ -3547,13 +3585,17 @@ if the nursing of the player is not 0 begin;
 		end if;
 	otherwise;
 			say "     The bundle in your arms remains firmly attached, drinking hungrily from you and making it hard to concentrate. It seems no amount of your milk sates the busty feline as she snuggles against you.";
-			if the tf table of chest is table 21 then now the desc of chest is "You have the chest and back of a small lioness with huge D cups, black nipples aroused and displayed and leaking a thick cream that runs down into your fur if it isn't being drunk constantly.";
+			if the tf table of chest is table 21 begin;
+				now the desc of chest is "You have the chest and back of a small lioness with huge D cups, black nipples aroused and displayed and leaking a thick cream that runs down into your fur if it isn't being drunk constantly.";
+			end if;
 			choose row with Segment of "full" in table 21;
-			change desc text entry to "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front.";
+			now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front.";
 			choose row with Segment of "chest" in table 21;
-			change desc text entry to "You have the chest and back of a small lioness with huge D cups, black nipples aroused and displayed and leaking a thick cream that runs down into your fur if it isn't being drunk constantly.";
+			now desc text entry is "You have the chest and back of a small lioness with huge D cups, black nipples aroused and displayed and leaking a thick cream that runs down into your fur if it isn't being drunk constantly.";
 			if the willpower of the player is greater than 1 and a random chance of 1 in 3 succeeds, decrease the willpower of ctype of the player by 1;
-			if the TF table of chest is not table 21 and the tf table of chest is not table 22 then  infect chest with a random lionette person;
+			if the TF table of chest is not table 21 and the tf table of chest is not table 22 begin;
+				infect chest with a random lionette person;
+			end if;
 	end if;
 end if;
 
@@ -3577,19 +3619,27 @@ if an infectitem thing is not out of play begin; [deals with automatically consu
 				if J is not holding I, try silently J taking I;
 				if I is a drink begin;
 					try silently J eating I;
-					if j is the player then say "You're  not sure why you just drank that.";
+					if j is the player begin;
+						say "You're  not sure why you just drank that.";
+					end if;
 				end if;
 				if I is edible begin;
 					try silently J eating I;
-					if j is the player then say "You're  not sure why you just ate that.";
+					if j is the player begin;
+						say "You're  not sure why you just ate that.";
+					end if;
 				end if;
 				if I is wearable begin;
 					try silently J wearing I;
-					if j is the player then say "You're not sure why you just did that.";
+					if j is the player begin;
+						say "You're not sure why you just did that.";
+					end if;
 				end if;
 				if I is readable begin;
 					try silently J reading I;
-					if j is the player then say "You're not sure why you just read that.";
+					if j is the player begin;
+						say "You're not sure why you just read that.";
+					end if;
 				end if;
 			end if;
 		end repeat;
@@ -3601,7 +3651,7 @@ Section - Wear
 clothing is a kind of thing.
 clothing is wearable.
 clothing has some text called clothing type. The clothing type of clothing is usually "shirt".
-The tf table of clothing is usually table 0;
+The tf table of clothing is usually table 0.
 a body part can be secret or exposed. A body part is usually exposed.
 
 Definition: A clothing (called N) is worn if the player is wearing N;
@@ -3627,118 +3677,119 @@ before wearing the stomach pouch:
 	
 before wearing something: [makes sure your not already wearing something there and if so stops]
 	let x be clothing type of noun;
-	if x is:
-		-- "shirt":
-			if shirt is 1:
-				say "You are already wearing a shirt.";
-				stop the action;
-		-- "pants":
-			if pants is 1:
-				say "You are already wearing pants.";
-				stop the action;
-		-- "shoes":
-			if shoes is 1:
-				say "You are already wearing shoes.";
-				stop the action;
-		-- "headwear":
-			if shoes is 1:
-				say "You are already wearing a hat.";
-				stop the action;
+	if clothing type of noun is "shirt":
+		if shirt of player is 1:
+			say "You are already wearing a shirt.";
+			stop the action;
+	otherwise if x is "pants":
+		if pants of player is 1:
+			say "You are already wearing pants.";
+			stop the action;
+	otherwise if x is "shoes":
+		if shoes of player is 1:
+			say "You are already wearing shoes.";
+			stop the action;
+	otherwise if x is "headware":
+		if headwear of player is 1:
+			say "You are already wearing a hat.";
+			stop the action;
+	otherwise if x is "headwear":
+		if headwear of player is 1:
+			say "You are already wearing a hat.";
+			stop the action;
 
 
 after wearing something: [infects if clothing is infectable, otherwise conceals]
 	let x be clothing type of noun;
-	if x is:
-		-- "shirt":
-			say "The shirt conceals your torso and arms from view, and may provide protection.";
-			if the tf table of the noun is not table 0:
-				infect chest with the noun;
-				infect left forearm with the noun;
-				infect right forearm with the noun;
-				infect gut with the noun;
-				infect left upper arm with the noun;
-				infect upper right arm with the noun;
-				remove noun from play;
-			otherwise:
-				now the chest is secret;
-				now left forearm is secret;
-				now right forearm is secret;
-				now gut is secret;
-				now left upper arm is secret;
-				now upper right arm is secret;
-				now shirt of player is 1;
-		-- "necklace":
-			say "The necklace drapes over your chest.";
-			if the tf table of the noun is not table 0:
-				infect chest with the noun;
-				remove noun from play;
-		-- "pants":
-			say "You pull on some pants and feel more secure.";
-			if the tf table of the noun is not table 0:
-				infect pelvis with the noun;
-				infect left thigh with the noun;
-				infect right thigh with the noun;
-				infect rear with the noun;
-				infect left shin with the noun;
-				infect right shin with the noun;
-				remove noun from play;
-			otherwise:
-				now the pelvis is secret;
-				now left thigh is secret;
-				now right thigh is secret;
-				now rear is secret;
-				now left shin is secret;
-				now right shin is secret;
-				now pants of player is 1;
-		-- "shoes":
-			say "You put on some shoes and feel more secure in the fact that your feet are now protected.";
-			if the tf table of the noun is not table 0:
-				infect left foot with the noun;
-				infect right foot with the noun;
-				remove noun from play;
-			otherwise:
-				now left foot is secret;
-				now right foot is secret;
-				now shoes of player is 1;
-		-- "headwear":
-			say "You put on [the noun] and feel safer.";
-			if the tf table of the noun is not table 0:
-				infect head with the noun;
-				remove noun from play;
-			otherwise:
-				now head is secret;
-				now headwear of player is 1;
+	if x is "shirt":
+		say "The shirt conceals your torso and arms from view, and may provide protection.";
+		if the tf table of the noun is not table 0:
+			infect chest with the noun;
+			infect left forearm with the noun;
+			infect right forearm with the noun;
+			infect gut with the noun;
+			infect left upper arm with the noun;
+			infect upper right arm with the noun;
+			remove noun from play;
+		otherwise:
+			now the chest is secret;
+			now left forearm is secret;
+			now right forearm is secret;
+			now gut is secret;
+			now left upper arm is secret;
+			now upper right arm is secret;
+			now shirt of player is 1;
+	otherwise if x is "necklace":
+		say "The necklace drapes over your chest.";
+		if the tf table of the noun is not table 0:
+			infect chest with the noun;
+			remove noun from play;
+	otherwise if x is "pants":
+		say "You pull on some pants and feel more secure.";
+		if the tf table of the noun is not table 0:
+			infect pelvis with the noun;
+			infect left thigh with the noun;
+			infect right thigh with the noun;
+			infect rear with the noun;
+			infect left shin with the noun;
+			infect right shin with the noun;
+			remove noun from play;
+		otherwise:
+			now the pelvis is secret;
+			now left thigh is secret;
+			now right thigh is secret;
+			now rear is secret;
+			now left shin is secret;
+			now right shin is secret;
+			now pants of player is 1;
+	otherwise if x is "shoes":
+		say "You put on some shoes and feel more secure in the fact that your feet are now protected.";
+		if the tf table of the noun is not table 0:
+			infect left foot with the noun;
+			infect right foot with the noun;
+			remove noun from play;
+		otherwise:
+			now left foot is secret;
+			now right foot is secret;
+			now shoes of player is 1;
+	otherwise if x is "headwear":
+		say "You put on [the noun] and feel safer.";
+		if the tf table of the noun is not table 0:
+			infect head with the noun;
+			remove noun from play;
+		otherwise:
+			now head is secret;
+			now headwear of player is 1;
 
 after taking off something: [informs of exposure and sets parts as exposed]
 	let x be clothing type of noun;
-	if x is:
-		-- "shirt":
-			say "Your torso is now exposed.";
-			now the chest is exposed;
-			now left forearm is exposed;
-			now right forearm is exposed;
-			now gut is exposed;
-			now left upper arm is exposed;
-			now upper right arm is exposed;
-			now shirt of player is 0;
-		-- "pants":
-			say "Your bottom half is exposed.";
-			now the rear is exposed;
-			now left shin is exposed;
-			now right shin is exposed;
-			now pelvis is exposed;
-			now left thigh is exposed;
-			now right thigh is exposed;
-			now pants of player is 0;
-		-- "shoes":
-			say "Your feet are now exposed.";
-			now the right foot is exposed;
-			now left foot is exposed;
-			now shoes of player is 0;
-		-- "headwear":
-			say "Your head is now exposed.";
-			now the head is exposed;
-			now headwear of player is 0;
+	if x is "shirt":
+		say "Your torso is now exposed.";
+		now the chest is exposed;
+		now left forearm is exposed;
+		now right forearm is exposed;
+		now gut is exposed;
+		now left upper arm is exposed;
+		now upper right arm is exposed;
+		now shirt of player is 0;
+	otherwise if x is "pants":
+		say "Your bottom half is exposed.";
+		now the rear is exposed;
+		now left shin is exposed;
+		now right shin is exposed;
+		now pelvis is exposed;
+		now left thigh is exposed;
+		now right thigh is exposed;
+		now pants of player is 0;
+	otherwise if x is "shoes":
+		say "Your feet are now exposed.";
+		now the right foot is exposed;
+		now left foot is exposed;
+		now shoes of player is 0;
+	otherwise if x is "headwear":
+		say "Your head is now exposed.";
+		now the head is exposed;
+		now headwear of player is 0;
 
 Instead of a person (called the wearer) wearing a thing(called the victim): [controls npc's wearing of wearables]
 	try silently wearer taking the victim;
@@ -4396,7 +4447,7 @@ The move rate of a cat girl is 2.
 The attack rate of a cat girl is 2.
 The reflex of a cat girl  is 13.
 The primary attack description of a cat girl is "approaches and draws close, grinding  lustfully while a hand reaches out to brush against".
-The secondary attack description of a cat girl is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.";
+The secondary attack description of a cat girl is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.".
 The TF description of a cat girl is "shudders and moans, grabbing at their chest and crotch  as they collapse to the ground,[if noun is male or noun is neuter] spilling the last of their seed in a great, and final,  climax[end if] before rising as a".
 
 Section - Sheep
@@ -4407,7 +4458,7 @@ The move rate of a Sheep is 2.
 The attack rate of a Sheep is 5.
 The reflex of a Sheep  is 8.
 The primary attack description of a Sheep is "happens by casually and chomps".
-The secondary attack description of a Sheep is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.";
+The secondary attack description of a Sheep is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.".
 The TF description of a Sheep is "falls to all fours as wool explodes over their form. They slowly rise back to their hoof-feet, disoriented and now a".
 
 Section - Collie
@@ -4419,7 +4470,7 @@ The attack rate of a Collie is 1.
 The reflex of a Collie  is 18.
 The willpower of Collie is 12.
 The primary attack description of a Collie is "suddenly rushes up and employs their large tongue to lick at".
-The secondary attack description of a Collie is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.";
+The secondary attack description of a Collie is " changes as her soft paws stroke over it and she whispers something sweetly in your ear.".
 The TF description of a Collie is "gives a soft moan and staggers in place. Clothes they were wearing tears right off as they expand into a".
 
 Section - Kangaroos
@@ -4431,7 +4482,7 @@ The attack rate of a Kangaroo Boomer is 2.
 The reflex of a Kangaroo Boomer  is 13.
 The Kangaroo Boomer is pacified.
 The primary attack description of a Kangaroo Boomer is "approaches and draws close, grinding  lustfully while a hand reaches out to brush against".
-The secondary attack description of a Kangaroo Boomer is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Kangaroo Boomer is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Kangaroo Boomer is "closes their eyes and gives a soft, wistful, sigh as their body smoothly gains fur and mass. It is a peaceful transcendeance to become something new, though as the tranquility of the event passes, they become confused at how they woke up this morning to become a".
 
 A Kangaroo Flyer is a infection model.  The description of a Kangaroo Flyer is "Once a person, now infused with bestial features. This kangaroo stands bipedal on powerful leaping feet and lean muscular legs. She has an expressive face, largely confused and adjusting to his new state as a kangaroo hybrid. At a distance, it would be easy to confuse this person as a normal kangaroo, it is only close that one can see the light of intelligence in their eyes, and the deft way they can move their agile fingers. Another giveaway are her breasts, perhaps a B cup, carried over from her days as a human and covered in the same soft brown fur that covers the rest of her form."  The TF table of a Kangaroo Flyer is Table Kangaroo.  Kangaroo Flyer is female. the kangaroo flyer is immune. the kangaroo flyer is benign. The belly of the kangaroo flyer is the birthing pouch. A kangaroo flyer is fearful.
@@ -4441,7 +4492,7 @@ The attack rate of a Kangaroo Flyer is 2.
 The reflex of a Kangaroo Flyer  is 13.
 The Kangaroo Flyer is pacified.
 The primary attack description of a Kangaroo Flyer is "approaches and draws close, grinding  lustfully while a hand reaches out to brush against".
-The secondary attack description of a Kangaroo Flyer is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Kangaroo Flyer is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Kangaroo Flyer is "closes their eyes and gives a soft, wistful, sigh as their body smoothly gains fur and mass. It is a peaceful transcendeance to become something new, though as the tranquility of the event passes, they become confused at how they woke up this morning to become a".
 
 Section - Uber Fox
@@ -4453,7 +4504,7 @@ The attack rate of a uberfox is 2.
 The reflex of a uberfox  is 13.
 The uberfox is pacified.
 The primary attack description of a Uberfox is "approaches and draws close, grinding  lustfully while a hand reaches out to brush against".
-The secondary attack description of a Uber Fox is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Uber Fox is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Uber Fox is "gives a soft mournful howl as the last of their humanity flees them. They fall to all fours and swell with new muscles as they are left an".
 
 Section - Hyena
@@ -4464,7 +4515,7 @@ The move rate of a Hyena is 2.
 The attack rate of a Hyena is 2.
 The reflex of a Hyena  is 15.
 The primary attack description of a Hyena is "[one of]approaches their victim with a soft growl. When they try to flee, she lands on their back in a sudden pounce, knocking them both to the ground heavily. Softly furred, but irresistably strong paws hold the poor soul down as she begins to rut against them, grinding her pre cum drenched, tapered shaft against[or]makes a come hither motion with one finger while the other hand lifts her buoyant breasts in offer. Their victim approaches hesitantly, but is soon nursing at the large teats of the beast, making her growl with growing pleasure as changes are seen in[at random]".
-The secondary attack description of a Hyena is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Hyena is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Hyena is "gives a sudden low growl, swiping at the air and staggering. Their hands become paws abruptly and they howl, face pushing forward into a snout. Huge breasts rip any shirt they were wearing as a tail bursts free down below. As heavy, but slender, shaft slides into view, they hunch forward a little, now a were".
 
 Section - Feline Taur
@@ -4475,7 +4526,7 @@ The move rate of a Felitaur is 2.
 The attack rate of a Felitaur is 2.
 The reflex of a Felitaur  is 13.
 The primary attack description of a Felitaur is "[one of]leaps from ambush, knocking her victim over onto their back and pinning them with strong paws. She rubs her breast filled lower belly against their belly as she lines up her huge cock and drives it deep inside. She ruts and mates, at first alone, then with increasing consent, until both are howling like cats. When she finally blows her load, a change is seen in[or]charges suddenly on powerful feline paws. She lands on her victim and pins them in place before starting to rut against them. Their massive breasts rub against the victim's back with every lustful motion. She and her victim groan with shared pleasure even as her barbed cock locks deep inside and her heavy balls clench, firing seed in great torrents and causing change in[at random]".
-The secondary attack description of a Felitaur is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Felitaur is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Felitaur is "gasps as their pants blow off, taken up by a new lower torso. A huge, naked, cock flops down before a sheath begins to form, grabbing it and pulling it up even as their balls swell. Breasts begin to form, huge and ponderous on both torsos as they grind and sway in place, lost in the pleasure of changing into a".
 
 The feline torso is a body part.  The body part origin of the feline torso is "rear".  The shift of the feline torso is "You snap your head around to stare. You have the feline body from the magazine. Huge, four legs, breasts lining the bottom. Your new tail twitches anxiously as you stare at the hypersexualized torso you've been given."  The desc of the feline torso is "You have the lower torso of a cat, of sorts, starting at your hips and working back. It appears to be that of a cougar, with mixtures of cream, brown, and even a splash of black at the end of your long tail. Along your lower belly are six huge breasts, taking up all the space between your powerful legs, at least the space not taken up by the two liter sized sheath and the huge furry balls that rest just under your thick, pouting, nethers."  The TF table of the feline torso is Table felitaur. The feline torso is benign.
@@ -4489,7 +4540,7 @@ The attack rate of a Jackal Priest is 2000.
 The reflex of a Jackal Priest  is 13.
 The Jackal Priest is pacified.
 The primary attack description of a Jackal Priest is "approaches and draws close, grinding  lustfully while a hand reaches out to brush against".
-The secondary attack description of a Jackal Priest is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well";
+The secondary attack description of a Jackal Priest is " gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Jackal Priest is "squirms and writhes as their body is covered in black and and their clothing vanishes. As they groan, their body becomes curvy and a long, thin, tail sprouts. Soon they are a".
 
 
@@ -4737,7 +4788,7 @@ After reading a command when the turn count is 1: [continues getting input for s
 					say "Ok, items will not tempt people.";
 				end if;
 				now Startcount is 4;
-				say "I lied, two more questions. Do you want graphics? Type 1 for yes and 0 for no.";
+				say "I lied, two more questions. Do you want be a male? Type 1 for yes and 0 for no.";
 			otherwise;
 				say "That's not a valid number.  Try again.";
 			end if;
@@ -4745,11 +4796,12 @@ After reading a command when the turn count is 1: [continues getting input for s
 			if the number understood is greater than -1 and the number understood is less than 2 begin;
 				let z be the number understood;
 				if z is 1 begin;
-					say "Ok, graphics will remain on.";
+					say "Ok, you are a male.";
 				otherwise;
-					say "Ok, graphics will be turned off.";
-					now Graphics Toggle is off;
-					now graphics toggle is norefresh;
+					say "Ok, you are a female.";
+						repeat with u running through visible body parts begin;
+							now the tf table of u is table female human;
+						end repeat;
 				end if;
 				now Startcount is 5;
 				say "Do you want items to be randomized? 1 for yes, 0 for no.";
@@ -4834,7 +4886,7 @@ The destined masculinity of the player is a number that varies.
 The destined femininity of the player is a number that varies.
 
  When play begins:
-	change the right hand status line to "[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";
+	now the right hand status line is "[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";
 	repeat with x running through infection models begin;
 		now x is a part of pelvis;
 	end repeat;
@@ -4992,10 +5044,10 @@ Every turn while a mousey npc person is visible and corruption is less than 5:
 	otherwise:
 		say "You resist the urge to have anything to do with that demonic looking mouse. It might be best to get away from here.";
 
-Every turn while a person (called victim) is stuck to a pentagram:
+Every turn while a person (called victim) is stuck to a pentagram (called pentie):
 	if the male rat tail is visible:
-		now the victim is not stuck to the pentagram;
-		now a random visible rope is not stuck to the pentagram;
+		now the victim is not stuck to the pentie;
+		now a random visible rope is not stuck to the pentie;
 		now the tf table of player is table slutrat;
 		tf player;
 		repeat with u running through on-stage monster persons:
@@ -5018,7 +5070,7 @@ Every turn while a person (called victim) is stuck to a pentagram:
 					otherwise:
 						say "'You are of no use to me at all. Mmm, did you think being a Eunuch would spare you my temptations? I suppose it does at that... Clever summoner. Very well then, we will bargain. Speak your terms.' You are unsure what to say at first, but you know you have to speak fast. You scramble to your feet and quickly spit out your fondest wish. 'Oh, that? I could do that, but what do I get in return?' You try offering things you have, but what use has a demon for such trinkets? She eventually agrees to make your wishes come true, but on the condition that the first person you truly care for that dies will become hers on death. Such a small price.";
 				now altending is 1;
-				end the game saying "";
+				end the story saying "";
 				stop the action;
 			otherwise:
 				say "She looks you over and give a loud laugh, 'One of my future girls, who still clings to some tiny shred of purity.' She steps up to you, grabbing at your new breasts, claws pinching at your teats, sending waves of pleasure through your demonic form, 'Oh, so precious. I don't usually get to play with you until after you're entirely damned.' she whispers, stroking over you as she pushes you back, licking at her lips. 'As much as I would like to simply fuck your little brains out until you were begging to be mine forever, I feel there's a better possibility, if I wait. You still have a small bit of your old, male, self in there. Let me show you'. She grabs you between the legs then, rubbing firmly across your distended vulva, stroking as she gazes into your eyes.";
@@ -5032,14 +5084,14 @@ Every turn while a person (called victim) is stuck to a pentagram:
 	[			repeat with counter running from 1 to 20:
 					move a random off-stage female to a random IC room;
 	]
-			now the victim is not stuck to the pentagram;
-			now a random visible rope is not stuck to the pentagram;
+			now the victim is not stuck to the pentie;
+			now a random visible rope is not stuck to the pentie;
 			remove the victim from play;
 			try looking;
 			stop the action;
 		say "[The victim] struggles wildly as you lash them down to the pentragam. You get out your book of 'ancient rites and rituals' and give it a try. Stomping around, lightning incense, slitting his throat. Slitting his throat? You should have read ahead! Racked with uncertainty, you hesitate. In that moment, [the victim] screams, and is engulfed in flames, something new appearing.";
-		now the victim is not stuck to the pentagram;
-		now a random visible rope is not stuck to the pentagram;
+		now the victim is not stuck to the pentie;
+		now a random visible rope is not stuck to the pentie;
 		move the victim to the location of the player;
 		if a random chance of 4 in 5 succeeds:
 			now the tf table of victim is table demonic mouse;
@@ -5051,11 +5103,11 @@ Every turn while a person (called victim) is stuck to a pentagram:
 at the time when judgement:
 	say "A sudden flush of warmth runs through your body, your cock spraying a gob of foul smelling spunk to the ground, then another. You grunt and groan with unexpected pleasure as a puddle slowly forms under your quivering pole. From it rises the demon rat, smirking with hands on her hips. 'Now let's see what we've been up to.[if fucked is 0] Not even one? Not even a single one? I guess you didn't want to do it after all. Ah well, I can still get use from you.[otherwise] I see you fucked [fucked]. I could have done better, but I suppose I can only expect so much from such a new demon.[end if]";
 	if fucked is 0:
-		end the game saying "You are stripped of your cock and become the lowest demons of your mistress' army. You are abused and mocked and fucked when nothing else is at hand. This not to say that your new family  has no care for you. They love you, in their own twisted way, and protect you from predation of other hell spawn. You never advance from your lowly position, however.";
+		end the story saying "You are stripped of your cock and become the lowest demons of your mistress' army. You are abused and mocked and fucked when nothing else is at hand. This not to say that your new family  has no care for you. They love you, in their own twisted way, and protect you from predation of other hell spawn. You never advance from your lowly position, however.";
 	otherwise if fucked is less than 5:
-		end the game saying "'Ah well, you will serve me well enough as my personal pet,' she decides, grabbing at the scruff of your neck. Your neck tingles as a golden collar forms around it, 'Such a cutie you are too.' She kisses your cheek, then your nose, long tongue slipping out to lick over your face as she draws you back into the puddle she emerged from. In hell, you remain at her side, serving loyally as one of her most favored submissive possessions. She puts many children into your belly over the coming eons, and you exist in a state of general contentment.";
+		end the story saying "'Ah well, you will serve me well enough as my personal pet,' she decides, grabbing at the scruff of your neck. Your neck tingles as a golden collar forms around it, 'Such a cutie you are too.' She kisses your cheek, then your nose, long tongue slipping out to lick over your face as she draws you back into the puddle she emerged from. In hell, you remain at her side, serving loyally as one of her most favored submissive possessions. She puts many children into your belly over the coming eons, and you exist in a state of general contentment.";
 	otherwise:
-		end the game saying "'You show promise, real promise. You will be as a general in my army. Come forward and accept my blessing.' She thrusts her hips forward. Acting on an unknown instinct, you greedily take her large shaft into your snout and suckle eagerly at her. She grabs at your large ears, rubbing as she rocks into you. Molten heat pours down your throat as your red fur grows denser and bristly, tail losing its fur, bright pink, as does your hands. Your form grows and sharpens, becoming rat instead of mouse. [line break][line break]You rise and follow your mistress to hell, where you develop your demonic powers, growing more powerful over time. You lead her rodent armies in great campaigns, against other demonic forces, and even heaven itself. In time, you amass a great harem all of your own, you and your mistress now peers, friends, allied under one banner.";
+		end the story saying "'You show promise, real promise. You will be as a general in my army. Come forward and accept my blessing.' She thrusts her hips forward. Acting on an unknown instinct, you greedily take her large shaft into your snout and suckle eagerly at her. She grabs at your large ears, rubbing as she rocks into you. Molten heat pours down your throat as your red fur grows denser and bristly, tail losing its fur, bright pink, as does your hands. Your form grows and sharpens, becoming rat instead of mouse. [line break][line break]You rise and follow your mistress to hell, where you develop your demonic powers, growing more powerful over time. You lead her rodent armies in great campaigns, against other demonic forces, and even heaven itself. In time, you amass a great harem all of your own, you and your mistress now peers, friends, allied under one banner.";
 		
 definition: A person(called N) is mousey:
 if the ctype of N is demonic mouse, yes;
@@ -5129,9 +5181,6 @@ definition: A person(called N) is skunky:
 if the ctype of N is skunkbeast, yes;
 no;
 
-definition: A person(called N) is ottery:
-if the ctype of N is otter, yes;
-no;
 
 definition: A person(called N) is squirrely:
 if the tf table of ctype of N is table 55, yes;
@@ -5360,19 +5409,19 @@ every turn while there is a not heavy batty on-stage person:
 Part - End Game Conditions
 
 every turn while there are no unchanged on-stage npc persons:
-	if the tf table of chest is table hyena or the tf table of rear is table slutrat or the tf table of rear is table huge dragoness or the tf table of head is table were fennec or the tf table of head is table werewolf or the tf table of rear is table jackal or the tf table of head is table echoen, end the game saying "There are no more people to claim.";
+	if the tf table of chest is table hyena or the tf table of rear is table slutrat or the tf table of rear is table huge dragoness or the tf table of head is table were fennec or the tf table of head is table werewolf or the tf table of rear is table jackal or the tf table of head is table echoen, end the story saying "There are no more people to claim.";
 
 every turn while there are no unchanged on-stage npc persons and the tf table of rear is table uber fox:
-	end the game saying "There is no more humanity to be absorbed..";
+	end the story saying "There is no more humanity to be absorbed..";
 
 every turn while there are no unchanged on-stage npc persons and the tf table of chest is table phoenix:
-	end the game saying "There are no more people to rebirth.";
+	end the story saying "There are no more people to rebirth.";
 
 every turn while there are no not secure on-stage npc not compatible monster persons and the pasture door has been open:
-	end the game saying "There are no more things to herd.";
+	end the story saying "There are no more things to herd.";
 
 every turn while there are no unchanged on-stage npc persons and the pasture door has been open:
-	end the game saying "There are no more people to save.";
+	end the story saying "There are no more people to save.";
 
 every turn while there are uber on-stage persons:
 	if the player is uber, now the command prompt is "Humanity: [0 minus humanity of player]>";		
@@ -5417,7 +5466,7 @@ every turn while there are no unchanged on-stage npc persons and the tf table of
 		say "You herd out your small collection of faithful and get them out of the city before trouble can arrive. You sneak aboard a large shipping freighter and eventually get yourself and your family to Australia, where you hide peacefully for the remainder of your days.";
 	if there are no on-stage not compatible npc persons:
 		say "The entire city has succumbed to your divine might. When the police come, they find the citizens asking them to leave. There is some violence at first, but your people insist on peace, and are eventually accepted as harmless, if strange looking. You become the mayor of the city, easily elected, and re-elected. With your divine powers keeping aging away, you look forward to guiding your people for a long time indeed.";
-	end the game saying "You have played the part of a kangaroo goddess, for better or worse.";
+	end the story saying "You have played the part of a kangaroo goddess, for better or worse.";
 
 Every turn while the head is infected: [end game conditions]
 	if corruption is 5, stop the action;
@@ -5439,7 +5488,7 @@ Every turn while the head is infected: [end game conditions]
 				say "Final body:[line break]";
 				check along the player;
 			end if;
-			end the game saying "You lose your mind to the changes.";
+			end the story saying "You lose your mind to the changes.";
 		end if;
 	otherwise if loss switch is "mixed tf";
 		now xcheckerx is 0;
@@ -5459,7 +5508,7 @@ Every turn while the head is infected: [end game conditions]
 					say "Final body:[line break]";
 					check along the player;
 				end if;
-				end the game saying "You have been overcome by the changes.";
+				end the story saying "You have been overcome by the changes.";
 		end if;
 		now xcheckerx is 0;
 	otherwise if loss switch is "full tf";
@@ -5470,7 +5519,7 @@ Every turn while the head is infected: [end game conditions]
 				let N be the TF table of the head;
 				choose row with segment of "full" in N;
 				say "Final description: [desc text entry][line break]";
-				end the game saying "You have been overcome by the changes.";
+				end the story saying "You have been overcome by the changes.";
 			end if;
 		end if;
 		now xcheckerx is 0;
@@ -5985,7 +6034,7 @@ Stomach Pouch is a kind of clothing. Understand "pouch" as a stomach pouch. The 
 
 There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back.".
 
-Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.]  understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". The description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws."; The clothing type of pair of latex wolf paws is "shoes"; The TF table of pair of latex wolf paws is table 54;  Pair of latex wolf paws is infectitem.
+Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.]  understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". The description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws." The clothing type of pair of latex wolf paws is "shoes". The TF table of pair of latex wolf paws is table 54. Pair of latex wolf paws is infectitem.
 
 Mephit Perfume is a kind of clothing.  Understand "perfume" as 1 Mephit Perfume.  The Description of Mephit Perfume is "A black can with white lettering stating it is Mephit Perfume.  Claims to be the finest of scents.  You wonder why you'd want to wear it.".  The tf table of Mephit Perfume is table 14.  The clothing type of Mephit Perfume is "headwear".  Mephit Perfume is infectitem.
 
@@ -6074,11 +6123,11 @@ A room is either IC or not IC. A room is usually IC.
 
 Part - Places
 
-Apartment 1A is a room.  "Your apartment. You've had better, you've had worse. At least this one has a window with a nice view, and you've only been mugged once all year! You got the place at a steal, and if you graduate on time, you'll be on to bigger and better soon. The pentagram you drew on a dare is still visible. Hope the land lord doesn't come and see that, oh well. Your dresser rests under your mirror, both cheap emergency buys from the local Ikea.";
+Apartment 1A is a room.  "Your apartment. You've had better, you've had worse. At least this one has a window with a nice view, and you've only been mugged once all year! You got the place at a steal, and if you graduate on time, you'll be on to bigger and better soon. The pentagram you drew on a dare is still visible. Hope the land lord doesn't come and see that, oh well. Your dresser rests under your mirror, both cheap emergency buys from the local Ikea.".
 First Floor Hallway is a room. Wooden door is a door. Northwest of wooden door is Apartment 1A. Southeast of wooden door is First Floor Hallway.[Northwest of First Floor Hallway is Apartment 1A.  ]The description of First Floor Hallway is "Just outside your apartment on the first floor. Whoever designed this apartment building was a little paranoid. Every floor has its own key, so you can't get to the other floors, just this one. The stairs lead down to the street at the end of the hallway, or you could go up to the roof. No key is needed up there. Two other apartments are visible from here as well.".
 Apartment 1B is a room. "Home of Bob and Susan. You know them from school, since they go to college with you. You're pretty sure they're an item, but they admit to nothing. The most prominent feature of the room is the huge fridge they got for Christmas last year. The thing is gargantuan, chrome, and has one of those built in water/ice dispensers. You are so jealous.".
 South of Apartment 1B is First Floor Hallway.
-There is a Refrigerator in Apartment 1B. The description of the refrigerator is "A huge chrome fridge. It even has one of those ice/water dispensers. Aw man, you wish you had one of these.";The Refrigerator is an openable container. It is closed. It is fixed in place. There is an easter egg and a bottle of milk in the refrigerator. understand "fridge" as refrigerator. There is a cat ear band in Apartment 1B. "Someone left a strange hair band laying around, it has cat ears on it."
+There is a Refrigerator in Apartment 1B. The description of the refrigerator is "A huge chrome fridge. It even has one of those ice/water dispensers. Aw man, you wish you had one of these.". The Refrigerator is an openable container. It is closed. It is fixed in place. There is an easter egg and a bottle of milk in the refrigerator. understand "fridge" as refrigerator. There is a cat ear band in Apartment 1B. "Someone left a strange hair band laying around, it has cat ears on it.".
 Apartment 1E is a room. "Home of David and Greg. You've heard Greg was a bit of a 'furry'. You know, one of those weird internet cult things, whatever. Either way, they do have a pet ferret in a cage right there on the counter of the kitchen. That has to be proof, right? I mean, really, there's even a dog treat shaped cookie in a clear cookie jar. Total furry." East of Apartment 1E is First Floor Hallway.
 There is a ferret cage in apartment 1E.
 There is a hawk milk in apartment 1E. "Some kind of dietary supplement drink is sitting there, [apostrophe]Hawk Milk[apostrophe], odd name.".
@@ -6106,7 +6155,7 @@ The description of pasture is "A nice, grassy, area. It seems the livestock is k
 The description of ranch yard is "You're coming up one of the ranches. Why this one? It was one of the few that didn't have a huge padlock right on the road and signs about shooting trespassers on sight. You're not even sure if this ranch is in use, looks a little rundown. To the north are some stables in a barn, but there is a padlock on that. To the south, a grassy field is visible. The road awaits you back west, or perhaps you want to explore inside the house?".
 Pasture Door is a door.
 West of Pasture Door is Pasture.
-East of Pasture Door is Sheep Pasture. The description of Sheep Pasture is "A fine fenced in area for some small livestock, probably sheep, guessing by the wool.";
+East of Pasture Door is Sheep Pasture. The description of Sheep Pasture is "A fine fenced in area for some small livestock, probably sheep, guessing by the wool.".
 Ranch Yard is a room.  West of Ranch Yard is Town Border.
 inside of ranch yard is Ranch Office.
 The description of ranch office is "This place is definititely abandoned. There's dust everywhere, except for a small patch on the counter. To the east, you see an open doorway leading to another room, or you could head out. You can feel your allergies about to kick in with all the dust.".
@@ -6282,10 +6331,11 @@ left	central	right
 " Exits: [list of valid directions]"	""	"[time of day]"
 [" You are:[Player_Status], [Player_Gender_Status]"	""	""]
 
-[The first for constructing the status line rule:
-	fill status bar with Table of Fancy Status;
-	rule succeeds.]
+The first for constructing the status line rule:
+[	fill status bar with Table of Fancy Status;]
+	rule succeeds.
 
+[
 Chapter - Toggling text map view (in place of Chapter - Hacking Automap in Glimmr Automap by Erik Temple)
 
 First for constructing the status line (this is the bypass status line map rule):
@@ -6299,9 +6349,10 @@ First for constructing the status line (this is the bypass status line map rule)
 			now current zoom is map zoomed in;
 			reserve automap memory of (text-map depth) rows;
 			fill status bar with table of fancy status and map.
+]
 
 When play begins: 
-	change right alignment depth to 18;
+[	change right alignment depth to 18;]
 	now all rooms in the apartments are indoor.
 
 Chapter - Generate Player Status
@@ -6396,7 +6447,7 @@ Figure of Black 14 is the file "black_14.png".
 Figure of Black 15 is the file "black_15.png".
 Figure of Black 16 is the file "black_16.png".
 
-Book - Flexible Windows support
+[Book - Flexible Windows support
 
 Include Flexible Windows by Jon Ingold.
 Include Glulx Status Window Control by Erik Temple.
@@ -6440,18 +6491,18 @@ Window-drawing rule for the side-window (this is the construct inventory rule):
 		move focus to status-window, clearing the window;
 		Generate Player Status;
 		say "You are [Player_Status], [Player_Gender_Status].";
-	if Graphics Toggle is on and graphics-window is g-present and Graphics Toggle is refresh:
+[	if Graphics Toggle is on and graphics-window is g-present and Graphics Toggle is refresh:
 		Clear_Graphics;
-		[if the player is fully gynoid, draw scaled framed for Figure of Side by Side in graphics-window;]
+		[if the player is fully gynoid, draw scaled framed for Figure of Side by Side in graphics-window;]]
 	now Graphics Toggle is refresh;
 	if Graphics Toggle is on and graphic-status-window is g-present:
-		Clear_Graphic_Status;
-		draw scaled copy of Figure of Body Status in graphic-status-window;
+[		Clear_Graphic_Status;]
+[		draw scaled copy of Figure of Body Status in graphic-status-window;]
 		repeat with N running from 1 to 16:
 			choose row with a placing of N in the table of adjacencies;
 			let F be the BlackStatusFigure entry;
 			let GSBP be the body part entry;
-			if TF table of GSBP is not Table 0, draw scaled copy of F in graphic-status-window;
+[			if TF table of GSBP is not Table 0, draw scaled copy of F in graphic-status-window;]
 	return to main screen.
 
 The graphic-status-window is a graphics g-window.  The side-window spawns the graphic-status-window.  The position of the graphic-status-window is g-placeabove.  The scale method of the graphic-status-window is g-proportional.  The measurement of the graphic-status-window is 42.
@@ -6464,10 +6515,10 @@ The inventory-window is a g-window.  The side-window spawns the inventory-window
 
 [Inform 6 code for handling graphics scaling.]
 
-To draw scaled copy of (f - a figure-name) in (g - a g-window):
+[To draw scaled copy of (f - a figure-name) in (g - a g-window):
      (- DrawScaled({f}, {g}); -) .
-
-Include (-
+]
+[Include (-
 
 		! Doing scaling calculations in I6 lets us handle bigger numbers
 
@@ -6581,6 +6632,7 @@ To Clear_Graphic_Status:
 	if graphic-status-window is g-present:
 		draw stretched copy of Figure of Blank White in graphic-status-window;
 
+][
 Book - Automap / Hyperlinks / Autowalk support
 
 Chapter -  Glimmr Automap support
@@ -6596,27 +6648,27 @@ An element display rule for the map-renderer (this is the map-renderer plus inte
 	let scan be 0;
 	let row be the win-y of the map-renderer;
 	let column be the win-x of the map-renderer;
-	let xx be the tile-width of the tilesetting * scaling factor of the current window as an integer;
-	let yy be the tile-height of the tilesetting * scaling factor of the current window as an integer;
+	let xx be the tile-width of the tilesetting * scaling factor of the current window to the nearest whole number;
+	let yy be the tile-height of the tilesetting * scaling factor of the current window to the nearest whole number;
 	unless the background tint of the map-renderer is g-placenullcol:
-		draw a rectangle (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window as an integer) by (map-height of map-renderer * scaling factor of the current window as an integer);
+		draw a rectangle (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window to the nearest whole number) by (map-height of map-renderer * scaling factor of the current window to the nearest whole number);
 		#if utilizing Glimmr debugging;
-		say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window as an integer)], [win-y + (map-height of map-renderer * scaling factor of the current window as an integer)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
+		say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window to the nearest whole number)], [win-y + (map-height of map-renderer * scaling factor of the current window to the nearest whole number)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
 		#end if;
-	unless using the no post-processing option:
-		follow the automap post-processing rules;
+[	unless using the no post-processing option:]
+	follow the automap post-processing rules;
 	repeat with count running from 1 to (map height * map width):
 		increase scan by 1;
 		if scan > map width:
 			increase row by yy;
-			change column to the win-x of the map-renderer;
+			now column is the win-x of the map-renderer;
 			let scan be 1;
 		let V be the map glyph of count;
 		if there is a char of V in the translation-table of the tilesetting:
 			choose row with a char of V in the translation-table of the tilesetting;
 			let the current tile be tile entry;
 			drscimage (current tile) in (current window) at (column) by (row) with dimensions (xx) by (yy);
-			if using the automap hyperlinks option:
+			if 1 is 0[using the automap hyperlinks option]:
 				if there is a char of V in the Table of Directional Correspondences:
 					choose row with a char of V in the Table of Directional Correspondences;
 					set a graphlink in the current window identified as dir entry from column by row to (column + xx) by (row + yy) as "", ignoring redundant links;
@@ -6675,7 +6727,7 @@ Carry out going by name:
 
 Automap graphlink rule for a room (called the target):
 	let target-text be the printed name of the target in upper case;
-	change glulx replacement command to "GO TO [target-text]";
+	now glulx replacement command is "GO TO [target-text]";
 	exit.
 
 Chapter - Graphic Windows exempt from GLIMMR canvas rules
@@ -6696,7 +6748,7 @@ A window-drawing rule for a graphics g-window (called the window) (this is the c
 		carry out the drawing the canvas background activity with the window;
 		carry out the drawing the active elements activity with the window.
 
-Procedural rule:  substitute the clever canvas-based drawing rule for the default canvas-based drawing rule.
+[Procedural rule:  substitute the clever canvas-based drawing rule for the default canvas-based drawing rule.]
 
 Part - Window setup at the start of play
 
@@ -6726,6 +6778,7 @@ Every turn when the startcount is 5:
 	try looking;]
 
 
+]]
 Book - Enhanced commands / items
 
 Part - Enhanced basic actions
@@ -6907,7 +6960,7 @@ After printing the name of a rope (called the tied object) while taking inventor
 
 [And, indeed, whenever the player examines a rope, we should see what's connected.]
 
-Instead of examining a rope when something is stuck to the rope:
+Instead of examining a rope (called the strand) when something is stuck to the strand:
 	say "[The noun] is tied to [the list of secondary things which are stuck to the noun]."
 
 [Similarly, any time the player looks at something tied to a rope.]
@@ -6969,18 +7022,18 @@ Understand "untie [something] from [something]" as untying it from. Understand "
 Rule for supplying a missing second noun while untying something from:
 	if the number of secondary things stuck to the noun is 0, say "[The noun] is already entirely free." instead;
 	if the noun is a rope:
-		if the number of touchable nonrope things which are stuck to the rope > 1:
+		if the number of touchable nonrope things which are stuck to the noun > 1:
 			say "You'll have to say which thing you want to untie [the noun] from.";
 			rule fails;
 		otherwise:
 			if the number of touchable nonrope things stuck to the noun is 0, say "You can't reach [the random nonrope thing stuck to the noun]." instead;
-			let the tied object be a random touchable nonrope thing which is stuck to the rope;
+			let the tied object be a random touchable nonrope thing which is stuck to the noun;
 			say "(from [the tied object])[line break]";
-			change the second noun to the tied object;
+			now the second noun is the tied object;
 	otherwise:
 		if the noun is stuck to a rope (called the tied object):
 			say "(from [the tied object])[line break]";
-			change the second noun to the tied object.
+			now the second noun is the tied object.
 
 Untying it from is an action applying to two things.
 

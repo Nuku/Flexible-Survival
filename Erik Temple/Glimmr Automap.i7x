@@ -181,8 +181,8 @@ For scaling a map-display window (called the viewport) (this is the select appro
 	continue the action.
 	
 For scaling a map-display window (called the viewport) (this is the resize canvas to map rule):
-	let scaled tile-width be (tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the viewport) as an integer;
-	let scaled tile-height be (tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the viewport) as an integer;
+	let scaled tile-width be (tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the viewport) to the nearest 1;
+	let scaled tile-height be (tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the viewport) to the nearest 1;
 	#if utilizing Glimmr debugging;
 	say "[>console][GLAM]Scaled automap tile will measure [scaled tile-width] x [scaled tile-height] pixels, based on [i]map-window[/i] scaling factor.[<]";
 	#end if;
@@ -192,14 +192,16 @@ For scaling a map-display window (called the viewport) (this is the resize canva
 	say "[>console][GLAM]Window fits [x-win] tiles wide by [y-win] tiles high.[<]";
 	#end if;
 	if maximum map width of the viewport > 0:
-		let x-win be MIN (x-win) or (maximum map width of the viewport);
+		if x-win > maximum map width of the viewport:
+			now x-win is maximum map width of the viewport;
 	if maximum map height of the viewport > 0:
-		let y-win be MIN (y-win) or (maximum map height of the viewport);
+		if y-win > maximum map height of the viewport:
+			now y-win is maximum map height of the viewport;
 	#if utilizing Glimmr debugging;
 	if maximum map height of viewport > 0 or maximum map width of viewport > 0:
 		say "[>console][GLAM]Number of displayed automap tiles set at [x-win] tiles wide by [y-win] tiles high, taking into account author limits.[<]";
 	#end if;
-	reserve automap memory of y-win rows by x-win columns;
+	reserve automap memory of y-win to the nearest whole number rows by x-win to the nearest whole number columns;
 	if the map is drawn and the current zoom is not map absent:
 		do nothing;[Automap's map is drawn by the phrase "if the map is drawn"; hence this odd instruction.]
 	now the map-width of the map-renderer is (map width * tile-width of associated tileset of the map-renderer);
@@ -222,12 +224,12 @@ An element display rule for the map-renderer (this is the map-renderer display r
 	let scan be 0;
 	let row be the win-y of the map-renderer;
 	let column be the win-x of the map-renderer;
-	let xx be the tile-width of the tilesetting * scaling factor of the current window as an integer;
-	let yy be the tile-height of the tilesetting * scaling factor of the current window as an integer;
+	let xx be the tile-width of the tilesetting * scaling factor of the current window to the nearest whole number;
+	let yy be the tile-height of the tilesetting * scaling factor of the current window to the nearest whole number;
 	unless the background tint of the map-renderer is g-placenullcol:
-		dimrectdraw (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window as an integer) by (map-height of map-renderer * scaling factor of the current window as an integer);
+		dimrectdraw (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window to the nearest whole number) by (map-height of map-renderer * scaling factor of the current window to the nearest whole number);
 		#if utilizing Glimmr debugging;
-		say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window as an integer)], [win-y + (map-height of map-renderer * scaling factor of the current window as an integer)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
+		say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window to the nearest whole number)], [win-y + (map-height of map-renderer * scaling factor of the current window to the nearest whole number)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
 		#end if;
 	unless the no post-processing option is active:
 		follow the automap post-processing rules;
@@ -1366,12 +1368,12 @@ The Table of Directional Correspondences includes only the tile numbers of direc
 		let scan be 0;
 		let row be the win-y of the map-renderer;
 		let column be the win-x of the map-renderer;
-		let xx be the tile-width of the tilesetting * scaling factor of the current window as an integer;
-		let yy be the tile-height of the tilesetting * scaling factor of the current window as an integer;
+		let xx be the tile-width of the tilesetting * scaling factor of the current window to the nearest whole number;
+		let yy be the tile-height of the tilesetting * scaling factor of the current window to the nearest whole number;
 		unless the background tint of the map-renderer is g-placenullcol:
-			draw a rectangle (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window as an integer) by (map-height of map-renderer * scaling factor of the current window as an integer);
+			draw a rectangle (color background tint of the map-renderer) in (the current window) at (column) by (row) with dimensions (map-width of map-renderer * scaling factor of the current window to the nearest whole number) by (map-height of map-renderer * scaling factor of the current window to the nearest whole number);
 			#if utilizing Glimmr debugging;
-			say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window as an integer)], [win-y + (map-height of map-renderer * scaling factor of the current window as an integer)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
+			say "[>console][GLAM]Drawing background rectangle (glulx color-value [background tint of map-renderer]) from ([win-x], [win-y]) to ([win-x + (map-width of map-renderer * scaling factor of the current window to the nearest whole number)], [win-y + (map-height of map-renderer * scaling factor of the current window to the nearest whole number)]) for element [i][map-renderer][/i] in [i][current window][/i].[<]";
 			#end if;
 		unless using the no post-processing option:
 			follow the automap post-processing rules;
