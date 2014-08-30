@@ -46,7 +46,9 @@ the scent of Andromeda is "     Andromeda smells clean, obviously taking care of
 
 [Talking with NPC - Individual scenes play till done, then random talks]
 instead of conversing Andromeda:
-	if hp of Andromeda is 0:
+	if debugactive is 1:
+		say "DEBUG ->HP: [hp of Andromeda], LUST: [lust of Andromeda], LIBIDO: [libido of Andromeda], XP: [xp of Andromeda] <- DEBUG[line break]";
+	otherwise if hp of Andromeda is 0:
 		say "     'Hi [if player is female]miss[otherwise if player is male]miss[otherwise]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I’ll show you around my store.' She says as she pulls you forward, surprisingly strong for her size.";
@@ -92,6 +94,7 @@ instead of fucking Andromeda:
 		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if libido of Andromeda > 0] She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl.[otherwise] Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
 		say "     Following her, you both find yourselves in the storage room, where Andromeda shuts and locks the door. Crates of what are probably excess clothes are stacked along the walls of this bare room, with the only other furnishings being a haphazard mess of blankets and pillows on the ground. You figure that Andromeda must sleep here at night. Turning around to you, her eyes have taken on a lustful look, and she is panting quietly, her tongue already lolling out of her mouth.";
 		say "     Under panted breaths, you hear Andromeda talking. [if libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you.[otherwise]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.' Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
+		say "     [line break]";
 		now calcnumber is -1;
 		now xp of Andromeda is 0;
 		while xp of Andromeda is 0:
