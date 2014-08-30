@@ -356,8 +356,8 @@ To decide whether (new room - mappable room) is placed (dx - a number) and (dy -
 	let delta_y be (map_y of old room) + dy - (map_y of new room);
 	repeat with loop_room running through all mappable rooms coregional with new room
 	begin;
-		change map_x of loop_room to (map_x of loop_room) + (delta_x);
-		change map_y of loop_room to map_y of loop_room + delta_y;
+		now map_x of loop_room is (map_x of loop_room) + (delta_x);
+		now map_y of loop_room is map_y of loop_room + delta_y;
 	end repeat;
 	now old room is coregional with new room;
 	recenter the region of old room;
@@ -367,7 +367,7 @@ To decide whether (r - a room) is not explored:
 	if r is explored, decide no; decide yes.	
 	
 To decide whether (r - a room) has an exit to the/-- (d - a direction):
-	if using the automap hide paths through closed doors option and the room-or-door d from r is a closed door, decide no;
+	if [using the automap hide paths through closed doors option and ]the room-or-door d from r is a closed door, decide no;
 	If the room d from r is a room, decide yes; decide no.
 
 Section 3 - Drawing the map - Writing to the character array
@@ -726,13 +726,17 @@ To fill status bar with (selected table - a table-name) and map:
                 center central entry at row __index;
                 right align cursor to __index;
                 say "[right entry]";
-                change __index to __index + 1;
+                now __index is __index + 1;
         end repeat;
 	if the map is drawn and the current zoom is not map absent, display the map at line __n;
 	[if __b and the current zoom is not map absent, display the map at line __n + 1;]
 		
-Before constructing the status line (this is the automap add adjacent rooms to map rule) : if not using the automap manual exploration option and the location is a mappable room and the location is not explored, say "Error exploring [location]."
-
+[Before constructing the status line (this is the automap add adjacent rooms to map rule) : 
+	if not using the automap manual exploration option:
+		if the location is a mappable room:
+			if the location is not explored:
+				say "Error exploring [location].";
+]
 Rule for constructing the status line (this is the automap standard status line rule):
 	fill status bar with table of ordinary status and map.
 

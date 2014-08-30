@@ -754,7 +754,7 @@ instead of conversing the Anthony:
 instead of fucking the Anthony:
 	say "     Anthony looks at you with interest as you make him your amorous offer, then sighs and shakes his head. 'I'd love to take you up on that, but right now isn't such a good time, sorry. With all the things that I have to worry about, sudden emergencies coming up and so on, I... can't just take time off right now. People on the farm count on me and grandfather would spin in his grave if I started fucking around with someone before sorting out the problems we have.'";
 
-instead of going northwest from Central Farm Square while (hp of Anthony is 0 or hp of Anthony is 1 or hp of Anthony is 3):
+instead of going northwest from Central Farm Square while (hp of Anthony is 0 or hp of Anthony is 1 or hp of Anthony is 3 or hp of Anthony is 4 or hp of Anthony is 5):
 	move player to Farmhouse Main Room;
 	if hp of Anthony is 0: [first meeting, no reward for Wendy yet]
 		say "     Entering the farmhouse, you find yourself in a large main room that combines the living and dining area. Sitting on a leather couch in the front part of the room, leaning forward to write on a notebook on the coffee table next to it, you see a lean, humanoid anteater. The young man stands up as he notices you, walking over to you and offering you his clawed hand in greeting. After introducing himself as Anthony McDermott, owner of the farm, he smiles and continues with 'Nice to see that not everyone out there has devolved into horny beasts. You're welcome to stay here with us for a while, if you want, though we can't offer any food or water, I hope you understand.'";
@@ -781,6 +781,32 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 			say "     [line break]";
 			say "     [AnthonyRewardSex]";
 		now hp of Anthony is 5;
+[		
+	otherwise if hp of Anthony is 5 and hp of Selena is 1 and SelenaDelivery - turns > 16:
+		say "     Entering the main room of the farmhouse, you are greeted by Anthony, who says, 'Hello my friend. Could I maybe ask you for a report about the newest spread of creatures out in the plains? We have to keep informed so we're not hit out of the blue when some new type of creature appears or any group expands their territory into the plains. So if -' His words are interrupted by a high-pitched voice calling out, 'Uncle Anthony! Can I ride one of the horses, today?' A small, spotted catgirl in an oversized t-shirt bounces into the room as she says the last words, which leads over to an 'Eep' as she notices you in the room too. Lightning-quick, the little feline flits to a spot behind Anthony, peeking out from behind him at you.";
+		now hp of Anthony is 6;
+		if xp of Selena is 1: [player lifted blanket, Selena vaguely remembers player]
+			say "     The tawny kitten tilts her head to the side, her eyes wide with wonder. She looks up to him, gently tugging on his kilt as she speaks in a soft voice. 'Uncle Anthony? Who is that?'";
+		otherwise if xp of Selena is 0: [player didn't lift blanket, no memories of player]
+			say "     She grips his clothes a little tighter, [if facename of player is listed in infections of CanineList]ducking back behind him with a whimper[otherwise]looking up at him in concern.";
+		say "     Anthony looks behind his back, then says in a calming tone, 'Don't worry, kitten. [if player is female]She[otherwise]He[end if]'s a friend. Even saved Wendy from the creatures out in the plains. You got nothing to fear from [if player is female]her[otherwise]him[end if]. Why don't you go and introduce yourself. That's only polite, you know.";
+		say "     You do your best to give a friendly smile, and...";
+		let bonus be (( charisma of player minus 10 ) divided by 2);
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] vs 19 and score [dice plus bonus]: (Charisma Check)[line break]";
+		if dice + bonus >= 19: 
+			say "     ...she seems to be a little uncomfortable, but the kitten does step out from behind Anthony, walking foward towards you. The girl looks down, playing with the hem of her shirt as she stammers out, 'I-I'm Selena. It... it's nice to meet you, [if player is female]Miss[otherwise]Sir[end if].'";
+		otherwise: 
+			say "     ...but it doesn't seem to be enough. She stays behind Anthony and gives a tiny wave. The little girl says, 'I'm S-Selena,' and ducks back behind her guardian, her tail now the only visible part of her.";
+		say "     'There, that wasn't so hard, was it?' Anthony says and tousles Selena's hair affectionately. Then he crouches down beside the young catgirl and continues in a more apologetic tone, 'As for the horses - I'm afraid not, kitten. We've got a... a number of mares now, out in the paddock, but Lucifer won't let anyone really get at them. That mustang is pretty dangerous for anyone to deal with - especially a little girl. But I'm sure Corbin will give you a piggyback ride if you ask him nicely...'";
+		say "     [WaitLineBreak]";
+		say "     As Selena perks up and tenses to rush off at once, Anthony stops her with an arm around her midriff. 'Wait a minute - did you do your homework, little lady? Everyone needs to know how to read, so playtime is only after you're done for the day.' The spotted kitten looks up at the farmer, pleading with her big olive eyes. 'But Uncle Anthony... I like it when you read to me...' Anthony gives her a smile and strokes the little feline's cheek, then says, 'And I love reading stories for you, kitten. But... I won't be with you all the time everywhere you go, and you will need to understand things for yourself at some point. Now be a good girl and do your reading, okay?'";
+		say "     Her ears droop at this, but Selena nods, giving him one last hug before trudging out of the room, briefly glancing at you before she disappears through the doorway. Waiting a few seconds after watching Selena walk out of the room, Anthony calls after her, 'I can see the shadow of your tail on the wall, little lady. Don't eavesdrop, that's not nice. And please go do your homework. Now.' After a little huff that can be heard through the open door, there is only silence. Something tells you she's gone now, but that anthro kitten walks on pretty quiet paws...";
+		say "     [WaitLineBreak]";
+		say "     Anthony clears his throat, then says, 'Hard to believe she's the kitten that got left at our gate only some short days ago. Growing up in jumps, large and small. Well, that's the new world I guess.' He shrugs and looks back over to the door through which Selena left, a smile playing over his lips. 'She's a sweet girl, and I'm glad to have her. One has to watch out a bit with her though - she can think up the wildest things to do. I'd appreciate it if you could try to rein her in a bit if you see her planning some hijinx on the farm grounds. Ha - a typical feline... let's just make sure that curiosity doesn't lead this kitty astray...'";
+		now hp of Selena is 2;  
+		now libido of Selena is 5;   [neutral start]
+]
 
 to say AnthonyRewardSex:
 	say "     Quickly stepping forward, you put a hand on Anthony's arm and pull him against you, finding his lips with yours. The sudden kiss startles him at first, but he quickly gets into it and eagerly replies, sliding an arm around you while making out. After some hot and hungry kisses, the giant anteater comes back up for air and pants 'So you want... something else as your reward, I gather?', looking down towards your crotch as he does so. Before you can do anything more than nod, he starts to pull off your clothes, guiding you step by step towards the nearest couch as he does so. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with Anthony kneeling between your legs. 'Just relax and enjoy' he says in a seductive voice, smiling up at you as he sticks out his long, long tongue and leans forward.";

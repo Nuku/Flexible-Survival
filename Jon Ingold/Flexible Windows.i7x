@@ -244,8 +244,9 @@ To g-make (g - a g-window):
 	now the pending g-window is g;
 	begin the constructing activity with the pending g-window;
 	let p1 be the pos-val for g of the position of g + method-val of the scale method of g;
-	if the scale method of g is g-using-minimum, let p2 be the minimum size of g; 
-	otherwise let p2 be the measurement of g;
+	let p2 be 0;
+	if the scale method of g is g-using-minimum, now p2 is the minimum size of g; 
+	otherwise now p2 is the measurement of g;
 	let p3 be the kind-val of the type of g;
 	let p0 be the ref-number of the direct parent of g;	
 	now the  ref-number of g is the reference created from p0 with p1 and p2 and p3 and rock value rock-value of g;

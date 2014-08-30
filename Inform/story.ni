@@ -6736,12 +6736,14 @@ Include Hermaid by Xenophiliac.
 Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
+Include Mpreg Platypus by Sapphire.
 
 
 
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
+Include Phantom Pony by Blue Bishop.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
@@ -6830,6 +6832,7 @@ Include Val by Wahn.
 Include Chris by Wahn.
 Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
+Include Santa Claws by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

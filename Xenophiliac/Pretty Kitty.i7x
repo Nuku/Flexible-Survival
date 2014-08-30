@@ -12,11 +12,11 @@ Instead of examining the The Pretty Kitty entrance:
 [Describing the store & NPC beginning descriptions]
 The description of The Pretty Kitty is "[PKDesc]".
 to say PKDesc:
-	if hunger of Andromeda is 0:
+	if thirst of Andromeda is 0:
 		say "	Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[otherwise]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
 		say "[line break]"; [There for first description clarification]
 		say "'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol[apostrophe] me! Feel free to take a look around, we've got prime merchandise available here!' The perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
-		now hunger of Andromeda is 1;
+		now thirst of Andromeda is 1;
 	otherwise:
 		say "	You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [otherwise]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
 		if libido of Andromeda >= 2:
@@ -24,7 +24,7 @@ to say PKDesc:
 			say "[line break]";
 			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
 		otherwise:
-			say "	'Hi [if player is female]miss[otherwise if player is male]mister[otherwise]there! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [Italic type]horrid[roman type] attire?' The perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
+			say "	'Hi [if player is female]miss[otherwise if player is male]mister[otherwise]there![end if] Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [Italic type]horrid[roman type] attire?' The perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
 			
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
@@ -42,11 +42,13 @@ Andromeda is a woman.
 The description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
 
 The conversation of Andromeda is { "I'm a cat!" }.
-the scent of Andromeda is "Andromeda smells clean, obviously taking care of herself, but she has been unable to rid herself of the distinct undertones of [Italic type]cat[roman type]."
+the scent of Andromeda is "     Andromeda smells clean, obviously taking care of herself, but she has been unable to rid herself of the distinct undertones of [Italic type]cat[roman type]."
 
 [Talking with NPC - Individual scenes play till done, then random talks]
 instead of conversing Andromeda:
-	if hp of Andromeda is 0:
+	if debugactive is 1:
+		say "DEBUG ->HP: [hp of Andromeda], LUST: [lust of Andromeda], LIBIDO: [libido of Andromeda], XP: [xp of Andromeda] <- DEBUG[line break]";
+	otherwise if hp of Andromeda is 0:
 		say "     'Hi [if player is female]miss[otherwise if player is male]miss[otherwise]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I’ll show you around my store.' She says as she pulls you forward, surprisingly strong for her size.";
@@ -71,7 +73,7 @@ instead of conversing Andromeda:
 		say "     I stayed there for a long time, a few hours or so. I started feeling odd after a bit, and I started growing hair all over. Before I knew it, I had become a cat.' Andromeda twirls around and does a little flourish, showing off her new body. 'Not that I mind that much. Who would've thought that being a cat would be so cool! Anyways, after I had transformed into a cat, and once everything had calmed down, I took a step outside. Everything LOOKED the same, but it wasn't until a few of the mall rats came in that I realized that this thing might be bigger than I first thought. I haven't gone outside the mall yet, but some of the rats tell me that it's worse outside.' You nod, confirming the mallrats observation. 'Well I guess I got lucky then. I can't really complain about being a cat.' She thinks a few moments. 'I'm more surprised that my shop is still running, honestly. I would've thought everyone would've lost interest in clothing, but it still seems that people want new attire. Or at least, replacement attire.'";
 		say "     You absentmindedly talk with her, chatting idly. Andromeda yawns after a few, blinking a few times to wake back up. 'Hate to be a downer, buuuuttttt I’m gonna have to kick you out for now. I gotta get back to my beauty sleep. Gotta keep appearances up.' She says to you, grinning cheekily the entire time, and blushing just a bit. Waving goodbye to the bubbly catgirl, you see her sit down behind the counter again, undoubtedly already asleep.";
 		increase hp of Andromeda by 1;
-	otherwise if morale of Andromeda is 1 and hp of Andromeda > 1:
+	otherwise if lust of Andromeda is 1 and hp of Andromeda > 1:
 		say "     Approaching the proprietor of the Pretty Kitty, you see her beam a smile at you as you walk up. Obviously waiting for you to start before she begins her usual barrage of questions and comments, you casually lean on the counter and nonchalantly ask her why she's carrying a selection of collars, a small smirk on your face.";
 		say "     Immediately, you know she begins to blush furiously under all that orange fur. While doing her best to remain composed, your question obviously threw her for a loop. 'Well I don't see why I shouldn't! There's a lot of people that like things like those, and if I'm able to provide that, and make some profit on the side, I don't see why it's a bad thing.'";
 		say "     You mention that your just surprised that she'd be carrying such... odd items for sale. Doesn't seem like something that'd be carried in a normal clothing store...";
@@ -92,6 +94,7 @@ instead of fucking Andromeda:
 		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if libido of Andromeda > 0] She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl.[otherwise] Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
 		say "     Following her, you both find yourselves in the storage room, where Andromeda shuts and locks the door. Crates of what are probably excess clothes are stacked along the walls of this bare room, with the only other furnishings being a haphazard mess of blankets and pillows on the ground. You figure that Andromeda must sleep here at night. Turning around to you, her eyes have taken on a lustful look, and she is panting quietly, her tongue already lolling out of her mouth.";
 		say "     Under panted breaths, you hear Andromeda talking. [if libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you.[otherwise]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.' Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
+		say "     [line break]";
 		now calcnumber is -1;
 		now xp of Andromeda is 0;
 		while xp of Andromeda is 0:
@@ -141,7 +144,7 @@ Section 3 - Clothes
 
 [Defining Clothing Shelf]
 Clothing Shelf is a man.
-The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, A slim [bold type]Tuxedo[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]buy[roman type] the outfit you want.";
+The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, A slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
 the linkaction of Clothing Shelf is "Possible Actions: [link]smell[as]Smell Shelf[end link][line break]". [Add options for clothes as links?]
 the scent of Clothing Shelf is "This rack of clothes smells like fresh laundry, with a hint of finished wood.".
@@ -153,44 +156,37 @@ TuxedoObtain is an action applying to nothing.
 SummerObtain is an action applying to nothing.
 
 [Start Tshirt understand]
-understand "tshirt" as TshirtObtain.
 understand "tshirt and jeans" as TshirtObtain.
 understand "tshirt and blue jeans" as TshirtObtain.
 understand "t-shirt" as TshirtObtain.
 understand "t-shirt and jeans" as TshirtObtain.
 understand "t-shirt and blue jeans" as TshirtObtain.
-understand "buy tshirt" as TshirtObtain.
-understand "buy t-shirt" as TshirtObtain.
-understand "buy tshirt and jeans" as TshirtObtain.
-understand "buy t-shirt and jeans" as TshirtObtain.
-understand "buy tshirt and blue jeans" as TshirtObtain.
-understand "buy t-shirt and blue jeans" as TshirtObtain.
-understand "buy tshirt & jeans" as TshirtObtain.
-understand "buy t-shirt & jeans" as TshirtObtain.
-understand "buy tshirt & blue jeans" as TshirtObtain.
-understand "buy t-shirt & blue jeans" as TshirtObtain.
+understand "procure tshirt" as TshirtObtain.
+understand "procure t-shirt" as TshirtObtain.
+understand "procure tshirt and jeans" as TshirtObtain.
+understand "procure t-shirt and jeans" as TshirtObtain.
+understand "procure tshirt and blue jeans" as TshirtObtain.
+understand "procure t-shirt and blue jeans" as TshirtObtain.
+understand "procure tshirt & jeans" as TshirtObtain.
+understand "procure t-shirt & jeans" as TshirtObtain.
+understand "procure tshirt & blue jeans" as TshirtObtain.
+understand "procure t-shirt & blue jeans" as TshirtObtain.
 understand "t-shirt & jeans" as TshirtObtain.
 understand "t-shirt & blue jeans" as TshirtObtain.
 understand "tshirt & jeans" as TshirtObtain.
 understand "tshirt & blue jeans" as TshirtObtain.
 [End TShirt understand for now]
 [Start Blouse understand for now]
-understand "blouse" as BlouseObtain.
 understand "blouse set" as BlouseObtain.
-understand "buy blouse" as BlouseObtain.
-understand "buy blouse set" as BlouseObtain.
+understand "procure blouse set" as BlouseObtain.
 [End Blouse understand for now]
 [Start Tuxedo understand for now]
-understand "tuxedo" as TuxedoObtain.
-understand "buy tuxedo" as TuxedoObtain.
 understand "tuxedo set" as TuxedoObtain.
-understand "buy tuxedo set" as TuxedoObtain.
+understand "procure tuxedo set" as TuxedoObtain.
 [End Tuxedo understand for now]
 [Start Summer understand for now]
-understand "summer" as SummerObtain.
-understand "buy summer" as SummerObtain.
 understand "summer set" as SummerObtain.
-understand "buy summer set" as SummerObtain.
+understand "procure summer set" as SummerObtain.
 [End Summer understanding for now]
 
 check TshirtObtain:
@@ -354,7 +350,7 @@ Section 4 - Collars
 
 [Defining Collar Rack]
 Collar Rack is a man.
-The description of Collar Rack is "In a more secluded part of the store, you see a few clothing mannequins standing stoically against the back wall of the store. Approaching them, you see that no clothing is displayed on them, totally bare... except for different types of collars around their necks. Wondering to yourself why Andromeda has such a selection of odd items on display, you brush those thoughts off and look at the selection she has in stock. Taking a close look at the well-made collars, you see that she has a [bold type]Black Spiked[roman type] collar, for those who wish for a more tough look; A fuzzy pink [bold type]Silk Collar[roman type] for people who want a cuter look; and a classic [bold type]Nametag Collar[roman type], for those wishing to display their name proudly. The changed price tags are still present, offering these pieces for '1 food or 1 milk'; you just have to ask to [bold type]buy[roman type] them.";
+The description of Collar Rack is "In a more secluded part of the store, you see a few clothing mannequins standing stoically against the back wall of the store. Approaching them, you see that no clothing is displayed on them, totally bare... except for different types of collars around their necks. Wondering to yourself why Andromeda has such a selection of odd items on display, you brush those thoughts off and look at the selection she has in stock. Taking a close look at the well-made collars, you see that she has a [bold type]Black Spiked[roman type] collar, for those who wish for a more tough look; A fuzzy pink [bold type]Silk Collar[roman type] for people who want a cuter look; and a classic [bold type]Nametag Collar[roman type], for those wishing to display their name proudly. The changed price tags are still present, offering these pieces for '1 food or 1 milk'; you just have to ask to [bold type]procure[roman type] them.";
 
 the linkaction of Collar Rack is "Possible Actions: [link]smell[as]Smell Rack[end link][line break]".
 the scent of Collar Rack is "These mannequins smell distinctively of plastic.".
@@ -372,12 +368,12 @@ check NametagCollarObtain:
 
 understand "black spiked" as SpikedCollarObtain.
 understand "black spiked collar" as SpikedCollarObtain.
-understand "buy black spiked" as SpikedCollarObtain.
-understand "buy black spiked collar" as SpikedCollarObtain.
+understand "procure black spiked" as SpikedCollarObtain.
+understand "procure black spiked collar" as SpikedCollarObtain.
 understand "silk collar" as FuzzyCollarObtain.
-understand "buy silk collar" as FuzzyCollarObtain.
+understand "procure silk collar" as FuzzyCollarObtain.
 understand "nametag collar" as NametagCollarObtain.
-understand "buy nametag collar" as NametagCollarObtain.
+understand "procure nametag collar" as NametagCollarObtain.
 
 carry out SpikedCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
@@ -393,7 +389,7 @@ carry out SpikedCollarObtain:
 					say "     'Thanks for the purchase, and come again soon!'";
 					delete food;
 					increase carried of spiked collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			otherwise:
@@ -402,18 +398,18 @@ carry out SpikedCollarObtain:
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
 					delete gryphon milk;
 					increase carried of spiked collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tenative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
 					delete dolphin milk;
 					increase carried of spiked collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
 					delete distilled milk;
 					increase carried of spiked collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		otherwise:
@@ -433,7 +429,7 @@ carry out FuzzyCollarObtain:
 					say "     'Thanks for the purchase, and come again soon!'";
 					delete food;
 					increase carried of silk collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			otherwise:
@@ -442,18 +438,18 @@ carry out FuzzyCollarObtain:
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
 					delete gryphon milk;
 					increase carried of silk collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tenative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
 					delete dolphin milk;
 					increase carried of silk collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
 					delete distilled milk;
 					increase carried of silk collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		otherwise:
@@ -473,7 +469,7 @@ carry out NametagCollarObtain:
 					say "     'Thanks for the purchase, and come again soon!'";
 					delete food;
 					increase carried of nametag collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda looks at you with humorous, but disapproving look. 'You need to ACTUALLY have the food here; I can't accept imaginary things for payment!' Andromeda says to you, flailing her hands out in an obviously fake attempt at seriousness.";
 			otherwise:
@@ -482,18 +478,18 @@ carry out NametagCollarObtain:
 					say "     'Thanks for' -lap- 'the purchase, come' -lap- 'again soon!'";
 					delete gryphon milk;
 					increase carried of nametag collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if dolphin milk is owned:
 					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tenative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your collar, figuring that Andromeda is going to be busy for a while.";
 					delete dolphin milk;
 					increase carried of nametag collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise if distilled milk is owned:
 					say "     Putting out the packet of distilled milk, Andromeda picks up your payment, looking it over intently. Putting the packet next to her ear, she shakes it vigorously, and you hear the powered milk shake within. Satisfied, she slides the packet into a compartment beneath the counter.";
 					say "     'Thanks! I'm gonna save that for a snack later. Enjoy your purchase!'";
 					delete distilled milk;
 					increase carried of nametag collar by 1;
-					if morale of Andromeda < 1, increase morale of Andromeda by 1;
+					if lust of Andromeda < 1, increase lust of Andromeda by 1;
 				otherwise:
 					say "     Andromeda huffs disappointedly at you. 'Come on, don't tease me like that!'";
 		otherwise:
@@ -594,8 +590,8 @@ Section 6 - Comments and Variables
 [hp of Andromeda -- Variable for player-triggered talking scenes]
 [xp of Andromeda -- variable used to work the sex menu]
 [libido of Andromeda -- Variable for sex count, used to trigger some scenes]
-[morale of Andromeda -- Variable for talk scene regarding collars]
-[Hunger of Andromeda -- Used for store description]
+[lust of Andromeda -- Variable for talk scene regarding collars]
+[thirst of Andromeda -- Used for store description]
 
 
 The Pretty Kitty ends here.

@@ -10,7 +10,7 @@ Part - Preliminaries
 Chapter - Inclusions
 
 Include version 9 of Flexible Windows by Jon Ingold.
-Include version 3 of Fixed Point Maths by Michael Callaghan.
+[Include version 3 of Fixed Point Maths by Michael Callaghan.]
 Include Glimmr Drawing Commands by Erik Temple.
 
 
@@ -137,7 +137,7 @@ A g-element has a real number called the scaling factor. The scaling factor of a
 [These are used only if asymmetrical scaling is enabled.]
 A g-element has a real number called the x-scaling factor. The x-scaling factor of a g-element is usually 1.0000. The x-scaling factor property translates into I6 as "x_factor". 
 
-A g-element has a real number called the y-scaling factor. The y-scaling factor of a g-element is usually 1.0000. The y-scaling factor property translates into I6 as "y_factor".
+A g-element has a  real number called the y-scaling factor. The y-scaling factor of a g-element is usually 1.0000. The y-scaling factor property translates into I6 as "y_factor".
 
 A g-element can be left-aligned, center-aligned, or right-aligned (this is its alignment property). A g-element is usually left-aligned.
 
@@ -173,9 +173,12 @@ A graphics g-window has a list of numbers called the origin. The origin is usual
 
 A graphics g-window has a real number called the arbitrary scaling factor. The arbitrary scaling factor is usually 0.0000.
 
-A graphics g-window has a real number called the x-scaling factor. A graphics g-window has a real number called the y-scaling factor. The x-scaling factor of a graphics g-window is usually 0.0000. The y-scaling factor of a graphics g-window is usually 0.0000.
+A graphics g-window has a  real number called the x-scaling factor. 
+A graphics g-window has a  real number called the y-scaling factor. 
+The x-scaling factor of a graphics g-window is usually 0.0000. 
+The y-scaling factor of a graphics g-window is usually 0.0000.
 
-A graphics g-window has a real number called the scaling factor. The scaling factor of a graphics g-window is usually 1.0000. [The scaling factor property translates into I6 as "scaling_factor". --Already included with the g-element kind.]
+A graphics g-window has a  real number called the scaling factor. The scaling factor of a graphics g-window is usually 1.0000. [The scaling factor property translates into I6 as "scaling_factor". --Already included with the g-element kind.]
 
 A graphics g-window has a number called the x-offset. A graphics g-window has a number called the y-offset. The x-offset of a graphics g-window is usually 0. The y-offset of a graphics g-window is usually 0. The x-offset property translates into I6 as "x_offset". The y-offset property translates into I6 as "y_offset".
 
@@ -257,17 +260,17 @@ Last for scaling a graphics g-window (called the window) (this is the default wi
 		#if utilizing Glimmr debugging;
 		say "[>console][CBD]Canvas [i][panel][/i] is [canvas-width of panel] by [canvas-height of panel] pixels.[<]";
 		#end if;
-	if the arbitrary scaling factor of the window is real greater than 0.0000:
+	if the arbitrary scaling factor of the window is greater than 0.0000:
 		now the scaling factor of the window is the arbitrary scaling factor of the window;
 		#if utilizing Glimmr debugging;
 		say "[>console][CBD]Scaling factor of [i][window][/i] set to [scaling factor of the window] based on arbitrary scaling factor.[<]";
 		#end if;
 	otherwise:
-		let x-win be the width of the window as a fixed point number;
-		let y-win be the height of the window as a fixed point number;
-		now the x-scaling factor of the window is x-win real divided by the canvas-width of panel;
-		now the y-scaling factor of the window is y-win real divided by the canvas-height of panel;
-		if the x-scaling factor of the window is real greater than the y-scaling factor of the window:
+		let x-win be the width of the window;
+		let y-win be the height of the window;
+		now the x-scaling factor of the window is x-win  divided by the canvas-width of panel;
+		now the y-scaling factor of the window is y-win  divided by the canvas-height of panel;
+		if the x-scaling factor of the window is greater than the y-scaling factor of the window:
 			now the scaling factor of the window is the y-scaling factor of the window;
 			#if utilizing Glimmr debugging;
 			say "[>console][CBD][i][window][/i] scaling factor set to the vertical scaling factor: [y-scaling factor of the window].[<]";
@@ -283,8 +286,8 @@ Last for scaling a graphics g-window (called the window) (this is the default wi
 				#if utilizing Glimmr debugging;
 				say "[>console][CBD][i][window][/i] scaling factor set to [scaling factor of the window]. To allow for a higher scaling factor, set the window's oversize scaling property to true.[<]";
 				#end if;
-	now the scaled width of panel is the scaling factor of the window real times the canvas-width of panel as an integer;
-	now the scaled height of panel is the scaling factor of the window real times the canvas-height of panel as an integer;
+	now the scaled width of panel is the scaling factor of the window  times the canvas-width of panel to the nearest whole number;
+	now the scaled height of panel is the scaling factor of the window  times the canvas-height of panel to the nearest whole number;
 	#if utilizing Glimmr debugging;
 	say "[>console][CBD]Scaled size for canvas [i][panel][/i] is [scaled width of panel] by [scaled height of panel].[<]";
 	#end if;
@@ -308,8 +311,8 @@ Chapter - Window-framing adjustment
 Window-framing adjustment of something is an activity.
 
 Last for window-framing adjustment of a graphics g-window (called the window) when the origin of the window is not {0, 0} (this is the default window-framing adjustment rule):
-		let xx be entry 1 of the origin of the window real times the scaling factor of the window as an integer;
-		let yy be entry 2 of the origin of the window real times the scaling factor of the window as an integer;
+		let xx be entry 1 of the origin of the window  times the scaling factor of the window to the nearest whole number ;
+		let yy be entry 2 of the origin of the window  times the scaling factor of the window to the nearest whole number ;
 		now the x-offset of the window is (0 - xx) + x-offset of the window;
 		now the y-offset of the window is (0 - yy) + y-offset of the window;
 		#if utilizing Glimmr debugging;
@@ -427,10 +430,10 @@ The element scaling rules are an object-based rulebook.
 The element scaling rules have outcomes exit (success) and continue (no outcome - the default).
 
 An element scaling rule for a g-element (called the current-element) (this is the element origin scaling rule):
-	let x-temp be entry 1 of the origin of the current-element scaled by the scaling factor of the current window;
-	let y-temp be entry 2 of the origin of the current-element scaled by the scaling factor of the current window;
-	now the win-x of current-element is x-temp real plus the x-offset of the current window as an integer;
-	now the win-y of current-element is y-temp real plus the y-offset of the current window as an integer;
+	let x-temp be entry 1 of the origin of the current-element scaled by the scaling factor of the current window to the nearest whole number;
+	let y-temp be entry 2 of the origin of the current-element scaled by the scaling factor of the current window to the nearest whole number;
+	now the win-x of current-element is x-temp plus the x-offset of the current window to the nearest whole number ;
+	now the win-y of current-element is y-temp  plus the y-offset of the current window to the nearest whole number ;
 	continue;
 
 The element origin scaling rule is listed first in the element scaling rules.
@@ -447,13 +450,13 @@ Part - Useful phrases
 
 Chapter - Scaling phrases
 
-To decide which real number is (N - a number) scaled by (R - a real number):
+To decide which  number is (N - a number) scaled by (R - a  number):
 	Let temp be N as a fixed point number;
-	let temp be temp real times R;
+	let temp be temp  times R;
 	decide on temp.
 	
-To decide which real number is (N - a real number) scaled by (R - a real number):
-	Let temp be N real times R;
+To decide which  number is (N - a  number) scaled by (R - a  number):
+	Let temp be N  times R;
 	decide on temp.
 
 
@@ -474,14 +477,14 @@ To decide which list of numbers is the (warp - a list of numbers) offset by (wef
 	decide on L.
 
 To decide which list of numbers is the canvas equivalent of the screen coordinates (X - a number) by (Y - a number) of (win - a g-window):
-	let x-fixe be X as a fixed point number;
-	let y-fixe be Y as a fixed point number;
-	let x-fixe be (x-fixe real minus x-offset of win) real divided by the scaling factor of win;
-	let y-fixe be (y-fixe real minus y-offset of win) real divided by the scaling factor of win;
+	let x-fixe be X + 0.0;
+	let y-fixe be Y + 0.0;
+	let x-fixe be (x-fixe  minus x-offset of win)  divided by the scaling factor of win;
+	let y-fixe be (y-fixe  minus y-offset of win)  divided by the scaling factor of win;
 	let L be a list of numbers;
 	let L be {0, 0};
-	now entry 1 of L is x-fixe as an integer;
-	now entry 2 of L is y-fixe as an integer;
+	now entry 1 of L is x-fixe to the nearest whole number;
+	now entry 2 of L is y-fixe to the nearest whole number;
 	decide on L;
 
 
@@ -547,14 +550,14 @@ Chapter - Sprite scaling rule
 An element scaling rule for a sprite (called the current-sprite) (this is the sprite scaling rule):
 	unless the image-ID of current-sprite is Figure of Null:
 		let sprite-ID be image-ID of current-sprite;
-		let x-temp be the image-width of sprite-ID as a fixed point number;
-		let y-temp be the image-height of sprite-ID as a fixed point number;
+		let x-temp be the image-width of sprite-ID + 0.0;
+		let y-temp be the image-height of sprite-ID + 0.0;
 		unless the asymmetrical scaling option is active:
-			now sprite-x is x-temp real times the scaling factor of current window real times the scaling factor of the current-sprite as an integer;
-			now sprite-y is y-temp real times the scaling factor of current window real times the scaling factor of the current-sprite as an integer;
+			now sprite-x is x-temp times the scaling factor of current window times the scaling factor of the current-sprite to the nearest whole number ;
+			now sprite-y is y-temp times the scaling factor of current window times the scaling factor of the current-sprite to the nearest whole number ;
 		otherwise:
-			now sprite-x is x-temp real times the scaling factor of current window real times the x-scaling factor of the current-sprite as an integer;
-			now sprite-y is y-temp real times the scaling factor of current window real times the y-scaling factor of the current-sprite as an integer;
+			now sprite-x is x-temp times the scaling factor of current window  times the x-scaling factor of the current-sprite to the nearest whole number ;
+			now sprite-y is y-temp times the scaling factor of current window  times the y-scaling factor of the current-sprite to the nearest whole number ;
 		if current-sprite is center-aligned:
 			now the win-x of current-sprite is win-x - (sprite-x) / 2;
 			now the win-y of current-sprite is win-y - (sprite-y) / 2;
@@ -593,11 +596,11 @@ To decide what list of numbers is the center-point of (current-sprite - a sprite
 	let x-temp be the image-width of the image-ID of current-sprite as a fixed point number;
 	let y-temp be the image-height of the image-ID of current-sprite as a fixed point number;
 	unless the asymmetrical scaling option is active:
-		let dx be x-temp real times the scaling factor of the current-sprite as an integer;
-		let dy be y-temp real times the scaling factor of the current-sprite as an integer;
+		let dx be x-temp  times the scaling factor of the current-sprite to the nearest whole number;
+		let dy be y-temp  times the scaling factor of the current-sprite to the nearest whole number;
 	otherwise:
-		let dx be x-temp real times the x-scaling factor of the current-sprite as an integer;
-		let dy be y-temp real times the y-scaling factor of the current-sprite as an integer;
+		let dx be x-temp  times the x-scaling factor of the current-sprite to the nearest whole number;
+		let dy be y-temp  times the y-scaling factor of the current-sprite to the nearest whole number;
 	let x be x + (dx / 2);
 	let y be y + (dy / 2);
 	let coord be {0, 0};
@@ -626,16 +629,16 @@ Section - Scaling rule for primitives
 [The line-weight of the lines used in primitives are scaled according to the scaling factor (or, if we are using asymmetrical scaling, the x scaling factor). If we need to prevent line-weight from changing with the window scaling, we need to place a rule applying to the appropriate primitive or class before the primitive scaling rule. This rule should now the scaling factor is the inverse of the scaling factor; i.e. if the scaling factor were 0.2500, our rule would set the scaling factor to 4.0000, thereby canceling the effect of the window-scaling on the line line-weight.]
 
 An element scaling rule for a primitive (called the subject) (this is the primitive scaling rule):
-	let x-temp be entry 1 of the endpoint of the subject scaled by the scaling factor of the current window;
-	let y-temp be entry 2 of the endpoint of the subject scaled by the scaling factor of the current window;
-	now the end-x of the subject is x-temp real plus the x-offset of the current window as an integer;
-	now the end-y of the subject is y-temp real plus the y-offset of the current window as an integer;
+	let x-temp be entry 1 of the endpoint of the subject scaled by the scaling factor of the current window to the nearest whole number;
+	let y-temp be entry 2 of the endpoint of the subject scaled by the scaling factor of the current window to the nearest whole number;
+	now the end-x of the subject is x-temp plus the x-offset of the current window to the nearest whole number ;
+	now the end-y of the subject is y-temp plus the y-offset of the current window to the nearest whole number ;
 	if the subject provides the property line-weight:
-		let weight-temp be the line-weight of the subject as a fixed point number;
+		let weight-temp be the line-weight of the subject + 0.0;
 		unless the asymmetrical scaling option is active:
-			now the stroke of the subject is the weight-temp real times the scaling factor of the current window real times the scaling factor of the subject as an integer;
+			now the stroke of the subject is the weight-temp times the scaling factor of the current window times the scaling factor of the subject to the nearest whole number ;
 		otherwise:
-			now the stroke of the subject is the weight-temp real times the scaling factor of the current window real times the x-scaling factor of the subject as an integer;
+			now the stroke of the subject is the weight-temp times the scaling factor of the current window times the x-scaling factor of the subject to the nearest whole number ;
 		if the stroke of the subject < 1, now the stroke of the subject is 1;
 	if the subject is center-aligned:
 		let dx be (end-x of the subject - win-x) / 2;
@@ -826,11 +829,11 @@ A bitmap has a number called the dot-size. The dot-size of a bitmap is 1.
 Section - Scaling rule for bitmaps
 
 An element scaling rule for a bitmap (called the grid) (this is the bitmap scaling rule):
-	let the bitsize-temp be the bit-size of the grid as a fixed point number;
+	let the bitsize-temp be the bit-size of the grid + 0.0;
 	unless the asymmetrical scaling option is active:
-		now the dot-size of the grid is the bitsize-temp real times the scaling factor of the current window real times the scaling factor of the grid as an integer;
+		now the dot-size of the grid is the bitsize-temp times the scaling factor of the current window times the scaling factor of the grid to the nearest whole number ;
 	otherwise:
-		now the dot-size of the grid is the bitsize-temp real times the scaling factor of the current window real times the x-scaling factor of the grid as an integer;
+		now the dot-size of the grid is the bitsize-temp times the scaling factor of the current window times the x-scaling factor of the grid to the nearest whole number ;
 	if the dot-size of the grid < 1, now the dot-size of the grid is 1;
 	let the bitmap-width be the number of entries in entry 1 of the bitmap-array of the grid;
 	let the bitmap-height be the number of entries of the bitmap-array of the grid;
@@ -853,11 +856,11 @@ To decide what list of numbers is the center-point of (item - a bitmap):
 	let the bitmap-width be the number of entries in entry 1 of the bitmap-array of the item;
 	let dot-scale be (bit-size of the item * bitmap-width) as a fixed point number;
 	unless the asymmetrical scaling option is active:
-		let dx be the dot-scale real times the scaling factor of the item as an integer;
-		let dy be the dot-scale real times the scaling factor of the item as an integer;
+		let dx be the dot-scale  times the scaling factor of the item to the nearest whole number;
+		let dy be the dot-scale  times the scaling factor of the item to the nearest whole number;
 	otherwise:
-		let dx be the dot-scale real times the x-scaling factor of the item as an integer;
-		let dy be the dot-scale real times the y-scaling factor of the item as an integer;
+		let dx be the dot-scale  times the x-scaling factor of the item to the nearest whole number;
+		let dy be the dot-scale  times the y-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
 	let y be y + (dy / 2);
 	let coord be {0, 0};
@@ -978,11 +981,11 @@ To decide what list of numbers is the center-point of (item - a bitmap-rendered 
 	let y be entry 2 of the origin of item;
 	let dot-width be (bit-size of the item * length of the item) as a fixed point number;
 	unless the asymmetrical scaling option is active:
-		let dx be the dot-width real times the scaling factor of the item as an integer;
-		let dy be the font-height of the associated font of the item real times the scaling factor of the item as an integer;
+		let dx be the dot-width  times the scaling factor of the item to the nearest whole number;
+		let dy be the font-height of the associated font of the item  times the scaling factor of the item to the nearest whole number;
 	otherwise:
-		let dx be the dot-width real times the x-scaling factor of the item as an integer;
-		let dy be the font-height of the associated font of the item real times the x-scaling factor of the item as an integer;
+		let dx be the dot-width  times the x-scaling factor of the item to the nearest whole number;
+		let dy be the font-height of the associated font of the item  times the x-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
 	let y be y + (dy / 2);
 	let coord be {0, 0};
@@ -994,11 +997,11 @@ To decide what list of numbers is the center-point of (item - a bitmap-rendered 
 Section - Scaling rule for bitmap-rendered strings
 
 An element scaling rule for a bitmap-rendered string (called the stream) (this is the bitmap-rendered string scaling rule):
-	let the bitsize-temp be the bit-size of the stream as a fixed point number;
+	let the bitsize-temp be the bit-size of the stream + 0.0;
 	unless the asymmetrical scaling option is active:
-		now the dot-size of the stream is the bitsize-temp real times the scaling factor of the current window real times the scaling factor of the stream as an integer;
+		now the dot-size of the stream is the bitsize-temp times the scaling factor of the current window times the scaling factor of the stream to the nearest whole number ;
 	otherwise:
-		now the dot-size of the stream is the bitsize-temp real times the scaling factor of the current window real times the x-scaling factor of the stream as an integer;
+		now the dot-size of the stream is the bitsize-temp times the scaling factor of the current window times the x-scaling factor of the stream to the nearest whole number ;
 	if the dot-size of the stream < 1, now the dot-size of the stream is 1;
 	continue.
 
@@ -1066,7 +1069,7 @@ An image-rendered string is a kind of rendered string.
 The specification of image-rendered string is "An image-rendered string is a rendered string in which each glyph is drawn using a separate external PNG file; these are assigned and managed via a separate font object, which must be supplied as the 'associated font' of the rendered string. Like sprites, the rendered string can be provided its own 'scaling factor' property to adjust the size of its glyphs relative to the canvas. If the 'background tint' property is supplied (a glulx color value), a rectangle of that color will be drawn behind the rendered string."
 
 [The scaling factor is automatically calculated by the extension; authors need not utilize it.]
-An image-rendered string has a real number called the calculated scaling factor.
+An image-rendered string has a  number called the calculated scaling factor.
 
 
 Section - Centering algorithm for image-rendered strings
@@ -1079,11 +1082,11 @@ To decide what list of numbers is the center-point of (item - a image-rendered s
 	let string-width be length of the item plus (2 * background-margin of the associated font of the item) as a fixed point number;
 	let string-height be font-height of the associated font of the item plus (2 * background-margin of the associated font of the item) as a fixed point number;
 	unless the asymmetrical scaling option is active:
-		let dx be the string-width real times the scaling factor of the item as an integer;
-		let dy be the string-height real times the scaling factor of the item as an integer;
+		let dx be the string-width  times the scaling factor of the item to the nearest whole number;
+		let dy be the string-height  times the scaling factor of the item to the nearest whole number;
 	otherwise:
-		let dx be the string-width real times the x-scaling factor of the item as an integer;
-		let dy be the string-height real times the x-scaling factor of the item as an integer;
+		let dx be the string-width  times the x-scaling factor of the item to the nearest whole number;
+		let dy be the string-height  times the x-scaling factor of the item to the nearest whole number;
 	let x be x + (dx / 2);
 	let y be y + (dy / 2);
 	let coord be {0, 0};
@@ -1102,9 +1105,9 @@ Section - Image-rendered string scaling rule
 
 An element scaling rule for an image-rendered string (called the stream) (this is the image-rendered string scaling rule):
 	unless the asymmetrical scaling option is active: 	
-		now the calculated scaling factor of the stream is the the scaling factor of the current window real times the scaling factor of the stream;
+		now the calculated scaling factor of the stream is ( the the scaling factor of the current window  times the scaling factor of the stream) to the nearest whole number;
 	otherwise:
-		now the calculated scaling factor of the stream is the the scaling factor of the current window real times the x-scaling factor of the stream; 
+		now the calculated scaling factor of the stream is ( the the scaling factor of the current window  times the x-scaling factor of the stream) to the nearest whole number; 
 	continue.
 
 
@@ -1118,17 +1121,17 @@ An element display rule for an image-rendered string (called the stream):
 		exit;
 	[let foreground-color be the tint of the stream;
 	let background-color be the background tint of the stream;]
-	let len be the length of the stream real times the calculated scaling factor of the stream as an integer;
+	let len be the length of the stream  times the calculated scaling factor of the stream to the nearest whole number;
 	if the stream is right-aligned:
 		now the win-x of the stream is the win-x of the stream - len;
 	if the stream is center-aligned:
 		now the win-x of the stream is the win-x of the stream - (len / 2);
 	[let row be the win-y of the stream;]
 	let column be the win-x of the stream;
-	let cursor-weight be the cursor-width of the associated font of the stream real times the calculated scaling factor as an integer;
+	let cursor-weight be the cursor-width of the associated font of the stream  times the calculated scaling factor to the nearest whole number;
 	if cursor-weight < 1, now cursor-weight is 1;
-	let margin be background-margin of the associated font of the stream real times the calculated scaling factor as an integer;
-	let vertical-size be font-height of the associated font of the stream real times the calculated scaling factor as an integer;
+	let margin be background-margin of the associated font of the stream  times the calculated scaling factor to the nearest whole number;
+	let vertical-size be font-height of the associated font of the stream  times the calculated scaling factor to the nearest whole number;
 	unless background tint of the stream is g-PlaceNullCol or the text-string of the stream is "":
 		dimrectdraw (color background tint of the stream) in (current window) at (win-x of the stream - margin) by (win-y of the stream - margin) with size (len + margin + margin) by (vertical-size + margin + margin);
 	if the cursor of the stream is 0:
@@ -1145,17 +1148,17 @@ An element display rule for an image-rendered string (called the stream):
 		otherwise:
 			choose row with a char of 32 in the font table of the associated font of the stream;
 		let the chosen glyph be glyph-ref entry;
-		let the yoffset be yoffset entry real times the calculated scaling factor of the stream as an integer;
+		let the yoffset be yoffset entry  times the calculated scaling factor of the stream to the nearest whole number;
 		let xx be the image-width of chosen glyph;
 		let yy be the image-height of chosen glyph;
-		now xx is xx real times the calculated scaling factor of the stream as an integer;
-		now yy is yy real times the calculated scaling factor of the stream as an integer;
+		now xx is xx  times the calculated scaling factor of the stream to the nearest whole number;
+		now yy is yy  times the calculated scaling factor of the stream to the nearest whole number;
 		drscimage (chosen glyph) in (current window) at (column) by (win-y of the stream + yoffset) with dimensions (xx) by (yy);
 		if the cursor of the stream is N:
 			dimrectdraw (color tint of the stream) in (current window) at (column + xx) by (win-y of the stream) with size cursor-weight by vertical-size;
 		[if the text-animation delay of the stream is greater than 0 and glulx timekeeping is supported:
 			follow the text-painting animation rules for the stream;]
-		increase column by the advance entry real times the calculated scaling factor of the stream as an integer;
+		increase column by the advance entry  times the calculated scaling factor of the stream to the nearest whole number;
 	#if utilizing Glimmr debugging;
 	say "[>console][CBD]Displaying rendered image string [i][stream][/i], foreground color [color tint of the stream], in [i][current window][/i] with upper left ([win-x of stream], [win-y]) and lower right ([column + margin], [win-y of the stream + vertical-size + margin])[unless background tint of the stream is g-PlaceNullCol]; background color [color background tint of the stream][end if][if stream is graphlinked]. [line break][CBD]Graphlink corresponding to [i][stream][/i] set from ([win-x of stream], [win-y of stream]) to ([column + margin], [win-y of the stream + vertical-size + margin]): [quotation mark][linked replacement-command of stream][quotation mark][end if].[<]";
 	#end if;
@@ -1281,11 +1284,11 @@ An element scaling rule for an image-map (called the grid) (this is the image-ma
 	let imap-x be the desired tile-width of the grid;
 	let imap-y be the desired tile-height of the grid;
 	unless the asymmetrical scaling option is active:
-		now the scaled tile-width of the grid is imap-x real times the scaling factor of current window real times the scaling factor of the grid as an integer;
-		now the scaled tile-height of the grid is imap-y real times the scaling factor of current window real times the scaling factor of the grid as an integer;
+		now the scaled tile-width of the grid is imap-x times the scaling factor of current window  times the scaling factor of the grid to the nearest whole number ;
+		now the scaled tile-height of the grid is imap-y times the scaling factor of current window  times the scaling factor of the grid to the nearest whole number ;
 	otherwise:
-		now the scaled tile-width of the grid is imap-x real times the scaling factor of current window real times the x-scaling factor of the grid as an integer;
-		now the scaled tile-height of the grid is imap-y real times the scaling factor of current window real times the y-scaling factor of the grid as an integer;
+		now the scaled tile-width of the grid is imap-x times the scaling factor of current window  times the x-scaling factor of the grid to the nearest whole number ;
+		now the scaled tile-height of the grid is imap-y times the scaling factor of current window times the y-scaling factor of the grid to the nearest whole number ;
 	if grid is center-aligned:
 		now the win-x of the grid is win-x - (imap-x * scaled tile-width) / 2;
 		now the win-y of the grid is win-y - (imap-y * scaled tile-height) / 2;
@@ -1323,11 +1326,11 @@ To decide what list of numbers is the center-point of (grid - an image-map):
 	let imap-x be the desired tile-width of the grid;
 	let imap-y be the desired tile-height of the grid;
 	if the asymmetrical scaling option is not active:
-		let dx be imap-x real times the the scaling factor of the grid as an integer;
-		let dy be imap-y real times the scaling factor of the grid as an integer;
+		let dx be imap-x  times the the scaling factor of the grid to the nearest whole number;
+		let dy be imap-y  times the scaling factor of the grid to the nearest whole number;
 	otherwise:
-		let dx be imap-x real times the x-scaling factor of the grid as an integer;
-		let dy be imap-y real times the y-scaling factor of the grid as an integer;
+		let dx be imap-x  times the x-scaling factor of the grid to the nearest whole number;
+		let dy be imap-y  times the y-scaling factor of the grid to the nearest whole number;
 	let the calc-height be the number of entries of the tile-array of the grid;
 	let the calc-width be the number of entries in entry 1 of the tile-array of the grid;
 	let dx be dx * calc-width;
@@ -1799,7 +1802,7 @@ A primitive element is a simple shape that is generally intended to be used in c
 
 	Box primitive - An "empty" rectangle defined by a surrounding line of variable thickness.
 
-	Stroked rectangle primitive - A rectangle of color surrounded by a line of another color. Basically, a rectangle primitive with a box primitive drawn around it. (Not really a "primitive", then, but the algorithm used draws this faster than using the two primitives, so it makes sense to provide it.)
+	Stroked rectangle primitive - A rectangle of color surrounded by a line of another color. Basically, a rectangle primitive with a box primitive drawn around it. (Not ly a "primitive", then, but the algorithm used draws this faster than using the two primitives, so it makes sense to provide it.)
 
 	Line primitive - A straight line drawn between any two points. Horizontal and vertical lines will be the fastest to draw. Diagonal lines, especially long lines or lines approaching a 45 degree angle, can be much slower.
 
@@ -2000,7 +2003,7 @@ Note that when this option is set, we can no longer use the "scaling factor" pro
 
 	The gas mask is a sprite. The x-scaling factor is 0.9800. The y-scaling factor is 0.5000.
 
-Note that by default, both scaling factors are set to 1.0000, so we really only need to set the scaling factors if we wish to scale to some other factor.
+Note that by default, both scaling factors are set to 1.0000, so we ly only need to set the scaling factors if we wish to scale to some other factor.
 
 
 Section: Oversize scaling
@@ -2074,7 +2077,7 @@ Section: Using canvases to manage display
 
 At first glance, the canvas may almost look unnecessary: elements will be displayed in a graphics window, so why not assign the element directly to the window? Why do we need the canvas to mediate?
 
-There are really two answers. First, canvases provide an easy way to change the display content of a graphics window at a stroke. We can, for example, set up two canvases with different elements. We first show Canvas A in our graphics window, and then, when we want to change the content of the window, we simply change the associated canvas of the window to Canvas B. The next time the window refreshes, it will display our second composition.  Canvases can thus be used as discrete "pages" to be shown in a graphics window. See the "Two Canvases, One Window" example.
+There are ly two answers. First, canvases provide an easy way to change the display content of a graphics window at a stroke. We can, for example, set up two canvases with different elements. We first show Canvas A in our graphics window, and then, when we want to change the content of the window, we simply change the associated canvas of the window to Canvas B. The next time the window refreshes, it will display our second composition.  Canvases can thus be used as discrete "pages" to be shown in a graphics window. See the "Two Canvases, One Window" example.
 
 We can also display the same canvas in two or more windows at the same time, using different display parameters. So, if we have a detailed map that would benefit from being seen both in close-up and at long-range, we could show the map at one scale in one window, and at another in the other. See the "One Canvas, Two Windows" example.
 
@@ -2095,7 +2098,7 @@ Second, a graphics window has an origin coordinate, similar to that of elements.
 		change x-offset of the graphics-window to 0;
 		change y-offset of the graphics-window to 0.
 
-This will replace the standard behavior of the window offset calculation activity in the case of the graphics-window (only--other graphics windows would not be affected) and make sure that no offsets are used in the framing of the window. Note that origins (and any coordinates, really) can be set to negative numbers, or to numbers larger than the canvas dimensions, and they will still display. The elements may not appear in the visible part of the window, but they are there "virtually".
+This will replace the standard behavior of the window offset calculation activity in the case of the graphics-window (only--other graphics windows would not be affected) and make sure that no offsets are used in the framing of the window. Note that origins (and any coordinates, ly) can be set to negative numbers, or to numbers larger than the canvas dimensions, and they will still display. The elements may not appear in the visible part of the window, but they are there "virtually".
 
 Third, we can center the window frame on a specific point on the canvas. This must be done after the scaling and offset calculation phases of the canvas-based drawing rule; usually it will occur during the window-framing adjustment activity (step 3 of the default canvas-based drawing rule; see above). Here's how to do it:
 
@@ -2436,7 +2439,7 @@ Section: Summary of the properties of image-rendered strings
 
 This section presents a list of the properties associated with image-rendered strings. Properties which the extension uses internally, and should not be referred to by the author, are marked with a double asterisk (**). All image-rendered strings also inherit the properties common to the g-element and rendered string kinds (see above for those properties).
 
-	calculated scaling factor** - a real number (decimal with four-digit precision) that represents the scaling factor of both the window and the rendered string element. 
+	calculated scaling factor** - a  number (decimal with four-digit precision) that represents the scaling factor of both the window and the rendered string element. 
 
 
 Chapter: Contact info
@@ -2525,7 +2528,7 @@ Note that the image-based font is rather large, and we need to scale it down to 
 	Button_4	{173, 7}	{238, 28}	Label_4	"TRANSCRIPT"
 
 
-We can include a little optional code to change the color of the button momentarily when it is pressed, then reverting back to the original color. We do this using Glulx's real-time capability: when the button is pressed, we change the button's color, and start a short timer (85 milliseconds). When the timer runs out, we stop the timer and change the button back to the original color. Note that the window must be redrawn after each of these to show the state change to the player.
+We can include a little optional code to change the color of the button momentarily when it is pressed, then reverting back to the original color. We do this using Glulx's -time capability: when the button is pressed, we change the button's color, and start a short timer (85 milliseconds). When the timer runs out, we stop the timer and change the button back to the original color. Note that the window must be redrawn after each of these to show the state change to the player.
 	
 	*: To revert the/-- button/-- after (T - a number) millisecond/milliseconds:
 		(- glk_request_timer_events({T});  -)
@@ -2551,9 +2554,9 @@ This last part is even more optional, but it will ensure that the button acts co
 		revert the button after 0 milliseconds.
 
 
-Example: * Simpler Buttons - This example is a simple refinement of the previous example (Simple Buttons). In Simple Buttons, we had to supply what really was redundant information: the text of the label was the same as the linked replacement-command of its button, while the origin coordinate of the label is easily deducible from the placement and size of the button outline (the label is centered on the button). This example lets us define the labels minimally and auto-generate their text-strings and origin coordinates from their associated buttons. (One could go even farther with this approach, really.)
+Example: * Simpler Buttons - This example is a simple refinement of the previous example (Simple Buttons). In Simple Buttons, we had to supply what ly was redundant information: the text of the label was the same as the linked replacement-command of its button, while the origin coordinate of the label is easily deducible from the placement and size of the button outline (the label is centered on the button). This example lets us define the labels minimally and auto-generate their text-strings and origin coordinates from their associated buttons. (One could go even farther with this approach, ly.)
 
-Simpler Buttons also uses a bitmap font for variety's sake. Note that if you make the window too narrow--unplayably narrow, really--the labels will not fit within the button outlines. This is because bitmaps can't be scaled below 1 pixel per bit, while the canvas itself is scaled to much less than this. This is something to be wary of whenever you are using bitmaps.
+Simpler Buttons also uses a bitmap font for variety's sake. Note that if you make the window too narrow--unplayably narrow, ly--the labels will not fit within the button outlines. This is because bitmaps can't be scaled below 1 pixel per bit, while the canvas itself is scaled to much less than this. This is something to be wary of whenever you are using bitmaps.
 
 The example starts out in essentially the same way as the previous: 
 
@@ -3118,7 +3121,7 @@ We then define the rooms and other behavior. Note that each room has an image-ma
 	Understand "shoot [something]" as attacking.
 	
 	Instead of attacking the Manticore:
-		say "As you nock one of your spindly arrows, you realize just how foolish you have been. Before you can draw back the bowstring, the Manticore's tail stiffens and a shower of deadly spikes arcs toward you.";
+		say "As you nock one of your spindly arrows, you ize just how foolish you have been. Before you can draw back the bowstring, the Manticore's tail stiffens and a shower of deadly spikes arcs toward you.";
 		end the story finally.
 	
 	Every turn when the player is in the Den:
@@ -3131,7 +3134,7 @@ Finally, we have a couple of things we want to do with mouse input. Since all of
 
 More interesting is the handle movement rule. This rule moves the player's avatar in response to mouse clicks on the map. If the player has clicked on the Dungeon Map, we check to see what command was triggered by the click. If that command was "-", we know that the player has clicked on a floor tile. We then convert the coordinates of the mouse input from screen coordinates to the coordinates of the image-map. We compare those coordinates with the coordinates of the player, and move the player one step horizontally and/or one step vertically toward the clicked coordinate.
 
-You will notice that this rule doesn't do any collision checking--what happens if the player moves over a wall, or on top of the Manticore? This example game is set up so that this is impossible. The player will die before he reaches the Manticore, and because the walls are always at the edge of the map and are not themselves graphlinked, the player can never reach them by clicking. In a real game, we'd need a full system of collision detection, but this slight of hand suffices for a short example.
+You will notice that this rule doesn't do any collision checking--what happens if the player moves over a wall, or on top of the Manticore? This example game is set up so that this is impossible. The player will die before he reaches the Manticore, and because the walls are always at the edge of the map and are not themselves graphlinked, the player can never reach them by clicking. In a  game, we'd need a full system of collision detection, but this slight of hand suffices for a short example.
 
 	*: Section - Mouse movement
 
@@ -3193,7 +3196,7 @@ Note the use of the "associated canvas of the graphics-window"--this allows this
 		change the canvas-height of the associated canvas of the graphics-window to the height of the graphics-window;
 		continue the action.
 
-Now we define the manager g-element. We provide an origin point, but it is really a placeholder. The x-coordinate will be changed by the scaling rule for the element. Because our graphics window is of a fixed height, the y-coordinate will not change (though in principle it could, of course).
+Now we define the manager g-element. We provide an origin point, but it is ly a placeholder. The x-coordinate will be changed by the scaling rule for the element. Because our graphics window is of a fixed height, the y-coordinate will not change (though in principle it could, of course).
 
 We also define the dimensions for each card as global variables. We refer only to the variables in the remainder of the source code, so that if we want to adjust things, we need only return to this paragraph and change these variables.
 
@@ -3206,7 +3209,7 @@ We also define the dimensions for each card as global variables. We refer only t
 
 Each element (or type of element) has both a scaling rule and a display rule. In the scaling rule for the card-manager element, we don't actually do any scaling. (We don't have to, because the height of our graphics window is fixed, and we simply center the cards in the available space horizontally.) Instead, we use the scaling rule as a hook for setting the x-coordinate of the origin properly in order to display the cards as centered in the window. We do this by first changing the x-coordinate (entry 1 in the origin, which is stored as a list of numbers) to the center-point of the window. We then calculate 2.5 card-widths (half of the five card-widths needed to display the five cards) plus 2/3 of a card-width for the total spacing between cards, and subtract this from the center point. This sets the x-coordinate to the leftmost point of the card assemblage.
 
-Next, we move on to the element display rule, where most of the real work is done. After sorting the cards into a reasonable order (by calling a rulebook from the Tilt 3 example), we repeat first through the cards held by the player. Starting at the origin point of the card-manager element, we draw two overlapping white filled rectangles, one slightly wider and shorter than the other; this is a computationally inexpensive way of depicting "rounded" corners for the cards. We then draw a bitmap text in the upper left corner of the card in the appropriate color that indicates its rank (1 to 10, J, Q, K, or A), followed by a monochrome bitmap in the lower right corner to indicate the suit. We then set a graphic hyperlink area in the same screen position as the card with the command "Discard." This command is just a placeholder; the more important thing we do here is identify the graphlink zone using the name of the card. (For the phrases used to draw the various entitites, see the Glimmr Drawing Commands extension.) Finally, we increase the drawing coordinate by the width of one card plus 1/3 of one card for spacing and start the process over with the next card.
+Next, we move on to the element display rule, where most of the  work is done. After sorting the cards into a reasonable order (by calling a rulebook from the Tilt 3 example), we repeat first through the cards held by the player. Starting at the origin point of the card-manager element, we draw two overlapping white filled rectangles, one slightly wider and shorter than the other; this is a computationally inexpensive way of depicting "rounded" corners for the cards. We then draw a bitmap text in the upper left corner of the card in the appropriate color that indicates its rank (1 to 10, J, Q, K, or A), followed by a monochrome bitmap in the lower right corner to indicate the suit. We then set a graphic hyperlink area in the same screen position as the card with the command "Discard." This command is just a placeholder; the more important thing we do here is identify the graphlink zone using the name of the card. (For the phrases used to draw the various entitites, see the Glimmr Drawing Commands extension.) Finally, we increase the drawing coordinate by the width of one card plus 1/3 of one card for spacing and start the process over with the next card.
 
 If the player is holding fewer than 5 cards, we repeat through the number of places remaining. We draw a lavender box (outline) for each empty spot in the player's hand, and hyperlink this with a "Draw" command.
 
