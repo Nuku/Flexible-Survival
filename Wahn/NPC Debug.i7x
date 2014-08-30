@@ -38,13 +38,28 @@ understand "currentturn" as turncountdisplay.
 
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]";
-
-to say NavCheck:
+	
+NavCheckReturn is a truth state that varies.
+	
+to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
+	if debugactive is 1:
+		say "DEBUG -> NavCheck just checked your travel route out! <- DEBUG";
 	if location of player is not fasttravel:
 		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
+		now NavCheckReturn is false;
+	otherwise if location of player is CheckRoom:
 		say "You're already here.";
-		stop the action;
+		now NavCheckReturn is false;
+	otherwise:
+		if debugactive is 1:
+			say "DEBUG -> ...and you may travel. Pass along now. <- DEBUG";
+		now NavCheckReturn is true;
+				
+to say WaitLineBreak: [little bit of often used code]
+	if waiterhater is 0:
+		wait for any key; [skips waiting if it's not wanted]
+		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
+	otherwise:
+		say "[line break]"; [people who don't want to wait at least get a break]		
 
 NPC Debug ends here.

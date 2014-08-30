@@ -42,14 +42,6 @@ Version 5 of Eric by Wahn begins here.
 [   4: Player told him that they're okay with it                     ]
 [  99: the player stopped the Felinoid from fucked him               ]
 
-
-to say WaitLineBreak: [little bit of often used code]
-	if waiterhater is 0:
-		wait for any key; [skips waiting if it's not wanted]
-		if hypernull is 0, say "[line break]"; [adds a break after the 'more']
-	otherwise:
-		say "[line break]"; [people who don't want to wait at least get a break]
-
 Section 1 - Meeting Event
 
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
@@ -105,8 +97,9 @@ instead of going inside from the Grey Abbey Library while (libido of Eric is 0 a
 	now libido of Eric is 1;
 
 instead of navigating Sports Arena Lockerroom while (libido of Eric is 0 and bodyname of player is "Furling"):
-	say "[NavCheck]";
-	move player to Sports Arena Lockerroom;
+	say "[NavCheck Sports Arena Lockerroom]";
+	if NavCheckReturn is false, stop the action;
+	move player to Sports Arena Lockerroom;	
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	say "     As you enter the lockerroom and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies in the dorm after they transformed.'";
@@ -1325,7 +1318,8 @@ to say EricSex13_99_Female: [sex slave Eric]
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32 or hp of Eric is 99) and (lastfuck of Eric - turns) > 12):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FIRST FELINOID SEX WALKIN [line break]";
@@ -1408,7 +1402,8 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			now lastfuck of Eric is turns;
 			
 instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (hp of Eric is 11 or hp of Eric is 22 or hp of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and hp of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ERIC FELINOID SEX REPEAT WALKIN [line break]";

@@ -116,14 +116,16 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FIRST WALKIN [line break]";
 	say "[FionaFirstMeeting]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA REPEAT WALKIN [line break]";
@@ -199,7 +201,8 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and Fang is in Gre
 	say "[FionaFangSex]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastCatgirlFuck - Turns) > 10):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
@@ -233,7 +236,8 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatu
 	say "[FionaCarlMeet]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus is 0 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
@@ -276,7 +280,8 @@ instead of going outside from Bunker while (CatgirlFucked > 3 and FionaCarlStatu
 	say "[FionaCarlRepeatFuck]";
 
 instead of navigating Grey Abbey Library while (CatgirlFucked > 3 and FionaCarlStatus > 0 and FionaCarlStatus < 100 and Carl is in Grey Abbey 2F and (LastCatgirlFuck - Turns) > 10 and hp of Carl is 10 and a random chance of 1 in 4 succeeds):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";		

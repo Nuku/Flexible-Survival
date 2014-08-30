@@ -416,7 +416,8 @@ to say CarlSex6: [Carl's ass fucked]
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastFangfucked - turns) > 12):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FANG ATTACKS CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
@@ -478,7 +479,8 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastFangfucked is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: NORM CARL FUCKS BETA FANG - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
@@ -495,8 +497,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FANG FUCKS SUB CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
@@ -512,8 +515,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: ALPHA FANG MOUNTS NORM CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
@@ -533,8 +537,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & HELEN - SEX WALK-IN - HP OF CARL: [hp of Carl], LIBIDO OF CARL: [libido of Carl][line break]";
@@ -598,8 +603,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now libido of Carl is 100;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & XERXES - SEX WALK-IN - HP OF CARL: [hp of Carl], DEXTERITY OF CARL: [dexterity of Carl][line break]";		
@@ -675,7 +681,8 @@ instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl
 			say "     After a while of just holding Xerxes from behind and slowly stroking his body while waiting for his knot to go down, Carl says 'You're an amazing, sexy guy, Xerxes. As long as the alpha allows it, I'm gonna use every chance I get to do you...'";
 
 instead of navigating Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY INITIAL SEX WALKIN [line break][line break]";
@@ -709,8 +716,9 @@ instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl
 	now lastfuck of Candy is turns;
 	now lastfuck of Carl is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";	
@@ -725,8 +733,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     Carl's ears droop a bit in disappointment as you tell him to hold back, but he accepts your advice nonetheless. With a sigh, he rubs the bulge in his pants and says 'Guess I'll have to masturbate in the future before going to see him if I don't want to give myself away. Thanks anyways.'";
 		now thirst of Carl is 99;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and David is in Bunker):	
-	say "[NavCheck]";
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and David is in Bunker):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
@@ -763,7 +772,8 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	now lastfuck of David is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
-	say "[NavCheck]";
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";

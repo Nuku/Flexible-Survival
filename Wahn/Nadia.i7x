@@ -749,8 +749,9 @@ instead of going up from Grey Abbey Library while (Nadia is in Grey Abbey 2F and
 	now hp of Nadia is 5;
 	
 instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
-	say "[NavCheck]";
-	move player to Grey Abbey Library;	
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
 	say "     Upon your return to the library, you notice that someone's added a couple of potted plants next to the doorway and across from the stairwell - you quickly step back, but relax when you realise that they aren't horrible mutants, but just plain ordinary plants, as far as their outward appearance goes. There are a couple of more common veggies - tomatoes and various peppers on stakes, as well as a few leafy greens, but about a third of the pots are filled with colourful flowers. It's over one of these tropical blossoms that you find Nadia kneeling, humming softly to herself as she tends to its wilted leaves and petals, her chicks watching on interestedly.";
 	say "     'Oh, hello!' she chirps, seeing you arrive. 'I was taking the chicks out for a walk some time ago when I came across some of these in a backyard. They were in pretty bad shape when I took them in, but at least they've perked up some now. A little water, a little mulch and care, and they'll just be as good as new. It's a pity the library doesn't have any planters for them to have a proper home, though. I looked up what some of them were in the library books, and they're apparently called birds of paradise, just like me. I can only hope they turn out even prettier than they are.'";
 	say "     Right now, it would be sensible for Nadia to plant just veggies considering the apocalypse and all, but she seems so happy tending to all the plants... and besides, if she's as good a gardener as she claims to be, then the harvest should be good enough to spare her a few indulgences, right?";
@@ -759,8 +760,9 @@ instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and Na
 	now	GreenTumbTurn is turns;
 	
 instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (GreenTumbTurn - turns > 12)):
-	say "[NavCheck]";
-	move player to Grey Abbey Library;	
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;		
 	say "     Stepping into the library, you're greeted by a whiff of fresh air, as opposed to the usual musty old-book smell that pervades the library's atmosphere. The reason for that soon becomes clear after a cursory examination of the second floor: in addition to her nest, Nadia has placed a number of potted plants here and there to give some colour to the library's rather droll interior, adding to those which she'd already saved the first time around. She's got a fairly good sense of design, you've to admit. Probably that nesting instinct at work again, and besides, you're not the one sating Nadia's desires for interior redecoration - she's roped her chicks into doing the heavy lifting.";
 	say "     The results of Nadia's care have indeed been quite drastic. Most of the rescued plants have perked up magnificently, saved from the verge of drying out, and although most of them are growing at a far faster rate than they ought to be, that's the only thing off about the otherwise harmless plants. The veggies are green, the flowers are more colourful now, and Nadia's tending to a particularly bright blossom, taking a moment to savour its fragrance.";
 	say "     [WaitLineBreak]";
@@ -774,8 +776,9 @@ instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (Gree
 	say "[npcNadiaintUpdate]";
 		
 instead of navigating Grey Abbey Library while (Nadia is in Grey Abbey 2F and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
-	say "[NavCheck]";
-	move player to Grey Abbey Library;	
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;		
 	say "     As you enter the library, you notice birdsong wafting down from the second floor; it seems that Nadia's particularly pleased about something today. Stepping upstairs to investigate, you're greeted by the sight of Nadia snuggled in her nest as she's being pampered. Two of Nadia's daughters are brushing her hair and wings, easing out tangles and ruffled feathers, while she herself preens her colourful plumage in a particularly birdlike manner. Nadia makes happy, contented noises in the back of her throat as her daughters preen and pamper her, and they only grow more so as she opens her eyes and notices you staring at her.";
 	say "     'Oh! Welcome back. Say hello to your father, girls,' she says with a giggle, and shakes bits of fluff from her beak. 'Don't mind us - I'm just trying to look my best for you, after all. I'd ask you to join in, if you'd like, but that would ruin the surprise. Please come back later when we're finished and I'll show you just how prettied up I can be, okay?'";
 	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you're bred her. Thinking about it, It must certainly be quite some effort to get her all cleaned up after each session...";
