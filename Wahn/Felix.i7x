@@ -24,6 +24,8 @@ Version 1 of Felix by Wahn begins here.
 Section 1 - Walk-in Event to put him into the dry plains room
 
 instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and hp of Felix is 0):
+	say "[NavCheck Dry Plains]";
+	if NavCheckReturn is false, stop the action;
 	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[otherwise if libido of Thomas is 11]Thomas and Sandy are[otherwise if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	say "     [line break]";
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker (Y), or wave it off as just his imagination (N) ?";
@@ -50,6 +52,9 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 	move player to Dry Plains;
 
 instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 3 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Dry Plains]";
+	if NavCheckReturn is false, stop the action;
+	move player to Dry Plains;
 	say "     As you come out into the dry plains to your usual meeting spot with the centaurs, Felix is waiting for you. He's trying his best to look calm, but you can see something is up. 'See that large pile of rubble back there in the midst of all that high grass? I saw something moving there just now.' He gives a slight sideways nod with his head, as not too obviously point out the location. 'Please, can you go look?'";
 	say "     [Stalker1]";
 
@@ -85,6 +90,9 @@ to say Stalker1:
 	move player to Dry Plains;
 
 instead of navigating Dry Plains while (hp of Felix is 1 and libido of Felix is 4 and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Dry Plains]";
+	if NavCheckReturn is false, stop the action;
+	move player to Dry Plains;
 	say "     As you come out into the dry plains to your usual meeting spot with the centaurs, Felix is waiting for you. He's trying his best to look calm, but you can see something is up. 'It's back! The predator! See that large pile of rubble back there in the midst of all that high grass? I saw something moving there just now.' He gives a slight sideways nod with his head, as not too obviously point out the location. 'Please, don't let it eat me!'";
 	say "     [Stalker2]";
 

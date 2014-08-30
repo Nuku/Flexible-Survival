@@ -416,13 +416,9 @@ to say CarlSex6: [Carl's ass fucked]
 Section 4 - Events
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 1 and (lastFangfucked - turns) > 12):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FANG ATTACKS CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]
@@ -483,13 +479,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastFangfucked is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: NORM CARL FUCKS BETA FANG - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if level of Carl is 1:
@@ -505,14 +497,10 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: FANG FUCKS SUB CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	if level of Carl is 1:
@@ -527,14 +515,10 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and hp of Fang > 2 and (lastFangfucked - turns) > 12 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: ALPHA FANG MOUNTS NORM CARL - SEX WALK-IN - HP OF FANG: [hp of Fang], HP OF CARL: [hp of Carl], LEVEL OF CARL: [level of Carl][line break]";
 	otherwise if hp of Fang > 2: [Alpha Fang - Fang wins]
@@ -553,14 +537,10 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		now lastfuck of Carl is turns;
 		now lastFangfucked is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL & HELEN - SEX WALK-IN - HP OF CARL: [hp of Carl], LIBIDO OF CARL: [libido of Carl][line break]";
 	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]
@@ -623,14 +603,10 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now libido of Carl is 100;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL & XERXES - SEX WALK-IN - HP OF CARL: [hp of Carl], DEXTERITY OF CARL: [dexterity of Carl][line break]";		
 	if hp of Carl > 9 and hp of Carl < 30: [normal Carl]		
@@ -705,13 +681,9 @@ instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl
 			say "     After a while of just holding Xerxes from behind and slowly stroking his body while waiting for his knot to go down, Carl says 'You're an amazing, sexy guy, Xerxes. As long as the alpha allows it, I'm gonna use every chance I get to do you...'";
 
 instead of navigating Grey Abbey Library while (hp of Carl > 9 and hp of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY INITIAL SEX WALKIN [line break][line break]";
 	say "     Coming into the library, you see a grey and pink striped tail swish through the air as its owner vanishes up the stairs to the upper library level. What is Candy doing up there, you wonder, so your curiosity drives you to hurriedly follow the coon upstairs. Soon, you catch sight of the effeminate male in his candy striper uniform, just walking up to where Carl is holding watch at one of the windows. 'Hello there soldier. I'm Candy,' the raccoon says in his sweet voice, swishing his hips a bit as the husky turns to watch him come closer. 'Oh hey, I'm Carl. Nice to meet you,' Carl replies and shakes the raccoon's hand, then continues 'What can I do for you?'";
@@ -744,14 +716,10 @@ instead of going up from Grey Abbey Library while (hp of Carl > 9 and hp of Carl
 	now lastfuck of Candy is turns;
 	now lastfuck of Carl is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";	
 	say "     Coming into the library, you walk in on David just finishing a conversation with Carl, then saluting him and starting back towards the stairs down into the bunker. The husky soldier watches his human compatriot walk off, eyes lingering on David's shapely butt for a moment before he notices your presence. Turning to face you, Carl says, 'Hello, my friend. Had a little talk with David and he told me about everything you did for him. Thank you for that. The demon sounded like a nasty customer...' He looks over to watch David walk through the cellar door, then puts a hand-paw on your arm and continues in a low tone. 'I have to admit that - well - some of my canine urges kicked in hard when I met David. He's a damned handsome guy - and just a private, while I'm a corporal, you know. Under me in the pack - err, the military. Half my mind was busy imagining bending him over and pounding his ass while we were talking.'";
@@ -765,14 +733,10 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 		say "     Carl's ears droop a bit in disappointment as you tell him to hold back, but he accepts your advice nonetheless. With a sigh, he rubs the bulge in his pants and says 'Guess I'll have to masturbate in the future before going to see him if I don't want to give myself away. Thanks anyways.'";
 		now thirst of Carl is 99;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and David is in Bunker):	
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and David is in Bunker):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David stroll along the long rows of bookshelves in the back of the building, talking to one another. From the gestures the husky soldier is making, you suspect their topic is past girlfriends and conquests, something that's confirmed as you walk a bit closer and overhear '...really, she had the most massive tits you can imagine. This big - and all natural, no implants.' David is visibly astounded by the size Carl indicates at that, and it's clear their talk has gotten him quite a bit excited. When the men reach the end of the room and turn to walk on between the bookshelves, you can see a distinct bulge in the front of his pants...";
@@ -808,13 +772,9 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	now lastfuck of David is turns;
 
 instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if location of player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
-	if location of player is Grey Abbey Library:
-		say "You're already here.";
-		stop the action;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP OF CARL: [hp of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you see Carl and David at the back of the main room, quietly talking to each other. You can't help but notice how close Carl is leaning to the human soldier as he whispers something, awakening your curiosity about what's going on, so you inconspicuously wander a bit closer. Then, before you've taken more than a few steps, it becomes obvious - as Carl sets his paw-hand on David's crotch and starts to rub it through his pants. The anthro husky leans in and brings his muzzle against his friend's skin just a moment later, then gives David's neck a long and sensuous lick. Quietly observing and getting closer and closer, you're in position to hear their next exchange:[line break]";
