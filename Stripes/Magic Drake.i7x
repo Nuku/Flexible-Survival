@@ -1,5 +1,5 @@
 Version 1 of Magic Drake by Stripes begins here.
-[ Version 1.1 - Player victory (partial) and ass growth/shrink control ]
+[ Version 1.2 - Player victory cock-fuck option ]
 
 "Adds a shemale drake sorceress creature to Flexible Survivals Wandering Monsters table."
 
@@ -153,13 +153,13 @@ to say beatthemagicdrake:
 [			choose a blank row in table of fucking options;
 			now title entry is "Receive fellatio";
 			now sortorder entry is 6;
-			now description entry is "get her to suck you off";
+			now description entry is "get her to suck you off";		]
 			if cock length of player <= 18:
 				choose a blank row in table of fucking options;
 				now title entry is "Cock-fuck";
 				now sortorder entry is 3;
 				now description entry is "stuff your manhood down her cum slit";
-		if cunts of player > 0:
+[		if cunts of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive cunnilingus";
 			now sortorder entry is 7;
@@ -294,7 +294,7 @@ to say beatthemagicdrake:
 							if mdstaffaction is 1 or mdstaffaction is 3:
 								say ".  The dragoness laughs at your confused attempt.  'And that is why you're meant to be a familiar and nothing more,' she teases.";
 							otherwise:
-								say ".  The dragoness is quite upset by your actions.  'You're being a very -ngg- naughty familiar.  I'll definitely need to punish -grunt- punish you severely -oof- as soon as I can get up,' she growls as she fails to rise and stop you.";
+								say ".  The dragoness is quite upset by your actions.  'You're being a very -ngg- naughty familiar.  I'll definitely need to punish -grunt- punish you severely -oof- as soon as I can get up,' she growls in frustration as she fails to rise and stop you.";
 							say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your rear";
 							if mdstaffaction is 1:
 								increase mdasslevel by 1;
@@ -322,7 +322,27 @@ to say mdrake_pvictory_02:
 	say "     'Such a naughty familiar, doing this to your poor, stranded mistress,' she says with a moan, making it hard to tell if she's truly upset or playfully teasing.  Regardless, you forge on, pounding your [cock size desc of player] penis into the warm embrace of her bosom.  Placing your hands on her massive nipples, you grab them and start pinching and rubbing them, making the dragoness moan all the more.  Each are a handful on their own, full, plump and sensitive.  Her mighty cock is hard and slaps along your back as it twitches and throbs with excitement as if goading you on.  With all this sexy flesh around you, it doesn't take you long before you're ready to blow and paint a sticky white picture of semen across and between her green tits.  Having had your fun, you get up, leaving her to crane her muzzle to try and lick up the tasty treat you've left her.";
 
 to say mdrake_pvictory_03:
-	say "***";
+	choose row monster from the table of random critters;
+	say "     Deciding you need some relief after your vigorous battle, your eyes fall to her massive manhood and its drooling slit.  The sight of that large, slick and juicy opening has a kinky idea pop into your mind.  You stride over to her and, as she struggles to get back up, you grab her cock stroke it firmly.  This causes her to moan and distracts her in part from her attempts to rise.  Her titanic penis throbs as you run your hands over it, coaxing more precum from its tip.  Angling her meaty rod into position, you get your [cock of player] shaft lined up and thrust right into its leaking urethra, causing the dragoness to moan in lustful surprise.";
+	say "     With your hands gripping the rim of her glans, you pound into her juicy cock.  Her cum slit is hot and wet with draconic pre, making your [cock size desc of player] shaft's passage smooth and slick.  The feel of this penile penetration is delightfully different from other sex you've had, this kinky violation very arousing.  And it seems to be having a similar effect on your foe as well, the sorceress moaning and panting as her manhood is stuffed with yours.  The flow of precum increases as you continue, soaking your crotch as you plough into that virile pillar.";
+	attempttowait;
+	let x be a random number between 0 and libido of player;
+	let y be a random number between 0 and 45;
+	if x > y:
+		say "     Eventually this perverse penetration becomes too much for the dragoness and she roars in climax.  You can feel her cock throb with imminent release, but you're too busy thrusting to have the strength to resist the tug of her spasming cum slit.  A torrent of draconic semen is pumped through her stuffed slit.  And while much of it gushes out around your penis, plenty more is pushed into it by fluid pressure.  You can feel her gooey sperm being forced into you, flowing back through your pipes.  Your balls bloat with draconic cum being force-fed into them.  As they get overloaded and struggle to keep taking more, your bladder and prostate are also stuffed with the invading rush of semen.  And only when there's no more room for more inside you is your bloated penis finally forced free from her urethra.";
+		say "     Filled to the point of overflowing, you ache for release like you never have before and grab your cock in both hands, pumping it until and rubbing your balls in an attempt to drain out all that excess dragon sperm.  Your climax is powerful and launches your first few sprays well over ten feet.  You aim the rest of your powerful blasts down onto the dragoness, who moans and rubs the sticky mess into her scales[if wslevel is 3].  With a groan, you release the mix of urine and semen filling your bladder, pissing it out over her[end if].  By the point you're eventually drained, you are weak and woozy, stumbling back several feet as you try to retain your balance.  You're sexually sated by this kinky experience[if cock width of player < 36], though your balls have been left larger than before[end if].";
+		if cockname of player is not "Magic Drake":
+			say "     Having your genitals overloaded with the dragoness's semen has left your penis transformed.  While human-like in shape, it is now made of green flesh and your pubic hair has been replaced by a patch of green scales.  You can feel a warmth in your balls as your semen is corrupted and transformed by the lingering dragon cum still in there, making it draconic as well.";
+			now cockname of player is "Magic Drake";
+			now cock of player is cock entry;
+			if cock width of player < 36:
+				increase cock width of player by ( 50 - cock width of player ) / 10;
+			follow the sex change rule;
+		otherwise:
+			if cock width of player < 36:
+				increase cock width of player by ( 50 - cock width of player ) / 10;
+	otherwise:
+		say "     Eventually this perverse penetration becomes too much and you drive your cock fully into the dragoness's, cumming with a lustful groan.  You blast shot after shot of your [cum load size of player] load down into her urethra[if cock width of player > 15], feeding your some of your load all the way down into her balls[end if] as she moans and squirms beneath you.  Once you're spent, you pull out and watch as her spasming penis twitches and slaps against her belly while some of your cum leaks back out.  She moans and rubs it with a desperate need to release, soon cumming with a roar that splatters a mix of your semen and hers across herself and the ground beyond.  She flops back onto the ground, your kinky abuse of her mighty manhood leaving her momentarily dazed.";
 
 to say mdrake_pvictory_04:
 	say "***";
@@ -350,7 +370,7 @@ to say magicdrakedesc:
 		say "     'Ah yes!  You should do nicely!  With a little remodelling, you'll make for a fine familiar,' you hear an excited voice say.  It is coming from a shemale dragon-woman wearing a sheer blue dress over her green scales, wings flapping as she approaches you.  The dragoness's figure is very striking, even beyond being an imposing ten feet tall.  While most of her body is of an average build (for her size) with a few inches to pinch, her breasts, balls, cock and ass are all outlandishly over-sized.  Each jiggling ass cheek is larger around than her stomach.  Her breasts are similarly voluminous, bouncing buoyantly as she advances on you.  And it's quite clear she's becoming excited, her nipples hard and her titanic cock throbbing as it dribbles sticky patches of precum with every slap of her basketball-sized nuts against her scaly flesh.";
 		say "     So awestruck are you by her transformed figure that you only notice the details of her garments after that.  Her blue dress, aside from made being almost transparently thin silk, is decorated by stars that actually twinkle.  Atop her horned head, she wears a golden tiara that is molded right around her ridged brow and long horns.  Around her neck is a golden talisman adorned with a fiery stone.  Lastly, she holds an ebon staff with a rather phallic headpiece, also made of gold.  It shimmers and leaves a streak of golden sparkles in its wake as she brings it to bear on you.";
 	otherwise:
-		say "     You've ended up crossing paths with that dragon sorceress again.  Her ultra-wide hips sway as she strides towards you.  Her sheer blue dress hides nothing of her imposing figure - 10 foot tall body, beachball breasts, titanic cock, basketball testes and of course her two meter wide ass.  The sight of you has clearly gotten her excited as well, her nipples hard and her cock perking up quickly.";
+		say "     You've ended up crossing paths with that dragon sorceress again.  Her ultra-wide hips sway as the green-scaled shemale strides towards you.  Her sheer blue dress hides nothing of her imposing figure - 10 foot tall body, beachball breasts, titanic cock, basketball testes and of course her two meter wide ass.  The sight of you has clearly gotten her excited as well, her nipples hard and her cock perking up quickly.";
 		say "     '[one of]There you are!  Let's continue your training to become my perfect familiar.  Now come here and bend over,' she commands[or]Perfect!  I could use some quality time with my new familiar-to-be,' she rumbles[or][if mdasslevel < 4]Familiar!  Come here!  We must finish improving your body so you can be my cocksleeve whore[otherwise if mdasslevel < 6]That ass of yours isn't quite what I need it to be.  Come here so we can get you ready to take my cock[otherwise]Come, Familiar!  I need to refresh my magical energies.  Bend over to receive your mistress's gift[end if],' she commands[cycling].  When you don't immediately comply, she raises her staff and energy glows around its phallic headpiece, preparing to force the issue.";
 	if mdasslevel is 0, now mdasslevel is 1;	[met her]
 
