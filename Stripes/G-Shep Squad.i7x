@@ -1,5 +1,5 @@
 Version 1 of G-Shep Squad by Stripes begins here.
-[Version 1.1 - some sex w/Buster]
+[Version 1.2 - more sex w/Buster]
 
 "Adds a group of (mostly) German Shepherd police dogs to Flexible Survival."
 
@@ -13,19 +13,14 @@ when play begins:
 	add Canine Patrol to badspots of furry;
 
 gshepsquad is a number that varies.
+gshepmood is a number that varies.
 
 Instead of resolving a Canine Patrol:
-	let gshepmood be 0;
-	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
-	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
-	otherwise:
-		now gshepmood is 1;		[neutral]
+	gshepmoodcheck;
 	if gshepsquad is 1:
 		say "ERROR - Event closed.";
 		now Canine Patrol is resolved;
-	if gshepsquad is 0:
+	otherwise if gshepsquad is 0:
 		say "     While trying to move unnoticed through the city, you come across a sight not uncommon these days.  Not far from you, a woman well on her way to becoming one of those vapid husky girls is being accosted by another mutant, a large feline in this case.  She is manhandled against the side of a car, the wind knocked out of her and her remaining scraps of clothes torn away.  Before you can decide what if anything to do about this, you hear some loud barking rapidly approaching.  The noise comes from a pair of German Shepherds in partial police uniforms.";
 		say "     'Halt!  Police!  Unhand that woman!' they cry, switching to all fours and charging faster.  The feline, startled by this, takes a couple of steps back.  His would-be victim, seeing a chance for rescue, makes a break towards the police dogs.  The cat takes a few steps towards her in an attempt to grab her, but then backs down as the barking dogs draw nearer.  The pair motion for the dog-woman to wait and continue on, giving brief chase to ensure he's well and truly run off before going back to talk to the victim.";
 		say "     Shall you go talk to these K9 officers or make a discrete exit while you can?";
@@ -76,13 +71,7 @@ to say k9vansdesc:
 		move player to Grey Abbey Library;
 		now K9 Vans is unknown;
 	otherwise if gshepsquad is 4:
-		let gshepmood be 0;
-		if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-			now gshepmood is 2;		[dog = positive]
-		otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-			now gshepmood is 0;		[feline = negative]
-		otherwise:
-			now gshepmood is 1;		[neutral]
+		gshepmoodcheck;
 		say "     Approaching the intersection Buster told you, one outside of the shadier red light district where you met him, you find it the scene of an accident.  The convenience store on this corner has a pair of canine unit vans crashed into it.  One has driven right into the front window and the other is on its side, smashed into the other.  The area around the crash has been swept clear, removing any broken glass or debris.  The door to the store has a sign stuck on it saying 'Temporary Police Station' and there is a gruff looking German shepherd in a partial police uniform - shorts, open dress shirt and hat in this case.  This guard looks you over and asks what you want[if gshepmood is 0] with a low growl[end if].  Telling him that Buster asked to see you, he steps aside and motions with his nightstick for you to go in.";
 		say "     The interior, partially occupied by the front end of the smashed up vans, has been opened up a bit by the removal of the first few rows of shelves.  The other shelves have mostly been picked clean, their contents probably consumed by the canines milling about here.  Most of the are males and all are German shepherds in some partial set of police clothes or gear.  There's an eclectic collection of chairs scavenged from the area as well as a few mats on which some of the officers are sleeping or screwing.  Buster's sitting on one behind a folding table.  He motions for you to come on over.";
 		say "     'Hey!  I'm glad you came.  Sorry for all the questions earlier, but the fact that you even came shows me that you're [if gshepmood is 2]a good dog[otherwise if gshepmood is 1]an alright person[otherwise]an alright person despite that feline taint you've picked up[end if],' he says, getting up and offering you his paw for a shake.  'Now, you were talking about wanting to get some help, but as you can see, we're not in much position to help out right now.  We're cops and good dogs though, so we do our best.'";
@@ -126,9 +115,9 @@ Instead of conversing the Buster:
 the fuckscene of Buster is "[sexwithBuster]";
 
 to say sexwithBuster:
-	say "[bracket]Coming soon. - The Mgmt.[close bracket][line break]";
+	gshepmoodcheck;
 	if debugactive is 1:
-		say "DEBUG -> gshepsquad: [gshepsquad], HP: [hp of Buster], Msg 1: [if busterstory1 is true]Y[otherwise]N[end if], Msg 2: [if busterstory2 is true]Y[otherwise]N[end if] <- DEBUG[line break]";		
+		say "DEBUG -> gshepsquad: [gshepsquad], HP: [hp of Buster], gshepmood: [gshepmood], Msg 1: [if busterstory1 is true]Y[otherwise]N[end if], Msg 2: [if busterstory2 is true]Y[otherwise]N[end if] <- DEBUG[line break]";		
 	if gshepsquad < 5:
 		say "ERROR-Buster-[hp of Buster]F: You should be able to find me yet.";
 	otherwise if lastfuck of Buster - turns < 6:
@@ -139,29 +128,23 @@ to say sexwithBuster:
 		say "[bustersex00]";
 		gsquadinfect;
 		now lastfuck of Buster is turns;
-		[increase hp of Buster by 1;]		[***]
+		increase hp of Buster by 1;
 	otherwise:
 		say "[bustersexmenu]";
 
 
 to say bustersexmenu:
-	now sextablerun is 0;
-	let gshepmood be 0;
-	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
-	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
-	otherwise:
-		now gshepmood is 1;		[neutral]
-	say "     Approaching Buster with an offer of sex gets the German shepherd's ears to perk up.  '[if gshepmood is 2]Alright recruit.  I could use a break.  You're a good dog for offering,' he says with a doggy grin and wagging tail[otherwise if gshepmood is 1]Sounds good, recruit.  Lets have another go at training you up to be a good dog, eh?' he says with a doggy grin and a wag of his tail[otherwise]I'd say another round of doggy training is in order.  Let's see if we can't clear up this feline mess and get you looking like a good, canine citizen,' he says assertively[end if].  While the canine officer divests you of your pack and gear, he [one of]slathers your face with sloppy doggy kisses[or]French kisses you, sliding his long, slobbery tongue past your lips[or]fondles himself with one paw, coaxing his stiffening shaft to rise from his sheath[or]makes a show of groping your ass for the other German shepherds around.  They've seen (and partaken in) this sort of thing plenty of times before, so it doesn't really faze them too much, though there are a few barks and whistles[or]playfully humps your leg with his stiffening cock[in random order].  As things are heating up, you try to decide what you might like to do with the sexy canine stud.";
+	setmonster "German Shepherd";
+	choose row monster from the table of random critters;
+	say "     Approaching Buster with an offer of sex gets the German shepherd's ears to perk up.  '[if gshepmood is 2]Alright recruit.  I could use a break.  You're a good dog for offering,' he says with a doggy grin and wagging tail[otherwise if gshepmood is 1]Sounds good, recruit.  Let's have another go at training you up to be a good dog, eh?' he says with a doggy grin and a wag of his tail[otherwise]I'd say another round of doggy training is in order.  Let's see if we can't clear up this feline mess and get you looking like a good, canine citizen,' he says assertively[end if].  While the canine officer divests you of your pack and gear, he [one of]slathers your face with sloppy doggy kisses[or]French kisses you, sliding his long, slobbery tongue past your lips[or]fondles himself with one paw, coaxing his stiffening shaft to rise from his sheath[or]makes a show of groping your ass for the other German shepherds around.  They've seen (and partaken in) this sort of thing plenty of times before, so it doesn't really faze them too much, though there are a few barks and whistles[or]playfully humps your leg with his stiffening cock[in random order].  As things are heating up, you try to decide what you might like to do with the sexy canine stud.";
 	blank out the whole of table of fucking options;
-[	if cocks of player > 0:
+	if cocks of player > 0:
 		if gshepmood is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
 			now sortorder entry is 1;
 			now description entry is "fuck the studly G-shep";
-		if gshepmood > 0:
+[		if gshepmood > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Get a blow job";
 			now sortorder entry is 10;
@@ -217,13 +200,6 @@ to say bustersexmenu:
 
 
 to say bustersex00:
-	let gshepmood be 0;
-	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
-	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
-	otherwise:
-		now gshepmood is 1;		[neutral]
 	if hp of Buster is 0:		[***first time - until separate oral is created]
 		say "     '[if gshepmood is 2]I'm always up for helping out a good dog feel better,' he says with a happy grin and wagging tail[otherwise if gshepmood is 1]Sounds good to me.  I had a feeling you'd understand and agree to join up.  Let's get you on the path to being a good doggy,' he says with a friendly smile and a wag of the tail[otherwise]Alright.  We can see about clearing up this feline taint you've gotten and put you on the path to being a good doggy,' he says with friendly concern[end if].  Using one paw to help you out of your gear, he rubs his fuzzy sheath with the other, coaxing his canine cock to rise from it.  When you're ready so is he, his member dripping with precum.";
 	say "     With a paw at your shoulder, he get you to go down on your knees and take his doggy dong into your mouth.  The taste of the K9 cop's cock fills your mouth and you lick the sticky precum from its warm flesh.  This gets him to moan softly, rubbing his hand atop your head as if petting you[if gshepmood is 2 and cocks of player > 0].  'Mmm... that's it.  Lick that bone like a good dog[otherwise if gshepmood is 2].  'Mmm... that's it.  Lick that bone like a good bitch[otherwise if gshepmood is 1].  'Alright, now work that tongue.  Lick it like a good dog[otherwise].  'Yeah, lick it you naughty kitty.  Lick that dog bone.  We'll make a horny pup out of you yet[end if],' he moans.  His encouraging has you to work your tongue all over his throbbing canine penis, getting him to pant with growing pleasure.  Drool drips from his dangling tongue onto your head, but you hardly mind at this point, too into sucking on the delicious treat in your mouth.";
@@ -233,37 +209,27 @@ to say bustersex00:
 
 
 to say bustersex01:		[Fuck him]
-	say "***";
+	say "     'Oh?  You looking to bury that bone of yours?' he jokes, reaching between your legs to fondle your manhood.  'Well, I'm always up for helping a good dog out.'  With that, he leads you over to one of the available mats near his makeshift desk and helps you out of your gear and pack while exchanging a few doggy kisses.  These turn into a steamy French kiss with the dog's long tongue squirming in your mouth once he's gotten you naked.  With a paw back on your [cock of player] cock, he strokes you to full erection.";
+	say "     With you ready to go, he moves down onto all fours and raises his fluffy tail with an eager bark[if anallevel is 3 and a random chance of 1 in 2 succeeds].  Rather than mount him right away, you decide to start off by nuzzling under his tail and rimming his waiting hole.  He pants and whines with arousal as your tongue plays across and wriggles into his puckered ring, getting it slick and shiny with spit.  After getting his back door ready, you then[otherwise].  You take a moment to grope and fondle the studly male, stroking his canine dick in appreciation for what he's allowing you to do.  Only once he's panting and whining with need to you[end if] move overtop him, lining up your throbbing erection with his anus.  You ease yourself in slowly at first, enjoying the tightness of his muscular ass squeezing around your meat as you mount him.";
+	attempttowait;
+	say "     After giving him [if cock length of player > 24]a considerable amount of time to stretch out to accommodate your [cock size desc of player] penis[otherwise if cock length of player > 12]enough time to stretch out to accept your [cock size desc of player] penis[otherwise]a few moments to adjust to having your penis stuffed in his rear[end if], you start thrusting with a slow but increasing pace.  The canine leader pants happily as you pound away at him, this clearly not being his first time as the bottom given how easily he takes to it.  With a hand wrapped around his throbbing dog cock, you stroke him in time to your thrusts, adding to the pleasure he's receiving while you enjoy that hot, tight hole of his.  He pants and barks as you pound away at him, his hips pushing up and back into your thrusts even as they grow harder and faster.";
+	say "     With your climax approaching, you grip his firm buttock with one hand and drive yourself hard and fast into the panting shepherd.  He takes it with an excited bark as his ballsac tightens up, his cock throbs and moments later his runny seed is splattering onto the mat, adding fresh stains to it.  His tailhole squeezes and milks at your [cock of player] rod, sending you over the edge a few thrusts later.  You cry out in orgasmic release, painting his insides with your [cum load size of player] load[if cockname of player is listed in infections of knotlist].  You remain tied and buried in his butt until your knot goes down, sharing licks and nuzzles as your sticky load rests warmly in his belly[end if].  When you dismount, [one of]he remains with his ass in the air until his tailhole's recovered enough to clamp shut to keep your creamy load inside him[or]he lets some of your sticky load leak out and run down his thighs as he fingers his well-used hole[or]he motions for another of his dogs to come in and lick the dribbling excess of your load from his well-used hole[or]he gets one of the other dogs to toss him a butt plug, which he stuffs in his hole to keep your load locked inside[in random order].";
 
 to say bustersex02:		[Get fucked - vaginal]
-	let gshepmood be 0;
-	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
-	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
-	otherwise:
-		now gshepmood is 1;		[neutral]
 	say "     Guiding you over to a free mat near his desk, Buster gets you to move onto all fours with your ass in the air.  Mounting you with a happy bark, he gives your shoulder a playful nip as his throbbing rod seeks your dripping entrance.  No surprise, the horny hound wants to take you doggy style.  And when his doggy prick slips a couple of inches into you on a successful thrust, he barks again and drives himself deeper.  Soon he's humping away at you.";
 	say "     '[if gshepmood is 2]Mmm... you make for one hot bitch.  I knew you were something special when I saw you.  Oh, I want to give you so many puppies[otherwise if gshepmood is 1]Yeah, that's it.  Soon we'll have you taking it like a doggy bitch and get you breeding some puppies[otherwise]Yeah, let's pound that dirty feline taint out of you and soon we'll be able to breed some proper puppies in you[end if],' he pants, drooling onto your back as he pounds away at you[if the player is impreg_ok].  The thought of bearing the canine leader's pups is strangely arousing, your nanite-addled libido causing you to imagine what strong pups the canine stud would give you[otherwise].  You know you can't bear pups for the canine stud, but you can't bear to tell him that... though part of you can't help but longingly imagine what it'd be like if you did[end if].  His words also turn him on all the more, pounding you harder and deeper, trying to push his swelling knot into you.";
 	attempttowait;
 	say "     He licks along your neck and cheek as he mates with you, a paw caressing your [bodytype of player] body's many erogenous zones.  With his hefty balls slapping against your thighs and the firm bulge of his knot [if cunt length of player < 20]pushing against your [cunt size desc of player] pussy in its quest to gain entry[otherwise]popping in and out of your [cunt size desc of player] pussy[end if], your cunt quivers and squeezes around his meat.  When your climax hits, you push your hips back hard into his thrust and, with his knot buried inside you, your inner walls clamp down around it.  You cry out in orgasmic release, your female juices soaking the canine dick stuffed inside you.  The clenching grip of your orgasming hole proves to be too much for the horny hound and he cums hard, blasting shot after shot of his virile seed into your vagina.  You can feel that hot puppy batter flow into your womb as his knot [if cunt length of player < 20]leaves it nowhere else to go[otherwise]stoppers up most of it from leaking out[end if].  When he's done and his dick's softened enough that you're no longer tied, he eases his spent shaft out and lets you rest and recover on the mat while he gets back to work.[fimpregchance]";
 	
 to say bustersex03:		[Get fucked - anal]
-	let gshepmood be 0;
-	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
-		now gshepmood is 2;		[dog = positive]
-	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
-		now gshepmood is 0;		[feline = negative]
-	otherwise:
-		now gshepmood is 1;		[neutral]
 	say "     Bending you over his makeshift desk, Buster humps your rear with his drooling cock.  With his paws on your shoulders, he lets his pointed dick prod at your puckered ring, dribbling some precum onto it before easing himself into you.  He gives a pleased bark and thrusts gently to start, working to open your back door, relaxing your anal muscles to let the doggy dong penetrate steadily deeper into your hot hole.";
 	say "     '[if gshepmood is 2]Mmm... you make for one hot dog.  I knew you were something special when I saw you.  Oh, I'm going to make you into a cream-filled pup, recruit[otherwise if gshepmood is 1]Yeah, that's it.  Soon we'll have you taking it like a good dog.  Oh, I'm going to make you into a cream-filled pup[otherwise]Yeah, let's pound that dirty feline taint out of you.  You'll be much better off as a cream-filled pup once I'm through with you[end if],' he pants, drooling onto your back as he pounds away at you[if the player is impreg_ok].  The thought of the canine leader painting your insides with his virile load becomes increasingly arousing, your nanite-addled libido longing for him to fill you.  His words also turn him on all the more, pounding you harder and deeper, trying to push his swelling knot into you.";
 	attempttowait;
-	say "     Leaning overtop you, he runs his tongue along your neck and cheek as he ass-fucks  you, a paw caressing your [bodytype of player] body's sensitive erogenous zones.  With his hefty balls slapping against your thighs and the firm bulge of his knot [if scalevalue of player is 5]popping in and out of your oversized pucker[otherwise if the player is twistcapped]popping in and out of your super-stretchy pucker[otherwise]pushing against your pucker in its quest to gain entry[end if], your rectum squeezes and clenches around his meat.  When your climax hits, you push your hips back hard into his thrust and, with his knot buried inside you, your inner walls clamp down around it.  You cry out in orgasmic release, your anal walls milking and tugging at the tied dog cock locked inside you.  The clenching grip of your hole proves to be too much for the horny hound and he cums hard, blasting shot after shot of his virile seed into your bowels.  You can feel that hot puppy batter flow into your belly as his knot [if cunt length of player < 20]leaves it nowhere else to go[otherwise]stoppers up most of it from leaking out[end if].  When he's done and his dick's softened enough that you're no longer tied, he eases his spent shaft out and playfully wipes it off against your butt cheeks.  He then helps you up off the table and leads you over to one of the nearby mats so you can rest and recover while he gets back to work.[mimpregchance]";
+	say "     Leaning overtop you, he runs his tongue along your neck and cheek as he ass-fucks you, a paw caressing your [bodytype of player] body's sensitive erogenous zones.  With his hefty balls slapping against your thighs and the firm bulge of his knot [if scalevalue of player is 5]popping in and out of your oversized pucker[otherwise if the player is twistcapped]popping in and out of your super-stretchy pucker[otherwise]pushing against your pucker in its quest to gain entry[end if], your rectum squeezes and clenches around his meat.  When your climax hits, you push your hips back hard into his thrust and, with his knot buried inside you, your inner walls clamp down around it.  You cry out in orgasmic release, your anal walls milking and tugging at the tied dog cock locked inside you.  The clenching grip of your hole proves to be too much for the horny hound and he cums hard, blasting shot after shot of his virile seed into your bowels.  You can feel that hot puppy batter flow into your belly as his knot [if cunt length of player < 20]leaves it nowhere else to go[otherwise]stoppers up most of it from leaking out[end if].  When he's done and his dick's softened enough that you're no longer tied, he eases his spent shaft out and playfully wipes it off against your butt cheeks.  He then helps you up off the table and leads you over to one of the nearby mats so you can rest and recover while he gets back to work.[mimpregchance]";
 
 to say bustersex04:		[Give a blow job]
 	say "[bracket]Displaying first time oral scene for now. - The Mgmt.[close bracket][line break]";
-	say "[bustersex00]";		[*** temporarily using first-time sex scene.]
+	say "[bustersex00]";		[*** temporarily re-using first-time sex scene.]
 
 to say bustersex05:		[Get a blow job]
 	say "***";
@@ -271,6 +237,8 @@ to say bustersex05:		[Get a blow job]
 to say bustersex06:		[69]
 	say "***";
 
+
+Section 99 - Subroutines
 
 to gsquadinfect:
 	setmonster "German Shepherd";
@@ -280,6 +248,15 @@ to gsquadinfect:
 	infect;
 	infect;
 	now sex entry is tempsex;
+
+to gshepmoodcheck:
+	now gshepmood is 0;
+	if bodyname of player is listed in infections of CanineList or facename of player is listed in infections of CanineList:
+		now gshepmood is 2;		[dog = positive]
+	otherwise if bodyname of player is listed in infections of FelineList or facename of player is listed in infections of FelineList:
+		now gshepmood is 0;		[feline = negative]
+	otherwise:
+		now gshepmood is 1;		[neutral]
 
 
 Section 100 - Notes
