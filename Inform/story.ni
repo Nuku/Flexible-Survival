@@ -1985,7 +1985,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
 		say "[line break]";
 	[another sub-section of the 'outside' area (named Commercial District here)]
-	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known:
+	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known or K9 Vans is known:
 		say "[bold type]Commercial District[roman type]: ";
 		if Smith Haven Mall Lot South is known:
 			say "[link][bracket]Smith Haven Mall[close bracket][as]nav Smith Haven Mall Lot South[end link] - ";
