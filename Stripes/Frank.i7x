@@ -1,5 +1,5 @@
 Version 4 of Frank by Stripes begins here.
-[Version 4.0 - Dominant player M/M top]
+[Version 4.1 - Switching Frank]
 "Adds a Skunk NPC named Frank to the Flexible Survival game"
 
 Section 1 - Event and Comic Store
