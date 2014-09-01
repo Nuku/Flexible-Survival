@@ -1,5 +1,5 @@
 Version 1 of G-Shep Squad by Stripes begins here.
-[Version 1.0 - Events and location, NPC w/o sex]
+[Version 1.1 - some sex w/Buster]
 
 "Adds a group of (mostly) German Shepherd police dogs to Flexible Survival."
 
