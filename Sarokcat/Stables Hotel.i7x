@@ -16,7 +16,7 @@ Instead of Resolving a A Stabled Situation:
 		say "     The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and consider briefly for a minute following them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";
 		now Stablesearchstatus is 1;
 	otherwise if Stablesearchstatus is 1:
-		say "     As you wander throughout the city, you once again hear the clopping of a number of hooves on the pavement, and recalling the last group of horsemen you saw, you immediately begin looking for a safe hiding spot. You barely make it into cover before a smaller group of horsemen appear down the street, this group however appears much less vigilant, and more relaxed as they focus on something in the middle of the group. Looking out carefully as the group passes you, you find yourself staring at the group in surprise, as you realize why most of the equine men[']s attention is focused towards the center of the group.";
+		say "     As you wander throughout the city, you once again hear the clopping of a number of hooves on the pavement, and recalling the last group of horsemen you saw, you immediately begin looking for a safe hiding spot. You barely make it into cover before a smaller group of horsemen appear down the street, this group however appears much less vigilant, and more relaxed as they focus on something in the middle of the group. Looking out carefully as the group passes you, you find yourself staring at the group in surprise, as you realize why most of the equine men's attention is focused towards the center of the group.";
 		say "     In the middle of the group of beasts, is a relatively large group of captives bound together with leather harnesses being led down the street, many of the captives are already starting to display several equine features as they stumble along. A closer look at the captives as they stagger off has you realizing that they are wearing the remains of what were obviously military uniforms, obviously a patrol of some sort that the horsemen managed to capture. Not wanting to fight with a group that could manage to capture a military patrol, you let the beasts pass, however you also realize this is a perfect opportunity to follow the beasts to see where they are going, while their attention is focused on their captives.";
 		say "     You follow the horsemen and their captives at a discrete distance as they make their way through the dangerous streets of the city, sometimes having to duck down dark alleyways not to be noticed. Finally after what seems like forever the long nerve-wracking trip comes to an end near the red light district, as the horsemen lead their captives through the side entrance of what appears to be an old hotel complex.";
 		say "     The building looks like it was built sometime around the turn of the twentieth century, and has certainly seen better days. The large building seems more like an an insane asylum than a luxury hotel now with its large multi-story main building and the two slightly shorter wings which appear to have been added at some later date. Flanking the entrance are two more of the horsemen obviously there to keep out the riffraff, though with only two of them, perhaps you could try to bribe your way inside.  Do you try to gain entrance to the building?";
@@ -31,7 +31,7 @@ Instead of Resolving a A Stabled Situation:
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:
-				say "     Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[']t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something.  Everyone likes snack food right?";
+				say "     Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something.  Everyone likes snack food right?";
 				now Stablesearchstatus is 2;
 		otherwise:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing buildings location, and head back to the library for now.";
@@ -48,7 +48,7 @@ Instead of Resolving a A Stabled Situation:
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:
-				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[']t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
+				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
 		otherwise:
 			say "     Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
 
@@ -59,7 +59,7 @@ Stables Hotel is a room. It is fasttravel. It is private.
 Stable is a room.
 Stalls is a room.
 
-The description of Stables Hotel is "     The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn[']t appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.".
+The description of Stables Hotel is "     The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn't appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.".
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 
 Northeast of Stables Hotel is Stalls.
@@ -98,7 +98,7 @@ Daisy is in Mares Quarters.
 Feeding Table is in Mares Quarters.
 
 Feeding Table is a man.
-The description of Feeding Table is "     A large table that has been set up to the side of the room, it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes, and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as, Mare[']s Milk. Looking around, you note that some of the mares are eyeing you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food', maybe it wouldn[']t hurt to 'Try the Horsefood' set out on the table?".
+The description of Feeding Table is "     A large table that has been set up to the side of the room, it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes, and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labelled as, Mare's Milk. Looking around, you note that some of the mares are eyeing you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food', maybe it wouldn't hurt to 'Try the Horsefood' set out on the table?".
 
 instead of sniffing Mares Quarters:
 	say "The mares['] quarters smells strongly of mares and equine sex.  While the scent of the females living here is the strongest, there is the scent of many males as well, clearly left by their aroused [']visitors['].";
@@ -122,7 +122,7 @@ Check Marefeeding:
 
 Carry out Marefeeding:
 	if Lastmarefed - turns is less than 8:
-		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn[']t worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
+		say "     You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn't worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	otherwise:
 		say "     Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares select several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
 		decrease hunger of player by 10;
@@ -135,7 +135,7 @@ Carry out Marefeeding:
 
 Holding Pens is a room.
 
-The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if xp of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[otherwise]Onyx[']s holding pen remains open as if awaiting a new occupant[end if].  Next to it someone has hung a handmade sign reading ['][if xp of Onyx >= 60 and xp of Onyx <= 79]Obsidian[otherwise]Onyx[end if]['].".
+The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. [if xp of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[otherwise]Onyx's holding pen remains open as if awaiting a new occupant[end if].  Next to it someone has hung a handmade sign reading ['][if xp of Onyx >= 60 and xp of Onyx <= 79]Obsidian[otherwise]Onyx[end if]['].".
 Onyx is in Holding Pens.
 
 instead of sniffing Holding Pens:
@@ -144,7 +144,7 @@ instead of sniffing Holding Pens:
 
 Employee Access is a room.
 
-The description of Employee Access is "     This long narrow hallway curves north, and has several doors along the sides, eventually ending in a pair of large closed double doors, labeled Master[']s Stable. Unfortunately most of the doors are sealed tight, and you will need to find the keys or some other way to open them before you can go any further in this direction.".
+The description of Employee Access is "     This long narrow hallway curves north, and has several doors along the sides, eventually ending in a pair of large closed double doors, labeled Master's Stable. Unfortunately most of the doors are sealed tight, and you will need to find the keys or some other way to open them before you can go any further in this direction.".
 
 instead of sniffing Employee Access:
 	say "This area smells particularly strongly of the dominant, equine scents beyond.";

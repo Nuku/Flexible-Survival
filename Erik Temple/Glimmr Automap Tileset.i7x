@@ -98,7 +98,7 @@ Section - Translation Table
 
 Table of Automap Tiles
 Char	Tile
-number	figure-name
+[number	figure-name]
 3	Figure of automap in
 4	Figure of automap out
 5	Figure of automap inout

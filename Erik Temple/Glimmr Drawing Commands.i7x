@@ -6,7 +6,7 @@ Version 2/101030 of Glimmr Drawing Commands (for Glulx only) by Erik Temple begi
 Part - Inclusions
 
 Include version 9 of Flexible Windows by Jon Ingold.
-Include version 3 of Fixed Point Maths by Michael Callaghan.
+[Include version 3 of Fixed Point Maths by Michael Callaghan.]
 
 
 Part - Use options
@@ -323,8 +323,8 @@ To line (coord1 - a list of numbers) to (coord2 - a list of numbers) at (wgt - a
 Section - Line using angle + distance
 
 To draw a line (hue - a number) in (win - a g-window) from (x1 - a number) by (y1 - a number) measuring/of (distance - a number) pixel/pixels/px/-- long/-- at (angle - a number) deg/degree/degrees/-- angle/-- with (wgt - a number) pixel/pixels/px/-- line-weight/stroke:
-	let xx be (sine of angle) * distance as an integer;
-	let yy be (cosine of angle) * distance as an integer;
+	let xx be (sine of angle) * distance to the nearest whole number;
+	let yy be (cosine of angle) * distance to the nearest whole number;
 	let x2 be x1 + xx;	
 	let y2 be y1 - yy;
 	#if utilizing Glimmr debugging;
@@ -346,7 +346,7 @@ To line (coord1 - a list of numbers) dist/distance (distance - a number) px/pixe
 	Draw a line (current foreground-color) in (current graphics window) from (x1) by (y1) measuring (distance) pixels at (angle) with (wgt) pixel line-weight.
 
 To decide what number is (rad - a real number) rad/radians:
-	decide on rad in degrees as an integer.
+	decide on rad in degrees to the nearest whole number.
 
 
 Chapter - Images
@@ -798,14 +798,14 @@ Section - Text-painting with a background color
 To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a number) by/x (Y1 - a number) using font/-- (TYPF - a font) scaled at (SCF - a real number) with background (BKGD - a number) and margin of/-- (MARGIN - a number) pixel/pixels/px/--, center-aligned or right-aligned:
 	unless STR is "":
 		now g-LEN is the length of STR set in TYPF;
-		now g-LEN is g-LEN real times SCF as an integer;
+		now g-LEN is g-LEN times SCF to the nearest whole number;
 		if right-aligned:
 			let X1 be X1 - g-LEN;
 			let X1 be X1 - (g-LEN / 2);
 		now current g-row is Y1;
 		now current g-column is X1;
-		[let vertical-size be font-height of TYPF real times SCF as an integer;]
-		dimrectdraw (BKGD) in (WIN) at (current g-column - MARGIN) by (current g-row - MARGIN) with size (the length of STR set in TYPF real times SCF as an integer + MARGIN + MARGIN) by (font-height of TYPF real times SCF as an integer + MARGIN + MARGIN);
+		[let vertical-size be font-height of TYPF times SCF to the nearest whole number;]
+		dimrectdraw (BKGD) in (WIN) at (current g-column - MARGIN) by (current g-row - MARGIN) with size (the length of STR set in TYPF times SCF to the nearest whole number + MARGIN + MARGIN) by (font-height of TYPF times SCF to the nearest whole number + MARGIN + MARGIN);
 		repeat with N running from 1 to the number of characters in STR:
 			now char_code is the character code of position N of STR;
 			if there is a char of char_code in the font table of TYPF:
@@ -813,13 +813,13 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			otherwise:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
-			let the yoffset be yoffset entry real times SCF as an integer;
+			let the yoffset be yoffset entry times SCF to the nearest whole number;
 			now g-imgwidth is the image-width of chosen glyph;
 			now g-imgheight is the image-height of chosen glyph;
-			now g-imgwidth is g-imgwidth real times SCF as an integer;
-			now g-imgheight is g-imgheight real times SCF as an integer;
+			now g-imgwidth is g-imgwidth times SCF to the nearest whole number;
+			now g-imgheight is g-imgheight times SCF to the nearest whole number;
 			drscimage (chosen glyph) in (WIN) at (current g-column) by (current g-row + yoffset) with dimensions (g-imgwidth) by (g-imgheight);
-			increase current g-column by the advance entry real times SCF as an integer;
+			increase current g-column by the advance entry times SCF to the nearest whole number;
 
 To paint/display an/-- image-based text of/-- (STR - indexed text) in (win - a g-window) at (X1 - a number) by/x (Y1 - a number) using font/-- (TYPF - a font) scaled at (SCF - a real number) with background (BKGD - a number) and margin of/-- (MARGIN - a number) pixel/pixels/px/--, center-aligned or right-aligned:
 	#if utilizing Glimmr debugging;
@@ -848,14 +848,14 @@ Section - Text-painting without a background color
 To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a number) by/x (Y1 - a number) using font/-- (TYPF - a font) scaled at (SCF - a real number), center-aligned or right-aligned:
 	unless STR is "":
 		now g-LEN is the length of STR set in TYPF;
-		now g-LEN is g-LEN real times SCF as an integer;
+		now g-LEN is g-LEN times SCF to the nearest whole number;
 		if right-aligned:
 			let X1 be X1 - g-LEN;
 		if center-aligned:
 			let X1 be X1 - (g-LEN / 2);
 		now current g-row is Y1;
 		now current g-column is X1;
-		let vertical-size be font-height of TYPF real times SCF as an integer;
+		let vertical-size be font-height of TYPF times SCF to the nearest whole number;
 		repeat with N running from 1 to the number of characters in STR:
 			let V be the character code of position N of STR;
 			if there is a char of V in the font table of TYPF:
@@ -863,13 +863,13 @@ To paintimgtext of/-- (STR - indexed text) in (win - a g-window) at (X1 - a numb
 			otherwise:
 				choose row with a char of 32 in the font table of TYPF;
 			let the chosen glyph be glyph-ref entry;
-			let the yoffset be yoffset entry real times SCF as an integer;
+			let the yoffset be yoffset entry times SCF to the nearest whole number;
 			now g-imgwidth is the image-width of chosen glyph;
 			now g-imgheight is the image-height of chosen glyph;
-			now g-imgwidth is g-imgwidth real times SCF as an integer;
-			now g-imgheight is g-imgheight real times SCF as an integer;
+			now g-imgwidth is g-imgwidth times SCF to the nearest whole number;
+			now g-imgheight is g-imgheight times SCF to the nearest whole number;
 			drscimage (chosen glyph) in (WIN) at (current g-column) by (current g-row + yoffset) with dimensions (g-imgwidth) by (g-imgheight);
-			increase current g-column by the advance entry real times SCF as an integer;
+			increase current g-column by the advance entry times SCF to the nearest whole number;
 
 To paint/display an/-- image-based text of/-- (STR - indexed text) in (win - a g-window) at (X1 - a number) by/x (Y1 - a number) using font/-- (TYPF - a font) scaled at (SCF - a real number), center-aligned or right-aligned:
 	#if utilizing Glimmr debugging;
@@ -952,7 +952,7 @@ The null tileset is a tileset. The translation-table is Table of Null Tilesettin
 
 Table of Null Tilesetting
 Char	Tile
-number	figure name
+[number	figure name]
 1	Figure of Null
 
 
@@ -1136,9 +1136,9 @@ Section - RGB specified as a percentage
 
 To decide which number is r%/R% --/= (R - a number) g%/G% --/= (G - a number) b%/B% --/= (B - a number):
 	unless R < 0 or R > 100 or G < 0 or G > 100 or B < 0 or B > 100:
-		let R be R real times 2.5500 as an integer;
-		let G be G real times 2.5500 as an integer;
-		let B be B real times 2.5500 as an integer;
+		let R be R times 2.5500 to the nearest whole number;
+		let G be G times 2.5500 to the nearest whole number;
+		let B be B times 2.5500 to the nearest whole number;
 		decide on (R * 65536) + (G * 256) + B;
 	decide on 0;
 
@@ -1147,9 +1147,9 @@ Section - RGB specified as a fixed point percentage
 
 To decide which number is r%/R% --/= (R - a real number) g%/G% --/= (G - a real number) b%/B% --/= (B - a real number):
 	unless R is real less than 0 or R is real greater than 100.0000 or G is real less than 0 or G is real greater than 100.0000 or B is real less than 0 or B is real greater than 100.0000:
-		let R1 be R real times 2.5500 as an integer;
-		let G1 be G real times 2.5500 as an integer;
-		let B1 be B real times 2.5500 as an integer;
+		let R1 be R times 2.5500 to the nearest whole number;
+		let G1 be G times 2.5500 to the nearest whole number;
+		let B1 be B times 2.5500 to the nearest whole number;
 		decide on (R1 * 65536) + (G1 * 256) + B1;
 	decide on 0;
 
@@ -1706,7 +1706,7 @@ It is also possible to specify a line using an origin point and an angle (in deg
 
 	draw a line <color> in <window> from <origin> measuring <distance> pixels at <angle> degrees/radians with <weight> pixel line-weight
 
-The angle must be supplied as an integer when degrees are used, or as a real number if radians are used. The orientation is geographical, so that 0 degrees is the top of the screen, 90 degrees is to the right side, etc.:
+The angle must be supplied to the nearest whole number when degrees are used, or as a real number if radians are used. The orientation is geographical, so that 0 degrees is the top of the screen, 90 degrees is to the right side, etc.:
 
 	    0°
 	270 + 90

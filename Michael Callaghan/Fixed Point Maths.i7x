@@ -4,7 +4,7 @@ Chapter 1 - Basic definitions
 
 Section 1 - Defining a fixed point number
 
-A real number is a kind of value.  -999999.9999 specifies a real number with parts whole and fractional.
+[A real number is a kind of value.  -999999.9999 specifies a real number with parts whole and fractional.]
 
 The specification of a real number is "Represents a fixed point number in the range -214748.3648 to 214748.3647."
 
@@ -13,7 +13,7 @@ Section 2 - Constants for precision
 Precision is a number that varies.  Precision is 4.
 Divisor is a number that varies.  Divisor is 10000.
 HalfDivisor is a number that varies.  HalfDivisor is 4999.
-Pi is a real number that varies.  Pi is 3.1416.
+[Pi is a real number that varies.  Pi is 3.1416.]
 
 Chapter 2 - Internal functions
 
@@ -38,16 +38,16 @@ To decide which number is the lesser part of (N - a number):
 Section 4 - Finding the aggregate of a number
 
 To decide which number is the aggregate of (N - a real number):
-	let temp be the whole part of N;
+	let temp be N to the nearest whole number;	
 	let temp be temp times Divisor;
-	let temp be temp plus the fractional part of N;
+	let temp be temp plus N - N to the nearest whole number;
 	decide on temp.
 
 Chapter 3 - Basic functions to convert numbers
 
 Section 1 - Int function converts to the nearest integer
 
-To decide which number is (N - a real number) as an integer:
+[To decide which number is (N - a real number) as an integer:
 	let result be the whole part of N;
 	let temp1 be the absolute value of N;
 	let temp2 be the fractional part of temp1;
@@ -59,24 +59,18 @@ To decide which number is (N - a real number) as an integer:
 		if result is less than 0:
 			let result be result minus 1;
 	decide on result.
-
+]
 Section 2 - Round up (rounds up to nearest integer)
 
 To decide which number is (N - a real number) rounded up:
-	let result be the whole part of N;
-	if the fractional part of N is less than 0:
-		let result be result minus 1;
-	if the fractional part of N is greater than 0:
-		let result be result plus 1;
-	decide on result.
+	decide on N to the nearest whole number.
 
 Section 3 - Round down (rounds down to the nearest integer)
 
 To decide which number is (N - a real number) rounded down:
-	let result be the whole part of N;
-	decide on result.
+	decide on N to the nearest whole number.
 
-Section 4 - Absolute value of a fixed point number (converts negatives to positives)
+[Section 4 - Absolute value of a fixed point number (converts negatives to positives)
 
 To decide which real number is the absolute value of (N - a real number):
 	let temp1 be the whole part of N;
@@ -93,21 +87,21 @@ To decide which number is the absolute value of (N - a number):
 	if N is less than 0:
 		let N be 0 minus N;
 	decide on N.
-
+]
 Section 6 - Convert number to floating point
 
 To decide which real number is (N - a number) as a fixed point number:
-	let result be the real number with whole part N fractional part 0;
+	let result be N + 0.0;
 	decide on result.
 
 Section 7 - Change the sign of a fixed point number
 
-To decide which real number is the reverse/negation of (N - a real number):
+[To decide which real number is the reverse/negation of (N - a real number):
 	let temp1 be 0 minus the whole part of N;
 	let temp2 be 0 minus the fractional part of N;
 	let result be the real number with whole part temp1 fractional part temp2;
 	decide on result.
-
+]
 Section 8 - Change the sign of a number
 
 To decide which number is the reverse/negation of (N - a number):
@@ -182,10 +176,7 @@ To decide if (A - a real number) is real less than (B - a number):
 Section 4 - Deciding if a fixed point number is negative
 
 To decide if (N - a real number) is negative:
-	if the whole part of N is less than 0:
-		decide yes;
-	if the fractional part of N is less than 0:
-		decide yes;
+	if N < 0, decide yes;
 	decide no.
 
 Chapter 5 - Addition
@@ -193,11 +184,7 @@ Chapter 5 - Addition
 Section 1 - Addition of two fixed point numbers
 
 To decide which real number is (A - a real number) real plus (B - a real number):
-	let temp be the aggregate of A plus the aggregate of B;
-	let result_int be the greater part of temp;
-	let result_dec be the lesser part of temp;
-	let result be the real number with whole part result_int fractional part result_dec;
-	decide on result.
+	decide on A + B.
 
 Section 2 - Addition of a fixed point number and an integer
 
@@ -214,54 +201,22 @@ Chapter 6 - Subtraction
 Section 1 - Subtraction of two fixed point numbers
 
 To decide which real number is (A - a real number) real minus (B - a real number):
-	let B be the reverse of B;
-	decide on A real plus B.	
+	decide on A - B.	
 
 Section 2 - Subtraction of a fixed point number and an integer
 
 To decide which real number is (A - a real number) real minus (B - a number):
-	let temp be B as a fixed point number;
-	let temp be the reverse of temp;
-	decide on A real plus temp.
+	decide on A - B.
 
 To decide which real number is (A - a number) real minus (B - a real number):
-	let temp be A as a fixed point number;
-	let B be the reverse of B;
-	decide on temp real plus B.
+	decide on A - B.
 
 Chapter 7 - Multiplication
 
 Section 1 - Multiplication of two fixed point numbers
 
 To decide which real number is (A - a real number) real times (B - a real number):
-	let temp be the absolute value of A;
-	let temp1_int be the whole part of temp;
-	let temp1_dec be the fractional part of temp;
-	let temp be the absolute value of B;
-	let temp2_int be the whole part of temp;
-	let temp2_dec be the fractional part of temp;
-	let result_int be temp1_int times temp2_int;
-	let temp1 be temp1_int times temp2_dec;
-	let result_int be result_int plus the greater part of temp1;
-	let result_dec be the lesser part of temp1;
-	let temp1 be temp1_dec times temp2_int;
-	let result_int be result_int plus the greater part of temp1;
-	let result_dec be result_dec plus the lesser part of temp1;
-	let temp1 be temp1_dec times temp2_dec;
-	let result_dec be result_dec plus the greater part of temp1;
-	if the lesser part of temp1 is greater than HalfDivisor:
-		let result_dec be result_dec plus 1;
-	let result_int be result_int plus the greater part of result_dec;
-	let result_dec be the lesser part of result_dec;
-	let result be the real number with whole part result_int fractional part result_dec;
-	if A is negative:
-		let result be the reverse of result;
-		if B is negative:
-			let result be the reverse of result;
-	otherwise:
-		if B is negative:
-			let result be the reverse of result;
-	decide on result.
+	decide on A * B;
 
 Section 2 - Multiplication of a number and a fixed point number
 
@@ -278,34 +233,7 @@ Chapter 8 - Division
 Section 1 - Division of one fixed point number by another fixed point number
 
 To decide which real number is (A - a real number) real divided by (B - a real number):
-	let temp1 be the aggregate of A;
-	let temp1 be the absolute value of temp1;
-	let temp2 be the aggregate of B;
-	let temp2 be the absolute value of temp2;
-	let result_int be temp1 divided by temp2;
-	let result_dec be 0;
-	let temp be the remainder after dividing temp1 by temp2;
-	let Placeholder be Divisor divided by 10;
-	repeat with X running from 1 to Precision:
-		let temp be temp times 10;
-		let temp1 be temp divided by temp2;
-		let temp1 be temp1 times Placeholder;
-		let result_dec be result_dec plus temp1;
-		let temp be the remainder after dividing temp by temp2;
-		let Placeholder be Placeholder divided by 10;
-	let temp be temp times 10;
-	let temp1 be temp divided by temp2;
-	if temp1 is greater than 4:
-		let result_dec be result_dec plus 1;
-	let result be the real number with whole part result_int fractional part result_dec;
-	if A is negative:
-		let result be the reverse of result;
-		if B is negative:
-			let result be the reverse of result;
-	otherwise:
-		if B is negative:
-			let result be the reverse of result;
-	decide on result.
+	decide on A / B;
 
 Section 2 - Division of one fixed point number by an integer
 
@@ -343,30 +271,30 @@ To decide which number is the factorial of (N - a number):
 
 Section 3 - Simple powers
 
-To decide which real number is (A - a real number) to the power (B - a number):
+[To decide which real number is (A - a real number) to the power (B - a number):
 	let result be 1.0000;
 	repeat with X running from 1 to B:
 		let result be result real times A;
 	decide on result.
-
-To decide which number is (A - number) to the power (B - a number):
+]
+[To decide which number is (A - number) to the power (B - a number):
 	let result be 1;
 	repeat with X running from 1 to B:
 		let result be result times A;
 	decide on result.
-
+]
 To decide which real number is (A - a real number) squared:
 	decide on A to the power 2.
 
-To decide which number is (A - a number) squared:
+[To decide which number is (A - a number) squared:
 	decide on A to the power 2.
-
+]
 To decide which real number is (A - a real number) cubed:
 	decide on A to the power 3.
 
-To decide which number is (A - a number) cubed:
+[To decide which number is (A - a number) cubed:
 	decide on A to the power 3.
-
+]
 Section 4 - Square roots
 
 To decide which real number is the real square root of (N - a real number):
@@ -395,7 +323,7 @@ To decide which real number is the real square root of (N - a number):
 Section 5 - Degrees to radians and radians to degrees
 
 To decide what real number is (N - a real number) in radians:
-	let temp be N real times Pi;
+	let temp be N times 3.14;
 	let temp be temp real divided by 180.0000;
 	decide on temp.
 
@@ -404,9 +332,9 @@ To decide what real number is (N - a number) in radians:
 	decide on temp in radians.
 
 To decide what real number is (N - a real number) in degrees:
-	let temp be N real times 57.2958;
-	let angle be the whole part of temp;
-	let decimal be the fractional part of temp;
+	let temp be N times 57.2958;
+	let angle be temp to the nearest whole number;
+	let decimal be temp to the nearest whole number - temp;
 	let temp1 be decimal real divided by 1000.0000;
 	let temp2 be temp1 rounded up;
 	if temp2 is 10:
@@ -414,7 +342,7 @@ To decide what real number is (N - a real number) in degrees:
 		let angle be angle plus 1;
 	otherwise:
 		let temp2 be temp2 times 1000;
-	let result be the real number with whole part angle fractional part temp2;
+	let result be angle  to the nearest whole number + temp2 - temp2 to the nearest whole number;
 	decide on result.
 
 To decide what real number is (N - a number) in degrees:
@@ -458,9 +386,9 @@ To decide what real number is the sine of (N - a real number):
 		otherwise:
 			let result be result real plus temp1;
 			let sign be the reverse of sign;
-		increase X by 1;
+[		increase X by 1;]
 	if adjustsign is true:
-		let result be the reverse of result;
+		let result be 0 - result;
 	decide on result.
 
 To decide what real number is the sine of (N - a number):
@@ -560,7 +488,7 @@ To decide what real number is the natural log of (N - a real number):
 		let temp2 be X as a fixed point number;
 		let temp1 be temp1 real divided by temp2;
 		let result be result real plus temp1;
-		increase X by 1;
+[		increase X by 1;]
 	let result be result real times 2;
 	decide on result.
 
@@ -676,7 +604,7 @@ To decide which real number is the number derived from (T - indexed text):
 				now invalid conversion is true;
 				decide on 0 as a fixed point number;
 	let first be result;
-	let final result be the real number with whole part first fractional part second;
+	let final result be first to the nearest whole number + second - second to the nearest whole number;
 	if negative flag is true:
 		let final result be the negation of final result;
 	now invalid conversion is false;

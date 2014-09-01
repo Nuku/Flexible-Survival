@@ -1985,7 +1985,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Lion's Den[close bracket][as]nav Lion's Den[end link] ";
 		say "[line break]";
 	[another sub-section of the 'outside' area (named Commercial District here)]
-	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known:
+	if Smith Haven Mall Lot South is known or Back Alley is known or Comic Shop is known or Isolated Street is known or Kristen's Hideout is known or Lingerie Store is known or New Ewe Storeroom is known or The Palomino is known or SlutRat Den is known or K9 Vans is known:
 		say "[bold type]Commercial District[roman type]: ";
 		if Smith Haven Mall Lot South is known:
 			say "[link][bracket]Smith Haven Mall[close bracket][as]nav Smith Haven Mall Lot South[end link] - ";
@@ -4730,7 +4730,10 @@ check resting:
 		say "You have nothing to rest on.";
 		stop the action;
 	if companion of player is not rubber tigress:
-		if there is a dangerous door in the location of the player and location of player is not sleepsafe:
+		if ( there is a dangerous door in the location of the player or the location of player is fasttravel ) and location of player is not sleepsafe:
+			let l be a random visible dangerous door;
+			if l is not nothing, now battleground is the marea of l;
+			if l is nothing, now battleground is "Outside";	[***]
 			say "...";
 			attempttowait;
 			let intodds be 3;
@@ -6730,14 +6733,17 @@ Include Impala by UrsaOmega.
 Include Feral Gryphon by UrsaOmega.
 Include Shadow Beast by UrsaOmega.
 Include Hermaid by Xenophiliac.
+Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
+Include Mpreg Platypus by Sapphire.
 
 
 
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
+Include Phantom Pony by Blue Bishop.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
@@ -6825,6 +6831,8 @@ Include Orc Lair by Wahn.
 Include Val by Wahn.
 Include Chris by Wahn.
 Include NPC Interactions by Wahn.
+Include Pretty Kitty by Xenophiliac.
+Include Santa Claws by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

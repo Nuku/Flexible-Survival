@@ -395,14 +395,13 @@ Section 4 - Nanite Density Monitors Sub-Quest	[move to Zephyr file later?]
 
 Chapter 1 - Getting Started
 
-ndmlist is a list of text that varies.  ndmlist is usually { }.
+ndmlist is a list of text that varies.  ndmlist is usually {"Beach", "Red Light District", "High Rise District", "Park"}.
 
 to say zephyrmatt1:
 	say "     You go up to Larissa at the counter and inform her that you're here on Dr. Matt's behalf to exchange information.  She glances up from the electronic game she's playing to pass the time.  'Oh, hey.  Head Office said someone would be coming by for that.'  She sets her game aside and glances up at you between flipping through the documents.  'If you're going around the city looking for work, we've got a bit of something for you to do.  HQ says it needs to be done ASAP, but we don't have the manpower.  If you could take care of that, I'll make sure these get a rush on top of paying you for the job.  Sound good?'";
 	say "     Understanding that Dr. Matt needs this information and that you'd best get on Zephyr's good side to get it, you nod ask her what needs to be done.  'Excellent!  We can't really go hiring you on right now, but even working for us freelance will really help you in the long run.  Zephyr's moving up in the world and you really want to be part of the team, trust me,' she says with a knowing smile.";
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city.  They'll help us detect the prop-' she stops herself short.  'Well, a temp doesn't need to know the details.  They measure some stuff about the nanites.  Perfectly safe,' she adds reassuringly.  'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district.  They should be placed in open, elevated locations where they won't be disturbed.  Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open.  She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you.  'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys.  They've got to be outside in the open and somewhere high up.'  Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
-	now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
 	increase carried of nanite density monitor by 1;
 	now beach detector site is unresolved;
 	now red light detector site is unresolved;
