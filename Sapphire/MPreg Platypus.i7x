@@ -63,12 +63,12 @@ to say beattheplatypus:
 
 to say platypusdesc:
 	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer.  Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
-	if bodyname of player is "platypus":
+	if bodyname of player is "Platypus":
 		if gestation of child > 0 and gestation of child < 20:
 			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. I see you're working on another clutch. Congratulations!' Reaching forward, he rubs at your belly lovingly, feeling your belly fur move under his webbed fingers. You recoil from his touch with mild concern. 'Hey now... No need to be like that,' the platypus whines, getting a bit more aggressive with his advances.";
 		otherwise:
 			say "     The creature approaches you and takes a moment to catch his breath. He looks up at you and smiles, a hand on his belly. 'Good to see another platypus out and about. Had many clutches lately?' Reaching forward, he chuckles and rubs at your belly playfully. 'How's about we try for one now?' With that, he takes a few steps back, being polite and giving you a bit of a warning before he starts a fight.";
-	otherwise if bodyname of player is "kangaroo":
+	otherwise if bodyname of player is "red kangaroo":
 		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Nice to see another Aussie about. Pardon my lack of manners, but these eggs are weighing me down a bit.' He straightens and stretches. 'How about a little friendly sparring? Don't worry about me. I'm fit enough to keep up.'";
 	otherwise:
 		say "     Looking it over again, you realize this isn't a chimera, but an actual animal - a duck-billed platypus. The creature staggers to a stop in front of you and spends a moment catching his breath, hands on his knees. 'Just give me a second. These eggs are getting a bit heavier lately.' He pants a little longer, his belly swaying with each breath. Watching the hypnotic motions of the gravid male, he grins and says 'You'll see what I mean soon enough.' With an unexpected burst of movement, the platypus charges, leaving little time to prepare yourself for combat!";
@@ -106,7 +106,7 @@ When Play begins:
 	now sex entry is "Male";                      [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 37;                           [ The monster's starting hit points. ]
 	now lev entry is 2;                           [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 8;                          [ Monster's average damage when attacking. ]
+	now wdam entry is 5;                          [ Monster's average damage when attacking. ]
 	now area entry is "Beach";                    [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;                         [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8;                   [ Length in inches infection will make cock grow to if cocks. ]
@@ -122,7 +122,7 @@ When Play begins:
 	now lootchance entry is 0;                    [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2;                         [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]curvy[at random]";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "platypus";                      [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "[one of]platypus[or]monotreme[as decreasingly likely outcomes]";                      [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;                 [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;            [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
