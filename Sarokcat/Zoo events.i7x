@@ -160,7 +160,7 @@ Instead of Resolving a Vet supplies:
 
 
 to say vetsup_fshots:
-	say "     Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
+	say "     Examining the female shots you have laid out before you, you decide to discard the male shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
 	if "Female Preferred" is listed in feats of the player:
 		say "     While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more bestial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
 		decrease humanity of player by 40;
