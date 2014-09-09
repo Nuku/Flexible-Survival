@@ -310,6 +310,38 @@ instead of going east from Central Farm Square while (hp of Corbin < 2 and dayti
 	now lastfuck of Corbin is turns;
 	now hp of Corbin is 2;
 
+
+[
+instead of entering Central Farm Square while (companion of player is felinoid companion and hp of Corbin < 2 and daytimer is night):
+	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
+	say "     [line break]";
+	say "     Do you want to go after your pet and see what he's up to (Y), or do you just let him go to do his cat-things, trusting that he'll return eventually (N)?";
+	If player consents:
+		say "     [line break]";
+		say "     Following the large feline, you walk into the milking shed, immediatley noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
+		say "     Taking in those attractive sights, you only notice a moment later that tubes of the milking apparatus dangle in the air on the front side of his body, twitching as something is sucked through them. Is he using that thing as a cock pump? You're tempted to step forward and have a look - but before you can do so, the felinoid is already stalking closer to Corbin on silent paws. He keeps sniffing the air, giving low rumbles from his throat and you can see the big cat's maleness get more erect by the second. Soon, the felinoid is right behind the horseman - at which point he stretches his head forward and gives the unsuspecting cowboy a lick between the legs. Confronted with someone making their presence known in such an intimate matter, Corbin whirls around - which is complicated a bit by the fact that there are two suction cups attached to the small but perky breasts just above his genitals. His female genitals at that - he isn't a stallion at all, but has a rather wet mare's pussy between his legs into which he was thrusting a rubber dildo.";
+		say "     [WaitLineBreak]";
+		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly and lies back, relaxing visibly and stroking his pussy.";		
+		say "     [line break]";
+		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin (Y), or would you rather pull him off (N)?";
+		if player consents:
+			say "     ";
+		otherwise:
+			say "     ";
+		
+		
+		say "     Moaning softly, his eyes closed as a surprising amount of milk is chugged away by the machine out of his small breasts, Corbin doesn't notice you at first and just keeps using the dildo on himself. Soon, he reaches his goal, gasping loudly as he orgasms, then almost jumps out of his skin as he opens his eyes and sees you right next to him. As he stumbles away to catch himself on the railing at the other side of the stall, the suction cups are pulled off his breasts, flopping through the air in a spray of fresh milk. The dildo also escapes his grasp, slipping out of the cuntboy's female bits to wetly thump on the ground. It's shaped like a horse-cock you notice, flared tip and all.";
+		say "     Still rather wide-eyed, Corbin turns to you 'Man - don't sneak up on me like that. How did you even get in here? Oh, I forgot to lock the door, didn't I?' As you nod, he looks from the dangling tube with its milking cups to the dildo and finally to his own dripping pussy. 'Guess I'm found out then - all the way. Having a pussy, breasts and all.' He sighs, then gives a shrug. 'You know, I've been coming her at night for weeks now to... take the edge off without anyone noticing. I don't mind being a horse, or a woman, down below - in fact, it's great. But... have you talked to the guys over in the barracks? They're good buddies, but if they'd know... I don't think I'd have a moment of rest with them coming over to 'visit' my bunk. And I doubt I could - or even would want to - stop them, not with how good this feels.' At that, he reaches down and strokes his swollen and drippingly wet pussy lips, then looks up at you and gives a wink. 'Since you already know, we could... have some fun here sometime, just us two after dark? As for the others - please keep this quiet, ok?'";
+		say "     [WaitLineBreak]";
+		say "     Wiping himself off with a towel, Corbin pulls his jeans back on, then grabs a water bucket, rinsing the suction cups out in it and afterwards cleaning the horsecock dildo. He then takes it to a storage closet standing against the back wall, hiding it inside and locking the closet for good measure.";
+		now lastfuck of Corbin is turns;
+		now hp of Corbin is 2;
+	Otherwise:
+		say "     [line break]";
+		say "     The cat can look after himself generally, and the farm is a pretty peaceful place in today's world, so you jut leave the felinoid be. He'll return eventually, as he always does.";
+
+]
+
 instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
@@ -365,7 +397,7 @@ instead of going east from Central Farm Square while (CorbinPregnancy is 4	and d
 	otherwise: [a horseman was the father]
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little horseman boy in his early teens.";
 	now CorbinPregnancy is 0;
-
+	
 to say LoseInBarracksfight:
 	say "     With you out of action, there isn't anything left so stop the horny horsemen. In short order, they have Corbin on one of the beds and strip off his clothes while holding him down. 'You know you want a real man's cock to fuck you', the leader of the little mob tells the equine cuntboy as he pushes two fingers in and out of his soppingly wet pussy. 'At least your body knows what it needs. And I'm gonna give it to you!' With that, the large horseman climbs on the bed and slaps his thick cock against Corbin's pubic mound with a meaty thud or two. Then he positions his flared equine shaft at the transgendered cowboy's nether lips and thrusts in, grunting in satisfaction as he buries his manhood deep. Corbin can't stop himself from moaning loudly as the other farm-worker starts to fuck him hard, pounding his pussy with rapid thrusts.";
 	say "     For some time, grunts, moans and the sounds of the horseman's balls hitting the cuntboy's crotch fill the barracks, finally building up to a shouted 'Uh uh uuuuh - I'm gonna fill you up, slut!' as Corbin's fucker slams forward one last time and floods the equine cowboy's womb with a deluge of cum. After he finishes coming, the horseman then pulls out unceremoniously and is immediately replaced by another, who sinks his own shaft into Corbin's freshly bred hole with a wet squishy noise and starts to fuck him. This continues for quite a while, with all of the men taking a turn, or even two, before they allow the totally exhausted and sticky cuntboy some rest.";
@@ -788,7 +820,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		if xp of Selena is 1: [player lifted blanket, Selena vaguely remembers player]
 			say "     The tawny kitten tilts her head to the side, her eyes wide with wonder. She looks up to him, gently tugging on his kilt as she speaks in a soft voice. 'Uncle Anthony? Who is that?'";
 		otherwise if xp of Selena is 0: [player didn't lift blanket, no memories of player]
-			say "     She grips his clothes a little tighter, [if facename of player is listed in infections of CanineList]ducking back behind him with a whimper[otherwise]looking up at him in concern.";
+			say "     She grips his clothes a little tighter, [if facename of player is in infections of CanineList]ducking back behind him with a whimper[otherwise]looking up at him in concern.";
 		say "     Anthony looks behind his back, then says in a calming tone, 'Don't worry, kitten. [if player is female]She[otherwise]He[end if]'s a friend. Even saved Wendy from the creatures out in the plains. You got nothing to fear from [if player is female]her[otherwise]him[end if]. Why don't you go and introduce yourself. That's only polite, you know.";
 		say "     You do your best to give a friendly smile, and...";
 		let bonus be (( charisma of player minus 10 ) divided by 2);
@@ -1159,7 +1191,7 @@ to say DukeSex5: [Player fucked in the ass]
 	say "     Burying his manhood down to the base in your warm and tight ass is the last straw for the German Shepherd. He gives a sound that's halfway between a howl and an aroused grunt, then starts to flood your insides with blast after blast of canine seed, gushing forth as his knot expands even more and seals the two of you together. Panting, Duke leans against your back, his cock still pulsing with more cum shooting into you. He says 'That was... amazing.' and caresses your chest, then reaches down to take hold of your own shaft and return the favor. With how hot and horny all this fucking already made you, it doesn't take all that long until his eager jerking drives you over the edge and you spray your own seed all over the grass below.[mimpregchance]";
 	say "     [WaitLineBreak]";
 	say "     With both of you having gotten off, Duke just puts his arms around your body to hold you and pulls you down to lie on the grass as you wait for his knot to go down. He nuzzles against your neck from behind and whispers 'Thanks for letting me fuck you. I really could get used to this too...'";
-		
+[
 Shawn is a man. The hp of Shawn is normally 0. 
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
@@ -1191,7 +1223,7 @@ instead of fucking the Shawn:
 
 Section 4 - Endings
 
-[
+
 when play ends:
 	if bodyname of player is "Cowboy":
 		if humanity of player is less than 10:
