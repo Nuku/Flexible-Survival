@@ -6739,8 +6739,6 @@ Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
 Include Erica by Wahn.
 
-Shawn is a person. [WAHN FIX THIS]
-
 [NPCs]
 Include Velos by Blue Bishop.
 Include Doran by Blue Bishop.
