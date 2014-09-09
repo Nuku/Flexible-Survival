@@ -6833,6 +6833,7 @@ Include Chris by Wahn.
 Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
+Include Erica by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
