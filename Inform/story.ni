@@ -6737,8 +6737,9 @@ Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
+Include Erica by Wahn.
 
-
+Shawn is a person. [WAHN FIX THIS]
 
 [NPCs]
 Include Velos by Blue Bishop.

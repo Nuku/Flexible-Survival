@@ -6359,15 +6359,6 @@ The first for constructing the status line rule:
 Every turn:
 	let z be 0;
 	let q be 0;
-	repeat with x running through body parts:
-		increase z by 1;
-		say "[X] is a bodypart ";
-		if x is infected:
-			say "and is infected.";
-		otherwise:
-			say "and is not infected.";
-			increase q by 1;
-	say "There are [Z] bodyparts, of which [Q] are not infected.";
 
 
 [
