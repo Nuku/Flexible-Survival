@@ -1191,7 +1191,7 @@ to say DukeSex5: [Player fucked in the ass]
 	say "     Burying his manhood down to the base in your warm and tight ass is the last straw for the German Shepherd. He gives a sound that's halfway between a howl and an aroused grunt, then starts to flood your insides with blast after blast of canine seed, gushing forth as his knot expands even more and seals the two of you together. Panting, Duke leans against your back, his cock still pulsing with more cum shooting into you. He says 'That was... amazing.' and caresses your chest, then reaches down to take hold of your own shaft and return the favor. With how hot and horny all this fucking already made you, it doesn't take all that long until his eager jerking drives you over the edge and you spray your own seed all over the grass below.[mimpregchance]";
 	say "     [WaitLineBreak]";
 	say "     With both of you having gotten off, Duke just puts his arms around your body to hold you and pulls you down to lie on the grass as you wait for his knot to go down. He nuzzles against your neck from behind and whispers 'Thanks for letting me fuck you. I really could get used to this too...'";
-[
+
 Shawn is a man. The hp of Shawn is normally 0. 
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
@@ -1220,7 +1220,7 @@ instead of fucking the Shawn:
 	otherwise: [at night, he's got some time to chat]
 		say "     With Shawn almost constantly busy chatting with his boyfriend Duke, you can't get a word in edgewise.";
 		say "     <Wahn says: Sex scenes can be added somewhen later...>";
-
+[
 Section 4 - Endings
 
 
