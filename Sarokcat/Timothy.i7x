@@ -70,6 +70,7 @@ instead of conversing the timothy:
 				if "Fertile" is listed in feats of player:
 					end the story saying "Your life becomes set in its way at just that point. Timothy breeds with you whenever another griffon isn't around, and you, in turn, service her needs to the best of your ability. You are well regarded by the griffons, as breeders go. Your astounding fertility earns you special praise as you produce child after child with seeming ease, creating a great demand to lay you in bed and experience it for themselves. You are well treated and cared for, but your days of adventuring are quite over. You serve well as a breeding griffon.";
 				otherwise:
+					let a be 0;
 					end the story saying "Your life becomes set in its way at just that point. Timothy breeds with you whenever another griffon isn't around, and you, in turn, service her needs to the best of your ability. You are well regarded by the griffons, as breeders go. You are well treated and cared for, but your days of adventuring are quite over. You serve well as a breeding griffon.";
 			otherwise:
 				say "Timothy looks disappointed when you decline the proposition. She reaches up to rub over your chest lightly, 'Well, that[']s ok. I will be here when you change your mind, and we can have fun until then, right?' Despite her words, it seems clear that she would have rather you had joined her.";
