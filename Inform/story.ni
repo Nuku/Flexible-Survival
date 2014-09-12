@@ -6737,8 +6737,7 @@ Include Foul Scuttler by Xenophiliac.
 Include Monkey King by Kln.
 Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
-
-
+Include Erica by Wahn.
 
 [NPCs]
 Include Velos by Blue Bishop.
@@ -6833,6 +6832,7 @@ Include Chris by Wahn.
 Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
+Include Erica by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
