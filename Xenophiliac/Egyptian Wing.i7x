@@ -56,7 +56,7 @@ Egypt Wing Entrance is a room. it is fasttravel. it is private.
 Egyptian Wing Foyer is a room.
 Mythical Murals is a room.
 Golden Doors is a room.
-Shrine of Set is a room.
+Temple of Set is a room.
 Sanctum of Horus is a room.
 
 [Egypt Wing Entrance]
@@ -132,7 +132,7 @@ instead of sniffing Golden Doors:
 
 North of Golden Doors is Sanctum of Horus.
 South of Golden Doors is Egyptian Wing Foyer.
-West of Golden Doors is Shrine of Set.
+West of Golden Doors is Temple of Set.
 
 instead of going north from Golden Doors while EgyptianRiddle is 0: [add cycling riddles?]
 	say "     Approaching the solid metal doors in front of you, you look around for some sort of way to open the doors. Even with all of your detective prowess, however, there seems to be no way to open the gigantic doors. No levers, no buttons; not even a door handle. These doors seem to be standing here permanently, keeping everything out; or keeping something in. Deciding as one last-ditch effort to try and push the doors, you put all your might forward to open these great doors. Your efforts prove fruitless, however; even though you thought nothing would happen, you figure it was worth a shot. Stepping back and taking a discouraged look at the imposing portals, you're quite shocked when [']something['] begins to appear on the golden doorways, rapidly etching itself into the solid metal slabs.";
@@ -248,25 +248,25 @@ An everyturn rule:
 	if LastRiddle > 0:
 		if LastRiddle < 9, increase LastRiddle by 1;
 
-instead of going west from Golden Doors while SethShrineNumber is 1:
-	say "     A large stone door blocks your path forward; the shrine has been sealed by a force unknown.";
+instead of going west from Golden Doors while SethTempleNumber is 1:
+	say "     A large stone door blocks your path forward; the temple has been sealed by a force unknown.";
 
-[Shrine of Set]
-The description of Shrine of Set is "[ShrineOfSetDesc]".
+[Temple of Set]
+The description of Temple of Set is "[TempleOfSetDesc]".
 
-to say ShrineOfSetDesc:
+to say TempleOfSetDesc:
 	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[otherwise]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of heiroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues; Jackal-headed guards watch over the shrine, holding deadly metal blades.";
 	say "     Finally drawing your eyes to what lies on the altar, you barely contain a gasp as the item lying there. An exquisite golden sword lies on the altar, torchlight glinting off of the exquisite blade. It would take almost no effort to [bold type]pick up[roman type] the[bold type] antique sword[roman type] off of the altar.";
-instead of sniffing Shrine of Set:
+instead of sniffing Temple of Set:
 	say "     You're unable to pin down the smell of this room; you think it's constantly changing.";
 
-East of Shrine of Set is Golden Doors.
+East of Temple of Set is Golden Doors.
 
-SethShrineNumber is a number that varies.
+SethTempleNumber is a number that varies.
 SwordOfSeth is an action applying to nothing.
 
 check SwordOfSeth:
-	if player is not in Shrine of Set, say "     What sword?" instead;
+	if player is not in Temple of Set, say "     What sword?" instead;
 
 understand "pick up antique sword" as SwordOfSeth.
 understand "pick up sword" as SwordOfSeth.
@@ -276,18 +276,18 @@ carry out SwordOfSeth:
 	say "     Taking a deep breath and dashing forward, you grasp the sword lying on the altar. Instantly, the torchlight dims to a dark red and you get the overwhelming feeling that you just did something incredibly [italic type]bad[roman type]. Sprinting towards the door, you almost run face-first into something blocking your path; a mass of stone now blocks your way. You quickly realize that the stone guardians have somehow animated, both of the beasts blocking your way out.";
 	challenge "Jackal Guard";
 	if lost is 1:
-		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the shrine, blocking your passage in.";
-		now SethShrineNumber is 1;
+		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the temple, blocking your passage in.";
+		now SethTempleNumber is 1;
 		move player to Golden Doors;
 	challenge "Jackal Guard";
 	if lost is 1:
-		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the shrine, blocking your passage in.";
-		now SethShrineNumber is 1;
+		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the temple, blocking your passage in.";
+		now SethTempleNumber is 1;
 		move player to Golden Doors;
 	otherwise:
-		say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the shrine as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
+		say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
 		increase carried of ancient blade by 1;
-		now SethShrineNumber is 1;
+		now SethTempleNumber is 1;
 		move player to Golden Doors;
 
 [Sanctum of Horus]
