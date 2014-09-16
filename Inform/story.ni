@@ -2089,10 +2089,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Shifting Room[close bracket][as]nav Shifting Room[end link] ";
 		say "[line break]";
 	[start of the Museum area]
-	if Museum Foyer is known:
+	if Museum Foyer is known or Egypt Wing Entrance is known:
 		say "[bold type]Museum[roman type]: ";
 		if Museum Foyer is known:
-			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] -";
+			say "[link][bracket]Museum Foyer[close bracket][as]nav Museum Foyer[end link] - ";
+		if Egypt Wing Entrance is known:
+			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		say "[line break]";
 	[start of the red light area]
 	if Entrance to the Red Light District is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
@@ -6738,6 +6740,8 @@ Include Monkey King by Kln.
 Include Gorilla by Wahn.
 Include Mpreg Platypus by Sapphire.
 Include Erica by Wahn.
+Include Jackal Guard by Xenophiliac.
+Include Scarab Beetle by Xenophiliac.
 
 [NPCs]
 Include Velos by Blue Bishop.
@@ -6833,6 +6837,7 @@ Include NPC Interactions by Wahn.
 Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
 Include Erica by Wahn.
+Include Egyptian Wing by Xenophiliac.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.
