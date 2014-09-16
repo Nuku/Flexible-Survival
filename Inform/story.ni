@@ -3520,7 +3520,7 @@ To say blockquote-style:
 To say input-style:
 	(- glk_set_style(style_Input); -)
 
-Table of Common Color Values (continued)
+Table of Common Color Values [(continued)]
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF] 
 g-bright-cyan	39423		[== $0099FF]
