@@ -1,10 +1,12 @@
 Version 3 of Ashen Breeder for FS by Stripes begins here.
-[ Version 3.2 - More player loss scenes]
+[ Version 3.3 - Alternating variation and (partial) player choice for victory sex]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
  
 "Adds Ashen Breeder to Flexible Survival."
 
- Section 1 - Monster Responses
+ashenvicsex is a number that varies.
+
+Section 1 - Monster Responses
  
  [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
  to say ashen breeder attack:
@@ -33,15 +35,41 @@ Version 3 of Ashen Breeder for FS by Stripes begins here.
 
 to say beattheashenbr:
 	say "     The Ashen Breeder moans with need, staggering as shi's tries in vain to continue the struggle.  Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees";
-	let diceroll be a random number between 40 and 125;
-	if diceroll < libido of player and cocks of player > 0:
-		say ".  Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast.  Pushing hir down onto all fours, shi releases a series of pleasured chirps.  You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
-		if cock length of player > 18:
-			say ".  Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in.  Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
-		say ".  You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground.  You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
-		say "     When you feel your orgasm about to arrive, you drive yourself fully into hir, pushing your cock into hir accommodating womb and releasing your thick seed to breed hir.  Shi moans in delight, clamping down firmly on your cock and milking it for all you'll give[if cock width of player > 10].  Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if].  Hir penis twitches and hir balls pull up, spraying hir own seed into the puddle of hir milk, adding to the messy white stain.  When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
+	if cocks of player > 0:
+		let diceroll be a random number between 40 and 125;
+		if cockname of player is listed in infections of Caninelist and diceroll < libido of player:
+			say ".  Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast welling up in your canine loins.  Before you can suppress it, you push hir down onto all fours.  Shi releases a series of pleasured chirps at this and raises hir ass, offering up hir juicy pussy.  You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
+			if ashenvicsex is odd:
+				say "[ashenbreedersex01]";
+			otherwise:
+				say "[ashenbreedersex02]";
+			increase ashenvicsex by 1;
+		otherwise:
+			say ".  Something about hir needy display arouses you and you feel a growing urge to mate with this strange beast.  Shall you give into this desire?";
+			if the player consents:
+				say "     Rather than resist this urge, you give into your lustful desire and approach the horny herm breeder.  You push hir down onto all fours and shi releases a series of pleasured chirps, raising hir ass in the air.  You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
+				if ashenvicsex is odd:
+					say "[ashenbreedersex01]";
+				otherwise:
+					say "[ashenbreedersex02]";
+				increase ashenvicsex by 1;
+			otherwise:
+				say "     Resisting the temptation, you take a few steps back to distance yourself from the whining herm's needy display.  Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue.  With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
 	otherwise:
 		say ".  Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue.  With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
+
+
+to say ashenbreedersex01:
+	if cock length of player > 18:
+		say ".  Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in.  Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
+	say ".  You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground.  You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
+	say "     When you feel your orgasm about to arrive, you drive yourself fully into hir, pushing your cock into hir accommodating womb and releasing your thick seed to breed hir.  Shi moans in delight, clamping down firmly on your cock and milking it for all you'll give[if cock width of player > 20].  Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if].  Hir penis twitches and hir balls pull up, spraying hir own seed into the puddle of hir milk, adding to the messy white stain.  When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
+
+to say ashenbreedersex02:
+	if cock length of player > 18:
+		say ".  Your [cock size desc of player] shaft stretches hir pussy open with ease, hir breeder body readily adjusting to accommodate you.  Shi rubs a paw over the bulge you make in hir belly with happy chirps, pleased to have such a virile and well-hung stud atop hir";
+	say ".  You briefly manhandle hir leaking breasts, drawing spurts of hir milk before moving to hir hips to grab them so you can fuck hir all the harder.";
+	say "     You drive your [cock of player] cock into hir needy pussy over and over again, losing yourself in the lustful breeding.  And no matter how rough you get, the horny herm only chirps and pants in hir need for more, hir body longing for your seed.  You give hir plump bottom a few slaps which cause hir cunt to squeeze down around you with each blow.  After a short set of these, you're ready to blow in a different manner and drive yourself fully into hir, pushing your cock into hir accommodating womb and unleashing your [cum load size of player] load.  Shi moans in delight and hir vagina clamps down firmly on your cock, milking it for all you'll give[if cock width of player > 20].  Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if].  Hir penis twitches and hir balls pull up, spraying hir own seed onto the ground beneath hir.  When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
 
 
 Section 2 - Monster Insertion
@@ -53,10 +81,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
-	now attack entry is "[one of]grabs at you with hir small claws trying to pull you against hir chest[or]overpenetrate[or]wraps hir claws around a tit and squeezes hard, sie lets the warm milk splashes against your body[or]manages to get a hold of you and pull you against one of hir nipples, sie forces your mouth against it and squeezes hard and milk pours down your throat[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]grabs at you with hir small claws trying to pull you against hir chest[or]grinds hir cock firmly against you[or]wraps hir claws around a tit and squeezes hard, sie lets the warm milk splashes against your body[or]manages to get a hold of you and pull you against one of hir nipples, sie forces your mouth against it and squeezes hard and milk pours down your throat[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
 	now victory entry is "[Ashen Breeder Attack]" ; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "     A mutant dog-like creature.  Hir long, floppy ears perk up as she notices you.  Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; all of hir breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";[ Description of the creature when you encounter it.]
+	now desc entry is "     Before you is another strange mutant, a rather dog-like creature this time.  Hir long, floppy ears perk up as she notices you.  Sie has [one of]red[or]pink[at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; hir large breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Hir penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone sie fucks.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";[ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears";	[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "deliciously curvy and exposes the tender lip of a pouch. Any breasts present are swollen, dribbling milk upon the floor at a slow, yet constant rate.. Your arms are thick, with diminutive claws that yearn to hold and cuddle.. Your legs are digitigrade, shapely, and defined with excellent muscular tone. Your feet are exceptionally large paws with long toes";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "smooth, tender, yearning";[ skin Description, format as the text "You have (your text) skin."] 
