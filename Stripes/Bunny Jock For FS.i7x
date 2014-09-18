@@ -1,5 +1,5 @@
 Version 1 of Bunny Jock For FS by Stripes begins here.
-[ Version 1.2 - Demoted to level 4 ]
+[ Version 1.3 - M/M player victory sex ]
 
 "Adds a Bunny Jock creature to Flexible Survivals Wandering Monsters table with impregchance"
 
@@ -31,27 +31,51 @@ to say beatthebunnyjock:
 	if bunnyjocknosex > 2:
 		say ".  As his paws wander down to his shorts to fondle himself, you head off as you have with the rest of them.  You leave him to his own devices to find some relief elsewhere.";
 	otherwise if libido of player > 40:
-		say ".  As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock.  Do you want to stroke and suck him off?";
-		if the player consents:
-			now bunnyjocknosex is 0;
-			say "     Moving over to the big bunny, you grab his crotch and start tugging down his shorts.  Pulling them off, you free his huge cock, which soon rises to roughly two and a half feet in length.  Wrapping both hands around it, you start stroking it up and down, grinning as you watch the jock's face melt into one of bliss.  You lick and kiss all over his massive glans, even playing your tongue against his slit to lap up the precum leaking quickly from it.  You grind your body against his shaft while you stroke him.  As he's about to blow, you press your lips to his glans and catch the first few blasts in your mouth, gulping them down.  But you can't keep up with his prodigious output and let the rest blast across him and the ground.  Leaving him like that, you head on your way, rubbing your full tummy.  You find the bunny's load quite satisfying, though you later find yourself growing increasingly aroused.";
-			decrease thirst of player by 8;
-			decrease hunger of player by 4;
-			increase libido of player by 5;
-			if thirst of player < 0, now thirst of player is 0;
-			if hunger of player < 0, now hunger of player is 0;
-			if libido of player > 100, now libido of player is 100;
+		say ".  As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock";
+		if cocks of player > 0:
+			say ".  Do you want to [link]fuck him (1)[as]1[end link], [link]suck him off (2)[as]2[end link] or [link]just leave (0)[as]0[end link]?";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-2)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				say "[bjockvicsex01]";
+			otherwise if calcnumber is 2:
+				say "[bjockvicsex02]";
+			otherwise:
+				increase bunnyjocknosex by 1;
+				say "     Resisting the urge, you turn away and head off before you are tempted further.";
 		otherwise:
-			increase bunnyjocknosex by 1;
-			say "     Resisting the urge, you turn away and head off before you are tempted further.";
+			say ".  Do you want to stroke and suck him off?";
+			if the player consents:
+				say "[bjockvicsex02]";
+			otherwise:
+				increase bunnyjocknosex by 1;
+				say "     Resisting the urge, you turn away and head off before you are tempted further.";
 	otherwise:
 		say ".  As his paws wander down to his shorts to fondle himself, you head off, leaving him to his own devices to find some relief elsewhere.";
+
+to say bjockvicsex01:
+	say "     Planting your hands on the big bunny's muscled shoulders, you push him back onto the ground.  He gives a soft eep as you pin him down beneath you.  He's too worn at this point to resist, only squirming a little as you grab his butt and give it a squeeze.  'Hey, this isn't quite what I had in mind[if cunts of player > 0].  Ain't nothing wrong with tough chicks though.  I guess fair's fair[otherwise].   I don't normally play receiver, but you won, so I guess fair's fair.  Just don't get the wrong idea[end if],' he says with a mix of trepidation and lust.  He plants his elbows and raises his lower back with his paws and wiggles his shorts partway down.  You grab them and pull them off the rest of the way, giving you a fine view of the bunny's meaty cock, muscular butt, fluffy tail and the crinkled hole nestled between all of these.";
+	say "     With his ass raised and waiting for you, you decide not to tarry with enjoying the view and instead move on to enjoying bunny's butt.  Lining up your [cock of player] cock, you press it to his back door and thrust into him.  He gives a soft moan that he tries to cover up when you first penetrate him, but soon he's panting and moaning with lust as you pound away at him.  The sight of the tough jock moaning as you drive your cock into him makes you grin and turns you on all the more.  All it takes is for you to grab his cock and stroke it a few times to get him to cum all over himself.  His lapine seed splatters his face and chest as the combination ass-fuck and hand job milk his balls dry.  As he's finishing up, you plough hard into him and cry out in climax, pumping your [cum load size of player] load into his well-fucked ass.  You pull out before you're done, adding a few last shots of your semen to the sticky mess already covering him before leaving the panting jock covered in your combined semen.";
+
+		
+to say bjockvicsex02:
+	now bunnyjocknosex is 0;
+	say "     Moving over to the big bunny, you grab his crotch and start tugging down his shorts.  Pulling them off, you free his huge cock, which soon rises to roughly two and a half feet in length.  Wrapping both hands around it, you start stroking it up and down, grinning as you watch the jock's face melt into one of bliss.  You lick and kiss all over his massive glans, even playing your tongue against his slit to lap up the precum leaking quickly from it.  You grind your body against his shaft while you stroke him.  As he's about to blow, you press your lips to his glans and catch the first few blasts in your mouth, gulping them down.  But you can't keep up with his prodigious output and let the rest blast across him and the ground.  Leaving him like that, you head on your way, rubbing your full tummy.  You find the bunny's load quite satisfying, though you later find yourself growing increasingly aroused.";
+	decrease thirst of player by 8;
+	decrease hunger of player by 4;
+	increase libido of player by 5;
+	if thirst of player < 0, now thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
+	if libido of player > 100, now libido of player is 100;
+
 
 to say bunnyjockattack:
 	if cunts of player > 0:
 		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny grinds his massive crotch against you![or]The strong rabbit pulls you into a big kiss![or]Grabbing you, he presses you to his body in a rather crushing hug![at random]";
 	otherwise:
-		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny tackles you to the ground, then hops up and waves his arms in the air.  'Woo!  Intercepted!'[or]The big jock puts you in a headlock that threatens to crush your skull.  'Noogie!' he calls out before grinding his paw painfully atop your head![or]The rabbit slams his massive chest against you, crushing you against a wall.  'Yah!  Unnecessary roughness!'[at random]";
+		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny tackles you to the ground, then hops up and waves his arms in the air.  'Woo!  Intercepted!'[or]The big jock puts you in a headlock that threatens to crush your skull.  'Noogie!' he calls out before grinding his paw painfully atop your head![or]The rabbit slams his massive shoulder against you, crushing you against a wall.  'Yah!  Unnecessary roughness!'[at random]";
 
 to say bunnyjockdesc:
 	say "     Before you is one of the most massively muscled creatures you've seen in this city gone mad[one of].  Dressed in a tight sports t-shirt[or].  Dressed in the local team's jersey[or].  Stuffed into in a tank-top with a gym logo[or].  Wearing a t-shirt with a beer company logo on it[at random] and shorts, this bunny's massive muscles stretch the fabric tight over his bulging pecs and chiseled abs.  Standing roughly 7 1/2 feet tall, this powerful rabbit is certainly no timid, little bunny.  He's got [one of]short,[or]fluffy,[or]thick,[at random] [one of]black[or]white[or]grey[or]brown[or]tan[at random] fur that does little to hide his big, bulging muscles.  And speaking of big, his shorts are stretched nearly to the point of being torn by the massive man meat tucked into them[if cunts of player > 0][one of].  'Hey there, honey.  Let's party!'[or].  'Lemme show you a good time, baby' he says, advancing on you.[or].  'Lemme show you why I'm big with all the ladies,' he brags, rubbing his crotch.[or].  'Have you got a kiss for the winner of the big game?' he asks, moving in to grab you.[at random][otherwise][one of].  'How [']bout a little wrestling, big man?' he says before charging.[or].  'Hey, you're that guy to took my beer, aintcha?' he growls, charging.[or].  'I'm the big bunny around here now.'[or].  He flexes, showing off his muscles before making a grab at you.[or].  'If I beat you, Coach'll put me on the team for sure,' he says, clearly confused.[or].  'Did you see the tackle I made in the big game?  Guy was running and I came at him just like this,' he says, charging to tackle you.[at random]";
