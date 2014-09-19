@@ -934,6 +934,21 @@ to chairboundstate:
 					say "[line break]";
 					cleanboundmemory;
 					now trixieexit is 1;
+					say "     A quick glances shows none of the red spots located in the other rooms.  Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[otherwise]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
+					now calcnumber is 0;
+					while calcnumber < 1 or calcnumber > 3:
+						say "Choice? (1-3)>[run paragraph on]";
+						get a number;
+					if calcnumber is 1:
+						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises.  You head to the separating wall and move through the archway into the other room.";
+						move player to Throne Room;
+						follow the turnpass rule;
+					otherwise if calcnumber is 2:
+						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises.  You head to the separating wall and return to the safety of the upper hall to consider your next course of action.";
+						move player to Upper Hall;
+						follow the turnpass rule;
+					otherwise if calcnumber is 3:
+						try bcsliding;
 				wait for any key;
 				next;
 			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
