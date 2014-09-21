@@ -164,11 +164,11 @@ to say Frank_MM_sex00:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him A";
 			now sortorder entry is 2;
-			now description entry is "get lain across the table and fucked";
+			now description entry is "fuck him bent over the table";
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him B";
 			now sortorder entry is 3;
-			now description entry is "get bent over the table and fucked";
+			now description entry is "fuck him on his back";
 			choose a blank row in table of fucking options;
 			now title entry is "Receive oral";
 			now sortorder entry is 20;
@@ -177,11 +177,11 @@ to say Frank_MM_sex00:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked A";
 			now sortorder entry is 10;
-			now description entry is "fuck him on his back";
+			now description entry is "get lain across the table and fucked";
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked B";
 			now sortorder entry is 11;
-			now description entry is "fuck him bent over the table";
+			now description entry is "get bent over the table and fucked";
 			choose a blank row in table of fucking options;
 			now title entry is "Give oral";
 			now sortorder entry is 21;
