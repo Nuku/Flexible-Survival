@@ -1,5 +1,5 @@
 Version 8 of Lizard Girl For FS by Damaged begins here.
-[ Version 8.1 - Streamlined feat check - no MPreg heat - Stripes ]
+[ Version 8.1.1 - Fix to heat impregnation - Stripes ]
 
 "Adds a Lizard Girl to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -183,11 +183,14 @@ When Play begins:
 
 
 to say liz impreg:
+	let found be 0;
 	repeat with Z running from 1 to number of rows in table of random critters:
 		choose row Z from the table of random critters;
 		if name entry matches the text "lizard girl":
+			now monster is z;
+			now found is 1;
 			break;
-	if lizgirlimpreg is 1:
+	if lizgirlimpreg is 1 and found is 1:
 		if cocks of player is 0:
 			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
 		otherwise:
