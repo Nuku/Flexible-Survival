@@ -1,5 +1,5 @@
 Version 2 of High Rise Events by Stripes begins here.
-[version 2.3 - Veterinary Hospital update]
+[version 2.3.1 - Dog infection and vet fight lists updated]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -197,25 +197,29 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and nine; [adjust this for new dogs]
+	let tempnum  be a random number between 1 and 11; [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
-	if tempnum is 2:
+	otherwise if tempnum is 2:
 		infect "German Shepherd";
-	if tempnum is 3:
+	otherwise if tempnum is 3:
 		infect "Shemale Smooth Collie";
-	if tempnum is 4:
+	otherwise if tempnum is 4:
 		infect "Pit bull";
-	if tempnum is 5:
+	otherwise if tempnum is 5:
 		infect "Ashen Breeder";
-	if tempnum is 6:
+	otherwise if tempnum is 6:
 		infect "Chocolate Lab";
-	if tempnum is 7:
+	otherwise if tempnum is 7:
 		infect "Alpha Husky";
-	if tempnum is 8:
+	otherwise if tempnum is 8:
 		infect "Retriever";
-	if tempnum is 9:
+	otherwise if tempnum is 9:
 		infect "Cerberus";
+	otherwise if tempnum is 10:
+		infect "Horny Doctor";
+	otherwise if tempnum is 11:
+		infect "Pink Poodle";
 
 
 Section 4- Corporate Fat Cats
@@ -372,7 +376,7 @@ to say kittycheck:
 
 
 to say randomvetfight:				[more suitable pets can be added]
-	let tempnum be a random number between one and ten;
+	let tempnum be a random number between 1 and 11;
 	if tempnum is 1:
 		challenge "Female Husky";
 	if tempnum is 2:
@@ -395,6 +399,8 @@ to say randomvetfight:				[more suitable pets can be added]
 		challenge "Siamese Cat";
 	if tempnum is 10:
 		challenge "Retriever";
+	if tempnum is 11:
+		challenge "Catgirl";
 
 
 Section 6- Golf Store
