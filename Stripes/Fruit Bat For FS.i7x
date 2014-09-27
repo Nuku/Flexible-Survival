@@ -1,5 +1,5 @@
 Version 2 of Fruit Bat For FS by Stripes begins here.
-[Version 2 - Player victory menu]
+[Version 2.1 - Player victory blowjob added]
 
 "Adds a nocturnal Fruit Bat creature to Flexible Survivals Wandering Monsters table"
 
@@ -47,10 +47,10 @@ to say beatthefruitbat:
 			now title entry is "69";
 			now sortorder entry is 4;
 			now description entry is "suck each other off";		]
-[			choose a blank row in table of fucking options;
+			choose a blank row in table of fucking options;
 			now title entry is "Blow job";
 			now sortorder entry is 5;
-			now description entry is "make him suck you off";	]
+			now description entry is "make him suck you off";
 		if cunts of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride him (vaginal)";
@@ -116,7 +116,9 @@ to say frbatsex_04:
 	say "***69";
 
 to say frbatsex_05:
-	say "***blow job";
+	say "     With the boytoy bat too worn out after the fight and his capture, you have little difficulty manhandling him onto his knees.  With your hands on his head, you press your [cock of player] cock against to his foxish muzzle.  His large ears twitch as he looks over your waiting erection, then licks his lips and wraps his elongated tongue around your manhood.  The fruity bat is clearly well practised at the task and takes to sucking your cock with eager skill, aided by his lengthy tongue.  You moan in delight and rub his sensitive ears, coaxing him on.";
+	say "     Rocking your hips gently, you thrust into that slick muzzle of his, running your fingers through his blue-tinted fur.  As he sucks you off, you're treated to the added show of him having slipped his speedo down enough to free his blue cock so he can stroke it.  He's got an above-average length, about eight inches, that he works steadily with his wing-like hand.  His other hand grasps and plump balls and kneads them, prompting him to moan lustfully around your pulsing rod.  Blueberry-scented precum drips onto the ground as he plays with himself.";
+	say "     Between the show and the tonguework, you are built up to a powerful orgasm that culminates in you shooting your [cum load size of player] load down his throat.  The fruit bat eagerly swallows it all down like some delicious treat and sucks you for every last drop you'll give.  And being fed your hot semen also drives the fruity bat to cum as well, spraying out his sticky, berry-scented load [if showlocale is true]onto the sandy shore[otherwise]onto the ground[end if].  You caress his head and ears as you he licks your spent shaft clean before pulling away and sending him off with a swat on his speedo'd butt.";
 
 to say frbatsex_06:
 	say "***cunnilingus";
