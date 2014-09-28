@@ -88,6 +88,7 @@ carry out trixiecheating:
 				say "Your 'Lil Better' cheating ability has been removed.";
 				increase score by 200;
 				decrease strength of player by 1;
+				decrease capacity of player by 5;
 				decrease dexterity of player by 1;
 				decrease stamina of player by 1;
 				decrease intelligence of player by 1;
@@ -101,6 +102,7 @@ carry out trixiecheating:
 				decrease score by 400;
 				say "You have gained the 'Lil Better' cheat, but are penalized 400 points.";
 				increase strength of player by 1;
+				increase capacity of player by 5;
 				increase dexterity of player by 1;
 				increase stamina of player by 1;
 				increase intelligence of player by 1;
