@@ -236,11 +236,11 @@ This is the doorcheck rule:
 			If player consents:
 				now doorsearch is 0;
 				while doorsearch is 0:
-					let bonus be (( the Strength of the player minus 15 ) divided by 3);
+					let bonus be (( the Strength of the player minus 10 ) divided by 2);
 					let diceroll be a random number from 1 to 20;
 					say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
-					if diceroll is greater than 10:
+					if diceroll is greater than 12:
 						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier."; 
 						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [facename of player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes…or was that the brave?";
 						wait for any key;
