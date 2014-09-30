@@ -198,7 +198,6 @@ Instead of fucking the Erica:
 			say "     As you approach Erica, she immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, the attractive college student says, 'I love you baby, but I need some rest in between. Can we play another time?' She gives you a soft kiss on the lips as you nod, already thinking about what you want to do with her later.";
 		otherwise:
 			say "     You walk over to Erica, who immediately starts smiling as she sees the lust-filled twinkle in your eyes. Throwing her arms around you, her lips find yours for a quick kiss, then she suggestively nods over to her bunk.";
-			wait for any key;
 			say "[line break]";
 			say "[EricaSexMenu]";
 	
