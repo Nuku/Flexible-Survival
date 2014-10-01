@@ -1,5 +1,5 @@
 Version 8 of Lizard Girl For FS by Damaged begins here.
-[ Version 8.1.1 - Fix to heat impregnation - Stripes ]
+[ Version 8.1.2 - Heat impregnation updated to ovichance - Stripes ]
 
 "Adds a Lizard Girl to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -61,7 +61,7 @@ to say lizgirl attack:
 			if lizgirlimpreg is 0:
 				say "Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now its my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break] 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			otherwise:
-				say "'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member.  She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][impregchance]";
+				say "'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member.  She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
 	infect;		
 						
 to say lizgirl defeat:
@@ -192,9 +192,9 @@ to say liz impreg:
 			break;
 	if lizgirlimpreg is 1 and found is 1:
 		if cocks of player is 0:
-			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
+			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
 		otherwise:
-			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
+			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[ovichance]";
 
 to say toggle heat flag:
 	now lizgirlinheat is 1 minus lizgirlinheat;
