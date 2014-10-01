@@ -1,5 +1,5 @@
 Version 1 of Dryad for FS by Hellerhound begins here.
-[ Version 1.1 - Relocated to Urban Forest area. ]
+[ Version 1.2 - Minor revision to player victory.  Now offers player choice. ]
 [renamed from Tree Nymph]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
@@ -30,14 +30,18 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 
 To say dryad defeat:
-	if libido of player < 50:
-		Say "You manage to break the dryad in half, much like a tree. As the crack forms, her skin goes rough, and turns brown, morphing into bark. She shouts at you that she will return.";
-	if libido of player > 50 and cocks of player is greater than 0:
-		Say "You move closer to the dryad, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or two.";
-		say "She leans into you, vines stroking your cock as it is massaged against her inner walls. You come to climax surprisingly quickly, spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind begin to suckle.";
-		say "That's good, have a drink, she says, as you roll over onto the ground, and she walks away, the tree disguise forming once more.";
-	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
-		say "The dryad screams in rage, and her skin turns barklike. In an instant she has become a true tree, unmoving, covered in vines.";
+	if libido of player > 25 and cocks of player is greater than 0:
+		say "     The dryad stagger back and stumbles into a tree.  Trapped between you and it, she moans weakly.  With her nude form on display, you can't help but run yours eyes over her lovely bosom, slender body and down to her syrupy pussy.  You find her quite tantalizing to look at and you're tempted to do much more than look.  Shall you try to have your way with her?";
+		if the player consents:
+			say "     You move closer to the dryad and thrust your [cock of player] cock into her.  Entry is deceptively easy and you start as you feel vines creeping along her inner walls.  You try to pull out but they grab hold and draw you all the way in.  The dryad murmurs, 'Silly mortal, thinking you could rape me.  Well, let me teach you a thing or two.'";
+			say "     She leans into you, the vines along her internal walls stroking and milking at your cock insistently.  You come to climax surprisingly quickly, spraying your load inside of her.  When you finish, she places the nipple of one of her large breasts at your mouth and, with a dulled mind, begin to suckle as she says, 'That's good, have a drink.'";
+			say "     When you are finished, you roll over onto the ground and she walks away, the tree disguise forming once more.";
+		otherwise:
+			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side.  She gives an angry hiss like cracking bark and slips away into the trees.";
+	otherwise if libido of player < 25:
+		Say "     The dryad stumbles back from the fight and, rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[end if] with a sharp snap.  Looking at the wound, it's snapped and broken off like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
+	otherwise:
+		say "     The dryad screams in rage and her skin turns bark-like.  In an instant she has become a true tree, unmoving, covered in vines.";
 		
 
 To say dryad attack:
