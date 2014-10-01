@@ -4,12 +4,9 @@ Scarab Beetle by Xenophiliac begins here.
 
 Section 1 - Monster Responses
 
-[when play begins:
-	add { "Template" } to infections of girl;
-	add { "Template" } to infections of guy;
-	add { "Template" } to infections of hermaphrodite;
-	add { "Template" } to infections of Insectlist;      [list of insectile infections]
-	add { "Template" } to infections of Internallist;   [list of infections w/internal male genitals]]
+when play begins:
+	add { "Scarab Beetle" } to infections of Insectlist;      [list of insectile infections]
+	add { "Scarab Beetle" } to infections of Internallist;   [list of infections w/internal male genitals]
 [Unsure if above is needed]
 
 Section 1 - Monster Insertion
@@ -42,7 +39,7 @@ When Play begins:
    now per entry is 16;
    now int entry is 16;
    now cha entry is 12;
-   now sex entry is "No Change";
+   now sex entry is "nochange";
    now hp entry is 0;
    now lev entry is 0;
    now wdam entry is 0;
@@ -60,8 +57,8 @@ When Play begins:
    now loot entry is "";
    now lootchance entry is 0;
    now scale entry is 3;
-   now body descriptor entry is "[one of]insectoid[or]chitinous[or]plated[or]beetle-like[at random]";
-   now type entry is "insectoid";
+   now body descriptor entry is "[one of]chitinous[or]plated[or]ovoid[or]rounded[at random]";
+   now type entry is "[one of]insectoid[or]beetle-like[at random]";
    now magic entry is false; [?]
    now resbypass entry is false; [?]
    now non-infectious entry is false;
