@@ -15,6 +15,7 @@ Version 5 of Eric by Wahn begins here.
 [  32: now with satyrcock, had sex with player, in the Bunker        ]
 [  99: Taken advantage of -> submissive cuntboy, in the Bunker       ]
 [ 100: Stacy's girlfriend now, pregnant (no longer available)        ]
+[ 200: Transformed into Erica                                        ]
 
 [ Thirst states of Eric (for the smell)                              ]
 [   0: Smells male & something the player can't identify             ]
@@ -378,7 +379,21 @@ to say satyrwine_eric:
 	delete Satyr Wine;
 	now hp of Eric is 31;
 	now thirst of Eric is 31;
+	
 
+instead of trading the pomegranate seed when the current action involves the Eric:
+	if Dexterity of Erica is not 4:
+		say "     Error E1: Something went wrong, Eric's variables are not correctly set. Please report how you saw this.";
+	otherwise:
+		say "     Handing Eric the small seed, you recount what you had to go through to get it, which promts the young man to give you a hug while he thanks you again and again. 'You're just... the best,' he continues, then looks down at the divine artifact in his hand. 'I guess this is the time then. I'm so excited.' With a beaming smile at you, he then brings the seed to his mouth and puts it on his tongue - which is when the college student's eyes widen in delight. 'Mmmm, tashtes amashing,' he hums to you, half lost in a little food-gasm in his mouth before he swallows Hera's gift down. As he does so, a golden shimmer fills the air around him and his form shifts in just an eyeblink or three.";
+		say "     It begins at the face, which softens a bit and takes on feminine features with oh so kissable lips, and suddenly is framed in shoulder-length red curls. The wave of change then runs down over his body, making the black t-shirt Eric is wearing fill out at the front, with the curve of perky B-cup breasts making you eager for a chance to see them laid bare. What follows next are many more big and small changes - the proportions of arms and legs, hands and feet, a slight widening of the hips to ease future pregnancies, his skin smoothing out and becoming naturally hairless. Even simple things like the way he stands or holds his upper body. When the transformation finishes a moment later, you're almost stunned by the sight of this beautiful woman you helped bring into the world. Your friend is no longer Eric, no he - now she - is Erica.";
+		say "     [WaitLineBreak]";
+		say "     After Erica looks down over herself and gives a delighted little giggle at her new body, she rushes forward to embrace you tightly - which brings her perky breasts into contact with your chest, pressing softly against you. 'Wow, this feels even better than I...' This is as far as she gets, before noticing the sensations of brushing her nipples against someone with only a thin shirt in between. 'Oh - ooh,' she sighs softly, pulling back slightly, then continues, 'That feels amazing. I - thank you so much, but... I think I've got to experiment a bit with this. Though if you want me to give you a reward for all your hard work... I'd be more than willing to have some fun later, you know.'";
+		decrease carried of pomegranate seed by 1;
+		now Dexterity of Erica is 5;
+		now hp of Eric is 200;
+		move Erica to Bunker;
+		remove Eric from play;
 
 Section 3 - Fucking Eric
 
@@ -1523,6 +1538,8 @@ when play ends:
 	otherwise if (hp of Eric is 100): [Stacy's girlfriend now]
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
+	otherwise if hp of Eric is 200: [transformed into Erica]
+		say ""; [dealt with in Erica's file instead]
 	otherwise if Sports Arena Lockerroom is known:
 		say "ERROR-Eric-[hp of Eric]E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
 

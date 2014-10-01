@@ -341,6 +341,7 @@ Instead of fucking David:
 						say "[DavidSex10]";
 					otherwise if (nam is "Threesome with Brutus & David (DP Brutus)"):
 						say "[DavidSex11]";
+					wait for any key;				
 			otherwise if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
@@ -427,7 +428,9 @@ instead of conversing David:
 					if nam is "Suggest a trip to the beach with Brutus":
 						say "[DavidTalk5]";
 					if nam is "Suggest a trip to Camp Bravo with Brutus":
-						say "[DavidTalk6]";						
+						say "[DavidTalk6]";				
+					wait for any key;
+					now lastfuck of David is turns;								
 			otherwise if calcnumber is 100:
 				say "Break off?";
 				if the player consents:

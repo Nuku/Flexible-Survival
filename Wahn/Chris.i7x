@@ -107,7 +107,6 @@ to say ChrisTalkMenu:
 				if nam is "Sex":
 					say "[ChrisTalk2]";
 				wait for any key;
-				now lastfuck of Aelias is turns;
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
@@ -179,7 +178,7 @@ Instead of fucking the Chris:
 					if nam is "Fuck the orc's ass":
 						say "[ChrisSex2]";
 					wait for any key;
-					now lastfuck of Aelias is turns;
+					now lastfuck of Chris is turns;
 			otherwise if calcnumber is 100:
 				say "Break off?";
 				if the player consents:
