@@ -39,7 +39,7 @@ To say dryad defeat:
 		otherwise:
 			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side.  She gives an angry hiss like cracking bark and slips away into the trees.";
 	otherwise if libido of player < 25:
-		Say "     The dryad stumbles back from the fight and, rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[end if] with a sharp snap.  Looking at the wound, it's snapped and broken off like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
+		Say "     The dryad stumbles back from the fight and, rather than give her a chance to recover, you throw a final blow.  This manages to break off [one of]an arm[or]a leg[or]a limb[purely at random] with a sharp snap.  Looking at the wound, it's snapped and broken off like a tree limb with ragged splinters of wood.  The skin around it goes rough and turns brown as it morphs into bark.  She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that.";
 	otherwise:
 		say "     The dryad screams in rage and her skin turns bark-like.  In an instant she has become a true tree, unmoving, covered in vines.";
 		
