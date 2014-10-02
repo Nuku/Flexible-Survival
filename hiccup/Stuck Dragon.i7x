@@ -1,5 +1,5 @@
 Version 5 of Stuck Dragon by hiccup begins here.
-[Version 5.2.1 - Temporary dialog fix for second tier male Christy - Stripes]
+[Version 5.3 - sex fix - Stripes]
 
 Section 1 - Finding the Building
 
@@ -1038,7 +1038,10 @@ to say maleChristysex:
 			if calcnumber is 1:
 				say "[mchristy_oral0]";
 			otherwise if calcnumber is 2:
-				say "[mchristy_top0]";
+				if cunts of player > 0:
+					say "[mchristy_top0]";
+				otherwise:
+					say "[mchristy_anal0]";
 				now hp of Christy is 52;
 			otherwise if calcnumber is 3:
 				say "[mchristy_bottom0]";
@@ -1047,10 +1050,13 @@ to say maleChristysex:
 			say "[link]suck him off (Y)[as]y[end link] or bend over to [link]get fucked (N)[as]n[end link]?";
 			if the player consents:
 				say "[mchristy_oral0]";
-			otherwise:
+			otherwise if cunts of player > 0:
 				say "[mchristy_top0]";
 				now hp of Christy is 52;
-	otherwise if hp of Christy is 52:
+			otherwise:
+				say "[mchristy_anal0]";
+				now hp of Christy is 52;
+	otherwise if hp of Christy >= 52:
 		say "[mchristysexmenu]";
 
 
