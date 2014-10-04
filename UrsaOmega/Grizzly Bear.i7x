@@ -42,13 +42,13 @@ to say beatthegrizzly:
 			say "Choice? (0-4)>[run paragraph on]";
 			get a number;
 		if calcnumber is 1:
-			say "[giveanal]";
+			say "[gbeargiveanal]";
 		otherwise if calcnumber is 2:
-			say "[getsucked]";
+			say "[gbeargetsucked]";
 		otherwise if calcnumber is 3:
-			say "[ridevag]";
+			say "[gbearridevag]";
 		otherwise if calcnumber is 4:
-			say "[rideanal]";
+			say "[gbearrideanal]";
 		otherwise:
 			say "     You decide against fucking the bear right now, walking away from his defeated form.";
 	otherwise if cunts of player > 0:
@@ -58,41 +58,43 @@ to say beatthegrizzly:
 			say "Choice? (0-2)>[run paragraph on]";
 			get a number;
 		if calcnumber is 1:
-			say "[ridevag]";
+			say "[gbearridevag]";
 		otherwise if calcnumber is 2:
-			say "[rideanal]";
+			say "[gbearrideanal]";
 		otherwise:
 			say "     You decide against fucking the bear right now, walking away from his defeated form.";
-	otherwise:
+	otherwise if cocks of player > 0:
 		say "     Would you like to [link]mount the grizzly's ass (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], take him [link]in your ass (3)[as]3[end link] or [link]leave (0)[as]0[end link]?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
 			get a number;
 		if calcnumber is 1:
-			say "[giveanal]";
+			say "[gbeargiveanal]";
 		otherwise if calcnumber is 2:
-			say "[getsucked]";
+			say "[gbeargetsucked]";
 		otherwise if calcnumber is 3:
-			say "[rideanal]";
+			say "[gbearrideanal]";
 		otherwise:
 			say "     You decide against fucking the bear right now, walking away from his defeated form.";
+	otherwise:		[neuter loss needed? - adjust some possible scenes]
+		say "     You briefly taking advantage of the fallen bruin, but decide in the end against it due to your own lack of gender.";
 
-to say giveanal:
+to say gbeargiveanal:
 	say "     With some effort, you roll the grizzly over and raise his hips up so his ass is sticking up in the air. You admire the bear's anus, currently twitching in anticipation, tucked under his stubby bear tail. You press a finger against his muscular ring and push inward. Surprisingly, it slips in with very little effort - this bear doesn't seem to be new to being mounted. You add two more fingers, testing his flexibility with deep, scissoring strokes. The grizzly gives a manly grunt as you do, his hardening length quickly slipping from his sheath. With your preparations complete, you move behind him, gripping his hips and lining your cock up with his tailhole. You hilt yourself inside his rectum in one firm thrust, gasping as you feel his hot, muscular anal cavity envelope your [cock size desc of player] [cock of player] cock.";
 	say "     You by making slow, deep strokes in and out of his ass, relishing the feeling of your ursine ass-slut clenching down on your cock as you pull back before driving yourself back in with a ball-slapping thrust. The grizzly begs you (between pants and moans) to fuck him harder, and you comply by increasing the frequency and depth of your thrusts. This redoubled anal assault is too much for your bottom bear, who starts shooting grizzly cum over the ground. The orgasmic contractions of his ass send you over the edge as well, and you start filling the bear's ass with your seed. You pull out and shoot the last of your load over his backside before stepping back to admire your handiwork. Satisfied, you get dressed and leave the bear in a pool of cum.";
 
-to say getsucked:
+to say gbeargetsucked:
 	say "     You walk up to the grizzly, your cock hardening at the thought of taking his muzzle. You push his muzzle into your groin, rubbing your [cock size desc of player] [cock of player] cock against his lips and the sides of his muzzle. The grizzly breaks down and starts giving your shaft long licks with his broad ursine tongue; the rough texture feels great on your cock. Occasionally he dips down under your shaft to suck on your testicles, juggling them with his his tongue, before returning to lavishing your [cock of player] cock with oral attention.[line break]";
 	if "More Anal" is listed in the feats of the player:
 		say "     The grizzly pulls off of your cock for a minute to look up and give you a lecherous grin as he puts two fingers in this mouth, sucking on them. You raise an eyebrow as he removes the fingers from his muzzle and then leans back into your groin, this time engulfing your entire length in his muzzle. The wet heat wrapped around your dick feels great, and you almost don't notice the bear sneaking the two saliva-coated fingers under your ballsack[if cunts of player > 0] and past your womanly netherlips[end if].  Realizing what he's planning, you look down at the bear eagerly sucking his way up and down you shaft and return the lecherous grin, spreading your legs a bit to give him better access to your pucker. While continuing to give your [cock of player] cock a masterful blowjob, he strokes his two slick fingers across your pucker, relaxing it. On one particularly deep throating of your cock, he slides his digits into your rectum. You grunt as he finds your prostate gland and starts stroking it vigorously. Each press of his fingers is like the press of a pleasure buzzer in your ass, and you start leaking pre into his muzzle like a leaky tap. Your knees can hardly hold your body up, so you lean on him while he drives you higher and higher with his talented tongue, muzzle, and fingers. Finally, you can't take the stimulation overload any more and cum hard, filling his mouth up and squeezing on his fingers in your ass. You pull out for the last few shots of seed, painting his snout in streaks of white with your load. Getting dressed, you leave the sex-starved bear to take care of his own needs.";
 	otherwise:
 		say "     Eager to get to the real deal, the bear dives down on your [cock of player] cock, taking it to the base in his muzzle. The wet heat wrapped around your dick feels great, and you give a satisfied grunt as he starts to move his mouth up and down your length, all the while using his tongue to stroke and tease the head of your penis. You move your hands to the back of his head but he hardly needs any encouragement as he eagerly suckles your [cock of player] cock, sucking down your precum. Soon you can't take it any more as his rippling throat and talented tongue push you over the edge, and you're spilling your semen down his throat and then in his mouth. You pull out for the last few shots of seed, painting his snout in streaks of white with your load. Getting dressed, you leave the sex-starved bear to take care of his own needs.";
 			
-to say ridevag:
+to say gbearridevag:
 	say "     The grizzly falls on his back, breathing heavily. Eyeing his bulging groin you decide you want him in your hot cunt. Walking over to his prone form you begin taking your pants off and then removing his, revealing his thick nine inch bearhood. The grizzly, too weak to react, looks at you eagerly. Straddling the ursine, you position his shaft at your pussy. You tease his glans with your entrance a bit before sinking down into his bear cock. It spreads you open delightfully and strokes your clit just right as you slide down the full length of his cock. He moves to place his hands on your hips but a quick glare reminds him who's in charge. You begin moving up and down on his shaft, each thrust penetrating a little deeper into your cunt, his cock filling you exquisitely. Feeling yourself getting close to your peak you start to increase the pace, filling the air with the sound of smacking flesh. Finally, on one particularly deep thrust, you cry out, your vaginal muscles clamping down on his bear dick [if cocks of player > 0]and your cock spurting seed in thick ropes over his chest[end if]. The grizzly is right behind you, filling you up with thick spurts of bear cum. You collapse, panting, on top of the exhausted form of the grizzly, his cum oozing from your pussy. You pull yourself off of the bear, clean yourself up, get dressed, and continue on your way.[impregchance]";
 	
-to say rideanal:
+to say gbearrideanal:
 	say "     The grizzly falls on his back, breathing heavily. Eyeing his bulging groin you decide you want him in your ass. Walking over to his prone form you begin taking your pants off and then removing his, revealing his thick nine inch bearhood. The grizzly, too weak to react, looks at you eagerly.";
 	If "More Anal" is listed in the feats of the player:
 		say "     Before you have your fun, you'll need to... Prepare properly. Moving your naked rear over the bear's face you spread your asscheeks and brusquely command him to get licking. The bear-man complies eagerly, plunging his muzzle between your cheeks. First you feel the cold wetness of his nose, but that is soon replaced by the warm slickness of his tongue. He starts by lapping gently at your ring of muscle, but as your pucker relaxes he transitions to deep, stimulating licks. His broad ursine tongue fills you so completely you almost cum on the spot. Satisfied with his performance you pull off of him, your cleft now dripping with grizzly saliva.[line break]";
@@ -122,7 +124,7 @@ When Play begins:
 	now tail entry is "You have a short ursine tail that hangs over your ass.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "ursine";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "your head widens and your face pushes out. You nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more pawlike";	[ Body TF text, format as "Your body feels funny as (your text)." ]
+	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "thick shaggy brown bear fur spreads across your skin";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a furred sheath grows around it, holding it when it's not erect";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
@@ -168,7 +170,7 @@ when play ends:
 	if bodyname of player is "Grizzly":
 		if humanity of player is less than 10:
 			say "     You succumb to your bear instincts, going completely feral. When the military finds you, you're almost entirely unable to communicate with them. You manage to defeat each squad that discovers you, using your unnatural strength and stamina to take them out one by one. You enjoy leaving the last one conscious so you can fuck them into big, strong bears like yourself. Your luck finally runs out one day when searching for your next victim. You feel a pinch at your neck; swatting your paw at the sensation you notice the tranquilizer dart. Already beginning to feel the effects, you turn to see two squads of soldiers descending upon you. You fight fiercely, but a second prick signals the end of the fight as your body becomes to heavy to lift. Before you slip into unconsciousness you hear one of the soldiers mention that the dose was practically enough to down an elephant...";
-			 say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
+			say "     You wake up in a government holding facility, where you are poked and prodded (under heavy restraint and anesthesia) for what feels like a month. The scientists must not have been optimistic about your prospects in the post-infection world, because after another elephant dose of tranquilizer you wake up somewhere heavily wooded and remote. You find a salmon-rich stream nearby and settle into a decidedly ursine lifestyle of mostly eating and sleeping.";
 			if cunts of player > 0:
 				say "     One hot summer day, you run into a rare sight - another grizzly bear! A very male one, at that. You feel a need growing between your legs and in your womb, a need you've been ignoring during your time in the wild. After a brief period of wary sniffing you're on your hands and knees under the grizzly getting filled with bear cum. You rub a paw over your stomach contentedly, looking forward to raising your new cubs after the next hibernation.";
 			otherwise if cocks of player > 0 and "Mpreg" is not listed in the feats of the player:
