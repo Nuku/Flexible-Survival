@@ -51,6 +51,8 @@ to say beattheGryphon:	[Player victory scenes to come]
 			say "     Stroking the monster's erection makes him even more compliant and soon he's pushing back into your thrusts and cooing softly with pleasure.  At that point, it only takes a few more thrusts before you're cumming, painting the gryphon's bowels with a [cum load size of player] dose of your semen.  With his foot-long rod pulsing in your hand, your once-reluctant foe cries out as he cums, staining the ground with his virile load.  You pump your hips into him even as you pump his cock, making sure you're both drained before you release him and pull out.  Trying to preserve at least a little dignity, the gryphon gives a snarl and lowers his tail to hide the sticky mess you've left leaking out of him before taking to the air.";
 		otherwise:
 			say "     Deciding against it, the moment passes and the gryphon takes off, limping his way into the air to nurse his wounds.";
+	otherwise:
+		say "     Standing up to the gryphon, you are able to force this mythological beast to retreat.";
 
 to say Gryphondesc:
 	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
@@ -87,7 +89,7 @@ When Play begins:
 	now sex entry is "Male";           [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 90;                [ The monster's starting hit points. ]
 	now lev entry is 10;               [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 24;              [ Monster's average damage when attacking. ]
+	now wdam entry is 13;              [ Monster's average damage when attacking. ]
 	now area entry is "Museum";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
