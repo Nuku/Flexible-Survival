@@ -192,15 +192,7 @@ the usedesc of hermaid kelp is "[HKelpUse]".
 
 to say HKelpUse:
 	say "You run the moist piece of plant through your hands for a few moments, noting the leafy feel and grainy texture. Giving it only a moments thought, you roll up the leaf and pop it into your mouth. Chewing on the leaf, you find that it tastes remarkably like lettuce, but with a slightly salty taste.";
-	setmonster "Hermaid";
-	choose row monster from the table of random critters;
-	if "Male Preferred" is listed in feats of player:
-		now sex entry is "Male";
-	otherwise if "Female Preferred" is listed in feats of player:
-		now sex entry is "Female";
-	otherwise:
-		now sex entry is "Both";
-	infect;
+	infect "Hermaid";
 
 the scent of hermaid kelp is "As you smell the sea leaf, your nostrils are assaulted with the scents of the sea; the smell of salt water and fish overwhelms your senses, and reminds you of a time where you stood at the edge of the water, looking wordlessly into the vast ocean before you.".
 

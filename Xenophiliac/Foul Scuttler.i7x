@@ -182,8 +182,8 @@ When Play begins:
    now cunt length entry is 15;
    now cunt width entry is 5;
    now libido entry is 60;
-   now loot entry is "";
-   now lootchance entry is 0;
+   now loot entry is "foul scuttler spit";
+   now lootchance entry is 35;
    now scale entry is 3;
    now body descriptor entry is "[one of]beastly[or]strange[or]frightening[or]mutated[at random]";
    now type entry is "mutant";
