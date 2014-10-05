@@ -5507,6 +5507,8 @@ This is the self examine rule:
 			say "  [descmod of x][run paragraph on]";
 	if "Angie's Mate" is listed in feats of player:
 		say "  Thin lines of healed claw-marks run down your back, marking you as Angie's mate.";
+	if "Boghrim's Mark" is listed in feats of player:
+		say "  Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you.";
 	if weapon object of player is not journal:
 		say "  You are carrying a/an [weapon object of player] just in case of trouble";
 		if weapon object of player is unwieldy:
