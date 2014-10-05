@@ -34,6 +34,8 @@ to say losetoplatypus:
 		say "     [line break]";
 		say "     You feel something tingling in your belly as it grows warm and put your hands on it in concern. Then a thought clicks suddenly into your head: You can now become pregnant through anal sex, much like the platypus who did this to you. [line break]     [']MPreg['] has been added to your list of feats.";
 		add "MPreg" to feats of player;
+		say "[ovichance]";
+
 to say beattheplatypus:
 	say "     The platypus grabs his belly and falls back, raising a hand up in surrender. He looks up at you with his brown eyes and says, 'Just... whatever you do, just leave my clutch alone.' Gazing at and holding his gravid womb, he patiently awaits your decision."; 
 	if libido of player > 40:
