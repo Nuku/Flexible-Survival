@@ -21,6 +21,7 @@ Instead of Resolving a Egyptian Wing:
 	say "[WaitLineBreak]";
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
 	move player to Egypt Wing Entrance;
+	now Egypt Wing Entrance is known;
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
