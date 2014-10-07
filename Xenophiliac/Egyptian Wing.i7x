@@ -21,6 +21,7 @@ Instead of Resolving a Egyptian Wing:
 	say "[WaitLineBreak]";
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
 	move player to Egypt Wing Entrance;
+	now Egypt Wing Entrance is known;
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
@@ -540,6 +541,7 @@ to say AmuranSexMenu:
 			say "(2) [link]Get Stuffed - Anal[as]2[end link][line break]";
 			say "(3) [link]Jerk Him[as]3[end link][line break]";
 			say "(4) [link]Blow Him[as]4[end link][line break]";
+			say "(0) [link]Nevermind[as]0[end link][line break]";
 			while 1 is 1:
 				say "Choice? (0-4)> [run paragraph on]";
 				get a number;
@@ -558,9 +560,10 @@ to say AmuranSexMenu:
 			otherwise:
 				say "[AmuranNevermind]";
 		otherwise:
-			say "(1) [link]Get Stuffed - Anal[as]2[end link][line break]";
-			say "(2) [link]Jerk Him Off[as]3[end link][line break]";
-			say "(3) [link]Blow Him Off[as]4[end link][line break]";
+			say "(1) [link]Get Stuffed - Anal[as]1[end link][line break]";
+			say "(2) [link]Jerk Him Off[as]2[end link][line break]";
+			say "(3) [link]Blow Him Off[as]3[end link][line break]";
+			say "(0) [link]Nevermind[as]0[end link][line break]";
 			while 1 is 1:
 				say "Choice? (0-3)> [run paragraph on]";
 				get a number;
