@@ -1,7 +1,122 @@
-Version 1 of Seraphim by Wahn begins here.
-[Version 1 - Seraphim infection for use in impregnations (the "do you want to be impregnated with a/an <infection>?" question)]
+Version 2 of Seraphim by Wahn begins here.
+[Version 2 - Actual Monster now with full infection and fight texts]
 
-Section 1 - Monster Insertion 
+[ hp of Gabriel                                              ]
+[  0: not around yet                                         ]
+[  1: Elijah has been corrupted                              ]
+[  2: player saw Gabriel appear and ask for Elijah           ]
+[  3: player had a run-in with Gabriel before                ]
+[  4: Gabriel got fucked - now has genitals                  ]
+
+
+Section 1 - Victory/Defeat Sex
+
+to say SeraphDefeated:
+	say "     Crumpling to his knees in exhaustion, Gabriel pants, 'You are far stronger than you are supposed to be. I yield, as I would have to harm you significantly if I met this with equal force.' He pulls the flaming sword from his hip and sets it down on the ground with calm movements, then looks at you with a concerned expression, 'You really should let me help you. Don't you see that resistance only hurts yourself?'";
+	say "     [line break]";
+	say "     Well, now that you've won this fight, what do you want to do?";
+	say "     (Y) - Take advantage of the angel.[line break]";
+	say "     (N) - Just leave.[line break]";
+	if player consents:
+		say "     [line break]";	
+		if hp of Gabriel < 4: [didn't have sex before]
+			say "     Excited by the opportunity of having this magnificent creature at your mercy, you lean over him and start pulling off his armor piece by piece, then soon move on to undo the fastenings of his robe. 'What are you doing?', Gabriel asks as you pull open his clothes and bare his muscled chest, then as you are undoing a golden belt-buckle, he adds, 'I am a protector - I wasn't created for what you seem to expect from me.' And it's true... pulling down the soft white fabric of his pants, you reveal a totally sexless smooth crotch. Gabriel says, 'Now you see. There is nothing I can do for you. You should -' Before he can add another word, you put a finger on his lips and shush him, all the while giving the angel a salacious grin that makes a hint of doubt in his confident expression appear.";
+			if cocks of player > 0:
+				say "     Even without genitals on his own body, there are lots of possibilities for fun with this pretty hunk - a whole lot more than the innocent virgin could even imagine. Your cock goes hard inside your pants from the idea of feeling those soft lips of his stretched around your shaft - but no, there is a greater prize to be had right now... between the two shapely buns of Gabriel's ass. How often does the opportunity of popping an angel's cherry present itself, after all. You continue unwrapping your beaten opponent some more until he's almost completely naked, just his white pants still pooled at his knees and covering the lower legs, then get a grip on the back of his head and pull him in for a surprise kiss that makes his eyes go round.";
+				say "     [WaitLineBreak]";
+				say "     After making out with Gabriel for some very enjoyable moments, exploring his mouth with your tongue and finding yourself delighted by the confused and clueless reactions of a person who has never been kissed, you take a second to catch a breath, leaving the angel to pant loudly and look at you in wonder. As it's best to forge while the iron is hot - and the hottie still reeling from all the new sensation, you immediately proceed to grab him by the arm and pull Gabriel forwards. As he finds himself on all fours before you a moment later, a flash of realization at what will happen next spreads over Gabriel's face, causing his cheeks to turn red in embarrassment. Giving him a grin, you then stand up and walk around the angel to stand behind him.";
+				say "     Quickly undoing your own pants and freeing your by now rock-hard erection, you kneel down behind the virgin hunk, then grab both of his well-rounded butt-cheeks with your hands and pull them apart, squeezing tightly as you do so. The nice and pink pucker between his shapely buns looks very inviting and you stretch your thumb to rub lightly over it, provoking a breathless little pant from your captive, which leads over into silent moaning as you proceed to stroke over the bumps and wrinkles of his pucker in teasing slowness. Gathering a bit of spit and smearing that on his back door to help lube the way, you then push your index finger against Gabriel's hole, slowly increasing pressure and wiggling it a bit until his muscle yields and you can slip right in.";
+				say "     [WaitLineBreak]";
+				say "     Your winged hunk can't help but gasp and moan as you explore his pretty tight, virgin hole with your probing digit, stroking sensitive spots. It's quite a bit of fun to see what noises you can let him make if you for example... wiggle your fingertip like so - which makes Gabriel give a half-panted squeak of arousal - or bend your finger to rub another specific spot... which draws a full-throated moan out of him and makes his toes curl up. In fact, you find yourself distracted quite a bit with this fun game, stroking him and adding another finger, then a third, until you eventually remember there is another exciting thing you can do with the angel.";
+				say "     As you pull your fingers from Gabriel's hole, the muscled guy pants loudly and his pucker winks at you as he tries to prepare himself for whatever new way you'll touch him next - though he falls into shocked silence as not a finger but rather the tip of your cock nudges his opening and sinks inside. There is an instinctive tightening of his muscles around your unexpected invasion - but you're already halfway inside him, making him only squeeze down on your shaft in a most stimulating manner that feels pretty great. Giving Gabriel a moment to get used to the hot and hard pole now inside his body, you revel in the tightness of his passage around your cock, then eventually tell him to relax and start to press even deeper.";
+				say "     [WaitLineBreak]";
+				say "     Before long, you bottom out inside the handsome angel and lean forward to lick him between his wings and nibble his ear, then - in a whisper - ask him if your [cock of player] cock feels good inside him. There is a short moment of silence in which you first think he won't answer, then you can hear a low, 'Yes... its wrong, but... I like it.' And he really does - after getting over the first shock of finding himself being fucked, Gabriel turns out to be a very receptive - and vocal - partner, gasping and moaning loudly while his inner muscles grip your thrusting shaft. You give the angel a good and long pounding, really laying into him with deep thrusts that make him gasp in lust, and eventually drive the winged hunk to his first orgasm, trembling and twitching all over.";
+				say "     The sensations of Gabriel's anal muscles flexing around your cock, in addition to the satisfaction of picking his cherry, push you over the edge too in short notice and you thrust in deep one last time until your crotch meets his cheeks with a satisfying slap. Balls-deep in the no-longer virgin angel, you unload everything that you have from your balls, blasting your thick, creamy cum into him. Spurt after spurt fills Gabriel up as he moans and pants like a good bottom-boy should.";
+				say "     [WaitLineBreak]";
+				say "     When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then pull up your pants and grab all the gear that you put down before having sex. With a spring in your step - from having fucked such a hottie, and a virgin no less - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+			otherwise:
+				say "     Even without genitals on his own body, there are lots of possibilities for fun with this pretty hunk - a whole lot more than the innocent virgin could even imagine. [if cunts of player > 0]Your pussy gets wet from the though of having him licking you down there [otherwise]You get pretty excited from the thought of him licking your sensitive skin on the crotch [end if]- but no, to break him in to sex for good, you'll concentrate on something else right now... with it between the two shapely buns of Gabriel's ass. Also, how often does the opportunity of popping an angel's cherry present itself? You continue unwrapping your beaten opponent some more until he's almost completely naked, just his white pants still pooled at his knees and covering the lower legs, then get a grip on the back of his head and pull him in for a surprise kiss that makes his eyes go round.";
+				say "     [WaitLineBreak]";
+				say "     After making out with Gabriel for some very enjoyable moments, exploring his mouth with your tongue and finding yourself delighted by the confused and clueless reactions of a person who has never been kissed, you take a second to catch a breath, leaving the angel to pant loudly and look at you in wonder. As it's best to forge while the iron is hot - and the hottie still reeling from all the new sensation, you immediately proceed to grab him by the arm and pull Gabriel forwards. As he finds himself on all fours before you a moment later, a flash of realization at what will happen next spreads over Gabriel's face, causing his cheeks to turn red in embarrassment. Giving him a grin, you then stand up and walk around the angel to stand behind him.";
+				say "     You kneel down behind the virgin hunk, then grab both of his well-rounded butt-cheeks with your hands and pull them apart. Squeezing their firm flesh appreciatively as you do so, the nice and pink pucker between his shapely buns is revealed, looking very inviting. You stretch your thumb to rub lightly over it, provoking a breathless little pant from your captive, which quickly leads over into silent moaning as you proceed to stroke over the bumps and wrinkles of his pucker in teasing slowness. Gathering a bit of spit and smearing that on his back door to help lube the way, you then push your index finger against Gabriel's hole, slowly increasing pressure and wiggling it a bit until his muscle yields and your fingertip can slip right in.";
+				say "     [WaitLineBreak]";
+				say "     Your winged hunk can't help but gasp and moan as you explore his pretty tight, virgin hole with your probing digit, stroking sensitive spots. It's quite a bit of fun to see what noises you can let him make if you for example... wiggle your fingertip like so - which makes Gabriel give a half-panted squeak of arousal - or bend your finger to rub another specific spot... which draws a full-throated moan out of him and makes his toes curl up. Before long, as you continue fondling the handsome angel, you lean forward to lick him between his wings and nibble his ear, then - in a whisper - ask him if he likes what you're doing. There is a short moment of silence in which you first think he won't answer, then you can hear a low, 'Yes... its wrong, but... I like it.'";
+				say "     And he really does - after getting over the first shock of having his ass played with, Gabriel turns out to be a very receptive - and vocal - partner, gasping and moaning loudly while his inner muscles grip your questing fingers. You stimulate the angel more and more, really finding all his pressure points and tickling them and eventually drive the winged hunk to his first orgasm, trembling and twitching all over. When you eventually pull out your fingers, he even moves with you a little bit, trying to keep them inside - just like a good bottom-boy should.";
+				say "     [WaitLineBreak]";
+				say "     Standing up, you go and grab all the gear that you put down before deciding to have fun with Gabriel, then walk away, leaving the worn out and still panting angel to pick himself up on his own.";
+			now hp of Gabriel is 4;
+		otherwise if hp of Gabriel is 4: [had sex before]
+			say "     Excited by the opportunity of having this magnificent creature at your mercy, you lean over him and start pulling off his armor piece by piece, then soon move on to undo the fastenings of his robe. 'Again?', Gabriel asks as you pull open his clothes and bare his muscled chest, then as you are undoing a golden belt-buckle, he adds, 'I've been feeling... different, since last time. My body... changed.' And it's true - pulling down the soft white fabric of his pants, you reveal that where previously there was only sexless smoothness, now a respectably sized manhood dangles between his legs. Gabriel looks down at his cock a bit sheepishly, then says, 'The tiny machines that infuse everything around here added this to me. It is... irregular. I wasn't created for -' Before he can add another word, you put a finger on his lips and shush him, all the while giving the angel a salacious grin.";
+			if cocks of player > 0: [males and herms]
+				say "     Continuing to strip Gabriel all the way until he's bare-ass naked, you lay out his clothes on top of each other, then gently press against the angel's chest, pushing him to lie back on the soft layer of fabric. He looks pretty amazing, stretched out on the ground before you in his well-built beauty and with white wings stretched to the sides - so much so that you can't help but want to feel his lips on yours. Leaning over the naked male, you put your hands on his upper arms to brace yourself and pin him down, then give him a deep and hungry kiss. And... quite interestingly, Gabriel replies in kind, the feelings you've just awoken leading him to actively participate in a very nice making-out session.";
+				say "     You'd love to continue snogging with the handsome male for quite a while - but at one point, a sudden feeling of being poked in the stomach distracts you from him. Looking down, you see that it's Gabriel's cock, by now fully hard and ready for action. Reaching out to take hold of his manhood, you stroke the angel, making him arch his back and moan loudly from all the novel sensations he is going through. The youthful male's breathing soon comes faster and faster and a clear drop of pre forms at the slit of his cockhead, glistening in the light - which is exactly when you suddenly stop and pull your hand away.";
+				say "     [WaitLineBreak]";
+				say "     The angel looks up at you with a surprised expression, panting quickly in built-up arousal as his eyes jump between your hand and the erect pole standing proudly over his crotch. Gabriel's deep need to get off is painfully obvious on that unlined face of his, but as second after second ticks by and you don't react, he clears his throat and says in a pleading voice, 'Please... can - can you continue with...' Giving a wide smile at the angel, you do take hold of his cock again - but only with two fingers and your thumb, slowly, very slowly stroking up and down. As you continue this merciless teasing for a minute, then two, Gabriel gets pretty tense and even reaches out to grab his own cock - which you stop by clearing your throat and pushing his hand aside.";
+				say "     Eventually, when he's all twitchy and can't suppress needy little whimpers at each touch anymore, you do ask if he wants you to show him another technique that is sure to him off - to which he almost screams, 'Yes, please! Anything!' You can't help but grin at having reduced the proud angel to this, lying before you in all his naked beauty and begging for you to take him - which is exactly what you plan to do. Quickly standing up and stripping off your clothes, you're kneeling between his legs a moment later and slide both hands up the inside of Gabriel's thighs. Taking hold of his legs, you raise and spread them to bare his tight little pucker, the view of which makes your hard cock pulse in anticipation.";
+				say "     [WaitLineBreak]";
+				say "     Without any further delay, you line up your erection with your captive angel's winking hole, then thrust in deep into his warm and tight chute. There is a breathless groan from Gabriel at the sudden invasion, leading over to lust-filled moaning as you proceed until you bottom out inside him. Giving him a short moment to get used to it - you then pull most of the way back out and start fucking the angel's hole with with hard and deep thrusts. Gabriel just feels amazing to be in, with a yielding yet very tight hole and anal muscles that seem to know instinctively when to flex around your shaft. As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms.";
+				say "     Coming more or less at the same time, you sink your manhood deep and blast the first spurt of your creamy cum into Gabriel, while he grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into the air to splat down all over his chest and neck. It's pretty cute how he moans and pants as you fill him up - just like a good bottom-boy should. You can't help but think how awesome it would be to just... keep him, having an eager little slut to breed whenever you want to. Though you guess you'd have to break him in a bit more before that.";
+				say "     [WaitLineBreak]";
+				say "     When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+			otherwise: [females and neuter]
+				say "     Continuing to strip Gabriel all the way until he's bare-ass naked, you lay out his clothes on top of each other, then gently press against the angel's chest, pushing him to lie back on the soft layer of fabric. He looks pretty amazing, stretched out on the ground before you in his well-built beauty and with white wings stretched to the sides - so much so that you can't help but want to feel his lips on yours. Leaning over the naked male, you put your hands on his upper arms to brace yourself and pin him down, then give him a deep and hungry kiss. And... quite interestingly, Gabriel replies in kind, the feelings you've just awoken leading him to actively participate in a very nice making-out session.";
+				say "     You'd love to continue snogging with the handsome male for quite a while - but at one point, a sudden feeling of being poked in the stomach distracts you from him. Looking down, you see that it's Gabriel's cock, by now fully hard and ready for action. Reaching out to take hold of his manhood, you stroke the angel, making him arch his back and moan loudly from all the novel sensations he is going through. The youthful male's breathing soon comes faster and faster and a clear drop of pre forms at the slit of his cockhead, glistening in the light - which is exactly when you suddenly stop and pull your hand away.";
+				say "     [WaitLineBreak]";
+				say "     The angel looks up at you with a surprised expression, panting quickly in built-up arousal as his eyes jump between your hand and the erect pole standing proudly over his crotch. Gabriel's deep need to get off is painfully obvious on that unlined face of his, but as second after second ticks by and you don't react, he clears his throat and says in a pleading voice, 'Please... can - can you continue with...' Giving a wide smile at the angel, you do take hold of his cock again - but only with two fingers and your thumb, slowly, very slowly stroking up and down. As you continue this merciless teasing for a minute, then two, Gabriel gets pretty tense and even reaches out to grab his own cock - which you stop by clearing your throat and pushing his hand aside.";
+				say "     Eventually, when he's all twitchy and can't suppress needy little whimpers at each touch anymore, you do ask if he wants you to show him another technique that is sure to him off - to which he almost screams, 'Yes, please! Anything!' You can't help but grin at having reduced the proud angel to this, lying before you in all his naked beauty and begging for you to take him - which is exactly what you plan to do. Quickly standing up and stripping off your clothes, you're kneeling over him a moment later, with knees left and right of Gabriel's hips. Then, without any further delay, you reach down to take hold of his erection and lower your hips a bit. [if cunts of player > 0]There is the magic moment when the tip of his cock first nudges your nether lips, making both of you moan in lust, then his manhood slides into your drippingly wet and swollen pussy, filling you quite nicely and rubbing many sensitive spots deep inside.[otherwise]There is the magic moment when the tip of his cock first nudges your crack, making both of you moan in lust, then with a little help, his manhood presses directly against your pucker. Having prepared yourself and relaxed properly, it doesn't take long until your muscle yields to the pressure and Gabriel's cock slides right into your tight hole, filling you quite nicely and rubbing many sensitive spots deep inside.[end if]";
+				say "     [WaitLineBreak]";
+				say "     Leaning over your captive angel and pinning his arms down with your hands to show that you're still the one in control, you gyrate your hips and ride him hard, raising yourself up and then slamming down again to take all of his prick at once. Gabriel accepts you holding him down without any problems, panting loudly as he's being fucked, though at some point, he can't help himself and starts to buck his hips up and down. Seems like he's not completely submissive (yet?) - but then, he doesn't have to be, as his own movements add a nice little bit of fun to your coupling. Your sexy angel feels amazing inside you, with his cock having both the length and girth to really get to the good spots...";
+				say "     As wound up as you got him and with your own satisfaction of how nicely this is working out, it doesn't take all that long until the two of you approach your respective orgasms. Coming more or less at the same time, you lower yourself on his pole all the way, trembling as your femcum squirts out and soaks his pubes, while Gabriel grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into your body, squirting directly into your womb as his cockhead is tightly pressed against your cervix. As the warmth of his seed fills you more and more, you can't help but think how awesome it would be to just... keep him, having an eager little slut to breed you whenever you want him to. Though you guess you'd have to break him in a bit more before that.";
+				say "     [WaitLineBreak]";
+				say "     When your orgasm finally winds down, you pull away from the angel, his cock leaving your body with a wet slurp and a small gush of cum. Then you go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+			[now hp of Gabriel is 5;] [disabled until the next stage is actually written]
+		otherwise if hp of Gabriel is 5: [saw Gabriel's genitals before]
+			say "     A";
+			if cocks of player > 0: [males and herms]
+				say "     B";
+			otherwise: [females and neuter]
+				say "     C";
+			say "     <add-in choice to take him as a subby slave>";
+	otherwise:
+		say "     [line break]";	
+		say "     You decide to just go, leaving Gabriel to pick himself up on his own.";
+	
+to say SeraphVictorious:
+	if hp of player > 0:    [player submits]	
+		say "     As you submit, Gabriel presses his glowing hand against your forehead, causing you to scream in pain from the sensations of a fiery fingers rifling through your mind. They drag questionable things you have done in the past to its forefront and shine a light on them, banishing whatever justification you thought you had before. Then he lets go and helps you sit down to hold your head and process what just happened. 'There - this is enough for now or I would break your mind. Ponder these acts and better yourself. Return when you are ready for more. I will patrol these streets for demons until you are back.'";
+	otherwise: [player loses]
+		say "     As you collapse in defeat, Gabriel presses his glowing hand against your forehead, causing you to scream in pain from the sensations of a fiery fingers rifling through your mind. They drag questionable things you have done in the past to its forefront and shine a light on them, banishing whatever justification you thought you had before. Then he lets go and leaves you to crumple on the floor. 'There - this is enough for now or I would break your mind. Ponder these acts and better yourself. Return when you are ready for more - and be sure that I will hunt you down if you do not.'";
+	
+to say SeraphDesc:
+	if hp of Gabriel is 2:
+		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus['] description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
+		say "     [line break]";
+		say "     [link](1)[as]1[end link] - Just tell him what you did.[line break]";
+		say "     [link](2)[as]2[end link] - Make up a convincing lie.[line break]";
+		say "     [link](3)[as]3[end link] - Run away.[line break]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			otherwise:
+				say "Invalid choice. Type [link]1[end link] to admit everything, [link]2[end link] to lie or [link]3[end link] to run away.";
+		if calcnumber is 1: [admitting]	
+			say "     Steeling your nerves for the likely reaction from this divine warrior, you come clean and admit how you corrupted Elijah, turning him into a vain and lust-filled shadow of his former self. Gabriel's eyes harden with every word you speak and his right hand strays to the grip of his flaming sword, closing halfway around it, then he shakes his head and says, 'No, even as vile and despicable as you are, you are still of those I was made to protect. I long to be done with you and hasten to save my brother from the pit you've pushed him in, but duty comes first, always. You WILL be cleansed you from your sins even if I have to BURN it out of you - and then you WILL assist me in saving Elijah.'";
+			say "     A pale-white glow appears around Gabriel's hands and the angel's expression hardens. 'This will not be without pain - and you deserve nothing less. Do not struggle against me, it is only to your best,' he says, then steps forward and reaches out for you.";
+		otherwise if calcnumber is 2: [lying]
+			say "     Cold sweat runs down your back as you try to come up with some convincing story that doesn't enrage someone armed with a flaming sword... but as you open your mouth to speak, the angel raises his hand. 'Don't bother lying - guilt hangs around you like a rotten stench. I can see that dark influences have affected you and nothing you say can be believed.' His right hand strays to the grip of his flaming sword, closing halfway around it, then he shakes his head and says, 'No, corrupted as you are, you are still of those I was made to protect. Since a proper interrogation is out of the question, I will have to do this the hard way - cleansing you from your sins bit by bit until you are ready to assist me in saving Elijah.'";
+			say "     A pale-white glow appears around Gabriel's hands and the angel's expression hardens. 'This will not be without pain, but it is for your best. Do not struggle against me,' he says, then steps forward and reaches out for you.";
+		otherwise if calcnumber is 3: [running]
+			say "     You turn and run - only to find Gabriel standing before you some moments later, folding his wings after a short dash through the air. He's got you on mobility, that's for sure. 'Halt! Your actions prove your guilt - and now I can see that dark influences have affected you and nothing you say can be believed.' His right hand strays to the grip of his flaming sword, closing halfway around it, then he shakes his head and says, 'No, corrupted as you are, you are still of those I was made to protect. Since a proper interrogation is out of the question, I will have to do this the hard way - cleansing you from your sins bit by bit until you are ready to assist me in saving Elijah.'";
+			say "     A pale-white glow appears around Gabriel's hands and the angel's expression hardens. 'This will not be without pain, but it is for your best. Do not struggle against me,' he says, then steps forward and reaches out for you.";
+	otherwise if hp of Gabriel is 3:
+		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... Gabriel. He turns his head to look you up and down, then says, 'I still sense some darkness in your soul. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
+	otherwise if hp of Gabriel is 4:
+		say "     You run into an angel on the seedy streets of the red light district - and it's one you know... intimately. Gabriel looks at you and hesitates a second, biting his lip, then says, 'I still sense some darkness in your soul. Please do not resist - this is only to help you.' With that, he steps forward, white light glowing around his raised hand.";	
+		
+Section 2 - Monster Insertion 
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -10,38 +125,38 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Seraphim";
-	now attack entry is "The seraphim smites you.";
-	now defeated entry is " ";
-	now victory entry is " ";
-	now desc entry is "     This isn't supposed to be an actual infection, just a standin - please report how you saw this.";
-	now face entry is "seraphim";
-	now body entry is "seraphim";
-	now skin entry is "perfect";
-	now tail entry is "";
-	now cock entry is "human";
-	now face change entry is " ";
-	now body change entry is " ";
-	now skin change entry is " ";
-	now ass change entry is "";
-	now cock change entry is " ";
-	now str entry is 12;
-	now dex entry is 12;
-	now sta entry is 12;
-	now per entry is 12;
-	now int entry is 12;
-	now cha entry is 12;
-	now sex entry is "Nochange";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 25;                   [ How many HP has the monster got? ]
-	now lev entry is 1;                   [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 5;                  [ Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere";          [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now attack entry is "[one of]The Seraphim calls out, 'Surrender! This just prolongs your pain. It will be over quickly if you do not struggle.' Then he smites you with a faintly glowing hand.[or]Your angelic opponent calls out, 'Stop fighting, foolish mortal - I only want to help you!' Then he gives you a hard punch in the face, a mixture of regret and annoyance on his face.[or]Hooking a foot behind your leg, the Seraphim pulls it out from under you. As you crash down on the ground, he calls out, 'Surrender, I do not wish to hurt you more than necessary.'[at random]";
+	now defeated entry is "[SeraphDefeated]";
+	now victory entry is "[SeraphVictorious]";
+	now desc entry is "[SeraphDesc]";
+	now face entry is "quite beautiful, with chiseled features bare of even the slightest imperfection. A full head of shoulder-length and slightly curled brown hair frames the picture of a handsome male";
+	now body entry is "that of a well-built and muscular human being, toned and strong. It is garbed in a robe of pure white, flowing fabric. Two large wings sprout from your back, bearing white feathers";
+	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
+	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "it is reshaped into a very well-built form, leaving you with a toned and strong human-like body. A moment later, a pair of large white wings unfold behind your back, leaving you to wonder if you might fly once you've figured out how they actually work. Then finally, there is a short ringing in the air behind you, as if from hundreds of tiny bells, leaving you to find a neatly folded white robe on the ground as you turn around. Slipping into the silk-soft item of clothing, you just feel right";
+	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
+	now ass change entry is "it tightens up into a firm, round bubble butt";
+	now cock change entry is "it becomes human-like, uncut and well-proportioned";
+	now str entry is 20;                  [ These are now the creature's stats... ]
+	now dex entry is 18;                  [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16;                  [ These values may be used as part of alternate combat.]
+	now per entry is 14;
+	now int entry is 16;
+	now cha entry is 18;
+	now sex entry is "Male";              [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 85;                   [ The monster's starting hit points. ]
+	now lev entry is 13;                  [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 12;                 [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere";          [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;                 [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;           [ Length infection will make cock grow to if cocks]
+	now cock length entry is 9;           [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6;            [ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 2;               [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;           [ Size of breasts infection will try to attain ]
+	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 0;                 [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;           [ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;            [ Width of female sex  infection will try and give you ] 
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
@@ -49,12 +164,15 @@ When Play begins:
 	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "human";
-	now type entry is "human";
+	now body descriptor entry is "angelic";
+	now type entry is "angel";
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;     [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
 
+Section 3 - NPC
+
+Gabriel is a man.
 Seraphim ends here.

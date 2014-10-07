@@ -61,10 +61,11 @@ to say OrcVictorious:
 			otherwise:				
 				say "[MulFuck2]";		
 		otherwise if OrcSpecialFightNumber is 2:
-			say "<special fight loss 2>";
+			say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
+			say "     [line break]";
+			say "     You awake quite a while later, bruised and hurting all over, still lying on the floor of the drinking hall. Looks like Glarbuk just dropped your limp body where he stood after finishing you off, and no one bothered to help you up or even drag you aside since. In fact, you find yourself pretty wet and sticky, smelling of orc brew... someone must have stumbled over your prone form and spilled their drink all over you. After standing up and gingerly taking stock of where you hurt the most, your gaze turns to Boghrim. After your weak showing just now, he doesn't seem impressed, giving you only a casual glance before pulling Jason on his lap and making the human slave ride his thick, green cock.";
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;
-		
 		
 to say OrcBeaten:
 	if inasituation is false:
@@ -82,7 +83,7 @@ to say OrcBeaten:
 			say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
 			say "     [line break]";
 			if cocks of player > 0 and bodyname of player is "Orc Warrior" and player is pure::
-				say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so (Y), or do you just leave (N)?";				
+				say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so (Y), or do you just leave (N)?";
 				if player consents:
 					say "[MulAnal]";
 				otherwise:
@@ -91,7 +92,11 @@ to say OrcBeaten:
 				say "     Shaking off the funny feeling you get at the thought that he was ready to fuck you with that massive pole, you check the orc for loot, then leave the room.";	
 			now lastfuck of Mul is turns;
 		otherwise if OrcSpecialFightNumber is 2:
-			say "<special fight victory 2>";
+			say "     After your last blow, the brutish orc warrior's yellow eyes become somewhat unfocused as he looks at you, surprise on his face about how this fight is going. Then, after another moment or two of staring at you, his eyes roll up in their sockets and he keels over backwards, hitting the floor with a resounding thud. Cheers erupt from the watching orcs and you soon find yourself surrounded by quite a few who congratulate you and want to drink a brew with you. There is a small celebration of your victory, with lots of booze being offered and quaffed, but eventually you can extract yourself from the throng of orcs and make your way to Boghrim, who awaits you sitting on his large couch, giving an approving nod as you step up on the platform.";
+			say "     'You're not bad in a fight,' the orc boss says, while at the same time casually groping his human slave Jason's as he lies stretched out over his lap. Giving Jason's ass a playful slap that makes the young man pant in arousal, Boghrim pulls him aside, making his own orcish prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back. 'You do you stil want to go through with the... arrangement we talked about?' he asks, chuckling at your eager nod a moment later.";
+			say "     [WaitLineBreak]";
+			say "[BoghrimFirstFuck]";
+			now hp of Boghrim is 1; [fuck buddy status reached]
 		now inasituation is false;
 		now OrcSpecialFightNumber is 0;			
 
@@ -196,6 +201,8 @@ to say OrcDesc:
 	otherwise:  [in an event]
 		if OrcSpecialFightNumber is 1:
 			say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";
+		otherwise if OrcSpecialFightNumber is 2:
+			say "     Glarbuk towers even over the other green-skinned orc warriors, having at least half a foot extra on top of their already impressive stature. His bicep is at least as thick as a normal human's thigh and he has hands large enough to fully enclose a human head - and crush it like an egg. At the moment, the powerful male's eyes are focusing on you, and his drawn-together eyebrows and annoyed expression tell you that you're in for a beating. Maybe you shouldn't have smashed the beer stein over his head...";
 		
 Section 2 - Monster Insertion
 

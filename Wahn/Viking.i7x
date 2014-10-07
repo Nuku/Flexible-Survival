@@ -93,7 +93,7 @@ An everyturn rule:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
 		now VikingUltimatum is 0;
 		now Chieftain's Challenge is resolved;	
-		repeat with y running from 1 to number of filled rows in table of random critters:
+		repeat with y running from 1 to number of filled rows in Table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Viking":
 				now monster is y;
@@ -780,7 +780,7 @@ Instead of resolving a Chieftain's Challenge:
 		choose row y in table of random critters;
 		if name entry is "Viking":
 			now monster is y;
-			break;	
+			break;
 	choose row monster from the table of random critters;   [the chieftain is stronger than Sonya]
 	now hp entry is 275;
 	now monsterhp is 275;
@@ -794,7 +794,12 @@ Instead of resolving a Chieftain's Challenge:
 		say "     [VikingDuelEscape]";
 	otherwise if fightoutcome >= 10 and fightoutcome <= 19:  [won]
 		say "     [VikingDuelVictory]";
-	choose row monster from the table of random critters;   [restoring the original values]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Viking":
+			now monster is y;
+			break;	
+	choose row monster from the table of random critters;			
 	now hp entry is 80;
 	now monsterhp is 80;
 	now lev entry is 9;

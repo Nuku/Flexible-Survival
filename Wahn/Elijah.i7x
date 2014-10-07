@@ -92,34 +92,50 @@ when play begins:
 	add Angel vs Demons to badspots of hellspawn; [demons everywhere - he might even become one]
 
 Instead of resolving a Angel vs Demons:
-	say "     While exploring this seedy district of town, you hear a terrible racket and disconcerting shrieks from inside an adult-only movie theatre you're just passing. Then suddenly a section of its front wall explodes outward as a creature gets thrown right through it, sending bricks flying all over the street. You catch a glimpse of its horned, demonic form sailing past, then everything goes black as a brick hits you in the head.";
-	say "     [line break]";
-	say "     When you open your eyes again a short while later, the street around you is a battlefield of shattered and burning buildings. Sitting up makes you go woozy again for a moment, then thankfully your vision clears. Center of the destruction surrounding you is a humanoid figure with large white wings, garbed in shimmering plate-mail and wielding a flaming sword. It is surrounded by a golden halo of energy, making it difficult to discern any more. Surrounding the apparition there is a mid-sized flock of demons, incubi, succubi and hellhounds. Several of them are hurt and you see ...pieces... of others on the ground, but they still hold a circle around the angel in their midst, waiting for the time to strike while dodging strikes of his sword.";
-	say "     Your revival hasn't gone unnoticed and brings some movement into the standoff, as a hellhound turns towards you. It decides you might serve as a good mid-combat snack and rushes forward. You feel its foul breath as it opens its snout to tear out your throat - then, there is a flash of fire in the air and the creature collapses lifelessly on top of you, a flaming sword sticking in its side. The angel must have thrown it to save you.";
-	say "     That was just the moment the other demons have waited for. They pile on top of the now disarmed angel, clawing and biting, and wrestle him to the ground. You're still busy wriggling out from under the dead hound when they carry him off towards a ruined chapel at the far end of the street.";
-	say "     [line break]";
-	say "     When you finally manage to get free a bit later, you're alone between the burning buildings. The flaming sword still sizzling in the flesh of the dead hellhound sadly isn't something you could use - it's all flame, even the grip. Looking down the street where the demons went, you see the [bold type]Burned-Out Chapel[roman type] they went into. You could follow them, if you think you're strong enough. But don't wait too long... who knows what they'll do to him.";
-	wait for any key;
-	now Burned-Out Chapel is known;
-	move Elijah to Burned-Out Chapel;
-	now lastElijahfucked is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
-	now NPCintCounter is turns;
-	now npcEint is "0000000000000N";
-	now Char-A of Elijah is "0";
-	now Char-B of Elijah is "0";
-	now Char-C of Elijah is "0";
-	now Char-D of Elijah is "0";
-	now Char-E of Elijah is "0";
-	now Char-F of Elijah is "0";
-	now Char-G of Elijah is "0";
-	now Char-H of Elijah is "0";
-	now Char-I of Elijah is "0";
-	now Char-J of Elijah is "0";
-	now Char-K of Elijah is "0";
-	now Char-L of Elijah is "0";
-	now Char-M of Elijah is "0";
-	increase score by 15;
-	Now Angel vs Demons is resolved;
+	if hp of Gabriel is 0:
+		say "     While exploring this seedy district of town, you hear a terrible racket and disconcerting shrieks from inside an adult-only movie theatre you're just passing. Then suddenly a section of its front wall explodes outward as a creature gets thrown right through it, sending bricks flying all over the street. You catch a glimpse of its horned, demonic form sailing past, then everything goes black as a brick hits you in the head.";
+		say "     [line break]";
+		say "     When you open your eyes again a short while later, the street around you is a battlefield of shattered and burning buildings. Sitting up makes you go woozy again for a moment, then thankfully your vision clears. Center of the destruction surrounding you is a humanoid figure with large white wings, garbed in shimmering plate-mail and wielding a flaming sword. It is surrounded by a golden halo of energy, making it difficult to discern any more. Surrounding the apparition there is a mid-sized flock of demons, incubi, succubi and hellhounds. Several of them are hurt and you see ...pieces... of others on the ground, but they still hold a circle around the angel in their midst, waiting for the time to strike while dodging strikes of his sword.";
+		say "     Your revival hasn't gone unnoticed and brings some movement into the standoff, as a hellhound turns towards you. It decides you might serve as a good mid-combat snack and rushes forward. You feel its foul breath as it opens its snout to tear out your throat - then, there is a flash of fire in the air and the creature collapses lifelessly on top of you, a flaming sword sticking in its side. The angel must have thrown it to save you.";
+		say "     That was just the moment the other demons have waited for. They pile on top of the now disarmed angel, clawing and biting, and wrestle him to the ground. You're still busy wriggling out from under the dead hound when they carry him off towards a ruined chapel at the far end of the street.";
+		say "     [line break]";
+		say "     When you finally manage to get free a bit later, you're alone between the burning buildings. The flaming sword still sizzling in the flesh of the dead hellhound sadly isn't something you could use - it's all flame, even the grip. Looking down the street where the demons went, you see the [bold type]Burned-Out Chapel[roman type] they went into. You could follow them, if you think you're strong enough. But don't wait too long... who knows what they'll do to him.";
+		wait for any key;
+		now Burned-Out Chapel is known;
+		move Elijah to Burned-Out Chapel;
+		now lastElijahfucked is turns; [to clarify: only using this for timing purposes here - he's still a virgin, they only hurt him and cum on him before the player gets to the chapel]
+		now NPCintCounter is turns;
+		now npcEint is "0000000000000N";
+		now Char-A of Elijah is "0";
+		now Char-B of Elijah is "0";
+		now Char-C of Elijah is "0";
+		now Char-D of Elijah is "0";
+		now Char-E of Elijah is "0";
+		now Char-F of Elijah is "0";
+		now Char-G of Elijah is "0";
+		now Char-H of Elijah is "0";
+		now Char-I of Elijah is "0";
+		now Char-J of Elijah is "0";
+		now Char-K of Elijah is "0";
+		now Char-L of Elijah is "0";
+		now Char-M of Elijah is "0";
+		increase score by 15;
+		Now Angel vs Demons is resolved;
+	otherwise if hp of Gabriel is 1:
+		say "     Once again, as you make your way into this seedy part of town, you find a battlefield in the streets. Steaming patches of hellhound drool and blood mar the ground, followed by pieces of multiple of those dangerous creatures. An unconscious demon brute leans against a nearby building's wall, his left arm nothing but a whirl of purple smoke as the nearby cut-off extremity slowly dissolves and wafts back to him. The sound of an impact and shattering glass draws your attention to the next street corner, and as you make your way over there to see what's going on, you hear an imperious voice call out, 'Where is he? Tell me what you have done with him, hellspawn!'";
+		say "     Peeking around the corner, your yes fall upon the imposing figure of an angel, standing tall in white robes and gleaming armor. In one hand, he holds a flaming sword, while the other just reaches out to pick up an incubus by the neck, peeling him out of the dent he made in a car after being thrown against it. 'Elijah! Where is he? Speak!', the divine warrior shouts, shaking the sex demon impatiently. The incubus gives a weak groan, then focuses his red eyes on his captor and spits at him - which the angel easily avoids. Then the demon gives a somewhat choked chuckle and says, 'We don't have him, you overgrown chicken! One of your precious humans stole him from us... not that most of them look human anymore these days. And the kicker is - somehow the do-gooder got turned afterwards. Your boy has been making rounds all over the city, fucking everyone and everything he could get his hands on. Lots of bitches will be popping out nephilim soon...'";
+		say "     [WaitLineBreak]";
+		say "     A furious expression on his face, the angel shouts, 'No! This cannot be - Elijah could never fall that far! You must be lying - but I sense at least some truth in your words. Tell me about this mortal - I will search him out and question him myself!' The incubus gives a disconcertingly good description of yourself, with those features and specifics that will mostly stay the same no matter what form you are in...";
+		say "     Pulling your head back before this avenging angel is done with his captive and might spot anyone watching, you quietly walk away, then start running after you're out of range for them to hear your footfalls. You'll have to keep an eye out for that guy - as he surely won't be gentle when he learns about what you did.";
+		now hp of Gabriel is 2;
+		repeat with y running from 1 to number of filled rows in Table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Seraphim":
+				now monster is y;
+				now area entry is "Red";
+				break;			
+		Now Angel vs Demons is resolved;
+		
 
 Burned-Out Chapel is a room. It is fasttravel.
 The description of Burned-Out Chapel is "[chapelplacedesc]".
@@ -263,6 +279,8 @@ instead of conversing the Elijah:
 					now hp of Elijah is 99;
 					now the icon of Elijah is Figure of Elijah_evil_icon;
 					now lastElijahfucked is turns + 8; [guarantee he's ready for action]
+					now hp of Gabriel is 1;
+					now Angel vs Demons is not resolved;
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
 		otherwise:

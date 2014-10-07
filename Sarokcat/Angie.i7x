@@ -462,7 +462,7 @@ to say AngieSexMenu:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked by Angie";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Let the sexy pantheress pound you with her cock";
 		[]		
 	sort the table of fucking options in sortorder order;
@@ -789,7 +789,9 @@ to say AngieSex4:  [Angie rides the player's cock]
 	say "     Feeling the muscular feline's body on top of you, having her pant hotly against your face and lightly nip your lip after kissing you... feels wonderful. It still amazes you how far she has come from a shy woman hiding from roaming beasts when you found her, to become this sexy creature straddling your hips. Caring and friendly, but also wild and insatiable, plus just a bit dominating. More than willing to let her have the lead, you simply enjoy the  coupling with her, and before much longer, you find yourself screaming in orgasm, bucking up your hips as you blast spurt after spurt of your seed into the large black pussy's pussy. Just seconds later, Angie lets loose her own beast-like roar above you, her cock shooting its changed load to splash down all over your chest and face.";
 	say "     [WaitLineBreak]";
 	say "     You both lie there for a minute, panting to catch your breath while Angie cools down from her mating frenzy. Eventually, a measure of calm and reason returns into her eyes and after giving you a kiss, she pulls off your softening shaft and staggers to lean on the counter. You just keep where you are and stare up at her from your position on the floor, eyes taking in those shapely breasts and everything else of your sexy beast of a friend. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
-	say "     'That was unbelievably amazing,' she finally says after taking a few more deep breaths, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait.' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";		
+	say "     'That was unbelievably amazing,' she finally says after taking a few more deep breaths, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait.' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
+	Infect "Pantherherm";
+
 	
 to say AngieSex5:  [Angie fucks the player]
 	if cocks of player > 0 and cunts of player > 0:
@@ -802,7 +804,8 @@ to say AngieSex5:  [Angie fucks the player]
 		say "[Angie7PussyFuck]";
 	otherwise:
 		say "[Angie7AssFuck]";
-		
+	Infect "Pantherherm";
+				
 to say Angie7PussyFuck:
 	say "     Angie gives an aroused mrowl and starts making out with you while her hands roam over your body, pulling off your clothes in eager haste. Soon, you're both completely naked and Angie steps back, letting her eyes roam over your shapely form. 'Mmm, yes! It looks like you're definitely ready,' she says as she runs one of her soft paws teasingly over your increasingly damp pussy, paw-pads rubbing across your clit and making you gasp with renewed arousal as the panther herm chuckles at your eager response. 'You're like a needy female in heat and I'm the one who gets to mount you,' Angie says happily, a large feline grin spreading across her muzzle, 'Every time I sink my shaft into you, it feels so good... so right...'";
 	say "     Angie runs her hands over your body, focusing her attentions on your breasts and your already a bit moist sex, before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body. And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, forgetting everything but the exaltation of being together with her right now.";
