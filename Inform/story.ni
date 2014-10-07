@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 150000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 160000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 25000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
@@ -3522,6 +3522,7 @@ To say blockquote-style:
 To say input-style:
 	(- glk_set_style(style_Input); -)
 
+[
 Table of Common Color Values [(continued)]
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF] 
@@ -3536,8 +3537,10 @@ g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
 [names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
+]
 
 Table of User Styles (continued)
+[
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
 special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
 special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
@@ -3553,6 +3556,12 @@ bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
 [blockquote, input, and fixed letter appear to be unused.  they could be redefined as desired for more colors/formating.]
 [alert, header, and note are used for a few game functions.  if you wanted to change those you could]
 [italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
+]
+style name (a glulx text style)	background color (a text)	color (a text)	first line indentation (a number)	fixed width (a truth state)	font weight (a font weight)	indentation (a number)	italic (a truth state)	justification (a text justification)	relative size (a number)	reversed (a truth state)
+special-style-1	--	"#00CC00"	--	--	bold-weight	--	--	--	--	--
+special-style-2	--	"#CC0000"	--	--	bold-weight	--	--	--	--	--
+
+
 
 Part 3 - Item Code
 
