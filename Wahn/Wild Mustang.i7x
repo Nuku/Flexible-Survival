@@ -242,7 +242,7 @@ to say Luciferdesc:
 		say "     Since your little sexual adventure with the magnificent stallion, he at least accepts your presence, but nevertheless still interposes himself whenever you take a step towards his harem.";
 	
 instead of fucking Lucifer:
-	if (lastfuck of Erica - turns < 6):
+	if (lastfuck of Lucifer - turns < 6):
 		say "     As you approach Lucifer with lust on your mind, you find that the large horse doesn't seem all that interested to your advances right now. Maybe you should give him some time to rest before trying to get it on with the mustang again...";
 	otherwise:
 		say "[LuciferSexMenu]";
