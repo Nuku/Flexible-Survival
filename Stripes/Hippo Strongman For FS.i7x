@@ -1,4 +1,5 @@
 Version 1 of Hippo Strongman For FS by Stripes begins here.
+[ Version 1.1 - Added vaginal/anal player loss scenes for Hippo players. ]
 
 "Adds a Hippo Strongman creature to Flexible Survivals Wandering Monsters table with impregchance"
 
@@ -10,17 +11,24 @@ when play begins:
 	add { "Hippo" } to infections of furry;
 
 to say losetohippo:
-	say "     The victorious strongman cheers his own success and slams you to your knees.  Holding you in place with one meaty hand, the other brushes aside his loincloth to release his throbbing cock.  At about 16 inches, his grey cock is quite huge, as are the balls beneath it.  The hippo's cock is quite thick as well and bulges with throbbing veins.  As his precum dribbles out from that impressive cock, you find yourself longing for a taste and lick the dribbling tip.  His pre is quite invigorating and you start licking and sucking at his cock for more.  He pushes you to take more and more of his cock into your mouth until finally he's managed to stuff the full, monstrous thing into you.  With it stuffed down your throat, you have trouble breathing, but that doesn't seem to matter now, only sucking at that muscled male's meat does.  When he finally cums, you are quite light-headed, but enjoy the feel of that ample load pumping into your belly so much that you cum as well.  Still coming, he pulls his cock free and you gasp for breath even as he paints your face with the other half of his big load.";
-	say "     Feeling quite satisfied from the ample load in your belly, you wander off without direction before finally ending back where you started.  You feel a little better from the effects of his powerful, steroid-filled cum, but also hornier as well.";
-	increase hp of player by ( Stamina of player / 2 ) + a random number between 2 and 4;
-	if hp of player > maxhp of player, now hp of player is maxhp of player;
-	increase libido of player by a random number between 6 and 12;
-	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
-	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 4;
-	if libido of player > 100, now libido of player is 100;
-	decrease humanity of player by a random number from 1 to 3;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	if bodyname of player is "Hippo" and ( ( cunts of player > 0 and a random chance of 3 in 5 succeeds ) or ( cunts of player is 0 and a random chance of anallevel in 5 succeeds ) ):
+		say "     The victorious strongman knocks you to the ground with a cheer.  Raising his arms in the air in triumph, he brags about how he is the strongest of all.  He then brushes aside his loincloth to release his throbbing cock.  With his 16 inch member on display, you can't help but become aroused, your body starting to respond to the victor's urges.  When he moves you onto all fours, you grind back against his thick, bulging member, moaning for him to prove his might again.  Running his meaty hands along your muscled back and grabbing your strong shoulders, he [if cunts of player > 0]thrusts into your juicy cunt[otherwise]ploughs into your tight asshole[end if] with a raucous laugh.";
+		if cunts of player > 0:
+			say "     He pumps his hips steadily, sliding that grey cock of his into your juicy hole while his huge balls slap against you.  The feel of the strongman's pole ringing your bell has you moaning beneath him with ever-expanding desire.  With thoughts of the big, strong children such a mighty stud could give you, you push back into his thrusts and work your inner muscles around his mighty rod.  Eventually he gives you what you're craving, pumping his hot load into your needy cunt and flooding your womb with his virile, steroid-rich semen.  After pulling out, he has you lick him clean before sending you on your way with a warm feeling filling your tummy.[impregchance]";
+		otherwise:
+			say "     He pumps his hips vigorously, stuffing that grey cock of his into your tihgt hole while his huge balls slap against you.  The feel of the strongman's pole driving into you has you moaning beneath him with ever-expanding desire.  With growing lust and admiration for the mighty stud who's bested you, you push back into his thrusts and squeeze your anal muscles around his mighty rod.  Eventually he gives you what you're craving, that final proof of his superior might, as he climaxes and pumps his hot load into your ass.  His virile, steroid-rich semen floods your bowels.  After pulling out, he has you lick him clean before sending you on your way with a warm feeling filling your belly.[mimpregchance]";
+	otherwise:
+		say "     The victorious strongman cheers his own success and slams you to your knees.  Holding you in place with one meaty hand, the other brushes aside his loincloth to release his throbbing cock.  At about 16 inches, his grey cock is quite huge, as are the balls beneath it.  The hippo's cock is quite thick as well and bulges with throbbing veins.  As his precum dribbles out from that impressive cock, you find yourself longing for a taste and lick the dribbling tip.  His pre is quite invigorating and you start licking and sucking at his cock for more.  He pushes you to take more and more of his cock into your mouth until finally he's managed to stuff the full, monstrous thing into you.  With it stuffed down your throat, you have trouble breathing, but that doesn't seem to matter now, only sucking at that muscled male's meat does.  When he finally cums, you are quite light-headed, but enjoy the feel of that ample load pumping into your belly so much that you cum as well.  Still coming, he pulls his cock free and you gasp for breath even as he paints your face with the other half of his big load.";
+		say "     Feeling quite satisfied from the ample load in your belly, you wander off without direction before finally ending back where you started.  You feel a little better from the effects of his powerful, steroid-filled cum, but also hornier as well.";
+		increase hp of player by ( Stamina of player / 2 ) + a random number between 2 and 4;
+		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		increase libido of player by a random number between 6 and 12;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 4;
+		if libido of player > 100, now libido of player is 100;
+		decrease humanity of player by a random number from 1 to 3;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 to say beatthehippo:
 	say "     Your last blow sends the big hippo staggering back.  'Impossible!  None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them.  'You've not seen the last of me!' he yells.  Wait... didn't he have a different name earlier?";
