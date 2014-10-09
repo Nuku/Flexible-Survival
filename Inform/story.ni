@@ -6849,6 +6849,7 @@ Include Pretty Kitty by Xenophiliac.
 Include Santa Claws by Wahn.
 Include Erica by Wahn.
 Include Egyptian Wing by Xenophiliac.
+Include Wild Mustang by Wahn.
 
 [Pets]
 Include Gryphon Companion by Sarokcat.

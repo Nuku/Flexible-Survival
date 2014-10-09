@@ -220,14 +220,13 @@ Up of McDermott Barn is Barn Hayloft.
 The description of Barn Hayloft is "     The hayloft is pretty big and... filled with hay. Lots and lots of hay, piled up nearly to the ceiling. From time to time, something rustles somewhere inside. Who knows what's hiding here...".
 
 Mustang Paddock is a room.
-The description of Mustang Paddock is "     This large fenced area is the paddock of the wild mustang the farm got just before the nanite catastrophe. He's overpowered multiple persons trying to break him in for riding since then, transforming them into new mares for himself, whom you can see further back in the paddock. In the front bit, where you are, there is no one except the mustang himself, who quickly trots over to you.".
+The description of Mustang Paddock is "     This large fenced area is the paddock of the wild mustang the farm got just before the nanite catastrophe. Now it is fully his domain, with any who trespass being in danger of becoming one of his new mares, several of whom you can see further back in the paddock. In the front bit, where you are, there is no one except the mustang himself, who is already galloping towards you.".
 
 The Mustang Paddock Gate is a door.
-The description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Seems like someone really doesn't want those horses to get out.".
+The description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Its key hangs from a short chain besides it, but still... seems like someone really doesn't want those horses to get out.".
 understand "gate" as the Mustang Paddock Gate.
 south of Mustang Paddock Gate is Central Farm Square.
 north of Mustang Paddock Gate is Mustang Paddock.
-Mustang Paddock Gate is lockable and locked.
 
 Section 3 - NPCs
 
@@ -1368,6 +1367,14 @@ instead of fucking the Shawn:
 	otherwise: [at night, he's got some time to chat]
 		say "     With Shawn almost constantly busy chatting with his boyfriend Duke, you can't get a word in edgewise.";
 		say "     <Wahn says: Sex scenes can be added somewhen later...>";
+		
+		
+[instead of going north from Central Farm Square while (hp of Lucifer is 0):
+	move player to Mustang Paddock;
+	wait for any key;
+	challenge "Wild Mustang";		
+	][Does not compile]
+	
 [
 Section 4 - Endings
 
