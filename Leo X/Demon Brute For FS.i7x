@@ -415,8 +415,8 @@ understand "Brutus" as demon brute.
 The description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
 The weapon damage of demon brute is 8.
-The level of demon brute is 4.
-The Dexterity of demon brute is 8.
+The level of demon brute is 5.
+The Dexterity of demon brute is 9.
 The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[otherwise]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, ok?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[otherwise]growling[end if] voice, the demon answers 'Yes... master.'".
 The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
 the fuckscene of demon brute is "[sexwithdemonbrutepet]".
@@ -1131,26 +1131,26 @@ When Play begins:
 	now ass change entry is "you feel it becoming tighter, leaner, and more fit.  This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying.  The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface.  At first, you think it is some sort of strange disease, but, then you realize that this entire thing is some sort of disease";
 	now str entry is 20;
-	now dex entry is 8;
+	now dex entry is 9;
 	now sta entry is 14;					
-	now per entry is 5;
-	now int entry is 3;
-	now cha entry is 0;
-	now sex entry is "Male"; 	
-	now hp entry is 50;			
-	now lev entry is 4;			 
-	now wdam entry is 9;			
+	now per entry is 7;
+	now int entry is 5;
+	now cha entry is 3;
+	now sex entry is "Male";
+	now hp entry is 50;
+	now lev entry is 5;
+	now wdam entry is 10;
 	now area entry is "Mall";
-	now cocks entry is 1;			
-	now cock length entry is 18;		
-	now cock width entry is 8;    
-	now breasts entry is 0;     
-	now breast size entry is 0;   
-	now male breast size entry is 0;  
-	now cunts entry is 0;     
-	now cunt length entry is 0;   
-	now cunt width entry is 0;    
-	now libido entry is 45;     
+	now cocks entry is 1;
+	now cock length entry is 18;
+	now cock width entry is 8;
+	now breasts entry is 0;
+	now breast size entry is 0;
+	now male breast size entry is 0;
+	now cunts entry is 0;
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45;
 	now loot entry is "demon seed";       [ Loot monster drops, ]
 	now lootchance entry is 50;           [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
@@ -1162,7 +1162,7 @@ When Play begins:
 	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "demonbrute";  [ Row used to designate any special combat features, "default" for standard combat. ]
-			
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "demon seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, and is still warm."	1	demon seed
@@ -1180,7 +1180,7 @@ Section 4 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"demonbrute"	retaliation rule	brfoinc rule	--	bruteforce rule	10	--	--	--	--	--
+"demonbrute"	retaliation rule	brfoinc rule	--	bruteforce rule	16	--	--	--	--	--
 
 this is the brfoinc rule:   [increasing likelihood of bruteforce attack]
 	choose row monstercom from the table of critter combat;
@@ -1189,14 +1189,14 @@ this is the brfoinc rule:   [increasing likelihood of bruteforce attack]
 
 this is the bruteforce rule:
 	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 0;
+	now alt1chance entry is 5;
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly.  It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random].  It then tosses you aside roughly with another growl, sending you tumbling.  You suffer [special-style-2][dam][roman type] damage!";
+	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly.  It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random].  It then [if scalevalue of player < 4]tosses you aside[otherwise]shoulders you back[end if] roughly with another growl, sending you tumbling.  You suffer [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";   [unable to use shield while pinned]
 	if absorb is greater than dam:
@@ -1216,9 +1216,9 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "demon brute":
 		if humanity of player is less than 10:
-			say "You find yourself overcome with lust, your balls simply aching, ready to burst. You need to find some relief, and soon! You go on a proper rampage, pushing over small trees and walls, and smashing in windows, and generally wreaking havoc. You eventually spot what you want, a woman in her prime. She is a [one of]human-feline mix, with large cat-ears, a tail, and beautiful black fur[or]husky-human mix, with soft white and grey fur and a puffy white-grey tail[at random]. You seize her, and, without much resistance on her part, are able to gain control. You tear her clothes away, revealing her naked, furry body. She seems too overcome with lust to worry about the size of your cock. But, then again, you aren't the only one with a large tool, and you aren't the first to rut with this girl. She wraps her arms and legs around your large body, her wet sex exposed and moistening, ready for your massive meat. You thrust into her without hesitating, and before long the both of you are moaning and grunting two lust-filled monsters mating like the animals they have become. During the ordeal, the girl climaxes several times, each time becoming more intense than the last. You can feel that you are approaching your climax as well, and your grunts become more frequent. Then, as she is hit by her most powerful orgasm yet, her tight sex squeezes your big meat, enough to push you ever the edge. You begin to come, shooting your seed up inside your new bitch. She pants and moans as your cum fills her womb, causing it to swell to a great size. Massive quantities of cum spill out onto the ground beneath your feet, and a constant stream of it is leaking out around your cock. You realize that this ordeal was too much for the girl, and that she has passed out. Since you really enjoyed your time with this girl, you decide to hold onto her as you disappear back to your den, that safe-room you started your journey in. You set up the cot, and then lay her down on it, her pussy still leaking fluid. Months of wild mating later, and she is heavily pregnant with your brood, which gives you the utmost satisfaction.";
+			say "     You find yourself overcome with lust, your balls simply aching, ready to burst. You need to find some relief, and soon!  You go on a proper rampage, pushing over small trees and walls, and smashing in windows, and generally wreaking havoc.  You eventually spot what you want, a woman in her prime.  She is a [one of]human-feline mix, with large cat-ears, a tail, and beautiful black fur[or]husky-human mix, with soft white and grey fur and a puffy white-grey tail[at random].  You seize her, and, without much resistance on her part, are able to gain control.  You tear her clothes away, revealing her naked, furry body.  She seems too overcome with lust to worry about the size of your cock.  But, then again, you aren't the only one with a large tool, and you aren't the first to rut with this girl.  She wraps her arms and legs around your large body, her wet sex exposed and moistening, ready for your massive meat.  You thrust into her without hesitating, and before long the both of you are moaning and grunting two lust-filled monsters mating like the animals they have become.  During the ordeal, the girl climaxes several times, each time becoming more intense than the last.  You can feel that you are approaching your climax as well, and your grunts become more frequent.  Then, as she is hit by her most powerful orgasm yet, her tight sex squeezes your big meat, enough to push you ever the edge.  You begin to come, shooting your seed up inside your new bitch.  She pants and moans as your cum fills her womb, causing it to swell to a great size.  Massive quantities of cum spill out onto the ground beneath your feet, and a constant stream of it is leaking out around your cock.  You realize that this ordeal was too much for the girl, and that she has passed out.  Since you really enjoyed your time with this girl, you decide to hold onto her as you disappear back to your den, that safe-room you started your journey in.  You set up the cot, and then lay her down on it, her pussy still leaking fluid.  Months of wild mating later, and she is heavily pregnant with your brood, which gives you the utmost satisfaction.";
 		otherwise:
-			say "You are eventually found by a rather strange man, leading a group of explorers through the city. He walks up to you, and holds out his hand. He introduces himself as a adult film producer with a special request. He says that you would make the perfect monster to fill the part of the evil demon-lord in a live-action version of a hentai anime series he has decided to produce. He offers you asylum, a mountain estate away from the peering eyes of society, and a large sum of money. How could you possibly turn that kind of an offer down? The series becomes [one of]a great success, with millions flowing in from frenzied fans. You become a hero to many hentai fans, and you can use all the fangirls you want..[or]a controversial work which ends up getting banned in several countries. The money soon dries up, and you are forced to move out, eventually joining a circus.[at random]";
+			say "     You are eventually found by a rather strange man, leading a group of explorers through the city.  He walks up to you, and holds out his hand.  He introduces himself as a adult film producer with a special request. He says that you would make the perfect monster to fill the part of the evil demon-lord in a live-action version of a hentai anime series he has decided to produce.  He offers you asylum, a mountain estate away from the peering eyes of society, and a large sum of money.  How could you possibly turn that kind of an offer down?  The series becomes [one of]a great success, with millions flowing in from frenzied fans.  You become a hero to many hentai fans, and you can use all the fangirls you want..[or]a controversial work which ends up getting banned in several countries.  The money soon dries up, and you are forced to move out, eventually joining a circus.[at random]";
 [	if demon brute is tamed:
 		if DemonBruteStatus is 0:            
 			say "A";
