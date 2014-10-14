@@ -5123,12 +5123,13 @@ This is the turnpass rule:
 			otherwise:				[MPreg]
 				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with [if snakehijack is true][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][otherwise]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				increase breast size of player by 1;
-				follow breast descr rule;
-				if cunts of player > 0:
-					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
-				otherwise:
-					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+				if "Flat Chested" is not listed in feats of player:
+					increase breast size of player by 1;
+					follow breast descr rule;
+					if cunts of player > 0:
+						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+					otherwise:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
 			if cunts of player > 0:
 				say "Your [bodydesc of player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[otherwise]your oncoming pregnancy[end if].  It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
@@ -5136,12 +5137,13 @@ This is the turnpass rule:
 				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
 			if a random chance of 1 in 20 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
-				increase breast size of player by 1;
-				follow breast descr rule;
-				if cunts of player > 0:
-					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
-				otherwise:
-					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
+				if "Flat Chested" is not listed in feats of player:
+					increase breast size of player by 1;
+					follow breast descr rule;
+					if cunts of player > 0:
+						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
+					otherwise:
+						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
 		otherwise if gestation of child is less than 30:
 			if a random chance of 1 in 2 succeeds:
 				if cunts of player > 0:
