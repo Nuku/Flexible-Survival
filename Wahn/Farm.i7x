@@ -1369,11 +1369,10 @@ instead of fucking the Shawn:
 		say "     <Wahn says: Sex scenes can be added somewhen later...>";
 		
 		
-[instead of going north from Central Farm Square while (hp of Lucifer is 0):
+instead of going north from Central Farm Square while (hp of Lucifer is 0):
 	move player to Mustang Paddock;
 	wait for any key;
 	challenge "Wild Mustang";		
-	][Does not compile]
 	
 [
 Section 4 - Endings
