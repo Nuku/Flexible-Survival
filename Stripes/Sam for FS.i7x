@@ -48,12 +48,12 @@ to say minilabscent:
 	if hp of Sam is not 100:
 		say "The basement housing the research station smells strongly of dust and mildew, as well as dying traces of older smells from when the local teens would come here to drink.";
 	otherwise:
-		say "The basement has a wet, musky scent hanging in the air.  There are scents you recognize faintly as being from creature's you've encountered before, but the whole of that is largely buried beneath smells of sex and arousal.";
+		say "The basement has a wet, musky scent hanging in the air.  There are scents you recognize faintly as being from creatures you've encountered before, but the whole of that is largely buried beneath smells of sex and arousal.";
 
 
 to say minilabdesc:
 	if hp of Sam <= 4:
-		say "     Tucked into the corner of basement in the long-abandoned home, Sam has set up his mini-lab.  Here the researcher stores and analyzes the nanite and samples he's gathered out in the city.  His equipment's been set up on a small table with a dented folding chair for him to sit on.  There are numerous racks of labelled test tubes vials on the table and more on a small bookshelf behind it.  The collection of vials seems quite impressive, with several marked with creatures you've not even seen yet.";
+		say "     Tucked into the corner of basement in the long-abandoned home, Sam has set up his mini-lab.  Here the researcher stores and analyzes the nanites and samples he's gathered out in the city.  His equipment's been set up on a small table with a dented folding chair for him to sit on.  There are numerous racks of labelled test tubes vials on the table and more on a small bookshelf behind it.  The collection of vials seems quite impressive, with several marked with creatures you've not even seen yet.";
 		say "     The basement itself isn't much to look at, having several broken bottles and lots of graffiti from having been used as a hang-out for the local kids.  It looks like Sam's made some effort to clean it up, but mainly in the form of sweeping the trash into a few corners";
 		if "cot" is listed in invent of Mini-Lab:
 			say ".  Near the work area, there are two sleeping bags and some supplies, the second probably belonging to his now absent partner.";
@@ -93,10 +93,10 @@ to say samdesc:
 	if hp of Sam >= 1 and hp of Sam <= 4:
 		say "     Sam is an average looking human male.  He's roughly six feet tall and with a strong build.  Having seen him undressed when you first encountered him, you know he's physically fit, neither thin nor chiselled.  The constant exercise of travelling around the city to fight and fuck monsters has toughened him up.  He's got brown hair and eyes.  There is a bit of stubble on his face, probably seeing little need to shave regularly out here.  At 21 years old and in university, he's been sent here as part of a research project to gather samples of the nanites.  He's [one of]hard at work at his lab station, running analyses on his recent acquisitions[or]taking a short break and is stretched out on his sleeping bag[or]grabbing a quick snack[or]checking his gear before having to go out again[purely at random].";
 	otherwise if hp of Sam >= 10 and hp of Sam <= 29:
-		say "     After his confrontation and the ensuing accident, Sam has become a male dragontaur creature thanks to you quick assistance.  He's gained about a foot and a half in height from the transformation, putting him something over seven feet tall.  His draconic head has a long, pointed muzzle with a slight curve at the end.  His blue scales darken towards the back of his head as they approach the base of ivory horns which jut from the back of his head.  There are three smaller horns to each side and a larger pair at the top.  His upper body is generally human in shape, but covered in azure scales.  He's become quite toned through the change, his chest showing firm pecs and hard abs.  His hands are a cross between human hands and his more draconic clawed feet.";
+		say "     After his confrontation and the ensuing accident, Sam has become a male dragontaur creature thanks to your quick assistance.  He's gained about a foot and a half in height from the transformation, putting him something over seven feet tall.  His draconic head has a long, pointed muzzle with a slight curve at the end.  His blue scales darken towards the back of his head as they approach the base of ivory horns which jut from the back of his head.  There are three smaller horns to each side and a larger pair at the top.  His upper body is generally human in shape, but covered in azure scales.  He's become quite toned through the change, his chest showing firm pecs and hard abs.  His hands are a cross between human hands and his more draconic clawed feet.";
 		say "     His lower body is that of a compact, but powerful beast, with strong limbs and a stocky frame to support his weight.  His azure scales give way to harder, steel blue plates along his underbelly.  Atop the back of his tauric body are a pair of draconic wings he keeps folded alongside his sides.  He has a long lizard tail ending in a spaded tip.  Beneath his lower body hangs his plump sheath and large balls.";
 	otherwise if hp of Sam >= 30 and hp of Sam <= 49:
-		say "     After his confrontation and the ensuing accident, Sam has become a female vixentaur creature thanks to you quick assistance.  She's gained about a foot in height from the transformation, putting her something close to seven feet tall.  Her vulpine muzzle is alluringly beautiful, with long lashes, pretty coral eyes and long, flowing cerise hair.  Her upper body is generally human in shape, but covered in pink fur.  She has become quite curvaceous, with a lovely bosom, slender waist and round hips blending into her tauric lower half.  Her hands are largely human in shape but with velvety pawpads and small, painted claws.";
+		say "     After his confrontation and the ensuing accident, Sam has become a female vixentaur creature thanks to your quick assistance.  She's gained about a foot in height from the transformation, putting her something close to seven feet tall.  Her vulpine muzzle is alluringly beautiful, with long lashes, pretty coral eyes and long, flowing cerise hair.  Her upper body is generally human in shape, but covered in pink fur.  She has become quite curvaceous, with a lovely bosom, slender waist and round hips blending into her tauric lower half.  Her hands are largely human in shape but with velvety pawpads and small, painted claws.";
 		say "     Her lower body is that of a slender fox, with shapely legs and cute paws.  Her pink fur becomes a very light shade at her chest and underbelly, as does the tip of her tail.  What would normally be the black of her socks is a deep pink.  She has a long, vulpine tail covered in fluffy fur.  Beneath that tail is her new pussy, wet and juicy.  Along her underbelly, she has three pairs of smaller breasts with perky, rosy nipples.";
 	otherwise if hp of Sam >= 50 and hp of Sam <= 69:
 		say "     After the confrontation and being given both vials, Sam has become a hermaphroditic dracovixentaur creature.  She's gained a little over a foot of height from her original human form, putting her at roughly seven feet tall.  Her face and muzzle is a mix of vulpine and draconic features, making for an alluring combination.  She has long lashes, pretty orchid coloured eyes and long, lilac hair.  She has a pair of vulpine ears and some ivory horns which poke out from her flowing hair.  Her upper body is generally human in shape, but covered in lilac fur at her shoulders and down the front of it.  Her arms, back and sides are covered in silky smooth scales that are a richer, lavender colour.  She has become quite curvaceous, with a lovely bosom, slender waist and round hips blending into her tauric lower half.  Her hands are largely human in shape but with velvety pawpads and small, painted claws, almost as if she were wearing furry gloves.";
@@ -111,7 +111,7 @@ Instead of conversing the Sam:
 		if Zoo Entrance is unknown:
 			say "     'I haven't made a trip out there yet myself, but he did tell me the route he found to get there.  It should be fairly safe and let you avoid the really unsafe or blocked sections.'";
 			now Zoo Entrance is known;
-		say "     'I've got some extra supplies.  I can give you some if you'll gather two samples of both cheetah milk and rhino cum.  I'd really appreciate it.  Here, you can even take this bottle of water as a down payment.'  Deciding it might be a good way to get some extra supplies, you agree to give it a shot.  As well, helping Sam finish up might be your ticket out of this whole mess if you can tag along with him.";
+		say "     'I've got some extra supplies.  I can give you some if you'll gather two samples of both cheetah milk and rhino cum.  I'd really appreciate it.  Here, you can even take this bottle of water as a down payment.'  Deciding it might be a good way to get some extra supplies, you agree to give it a shot.  In addition, helping Sam finish up might be your ticket out of this whole mess if you can tag along with him.";
 		increase carried of water bottle by 1;
 		now hp of Sam is 2;
 	otherwise if hp of Sam is 2:
@@ -161,7 +161,7 @@ Instead of conversing the Sam:
 				say "     'Keep an eye out for some eagle feathers.  I'll need at least two for the upcoming experiment.  There should be plenty of eagles flying around the Dry Plains outside of the city.";
 			otherwise:
 				say "     [one of]'I want to thank you for giving me a hand with this.  I don't think I could finish on my own.'[or]'I've got some other tests to run, but then I've got to go right back out and find a few more critters to fill out my quota.'[or]'I wouldn't have considered messing around with a guy before this, but I must say some of those males out there can be a lot of fun.'[or]'Some of those mutants out there are actually pretty sexy.  Once you learn to overlook stuff like fur or scales, you can see that there's some really hot ladies (and dudes) out there.'[or]'There's such a wild mix of creatures out there.  It's getting kind of fun finding them and just having some wild sex.  You should try letting a few of them win more often.'[or]'This resistance treatment's been a big help since I don't have to fight off all the creatures.  Though I do have to shoo away those I've already gotten samples from or I don't have the time and energy left to have fun when I finally track down a new one I need.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 3 succeeds]herm[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] next time.  Hopefully there's one around that I haven't already got.'[or]'It's getting harder to track down creatures I haven't already gotten enough samples from,' he says, motioning to wide array of small vials on the racks.[at random]";
-	otherwise if hp of Sam is 10:		[Dragontaur form]
+	otherwise if hp of Sam is 10: [Dragontaur form]
 		say "     'Thanks again for helping me out back there.  I don't want to think about what I would have ended up if you were there to help,' he shudders a little.  'But it's all good now.  I've got this hunky new body and I'm itching to try it out.  I can't wait to try playing with all those fun creatures out there again now that I'm a big, strong dragon.'  Noticing the look you're giving him, he's quick to hold up the device you saw him with that first day.  'Got to get to work on gathering all my samples again,' he says with a grin.  'Not that I can't spare some time to show you how nice it is to have a big, strong dragon atop you,' he rumbles.";
 		now hp of Sam is 11;
 	otherwise if hp of Sam is 11:
@@ -181,7 +181,7 @@ Instead of conversing the Sam:
 			challenge "Dragontaur";
 			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Your fight with the powerful male over, you pry open his draconic muzzle and pour the vial down his throat, repeating to him that it's for his own good.  He coughs and sputters a little, but swallows it down.  He moans as a flash of pink washes over his eyes, soon his dark scales are turning from blue to purple as the hardened plates at his chest begin to fade.  You stroke his head soothingly as his muzzle narrows and becomes more feminine with softly lines and smaller horns.  Lilac hair grows from his head, flowing back from behind the horns and down his back as it glows to a long and luxurious length.";
+				say "     Your fight with the powerful male over, you pry open his draconic muzzle and pour the vial down his throat, repeating to him that it's for his own good.  He coughs and sputters a little, but swallows it down.  He moans as a flash of pink washes over his eyes, soon his dark scales are turning from blue to purple as the hardened plates at his chest begin to fade.  You stroke his head soothingly as his muzzle narrows and becomes more feminine with soft lines and smaller horns.  Lilac hair grows from his head, flowing back from behind the horns and down his back as it glows to a long and luxurious length.";
 				say "     Sam's armoured body continues to change.  What was once hard plates at his chest and underbelly become plush with lilac fur and small breasts begin to swell up with hard lavender nipples, the same shade that the changing dragontaur's scales have become.  As Sam's gender begins to change, gaining a damp pussy behind her furred sheath and ballsac.  She moans and moves her hands to the bosom at her chest and rubs them tentatively at first, but with growing enthusiasm.";
 				attempttowait;
 				say "     'Ohh... mmm... I can see why you wanted me to try this,' she moans with growing excitement.  'I'm sorry I made such a fuss about it.  This is great!' she adds before pulling you in for a kiss.  Her tongue dives into your mouth to wrestle with yours.  You can feel that it's broader and shorter now, but still forked at the tip.";
@@ -198,22 +198,22 @@ Instead of conversing the Sam:
 				say "     'That was really nice.  I can't wait to try it again.  Mmm... there's so many creatures out there I haven't tried with a pussy yet.  I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have.  You get the sinking feeling that you haven't really helped the situation much.  Well, at least Sam isn't nearly so aggressive now.";
 				now hp of Sam is 56;
 				now lastfuck of Sam is turns;
-				tripletaur_active;		[activate all three taur creatures]
+				tripletaur_active; [activate all three taur creatures]
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as he goes on a rampage, roaring angrily.  He tosses the bottle you intended for him against a wall, splattering its contents across the concrete.  'You piece of scum.  I trusted you, but you're no better than Rick in the end.  I don't want to have anything to do with you ever again,' he roars as he shakes you so roughly you black out from the pain.  By the time you come to, he's gathered up his remaining supplies and equipment and has left the bunker for good.  It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of pink fur grow on the wall.";
 				now hp of Sam is 98;
 				remove Sam from play;
-				dragontaur_active;		[activate Dragontaur creature]
+				dragontaur_active; [activate Dragontaur creature]
 			otherwise:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the bunker and the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[otherwise if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if].  Once outside, Sam growls in frustration and takes to the air on his large wings.  'You piece of scum.  You're no better than Rick.  I don't want to have anything to do with you ever again,' he roars, unleashing a large gout of fire into the air before flying off.  With him safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now hp of Sam is 98;
 				remove Sam from play;
-				dragontaur_active;		[activate Dragontaur creature]
+				dragontaur_active; [activate Dragontaur creature]
 		otherwise:
 			say "     Rather than betray your friend's trust, you decide against using it on him.  You toss the vial into the trash disposal rather than risk being tempted again.";
 			now hp of Sam is 16;
-			dragontaur_active;			[activate Dragontaur creature]
-	otherwise if hp of Sam is 30:		[Vixentaur form]
+			dragontaur_active; [activate Dragontaur creature]
+	otherwise if hp of Sam is 30: [Vixentaur form]
 		say "     'Thanks again for helping me out back there.  I don't want to think about what I would have ended up if you were there to help,' she shudders a little.  'But it's all good now.  I've got this sexy new body.  It's a little strange to be female now, but I'm itching to try it out and seeing what it's like to be Samantha instead.  I can't wait to try playing with all those fun creatures out there again now that I've got a juicy pussy for them to sample.'  Noticing the look you're giving him, she's quick to hold up the device you saw her with that first day.  'Got to get to work on gathering all my samples again,' she says with a grin.  'Not that I can't spare some time to show you just how much I appreciate your help,' she purrs.";
 		now hp of Sam is 31;
 	otherwise if hp of Sam is 31:
@@ -262,28 +262,28 @@ Instead of conversing the Sam:
 				say "     'That was really nice.  I can't wait to try it again.  Mmm... there's so many creatures out there I haven't tried with a pussy yet.  I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have.  You get the sinking feeling that you haven't really helped the situation much.  Well, at least Sam isn't quite such a big cock slut now.";
 				now hp of Sam is 56;
 				now lastfuck of Sam is turns;
-				tripletaur_active;		[activate all three taur creatures]
+				tripletaur_active; [activate all three taur creatures]
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as she goes on a rampage, growling angrily.  She tosses the bottle you intended for her against a wall, splattering its contents across the concrete.  'You piece of scum.  I trusted you, but you're no better than Rick in the end.  I don't want to have anything to do with you ever again,' she snarls as she shakes you so roughly you black out from the pain.  By the time you come to, she's gathered up her remaining supplies and equipment and has left the bunker for good.  It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of blue scales grow on the wall.";
 				now hp of Sam is 99;
 				remove Sam from play;
-				vixentaur_active;			[activate Vixentaur creature]
+				vixentaur_active; [activate Vixentaur creature]
 			otherwise:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the bunker and the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[otherwise if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if].  Once outside, Sam snarls in frustration and quickly bounds down the hill.  'You piece of scum.  You're no better than Rick.  I don't want to have anything to do with you ever again,' she growls as she's leaving.  With her safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now hp of Sam is 99;
 				remove Sam from play;
-				vixentaur_active;			[activate Vixentaur creature]
+				vixentaur_active; [activate Vixentaur creature]
 		otherwise:
 			say "     Rather than betray your friend's trust, you decide against using it on her.  You toss the vial into the trash disposal rather than risk being tempted again.";
 			now hp of Sam is 36;
-			vixentaur_active;				[activate Vixentaur creature]
+			vixentaur_active; [activate Vixentaur creature]
 	otherwise if hp of Sam is 36:
 		if a random chance of 1 in 3 succeeds and samformtalk is false:
 			say "     'Rick was the one who'd found the pink vixen somewhere.  From the way he talked about it, she was a whole lot of fun and I was a bit jealous he'd met her.'  She runs her paws over her shapely body.  'But now that I am one, it's even better since I get to have all the fun SHE was having.  And more, cause I'm a hot taur as well,' she says with a giggle.";
 			now samformtalk is true;
 		otherwise:
 			say "     [one of]'I don't need to worry about feeding me.  I can take care of myself,' the sexy vixen purrs.[or]'I'm much preferring this new body of mine.  I wonder why I ever resisted changing in the first place.'[or]'I'm looking forward to finding some more males out there to breed kits in me,' she giggles.[or]'I managed to find that dog you saw me with that first day.  Having him mount and fuck my vixen pussy was so much better than last time,' she giggles.[or][if number of bunkered people + number of booked people > 3]'I've already gathered samples from the others here,' she says.  'Not like that, silly' she adds with a giggle.  'Just refined from blood samples they gave.'[otherwise]'If you happen to rescue any others who've been transformed, I'll take samples from them as well.'[end if][or]'My resistance treatment still seems to be holding out despite my big change.  That means I can have all the fun I like and still stay a sexy vixen taur.'[or]She runs a hand along your body.  'You should have some more fun with the horny vixen beast soon[if cocks of player > 0].  I can tell you want to stuff your cock inside me again[otherwise].  You just need to find yourself a cock and you can get to mounting me properly[end if],' she moans, pressing her furry melons against you while giving you a hug.[or]'There's a lot of sexy beasts out there.  You should let a few more of them have their way with you.  Then you can come back here and have your way with me, too.  That way, we both get to enjoy it.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 2 succeeds]male[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]herm[end if] next time.  Hopefully there's one around that I haven't tried before.'[or]'I make a pretty sexy Samantha, don't I?' she asks with a giggle, stretching her arms behind her head to show off her lovely breasts and perky, rosy nipples.[at random]";
-	otherwise if hp of Sam is 50:		[Dracovixentaur form]
+	otherwise if hp of Sam is 50: [Dracovixentaur form]
 		say "     'Thanks again for helping me out back there.  I don't want to think about what I would have ended up if you were there to help,' she shudders a little.  'But it's all good now.  I've got this sexy new body and I'm itching to try it out.  I can't wait to try playing with all those fun creatures out there again now.  There's just so many possibilities now that I'm a big, sexy herm.'  Noticing the look you're giving her, she's quick to hold up the device you saw her with that first day.  'Got to get to work on gathering all my samples again,' she says with a grin.  'Not that I can't spare some time to show you how nice it is to share those pleasurable possibilities with you,' she rumbles.";
 		now hp of Sam is 51;
 	otherwise if hp of Sam is 51:
@@ -292,7 +292,7 @@ Instead of conversing the Sam:
 		say "     [one of]'I managed to save most of my supplies, but I'll need the rest for myself.  This big body of mine's got a big appetite.  But at least you don't have to worry about feeding me.'[or]'I'm enjoying this new body of mine.  I feels so much better than my plain old one.  I wonder why I ever resisted changing in the first place.'[or]'I'm looking forward to finding some males out there to breed a few kits in me.  Just to see what it's like,' she adds with a grin.[or]'I'm looking forward to breeding a few whelps in those females out there.'[or]'I'm going to have even more fun out there now that I'm a sexy herm taur.  There's so many sexy possibilities open to me now,' she says as she runs her paws over her hybrid body.[or]'I should see if I can find that dog you saw me with and see how different he'll feel in my cunny.  And maybe I'll [']return the favour['] while I'm at it,' she says with a sly grin.[or][if number of bunkered people + number of booked people > 3]'I've already gathered samples from the others here,' she says.  'Not like that, silly' she adds with a giggle.  'Just refined from blood samples they gave.'[otherwise]'If you happen to rescue any others who've been transformed, I'll take samples from them as well.'[end if][or]'My resistance treatment still seems to be holding out despite my accident.  That means I can have all the fun I like and still stay a sexy hybrid taur.'[or]She runs a hand along your body.  'You should have some more fun with the horny herm beast soon[if cocks of player > 0 and cocks of player > 0].  Maybe we can swap positions next time[end if],' she moans, pressing her furry melons against you while giving you a hug.[or]'There's a lot of sexy beasts out there.  You should let a few more of them have your way with you.  Then you can come back here and have your way with me, too.  That way, we both get to enjoy it.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 2 succeeds]herm[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] next time.  Hopefully there's one around that I haven't tried before.'[or]'I'm glad you weren't kidding about having enough space for me.  This is a pretty sweet setup you have here,' she says, looking around the fortified bunker.[or]'I guess I'll have to get used to being Sammie now,' she says with a giggle.[at random]";
 	otherwise if hp of Sam is 53 or hp of Sam is 54:
 		say "     [one of]'You don't have to worry about feeding me.  I can take care of myself,' the dracovixen rumbles.[or]'I think this new body of mine is much better.  Thanks for insisting I take them both.'[or]'I'm looking forward to finding some males out there to breed a few kits in me.  Just to see what it's like,' she adds with a grin.[or]'I'm looking forward to breeding a few whelps in those females out there.'[or]'I'm going to have even more fun out there now that I'm a sexy herm taur.  There's so many sexy possibilities open to me now,' she says as she runs her paws over her hybrid body.[or][if number of bunkered people + number of booked people > 2]'I've already gathered samples from the others here,' she says.  'Not like that,' she adds quickly, 'just refined from blood samples they gave.'[otherwise]'If you happen to rescue any others who've been transformed, I'll take samples from them as well.'[end if][or]'My resistance treatment still seems to be holding out despite my big changes.  That means I can have all the fun I like and still stay a sexy dracovixen taur.'[or][or]She runs a hand along your body[if cocks of player > 0].  'You should have some more fun with the horny dracovixen beast soon.  I can tell you want to stuff your cock inside me[otherwise].  'You should try letting the sexy dracovixen beast mount you.  I can tell your body wants this ridged beast I'm packing inside you,' she rumbles, giving your ass a squeeze[end if] as she presses her furry melons against you while giving you a hug.[or][or]She runs a hand along your body[if cocks of player > 0].  'You should have some more fun with the horny dracovixen beast soon.  I can tell you want to stuff your cock inside me[otherwise].  'You should try letting the sexy dracovixen beast mount you.  I can tell your body wants this ridged beast I'm packing inside you,' she rumbles, giving your ass a squeeze[end if] as she presses her furry melons against you while giving you a hug.[or]'There's a lot of sexy beasts out there.  You should let a few more of them have their way with you.  Then you can come back here so I can have my way with you too.  That way, we both get to enjoy it.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 2 succeeds]herm[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] next time.  Hopefully there's one around that I haven't tried before.'[or]'My new look as Sammie's pretty sexy, isn't it?' she asks with a grin, stretching her arms behind her head to show off her lovely breasts and perky, purple nipples.[at random]";
-	otherwise if hp of Sam is 55 or hp of Sam is 56:		[***to be replaced later]
+	otherwise if hp of Sam is 55 or hp of Sam is 56: [***to be replaced later]
 		say "     [one of]'You don't have to worry about feeding me.  I can take care of myself,' the dracovixen rumbles.[or]'I think this new body of mine is much better.  Thanks for insisting I take them both.'[or]'I'm looking forward to breeding a few more litters in those females out there.'[or]'I'm looking forward to finding more males out there breed kits in me,' she says with a grin.[or]'My litters have been turning out to be a mix of kits, with male dragontaurs, female vixentaurs and even a few herms hybrids like me.  It's so nice seeing them heading off to play in the city.'[or]'You'll need to be careful out there with my new offspring running around.  They'll be eager to play with someone as sexy as you.  I know I am,' she adds, giving your ass a playful swat.[or][if number of bunkered people + number of booked people > 2]'I've already gathered samples from the others here,' she says.  'Not like that,' she adds quickly, 'just refined from blood samples they gave.'[otherwise]'If you happen to rescue any others who've been transformed, I'll take samples from them as well.'[end if][or]'My resistance treatment still seems to be holding out despite my big changes.  That means I can have all the fun I like and still stay a sexy dracovixen taur.'[or][or]She runs a hand along your body[if cocks of player > 0].  'You should have some more fun with the horny dracovixen beast soon.  I can tell you want to stuff your cock inside me[otherwise].  'You should try letting the sexy dracovixen beast mount you.  I can tell your body wants this ridged beast I'm packing inside you,' she rumbles, giving your ass a squeeze[end if] as she presses her furry melons against you while giving you a hug.[or]'I'm looking forward to fucking you again.  Another romp with a sexy herm like me is definitely what that horny body of your needs to satisfy it,' she rumbles, licking your cheek slowly with her forked tongue.[or]'There's a lot of sexy beasts out there.  You should let a few more of them have their way with you.  Then you can come back here so I can have my way with you too.  That way, we both get to enjoy it.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 2 succeeds]herm[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] next time.  Hopefully there's one around that I haven't tried before.'[or]'My new look as Sammie's pretty sexy, isn't it?' she asks with a grin, stretching her arms behind her head to show off her lovely breasts and perky, purple nipples.[at random]";
 	otherwise:
 		say "ERROR-Sam-[hp of Sam]L: You should not be able to find me!";
@@ -461,7 +461,7 @@ to minilabvictory:
 	if the player consents:
 		say "[samtf_maledragon]";
 	otherwise:
-		say "[samtf_femalevixen]";	]
+		say "[samtf_femalevixen]"; ]
 	say "     Realizing what he means, you turn to the overturned mess of his work area, trying to locate unbroken vials among the sticky mess without getting caught in it yourself.  You are only able to find two intact in a during a quick search and grab them with a scrap of Sam's torn clothes.  They are labelled as '[link]#143 - Dragon - Male[as]1[end link]' and '[link]#039 - Pink Vixen - Female[as]2[end link]'.  You've only got a moment to decide.  Which one will you give him - the [link]dragon (1)[as]1[end link] or the [link]vixen (2)[as]2[end link]... or [link]both (3)[as]3[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
@@ -507,7 +507,7 @@ to say samtf_femalevixen:
 	move player to bunker;
 
 
-to say samtf_hermboth:		[Not for release yet]
+to say samtf_hermboth: [Not for release yet]
 	say "     Taking both vials, you pop them open and try to offer them both to Sam at once.  At first, he tries to wave you off with a misshapen hand, but you insist he needs them both to be certain there's enough to overwrite the diverse nanites.  Unable to speak or properly use his distorted hand to only grab one and losing valuable moments, he relents and allows you to pour them both as best you can into the fleshy hole that his mouth has become.  Its shape distorts even as you toss the empty vials onto the rest of the mess, pushing forward into an elongating muzzle.  'Yes!  It's working...' he gurgles, his words becoming clearer again.  The flowing flesh starts to regain texture which soon forms into lizard-like scales in some spots and grows fluffy fur in others.  His body grows more solid as his tauric limbs become sleek and strong, forming pawed feet.  The breasts there grow larger, perking up into lovely globes with round, lavender nipples.  Sam's increasingly body takes on more feminine curves, with a slender waist and shapely hips joining into her lower body.  Lilac fur covers her chest, belly, underbelly and loins while lavender scales cover the rest.  Still on her side, she reaches down with her tauric forepaws and grabs onto her enlarged cock, stroking it with moans of pleasure.  'Oh yeah... the best of both worlds,' she rumbles, stroking her ridged and knotted maleness as it spurts precum while her pussy quivers behind her hefty balls.";
 	say "     Wanting more, Sam grabs the swelling bosom at her chest and moans in surprised delight.  Running her tauric forepaws across her lower breasts, she moans.  'Mmm... that's nice.  This is going to be so much fun.'  She squirms her hips and yips in pleasure, hot juices running from her growing pussy.  Her head a feminine muzzle, part dragon and part fox in form, covered in scales.  A crest of small horns grow from the back of her head and long, lilac-coloured hair grows out from behind those and flows down over her shoulders.  As she gains her fluffy fox tail with a spade half-hidden at its tip, she moans loudly and cums, hot juices flowing from her new pussy as she splatters herself with her hot seed.  'Oh baby... that's... that's so intense...' she moans as the last trembles of her first herm orgasm come to a close.";
 	say "     You've moved back at this time, not quite sure if your friend's still in there, but as she releases her spent shaft and many breasts as she sags back on the floor and smiles up at you.  'Thanks.  That was... close...  Here, help me up,' she says as she tries to rise, unused to having four legs.  She, like the tigertaur, is a little big for the cramped basement, but manages to get around.  She gathers together what she can that hasn't been destroyed or tainted by the nanite serum.  'Uhh... so... I hope your place has got higher ceilings,' she says with a grin and a chuckle.  After the recent tension, you can't help but laugh, telling her you might be able to find some space for her.  You head off together towards the bunker.";
@@ -547,7 +547,7 @@ to say sexwithSam:
 		now hp of Sam is 13;
 		now lastfuck of Sam is turns;
 	otherwise if hp of Sam is 13 or hp of Sam is 14 or hp of Sam is 15 or hp of Sam is 16:
-		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist:	[taur]
+		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist: [taur]
 			say "[samdragontaurfuck]";
 		otherwise if a random chance of 3 in 5 succeeds:
 			say "[samdragonfuck]";
@@ -567,7 +567,7 @@ to say sexwithSam:
 		if cocks of player > 0, now hp of Sam is 33;
 		now lastfuck of Sam is turns;
 	otherwise if hp of Sam >= 33 and hp of Sam <= 36:
-		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist:	[male/herm taur]
+		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist: [male/herm taur]
 			say "[samvixentaurfuck]";
 		otherwise if a random chance of 3 in 5 succeeds and cocks of player > 0:
 			say "[samvixenfuck]";
@@ -584,7 +584,7 @@ to say sexwithSam:
 		now lastfuck of Sam is turns;
 		now hp of Sam is 53;
 	otherwise if hp of Sam is 53:
-		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist:	[taur]
+		if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist: [taur]
 			if cocks of player > 0 and cunts of player > 0:
 				if a random chance of 1 in 2 succeeds:
 					say "[samDVtaurfuck_top]";
@@ -612,7 +612,7 @@ to say sexwithSam:
 				say "[samDVfuck_top]";
 		otherwise:
 			say "[samDVoral]";
-		if hp of Sam < 54, increase hp of Sam by 1;		[***locks at 54 for now]
+		if hp of Sam < 54, increase hp of Sam by 1; [***locks at 54 for now]
 		now lastfuck of Sam is turns;
 	otherwise if hp of Sam is 54:
 		if cocks of player > 0 or cunts of player > 0:
@@ -620,7 +620,7 @@ to say sexwithSam:
 			tripletaur_active;
 			now hp of Sam is 55;
 		otherwise:
-			if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist:	[taur]
+			if a random chance of 3 in 5 succeeds and bodyname of player is listed in infections of Taurlist: [taur]
 				say "[samDVtaurfuck_top]";
 			otherwise if a random chance of 3 in 5 succeeds:
 				say "[samDVfuck_top]";
@@ -940,31 +940,31 @@ to tripletaur_active:
 
 monstermemory is a number that varies.
 
-to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
+to say DVimpregchance: [Allows for varied offspring by Sam/Dracovixentaur]
 	let Z be a random number between 1 and 4;
 	now monstermemory is monster;
-	if Z is 1 and girl is not banned:			[puts Vixentaur as lead monster in case of impregnation]
+	if Z is 1 and girl is not banned: [puts Vixentaur as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Vixentaur":
 				now monster is y;
 				break;
 		say "[impregchance]";
-	otherwise if Z is 2 and guy is not banned:		[puts Dragontaur as lead monster in case of egg-pregnation]
+	otherwise if Z is 2 and guy is not banned: [puts Dragontaur as lead monster in case of egg-pregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dragontaur":
 				now monster is y;
 				break;
 		say "[ovichance]";
-	otherwise if Z is 3:						[puts Dracovixentaur as lead monster in case of impregnation]
+	otherwise if Z is 3: [puts Dracovixentaur as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dracovixentaur":
 				now monster is y;
 				break;
 		say "[impregchance]";
-	otherwise:								[puts Dracovixentaur as lead monster in case of egg-pregnation]
+	otherwise: [puts Dracovixentaur as lead monster in case of egg-pregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Dracovixentaur":
@@ -1011,7 +1011,7 @@ to say DVimpregchance:		[Allows for varied offspring by Sam/Dracovixentaur]
 Section 7 - Endings
 
 when play ends:
-	if bodyname of player is "Feline Hexataur":		[special surrender ending]
+	if bodyname of player is "Feline Hexataur": [special surrender ending]
 		say "     Having given yourself over to Rick, you and Sammie are made into love hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers['].  And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
 		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead both you, Sammie and your cubs through out of the city and into the rest of the world. From what little you remember of that time you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs and those who did manage to catch up to the lot of you... well currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you and Sammie and the pair of cubs the two of you are currently nursing.";
 		stop the action;
@@ -1024,15 +1024,15 @@ when play ends:
 			otherwise if hp of Sam >= 50 and hp of Sam <= 69:
 				say "     After you succumb to the infection and do not return, Sammie strikes back out on her own, heading into the city to enjoy the sexy creatures populating the fallen city.  She births many new kits as her lustful body is mounted by many a horny creature and sires numerous others in those she mounts.  Her offspring are a collection of male dragontaurs, female vixentaurs and herm dracovixentaurs.";
 		otherwise:
-			if hp of Sam >= 10 and hp of Sam <= 29:				[Dragontaur - survival]
+			if hp of Sam >= 10 and hp of Sam <= 29: [Dragontaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Sam informs you that he will not be coming, having decided he'd prefer to stay in the city.  He thanks you again for your help and makes plans to take over living in the bunker once you're gone.  From there, he continues his work and his sexual enjoyment of the fallen city's diverse pleasures.  He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.  He even locates Rick again and takes particular pleasure in breeding several clutches of whelps in her tigertaur body.";
 				if hp of Sam >= 13:
 					say "     Before you depart, Sam imparts his research data and vial collection to you, asking that you provide it to the university which had arranged it.  He provides you with his research permits and a letter explaining that you're taking over delivery of his permitted research work.  There is some screening involved with getting them out, but [if hospquest is 13 and hp of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[otherwise if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery.  He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[otherwise]RSX's involvement in the grant keeps it from being confiscated by the military[end if].  You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
-			otherwise if hp of Sam >= 30 and hp of Sam <= 49:		[Vixentaur - survival]
+			otherwise if hp of Sam >= 30 and hp of Sam <= 49: [Vixentaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Samantha informs you that she will not be coming, having decided she'd prefer to stay in the city.  She thanks you again for your help and makes plans to take over living in the bunker once you're gone.  From there, she continues her work and her sexual enjoyment of the fallen city's diverse pleasures.  She births many new vixentaur kits as her lustful body is mounted by many a horny creature.  She even locates Rick again and takes particular pleasure in letting the tigertaur sire several of her litters.";
 				if hp of Sam >= 33:
 					say "     Before you depart, Samantha imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it.  She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work.  There is some screening involved with getting them out, but [if hospquest is 13 and hp of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[otherwise if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery.  He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[otherwise]RSX's involvement in the grant keeps it from being confiscated by the military[end if].  You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
-			otherwise if hp of Sam >= 50 and hp of Sam <= 69:		[Dracovixentaur - survival]
+			otherwise if hp of Sam >= 50 and hp of Sam <= 69: [Dracovixentaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Sammie informs you that she will not be coming, having decided she'd prefer to stay in the city.  She thanks you again for your help and makes plans to take over living in the bunker once you're gone.  From there, she continues her work and her sexual enjoyment of the fallen city's diverse pleasures.  She births numerous offspring as her lustful body is mounted by many a horny creature and sires others in those she mounts.  She even locates Rick again and takes particular pleasure in letting the tigertaur sire several of her litters as long as she can breed her ex-partner in return.  Sammie's children are a collection of male dragontaurs, female vixentaurs and herm dracovixentaurs.";
 				if hp of Sam >= 53:
 					say "     Before you depart, Sammie imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it.  She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work.  There is some screening involved with getting them out, but [if hospquest is 13 and hp of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[otherwise if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery.  He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[otherwise]RSX's involvement in the grant keeps it from being confiscated by the military[end if].  You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
