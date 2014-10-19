@@ -331,25 +331,7 @@ This is the gainfeat rule:
 			increase maxhp of player by 8;
 			increase hp of player by 8;
 		if nam is "City Map":
-			now Beach Plaza is known;			
-			now Outside Trevor Labs is known;			
-			Now Smith Haven Mall Lot South is known;
-			now Park Entrance is known;			
-			now City Hospital is known;			
-			Now State fair is known;
-			Now Approaching the Capitol Building is known;
-			Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
-			Now Plant Overview is known;
-			now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
-			now College Campus is known;
-			now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
-			Now Entrance to the Red Light District is known;
-			Now Entrance to the High Rise District is known;
-			Now Zoo entrance is known;
-			Now Dry Plains is known;
-			Now Museum Foyer is known;
-			now Warehouse District is known;
-			now Urban Forest is known;
+			say "[bestowcitymapfeat]";
 		if nam is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		if nam is "Vore Predator":
@@ -360,6 +342,26 @@ This is the gainfeat rule:
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
 
+to say bestowcitymapfeat:
+	now Beach Plaza is known;
+	now Outside Trevor Labs is known;
+	Now Smith Haven Mall Lot South is known;
+	now Park Entrance is known;
+	now City Hospital is known;
+	Now State fair is known;
+	Now Approaching the Capitol Building is known;
+	Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+	Now Plant Overview is known;
+	now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+	now College Campus is known;
+	now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+	Now Entrance to the Red Light District is known;
+	Now Entrance to the High Rise District is known;
+	Now Zoo entrance is known;
+	Now Dry Plains is known;
+	Now Museum Foyer is known;
+	now Warehouse District is known;
+	now Urban Forest is known;
 
 muggering is an action applying to nothing.
 understand "mugger" as muggering.
