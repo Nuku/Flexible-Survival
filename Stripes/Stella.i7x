@@ -1,5 +1,5 @@
 Version 1 of Stella by Stripes begins here.
-[Version 1.0 - Basic NPC]
+[Version 1.1 - Dialogue tweaked for Police Station survivors]
 [NOTE: It was the commissioner's specific request that this character top only.  She's very "been there, done that" with her vagina and is instead all "I've got a stiffy!"]
 
 "Adds a dalmatian herm to Flexible Survival."
@@ -72,9 +72,13 @@ the scent of the Stella is "Stella smells of canine arousal, the scent of sex li
 
 to say stelladesc:
 	say "     Once a female exchange student from England, she's been transformed into a herm dalmatian by the outbreak.  Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle.  Despite having a refined British accent, it seems like she's always been a bit of a ditzy slut even before coming here.  She's got shoulder-length white hair with a splash of black on her bangs.  She's wearing a pair of glasses in front of her bright, blue eyes.  She's got a somewhat larger than normal cock, canine in form and lacking in sheath or balls.  It grows from the top of her pussy, turning her clitoris into this dripping doggy dong she's so proud of.";
+	if Police Station is known and hp of Stella >= 52:
+		say "     Being no stranger to roaming the city, you can ask to [bold type]move Stella[roman type] between the police station and the library.";
 
 
 Section 2 - Conversation
+
+stellapsurv is a truth state that varies.  stellapsurv is usually false.
 
 Instead of conversing the Stella:
 	if debugactive is 1:
@@ -85,8 +89,12 @@ Instead of conversing the Stella:
 		say "     'This place ain't too bad.  It'll do fine for a place to take a kip when I need a break.  I don't mind staying here for a while, though if you know another safe spot as good as this with some interesting folks, I could go hang there for a while too.  Just ask me to [bold type]move[roman type].'";
 		say "     She stretches and rubs a paw over her groin.  'As it is, when I'm not faffing about here, I'll totally be wandering in and out.  Places to go, people to see, holes to stuff - you know how it is,' she giggles.  'Oh, speaking of, I don't want you to be getting any funny ideas.  If we're going to be banging - and I hope we will - I'm like totally going to be on top.  I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
 		now hp of Stella is 3;
+	otherwise if Stella is in the Police Lockerroom and population of Police Station > 0 and stellapsurv is false:
+		say "     'I'm glad to see you've got some other people around here.  I'm sure a few'll be up to polishing the silver or even a quick shag, if you get me,' she adds with a wink.  'It's better for [']em to get a spot of relief than to have [']em risk going round the bend, I'd say.'";
+		if infpop of Police Station < population of Police Station, increase infpop of Police Station by 1;
+		now stellapsurv is true;
 	otherwise:
-		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain.  I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed.  And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat.  'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[or][if police station is known and laststellamove - turns >= 16]Do let me know if you find another spot with some fun [']friends['] I can get to [']know better['] and I can [bold type]move[roman type] there for a while.'[otherwise]'I'm really enjoying making friends around here.  There's plenty of people out there happy to have a go at this girl's doggy dong.'[end if][in random order]";
+		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain.  I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed.  And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat.  'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[or][if police station is known and laststellamove - turns >= 16]Do let me know if you find another spot with some fun [']friends['] I can get to [']know better['] and I can [bold type]move[roman type] there for a while.'[otherwise]'I'm really enjoying making friends around here.  There's plenty of people out there happy to have a go at this girl's doggy dong.'[end if][or][if location of Stella is Police Lockerroom and population of Police Station > 20]'Quite the crowd you've got here.  Nice work helping all these poor people out.  Nice, [']friendly['] folks they are too,' she adds with a wink and a rub at her groin.[otherwise if location of Stella is Police Lockerroom and population of Police Station > 12]'You've got a good crowd here.  You keep them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin.[otherwise if location of Stella is Police Lockerroom and population of Police Station > 0]'These poor people've had it rough, chum.  Do what you can to keep the rest of them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin.[otherwise]'I've got to say, all this is proving to be the dog's bollocks,' she says, laughing at her own joke.[end if][in random order]";
 
 
 Section 3 - Moving Stella
