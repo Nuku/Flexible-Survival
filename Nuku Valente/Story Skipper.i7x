@@ -1080,6 +1080,10 @@ To reciting2:
 							move Alexandra to Grey Abbey Library;
 						if hp of Alexandra >= 65 and hp of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
+						otherwise:
+							remove Master Mind from play;
+						if hp of Alexandra is 61:
+							now Survivor Group is unresolved;
 					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
@@ -3070,6 +3074,10 @@ Carry out reciting:
 							move Alexandra to Grey Abbey Library;
 						if hp of Alexandra >= 65 and hp of Alexandra <= 100:
 							now Master Mind is in Cell Block A;
+						otherwise:
+							remove Master Mind from play;
+						if hp of Alexandra is 61:
+							now Survivor Group is unresolved;
 					if hp of Alexandra is 3 or hp of Alexandra is 5:
 						now lust of Alexandra is 1;	[reset to start of pregnancy]
 					if hp of Alexandra is 4 or hp of Alexandra is 5:
