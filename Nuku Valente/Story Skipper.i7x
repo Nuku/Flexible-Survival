@@ -1923,7 +1923,7 @@ To reciting2:
 					now population of Police Station is the number understood;
 					if population of Police Station > 50, now population of Police Station is 50;
 					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
-					if hp of Alexandra < xx or hp of Alexandra is 100, now population of Police Station is 0;
+					if hp of Alexandra < 2 or hp of Alexandra is 100, now population of Police Station is 0;
 			-- 211:	[infpop of Police Station]
 				if the player's command matches "[number]":
 					now infpop of Police Station is the number understood;
@@ -3910,7 +3910,8 @@ Carry out reciting:
 					now population of Police Station is the number understood;
 					if population of Police Station > 50, now population of Police Station is 50;
 					if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
-					if hp of Alexandra < xx or hp of Alexandra is 100, now population of Police Station is 0;
+					if hp of Alexandra < 2 [no number was hete] or hp of Alexandra is 10:
+						now population of Police Station is 0;
 			-- 211:	[infpop of Police Station]
 				if the player's command matches "[number]":
 					now infpop of Police Station is the number understood;
