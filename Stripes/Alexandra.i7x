@@ -1289,6 +1289,7 @@ to say A_Task54:	[Group Rescue]
 		say "     'A neighbourhood of the city's been overrun by woodlands that's suddenly sprung up.  Lots of trees have sprung up, many growing through the pavement or buildings.  And if that wasn't bad enough, some of those trees seem to be moving around.  Since there was still a lot of the city to patrol in search of survivors, I didn't explore inside it.  I'd like you to try checking it out though.  There could still be a [bold type]survivor[roman type] hiding out in that creepy [bold type]urban forest[roman type][if Urban Forest is unknown].'  Alexandra describes where she came across this forest and the rough outline of the blocks its spread across.  You'll be able to make your way to its edge now easily enough[otherwise].'  You tell Alexandra that you've encountered this forest before and reassure her that you'll go check it out when you get the opportunity[end if].";
 		now Urban Forest is known;
 		now hp of Alexandra is 61;
+		now Survivor Group is unresolved;
 	otherwise:
 		say "     'Have you had a chance to go through that strange forest?  Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if hp of Alexandra is 62].  Not wanting to get her hopes up too high, you let her know you're following some leads.  Having been reminded, you start thinking about going back again.  Perhaps you'll be able to convince at least a few of them to come with you[end if].";
 
