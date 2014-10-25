@@ -1783,6 +1783,7 @@ To reciting2:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+					if xp of Onyx > 3, now daisytalk is 1;
 			-- 190: [hp of Val]
 				if the player's command matches "[number]":
 					now hp of Val is the number understood;
@@ -3764,6 +3765,7 @@ Carry out reciting:
 					otherwise:
 						now Stablestoreroom is resolved;
 					if xp of Onyx is 100, now xp of Onyx is 0;
+					if xp of Onyx > 3, now daisytalk is 1;
 			-- 190: [hp of Val]
 				if the player's command matches "[number]":
 					now hp of Val is the number understood;
