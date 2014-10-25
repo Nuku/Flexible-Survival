@@ -1267,7 +1267,7 @@ when play begins:
 
 Rodentlist is a marker.	[list of rodent infections]
 when play begins:
-	add { "Slut Rat", "Mall Rat" } to infections of Rodentlist;
+	add { "Slut Rat", "squirrel" } to infections of Rodentlist;
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:

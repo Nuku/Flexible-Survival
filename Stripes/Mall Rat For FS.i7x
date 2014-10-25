@@ -7,6 +7,7 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Mall Rat" } to infections of furry;
+	add { "Mall Rat" } to infections of Rodentlist;
 
 
 Section 2 - Monster Insertion
