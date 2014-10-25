@@ -11,6 +11,7 @@ chindem is a truth state that varies. chindem is usually false. [Chinchilla Deme
 when play begins:
 	add "Chinchilla" to infections of girl;
 	add "Chinchilla" to infections of furry;
+	add "Chinchilla" to infections of Rodentlist;
 
 to say chinvic:
 	if hp of player > 0:

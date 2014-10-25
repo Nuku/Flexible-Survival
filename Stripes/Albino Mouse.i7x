@@ -11,6 +11,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Albino Mouse" } to infections of furry;
 	add { "Albino Mouse" } to infections of guy;
+	add { "Albino Mouse" } to infections of Rodentlist;
 
 to say drmouseattack:
 	if hospfight is 1:

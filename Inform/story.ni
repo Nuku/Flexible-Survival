@@ -1265,6 +1265,10 @@ Avianpredlist is a marker.	[list of predatory avian/bird infections]
 when play begins:
 	add { "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman" } to infections of Avianpredlist;
 
+Rodentlist is a marker.	[list of rodent infections]
+when play begins:
+	add { "Slut Rat", "Mall Rat" } to infections of Rodentlist;
+
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
@@ -6725,6 +6729,7 @@ Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
 Include Goat Janitor by McRabid.
+Include Nerdy Mouse by McRabid.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.

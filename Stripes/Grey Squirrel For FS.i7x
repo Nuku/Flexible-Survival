@@ -8,6 +8,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Grey Squirrel" } to infections of guy;
 	add { "Grey Squirrel" } to infections of furry;
+	add { "Grey Squirrel" } to infections of Rodentlist;
 
 to say losetogreysquirrel:
 	say "non-combative.";
