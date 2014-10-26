@@ -91,7 +91,7 @@ Instead of going south from the abandoned lot:
 			if Stevenswayed is 1:
 				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide how [if bodyname of player is listed in infections of Taurlist]those four feet of yours.  You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]really small you are.  They're sure to know something's up.  Try to find a way to get back to normal size, okay[otherwise]big you've gotten.  Try to find a way to shrink back down somehow, okay[end if]?' before he closes the slat.";
 			otherwise:
-				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size desc of player] size[end if].";
+				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size of player] size[end if].";
 		otherwise:
 			say "'Hello! Who's there?' a man from behind the door says.";
 			if Stevenswayed is 1:
