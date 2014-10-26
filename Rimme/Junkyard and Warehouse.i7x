@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Rimme begins here.
-[Version 2.2 - Human definitions expanded]
+[Version 2.3 - Tweaking entry]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -87,6 +87,11 @@ Instead of going south from the abandoned lot:
 				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' before he closes the slat.";
 			otherwise:
 				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
+		otherwise if scalevalue of player is 1 or scalevalue of player > 3 or bodyname of player is listed in infections of Taurlist:
+			if Stevenswayed is 1:
+				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide how [if bodyname of player is listed in infections of Taurlist]those four feet of yours.  You're going to have to at least be humanoid, okay[otherwise if scalevalue of player is 1]really small you are.  They're sure to know something's up.  Try to find a way to get back to normal size, okay[otherwise]big you've gotten.  Try to find a way to shrink back down somehow, okay[end if]?' before he closes the slat.";
+			otherwise:
+				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of player is listed in infections of Taurlist]tauric body[otherwise]altered body and its [body size desc of player] size[end if].";
 		otherwise:
 			say "'Hello! Who's there?' a man from behind the door says.";
 			if Stevenswayed is 1:
@@ -94,9 +99,12 @@ Instead of going south from the abandoned lot:
 				move player to Storage Room;
 			Otherwise:
 				let changed be false;
-				if the player is not skintone human, let changed be true;
-				if the tail of the player is not "", let changed be true;
-				if the player is not bodily human, let changed be true;
+				if the player is not skintone human:
+					now changed is true;
+				if the tail of the player is not "":
+					now changed is true;
+				if the player is not bodily human:
+					now changed is true;
 				if changed is false:
 					say "You explain that you are another survivor, that you wish to enter. 'Of course. Open her up!' he calls out, closing the slat. The door swings open, and you step through.";
 					move the player to Storage Room;
@@ -105,7 +113,7 @@ Instead of going south from the abandoned lot:
 					if soda is owned:
 						say "Do you give him a soda?";
 						if the player consents:
-							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you.";
+							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you, Steven slipping a raincoat over you to help conceal your changes a little.";
 							delete soda;
 							move the player to Storage Room;
 							now Stevenswayed is 1;
