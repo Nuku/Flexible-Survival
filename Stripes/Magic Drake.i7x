@@ -150,10 +150,10 @@ to say beatthemagicdrake:
 			now title entry is "Titty-fuck";
 			now sortorder entry is 2;
 			now description entry is "wedge your meat between those plump melons";
-[			choose a blank row in table of fucking options;
+			choose a blank row in table of fucking options;
 			now title entry is "Receive fellatio";
 			now sortorder entry is 6;
-			now description entry is "get her to suck you off";		]
+			now description entry is "get her to suck you off";
 			if cock length of player <= 18:
 				choose a blank row in table of fucking options;
 				now title entry is "Cock-fuck";
@@ -361,8 +361,11 @@ to say mdrake_pvictory_05:
 		say "     [bracket]You have gained the 'Twisted Capacity' feat and are now stretchy enough to take some astonishingly huge things inside you.[close bracket][line break]";
 		add "Twisted Capacity" to feats of player;
 
-to say mdrake_pvictory_06:
-	say "***";
+to say mdrake_pvictory_06:		[Receive fellatio]
+	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of player] cock and stroke it to erection.  The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise.  As you approach her draconic muzzle, she licks her lips and releases a needy moan.  And when you bring your [cock of player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
+	say "     'Come on.  Give it to me, my sweet,' she moans with an obvious need that brings a grin to your lips.  While a little tempted to tease her longer, you want to get it on and so move forward, plunging your [cock of player] cock into her warm muzzle.  Rocking your hips, you plunge into her sucking maw.  Her tongue plays over your meat and her hands [if cockname of player is listed in infections of Internallist]fondle your [ball size] with an obvious hunger[otherwise]grap your hips to urge you onwards[end if].";
+	say "     Seeing her meaty pillar bobbing in front of you, you grab it and start stroking it as further encouragement for the slutty sorceress.  The titanic manhood is shaped like a normal cock, but taken to enormous size.  Its smooth flesh, phallic shape and throbbing veins would have it seem human in form were it not for its green hue.  This examination is a casual one, undertaken while enjoying the blow job and giving a hand job (as best you can give its size) in return.";
+	say "     As your climax hits you, you thrust deeply into the buxom beauty's maw.  Cumming hard, you blast your [cum load size of player] load across her tongue and down her throat[if cock width of player >= 30].  Your voluminous output is enough to plump the dragoness's belly with her feast of hot semen[end if].  With your orgasm waning, you shift your focus to her cock, rubbing and stroking it just right to finish her off.  Angling it away, you delight in watching the high arcs and messy splatters her blasts of cum make until finally her spent shaft flops down onto the ground, temporarily sated.";
 
 to say mdrake_pvictory_07:
 	say "***";
