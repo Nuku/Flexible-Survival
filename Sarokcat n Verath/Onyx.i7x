@@ -1,5 +1,5 @@
 Version 3 of Onyx by Sarokcat n Verath begins here.
-[ Version 3.1 - Onyx only asks once about player topping ]
+[ Version 3.2 - Lap dance from fem Onyx at Palomino ]
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
@@ -11,7 +11,8 @@ onyxdmra is a number that varies.	[rescued Onyx / dom male / reciprocal anal for
 onyxhappytalk is a truth state that varies.  onyxhappytalk is normally false.
 Onyxmareslut is a number that varies.	[Stables Onyx / dom male / player into mareslut]
 Onyxboislut is a number that varies.	[Stables Onyx / dom male / player into stallionboi]
-femonyxq is a number that varies. [Quest variable for fem onyx]
+femonyxq is a number that varies.	[Quest variable for fem onyx]
+onyxlapdance is a number that varies.	[number of lap dances from Onyx]
 
 Onyx is a man.
 The description of Onyx is "[onyxappearance]".
@@ -179,6 +180,11 @@ Instead of fucking the Onyx:
 			say "[onyxbunkersex]";
 [		say "'Sorry friend,' Onyx says with a shy smile as he moves the pictures of horses around in front of him. 'But I haven't yet figured out what I should be yet, and I figure actually giving in and having sex would kind of make the decision for me... so I think I should pass for now..' He says with a sigh as he goes back to looking at the pictures, and you wonder if maybe there isn't something out there in the city you could find which would help him make the choice you want him to... perhaps in the red light district or one of the clubs in town...";	]
 [		say "***INSERT NEW CONTENT HERE";	]
+	otherwise if xp of Onyx is 32 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
+		[first time lap dance]
+		say "     Catching your look and returning it with a smile, the sexy mare saunters over to you sexily.  'Oh, I've been looking forward to showing you a good time again,' she says sensually.  Taking your hand in hers, she leads you off to a private little boudoir and helps you strip down while making a show of baring herself as well.";
+		femonyxsex5;
+		now xp of Onyx is 32;
 	otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:		[at Palomino]
 		now lastfuck of onyx is turns;
 		femonyxsex;
@@ -584,13 +590,23 @@ to femonyxsex:
 			say "(1) [link]Continue Oral[as]1[end link][line break]";
 			say "(2) [link]Fuck her[as]2[end link] [if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			say "(3) [link]Fuck her anally[as]3[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
+			if xp of Onyx >= 32:
+				say "(4) [link]Lap dance[as]4[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			while 1 is 1:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber >= 1 and calcnumber <= 3:
-					break;
+				if xp of Onyx < 32:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "Invalid entry.";
 				otherwise:
-					say "Invalid entry.";
+					say "Choice? (1-4)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 4:
+						break;
+					otherwise:
+						say "Invalid entry.";
 			if calcnumber is 1:
 				femonyxsex1;
 				now trixieexit is 1;
@@ -658,6 +674,7 @@ to femonyxsex2:
 				say ", your unattended dick staining her thighs.";
 		say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
 		say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
+	if xp of Onyx is 30, now xp of Onyx is 31;
 
 
 to femonyxsex3:
@@ -719,6 +736,18 @@ to femonyxsex4:
 		say ". Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
 		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]";
 	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
+
+to femonyxsex5:
+	say "     After that very sexy warm-up, Onyx cuddles up close to you, running her hands over your [bodydesc of player] body.  She nuzzles your ear and nibbles softly with her flat teeth.  '[if xp of Onyx is 31]Here, let me show you one of the fun things I've learned from the other girls,' she whispers tantalizingly[otherwise]And I think you were asking for another dance, weren't you, sexy?' she whispers teasingly[end if] as she gently presses you down into a seat.  Sliding into your lap, she grinds her shapely buttocks down onto your manhood.  You stiffen quickly as she continues to slide and grind down onto you.";
+	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways.  Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you.  You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face[if xp of Onyx is 31].  You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron.  And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[otherwise].  As before, she's doing her best to make a dance out of this lap dance for her special patron.  She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
+	say "     She goes like this through a couple of songs, getting you good and rile up.  And from the hot, wet juices dripping onto you, you can tell it's having a similar effect on her";
+	if onyxlapdance is even:
+		say ".  And when she can't take any more, she drops to her knees between your legs just as the bass drops on the techno tune being played and plunges your [cock of player] meat into her equine muzzle.  She sucks you to a moaning climax that blasts shot after shot down her throat while she fingers herself to orgasm.  She makes sure to suck all your seed down and lick you clean before getting up and giving you a tongue-filled kiss.";
+	otherwise:
+		say ".  And when you can't take it any longer, you grab her hips just as another song is starting and plunge your [cock of player] meat into her heated cunt.  She gives a neighing moan, squirming in delight in your lap as you bounce her vigorously.  You cum hard, blasting shot after shot into her clenching tunnel, feeding your [cum load size of player] load into her equine belly.  The feel of you seeding her sets her off and she gives a wild neigh of orgasmic release.  You fuck her through her climax before finally sagging back in your seat.  She gives you a tongue-filled kiss as she slowly, reluctantly, slips off your spent shaft.";
+	say "     After getting you cleaned up and dressed again, she sends you off to the main club area while she tidies up the room for the next to use it.  She comes out a few minutes later back in her skimpy outfit and tantalizing the other patrons with her shapely body.";
+	increase onyxlapdance by 1;
+
 
 Section 5 - Endings
 
