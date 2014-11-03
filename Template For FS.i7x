@@ -28,6 +28,7 @@ when play begins:
 	add { "Template" } to infections of Plantlist;		[list of plant infections]
 	add { "Template" } to infections of Avianlist;		[list of avian/bird infections]
 	add { "Template" } to infections of Avianpredlist;	[list of predatory avian/bird infections]
+	add { "Template" } to infections of Rodentlist;		[list of rodent infections]
 	add { "Template" } to infections of Taurlist;		[list of tauric infections]
 	add { "Template" } to infections of Knotlist;		[list of cock infections with a knot]
 	add { "Template" } to infections of Latexlist;		[list of latex/rubber/PVC skin infections]

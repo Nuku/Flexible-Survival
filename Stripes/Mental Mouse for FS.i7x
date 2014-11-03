@@ -13,6 +13,7 @@ mousecounter is a number that varies.
 when play begins:
 	add { "Mental Mouse" } to infections of hermaphrodite;
 	add { "Mental Mouse" } to infections of furry;
+	add { "Mental Mouse" } to infections of Rodentlist;
 
 to say losetomouse:
 	if mouse girl is tamed:

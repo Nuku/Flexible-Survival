@@ -11,13 +11,14 @@ Fancyquest is a number that varies.[often used for quests or renamed to Fancyque
 Fancyfucked is a number that varies. Fancyfucked is usually 0.
 Nightmareslavery is a number that varies.
 Nightmaremastery is a number that varies.
+nmformswitch is a truth state that varies.
 
 Fancy is a man.[or woman]
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more then they conceal. Her body is well built, and nicely rounded in all the right places, the horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs slightly parted teasingly as she gives you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hooflike hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
 the conversation of Fancy is { "Grumble!" }.
 
 instead of sniffing Fancy:
-	say "Fancy smells like a strong, willful mare.  She smells strongly of sex and arousal, clearly an experienced lover.";
+	say "Fancy smells like a strong, wilful mare.  She smells strongly of sex and arousal, clearly an experienced lover.";
 
 instead of conversing the Fancy:
 	if Fancytalk is 0:[first time you encounter the npc text]
@@ -186,24 +187,8 @@ Instead of fucking the Fancy:
 		otherwise:
 			say "     The white mare moans as you fondle her, but rebukes your offer for sex.  'That is very tempting, Stablemaster, but there is still a lot of work I need to take care of around here.  This place doesn't run itself, you know.'";
 	otherwise if fancyquest is 16:
-		let nightmareform be true;
-		if bodyname of player is not "Nightmare" or the player is not pure:
-			now nightmareform is false;
-			setmonster "Nightmare";
-			choose row monster from the table of random critters;
-			if name entry is "Nightmare":
-				now bodyname of player is "Nightmare";
-				now facename of player is "Nightmare";
-				now skinname of player is "Nightmare";
-				now tailname of player is "Nightmare";
-				now cockname of player is "Nightmare";
-				now body of player is body entry;
-				now face of player is face entry;
-				now skin of player is skin entry;
-				now tail of player is tail entry;
-				now cock of player is cock entry;
-				attributeinfect "Nightmare";
-		say "     Eyeing Fancy, you grow aroused and approach her with lustful intent[if nightmareform is false].  Your lust for the mare who helped make you Stablemaster awakens your Nightmare form, transforming your body to that of the powerful equine[end if].  Putting your arms around her, you grope the lovely white mare with a hoof-hand on her breast and another on her ass.  She moans at the possessive manhandling and makes no attempt to stop you.";
+		restorenightmareform;
+		say "     Eyeing Fancy, you grow aroused and approach her with lustful intent[if nmformswitch is true].  Your lust for the mare who helped make you Stablemaster awakens your Nightmare form, transforming your body to that of the powerful equine[end if].  Putting your arms around her, you grope the lovely white mare with a hoof-hand on her breast and another on her ass.  She moans at the possessive manhandling and makes no attempt to stop you.";
 		if cocks of player > 0:
 			say "     'Come to take your privilege, my Stablemaster?  I think I can fit you into my busy schedule,' she says teasingly, rubbing herself back against you, already feeling your stiff member rubbing across her labial folds.  You can feel the growing dampness of her arousal, the mare quite aroused by the touch of your equine cock and the scent of your virile musk.  Fondling her breasts, you have her lean over the feeding table and spread her legs before thrusting your [cock size desc of player] shaft into her accommodating cunt.  She nickers in lustful delight as you plough into her, claiming this ivory mare as is your right as the master of this brothel.";
 			say "     Fancy, as your female counterpart, is perfectly sized to accept your [if cock length of player < 5]small[otherwise if cock length of player < 12]adequate[otherwise if cock length of player < 24]sizable[otherwise if cock length of player < 36]mighty[otherwise]huge[end if] member with just enough tightness to provide for a really good fuck.  Your flat glans pushes deep inside her with every thrust you make, kissing at her cervix when you push fully into her wanton hole.  Her moans and nickers of pleasure grow more heated when you start nipping at her shoulders and neck while you mate her.  Her plump breasts swing and sway as you pound into her with growing zeal.  For while you started out slow, remembering how much she's done for you to make you what you are now, you start to lose track of that and focus instead on how you need to show this strong, confident mare that you're the master now.  And she takes the rough mating eagerly, her body and mind lusting for her chosen stallion to fill her with his seed.";
@@ -217,7 +202,7 @@ Instead of fucking the Fancy:
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		now lastfuck of Fancy is turns;
 	otherwise if fancyaroused is 1:
-		say "'Hmm that sounds like an interesting proposition,' the white mare says with a teasing grin as she looks you up and down appraisingly, 'But as you can see from all the mares and stallions around this place, I certainly am not lacking for sex anytime I feel the need for some 'action' so to speak.' Fancy says with a soft chuckle as she runs one of her hoof tipped hands through her mane of silvery hair absently, her chest heaving interestingly as she does. 'Though I might be interested in having a more, long term companion around... And given the help you gave Onyx and Daisy in deciding to be proper members of the Stables, I think you might have the right mindset to help me out with this place. If you would be interested in staying around a while that is....' She says with an equine grin as she looks at you and waits for your response.";
+		say "'Hmm that sounds like an interesting proposition,' the white mare says with a teasing grin as she looks you up and down appraisingly.  'But as you can see from all the mares and stallions around this place, I certainly am not lacking for sex anytime I feel the need for some [']action['], so to speak,' Fancy says with a soft chuckle as she runs one of her hoof-tipped hands through her mane of silvery hair absently, her chest heaving interestingly as she does.  'Though I might be interested in having a more, long term companion around...  And given the help you gave Onyx and Daisy in deciding to be proper members of the Stables, I think you might have the right mindset to help me out with this place.  If you would be interested in staying around a while that is....' she says with an equine grin as she looks at you and waits for your response.";
 		if player consents:
 			say "'Well that's a wonderful offer and I would love to take you up on it actually, but as you can see the author is lazy and hasn't finished this increasingly smexy side quest, so you will just have to enjoy helping me patch the place up until they do.' The mare says with a teasing smile as she goes back to what she was working on, leaving you to curse this unknown author's laziness.";
 		otherwise:
@@ -362,6 +347,24 @@ An everyturn rule:
 			now cock of player is "[one of]equine[or]blunt-tipped[or]horse-like[at random]";
 
 
+to restorenightmareform:
+	now nmformswitch is false;
+	if bodyname of player is not "Nightmare" or the player is not pure:
+		now nmformswitch is true;
+		setmonster "Nightmare";
+		choose row monster from the table of random critters;
+		if name entry is "Nightmare":
+			now bodyname of player is "Nightmare";
+			now facename of player is "Nightmare";
+			now skinname of player is "Nightmare";
+			now tailname of player is "Nightmare";
+			now cockname of player is "Nightmare";
+			now body of player is body entry;
+			now face of player is face entry;
+			now skin of player is skin entry;
+			now tail of player is tail entry;
+			now cock of player is cock entry;
+			attributeinfect "Nightmare";
 
 
 

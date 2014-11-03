@@ -7,6 +7,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Beaver" } to infections of guy;
 	add { "Beaver" } to infections of furry;
+	add { "Beaver" } to infections of Rodentlist;
 	add { "Beaver" } to infections of Tailweapon;		[usable for Tail Strike feat]
 
 nobeaversex is a number that varies.

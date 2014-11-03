@@ -66,7 +66,7 @@ instead of using porn collection:
 					decrease humanity by 1;
 					now researchbypass is 0;
 				now libido of player is ( 5 * libido of player ) / 6;
-			if there is a dangerous door in the location of the player or ( player is in Grey Abbey Library and hp of Fang is 0 and hp of Alexandra is 0 ):
+			if there is a dangerous door in the location of the player and the location of player is not sleepsafe:
 				while muskwave > 50:
 					if a random number between 1 and 200 < muskwave:
 						say "     As you're resting and recovering from your massive orgasm, a nearby creature is drawn in by the musky aroma of your sexual fluids before the scent can dissipate.";

@@ -116,7 +116,7 @@ this is the pigpussy rule:
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 6;
 	choose row monster from table of random critters;
-	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + cha entry;
+	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + charisma of player;
 	say "[piggycheck]";
 	if tempnum is 1, decrease playernum by 30;
 	let messypigcaught be 1;

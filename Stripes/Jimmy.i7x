@@ -1,5 +1,5 @@
 Version 1 of Jimmy by Stripes begins here.
-[Version 1 - Basic event and NPC]
+[Version 1.1 - Dialogue tweaked for Police Station survivors, still needs survivor info section]
 "Adds corgi NPC named Jimmy to the Flexible Survival game."
 
 Section 1 - Event
@@ -75,8 +75,10 @@ Instead of conversing the Jimmy:
 	otherwise if hp of Jimmy is 3:
 		say "     'Thanks again for helping me get here.  This place is so much better than where I was stuck before, even though there's a lot of sticky messes to clean up.  Still, once I get it all cleaned up, it'll be fun to make a few sticky messes of my own,' he laughs with a wink at you.  'Oh, do you like my new outfit,' he asks, doing a wobbly spin to show off the police dog vest he found.  It is the kind worn by the dogs of the K-9 unit and looks absolutely adorable on him.  It makes you want to scoop him up and hug him tight.";
 		now hp of Jimmy is 4;
+[	otherwise if population of Police Station > 0:
+		say "***";		]
 	otherwise:
-		say "     [one of]'It's nice to be able to sleep in a proper bed again.  Sleeping on the floor's not so bad when you're a dog, but being on the bed's much better.  And you can have a lot more fun in bed, too,' he adds with a cute chuckle.[or]'Do keep a look out for some doggy treats while you're out there.  I've grown a taste for them,' he says, licking his chops.[or]'There's always more stuff to do around here, but that just means we'll be able to have more friends.'[or]'It's nice here and all, but I'm looking forward to the rescue Alexandra keeps talking about.'[or]'Thanks for helping us.  Keep up the search for others.'[or]'I don't mind being this short now.  It makes me the perfect height for oral sex,' he says with a grin and a wink.[or][if hp of Alexandra >= 60]'I don't like having that- that- robot bitch here,' he growls.[otherwise]'Clean up's been going well,' he says cheerfully, tail wagging even as he lugs a bucket of grimy mop water with both hands.[end if][at random]";
+		say "     [one of]'It's nice to be able to sleep in a proper bed again.  Sleeping on the floor's not so bad when you're a dog, but being on the bed's much better.  And you can have a lot more fun in bed, too,' he adds with a cute chuckle.[or]'Do keep a look out for some doggy treats while you're out there.  I've grown a taste for them,' he says, licking his chops.[or][if population of Police Station is 0]'There's always more stuff to do around here, but that just means we'll be able to have more friends.'[otherwise]'There's even more to do around here now that we've got people in our shelter.  It feels great to be helping them out though, so I don't mind.  Besides, they give me plenty of scritches and hugs and... well, you know,' he says with a tail wag and a lick of his muzzle.[end if][or]'It's nice here and all, but I'm looking forward to the rescue Alexandra keeps talking about.'[or]'Thanks for helping [if population of Police Station > 0]all of [end if]us.  Keep up the search for others.'[or]'I don't mind being this short now.  It makes me the perfect height for oral sex,' he says with a grin and a wink.[or][if hp of Alexandra >= 65]'I don't like having that- that- robot bitch here,' he growls.[otherwise if hp of Alexandra >= 63]'The newcomers are getting settled in nicely.  They've even voted to make me their representative,' he says happily[otherwise]'Clean up's been going well,' he says cheerfully, tail wagging even as he lugs a bucket of grimy mop water with both hands.[end if][at random]";
 [***]
 
 the fuckscene of Jimmy is "[sexwithJimmy]".

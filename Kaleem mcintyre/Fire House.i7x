@@ -586,13 +586,15 @@ Instead of fucking Kenaz:
 		if name entry is "Dalmatian":
 			now monster is y;
 			break;
-	if KTO is 0:
+	if cocks of player is 0 and cunts of player is 0:
+		say "Lacking a gender of your own, you doubt you'd be able to entice him into some fun until that's resolved.";
+	otherwise if KTO is 0:
 		say "'I'm sorry, but no.' Kenaz's resolve is unwavering, something unusual in this town, and at the staunch rejection you back from trying to entice the other man.";
-	if KTO is 1: 
+	otherwise if KTO is 1:
 		if lastKenazfucked - turns < 8:
 			say "'S-sorry friend.' Kenaz pants while wagging his tail both tiredly as well as happily up at you. 'I think this Dal boy is going to need a rest before shooting anything else out this fire hose.' The playful firefighter gives you a lick across the cheek before going back to what he was doing.";
 		otherwise:
-			if cunts of player > 0 and cocks of player < 0:
+			if cunts of player > 0:			[female or herm]
 				say "'Uhm...well...that is to say...' Kenaz seems to be somewhat bashful at the moment and you have to tilt your head to the side as confusion runs rampant throughout out your mind, that is, right before a hand at your rump has you whipping around. 'See, the thing is,' One of the other Dal boys, you're not sure who because of your intense focus on the blushing Dalmatian in front of you, says all of a sudden. 'Kenaz is here really prefers guys over the ladies so with you having a cunt and all...' Turning to look back at Kenaz you watch as the other man nods at you before blushing sharply. 'So here's the deal, me and some of the other guys will play with you if you want until you grow a pair to play with the firehouse tailbender over there.' The firefighter tips his head to Kenaz who growls at the other in warning.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -618,7 +620,7 @@ Instead of fucking Kenaz:
 					now lastKenazfucked is turns;
 				otherwise:
 					say "Waving the other off you let the firefighter know that, that will be alright. 'Suit yourself, but if you ever change your mind come back around. The rest of the guys and I will treat that pussy of yours to a real fine treat if you do.' A quick flick of a long and somewhat dexterous tongue has you blushing as you try and visualize what the Dalmatian is trying to hint at.";
-			otherwise if cocks of player > 0:
+			otherwise if cocks of player > 0:		[male]
 				say "Kenaz barks happily as you grind yourself up against the back of the Dalmatian's jean covered rump. Turning around to have a look down at your crotch the jade green eyes of the Dalmatian seem to almost twinkle as the spotted firefighter licks his lips hungrily while whimpering slightly at you. Some of the other guys around the fire house chuckle at this as they think about how needy the normally reserved Dal boy seems to become around you. Wagging his thin whip of a tail excitedly Kenaz grabs you by the arm and then hauls you upstairs to the sleeping area on fleet feet faster than you can blink.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -663,14 +665,14 @@ Instead of fucking Kenaz:
 					infect "Dalmatian";
 					infect "Dalmatian"; 
 					now lastKenazfucked is turns;
-	if KTO is 2: 
+	otherwise if KTO is 2:
 		if lastKenazfucked - turns < 6:
 			say "'I know you might want to take a ride right about now, or maybe have a nice foot and a half-long Dalmatian hot dog underneath your tail, but you're going to have to wait.' Kenaz chuckles before patting you on the ass and then sending you off with a dismissive wave of his hand.";
 		otherwise:
 			say "The alpha herm Dalmatian growls in a lustful, but dangerous way after you tell him what you want. It's only a second later that Kenaz grabs you by your shirt and then hauls upstairs towards the station's bunk area. When Kenaz kicks the door open several spots heads look up in confusion. Barking for the others to [']get out['] the rest of the firefighting crew snickers and then move off about their way downstairs, some via the fire pole. Once the others are gone Kenaz tosses you onto his bed you find and then quickly and efficiently begins to strip you out of your clothes. The Dal does the same to his own clothing once you are naked making things much easier for what to come next. A few playful licks over your face and neck have you shivering in restless excitement as the Dalmatian silently shows you his affection for asking him to be your lover today.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
-			if cunts of player > 0 and cocks of player > 0:
+			if cunts of player > 0 and cocks of player > 0:		[herm]
 				say "'Well, how should we do this?' The aggressive Dalmatian inquires while pulling of his own shirt, pants and shoes. Looking at the massive sixteen inch dong settled in between Kenaz's leg you mildly wonder if that could fit into your body without causing insufferable pain. 'I think I'll let you decide,' Kenaz words make your head snap up so that you can look into the smoldering eyes of the once timid Dalmatian.";
 				say "Not sure about whether you would want Kenaz buried inside of your ass or your eager cunt, since you have a feeling the other is not about to give up his ass or cunt to you anytime too soon, if the hungry look being cast your way is anything to go by, you think over the question for a minute. Which would be better? (Y=Ass, N=Cunt)[line break]";
 				if player consents:
@@ -743,7 +745,7 @@ Instead of fucking Kenaz:
 							say "Panting from the feel of being stuffed so completely you find yourself blinking in surprise as you feel the warmth trickling down your thighs. Tilting your head down you realize that Kenaz didn't knot you so there's no plug to keep his load into you. Therefore, minutes after everything is over with and the Dalmatian is pulling out of you, you can only dip your head into the side of your lover's neck in embarrassment as you see your firefighter's cum literally spill out of your body. Kenaz simply chuckles and lick you across the back of your neck on up to the side of your head before whispering something unintelligible into your ears.";
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-							say "The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you, he makes a special play of things by licking his cum up off of your body before handing you a towel, but once you both are ready to leave the two of your head out of the sleeping area and then back downstairs together. As expected half of the station is either snickering and nodding to you in respect.[line break]";
+							say "The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you, he makes a special play of things by licking his cum up off of your body before handing you a towel, but once you both are ready to leave the two of your head out of the sleeping area and then back downstairs together. As expected half of the station is either snickering and nodding to you in respect.[impregchance][impregchance][line break]";
 							infect "Dalmatian";
 							infect "Dalmatian";
 							now lastKenazfucked is turns;
@@ -774,11 +776,11 @@ Instead of fucking Kenaz:
 						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 						say "Pulling back and then driving his knot into you one more time Kenaz plugs you fully and then does a very canine-like thing. Lifting one leg up and then spinning around you Kenaz gives you his back as the Dalmatian stimulates a true canine mating tie with you. Chuckling at the act you find yourself reaching out a hand to rub along the Dalmatian's gaping slit, which looks somewhat unfulfilled. A hiss and shudder follows a groan as Kenaz lets you touch him this way. Turning his head back to look at you the other has a funny look in his eye, but you're not sure what  it means.[line break][line break]";
-						say "It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[line break]";
+						say "It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[impregchance][line break]";
 						infect "Dalmatian";
 						infect "Dalmatian";
 						now lastKenazfucked is turns;
-			otherwise if cunts of player > 0 and cocks of player < 0:
+			otherwise if cunts of player > 0:		[female]
 				say "Kenaz sniffs over your form and then chuffs slightly while looking down at your [bodyname of player] form. 'Well, it seems we're more like [']sisters['] than what I would have preferred.' The Dal doesn't say much after that, but by the penetrating look in his eyes you get the feeling that he's thinking over something. 'Want to try 69ing each other?' The out of the blue question makes you blink and then smile before nodding to your lover. Kenaz whuffs in front of your face and then proceeds to get himself into position to fuck you.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -798,8 +800,8 @@ Instead of fucking Kenaz:
 				infect "Dalmatian";
 				infect "Dalmatian";
 				now lastKenazfucked is turns;
-			otherwise:
-				say "Seeing the nice piece of meat swinging between your legs Kenaz doesn't waste time as he lays himself down on top of you, gripping both of your arms to hold you steadfast onto the bed, and then begins to grind sheath and balls into your body. 'Always like doing this, hope you don't mind.' Even if you did you have the strangest sensation that the larger Dalmatian wouldn't pay you much attention if you protested as Kenaz quickly frees cock itself from its furry home by continuing to rub himself over you while his nuts grind themselves further into the underside of your taint. Feeling the weight of the firefighter using you for his own pleasure you smirk and then lift your head back into the pillows while moaning your submission loudly up to the other.";
+			otherwise:		[male]
+				say "Seeing the nice piece of meat swinging between your legs Kenaz doesn't waste time as he lays himself down on top of you, gripping both of your arms to hold you steadfast onto the bed, and then begins to grind sheath and balls into your body. 'Always like doing this, hope you don't mind.' Even if you did you have the strangest sensation that the larger Dalmatian wouldn't pay you much attention if you protested as Kenaz quickly frees his cock itself from its furry home by continuing to rub himself over you while his nuts grind themselves further into the underside of your taint. Feeling the weight of the firefighter using you for his own pleasure you smirk and then lift your head back into the pillows while moaning your submission loudly up to the other.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "Kenaz doesn't say a word as he begins to rock the bed hard enough so that it bumps into the back wall as he meshes himself more firmly into you. The Dalmatian's growls are probably drowning out any sound he could hear as the other snarls while coaxing his cock to its full length as he steadily drips pre-cum onto your [bodyname of player] chest. The warmth of the other coupled with the feel of the Dal's fur rubbing up and across your cock work in time to make your own manhood liberally leak pre out across your stomach. Grunting and twining your legs over and around Kenaz's backside you gasp slightly as you feel the other getting closer to his fulfillment as he thrusts across your body harder.";

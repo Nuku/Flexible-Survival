@@ -1,5 +1,5 @@
 Version 3 of Onyx by Sarokcat n Verath begins here.
-[ Version 3.1 - Onyx only asks once about player topping ]
+[ Version 3.3 - Alternate vaginal/anal scenes w/fem Onyx at Palomino ]
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
@@ -11,7 +11,10 @@ onyxdmra is a number that varies.	[rescued Onyx / dom male / reciprocal anal for
 onyxhappytalk is a truth state that varies.  onyxhappytalk is normally false.
 Onyxmareslut is a number that varies.	[Stables Onyx / dom male / player into mareslut]
 Onyxboislut is a number that varies.	[Stables Onyx / dom male / player into stallionboi]
-femonyxq is a number that varies. [Quest variable for fem onyx]
+femonyxq is a number that varies.	[Quest variable for fem onyx]
+onyxlapdance is a number that varies.	[number of lap dances from Onyx]
+fonyxvagcount is a number that varies.	[number of vaginal sex with Onyx]
+fonyxanalcount is a number that varies.	[number of anal sex with Onyx]
 
 Onyx is a man.
 The description of Onyx is "[onyxappearance]".
@@ -179,6 +182,11 @@ Instead of fucking the Onyx:
 			say "[onyxbunkersex]";
 [		say "'Sorry friend,' Onyx says with a shy smile as he moves the pictures of horses around in front of him. 'But I haven't yet figured out what I should be yet, and I figure actually giving in and having sex would kind of make the decision for me... so I think I should pass for now..' He says with a sigh as he goes back to looking at the pictures, and you wonder if maybe there isn't something out there in the city you could find which would help him make the choice you want him to... perhaps in the red light district or one of the clubs in town...";	]
 [		say "***INSERT NEW CONTENT HERE";	]
+	otherwise if xp of Onyx is 32 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
+		[first time lap dance]
+		say "     Catching your look and returning it with a smile, the sexy mare saunters over to you sexily.  'Oh, I've been looking forward to showing you a good time again,' she says sensually.  Taking your hand in hers, she leads you off to a private little boudoir and helps you strip down while making a show of baring herself as well.";
+		femonyxsex5;
+		now xp of Onyx is 32;
 	otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:		[at Palomino]
 		now lastfuck of onyx is turns;
 		femonyxsex;
@@ -584,13 +592,23 @@ to femonyxsex:
 			say "(1) [link]Continue Oral[as]1[end link][line break]";
 			say "(2) [link]Fuck her[as]2[end link] [if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			say "(3) [link]Fuck her anally[as]3[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
+			if xp of Onyx >= 32:
+				say "(4) [link]Lap dance[as]4[end link][if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
 			while 1 is 1:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber >= 1 and calcnumber <= 3:
-					break;
+				if xp of Onyx < 32:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 3:
+						break;
+					otherwise:
+						say "Invalid entry.";
 				otherwise:
-					say "Invalid entry.";
+					say "Choice? (1-4)>[run paragraph on]";
+					get a number;
+					if calcnumber >= 1 and calcnumber <= 4:
+						break;
+					otherwise:
+						say "Invalid entry.";
 			if calcnumber is 1:
 				femonyxsex1;
 				now trixieexit is 1;
@@ -621,83 +639,107 @@ to femonyxsex1:
 	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 	
 to femonyxsex2:
-	say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
-	if cocks of player > 1:
-		say ". You imagine you can use [if cocks of player > 2]two[otherwise]both[end if] of your dicks on her[if cock length of player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
-		if player consents:
-			if cock length of player < 11: 
-				say "     Shall you fit both in her cunt? Else you'll plug both holes.";
-				if player consents:
-					now tempnum is 1;
+	if fonyxvagcount is 0 or a random chance of 2 in 3 succeeds:
+		say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
+		if cocks of player > 1:
+			say ". You imagine you can use [if cocks of player > 2]two[otherwise]both[end if] of your dicks on her[if cock length of player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
+			if player consents:
+				if cock length of player < 11: 
+					say "     Shall you fit both in her cunt? Else you'll plug both holes.";
+					if player consents:
+						now tempnum is 1;
+					otherwise:
+						now tempnum is 2;
 				otherwise:
 					now tempnum is 2;
 			otherwise:
-				now tempnum is 2;
+				now tempnum is 0;
 		otherwise:
+			say ".";
 			now tempnum is 0;
-	otherwise:
-		say ".";
-		now tempnum is 0;
-	say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if tempnum > 0 and cocks of player > 2] two of[otherwise if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
-	say "     Cunt [if cock length of player > 12 and tempnum is 2]and anal ring strained to contain your substantial flesh[otherwise if cock length of player > 12 or tempnum is 1]strained to contain your substantial flesh[otherwise if tempnum is 2]and anal ring easily abiding your rigid flesh[otherwise]easily abiding your rigid flesh[end if], your motion slicked by a mix of her juices and your precum, the heat of your shared fervour coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
-	if player consents:
-		say "     Right on the brink of bliss you pull your [cock size desc of player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [cum load size of player] load painting her back and ass[if cock width of player > 18] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
-		say "     'Whew! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
-	otherwise:
-		if libido of player > 40:
-			say "     You can't hold back for much longer, finally crying out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's womb with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, [if tempnum is 2]ass[otherwise]pussy[end if] squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
-			if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
-				say ", your unattended cocks staining her thighs.";
-			otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
-				say ", your unattended cock staining her thighs.";
+		say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if tempnum > 0 and cocks of player > 2] two of[otherwise if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
+		say "     Cunt [if cock length of player > 12 and tempnum is 2]and anal ring strained to contain your substantial flesh[otherwise if cock length of player > 12 or tempnum is 1]strained to contain your substantial flesh[otherwise if tempnum is 2]and anal ring easily abiding your rigid flesh[otherwise]easily abiding your rigid flesh[end if], your motion slicked by a mix of her juices and your precum, the heat of your shared fervour coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
+		if player consents:
+			say "     Right on the brink of bliss you pull your [cock size desc of player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [cum load size of player] load painting her back and ass[if cock width of player > 18] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
+			say "     'Whew! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 		otherwise:
-			say "     It's clear the equine can't hold back any longer, whinnying out loudly as her [if tempnum is 2]ass[otherwise]pussy[end if] tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's womb with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]";
-			if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
-				say ", your unattended dicks staining her thighs.";
-			otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
-				say ", your unattended dick staining her thighs.";
-		say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
-		say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
-
+			if libido of player > 40:
+				say "     You can't hold back for much longer, finally crying out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's womb with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, [if tempnum is 2]ass[otherwise]pussy[end if] squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
+				if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
+					say ", your unattended cocks staining her thighs.";
+				otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
+					say ", your unattended cock staining her thighs.";
+			otherwise:
+				say "     It's clear the equine can't hold back any longer, whinnying out loudly as her [if tempnum is 2]ass[otherwise]pussy[end if] tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's womb with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]";
+				if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
+					say ", your unattended dicks staining her thighs.";
+				otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
+					say ", your unattended dick staining her thighs.";
+			say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
+			say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
+	otherwise:
+		say "     With your decision made, you motion for Onyx to get down on all fours.  She does so eagerly, raising her ass in the air and giving her long tail a flick up.  The delectable sight of her sexy ass with her juicy muff ready and waiting for you is a beautiful one.  Resting your cock between her cheeks, you make it a point of telling her what a fine mare she's become before thrusting into her slick cunny.  Her response is lost in a nickering moan as you mount her and start fucking her.";
+		if cocks of player > 2:
+			say "     Leaving your extra cocks to hang between her thighs, they slide across her ebony fur[if cock length of player > 12] and slap against her belly[end if] as you thrust into her.  ";
+		otherwise if cocks of player is 2:
+			say "     Leaving your extra cock to hang between her thighs, it slides across her ebony fur[if cock length of player > 12] and slap against her belly[end if] as you thrust into her.  ";
+		otherwise:
+			say "     ";
+		say "Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking.  And you're more than happy to give it to the lovely mare.  Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm.  She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
+		say "     As you fuck her, she moans about how you make her such a happy mare when you fuck her.  'I wouldn't even be a happy mmmm-mare if it weren't for you.  I'd be some -nggg- brainless slut, getting fucked by anyone they told -ohhh yeah- told me to bang.  Here I get to be banged by anyone [bold type]I[roman type] like.  And I like being banged by you soooo much,' she neighs, grinding back against you harder as her vaginal walls tremble around you on the edge of orgasm.  Smiling at how well things have worked out, your pace quickens and you unleash your hot [cum load size of player] load into the black beauty beneath you moments after her own climax hits.  You nuzzle and nip at her neck as you send shot after shot into her[if cocks of player > 1] and across her thighs and belly[end if] until your balls are drained.  You slip your softening member from her pussy and makes sure to lick it clean before letting you return to the club.  She follows you out soon after, having made sure the room's ready for the next stripper girl who needs a private space.";
+	if xp of Onyx is 30, now xp of Onyx is 31;
+	increase fonyxvagcount by 1;
 
 to femonyxsex3:
-	say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
-	if cocks of player > 1:
-		say ". You imagine you can use [if cocks of player > 2]two[otherwise]both[end if] of your dicks on her[if cock length of player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
-		if player consents:
-			if cock length of player < 11: 
-				say "     Shall you fit both in her ass? Else you'll plug both holes.";
-				if player consents:
-					now tempnum is 1;
+	if fonyxanalcount is 0 or a random chance of 2 in 3 succeeds:
+		say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
+		if cocks of player > 1:
+			say ". You imagine you can use [if cocks of player > 2]two[otherwise]both[end if] of your dicks on her[if cock length of player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
+			if player consents:
+				if cock length of player < 11: 
+					say "     Shall you fit both in her ass? Else you'll plug both holes.";
+					if player consents:
+						now tempnum is 1;
+					otherwise:
+						now tempnum is 2;
 				otherwise:
 					now tempnum is 2;
 			otherwise:
-				now tempnum is 2;
+				now tempnum is 0;
 		otherwise:
+			say ".";
 			now tempnum is 0;
-	otherwise:
-		say ".";
-		now tempnum is 0;
-	say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if tempnum > 0 and cocks of player > 2] two of[otherwise if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
-	say "     Anal ring [if cock length of player > 12 and tempnum is 2]and cunt strained to contain your substantial flesh[otherwise if cock length of player > 12 or tempnum is 1]strained to contain your substantial flesh[otherwise if tempnum is 2]and cunt easily abiding your rigid flesh[otherwise]easily abiding your rigid flesh[end if], your motion slicked by[if tempnum is 2] a mix of her juices and[end if] your precum, the heat of your shared fervour coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
-	if player consents:
-		say "     Right on the brink of bliss you pull your [cock size desc of player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [cum load size of player] load painting her back and ass[if cock width of player > 18] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
-		say "     'Oh my! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
-	otherwise:
-		if libido of player > 40:
-			say "     You can't hold back for much longer, finally crying out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's bowels with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, ass squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
-			if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
-				say ", your unattended cocks staining her thighs.";
-			otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
-				say ", your unattended cock staining her thighs.";
+		say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if cockname of player is listed in infections of bluntlist] blunt[end if] head of[if tempnum > 0 and cocks of player > 2] two of[otherwise if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
+		say "     Anal ring [if cock length of player > 12 and tempnum is 2]and cunt strained to contain your substantial flesh[otherwise if cock length of player > 12 or tempnum is 1]strained to contain your substantial flesh[otherwise if tempnum is 2]and cunt easily abiding your rigid flesh[otherwise]easily abiding your rigid flesh[end if], your motion slicked by[if tempnum is 2] a mix of her juices and[end if] your precum, the heat of your shared fervour coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
+		if player consents:
+			say "     Right on the brink of bliss you pull your [cock size desc of player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [cum load size of player] load painting her back and ass[if cock width of player > 18] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
+			say "     'Oh my! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 		otherwise:
-			say "     It's clear the equine can't hold back any longer, whinnying out loudly as her ass tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's bowels with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]";
-			if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
-				say ", your unattended dicks staining her thighs.";
-			otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
-				say ", your unattended dick staining her thighs.";
-		say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
-		say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
+			if libido of player > 40:
+				say "     You can't hold back for much longer, finally crying out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's bowels with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, ass squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
+				if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
+					say ", your unattended cocks staining her thighs.";
+				otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
+					say ", your unattended cock staining her thighs.";
+			otherwise:
+				say "     It's clear the equine can't hold back any longer, whinnying out loudly as her ass tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if cockname of player is listed in infections of knotlist]tying[otherwise]hilting[end if] yourself as you flood the equine's bowels with your [cum load size of player] load[if cock width of player > 18 and tempnum is 2] until it starts to sputter from her stuffed holes[otherwise if cock width of player > 18] until it starts to sputter from her stuffed hole[end if]";
+				if (tempnum > 0 and cocks of player > 3) or cocks of player > 2:
+					say ", your unattended dicks staining her thighs.";
+				otherwise if (tempnum > 0 and cocks of player > 2) or cocks of player > 1:
+					say ", your unattended dick staining her thighs.";
+			say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
+			say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
+	otherwise:
+		say "     With your decision made, you motion for Onyx to get down on all fours.  She does so eagerly, raising her ass in the air and giving her long tail a flick up.  The delectable sight of her sexy ass with her juicy muff and tight tailhole ready and waiting for you is a beautiful one.  Resting your cock between her cheeks, you make it a point of telling her what a fine mare she's become before easing into her tight anus.  Her response is lost in a nickering moan as you mount her and start fucking her.";
+		if cocks of player > 2:
+			say "     Leaving your extra cocks to rest between her cheeks, they hotdog her ebony ass[if cock length of player > 12] and dribble onto her lower back[end if] as you thrust into her.  ";
+		otherwise if cocks of player is 2:
+			say "     Leaving your extra cock to rest between her cheeks, it hotdogs her ebony ass[if cock length of player > 12] and dribble onto her lower back[end if] as you thrust into her.  ";
+		otherwise:
+			say "     ";
+		say "Her anal muscles squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good buggering.  And you're more than happy to give it to the lovely mare.  Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm.  She gives a soft neigh as you tweak her nipple and you can feel rectum clench down around you in delighted response.  After playing with her tits for a while, you move your hand back between her legs to finger her clit and stuff her cunny with a few probing digits.";
+		say "     As you fuck her, she moans about how much she loves being a naughty mare and getting it up the ass.  'I've been having so mmm-much kinky fun since I've gotten here.  If it weren't for you-oooo! and the girls here helping me, I'd be missing -ohhh- out on all this fun.  So go ahead, baby.  Pound that ass of mine!' she neighs, grinding back against you harder as you can feel the quiver of her cunt around your fingers on the edge of orgasm.  Smiling at how well things have worked out, your pace quickens and you unleash your hot [cum load size of player] load into the black beauty beneath you moments after her own climax hits.  You nuzzle and nip at her neck as you send shot after shot into her bowels[if cocks of player > 1] and across her ass and back[end if] until your balls are drained.  You slip your softening member from her pussy and makes sure to wipe it clean before letting you return to the club.  She follows you out soon after, having made sure the room's ready for the next stripper girl who needs a private space.";
+	increase fonyxanalcount by 1;
 
 to femonyxsex4:
 	say "     Eagerly obliging your request, Onyx is already lowering herself[if scalevalue of player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cunt size desc of player] cunt[sfn] before her curious gaze.";
@@ -719,6 +761,18 @@ to femonyxsex4:
 		say ". Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
 		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]";
 	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
+
+to femonyxsex5:
+	say "     After that very sexy warm-up, Onyx cuddles up close to you, running her hands over your [bodydesc of player] body.  She nuzzles your ear and nibbles softly with her flat teeth.  '[if xp of Onyx is 31]Here, let me show you one of the fun things I've learned from the other girls,' she whispers tantalizingly[otherwise]And I think you were asking for another dance, weren't you, sexy?' she whispers teasingly[end if] as she gently presses you down into a seat.  Sliding into your lap, she grinds her shapely buttocks down onto your manhood.  You stiffen quickly as she continues to slide and grind down onto you.";
+	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways.  Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you.  You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face[if xp of Onyx is 31].  You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron.  And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[otherwise].  As before, she's doing her best to make a dance out of this lap dance for her special patron.  She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
+	say "     She goes like this through a couple of songs, getting you good and rile up.  And from the hot, wet juices dripping onto you, you can tell it's having a similar effect on her";
+	if onyxlapdance is even:
+		say ".  And when she can't take any more, she drops to her knees between your legs just as the bass drops on the techno tune being played and plunges your [cock of player] meat into her equine muzzle.  She sucks you to a moaning climax that blasts shot after shot down her throat while she fingers herself to orgasm.  She makes sure to suck all your seed down and lick you clean before getting up and giving you a tongue-filled kiss.";
+	otherwise:
+		say ".  And when you can't take it any longer, you grab her hips just as another song is starting and plunge your [cock of player] meat into her heated cunt.  She gives a neighing moan, squirming in delight in your lap as you bounce her vigorously.  You cum hard, blasting shot after shot into her clenching tunnel, feeding your [cum load size of player] load into her equine belly.  The feel of you seeding her sets her off and she gives a wild neigh of orgasmic release.  You fuck her through her climax before finally sagging back in your seat.  She gives you a tongue-filled kiss as she slowly, reluctantly, slips off your spent shaft.";
+	say "     After getting you cleaned up and dressed again, she sends you off to the main club area while she tidies up the room for the next to use it.  She comes out a few minutes later back in her skimpy outfit and tantalizing the other patrons with her shapely body.";
+	increase onyxlapdance by 1;
+
 
 Section 5 - Endings
 
