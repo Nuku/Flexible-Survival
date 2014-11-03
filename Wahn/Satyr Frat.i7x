@@ -15,6 +15,7 @@ Version 1 of Satyr Frat by Wahn begins here.
 [  0: not met                                                          ]
 [  1: friendly encounter (know his name)                               ]
 [  2: sexual encounter (know his name)                                 ]
+[  3: fucked in public (know his name)                                 ]
 [ 98: neutral encounter (do not know his name)                         ]
 [ 99: unfriendly encounter (do not know his name)                      ]
 
@@ -113,7 +114,7 @@ to say SatyrFratSex:
 		say "     You can feel his manhood twitch and pulse with more and more of his seed being deposited into you, leaving you with a pretty nice and full sensation. Holding on to you and leaning his head against your back, Richard gets out 'That was *pant* amazing!' You pull off his still hard cock with a wet slurp, then turn around and give him a deep kiss. After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the other satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see what you've just helped do...";
 		now SatyrFratPartyStage is 6;
 
-Let's Party is a situation.
+Let's Party is a situation. Let's Party is resolved.
 The sarea of Let's Party is "Campus".
 when play begins:
 	add Let's Party to badspots of guy;       [frat boys]
@@ -146,13 +147,13 @@ to say SatyrFratSexMenu:
 	now title entry is "'Accidentally' spill a drink over someone and help him 'clean up' in the shower";
 	now sortorder entry is 2;
 	now description entry is "Have some fun with a frat guy once you got his clothes off";
-	[  
+	[]
 	if SatyrFratRichardRelationship < 90:
 		choose a blank row in table of fucking options;
 		now title entry is "Get it on with Richard - publicly";
 		now sortorder entry is 3;
 		now description entry is "Pull the guy down on a sofa right here in the room and have your way with him";
-	]     
+	[]     
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -261,6 +262,20 @@ to say SatyrFratSex2:
 			say "     Unlike your over-excited stud, you do dry yourself off and put your clothes back on before you make your way out of the bathroom. Back in the main room of the frat house, you don't see the new satyr you helped create - but the thumbs-up and grin that Talov shows tells you that he made a nice big splash. Content with a job well done, you walk back towards the entrance and leave - for now. A voice inside you tells you to just stay, but you can't - you've got to work at it if you want to survive in this ever-changing crazy world.";	
 		
 to say SatyrFratSex3:
-	say "     SatyrFratNPC says, 'bla bla.'";
-
+	say "     Letting your eyes wander over the crowd of partying students, you spot your perfect mark - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. Not wanting to risk anyone else honing in on the handsome guy, you quickly grab a cup of satyr wine and make your way over to him, dodging between the frat guys and girls in between. As you suddenly step up close to Richard, his eyes go wide and cheeks go red as he remembers your last encounter, then he catches himself and readily accepts the plastic cup from you. In between taking short nips, then larger swallows from the potent drink, he says, 'Hey, thanks! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
+	if SatyrFratRichardRelationship is 2:
+		say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' The muscular student turns crimson red in the face, then clears his throat and stutters to you, 'Let - let's go to my room upstairs and -' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";
+	otherwise:
+		say "     You exchange some sentences of small talk about the party with Richard, then casually lean in against him and place your hand on his crotch, right on the noticeable bulge he's already sporting thanks to the satyr wine. He falls silent for a second, moaning quietly as you openly rub his erection through the pants. As you're not even trying to hide what you're doing, it doesn't take long before a [one of]sorority girl[or]frat guy[at random] dancing nearby calls out, 'Seems like Richard is really enjoying the party!' A wide grin spreads over the muscular student's face as he looks over to the commenter and replies, 'Oh yeah - you should try it sometime. Lots of fun in public!' And that's how far you let him get before pulling his head to yours and giving him a deep kiss. While he's distracted with your tongue wiggling against his own, you slide your hand inside his pants and take hold of his hardon.";		
+	say "     [WaitLineBreak]";
+	say "     In between your continuing stimulation and the satyr wine unfolding its effects more and more, Richard is more than ready to fuck you right on this very spot. By the time you pull back and allow him to take moaned breaths again, he helps eagerly when you start undoing his pants. An eyeblink later, the young man's erect cock is proudly dangling in view of anyone caring to look, causing a series of whoops and hollers from the watching party-goers. One hand wrapped around the ultimate joy-stick to control a man, you proceed to slowly walk Richard backwards until he reaches the nearby sofa. Giving a soft but firm push against his chest, you make him sit, then sink down on your knees and start bobbing your head with its lips wrapped around his hard pole.";
+	say "     The shout, 'Hey look, Richard's getting a BJ,' is repeated several times, bringing more and more onlookers and turning the sexually charged atmosphere in here decidedly hotter. There's a few calls of, 'Hey [if cunts of player > 0]baby[otherwise]stud[end if], you're gonna do me next, right?' and 'Way to go, Richard - scoring at your first party!' - but as you pull off his manhood with a loud pop and start to take off your own clothes, something of a shocked silence falls over the would be commenters. When you're completely naked and start to climb on top of the sofa - and Richard, one guy gasps, barely audible above the loud music, 'No way! Is [if cunts of player > 0]she[otherwise]he[end if] gonna - WOOOW!' A mixed cheer and aroused sigh goes through the crowd as you sink your [if cunts of player > 0]pussy[otherwise]asshole[end if] down on Richard's nice and wet cock in one fell swoop.";
+	say "     [WaitLineBreak]";
+	say "     Once fully impaled on his hot and hard shaft, you lean down to give Richard a hungry kiss that leads over to a breathtaking make-out session. Sharing kiss after kiss while you can feel the beat of his heart though the erect manhood deep inside you makes you blank out everything around and totally concentrate on pleasing Richard. 'So good! So tight! Yeah!' he gasps out in between more kisses as you start rotating your hips and slide up and down on his shaft. After a while of fucking yourself with the athlete's cock, he suddenly wraps his arms tightly around your chest, then partly rises and turns the two of you around, putting you under him, with your back to the cushions now. You've got a second to register the shout of, 'Yeah, show [if cunts of player > 0]her[otherwise]him[end if] what a real Phi Alpha Nu member is like!', then your mind explodes in bliss as Richard's cock pounds into you all the way until his balls slap your crotch.";
+	say "     'Man, I love your hot hole around my shaft!' he grunts with lust in his voice, then pulls back and thrusts in again... and again... and again, really hammering you with a relentless rhythm that has you howling and twitching from the sensations it gives you. Being fucked by this very eager young man, you delight in his impressive stamina, keeping you in a state of almost constantly rising arousal. Each time he starts moving in again, you flex your inner muscles and listen to the moaned and gasped reactions that follow, playfully working at being the best he ever had. With this being a totally hot public fuck, it's no big wonder that Richard soon gets closer and closer to orgasming. His pants and moans rise in volume and frequency until he finally gives a hoarse bellow of 'I'm coming!' and pounds his cock into your hole one last time as it starts blasting spurt after spurt of cum. Your own orgasm was just teetering on the brink itself, so you join Richard in climax as feeling the first splash of his seed inside you pushes you over the edge too.[impregchance]";
+	say "     [WaitLineBreak]";
+	say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself[if cocks of player > 0], splattered all over chest with your own cum, [otherwise if cunts of player > 0], all sweaty and dripping femcum from your pussy, [otherwise], all sweaty as you are, [end if]then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
+	say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by offering his t-shirt as an impromptu towel, he later bids you farewell and goes upstairs to clean himself up too.";	
+	now SatyrFratRichardRelationship is 3;	
+	
 Satyr Frat ends here.
