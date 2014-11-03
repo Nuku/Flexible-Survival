@@ -179,24 +179,24 @@ Instead of resolving a The blue Oni:
 		say "     Rane looks at you with a shocked expression, then says 'You made a deal with that beast? I would never have expected something so vile from you. Stay away from me.' After a quick murmur in Japanese and a bowing towards the mirror, the blue oni then dashes off, vanishing between the bamboo poles before you can do or say anything.";
 		now hp of Rane is 99;
 		now battleground is "void";	[blocks a random fight after this]
-		move player to Shinto Shrine;
+		move player to shrine;
 		remove Rane from play;
 	otherwise if jackalmantf is 4:  [Jackalman Transformation]
 		say "then is eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
-		move Rane to Shinto Shrine;
+		move Rane to shrine;
 		now hp of Rane is 6;
 		now battleground is "void";	[blocks a random fight after this]
-		move player to Shinto Shrine;	
+		move player to shrine;	
 	otherwise if Nightmaremastery is 1:   [Player is Stablemaster]
 		say "then is eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";		
 	otherwise:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
-		move Rane to Shinto Shrine;
+		move Rane to shrine;
 		now hp of Rane is 6;
 		now battleground is "void";	[blocks a random fight after this]
-		move player to Shinto Shrine;
+		move player to shrine;
 	now The blue Oni is resolved;
 
 Table of random critters (continued)
