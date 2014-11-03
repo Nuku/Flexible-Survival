@@ -770,7 +770,7 @@ instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 
 	now lastfuck of Carl is turns;
 	now lastfuck of David is turns;
 
-instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (hp of Carl > 3 and hp of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 6 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

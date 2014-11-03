@@ -865,7 +865,7 @@ after of going to Bunker while thirst of David is 5 and hp of David is 4:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
 
-after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
+after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 0: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	say "     As you enter the bunker, David walks up to you and pulls you to the side, whispering he has something talk to you about. He looks a bit embarrassed about it, and you notice his eyes straying over to where Eric sits on his bunk (reading something with his back to you) before he continues. 'I - I accidentally saw Eric when he changed his clothes. I didn't spy on him or anything, it just happened, and... he's...'";
@@ -902,7 +902,7 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 	otherwise:
 		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
+after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	if lust of Erica is 0:
@@ -913,7 +913,7 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";		
 	now lust of Erica is 1;
 
-after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
+after of going to Bunker while Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -921,12 +921,12 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
+	if player is in bunker and Eric is in bunker and thirst of David > 5 and hp of David is 4 and hp of Eric > 0 and lust of Eric is 1:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		say "     [line break]";
 		say "     [DavidEricTalk]";
 	
-after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
+after of going to Bunker while Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -934,7 +934,7 @@ after of going to Bunker while thirst of David > 5 and hp of David is 4 and hp o
 	say "     [DavidEricaTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if player is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1:
+	if player is in bunker and Erica is in bunker and thirst of David > 5 and hp of David is 4 and hp of Erica > 0 and lust of Erica is 1:
 		say "     As you spend some time in the bunker, you notice David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		say "     [line break]";
 		say "     [DavidEricaTalk]";	
@@ -1018,7 +1018,7 @@ instead of going to Bunker while hp of David is 4 and libido of David < 53 and c
 			say "     They stay in that tight hug for a moment, David pressed against Brutus chest, his arms not even close long enough to reach around the demon's wide chest. Then suddenly, Brutus clears his throat, his face taking on an interesting shade of embarrassed purple as he lets the young soldier in his arms go. As David steps away, you see the demon's cock in a quite aroused state, hanging where it must have pressed right against David. With you standing right next to them, both the soldier and the demon seem to come to the decision to ignore the last bit at the same time, resulting in a somewhat awkward 'See ya.' and 'Sure, friend.'";
 		now libido of David is 53;
 			
-instead of going to Bunker while hp of David is 4 and (libido of David > 56 and libido of David < 80): [David wants Brutus to get out more]
+instead of going to Bunker while hp of David is 4 and (libido of David is 57): [David wants Brutus to get out more]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DAVID/BRUTUS TRIP INTERACTION";
