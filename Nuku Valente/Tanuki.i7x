@@ -5,21 +5,21 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 Section 1 - The Situation
 
-Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese gently roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
-Northwest of Park Trail is Shrine.
+Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese gently roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Northwest of Park Trail is Shinto Shrine.
 
-instead of sniffing Shrine:
+instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
-Shrine has a Grab Object called Demand.
-The demand of shrine is usually journal.
+Shinto Shrine has a Grab Object called Demand.
+The demand of Shinto Shrine is usually journal.
 
 ringing is an action applying to nothing.
 
 understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ring ornate bell" and "ring ornate bell with hammer" as ringing.
 
-There is a donation box and hammer and ornate bell in shrine.
+There is a donation box and hammer and ornate bell in Shinto Shrine.
 
 The description of ornate bell is "A small ornate bell.".
 The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.".
@@ -35,14 +35,14 @@ instead of taking the hammer:
 	say "You have no use for that. Besides, why anger the spirits?";
 
 check ringing:
-	if the player is not in Shrine, say "I see nothing to ring here." instead;
+	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
 	if SatisfiedTanuki is less than 1, say "Nothing happens." instead;
 	
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
-	if the demand of the shrine is journal:
-		now the demand of shrine is a random temporary grab object;
+	if the demand of the Shinto Shrine is journal:
+		now the demand of Shinto Shrine is a random temporary grab object;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
 	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 
@@ -52,8 +52,8 @@ understand "sacrifice [grab object]" as sacrificing.
 
 check sacrificing:
 	if noun is not owned, say "You don't have that." instead;
-	if the player is not in Shrine, say "I see nothing to sacrifice to here" instead;
-	if noun is not demand of shrine, say "That is not what the spirit wants!" instead;
+	if the player is not in Shinto Shrine, say "I see nothing to sacrifice to here" instead;
+	if noun is not demand of Shinto Shrine, say "That is not what the spirit wants!" instead;
 
 carry out sacrificing:
 	say "You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
@@ -64,7 +64,7 @@ carry out sacrificing:
 		extend game by 40;
 		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
 	otherwise:
-		now the demand of the shrine is journal;
+		now the demand of the Shinto Shrine is journal;
 		try ringing;
 
 leafing is an action applying to nothing.
