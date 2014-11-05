@@ -633,6 +633,8 @@ To reciting2:
 						now the icon of Elijah is Figure of Elijah_good_icon;
 					otherwise if hp of Elijah is 99:
 						now the icon of Elijah is Figure of Elijah_evil_icon;
+						now hp of Gabriel is 1;
+						move Elijah to Bunker;
 					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
@@ -2634,6 +2636,8 @@ Carry out reciting:
 						now the icon of Elijah is Figure of Elijah_good_icon;
 					otherwise if hp of Elijah is 99:
 						now the icon of Elijah is Figure of Elijah_evil_icon;
+						now hp of Gabriel is 1;			
+						move Elijah to Bunker;									
 					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
 						now Burned-Out Chapel is known;
