@@ -48,7 +48,7 @@ To say onyxappearance:[his description at each stage, comments on what each stag
 		otherwise:
 			say "     The tall horseboy is seated at one of the empty stalls, and is idly watches the strippers at the lounge. His features have continued to change from when you rescued him from the library, and his face is nearly a full equine muzzle now, and underneath the desk, you are all to well aware of how very equine his legs and body has become. Onyx doesn't seem to mind the changes at all anymore however, and he looks up at you with a rather sexy smile as you approach.";
 	otherwise if xp of Onyx >= 10 and xp of Onyx <= 29:		[Onyx free - stallion at Library, wants player mare]
-		say "     Onyx looks like a proper Stallion now, his handsome black equine features, and lovely pelt of jet black horse fur making him look extremely exotic and sexy as he wanders around the library. Noticing you looking at him, he shoots you a rather dominant equine grin, as he flexes slightly for your enjoyment. His obviously large and powerful stallionhood obviously far to large now to be contained in a thong, it hangs half erect between your stallions legs as if teasing you to come over and worship it properly.";
+		say "     Onyx looks like a proper Stallion now, his handsome black equine features, and lovely pelt of jet black horse fur making him look extremely exotic and sexy as he wanders around the library. Noticing you looking at him, he shoots you a rather dominant equine grin, as he flexes slightly for your enjoyment. His obviously large and powerful stallionhood obviously far to large now to be contained in a thong, it hangs half erect between your stallion's legs as if teasing you to come over and worship it properly.";
 	otherwise if xp of Onyx >= 30 and xp of Onyx <= 49:		[Onyx has become convinced to visit the palomino, where she is learning to be a female stripper.]
 		say "     Onyx seems quite happy as she bobs her head to the beat of the bouncy music, the former teenage boy has obviously adapted well to her new role as a sexy mare. Her lush black equine pelt is draped in a leather harness with shiny silver buckles, and she has is wearing a tight red thong and bra that barely contain her obviously damp and needy mare pussy, and her pert and sexy breasts. You can tell just by the looks that several of the club goers are giving her that she is going to be quite a popular little stripper here at the club, and from the teasing glances she sends you from time to time, she certainly appears grateful for all your help in getting her here.";
 	otherwise if xp of Onyx >= 60 and xp of Onyx <= 79:		[Onyx staying as stallion - wants player as replacement mare]
@@ -182,7 +182,7 @@ Instead of fucking the Onyx:
 			say "[onyxbunkersex]";
 [		say "'Sorry friend,' Onyx says with a shy smile as he moves the pictures of horses around in front of him. 'But I haven't yet figured out what I should be yet, and I figure actually giving in and having sex would kind of make the decision for me... so I think I should pass for now..' He says with a sigh as he goes back to looking at the pictures, and you wonder if maybe there isn't something out there in the city you could find which would help him make the choice you want him to... perhaps in the red light district or one of the clubs in town...";	]
 [		say "***INSERT NEW CONTENT HERE";	]
-	otherwise if xp of Onyx is 32 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
+	otherwise if xp of Onyx is 31 and cocks of player > 0 and cock length of player <= 15 and a random chance of 3 in 5 succeeds:
 		[first time lap dance]
 		say "     Catching your look and returning it with a smile, the sexy mare saunters over to you sexily.  'Oh, I've been looking forward to showing you a good time again,' she says sensually.  Taking your hand in hers, she leads you off to a private little boudoir and helps you strip down while making a show of baring herself as well.";
 		femonyxsex5;
@@ -798,7 +798,9 @@ when play ends:
 [ 10 = gave oral again (random - stallion locked) ]
 [ ... ]
 [ 30-49 = Freed mare (Palomino) ]
-[ ... content not yet created ]
+[ 31 = Fucked mare ]
+[ 32 = Received lap dance ]
+[ ... ]
 [ 50 = talked to Daisy, plan to have Onyx stay ]
 [ 51 = talked to Onyx about staying - fuck to lock him in ]
 [ 60-79 = Stabled stallion ]
