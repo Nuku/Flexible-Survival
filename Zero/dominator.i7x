@@ -168,7 +168,7 @@ When Play begins:
 	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later, a chain appearing from nowhere and rapping around your neck"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body's fat is converted into muscle, becoming that of a muscular wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft and shiny black fur covers your body. "; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a long wolfs tail grows and begins waggling happily."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "a long wolf's tail grows and begins waggling happily."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes canine, and incredibly hard."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 12;
