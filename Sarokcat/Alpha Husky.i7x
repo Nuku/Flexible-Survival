@@ -20,7 +20,7 @@ to say Alpha Husky attack:
 			Say "     You can feel your mind emptying of any thoughts other then pleasing and serving your alpha, your nice, strong amazingly powerful alpha. Images of being a nice proper slutty husky bitch for your handsome mate filling your head, and replacing those old unnecessary human thoughts, each press of his male husky body against your own slutty female husky body, making you more and more his bitch. A nice slutty husky bitch for him to fuck, a needy and horny heat filled husky for him to breed, and fill full of lovely little husky pups for him. The new thoughts taking root in your mind, you find yourself whining eagerly up at your alpha as he pounds into your body, begging him without words to mark you with his seed and make you his. [line break]";
 			say "     The alpha grins as your mind finally begins to submit to him just as eagerly as your body, before letting out a low howl of pleasure as his cock begins to spill his lovely alpha seed inside your body. Your already aroused body explodes with pleasure as the alpha husky's cum splashes into your womb, each additional pulse of his male essence working hard to quench the burning fire in your body his dominant presence awoke within you. You pant happily as your alpha holds your limp body close as you lie there on the ground beside him, his knot sealing you together as his paws stroke your body happily. 'Now there[']s a good husky bitch, just submit to your alpha and give up this silly wandering around the city of yours and be a good little packslut.' He says teasingly when he finally pulls his softening knot out of your body, his paw petting your head as you whimper slightly at being left all alone as the handsome male alpha begins to saunter off into the city, his teasing look back over his shoulder at your well fucked female body almost making you want to run after him and beg him to finish showing you how to be a good little husky slut for him and his pack...[impregchance][impregchance]";
 			infect "Female Husky";
-			decrease humanity of player by 10; 
+			decrease humanity of player by 10;
 			increase Alphahuskypet by 1;
 		otherwise:
 			say "     Throwing you to the ground one last time, the powerful male husky sniffs you for a minute, before grinning happily 'You'll make a good bitch for me now won[']t you,' The alpha male growls out, his sexy dominant tone making you shudder, as your pussy clenches with need. He wastes no more time with words, as he pounces on you eagerly, pinning you to the ground underneath him, the powerful male rolls you over, pressing his soft furred chest up to your back as you lie face down underneath him. His pawlike hands grip your hips, reaching around and spreading your legs wider for him even as they lift your hips up to meet his, the feel of the hot excited breath of the alpha husky on your neck making you moan as your body heats up underneath him. [line break]";
@@ -87,7 +87,7 @@ to say alpha huskypack lost:
 	if hp of player is less than 1:
 		say "     The pack laughs and cheers as you submit to their superior numbers. They push you over and suddenly your mouth is full of dog cock as one sits down on you, shoving his member into you and starting to rut eagerly and with reckless abandon.";
 		say "     You feel another husky rifling through your pockets. Are they mugging you? It seems so, as one gives a delighted bark and dashes off with something of yours, bringing it to the alpha husky to admire. You try to voice complaint, but can only get out a muffled whine around the cock filling you. The husky straddling your face howls, filling you with salty dog cum and forcing himself forward. Your jaw hurts as the knot is forced past it, leaving you tied to the lusty canine.";
-		say "     Time passes, and the sounds of the other dogs grows quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
+		say "     Time passes, and the sounds of the other dogs grow quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
 		let z be a random owned grab object;
 		decrease carried of z by 1;
 [		sort invent of the player in random order;	]
@@ -95,9 +95,9 @@ to say alpha huskypack lost:
 	otherwise: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions. Some are petting, some are licking. The leader however is looking you in the eyes. 'If you want to join us,' he says, 'You will have to be stronger than that.";
 		if cocks of player is greater than 0:
-			say "    You feel your [cock of player] shaft being buried in the eager mouth of a husky, slurping at you with loud rude sounds and bobbing against your crotch. Furry paws grasp and caress at your [ball size] nuts as they growl happily.";
+			say "     You feel your [cock of player] shaft being buried in the eager mouth of a husky, slurping at you with loud rude sounds and bobbing against your crotch. Furry paws grasp and caress at your [ball size] nuts as they growl happily.";
 		if cunts of player is greater than 0:
-			say "    A wet, slippery, canine tongue delves up into your cunt, lapping at your [cockname of player] sex as they tease at your clit with clawtips carefully. Your sex sings with forced pleasure as the dogs work diligently to bring you to delirious heights.";
+			say "     A wet, slippery, canine tongue delves up into your cunt, lapping at your [cockname of player] sex as they tease at your clit with clawtips carefully. Your sex sings with forced pleasure as the dogs work diligently to bring you to delirious heights.";
 		say "     You shudder and spasm as climax hits you like a freight train, feeding hungry husky mouths with your fluids. They work you until you have no further to give and lower you back to the ground gently. The alpha stands over you, his tail wagging, 'Next time.'";
 				
 		
@@ -293,7 +293,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][otherwise][one of]altered[or]animalistic[at random][end if]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
