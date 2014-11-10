@@ -285,7 +285,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind";
 			if facename of player is "Cerberus":
-				say ".  With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement.  Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind.  You receive a very lustful welcome from the other three-headed dogs people, who share triple-kisses with you.  Soon enough, you are rolling around with them, mating one another";
+				say ".  With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement.  Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind.  You receive a very lustful welcome from the other three-headed dog people, who share triple-kisses with you.  Soon enough, you are rolling around with them, mating one another";
 				if cocks of player > 0 and cunts of player > 0:
 					say ".  You take turns mounting them and being mounted, sometimes enjoying one bitch's pussy while another takes you as hir bitch with hir tailcock";
 				otherwise if cocks of player > 0:
