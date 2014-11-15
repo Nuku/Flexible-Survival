@@ -5390,21 +5390,21 @@ To say ball size:
 
 to say cum load size of ( x - a person ):
 	if cock width of x > 0:
-		if cock width of x is less than 3:
+		if cock width of x is less than 3:			[1, 2]
 			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
-		otherwise if cock width of x is less than 6:
+		otherwise if cock width of x is less than 6:	[3 - 5]
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
-		otherwise if cock width of x is less than 12:
+		otherwise if cock width of x is less than 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupfull[or]ample[or]above-average[or]generous[or]sizable[at random]";
-		otherwise if cock width of x is less than 16:
+		otherwise if cock width of x is less than 16:	[12 - 15]
 			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
-		otherwise if cock width of x is less than 20:
+		otherwise if cock width of x is less than 20:	[16 - 19]
 			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
-		otherwise if cock width of x is less than 25:
+		otherwise if cock width of x is less than 25:	[20 - 24]
 			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		otherwise if cock width of x is less than 32:
+		otherwise if cock width of x is less than 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
-		otherwise:
+		otherwise:								[32+]
 			say "[one of]torrential[or]monumental[or]colossal[or]gigantic[or]immeasurable[or]devastating[or]near-unending[at random]";
 
 This is the cunt descr rule:
@@ -6588,6 +6588,7 @@ Include jackalman by Sarokcat.
 Include Twisted Pimp by Sarokcat.
 Include Amazonian for FS by Stripes.
 Include Pewter Consort By Blue Bishop.
+Include Maternity Lamia By Blue Bishop.
 Include Queen Bee for FS by Stripes.
 Include Saber Kitty by Blaydrex.
 Include Naga by Nuku Valente.

@@ -160,10 +160,13 @@ Maternity Ward is a situation.
 The sarea of Maternity Ward is "Hospital".
 
 Instead of resolving a Maternity Ward:
-	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
+	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed by the scene inside or relieved that it was not as you feared within.";
 	if hp of Doctor Medea is 3:
-		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in there and deal with the large group vixen nurses in there.  It seems like you'll have to look elsewhere in the hospital.";
+		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in and deal with the large group vixen nurses inside the ward.  It seems like you'll have to look elsewhere in the hospital though.";
 		increase score by 4;
+	if mlamiamet is true:
+		say "     As you're leaving, you hear a familiar voice behind you.  'Oh, did you come here looking for me?' the creamy voice says as the door behind you opens and shuts.  Turning, you see it to be the white-scaled lamia you encountered before.  Her smile becomes briefly skewed as she struggles to close up her overstuffed nurse's outfit, her many nipples wet with milk.  It's easy to surmise that she does a lot of the wet nursing for the mutant offspring.  'It's so nice of you to come visit me at work.  It makes me all warm and happy inside to know you care.  Come, give me a hug,' she says playfully.";
+		challenge "Lamia";
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 1;
