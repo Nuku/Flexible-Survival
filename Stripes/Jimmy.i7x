@@ -75,6 +75,10 @@ Instead of conversing the Jimmy:
 	otherwise if hp of Jimmy is 3:
 		say "     'Thanks again for helping me get here.  This place is so much better than where I was stuck before, even though there's a lot of sticky messes to clean up.  Still, once I get it all cleaned up, it'll be fun to make a few sticky messes of my own,' he laughs with a wink at you.  'Oh, do you like my new outfit,' he asks, doing a wobbly spin to show off the police dog vest he found.  It is the kind worn by the dogs of the K-9 unit and looks absolutely adorable on him.  It makes you want to scoop him up and hug him tight.";
 		now hp of Jimmy is 4;
+	otherwise if hp of Alexandra >= 63 and sgtimer - turns >= 8 and sgtimer is not 255:
+		say "     Speaking with Jimmy, he inform you that one of the survivors from the bingo hall had left a note for any of the missing scouts who might return, telling them where the rest of you had gone.  'Since they'd be left there alone without directions or help to get here, I'd like you to go back there and check it out one last time.  Besides, some of those scattered by the wolves may have escaped there.'  Agreeing that it's worth a shot, you promise him you'll return to check on the [bold type]survivor group[roman type]'s bingo hall one last time.";
+		now sgtimer is 255;
+		now Survivor Group is unresolved;
 [	otherwise if population of Police Station > 0:
 		say "***";		]
 	otherwise:

@@ -546,7 +546,7 @@ to say policelockerdesc:
 		say "     This room was once the lockerroom area of the station, where the cops could get changed when coming on and off duty.  The room's been cleaned up quite a bit.  The destroyed lockers have been removed and the open space now has some bunks in it.  The remaining lockers have been pushed to one wall to be a place where those staying here can store their few personal belongings or a change of clothes[if hp of Jimmy >= 3].  Jimmy's cheerfully made quite the effort to clean up the place, having scrubbed away most of the messy stains left after the outbreak[end if].";
 	if paula is lockered:
 		say "     Paula's converted a small corner of this room into her nurse's station.  The medical supplies, which she's put herself in charge of, are secured in some lockers to prevent misuse.  She's also set aside a cot to use as her examination table.";
-	if population of Police Station > 25:
+	if population of Police Station > 30:
 		say "[bracket]*** Someone's cheating... the population shouldn't be this high yet. ***[close bracket][line break]";
 	otherwise if population of Police Station > 20:
 		say "     The makeshift shelter has quite a few people living in it, the various survivors you've brought in having taken bunks or mats here.  They're in pretty good spirits, doing their best to keep it together until rescue can arrive.  They're generally friendly, if a little worn out by everything that's happened to them[if infpoppercent is 100].  None of the survivors are human any longer, each showing more infected traits than uninfected ones[otherwise if infpoppercent >= 75].  There are a few survivors who are still human, or at least human enough at a casual glance[otherwise].  There's even quite a few survivors who still seem human, or at least close enough to human at a casual glance[end if].  There's a mix of strains among the infected survivors staying here, with no particular strain affecting more than a handful at most.  From time to time, couples head off with a blanket to get some alone time elsewhere in the abandoned station.";
@@ -1296,6 +1296,7 @@ to say A_Task54:	[Group Rescue]
 
 Survivor Group is a situation.  Survivor Group is resolved.
 The sarea of Survivor Group is "Forest".
+sgtimer is a number that varies.  sgtimer is usually 255.
 
 Instead of resolving a Survivor Group:
 	if hp of Alexandra is 61:
@@ -1335,7 +1336,7 @@ Instead of resolving a Survivor Group:
 		otherwise:
 			say "Focused as you are on the ruins, you fail to notice some rustling among the trees until it is too late.  By the time you do spot it, the creature is moving in to attack you, derailing your search.";
 			fight;
-	otherwise:
+	otherwise if hp of Alexandra is 62:
 		say "     Successfully navigating the confusing forest paths, you're pretty sure you're getting close to that survivor group you met earlier.  Drawing nearer, you notice the are is more active with monsters than before, necessitating greater caution.  Despite your attempts to stay hidden, you're beset by one of the woodland creatures.";
 		fight;
 		say "     With the creature defeated, sated or driven off, you feel it's safe to approach the bingo hall.  This time, there's a trio of guards at the door.  They, like everyone inside, are very glad to see you again.  It seems things have gotten worse since your previous visit, with the creatures and animated trees drawing ever closer.  More scavenger teams have gone missing and a few guards have been lost.";
@@ -1344,7 +1345,30 @@ Instead of resolving a Survivor Group:
 		now population of Police Station is 25;
 		now infpop of Police Station is 17;
 		say "[survivorgrouptrek]";
-		
+	otherwise if hp of Alexandra > 62:		[return for stragglers]
+		say "     Making a return trip to the bingo hall, you find that conditions in the area have deteriorated further.  There's increasing tree encroachment onto the parking lot, bringing with them more creature activity.  There are some wolves a couple hundred feet away, clearly watching the hall with dark intent.  This tells you two things: there's likely someone in there and the wolves are waiting for their chance to get them.  Doing your best to avoid notice as long as you can, you make your way closer, only coming into view as you approach the entrance.";
+		say "     Once inside, your greeting by the trio there is a happy but brief one.  One of them had managed to escape the wolves with only some mild lupine features and the other two are long-awaited scavengers showing more significant symptoms of other strains.  Between the note and the news from the one unable to complete the original journey, they've remained packed and ready to go at a moment's notice, especially with the wolves drawing nearer.";
+		attempttowait;
+		say "     And it seems they can't wait to depart any longer.  From the howls outside, it seems your arrival has been reported and the wolves are on the move.  Again, you take the lead, running interference for the others as the wolves on watch charge the door.";
+		challenge "Feral Wolf";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     With one wolf dealt with, there's hesitation from the others.  Raising your [if weapon object of player is journal]fists[otherwise]weapon[end if], they are kept at bay until a voice among them spurs them on.  'It's just one guard, you foolish pups, and [if cunts of player > 0]she's[otherwise]he's[end if] already worn down.  Get [if cunts of player > 0]her[otherwise]him[end if] and those inside will be yours,' she says.  This prompts them to draw closer, an emboldened one moving in to get you.";
+			challenge "Feral Wolf";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     As the fight turns in your favour, the remaining wolves slink back until they flee when you're victorious over a second packmate.  All except one, that is.  A pudgy wolf-hamster hybrid pushes past you in the confusion with a wild laugh.  But rather than go after the others, she rushes the stage.  Grabbing the bingo mixer, she giggles madly.  'Yes!  Yes!  I've got you back, my pretty.  Yes, I've missed you, too,' the maddened William babbles to the shiny wire globe, spinning it with glee.  Seeing you watching her, she growls and withdraws.  'I won't let you break us up again!  Come, my love,' she says, kissing the object before heading for a back door.";
+				say "     Rather than deal with the obviously insane hybrid, you rally the others into motion, wanting to be long gone before more of the pack can arrive.  With speed essential, they grab the bare minimum and follow you out.  You rush through the trees, pushing aside clinging branches as you go in a different direction than either William or the wolves took.  Only after you've put some distance between your group and the bingo hall do you switch to more covert movement.  While you doubt the wolves are still in pursuit, attracting the notice of some other monsters wouldn't be any better.  Eventually, you're able to find a path leading out of the woods and return to the city proper.  As a small band, it is harder to move about in secret than you on your own, but it's far easier a trek than when you were moving the main body of their group.  When you arrive at the police station, the others are overjoyed to see some members they'd thought lost for good able to rejoin them thanks to your efforts.  They even throw a little party to celebrate, passing around some of the rarer treats among their rations as snacks.  Jimmy even nudges your thigh and gives you a wink, letting you know he'd be happy to give you his personal [']thanks['] as well, if you'd like.";
+				now lastfuck of Jimmy is turns + 8;
+				increase score by 30;
+				decrease hunger of player by 6;
+				if hunger of player < 0, now hunger of player is 0;
+				increase population of Police Station by 3;
+				increase infpop of Police Station by 3;
+		if fightoutcome >= 20 and fightoutcome <= 29:
+			say "     While you're dealing with the wolf who's defeated you, there's some commotion inside as the remaining wolves take the others.  You can do little about it at this point, far too occupied with your own lupine assailant.  And while you do manage to make your escape while the others are being dragged off, you can't do anything to help them at this point.  By the time you've recovered, it is all over and they are gone.";
+		otherwise if fightoutcome >= 30:
+			say "     Seizing an opening, you make your escape into the woods, leaving those inside behind to their lupine fate.";
+		now Survivor Group is resolved;
+
 		
 to say survivorgrouptrek:
 	say "     With the crowd's opinion turning towards you, you hear the hamster roused by all the commotion.  She starts to bring up the danger of such a trek, but you cut her off[if 2 is listed in bookcollection] with a quick joke[end if].  Yes, you admit that there will be risk, but you then shift the focus to the encroaching dangers already around them, playing up how the trees and the wolves are getting closer and how they'll be sniffing at their door soon if they don't leave right now.  With the crowd sufficiently stirred up, you put it down to either going with you and having a chance to make it or staying here and playing bingo until the trees break in or the Big Bad Wolf blows down their door and rapes them all.  The prospect of another game of bingo seems to be the final straw, many of the group rushing off to gather their stuff and the others pushing their indolent leader into motion despite herself.";
@@ -1370,7 +1394,7 @@ to say survivorgrouptrek:
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					decrease wolffightcount by 1;
 					say "     Having defeated and humiliated the alpha in front of his pack, the others wolves break off into the trees, driven off by the unexpectedly strong foe.  There comes a few other howls from behind you, off towards the survivors you'd almost forgotten in the frenzy of fending off the wolves.  By the time you get back to them, it seems you'd been tricked, drawn away from the other groups so other members of the pack might strike.  Several of the survivors, including William, were dragged off or driven into the woods by the attacking wolf-creatures.  Knowing there's nothing you can do for them at this point, you get the others back into motion, keeping them staggered so they can't notice the losses until they're safe.";
-	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     While the victorious wolf claims his prize, the others head back into the trees.  You know there's some reason you should be concerned about this, but you cannot quite remember what it is, the virile wolf absorbing too much of your focus.  After he's finished up and has departed and you're able to think more clearly, realization that they were going after the others sets in.  You stagger to your feet and head back to check on them.  By the time you get back to them, it becomes apparent that you were tricked, lured away from those you were meant to protect so the rest of the pack could pick off the weak.  Many of the survivors, including William, were dragged off or driven into the woods by the attacking wolf-creatures.  Knowing there's nothing you can do for them at this point, you do your best to get the others back into motion.  Putting off their worried questions about your dishevelled state and all the howling they heard, you keep the groups staggered so they can't notice the extent of the losses until they're safe.";
 	otherwise if fightoutcome >= 30:
 		say "     Rather than face the wolves now that you have their attention, you break away and make a run for it.  You can hear them give chase at first, but after a few minutes, you notice that things are wrong.  There's only a lone wolf in pursuit of you now and he seems to be driving you on rather than trying to catch you at this point.  The howling you hear is far back in the distance, the remaining wolves active back where you started - back with the survivors.  You double back and return to find your fears confirmed; you were driven away from those you were meant to protect so the rest of the pack could pick off the weak.  Many of the survivors, including William, were dragged off or driven into the woods by the attacking wolf-creatures.  Knowing there's nothing you can do for them at this point, you do your best to get the others back into motion.  Putting off their worried questions about your dishevelled state and all the howling they heard, you keep the groups staggered so they can't notice the extent of the losses until they're safe.";
@@ -1392,6 +1416,8 @@ to say survivorgrouptrek:
 		decrease population of Police Station by 5;
 		decrease infpop of Police Station by 3;
 	now hp of Alexandra is 63;
+	increase score by ( population of Police Station * 5 );
+	now sgtimer is turns;
 	move player to Police Station;
 	say "     Your arrival is met with surprise and congratulations by Alexandra and [if the number of lockered people > 1]the others[otherwise]Jimmy[end if].  As they are getting settled in, they [if wolffightcount > 0]quickly[otherwise]start to[end if] realize that not everyone made it.  This dampens their spirits [if wolffightcount > 0]considerably[end if], so Jimmy rounds up a few to help organize a little ceremony for their lost comrades.  While a brief and solemn event, it does help them to move on.  The cheerful corgi's positive demeanour also helps to lift there spirits a little as he talks to them all afterwards.  Eventually all the basic arrangements are made and they can rest after their difficult journey.";
 	now Survivor Group is resolved;
