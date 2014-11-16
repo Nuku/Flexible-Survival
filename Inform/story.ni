@@ -2145,10 +2145,12 @@ carry out destinationcheck:
 			say "| [link][bracket]Master's Office[close bracket][as]nav Master's Office[end link] ";
 		say "[line break]";
 	[start of the college area]
-	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known:
+	if College Campus is known or Campus Gym is known or Paleontology Office is known or Phi Iota Gamma is known or Sports Arena Lockerroom is known or Astroslide Field Lockerroom is known:
 		say "[bold type]Tenvale College[roman type]: ";
 		if College Campus is known:
 			say "[link][bracket]College Campus[close bracket][as]nav College Campus[end link] - ";
+		if Astroslide Field Lockerroom is known:
+			say "| [link][bracket]Astroslide Field Lockerroom[close bracket][as]nav Astroslide Field Lockerroom[end link] ";
 		if Campus Gym is known:
 			say "| [link][bracket]Campus Gym[close bracket][as]nav Campus Gym[end link] ";
 		if Paleontology Office is known:
