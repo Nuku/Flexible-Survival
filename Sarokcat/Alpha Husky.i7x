@@ -122,7 +122,7 @@ to say alpha huskypack victory:
 			otherwise:
 				say "     The dog behind you nuzzles against your [tailname of player] ass a moment before he rears up, placing his pawhands on your shoulders and drawing in for a firm hug from behind, growling in your ear in a way that seems nothing but adoringly. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked.";
 				say "     The narrow end of his raging erection nudges against your asshole and he pulls away sharply, making a whine as if he did a bad thing. You give out a growl of your own, reaching back to pull him forward, and into yourself. With a happy yelp, he buries himself into your tight back door, filling you with rapid strokes into you as he yelps and barks with delight at being permitted to mount his alpha.";
-			say "     With the pleasure coming from both ends, it is not long before your body seizes in climax. Your cry mixes with those of the canines, shuddering  and pressing tight together as hot cum flows between. They are eager to clean you, and one volunteers to be your pillow, another, your blanket, all snuggled tight to you until you pass to a restful sleep.[impregchance]";
+			say "     With the pleasure coming from both ends, it is not long before your body seizes in climax. Your cry mixes with those of the canines, shuddering and pressing tight together as hot cum flows between. They are eager to clean you, and one volunteers to be your pillow, another, your blanket, all snuggled tight to you until you pass to a restful sleep.[impregchance]";
 			decrease humanity of player by 20;
 			if humanity of player is less than 10:
 				end the game saying "[alpha pack victory ending]";
