@@ -64,8 +64,13 @@ Version 2 of Amy by Wahn begins here.
 [                                                                       ]
 [ AlexandraAmySex (relationship with Alexandra)                         ]
 [   0: nothing happened                                                 ]
-[   1: Snow fucked her                                                  ]
+[   1: Alexandra had fun with Amy                                       ]
 [  99: player stepped in before Alexandra had any fun with Amy          ]
+[                                                                       ]
+[ CarlAmySex (relationship with Carl)                                   ]
+[   0: nothing happened                                                 ]
+[   1: Carl learned she's his daughter and stopped himself              ]
+[  51: player pushed Carl to fuck Amy                                   ]
 
 Amy is a woman. The hp of Amy is usually 0.
 The icon of Amy is Figure of Amy_icon.
@@ -81,6 +86,7 @@ BrutusAmySex is a number that varies.
 SnowAmySex is a number that varies.
 IcarusAmySex is a number that varies.
 AlexandraAmySex is a number that varies.
+CarlAmySex is a number that varies.
 
 instead of conversing the Amy:
 	if (hp of Amy is 1): [child-like]
@@ -564,7 +570,7 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 		otherwise if AmyShyness is 4:
 			say "     Pulled out of her fantasy by Alexandra's comment, Amy opens her eyes and gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' At that point, Amy notices the intensity of Alexandra's hungry looks wandering over her naked body and visible, wet pussy. Used to showing herself to others, Amy just smiles and leans back a bit, stroking a hand over her four breasts and providing Alexandra with an even better view. Giving the young husky an approving nod, Alexandra barks 'Exhibitionistic too, very nice. Just as you should be. It'd be a crime to hide a body like that... especially from your pack-mates.'";
 		say "     [WaitLineBreak]";
-		say "     Amy looks at the other woman with a curious expression, then says 'Pack-mates? But... I've never been in a pack. What do you mean?' With a barking laugh, Alexandra replies 'What else did you think you were doing, girl? Following the boss to [if cunts of player > 0 and cocks of player is 0]her home and having sex with her?[otherwise]his home and having sex with him?[end if] You're in the pack, just like me.' With that, Alexandra steps up to Amy and crouches down besides her, stroking a finger along the underside of the husky's muzzle and looking deep into her eyes. 'I see I`m gonna have to teach you how to be a real pack bitch, pup. The first lesson is to always give yourself completely to the boss and his top bitch - me. Now... I'm gonna show you how good it feels to just submit.'";
+		say "     Amy looks at the other woman with a curious expression, then says 'Pack-mates? But... I've never been in a pack. What do you mean?' With a barking laugh, Alexandra replies 'What else did you think you were doing, girl? Following the boss to [if cunts of player > 0 and cocks of player is 0]her home and having sex with her?[otherwise]his home and having sex with him?[end if] You're in the pack, just like me.' With that, Alexandra steps up to Amy and crouches down besides her, stroking a finger along the underside of the husky's muzzle and looking deep into her eyes. 'I see I'm gonna have to teach you how to be a real pack bitch, pup. The first lesson is to always give yourself completely to the boss and his top bitch - me. Now... I'm gonna show you how good it feels to just submit.'";
 		say "     [line break]";
 		say "Do you want to stand back and just watch what Alexandra will do to Amy (Y), or do you tell the dobie bitch to leave her alone (N)? ";
 		if player consents:		[Amy+Alexandra Sex]
@@ -632,6 +638,29 @@ instead of navigating Grey Abbey Library while ((hp of Amy > 1 and hp of Amy < 9
 						now Lust of Amy is 24;
 		otherwise:
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
+[
+[ ..................................................... ]			
+	otherwise if (hp of Amy > 10 and Carl is in the Grey Abbey Library and CarlAmySex is 0):	[first interest of Carl in her]
+		say "     Entering the library, you see Amy walk along the bookshelves, an open book that has to be a romance novel in hand, judging from the dreamy look on her face. As the young husky woman strolls along, another anthro canine suddenly comes out between the shelves - it's Carl, with a head-high stack of books in his hands - which leads to the two of them walking right into each other, sending books tumbling all over the floor. 'Oh, I'm sorry - are you alright? Didn't mean to almost bowl you over,' the husky soldier says after both of them catch their balance again, then he crouches down to pick up the fallen books.";
+		say "     As he grabs Amy's novel a moment later, Carl set his own book pile aside and stands up to hand it to her, saying. 'Here you go. I'm Carl, by the way.' Accepting the book, the female husky resplies, 'Amy... thanks for being so nice about this. It's always good to meet friendly people. And especially other huskies. That said, she leans in to lick his muzzle in an affectionate gesture akin to a kiss on the cheek - though as she does so, you hear the young woman give several deep sniffs, hovering with her nose close to his for more than just a short moment. 'You smell really nice,' she eventually says in a shy voice, continuing with, 'So strong and... safe,' as she moves her foot-paws just a little bit closer, bringing their bodies into contact.";
+		say "     [WaitLineBreak]";
+		say "     Finding Amy's breasts pressing aginst his side and her muzzle raised to do far more than just lick him, Carl raises his paws to embrace and touch her - but then suddenly, his nostrils flare as he takes a frantic breath. Instead of wrapping around her to make out, his paws grasp Amy be the shoulders and softly push her back. 'I - I'm really sorry Amy, I got to go - now!' Leaving the young woman standing, a nonplussed expression on her face and still clutching the romance novel, Carl dashes off, taking several steps on the stairs up at one and just abandoning his own book stack.";
+		say "You wonder what that was about. Couldn't have beed a lack of attraction, as you clearly saw the male husky's erection tent his pants. After consoling Amy about having her interesting new 'friend' run off, you do follow the husky to investigate. As you climb the last few steps, you see Carl standing at the window and staring outside intently, as if trying to distract himself from everything in here. Stepping up besides the man, you give him a questioning look and after a few moments of sullen silence, he says, 'Damn, damn, damn! Amy is a seriously hot bitch and I wanted to...' Making a fist and hitting the window-frame, he continues, '...I wanted to just grab her and breed her right there between the bookshelves. I almost didn't realize that under the smell of her heat, she is... very familiar, with a scent that resembles Davies... and myself.";
+		say "     [WaitLineBreak]";
+		say "     Carl is clearly fighting with himself about the conflicting feelings fow what he's pretty sure is his daughter. Its obvious that this has to be resolved somehow, as you don't want him to tear himself up inside.";
+		say "     [line break]";
+		say "     So, what's your advice to the canine soldier?";
+		say "     (Y) - He should do the right thing and tell her what's up.";
+		say "     (N) - He's surely just imagining things and should go for some dog on dog action.";
+		if player consents:
+			say "     [line break]";
+			say "     A";
+		otherwise:
+			say "     [line break]";
+			say "     Stepping up close to Carl, you put a hand on his shoulder and quietly tell him that while Amy is Davies daughter, there were quite a few males involved in breeding the soldier after his - or rather her - transformation. Surely it's unlikely that specifically Carl's seed was responsible for creating Amy. Letting a hand wander down his body and giving the still pretty obvious tent in the husky's pants a quick squeeze, you recommend that he stop worring so much. He surely only smelled himself on Amy because he just ran into her... that's no reason not to enjoy himself with the so clearly willing young woman.";
+			say "     Carl's muzzle opens as if to say something, but the canine soldier stays silent instead, a thoughtful expression on his face. You can almost see in his eyes how he swings back and forth between accepting your oh so convenient argumentation, and the ";
+[ ..................................................... ]			
+]
 	otherwise if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4].  Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";

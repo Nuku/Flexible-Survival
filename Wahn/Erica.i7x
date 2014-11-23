@@ -70,7 +70,7 @@ instead of going inside from the Grey Abbey Library while (Dexterity of Erica is
 	
 [ Next part of the quest in /Sarokcat/Museum.i7x (talking to Valerie)]
 
-Temple of Hera is a situation.
+Temple of Hera is a situation. 
 The sarea of Temple of Hera is "Museum".
 when play begins:
 	add Temple of Hera to badspots of guy;       [male soldiers]
@@ -85,9 +85,10 @@ Instead of resolving a Temple of Hera:
 	say "     A young woman steps out behind the golden throne, dressed in a similar, if less elaborate gown as Hera herself. Her eyes are a bit reddened, likely from by-now dried tears. She takes a deep breath and says, 'My name is Rebecca. I - We - me and my fiancee Joel were in the downtown area when things started to happen and... they took him from me! There were those bikers, and when he stepped between them and me to protect me, the leader just punched him out. And before I knew what was happening, he was bundled over a bike and they drove off!' She halts for a second, wiping away a new tear, then composes herself and adds, 'My mistress Hera told me he is alive and that you would come and help me. Please - find those guy's [bold type]hangout[roman type] in the [bold type]Junkyard[roman type] and bring Joel back to me!'";
 	say "     [WaitLineBreak]";
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";	
+	now Temple of Hera is resolved;
 	now Dexterity of Erica is 3;
 
-Biker Hangout is a situation.
+Biker Hangout is a situation. Biker Hangout is resolved.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Temple of Hera to badspots of guy;       
@@ -133,6 +134,7 @@ Instead of resolving a Biker Hangout:
 		say "     [WaitLineBreak]";		
 		say "     Meanwhile, you duck behind the shack and get to the kennel as quickly as you can, pulling the key ring out of the biker's abandoned pants and stepping forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
 		say "[JoelSaved]";
+	now Biker Hangout is resolved;
 		
 to say JoelSaved:
 	say "     Only when you gently put a hand on his shoulder and tell the saluki that his girlfriend sent you does he look up, focusing on you with sad eyes that widen as a small shimmer of hope flickers up in them. 'Rebecca? She... she's alive? I - I had lost all hope.' You are guiding the abused man from the kennel, softly explaining about his love being safe in the museum - when the shack back door opens and someone calls out, 'You done with the little bitch yet, Andy? Don't hog him all to yourself, other guys need to drain their balls too!' Then the man actually looks outside for the first time since he started talking, shouting, 'What the fuck! We got a poacher, and Andy is down! Bring the shotgun, Ulrich!'";
@@ -211,10 +213,10 @@ instead of conversing the Erica:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
-				if nam is "Have her blow your cock":
-					say "[EricaSex1]";
-				if nam is "Have her lick your pussy":
-					say "[EricaSex2]";		
+				if nam is "Talk a bit with Erica":
+					say "[EricaTalk1]";
+				if nam is "Talk about sex with David":
+					say "[EricaTalk2]";		
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off?";
@@ -249,7 +251,7 @@ Instead of fucking the Erica:
 			say "     Now fully naked, Erica looks up from the bed to you, her eyes inevitably drawn to your by now rock-hard cock. With an inviting smile she spreads her legs for you, the lips of her slightly swollen pussy glistening with female juices. Eagerly, you climb on the bed with her, stroking her smooth legs as you kneel between them. Erica gasps as your dick touches her pussy the first time, followed by rapid panting as you rub up and down against its folds. Then you put your cockhead against her opening and slowly push forward, moaning in lust yourself as her nether lips spread for you, enveloping your shaft in a warm and tight embrace.";
 			say "     Sliding deeper into her, your progress soon meets resistance as your cock pushes against a soft flexible barrier inside her - Erica's hymen. You lean down and put your arms around her then let your lips meet and give her a deep kiss. While distracting her with some playful tongue-wrestling, you push forward with your hips, increasing the pressure until you break through the thin flesh and make a real woman out of her.";
 			say "     [WaitLineBreak]";
-			say "     You rest your hard shaft inside Erica for a moment to allow her to get used to it, then start moving in and out, moaning in unison with your handsome athlete. Her legs wrap around your hips and pull you tight against her with each of your thrusts. Fucking this tight virgin pussy has you incredibly aroused and you have to control yourself pretty hard to last at least a little bit longer. And you're not the only one - soon Erica's moans and groans rise to a pretty noisy climax and you feel the femcum leak from her pussy and squirt out around around your cock. she pulls you down on top of her, going for a breathtaking kiss, then whispers 'Finish it - come inside me.'";
+			say "     You rest your hard shaft inside Erica for a moment to allow her to get used to it, then start moving in and out, moaning in unison with your handsome athlete. Her legs wrap around your hips and pull you tight against her with each of your thrusts. Fucking this tight virgin pussy has you incredibly aroused and you have to control yourself pretty hard to last at least a little bit longer. And you're not the only one - soon Erica's moans and groans rise to a pretty noisy climax and you feel the femcum leak from her pussy and squirt out around your cock. She pulls you down on top of her, going for a breathtaking kiss, then whispers 'Finish it - come inside me.'";
 			say "     Giving her another quick kiss on the lips, you eagerly follow the beautiful student's request and pump your hips up and down rapidly, thrusting hard and deep into her body. With your cock already primed and ready to go, it takes just a few more thrusts for the cum to boil up from your balls and pulse through your cock, spurt after spurt blasting into her. You fill Erica's pussy with your fertile seed, feeling a deep satisfaction as you imagine the millions of little swimmers invading her womb in search of an egg. Your cock still inside her, the two of you move to lie on your sides on the bed, holding each other and reveling in post-coital bliss. Lying there, Erica softly strokes your side and says 'That was amazing - thank you.'";
 			now hp of Erica is 1;
 			now lastfuck of Erica is turns;
@@ -489,7 +491,7 @@ to say EricaSex8: [threesome with Felinoid+Erica]
 
 to say EricaSex8_1_Male: [male player]
 	say "     [line break]";
-	say "     What shall it be you want to do with your female and felinoid friends? Fuck Erica's ass [link](1)[as]1[end link], or rather the felinoid's ass [link](2)[as]2[end link], maybe get a blowjob from Erica [link](3)[as]3[end link] or present your manhood to the felinoid to have her lick it [link](4)[as]4[end link]?";
+	say "     What shall it be you want to do with your female and felinoid friends? Fuck Erica's ass [link](1)[as]1[end link], or rather the felinoid's ass [link](2)[as]2[end link], maybe get a blowjob from Erica [link](3)[as]3[end link] or present your manhood to the felinoid to have him lick it [link](4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)>[run paragraph on]";
