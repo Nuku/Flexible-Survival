@@ -1338,8 +1338,8 @@ carry out hunting:
 				add y to q;
 				if "Like Attracts Like" is listed in feats of player:
 					add y to q;
-				if humanity of player < 85:
-					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
+				if humanity of player < 75:
+					repeat with x running from 1 to ( ( 100 - humanity of player ) / 25 ):
 						add y to q;
 				break;
 	if insectlarva is true and larvaegg is 1 and gestation of child is 0:		[hunted by wasp hive anywhere outdoors]
@@ -1402,7 +1402,7 @@ carry out hunting:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
-				let zed be perception of player / 4;
+				let zed be perception of player / 3;
 				if zed > 8, now zed is 8;
 				repeat with N running from 1 to zed:
 					add x to q;
@@ -3805,7 +3805,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3816,7 +3816,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if cockname of player is listed in infections of Internallist]internal[otherwise]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
 	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
 		let prevcock be cocks of player;
 		if cocks of player is 0:
@@ -3857,7 +3857,7 @@ This is the sex change rule:
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
@@ -5893,7 +5893,7 @@ carry out scavenging:
 	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
-	if dice plus bonus is greater than 10:
+	if dice plus bonus is greater than 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
 			try resolving potential resources;
