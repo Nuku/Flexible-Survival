@@ -336,7 +336,8 @@ to say WYVDESC:
 			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You [if weapon object of player is journal]raise your fists[otherwise]raise your weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of player >= 20:
 			let debit be 0;
-			if hardmode is true and level of player > 25, now debit is level of player - 25;
+			if hardmode is true and level of player > 25:
+				now debit is level of player - 25;
 			now WYVLEV is 1;
 			now hp entry is ( a random number between 200 and 275 ) + ( debit * 5 );
 			now monsterhp is hp entry;
@@ -690,7 +691,7 @@ When Play begins:
 	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Wyvern Goop";			[ Loot monster drops, ]
+	now loot entry is "wyvern goop";			[ Loot monster drops, ]
 	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -2018,9 +2019,9 @@ to wyvernbiasrequest:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Wyvern Goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	Wyvern Goop
+"wyvern goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	wyvern goop
 
-the scent of Wyvern Goop is "      The sticky gel has an acrid, spicy scent.";
+the scent of wyvern goop is "      The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use:
 	say "     Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";
@@ -2033,7 +2034,7 @@ To say wyvern goop use:
 	decrease humanity of player by 4;
 	increase libido of player by 1;
 	
-Wyvern Goop is a grab object. Wyvern Goop is infectious. The strain of Wyvern is "Wyvern".
-Wyvern Goop has a usedesc "[wyvern goop use]".
+wyvern goop is a grab object. wyvern goop is infectious. The strain of Wyvern is "Wyvern".
+wyvern goop has a usedesc "[wyvern goop use]".
 
 Wyvern For FS ends here.
