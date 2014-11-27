@@ -220,7 +220,7 @@ instead of conversing the Rex:
 			follow the turnpass rule;
 			stop the action;
 		otherwise:
-			say "     You realize Rex's intent immediately and push the collar away, informing him that you have no intention of submitting to him. 'That's to bad,' Rex replies. 'It really would be much easier for both of us if you just gave in now, but I'm sure I'll have plenty of opportunity to change your mind,' he says with a smirk as he glances back at your bone sitting in the back of the room. 'After all, who else is going to help you control those urges your struggling with?'";
+			say "     You realize Rex's intent immediately and push the collar away, informing him that you have no intention of submitting to him. 'That's too bad,' Rex replies. 'It really would be much easier for both of us if you just gave in now, but I'm sure I'll have plenty of opportunity to change your mind,' he says with a smirk as he glances back at your bone sitting in the back of the room. 'After all, who else is going to help you control those urges your struggling with?'";
 			say "     'But enough of that, let me show you around our home,' Rex says as he begins touring you around the small house.  Finally he introduces you to Karen, the other retriever in the home, who you quickly recognize as the girl you saw Rex grab earlier and the original owner of the bone that drew you here. As Rex introduces you properly she smiles at you knowingly, apparently somehow recognizing you as well.";
 		now hp of Rex is 6;
 	otherwise if hp of Rex > 9:
