@@ -482,11 +482,11 @@ carry out nerminehelping:
 		say "'Nermine already is helping you! You use totem again and see!', Nermine says with a twinkle in her eye.";
 		stop the action;
 	if Nerminehelpstatus is 2:
-		if carried of Wyvern Goop > 2:
+		if carried of wyvern goop > 2:
 			say "'Yes you bring Nermine the samples!' Nermine says with a smile on her muzzle as she takes the samples from you. 'Now Nermine can make several charms to trap one of the beasts for customer who wants little pet wyvern, Nermine think he will make handsome mate for trapped wyvern when she is done. Not that helpful little friend here needs to worry about that,' She says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Now Nermine promised you to help you in return, and she keeps her bargains.' The jackal woman says as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
-			delete Wyvern Goop;
-			delete Wyvern Goop;
-			delete Wyvern Goop;
+			delete wyvern goop;
+			delete wyvern goop;
+			delete wyvern goop;
 			increase carried of Jackal totem by 1;
 			increase xp of player by 10;
 			now Nerminehelpstatus is 6;
