@@ -108,7 +108,7 @@ Instead of fucking the Daisy:
 	otherwise if Daisy is in Master's Office:
 		let nightmareform be true;
 		if bodyname of player is not "Nightmare" or the player is not pure:
-			restorenightmareform;
+			quietrestorenightmareform;
 			say "     Eyeing Daisy, you grow aroused and approach her with lustful intent[if nmformswitch is true].  Your lust for this prize mare awakens your Nightmare form, transforming your body to that of the powerful equine[end if].  Putting your arms around the dappled beauty, you have her strip off her maid outfit so you might take your privilege with her.  As the new Stablemaster, your claim on using Daisy is uncontested and she is eager to fulfil your needs";
 		if cocks of player > 0:	
 			say "[if hp of Daisy is 0].  Ready and willing to at long last be bred[otherwise if the remainder after dividing hp of Daisy by 3 is 0].  Ready and willing to be bred again[otherwise].  Eager for her master to mount her again[end if], she starts by getting on her knees and lavishing attention upon your equine manhood.  Her tongue licks up and down it, drooling over your virile balls.  After the tongue bath, she goes for full immersion, taking it into her long, equine muzzle.  The warm-up blow job is very enjoyable, the mare clearly having taken to her training well.";

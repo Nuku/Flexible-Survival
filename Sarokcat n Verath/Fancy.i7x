@@ -1,9 +1,9 @@
 Fancy by Sarokcat n Verath begins here.
-[Version 1.1 - Finale fights flagged as a situation]
+[ Version 1.2 - Leather duster converted to armour ]
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
-section 1- Fancy
+Section 0 - NPC Setup
 
 Fancytalk is a number that varies.
 Fancyaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
@@ -13,21 +13,24 @@ Nightmareslavery is a number that varies.
 Nightmaremastery is a number that varies.
 nmformswitch is a truth state that varies.
 
-Fancy is a man.[or woman]
-The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more then they conceal. Her body is well built, and nicely rounded in all the right places, the horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs slightly parted teasingly as she gives you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hooflike hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
+Fancy is a woman.
+The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more then they conceal. Her body is well built, and nicely rounded in all the right places, the horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs slightly parted teasingly as she gives you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hoof-like hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
 the conversation of Fancy is { "Grumble!" }.
 
 instead of sniffing Fancy:
 	say "Fancy smells like a strong, wilful mare.  She smells strongly of sex and arousal, clearly an experienced lover.";
 
+Section 1 - Talking w/Fancy
+
 instead of conversing the Fancy:
 	if Fancytalk is 0:[first time you encounter the npc text]
-		say "'Well, hey there.  It's interesting to see a new face all the way over here,' the white mare says with a smile on her muzzle before chuckling slightly to herself. 'Let me guess, the receptionist is off playing with that donkey toy of hers again, and there was no one at the front?' she asks with some amusement as she looks up at you.  When you just shrug, she sighs and continues. 'Yeah well, figured as much.  Well since they let you in here, you must be a customer of some stripe... Either that or a very fast talker.  Either way, welcome to [']The Stables['],' The mare says as she leans back and halfheartedly gestures with one of her hoof-tipped hands at the building.";
-		say "'It might be a bit old and all, but it's still nice and sturdy, and above all pretty damn secure, which has certainly become a more important factor due to recent events,' the mare adds, before focusing her attention back on you fully. 'The name's Fancy, and I'm kind of the mare in charge of this area, though it doesn't take much to keep things running smoothly enough. Though it certainly could be a bit better if we could only get some proper supplies,' Fancy says with a shrug. 'Still, this is the Mare's quarters which, as you can see, is where all the mares stay and hang out when they aren't [']working['].' She pauses for a minute as she grins at you, stretching her hooves out in front of her teasingly as she leans back on her stool slightly. 'In case you haven't figured it out yet, the Stables is a [']working house['], a pleasure palace, or to put it pretty bluntly, a proper whorehouse. It used to be people would come here on trips or vacation, and the women would come over from the red light district and do some 'room service' of their own,' Fancy says as she watches your reaction with amusement. 'Now the owner just rents out members of his [']stable['] to anyone who has something to trade. I understand he used to be an avid collector of horses at one point, and now well, he just moved on to collecting a different type of horseflesh,' the mare says with some amusement.";
-		say "'So that's the basics, though I am sure you had figured most of it out for yourself already.  After all, you did come here for a reason, I'm sure,' Fancy says with a smile, before sighing. 'Sad to say though, most of us mares over here are relaxing for now, and while I am sure you could certainly manage to entice several of them to play with you, they really are supposed to be resting and waiting their turn,' she says as she glances around at the few mares hanging around nearby pretending not to be listening. 'So if you are looking for some fun, you should head back and go through the doors to the main building, north of the reception desk. Of course if you just want to hang around with some mares, well feel free to hang around here as long as you want,' the mare says with a smile as she shifts her weight forward to give you a nice view of her ample breasts. 'And I'm sure if you hang around here a while we can certainly find ways to help you fit in so to speak, and maybe you could even help me get this place fixed up a bit if you wanted. It would certainly be appreciated after all.'";
+		say "     'Well, hey there.  It's interesting to see a new face all the way over here,' the white mare says with a smile on her muzzle before chuckling slightly to herself.  'Let me guess, the receptionist is off playing with that donkey toy of hers again, and there was no one at the front?' she asks with some amusement as she looks up at you.  When you just shrug, she sighs and continues.  'Yeah well, figured as much.  I guess since they let you in here, you must be a customer of some stripe... Either that or a very fast talker.  Either way, welcome to [']The Stables['],' the mare says as she leans back and halfheartedly gestures with one of her hoof-tipped hands at the building.";
+		say "     'It might be a bit old and all, but it's still nice and sturdy, and above all pretty damn secure - which has certainly become a more important factor due to recent events,' the mare adds, before focusing her attention back on you fully.  'The name's Fancy, and I'm kind of the mare in charge of this area, though it doesn't take much to keep things running smoothly enough.  Though it certainly could be a bit better if we could only get some proper supplies,' Fancy says with a shrug.  'Still, this is the Mare's Quarters which, as you can see, is where all the mares stay and hang out when they aren't [']working['].'  She pauses for a moment as she grins at you, stretching her hooves out in front of her teasingly as she leans back on her stool slightly.";
+		say "     'In case you haven't figured it out yet, the Stables is a [']working house['], a pleasure palace, or to put it pretty bluntly, a proper whorehouse. It used to be people would come here on trips or vacation, and the women would come over from the red light district and do some [']room service['] of their own,' Fancy says as she watches your reaction with amusement.  'Now the owner just rents out members of his [']stable['] to anyone who has something to trade.  I understand he used to be an avid collector of horses at one point, and now well, he just moved on to collecting a different type of horseflesh,' the mare says with some amusement.";
+		say "     'So that's the basics, though I am sure you had figured most of it out for yourself already.  After all, you did come here for a reason, I'm sure,' Fancy says with a smile, before sighing.  'Sad to say though, most of us mares over here are relaxing for now, and while I am sure you could certainly manage to entice several of them to play with you, they really are supposed to be resting and waiting their turn,' she says as she glances around at the few mares hanging around nearby pretending not to be listening.  'So if you are looking for some fun, you should head back and go through the doors to the main building, north of the reception desk.  Of course if you just want to hang around with some mares, feel free to hang around here as long as you want,' the mare says with a smile as she shifts her weight forward to give you a nice view of her ample breasts.  'And I'm sure if you hang around here a while we can certainly find ways to help you fit in so to speak, and maybe you could even help me get this place fixed up a bit if you wanted.  It would certainly be appreciated after all.'";
 		increase Fancytalk by 1;
 	otherwise if fancyquest is 16:
-		say "'[one of]Welcome back, Stablemaster! How can I help you?[or]I was right, you do make a fine Stablemaster.[or]Have you decided what you are going to call the former Stablemaster? I am partial to Topaz myself.[or]Anything I or my mares can do for you now?[or]Be careful, there are still a few of the stallions who might try challenging you in the halls for dominance.[or]Now that you are in charge, I look forward to actually getting some things done around here![or]Have you decided what to do about those uppity hyenas yet?[or]Don't worry about things around here, now that you are the boss the other stallions have started listening to me more.[at random]'";
+		say "     '[one of]Welcome back, Stablemaster! How can I help you?[or]I was right, you do make a fine Stablemaster.[or]Have you decided what you are going to call the former Stablemaster? I am partial to Topaz myself.[or]Anything I or my mares can do for you now?[or]Be careful, there are still a few of the stallions who might try challenging you in the halls for dominance.[or]Now that you are in charge, I look forward to actually getting some things done around here![or]Have you decided what to do about those uppity hyenas yet?[or]Don't worry about things around here, now that you are the boss the other stallions have started listening to me more.[at random]'";
 	otherwise if fancyquest is 15:
 		say "'Ah your back, ready to hear the plan?' Fancy says with a broad smile, before continuing without waiting for you to agree. 'Basically the Stablemaster is in hiding, with some of his most trusted lieutenants nearby and keeping a lookout for him. The real problem is, if you tried to just break in to his office, he would most assuredly slip out one of his escape tunnels. No you need to surprise him. Which is where Daisy comes in.' She says with a smile as she gestures at the demure looking mare standing in the corner and eyeing you lustfully.  'Sometimes when we find a particularly lovely looking mare... we inform the Stablemaster, and when she is ready for her first breeding, we bring her to him and he finishes her transformation.' The white mare says with a smile and a fond sigh as if remembering something, before turning back to look at daisy again. 'In this case, we have Daisy who is exactly the type of mare he likes to 'break in' so to speak. So now all we need to do is let him know she is ready, and he will send one of his lieutenants for her.' Fancy turns back to you with a smile as she looks up at you, 'That's where you come in, all you need to do is take the place of the lieutenant and escort her back to the Stablemaster, he won't pay any attention to you once he gets a whiff of a nice virgin mares heat, or at least he won't until after he lets you both in hopefully. Which is going to be your one shot at this.' The white mare says with a nervous snort, and a slight shake of her head, 'If you lose, well we won't have another shot at this, and you and I are certainly not going to be trying again anytime soon. So be sure you are ready before we start.' She says with a soft smile, as she finally pauses and waits for your response. Are you ready to take on the Stablemaster?";
 		if player consents:
@@ -88,7 +91,7 @@ instead of conversing the Fancy:
 			say "Your strength, stamina and charisma have all increased by 4!";
 		otherwise:
 			say "'Any word back on the ingredients we need? Or the item that was ordered from her?' Fancy says with a hopeful smile as she looks up at you eagerly, and you feel rather embarrassed as you shake your head and she sighs unhappily. 'Well keep trying... We can't keep the plan from the Stablemaster much longer...' The white mare says with some disappointment as she goes back to her duties as head mare.";
-	if fancyquest is 13:
+	otherwise if fancyquest is 13:
 		say "'Looking great there you sexy beast you,' Fancy says with a smile as she takes in your new surprisingly sleek black equine countenance, and your shimmering black furred hide. 'I have a bit of bad news for you though,' the white mare says with a soft sigh as she shakes her head slightly, 'I think the Stablemaster is getting suspicious, and well, it would of course have been too much to hope that he wouldn't notice the power coming on and the new atmosphere around here. Though I don't think he knows about you yet, after all, you're still here aren't you?' She says with a sly grin on her muzzle before continuing. 'But this means we probably have to act a bit faster then intended, and you are going to need another dose even sooner then expected, and one with a bit of extra kick as well if you know what I mean.' The mare winks at you teasingly before smoothing her hand through her soft white fur and continuing nervously. 'The problem is, well we haven't managed to collect another draft of the main ingredient yet, and I haven't managed to get another of the horsemen to go to the weird shop at the mall where I get the special additives to mix into it that help to make you just as powerful as the Stablemaster is.  Plus I ordered a special item from her as well a while ago, and while it wasn't quite ready last I heard she needed some special ingredients to finish it...' Fancy sighs helplessly, before looking up at you coyly. 'Maybe you could go check on the shop near the mall? Though I heard it moves sometimes... I think the shopkeepers name was Nermine, and well... no one else I trust will go near her after what happened to the last stallion to visit her, though in my defense, she does make a lovely little cow now, and her milk is quite nice!' She says nervously, before sighing and looking up at you hopefully, her words and attitude making you wonder just what kind of trouble you are about to get into.";
 		now fancyquest is 14;
 		now hellgatherquest is 1;
@@ -132,62 +135,73 @@ instead of conversing the Fancy:
 			say "'That's... really too bad,' Fancy says with a soft sigh, 'Well I suppose it was good of you to help us out a little bit at least, though I probably won't ask you for any more help in the future.' The white mare says with a sigh as she goes back to what she was doing.";
 			now fancyquest is 0;
 	otherwise if fancyquest is 4:
-		say "'Having trouble finding a suitable spot? Well don't worry, I am sure you will find one if you keep looking.' Fancy says with a bright smile on her equine muzzle, 'And I really appreciate the help you are giving us with this, why if the Stablemaster cared half as much for the Stables as you do.... well maybe we can get into that later...' She says with a teasing wink.";
+		if recoveredhardware is 0:
+			say "     'Having trouble finding a suitable spot?  Well don't worry, I am sure you will find one if you keep looking,' Fancy says with a bright smile on her equine muzzle.  'And I really appreciate the help you are giving us with this.  Why, if the Stablemaster cared half as much for the Stables as you do.... well maybe we can get into that later...' she says with a teasing wink.";
+		otherwise if recoveredhardware is 1:
+			say "     'Having trouble finding a suitable spot?  Oh, you've got one?  Well, keep at it and hopefully you'll be able to get our stallions in there,' Fancy says with a bright smile on her equine muzzle.  'And I really appreciate the help you are giving us with this.  Why, if the Stablemaster cared half as much for the Stables as you do.... well maybe we can get into that later...' she says with a teasing wink.";
+		otherwise:
+			say "     'I hear you've been having trouble dealing with the creatures making trouble at that hardware store.  You go toughen yourself up and head back in there.  We really need those supplies and I really appreciate the help you're giving us with this,' she says alluringly.  Why, if the Stablemaster cared half as much for the Stables as you do.... well maybe we can get into that later...' she says with a teasing wink.";
 	otherwise if fancyquest is 3:
-		say "'Back again and looking to help?' Fancy asks you with a happy smile as you approach her again, though she doesn't wait for a response on your part before continuing. 'Well now that we have some stuff to do some patchwork around here, we could use some help getting some of the larger pieces we need to do some repairs.' She says with a rather determined nod of her equine head. 'Now I don't expect you to go hauling beams and construction tools back here on your own or anything, but I do need you to find and secure us a good supply of the items. Here.' She says as she hands you what looks like a small radio transceiver. 'I had one of the mares who knows a little bit about electronics still put this together, and I bullied a few of the stallions into agreeing to go out to pick up the items once you find them. It's amazing what a horse will do when his source of sex is threatened,' Fancy says with a soft equine snicker as she shakes her head at the silliness of the stallions. 'All you need to do is locate a good spot somewhere in the city, possibly a large hardware store or construction site, clean it out, and then guard it while the stallions head there and haul off the materials. Should be simple for a fine and powerful specimen like yourself right?' The white mare says with a teasing wink as she settles back down in her chair.";
+		say "     'Back again and looking to help?' Fancy asks you with a happy smile as you approach her again, though she doesn't wait for a response on your part before continuing.  'Now that we have some stuff to do some patchwork around here, we could use some help getting some of the larger pieces we need to do some repairs,' she says with a rather determined nod of her equine head.  'Now I don't expect you to go hauling beams and construction tools back here on your own or anything, but I do need you to find and secure us a good supply of the items.  Here,' she says as she hands you what looks like a small radio transceiver.  'I had one of the mares who knows a little bit about electronics still put this together, and I bullied a few of the stallions into agreeing to go out to pick up the items once you find them.  It's amazing what a horse will do when his source of sex is threatened,' Fancy says with a soft equine snicker as she shakes her head at the silliness of the stallions.";
+		say "     'All you need to do is locate a good spot somewhere in the city, possibly a large [bold type]hardware[roman type] store or construction site, clean it out of troublemakers, and then guard it while the stallions head there and haul off the materials.  Should be simple for a fine and powerful specimen like yourself, right?' the white mare says with a teasing wink as she settles back down in her chair.";
 		now fancyquest is 4;
+		now Hardware Fort is unresolved;
 	otherwise if fancyquest is 2:
-		if carried of Wyvern Goop > 4:
-			say "'Ah yes! That sticky stuff should work fine to plug up some of the holes and hold some of the walls together when it hardens! Perfect!' Fancy says with increasing enthusiasm as she looks at your pack.";
+		if carried of wyvern goop > 4:
+			say "     'Ah yes!  That sticky stuff should work fine to plug up some of the holes and hold some of the walls together when it hardens!  Perfect!' Fancy says with increasing enthusiasm as she looks at the items you pull from your pack.";
 			if carried of Tiger patch > 4:
-				say "'And you have some rubber patches here too! Though that is a very odd patterned rubber.' She says with an intrigued tone as she looks at the striped patches of rubber before shrugging absently. 'Still they should work great for patching some of the wiring and covering smaller holes, and since it looks like it might be still infectious, I wonder if we could find a 'volunteer' to try a patch or two on so we could get more whenever we needed... Though maybe that's a thought for later.' Fancy says in an extremely cheerful tone as she takes the items from you and sets them aside. 'I'll have several of the mares work on the repairs in their spare time, and I have to thank you for your help as well, it's really nice to have someone actually follow through on getting us some help around here. She says with an equine grin as she leans back and stretches slightly, 'I wish the Stablemaster would take more of an interest in the running of the place instead of just enjoying the place... but still..' Fancy sighs slightly on the last note, before shrugging helplessly. 'Still what can we get you for your help.... I know!' She says with a smile as she stands up and stretches slightly, 'Wait right here.' She says as she wanders off, her tail swaying teasingly behind her as she vanishes into one of the nearby rooms, before returning with a rather interesting looking large black leather duster. 'This should help, and look pretty sexy as well,' Fancy says with a wink as she slips the soft leather coat onto you, and you note that the leather appears to be not only rather sexy looking, but is also reinforced against most types of physical damage as well!";
+				say "     'And you have some rubber patches here, too!  Though that is a very odd patterned rubber,' she says with an intrigued tone as she looks at the striped patches of rubber before shrugging absently.  'Still, they should work great for patching some of the wiring and covering smaller holes.  And since it looks like it might be still infectious, I wonder if we could find a [']volunteer['] to try a patch or two on so we could get more whenever we needed...  Though maybe that's a thought for later,' Fancy says in an extremely cheerful tone as she takes the items from you and sets them aside.";
+				say "     'I'll have several of the mares work on the repairs in their spare time.  And I have to thank you for your help as well.  It's really nice to have someone actually follow through on getting us some help around here,' she says with an equine grin as she leans back and stretches slightly.  'I wish the Stablemaster would take more of an interest in the running of the place instead of just enjoying the place... but still..' Fancy sighs slightly on the last note, before shrugging helplessly.";
+				say "    'Still what can we get you for your help.... I know!' she says with a smile as she stands up and stretches slightly.  'Wait right here,' she says as she wanders off, her tail swaying teasingly behind her as she vanishes into one of the nearby rooms.  She returns shortly with a rather interesting looking large black leather duster.  'This should help, and look pretty sexy as well,' Fancy says with a wink as she slips the soft leather coat onto you.  You note that the leather appears to be not only rather sexy looking, but is also discretely reinforced in key places.  Having this on would help protect you quite well out there as well!";
 				decrease carried of wyvern goop by 5;
 				decrease carried of tiger patch by 5;
-				add "Sexy Leather duster" to feats of the player;				
-				if "Toughened" is listed in feats of the player:
-					increase stamina of player by 5;
-					say "your stamina has increased by 5!";
-					now fancyquest is 3;
-				otherwise:
-					add "Toughened" to feats of the player;
-					increase stamina of player by 2;
-					say "your stamina has increased by 2 and you feel a bit tougher!";		
-					now fancyquest is 3;
+				now carried of leather duster is 1;
+				now fancyquest is 3;
 			otherwise:
-				say "'Though it looks like we still need some rubber patches to go with the plaster like stuff.' Fancy says with a sigh, 'Maybe you should look around somewhere with a lot of balloons or something? wasn't there a fair in town?' She says hopefully as she looks at you.";
+				say "     'Though it looks like we still need some rubber patches to go with the plaster-like stuff,' Fancy says with a sigh.  'Maybe you should look around somewhere with a lot of balloons or something?  Wasn't there a fair in town?' she asks hopefully as she looks at you.";
 		otherwise:
-			say "'Still no luck on finding the materials?' Fancy says with a sad sigh, 'I am sure you can find some of them out there in the city somewhere, it doesn't matter if they are infectious or not really, in fact it might be mildly preferable honestly...' She says with an equine grin as she gives you a wink.";
+			say "     'Still no luck on finding the materials?' Fancy asks with a sad sigh.  'I am sure you can find some of them out there in the city somewhere.  It doesn't matter if they are infectious or not really.  In fact, it might be mildly preferable honestly...' she says with an equine grin as she gives you a wink.";
 	otherwise if fancyquest is 1:
 		if fancyaroused is greater than 1:
-			say "'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos. 'It figures they would just throw them away like that,' The sexy white mare says with a sigh, 'But its nothing you need to worry your little head about right now,' She says with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
+			say "     'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos.  'It figures they would just throw them away like that,' the sexy white mare says with a sigh.  'But it's nothing you need to worry your little head about right now,' she adds with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
 			Now fancyquest is 0;
 		otherwise:
-			say "'Hey there again, did you have some more questions about this place or did you need help with something?' Fancy says with a soft smile on her white muzzle as she looks up at you again, only to blink in surprise as you mention the stack of memos you found, and that you were actually wondering if she needed help instead. Fancy blinks in surprise, and then sighs, 'So they just tossed all my requests on a desk somewhere and forgot about them? That sounds about normal for this place, so I don't know why I am surprised.' She shakes her equine head sadly, before concentrating her attention on you again. 'And while I am sure I'm probably not supposed to get help from outside sources, if you are offering I certainly can't afford to turn down some help.' Fancy says with a rueful smile as she looks at you expectantly. Do you offer to help out?";
+			say "     'Hey there again, did you have some more questions about this place or did you need help with something?' Fancy asks with a soft smile on her white muzzle as she looks up at you again.  She blinks in surprise as you mention the stack of memos you found, and that you were actually wondering if she needed help instead.  Fancy's briefly stunned and then sighs, 'So they just tossed all my requests on a desk somewhere and forgot about them?  That sounds about normal for this place, so I don't know why I am surprised.'  She shakes her equine head sadly, before concentrating her attention on you again.  'And while I am sure I'm probably not supposed to get help from outside sources, if you are offering I certainly can't afford to turn down some help,' Fancy says with a rueful smile as she looks at you expectantly.  Do you offer to help out?";
 			if player consents:
-				say "'Great! I could really use some help around here,' Fancy says happily as she rubs her hands together and smiles, 'Now lets see, what to deal with first...' She pauses for a minute as she stares around the mares quarters speculatively, before smiling and turning her large equine blue eyes back to you. 'I know! Since unlike most of us, you can still go out into the city and find things, and unlike the stallions you might actually bring back something other then new recruits, maybe you could bring me a few items.' The white mare says with a smile as she looks at you, and her grin only grows larger when you nod in agreement, 'Great! Well the first thing I suppose we really need is some supplies to we can  use to help patch this place up a bit. If you could get us some kind of sticky goop or substance to fill in holes and plug some of the leaks with, and maybe a bit of rubber to patch some of the wiring with, it would be a great start.' She says with a small smile, 'About five samples of each should be enough to get us started.' Fancy says with a happy nod of her equine head as she sends you on your way, and you wonder idly where you will find the required items...";
+				say "     'Great! I could really use some help around here,' Fancy says happily as she rubs her hands together and smiles.  'Now let's see... what to deal with first...'  She pauses for a minute as she stares around the mare's quarters speculatively before smiling and turning her large equine blue eyes back to you.  'I know!  Since unlike most of us, you can still go out into the city and find things and, unlike the stallion's, you might actually bring back something other then new recruits, maybe you could bring me a few items,' the white mare says with a smile as she looks at you, and her grin only grows larger when you nod in agreement.";
+				say "     'Great!  Well, the first thing I suppose we really need is some supplies we can use to help patch this place up a bit.  If you could get us some kind of sticky goop or substance to fill in holes and plug some of the leaks with and maybe a bit of rubber to patch some of the wiring with, it would be a great start,' she says with a small smile.  'About five samples of each should be enough to get us started,' Fancy addds with a happy nod of her equine head as she sends you on your way.  You wonder idly where you will find the required items...";
 				now fancyquest is 2;
 			otherwise:
-				say "'Ah well, I shouldn't be surprised I suppose, it isn't like anyone else wants to help out around here anyways...' She says with a sigh, before going back to pointedly ignoring you. ";
+				say "     'Ah well, I shouldn't be surprised I suppose, it isn't like anyone else wants to help out around here anyways...' she says with a sigh, before going back to pointedly ignoring you.";
 				now fancyquest is 0;
+	otherwise if fancyquest is 101:
+		say "     Fancy gives you an angry look as you come over.  'Oh, come slinking back here, have you?  That's pretty bold of you after running out on the horsemen back when they were getting attacked.  They eventually managed to get away with some stuff, but nowhere near everything they could have and only after taking heavy losses.  They aren't too pleased with you at all and I can't say I blame them.'  She crosses her arms sternly and gives an neighing grumble.";
+		now fancyquest is 100;
+	otherwise if fancyquest is 102:
+		say "     Fancy gives you an angry look as you come over.  'Oh, so you managed to pull yourself up out of that mess and so you come back here thinking everything's fine?  That's pretty bold of you after all of your screw-ups with those hardware supplies.  I told you to make sure it was safe before bringing the horsemen and in and instead you kept getting them into trouble.  They managed to get away with some stuff, but nowhere near everything they could have and only after taking heavy losses.  They aren't too pleased with you at all and I can't say I blame them.'  She crosses her arms sternly and gives an neighing grumble.";
+		now fancyquest is 100;
+	otherwise if fancyquest is 100:
+		say "     [one of]'Get whatever it is you're here for over and done with and then shove off,' the mare grumbles[or]'I don't feel like even looking at you right now,' she grumbles before turning and stomping away[or]'You should clear out of here before I call the horsemen on you,' she threatens[or]'I don't want you harassing my mares, you failure,' she snarls[or]'I'd offer you some of the food, but I'm not even sure I want you among my mares,' she snaps at you[or]'I don't see why you think you can keep bothering me like this,' she grumbles[or]'Well, there's no chance you're getting any of this now,' she says tauntingly as she poses sexily and plays with her breasts[or]'Those horsemen you let down aren't too bright, but at least their strong and brave - not like you.  And it helps that they're also hung like horses,' she laughs mockingly[or]'You better not be bothering my mares,' she tells you sternly[at random].";
 	otherwise if fancyaroused is 1:
-		say "'It was nice of you to help Daisy and Onyx out with their distraction I must admit,' the white mare says with a soft smile as she looks up at you with a teasing wink. 'One would almost think you wanted to stay around and help me keep this place running smoothly,' Fancy says with a soft smile as she looks around the mare's quarters before returning to eying you speculatively.";
+		say "     'It was nice of you to help Daisy and Onyx out with their distraction I must admit,' the white mare says with a soft smile as she looks up at you with a teasing wink. 'One would almost think you wanted to stay around and help me keep this place running smoothly,' Fancy says with a soft smile as she looks around the mare's quarters before returning to eying you speculatively.";
 	otherwise if Fancytalk is 1:[Normal short messages the npc will say each time you talk to them]
-		say "[one of]'Hanging around the mares' area some more? We are always glad to see a friendly face.'[or]'Back again? Maybe you are interested in a position here at the Stables? Or maybe even several positions?' Fancy says with a suggestive grin.[or]'Those damn horsemen are always breaking things on accident, and never fixing them. I swear...'[or]'Try some of the food over there on the table, you might like it.'[or]'So, what do you like in a mare?' Fancy asks you teasingly, 'Breasts, legs, or ass?' she says, her hands rubbing over each part in turn as she watches your reactions.[or]'Were you looking for something here? Or maybe you were looking for someone?' Fancy asks you teasingly.[or]'I wish I could get some help around here sometimes, I only have two hooves after all!'[or]'You know what one of the best parts about this place? When they say hung like a horse around here, they really aren't kidding!' Fancy says with a snicker.[or]'It's good to have a nice safe stall to sleep in here while things go to hell out there.  You should try it yourself sometime.'[or]'Enjoying the Stables so far?'[at random]";
+		say "[one of]'Hanging around the mares['] area some more?  We are always glad to see a friendly face.'[or]'Back again? Maybe you are interested in a position here at the Stables?  Or maybe even several positions?' Fancy says with a suggestive grin.[or]'Those damn horsemen are always breaking things on accident and never fixing them.  I swear...'[or]'Try some of the food over there on the table.  You might like it.'[or]'So, what do you like in a mare?' Fancy asks you teasingly.  'Breasts, legs, or ass?' she says, her hands rubbing over each part in turn as she watches your reactions.[or]'Were you looking for something here?  Or maybe you were looking for someone?' Fancy asks you teasingly.[or]'I wish I could get some help around here sometimes; I only have two hooves after all!'[or]'You know what one of the best parts about this place?  When they say hung like a horse around here, they really aren't kidding!' Fancy says with a snicker.[or]'It's good to have a nice safe stall to sleep in here while things go to hell out there.  You should try it yourself sometime.'[or]'Enjoying the Stables so far?'[at random]";
 
 
-
-
+Section 3 - Fucking Fancy
 
 Instead of fucking the Fancy:
 	if cocks of player is 0 and cunts of player is 0:
 		say "     Currently lacking a gender, you don't really have much to tempt Fancy away from her duties at the moment.";
+	otherwise if fancyquest >= 100:
+		say "     'While a little romp might be fun, I don't particularly feel you're what I'm looking for.  Clearly I was wrong about you; you messed things up too much.";
 	otherwise if lastfuck of Fancy - turns is less than 6:
 		if fancyquest < 16:
 			say "     'That certainly sounds tempting, but I've unfortunately still got a lot of work to do around here.  Despite what the Stablemaster may think, this place doesn't run itself.'";
 		otherwise:
 			say "     The white mare moans as you fondle her, but rebukes your offer for sex.  'That is very tempting, Stablemaster, but there is still a lot of work I need to take care of around here.  This place doesn't run itself, you know.'";
 	otherwise if fancyquest is 16:
-		restorenightmareform;
+		quietrestorenightmareform;
 		say "     Eyeing Fancy, you grow aroused and approach her with lustful intent[if nmformswitch is true].  Your lust for the mare who helped make you Stablemaster awakens your Nightmare form, transforming your body to that of the powerful equine[end if].  Putting your arms around her, you grope the lovely white mare with a hoof-hand on her breast and another on her ass.  She moans at the possessive manhandling and makes no attempt to stop you.";
 		if cocks of player > 0:
 			say "     'Come to take your privilege, my Stablemaster?  I think I can fit you into my busy schedule,' she says teasingly, rubbing herself back against you, already feeling your stiff member rubbing across her labial folds.  You can feel the growing dampness of her arousal, the mare quite aroused by the touch of your equine cock and the scent of your virile musk.  Fondling her breasts, you have her lean over the feeding table and spread her legs before thrusting your [cock size desc of player] shaft into her accommodating cunt.  She nickers in lustful delight as you plough into her, claiming this ivory mare as is your right as the master of this brothel.";
@@ -201,22 +215,15 @@ Instead of fucking the Fancy:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		now lastfuck of Fancy is turns;
-	otherwise if fancyaroused is 1:
+[	otherwise if fancyaroused is 1:
 		say "'Hmm that sounds like an interesting proposition,' the white mare says with a teasing grin as she looks you up and down appraisingly.  'But as you can see from all the mares and stallions around this place, I certainly am not lacking for sex anytime I feel the need for some [']action['], so to speak,' Fancy says with a soft chuckle as she runs one of her hoof-tipped hands through her mane of silvery hair absently, her chest heaving interestingly as she does.  'Though I might be interested in having a more, long term companion around...  And given the help you gave Onyx and Daisy in deciding to be proper members of the Stables, I think you might have the right mindset to help me out with this place.  If you would be interested in staying around a while that is....' she says with an equine grin as she looks at you and waits for your response.";
 		if player consents:
 			say "'Well that's a wonderful offer and I would love to take you up on it actually, but as you can see the author is lazy and hasn't finished this increasingly smexy side quest, so you will just have to enjoy helping me patch the place up until they do.' The mare says with a teasing smile as she goes back to what she was working on, leaving you to curse this unknown author's laziness.";
 		otherwise:
 			now fancyaroused is 5;
-			say "That's just too bad then, but seeing as I have all these delicious equines to choose from for casual fun, I think I will just have to decline your offer for now.' Fancy says with a slightly dismissive shrug of her large shoulders.";
+			say "That's just too bad then, but seeing as I have all these delicious equines to choose from for casual fun, I think I will just have to decline your offer for now.' Fancy says with a slightly dismissive shrug of her large shoulders.";		]
 	otherwise:
-		say "'Sorry, there friend, but I think we should keep things professional between us, for now anyways.' The sexy white mare says with a teasing wink, 'Maybe after we get to know each other better, we can really 'Get to know each other,' but until that happens...' She shrugs softly, and gives you an equine grin as she leans back on her stool, her long equine tail swishing across the ground absently behind her.";
-
-
-
-
-
-
-
+		say "     'Sorry, there friend, but I think we should keep things professional between us.  For now anyways,' the sexy white mare says with a teasing wink.  'Maybe after we get to know each other better, we can really 'Get to know each other,' but until that happens...' She shrugs softly and gives you an equine grin as she leans back on her stool, her long equine tail swishing across the ground absently behind her.";
 
 
 
@@ -231,7 +238,7 @@ Instead of fucking the Fancy:
 
 
 
-Section 2- Nightmare vial
+Section 4 - Nightmare vial
 
 nightmaretf is a number that varies.
 
@@ -347,7 +354,7 @@ An everyturn rule:
 			now cock of player is "[one of]equine[or]blunt-tipped[or]horse-like[at random]";
 
 
-to restorenightmareform:
+to quietrestorenightmareform:
 	now nmformswitch is false;
 	if bodyname of player is not "Nightmare" or the player is not pure:
 		now nmformswitch is true;
@@ -365,6 +372,40 @@ to restorenightmareform:
 			now tail of player is tail entry;
 			now cock of player is cock entry;
 			attributeinfect "Nightmare";
+
+
+Section 5 - Leather Duster
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"leather duster"	"A toughened duster made of reinforced leather, all black and very bad-ass."	10	leather duster
+
+leather duster is equipment. It is not temporary.
+The AC of leather duster is 22.
+The effectiveness of leather duster is 75.
+The placement of leather duster is "body".
+The descmod of leather duster is "You are wearing a really bad-ass duster made of toughened black leather.".
+The slot of leather duster is "body".
+
+the scent of leather duster is "The leather smells vaguely of saddle oil.".
+
+
+
+Section X - Variables
+
+[ fancyquest ]
+[ 0 = not started / refused ]
+[ 1 = found ignored memos ]
+[ 2 = agreed to find items ]
+[ 3 = gave tiger patches and wyvern goop ]
+	[ got leather duster ]
+[ 4 = told to find construction materials / tools ]
+
+[ 16 = become Stablemaster ]
+[ 101 = fled Hardware Fort in front of Horsemen ]
+[ 102 = failed Hardware Fort too often ]
+
+
 
 
 

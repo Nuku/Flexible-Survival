@@ -28,6 +28,7 @@ Instead of Resolving a A Stabled Situation:
 				delete chips;
 				delete soda;
 				Move player to The Stables Hotel;
+				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:
@@ -45,6 +46,7 @@ Instead of Resolving a A Stabled Situation:
 				delete chips;
 				delete soda;
 				Move player to The Stables Hotel;
+				now battleground is "void";
 				Now The Stables Hotel is known;
 				now A Stabled Situation is resolved;
 			otherwise:

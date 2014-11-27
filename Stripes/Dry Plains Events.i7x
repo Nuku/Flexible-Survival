@@ -67,17 +67,17 @@ Instead of resolving a Partial Ruin:
 	Now Partial Ruin is resolved;
 
 
-Section 5- Hardware Store
+Section 5- Hardware Store Ruins
 
-Hardware Store is a situation.
-The sarea of Hardware Store is "Plains".
+Hardware Store Ruins is a situation.
+The sarea of Hardware Store Ruins is "Plains".
 
-Instead of resolving a Hardware Store:
+Instead of resolving a Hardware Store Ruins:
 	say "     Coming across the remains of a hardware store, you are very hopeful to find something of use in it.  The rubble is difficult to move and the task quickly becomes both tiring and frustrating.  More and more as you work, you come to believe this place was picked completely clean before it collapsed.  While some parts are too buried to reach and check, those you can find yield nothing of value at all.  After a long and fruitless search, you grab the pack of nails you found and bash them into a board using a rock.  You wrap some fabric tape around the base to give you a better grip and end up with a crude spiked club.";
 	say "     Spiked club obtained!";
 	increase carried of spiked club by 1;
 	increase score by 5;
-	Now Hardware Store is resolved;
+	Now Hardware Store Ruins is resolved;
 
 
 Table of Game Objects (continued)
