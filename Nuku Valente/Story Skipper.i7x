@@ -448,12 +448,12 @@ To reciting2:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now findinghardware is unresolved;
-					now ignoredmemo is unresolved;
-					if fancyquest is greater than 4:
-						now findinghardware is resolved;
+					now Ignored Memos is unresolved;
+					now Hardware Fort is resolved;
+					if fancyquest is 4:
+						now Hardware Fort is unresolved;
 					if fancyquest is greater than 0:
-						now ignoredmemo is resolved;
+						now Ignored Memos is resolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -2451,12 +2451,12 @@ Carry out reciting:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now findinghardware is unresolved;
-					now ignoredmemo is unresolved;
-					if fancyquest is greater than 4:
-						now findinghardware is resolved;
+					now Hardware Fort is resolved;
+					now Ignored Memos is unresolved;
 					if fancyquest is greater than 0:
-						now ignoredmemo is resolved;
+						now Ignored Memos is resolved;
+					if fancyquest is 4:
+						now Hardware Fort is unresolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
