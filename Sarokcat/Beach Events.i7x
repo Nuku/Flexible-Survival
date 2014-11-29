@@ -11,11 +11,11 @@ bbum is a number that varies.
 
 Instead of resolving a Beach bum:
 	if bbum is 0:
-		say "Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach,  The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
+		say "Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach.  The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The strange person calls out to you again, and against your better judgement you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items.  Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach, unfortunately the people he usually deals with for food have all pretty much become to changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
 		if player consents:
-			say "The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership.... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
+			say "The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
@@ -52,7 +52,7 @@ Instead of resolving a Beach bum:
 				otherwise:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-		otherwise if food is owned:	
+		otherwise if food is owned:
 			say "Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -65,7 +65,7 @@ Instead of resolving a Beach bum:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
 		otherwise:
-			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly,  apparently finding nothing edible amongst your offerings.  The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
+			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly, apparently finding nothing edible amongst your offerings.  The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
 
 
 Section 2- Flotsam bits
@@ -149,7 +149,7 @@ relaxing scene is a situation.
 The sarea of relaxing scene is "Beach".
 
 Instead of resolving a relaxing scene:
-	say "Moving along down the silent beach, a glint on the water catches your attention,  you immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..";
+	say "Moving along down the silent beach, a glint on the water catches your attention.  You immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..";
 	Increase Humanity of player by 20;
 	Now relaxing scene is resolved;
 
@@ -176,8 +176,8 @@ Instead of resolving a Tainted yacht:
 	say "While moving along the nearly deserted coast, you spot a small 60 foot yacht anchored nearby, you think with a bit of effort you might be able to swim out to the anchored boat, do you try?";
 	if player consents:
 		fight;
-		say "Making it to the ship at last, you tiredly haul yourself aboard, only to stare around you in shock.  The deck is a slippery mess of fluid, and champagne glasses and bits of clothing lie scattered around the deck forlornly. Looking around inside carefully, you find the ship seems deserted, at least the front cabin is, you look around to try to figure out what happened here, and spot a few small journal entries in the log. Skimming the log you begin to understand what happened,  while apparently the owners of this yacht were intending to wait out the infection in style with a close group of friends, one of the people they let on the boat must have been infected already and not shown it yet.  Soon after they set up anchor for their nightly party, the orgy must have started, spreading the conversion throughout the small enclosed ship like a wildfire[line break]";
-		say "Searching the ship further could be dangerous, as not all of the creatures may have abandoned ship fully, still you decide to check to see if the boat still runs.   Unfortunately something seems to have flooded the engines, rendering them currently inoperable, moving forward to open the hatchway leading to the engines, you are overcome with the strong scent of musk and sex, making your skin twitch with the first signs of impending change.  Quickly slamming the door shut you realize that an orgy seems to have taken place near the engine room, and whatever the engine is flooded with, trying to clean it out would most likely result in you turning into whatever creature these people became. Quickly abandoning that idea, you go check the food supplies only to find that they like everything else on the ship, are tainted with the results of the boats occupants long orgy. Sighing, you go about gathering up some of the least tainted of the water supplies before heading back to shore, only slightly changed by your experience.";
+		say "Making it to the ship at last, you tiredly haul yourself aboard, only to stare around you in shock.  The deck is a slippery mess of fluid, and champagne glasses and bits of clothing lie scattered around the deck forlornly. Looking around inside carefully, you find the ship seems deserted, at least the front cabin is, you look around to try to figure out what happened here, and spot a few small journal entries in the log. Skimming the log you begin to understand what happened.  While apparently the owners of this yacht were intending to wait out the infection in style with a close group of friends, one of the people they let on the boat must have been infected already and not shown it yet.  Soon after they set up anchor for their nightly party, the orgy must have started, spreading the conversion throughout the small enclosed ship like a wildfire[line break]";
+		say "Searching the ship further could be dangerous, as not all of the creatures may have abandoned ship fully, still you decide to check to see if the boat still runs.  Unfortunately something seems to have flooded the engines, rendering them currently inoperable, moving forward to open the hatchway leading to the engines, you are overcome with the strong scent of musk and sex, making your skin twitch with the first signs of impending change.  Quickly slamming the door shut you realize that an orgy seems to have taken place near the engine room, and whatever the engine is flooded with, trying to clean it out would most likely result in you turning into whatever creature these people became. Quickly abandoning that idea, you go check the food supplies only to find that they like everything else on the ship, are tainted with the results of the boats occupants long orgy. Sighing, you go about gathering up some of the least tainted of the water supplies before heading back to shore, only slightly changed by your experience.";
 		increase carried of dirty water by 2;
 		infect "sewer gator";
 		infect "sewer gator";
@@ -192,7 +192,7 @@ Strange castle is a situation.
 The sarea of Strange castle is "Beach".
 
 Instead of resolving a Strange castle:
-	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[']t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.";
+	say "Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[']t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castle[']s structure.";
 	Now Strange castle is resolved;
 
 
@@ -251,7 +251,7 @@ Instead of resolving a Lucky seashell:
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
 	otherwise if T is 4:
-		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today!  Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach,  deciding maybe it was the shells fault after the 4th time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. Feeling much more ragged from the experience, though it has taught you a bit about stubbornly enduring things....";
+		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today!  Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
 		increase stamina of player by 2;
 		say "your stamina has increased by 2!";
 	otherwise:

@@ -116,4 +116,4 @@ Instead of resolving Thelonesurvivor:
 
 
 
-Events basic ends here.	 
+Events basic ends here.
