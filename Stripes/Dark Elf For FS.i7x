@@ -88,8 +88,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Dark Elf";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!";
-	[at random]";	[Text used when the monster succeeds on an attack]
+	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[beatthedarkelf]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetodarkelf]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[darkelfdesc]";						[ Description of the creature when you encounter it. ]
