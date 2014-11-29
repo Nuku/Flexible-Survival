@@ -16,14 +16,14 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say gazelle attack:
-	say "     The gazelle-like human knocks you to the ground, and then stares down at your defeated form, almost seeming surprised at their victory.  'Well you aren[']t so dangerous after all,' the beast says, and you can see its cock growing erect and its pussy moistening as it savors its victory.. 'Maybe we didn[']t have to panic after all... then again,' the gazelle says with a speculative look at your prone form. 'Just maybe deep down you wanted me to win after all, hmm.' She considers you for a minute as she tries to catch her breath before deciding something. 'I think I see something I like in you,' she says with a sharp nod, her horns bobbing as she lowers herself over you. 'Maybe we should have some fun...'";
+	say "     The gazelle-like human knocks you to the ground, and then stares down at your defeated form, almost seeming surprised at their victory.  'Well you aren[']t so dangerous after all,' the beast says, and you can see its cock growing erect and its pussy moistening as it savors its victory. 'Maybe we didn[']t have to panic after all... then again,' the gazelle says with a speculative look at your prone form. 'Just maybe deep down you wanted me to win after all, hmm.' She considers you for a minute as she tries to catch her breath before deciding something. 'I think I see something I like in you,' she says with a sharp nod, her horns bobbing as she lowers herself over you. 'Maybe we should have some fun...'";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if cunts of player is greater than 0:
 		say "     Reaching down, she spreads your legs further apart as she takes a good long look at your body, before running her hoof-like fingers along the outside of your soft cunt.  'Yes I definitely see something I like,' She says with a grin, as she pumps her cock with her other hand, not waiting for your reaction, she quickly grabs your legs in her hands and spreads them wide as she moves between them, her cock probing at your feminine passage.  Finding the right angle she wastes no time thrusting herself into you fully, making you cry out at the sudden invasion, soon though you find the feeling of being penetrated by her hard maleness becomes completely pleasurable.  Her animalistic member spearing into you again and again as she leans over you, her hoof-like hands on her hips as she thrusts in, you find your own hands gripping her horns as she hovers over you, gripping her in an effort to get her to thrust harder, and faster.  She soon complies to your demands, and you buck and writhe underneath her as your orgasm shoots through you, causing her to orgasm as well, her strong member filling you up to the brink.  Slowly she withdraws as you collapse bonelessly, a mixture of your juices leaking out of your passage as she sets you down, causing you to moan at the erotic feeling.  'Yes I definitely see something here I like,' She says with a grin, as she brushes herself off, 'Hopefully you will come by soon so I can see it again,' So saying she bounds off down the zoo pathways to rejoin her herd, leaving you lying there helplessly, her warm seed still leaking out of you.[impregchance]";
 		infect "gazelle";
 	otherwise:
-		say "     Reaching down she wraps her slightly hoof-like fingers around your cock, pumping it once or twice with a grin as she watches your reaction. 'Yes I definitely see something I like here.' She says as she wastes no time lowering herself onto you.  You buck in pleasure as she sinks onto your cock, and then moan as she starts to ride you, one hand bracing herself up on your chest, while the other strokes her own erect cock where it stands out from her body.  You gasp in pleasure as she fucks you hard, her strong leg muscles lifting her up and down on your cock until you finally can't take it anymore.  You cry out as you orgasm, shooting yourself into her hot opening, causing her to cry out above you as your release causes her to orgasm as well, her cunt shuddering around your cock as it milks it, and her own cock shooting its seed all over your chest some of it even spattering your face with its a powerful release.  Spent you lie there as she shudders over you, she recovers first and pulls herself off of you, standing up and brushing herself off, she looks down at your spent form, covered in her juices and her seed.  'Yes I definitely see something I like there...' She says with a grin, 'Hopefully you will come by soon so I can see it again,' she finishes, before bounding off down the zoo pathways to rejoin her herd, leaving you lying there, covered in her seed.";
+		say "     Reaching down she wraps her slightly hoof-like fingers around your cock, pumping it once or twice with a grin as she watches your reaction. 'Yes I definitely see something I like here.' She says as she wastes no time lowering herself onto you.  You buck in pleasure as she sinks onto your cock, and then moan as she starts to ride you, one hand bracing herself up on your chest, while the other strokes her own erect cock where it stands out from her body.  You gasp in pleasure as she fucks you hard, her strong leg muscles lifting her up and down on your cock until you finally can't take it anymore.  You cry out as you orgasm, shooting yourself into her hot opening, causing her to cry out above you as your release causes her to orgasm as well, her cunt shuddering around your cock as it milks it, and her own cock shooting its seed all over your chest some of it even spattering your face with its powerful release.  Spent you lie there as she shudders over you, she recovers first and pulls herself off of you, standing up and brushing herself off, she looks down at your spent form, covered in her juices and her seed.  'Yes I definitely see something I like there...' She says with a grin, 'Hopefully you will come by soon so I can see it again,' she finishes, before bounding off down the zoo pathways to rejoin her herd, leaving you lying there, covered in her seed.";
 		infect "gazelle";
 
 
@@ -85,13 +85,13 @@ When Play begins:
 	now name entry is "gazelle"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming into you roughly[or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hoof-like feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[gazelle loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[gazelle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[gazelle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "     Wandering down the zoo paths, you come across a small group of rather human-like gazelles.  Their short muzzles and sharp horns move happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests.  Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd!  You have no choice but to brace yourself for battle!";[ Description of the creature when you encounter it.]
-	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [Your have a (your text) face."] 
-	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a small fluffy tail sticking out from your backside, its shape helping to pull your ass up slightly giving your backside a happy perky appearance.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]gazelle[or]sheathed[or]bovine[as decreasingly likely outcomes]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [Your have a (your text) face."]
+	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a small fluffy tail sticking out from your backside, its shape helping to pull your ass up slightly giving your backside a happy perky appearance.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]gazelle[or]sheathed[or]bovine[as decreasingly likely outcomes]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it pushes forward into a short narrow muzzle, filling up with thick herbivore teeth.  Sharp pressure shoots through your skull as two new gazelle like horns slowly press out of your skull, adding some weight to your head"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it seems to grow more lithe and lean, your feet changing into sharp hooves, as your legs shift and change to help you balance better on your new hooves.  Your hands grow slightly shorter as your fingernails cover the tips, giving them a slightly hoof-like appearance, and your form becomes better suited to swift fast movements and leaps"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft brown and white patterned fur covers your body, your skin itching slightly as it settles into place."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -99,13 +99,13 @@ When Play begins:
 	now cock change entry is "it draws up tighter between your legs, becoming wrapped in a proper gazelle-like sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 18;
-	now sta entry is 12;					
+	now sta entry is 12;
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 30;			[ How many HP has the monster got? ]
-	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Zoo";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -116,7 +116,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -146,7 +146,7 @@ when play ends:
 		otherwise:
 			say "Rescued from the city before you can completely lose your mind to the infection, the military releases you after only the most cursory inspection, your inoffensive looking form not seeming half as important as those of the larger predatory creatures they have to deal with. Left out and on your own, you feel somewhat nervous and skittish without anyone you can trust around, people shying away from your changed body.  Deciding to make the best of things, you soon begin looking for any kind of work that is available, eventually finding a job at [one of]an accounting firm as a secretary[or]a factory working with others on the floor[or]a school teaching children[or]a law firm, as a champion of changed rights[or]a dance studio, eventually taking part in several musical productions[or]a construction firm as a coordinator[at random].  Your instinctive ability to work as part of a team proving to be a great asset in your career, though you always feel as if something is missing. Eventually at the height of your success, you decide to cash you and go looking for the partner you need, wandering the world looking for a place to belong and a partner to run with... maybe you will try Africa next...";
 
-			
+
 
 
 
