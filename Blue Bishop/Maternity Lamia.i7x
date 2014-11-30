@@ -120,7 +120,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "matlamia";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Alt Combat
