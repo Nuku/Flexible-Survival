@@ -600,7 +600,7 @@ to say alexandratalk_gg:
 		now hp of Alexandra is 51;
 	if hp of Alexandra is 51:
 		say "     'It's good to see that you're still holding out.  It's been a while since I've met anyone as coherent as you, so I could really use the company.  Here, let me show you around,' she says, leading you around the station.";
-		say "     'As you can see, things got pretty bad here.  Like I'd mentioned, we were responding to calls as everything started to fall apart.  A lot of the officers simply never returned from those calls.  The few that did either must have been tainted by sexual fluids or had brought those they'd arrested, or both.  Things got out of hand quickly, the infection spreading through the office and through the lockout, building upon itself.'";
+		say "     'As you can see, things got pretty bad here.  Like I'd mentioned, we were responding to calls as everything started to fall apart.  A lot of the officers simply never returned from those calls.  The few that did either must have been tainted by sexual fluids or had brought those they'd arrested, or both.  Things got out of hand quickly, the infection spreading through the office and through the lockup, building upon itself.'";
 		say "     You ask her how she got out of there, if things were so bad.  'I was lucky, I guess.  Just before things boiled over completely, I'd gone outside to assist a canine team, only to find them merging with their dogs and fucking like animals.  I was grabbed and they tried to pull me down to rape me just as some muscled brute of a creature crashed out the front doors and rammed right into the canine unit's van.  More of them charged out the windows, leaping to the ground and running off into the city.  In the confusion, I was able to make a break for it, but I'd already been infected and kept changing.";
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants.  I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance.  When no one turned up, I went out on my own, trying to find citizens to help.  I... think I was starting to crack by the time I ran into you.  I'm not going out on patrol as much for a while.'";
 		now hp of Alexandra is 52;
@@ -949,9 +949,9 @@ to AlexandraTaskChat:
 		add { 54, 54, 54, 54, 54 } to AlexandraTask;
 	if hp of Alexandra is 59:
 		add { 54, 54, 54 } to AlexandraTask;
-	if hp of Alexandra is 61:
+	if hp of Alexandra is 63:
 		add { 55, 55, 55, 55 } to AlexandraTask;
-	otherwise if hp of Alexandra is 62:
+	otherwise if hp of Alexandra is 64:
 		add { 55, 55 } to AlexandraTask;
 	if AlexandraTask is empty:
 		now no_AlexandraTask is turns;
@@ -1050,7 +1050,7 @@ Part 2 - Tasks (50+)
 
 to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 	if hp of Jimmy is 0:
-		say "     'Earlier, I'd tried tracking down some help from the government, but the area around the capitol building has been destroyed.  We'd gotten a sketchy report that night of a volcanic eruption near the State Capitol Building, but we could hardly believe it.  But when I went there looking for help after the outbreak, it turned out to be true.  Thankfully, it wasn't large eruption, but it was enough to burn down much of the immediate area.  Strangely, the soot and ash in the air still lingers around that part of the city, but hasn't drifted elsewhere.'  [if Approaching the Capitol Building is unknown]She informs you of a fairly safe route you can take to get into the area[otherwise]She pauses for a moment, thinking about the odd behaviour of the ash cloud there[end if].";
+		say "     'Earlier, I'd tried tracking down some help from the government, but the area around the capitol building has been destroyed.  We'd gotten a sketchy report that night of a volcanic eruption near the State Capitol Building, but we could hardly believe it.  But when I went there looking for help after the outbreak, it turned out to be true.  Thankfully, it wasn't a large eruption, but it was enough to burn down much of the immediate area.  Strangely, the soot and ash in the air still lingers around that part of the city, but hasn't drifted elsewhere.'  [if Approaching the Capitol Building is unknown]She informs you of a fairly safe route you can take to get into the area[otherwise]She pauses for a moment, thinking about the odd behaviour of the ash cloud there[end if].";
 		say "     'Much of the remaining population in the area has been turned into automatons, metal-skinned people without minds or emotions past their programmed lusts.  I wasn't able to discover much more before leaving the area, but I'd like you to go check it out and see if you can look into the [bold type]automaton activity[roman type] there.  They seem to be up to something, but I wasn't able to figure it out.  But be careful, the creatures in that part of the city are particularly strange and dangerous.'";
 		now Approaching the Capitol Building is known;
 		now Government Assistance is resolved;
@@ -1421,7 +1421,6 @@ to say survivorgrouptrek:
 	move player to Police Station;
 	say "     Your arrival is met with surprise and congratulations by Alexandra and [if the number of lockered people > 1]the others[otherwise]Jimmy[end if].  As they are getting settled in, they [if wolffightcount > 0]quickly[otherwise]start to[end if] realize that not everyone made it.  This dampens their spirits [if wolffightcount > 0]considerably[end if], so Jimmy rounds up a few to help organize a little ceremony for their lost comrades.  While a brief and solemn event, it does help them to move on.  The cheerful corgi's positive demeanour also helps to lift there spirits a little as he talks to them all afterwards.  Eventually all the basic arrangements are made and they can rest after their difficult journey.";
 	now Survivor Group is resolved;
-
 
 
 
