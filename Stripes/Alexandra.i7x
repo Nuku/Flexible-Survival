@@ -1363,6 +1363,8 @@ Instead of resolving a Survivor Group:
 				if hunger of player < 0, now hunger of player is 0;
 				increase population of Police Station by 3;
 				increase infpop of Police Station by 3;
+				move player to Police Station;
+				now battleground is "void";
 		if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     While you're dealing with the wolf who's defeated you, there's some commotion inside as the remaining wolves take the others.  You can do little about it at this point, far too occupied with your own lupine assailant.  And while you do manage to make your escape while the others are being dragged off, you can't do anything to help them at this point.  By the time you've recovered, it is all over and they are gone.";
 		otherwise if fightoutcome >= 30:
