@@ -642,8 +642,8 @@ The marea of library door is "Outside".
 to say bunker desc:
 	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
-		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take along if you'd like";
-	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure looking door leading [bold type]outside[roman type].";
+		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take it along if you'd like";
+	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned.  There is a secure-looking door leading [bold type]outside[roman type].";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner where it continues to play without power, providing a mix of tunes and the occasional weather report on the continuing heat wave.  Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio.  The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station['].  Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 
