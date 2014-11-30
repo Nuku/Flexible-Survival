@@ -97,7 +97,7 @@ to say movingYolanda:
 				move Yolanda to Grey Abbey 2F;
 				now hp of Yolanda is 6;
 				move player to Grey Abbey 2F;
-				now lastfuck of Yolanda is turns - 8;
+				now lastfuck of Yolanda is turns + 8;
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another.  Other packs have been torn from Yolanda's back and are similarly being carried off by the others.  'Oh no!  My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her.  'Give me back my shinies!  My playthings!  You feathery thieves!  Lice-ridden bandits!  You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind.  You wait a while, hoping she'll return, but she never does.  Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
 				now hp of Yolanda is 100;

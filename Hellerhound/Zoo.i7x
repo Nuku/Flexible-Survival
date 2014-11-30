@@ -86,7 +86,7 @@ to say birdrape:
 			infect "Hermaphrodite Gryphon";
 		otherwise:
 			say "A light brown bird more commonly known as a wren flies over and pulls up, headed to the ceiling in from of you. As it does this, it lets loose and hits you full in the chest with a big splatter of bird poop. [line break]Disgusting! [line break]";
-			infect "harpy";
+			infect "Harpy";
 	otherwise:
 		say "There is an ominous feeling about here, and you feel real uncomfortable.";
 

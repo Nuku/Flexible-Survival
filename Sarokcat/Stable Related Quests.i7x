@@ -206,7 +206,7 @@ to hardwarefortphase4-basic:
 				if recoveredhardware < 3:
 					challenge "Wyvern";		[one less fight on re-tries]
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					challenge "harpy";
+					challenge "Harpy";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						if recoveredhardware > 2:
 							say "     The lead horseman nods at you in grudging thanks as he leads the horsemen out of the lot before more of the infected creatures can show up and interfere. And you feel a bit better as you head back to the library again, feeling rather hopefully that you might have earned at least a bit of grudging respect for all your efforts, though it took several attempts to actually do so.";
@@ -231,7 +231,7 @@ to hardwarefortphase4-basic:
 to hardwarefortphase4-10plus:
 	challenge "Hermaphrodite Gryphon";	
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		challenge "harpy";	
+		challenge "Harpy";	
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware < 3:
 				challenge "Hawkman";		[one less fight on re-tries]
@@ -263,7 +263,7 @@ to hardwarefortphase4-10plus:
 to hardwarefortphase4-20plus:
 	challenge "Hawkman";	
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		challenge "harpy";	
+		challenge "Harpy";	
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			challenge "Hawkman";
 			if fightoutcome >= 10 and fightoutcome <= 19:
