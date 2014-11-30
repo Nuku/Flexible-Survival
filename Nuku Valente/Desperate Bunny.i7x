@@ -38,7 +38,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		if diceroll is greater than 12:
 			say "You call out gently to the woman and she turns to face you once more. She looks ready to flee but you hurriedly explain you mean no harm. Cautiously, she begins to relax, but does not approach you.";
 		otherwise:
-			say "You call out gently to the woman, but when she tuns that panicked gaze on you, you fail to think of anything convincing to say, and she flees off into the ruins.";
+			say "You call out gently to the woman, but when she turns that panicked gaze on you, you fail to think of anything convincing to say, and she flees off into the ruins.";
 			stop the action;
 		if the cocks of the player is greater than 0:
 			say "     As you approach her, slowly, you speak in gentle tones. She seems to be relaxing a little bit. When you get within twelve feet, you see that her eyes have wandered down, not meeting your gaze, instead she's looking at your belly, or groin. When you reach easy conversational distance, she grabs at your hand, 'I thought I would die alone in this city!' she gasps out, 'I can't even tell you how happy I am to see you.'";
