@@ -2034,7 +2034,7 @@ To say wyvern goop use:
 	decrease humanity of player by 4;
 	increase libido of player by 1;
 	
-wyvern goop is a grab object. wyvern goop is infectious. The strain of Wyvern is "Wyvern".
+wyvern goop is a grab object. wyvern goop is infectious. The strain of wyvern goop is "Wyvern".
 wyvern goop has a usedesc "[wyvern goop use]".
 
 Wyvern For FS ends here.
