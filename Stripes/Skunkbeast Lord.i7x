@@ -414,5 +414,20 @@ when play ends:
 			otherwise:
 				say "     While the doctor is pounding away at her, releasing his pent-up desires for the lusty creature and she yowls with delight beneath him, Slut whispers for you to do it, to give in to your urges, that you know what to do.  Acting on instinct, you move your taur body atop them and grind your throbbing cock over their body.  As you cum, you spray sticky fluid onto them, like the skunk goo you encountered long ago in the city.  They moan and writhe, thrusting into one another hard as they start to meld and become a skunktaur like yourself, but female, a perfect mate for you both.  The scientist is briefly concerned about the loss of his cock, but as you thrust into her new pussy, all objections disappear as you breed her hard and fast, much to their mutual delight.";
 
+[ Skunkbeast Lord  ]
+[ skunkbeaststatus ]
+[ 0 = inactive     ]
+[ 1 = victorious - now Skunkbeast Lord ]
+[ 2 = lost - turned into skunk plaything ]
+[ 3 = fled - encounter over ]
+
+[ Double-Skunk / Skunk-Taur ]
+[ skrp ]
+[ -1 = not encountered ]
+[ 0 = warning accepted ]
+[ 1 = double-skunked   ]
+
+
+
 
 Skunkbeast Lord ends here.
