@@ -15,7 +15,7 @@ tattoohunter is a number that varies.
 Harold is in The PALOMINO.
 
 Harold is a man.
-The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hooflike hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of colour every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
+The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons.  His slightly hoof-like hands not seeming to slow him down at all.  A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colours.  Even more striking however is the spiraling horn emerging from the center of the equine's forehead.  Its pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of colour every time the unicorn bartender moves his head.  Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The conversation of Harold is { "Glug glug!" }.
 
 the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.".
@@ -66,7 +66,7 @@ instead of conversing the Harold:
 		say "     'Thanks a lot for this, I really appreciate it.' Harold whickers gratefully and you nod to the unicorn before turning to head off about your way. 'Hey, hold up a sec.' Stopping you turn to look back at Harold and then find yourself being handed something by the stallion. 'It's not much, but I wanted you to have this. Looking at what the unicorn hands you, you find yourself in possession of a good number of freecred. 'Some guys at Zephyr have been giving these out for nailing the beasts running around... so... yeah...' Wondering how Harold got a hold of these, considering that he's been at the bar the whole time, right before you shrug and then thank the other man for the gift. 'No problem!'";
 		increase freecred by 100;
 		increase xp of player by 12 + level of player;
-		now Haroldtalk is 2;
+		now Haroldtalk is 4;
 	otherwise if femonyxq is 0 and girl is not banned and xp of Onyx >= 6 and xp of Onyx <= 8:
 		say "     As you approach bar, you're stricken with the notion that Onyx might be better suited here than at the Abbey, though you're not sure if all the ladies around might have an effect on him. Shall you raise the topic with him?";
 		if girl is warded:
@@ -397,8 +397,8 @@ carry out Heavendrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly.  'Sorry friend, I can only give you so much at a time.  It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea.  'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while.  We have to be careful how much we give out in a day.'  He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	otherwise:
 		say "     Harold nods at you as you place your order, before pulling out a small energy drink bottle and placing it in front of you.  You raise your eyebrows at him, but he only grins as he nudges the small bottle towards you.  Shrugging, you toss back the small bottle of liquid, gasping as the strangely bitter tasting liquid sears its way down your throat. Blinking in surprise as you set the bottle down, you realize that you strangely feel increasingly light and energized, though your body feels oddly tingly. ";
-		infect "harpy";
-		infect "harpy";
+		infect "Harpy";
+		infect "Harpy";
 		decrease humanity of player by 5;
 		decrease thirst of player by 5;
 		now lastDrinkserved is turns;

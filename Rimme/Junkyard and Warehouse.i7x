@@ -41,7 +41,7 @@ Definition: a person is skintone human:
 	if the skinname of the player is "city sprite", yes;
 	if the skinname of the player is "Wood Elf", yes;
 	if the skinname of the player is "Elven Hunter", yes;
-	if the skinname of the player is "harpy", yes;
+	if the skinname of the player is "Harpy", yes;
 	if the skinname of the player is "Siren", yes;
 	if the skinname of the player is "Succubus", yes;
 	if the skinname of the player is "Incubus", yes;

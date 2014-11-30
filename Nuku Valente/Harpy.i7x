@@ -43,7 +43,7 @@ to say Harpy attack:
 				say "     Once up on the roof, she presses you down on your back and moves atop you.  She presses her bosom to your face, pushing one of her nipples to your lips.  Still catching the arousing scent of lust from your earlier lovemaking on it and quickly wrap your lips around it, starting to suckle at it.  She slips a taloned hand between your thighs and presses a [if cunt width of player > 10]trio of fingers[otherwise if cunt width of player > 5]pair of fingers[otherwise]finger[end if] into your juicy cunt.  You moan loudly and suckle all the harder, soon rewarded with the harpy's milk.  'Yes, my sweet.  Drink up and soon you'll be another beautiful harpy like me.  Wouldn't that be wonderful,' she says in a crooning voice.  You moan and chirp in response, your besotted mind willing to agree to nearly anything for your feathered lover.  You switch to her other breast for more of her delicious milk.  You nurse from her until she has no more milk to give and you've had several powerful orgasms from her continuous attention to your quivering cunt.  You are still in a daze as she takes you back to the ground and gropes you, urging you to become a lovely harpy quickly so you can join her and the others.";
 				decrease thirst of player by 10;
 				decrease humanity of player by 10;
-				infect "harpy";
+				infect "Harpy";
 			otherwise:
 				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia.  She shrieks in frustration and slashes at you with her claws.  'Ugh!  Why am I wasting my time with you?'  You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
 				decrease morale of player by 10;
@@ -78,9 +78,9 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "harpy" to infections of girl;
+	add "Harpy" to infections of girl;
 	Choose a blank row from Table of random critters;
-	now name entry is "harpy"; [Name of your new Monster]
+	now name entry is "Harpy"; [Name of your new Monster]
 	now attack entry is "[one of]She manages to get a good grip with a talon around an arm, digging her claws in as her wings-arms beat powerfully.[or]She dive bombs from above, knocking you to the ground.[or]A sudden hug has you pressed to her soft front, only to be released above the ground.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Harpy loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Harpy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
@@ -129,7 +129,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "harpy":
+	if bodyname of player is "Harpy":
 		if humanity of player is less than 10:
 			if centrallib is 7:
 				say "     As a harpy in the library, you quietly tend to the stacks as do the others.  The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time.  On occasion, you fly out into the city to pluck up a [if cunts of player > 0]male to satisfy your needs and give you an egg for the season.  Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[otherwise]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg.  Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if cocks of player > 0].  The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if cocks of player > 0 and cunts of player is 0].  You have become an unusual creature of myth and legend, the rare male librarian[end if].";

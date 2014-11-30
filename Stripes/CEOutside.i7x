@@ -1,5 +1,5 @@
 Version 1 of CEOutside by Stripes begins here.
-[Version 1 - Coded by Stripes to consolidate many of the excess background events]
+[Version 1.1 - #4 removed from set]
 
 "Consolidates a collection of simple and background events into a pair of events to clear up the Outside area."
 
@@ -8,7 +8,8 @@ Book 1 - CEO1 (Kaleem and hiccup)
 Consolidated Events Outside CEO1 is a situation.
 The sarea of Consolidated Events Outside CEO1 is "Outside".
 
-ceoutside1list is a list of numbers that varies.  ceoutside1list is usually {1, 2, 3, 4, 5, 6, 7, 8, 9}.
+ceoutside1list is a list of numbers that varies.  ceoutside1list is usually {1, 2, 3, 5, 6, 7, 8, 9}.
+[ #4 removed due to placement issues and general story violations ]
 
 Instead of resolving Consolidated Events Outside CEO1:
 	if furry is banned or hermaphrodite is banned, remove 2 from ceoutside1list, if present;
@@ -23,8 +24,8 @@ Instead of resolving Consolidated Events Outside CEO1:
 			say "[ceoutside2]";
 		otherwise if entry 1 of ceoutside1list is 3:
 			say "[ceoutside3]";
-		otherwise if entry 1 of ceoutside1list is 4:
-			say "[ceoutside4]";
+[		otherwise if entry 1 of ceoutside1list is 4:
+			say "[ceoutside4]";		]
 		otherwise if entry 1 of ceoutside1list is 5:
 			say "[ceoutside5]";
 		otherwise if entry 1 of ceoutside1list is 6:
@@ -88,6 +89,7 @@ to say ceoutside3:
 	mallrecall;
 	remove 3 from ceoutside1list;
 
+[
 
 Section 4 - The Pack (by Kaleem)
 
@@ -123,6 +125,7 @@ to say ceoutside4:
 		say "Grunting as your shoulder bangs into the doorframe without causing it to open you curse and then shake your head as you try to prepare yourself for another ramming charge. However, the pitter patter of rain soon comes down around you and you end up getting drenched before you can make your second effort of it. Swearing and throwing an arm up to shield your head you move away from the door to find another spot to take cover in. Running as you do, coupled with the growing storm raging around you, you fail to hear a woman's cry coming from the derelict little shop. The yelping sound soon turns into a series of biting moans as the minutes pass, but by then you are already a block and a half away. Too far to hear or care.";
 	remove 4 from ceoutside1list;
 
+]
 
 Section 5 - Desperation (by Kaleem)
 

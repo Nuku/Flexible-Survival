@@ -692,7 +692,7 @@ When Play begins:
 	now cunt width entry is 16;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "wyvern goop";			[ Loot monster drops, ]
-	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 5;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bulky[or]draconic[or]winged[at random]";
@@ -2034,7 +2034,7 @@ To say wyvern goop use:
 	decrease humanity of player by 4;
 	increase libido of player by 1;
 	
-wyvern goop is a grab object. wyvern goop is infectious. The strain of Wyvern is "Wyvern".
+wyvern goop is a grab object. wyvern goop is infectious. The strain of wyvern goop is "Wyvern".
 wyvern goop has a usedesc "[wyvern goop use]".
 
 Wyvern For FS ends here.

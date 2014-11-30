@@ -377,13 +377,13 @@ to say libraryexplore:
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you.  The one who chased you out from the stacks is similar to the others you've seen outside, but with her grey hair in a tight bun and a pair of reading glasses dangling on a chain.  Her eyes are wild with anger at the disturbance to her library.";
 	now harpyfight is 3;
 	say "[line break]";
-	challenge "harpy";
+	challenge "Harpy";
 	if harpyfight is 1 or harpyfight is 3:
 		if harpyfight is 1, say "     With the assault of the first one ended, another is upon you.  This one is younger and has managed to keep a low-cut top and skirt despite her radical changes.  She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		if harpyfight is 3, say "     Diving under one of the long reading tables as the harpy swoops in, you hear her thump against it.  You scurry quickly between two chairs and try to make a break for it, but another is upon you.  This one is younger and has managed to keep a low-cut top and skirt despite her radical changes.  She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		now harpyfight is 3;
 		say "[line break]";
-		challenge "harpy";
+		challenge "Harpy";
 		if harpyfight is 1 or harpyfight is 3:
 			say "     Having [if harpyfight is 1]beaten[otherwise]evaded[end if] the second one, you continue to try reaching the exit, but are cut off at every turn.  You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
 			if centrallib is 4 or jamesfed is 2 or jamessex is 3:		[positive entry]
@@ -408,15 +408,15 @@ to say libraryexplore:
 		[puts harpy as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry is "harpy":
+			if name entry is "Harpy":
 				now monster is y;
 				break;
-		now tailname of player is "harpy";
-		now facename of player is "harpy";
-		now skinname of player is "harpy";
-		now bodyname of player is "harpy";
-		now cockname of player is "harpy";
-		attributeinfect "harpy";
+		now tailname of player is "Harpy";
+		now facename of player is "Harpy";
+		now skinname of player is "Harpy";
+		now bodyname of player is "Harpy";
+		now cockname of player is "Harpy";
+		attributeinfect "Harpy";
 		now tail of player is tail entry;
 		now face of player is face entry;
 		now skin of player is skin entry;

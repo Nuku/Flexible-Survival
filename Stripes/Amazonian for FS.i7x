@@ -67,7 +67,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Amazonian"; [Name of your new Monster]
-	now attack entry is "Amazonian uses their [one of]Superior Fist[or]Penetrating Stare[or]Snap Kick[or]mutant power[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She[or]The Amazonian[or]The Amazon woman[or]The muscular herm[at random] [one of]strikes you with a powerful punch[or]connects with a snap kick[or]strikes you with a powerful blow[at random].";
 	now defeated entry is "[beattheamazonian]";
 	now victory entry is  "[losetoamazonian]";
 	now desc entry is "[amazoniandesc]";
