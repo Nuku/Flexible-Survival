@@ -15,7 +15,7 @@ The conversation of Master Mind is { "meatbag" }.
 the scent of the Master Mind is "Master Mind has little scent of her own, through there is a faintly feminine scent to her, coming from her juicy pussy.".
 
 to say masterminddesc:
-	say "     Imprisoned in one of the police station's cells, this gold-skinned automaton is some kind of elite model.  She has a glass dome at the top of her cranium, through which you can see a computerized brain made of electronics, wires and blinking lights.  It looks like something out of a 50's B-movie, but created with modern components.  Her gold-plated skin is smooth and without blemish or patina.  She is wearing a skintight silver jumpsuit that leaves little to the imagination, her firm nipples, camel toe and sexy ass all smoothly outlined by the fabric.";
+	say "     Imprisoned in one of the police station's cells, this gold-skinned automaton is some kind of elite model.  She has a glass dome at the top of her cranium, through which you can see a computerized brain made of electronics, wires and blinking lights.  It looks like something out of a 50[']s B-movie, but created with modern components.  Her gold-plated skin is smooth and without blemish or patina.  She is wearing a skintight silver jumpsuit that leaves little to the imagination, her firm nipples, camel toe and sexy ass all smoothly outlined by the fabric.";
 	say "     She stands or sits impassively, quietly doing nothing during her confinement.  Except when engaged in conversation, the only activity from her is the erratic flashing of the lights in her brain computing away in silence with a faint air of smugness to her otherwise expressionless face.";
 		
 Instead of conversing the Master Mind:
@@ -29,6 +29,7 @@ Instead of conversing the Master Mind:
 		say "     'We found you, didn't we?' Alexandra says with a grin, the smug one this time.";
 		say "     'Indeed.'  The elite automaton's tone is flat and she falls silent after that, refusing to respond to further questions.  Eventually Alexandra grows tired of trying to question the unresponsive android and storms off with a growl, leaving you alone with her.";
 		increase hp of Master Mind by 1;
+		now hp of Alexandra is 61;
 	otherwise if hp of Master Mind is 1:
 		say "[one of]The golden automaton listens impassively to you, making no response to your attempts to communicate.[or]'I look forward to seeing your meat bitch be silenced.'[or]'The two of you will make fine, strong automatons when your conversion finally arrives.  I look forward to it.  I may even keep you so I might use you both for my recreation.  Perhaps you'd care to [']recreate['] right now,' she says with a slow, sensual edge to her voice while running her hands along the smooth, silvery fabric of her body-clinging outfit.[or]'This is an interesting choice of safe haven.  How many meatbags are you even trying to hide in here?  How long do you think it will last before your biological instincts results in its downfall in an orgy of transformation?'[or]The glass-skulled android seems to ignore you, her brain lights blinking away passively as she stands in the middle of her cell.[at random]";
 	otherwise:
@@ -62,6 +63,7 @@ to say sexwithmastermind:
 			say "     She grins and grinds her hips against yours.  'Oh that was amusing, little meat puppet,' she says, panting hard.  'That was almost satisfying... though you're welcome to try again soon.'  Not one to leave it at that, you drive your fingers back into her sopping cunt, frigging her hard and fast again. But this time once you've gotten her good and worked up, you step away, leaving the smug bitch unsatisfied as you lock up her cell and return the cuffs and keys where you got them.";
 		increase hp of Master Mind by 1;
 	otherwise:
+[		say "     Deciding to have another go at [']interrogating['] the prisoner, you ...		]
 		say "[bracket]***Alternate sex scenes to come later.  Please enjoy the original one again for now.[close bracket][line break]";
 		say "[line break]";
 		say "     The idea of trying to interrogate the prisoner yourself comes to mind, but through other means.  Your mind, tumbling into the gutter, shifts to kinkier ways to go about it.  Checking to make sure no one's coming back down here, you obtain the cell door keys from the security safe holding them.  Remembering the way she infected that guy so quickly, you also grab the handcuffs.  Returning to her cell, you order her forward and to place her hands between the bars.  After studying you for a few moments, as if testing your patience, she complies, allowing you to handcuff her to the bars.  Once she's secured, you open the door and enter her cell.";
