@@ -19,7 +19,7 @@ To say reservoirdesc:
 	otherwise if waterworks > 0:
 		say "Having cleaned up the mess that had once been the reservoir the facility is now bright and sparkly as it was before the madness with the infection going throughout the city began. You nod to some of the military people walking around. You take care not to head any further inside of the building, being as the soldiers have put blockades up and around while assigning guards to watch over the place. Having done your duty as a citizen you don't have much of a reason to come here now so it would probably be good time to vamoose.";
 
-instead of sniffing Reservoir: 
+instead of sniffing Reservoir:
 	if waterworks is 0:
 		say "The reservoir reeks of the scents of too many odors to discern one by one who or what left them behind. However, the pervasive smell of musk and sexual fluids is not hard to miss in the least.";
 	otherwise if waterworks > 0:
@@ -80,7 +80,7 @@ The sarea of For Purity's Sake is "Reservoir".
 
 Instead of resolving For Purity's Sake:
 	If resevquest is 0:
-		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nausea that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch."; 
+		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nausea that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch.";
 		say "This small dilemma frustrates you for a moment before you calm yourself down and realize that if there is something that you can do then you'll just have to do it to the best of your own natural ability. Come what may you can't make the situation any worse than it already is.";
 		now resevquest is 1;
 		increase score by 2;
@@ -95,7 +95,7 @@ bookfind is a number that varies.
 
 Instead of resolving a Technical Assistance:
 	If resevquest is 1:
-		say "Looking around you manage to find a door way with the stamp of [']Technician['] placed securely onto the front of the metal barrier. Slightly stained with what appears to be male sexual fluids you toughen your resolve and enter into the room. The room is darkened; most probably because the lights are switched off and yet you recall the facilities personal backup generators should still be supplying the place power. Hesitant, but knowing that you'll need light to see by, you reach out to search the wall to flip on a light. Finding the small nub, you then flip the switch. With a telltale 'click' the room in suddenly brightened for all the world to see."; 
+		say "Looking around you manage to find a door way with the stamp of [']Technician['] placed securely onto the front of the metal barrier. Slightly stained with what appears to be male sexual fluids you toughen your resolve and enter into the room. The room is darkened; most probably because the lights are switched off and yet you recall the facilities personal backup generators should still be supplying the place power. Hesitant, but knowing that you'll need light to see by, you reach out to search the wall to flip on a light. Finding the small nub, you then flip the switch. With a telltale 'click' the room in suddenly brightened for all the world to see.";
 		say "And sadly all of the world does see...you. Or rather to say the large creature that's standing before you see you as it blinks in confusion at having someone interrupt its nap. Frantically you hope that civil conversation will stop any possible altercation you might have with the creature, but too late, it's already ambling towards you with eyes filled with intent on nothing good.";
 		say "[resevfight1]";
 		say "After dealing with the creature in question you shake your head in pity. A small part of you wonders if the thing you just beat was once one of the technicians you so desperately need right now. Finding that it doesn't matter you go ahead and search around the room for something that will help you clean up the city's water supply.";
@@ -115,7 +115,7 @@ Instead of resolving a Technical Assistance:
 				now Technical Assistance is resolved;
 				now Slightly Sidetracked is unresolved;
 				now bookfind is 1;
-			otherwise: 
+			otherwise:
 				say "Searching over and under you can't seem to find anything remotely useful to your needs. Grunting you begin to feel somewhat annoyed, but before you can you sigh and realize that you need to look a little harder. Maybe you should try a little harder to find the material you need?";
 				if the player consents:
 					say "You find yourself looking around the room, though as quietly as you can so as not to alert more trouble.";
@@ -136,7 +136,7 @@ Instead of resolving a Technical Assistance:
 					now Technical Assistance is resolved;
 					now Slightly Sidetracked is unresolved;
 					now bookfind is 1;
-				
+
 to say resevfight1:
 	let T be a random number between 1 and 3;
 	if T is 1:
@@ -152,7 +152,7 @@ The sarea of Slightly Sidetracked is "Reservoir".
 
 Instead of resolving Slightly Sidetracked:
 	If resevquest is 2:
-		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee."; 
+		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you your feet are  running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
 		say "[resevfight2]";
 		say "[resevfight2]";
@@ -183,11 +183,11 @@ The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls."; 
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you…and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls.";
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are you not found by anymore mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
-		now resevquest is 4; 
+		now resevquest is 4;
 		increase score by 10;
 		now Flight of stairs is resolved;
 		now ThreeDoors is unresolved;
@@ -203,7 +203,7 @@ doorsearch is a number that varies.
 
 Instead of Resolving ThreeDoors:
 	If resevquest is 4:
-		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room…then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is."; 
+		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room…then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
 		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way.  It's not like you can you really go back and ask one of the creatures here for help.  Well, not and expect to get a useful answer anyway.  You have something of a dilemma on your hands.";
 		say "[doorcheck]";
 
@@ -219,7 +219,7 @@ to say doorcheck:
 	clear the screen;
 	wait for any key;
 	try looking;
-		
+
 Table of Door Choice
 title		subtable	description	sortorder	toggle
 "Left Door"		--	--	1	doorcheck rule
@@ -241,7 +241,7 @@ This is the doorcheck rule:
 					say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
 					if diceroll is greater than 12:
-						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier."; 
+						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier.";
 						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [facename of player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes…or was that the brave?";
 						wait for any key;
 						increase carried of water bottle by 1;
@@ -258,27 +258,27 @@ This is the doorcheck rule:
 							next;
 						otherwise:
 							say "Not feeling like being bothered anymore with this you decide to turn around and go about your way.";
-			otherwise:		
+			otherwise:
 				say "Trusting in your feelings more than in some unknown possibility behind a random door you decide not to bother with this door. Though you may have to come back later if the other two prove to be the wrong choice in your search.";
 		if ldoor is 1:
 			say "Having already come this way you see that there is nothing of value inside of the breakroom. That being the case you turn to go about your way.";
 	otherwise if title entry is "Center Door":
-		now lastResevoirfix is turns + 10; 
+		now lastResevoirfix is turns + 10;
 		say "A good feeling surges throughout your body as you reach out for this door, despite the stains leaking down the once richly polished frame. Giving the doorknob a tentative shake you twist your hand to turn the handle forty-five degrees to the right. Yours eyes nearly pop from your head in amazement when the door opens without incident. Pushing open the barrier with minimal strength you find yourself hurriedly entering into the room and then looking around rapidly as you try to find the main terminal to the Reservoir. You decide that this room is indeed the main terminal of the facility, if the high tech and astonishingly intact machinery is anything to go by.";
-		say "Seeing that much of what you need has already been provided, and remembering the technical manual you had read prior to coming here, you swiftly move about switching on panels and pressing in on knobs, after boarding the door of course with a file cabinet. No sense testing the length of your string of good luck by taking needless chances."; 
-		say "Getting to work you try not to wince as alarms begin to sound as the warning system indicates that there is going to be a massive happening in the reservoir come the next sixty seconds and that all personnel should get out of dodge before that happens. Mind working furiously on the controls as you check the pressure of the water, which seems a too high to be normal, the gauges for the pumps working to filter excess filth and slime into the cleaning portion of the facility's heating and treatment tank, and the monitors which are showing how fluidly the water is flowing throughout the city's pipe system you barely stop to wonder about the sense of elation that courses throughout your body."; 
-		say "Your mind does pause to consider the various creatures down below getting swept up into the water and then dragged down to be 'purified' by the massive cleaning system, but there's little that can be done about that now. An hour later an actual smile crosses your face as you see that almost 90% of all of the toxins - aka infected cum/piss/and other fluids -- in the water are almost gone. With this the city should be able to get back to some level or normalcy, however, all too soon the party grinds to a screeching halt when buzzers alert you to something foreign swelling up inside of the main pool of water.[line break]"; 
-		say "Wondering what in the nine hells could be trying to go wrong now you step away from the control terminal and look out to the one-sided glass windows overlooking the entire reservoir…and then your mouth just drops at the sight lumbering up out of the water. As though coming from out of a nightmare a massive ball of…slime, flesh, and writhing indefinable forms surges up through the clear aqua blue water as though offended that something had bothered it from its quiet reprieve. In a flash all of your hard work comes to an end as the creature, or rather BLOB, snakes fleshy tentacles out all over the place to try and restore its home to some kind of debased and disgusting order."; 
-		say "Rapidly your brain goes to work trying to think of a way to stop the creature and in seconds you find your answer coming to you. While you're sure that, if broken up into smaller pieces, the heating tank could evaporate the monster and subsequently destroy it you realize that the thing is just too big and probably has no intentions of nicely disassembling itself for your benefit. That being the case you would probably have to go down and try to tear the creature into bits with whatever you could find on hand in order to make it cease and desist what it's doing. But that would also mean putting yourself at the mercy of the creature in order to do so...[line break]"; 
-		say "By the look of the monster it has to be almost four times bigger than the average wolftaur, not to mention almost five times as long. What in the hell could you do to stop that thing? An answer comes, not from on high but from down below as you spot the creature shuddering and writhing in silent pain. Apparently the dumb thing managed to knock over some canisters of... something and now one of its tentacles was frozen solid. The solidified limb reaches up as far as the six feet along the monster's limb before the whole thing starts to disintegrate and then burst into powder."; 
-		say "It would seem that someone doesn't like the cold, you think maliciously. Jumping over one of the terminals and then checking the system you find that - yes - there is a protocol to flash freeze the entire facility close to 32* F. This was probably in case of…you shake your head as you realize that you don't have time for the security lesson as you hear the creature shambling around and trying to destroy the place. Activating the system you hear more warnings and know that in a few minutes the problem will be solved, that is right before you see a large tentacle coming directly for the room you're in via the glass windows."; 
-		say "A sudden slam of the massive flesh into the glass has you scrambling away for safety. Your good fortune is holding as you notice that the fiber glass is standing strong, but it won't be long before the window gives way, if the splintering of the glass is anything to go by, and the creature finds a way in. However, the system hasn't fully activated itself yet! If the creature destroys the machinery in here then the reservoir might never get cleaned…and if that happens then who knows what might become of the people in the town, supposing the military doesn't come, or the cubs and other patients in the hospital. This city cannot survive indefinitely without some form of running water. Hygiene alone demands that something other than rainwater has to flow throughout the town in order to keep the place at least moderately clean."; 
+		say "Seeing that much of what you need has already been provided, and remembering the technical manual you had read prior to coming here, you swiftly move about switching on panels and pressing in on knobs, after boarding the door of course with a file cabinet. No sense testing the length of your string of good luck by taking needless chances.";
+		say "Getting to work you try not to wince as alarms begin to sound as the warning system indicates that there is going to be a massive happening in the reservoir come the next sixty seconds and that all personnel should get out of dodge before that happens. Mind working furiously on the controls as you check the pressure of the water, which seems a too high to be normal, the gauges for the pumps working to filter excess filth and slime into the cleaning portion of the facility's heating and treatment tank, and the monitors which are showing how fluidly the water is flowing throughout the city's pipe system you barely stop to wonder about the sense of elation that courses throughout your body.";
+		say "Your mind does pause to consider the various creatures down below getting swept up into the water and then dragged down to be 'purified' by the massive cleaning system, but there's little that can be done about that now. An hour later an actual smile crosses your face as you see that almost 90% of all of the toxins - aka infected cum/piss/and other fluids -- in the water are almost gone. With this the city should be able to get back to some level or normalcy, however, all too soon the party grinds to a screeching halt when buzzers alert you to something foreign swelling up inside of the main pool of water.[line break]";
+		say "Wondering what in the nine hells could be trying to go wrong now you step away from the control terminal and look out to the one-sided glass windows overlooking the entire reservoir…and then your mouth just drops at the sight lumbering up out of the water. As though coming from out of a nightmare a massive ball of…slime, flesh, and writhing indefinable forms surges up through the clear aqua blue water as though offended that something had bothered it from its quiet reprieve. In a flash all of your hard work comes to an end as the creature, or rather BLOB, snakes fleshy tentacles out all over the place to try and restore its home to some kind of debased and disgusting order.";
+		say "Rapidly your brain goes to work trying to think of a way to stop the creature and in seconds you find your answer coming to you. While you're sure that, if broken up into smaller pieces, the heating tank could evaporate the monster and subsequently destroy it you realize that the thing is just too big and probably has no intentions of nicely disassembling itself for your benefit. That being the case you would probably have to go down and try to tear the creature into bits with whatever you could find on hand in order to make it cease and desist what it's doing. But that would also mean putting yourself at the mercy of the creature in order to do so...[line break]";
+		say "By the look of the monster it has to be almost four times bigger than the average wolftaur, not to mention almost five times as long. What in the hell could you do to stop that thing? An answer comes, not from on high but from down below as you spot the creature shuddering and writhing in silent pain. Apparently the dumb thing managed to knock over some canisters of... something and now one of its tentacles was frozen solid. The solidified limb reaches up as far as the six feet along the monster's limb before the whole thing starts to disintegrate and then burst into powder.";
+		say "It would seem that someone doesn't like the cold, you think maliciously. Jumping over one of the terminals and then checking the system you find that - yes - there is a protocol to flash freeze the entire facility close to 32* F. This was probably in case of…you shake your head as you realize that you don't have time for the security lesson as you hear the creature shambling around and trying to destroy the place. Activating the system you hear more warnings and know that in a few minutes the problem will be solved, that is right before you see a large tentacle coming directly for the room you're in via the glass windows.";
+		say "A sudden slam of the massive flesh into the glass has you scrambling away for safety. Your good fortune is holding as you notice that the fiber glass is standing strong, but it won't be long before the window gives way, if the splintering of the glass is anything to go by, and the creature finds a way in. However, the system hasn't fully activated itself yet! If the creature destroys the machinery in here then the reservoir might never get cleaned…and if that happens then who knows what might become of the people in the town, supposing the military doesn't come, or the cubs and other patients in the hospital. This city cannot survive indefinitely without some form of running water. Hygiene alone demands that something other than rainwater has to flow throughout the town in order to keep the place at least moderately clean.";
 		say "Can you really turn tail and run from this situation? Looking at the monster still batting at the window can you say yes with your eyes open as you see it continue to batter the creaking and straining glass?";
 		wait for any key;
 		now resevquest is 5;
-		now lastResevoirfix is turns; 
+		now lastResevoirfix is turns;
 		now ThreeDoors is resolved;
-		now The beast of the tainted waters is unresolved;	
+		now The beast of the tainted waters is unresolved;
 	otherwise if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
@@ -287,7 +287,7 @@ This is the doorcheck rule:
 			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll is greater than 8:
-				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes."; 
+				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes.";
 				challenge "German Shepherd";
 				say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave.";
 			otherwise:
@@ -316,9 +316,9 @@ Instead of Resolving a The beast of the tainted waters:
 			say "Having let the beast of ooze do what it wishes you have let the main terminal become destroyed beyond repair, at least from what your limited skills with working with machines tells you. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now The beast of the tainted waters is resolved;
 		otherwise :
-			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave…or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet."; 
-			say "Doing so, albeit somewhat unsteadily, you breath out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you."; 
-			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now its time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be…difficult…[roman type]";
+			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave…or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet.";
+			say "Doing so, albeit somewhat unsteadily, you breath out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you.";
+			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now it's time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be…difficult…[roman type]";
 			increase carried of medkit by 1;
 			increase carried of healing booster by 1;
 			now resevquest is 6;
@@ -377,7 +377,7 @@ Instead of resolving a A Fight to remember:
 					say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 					now lastResevoirfix is turns;
 			otherwise:
-				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you."; 
+				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you.";
 				let bonus be (( the dexterity of the player minus 8 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -385,7 +385,7 @@ Instead of resolving a A Fight to remember:
 				if diceroll is greater than 10:
 					say "You find yourself dodging out of the way just in time not to be hurt. Obviously, even if your mind has turned to jelly your feet haven't and you dance skillfully out of the way of the creature's oozing appendages.";
 					wait for any key;
-					challenge "Blob"; 
+					challenge "Blob";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
@@ -416,7 +416,7 @@ Instead of resolving a A Fight to remember:
 					say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs in order to ease the growing ache building up within you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry rips free from your lips a second later and soon you are charging right at the BLOB!";
 					decrease hp of player by 10;
 					wait for any key;
-					challenge "Blob"; 
+					challenge "Blob";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
@@ -465,7 +465,7 @@ Instead of resolving a PassionAfterTheBattle:
 		now waterworks is 1;
 		now PassionAfterTheBattle is resolved;
 		now Sanctuary is resolved;
-		
+
 Section 6 - Sanctuary
 
 Sanctuary is a situation.
@@ -486,7 +486,7 @@ It is part of the player.
 It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
-	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir."; 
+	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
 
 
 
