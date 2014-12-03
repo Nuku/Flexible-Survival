@@ -86,13 +86,14 @@ Instead of resolving a Temple of Hera:
 	say "     [WaitLineBreak]";
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";	
 	now Temple of Hera is resolved;
+	now Biker Hangout is not resolved;
 	now Dexterity of Erica is 3;
 
 Biker Hangout is a situation. Biker Hangout is resolved.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
-	add Temple of Hera to badspots of guy;       
-	add Temple of Hera to badspots of furry;     
+	add Biker Hangout to badspots of guy;       
+	add Biker Hangout to badspots of furry;     
 
 Instead of resolving a Biker Hangout:
 	say "     After a while of searching, you do find a chain-link gate that leads on to the junkyard proper from an adjoining dark alley. Near that back entrance, there is a run-down shack with three bikes parked in front of it. Seems you've found the hideout of the biker gang that kidnapped Joel. There is no one in sight right now, but where the bikes are, the bikers to go with them can't be far... so you decide to scout the place out stealthily first. As you carefully make your way through the piles of rusty cars and metal scrap, always using what concealment from observation through the shack's dirty windows you can get, you soon find out that there is another structure behind the shack - a chain link dog kennel. In it, you see the humanoid figure of an anthro dog lying on the ground, a short chain connecting his collar to an iron ring anchored in the concrete floor. From the looks of it, that chain doesn't even allow him to sit up, only to cower low to the ground or lie flat.";
