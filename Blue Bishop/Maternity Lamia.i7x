@@ -98,8 +98,7 @@ to say beatthelamia:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
+			say "[title entry]: Shall you [description entry]?";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -135,7 +134,7 @@ to say mlamiavsex02:
 
 to say mlamiavsex03:
 	say "     Feeling you deserve some relief in exchange for your troubles, you stride over to the serpent woman as she slithers away and grab her by the shoulders.  She struggles momentarily in surprise, but relents easily enough rather than continue fighting you.  You press the creature to the ground like the serpent she is.  Getting on your knees in front of her, you press her pretty human face between your legs and against your wet puss[yfn].  '[one of]Such a naughty girl[or]Oh, you're such a wilful one[or]If you really wanted to play, you should have just said so[or]Alright then, if you insist[or]Mmm... Is someone hot and bothered now?  Let's see what we can do about that[at random],' she says teasingly as you grind your dripping crotch against her.";
-	say "     The lamia's tongue slithered across your wet folds with light touches at first, but she's soon eating you out with gusto[if cunts of player > 0].  Sensitive to the needs of one with multiple pussies, she makes sure to swap between them from time to time.  She's neither too fast or nor too infrequent in doing so, making sure to give the current one plenty of stimulation without letting the pleasure wane too much elsewhere[end if].  She lavishes attention across your sensitive petals, delves into your hot tunnel[sfn] and licks and kisses your clit[sfn].  She shows considerable familiarity and skill with satisfying a woman, providing you with several enjoyable orgasms before you're finally sated enough to let her be on her way.";
+	say "     The lamia's tongue slithered across your wet folds with light touches at first, but she's soon eating you out with gusto[if cunts of player > 1].  Sensitive to the needs of one with multiple pussies, she makes sure to swap between them from time to time.  She's neither too fast or nor too infrequent in doing so, making sure to give the current one plenty of stimulation without letting the pleasure wane too much elsewhere[end if].  She lavishes attention across your sensitive petals, delves into your hot tunnel[sfn] and licks and kisses your clit[sfn].  She shows considerable familiarity and skill with satisfying a woman, providing you with several enjoyable orgasms before you're finally sated enough to let her be on her way.";
 
 to say mlamiavsex04:
 	say "     Feeling thirsty after the fight, you feel she should be the one the slake your thirst.  You stride over to the serpent woman as she slithers away and grab her breasts from behind.  She releases a moan in surprise, but doesn't resist the groping beyond her initial surprise.  '[one of]Oh, so now you want them.  Make up your mind[or]Such a naughty [if cocks of player > 0]boy[otherwise if cunts of player > 0]girl[otherwise]thing[end if][or]If you just wanted a drink, you should have just said so[or]Alright then, if you insist[or]Don't!  That's for the babies... Well, I guess there's enough to go around[at random],' she says teasingly as you press her back to a wall.";
