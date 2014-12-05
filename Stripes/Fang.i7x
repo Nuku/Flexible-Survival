@@ -1,5 +1,5 @@
 Version 5 of Fang by Stripes begins here.
-[Version 5.2 - Alpha Fang WS content]
+[Version 5.3 - Fang (alpha & beta) SBL special scenes]
 
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
@@ -64,62 +64,70 @@ to say sexwithFang:
 
 
 to say fangsex:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Suck wolf cock";
 	now sortorder entry is 1;
 	now description entry is "In the mood to taste the big wolf cock?";
-	now toggle entry is fangsexy rule;
 	choose a blank row in table of fucking options;
 	if cunts of player > 0:
 		now title entry is "Wolf mating";
 	otherwise:
 		now title entry is "Anal";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "Let Fang mount you.";
-	now toggle entry is fangsexy rule;
 	if cunts of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Wolf tongue";
 		now sortorder entry is 2;
 		now description entry is "Put your wolf's tongue to use.";
-		now toggle entry is fangsexy rule;
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount Fang";
 		now sortorder entry is 3;
 		now description entry is "Mount the big wolf to show him who's alpha.";
-		now toggle entry is fangsexy rule;
+		if bodyname of player is "Skunkbeast Lord" and player is pure:
+			choose a blank row in table of fucking options;
+			now title entry is "SBL fuck";
+			now sortorder entry is 4;
+			now description entry is "Vent your skunkbeast urges by fucking Fang.";
 	if libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - hp of Fang ) and Sandra is in the Bunker :
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 5;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
-		now toggle entry is fangsexy rule;
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Suck wolf cock":
+					say "[fangsex1]";
+				otherwise if nam is "Wolf tongue":
+					say "[fangsex2]";
+				otherwise if nam is "Wolf mating" or nam is "Anal":
+					say "[fangsex3]";
+				otherwise if nam is "Mount Fang":
+					say "[fangsex4]";
+				otherwise if nam is "Fang and Sandra":
+					say "[fangsandrasex]";
+				otherwise if nam is "SBL fuck":
+					say "[fangsex5]";
+		otherwise:
+			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
+	clear the screen and hyperlink list;
 
-This is the fangsexy rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if nam is "Suck wolf cock":
-			say "[fangsex1]";
-		otherwise if nam is "Wolf tongue":
-			say "[fangsex2]";
-		otherwise if nam is "Wolf mating" or nam is "Anal":
-			say "[fangsex3]";
-		otherwise if nam is "Mount Fang":
-			say "[fangsex4]";
-		otherwise if nam is "Fang and Sandra":
-			say "[fangsandrasex]";
-		wait for any key;
 
 to say fangsex1:		[suck wolf cock]
 	say "     Watching the powerful form of the wolf move around as he paces by the door, you catch sight of his large sheath and swollen balls.  Licking your lips, you decide you'd like a taste of the big wolf's thick seed.  You walk over and pet his head, scritching his ears.  His ears perk up at the show of affection and nuzzles at your hand. licking your fingers.  Reaching down with your other hand, you slip it underneath him and start rubbing his warm maleness, getting a rumble of pleasure from the large wolf.  He almost seems to smile as he rolls over onto his back, baring himself to you as his swelling cock starts to slip free.  His red shaft pokes from his sheath, growing longer and fuller as you start stroking it.";
@@ -140,6 +148,20 @@ to say fangsex3:		[fucked by Fang]
 to say fangsex4:		[assfuck Fang]
 	say "     Deciding to remind the big wolf that you're in charge, you stroke your throbbing cock and call with big wolf over.  Noticing your erection, the wolf comes over obediently and starts licking at it, slathering his slobbering tongue all over it.  You stroke his head and rumble in pleasure, only stopping him once you're good and slick.  Ordering him to turn, you get him to raise his tail for you, ears dipped and cowed before his strong alpha.  Climbing atop the big wolf, you line yourself up with his tight pucker and sink yourself into him.  He releases a soft growl and whimpers a little, but submits to you and takes it.  You nibble his ear and whisper what a good guard he's been and how pleased you are with him.  You pound your cock into him firmly, adding how happy you are with his tight ass and that's such a good beta for bending over and taking his alpha's cock.  Reaching around, you wrap your hand around his shaft, finding it hard and throbbing, enjoying the good, hard fuck he's getting.  Pumping hard and fast, you get him to howl under you as you thrust hard into his ass and unleash your hot cum, painting his insides with your seed, claiming him once more as yours.  The wolf's semen sprays onto the floor, forming a large puddle of thick, white wolfcum.";
 	now libido of player is ( ( libido of player * 2 ) / 5 );
+
+to say fangsex5:		[assfuck Fang]
+	say "     Deciding to sate your skunkbeast urges by mounting the wolf, you stride over to him.  With your enlarged body, you're easily able to push him over.  He gives a submissive whine and, noticing your midnight black erection, starts licking over it.  You give an appreciative rumble";
+	if skrp is 1:
+		say " and your added skunk girl head chirrs happily.  She directs the beta wolf to lick and suck your [cock size desc of player] cock and balls[if hp of Fang is 2], which he does obediently[otherwise], which he obeys reluctantly[end if].";
+	otherwise:
+		say ", allowing the beta wolf to lick and suck your [cock size desc of player] cock and balls.";
+	say "     Once you're good and slick with his saliva, you pull your throbbing back and press the wolf down beneath you.  Your strong, mephit body is able to stand over him and you press your pulsing rod against him.  Knowing what's coming, the wolf's ears dip and he gives a soft whimper, but keeps his tail raised for his beastly alpha.  He releases a soft growl as you push your ebon rod into him, spreading his tight pucker [if cock length of player > 20]very wide[otherwise if cock length of player > 10]wide[otherwise]open[end if] as you fuck him.  Your first few thrusts are restrained, giving the wolf a chance to adjust, but you don't hold back after that, letting your bestial urges set a fast and rough pace";
+	if skrp is 1:
+		say ".  That animalistic corner of your mind is quite pleased to be, as your co-inhabitor teases Fang, 'fucking one of the forest wolves' and 'staking territory for the skunks.'  Fang can only give a soft whimper at this and dips his ears lower even as he keeps his tail raised and feet planted firmly so his strange alpha can keep pounding him.";
+	otherwise:
+		say ".  That animalistic corner of your mind is quite pleased to be fucking one of the forest wolves, dominating a member of your territorial rivals.  Fang, like a good beta to his strange alpha, keeps his tail raised and feet planted firmly as you pound into him.";
+	say "     Your scent grows strong in the air and clings to the wolf for some time after you're done with him.  And by the time you're are done, you've cum hard a few times.  Having drained your mephit balls into the cowed wolf, you've once again staked your position over him.  The wolf, also having enjoyed the bestial mating by his alpha that's left him sated and sore, has left several sticky stains on the floor.";
+	now libido of player is libido of player / 2;
 
 
 Section 3 - Fang and Sandra
@@ -520,14 +542,24 @@ to say fangalphaoral:
 	decrease humanity of player by 3;
 
 to say fangalphafucked:
-	say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and nudges you to move onto all fours.  You moan softly in anticipation and strip off your clothes and pack.  Once in position, the wolf comes up behind you and sniffs at you [if cunts of player > 0]pussy and [end if]rear, as if checking what his slutty pet's been up to out in the city.  He [one of]growls and nips at your thigh[or]slides his tongue across your [if cunts of player > 0]wet folds and [end if]between your cheeks[or][if cunts of player > 0]dives his cock into your pussy to lap at your juices[otherwise]slathers his tongue over your waiting pucker[end if][at random] before climbing atop you.  The pointed tip of his enlarged shaft bumps against you once before finding your eager hole and sinking into you, making you both growl lustfully.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "     He pounds into you hard and fast while your needy [if cunts of player > 0]cunt[otherwise]hole[end if] grips and squeezes around that feral wolf cock.  You moan about how strong your big alpha is, how virile, how you are his bitch to use.  Clearly pleased by your words, he licks at your cheek before taking the nape of your neck in his teeth and fucking you even harder, slamming his swollen knot against your sore [if cunts of player > 0]pussy[otherwise]anus[end if] until it stretches open enough to let that oversized knot pop in and tie with you.  Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if cunts of player > 0]womb[otherwise]tummy[end if] with his ample load as he drains his large, virile balls into you.  You writhe beneath him in ecstasy, cumming hard as well from taking your master's seed.  When his knot goes down, he pops his cock from you, letting his excess semen flow out to soak your crotch, leaving the scent of it upon you to be a reminder to you and others that you belong to him now.[impregchance]";
-	now libido of player is ( ( libido of player * 4 ) / 5 );
-	decrease humanity of player by 3;
-	say "[fangwscontent]";
+	if bodyname of player is "Skunkbeast Lord" and the player is pure:
+		say "[fangalphafuckedSBL]";
+	otherwise:
+		say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and nudges you to move onto all fours.  You moan softly in anticipation and strip off your clothes and pack.  Once in position, the wolf comes up behind you and sniffs at you [if cunts of player > 0]pussy and [end if]rear, as if checking what his slutty pet's been up to out in the city.  He [one of]growls and nips at your thigh[or]slides his tongue across your [if cunts of player > 0]wet folds and [end if]between your cheeks[or][if cunts of player > 0]dives his cock into your pussy to lap at your juices[otherwise]slathers his tongue over your waiting pucker[end if][at random] before climbing atop you.  The pointed tip of his enlarged shaft bumps against you once before finding your eager hole and sinking into you, making you both growl lustfully.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		say "     He pounds into you hard and fast while your needy [if cunts of player > 0]cunt[otherwise]hole[end if] grips and squeezes around that feral wolf cock.  You moan about how strong your big alpha is, how virile, how you are his bitch to use.  Clearly pleased by your words, he licks at your cheek before taking the nape of your neck in his teeth and fucking you even harder, slamming his swollen knot against your sore [if cunts of player > 0]pussy[otherwise]anus[end if] until it stretches open enough to let that oversized knot pop in and tie with you.  Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if cunts of player > 0]womb[otherwise]tummy[end if] with his ample load as he drains his large, virile balls into you.  You writhe beneath him in ecstasy, cumming hard as well from taking your master's seed.  When his knot goes down, he pops his cock from you, letting his excess semen flow out to soak your crotch, leaving the scent of it upon you to be a reminder to you and others that you belong to him now.[impregchance]";
+		now libido of player is ( ( libido of player * 4 ) / 5 );
+		decrease humanity of player by 3;
+		say "[fangwscontent]";
 
+to say fangalphafuckedSBL:
+	say "     You snuggle up to your big alpha wolf and nuzzle under him, your dark nose twitching as it catches the scent of his aroused manhood.  Finding that hard wolfcock, you start by licking all over it before taking it into your muzzle.  You suck on his leaking cock and lap up his precum until the dominant would gives a firm growl.  Knowing what's wanted of you, you slip off your gear and raise your big, fluffy tail.  The virile wolf mounts your [if skrp is 0]bestial form and gives your shoulder a nip[otherwise]tauric form and gives your side a nip, causing the skunk head at the base of your torso to moan[end if].  After a few thrusts that spread his precum across your furry behind, he gets lined up and pushes that lupine cock into your [if cunts of player > 0][cunt size desc of player] pussy[otherwise]black ring[end if].";
+	say "     The feral wolf fucks you with considerable zeal, enjoying dominating the master of the forest skunks.  The thought of the skunk girls seeing you like this, submissive plaything to one of their territorial rivals makes you blush beneath your fur[if skrp is 1].  Your mephit co-inhabitor teases you about it between her lustful moans[end if].  The wolf's lupine rod drives into you again and again as he continues to nip and play-bite you, reinforcing his dominance.  Your [if cunts of player > 0]juicy cunt[otherwise]tight hole[end if] grips and squeezes around that lupine cock every time it's pushed into you.  Your virile alpha slams his swollen knot against your sore [if cunts of player > 0]pussy[otherwise]anus[end if] until it stretches open enough to let that oversized knot pop in and tie with you.  Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if cunts of player > 0]womb[otherwise]tummy[end if] with his ample load as he drains his large, plump balls into you.  You [if skrp is 1]and your lower skunk head [end if]release a chirring moan as you feel your lupine master filling you with his gooey seed.";
+	say "     When his knot goes down, he pops his cock from you only to drive it back into you and start fucking you again.  He ends up taking you several times, relishing asserting his dominance over you.  By the time he's finally done, your [if cunts of player > 0]womb is completely stuffed[otherwise]belly is heavy[end if] with his lupine cum[if cocks of player > 0] and you've drained your own balls uselessly across the floor beneath you[otherwise if cunts of player > 0] and your crotchfur is soaked and sticky with his semen and your female juices[end if].  When he does dismount, you can barely stagger a few steps before collapsing onto your side to recover.  You release a sated moan while his excess semen flows out of your stretched and gaping hole.  Its scent lingers upon you for some time, overpowering even that of your mighty skunkbeast form.";
+	now libido of player is ( ( libido of player * 2 ) / 3 );
+	decrease humanity of player by 5;
+	infect "Feral Wolf";
 
 to say fangwscontent:
 	if FangWS is 0:
