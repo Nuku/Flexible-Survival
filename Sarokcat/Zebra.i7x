@@ -39,7 +39,7 @@ to say Zebra attack:
 
 to say Zebra loss:
 	say "     'Fine' The zebra stallion says in a pained voice, as he stumbles backwards in defeat. 'You win the battle for now - But I'll be back stronger then ever to make you one of the herd before you know it!' he continues, eyes moving left and right as he looks for a way of escape.";
-	say "     [line break]";	
+	say "     [line break]";
 	if ZebraLossCount is 0:
 		say "     With a sudden burst of speed, the zebra dashes off as fast as his hoofed legs can carry him. Caught by surprise, you don't have any realistic chance of catching him, so you just stay where you are and watch. He sure looks impressive, with the high stature and well-muscled body. Maybe next time, you can catch him before he runs off...";
 		increase ZebraLossCount by 1;
@@ -146,13 +146,13 @@ When Play begins:
 	now name entry is "Zebra"; [Name of your new Monster]
 	now attack entry is "[one of]He slams his large forehead right into your head causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grin at you lewdly, the sight and his strong dominant musk sapping your will to fight[or]he lashes out at you with his strong hoof-like hands[or]He charges forward wildly, slamming his body into yours![or] The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Zebra loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Zebra attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Zebra attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[if ndmhigh is 1]After getting slammed in the back by a surprise blow, you can hear the loud, braying chuckle behind you[otherwise]Wandering down the zoo paths, you hear a strange thundering noise coming up on you quickly[end if], turning to face the noise you find a large anthro zebra is closing on you with an intent look in his eyes. His large thick cock partially erect as he plunges forward, obviously eager to be put to use. '[one of]You'll make a fine addition to the herd![or]You look like you want to be my mare![or]Soon you'll be mine![or]Now I have you![or]I'll make you acknowledge my dominance![or]Now to enlarge the herd![or]You will be no match for me![or]Submit now, resistance is futile![at random]' he calls out, before unleashing a sharp cry and attacking!";[ Description of the creature when you encounter it.]
-	now face entry is "Long zebra-like muzzle on your otherwise mostly humanoid face, your ears have lengthened and swivel constantly above your head as they search for danger. Your eyes still stare with human emotion out of your partially-zebra face"; [Your have a (your text) face."] 
-	now body entry is "thickly built, you stand easily on your strong digigrade legs, balancing easily on your thick hooves, your four fingered hands bear a strong resemblance to equine hooves, and you can't seem to manipulate objects quite as well as you could before";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]black and white striped[or]coarse furred[or]zebra striped[or]zebra fur[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a whip-like zebra tail hanging off your tight powerful ass, long coarse black hairs extending from part of the sides of the tail, and from the tip, extending its length almost to the ground as it swishes behind you.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]equine[or]Zebra[or]thick black[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "Long zebra-like muzzle on your otherwise mostly humanoid face, your ears have lengthened and swivel constantly above your head as they search for danger. Your eyes still stare with human emotion out of your partially-zebra face"; [Your have a (your text) face."]
+	now body entry is "thickly built, you stand easily on your strong digitigrade legs, balancing easily on your thick hooves, your four fingered hands bear a strong resemblance to equine hooves, and you can't seem to manipulate objects quite as well as you could before";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]black and white striped[or]coarse furred[or]zebra striped[or]zebra fur[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a whip-like zebra tail hanging off your tight powerful ass, long coarse black hairs extending from part of the sides of the tail, and from the tip, extending its length almost to the ground as it swishes behind you.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]Zebra[or]thick black[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel it stretch forward into a proper zebra-like muzzle, your teeth flattening and your nose expanding to take in the new scents around you. With a painful stretching feeling, your ears are tugged upwards to rest on top of your head, and black hair sprouts up to form a mohawk-like zebra mane. Soon the only difference between your face and that of a normal zebra is a slightly humanlike cast to your features, plus your strangely human eyes staring out at the world through an animal's face"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "its chest thickens and stretches into a more zebra-like barrel. Legs thickening and shifting into a digitigrade stance, your feet round out into rough hooves underneath you. Your arms thicken with new muscle while your fingers seem to flow and merge, leaving you with only 3 fingers and a thumb on each hand. The tips of your reformed digits are covered in thick black nails, giving your hands a strong hoof-like appearance"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft black and white striped fur slowly covers your body, your skin twitching and shuddering as it settles into place"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -177,7 +177,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "zebra fur";	[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
@@ -217,7 +217,7 @@ the usedesc of zebra fur is "[zebra fur use]";
 
 to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
-	
+
 zebra fur is infectious. The strain of zebra fur is "Zebra".
 
 
