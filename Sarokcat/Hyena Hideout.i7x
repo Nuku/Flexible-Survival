@@ -156,7 +156,7 @@ instead of conversing the Gina:
 					say "[hyenamat_victorytf]";
 					say "Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor.  Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes.  'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you.  'I knew you were special when I found ya, but I had no idea know just how tough you were.' She says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home.  'If you ever need any help with running this place or anything, you know where to find me.' Gina finishes, as she helps you settle in for a much needed rest after the hard fight, and fuck afterwards.";
 				otherwise:
-					say "Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off.  'Can[']t say I didn[']t warn you,' Gina mutters as she helps you settle down for a much needed rest. 'Things will be a bit different around her now that the matriarch has made you one of the gang sluts, I won[']t be able to keep you to myself anymore that[']s for sure. And its definitely going to be harder for you to get much respect around here, plenty of fucking though if that's any consolation' She finishes with a leer, causing you to blush as you recall your recent encounter, the thought of it making your loins heat up again almost against your will.";
+					say "Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off.  'Can[']t say I didn[']t warn you,' Gina mutters as she helps you settle down for a much needed rest. 'Things will be a bit different around her now that the matriarch has made you one of the gang sluts, I won[']t be able to keep you to myself anymore that[']s for sure. And it's definitely going to be harder for you to get much respect around here, plenty of fucking though if that's any consolation' She finishes with a leer, causing you to blush as you recall your recent encounter, the thought of it making your loins heat up again almost against your will.";
 			otherwise:
 				say "'Sorry hun' Gina says as she gestures at your crotch, 'You kind of lack the equipment for that sort of challenge right now, maybe you should hang out with us hyenas a bit more hmm?'";
 		otherwise:
@@ -206,7 +206,7 @@ instead of fucking Gina:
 		otherwise:
 			say "Gina grins as she moves over you, her hands running up and down your sides as shes massages your body, her musky scent flooding you with desire as she runs her rough paw-like palms over you. 'Mmmm I know what I want,' She mutters as she pushes your back into the mattress and climbs over you, one paw reaching behind your head and pulling you into a lewd wet kiss, while her other guides her cock right into your  hot body. You moan into her muzzle as she begins to grind herself into you, her rough tongue invading your mouth even as her cock invades your pussy. She thrusts herself into you hard and fast, making you groan into her muzzle with every thrust, she doesn[']t slow down at all as she fucks you like the beasts you both resemble.  You moan and cry out as you are engulfed in a powerful orgasm, your body's shuddering underneath her triggering her own powerful orgasm as she spills her hot virile seed into your empty womb. Your eyes roll back in your head as she stays there for a minute, joined together by her strong male organ, and the feel of her seed tingling inside you.  You can[']t help but feel a sense of belonging and happiness as you both collapse onto the mattress together, completely spent.[impregchance]";
 		hyenaify;
-		stop the action;	
+		stop the action;
 	otherwise:
 		say "Gina gives you a lewd grin as you accept her implicit invitation to join her, before you can react she reaches out and hauls you down onto the mattress beside her";
 		if cocks of player is greater than 0:
@@ -271,7 +271,7 @@ to say hyenamat_victorytf:
 	now breast size entry is 5;		[Size of breasts infection will try to attain ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 9;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 9;		[ Width of female sex  infection will try and give you ]
 	follow the sex change rule;
 	follow the sex change rule;
 	if libido of player < libido entry, now libido of player is libido entry;
