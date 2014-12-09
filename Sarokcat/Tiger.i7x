@@ -7,7 +7,7 @@ Tiger by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say Tiger attack:
 	say "'this is not the fighting monster you are looking for.'";
@@ -35,13 +35,13 @@ When Play begins:
 	now name entry is "Tiger"; [Name of your new Monster]
 	now attack entry is "[one of][at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Tiger loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Tiger attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Tiger attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "you encountered a tiger? Or did you?";[ Description of the creature when you encounter it.]
-	now face entry is "beautiful tiger-like face, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features combined in your ";[Your have a (your text) face."] 
-	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human like hands with their tiger-like claws tipping your fingers complete the look."; [Your Body is (your text)"] 
-	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]feline[or]Tiger[or]barbed[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "beautiful tiger-like face, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features combined in your ";[Your have a (your text) face."]
+	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human like hands with their tiger-like claws tipping your fingers complete the look."; [Your Body is (your text)"]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feline[or]Tiger[or]barbed[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitching as it flattens out, newly discovered scents washing over you as it merges into your new muzzle, the comforting scents of the numerous other tigers in the den, and the slightly arousing scent of the male tiger who changed you distract you from your eyes narrowing into slitted catlike pupils, and your ears finishing their adjustment to their new place on top of your head."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner.  You stumble as your legs shift underneath you, your ankles stretching upwards as your feet expand and change, shifting your balance to the balls of your new pawlike feet, and the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -49,13 +49,13 @@ When Play begins:
 	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the  skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tiger[']s sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 22;
-	now sta entry is 16;					
+	now sta entry is 16;
 	now per entry is 16;
 	now int entry is 12;
 	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 80;			[ How many HP has the monster got? ]
-	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Tiger Den";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -66,12 +66,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]exotic[at random]";
 	now type entry is "[one of]feline[or]tigrine[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -100,7 +100,7 @@ when play ends:
 			otherwise:
 				say "Finally rescued from the city by the military, you make sure to lead them to where the rest of the tigers are hiding in the den.  The soldiers are completely surprised to find so many infected in one place that seem to be relatively sane, and even more surprised that they all seem to be tigers.  They happily help you out of the city, where several of their scientists spend several weeks poking and prodding everyone to see what it is about being a tiger that makes you so resistant to the mental deterioration, finally they give up though and let all of you go, having bigger issues to deal with in the city. With everyone rescued as well, you feel rather happy at managing to get so many of your fellow tigers out of the city both alive and sane, and they seem to feel the same, and while many of them reconnect with old friends and contacts, they all continue to keep in touch with each other as well.  Many of you continue to visit, and work together, though you and Chase seem to form a special bond, based on your help while in the city, and the two of you spend more and more time together.  Eventually you end up traveling and working together as partners and friends, though you sometimes feel something is missing from your partnership, you enjoy your time together, visiting many different areas around the world as you work to educate people about the wonder that is the greatest of the great cats, the tiger.";
 
-			
+
 
 
 
