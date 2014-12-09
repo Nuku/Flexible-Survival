@@ -268,7 +268,7 @@ to fsdfvicmenu:
 		say "(4) [if cunts of player > 0][link]Have her eat your cunt[as]4[end link][otherwise][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Eat her out[as]6[end link][line break]";
 		say "[line break]";
-		say "(0) [link]Nevermind.[as]0[end link][line break]";	
+		say "(0) [link]Nevermind.[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-5)>[run paragraph on]";
 			get a number;
@@ -540,7 +540,7 @@ When Play begins:
 	now cha entry is 4;
 	now sex entry is "Female";
 	now hp entry is 80;
-	now lev entry is 7;			
+	now lev entry is 7;
 	now wdam entry is 21;
 	now area entry is "Beach";
 	now cocks entry is 1;
@@ -568,7 +568,7 @@ Section 3 - Vore Bound State
 
 to fsdfvore:
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -701,7 +701,7 @@ to fsdfvore:
 								cleanboundmemory;
 								now tempnum2 is 0;
 								now trixieexit is 1;
-								follow the turnpass rule;		
+								follow the turnpass rule;
 				next;
 			otherwise if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				say "[line break]";
