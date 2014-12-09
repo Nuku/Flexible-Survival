@@ -448,12 +448,12 @@ To reciting2:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now Ignored Memos is unresolved;
-					now Hardware Fort is resolved;
-					if fancyquest is 4:
-						now Hardware Fort is unresolved;
+-					now Ignored Memos is unresolved;
+-					now Hardware Fort is resolved;
+-					if fancyquest is 4:
+-						now Hardware Fort is unresolved;
 					if fancyquest is greater than 0:
-						now Ignored Memos is resolved;
+-						now Ignored Memos is resolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -633,16 +633,16 @@ To reciting2:
 						now the icon of Elijah is Figure of Elijah_good_icon;
 					otherwise if hp of Elijah is 99:
 						now the icon of Elijah is Figure of Elijah_evil_icon;
-						now hp of Gabriel is 1;
 						move Elijah to Bunker;
 					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
-						now Burned-Out Chapel is known;
 					if hp of Elijah > 0 and hp of Elijah < 100:
 						move Elijah to Bunker;
+						now Burned-Out Chapel is known;
 					if hp of Elijah is 100:
 						now Angel vs Demons is resolved;
 						remove Elijah from play;
+						now Burned-Out Chapel is known;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
 			-- 87:	[Elijah's interactions]
@@ -1905,6 +1905,9 @@ To reciting2:
 					if hp of Gabriel is 0:
 						if hp of Elijah > 0 and hp of Elijah is not 99:
 							now Angel vs Demons is resolved;
+						otherwise if hp of Elijah is 99:
+							now Angel vs Demons is unresolved;
+							now hp of Gabriel is 1;
 					otherwise if hp of Gabriel is 1:
 						now Angel vs Demons is unresolved;
 					otherwise if hp of Gabriel > 1:
@@ -2451,12 +2454,12 @@ Carry out reciting:
 			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-					now Hardware Fort is resolved;
-					now Ignored Memos is unresolved;
+-					now Ignored Memos is unresolved;
+-					now Hardware Fort is resolved;
+-					if fancyquest is 4:
+-						now Hardware Fort is unresolved;
 					if fancyquest is greater than 0:
-						now Ignored Memos is resolved;
-					if fancyquest is 4:
-						now Hardware Fort is unresolved;
+-						now Ignored Memos is resolved;
 			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -2640,12 +2643,13 @@ Carry out reciting:
 						move Elijah to Bunker;
 					if hp of Elijah > 0 and hp of Elijah < 99:
 						now Angel vs Demons is resolved;
-						now Burned-Out Chapel is known;
 					if hp of Elijah > 0 and hp of Elijah < 100:
 						move Elijah to Bunker;
+						now Burned-Out Chapel is known;
 					if hp of Elijah is 100:
 						now Angel vs Demons is resolved;
 						remove Elijah from play;
+						now Burned-Out Chapel is known;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
 			-- 87:	[Elijah's interactions]
@@ -3896,6 +3900,9 @@ Carry out reciting:
 					if hp of Gabriel is 0:
 						if hp of Elijah > 0 and hp of Elijah is not 99:
 							now Angel vs Demons is resolved;
+						otherwise if hp of Elijah is 99:
+							now Angel vs Demons is unresolved;
+							now hp of Gabriel is 1;
 					otherwise if hp of Gabriel is 1:
 						now Angel vs Demons is unresolved;
 					otherwise if hp of Gabriel > 1:
