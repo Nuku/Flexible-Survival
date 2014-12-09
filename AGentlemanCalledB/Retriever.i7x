@@ -72,7 +72,7 @@ to say Retrieverdesc:
 		now cha entry is 18;
 	otherwise:				[Fight Against Normal Retriever girl]
 		say "	As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
-		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitgrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
+		say "	When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
 		if hardmode is true and level of player > 5, let debit be level of player - 5;
 		now hp entry is 45 + ( debit * 4 );
 		now monsterhp is 45 + ( debit * 4 );
@@ -140,7 +140,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]shapely[or]slender[or]delicate[or]curvy[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -155,7 +155,7 @@ when play ends:
 			if hp of Rex is 49:
 				say "	Eventually Rex emerges from the back room, grinning happily as his newest retriever pet pads along behind him on all fours. The extended 'training' session having reduced your mind to little more then a sex crazed animal you eagerly follow your master into his life beyond the city, not caring where his life leads you or how you get there, so long as his wonderful cock is never far from your [if cunts of player > 0]dripping pussy[otherwise]needy body[end if].";
 			otherwise if hp of Rex is 10:
-				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for,  with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
+				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for, with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
 				if cunts of player > 0:
 					if "Sterile" is not listed in feats of player:
@@ -197,7 +197,7 @@ when play ends:
 					say "     Much to your surprise you spot Rex in your group, with Karen under his arm. He greets you warmly as you approach and you chat merrily with him for some time while you wait to be allowed to leave.";
 					say "     Even though it's apparent that he still hopes to make another pet of you one day you maintain contact with Rex in the outside world, forging an unusual  friendship with benefits with him, as he seems to be the only one who can sate the burning need in your body instilled by that unusual doggy sextoy, and he's more than happy to help you keep your needs in check.";
 					if humanity of player is less than 50:
-						say "     Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been.....the way things could still be.";
+						say "     Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been... the way things could still be.";
 				otherwise if hp of Rex is 4:
 					say "     You manage to smuggle your dog-cock shaped sex toy out of the city with you, Frequently needing it to satisfy your body's strange new needs.";
 				say "     You lead [if hp of Rex is 4]an otherwise normal[otherwise]a relatively normal[end if] life outside the city, ending up working as a [if cunts of player > 0]waitress[otherwise]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";

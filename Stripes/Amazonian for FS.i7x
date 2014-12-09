@@ -42,7 +42,7 @@ to say beattheamazonian:
 	if the player consents:
 		if cocks of player > 0 and cunts of player is 0:
 			say "     Pinning the amazonian woman down, you pull aside her loincloth and press a pair of fingers into her juicy cunt.  She moans and tries to struggle, claiming she needs no man, but her clear arousal and her eyes on your throbbing cock betray her desires for you to prove otherwise.  Getting your pulsing rod lined up with her, you sink it into her hot pussy, making her moan loudly as you start fucking her.  You pound away at the warrior woman, thrusting into her again and again.  Despite her protests, she cums several times before you are done with her, clearly aroused at being fucked by a man who could beat her in combat.";
-			say "     When you're done with her, you pull her up and grope her leaking, cum-filled pussy, reminding her that she was taken by a male.  Despite her anger at this, its clear that she's quite turned on by it as well, as if she's had something forbidden, taboo and therefore wonderfully arousing.  You send her on her way with a firm swat on her rear as an added reminder of her defeat.";
+			say "     When you're done with her, you pull her up and grope her leaking, cum-filled pussy, reminding her that she was taken by a male.  Despite her anger at this, it's clear that she's quite turned on by it as well, as if she's had something forbidden, taboo and therefore wonderfully arousing.  You send her on her way with a firm swat on her rear as an added reminder of her defeat.";
 		otherwise if cocks of player > 0:
 			say "     Pinning the amazonian woman down, you pull aside her loincloth and press a pair of fingers into her juicy cunt.  She moans and pants, clearly aroused by another herm who could best her.  She spreads her legs, offering her hot pussy to you as you thrust into her.  She clutches you tightly as you fuck her, moaning that she wants you to cum inside her, to breed a strong girl inside her.  In your lust and excitement, you are more than happy to do so, pounding her hard and fast until she's cum several times and you've drained your hot seed into her, claiming her womb with your seed.  When you're done with her, you pull her to her feet, fingering her cum-slick pussy with a grin before swatting her ass as a reminder of her defeat.";
 		otherwise:
@@ -74,7 +74,7 @@ When Play begins:
 	now face entry is "human in shape, though with beautifully shaped bone structure.  Your hair is long and has a silken shimmer, falling all the way down to your ass";
 	now body entry is "[if cunts of player > 0 and cocks of player is 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips[otherwise if cunts of player is 0 and cocks of player > 0]muscular and strong, though with a somewhat narrow waist and slightly wider hips that give them an almost hourglass figure... although a very slight one[otherwise if cunts of player is 0 and cocks of player is 0]muscular and androgynous, a very athletic build that could be male or female... depending on the lighting[otherwise if cunts of player > 0 and cocks of player > 0]musclebound, but feminine, with a wasp-thin waist and wide, child-bearing hips.  The muscles are somewhat bulkier than is typical for a woman though[end if].  Your body bears the telltale definition of someone who works out continuously, who is extremely proud of their strength.  Your arms are slender, but with a great deal of muscular definition under the taut skin.  Your legs are muscular in an athletic way.  Fine toned thighs and calves that lead into almost-dainty feet that never quite sit flat on the ground; always ready to move in some way";
 	now skin entry is "bronze-toned";
-	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]uncircumcised[or]human[or]normal, flesh-toned[or]thin, mushroom-shaped[at random]";
 	now face change entry is "you feel your head alter, bones reshaping as a warmth suffuses your skin.  There is a sense of pressure and almost taffy-like stretching as your skull reforms into a delicate and feminine shape.  It is once again human... but beautifully so in a way that is undeniable"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you feel muscles and bones shifting as many changes occur.  Many pounds of pure muscle begin stretching your skin almost to the point where you fear it will split!  You feel more muscles threatening to split your skin wide open as it is drawn tight against the emerging strength on your bones.  A burning and stretching sensation fills your legs and feet, muscles and tendons stretching as raw strength is quickly gained.  Your Achilles tendon shortens suddenly, forcing you to walk on the balls of your feet.  Interestingly, this is to your advantage as it keeps you ready to react to danger more quickly than if your feet sat flat on the ground"; [ body change text. format as "Your body feels funny as (your text)" ]
@@ -89,7 +89,7 @@ When Play begins:
 	now cha entry is 12;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 66;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -100,7 +100,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 16;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "estosterogen pill";			[ Loot monster drops, ]
 	now lootchance entry is 12;		[ Chance of loot dropping 0-100 ]
@@ -201,4 +201,4 @@ when play ends:
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 
-Amazonian for FS ends here. 
+Amazonian for FS ends here.

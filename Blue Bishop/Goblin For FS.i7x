@@ -27,8 +27,8 @@ to say losetogob_f:
 		say "!'  She moves a hand to grab [if cocks of player > 1]one of your cocks[otherwise]your cock[end if], stroking it as she shifts closer, her tongue lewdly caressing the [cock size desc of player] tool until you are[if hp of player < 1] forcibly[end if] made hard[if cocks of player > 2], its brothers soon following there after[otherwise if cocks of player > 1], its brother soon following there after[end if]";
 		If scalevalue of player > 3:
 			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if hp of player > 0]creature[otherwise]assailant[end if] is forced to scale your sizeable, [bodytype of player] form to position herself over you";
-		otherwise: 
-			say ". Satisfied, she scrambles to position himself on top of your [bodytype of player] form"; 
+		otherwise:
+			say ". Satisfied, she scrambles to position himself on top of your [bodytype of player] form";
 		say ", the spry lady shifting her tattered loincloth over so that it won't get in the way of impaling herself with your throbbing organ, she grinds her shapely ass along its length.";
 		say "     Now ready for you, the creature slowly sinks [if cocks of player > 2]one of your cocks within the folds of her cunt, your remaining organs left neglected in the open air[otherwise if cocks of player is 2]one of your cocks within the folds of her cunt, the remaining organ left neglected in the open air[otherwise] your cock within the folds of her cunt[end if]. She moans loudly in satisfaction, savouring the[if hp of player < 1] forced[end if] intrusion upon her wanton hole, inching it deeper in until it becomes fully engulfed[if cockname of player is listed in infections of knotlist] save for the knot[end if][if cock length of player > 8], no doubt strained by its comparatively large size[end if]. The goblin's revels in this lewd ceremony remain fairly brief, however, as she soon shifts gears to using you properly.";
 		say "     '";
@@ -56,12 +56,12 @@ to say losetogob_f:
 	otherwise:
 		say "!' Tugging at you towards her crotch, it's clear she intends to have you satisfy her orally, ";
 		If player is submissive or hp of player > 0:
-			say "and you are [if player is submissive]compelled by your submissive inclinations[otherwise]quickly compelled[end if] to oblige[if scalevalue of player > 4].  Thrusting your head between the diminutive creature's thighs, you practically lift her off her feet, the goblin quickly scrambling to ensure she doesn't fall back.  Perhaps a bit too forward in your actions, your intent is clarified when your tongue moves to pleasure the folds of her cunt from under the cover of a scant loincloth[otherwise if scalevalue of player is 4].  Thrusting your head between the diminutive creature's thighs, she looks visibly amused at such a large beast's compliance with something so small as her.  Not one to keep the girl waiting, your tongue soon moves to pleasure the folds of her cunt from under the cover of a scant loincloth[otherwise].  She unobstructs your view of her cunt by parting her scant loincloth, forcing her crotch against your face until you oblige her whims, your tongue soon probing the folds of her flesh[end if]."; 
+			say "and you are [if player is submissive]compelled by your submissive inclinations[otherwise]quickly compelled[end if] to oblige[if scalevalue of player > 4].  Thrusting your head between the diminutive creature's thighs, you practically lift her off her feet, the goblin quickly scrambling to ensure she doesn't fall back.  Perhaps a bit too forward in your actions, your intent is clarified when your tongue moves to pleasure the folds of her cunt from under the cover of a scant loincloth[otherwise if scalevalue of player is 4].  Thrusting your head between the diminutive creature's thighs, she looks visibly amused at such a large beast's compliance with something so small as her.  Not one to keep the girl waiting, your tongue soon moves to pleasure the folds of her cunt from under the cover of a scant loincloth[otherwise].  She unobstructs your view of her cunt by parting her scant loincloth, forcing her crotch against your face until you oblige her whims, your tongue soon probing the folds of her flesh[end if].";
 			say "     '";
 			if gobdem is true:
 				say "[one of]Slut -- good slut -- ha[or]Yes -- yes good -- mm[or]Mine, my slut, MINE[at random]";
 			otherwise:
-				say "[if scalevalue of player > 3][one of]Oh, I think my new big friend likes eating pussy[or]Ha, what a massive slut[or]Hm, what a big toy[at random][otherwise][one of]Oh, it looks like someone enjoys eating pussy[or]Ha, it look at that slut go[or]I think you're a natural at being a toy[at random][end if]";        
+				say "[if scalevalue of player > 3][one of]Oh, I think my new big friend likes eating pussy[or]Ha, what a massive slut[or]Hm, what a big toy[at random][otherwise][one of]Oh, it looks like someone enjoys eating pussy[or]Ha, it look at that slut go[or]I think you're a natural at being a toy[at random][end if]";
 		otherwise:
 			say "[if scalevalue of player > 4]though it would appear that you are too large and non-complicit to oblige her endeavours--defeated you as she may have, she's not strong enough to pull you along.  Eventually, she concedes to just sitting on your face until you're forced to humour her, the scent of her eager snatch flooding your nostrils.  This treatment soon has you increasingly eager to sate her obvious need as you are driven[otherwise if scalevalue of player > 3]and though you are much larger than the goblin she eventually situates you to properly pleasure her hole.  Ill-inclined to humor her, she coaxes you into compliance by pressing her now-exposed snatch against your face.  The scent of her arousal flood your nostrils until you're driven by your own emergent lust[otherwise]eventually situating you to properly pleasure her hole.  Ill-inclined to humor her, she coaxes you into compliance by pressing her now-exposed snatch against your face.  The scent of her arousal floods your nostrils until you're driven by your own emergent lust[end if] to comply.";
 			say "     '";
@@ -74,7 +74,7 @@ to say losetogob_f:
 		if gobdem is true:
 			say "[one of]Ha, ha, yes, bye[or]Bye, mine, heh[or]Good, good[at random]";
 		otherwise:
-			say "[if hp of player > 0 or player is submissive][one of]Not half bad, I've certainly had worse[or]That was some nice, quick fun[or]Ah, it's good to get some proper satisfaction around here[at random][otherwise][one of]Not half bad, once you learned your place[or]See? That wasn't all that bad[or]Maybe next time would give me less trouble[at random][end if]";    
+			say "[if hp of player > 0 or player is submissive][one of]Not half bad, I've certainly had worse[or]That was some nice, quick fun[or]Ah, it's good to get some proper satisfaction around here[at random][otherwise][one of]Not half bad, once you learned your place[or]See? That wasn't all that bad[or]Maybe next time would give me less trouble[at random][end if]";
 		say ".' [if scalevalue of player > 4]She pats you teasingly on the top of your head[otherwise]She gives you a playful swat on your behind[end if] before departing, the creature finding a tiny tunnel in the junk before descending within it. Now free, you suppose you could be worse for wear, though you are somewhat disoriented by the influence of her infection.  You stagger off, wanting to get some distance before the scent of sex draws others.";
 
 
@@ -89,8 +89,8 @@ to say losetogob_m:
 		say "!'  He moves a hand to grab [if cocks of player > 1]one of your cocks[otherwise]your cock[end if], stroking it as he shifts closer, his tongue lewdly caressing the [cock size desc of player] tool until you are[if hp of player < 1] forcibly[end if] made hard[if cocks of player > 2], its brothers soon following there after[otherwise if cocks of player > 1], its brother soon following there after[end if]";
 		If scalevalue of player > 3:
 			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if hp of player > 0]creature[otherwise]assailant[end if] is forced to scale your sizeable, [bodytype of player] form to position herself over you";
-		otherwise: 
-			say ". Satisfied, he scrambles to position himself on top of your [bodytype of player] form"; 
+		otherwise:
+			say ". Satisfied, he scrambles to position himself on top of your [bodytype of player] form";
 		say ", the spry lad shifting his tattered loincloth over so that it won't get in the way of impaling himself with your throbbing organ, his own standing proudly to attention as he grinds his shapely ass along its length. Apparently, this particular goblin is rather fond of going on a ride.";
 		say "     Quickly in position, the creature slowly sinks [if cocks of player > 2]one of your cocks past his supple anal ring, your remaining organs left neglected in the open air[otherwise if cocks of player is 2]one of your cocks past his supple anal ring, the remaining organ left neglected in the open air[otherwise]your cock past his supple anal ring[end if]. He moans loudly in satisfaction, savouring the[if hp of player < 1] forced[end if] intrusion upon his wanton hole, inching it deeper in until it becomes fully engulfed[if cockname of player is listed in infections of knotlist] save for the knot[end if][if cock length of player > 8], no doubt strained by its comparatively large size[end if]. The goblin's revels in this lewd ceremony remain fairly brief, however, as he soon shifts gears to using you properly.";
 		say "     '";
@@ -115,7 +115,7 @@ to say losetogob_m:
 			otherwise:
 				say "[one of]Whew, nothing I couldn't handle[or]Oh, that was some ride[or]Ah, I just need a second to catch my breath[at random]";
 		say "...' He eventually pulls herself free of your organ, a trail of seed in its wake, before he [if scalevalue of player > 3]makes the slow descent off of you[otherwise]climbs off of you[end if].  Still disoriented from lust, it takes awhile for him to readjust his paltry attire before he dizzily wanders off, [if cock width of player > 19]leaving a trail of seed in her wake[otherwise]abandoning you[end if].  You eventually manage to pull yourself to your feet, taking a moment to clean yourself of the mix of sexual fluids as best you can before leaving this place as well before the scent of sex draw others near.";
-	otherwise if anallevel is not 1 and (Cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)): 
+	otherwise if anallevel is not 1 and (Cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "!'  [if scalevalue of player > 3]He circles around you for a moment, deciding how best to handle a beast of your scale.  Coming to a fairly straightforward conclusion, he starts kicking you to compel you onto your back until you comply[otherwise]Toothy grin wide, he forces you onto your back[end if]. The goblin begins to lewdly fondle your exposed, [bodydesc of player] form[if hp of player < 1], much in spite of any protest you might offer[end if]. He's certainly going to enjoy the fun he has planned for you, given how jovially he goes about this preparation. Your legs pulled to spread for him, you're given a clear view of his blatantly erect dick, forced from hiding behind the paltry cover of his loincloth.";
 		say "     Grinding the length of his oozing -- admittedly fairly average, though you suppose it's quite impressive to a creature of his size -- tool against your exposed behind, ";
 		if cocks of player > 0:
@@ -164,7 +164,7 @@ to say losetogob_m:
 					say "[one of]Ah, ha, ha[or]Oh, heh, ah[or]Heh, mine, ah[at random]";
 				otherwise:
 					say "[if scalevalue of player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][otherwise][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
-				say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[mimpregchance]";					
+				say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[mimpregchance]";
 			Otherwise if cunts of player > 0:
 				say "     Suddenly, you feel the goblin's load flood your bowels, The sensation -- coupled with his additional attendance -- driving you to ecstasy as well, the diminutive creature panting against your [bodytype of player] form as your greedy hole milks him of every last drop.";
 				if gobdem is true:
@@ -172,7 +172,7 @@ to say losetogob_m:
 				otherwise:
 					say "[if scalevalue of player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][otherwise][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 				say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[mimpregchance]";
-	otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds: 
+	otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds:
 		say "!'  [if scalevalue of player > 3]He circles around you for a moment, deciding how best to handle a beast of your scale.  Coming to a fairly straightforward conclusion, he starts kicking you to compel you onto your back until you comply[otherwise]Toothy grin wide, he forces you onto your back[end if]. The goblin begins to lewdly fondle your exposed, [bodydesc of player] form[if hp of player < 1], much in spite of any protest you might offer[end if]. He's certainly going to enjoy the fun he has planned for you, given how jovially he goes about this preparation. Your legs pulled to spread for him, you're given a clear view of his blatantly erect dick, forced from hiding behind the paltry cover of his loincloth.";
 		say "     Grinding the length of his oozing -- admittedly fairly average, though you suppose it's quite impressive to a creature of his size -- tool against your exposed cunt, ";
 		if cocks of player > 0:
@@ -259,7 +259,7 @@ to say losetogob_m:
 		say "     The goblin cackles merrily at his victory and pushes you down onto the ground.  Having found a female goblin, or at least someone close to one, he pushes you onto all fours with his foot and scrambles atop you.  Raising his loincloth, he brings his green cock to your pussy and thrusts into you with no preamble.  He grips your shoulders and pounds away at you, driving his small cock in again and again.  Your body can't help but respond to this, panting and moaning at having a goblin cock inside it.  Your pussy quivers over his penis, milking at it until he cums.  As his hot seed rushes into you, you cum as well with a loud, squealing moan.  Once he's drained his balls into you, he gives you another kick to send you on your way.[impregchance]";
 	otherwise:
 		say "     The goblin cackles at his victory and pushes you to the ground.  Taking your head in his hands, you can feel they have a surprisingly strong grip for their spindly size.  Pressing your face to his loincloth, the masculine scent it's masking becomes more apparent.  As his cock grows hard, his loincloth is pushed aside to reveal a five inch cock.  Given his body's size, it must seem impressive to him, though you've seen much bigger out in this city.";
-		say "     But regardless of its size, its clear what the goblin wants of you.  As he presses his cock to your lips, you give it a few licks before taking it into your mouth.  Its taste is bitter, but also masculine and strong.  You find yourself continuing to lick at it and start sucking it of your own accord, aroused by the sight of the little guy's prominent ballsac.  They are a little bigger than an average man's, making them quite impressive on his small frame.  You grip his green, leathery sac as you bob over his cock, getting him to blast his spunk into your mouth.  Though bitter, you swallow it all down with a soft moan around his meat.  Once his cock gives its last spurt, he pushes you away with his boot and sends you on your way.";
+		say "     But regardless of its size, it's clear what the goblin wants of you.  As he presses his cock to your lips, you give it a few licks before taking it into your mouth.  Its taste is bitter, but also masculine and strong.  You find yourself continuing to lick at it and start sucking it of your own accord, aroused by the sight of the little guy's prominent ballsac.  They are a little bigger than an average man's, making them quite impressive on his small frame.  You grip his green, leathery sac as you bob over his cock, getting him to blast his spunk into your mouth.  Though bitter, you swallow it all down with a soft moan around his meat.  Once his cock gives its last spurt, he pushes you away with his boot and sends you on your way.";
 ]
 
 to say beatthegoblin:
@@ -544,7 +544,7 @@ to say goblindesc:
 		now gobgender is 2;
 	otherwise if guy is warded and girl is warded:
 		now gobgender is a random number between 1 and 2;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now gobgender is 1;
 		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
@@ -626,7 +626,7 @@ When Play begins:
 	now libido entry is 35;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]spindly[or]malformed[or]twisted[at random]";
 	now type entry is "[one of]goblin[or]humanoid[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

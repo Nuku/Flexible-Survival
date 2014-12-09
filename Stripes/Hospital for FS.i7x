@@ -183,7 +183,7 @@ when play begins:
 	add Radiology to badspots of furry;
 
 Instead of resolving a Radiology:
-	say "     The radiology department, where the x-rays are taken, seems to have had recent use.  There are several fresh x-rays showing images of the altered physiology of transformees.  While some seem to have been taken during partial transformation, most are of completed changes.  Many are arranged out on the illuminated viewers with annotations marked on.  Most are circles or arrows marking key points with a red wax pencil, but others contain medical jargon about the bones or joints being changed.  Briefly distracted by all this, you don't hear the sound of approaching footsteps until its too late and one of the hospital's creatures steps in.";
+	say "     The radiology department, where the x-rays are taken, seems to have had recent use.  There are several fresh x-rays showing images of the altered physiology of transformees.  While some seem to have been taken during partial transformation, most are of completed changes.  Many are arranged out on the illuminated viewers with annotations marked on.  Most are circles or arrows marking key points with a red wax pencil, but others contain medical jargon about the bones or joints being changed.  Briefly distracted by all this, you don't hear the sound of approaching footsteps until it's too late and one of the hospital's creatures steps in.";
 	if coonstatus is 0:
 		say "[hospfight1]";
 	otherwise:
@@ -337,7 +337,7 @@ The sarea of Stairwell is "Hospital".
 
 Instead of resolving a Stairwell:
 	if a random chance of 1 in 2 succeeds:
-		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that its been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
+		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that it's been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
 	otherwise:
 		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
 		increase hospstairs by 1;
@@ -536,7 +536,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 	if hp of doctor matt is 100:						[recording]
 		say "     You look around the lab and quickly find the VCR-sized device.  You unhook it and carry it off with you.  It is somewhat heavy though.  Better be worth it.";
 	otherwise:									[physically there]
-		say "     You take a look around the room and soon spot something that looks like the piece of equipment that the mouse described.  As you are looking it over to make sure its the right one, Dr Matt notices your interest in it.  'I'm not really using that thing any more.  My research has progressed past that point.  So you can clear it out for me to make space, but why are you interested in it at all?  I'm not even sure you could understand how it works, let alone how to use it.  Do you explain? (Y/N)";
+		say "     You take a look around the room and soon spot something that looks like the piece of equipment that the mouse described.  As you are looking it over to make sure it's the right one, Dr Matt notices your interest in it.  'I'm not really using that thing any more.  My research has progressed past that point.  So you can clear it out for me to make space, but why are you interested in it at all?  I'm not even sure you could understand how it works, let alone how to use it.  Do you explain? (Y/N)";
 		if the player consents:
 			say "     As you explain to Dr Matt about the strange state of the hospital and the mouse doctor working away deep inside, Dr Matt listens with increasing attention and some concern.  'This is quite unexpected.  You have found another person in the city searching into the mysteries of the nanite infection, but through a different avenue of research.  And using the infected as test subjected is...' he coughs as he notices the stern look you [if susan is visible]and Susan [end if]give him.  'That is, possibly using them as unwilling test subjects in such surgical experiments.  Most disturbing and unethical, even in such a crisis.'";
 			say "     'I suggest you take that device to this Dr Mouse individual.  It will further ingratiate you to him and allow you to find out more about what's going on at the hospital.  Hopefully, I am wrong about my concerns and this doctor may be of help to us.  As well, we do need to know if his concerns about the nanites are valid.";
@@ -638,7 +638,7 @@ to say hospquestpt7:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
 		if lava lamp is owned:
 			delete lava lamp;
-			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it[']s been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
+			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
@@ -1192,7 +1192,7 @@ to say tlvictory:
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the dragon eggs start sliding through the ovipositor and into the slut's womb.";
 		otherwise:
 			say "     Having finished thoroughly seeding the dragoness, the doe withdraws her shaft and grins to you.  'Bring that perv over here, hon.'  You nod and pull the huskybunny slut over, tossing her atop the dragoness.  She moans and grinds her cock against those smooth, hard scales.";
-			say "    'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but arches her hips up into the thrusts, starting to rut with the mindless sextoy whom she's failed to protect.";
+			say "     'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but arches her hips up into the thrusts, starting to rut with the mindless sextoy whom she's failed to protect.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again.  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum.";
 	otherwise:

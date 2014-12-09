@@ -98,7 +98,7 @@ to say cerberusfuck:
 to say cerberusride:
 	if libido of player > 55 and cocks of player > 0, now cerberusarousal is 1;
 	if cockname of player is "Cerberus" and cocks of player > 0, now cerberusarousal is 2;
-	say "     Running your hand over hir tail, your push hir to roll over with the other.  The lustful creature obeys readily, somehow sensing shi'll receive some form of release.  You sit atop hir waist and move hir tail into position, lining it up with your [if cunts of player > 0]wet cunt[otherwise]tight pucker[end if].  You rub back against it, smearing hir leaking pre against your hole before pushing that tailcock into you where you most need it.  You moan softly as you guide hir thick meat into you, then release the tail once its far enough to start thrusting into you on its own.";
+	say "     Running your hand over hir tail, your push hir to roll over with the other.  The lustful creature obeys readily, somehow sensing shi'll receive some form of release.  You sit atop hir waist and move hir tail into position, lining it up with your [if cunts of player > 0]wet cunt[otherwise]tight pucker[end if].  You rub back against it, smearing hir leaking pre against your hole before pushing that tailcock into you where you most need it.  You moan softly as you guide hir thick meat into you, then release the tail once it's far enough to start thrusting into you on its own.";
 	say "     You move your hands to hir many breasts, stroking over them as you watch hir three canine heads pant and whine in pleasure.  As that ridged, canine cock plows into you again and again, you moan in pleasure.  You tease and pinch hir many nipples, watching as hir milk starts to flow from them[if cerberusarousal is 1].  As your pleasure continues to grow, you find yourself lusting for more and you shift your hips and thrust your own cock into hir wet snatch, fucking hir even as you have hir fuck you[otherwise if cerberusarousal is 2].  As your pleasure continues to build, you find yourself lusting for more and bring your tailcock into position, guiding it into hir wet snatch, fucking hir even as you have hir fuck you[end if].";
 	say "     You keep this up as you start clenching and relaxing your [if cunts of player > 0]pussy[otherwise]anus[end if] around hir cock until finally shi drives hir knot into you, locking that twisted, canine cock into you.  Shi growls in pleasure from hir three muzzles and unleashes hir hot seed into your [if cunts of player > 0]womb[otherwise]ass[end if], filling you with hir virile semen[if cerberusarousal > 0].  You drive your own cock deep into hir and unleash as well, pumping your seed into hir waiting womb[end if].";
 	say "[impregchance]";
@@ -137,7 +137,7 @@ to say cerberusbodytf:
 
 to say cerberustailtf:
 	if cocks of player > 0:
-		say "your ass suddenly emits a sharp, painful CRACK as the bones spontaneously and painlessly break. Your hips quiver a little, but you otherwise manage to hold your position as more cracks occur as a new tail forms behind you.  It shifts and grows into a thick, demonic tail.  At the same time, your groin burns with pain as does the end of your new tail as a small slit appears on the very end of it.  You look down and realize that your penis[if cocks of player > 1]ed[end if] as well as your testicles have vanished from your crotch, leaving a smooth surface behind.  You look at your tail again just in time to see your penis[if cocks of player > 1]es[end if] emerge from the slit at the end of your tail, spurting virile seed excitedly onto the ground as [if cocks of player is 1]it[otherwise]they[end if] settles into place.  [if cocks of player is 1]It is[otherwise]They are[end if] exactly the same size and form as before the shift in position.  You can feel your balls spreading out in the tail's tissue as well, equal in size as before, but spread out across the whole of your tail to hide them while keeping them ready to perform their duty when needed.  But you have a feeling that your dick[if cocks of player > 1]s[end if] will go back where [if cocks of player is 1]it[otherwise]they[end if] belongs if your ass gets mutated again. On the other hand, you could get used to having [if cocks of player is 1]a tailcock[otherwise]a set of tailcocks[end if]";
+		say "your ass suddenly emits a sharp, painful CRACK as the bones spontaneously and painlessly break. Your hips quiver a little, but you otherwise manage to hold your position as more cracks occur as a new tail forms behind you.  It shifts and grows into a thick, demonic tail.  At the same time, your groin burns with pain as does the end of your new tail as a small slit appears on the very end of it.  You look down and realize that your penis[if cocks of player > 1]es[end if] as well as your testicles have vanished from your crotch, leaving a smooth surface behind.  You look at your tail again just in time to see your penis[if cocks of player > 1]es[end if] emerge from the slit at the end of your tail, spurting virile seed excitedly onto the ground as [if cocks of player is 1]it[otherwise]they[end if] settles into place.  [if cocks of player is 1]It is[otherwise]They are[end if] exactly the same size and form as before the shift in position.  You can feel your balls spreading out in the tail's tissue as well, equal in size as before, but spread out across the whole of your tail to hide them while keeping them ready to perform their duty when needed.  But you have a feeling that your dick[if cocks of player > 1]s[end if] will go back where [if cocks of player is 1]it[otherwise]they[end if] belongs if your ass gets mutated again. On the other hand, you could get used to having [if cocks of player is 1]a tailcock[otherwise]a set of tailcocks[end if]";
 	otherwise:
 		say "your ass emits a loud but painless CRACK as the bones shift, a new growth emerging in the form of a very thick tail with a slit at the very end of it. You don't know yet what that slit is for, but it feels sensitive like an erogenous zone. You get the feeling that something is supposed to be coming out of that slit, but another thought tells you that it will vanish completely if your tail is mutated again by something else";
 
@@ -161,7 +161,7 @@ When Play begins:
 	now face entry is "really three heads, as confusing as that is for you.  Your three heads are canine in form, with broad muzzles and slobbery tongues.  Your primary head, the one that is YOU, is in the middle and seems to have control over your body most of the time, though you can faintly feel the others there are well.  The other heads have their own personalities and minds, and are able to seize control of your shared body at times when something catches their interest";
 	now body entry is "broader near the top, with a wide chest with numerous strong lungs and a trio of powerful hearts to fuel your muscled form.  Your arms and legs are well muscled and end in clawed, canine hands and paws";
 	now skin entry is "[if looknow is 1]a coat of short, coarse fur.  It is as black as coal, covering your dark, rough[otherwise][one of]dark[or]furred[or]black furred[at random][end if]";
-	now tail entry is "You have a tight, muscled ass with very little jiggle in it.  A long and thick muscular tail extends from right above your ass[if cocks of player > 0].  As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of.  You can somehow sense that your testicles are in that tail as well[end if].";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a tight, muscled ass with very little jiggle in it.  A long and thick muscular tail extends from right above your ass[if cocks of player > 0].  As you examine the tail, you notice it has a slit at the very end of it from whence your male genitals are just peeking out of.  You can somehow sense that your testicles are in that tail as well[end if].";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]black, ribbed canine[or]ebon, knotted and ribbed[or]black, ridged and knotted[or]ebon, ridged canine[at random]";
 	now face change entry is "[cerberusfacetf]";
 	now body change entry is "[cerberusbodytf]";
@@ -170,13 +170,13 @@ When Play begins:
 	now cock change entry is "[cerberuscocktf]";
 	now str entry is 16;
 	now dex entry is 16;
-	now sta entry is 15;				
+	now sta entry is 15;
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 8;
 	now sex entry is "Both";	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 55;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 11;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Museum";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -187,7 +187,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 18;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 75;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -321,4 +321,4 @@ when play ends:
 			say "     Your trio of heads draw some interest from the scientists who are working with the army.  You are put through a series of psychological and awareness tests before the military personnel stop the research when they notice that it has ceased to be of worthwhile military application.  It does have the benefit of helping you come to a greater understanding with your companion heads, increasing your cooperation.  Better able to share your body with the mute, dependent pair, you are able to get on with your life with only the occasional interruption of control when one of them is feeling particularly strongly about something, which is usually sex of some kind.";
 
 
-Cerberus for FS ends here. 
+Cerberus for FS ends here.

@@ -6,7 +6,7 @@ jackalman by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say jackalman attack:
 	say "'wow you got here how did that happen.'";
@@ -34,27 +34,27 @@ When Play begins:
 	now name entry is "jackalman"; [Name of your new Monster]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[jackalman loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[jackalman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[jackalman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "The jackalman is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [Your have a (your text) face."] 
-	now body entry is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [Your have a (your text) face."]
+	now body entry is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek black muzzle, while your eyes blur as they shift in both colour and position, new sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your shape changes and seems to grow slightly more powerful, the muscles moving around under the skin as it becomes both stronger and sleeker. You can feel your legs shift and change as well, causing you to stumble forward slightly as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet as they shift into a more powerful predatory stance. Soon your feet finish changing and you find yourself balancing easily on your new jackal like paws, as you stand on your new digigrade jackal legs, and flex your new strong clawed hands"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "your shape changes and seems to grow slightly more powerful, the muscles moving around under the skin as it becomes both stronger and sleeker. You can feel your legs shift and change as well, causing you to stumble forward slightly as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet as they shift into a more powerful predatory stance. Soon your feet finish changing and you find yourself balancing easily on your new jackal like paws, as you stand on your new digitigrade jackal legs, and flex your new strong clawed hands"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of thick dark fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a strange tingling sensation seems to come from your rear, as it tightens somewhat, then you can feel a strong pulling sensation as a thick black canine tail pushes out from your rear, lengthening until it is down past your knees before your new appendage is finished growing"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "your shaft thins and changes, its tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur. Your balls tingle slightly as they swell with strongly fertile jackal seed"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 18;
-	now sta entry is 20;					
+	now sta entry is 20;
 	now per entry is 20;
 	now int entry is 16;
 	now cha entry is 28;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 30;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Shop";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -65,7 +65,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]

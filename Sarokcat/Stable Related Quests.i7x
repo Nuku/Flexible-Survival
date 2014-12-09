@@ -102,8 +102,8 @@ Instead of Resolving a Hardware Fort:
 			increase diceroll by bonus;
 			if diceroll is greater than 16:
 				say "     You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
-			otherwise:	
-				say "    You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
+			otherwise:
+				say "     You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
 				decrease hp of player by 25;
 			hardwarefortphase1;
 		otherwise if Recoveredhardware is 1:
@@ -152,7 +152,7 @@ to hardwarefortphase2:
 				hardwarefortphase3;
 			otherwise if recoveredhardware >= 3:
 				say "     Signaling the horsemen again, you sigh with relief as they show up rather quickly, obviously having been loitering nearby unwilling to give up on the loot they had gathered.  The lead horseman greets you brusquely as he begins to direct people to finish the loading of the carts and forklifts in preparation for moving out, while you and a few other horsemen keep watch.  This time it isn't much of a surprise when several aerial creatures swoop down on the area again, and you are ready for them when they draw close to attack!";
-				hardwarefortphase4;	
+				hardwarefortphase4;
 	if fightoutcome >= 20:		[loss/fled any fight]
 		if recoveredhardware < 3:
 			say "     Driven back by the creatures, when the horsemen arrive they find the store lot to be full of a decent sized group of various creatures currently in possession of the junkyard fort, and the head horseman glares at you as he stares at the well defended location, and evaluates matters. Sighing he gestures for his men to keep on moving, though before he leaves he glances down at you derisively, 'If Fancy didn't have her eye on you for some reason I'd be tempted to take you back with us for training just so this trip wouldn't be a total loss...' He says with a snort before continuing on his way, leaving you feeling rather embarrassed as you lie there trying to recover before heading back to the library.";
@@ -197,9 +197,9 @@ to hardwarefortphase4:
 		hardwarefortphase4-basic;
 
 to hardwarefortphase4-basic:
-	challenge "Hermaphrodite Gryphon";	
+	challenge "Hermaphrodite Gryphon";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		challenge "Wyvern";	
+		challenge "Wyvern";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			challenge "Hermaphrodite Gryphon";
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -229,9 +229,9 @@ to hardwarefortphase4-basic:
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4-10plus:
-	challenge "Hermaphrodite Gryphon";	
+	challenge "Hermaphrodite Gryphon";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		challenge "Harpy";	
+		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware < 3:
 				challenge "Hawkman";		[one less fight on re-tries]
@@ -261,9 +261,9 @@ to hardwarefortphase4-10plus:
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4-20plus:
-	challenge "Hawkman";	
+	challenge "Hawkman";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		challenge "Harpy";	
+		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			challenge "Hawkman";
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -325,7 +325,7 @@ to hardwarefortphase5:
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll is greater than 16:
-		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city.  You finally manage to lose the last of them near the library itself.  Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";			
+		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city.  You finally manage to lose the last of them near the library itself.  Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";
 	otherwise:
 		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmanoeuvred in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
 		let xyzlost be 0;
@@ -350,7 +350,7 @@ to hardwarefortphase5:
 		otherwise if xyzlost is 0:
 			say "     Having beaten or escaped the monsters at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
 		otherwise:
-			say "     You drag your well-used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";	
+			say "     You drag your well-used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";
 	now fancyquest is 5;
 	now Hardware Fort is resolved;
 	now battleground is "void";
@@ -389,7 +389,7 @@ Instead of Resolving a horsepowering:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
-			if diceroll is greater than 14:	
+			if diceroll is greater than 14:
 				say "After several hours of careful and conscientious work, you think you are finally ready to try out your modifications to the generator and the electrical system. With a nervous smile you reach over and switch the generator on, bracing yourself just in case your modifications somehow make the whole thing explode or burn the place down around your head. Fortunately, while the generator is quite loud, and the sound of all the machinery in the room starting up does make you jump, your attention to detail and careful hands seem to have resulted in a disasterless generator installation! Grinning happily with relief, you leave the heavy reference books here in case you or some other horse needs them for repairs later, and shut the heavy double doors behind you as you head back out into the Stables. You can't wait to see Fancy's reaction to this latest triumph of yours, and the other equines reaction too of course...";
 				now generatorfixing is 4;
 				now  horsepowering is resolved;
@@ -449,7 +449,7 @@ Instead of resolving a contract hyenegotiation:
 			now contract hyenegotiation is resolved;
 			stop the action;
 		otherwise if matriarchdefeated is 1 or matriarchdefeated is 2:
-			say "One of the hyenas steps forward and looks at you with amusement, 'A slutty little pet like you wants to take over the Stables? Yeah like that is going to happen!' He says with an amused laugh, several of the other hyenas nearby echoing his laugh with amusement. 'Well hell, if the horses are stupid enough to actually let something like that happen, far be it for us to stop them. Though if you actually become the head horsey, well that would sure help us deal with the crazy bastards... after all its not like you won't do whatever the matriarch says after all is it?' He says with amusement, the truth of his statement making you blush slightly, even as your changing body heats up with desire as you remember your time underneath the matriarch. Seeing your reaction, the hyena negotiator smirks as he snags the paper from you and scrawls his agreement on it, before slapping you on the ass and sending you on your way back to the Stables, the entertainment starting up again behind you as you leave like a good little submissive slut.";
+			say "One of the hyenas steps forward and looks at you with amusement, 'A slutty little pet like you wants to take over the Stables? Yeah like that is going to happen!' He says with an amused laugh, several of the other hyenas nearby echoing his laugh with amusement. 'Well hell, if the horses are stupid enough to actually let something like that happen, far be it for us to stop them. Though if you actually become the head horsey, well that would sure help us deal with the crazy bastards... after all it's not like you won't do whatever the matriarch says after all is it?' He says with amusement, the truth of his statement making you blush slightly, even as your changing body heats up with desire as you remember your time underneath the matriarch. Seeing your reaction, the hyena negotiator smirks as he snags the paper from you and scrawls his agreement on it, before slapping you on the ass and sending you on your way back to the Stables, the entertainment starting up again behind you as you leave like a good little submissive slut.";
 			now provingstallionhood is 2;
 			now contract hyenegotiation is resolved;
 		otherwise:
@@ -471,12 +471,12 @@ Instead of resolving a contract hyenegotiation:
 				now contract hyenegotiation is resolved;
 	otherwise:
 		say "Wandering through the streets of the empty city, you are surprised to hear several loud bursts of laughter and the sounds of cheering coming from down one of the side streets.  Feeling slightly curious, you carefully peek down the side street, only to see what appears to be a large gathering of those hyenas that have been wandering the city, many of them wearing bandannas and watching some sort of game or event. Realizing there are far to many of them to have a hope of engaging safely, you quickly back off and go back the way you came, shuddering slightly at your close call, and glad none of the beasts noticed you. Although some part of you is still whispering how much fun it would have been to let all those lusty spotted beasts play with your body until you were just as lusty and sexy as they are...";
-	
+
 Section 10-  Horsepitfight[Fancy quest part 4b]
 
 Horsepitfight is a situation.
 The sarea of Horsepitfight is "Stable".
-	
+
 instead of resolving a  Horsepitfight:
 	if provingstallionhood is 2:
 		say "Wandering through the halls of the Stables, you notice there seems to be a bit of hush over the area, and you almost aren't surprised when several stallions appear up ahead and gesture you to follow them. You feel increasingly nervous as they lead you to a rather large conference room, with seats scattered around the area, and a cleared circle in the center. From the smell of sweat and sex in the room, it is fairly obvious that the horsemen practice combat here on a fairly regular basis, and just as obvious what happens to the loser. Shaking your head slightly to clear it, you wince as several rather large horsemen step into the center of the circle and smirk at you, looking around you can see a number of other horsemen in the area pretending not to be interested in the building situation. 'Well so you're the new blood eh? I just don't see it happening, not for someone as scrawny as you anyways..' One of the horsemen in the circle says with a laugh, setting several of the others to chuckling as well. 'You may have impressed those hyenas out there, but if you want to get any further you will have to show us you can take on some real stallions, of course if you win we certainly won't object any further to your making the attempt... But if you lose...' The stallion pauses for dramatic effect, and you hear a jingle from one side of the circle and look over to see one of the other stallions showing off a full set of bondage gear obviously intended for use on you. You feel slightly nervous as you see the fully lockable gloves designed to make the hands resemble full hooves, and the straps which would force you to walk on all fours at all times... 'So what do you think, you ready to take us on little mare?' The horseman says with a smug grin on his face and an obviously erect cock as he draws your attention back to him and the other 2 standing proudly in the circle. Looking around at all the other horsemen watching, you realize that if you lose this battle you certainly won't be walking out of here on two legs, if they even let you leave again.  Do you step into the ring to take up the challenge?";
@@ -489,7 +489,7 @@ instead of resolving a  Horsepitfight:
 				say "As the last of the powerful stallions fall before you, you hear the room around you erupt into cheering, much to your surprise. The loud noise startling you after your intense concentration on the combat, though as you look around now, you can see your fight has seriously impressed the gathered stallions. Looking down at the defeated horsemen, you can see from their groggy looks of awe, that you won't be facing any problems from that direction either.  You feel a grin splitting your face as you look around the room in triumph, and several of the stallions come by to clap you on the back companionably before they let you leave the room. As you head back through the Stables to the entrance, you find yourself feeling pretty confidant that Fancy won't have any more trouble getting those stallions agree to work with you.";
 				now provingstallionhood is 3;
 				now Horsepitfight is resolved;
-			otherwise:	
+			otherwise:
 				say "You lie there helplessly on the floor, your body well-used by the large stallions already, only to groan helplessly as you hear the laughter of the other stallions as they close in around you. You moan and try to struggle limply as they slip your new harness on, though the straps of leather feel increasingly comfortable as they slip into place on your changing body, the leather straps pushing your increasingly large female breasts out and making them incredibly sensitive. The tail ring holding your tail up and exposing your increasingly sexy pert little ass and fresh and dripping mare sex, and the boots locking on your hands and feet and making it impossible for you to even handle the simplest of things like doors and feeding yourself.  Though perhaps the last and most intense embarrassment is when they slip your new halter over your head, the bit fitting nicely in your new equine muzzle and preventing any attempt at speech you might make. Fully outfitted like a slutty little mare, you can only moan helplessly as their hands rove over your new sexy and sleek body, and you find yourself finding it hard to concentrate on anything except the touch of all the powerful male stallions surrounding you. And you completely give up trying to think about things when one of them slides their thick stallionhood into your damp needy pussy, making you cry out with pleasure around the bit much to their amusement. As the first of the many stallions surrounding you begins to use your newly bound body, you find yourself trying to recall what you were doing here, something about a quest? No that's silly what kind of quest would a slutty mare like you have... unless it was to see just how many of these sexy stallions surrounding you you can get to blow their load in your cunt that is...";
 				now provingstallionhood is 4;
 				now humanity of player is 0;
@@ -499,7 +499,7 @@ instead of resolving a  Horsepitfight:
 				now bodydesc of player is "sultry";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
 				now the daycycle of player is 0;
-				follow the turnpass rule;					
+				follow the turnpass rule;
 		otherwise:
 			say "The brutish horsemen snort derisively at you, but let you leave for now, though one of them comments snidely that you can prepare all you want, but if you aren't ready to handle them, you certainly aren't ready to handle a powerful stallion like the Stablemaster. Striding back down the halls of the Stables as the horsemen laugh in amusement, you resolve to return sometime soon to wipe the smirks off of their equine muzzles.";
 	otherwise:
