@@ -9,7 +9,7 @@ The weapon damage of Exotic Bird is 2.
 The level of Exotic Bird is 1.
 The Dexterity of Exotic Bird is 15.
 The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.".
-The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversary's face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]".
+The assault of Exotic Bird is "[one of]The exotic bird dive bombs your opponent![or]The exotic bird flaps its wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, your pet bird manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]".
 The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.".
 
 instead of sniffing Exotic Bird:
@@ -38,7 +38,7 @@ Instead of resolving Scared bird:
 			otherwise:
 				say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry.  You obviously aren[']t going to convince it to trust you right now, maybe you should try again later.";
 		otherwise:
-			say "Deciding that you would[']t have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
+			say "Deciding that you wouldn[']t have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
 			now Scared bird is resolved;
 
 
