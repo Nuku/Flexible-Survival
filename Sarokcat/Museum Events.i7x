@@ -102,7 +102,7 @@ Instead of Resolving a Missing lamp:
 			increase carried of jade scarab by 1;
 		otherwise:
 			say "    Deciding to move on, you put the exhibit out of your head as you continue forward.";
-		
+
 
 
 Section 9- Night watchmen uniform
