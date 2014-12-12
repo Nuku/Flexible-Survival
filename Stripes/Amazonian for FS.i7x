@@ -128,7 +128,7 @@ the usedesc of estosterogen pill is "[estosterogen pill use]";
 before using a grab object(called x):
 	if x is estosterogen pill:
 		say "[line break]";
-		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+		if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 			say "Your feat will not allow this to work.";
 			stop the action;
 		continue the action;
@@ -171,19 +171,20 @@ to say estosterogen pill use:
 		now cunt width of player is 4;
 		say "You feel an aching warmth rush to your loins[run paragraph on]";
 		say ".  With your body in shock, you feel your bare groin clench as internal changes begin.  Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises.  Soon enough, you've grown a [cock size desc of player] [cock of player] cock and a [cunt size desc of player] cunt as your gender suddenly reverses from neither to both male and female in one[run paragraph on]";
-	if breasts of player is 0:
-		now breasts of player is 2;
-		now breast size of player is 2;
-		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
-	otherwise if breast size of player is 0:
-		now breast size of player is 2;
-		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
-	otherwise:
-		increase breast size of player by 1;
-		if breast size of player > 10, increase breast size of player by 1;
-		if breast size of player > 26, now breast size of player is 26;
-		follow the breast descr rule;
-		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+	if "Flat Chested" is not listed in feats of player:
+		if breasts of player is 0:
+			now breasts of player is 2;
+			now breast size of player is 2;
+			say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+		otherwise if breast size of player is 0:
+			now breast size of player is 2;
+			say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+		otherwise:
+			increase breast size of player by 1;
+			if breast size of player > 10, increase breast size of player by 1;
+			if breast size of player > 26, now breast size of player is 26;
+			follow the breast descr rule;
+			say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
 [
