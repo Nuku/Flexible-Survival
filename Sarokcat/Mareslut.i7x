@@ -1,5 +1,5 @@
 Version 1 of Mareslut by Sarokcat begins here.
-[ Version 1.3 - Stables-equine player victory (M/F) ]
+[ Version 1.3.1 - Stables-equine player victory (M/F) - now w/Stallionboi ]
 
 "Adds a Mareslut to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -31,7 +31,7 @@ to say Mareslut attack:
 
 
 To say Mareslut loss:
-	if cocks of player is 0 or ( bodyname of player is not "Mareslut" and bodyname of player is not "Horseman" and bodyname of player is not "Nightmare" ):
+	if cocks of player is 0 or ( bodyname of player is not "Mareslut" and bodyname of player is not "Horseman" and bodyname of player is not "Nightmare" and bodyname of player is not "Stallionboi" ):
 		say "     Driven back by your powerful assault, the slutty mare groans with pain as she staggers backwards and shoots you a rather dirty and sexy look as she says '[one of]Well you didn't have to be so rude!'[or]Maybe you will be more fun next time sexy,'[or]Why don't you want to fuck me?'[or]Damn sweety, that's a little rough for me, maybe you should try one of the donkeys,'[run paragraph on][at random] before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";
 	otherwise:
 		say "     Driven back by your continued resistance, the slutty mare groans and staggers backwards.  She leans back against a wall with a tired sigh.  '[one of]Alright, I give[or]Fine then, you win[or]You're too headstrong[at random],' she says, running her eyes over your horse form with continued longing even as she gives up her fight to molest you.  '[one of]Fuck me if you wish[or]I'm yours to claim[or]You can claim my body, stud[at random].'  She spreads her legs and offers up her body to you, submitting herself to you in a final plea to sate her lusts.  Your equine nature feels a fresh twinge of arousal and the thought of having your way with her makes you excited.  Shall you claim your prize now that this slutty mare's given in to you?";
