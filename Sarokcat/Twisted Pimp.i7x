@@ -171,19 +171,20 @@ to say estrogen pill use:
 		now cunt length of player is 6;
 		now cunt width of player is 4;
 		say "With your body in shock, you feel your bare groin clench as internal changes begin.  Soon you feel a pulling sensation as a wet passage opens and flesh folds form around it.  Within moments, you have a wet pussy and needy little cunt between your legs[run paragraph on]";
-	if breasts of player is 0:
-		now breasts of player is 2;
-		now breast size of player is 2;
-		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
-	otherwise if breast size of player is 0:
-		now breast size of player is 2;
-		say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
-	otherwise:
-		increase breast size of player by 1;
-		if breast size of player > 10, increase breast size of player by 1;
-		if breast size of player > 26, now breast size of player is 26;
-		follow the breast descr rule;
-		say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+	if "Flat Chested" is not listed in feats of player:
+		if breasts of player is 0:
+			now breasts of player is 2;
+			now breast size of player is 2;
+			say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+		otherwise if breast size of player is 0:
+			now breast size of player is 2;
+			say ".  With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+		otherwise:
+			increase breast size of player by 1;
+			if breast size of player > 10, increase breast size of player by 1;
+			if breast size of player > 26, now breast size of player is 26;
+			follow the breast descr rule;
+			say ".  With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
 when play ends:

@@ -685,9 +685,10 @@ to say testosterone pill use:
 		now cock length of player is 6;
 		now cock width of player is 4;
 		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [ball size] [if cockname of player is listed in infections of internallist]form inside you[otherwise]then pop out underneath your new manhood[end if]. ";
-	if breast size of player is greater than 0:
-		now breast size of player is 0;
-		say "With the feel of a popping balloon your breasts deflate leaving you with a flat yet muscular chest. ";
+	if "Breasts" is not listed in feats of player:
+		if breast size of player is greater than 0:
+			now breast size of player is 0;
+			say "With the feel of a popping balloon, your breasts deflate leaving you with a flat yet muscular chest. ";
 	if gestation of child is greater than 0 and the player is not mpreg_ok:
 		let infection be "";
 		now the child is not born;
