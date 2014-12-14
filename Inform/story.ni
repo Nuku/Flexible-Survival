@@ -5390,6 +5390,25 @@ To say ball size:
 			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
 
+To say short ball size:
+	if cock width of player is greater than 0:
+		if cock width of player is less than 3:
+			say "[one of]marble-sized[or]tiny[or]very small[at random]";
+		otherwise if cock width of player is less than 6:
+			say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
+		otherwise if cock width of player is less than 12:
+			say "[one of]lemon-sized[or]large[at random]";
+		otherwise if cock width of player is less than 16:
+			say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
+		otherwise if cock width of player is less than 20:
+			say "[one of]grapefruit-sized[or]massive[at random]";
+		otherwise if cock width of player is less than 25:
+			say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
+		otherwise if cock width of player is less than 32:
+			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
+		otherwise:
+			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
+
 to say cum load size of ( x - a person ):
 	if cock width of x > 0:
 		if cock width of x is less than 3:			[1, 2]
