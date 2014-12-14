@@ -768,7 +768,7 @@ An element display rule for a line primitive (called the line):
 	#end if;
 	linedraw (color tint of the line) in (current window) from (win-x) by (win-y) to (end-x) by (end-y) with (stroke);
 	if the line is graphlinked:
-		set a graphlink in the current window identified as the line from (min win-x or end-x)  by (min win-y or end-y) to (max win-x or end-x) by (max win-y or end-y) as the linked replacement-command of the line;
+		set a graphlink in the current window identified as the line from (min win-x or end-x) by (min win-y or end-y) to (max win-x or end-x) by (max win-y or end-y) as the linked replacement-command of the line;
 
 
 Section - Point primitive
@@ -1105,9 +1105,9 @@ Section - Image-rendered string scaling rule
 
 An element scaling rule for an image-rendered string (called the stream) (this is the image-rendered string scaling rule):
 	unless the asymmetrical scaling option is active: 	
-		now the calculated scaling factor of the stream is ( the the scaling factor of the current window  times the scaling factor of the stream) to the nearest whole number;
+		now the calculated scaling factor of the stream is ( the scaling factor of the current window  times the scaling factor of the stream) to the nearest whole number;
 	otherwise:
-		now the calculated scaling factor of the stream is ( the the scaling factor of the current window  times the x-scaling factor of the stream) to the nearest whole number; 
+		now the calculated scaling factor of the stream is ( the scaling factor of the current window  times the x-scaling factor of the stream) to the nearest whole number; 
 	continue.
 
 
@@ -1326,11 +1326,11 @@ To decide what list of numbers is the center-point of (grid - an image-map):
 	let imap-x be the desired tile-width of the grid;
 	let imap-y be the desired tile-height of the grid;
 	if the asymmetrical scaling option is not active:
-		let dx be imap-x  times the the scaling factor of the grid to the nearest whole number;
-		let dy be imap-y  times the scaling factor of the grid to the nearest whole number;
+		let dx be imap-x times the scaling factor of the grid to the nearest whole number;
+		let dy be imap-y times the scaling factor of the grid to the nearest whole number;
 	otherwise:
-		let dx be imap-x  times the x-scaling factor of the grid to the nearest whole number;
-		let dy be imap-y  times the y-scaling factor of the grid to the nearest whole number;
+		let dx be imap-x times the x-scaling factor of the grid to the nearest whole number;
+		let dy be imap-y times the y-scaling factor of the grid to the nearest whole number;
 	let the calc-height be the number of entries of the tile-array of the grid;
 	let the calc-width be the number of entries in entry 1 of the tile-array of the grid;
 	let dx be dx * calc-width;
@@ -3014,7 +3014,7 @@ Note the linked command entries in the tileset's translation table. These allow 
 		open up the graphics-window.
 		
 	[After printing the banner text:
-		say "[line break]This imitation of a roguelike game is an example for the Glimmr Canvas-Based Drawing extension. It features an image-map element that displays the map base for each room, using regular graphic tiles from a tileset known as LoFi Roguelike, by TIGSource user oryx (http://forums.tigsource.com/index.php?topic=8970.0). The character icons are borrowed from the the same tileset, and are implemented in Glimmr as sprite objects.[paragraph break]Click on the floor of the room to move toward the location clicked. Click on the furthest floor tile of a map exit to move to the next room. Click on the player's avatar (the archer) to take inventory, or click on an enemy to attack it.[paragraph break]"]
+		say "[line break]This imitation of a roguelike game is an example for the Glimmr Canvas-Based Drawing extension. It features an image-map element that displays the map base for each room, using regular graphic tiles from a tileset known as LoFi Roguelike, by TIGSource user oryx (http://forums.tigsource.com/index.php?topic=8970.0). The character icons are borrowed from the same tileset, and are implemented in Glimmr as sprite objects.[paragraph break]Click on the floor of the room to move toward the location clicked. Click on the furthest floor tile of a map exit to move to the next room. Click on the player's avatar (the archer) to take inventory, or click on an enemy to attack it.[paragraph break]"]
 
 Sprites are displayed using the coordinate system of the canvas, but the characters we are using them to display will need to move according to the internal grid of our image-map. We handle this by giving the sprite a second set of coordinates that we will use for calculating the character's position on the map. We convert this coordinate to canvas coordinates (based on the current position of the image-map on the canvas) before scaling and drawing a sprite. This is the "convert origin coordinate" rule below, and it utilizes one of the phrases that GCBD provides for converting between canvas, screen, and image-map coordinate systems; see the section on image-maps in the documentation above for more.
 
@@ -3026,7 +3026,7 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 	*: Section - Element display and updating
 
 	Element scaling rule for a character-sprite (called the character) (this is the convert origin coordinate rule):
-		now the origin of the character is the canvas coordinate equivalent of the grid-coordinate of the character in the coordinates of the the dungeon map;
+		now the origin of the character is the canvas coordinate equivalent of the grid-coordinate of the character in the coordinates of the dungeon map;
 		continue.
 
 	The convert origin coordinate rule is listed before the element origin scaling rule in the element scaling rules.
@@ -3039,7 +3039,7 @@ At the same time, we also ensure that the appropriate characters are visible. Ea
 	
 	This is the update dungeon map rule:
 		now the tile-array of the Dungeon Map is the tile-array of the location;
-		construct graphic hyperlinks array for the the dungeon map;
+		construct graphic hyperlinks array for the dungeon map;
 		now the grid-coordinate of the character of the player is the initial grid coordinate of the location;
 		repeat with P running through people:
 			if P can be seen by the player:
