@@ -162,7 +162,7 @@ instead of resolving Orthas's House:
 	otherwise if hp of Doctor Matt > 100:
 		say "     You end up wandering in the vicinity of the address Orthas gave you.  Thinking about what you've done to her, you crumple up the paper and toss it away.  There's no real point in going there at this point.";
 	otherwise:
-		say "     Wandering the residential side-streets around the sexually charged neighbourhood, you manage to find the street name on Orthas's note.  Following the numbers, you come to what was probably once a very nice two-story home with a white picket fence around the yard.  Like most of the homes on this street, the place has already been broken into and raided by scavengers and/or horny mutants.    But the current state of the place seems to be more than that, looking like it's been poorly maintained for some time.";
+		say "     Wandering the residential side-streets around the sexually charged neighbourhood, you manage to find the street name on Orthas's note.  Following the numbers, you come to what was probably once a very nice two-story home with a white picket fence around the yard.  Like most of the homes on this street, the place has already been broken into and raided by scavengers and/or horny mutants.  But the current state of the place seems to be more than that, looking like it's been poorly maintained for some time.";
 		say "     Moving cautiously, you step inside.  For a home of this size, it feels surprisingly cold and empty.  There's only a few pieces of furniture, no family photos, only one coat and pair of shoes by the door.  After taking a peek in the kitchen to find it picked clean by earlier looters, you head upstairs to get the dragon's old stuff.  The feeling of emptiness is even stronger there with the two smaller bedrooms being unused save to store a few boxes.  The few furnishings of the master bedroom includes only a small bed and dresser.";
 		say "     As instructed, you open the bedroom closet and take out the footlocker from inside.  Picking it up, you find it like the rest of the house - mostly empty.  While a little cumbersome and a little heavy, you can carry it easily enough.  Digging a little further into the closet, behind some suit bags and a military dress uniform, you find something more useful to you - a crossbow and quarrels.  You grab it and, finding the mechanism still works, head off to find something to use for target practise.";
 		say "     Hoping for more useful stuff, or at least useful targets, you move on to searching the rest of the house.  Unfortunately, the noise of your rummaging around draws the attention of some nearby creature.  You have to toss aside your new toy, having shot all its quarrels, and turn to face the kangaroo woman who's burst into the room.";
@@ -198,7 +198,7 @@ to say orthas_task2_done:
 			get a number;
 		if calcnumber is 1:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor to your pussy.  You moan as that cock-like member penetrates you, pushing past your juicy folds and diving into your depths after only a few thrusts.  Wrapping you legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score.  Her pulsating rod drives into you again and again as it leaks slick lubrication to prepare you for what's to come.  And seeing her belly swelling up, you know it's coming soon.";
-			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support.  Her ovipositor presses at your cervix, working it open even as you can feel the bulge of the egg start to force your folds to spread open.  After some initial difficulty, your body adjusts and soon you're sharing the the dragoness's pleasure as the firm ovoid makes its journey into your womb.  You climax again as you feel it finally settle into your uterus with a good splatter of the dragoness's fluids.";
+			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support.  Her ovipositor presses at your cervix, working it open even as you can feel the bulge of the egg start to force your folds to spread open.  After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your womb.  You climax again as you feel it finally settle into your uterus with a good splatter of the dragoness's fluids.";
 			if the gestation of the child is greater than 0:
 				say "The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 				decrease gestation of child by a random number from 5 to 10;
@@ -210,7 +210,7 @@ to say orthas_task2_done:
 				say "     Rubbing your rounded belly, you can feel the egg breaking back down into a gooey mix of semen and lubricating fluids that fill you with warm feeling of pleasure.";
 		otherwise if calcnumber is 2:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor between your ass cheeks.  She grinds against your back door, making sure to send several spurts of lubricating fluids onto and into that stretching ring.  And once she's gotten you good and lubed up, she drives that cock-like member into you, pushing past your anus and into your warm bowels.  Wrapping you legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score.  Her pulsating rod drives into you again and again as it leaks more slick lubrication to prepare you for what's to come.  And seeing her belly swelling up, you know it's coming soon.";
-			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support.  Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider.  After some initial difficulty, your body adjusts and soon you're sharing the the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels.  You climax again as you feel it finally settle into your [if the player is mpreg_ok]hidden womb[otherwise]belly[end if] with a good splatter of the dragoness's fluids.";
+			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support.  Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider.  After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels.  You climax again as you feel it finally settle into your [if the player is mpreg_ok]hidden womb[otherwise]belly[end if] with a good splatter of the dragoness's fluids.";
 			if the player is mpreg_ok:
 				if the gestation of the child is greater than 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
@@ -399,7 +399,7 @@ When Play begins:
    now face entry is "draconic head"; [ Face description, format as the text "You have a (your text)."]
    now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as the text "Your Body is (your text)."]
    now skin entry is "dark scaled"; [ skin Description, format as the text "You have (your text) skin."]
-   now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
    now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -430,7 +430,7 @@ When Play begins:
    now loot entry is "";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
    [ These represent the new additions to the table of random critters ]
-   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
    now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
    now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
    now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
