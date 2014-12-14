@@ -49,7 +49,7 @@ instead of conversing Andromeda:
 	if debugactive is 1:
 		say "DEBUG ->HP: [hp of Andromeda], LUST: [lust of Andromeda], LIBIDO: [libido of Andromeda], XP: [xp of Andromeda] <- DEBUG[line break]";
 	otherwise if hp of Andromeda is 0:
-		say "     'Hi [if player is female]miss[otherwise if player is male]miss[otherwise]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
+		say "     'Hi [if player is female]miss[otherwise if player is male]mister[otherwise]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I’ll show you around my store.' She says as she pulls you forward, surprisingly strong for her size.";
 		say "     You spend the next half-hour being shown around the girl's clothing store, roaming through aisles of different clothes and being shown any piece that sparks your interest. Throughout the tour, Andromeda bounces happily, continuing to bombard you with every question imaginable, and some even unimaginable. You do your best to answer as many of them as you can, but the onslaught is relentless, and a few of them go unanswered. Not that that seems to bother her. In between questions, the bubbly catgirl makes small talk, talking about the weather or what your opinions on fish are. You can't seem to figure out how someone so cheerful still lives here.";
@@ -235,7 +235,7 @@ carry out TshirtObtain:
 		otherwise:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and failing horribly. 'Who's kidding who here, I’m just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
-[Blouse action]		
+[Blouse action]
 carry out BlouseObtain:
 	say	"     Taking the Blouse & Skirt up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the blouse set.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
@@ -272,7 +272,7 @@ carry out BlouseObtain:
 		otherwise:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 	
-[Tuxedo action]		
+[Tuxedo action]
 carry out TuxedoObtain:
 	say	"     Taking one of the black tuxedos up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the suit.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
@@ -309,7 +309,7 @@ carry out TuxedoObtain:
 		otherwise:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
-[Summer action]		
+[Summer action]
 carry out SummerObtain:
 	say	"     Taking the loose-fitting summer clothes up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the baggy outfit.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
