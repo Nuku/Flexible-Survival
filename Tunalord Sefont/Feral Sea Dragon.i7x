@@ -572,7 +572,7 @@ to say FSDM_4: [Cunt Catching]
 		if cocks of player > 0:
 			say "     Your own bliss quickly following suit, your cock[smn] unleash your [cum load size of player] load on the beast, [if tempnum2 is 1 and cock width of player > 19]further embarrassing him as he's now utterly drenched in cum[otherwise if tempnum2 is 1]further embarrassing him as your cum also stains him[otherwise if cock width of player > 19]utterly drenching him in your cum[otherwise]staining him with your cum[end if]";
 		otherwise:
-			say "     Your own bliss quickly following suit, you oozing cunt[sfn] aching against the the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
+			say "     Your own bliss quickly following suit, you oozing cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
 		say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
 		now tempnum2 is 0;
@@ -622,7 +622,7 @@ to say FSDM_5: [Anal Catching]
 		if cocks of player > 0:
 			say "     Your own bliss quickly following suit, your cock[smn] unleash your [cum load size of player] load on the beast, [if tempnum2 is 1 and cock width of player > 19]further embarrassing him as he's now utterly drenched in cum[otherwise if tempnum2 is 1]further embarrassing him as your cum also stains him[otherwise if cock width of player > 19]utterly drenching him in your cum[otherwise]staining him with your cum[end if]";
 		otherwise if cunts of player > 0:
-			say "     Your own bliss quickly following suit, you cunt[sfn] aching against the the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
+			say "     Your own bliss quickly following suit, you cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
 		if cocks of player > 0 or cunts of player > 0:
 			say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
