@@ -66,11 +66,11 @@ instead of going inside from the Grey Abbey Library while (Dexterity of Erica is
 		say "     [line break]";
 		say "     Gently putting a hand on Eric's shoulder, you talk to him until he calms down and say that completing his transformation might be best. Just as long as it's what he himself really wants, not simply conforming to anyone else's views. After a short conversation in which he mulls it over again, then decides that he truly wants to be a full woman. A moment later, the young man says, 'Ha - here I am talking like I got a transformation pill in my pocket. Since it seems that the nanites can't finish what they started, we don't even know if there is a way to do this.'";
 		say "     At least on that front, you've got an idea. Magic might help out where technology fails. There could be any number of helpful artifacts in the depths of the [bold type]museum[roman type]. Maybe you should visit it sometime...";
-		now dexterity of Erica is 1; [Erica transformation quest step 1 - Talk to Valerie]	
-	
+		now dexterity of Erica is 1; [Erica transformation quest step 1 - Talk to Valerie]
+
 [ Next part of the quest in /Sarokcat/Museum.i7x (talking to Valerie)]
 
-Temple of Hera is a situation. 
+Temple of Hera is a situation.
 The sarea of Temple of Hera is "Museum".
 when play begins:
 	add Temple of Hera to badspots of guy;       [male soldiers]
@@ -84,7 +84,7 @@ Instead of resolving a Temple of Hera:
 	say "     The woman's voice rings with power as she addresses you, 'Ah, there you are mortal. Finally. Did you take your time because you were afraid? Since that slanderer Homer, you people seem to think my domain is vengeance, not women and marriage.' A hint of annoyance crosses her features, then she gives a throwing-away gesture and adds with a little smile, 'Oh well, I'm a goddess - and he's dead.' She waits a second after the slight echo of her last word fades, then clears her throat and leans forward, 'But let's get to more current matters. You come before Hera with a request for your friend Eric. His, or rather her little problem. Fine. I will aid you after you have completed a task for me.' With that, Hera turns her head to the side and commands, 'Show yourself, child. Tell this [if cocks of player > 0 and cunts of player is 0]little man[otherwise if cocks of player is 0 and cunts of player > 0]woman[otherwise]being[end if] your story and needs.'";
 	say "     A young woman steps out behind the golden throne, dressed in a similar, if less elaborate gown as Hera herself. Her eyes are a bit reddened, likely from by-now dried tears. She takes a deep breath and says, 'My name is Rebecca. I - We - me and my fiancee Joel were in the downtown area when things started to happen and... they took him from me! There were those bikers, and when he stepped between them and me to protect me, the leader just punched him out. And before I knew what was happening, he was bundled over a bike and they drove off!' She halts for a second, wiping away a new tear, then composes herself and adds, 'My mistress Hera told me he is alive and that you would come and help me. Please - find those guy's [bold type]hangout[roman type] in the [bold type]Junkyard[roman type] and bring Joel back to me!'";
 	say "     [WaitLineBreak]";
-	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";	
+	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
 	now Biker Hangout is not resolved;
 	now Dexterity of Erica is 3;
@@ -92,8 +92,8 @@ Instead of resolving a Temple of Hera:
 Biker Hangout is a situation. Biker Hangout is resolved.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
-	add Biker Hangout to badspots of guy;       
-	add Biker Hangout to badspots of furry;     
+	add Biker Hangout to badspots of guy;
+	add Biker Hangout to badspots of furry;
 
 Instead of resolving a Biker Hangout:
 	say "     After a while of searching, you do find a chain-link gate that leads on to the junkyard proper from an adjoining dark alley. Near that back entrance, there is a run-down shack with three bikes parked in front of it. Seems you've found the hideout of the biker gang that kidnapped Joel. There is no one in sight right now, but where the bikes are, the bikers to go with them can't be far... so you decide to scout the place out stealthily first. As you carefully make your way through the piles of rusty cars and metal scrap, always using what concealment from observation through the shack's dirty windows you can get, you soon find out that there is another structure behind the shack - a chain link dog kennel. In it, you see the humanoid figure of an anthro dog lying on the ground, a short chain connecting his collar to an iron ring anchored in the concrete floor. From the looks of it, that chain doesn't even allow him to sit up, only to cower low to the ground or lie flat.";
@@ -118,11 +118,11 @@ Instead of resolving a Biker Hangout:
 			say "    With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
 			move player to bunker;
-		otherwise if fightoutcome >= 30:			[fled]			
+		otherwise if fightoutcome >= 30:			[fled]
 			say "     Running off as quickly as you can, you leave the biker behind. It doesn't seem like he wants to follow you too much and instead gets busy fucking his 'pet' in short order. With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
 			move player to bunker;
-		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]		
+		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
 			say "     Punching out the only lightly infected human, you bend down to pick up the key ring that he dropped during your fight and step forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
 			say "[JoelSaved]";
 	otherwise if calcnumber is 2: [wait and hit]
@@ -132,7 +132,7 @@ Instead of resolving a Biker Hangout:
 		say "[JoelSaved]";
 	otherwise: [distraction]
 		say "     Dashing back towards the front of the shack, you move up next to one of the bikes, their owner's pride and joy - then give it a powerful shove that makes it fall over, crashing down on the gravelly ground with the sounds of splintering glass and dented metal. You do the same for a second bike, then rush towards the shack, pressing yourself against its wall right at the corner - and it works... the scruffy biker who was in the kennel a moment ago comes running to the front of the shack, right past where you're hiding around the corner. It's almost comical - since the man is naked from the waist down, his cock flapping in the wind as he passes you ...but then, you remind yourself just what the bastard was doing and the smile vanishes from your lips instantly. He curses loudly as he sees the damage on his bike and looks around (away from the shack) while bending over it to inspect the heavy machine.";
-		say "     [WaitLineBreak]";		
+		say "     [WaitLineBreak]";
 		say "     Meanwhile, you duck behind the shack and get to the kennel as quickly as you can, pulling the key ring out of the biker's abandoned pants and stepping forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
 		say "[JoelSaved]";
 	now Biker Hangout is resolved;
@@ -217,7 +217,7 @@ instead of conversing the Erica:
 				if nam is "Talk a bit with Erica":
 					say "[EricaTalk1]";
 				if nam is "Talk about sex with David":
-					say "[EricaTalk2]";		
+					say "[EricaTalk2]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off?";
@@ -229,7 +229,7 @@ instead of conversing the Erica:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;	
+	clear the screen and hyperlink list;
 
 to say EricaTalk1:
 	say "     She says [one of]'Thank you for everything. I feel... complete now.'[or]'Being a full woman is even better than I imagined. Thank you so much for this.[at random]";
@@ -349,7 +349,7 @@ to say EricaSexMenu:
 					say "[EricaSex7]";
 				if nam is "Threesome with the felinoid and Erica":
 					say "[EricaSex8]";
-				now lastfuck of Erica is turns;				
+				now lastfuck of Erica is turns;
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off?";
@@ -377,7 +377,7 @@ to say EricaSex3: [Erica's cunt licked/fingered]
 
 to say EricaSex4: [Erica's pussy fucked by player]
 	say "     Taking Erica by the hand, you lead her over to her bed and push your hands under her shirt. Sliding up over smooth skin, you feel her firm abs for a moment and even reach as far up as the curves of her B-cup breasts. Covering those perfect orbs with your hands, you stroke over them and rub her nipples, which makes the athletic student pant in arousal. You almost have to force yourself to let go of them again, taking hold of the shirt next and pulling it over Erica's head. Then it's time for her shorts, which you slide down her long runner's legs, stroking over her soft skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
-	say "     Running your hands over her body, you pull Erica in for another quick kiss, then softly push her backwards against the bed and make her lie down on it. You stroke over the thin fabric of her panties with your fingers, making her moan needily. Looks like your redheaded beauty about ready... slowly pulling the the panties off her body you reveal her swollen pussy with its open, glistening lips.";
+	say "     Running your hands over her body, you pull Erica in for another quick kiss, then softly push her backwards against the bed and make her lie down on it. You stroke over the thin fabric of her panties with your fingers, making her moan needily. Looks like your redheaded beauty about ready... slowly pulling the panties off her body you reveal her swollen pussy with its open, glistening lips.";
 	say "			[WaitLineBreak]";
 	say "     Quickly stripping off your own clothing, you climb on the bed with Erica and kneel between her spread legs. She just looks so delicious, lying before you naked and beautiful, with an eager expression on her face. You barely manage to control the impulse to just plunge in and take her then and there, instead going slow and rubbing the tip of your cock up and down over her pussy lips and clit, making her pant in need. After pushing softly against her opening several times, then going back to more rubbing, Erica moans 'Please - I need you in me.'";
 	say "     Following the female student's needful request, you aim your shaft and push forward, giving both your bodies the unity they craved for. As you sink deeper inside her, you lean down and make out with Erica, moaning into each other's mouth when you bottom out inside her. With the warm, tight hole around your cock, all restraint is soon forgotten and you start fucking her hard and deep. Erica gives lustful grunts to accompany the sound of your hips slapping against her crotch and wraps her arms and legs around you in an intimate embrace.";
@@ -386,7 +386,7 @@ to say EricaSex4: [Erica's pussy fucked by player]
 
 to say EricaSex5: [fucking Erica's ass]
 	say "     Taking Erica by the hand, you lead her over to her bed and push your hands under her shirt. Sliding up over smooth skin, you feel her firm abs for a moment and even reach as far up as the curves of her B-cup breasts. Covering those perfect orbs with your hands, you stroke over them and rub her nipples, which makes the athletic student pant in arousal. You almost have to force yourself to let go of them again, taking hold of the shirt next and pulling it over Erica's head. Then it's time for her shorts, which you slide down her long runner's legs, stroking over her soft skin as you go. Now your handsome athlete is almost naked before you, just wearing a skimpy white tanga already showing a little damp spot at the front.";
-	say "     Running your hands over her body, you pull Erica in for another quick kiss, then softly push her backwards against the bed and make her lie down on it. You stroke over the thin fabric of her panties with your fingers, making her moan needily. Looks like your redheaded beauty about ready... slowly pulling the the panties off her body you reveal her swollen pussy with its open, glistening lips.";
+	say "     Running your hands over her body, you pull Erica in for another quick kiss, then softly push her backwards against the bed and make her lie down on it. You stroke over the thin fabric of her panties with your fingers, making her moan needily. Looks like your redheaded beauty about ready... slowly pulling the panties off her body you reveal her swollen pussy with its open, glistening lips.";
 	say "			[WaitLineBreak]";
 	say "     Quickly stripping off your own clothing, you climb on the bed with Erica and kneel between her spread legs. She just looks so delicious, lying before you naked and beautiful, with an eager expression on her face. You barely manage to control the impulse to just plunge in and take her then and there, instead going slow and rubbing the tip of your cock up and down over her pussy lips and down the crack of her ass, making her pant in need.";
 	say "     When you start pushing softly against her rear opening, Erica's eyes looking up at you get very round for a second. You don't think she had any anal sex before all this happened, but... after everything you've done for her, she is ready to try almost anything that you suggest. After the moment of hesitation, she smiles up at you, indicating to go on.";
@@ -457,7 +457,7 @@ to say EricaSex7_1_Male: [Erica, male/herm player]
 	otherwise: [fondle David's ass]
 		say "     [EricaSex7_2_Fondling]";
 
-to say EricaSex7_2_Fondling: 
+to say EricaSex7_2_Fondling:
 	say "			[WaitLineBreak]";
 	if cocks of player > 0: [male player]
 		say "     You decide to give your soldier-boy a little bit of anal attention. After pulling off David's shoes and socks you reach for his hips, grabbing the sides of her open pants, then pull them down over her legs. Now both your sexy female friend as well as the handsome soldier are completely naked, presenting you with an enticing view that makes you start jerking your erect manhood. Looking up at Erica sliding herself up and down on David's hard shaft, you stroke the soldier's inner thighs, then move your fingers up to his asshole. Rubbing lightly at first, then pushing in against it, your finger soon penetrates David's rear entrance, causing him to gasp in between his moans at fucking Erica.";
@@ -647,7 +647,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 				if player consents:
 					say "     [line break]";
 					say "     Giving Erica another quick kiss on the lips, you bend down and pick up the books Fang made her drop, guide the young woman over to the next reading group, where you sit down comfortably together with her. Leaning back with your arm around her shoulders, you then open up a book and hold it so you can both see it, then start reading aloud from it. Between the two of you taking turns, you make it quite a few chapters into the interesting piece of literature that Erica picked out, more than long enough for her residual anxiousness about Fang to fade. In fact, you like exploring the story of the book together with your female friend so much that you almost have to force yourself to get up, sighing about having to get back to ensuring your survival in this chaotic city.";
-				otherwise: 
+				otherwise:
 					say "     [line break]";
 					say "     Giving Erica another quick kiss on the lips, you sneak a hand under her T-shirt, moving up to cup her perfectly shaped left breast and giving it a gentle squeeze that has the young woman sighing with arousal. As wound up as she is from her earlier encounter with Fang, the beautiful redhead just melts into your arms, readily letting herself be guided over to the next reading group, where she kneels on a softly cushioned sofa. Then the college athlete pulls her shirt over her head in a quick move, baring her well-trained body and shapely breasts fully for you to enjoy. A moment later, she automatically lowers herself down to all fours, legs spread widely to bare her wet and ready pussy in a typical doggie-style position. Seems like the encounter with Fang did leave some interesting effects after all...";
 					if cocks of player > 0:
@@ -686,7 +686,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 				say "     With the fuck-show now being over and nothing to see except a wolf balls-deep inside a well-built naked woman, you... stay a while yet, looking at Erica's enticing body while continuing to stroke yourself. It doesn't take long before the familiar sensations of an imminent orgasm build up inside you. Quickly dodging around the corner of the nearest bookshelf, you get out of sight before your rising moans draw Erica's attention, then [if cocks of player > 0]blast your load all over a meter-wide section of world literature[otherwise if cunts of player > 0]squirt more than a little femcum to drip and soak into the carpet on the library floor[otherwise]tremble and twitch as a breathtaking climax rocks your world[end if].";
 				now XP of Erica is 3;
 		otherwise: [Alpha Fang does what he want]
-			say "     [line break]";			
+			say "     [line break]";
 			say "     The sound of ripping cloth as Fang takes Erica's panties between his teeth and wrenches them off her body breaks you out of the stasis in which you watched what has been going on. The quick thought of maybe stopping him rushes through your mind, but... no, it doesn't matter if you want to or not, you don't dare approach the dominant wolf right now. And then... the whole concept of intervening becomes moot anyways, as the mighty wolf just rears up and thrusts into the young woman, mounting your friend with a loud and dominant growl that makes clear that the alpha wolf has claimed another bitch for himself. You can't help but be reminded of when he fucked you the last time, driving you to a heightened state of arousal as you imagine being the one under his furry body right now.";
 			say "     Silently watching, you just stay where you are and watch as your pet wolf rears up and sinks his canine cock into Erica's waiting pussy, sinking his maleness deep with a lusty growl. It's oddly exciting to see the wild animal mounting the pale-skinned human woman under him, his tail raised proudly as she gasps in arousal and need. Clearly Erica is getting off more than just a little bit from being pounded by the wolf's pointy, canine shaft. As for yourself - you do suddenly realize that your left hand is down by your crotch, rubbing it to satisfy your building arousal at the sexy show. An interesting little thought bubbles up in your mind, telling you that ready the acceptance of all this - bestiality, interspecies sex and just going along with almost anything sexual once the actual act starts - must be inherent in nearly all nanite strain's mental package. And then, the realization is gone again, forgotten as your fingers open the front of your pants, baring the [if cocks of player > 0]half-hard erection you're already sporting and giving it a few slow jerks[otherwise if cunts of player > 0]wet and swollen pussy between your legs and allowing you to rub gently over its clit[otherwise]smooth and sexless area of your crotch and allowing you to rub gently over its sensitive skin[end if].";
 			say "     [WaitLineBreak]";
@@ -733,7 +733,7 @@ instead of going inside from Grey Abbey Library while (XP of Erica > 0 and XP of
 		say "     [line break]";
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Fang here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for Fang's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now XP of Erica is 99;
-]		
+]
 
 Section 5 - Endings
 [

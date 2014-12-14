@@ -7,7 +7,7 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Foul Scuttler" } to infections of guy;
 
-FirstDescOuter is a number that varies.  [Don't know if monsters have something i can assign variables to]
+FirstDescOuter is a number that varies.  [Don't know if monsters have something I can assign variables to]
 
 to say PlayerVictory:
 	say "     Landing a heavy hit straight to the creature's head, pushing it back and slamming it into the ground. Letting out a mournful scream as he falls to the ground, the Foul Scuttler slams to the ground, hurt and exhausted from the long fight you both just engaged in.";

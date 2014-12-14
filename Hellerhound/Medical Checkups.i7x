@@ -4,7 +4,7 @@ Version 3 of Medical Checkups by Hellerhound begins here.
 Section 1 - Pediatrics Office
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
-Pediatrics Lobby is a room. "The lobby for one of those medical clinics people go to to find a doctor. This is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
+Pediatrics Lobby is a room. "The lobby for one of those medical clinics people go to find a doctor. This is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
 Pediatrics Lobby is fasttravel.
 Pediatrics door is dangerous.
 North of Pediatrics door is pediatrics Lobby.
@@ -62,7 +62,7 @@ instead of conversing the Doctor Medea:
 				now hp of doctor medea is 2;
 			otherwise if medeaget is 1:
 				say "     'I cannot help you.  I specialize in childbirth and minor illnesses.  As the latter are not occurring with the nanite plague.  Maybe I could help if you were a female?'";
-				say "      She pauses and ponders for a moment.  'There is another possibility as well.  With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I had just started to look into those possibilities.  Perhaps you might be interested in becoming my test subject for this.  To accomplish this, I would need you to obtain those medical supplies I had mentioned previously.  I would need those supplies regardless if you choose to undergo this procedure or if you find a means to become female again.'  She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
+				say "     She pauses and ponders for a moment.  'There is another possibility as well.  With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation.  I had just started to look into those possibilities.  Perhaps you might be interested in becoming my test subject for this.  To accomplish this, I would need you to obtain those medical supplies I had mentioned previously.  I would need those supplies regardless if you choose to undergo this procedure or if you find a means to become female again.'  She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 				now hp of doctor medea is 2;
 			otherwise if medeaget is 2 or medeaget is 3:
 				say "     'I cannot help you.  I specialize in childbirth and minor illnesses.  As the latter are not occurring with the nanite plague.  Maybe I could help if you were a female?'";

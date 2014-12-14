@@ -123,7 +123,7 @@ When Play begins:
 	now face entry is "that of an attractive feline";     [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "[JagBodyDesc]";                    [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "golden yellow fur, with elegant black rosettes and spots covering your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move.";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]red[or]barbed[or]spined[or]feline[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of of an attractive jungle cat";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "[JagBodyTF]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -154,7 +154,7 @@ When Play begins:
 	now loot entry is "";                 [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]lithe[or]alluring[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "feline";           [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
@@ -242,7 +242,7 @@ to say Tehuantlsex:
 	if hp of Tehuantl is 11:
 		try conversing the Tehuantl;
 	otherwise if cocks of player < 1 and cunts of player < 1:
-		say "    As eager as you are to have some fun with your feline pet, you find yourself ill equipped to have any fun with her at the moment. ";
+		say "     As eager as you are to have some fun with your feline pet, you find yourself ill equipped to have any fun with her at the moment. ";
 	otherwise if lastfuck of Tehuantl - turns < 6:
 		say "     'Mmm, as much as I would love my big warrior to make use of [if cocks of player > 0]his[otherwise if cunts of player > 0]her[end if] pussycat again, I think it would be nicer for both of us if we took a break.";
 	otherwise:
@@ -343,7 +343,7 @@ to say TehuantlandSven:
 	say "     As you make your way into the library, you hear the heavy bunker door creak open on the far side of the room. Ducking out of sight for a moment, you watch with curious interest as Sven quietly slips out and makes his way towards the stairs to the library's upper level with his nose high in the air. Taking a breath yourself, you realize the scent of Tehuantl's heat still permeates the room.";
 	say "     Seeing how distracted he seems, you could probably follow Sven upstairs and see what happens without him noticing pretty easily (y), or you could leave it be (n).";
 	if the player consents:
-		say "     As Sven's long snow-leopard tail disappears upstairs, you slowly make your way over to the steps quietly to see what your feline pets are up to. Peeking over the top of the stairs, you see Sven lurking down one the the aisles of books, wringing his tail nervously as he peers at Tehuantl from between the volumes. Tehuantl meanwhile, apparently well aware of the hidden kitty, is lounging on the couch near the balcony teasing her wet, swollen cunt as she watches the shy snowmeow spying on her.";
+		say "     As Sven's long snow-leopard tail disappears upstairs, you slowly make your way over to the steps quietly to see what your feline pets are up to. Peeking over the top of the stairs, you see Sven lurking down one the aisles of books, wringing his tail nervously as he peers at Tehuantl from between the volumes. Tehuantl meanwhile, apparently well aware of the hidden kitty, is lounging on the couch near the balcony teasing her wet, swollen cunt as she watches the shy snowmeow spying on her.";
 		say "     Finally tired of waiting, Tehuantl rises from her seat and makes her way over to where Sven is lurking. Realizing she's approaching, he quickly tries to make himself look busy, shuffling through the books in front of him as if he's looking for a specific title. With a predatory glint in her eye, Tehuantl pads up beside Sven, rumbling softly as she steps in close to him.";
 		attempttowait;
 		say "     'And what bring you up here, cutie?' Tehuantl rumbles as she leans in close to the nervous snow leopard, gently placing a paw between his shoulders, 'I'm sure I could help you find [italic type]whatever[roman type] you're looking for.";
@@ -373,7 +373,7 @@ to say TehuantlandSnow:
 			say "     The two lay locked together on the table for a few moments before Tehuantl pushes the limp squirrel off onto the table beside her, pulling Snow's cock free with a noticeable pop. With Snow's ample load still leaking down her furred thigh, Tehuantl ascends back up to her favorite spot upstairs, only stopping momentarily at the bottom of the stairs to look back at you, winking playfully while spreading her stuffed pussy lips apart for you to see before continuing upstairs.";
 			now TehuantlSnowStatus is 1;
 		Otherwise:
-			say "     Deciding against letting the needy feline prey on the unsuspecting squirrel, you shake your head sternly at her, motioning her back upstairs. Clearly disappointed, the obedient kitty slowly turns, and makes her way back to to her favorite spot upstairs, only pausing at the top of the steps to look back at you one last time before moving out of sight.";
+			say "     Deciding against letting the needy feline prey on the unsuspecting squirrel, you shake your head sternly at her, motioning her back upstairs. Clearly disappointed, the obedient kitty slowly turns, and makes her way back to her favorite spot upstairs, only pausing at the top of the steps to look back at you one last time before moving out of sight.";
 			now TehuantlSnowStatus is 99;
 	otherwise if TehuantlSnowStatus is 1:
 		if cocks of player > 0 or cunts of player > 0:
@@ -423,7 +423,7 @@ to say TehuantlandFelinoid:
 		say "     [WaitLineBreak]";
 		say "     Both felines groan in pleasure as the felinoid's shaft spreads Tehuantl's opening apart, pressing into her depths as he sinks himself into her waiting pussy. Soon he's all the way in, then starts to pull back and thrust in again, the spines on his shaft rubbing against her insides each time. Accompanied by a lustful growl, Tehuantl's claws dig into the carpeted floor, holding on tight as the virile male fucks her, even rocking back to meet his thrusts. Her obvious eagerness animates the felinoid to speed up more and more, making the bell on the jaguar's collar jingle merrily as he pounds against her ass.";
 		say "     [if cocks of player > 0 or cunts of player > 0]As you watch the show, you can't help but let your own hands drift down towards your excited groin and begin playing with yourself as you watch the feline intercourse. [end if]Before long, the rough fuck he's giving Tehuantl has the felinoid rapidly approaching his climax. He opens his muzzle in a short roar, then softly bites into her neck, just enough to hold her into position and not break the skin. One, two, three more thrusts and he suddenly holds still, his legs bent as he holds himself balls-deep in the female jaguar, depositing spurt after spurt of his feline seed straight into her womb. Meanwhile, the neck-bite and feeling his cum pulse into her was enough to drive Tehuantl over the edge of her own orgasm, making her whole body shiver and her pussy get drippingly wet around the felinoid's shaft.";
-		say "     [WaitLineBreak]";		
+		say "     [WaitLineBreak]";
 		say "     As the two begin to come down from their respective climaxes, Tehuantl exhaustedly sinks down on the ground, the felinoid's shaft sliding out of her with a small wet plop. He turns to look at you and gives a deep, rather self-satisfied purr, then throws himself on the ground against the freshly-bred jaguar-woman. His furry side pressed against her, he nuzzles her face, making Tehuantl giggle and give him a good scritch on the neck and behind his ears. They stay together like that on the floor, soon dozing off. You decide it best to [if cocks of player > 0 or cunts of player > 0]clean up your own mess and[end if] slip back downstairs and leave them to get some rest.";
 	otherwise:
 		say "     Deciding to leave your feline pets to take care of each other, you try to put the thought out of your mind as you hear the jingling of Tehuantl's belled collar, followed by a growl and a gasped yowl. That must have been when he entered her. Suppressing the urge to go back on your earlier decision and hurry up the stairs after them, you turn your attention to other things...";
@@ -481,7 +481,7 @@ to say TehuantlBunkerScenes:
 	if Snow is booked and TehuantlSnowStatus is not 99:
 		add 2 to TehuantlList;
 	if Felinoid Companion is tamed:
-		add 3 to TehuantlList;		
+		add 3 to TehuantlList;
 	sort TehuantlList in random order;
 	if entry one of TehuantlList is 1:
 		say "[TehuantlandSven]";
@@ -544,7 +544,7 @@ instead of resolving Feline Relief:
 			now humanity of player is 0;
 			end the story saying "You are transformed into a Rubber Sex Doll by the latex mistresses.";
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19: [player defeats all three mistresses]
-			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple the the new additions the rubber girls brought back with them before quickly departing the store.";
+			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple of the new additions the rubber girls brought back with them before quickly departing the store.";
 			now HP of Tehuantl is 14;
 			now Feline Relief is resolved;
 		otherwise: [player fled]
@@ -577,7 +577,7 @@ understand "TehuantlTest" as TehuantlCheating.
 
 carry out TehuantlCheating:
 	say "[TameTehuantl]";
-	
+
 TehuantlStating is an action applying to one topic.
 understand "TehuantlStat" as TehuantlStating.
 

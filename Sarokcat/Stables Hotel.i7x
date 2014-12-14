@@ -19,7 +19,7 @@ Instead of Resolving a A Stabled Situation:
 		say "     As you wander throughout the city, you once again hear the clopping of a number of hooves on the pavement, and recalling the last group of horsemen you saw, you immediately begin looking for a safe hiding spot. You barely make it into cover before a smaller group of horsemen appear down the street, this group however appears much less vigilant, and more relaxed as they focus on something in the middle of the group. Looking out carefully as the group passes you, you find yourself staring at the group in surprise, as you realize why most of the equine men's attention is focused towards the center of the group.";
 		say "     In the middle of the group of beasts, is a relatively large group of captives bound together with leather harnesses being led down the street, many of the captives are already starting to display several equine features as they stumble along. A closer look at the captives as they stagger off has you realizing that they are wearing the remains of what were obviously military uniforms, obviously a patrol of some sort that the horsemen managed to capture. Not wanting to fight with a group that could manage to capture a military patrol, you let the beasts pass, however you also realize this is a perfect opportunity to follow the beasts to see where they are going, while their attention is focused on their captives.";
 		say "     You follow the horsemen and their captives at a discrete distance as they make their way through the dangerous streets of the city, sometimes having to duck down dark alleyways not to be noticed. Finally after what seems like forever the long nerve-wracking trip comes to an end near the red light district, as the horsemen lead their captives through the side entrance of what appears to be an old hotel complex.";
-		say "     The building looks like it was built sometime around the turn of the twentieth century, and has certainly seen better days. The large building seems more like an an insane asylum than a luxury hotel now with its large multi-story main building and the two slightly shorter wings which appear to have been added at some later date. Flanking the entrance are two more of the horsemen obviously there to keep out the riffraff, though with only two of them, perhaps you could try to bribe your way inside.  Do you try to gain entrance to the building?";
+		say "     The building looks like it was built sometime around the turn of the twentieth century, and has certainly seen better days. The large building seems more like an insane asylum than a luxury hotel now with its large multi-story main building and the two slightly shorter wings which appear to have been added at some later date. Flanking the entrance are two more of the horsemen obviously there to keep out the riffraff, though with only two of them, perhaps you could try to bribe your way inside.  Do you try to gain entrance to the building?";
 		If player consents:
 			say "     Investigating the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into the building, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on any subsequent visits you might make.. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit. And begin searching through your pack as you approach the doors to see if you have anything the guards might be willing to take in trade.";
 			if chips is owned and soda is owned:
@@ -57,7 +57,7 @@ Instead of Resolving a A Stabled Situation:
 
 Section 2 - The Stables Hotel
 
-Stables Hotel is a room. It is fasttravel. It is private. 
+Stables Hotel is a room. It is fasttravel. It is private.
 Stable is a room.
 Stalls is a room.
 
@@ -65,7 +65,7 @@ The description of Stables Hotel is "     The lobby of this large sprawling buil
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 
 Northeast of Stables Hotel is Stalls.
-West of Stables Hotel is Employee Access. 
+West of Stables Hotel is Employee Access.
 
 The invent of The Stables Hotel is { "lucky horseshoe" , "lucky horseshoe" }.
 
@@ -88,7 +88,7 @@ instead of sniffing Stalls:
 
 The description of Stalls is "     This room appears to be the small lobby to one of the guest wings, and while it looks like the main part of the building is still mostly boarded up, this part appears to have been repaired recently, and halls to the north and south appear to have been refurbished for use. Strangely enough, someone seems to have hung a sign in this area, labeling this particular area 'The Stalls'.".
 
-North of Stalls is Mares Quarters. 
+North of Stalls is Mares Quarters.
 South of Stalls is Holding Pens.
 
 
