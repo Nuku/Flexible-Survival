@@ -171,7 +171,7 @@ East of Sheep Meadow SW is Sheep Meadow SE.
 The description of Sheep Meadow SE is "[MeadowSEDesc]".
 
 to say MeadowSEDesc:
-	say "     You're in the southeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south and and bounded by a long fence to the east, it stretches out further to the west, northwest and north.";
+	say "     You're in the southeastern quadrant of an enormous meadow, still green in contrast to the dry grassland outside the farm. Ending at the wall of the milking shed in the south and bounded by a long fence to the east, it stretches out further to the west, northwest and north.";
 	if daytimer is day:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
 	otherwise:
@@ -316,7 +316,7 @@ instead of going east from Central Farm Square while (hp of Corbin < 2 and dayti
 
 instead of going to Central Farm Square while (companion of player is Felinoid companion and hp of Corbin < 2 and daytimer is night and Dexterity of Corbin is 0):
 	if debugactive is 1:
-		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";	
+		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
 	say "     Do you want to go after your pet and see what he's up to (Y), or do you just let him go to do his cat-things, trusting that he'll return eventually (N)?";
@@ -325,7 +325,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     Following the large feline, you walk into the milking shed, immediatley noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
 		say "     Taking in those attractive sights, you only notice a moment later that tubes of the milking apparatus dangle in the air on the front side of his body, twitching as something is sucked through them. Is he using that thing as a cock pump? You're tempted to step forward and have a look - but before you can do so, the felinoid is already stalking closer to Corbin on silent paws. He keeps sniffing the air, giving low rumbles from his throat and you can see the big cat's maleness get more erect by the second. Soon, the felinoid is right behind the horseman - at which point he stretches his head forward and gives the unsuspecting cowboy a lick between the legs. Confronted with someone making their presence known in such an intimate matter, Corbin whirls around - which is complicated a bit by the fact that there are two suction cups attached to the small but perky breasts just above his genitals. His female genitals at that - he isn't a stallion at all, but has a rather wet mare's pussy between his legs into which he was thrusting a rubber dildo.";
 		say "     [WaitLineBreak]";
-		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";		
+		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
 		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin (Y), or would you rather pull him off (N)?";
 		if player consents:
@@ -356,7 +356,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		
 instead of going to Central Farm Square while (companion of player is Felinoid companion and hp of Corbin > 1 and hp of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
-		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";		
+		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, your felinoid companion gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
 	say "     [line break]";
 	say "     Do you want to go after your pet and see what he's up to (Y), or do you just let him go to do his cat-things, trusting that he'll return eventually (N)?";
@@ -365,7 +365,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     You can see where this is going from a mile away, so you follow the large feline into the milking shed, immediatley noticing that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead, where you also see the felinoid weave in and out of the many deep shadows in this place. Sounds like Corbin is at it again with one of his nightly milking sessions. Walking along the long row of milking stalls, you find all of them empty - until you come to the next to last one... where your cowboy friend Corbin is standing in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
 		say "     Taking in those attractive sights, you only notice a moment later that tubes of the milking apparatus dangle in the air on the front side of his body, twitching as the cuntboy's creamy milk is sucked through them. Before you can do or say anything, the felinoid is already stalking closer to Corbin on silent paws. He keeps sniffing the air, giving low rumbles from his throat and you can see the big cat's maleness get more erect by the second. Soon, the felinoid is right behind the horseman - at which point he stretches his head forward and gives the unsuspecting cowboy a lick between the legs. Confronted with someone making their presence known in such an intimate matter, Corbin whirls around - which is complicated a bit by the fact that there are two suction cups attached to the small but perky breasts just above his genitals. His female genitals - a rather wet mare's pussy between his legs into which he was thrusting a rubber dildo.";
 		say "     [WaitLineBreak]";
-		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";		
+		say "     Startled by the sudden appearance of a large feral beast in his 'private place', Corbin flinches back, which is enough to pull the suction cups off his breasts, flopping through the air in a spray of fresh milk. He tries to catch them, but the only thing that generates is more chaos, as he doesn't hold on to the dildo in his pussy at that moment, making it slip out. In between trying to juggle too many items at once, the horseman stumbles and falls on the ground, at which point the loudly purring felinoid makes his move, stepping right next to Corbin and rubbing his head affectionately against his naked form. From the cuntboy's reaction, you see that your feline pet must have gone all out with his special pheromones at the moment, as Corbin can't help but moan loudly as he lies back, relaxing visibly and stroking his pussy.";
 		say "     [line break]";
 		say "     You have little doubt what the felinoid wants to do next. Do you let him mount Corbin (Y), or would you rather pull him off (N)?";
 		if player consents:
@@ -389,8 +389,8 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 		say "     [line break]";
 		say "     The cat can look after himself generally, and the farm is a pretty peaceful place in today's world, so you jut leave the felinoid be. He'll return eventually, as he always does.";
 		now lastfuck of Corbin is turns;
-		move player to Central Farm Square;	
-	
+		move player to Central Farm Square;
+
 instead of going southwest from Central Farm Square while (hp of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
@@ -575,8 +575,8 @@ to say CorbinSexMenu:
 				otherwise if (nam is "Milk Corbin"):
 					say "[CorbinSex6]";
 				otherwise if (nam is "Let Corbin mount the felinoid"):
-					say "[CorbinSex7]";					
-				wait for any key;			
+					say "[CorbinSex7]";
+				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off?";
 			if the player consents:
@@ -587,7 +587,7 @@ to say CorbinSexMenu:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		otherwise:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-	clear the screen and hyperlink list;					
+	clear the screen and hyperlink list;
 
 to say CorbinSex1: [cock sucked by Corbin]
 	say "     As you ask the equine cowboy for a blowjob, he chuckles and says 'Want some attention by this farm's best cocksucker, hm?' Smiling, he crouches down, his hands already on your crotch. In no time at all, he's got your clothes out of the way and the strong fingers of his hand on your manhood. Stroking it till it's fully hard, he looks up at you, then kisses the tip and slides his lips down your shaft. Aaah, that feels great. Corbin teases your shaft with his tongue as he goes deeper and deeper, with his hand meanwhile cupping and fondling your balls. Finally his nose bumps against your crotch, the horseboy's breath hot against your skin as he holds all of your cock in his mouth.";
@@ -808,9 +808,9 @@ to say CorbinSex7: [Corbin + Felinoid]
 		say "[CorbinSex7_Male]";
 	otherwise:
 		say "[CorbinSex7_Female]";
-		
 
-to say CorbinSex7_Male: 
+
+to say CorbinSex7_Male:
 	say "     [line break]";
 	say "     What shall it be you want to do with your cuntboy and felinoid friends? Fuck Corbin's ass [link](1)[as]1[end link], or rather the felinoid's ass [link](2)[as]2[end link], maybe get a blowjob from Corbin [link](3)[as]3[end link] or present your manhood to the felinoid to have him lick it [link](4)[as]4[end link]?";
 	now calcnumber is 0;
@@ -973,9 +973,9 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 19 and score [dice plus bonus]: (Charisma Check)[line break]";
-		if dice + bonus >= 19: 
+		if dice + bonus >= 19:
 			say "     ...she seems to be a little uncomfortable, but the kitten does step out from behind Anthony, walking foward towards you. The girl looks down, playing with the hem of her shirt as she stammers out, 'I-I'm Selena. It... it's nice to meet you, [if player is female]Miss[otherwise]Sir[end if].'";
-		otherwise: 
+		otherwise:
 			say "     ...but it doesn't seem to be enough. She stays behind Anthony and gives a tiny wave. The little girl says, 'I'm S-Selena,' and ducks back behind her guardian, her tail now the only visible part of her.";
 		say "     'There, that wasn't so hard, was it?' Anthony says and tousles Selena's hair affectionately. Then he crouches down beside the young catgirl and continues in a more apologetic tone, 'As for the horses - I'm afraid not, kitten. We've got a... a number of mares now, out in the paddock, but Lucifer won't let anyone really get at them. That mustang is pretty dangerous for anyone to deal with - especially a little girl. But I'm sure Corbin will give you a piggyback ride if you ask him nicely...'";
 		say "     [WaitLineBreak]";
@@ -983,7 +983,7 @@ instead of going northwest from Central Farm Square while (hp of Anthony is 0 or
 		say "     Her ears droop at this, but Selena nods, giving him one last hug before trudging out of the room, briefly glancing at you before she disappears through the doorway. Waiting a few seconds after watching Selena walk out of the room, Anthony calls after her, 'I can see the shadow of your tail on the wall, little lady. Don't eavesdrop, that's not nice. And please go do your homework. Now.' After a little huff that can be heard through the open door, there is only silence. Something tells you she's gone now, but that anthro kitten walks on pretty quiet paws...";
 		say "     [WaitLineBreak]";
 		say "     Anthony clears his throat, then says, 'Hard to believe she's the kitten that got left at our gate only some short days ago. Growing up in jumps, large and small. Well, that's the new world I guess.' He shrugs and looks back over to the door through which Selena left, a smile playing over his lips. 'She's a sweet girl, and I'm glad to have her. One has to watch out a bit with her though - she can think up the wildest things to do. I'd appreciate it if you could try to rein her in a bit if you see her planning some hijinx on the farm grounds. Ha - a typical feline... let's just make sure that curiosity doesn't lead this kitty astray...'";
-		now hp of Selena is 2;  
+		now hp of Selena is 2;
 		now libido of Selena is 5;   [neutral start]
 ]
 
@@ -1375,13 +1375,13 @@ instead of fucking the Shawn:
 	otherwise: [at night, he's got some time to chat]
 		say "     With Shawn almost constantly busy chatting with his boyfriend Duke, you can't get a word in edgewise.";
 		say "     <Wahn says: Sex scenes can be added somewhen later...>";
-		
-		
+
+
 instead of going north from Central Farm Square while (hp of Lucifer is 0):
 	move player to Mustang Paddock;
 	wait for any key;
-	challenge "Wild Mustang";		
-	
+	challenge "Wild Mustang";
+
 [
 Section 4 - Endings
 
