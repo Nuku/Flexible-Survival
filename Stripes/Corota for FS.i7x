@@ -78,7 +78,7 @@ When Play begins:
 	now cock entry is "[one of]barbed[or]split[or]free hanging[or]hemipenis[or]serpentine[at random]";
 	now face change entry is "a lump that starts at the base of your throat quickly turns into an entire facial cramp.  In seconds, your neck is quickly extending to several times its old length, while your face stretches at the same time to a more serpentine shape.  Feeling like it's done transforming, you suddenly feel an explosion of expanding bone in your forehead, warning you of more to come.  Just as you feel a sensation that can best be described as ripping start from the tip of your face to the base of your neck, you hear a tearing sound, and your head and neck split apart, turning into a pair of functioning halves.  Your arms shoot up to force the two together and you find that they fuse together as readily as they split apart, your head capable of breaking from one into two on a whim";
 	now body change entry is "you're left gasping for air as your body tightens, some of its mass shifting through you and settling in your back.  When the pressure finally comes to a halt, your body is forced to double over in pain as two great, leathery wings form from the mass in your back.  When the wings are dried off some hours later, you notice the ample amounts of golden dust falling off.  Your arms begin to tingle as though being prickled all over, soon returning back to their original shape and build. They even have that little blemish in that one spot!  Any celebration at the nanites work is cut short as suddenly, with a great deal of pain, it feels like some thing's trying to force its way through your chest.  In a burst of growth, you've got a second pair of arms resting about halfway down your body.  The changes continue, moving lower as the muscles and bones in your lower half twist and crack, warning you of the coming changes in their own special, painful way.  As the changes come to a halt, you find your body slender and flexible and your legs very leonine, well suited for raking someone with their claws";
-	now skin change entry is "your body takes an ocher tint as as its veins darken noticeable, becoming readily traceable with the naked eye.";
+	now skin change entry is "your body takes an ocher tint as its veins darken noticeably, becoming readily traceable with the naked eye.";
 	now ass change entry is "your lower spine feels like someone's trying to tear it in two, and in a way someone (well, something) is!  Exploding out in a burst, your spinal column extends into two long tails, each capped with a spiked knob.  Once some muscle finally grows in on the limb, you find that each limb is fully prehensile.  If only it weren't so bloody painful growing them!";
 	now cock change entry is "a pressure builds in your cock[if cocks of player > 1]s[end if] as the nanites within struggle for dominance.  In the end, they seem to agree on a mutual condition, your groin[if cocks of player > 1]s[end if] finally exploding into change.  In seconds you're left amazed and disturbed as your cock splits down the center, small barbs forming along its length.  Waiting for it to slide into your body for protection, you're further surprised as it continues to hang limply, waiting to be aroused.";
 	now str entry is 14;
@@ -89,7 +89,7 @@ When Play begins:
 	now cha entry is 10;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 68;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 9;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall' Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -100,7 +100,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "corota venom";	[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
@@ -175,4 +175,4 @@ when play ends:
 ]
 
 
-Corota for FS ends here. 
+Corota for FS ends here.
