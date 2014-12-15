@@ -16,10 +16,10 @@ Instead of Resolving a Horse Sense:
 		say "     As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building.  Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out.  Thankfully it is very brief.  And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted.  At least you get to enjoy the beautiful lightning across the sky.  After the rain passes, the water is quickly soaked up by the parched soil.";
 	otherwise:
 		say "     Basking in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave.  Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat.  As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
-		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst.  Throwing your head back and shaking the watery drops of rain off from your face you let out an unconscious whinny just in time for a crack of thunder to snap above your head.  The bolt of lightning that follows darkens the land for a moment, but despite this you find yourself continuing to run with no particular destination in mind.  There's no fear of the dancing electricity above you as as you run, momentarily lost in the moment.  The rain passes as quickly as it came, but the lingering changes that it brought continue.";
+		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst.  Throwing your head back and shaking the watery drops of rain off from your face you let out an unconscious whinny just in time for a crack of thunder to snap above your head.  The bolt of lightning that follows darkens the land for a moment, but despite this you find yourself continuing to run with no particular destination in mind.  There's no fear of the dancing electricity above you as you run, momentarily lost in the moment.  The rain passes as quickly as it came, but the lingering changes that it brought continue.";
 		infect "black equinoid";
 		infect "black equinoid";
-		decrease humanity of player by 10; 
+		decrease humanity of player by 10;
 	increase score by 1;
 	now Horse Sense is resolved;
 
@@ -49,7 +49,7 @@ Instead of Resolving a Victim:
 			if humanity of player > 100, now humanity of player is 100;
 			increase score by 5;
 			now Victim is resolved;
-		otherwise:	
+		otherwise:
 			say "     Managing to deal with the little slime as best you can by at least keeping him occupied, you find that the tigress hooker has taken the smart route and gone on about her way as the female herm is now nowhere in sight. Shrugging, but feeling as though you did a good thing you go about your business without thinking about what may happen to the tigress come later. After all, there's only so much you can do for one person.";
 			increase humanity of player by 5;
 			if humanity of player > 100, now humanity of player is 100;
@@ -86,7 +86,7 @@ Instead of Resolving a Portrait:
 	challenge "Alpha Husky";
 	challenge "Alpha Wolf";
 	challenge "Shemale Smooth Collie";
-	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry."; 
+	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry.";
 	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [facename of player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
 	increase humanity of player by 10;
 	if humanity of player > 100, now humanity of player is 100;
@@ -147,7 +147,7 @@ The sarea of Chocolate Treat is "High".
 when play begins:
 	add Chocolate Treat to badspots of furry;
 	add Chocolate Treat to badspots of humorous;
-	add Chocolate Treat to badspots of hermaphrodite; 
+	add Chocolate Treat to badspots of hermaphrodite;
 
 Instead of Resolving a Chocolate Treat:
 	[puts Chocolate Lab as lead monster for infection and impregnation]
