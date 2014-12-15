@@ -140,7 +140,7 @@ The icon of Athanasia is Figure of Athanasia_icon.
 the scent of the Athanasia is "The phoenix smells of woodsmoke.".
 
 to say athanasiadesc:
-	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as as tall as a normal human being when upright.  She has rich red and golden plumage over her hawk-like body.  The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them.  Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side.  Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";
+	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright.  She has rich red and golden plumage over her hawk-like body.  The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them.  Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side.  Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";
 
 Instead of conversing the Athanasia:
 	if hp of Athanasia < 5:
@@ -201,7 +201,7 @@ to say sexwithAthanasia:
 			say "[athanasiasex07]";		[give cunnilingus]
 		if hp of Athanasia < 7, increase hp of Athanasia by 1;
 		athanasiasexchange;
-		
+
 to athanasiasexmenu:
 	say "     In the mood for some more fun with the phoenix, you decide to assist her with some more sexual self-discovery.  Having gotten pretty familiar with her habits and desires, you can probably predict what she'll be in the mood for if you use some timing and approach her in the appropriate manner.  What would you like to do with the sexy firebird this time?";
 	now sextablerun is 0;
@@ -295,7 +295,7 @@ to athanasiasexmenu:
 	athanasiasexchange;
 	wait for any key;
 	clear the screen and hyperlink list;
-	
+
 to say athanasiasex00:		[first time]
 	say "     Deciding it's pretty clear what the new and improved Athanasia wants, you run your hands over her soft feathers, sliding them down under her tail and stroking over her wet pussy.  It feels so hot to the touch, but does no harm.  Your nerves can tell it is burning, but there is no pain or discomfort that you'd expect with such a heat.  The phoenix moans at your touch, pressing her hindquarters back against your touch and raising her tail.  'Mmm... yes, that feels so good.'";
 	if cocks of player > 0:
