@@ -39,7 +39,7 @@ instead of navigating Dry Plains while (hp of Thomas > 0 and hp of Thomas < 100 
 		if diceroll is greater than 10:
 			say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 			say "     [line break]";
-			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
+			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
 			now Libido of Felix is 3;
 		otherwise:
 			say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";
@@ -275,7 +275,7 @@ to say FelixTalk2:
 	if diceroll is greater than 10:
 		say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 		say "     [line break]";
-		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
+		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
 		now Libido of Felix is 3;
 	otherwise:
 		say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";
@@ -560,7 +560,7 @@ When Play begins:
 	now face entry is "elongated and reptilian, with a tooth-filled mouth and only slits on your snout as a nose. A spined crest runs over the top of your head and down the long neck, ending at the shoulders and giving you a dashing appearance";
 	now body entry is "that of a very large lizard, at least as big as a horse. It's muscular, but sleek, promising agility and speed on your four legs";
 	now skin entry is "scaled, sand-colored";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "A long and flexible tail stands out behind you, perfect to keep your balance.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ridged, reptilian";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shapes itself into the elongated shape of a lizard, complete with snout and tooth-filled maw. Instead of hair, a spined crest forms on the top of your head, running down the back of your neck and ending between your shoulders"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a large lizard's, a quadrupedal form that promises strength as well as speed with its sleek lines"; [ body change text. format as "Your body feels funny as (your text)" ]
