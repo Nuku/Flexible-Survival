@@ -14,13 +14,13 @@ lizgirlangry is a number that varies.
 
 
 to say lizgirl herm:
-	choose row monster from the table of random critters;	
+	choose row monster from the table of random critters;
 	now sex entry is "Both";
 	now cocks entry is 1;
 	now cock length entry is 8;
 	now cock width entry is 3;
 	infect;
-	
+
 to say lizgirl female:
 	choose row monster from the table of random critters;
 	now sex entry is "Female";
@@ -28,19 +28,19 @@ to say lizgirl female:
 	now cock length entry is 0;
 	now cock width entry is 0;
 	infect;
-	
+
 to say lizgirl mark:
 	now lizgirlmarked is 1;
-		
+
 to say lizgirl impreg:
 	now lizgirlimpreg is 1;
-		
+
 to say lizgirl check angry:
 	if lizgirlangry is 1:
 		if hp of player < 11:
 			now fightoutcome is 19;
-			say "The lizard girl draws away from the fight. [line break][line break]'Useless useless useless, your blood is tainted and weak!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
-		
+			say "The lizard girl draws away from the fight.[line break][line break]'Useless useless useless, your blood is tainted and weak!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
+
 to say lizgirl attack:
 	if lizgirlmarked is 0:
 		say "[lizgirl mark]";
@@ -51,19 +51,19 @@ to say lizgirl attack:
 	otherwise:
 		if cocks of player is 0:
 			if lizgirlimpreg is 0:
-				say "'You are already marked as mine! And yet still here you are with nothing for me?' she says angrily, pushing you to your back and lowering herself between your legs. This time, you know what's coming and you spread yourself a little wider for her as she draws a whimper after whimper from you as she takes to your dripping slit. Slowly as her ministrations increase you feel a tingling in your front as your clitoris grows, swelling out into a male shaft, even as a pair of orbs swell into existence below them. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl mark][lizgirl herm]";	
+				say "'You are already marked as mine! And yet still here you are with nothing for me?' she says angrily, pushing you to your back and lowering herself between your legs. This time, you know what's coming and you spread yourself a little wider for her as she draws a whimper after whimper from you as she takes to your dripping slit. Slowly as her ministrations increase you feel a tingling in your front as your clitoris grows, swelling out into a male shaft, even as a pair of orbs swell into existence below them. She pulls back at last, licking her lips. Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random] on your thigh, rubbing her own juices over the wound. It stings a little, but you sigh in contentment knowing she has plans for your future.[lizgirl mark][lizgirl herm]";
 			otherwise:
 				if lizgirlinheat is 0:
-					say "'Mmm, you carry my seed little one, do not fear, you will be done soon.' the Lizard Girl murmurs close by your head, walking around you [one of]as she runs her clawed hands all over every exposed part[or]lashing out at random with her tongue every so often, leaving tingling little spots all over you[at random].";	
+					say "'Mmm, you carry my seed little one, do not fear, you will be done soon.' the Lizard Girl murmurs close by your head, walking around you [one of]as she runs her clawed hands all over every exposed part[or]lashing out at random with her tongue every so often, leaving tingling little spots all over you[at random].";
 				otherwise:
-					say "'Oh, what's this? Are we feeling a little tender, a little needy? Oh my poor baby. Come here.' the lizard girl says, taking you into her arms. For your part, its a welcome relief as she starts to lap at your aching entrance, cleaning the latest stains of your semen that had leaked out. Your orgasm, female in origin, wracks your body, leaving you at peace in the wonderful afterglow. Laying there still, you feel a need for something to taste and before you know what you are doing you have your head buried between the lizard girl's thighs, administering pleasure to her slit even as she continues on your own. After what feels like days of pleasure and release you slowly pull apart. 'My wonderful little treasure, you are, without a doubt, perfect.' she says, and you feel that inner glow intensify. Looking down at her thigh, you see another name scrawled there, similar to hers on your own leg. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
+					say "'Oh, what's this? Are we feeling a little tender, a little needy? Oh my poor baby. Come here.' the lizard girl says, taking you into her arms. For your part, it's a welcome relief as she starts to lap at your aching entrance, cleaning the latest stains of your semen that had leaked out. Your orgasm, female in origin, wracks your body, leaving you at peace in the wonderful afterglow. Laying there still, you feel a need for something to taste and before you know what you are doing you have your head buried between the lizard girl's thighs, administering pleasure to her slit even as she continues on your own. After what feels like days of pleasure and release you slowly pull apart. 'My wonderful little treasure, you are, without a doubt, perfect.' she says, and you feel that inner glow intensify. Looking down at her thigh, you see another name scrawled there, similar to hers on your own leg. 'She would be proud too,' you say softly, meaning every word of it. Kissing softly, you part ways.";
 		otherwise:
 			if lizgirlimpreg is 0:
-				say "Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now its my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break] 'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
+				say "Looking to your thigh, the recognizable Lizard Girl smiles, 'Always wonderful to see my pets blossoming and ready.' she pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn.' she says, snapping your attention away from her assault on your reproductive system. All of a sudden,  you feel a pressure build all down the your members length as her own seed pours into your body, leaving your balls swollen and tingling.[line break]'Now be a good dear, and don't fight it any more.' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			otherwise:
 				say "'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member.  She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
-	infect;		
-						
+	infect;
+
 to say lizgirl defeat:
 	if lizgirlimpreg is 0:
 		if lizgirlangry is 0:
@@ -88,7 +88,7 @@ to say lizgirl defeat:
 			say "[lizdefnone]";
 
 to say lizdefmale:
-	say "You look down upon the defeated lizard girl[']s body, you arousal growing as you decide to sate your lusts on this creature.[line break]You stride over to her and undress, you cock growing erect with thoughts of what you[']re about to do to her. You kneel down beside her and push her onto her stomach, causing her to groan. You position yourself behind her, taking hold of her hips with one hand while the other lifts up her reptilian tail to reveal her wet folds. You grin and lick your lips pulling her hips up to meet yours as you press the tip of your [cock of player] length against her sex and slide it in.[line break]You moan out in pleasure, her reptilian cunt instinctively gripping and pulling on your shaft, urging you to fuck her. Not wasting any time, you begin to buck into her tight depths, both arms rapped around her tail for support.[line break]The lizard girl beneath your gasps and groans at this treatment, her tail wrapping around you as much as it can, trying to pull you closer to her. You grit your teeth and buck into her harder, trying your best to hold of the impending orgasm you feel coming. You can barely hold on any longer when the girl beneath you cries out as she climaxes, her cunt spasming along your length and sending you over the edge. You[']re cries of joy mix with hers as you empty your balls into her depths, her cunt milking your [cock size desc of player] shaft for your cum.[line break]You pant and groan as you come down from your climax, slipping your length out of her cunt, your cum leaking out from her hole. You stand up and give the lizard girl[']s ass a soft slap, making her shiver and groan, before you grab your gear and head out.";
+	say "You look down upon the defeated lizard girl[']s body, you arousal growing as you decide to sate your lusts on this creature.[line break]You stride over to her and undress, your cock growing erect with thoughts of what you[']re about to do to her. You kneel down beside her and push her onto her stomach, causing her to groan. You position yourself behind her, taking hold of her hips with one hand while the other lifts up her reptilian tail to reveal her wet folds. You grin and lick your lips pulling her hips up to meet yours as you press the tip of your [cock of player] length against her sex and slide it in.[line break]You moan out in pleasure, her reptilian cunt instinctively gripping and pulling on your shaft, urging you to fuck her. Not wasting any time, you begin to buck into her tight depths, both arms rapped around her tail for support.[line break]The lizard girl beneath your gasps and groans at this treatment, her tail wrapping around you as much as it can, trying to pull you closer to her. You grit your teeth and buck into her harder, trying your best to hold of the impending orgasm you feel coming. You can barely hold on any longer when the girl beneath you cries out as she climaxes, her cunt spasming along your length and sending you over the edge. Your cries of joy mix with hers as you empty your balls into her depths, her cunt milking your [cock size desc of player] shaft for your cum.[line break]You pant and groan as you come down from your climax, slipping your length out of her cunt, your cum leaking out from her hole. You stand up and give the lizard girl[']s ass a soft slap, making her shiver and groan, before you grab your gear and head out.";
 
 to say lizdeffemale:
 	say "You look down upon the defeated lizard girl[']s body, you arousal growing as you decide to sate your lusts on this creature.[line break]You stride over to her and undress, your pussy getting nice and wet thinking about what you[']re going to do to her. You kneel down beside her and roll her onto her back, taking hold of her legs and spreading them open to show her sexy cunt. You grin, licking your lips and moving yourself between her legs, sliding your folds up against hers.[line break]She moan, involuntarily pressing back against you as you begin to grind your pussy against hers. Holding one leg of hers up with a hand, you take hold of one of your breasts with the other and gently begin stoking it and playing with the nipple. You look down at the female beneath you and notice that she's begun fondling her own breasts too, tweaking her nipples, and rubbing them together. You smile and laugh, getting even more turned on by her wanton display of need.[line break]You gasp, eyes going wide as you feel a long scaly shape sliding between your cunt and hers. You glance down and moan as you see her tail pressing and grinding against both of her sexes, the end pressing up against yours and slipping in. You arch your back and groan in pleasure as she stimulates your insides with her tail, pressing up against the walls of your pussy and flicking the tip of her tail up and down your depths. Your body shakes and shivers at this, quickly bringing you to orgasm as your cunt clamps down on her tail, your fem juices squirting out around the sides.[line break]You collapse in a heap, panting hard and groaning in the aftermath. Not one to be ungrateful though, you roll yourself onto your stomach and move to press your mouth against her folds, gently kissing and licking at them. Taking hold of the end of her tail, still slick with your juices, you press it against her sex and slide it in, using it like a living dildo. She gasps and squirms in response as you pump the end of her tail in and out of her while you lick and nibble at her clitoris. Soon enough she is crying out in orgasm, spraying your face with her juices. You eagerly lap them up and slip her tail out of her cunt. Once she lets out one last shiver or orgasmic pleasure, she collapses in an exhausted heap.[line break]Smiling all the while, you get up and grab your equipment and quietly sneak away, the taste of the lizard girl still on your lips.";
@@ -103,7 +103,7 @@ to say lizgirl desc:
 		now lizgirlangry is 1;
 	otherwise:
 		say "A five foot tall upright lizard stands before you. Dark green scales cover her back leading to a lighter almost blue shade around her front, with a white stripe leading from her neck down, between her small breasts to her cleft. She stands appraising, looking at you with a detached sort of grace, a half smile across her short muzzle. You can't help feel that to her, you are nothing more than an art piece awaiting her masterful expertise.";
-			
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -116,7 +116,7 @@ When Play begins:
 	now name entry is "lizard girl"; [Name of your new Monster]
 	now attack entry is "[one of]She rakes you with her sharp claws.[or]A spinning scaled form precludes the tail that smacks into your face, knocking you down.[or]Laughing the reptile lances her head forward to bite you on the arm[at random][line break][lizgirl check angry]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[lizgirl defeat]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[lizgirl attack]"; 
+	now victory entry is "[lizgirl attack]";
 	now desc entry is "[lizgirl desc]";	[ Description of the creature when you encounter it.]
 	now face entry is "longer and thinner as soft dark colored scales cover your short muzzle, lending your ear less features a very reptilian air";	[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation";[ Body Description, format as the text "Your Body is (your text)."]
@@ -130,7 +130,7 @@ When Play begins:
 	now cock change entry is "it feels wrong, as though it is not meant to stay and is just a means to an end"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
-	now sta entry is 10;						  
+	now sta entry is 10;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 16;
@@ -152,7 +152,7 @@ When Play begins:
 	now loot entry is "";				[ Loot monster drops, ]
 	now lootchance entry is 0;		  [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "curvaceous";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]reptilian[or]lizard-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -169,13 +169,13 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "lizard girl";	
-	now heat cycle entry is 2;				
-	now heat duration entry is 2;					
-	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]"; 
-	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";	
+	now infect name entry is "lizard girl";
+	now heat cycle entry is 2;
+	now heat duration entry is 2;
+	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]";
+	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";
 	now trigger text entry is "";
-	now description text entry is "";	
+	now description text entry is "";
 	now inheat entry is "[liz impreg]";			[The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
 	now fheat entry is true;
 	now mpregheat entry is false;
