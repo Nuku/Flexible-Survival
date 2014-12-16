@@ -33,7 +33,7 @@ to say defaultheat:
 	if heatlevel is 3:
 		increase libido of player by 2;
 	if libido of player > 100, now libido of player is 100;
-	
+
 to say huskyheatstart:
 	if heatform is 0:	[starting female heat]
 		increase Cunt length of player by 2;
@@ -61,7 +61,7 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 		let heatzone be "Outside";
 		let zz be a random visible dangerous door;
 		if zz is not nothing, now heatzone is the marea of zz;
-		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
+		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 			choose row X from the table of random critters;
 			if there is no area entry, next;
 			if area entry is heatzone:
@@ -69,7 +69,7 @@ to say huskyheat:  	[Husky stays in heat permanently. Let's make an interesting 
 				if name entry is "Alpha Husky" or name entry is "Female Husky":		[Huskies are more likely]
 					add X to hmonlist;
 		if hmonlist is empty and heatzone is not "Outside":		[If none valid found, default back to Outside]
-			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ] 
+			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 				choose row X from the table of random critters;
 				if there is no area entry, next;
 				if area entry is "Outside":
@@ -140,7 +140,7 @@ This is the check heat rule:
 						increase turns in heat by 1;	[20% duration of non-heated period lost]
 			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[ Check if it's just triggered]
-					say "You feel a hot rush in your lower belly as some hidden part of your is affected by your tainted sexuality.";
+					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
@@ -225,7 +225,7 @@ This is the check heat rule:
 					now inheat is False;
 			otherwise if cunts of player is 0 and cockname of player is not "human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[ Check if it's just triggered]
-					say "You feel a hot rush in your lower belly as some hidden part of your is affected by your tainted sexuality.";
+					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
