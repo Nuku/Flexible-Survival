@@ -530,6 +530,7 @@ to say mdrake_pvictory_09:		[Taunt her]
 	say "     Bending over further, you plunge your fingers in deeper and faster.  Growing aroused from playing with yourself, it adds to your fun and you continue on with the teasing show.  The dragoness, with her familiar's much-desired ass is put on wanton display, is reduced to panting and drooling at the sight of it.  Some more frantic fingering has you moaning in pleasure and this proves too be too much for the deprived dragoness, sending her to an orgasm that splatters great blasts of her semen into the air, across the ground and over herself.  Getting off on your effect on her, you [if cocks of player > 0 or cunts of player > 0]end up cumming as well[otherwise]groan in unfocused pleasure as your anus clenches down onto your probing digits until the waves of delight ebb[end if].  Having had your release, you realiz you'd carried things much farther than you'd originally planned and should probably get moving on.";
 
 to say mdstaff_overgrown:
+	increase mdrakeoversized by 1;
 	if mdrakeoversized >= 5 and inasituation is false:
 		say ".  As with the previous times, this power makes your already oversized ass quiver as you're filled with the pleasant rush of your backside inflating further.  As you fondle your expanding booty with both hands, you allow yourself to flop back onto the ground with a lustful moan as you grow increasingly back-heavy.  You can't suppress a happy squeal as you land on your super-padded bottom.";
 		attempttowait;
@@ -559,7 +560,6 @@ to say mdstaff_overgrown:
 	now fightoutcome is 20;		[player now 'lost' the fight]
 	decrease mdrakebeaten by 1;		[removing this win from the tally...]
 	increase mdrakeloss by 1;		[...and counting it as a loss instead]
-	increase mdrakeoversized by 1;
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
@@ -575,6 +575,7 @@ to say mdstaff_overgrown:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 	if libido of player > 100, now libido of player is 100;
 	if mdrakeoversized >= 5 and inasituation is false:
+		now mdrakeoversized is 100;
 		choose row monster from the table of random critters;
 		now humanity of player is 0;
 		now tailname of player is "Magic Drake";
