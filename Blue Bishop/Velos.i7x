@@ -16,7 +16,7 @@ Instead of resolving Strange Serpent:
 			now hp of Velos is 1;
 		otherwise:
 			say "     'Right, great, you don't look nearly as mentally deranged as the general fare you see down and about this place--though I suppose I could be wrong...' A little ill at ease with this creature, you greet it before it continues. 'I'm really in need of help here; I'm wholly unequipped to depart from this rather unsettling environment, and I need someone to carry me off.'";
-			say "      You're not rightfully sure if you can trust the serpent, but for the sake of argument you infer that you might be up to the task, simple as it seems.";
+			say "     You're not rightfully sure if you can trust the serpent, but for the sake of argument you infer that you might be up to the task, simple as it seems.";
 			say "     'Er, right, there's a catch--and before you roll your eyes and silently pat yourself on the back for your clever assumption, it's not as bad as you think... Depending on how you look at it.' Sighing, you decide to let him continue, for now.";
 			say "     'Thank you. Sadly, I can't really expose myself to light for more than a number of minutes at a time--Hell, even this dim light here tests me. No, I require a means of... Er... Obfuscation, shall we say?' You're not rightly sure what he's suggesting so you, reasonably enough, ask him to elaborate.";
 			if "Less Anal" is listed in feats of player:
@@ -39,15 +39,15 @@ Instead of resolving Strange Serpent:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. You can barely contain all of him, distended torso strained under such a considerable holding. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite these circumstances.";
 						say "     Bulge twitching as you must content with his irreverent movements, you're forced to illicit a weakened moan as you feel his head retreat from the hole it once invaded. pulling just enough of itself out that you might see himself before you.";
 					say "     'Quite the tight fit, if I do say so myself! But I like to think that cozy is often an attribute falsely regarded as poor.' He seems rather pleased with himself, try pulling him out?";
-				Otherwise if scalevalue of player > 3:
+				otherwise if scalevalue of player > 3:
 					say ". Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
 					if insectlarva is true and cunts of player is 0:
 						say "     Even as you fully engulf the serpent, his endeavours fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who--after leaving your body--is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1].  Its expulsion if followed by that of the unfertilized insect eggs[end if]. You'd imagine that it's kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						say "     Your new resident would only revel in this now-liberated dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
-					Otherwise:
+					otherwise:
 						say "     Weakly prodding your slightly bloated belly, now having fully engulfed the serpent, you're met with the strong pangs of his irreverent movement. He would only hide in his dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					say "     'Oh, quite the roomy fare, I'm surprised if I even phase you in the slightest! I certainly hope I don't get lost in here...' He seems rather pleased with himself, try pulling him out?";
-				Otherwise:
+				otherwise:
 					say ". Taken aback by these sudden turn of events, you can find that you can tolerate him flooding your bowels only momentarily. There's quite a lot of him, and you're forced to watch as your belly bloats further and further to abide his slippery frame.";
 					if insectlarva is true and cunts of player is 0:
 						say "     Even as you fully engulf the serpent, his endeavours fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who--after leaving your body--is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1].  Its expulsion if followed by that of the unfertilized insect eggs[end if]. You'd imagine that it's kin will find and retrieve the thing, no doubt to be inflicted upon another.";
@@ -318,12 +318,12 @@ to say drmoffattmusing:
 	say "     'What makes you assume I want you?'";
 	say "     'Fair enough...' Velos gravitates towards the desk, his slick frame twisting around one of her skunk statues.  'Given your decor, I wager you would prefer I dip myself in a bucket of black paint first, yes?  No, that'd be silly, I suppose I'd not be the same thing.  Shall I dip myself into a vat of rotten eggs then?  I assume that might rightly approximate the odour for you.'";
 	say "     Scowling, and with some disdain, she carefully pulls the statue from him, finding some cloth to clean it before she places it on the other side of the desk, offering up her retort.";
-	say "    'That's quite a taunt from someone relegating themselves to the inside of another person's ass.'";
-	say "    'Who wouldn't hide in someone's ass around here, the way this room smells?'";
-	say "    'I resent that claim; I keep myself very clean.'";
-	say "    'Perhaps somewhat in body, though I very much doubt in mind.  Tell me--for I am quite curious--how many of your patients have you slept with so far?' he asks, gesturing towards the crayon graffiti.  'I'm fairly certain they don't teach that in medical school.'";
-	say "    'Watch yourself, mister!'  By this point she's doubled over the desk, with a glare that could melt most people on the spot, which is really starting to make you regret this decision.";
-	say "    'Heavens, for a psychologist you're quite easy to manipulate into anger.  I'm beginning to think your credibility might be compromised.'  His final remark causes her to retreat back to her seat with an overly exasperated sigh, no doubt giving up on this whole argument altogether.  Pleased with himself, and a little embarrassed yourself, you start pushing the snake back from whence it came, to which he complies.";
+	say "     'That's quite a taunt from someone relegating themselves to the inside of another person's ass.'";
+	say "     'Who wouldn't hide in someone's ass around here, the way this room smells?'";
+	say "     'I resent that claim; I keep myself very clean.'";
+	say "     'Perhaps somewhat in body, though I very much doubt in mind.  Tell me--for I am quite curious--how many of your patients have you slept with so far?' he asks, gesturing towards the crayon graffiti.  'I'm fairly certain they don't teach that in medical school.'";
+	say "     'Watch yourself, mister!'  By this point she's doubled over the desk, with a glare that could melt most people on the spot, which is really starting to make you regret this decision.";
+	say "     'Heavens, for a psychologist you're quite easy to manipulate into anger.  I'm beginning to think your credibility might be compromised.'  His final remark causes her to retreat back to her seat with an overly exasperated sigh, no doubt giving up on this whole argument altogether.  Pleased with himself, and a little embarrassed yourself, you start pushing the snake back from whence it came, to which he complies.";
 	add 3 to velospostmusings;
 
 
@@ -470,7 +470,7 @@ to say fangmusing:
 		say "     Fang howls briefly in response, and the snake concedes that such is about the sum of what he's going to get out of him, saying his farewell and returning from whence he came.  The wolf tilts his head at you, no doubt a little confused about what has just transpired here.";
 		now Fangvelos1 is true;
 	otherwise:
-		say "     [If fangvelos1 is true]Once more[otherwise]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false], strange that he would be so fine with his presence, perhaps he already knew the snake was in there, or maybe he's just keeping his composure[end if].";
+		say "     [if fangvelos1 is true]Once more[otherwise]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false], strange that he would be so fine with his presence, perhaps he already knew the snake was in there, or maybe he's just keeping his composure[end if].";
 		say "     'Oh, hello[if fangvelos1 is true] again[end if], little doggie.  Who's a cute pooch?  You are!'  Velos's attempt at condescension is met with a low growl in discontent.";
 		say "     '[if fangvelos1 is true]Oh, what's this?  You were frightened by me a whilst ago.  Have you undergone some manner of change when I wasn't looking[otherwise]Oh, you're just scared I might bite you when you're having your fun, is that it[end if]?'";
 		say "     'Talk too much.'  Velos is a bit at odds with the wolf's curt response, but ultimately attempt to coax more out of him.";
@@ -625,7 +625,7 @@ to say leonardmusing:
 		say "     'Ah, well--Wait, I'm sorry, could you repeat that?'  The lion nearly spills his drink, taken off guard by how nonchalant this accusation is laid upon him.";
 		say "     'Oh.  These ladies are certainly better off in your hands, their prior captors far less equipped to care for them as you would.  Though they are still slaves, and not simply by virtue of their infection commanding it.'";
 		say "     'What are you insinuating, 'sir'?'  Fur transparently ruffled, he hands his glass to the feline and lets her off, standing up from his comfortable seat.";
-	Otherwise:
+	otherwise:
 		say "     'But enough of me.  Stranger though my circumstances, I wager you're--quite substantially--more interesting an individual.'  Buttering up Leo, he seems to take this regard quite well, Velos continuing.  'I'm very curious as to how you've acquired all this impressive decor.'";
 		say "     'You have a good eye!  I have a fair number of consorts--None of which are present right now[if hp of Leonard >= 4] save for my love here[end if]--who are more than happy to offer up these gifts as thanks for my... company.'";
 		say "     'Oh? Such a company as yours must be quite exceptional for these consorts to brave this wasteland in obtaining all these niceties.'";
@@ -728,7 +728,7 @@ to say christymusing:
 		say "     'I wasn't all that good with knitting at the nunnery.'  Velos seems a little perturbed that his joke flew right over her head.  '...Wait, so, you're stuck to each other?'";
 		say "     'I suppose you could say that.'";
 		add 19 to velospostmusings;
-	Otherwise:
+	otherwise:
 		say "     'Oh, That's so very naughty, maybe I could borrow him for a--No, no! Nevermind what I said.'  The serpent can't help but furrow his brow at the dragoness's presently conflicted state.";
 		say "     'You're quite the twisted lady, perhaps you should consider a hobby?  Knitting, maybe?  I'm sure we could find some rope and a pair of street lamps...?'";
 		say "     'I wasn't all that good with knitting at the nunnery.'  Velos seems a little perturbed that his joke flew right over her head.";
@@ -853,7 +853,7 @@ to say drmattmusing:
 	say "     'And it talks, huh.'  He quickly grabs a swab and rubs it against the snake, damping it with his slick lubricant, much to his apparent discomfort.  He takes the swab and starts to examine it.  'Well, that's odd.  He's not infectious, by the looks of it.'";
 	say "     'Why would I ever want more of me around?'";
 	say "     'It's rarely ever that simple.'";
-	say "     'I don't know, if I turned my friend into me that'd make my occupancy rather ill-fitting...[run paragraph on][If scalevalue of player < 3] I mean, more than it already is now.[end if]'";
+	say "     'I don't know, if I turned my friend into me that'd make my occupancy rather ill-fitting...[run paragraph on][if scalevalue of player < 3] I mean, more than it already is now.[end if]'";
 	say "     'Could you say [']Aaah['] for me?'";
 	say "     'Say wha--ghft' Velos is interrupted as the scientist assails the serpent with another swab, this time for his saliva, before retreating and looking into it as well, much to the snake's apparent disdain.";
 	say "     'Fascinating...'";
