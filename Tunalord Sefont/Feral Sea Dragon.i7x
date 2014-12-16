@@ -367,8 +367,8 @@ to fsdbiasshift:
 			now fsdbias is 4;
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 				say "     [italic type]Your tainted mind echoes with your defeat, revelling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
-			
-			
+
+
 [to fsdpostureshift:
 	if tempnum2 is 1:
 		if fsdmposture is 0:
@@ -397,7 +397,7 @@ to fsdbiasshift:
 			if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 				say "     [italic type]Your tainted mind echoes with your victory, revelling in your dominance of the beast[if player is submissive], even against your submissive inclinations[end if]. Surely this is a sign of your fate, should you succumb[roman type].";
 	now tempnum2 is 0;]
-				
+
 to say FSDM_1: [Anal Pitching]
 	if boundmod is 1:
 		say "     It doesn't take much before the[if scalevalue of player < 4] massive[end if] beast obliges your endeavour to expose his undercarriage, churring lowly in tainted compliance";
@@ -462,7 +462,7 @@ to say FSDM_1: [Anal Pitching]
 			say ". You'd imagine he'd be embarrassed by the whole ordeal, but you're not sure as to the long-term implications of such a dominant creature being abused in such a way...";
 	now tempnum is 0;
 	now tempnum2 is 0;
-	
+
 to say FSDM_2: [Oral Receiving Cock]
 	say "     Circling around the sea dragon to meet his head, the exhausted beast can only ";
 	if boundmod is 1:
@@ -495,7 +495,7 @@ to say FSDM_2: [Oral Receiving Cock]
 	otherwise:
 		say "     It's not long before you finally cry out in bliss, firing your [cum load size of player] load into the creature's[if boundmod is 1] obliging[end if] maw. [if boundmod is 1]Whining softly, he's gulps audibly in an eager desire[otherwise]Rumbling in detest, he can only oblige being forced[end if] to swallow your cum[if cock width of player > 20], the sheer volume of which quickly causing it to ooze from his lips[end if].";
 	say "     Satisfied, you step away from the dragon, writhing against the sand with a need to satisfy his own, lingering lust in the wake of your task. No doubt the beast will have to attend to his own need after your turn and depart.";
-	
+
 to say FSDM_3: [Oral Receiving Cunt]
 	say "     Circling around the sea dragon to meet his head, the exhausted beast can only ";
 	if boundmod is 1:
@@ -622,7 +622,7 @@ to say FSDM_5: [Anal Catching]
 		if cocks of player > 0:
 			say "     Your own bliss quickly following suit, your cock[smn] unleash your [cum load size of player] load on the beast, [if tempnum2 is 1 and cock width of player > 19]further embarrassing him as he's now utterly drenched in cum[otherwise if tempnum2 is 1]further embarrassing him as your cum also stains him[otherwise if cock width of player > 19]utterly drenching him in your cum[otherwise]staining him with your cum[end if]";
 		otherwise if cunts of player > 0:
-			say "     Your own bliss quickly following suit, you cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
+			say "     Your own bliss quickly following suit, your cunt[sfn] aching against the beast, [if tempnum2 is 1]further embarrassing him as he's stained with your juices[otherwise]staining him with your juices[end if]";
 		if cocks of player > 0 or cunts of player > 0:
 			say ". The dragon can only rumble and [if boundmod is 1]moan in approval, lost in a haze of[otherwise]groan in disdain, muffled under the throes of his[end if] tainted ecstasy.";
 	otherwise:
@@ -1118,7 +1118,7 @@ when play ends:
 						say ". After you assert your dominance, you make him lead you to his cave and claim it as your own.";
 						say "     Your days are filled with the constant abuse of your new servant, forcing him to attend to your every whim and desire. Over time ";
 						if cocks of player > 0:
-							say "[if girl is not banned and girl is not warded]your harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[otherwise]you subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
+							say "you[if girl is not banned and girl is not warded]r harem slowly grows in size, your overwhelming, bestial need requiring you to sate a desire for offspring by collecting some females just for you[otherwise] subjugate more of them under your will[end if], and though you have plenty a subjects to sate your lust";
 						otherwise:
 							say "you subjugate more of them under your will, and though your bestial need[if cunts of player > 0] for offspring[end if] is plenty sated by your subjects";
 						say " you remain particularly fond of abusing your first...";
