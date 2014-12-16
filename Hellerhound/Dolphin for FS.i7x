@@ -9,11 +9,11 @@ Version 1 of Dolphin for FS by Hellerhound begins here.
 when play begins:
 	add {"hermaphrodite dolphin"} to infections of furry;
 	add {"hermaphrodite dolphin"} to infections of hermaphrodite;
-	
+
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 dolphindefeat is a number that varies.
 dolphinconsent is a number that varies.
 dolphinwantmate is a number that varies.
@@ -60,7 +60,7 @@ To say dolphin loss:
 		otherwise:
 			say "You decide against exploiting this opportunity, leaving the creature as she is.";
 	otherwise:
-		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before before it can make it's final, sonic strike, you head off in search of another means to quell your raging hormones.";
+		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
 	if the cunts of the player is not 0: [prefer male action]
@@ -68,7 +68,7 @@ to say dolphin fuck:
 		if scalevalue of player is greater than 3:
 			say "She eagerly slams her cock into your cunt. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
 			say "She continues to ram your eager hole, you can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. At hilt she can only just barely tickle your cervix. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. 'I should be--unf--enjoying this, it's--urgh--rare for someone--Ah!--to handle me so well...' She trails off. You get the impression that, while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
-			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into you womb [impregchance]. You feel her passionate fluids flood the depths of you cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release; she's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";		
+			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into you womb[impregchance]. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release; she's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
 			continue the action;
 		if the cunt width of the player is less than 6:
 			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Let's fix it.";
@@ -80,7 +80,7 @@ to say dolphin fuck:
 		otherwise:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
 		if the cunt length of the player is less than 10:[won't go in far, must extend you]
-			say "She slams her cock into you with a cry of success, by it is cut off as she realizes she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles, and decides. She tells you 'I am going to have to lengthen you cunt, small one. It may hurt'";
+			say "She slams her cock into you with a cry of success, by it is cut off as she realizes she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles, and decides. She tells you 'I am going to have to lengthen your cunt, small one. It may hurt'";
 			say "She begins to slam her cock into you, and grunts when it smashes open your cervix.";
 			if the humanity of the player is less than 60:
 				say "You wince and hope your infected body can repair the damage she, no it, is doing so you may have children.";
@@ -102,7 +102,7 @@ to say dolphin fuck:
 				say "[impregchance]";
 		otherwise:[cunt is finally big enough]
 			say "She shrieks with joy 'Your pussy is finally big enough for me. I bet that took a lot of doing.'";
-			say "She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me, without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now shrinking cock out of your cunt and into the water. [impregchance]";
+			say "She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me, without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now shrinking cock out of your cunt and into the water.[impregchance]";
 	otherwise if "Male Preferred" is not listed in feats of player:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
@@ -125,7 +125,7 @@ to say dolphin fuck:
 			say "She eagerly slams her cock into your ass. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
 			say "Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims.";
 			say "Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously pulls her length from you in brisk departure.[impregchance]";
-		
+
 
 Section 2 - Monster Insertion
 
@@ -139,13 +139,13 @@ When Play begins:
 	now name entry is "hermaphrodite dolphin"; [Name of your new Monster]
 	now attack entry is "She takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "As you [if the location of the player is not Public Beach] swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
+	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "As you [if the location of the player is not Public Beach]swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
-	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]wet, glistening[or]smooth silver[or]thick blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphins. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]wet, glistening[or]smooth silver[or]thick blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphins. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is " blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft as blubber forms and it turns gray and silver"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -153,13 +153,13 @@ When Play begins:
 	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks disappear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 23;
 	now dex entry is 26;
-	now sta entry is 24;					
+	now sta entry is 24;
 	now per entry is 22;
 	now int entry is 20;
 	now cha entry is 19;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.][altered for dolphin so that it does different dmg for each attack]
 	now area entry is "Beach";	[ Current options are 'Outside' and 'Mall', "High", "Beach", "Red", "Labs"  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -170,7 +170,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 28;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dolphin milk";			[ Loot monster drops, ]
 	now lootchance entry is 75;		[ Chance of loot dropping 0-100 ]
@@ -237,7 +237,7 @@ when play ends:
 				say "You spend a long time in the hospital, but eventually you emerge, scarred, but alive.";
 			otherwise:
 				say "You spend some time at the end of each swim looking for the one that changed you, eager to bring her back as your mate. One day, you find her, and entice her to remain with you. She becomes your lifelong mate, and you bear each other many dolphinoid children.";
-		
+
 
 to dolphinify:
 	repeat with y running from 1 to number of rows in table of random critters:
