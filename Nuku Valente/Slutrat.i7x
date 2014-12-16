@@ -148,7 +148,7 @@ To say slut rat growth:
 
 
 Section 1 - Slut Rat Den & Arrival
-	
+
 SlutRat Den is a room. "This little slice of [']heaven['] is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky odor of the rats that dwell within it.  Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements.  For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them.  A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slutrat Den is private. Slutrat Den is fasttravel. It has a number called visittimes.  Slutrat Den has a number called pooltable.
 
 SlutratSub is a number that varies.  SlutratSub is usually 5.		[0 to 10 range, 5=neutral, higher is more a rat sub]
@@ -255,7 +255,7 @@ To Say ratslutwelcome:
 						say "You feel more confident about your dealings with the rat after that little battle.";
 						decrease slutratsub by 1;
 		otherwise:
-			say "     She smiles as she manages to stuff her whole paw into you and starts pumping it in and out, making you moan and quiver as she fists you.  'Mmm... nice and roomy,' she rumbles.  'Just like a nice bitch should be,' she adds while wiggling her fingertips to tease inside you before slipping her paw free.  She licks her dripping paw as her other one gives you ass a swat.  'Good little bitch,' she says with a chuckle.  'Go have a fun, slut.'";
+			say "     She smiles as she manages to stuff her whole paw into you and starts pumping it in and out, making you moan and quiver as she fists you.  'Mmm... nice and roomy,' she rumbles.  'Just like a nice bitch should be,' she adds while wiggling her fingertips to tease inside you before slipping her paw free.  She licks her dripping paw as her other one gives your ass a swat.  'Good little bitch,' she says with a chuckle.  'Go have a fun, slut.'";
 			infect "Slut Rat";
 	otherwise:
 		if breasts of player is greater than 0 and breast size of player is greater than 0:
@@ -453,7 +453,7 @@ To say slutratdomsex:
 		otherwise:
 			say "     Feeling in the mood for a little fun, you push the slutty rat to her knees and [if slutratsub < 4]press[otherwise]guide[end if] her muzzle between your legs to your dripping cunt.  Obediently, she sets to licking and kissing your sensitive folds, then slides her slick tongue into your hot tunnel, making you sigh in pleasure.  You run your fingers through her rough hair and over her round ears.  She works hard to please you, working her tongue up inside you and flicking it against your inner walls to excite any sensitive spot she finds.  Between licking, she kisses and sucks at your clit, making you moan all the more.  She keeps this up diligently until you cum hard, soaking her face and muzzle in your hot juices, which she eagerly laps up.  As the rush of your orgasm starts to fade, you press her to lay back on the floor and take her cock firmly in hand.  As a reward for her hard work and attentive tongue-work, you pump her meat until she cums hard and sprays her seed over herself.  Finished with her, you leave her like that, stick with a mix of your juices and her semen.";
 	infect "Slut Rat";
-	
+
 
 Section 5 - Pool Hall
 
