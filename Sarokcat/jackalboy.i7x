@@ -6,7 +6,7 @@ jackalboy by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say jackalboy attack:
 	say "'wow you got here how did that happen.'";
@@ -34,13 +34,13 @@ When Play begins:
 	now name entry is "jackalboy"; [Name of your new Monster]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[jackalboy loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[jackalboy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[jackalboy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "The jackalboy is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[']t help but enjoy how much your mistress seems to like your new jackal[']s "; [Your have a (your text) face."] 
-	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight ass with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[']t help but enjoy how much your mistress seems to like your new jackal[']s "; [You have a (your text) face."]
+	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself.";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight ass with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "Your face tingles as your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both colour and position, new sounds and smells explode through your enhanced senses as your new jackal[']s muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackals."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it seems to slim down, its form becoming both sleek and slim as it seems to shorten slightly. You can feel your legs shift and change as well, causing you to stumble for a minute as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet. Soon your feet finish changing and you find yourself balancing easily on your new jackal-like paws, as you stand on your slender digitigrade jackal legs."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of short dark fur."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -48,13 +48,13 @@ When Play begins:
 	now cock change entry is "your shaft thins and changes, its tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 8;
 	now dex entry is 20;
-	now sta entry is 10;					
+	now sta entry is 10;
 	now per entry is 22;
 	now int entry is 18;
 	now cha entry is 26;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 20;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Shop";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -65,12 +65,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]slender[at random]";
 	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
@@ -94,7 +94,7 @@ when play ends:
 	if bodyname of player is "jackalboy":
 		if humanity of player is less than 10:
 			if cocks of the player is greater than 0:
-				say "Looking around the city, you finally realize your true purpose in life, and hurry back to the shop where your wonderful mistress is waiting.  You arrive back just in time as not much later your mistress closes up the doors for a while so the military can hunt through the city without bothering the two of you as you become even better acquainted. Eventually after you have worshipped every inch of your lovely mistresses divine body with your tongue and your hands several times, she decides to reopen the shop for a bit.  You are only partially surprised at the fact  that when she opens the store front, it now opens out onto a bustling street in some other city entirely, soon you are happily fetching things and tidying the store for her during the day, while after hours she rewards you for your loyal service by playing with your body and letting you worship her own. As the days pass into years and then decades you realize that you never seem to grow any taller or stronger, and neither you or your mistress ever seem to age, and take it as just another sign of the perfection of your wonderful forms.  You are a perfectly happy pet jackal boy for your mistress, now and forever, just like you wanted to be, and while you will certainly never be her equal or true mate, you are still happy and filled with the joy of being allowed to serve and pleasure her as often as you can.";	
+				say "Looking around the city, you finally realize your true purpose in life, and hurry back to the shop where your wonderful mistress is waiting.  You arrive back just in time as not much later your mistress closes up the doors for a while so the military can hunt through the city without bothering the two of you as you become even better acquainted. Eventually after you have worshipped every inch of your lovely mistresses divine body with your tongue and your hands several times, she decides to reopen the shop for a bit.  You are only partially surprised at the fact  that when she opens the store front, it now opens out onto a bustling street in some other city entirely, soon you are happily fetching things and tidying the store for her during the day, while after hours she rewards you for your loyal service by playing with your body and letting you worship her own. As the days pass into years and then decades you realize that you never seem to grow any taller or stronger, and neither you or your mistress ever seem to age, and take it as just another sign of the perfection of your wonderful forms.  You are a perfectly happy pet jackal boy for your mistress, now and forever, just like you wanted to be, and while you will certainly never be her equal or true mate, you are still happy and filled with the joy of being allowed to serve and pleasure her as often as you can.";
 			otherwise:
 				say "Looking around the abandoned city, you finally realize that your true purpose in life is in serving and being a happy little jackal pet.  A smile tugs across your muzzle as you hurry back to the mall and your mistress, only to find yourself unable to find the mysterious store any longer, your mistress obviously having given up on you and closed up shop already.  You find yourself at a loss for what to do, as you wander aimlessly through the streets, and are soon captured by one of the groups of beasts still roaming the city, hardly even putting up a fight as they take you back to their lair. The beasts seem surprised at the fact that you don[']t change under the influence of the infection, but you soon become a prized treasure, as your servile nature makes you a happy pet for your new masters, and you belly swells again and again with their fully changed offspring.  The fact that you do not seem to age and can bear the offspring of just about any of the beasts in the city, combined with the fact that you are so eager and willing to serve any master now that your mistress has vanished, makes you a valuable treasure in the ongoing struggle in the city.  And you find yourself changing hands several times, even ending up in the military's hands several times, only to betray the humans to your bestial masters as soon as you discover they don[']t intend to use you like a proper little pet and fill you with their seed.  Soon the city is left to the beasts, and you spend the rest of your long life in service to one faction or another, sometimes changing factions monthly, other times staying a happy pet of one group for decades.  You really find yourself not caring who you serve, your mind completely overcome with the joy of helping your current masters, and the simple pleasures of being their well used fuckpet... you just sometimes wish you could find the store again someday, so you could thank the jackal woman properly for all the wonderful help she gave you...";
 		otherwise:
