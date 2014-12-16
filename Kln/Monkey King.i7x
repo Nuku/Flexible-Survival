@@ -7,7 +7,7 @@ Version 2 of Monkey King by Kln begins here.
 More/Less Anal Victory for male]
 The player has a number called MonkeyKingWin.
 
-[PLANS/A FAIRE : 
+[PLANS/A FAIRE :
 Randomiser MK descriptions scenes: [random adj][random name] (v 2)?
 Develop MonkeyKing: give option on how to handle victory . Depending on what you do, Fight intro and/or outcome changes. (v2)
 Interaction during fight? (v2)
@@ -44,16 +44,16 @@ to say losetoMonkeyKing:
 					say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.[fimpregchance]";
 		otherwise:
 			if cunts of player > 0:
-				say "     He sits on you, putting his growing cock against your face. '[italic type]Make it hard, servant.[roman type]' he orders as he pushes the head of his cock in your mouth. You start to protest, but the feeling of a tongue on your clitoris replaces that protest by a moan. The monkey goes to town on your pussy, sucking on your clit and exploring your passage with his tongue while he pistons his hips in your moaning, twitching face. Once he's sated, the rock-hard martial artist sits up and have you sit in his lap. Then, he aligns his member with your opening and spears your [if anallevel is 3]ass[otherwise]cunt[end if] with it. He starts fucking you in a slow, but steady and deep rhythm, making sure the only words coming from your mouth are moans of pleasure. '[italic type]Mmm, yes. This sound is music to my ears...[roman type]'. His hands caress your body, focusing on your breasts and your nipples."; 
-				say "     Suddenly, you gasp in surprise as the Monkey King folds one of his legs and uses his prehensile foot to play with your[if cocks of player > 0]cock, stroking it and playing with its head[otherwise]pleasure button, introducing one or two of his toes in your pussy while doing that[end if]. The new sensation is rapidly too much for you, and your muscles contract around his dick as you climax. Your mate cums shortly after, filling your insides with his sperm. The satisfied monkey takes his leave in a short, taunting victory dance. [if anallevel is not 3][fimpregchance][end if]";
+				say "     He sits on you, putting his growing cock against your face. '[italic type]Make it hard, servant.[roman type]' he orders as he pushes the head of his cock in your mouth. You start to protest, but the feeling of a tongue on your clitoris replaces that protest by a moan. The monkey goes to town on your pussy, sucking on your clit and exploring your passage with his tongue while he pistons his hips in your moaning, twitching face. Once he's sated, the rock-hard martial artist sits up and have you sit in his lap. Then, he aligns his member with your opening and spears your [if anallevel is 3]ass[otherwise]cunt[end if] with it. He starts fucking you in a slow, but steady and deep rhythm, making sure the only words coming from your mouth are moans of pleasure. '[italic type]Mmm, yes. This sound is music to my ears...[roman type]'. His hands caress your body, focusing on your breasts and your nipples.";
+				say "     Suddenly, you gasp in surprise as the Monkey King folds one of his legs and uses his prehensile foot to play with your[if cocks of player > 0]cock, stroking it and playing with its head[otherwise]pleasure button, introducing one or two of his toes in your pussy while doing that[end if]. The new sensation is rapidly too much for you, and your muscles contract around his dick as you climax. Your mate cums shortly after, filling your insides with his sperm. The satisfied monkey takes his leave in a short, taunting victory dance.[if anallevel is not 3][fimpregchance][end if]";
 			otherwise:
-				say "     Having you lay on your back, he frots his lithe body against yours. His mouth locks with your own in a sloppy kiss while his hands explore your chest. You feel your cocks quickly grow from arousal and touch each other. After a few minutes, the simian creature breaks the kiss and sits on your lap. '[italic type]Now, let's get serious.[roman type]' says the golden-furred lover as he aligns his ass with you cock and lets himself slowly fall down. He moans loudly. You moan as well, as his insides feel like silk on your [cockname of player] dick. Then he pushes up, only to let himself fall down on your lap, and so on.";
+				say "     Having you lay on your back, he frots his lithe body against yours. His mouth locks with your own in a sloppy kiss while his hands explore your chest. You feel your cocks quickly grow from arousal and touch each other. After a few minutes, the simian creature breaks the kiss and sits on your lap. '[italic type]Now, let's get serious.[roman type]' says the golden-furred lover as he aligns his ass with your cock and lets himself slowly fall down. He moans loudly. You moan as well, as his insides feel like silk on your [cockname of player] dick. Then he pushes up, only to let himself fall down on your lap, and so on.";
 				say "     The two of you quickly build a steady rhythm and you even start pushing up against your partner's ass. Suddenly, you muffle in surprise as the flexible creature puts one of his foot against your face, his toes entering your mouth. '[italic type]Lick, peasant.[roman type]' he orders smugly. To his great pleasure, you comply and start to lick the sole of his prehensile foot and suck on his toes.";
 				say "     After long minutes of this treatment, worshipping one foot, then the other, you feel the Monkey's ass tighen as he reaches his climax and splatters your chest with long ropes of sperm, almost gagging you as his foot reflexively slips further in your mouth. The vice-like pressure on your cock makes you cum as well and your partner makes sure to milk you of everything you've got. The satisfied monkey takes his leave in a short, taunting victory dance.";
-	otherwise: 
+	otherwise:
 		say "     The monkey sighs as you lack anything he could play with. '[italic type]Aw... Too bad. I won't be able to grace you with the exquisite pleasure of my carnal skills[roman type]'. On these words, he leaves you, panting and laying on the ground, as he looks for another victim to satiate his lust.";
 
-		
+
 to say beattheMonkeyKing:
 	say "     The beaten fighter falls on the ground, his staff bouncing away with a few loud, woody noises. '[italic type]Impossible... How could I, the Great Monkey King, be defeated by the likes of you...[roman type]'.";
 	if cunts of player > 0 or cocks of player > 0:
@@ -61,14 +61,14 @@ to say beattheMonkeyKing:
 		if the player consents:
 			say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. '[italic type]Wh... What are you doing?[roman type]' he asks, visibly intimidated. You could go at him [link]gently (Y)[as]y[end link], or choose to teach him a lesson the [link]hard way (N)[as]n[end link]. What is your choice?";
 			if player consents:
-				say "    You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, The monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
+				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, The monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
 				if cocks of player > 0 and cunts of player > 0:
 					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, jerking your [cockname of player] rod with one paw while frotting your [cunt size desc of player] pussy with the other.";
 				otherwise if cocks of player > 0:
 					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, fondling your ballsack and jerking your [cockname of player] rod.";
 				otherwise:
 					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate and shows you how it's done, frotting against your [cunt size desc of player] pussy and massaging your clit.";
-				say "    After several minutes, you both come to a climax, and the monkey's penis launching several ropes of cum in the air. The once-arrogant man is now calmed down and pants. His smile is not arrogant anymore; instead, it feels genuinely thankful. It looks like he learnt the lesson.";
+				say "     After several minutes, you both come to a climax, and the monkey's penis launching several ropes of cum in the air. The once-arrogant man is now calmed down and pants. His smile is not arrogant anymore; instead, it feels genuinely thankful. It looks like he learnt the lesson.";
 				now MonkeyKingWin of player is 1;
 			otherwise:
 				if cunts of player > 0:
@@ -99,16 +99,16 @@ to say MonkeyKingdesc:
 	otherwise:
 		now sex entry is "Male";
 	if MonkeyKingWin of player is 1:
-		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. He sounds much less arrogant than last time and seems to have calmed down.[line break] 'You got me by surprise last time, but it won't work on me anymore. I challenge you to a rematch!' On these words, he takes a fighting stance.";
+		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. He sounds much less arrogant than last time and seems to have calmed down.[line break]'You got me by surprise last time, but it won't work on me anymore. I challenge you to a rematch!' On these words, he takes a fighting stance.";
 	otherwise if MonkeyKingWin of player is 2:
 		say "     You are once again in the Asian wing of the Museum. 'You [bodyname of player] bastard! Stay where you are!' A furious Monkey King jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
 	otherwise:
 		if bodyname of player is "Monkey":
-			say "       The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
+			say "     The place around you looks familiar. It seems you are in the Asian wing. You shudder, remembering who is his annoying inhabitant. You starts to turn around and go back to the entrance, but a familiar, arrogant and very irritating voice resonates in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting.'.";
 			say "     The prideful monkey-man startles you as he falls from the ceiling just in front of you. Unfortunately, he seems to remember you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and let him satiate his lust!' he declares, with the same arrogant tone.";
 		otherwise:
 			say "     You find yourself in the Asian wing of the Museum. Suddenly, a regal-sounding voice booms in the empty halls. '[italic type]Halt, peasant![roman type]'. On these words, a golden-furred monkey dressed in an martial arts vest and pants  jumps in front of you. He is armed with a wooden staff which seems to change sizes when you're not looking at it.";
-			say "      With an arrogant grin on his face, the kung-fu artist challenges you: '[italic type]Peasant! You are now graced by the presence of the illustrious, mighty Monkey King. Obey your betters and service me. Of course, you can also do that after I whacked you a little with my staff...[roman type]'.";
+			say "     With an arrogant grin on his face, the kung-fu artist challenges you: '[italic type]Peasant! You are now graced by the presence of the illustrious, mighty Monkey King. Obey your betters and service me. Of course, you can also do that after I whacked you a little with my staff...[roman type]'.";
 
 Section 2 - Monster Insertion
 
@@ -127,7 +127,7 @@ When Play begins:
 	now face entry is "like a monkey, with a small muzzle, big laughing eyes and a mane of fur around it";      [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "lithe and human-like. It is also very flexible, and you can do any kind of acrobatics with ease. Your feet are prehensile, meaning you can hold various objects and do many things with them as if they were hands.";   [ Body Description, format as the text "Your body is (your text)" ]
 	now skin entry is "short, golden fur which recovers your entire";   [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, prehensile tail that wiggles in your back every time you move.";   [ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a long, prehensile tail that wiggles in your back every time you move.";   [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "human-like";                  [ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "you feel your hair grow and surround it. Your nose and your mouth changes, forming a small muzzle";   [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body loses mass and becomes lither. Your feet tingle as they change form, gaining an opposable thumb and becoming prehensile";   [ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -157,7 +157,7 @@ When Play begins:
 	now libido entry is 30;                       [ Target libido the infection will rise towards. ]
 	now loot entry is "";                         [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;                    [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 2;                         [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;                         [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "simian";               [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
