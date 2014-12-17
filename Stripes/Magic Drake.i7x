@@ -530,6 +530,7 @@ to say mdrake_pvictory_09:		[Taunt her]
 	say "     Bending over further, you plunge your fingers in deeper and faster.  Growing aroused from playing with yourself, it adds to your fun and you continue on with the teasing show.  The dragoness, with her familiar's much-desired ass is put on wanton display, is reduced to panting and drooling at the sight of it.  Some more frantic fingering has you moaning in pleasure and this proves too be too much for the deprived dragoness, sending her to an orgasm that splatters great blasts of her semen into the air, across the ground and over herself.  Getting off on your effect on her, you [if cocks of player > 0 or cunts of player > 0]end up cumming as well[otherwise]groan in unfocused pleasure as your anus clenches down onto your probing digits until the waves of delight ebb[end if].  Having had your release, you realiz you'd carried things much farther than you'd originally planned and should probably get moving on.";
 
 to say mdstaff_overgrown:
+	increase mdrakeoversized by 1;
 	if mdrakeoversized >= 5 and inasituation is false:
 		say ".  As with the previous times, this power makes your already oversized ass quiver as you're filled with the pleasant rush of your backside inflating further.  As you fondle your expanding booty with both hands, you allow yourself to flop back onto the ground with a lustful moan as you grow increasingly back-heavy.  You can't suppress a happy squeal as you land on your super-padded bottom.";
 		attempttowait;
@@ -540,7 +541,7 @@ to say mdstaff_overgrown:
 		say "     She gets herself lined up and pushes her massive cock into your extra-wide and accommodating backside.  Your pucker stretches itself open readily as she pushes into you and fills that aching need inside you.  You release a long, lustful cry through your mistress's first several thrusts before being reduced to a series of ongoing moans, pants and groans of delight.  'That's right, you're my sexy ass-slut now, aren't you?  My fat-assed, slutty pet?  My cock-sleeve familiar?  Come on, say it,' she rumbles firmly, pounding into you firmly with each slutty name she calls you.  You nod and moan, repeating back loudly and lustfully that you're each of these and many more wanton terms, giving yourself up to the sorceress.";
 		attempttowait;
 		say "     By the time she's done and cums in a torrent of belly-bulging seed, any last traces of your resistance has been eradicated by the thorough fucking and your complete submission to her magic[if cocks of player > 0 or cunts of player > 0].  You cry out in orgasm, spasms of delight running through you as your mega-booty tries to squeeze as much seed as it can from your mistress to seal the bond[otherwise].  You cry out in ecstasy as spasms of delight run through you and your mega-booty tries to squeeze as much seed as it can from your mistress to seal the bong[end if].  By the time she's done and pulled out, you're left [if scalevalue of player < 3]stuffed to overflowing with your body sloshing beyond fullness[otherwise if scalevalue of player < 5]stuffed to the point of rounding your body with fullness[otherwise]stuffed to a sloshing fullness that leaves your tummy visibly plumper[end if].  The warmth of her semen suffuses into you slowly as starts drawing runes on your big butt and belly with the excess cum gushing from your over-fucked hole.  Now that you've given into her fully, she's able to complete the ritual, bonding you to her as her familiar and sex slave - a fate you now fully embrace.  And by the time the ritual's done, your over-inflated ass has shrunk back down to its previous, beautifully super-wide state and you're able to get up and follow your sorceress mistress off as her loyal companion.";
-	otherwise if mdrakeoversized is even:
+	otherwise if mdrakeoversized is odd:
 		say ".  This power makes your already oversized ass quiver and you're filled with the pleasant rush of your backside inflating further.  Casting aside the staff, you reach back to fondle your expanding booty with both hands.  You can't hold back a lustful moan as grow increasingly back-heavy, soon falling over onto your super-padded bottom with a happy squeal.";
 		attempttowait;
 		say "     But thus your plan has gone awry[if mdrakeoversized > 0] again[end if].  After recovering from the initial rush of ecstasy from your gluteal growth, you find yourself unable to get up.  Now like the defeated dragoness, you're having difficulty getting back up.  After some grunting and rocking by both parties, the green sorceress has recovered enough to finally rise.  And with the tables turned, she grins eagerly and approaches you, cock throbbing and tongue licking her lips.";
@@ -559,7 +560,6 @@ to say mdstaff_overgrown:
 	now fightoutcome is 20;		[player now 'lost' the fight]
 	decrease mdrakebeaten by 1;		[removing this win from the tally...]
 	increase mdrakeloss by 1;		[...and counting it as a loss instead]
-	increase mdrakeoversized by 1;
 	increase mdrakeanal by 1;
 	if mdrakeanal >= 3 and "Twisted Capacity" is not listed in feats of player:
 		say "     From the way your asshole and insides have been so thoroughly used, abused and stretched by the dragoness's cock, you have a feeling that you'll never quite be the same again.";
@@ -575,6 +575,7 @@ to say mdstaff_overgrown:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 	if libido of player > 100, now libido of player is 100;
 	if mdrakeoversized >= 5 and inasituation is false:
+		now mdrakeoversized is 100;
 		choose row monster from the table of random critters;
 		now humanity of player is 0;
 		now tailname of player is "Magic Drake";

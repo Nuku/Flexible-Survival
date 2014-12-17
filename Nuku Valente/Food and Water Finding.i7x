@@ -125,7 +125,11 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "extremely difficult";
 		say " to sway.";
+		let petbonus be false;
 		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
+		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute:
+			increase bonus by 2;
+			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -143,6 +147,8 @@ Instead of resolving a potential resources:
 				if aa >= bb:
 					add y to invent of player;
 					say ".  You even manage to haggle a second one from the mutant";
+			if petbonus is true:
+				say ".  Though having an intimidating guard by your side may have helped a little";
 			say ".";
 	otherwise if x is 5:
 		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]

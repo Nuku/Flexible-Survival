@@ -459,7 +459,11 @@ Instead of resolving a Plains Scavenging:
 		otherwise:
 			say "extremely difficult";
 		say " to contend with.";
+		let petbonus be false;
 		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
+		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute:
+			increase bonus by 2;
+			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -468,7 +472,7 @@ Instead of resolving a Plains Scavenging:
 		if difficulty is greater than dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
 		otherwise :
-			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information.  It would seem that there are still some decent [']people['] in the world after all.  You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
+			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information.  It would seem that there are still some decent [']people['] in the world after all[if petbonus is true].  Though having an intimidating guard by your side may have helped a little[end if].  You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
 			add y to invent of player;
 	otherwise if x is 3:
 		let difficulty be a random number from 6 to 16;
@@ -628,7 +632,7 @@ The placement of shoulder pad is "body".
 The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
 
-the scent of shoulder pad is "The shoulder pad stinks of the '90s.".
+the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
 
 Section 14 - Hospital Scavenging
