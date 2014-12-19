@@ -1,7 +1,7 @@
 Version 1 of Grizzly Bear by UrsaOmega begins here.
 [Version 1.1 - Added player loss anal and oral endings w/being cum on - Stripes]
 
-"Adds a Grizzly Bear creature to Flexible Survivals Wandering Monsters table"
+"Adds a Grizzly Bear creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -123,7 +123,7 @@ When Play begins:
 	now skin entry is "[one of]thick brown fur covered[or]grizzly furred[or]shaggy brown furred[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a short ursine tail that hangs over your ass.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "ursine";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head widens and your face pushes out. You nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "your head widens and your face pushes out. Your nose becomes large and wet as it migrates to the end of your new bearlike muzzle and your ears move to the top of your head, becoming rounded and ursine";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands become more paw-like";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "thick shaggy brown bear fur spreads across your skin";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your rump becomes thicker and more rounded and bearlike, with a short fuzzy tail growing over your new ursine ass";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
