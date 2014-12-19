@@ -11,9 +11,9 @@ when play begins:
 
 to say Batcubus attack:
 	if cunts of player > 0:
-		Say "     She saunters over to your defeated form. 'Well well. Smells like somebody is a little excited.' she says as she starts to look over your body, especially your groin. She wastes no time in removing your clothes, and giggles with delight when she sees your aroused cunt. She lowers her head and begins to kiss your pussy, practically making out with it. Her technique is remarkable, bringing you close to the edge countless times, but always stopping just before you can climax. She spends what seems like an eternity denying you release before she decides you are ready. You feel a little pressure against our pussy and a small insertion. You look down to see she has put her nipple in you. She squeezes her breast, making milk pour into your desire filled fuckhole. She fills you with her milk before kissing your tummy where your uterus is. A warm feeling fills your womb as your pussy clamps down to stop the milk from leaking. You writhe on the ground as your body desires release heavily while being denied the pleasure once again. As quickly as the feeling began, it stopped. You see some of her milk pour out, but for some odd reason it seems more consistent with sperm. She stands up and licks her purple lips, giggling to herself. [']That was fun. I hope we can meet again sometime.['] she says before kissing you passionately on the lips and walking off, with you still needing release.[impregchance]";
+		Say "     She saunters over to your defeated form. 'Well well. Smells like somebody is a little excited.' she says as she starts to look over your body, especially your groin. She wastes no time in removing your clothes, and giggles with delight when she sees your aroused cunt. She lowers her head and begins to kiss your pussy, practically making out with it. Her technique is remarkable, bringing you close to the edge countless times, but always stopping just before you can climax. She spends what seems like an eternity denying you release before she decides you are ready. You feel a little pressure against our pussy and a small insertion. You look down to see she has put her nipple in you. She squeezes her breast, making milk pour into your desire filled fuckhole. She fills you with her milk before kissing your tummy where your uterus is. A warm feeling fills your womb as your pussy clamps down to stop the milk from leaking. You writhe on the ground as your body desires release heavily while being denied the pleasure once again. As quickly as the feeling began, it stopped. You see some of her milk pour out, but for some odd reason it seems more consistent with sperm. She stands up and licks her purple lips, giggling to herself. 'That was fun. I hope we can meet again sometime,' she says before kissing you passionately on the lips and walking off, with you still needing release.[impregchance]";
 	else:
-		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. She smiles and rips your pants off and gazes at you prick, eyes burning with lust. 'Oooooh. Hopefully this can get me the relief I need,' she says as she lowers her dripping cunt to grind against your stiff member. She sighs in bliss as she lowers until you are fully hilted in her. She begins to ride you like a slut who has been denied sex for a long time. Her cunt grips you tightly, like that of a virgin. Soon, it becomes too much for you to bear and you begin to shoot your load into her waiting womb, causing her to orgasm on your cock. She rewards you with bringing her large breasts to your face, forcing you to suckle her nipple till milk floods into your mouth. You stay there until you've had your fill. She gets up and kisses you sweetly on the lips before walking off to find another victim.";
+		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. She smiles and rips your pants off and gazes at your prick, eyes burning with lust. 'Oooooh. Hopefully this can get me the relief I need,' she says as she lowers her dripping cunt to grind against your stiff member. She sighs in bliss as she lowers until you are fully hilted in her. She begins to ride you like a slut who has been denied sex for a long time. Her cunt grips you tightly, like that of a virgin. Soon, it becomes too much for you to bear and you begin to shoot your load into her waiting womb, causing her to orgasm on your cock. She rewards you with bringing her large breasts to your face, forcing you to suckle her nipple till milk floods into your mouth. You stay there until you've had your fill. She gets up and kisses you sweetly on the lips before walking off to find another victim.";
 
 to say beatthebatcubus:
 	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. ";
@@ -46,11 +46,11 @@ When Play begins:
 	now defeated entry is "[beatthebatcubus]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Batcubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "An anthropomorphic bat. But she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are cover in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat[']s with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";[ Description of the creature when you encounter it.]
-	now face entry is "that of a female bat. It is beautiful and elegant, and your lips are covered with purple lipstick that is sweet when you lick it";[ Face description, format as the text 'Your face is (your text)'] 
-	now body entry is "slender and elegant. Your torso looks like it is covered with a red corset, but it is actually fur";[ Body Description, format as the text 'Your Body is (your text)'] 
-	now skin entry is "white furred";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "that of a bat. It is really cute.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "pteropine";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "that of a female bat. It is beautiful and elegant, and your lips are covered with purple lipstick that is sweet when you lick it";[ Face description, format as the text 'Your face is (your text)']
+	now body entry is "slender and elegant. Your torso looks like it is covered with a red corset, but it is actually fur";[ Body Description, format as the text 'Your Body is (your text)']
+	now skin entry is "white furred";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "that of a bat. It is really cute.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "pteropine";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel something weird on your lips. You lick them just to find they taste sweet and your mouth and groin quickly fill with lust-filled warmth. They are coated in the batcubus purple lipstick. You can't help but lick your lips over and over. Each lick making you more and more horny and advances your transformation further. Your face pulls forward into a bat muzzle and your ears extend into triangles and pulled to the top of your head. You soon finish your transformation, with your face resembling that of a beautiful bat. You lick your lips once again."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body begins to slender out, becoming beautiful and elegant. Your hands are covered in white gloves. Your legs end up covered in purple high-heeled boots that go all the way up your legs. A strange red fur covers your torso, making it look like you are wearing a red corset, even though you are actually naked."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it is covered in beautiful white fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -58,13 +58,13 @@ When Play begins:
 	now cock change entry is "it becomes pteropine"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 13;
 	now dex entry is 19;
-	now sta entry is 14;					
+	now sta entry is 14;
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female";          [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 49;                 [ How many HP has the monster got? ]
-	now lev entry is 6;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 6;                 [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 6;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";        [ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -75,7 +75,7 @@ When Play begins:
 	now male breast size entry is 16;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;          [ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 7;          [ Width of female sex  infection will try and give you ]
 	now libido entry is 80;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "batcubus milk";  [ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
@@ -90,7 +90,7 @@ When Play begins:
 
 
 Section 3 - Drop Item 
-	
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "batcubus milk"	"A small plastic bottle, filled with fresh batcubus milk."	1	batcubus milk
