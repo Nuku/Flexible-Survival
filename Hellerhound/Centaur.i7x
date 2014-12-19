@@ -4,7 +4,7 @@ Version 2 of Centaur by Hellerhound begins here.
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a mutant centaur to Flexible Survivals Wandering Monsters table"
+"Adds a mutant centaur to Flexible Survival's Wandering Monsters table"
 
 [Description text for this Extension.]
 
@@ -100,7 +100,7 @@ To say centaur defeat:
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vinelike bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if the humanity of the player < 40:
-			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then your hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
+			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
 			increase carried of fresh apple by 1;
 			now the libido of the player is 0;
 		otherwise if the humanity of the player < 90:
@@ -202,7 +202,7 @@ to say centaurgrowtorso:
 
 to say centaurmeet:
 	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.  As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.  It seems you've encountered one of the tainted centaurs created by the one you released.  The creature whinnies lustfully and makes a grab for you.";
-			
+
 
 Section 5 - Monster Insertion
 
@@ -220,25 +220,25 @@ When Play begins:
 	now defeated entry is "[centaur defeat]";
 	now victory entry is "[centaur attack]";
 	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
-	now face entry is "human, with horse ears";[ Face description, format as the text "Your face is (your text)"] 
+	now face entry is "human, with horse ears";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "that of a centaur, with a muscled, human upper torso.  Your body has well-defined muscles, but they seem a little strange and don't quite move right.  Your arms are strong and muscular, and roughly human in appearance as well.  Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
-	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind.  It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
 	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse.  Your muscles grow and shift, moving into slightly different positions.  Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
-	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be.  Your cock becomes twisted and deformed as its infested by the strange infection.  It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be.  Your cock becomes twisted and deformed as it's infested by the strange infection.  It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 24;
-	now sta entry is 20;					
+	now sta entry is 20;
 	now per entry is 13;
 	now int entry is 14;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 45;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
+	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
 	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -249,12 +249,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 17;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 24;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 24;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 0;	[done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "fresh apple";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "[one of]centaur[or]mutant[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -263,7 +263,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -274,7 +274,7 @@ When Play begins:
 
 
 Section 6 - Centaur Heat
-	
+
 Table of infection heat(continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 "Mutant Centaur"	10	7	"[centheat]"	"winking and dripping green cunt "	--	--	"[defaultheat]"	true	false	--
