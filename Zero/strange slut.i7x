@@ -20,7 +20,7 @@ to say sluttydesc:
 	say "[randomdesc2]";
 	say "[masterofslutsfe]";
 	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]white, black studded[at random] collar. Unfortunately, it's staring back at you!";
-	
+
 to say masterofsluts:
 	if slutmaster is greater than 0:
 		repeat with y running from 1 to number of filled rows in table of random critters: [puts dominator as lead monster...] 
@@ -31,7 +31,7 @@ to say masterofsluts:
 		choose row monster from the table of random critters;
 		follow the cock descr rule;
 		follow the breast descr rule;
-		say "[defeated entry]";	
+		say "[defeated entry]";
 
 to say masterofslutsfe:
 	if slutmaster is greater than 0:
@@ -43,7 +43,7 @@ to say masterofslutsfe:
 		choose row monster from the table of random critters;
 		follow the cock descr rule;
 		follow the breast descr rule;
-		say "[defeated entry]";	
+		say "[defeated entry]";
 
 to say randomdesc:
 	let T be a random number between 1 and 15;
@@ -121,7 +121,7 @@ to say tempting:
 		say "While still trying to fight you, the [slutname] begins to masturbate furiously, his hands becoming slick with cum![line break]";
 	otherwise if slutty is 1:
 		now slutty is 2;
-		say "[one of]The [slutname] hits you in the face with his cum-covered hands.  On reflex, you lick the cum of you lips and relish just how good it tastes![or]The [slutname] gives a low moan of delight as his cock explodes with cum, hitting you in the face with delicious tasting cum![at random][line break]";
+		say "[one of]The [slutname] hits you in the face with his cum-covered hands.  On reflex, you lick the cum of your lips and relish just how good it tastes![or]The [slutname] gives a low moan of delight as his cock explodes with cum, hitting you in the face with delicious tasting cum![at random][line break]";
 	otherwise if slutty is 2:
 		now slutty is 3;
 		say "The [slutname] bends over, giving you a lovely view of his tight ass and dripping cock![line break]";
@@ -140,7 +140,7 @@ to say tempting2:
 		say "While still trying to fight you, the [slutname] begins to masturbate furiously, her hands becoming slick with her own juices![line break]";
 	otherwise if slutty is 1:
 		now slutty is 2;
-		say "[one of]The [slutname] hits you in the face with her cum-covered hands.  On reflex, you lick the pussy juices of you lips and relish just how good it tastes![or]The [slutname] gives a low moan of delight as her pussy squirts her juices into her cup palm.  She splashes you in the face with delicious tasting cum![at random][line break]";
+		say "[one of]The [slutname] hits you in the face with her cum-covered hands.  On reflex, you lick the pussy juices of your lips and relish just how good it tastes![or]The [slutname] gives a low moan of delight as her pussy squirts her juices into her cup palm.  She splashes you in the face with delicious tasting cum![at random][line break]";
 	otherwise if slutty is 2:
 		now slutty is 3;
 		say "The [slutname] bends over, giving you a lovely view of her tight ass and dripping cunt![line break]";
@@ -196,12 +196,12 @@ to say sluttyvictory: [female]
 
 to say cockinc:
 	if cock length of player < 4 and "Female Preferred" is not listed in feats of player:
-		increase cock length of player by 1;	
-	
+		increase cock length of player by 1;
+
 to say cuntinc:
 	if cunt length of player < 4 and "Male Preferred" is not listed in feats of player:
-		increase cunt length of player by 1;		
-		
+		increase cunt length of player by 1;
+
 to say slutdef:
 	if massdomfightwin is 1:
 		say "exhausted the slut falls to the ground unconscious";
@@ -236,7 +236,7 @@ When Play begins:
 	now defeated entry is "[slutdef]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[slutvictory]";
 	now desc entry is "[slutdesc]";
-	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player].  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."] 
+	now face entry is "a wolf's muzzle with a pair of pointed wolf ears covered in [skin of player].  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."] 
 	now body entry is "that of a sexy anthro wolf, with soft-padded paws and firm muscles";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]light black fur over your";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -248,7 +248,7 @@ When Play begins:
 	now cock change entry is "it becomes canine, uncontrollably dribbling cum"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 3;
 	now dex entry is 12;
-	now sta entry is 15;					
+	now sta entry is 15;
 	now per entry is 3;
 	now int entry is 5;
 	now cha entry is 4;
@@ -269,7 +269,7 @@ When Play begins:
 	now libido entry is 100;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "slut tag";			[ Loot monster drops, ]
 	now lootchance entry is 45;		[ Chance of loot dropping 0-100 ]
-	
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -283,7 +283,7 @@ When Play begins:
 	now defeated entry is "[sluttydef]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[sluttyvictory]";
 	now desc entry is "[sluttydesc]";
-	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."] 
+	now face entry is "is that of a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "You have a (your text)."] 
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."] 
 	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."] 
 	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -295,7 +295,7 @@ When Play begins:
 	now cock change entry is "it becomes that of a rabbit's, uncontrollably dribbling cum"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 3;
 	now dex entry is 15;
-	now sta entry is 5;					
+	now sta entry is 5;
 	now per entry is 3;
 	now int entry is 5;
 	now cha entry is 4;
