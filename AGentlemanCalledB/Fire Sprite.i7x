@@ -33,7 +33,7 @@ to say FemaleFireSpriteVicOral:
 
 to say FemaleFireSpriteVicVag:
 	say "     Beaten by the fiery sprite, you fall to the ground as she prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position she wants the sprite eventually has laying on your back, with your throbbing maleness exposed. Teasing you to full erection with a fiery touch that boarders between pleasure and pain the small sprite is soon positioned above you, slowly sinking herself down onto your burning member. With a gleeful giggle she begins bouncing in your lap, riding your cock eagerly. With the heat of her drooling cunt wrapped around your glans, squeezing and clenching you as she bounces the pleasure soon begins to overwhelm you, pushing you to a powerful climax as she soaks your crotch in her steaming juices with an orgasm of her own. A chill runs over you as she pulls herself off your exhausted member, leaving you there soaked in her warm honey as she scampers off into the city.";
-	
+
 to say beattheFireSprite:
 	if cocks of player > 0 or cunts of player > 0:
 		say "     With a final blow, you knock the sprite to the ground, pinning [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if] there with your foot, you could have some fun with the sprite if you wanted to (Y/N).";
@@ -164,7 +164,7 @@ to say FuckFireSprite:
 	say "     Deciding to make use of the beaten sprite you remove your gear prepare for some fun. Taking a seat, you lift the sprite your lap, holding the squirming critter above your erect member. After aligning [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if] with your member, you slowly push [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] form down onto your ready flesh, splitting [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] [if FireSpritemode is 0]tight netherlips[otherwise if FireSpriteMode is 1]ass[end if] with a groan of relief. Once hilted inside [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if], you take hold of [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] waist and begin pistoning [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if] up and down your length. soon the warm squeezing passage milking your cock becomes too much and you orgasm powerfully, filling the tiny sprite's [if FireSpritemode is 0]womb[otherwise if FireSpriteMode is 1]bowels[end if] with your load. Releasing the sprite as you slouch back into your seat, [if FireSpritemode is 0]she[otherwise if FireSpriteMode is 1]he[end if] slides limply off your member before climbing to [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] feet and stumbling away, your [cum load size of player] load still leaking from [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] [if FireSpritemode is 0]cunt[otherwise if FireSpriteMode is 1]ass[end if].";
 
 to say FireSpriteMasturebate:
-	say "     Deciding to make use of the beaten sprite you remove your gear prepare for some fun. After sizing the little creature up you decide your massive member is just too much for [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] tiny form. Endeavoring to make use of your little plaything press [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] entire body against your throbbing cock, stroking it's entire length with [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] small warm form. Soon the sprite has [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] arms wrapped around you, grinding [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] body against you as you use [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if] to stroke yourself off. Through your combined efforts your balls are soon tensing up in anticipation as your quickly approach climax, blowing you [cum load size of player] load into the air. As your cum showers down atop the sprite you finally release [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if], basking in your afterglow as [if FireSpritemode is 0]she[otherwise if FireSpriteMode is 1]he[end if] scampers off while doing [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] best to shake off your sticky mess.";
+	say "     Deciding to make use of the beaten sprite you remove your gear prepare for some fun. After sizing the little creature up you decide your massive member is just too much for [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] tiny form. Endeavoring to make use of your little plaything press [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] entire body against your throbbing cock, stroking its entire length with [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] small warm form. Soon the sprite has [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] arms wrapped around you, grinding [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] body against you as you use [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if] to stroke yourself off. Through your combined efforts your balls are soon tensing up in anticipation as your quickly approach climax, blowing you [cum load size of player] load into the air. As your cum showers down atop the sprite you finally release [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]him[end if], basking in your afterglow as [if FireSpritemode is 0]she[otherwise if FireSpriteMode is 1]he[end if] scampers off while doing [if FireSpritemode is 0]her[otherwise if FireSpriteMode is 1]his[end if] best to shake off your sticky mess.";
 
 to say RideFireSpriteCock:
 	say "     Deciding to make use of the beaten sprite you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin you position his already firm prick in front of your hungry pussy and wrap your legs around his [ if scalevalue of player > 1]small[end if] from, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelope his orange flesh, soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of player > 1]smaller[end if] form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
@@ -193,7 +193,7 @@ to say FireSpritedesc:
 		now FireSpritemode is 1;
 	otherwise if guy is warded and girl is warded:
 		now FireSpritemode is a random number between 0 and 1;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now FireSpritemode is 0;
 		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
@@ -231,7 +231,7 @@ When Play begins:
 	now face entry is " mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seems to shimmer and flicker like fire.";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "that of a small energetic sprite";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed ";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "glowing orange human-like";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your body fills with heat as [if scalevalue of player > 1]the world seems to grows around you and[end if] your you take on a slim human-like shape";	[ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -262,7 +262,7 @@ When Play begins:
 	now loot entry is "glowing ember";					[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 1;					[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;					[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]small[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "elfin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -289,7 +289,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		if P is 0:
-			say "     The first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random] causing a searing pain as your try and shake the embers off! You take [special-style-2][dam][roman type] damage!";
+			say "     The first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random] causing a searing pain as you try and shake the embers off! You take [special-style-2][dam][roman type] damage!";
 		otherwise if P is 1:
 			say "     The sprite winds up and launches another fireball! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
@@ -322,7 +322,7 @@ glowing ember is a grab object. It is a part of the player. glowing ember is inf
 The usedesc of glowing ember is "[glowingemberuse]";
 
 to say glowingemberuse:
-	say "     Rolling the small warm ember between your fingers you begin to find it difficult to focus on anything but it's warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
+	say "     Rolling the small warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
 	attempttowait;
 	say "     You come to your senses some time later, glancing around you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
