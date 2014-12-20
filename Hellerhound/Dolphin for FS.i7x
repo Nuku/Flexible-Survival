@@ -71,7 +71,7 @@ to say dolphin fuck:
 			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into you womb[impregchance]. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release; she's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
 			continue the action;
 		if the cunt width of the player is less than 6:
-			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Let's fix it.";
+			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. Your cunt can't be that tight. Let's fix it.";
 			say "She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain you are having trouble staying conscious, and as she finally manages to slam inside you, you feel a twinge as the nanites 'fix' your cunt.";
 			now the cunt width of the player is 6;
 		otherwise if the cunt width of the player is less than 8:
