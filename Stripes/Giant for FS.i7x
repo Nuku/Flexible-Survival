@@ -1,4 +1,4 @@
-Giant for FS by Stripes begins here. 
+Giant for FS by Stripes begins here.
 
 "Adds Giant to Flexible Survival."
  
@@ -46,9 +46,9 @@ to say losetogiant:
 				say "can only lay there in the mess he's made as his excess semen leaks out of you.  'Thanks for sharing your break with me.  We should do this again sometime,' he adds, lumbering to his feet and spotting another critter to chase after.[mimpregchance]";
 		infect;
 	otherwise:
-		say ", pinning you to the ground.  '[one of]I've caught you now, back in your cage you go,[or]Gotcha!  Don't worry, you'll calm down once you're back in your pen,[or]It's okay, little guy.  Don't be scared.  I'm just going to put you back in your cage where it's safe,[at random]' he says in his booming voice, trying to sound reassuring.  You try to protest that you're not a zoo animal, he just laughs.  'Oh, don't you try to trick me.  Who's the zookeeper here?' he chuckles heartily.";
+		say ", pinning you to the ground.  '[one of]I've caught you now, back in your cage you go[or]Gotcha!  Don't worry, you'll calm down once you're back in your pen[or]It's okay, little guy.  Don't be scared.  I'm just going to put you back in your cage where it's safe[at random],' he says in his booming voice, trying to sound reassuring.  You try to protest that you're not a zoo animal, he just laughs.  'Oh, don't you try to trick me.  Who's the zookeeper here?' he chuckles heartily.";
 		say "     'Mmm... you must be excited like the rest of them, that's all.  Looking to run around, stretch your legs and have some fun, eh?  How about we have some fun then?' he asks.  Not waiting for your response, he kneels down above you, pressing his huge cock down onto you and grinding you under its massive weight.  Buried under his musky cock, you as soon covered in his leaking precum as he rubs the massive log of meat against you.";
-		say "     After a few minutes of this, he picks you up [if scalevalue of player > 4]with some effort [otherwise]and holds you against his pulsing rod.  His strong hands press you hard against that hard flesh, stroking the whole of your [bodytype of player] body against his manhood while precum leaks down over you.  Soaked in it, you make for a slick toy for him to rub along his shaft.  Every throb and pulse of it with the beating of his massive heart is felt through your entire body, so you have no problem noticing it beating faster (slow as it is) as his excitement builds.";
+		say "     After a few minutes of this, he picks you up [if scalevalue of player > 4]with some effort [end if]and holds you against his pulsing rod.  His strong hands press you hard against that hard flesh, stroking the whole of your [bodytype of player] body against his manhood while precum leaks down over you.  Soaked in it, you make for a slick toy for him to rub along his shaft.  Every throb and pulse of it with the beating of his massive heart is felt through your entire body, so you have no problem noticing it beating faster (slow as it is) as his excitement builds.";
 		say "     You can't help but grow aroused yourself as the scent of his manhood covers you and soon enough, you're rubbing, licking and kissing at his cock as best you can.  You press your lips to his giant, gaping urethra, gulping down mouthfuls of his precum and diving your tongue into it.  Heedless of the consequences, you keep this up even as his excitement continues to grow to the boiling point and he finally cums loudly, spraying his hot seed all over your face, much of it being forced down into your mouth by the blast, filling you [if scalevalue of player < 4]to the point that you're bloated and rounded from it[otherwise]until you're stuffed and have to push away[end if], unable to take any more.  He continues to cum in massive arcs across the zoo, leaving huge streaks of white that sends the critters who'd gathered to watch fleeing.";
 		now libido of player is libido of player / 2;
 		if a random chance of 1 in 3 succeeds or inasituation is true:
@@ -82,7 +82,7 @@ to say losetogiant:
 				say "one of the nearby enclosures as if not wanting to bother to find where you belong.  You're stuck in there for quite some time, unable to move until his massive load has been absorbed and leaked out of your body.  Thankfully the gate was broken when he tore it open to put you inside, so you're eventually able to make your escape.";
 				now battleground is "Zoo";
 			otherwise if t is 8:
-				say "the nearby gator pit.  With another shrug, he heads off in search of other wayward animals.  You moan wetly, but cannot get up, too overfull with the giant's cum.  You're forced to wait there until you're body's drained and absorbed his heavy load.  The cum that leaks out of you flows down towards the broken sewer grate.";
+				say "the nearby gator pit.  With another shrug, he heads off in search of other wayward animals.  You moan wetly, but cannot get up, too overfull with the giant's cum.  You're forced to wait there until your body's drained and absorbed his heavy load.  The cum that leaks out of you flows down towards the broken sewer grate.";
 				move player to Gator Pit;
 			otherwise if t is 9:
 				say "the nearby bird house.  He roughly shoves you inside before heading off in search of other wayward animals with a smile on his face.  You moan wetly, but cannot get up, too overfull with the giant's cum.  You're forced to wait there until your body's drained and absorbed his heavy load.  You can hear the rustling of feathers and the chirping of birds in here, but are thankfully unnoticed or ignored until you can move again.";
@@ -108,11 +108,11 @@ to say giantdesc:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Giant"; [Name of your new Monster]
@@ -138,7 +138,7 @@ When Play begins:
 	now cha entry is 12;
 	now sex entry is "Female";	 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 99;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 12;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 22;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Zoo";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -149,7 +149,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 45;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 40;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 40;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
