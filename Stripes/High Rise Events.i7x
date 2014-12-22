@@ -13,7 +13,7 @@ when play begins:
 	add Rabid Lawyers to badspots of furry;
 
 Instead of resolving a Rabid Lawyers:
-	say "     While searching the city, you encounter a large pack of wolves in front of a law firm.  They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants.  The are growling and slavering as they snap at each other or swinging their briefcases around.  Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones.  Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males.  Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
+	say "     While searching the city, you encounter a large pack of wolves in front of a law firm.  They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants.  They are growling and slavering as they snap at each other or swinging their briefcases around.  Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones.  Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males.  Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
 	mallrecall;
 	Now Rabid Lawyers is resolved;
