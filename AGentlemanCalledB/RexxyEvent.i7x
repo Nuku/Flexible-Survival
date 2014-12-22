@@ -410,7 +410,7 @@ to say DogBoneScene2m:
 	say "     You can't help but whimper and moan as you slowly push the canine member into yourself, a familiar warm tingling sensation begins to overtake your body and mind, filling your head with lewd imagery of canine sex.";
 	say "     One image in particular begins to come into focus above all the others, that of yourself under a large male Retriever. Soon you begin to lose track of reality, focusing only on the image of yourself being taken by this large canine, when he finally drives his length home, forcing his swollen knot into your tight pucker you do the same, forcing full length of the dildo into yourself with a howl of pleasure before finally passing out.";
 	attempttowait;
-	say "     You awaken some time later, the bone shaped sex toy still buried in your ass. As you pull  the toy from yourself with a whimper you can't help but wonder if it's a good idea to continue using it. Taking stock of the new changes it has caused in your body you ponder the powerful effect it seems to have over your body and mind, but by the time you've gathered your things and prepared to venture out into the city again your concerns have already started giving way to familiar daydreams of canine sex.";
+	say "     You awaken some time later, the bone shaped sex toy still buried in your ass. As you pull the toy from yourself with a whimper you can't help but wonder if it's a good idea to continue using it. Taking stock of the new changes it has caused in your body you ponder the powerful effect it seems to have over your body and mind, but by the time you've gathered your things and prepared to venture out into the city again your concerns have already started giving way to familiar daydreams of canine sex.";
 
 to say DogBoneScene3f:
 	say "     Eagerly, you dig your canine sex toy from your bag once again and find a safe spot to stop and enjoy yourself, without even considering the consequences you are quickly naked and teasing your female passage with the pointed tip of the canine cock.";
@@ -582,7 +582,7 @@ Section 8 - Progression Values
 [ 1 = done event once, received bone]
 [ 2-4 = used bone  1-3 times]
 [ 5 = met Rex, lost bone ]
-[ 6-9 = "training phase, fucked Rex , pet offer at 9]
+[ 6-9 = "training phase, fucked Rex, pet offer at 9]
 [ 10 = Pet game over  1]
 [ 11= Accepted collar]
 [ 49 = Defeated by Rex in escape quest]
