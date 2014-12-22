@@ -63,7 +63,7 @@ Instead of resolving a Canine Patrol:
 		increase score by 5;
 		now Canine Patrol is resolved;		[for now]
 
-		
+
 Section 2 - K9 Vans
 
 K9 Vans is a room. It is fasttravel. It is private. It is sleepsafe.
@@ -78,7 +78,7 @@ to say k9vansdesc:
 	otherwise if gshepsquad is 4:
 		gshepmoodcheck;
 		say "     Approaching the intersection Buster told you, one outside of the shadier red light district where you met him, you find it the scene of an accident.  The convenience store on this corner has a pair of canine unit vans crashed into it.  One has driven right into the front window and the other is on its side, smashed into the other.  The area around the crash has been swept clear, removing any broken glass or debris.  The door to the store has a sign stuck on it saying 'Temporary Police Station' and there is a gruff looking German shepherd in a partial police uniform - shorts, open dress shirt and hat in this case.  This guard looks you over and asks what you want[if gshepmood is 0] with a low growl[end if].  Telling him that Buster asked to see you, he steps aside and motions with his nightstick for you to go in.";
-		say "     The interior, partially occupied by the front end of the smashed up vans, has been opened up a bit by the removal of the first few rows of shelves.  The other shelves have mostly been picked clean, their contents probably consumed by the canines milling about here.  Most of the are males and all are German shepherds in some partial set of police clothes or gear.  There's an eclectic collection of chairs scavenged from the area as well as a few mats on which some of the officers are sleeping or screwing.  Buster's sitting on one behind a folding table.  He motions for you to come on over.";
+		say "     The interior, partially occupied by the front end of the smashed up vans, has been opened up a bit by the removal of the first few rows of shelves.  The other shelves have mostly been picked clean, their contents probably consumed by the canines milling about here.  Most of them are males and all are German shepherds in some partial set of police clothes or gear.  There's an eclectic collection of chairs scavenged from the area as well as a few mats on which some of the officers are sleeping or screwing.  Buster's sitting on one behind a folding table.  He motions for you to come on over.";
 		say "     'Hey!  I'm glad you came.  Sorry for all the questions earlier, but the fact that you even came shows me that you're [if gshepmood is 2]a good dog[otherwise if gshepmood is 1]an alright person[otherwise]an alright person despite that feline taint you've picked up[end if],' he says, getting up and offering you his paw for a shake.  'Now, you were talking about wanting to get some help, but as you can see, we're not in much position to help out right now.  We're cops and good dogs though, so we do our best.'";
 		say "     He walks around with you, giving one of the other dogs a playful swat on the rear as he passes.  'Hey Bear.  Come up to my quarters later.  I want to debrief you,' he says to the burly shepherd in a swat vest.  'We were responding to the disturbances around the city as things were getting out of control,' he says, getting back to his story.  'Something went wrong with the vans just as both units arrived, crashed together and careened into this place.  They're totalled.  Won't even turn over, like pretty much every other vehicle out there.  Not really clear on when or how we became dogs or what happened to our canines, but that's how the first few of us got started out.  Bred a few other recruits since then, shared around the gear and we're doing what we can.'";
 		say "     Looking around the makeshift station and the horny dogs, you ask him just what he means by that.  'As you've seen, the city's gone to the dogs, metaphorically if not quite literally.  That's where we come in.  Dogs are awesome, the best around - we're loyal, obedient and friendly.  The city'd be safe and peaceful if everyone goes to the dogs. don't you think?  Now, we don't want to hurt anyone, but there's a lot of crazy mutant things out there, so we need to protect every good dog and bitch out there and stop all those crimes by non-canines.'";
@@ -122,7 +122,7 @@ the fuckscene of Buster is "[sexwithBuster]";
 to say sexwithBuster:
 	gshepmoodcheck;
 	if debugactive is 1:
-		say "DEBUG -> gshepsquad: [gshepsquad], HP: [hp of Buster], gshepmood: [gshepmood], Msg 1: [if busterstory1 is true]Y[otherwise]N[end if], Msg 2: [if busterstory2 is true]Y[otherwise]N[end if] <- DEBUG[line break]";		
+		say "DEBUG -> gshepsquad: [gshepsquad], HP: [hp of Buster], gshepmood: [gshepmood], Msg 1: [if busterstory1 is true]Y[otherwise]N[end if], Msg 2: [if busterstory2 is true]Y[otherwise]N[end if] <- DEBUG[line break]";
 	if gshepsquad < 5:
 		say "ERROR-Buster-[hp of Buster]F: You should be able to find me yet.";
 	otherwise if lastfuck of Buster - turns < 6:
@@ -226,7 +226,7 @@ to say bustersex02:		[Get fucked - vaginal]
 	say "     '[if gshepmood is 2]Mmm... you make for one hot bitch.  I knew you were something special when I saw you.  Oh, I want to give you so many puppies[otherwise if gshepmood is 1]Yeah, that's it.  Soon we'll have you taking it like a doggy bitch and get you breeding some puppies[otherwise]Yeah, let's pound that dirty feline taint out of you and soon we'll be able to breed some proper puppies in you[end if],' he pants, drooling onto your back as he pounds away at you[if the player is impreg_ok].  The thought of bearing the canine leader's pups is strangely arousing, your nanite-addled libido causing you to imagine what strong pups the canine stud would give you[otherwise].  You know you can't bear pups for the canine stud, but you can't bear to tell him that... though part of you can't help but longingly imagine what it'd be like if you did[end if].  His words also turn him on all the more, pounding you harder and deeper, trying to push his swelling knot into you.";
 	attempttowait;
 	say "     He licks along your neck and cheek as he mates with you, a paw caressing your [bodytype of player] body's many erogenous zones.  With his hefty balls slapping against your thighs and the firm bulge of his knot [if cunt length of player < 20]pushing against your [cunt size desc of player] pussy in its quest to gain entry[otherwise]popping in and out of your [cunt size desc of player] pussy[end if], your cunt quivers and squeezes around his meat.  When your climax hits, you push your hips back hard into his thrust and, with his knot buried inside you, your inner walls clamp down around it.  You cry out in orgasmic release, your female juices soaking the canine dick stuffed inside you.  The clenching grip of your orgasming hole proves to be too much for the horny hound and he cums hard, blasting shot after shot of his virile seed into your vagina.  You can feel that hot puppy batter flow into your womb as his knot [if cunt length of player < 20]leaves it nowhere else to go[otherwise]stoppers up most of it from leaking out[end if].  When he's done and his dick's softened enough that you're no longer tied, he eases his spent shaft out and lets you rest and recover on the mat while he gets back to work.[fimpregchance]";
-	
+
 to say bustersex03:		[Get fucked - anal]
 	say "     Bending you over his makeshift desk, Buster humps your rear with his drooling cock.  With his paws on your shoulders, he lets his pointed dick prod at your puckered ring, dribbling some precum onto it before easing himself into you.  He gives a pleased bark and thrusts gently to start, working to open your back door, relaxing your anal muscles to let the doggy dong penetrate steadily deeper into your hot hole.";
 	say "     '[if gshepmood is 2]Mmm... you make for one hot dog.  I knew you were something special when I saw you.  Oh, I'm going to make you into a cream-filled pup, recruit[otherwise if gshepmood is 1]Yeah, that's it.  Soon we'll have you taking it like a good dog.  Oh, I'm going to make you into a cream-filled pup[otherwise]Yeah, let's pound that dirty feline taint out of you.  You'll be much better off as a cream-filled pup once I'm through with you[end if],' he pants, drooling onto your back as he pounds away at you[if the player is impreg_ok].  The thought of the canine leader painting your insides with his virile load becomes increasingly arousing, your nanite-addled libido longing for him to fill you.  His words also turn him on all the more, pounding you harder and deeper, trying to push his swelling knot into you.";
@@ -280,7 +280,7 @@ Section 100 - Notes
 [ 1 = had sex w/player ]
 
 [potential dog names, if needed:
-male - Rocky, Jake, Cooper, Bear, Lucky, Murphy, Rusty, Shadow, Hunter?, Boomer, Luke? 
+male - Rocky, Jake, Cooper, Bear, Lucky, Murphy, Rusty, Shadow, Hunter?, Boomer, Luke?
 female - Maggie, Lucy?, Molly, Bailey, Sasha, Lady, Missy, Dixie, Holly, Sandy, Pepper
 herm - Ginger
 ]
