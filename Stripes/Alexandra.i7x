@@ -1504,7 +1504,7 @@ Instead of resolving a Survivor Group:
 			say "Focused as you are on the ruins, you fail to notice some rustling among the trees until it is too late.  By the time you do spot it, the creature is moving in to attack you, derailing your search.";
 			fight;
 	otherwise if hp of Alexandra is 62:
-		say "     Successfully navigating the confusing forest paths, you're pretty sure you're getting close to that survivor group you met earlier.  Drawing nearer, you notice the are is more active with monsters than before, necessitating greater caution.  Despite your attempts to stay hidden, you're beset by one of the woodland creatures.";
+		say "     Successfully navigating the confusing forest paths, you're pretty sure you're getting close to that survivor group you met earlier.  Drawing nearer, you notice the area is more active with monsters than before, necessitating greater caution.  Despite your attempts to stay hidden, you're beset by one of the woodland creatures.";
 		fight;
 		say "     With the creature defeated, sated or driven off, you feel it's safe to approach the bingo hall.  This time, there's a trio of guards at the door.  They, like everyone inside, are very glad to see you again.  It seems things have gotten worse since your previous visit, with the creatures and animated trees drawing ever closer.  More scavenger teams have gone missing and a few guards have been lost.";
 		say "     While you're still getting this news, many of the residents have rushed off to pack.  A few of the same naysayers pester you for reassurances about the trek and the conditions at the station.  William, hearing all the commotion, comes over to regain control.  The plump hamster urges everyone to calm down and begins talking about how they'd pulled through during hard times before and not to abandon the safe haven that's protected them for so long.  But just as it seems she might convince them to stay behind again, she makes a fatal error - she suggests a friendly game of bingo to help everyone relax.  This results in an angry outcry from everyone at the prospect of even one more game.  All objections and concerns about the dangerous trip are forgotten as everyone rushes to get mobilized - preferring even death over bingo at this point.";
@@ -1538,7 +1538,7 @@ Instead of resolving a Survivor Group:
 			say "     Seizing an opening, you make your escape into the woods, leaving those inside behind to their lupine fate.";
 		now Survivor Group is resolved;
 
-		
+
 to say survivorgrouptrek:
 	say "     From that point, things progress fairly quickly and smoothly.  Someone suggests that everyone buddy up and, to make it easier to handle a group of this size, you agree and call for everyone to partner up.  You go around, checking up on the various groups of people, encouraging them to pack light.  A brief chat with the wolf-eared guard gets you a roster of the guards and the scavengers with experience out in the woods, making sure one of them is assigned to each larger group to help keep care of them while on the move.  It does take some effort to get William to leave behind her bingo mixer, but that's the only major holdup before things get on the rolling.";
 	say "     Leading the bands of survivors, you take the lead, leapfrogging them between any hiding spots or any cover you can find.  For this, you've got to scout ahead, quickly making sure the path is clear and checking ruins for hidden creatures before moving the next bunch forward.  With them split up into these smaller clusters, it's easier to move them discretely and between temporary shelters.  It makes for slow going and, at first, things go well.  But partway through the excursion, there comes the howl of a wolf, soon followed by more.  Getting the people to cover, you go to check it out, finding a small pack closing in.  Seeing no other way around it, you move in to deal with them before they can find the others.";
@@ -1823,7 +1823,7 @@ Sgt Marks reference.
 
 
 Informing you that her name is Officer Friedrich, she explains how she's been trying to help around here as best she can by trying to keep those infected from slipping any further.  As you talk about what you've been seeing, she even shares some water with you.
-You talk to her a little about what you've seen as well.  
+You talk to her a little about what you've seen as well.
 
 other rooms:
 holding cells
