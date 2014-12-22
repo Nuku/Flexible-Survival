@@ -1215,7 +1215,7 @@ to say bceastparapets:
 		say "[bcduofight]";
 	otherwise:
 		if lastbcduobeaten - turns < 3:
-			say ", the sea lion and orca toys still here as well.  Thankfully they are still too weak and deflated from your last confrontation to try facing you again.  They are laying side by side, the sea lion's cock in being sucked by the orca and the orca's pussy being tended by the sea lion.  At a quick glance, you'd think they're just orally stimulating one another, but the are actually in the process of blowing each other up via the air nozzle located at the tip of the sea lion's cock and as the orca's clit.  At the rate they're going at it, it doesn't seem that they'll be out of commission for long.";
+			say ", the sea lion and orca toys still here as well.  Thankfully they are still too weak and deflated from your last confrontation to try facing you again.  They are laying side by side, the sea lion's cock in being sucked by the orca and the orca's pussy being tended by the sea lion.  At a quick glance, you'd think they're just orally stimulating one another, but they are actually in the process of blowing each other up via the air nozzle located at the tip of the sea lion's cock and as the orca's clit.  At the rate they're going at it, it doesn't seem that they'll be out of commission for long.";
 		otherwise:
 			say ", the sea lion and orca toys still here as well and have managed to reinflate themselves enough to try and tackle you again.  Moving in towards you from each side the purple sea lion and the magenta orca bound towards you.";
 			now lastbcduobeaten is 254;
