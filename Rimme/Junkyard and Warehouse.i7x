@@ -5,9 +5,9 @@ Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
-Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading further away from the town." Abandoned Lot is fasttravel.
+Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-coloured warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading farther away from the town." Abandoned Lot is fasttravel.
 
-Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it.[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside.[end if]";
+Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
 Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
 South of Abandoned Lot is Warehouse Door.
@@ -31,7 +31,7 @@ Definition: a person is facially human:
 	if the facename of the player is "Amazonian", yes;
 	if the facename of the player is "Naiad", yes;
 	if the facename of the player is "Math Teacher", yes;
-	if the facename of the player is "Viking", yes;		
+	if the facename of the player is "Viking", yes;
 	no;
 
 Definition: a person is skintone human:
@@ -46,13 +46,13 @@ Definition: a person is skintone human:
 	if the skinname of the player is "Succubus", yes;
 	if the skinname of the player is "Incubus", yes;
 	if the skinname of the player is "Greek Nymph", yes;
-	if the skinname of the player is "Spartan", yes;		
-	if the skinname of the player is "Helot", yes;		
+	if the skinname of the player is "Spartan", yes;
+	if the skinname of the player is "Helot", yes;
 	if the skinname of the player is "Amazonian", yes;
-	if the skinname of the player is "Naiad", yes;		
-	if the skinname of the player is "Caveman", yes;		
+	if the skinname of the player is "Naiad", yes;
+	if the skinname of the player is "Caveman", yes;
 	if the skinname of the player is "Math Teacher", yes;
-	if the skinname of the player is "Viking", yes;		
+	if the skinname of the player is "Viking", yes;
 	no;
 
 Definition: a person is bodily human:
@@ -62,12 +62,12 @@ Definition: a person is bodily human:
 	if the bodyname of the player is "Elven Hunter", yes;
 	if the bodyname of the player is "Awesome tree", yes;
 	if the bodyname of the player is "Greek Nymph", yes;
-	if the bodyname of the player is "Spartan", yes;		
-	if the bodyname of the player is "Helot", yes;		
+	if the bodyname of the player is "Spartan", yes;
+	if the bodyname of the player is "Helot", yes;
 	if the bodyname of the player is "Amazonian", yes;
-	if the bodyname of the player is "Naiad", yes;		
+	if the bodyname of the player is "Naiad", yes;
 	if the bodyname of the player is "Math Teacher", yes;
-	if the bodyname of the player is "Viking", yes;		
+	if the bodyname of the player is "Viking", yes;
 	no;
 
 Instead of entering the Storage Room:
@@ -364,7 +364,7 @@ To stevenfuck:
 	infect "red horse";
 
 Section 4 - Steven in the Junkyard
-	
+
 To newstevenconverse:
 	now the description of Steven is "A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
 	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums.", "The smell still gets through, once in a while. Tell me if you find any potpourri or something."};
@@ -385,7 +385,7 @@ To stevenjunkfuck:
 		say "     You slide over and cuddle up against Steven, pulling you both down to the ground.  You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft.  He groans and shivers a little as you begin to gently stroking it";
 		if cocks of player > 0:
 			if cunts of player > 0:
-				say ".   While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give him a some [']oral['] attention.  (Y=Ride, N=Suck) ";
+				say ".  While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give him a some [']oral['] attention.  (Y=Ride, N=Suck) ";
 				if the player consents:
 					say "[stevenride]";
 				otherwise:
@@ -408,7 +408,7 @@ To stevenjunkfuck:
 		now laststevenfuck is turns;
 
 stevenfuckcount is a number that varies.
- 
+
  to say stevenride:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
 	if stevenfuckcount is even:
@@ -488,7 +488,7 @@ When play begins:
 	now loot entry is "";
 	now lootchance entry is 0;
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
 	now type entry is "equine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
