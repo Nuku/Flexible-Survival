@@ -21,7 +21,7 @@ Nerd's Opinion is resolved.
 Novelstudies is a number that varies.
 [Susan's Location is a situation.]
 
-Chapter 2 - Rules 
+Chapter 2 - Rules
 
 This is the Nohusky rule:
 	if tribe of player is Huskies:
@@ -88,7 +88,7 @@ Instead of resolving Nerd's Opinion:
 			say "After reading the book, you feel a sense of happiness overwhelm you. The moral of the story sticking with you for a life-time.[line break][line break]";
 		now Novelstudies is 2;
 	if tribe of player is latex foxes:
-		say "The nerdy vixen could be seen adjusting her glasses as she padded towards you, her thighs squeaking with every step.[if turns minus lastfuck of nerd is less than fuckfrequency of nerd and lastfuck of nerd is greater than 0] You can't help but notice she[']s slightly waddling, likely due to the roughness of your last encounter. You can still see thick globs of white, sticky substance running down those glossy thighs. Though she seemed unperturbed by this; however, you can not help but snicker quietly to yourself.[end if] She eyes you for a moment before speaking, 'Books is good boss, but I only can understand the pictures...' She frowns, staring at you for a moment, seeming to be slightly embarrassed. It seems your tribe isn't the sharpest of tools in the shed. So you all opt to sell them off to the highest bidder![line break][line break]";
+		say "The nerdy vixen could be seen adjusting her glasses as she padded towards you, her thighs squeaking with every step.[if turns minus lastfuck of nerd is less than fuckfrequency of nerd and lastfuck of nerd is greater than 0] You can't help but notice she[']s slightly waddling, likely due to the roughness of your last encounter. You can still see thick globs of white, sticky substance running down those glossy thighs. Though she seemed unperturbed by this; however, you cannot help but snicker quietly to yourself.[end if] She eyes you for a moment before speaking, 'Books is good boss, but I only can understand the pictures...' She frowns, staring at you for a moment, seeming to be slightly embarrassed. It seems your tribe isn't the sharpest of tools in the shed. So you all opt to sell them off to the highest bidder![line break][line break]";
 		let x be a random number from 100 to 400;
 		say "Selling the books, you earned [bold type]$[x].[roman type]";
 		if x is greater than 300:
@@ -99,7 +99,7 @@ Instead of resolving Nerd's Opinion:
 			say " ";
 		increase (creds of tribe of player) by x;
 	now Nerd's Opinion is resolved.
-	
+
 Part 4 - Beast's Den
 
 [Instead of resolving Beast's Den:
