@@ -3,7 +3,7 @@ Version 6 of Demon Brute For FS by Leo X begins here.
 [Version 6.1 - More/improved victory sex w/Brutus - Stripes]
 [Todo: Endings]
 
-"Adds a Monster name to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Monster name to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 DBCaptureQuestVar is a number that varies. DBCaptureQuestVar is usually 0.
 DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
@@ -806,7 +806,7 @@ to say DemonBruteSex3:    [pussy licked by demon brute]
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	otherwise:	[evil Brutus]
 		if DemonBruteStatus is 0 or DemonBruteStatus is 1:							[male+herm]
-			say "     You smile at the demon and say 'I command you to please me - lick my pussy till I come.' Grinning, you watch the creature's thick member fill out and come to full hardness, its muscles trembling - aching to just throw you down and rape you, but being held back by the binding spell of the amulet. Secure in your power over him, you slip your clothes off slowly to tease the demon a bit, then get down on on your back, spreading your legs invitingly. 'Get to work.'";
+			say "     You smile at the demon and say 'I command you to please me - lick my pussy till I come.' Grinning, you watch the creature's thick member fill out and come to full hardness, its muscles trembling - aching to just throw you down and rape you, but being held back by the binding spell of the amulet. Secure in your power over him, you slip your clothes off slowly to tease the demon a bit, then get down on your back, spreading your legs invitingly. 'Get to work.'";
 			say "     With an annoyed grumble at not being able to just fuck you, the demon obeys, leaning forward and putting two massive hands on your legs. Bringing his long forked tongue to your crotch, he licks over your sensitive pussy lips, then slips his forked tongue in between them. The wet appendage wiggles around, probing and teasing your insides and causing you to moan in lust. Amazingly good at oral sex, this demon - if one can make him do it.";
 			say "[WaitLineBreak]";
 			say "     Lying there on the ground, moaning deeply in your mounting arousal, you have an idea for even more fun, teasing your captive demon. A smile on your lips, you say 'Good job so far - for pleasing me, I'll allow you a bit more - you can touch my pussy with your cock too ...but only on the outside.' With a hungry growl, the demon is on top of you in a second, his body covering yours and hips thrusting forward - only to stop with just the tip of his thick erection touching your nether lips. You can see beads of sweat form on the demon's purple skin and the muscles below tighten and flex - but no matter how much he tries, the magic controlling him doesn't allow breaking your commands. Finally he relents, venting his frustration by digging his claws into the ground left and right of your head with a crunch, then starts rubbing up against your crotch. The hot member of this infernal creature sliding over your skin, touching your pussy lips and - almost - parting them, drives your arousal through the roof. It doesn't take much longer until your gasps and moans rise in a crescendo, a lustful scream marking your orgasm.";
