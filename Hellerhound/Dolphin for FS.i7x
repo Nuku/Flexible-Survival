@@ -60,7 +60,7 @@ To say dolphin loss:
 		otherwise:
 			say "You decide against exploiting this opportunity, leaving the creature as she is.";
 	otherwise:
-		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
+		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
 	if the cunts of the player is not 0: [prefer male action]
