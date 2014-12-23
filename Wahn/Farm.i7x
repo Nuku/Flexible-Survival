@@ -1047,7 +1047,7 @@ The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 
 instead of sniffing Duke:
-	say "Duke has a pleasant animalistic smell, just like a male dog. Though there seems to be an undertone of of sheep-musk there too.";
+	say "Duke has a pleasant animalistic smell, just like a male dog. Though there seems to be an undertone of sheep-musk there too.";
 
 to say DukeDesc:
 	if debugactive is 1:
