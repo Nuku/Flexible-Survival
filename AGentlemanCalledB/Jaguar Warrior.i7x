@@ -52,7 +52,7 @@ to say JaguarWarriordesc:
 		say "     As you wander the halls of the museum [one of]you hear a low rumbling growl behind you, turning quickly to face this potential threat you [or]you turn a corner and [or]you spot a figure moving towards you down the long corridor, once the creature is close enough to make out the details you [at random][run paragraph on]";
 	otherwise:
 		say "     You [run paragraph on]";
-	say "find yourself facing a powerful looking feline warrior, with the distinctive markings of a jaguar. He carriers an ornate feathered shield and a dangerous looking sword crafted from a stick with with several sharp looking black stones embedded in it. [if hp of Tehuantl < 4] Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
+	say "find yourself facing a powerful looking feline warrior, with the distinctive markings of a jaguar. He carriers an ornate feathered shield and a dangerous looking sword crafted from a stick with several sharp looking black stones embedded in it. [if hp of Tehuantl < 4] Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
 	say "     As the jaguar readies his weapon and moves forward you see the barbed tip of his feline cock poking free of its sheath, making his intent clear as he charges forward.";
 
 to say JagWarVic_Vag:
