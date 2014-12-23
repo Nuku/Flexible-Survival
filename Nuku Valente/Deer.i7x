@@ -2,12 +2,12 @@ Version 2 of Deer by Nuku Valente begins here.
 [Version 2.1 - Adjusted growth to coincide with hard mode at high levels - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a deer to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a deer to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 deerconsent is a number that varies.
 deerhappy is a number that varies.
 
@@ -110,13 +110,13 @@ When Play begins:
 	now name entry is "doe"; [Name of your new Monster]
 	now attack entry is "[if level of player is greater than 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][otherwise][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[if level of player is greater than 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[otherwise]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[deer attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[deer attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy coloured softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player is greater than 5] [doestats][end if]";[ Description of the creature when you encounter it.]
-	now face entry is "that of a furry[if Susan is in primary lab], feminine,[otherwise], antlered,[end if] head of an enchanting stag doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
+	now face entry is "that of a furry, [if Susan is in primary lab]feminine[otherwise]antlered[end if], head of an enchanting stag doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
 	now body entry is "feminine and graceful looking. You have long delicate arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "pitch black human";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "pitch black human";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. Thick fur swells ticklishly over your new contours as a distracting pain builds at the top of your head.[if susan is in primary lab][otherwise] Grand new antler points swell and grow ornately.[end if] You give a pant, long tongue hanging a moment"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your limbs grow long and graceful, slender, feminine. Your nails seem to cover your fingertips in a protective hoof each. Your feet chance more dramatically, becoming deer hooves"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft tingles spread in waves as fur sprouts in odd patterns across you, slowly settling into brown fur across sides and back, and a cream line that runs from under your chin to your groin"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -124,13 +124,13 @@ When Play begins:
 	now cock change entry is "your cock darkens until it is entirely black, but human shaped"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 12;
-	now sta entry is 18;					
+	now sta entry is 18;
 	now per entry is 16;
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 30;			[ How many HP has the monster got? ]
-	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -141,12 +141,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 70;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "effeminate";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "cervine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -209,10 +209,10 @@ to deerfy:
 			break;
 	infect;
 	follow the sex change rule;
-	
+
 instead of fucking the susan:
 	try conversing the susan;
-			
+
 instead of conversing the susan:
 	if deerconsent is 0:
 		say "Rather than talk to you, she avoids you entirely. Eventually you give up in trying to approach her at all as she storms off to another part of the labs.";
@@ -225,7 +225,7 @@ instead of conversing the susan:
 		if the player consents:
 			say "'Really! Fantastic. I will be your doe. You will be my stag,' she says with a dreamy sigh.";
 			if "Female Preferred" is listed in feats of player:
-				say "She frowns slightly, 'Oh dear, uh, pun not intended. You simply can not be my stag. I can smell it. Sorry...' She sighs and turns away, walking off.";
+				say "She frowns slightly, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. Sorry...' She sighs and turns away, walking off.";
 				move susan to dark basement;
 				remove susan from play;
 				now deerconsent is 2;
@@ -293,7 +293,7 @@ instead of conversing the susan:
 							say "She is no idle partner, driving herself back against every hungry push, groaning, gasping with rising bliss. Her hoofed hands run over your [bodydesc of player] body, lavishing attention upon her lover.  The feel of her wet, grasping cunt wrapped snugly around your [cock of player] member has you almost dizzy as you rock smoothly against her. Your balls pull up sharply, starting to fill her womb with thick gushes of hot seed, making her belly swell forward with the precious load, her body trembling under your own as she shares in the climax with you, squeaking once before a full bleat escapes her.";
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-							say "You settle down with her, kissing her and licking across her snout as she returns the affections to your face, hugging close. As the lust drains from you both, you eventually get up together. Sharing one last hug,  you return to the task of surviving.";
+							say "You settle down with her, kissing her and licking across her snout as she returns the affections to your face, hugging close. As the lust drains from you both, you eventually get up together. Sharing one last hug, you return to the task of surviving.";
 					otherwise:
 						say "She grabs directly for your [cock size desc of player] [cock of player] cock and grins up at you as she strokes it, 'It is just right,' she declares as she pushes you back to the ground, guiding you to lay down and slipping up on top of you. Her warm frame presses softly as it goes and she lines herself up, one hand holding the thick tip of your member, the other parting her nethers. She sinks down along your member, shuddering as it fills her grasping tunnel perfectly. Her wet labia sink down to your groin as she settles on you, breathing hard and just enjoying the feelings for the moment as she gazes into your eyes with a burning affection.";
 						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -306,7 +306,7 @@ instead of conversing the susan:
 						if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 						say "She straightens, then flops on top of you, squirming as you round her with your cum. Her messy front presses stickily to your [skin of player] front as she hugs tightly to you, heedless of the sticky warmth she shares with you. When your shaft has calmed and lays half firm within her, she leans up to kiss you on either cheek. 'I love you.' she whispers. You smile, grabbing her at the bottom and squeezing her close to snuggle for a moment, enjoying the peace before you are forced to return to other tasks.";
 
-	
+
 [Susan is in primary lab.]
 
 deer Den is a room. "You should not be here.". It is unknown. It is private.
