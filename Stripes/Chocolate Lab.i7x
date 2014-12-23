@@ -1,7 +1,7 @@
 Version 2 of Chocolate Lab by Stripes begins here.
 [Version 2 - Piggybacking Labs added by GentlemanB]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Chocolate Lab creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
+"Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
 
 labhost is a number that varies. [Tracks number of piggybacking labs/selects modified endings]
@@ -51,7 +51,7 @@ to say losetolab:
 				end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 				stop the action;
 			otherwise:
-				say "     Bested by yet another lab, all you can do is groan weakly as the confectionery canine pushes you to the ground.  With two two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground.  Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body.  You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form.  Your features melt away, replaced by the visage of a flowing chocolate dog.  Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body.  You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
+				say "     Bested by yet another lab, all you can do is groan weakly as the confectionery canine pushes you to the ground.  With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground.  Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body.  You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form.  Your features melt away, replaced by the visage of a flowing chocolate dog.  Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body.  You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
 				attempttowait;
 				say "     With your mind and body fully reshaped into that of a chocolate lab, you bark with excitement as the others separate themselves from your new body, leaving you panting happily as they grin and give you slobbery, chocolaty licks and nuzzles, welcoming you into the pack.";
 				now tailname of player is "Chocolate Lab";
