@@ -1,6 +1,6 @@
 Version 1 of Black Wolf For FS by Stripes begins here.
 
-"Adds a Black Wolf infection to Flexible Survivals for use with Andrew"
+"Adds a Black Wolf infection to Flexible Survival for use with Andrew"
 
 Section 1 - Monster Responses
 
@@ -56,7 +56,7 @@ When Play begins:
 	now face change entry is "vision blurs and a dark bulge pushes out below your nose.  As your altered eyes come back into focus, you can see you've grown a lupine muzzle";
 	now body change entry is "your hands and feet feel like soft clay.  They shift, stretch and bulge, remolding themselves to become more paw-like.  As this change is subsiding, your notice that your body's changed as well, though less dramatically.  You now have a rather normal looking body with an average build";
 	now skin change entry is "it feels like ripples are running over it.  As these pass across you, short, dark hairs are pushed out that extend further each time the wave moves across them.  In time, you are covered in a thick pelt of black fur, turning to purple at your groin";
-	now ass change entry is "the end of your spine forms into a black, lupine time with a streak of purple along along its underside";
+	now ass change entry is "the end of your spine forms into a black, lupine time with a streak of purple along its underside";
 	now cock change entry is "it twitches and throbs, spurting cum as wonderful sensations pulse through it.  It takes on a more lupine shape, forming a sheath for itself and taking on a rich, purple colour";
 	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -77,7 +77,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 67;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
