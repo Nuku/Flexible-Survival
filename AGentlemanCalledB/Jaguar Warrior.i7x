@@ -125,7 +125,7 @@ When Play begins:
 	now skin entry is "golden yellow fur, with elegant black rosettes and spots covering your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]red[or]barbed[or]spined[or]feline[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of of an attractive jungle cat";	[ Face TF text, format as "Your face feels funny as (your text)." ]
+	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of an attractive jungle cat";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "[JagBodyTF]";	[ Body TF text, format as "Your body feels funny as (your text)." ]
 	now skin change entry is "golden yellow fur spreads across your body, adorned by elegant black rosettes and spots";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it becomes tight and sexy. Your balance seems to shift slightly as you gain a long spotted jaguar's tail, which lashes back and forth excitedly even as it helps you maintain a sexy, graceful stride";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
