@@ -1,7 +1,7 @@
 Version 1 of Doran by Blue Bishop begins here.
 [ Version 1.4 - Minor Additions, adjustment to cunt requirements, neutral doran sex scene ]
 
-"Adds Doran to Flexible Survivals Wandering Monsters table"
+"Adds Doran to Flexible Survival's Wandering Monsters table"
 
 Section 1.0 - Doran Coding Miscellany
 
@@ -855,7 +855,7 @@ to say dordom_3: [Dom Doran oral sex]
 			say "     '[one of]Ah[or]Yes[or]Mm[at random], [one of]my [dorgr] treats their dragon well[or]I don't think a dragon could be happier with any other [dorgr][or]my [dorgr] certainly knows how make a mess of things[at random]!' His regard jovial in the wake of your completed task, he however pushes you back down with his snout when you attempt to pull away. '[one of]Oh[or]Not so fast[or]Now, now[at random], [one of]isn't my [dorgr] forgetting something[or]my [dorgr] wouldn't leave their dragon hungry, now would they[or]has my [dorgr] forgotten our arrangement[at random]?' Tongue caressing your cum-stained form, he affectionately prepares his meal-to-be.";
 			dorvore;
 		otherwise:
-			say "     '[one of]Ah[or]Yes[or]Mm[at random], [one of]my [dorgr] treats their dragon well[or]I don't think a dragon could be happier with any other [dorgr][or]my [dorgr] certainly knows how make a mess of things[at random]!' His regard jovial in in the wake of your completed task, he sets back down next to the campfire, allowing you to recover and go about your business.";
+			say "     '[one of]Ah[or]Yes[or]Mm[at random], [one of]my [dorgr] treats their dragon well[or]I don't think a dragon could be happier with any other [dorgr][or]my [dorgr] certainly knows how make a mess of things[at random]!' His regard jovial in the wake of your completed task, he sets back down next to the campfire, allowing you to recover and go about your business.";
 
 to say dorsub_1: [Sub Doran being fucked]
 	say "     You decide to [if dorroleint is 4]order[otherwise]ask[end if] the dragon to turn away and offer himself. Eager to please, he wheels around, [if scalevalue of player < 4]lowering himself to the ground before [end if]hiking his tail over to leave your entry unexposed. Shapely ass revealed before you, he's already quite aroused by the prospect of your imminent abuse, partially exposed tool staining the dirt with its pre.";
