@@ -426,7 +426,7 @@ to say FSDM_1: [Anal Pitching]
 		if tempnum is 1:
 			say ". [if cock length of player > 18 or tempnum2 is 1]Giving you a bit of resistance, your earlier work seems to have made inching yourself in deeper a fair bit easier[otherwise]He gives you practically no resistance, given your earlier work[end if].";
 		otherwise:
-			say ". [if cock length of player > 18 or tempnum2 is 1]Giving you a considerable resistance, he's clearly never been trained to take this much[otherwise]He gives you a fair bit of resistance, clearly showing no experience for this this[end if].";
+			say ". [if cock length of player > 18 or tempnum2 is 1]Giving you a considerable resistance, he's clearly never been trained to take this much[otherwise]He gives you a fair bit of resistance, clearly showing no experience for this[end if].";
 	say "     [if boundmod is 1]Churr[otherwise]Growl[end if]ing and moaning loudly, the[if scalevalue of player < 4] massive[end if] beast [if boundmod is 1]revels in being[otherwise]can't do a thing but allow himself to be[end if] railed, ";
 	if boundmod is 1:
 		say "[if tempnum is 0]his own dick quickly growing out and exposing itself to the open air under yours, bobbing wildly[otherwise]his own, eagerly dripping dick bobbing wildly in the open air[end if]";
