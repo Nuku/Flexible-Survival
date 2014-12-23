@@ -1,6 +1,6 @@
 Jaguar Warrior by AGentlemanCalledB begins here.
 
-"Adds a Jaguar Warrior creature to Flexible Survivals Wandering Monsters table"
+"Adds a Jaguar Warrior creature to Flexible Survival's Wandering Monsters table"
 [Version 2.3 - Base sex scenes, interaction with select bunker-able NPCs, Snow finished]
 
 Section 1 - Monster Responses
