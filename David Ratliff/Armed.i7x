@@ -358,7 +358,7 @@ Examining a NPC will also allow the player to see the present health of the NPC.
 
 If the player shoots or stabs another actor, that actor will become hostile. Hostile actors will take any weapon available (if there is one) and fight back.
 
-Additionally, a dead person no longer magically vanishes. A dead person, naturally, can not do anything, and little can be done to a dead person. If the need should arise, however, it is now possible to search the corpse of a fallen enemy, and take anything they may have been carrying.
+Additionally, a dead person no longer magically vanishes. A dead person, naturally, cannot do anything, and little can be done to a dead person. If the need should arise, however, it is now possible to search the corpse of a fallen enemy, and take anything they may have been carrying.
 
 Example: * Bob Fights Back! - A simple game featuring poor Bob. We can order Bob around (if we carry a weapon), or eliminate Bob. In this example, Bob will grab a weapon (if there is one available) and fight back. Using test commands may not give the desired results, as there is a 20% chance Bob will not do as he is told. After running the test me, one can restart the game to try something different. Trying test Bob will show Bob refusing to be bullied (and with luck, Bob refusing to commit suicide).
 
