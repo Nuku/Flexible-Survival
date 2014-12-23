@@ -54,7 +54,7 @@ to say icarustalk_sub:
 
 to say icarustalk_dom:
 	if hp of Icarus is 50:
-		say "     Icarus speaks with with a deeper tone, more like when you first met him, but his confidence sounding more genuine to you now.  'I think this'll work out much better for us.  You enjoy being the slut to the sexy bird much more.  I can tell,' he says with a firm squeeze of your ass and a grope at your crotch, drawing a moan from you.  'I should never have let you convince me to try being the bottom, you silly fucktoy.  But everything'll be right now that you know your place.'";
+		say "     Icarus speaks with a deeper tone, more like when you first met him, but his confidence sounding more genuine to you now.  'I think this'll work out much better for us.  You enjoy being the slut to the sexy bird much more.  I can tell,' he says with a firm squeeze of your ass and a grope at your crotch, drawing a moan from you.  'I should never have let you convince me to try being the bottom, you silly fucktoy.  But everything'll be right now that you know your place.'";
 		if cunts of player > 0:
 			say "     As he continues to manhandle you, he slips a pair of digits into your cunt and pumps them inside you roughly.  'Mmm... I'm really looking forward to breeding a few clutches of chicks in my horny slut.  Doesn't that sound nice?'  He gives your ass a swat and struts off, licking your juices from his fingers as he does.";
 		otherwise:
