@@ -1,7 +1,7 @@
 Version 2 of Sugar Glider by AGentlemanCalledB begins here.
 [Version 2 - No sex, Fellatio + Sugar Ferret theft by Stripes]
 
-"Adds a Sugar Glider creature to Flexible Survivals Wandering Monsters table"
+"Adds a Sugar Glider creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -100,7 +100,7 @@ to say beattheSugarGlider:
 				say "     Even in the afterglow of your climax, you moan at the delightful shivers the sugar glider's tongue sends through your body as it slowly slides out of your depths, she pulls her muzzle from your cunt with a wet slurp, doing her best to clean your female juices from her matted pink fur as she move over your supine body. As her face reaches you own, the sugar glides presses her muzzle to your lips, her long tongue slipping into your mouth, filling it with the sugary taste of her own saliva mixed with your own musky fluids before she springs to her feet and [one of]skips off into the midway[or]scampers up a nearby light post and glides off over the stalls[or]climbs a nearby stall and bounds off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
 		otherwise:
 			increase nosugarglidersex by 1;
-			say "     Deciding to leave the ditzy marsupial be, you shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
+			say "     Deciding to leave the ditzy marsupial be, you shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	otherwise:
 		say ", but you decide to let the ditzy marsupial be. You shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 
