@@ -26,7 +26,7 @@ to say whelp desc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	say "A squealing ball of needle sharp teeth plummets from the sky, clumsily wobbling through the air. The Ash Dragon Whelp's total size is the mass of an average humanoid torso, the dirty [one of]black-red speckled[or]dark ash grey[at random] scales, [one of]white[or]black[or]grey[at random] eyes, add to its fearsome appearance. A lava-like glow emanates from its core and the light seeps between its scales. Between its legs is a small pouch housing its minor genitals. The Ash Whelp appraises your [bodyname of player] form carefully for a time, then finally musters the courage to fly directly towards you!";
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -37,7 +37,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	add "Ash Whelp" to infections of guy;
 	now name entry is "Ash Whelp";
-	now attack entry is "[one of]The whelp rushes at you, clawing and scratching viciously.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[or]The creature flies at your legs, nipping and biting at them.[at random]";
+	now attack entry is "The [one of]whelp rushes at you, clawing and scratching viciously[or]whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark[or]creature flies at your legs, nipping and biting at them[at random].";
 	now defeated entry is "Crying mournfully the whelp loses its strength to fly and falls to the ground with a thud. where it does not stir again.";
 	now victory entry is  "You sink to your knees, wounded badly. The Whelp chirps in triumph and approaches you slowly...[whelp attack]";
 	now desc entry is "[whelp desc]";
@@ -94,6 +94,6 @@ when play ends:
 			if cunts of player is greater than 0:
 				say "As you ascend the capitol tower you feel your belly tingle with something akin to electricity. You know, somehow, that your body is preparing to bear a dragon brood of epic proportions.";
 		otherwise:
-			say "Having retained your sanity as an Ash Dragon you manage to escape the city. However civilization proves to much for your new urges and after a short span of time in which you spread many wild oats you find yourself fleeing to the east. A dark presence has emerged from the infected city, it is rumoured, and seems to be headed in your direction.";
+			say "Having retained your sanity as an Ash Dragon you manage to escape the city. However civilization proves too much for your new urges and after a short span of time in which you spread many wild oats you find yourself fleeing to the east. A dark presence has emerged from the infected city, it is rumoured, and seems to be headed in your direction.";
 
 Ash Whelp For FS ends here.
