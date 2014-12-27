@@ -52,7 +52,7 @@ to say beatthekomododragon:
 	if cocks of player > 0:
 		say "     Having defeated the reptilian brute, you knock him to the ground and leap onto him, keeping him pinned down while you decide what to do with him.  He tries to struggle weakly, but you have worn him down enough that he can't push you off.  Feeling [if libido of player < 33]a bit[otherwise if libido of player < 67]rather[otherwise]considerably[end if] aroused after the fight, you find yourself tempted to turn the tables on him and use him for some relief.  Not wanting that poisonous mouth filled with serrated teeth anywhere near your junk, that leaves you considering fucking him.  Shall you [link]mount him (Y)[as]y[end link] or just [link]let him go (N)[as]n[end link]?";
 		if the player consents:
-			say "     Feeling the big guy here deserves to be fucked for a change, you grab his thick tail and push it up.  Realizing what's coming, he tries to scramble free, but you've worn him down to much and another knee to his side settles him down long enough to get your [cock size desc of player] [cock of player] lined up with his dark hole.  Grabbing onto some of the loose skin at his sides, you thrust hard into him, spreading his asshole open with your glans as you thrust into the [if scalevalue of player < 3]much larger[otherwise if scalevalue of player is 3]larger[otherwise]large[end if] creature.";
+			say "     Feeling the big guy here deserves to be fucked for a change, you grab his thick tail and push it up.  Realizing what's coming, he tries to scramble free, but you've worn him down too much and another knee to his side settles him down long enough to get your [cock size desc of player] [cock of player] lined up with his dark hole.  Grabbing onto some of the loose skin at his sides, you thrust hard into him, spreading his asshole open with your glans as you thrust into the [if scalevalue of player < 3]much larger[otherwise if scalevalue of player is 3]larger[otherwise]large[end if] creature.";
 			say "     Not used to this sort of treatment, his hole is delightfully tight around your cock, making for a very pleasant, if slow to start, fuck.  But you keep at it, pounding away at the fallen reptile's ass with your [cock of player] shaft until it slides smoothly in and out of him[if cock length of player > 48].  Your titanic cock stuffs your reluctant lover so full that much of his sagging skin no longer sags and is instead just loose around his bulging body[end if].  As you keep thrusting, his struggles become less frequent and he's eventually pushing back into your thrusts as his lust becomes too much.  You can see a growing pool of precum spreading out beneath the lizard, further proof that he's enjoying getting buggered[if scalevalue of player > 2].  Reaching around him, you take one of his ridged members in each hand and start stroking them, rewarding the creature for no longer resisting you[otherwise].  Unable to reach around him due to your much smaller size, you stroke his leathery hide and keep thrusting[end if].";
 			say "     As you feel your peak rapidly approaching, you pound your hips hard and fast against that sexy, muscled ass of his, fucking him wildly.  The creature hisses and groans beneath you as you go at him all the harder and then finally cum in him[if cock width of player > 40].  As his belly starts to inflate rapidly with your huge output[otherwise if cock width of player > 20].  As his belly starts to bulge a little with your large output[otherwise].  As you start pumping your semen into him[end if], the large lizard growls and cums, splattering twin sprays of white seed across himself and the ground[if scalevalue of player > 2] while you help him empty his balls even as you drain your own into him[end if].  When you're finally done and pull out, [if cock width of player > 40]the komodo dragon is left full and bloated with your semen.  It is a struggle for the defeated and humiliated lizard - who now looks like he just ate a huge, gooey meal that's left his belly distended - to drag himself slowly back into the dark on all fours[otherwise if cock width of player > 20], the komodo dragon is left with a bulge in his belly like he just ate a large, gooey meal.  Defeated and humiliated, he slowly slinks off in the dark on all fours[otherwise]the komodo dragon has to slink off into the dark, defeated and humiliated[end if].";
 		otherwise:
@@ -76,11 +76,11 @@ to say komododragondesc:
 
 
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Komodo Dragon"; [Name of your new Monster]
@@ -106,7 +106,7 @@ When Play begins:
 	now cha entry is 7;
 	now sex entry is "nochange"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 88;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 11;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 2;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -117,7 +117,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 20;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 12;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 12;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 55;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -185,4 +185,4 @@ when play ends:
 			say "     After the holding period is finally over and you're released into the world, you make contact with Zephyr.  Their recruitment pitch, geared much more towards their growing strength and the money they can provide you, seems much more appealing to you.  You get hired on as a powerful ground trooper for situations where things get out of hand.  At first, things aren't quite as good as you'd expected it to be (and certainly less than it was pitched to you) and you consider quitting.  But when you get dropped into an out-of-control operation and manage to lead most of your team and many of the other employees out of that mess thanks to your considerable experience in the city, things start to turn around for you.  Recognized for the valuable asset you are, you become more valuable to the organization and are rewarded as such.  While by no means rich, you have plenty of money to satisfy the considerable hungers of your large body[if cocks of player > 0 and cunts of player > 0], both its hunger and its lustful needs[end if][if player is impreg_ok].  You even get a juicy bonus whenever you turn over a clutch of your eggs to Zephyr for them to be trained and recruited from hatching as foot soldiers.  As your lizard body feels no particular attachment to your offspring, doing this does not bother you at all and is a good way to leave you free to have the pleasure of getting another clutch growing in you much sooner[end if].";
 
 
-Komodo Dragon for FS ends here. 
+Komodo Dragon for FS ends here.
