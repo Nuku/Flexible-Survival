@@ -246,7 +246,7 @@ carry out Coleenspraying:
 			if coleenalpha is greater than 0:
 				say "'Sorry there little one,' She says with mock sincerity, 'I got rid of that silly little canister a while ago, It's not like anyone here was going to be needing it after all.' Coleen says with a soft husky laugh as she rubs herself up against your body suggestively.";
 			otherwise if coleenslut is 1:
-				say "'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Coleen says with a sad look on her husky face, 'Well ok, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay to much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
+				say "'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Coleen says with a sad look on her husky face, 'Well ok, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay too much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
 				if player consents:
 					say "'Well ok, here goes nothing,' the husky slut says nervously as she uncaps the small spray bottle, being careful to make sure it is pointed well away from her, before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 					now face of player is "human";
