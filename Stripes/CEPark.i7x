@@ -103,7 +103,7 @@ Instead of resolving Consolidated Events Park CEP2:
 			say "[cepark16]";
 		otherwise if entry 1 of cepark2list is 17:
 			say "[cepark17]";
-		otherwise if entry 1 of cepark2list is 18: 
+		otherwise if entry 1 of cepark2list is 18:
 			say "[cepark18]";
 		otherwise if entry 1 of cepark2list is 19:
 			say "[cepark19]";					]
