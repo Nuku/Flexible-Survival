@@ -45,7 +45,7 @@ Instead of resolving Scared bird:
 when play ends:
 	if Exotic Bird is tamed:
 		if humanity of player is less than 10:
-			say "When you give in to your feral instincts, the exotic bird you rescued seems to sense your new state of mind, and keeps at a safe distance, though it never strays to far, often helping you out of trouble or calling out to warn you of danger.  In thanks you often leave it little offerings of whatever is handy, it makes for a strange sort of partnership, but a happy enough one.";
+			say "When you give in to your feral instincts, the exotic bird you rescued seems to sense your new state of mind, and keeps at a safe distance, though it never strays top far, often helping you out of trouble or calling out to warn you of danger.  In thanks you often leave it little offerings of whatever is handy, it makes for a strange sort of partnership, but a happy enough one.";
 		otherwise:
 			say "After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing it back safely.  Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving your bird friend, but they ask you to stop by occasionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
 
