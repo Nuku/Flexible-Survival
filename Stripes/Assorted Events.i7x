@@ -597,7 +597,7 @@ Instead of resolving a Concession Stand:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
 			increase foodvendor by 1;
 		otherwise:
-			say "     Shaking your head and looking away from him, you try to refocus you mind.  Wary of the strangely hypnotic figure, you move away, taking care not to look at him.  You resolve not to return, lest your mind be ensnared again.";
+			say "     Shaking your head and looking away from him, you try to refocus your mind.  Wary of the strangely hypnotic figure, you move away, taking care not to look at him.  You resolve not to return, lest your mind be ensnared again.";
 			increase score by 1;
 			now Concession Stand is resolved;
 	otherwise:
