@@ -153,7 +153,7 @@ instead of entering the Confession Booth:
 	enterConfessional;
 
 to enterConfessional:
-	say "     As you close the door of the booth and kneel the best you can, a voice speaks slowly.  It is warm, comforting, and unmistakably female.  'Welcome my child, you may not know but we do not follow the Christian tradition here.  We simply are making use of what they left in place. Please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them.  I will do my best to put you mind and spirit at ease.'";
+	say "     As you close the door of the booth and kneel the best you can, a voice speaks slowly.  It is warm, comforting, and unmistakably female.  'Welcome my child, you may not know but we do not follow the Christian tradition here.  We simply are making use of what they left in place. Please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them.  I will do my best to put your mind and spirit at ease.'";
 	wait for any key;
 	change the current menu to Table of confession entries;
 	carry out the displaying activity;
@@ -405,7 +405,7 @@ every turn (This is the check Hellhound rule):
 		else if humanity of the player > 15:	[Bipedal Hellhound]
 			if hellHoundLevel  < 2:
 				now hellHoundLevel is 2;
-				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is.  You mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you.  A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
+				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is.  Your mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you.  A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
 				say "     You also get an unsettling urge to return to where you first encountered the infernal hound.";
 				delete journal;
 			if skinname of player is not "Hellhound":
