@@ -1421,7 +1421,7 @@ instead of conversing the rare counter:
 				now rarequesting is 1;
 				stop the action;
 		otherwise:
-			say "Deciding any item that Nermine is unable to acquire herself, is certainly going to be far to difficult for you to acquire, you decide to not say anything right now, and just watch as she admires her already fine collection.";
+			say "Deciding any item that Nermine is unable to acquire herself, is certainly going to be far too difficult for you to acquire, you decide to not say anything right now, and just watch as she admires her already fine collection.";
 
 
 the fuckscene of Rare Counter is "[sexwithrarecounter]".
