@@ -20,7 +20,6 @@ Instead of Resolving a Annoyed Hyena:
 	say "     'Well now, just what do we have here?  Someone new around to have fun with... suppose I might be up for you visiting me.  I definitely need more company.  And by company, I mean a warm squealing bitch underneath me, giving me exactly what I want.  Come on over and I promise I'll make you regret it later,' she growls with a big wink at you.  'I have a little shack set up nearby.  Just come over anytime you want to get treated like the fucktoy that you are[if the player is submissive].  You seem like the type that needs a good, rough mistress[end if].'  And with that, she just turns and disappears, leaving you slightly baffled and curious... but also very much wanting to see just what she has in store for you!";
 	say "     Hyena Shack is now known.";
 	now hp of Hadiya is 1;
-	now lastfuck of Hadiya is turns;
 	now Hyena Shack is known;
 	now Annoyed Hyena is resolved;
 
@@ -307,7 +306,12 @@ to say sexwithGobby:
 	otherwise if lastfuck of Gobby - turns is less than 6:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";
 	otherwise:
-		say "[bracket]***Sex content w/Gobby coming soon. - The Mgmt[close bracket][line break]";
+		if cocks of player > 0:
+			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you.  Already having pulled out your [cock of player] cock[s], he takes it in hand and rubs his nimble hands along your firm flesh.  His fingers are soon joined by his tongue before he slides his mouth down over it.  He licks and sucks on your manhood with an eagerness that goes beyond just his gratitude[if cockname of player is not listed in infections of internallist and cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth, sometimes moving down to play with your [ball size][otherwise if cockname of player is not listed in infections of internallist].  His fingers move down to play with your [ball size] while he sucks you off[otherwise if cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth[otherwise].  His hands rest on your hips as he bobs his mouth over your [cock size desc of player] shaft[end if][if cocks of player > 1].  He remains fairly focused on the one cock he's tending to, working to give it his full attention to satisfy you[end if].";
+			say "     With Hadiya watching on, a paw casually rubbing her half-hard member with a grin on her muzzle, you enjoy the fine blow job the goblin's providing.  Putting a hand on his head, you get him to quicken the pace as your excitement grows.  You rub his pointed ears, drawing a happy sigh from him that gets him sucking harder.  Soon enough you're balls tighten up and you feel the rush of ecstasy as you pump your hot load into the goblin's mouth.  He makes a show of swallowing [if cock width of player > 15]down the last mouthful[otherwise]it down[end if] after you're done.  After licking you clean, he heads back to his mistress's side, giving her the same treatment after the show.";
+		otherwise:
+			say "[bracket]***Sex content w/Gobby coming soon. - The Mgmt[close bracket][line break]";
+			say "*** F oral.";
 
 
 Section 8 - Infection by Hadiya
