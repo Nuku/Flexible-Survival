@@ -578,6 +578,56 @@ say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] th
 2+ cunts: ...Your juicy pussies then grind against his pointy nose.
 ]
 
+[short singular/plural pronoun statements - these pick between the two relevant pronouns based on plurality of either male of female sex organs]
+
+to say ittheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+	if cocks of player > 1:
+		say "they";
+	otherwise:
+		say "it";
+
+to say ittheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+	if cunts of player > 1:
+		say "they";
+	otherwise:
+		say "it";
+
+to say itthemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+	if cocks of player > 1:
+		say "them";
+	otherwise:
+		say "it";
+
+to say itthemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+	if cunts of player > 1:
+		say "them";
+	otherwise:
+		say "it";
+
+to say itstheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+	if cocks of player > 1:
+		say "their";
+	otherwise:
+		say "its";
+
+to say itstheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+	if cunts of player > 1:
+		say "their";
+	otherwise:
+		say "its";
+
+to say itstheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+	if cocks of player > 1:
+		say "theirs";
+	otherwise:
+		say "its";
+
+to say itstheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+	if cunts of player > 1:
+		say "theirs";
+	otherwise:
+		say "its";
+
 
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
@@ -653,9 +703,9 @@ to say abbey desc:
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if hp of Fang < 3:
-			say ".  The powerful male wolf watches in stoic silence";
-		otherwise:
 			say ".  The wolf tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
+		otherwise:
+			say ".  The powerful male wolf watches in stoic silence";
 		say ".  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	otherwise if Fang is booked:
 		if hp of Fang < 3:
