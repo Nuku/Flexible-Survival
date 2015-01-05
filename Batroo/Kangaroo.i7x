@@ -1,7 +1,7 @@
 Version 2 of Kangaroo by Batroo begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a kangaroo to Flexible Survivals Wandering Monsters table."
+"Adds a kangaroo to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -17,7 +17,7 @@ to say kangaroo attack:
 		attempttowait;
 		say "Riding you harder with each passing second, you soon end up giving her what she wants. Ropes of your seed pump up into her gripping depths as her powerful hips grind down on you to draw every last spurt from you. She bounces some more, a paw slipping down between the connection to help bring her own orgasm to fruition. The tight velvet of her cunt squeezes over you, milking any more of your seed you're able to give her. 'Oh you've been fun, I will have to find you again, very soon,' she pants down at you, resting on your limp form, before she pushes off of you with a shove.  She bounces away, dripping your seed across the ground as she goes, leaving you in a puddle of juices.";
 	otherwise:
-		say "'Drat, you need better equipment dear!' Though taking this opportunity, she pushes you back, pressing her own cunt against your face. 'Be a dear,' she says with an authoritative voice, grinding her pussy to your face, making you eat her out with her juices drooling down your chin. Huffs of irritation comes from her as you don't give her the pleasure she wants. 'You're going to have to do better then that, if you want to breathe,' she notes, before a gasp rises from her as your tongue starts to go to town, hips arching into the pleasuring mouth. 'Yes! That's it!'";
+		say "'Drat, you need better equipment dear!' Though taking this opportunity, she pushes you back, pressing her own cunt against your face. 'Be a dear,' she says with an authoritative voice, grinding her pussy to your face, making you eat her out with her juices drooling down your chin. Huffs of irritation comes from her as you don't give her the pleasure she wants. 'You're going to have to do better than that, if you want to breathe,' she notes, before a gasp rises from her as your tongue starts to go to town, hips arching into the pleasuring mouth. 'Yes! That's it!'";
 		attempttowait;
 		say " Her body shakes, shuddering as you bring her closer to her climax. 'Oh there!' Her voice cuts off into a loud moan as quick thumps of her tail hitting the ground warns of the oncoming flood of pussy juice, splashing across your face. Screaming in pure bliss, she grinds against your face as her juices keep coming, flooding your mouth, making you think you're about to drown. Keeping up with the juices as best you can, she finally stops and lets you flop onto your back with a gasp of air. 'Not what I needed, but it will do,' she huffs, bounding off in search of something more fulfilling.";
 
@@ -39,8 +39,8 @@ To say kangaroo loss:
 
 to say redroodesc:
 	follow the monster combat mode rule;		[select the combat mode for first-strike]
-	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?'  [or]Eeeee! A new plaything for me!'  [or]You[']re going to give me just what I want.'  [at random]Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
-	
+	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?'  [or]Eeeee! A new plaything for me![or]You[']re going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -53,7 +53,7 @@ When Play begins:
 	now name entry is "red kangaroo"; [Name of your new Monster]
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble.[or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs.[or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach.[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches.[at random][rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[redroodesc]";[ Description of the creature when you encounter it.]
 	now face entry is "medium sized rounded muzzle, black nose pad at the end of your new muzzle at the end of your face";
 	now body entry is "a soft rounded shoulder build with tight stomach, leading down into wide hips, large spring like thighs and feet";
@@ -73,7 +73,7 @@ When Play begins:
 	now cha entry is 11;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 35;			[ How many HP has the monster got? ]
-	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Red";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -84,12 +84,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "altered";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]marsupial[or]kangaroo[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -130,7 +130,7 @@ this is the rookick rule:		[+75% dmg cartoonish double-kick]
 to say rookickreset:
 	choose row monstercom from table of Critter Combat;
 	now alt1chance entry is 20;
-	
+
 
 Section 4 - Definitions
 
