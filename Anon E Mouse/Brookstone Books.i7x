@@ -60,7 +60,7 @@ instead of conversing the Beverly:
 			Say "     Looking at Beverly a moment more, you return to browsing through the books when she doesn't look back up.";
 	otherwise:
 		say "     [one of]'I hope Turtle is behaving himself.'[or]'I would like to resume teaching, even if I can't be transformed back.'[or]'It's good to see you safe and sane.'[or]'I heard the rats talk about seeing weird things below the mall. Is it true?'[or]'Turtle has always been a pretty smart kitty.'[or]'I remembered there was a class field trip planned for the zoo.'[or]'The jackal lady down the way is beautiful, but kind of strange don't you think?'[or]'How are things going for you out there?'[or]'Maybe when you have some time we can try one of the role playing games.'[or]'I hope Turtle is alright.'[or]'I have a lot of interesting books. You might find something useful among them.'[or]She smiles at you. 'This new look of mine is growing on me... What do you think?'[at random]";
-		
+
 Instead of fucking the Beverly:
 	if bevtalk is 1:
 		say "     'You're a nice person and all, but I'm not up for any kind of relationship right now. Do you mind if we just stick to platonic love?'";
@@ -99,7 +99,7 @@ carry out browsebooks:
 			If intelligence of player < 20:
 				Let bonus be ((the intelligence of the player minus 10) divided by 2);
 				Let diceroll be a random number from 1 to 20;
-				Increase diceroll by bonus;				
+				Increase diceroll by bonus;
 				If diceroll >= 12:
 					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
 					Increase intelligence of player by 1;
@@ -170,7 +170,7 @@ carry out browsebooks:
 			If hagfeat is 1:
 				say "     You head back to the business and money section to see if there are any other books that might be of help to you. Seeing the spine for [bold type]How to Find a Good Bargain[roman type], you're tempted to read it once more. But only if there is nothing else good to read, you decide, and continue to browse the titles.";
 			Otherwise:
-				say "     While looking through a stack of books on a table, you come across a book titled [bold type]How to Find a Good Bargain [roman type] by author I. M. Weasel. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of bartering. You manage to pick up a few pointers, but nothing more then that, and close it before continuing your search.";
+				say "     While looking through a stack of books on a table, you come across a book titled [bold type]How to Find a Good Bargain [roman type] by author I. M. Weasel. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of bartering. You manage to pick up a few pointers, but nothing more than that, and close it before continuing your search.";
 		Otherwise:
 			say "[hfgb]";
 	otherwise If X is 9:
@@ -194,7 +194,7 @@ carry out browsebooks:
 	Otherwise:
 		say "     You head over to the magazine racks and peruse through what magazines there are. Coming across [one of]Car and Driver[or]Equus[or]Wired[or]Equine Wellness[or]Entertainment Weekly[or]Reader's Digest[or]Modern Dog[or]Popular Mechanics[or]Time[or]Cat Fancy[or]Field and Stream[or]Predator Xtreme[or]Macworld[or]PCWorld[or]Shonen Jump[at random], you pull it out of the rack and head over to a chair to sit and read it. After reading an article or three, you decide you want to save the rest of the magazine for later and put it back before heading to browse another part of the store.";
 		Follow the turnpass rule;
-					
+
 Section 4 - Books
 
 survfeat is a number that varies.
@@ -267,5 +267,5 @@ To say hfgb:
 			Now hfgbread is turns;
 			Now hagfeat is 1;
 			Follow the turnpass rule;
-		
+
 Brookstone Books ends here.
