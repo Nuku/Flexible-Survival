@@ -1,5 +1,5 @@
 Version 3 of Hadiya by Kaxin begins here.
-[Version 3.1 - Gobby oral and revisions to Hadiya scenes - Stripes]
+[Version 3.1.1 - Eventual skip for target gender query to allow quest start - Stripes]
 [Character originally by Kaxin.  Expanded sex scenes and quest by Stripes.]
 
 "Adds a situation to Flexible Survival with a very annoyed Hyena woman."
@@ -47,6 +47,7 @@ The conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 The fuckscene of Hadiya is "[sexwithHadiya]".
 lastfuck of Hadiya is usually 300.
+hgsqc is a number that varies.
 
 to say hadiyadesc:
 	if debugactive is 1:
@@ -133,7 +134,7 @@ to say sexwithHadiya:
 		say "     Your asshole is pried open roughly by the hyena's cock, spread and forced to take her throbbing meat.  After all the teasing, or perhaps you're just starting to need it rough, this feels wonderful, filling a vacancy in you that only your hyena mistress can fill.  When her jaws are back around your throat, she starts pounding away at you, your body bent beneath her as she tears into you with her pointed, animal cock and pressing you downwards with each slamming thrust.  Your cock dribbles and drools, trapped between your groin and your mistress's furry belly - so very hard.  Her hips slam into yours, her cock bruising your prostate from how hard she's slamming into you, making you whimper and moan, in ecstasy despite (or perhaps even because of ) the pain."; 
 		attempttowait;
 		if hp of Hadiya is 6 and cunts of player > 0 and "One Way" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
-			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal.  You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you.  As she's sinking her shaft into you, her paw strays to your pussy, completely forgotten in the excitement, and brushes over it lightly.  Here you are, such a needy bitch taking it up the ass.  You don't need this pussy at all, do you?  When you get fucked, you just want it in your ass, so it's just getting in the way.  Your mistress doesn't want it, so you don't need it, do you?' she rumbles in your ear, moving her paw to play with your cock and your balls.  Do you agree with your mistress, no longer wanting and needing your pussy?";
+			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal.  You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you.  As she's sinking her shaft into you, her paw strays to your pussy, completely forgotten in the excitement, and brushes over it lightly.  'Here you are, such a needy bitch taking it up the ass.  You don't need this pussy at all, do you?  When you get fucked, you just want it in your ass, so it's just getting in the way.  Your mistress doesn't want it, so you don't need it, do you?' she rumbles in your ear, moving her paw to play with your cock and your balls.  Do you agree with your mistress, no longer wanting and needing your pussy?";
 			if the player consents:
 				say "     Hadiya laughs as you admit that getting it in the ass is all you really need and plows into you hard and deep, grinding her knot against your pucker.  'That's my good slut, knows what's best for him - whatever Mistress wants.'  You moan and nod, pressing back against her knot as your anus spreads, letting it pop into you, tying you to her.  It pulses and throbs inside you as she pumps your cock all the faster.  'Cum for me, you bitch.  Show me how much you love it.'  You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long.  With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more.  You are both left panting and leaking as the last of your seed dribbles out.  When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor and flops back into her chair, not bothering to pull up her pants.  After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time.  Eventually you slink off, making a show of your soreness that has your mistress grinning even as your pussy shrinks down a little.[mimpregchance]";
 				decrease cunt length of player by 2;
@@ -152,6 +153,12 @@ to say sexwithHadiya:
 			attempttowait;
 			say "     The red-furred hyena plows into you hard and deep, grinding her knot against your pucker and you press back against it as your anus spreads.  It pops into you, tying you to her.  Her red cock pulses and throbs inside you as she pumps your cock all the faster.  'Cum for me, you bitch.  Show me how much you love it.'  You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long.  With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more.  You are both left panting and leaking as the last of your seed dribbles out.  When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor.  Grabbing your head, she has you lick her clean before flopping back into her chair, not bothering to pull up her pants.  After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time.  Eventually you slink off, making a show of your soreness that has your mistress grinning.[mimpregchance]";
 			if hp of Hadiya is 6 and ( "One Way" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player), now hp of Hadiya is 7;	[skip query]
+			if hp of Hadiya is 6 and ( "Male Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player ), now hp of Hadiya is 57;	[skip query]
+			if hp of Hadiya is 6:
+				if hgsqc < 2:
+					increase hgsqc by 1;
+				otherwise:
+					now hp of Hadiya is 57;		[repeated male results in male target]
 		hadiyahyenaify;		
 		now lastfuck of Hadiya is turns;
 	otherwise if hp of Hadiya >= 4 and a random chance of 3 in 5 succeeds:
