@@ -2,7 +2,7 @@ Version 4 of Yamato Dragoness For FS by Kohryu begins here.
 [ Version 4.5 - Dragonpalooza 2 - player loss and bound state]
 [ - Originally Written by Kohryu - ]
 
-"Adds a Yamato Dragoness to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Yamato Dragoness to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -95,7 +95,7 @@ to say Yamato Dragoness attack:
 							say "     Twisted, heated confines filled with the wet sounds of his persisting motion, you're eventually met with a long, exhausted groan by the creature, hot seed flooding your depths before he -- finally -- goes limp, spent, and loosens up his hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to find your things and head back from where you came.[impregchance] [mimpregchance][line break]";
 							infect;
 					otherwise:
-						say "     In spite what better judgement you might have, you oblige the serpentine creature's need";
+						say "     In spite what better judgment you might have, you oblige the serpentine creature's need";
 						if "Horny Bastard" is listed in feats of player:
 							say ". Shifting slightly against this tight prison, you quickly realize how sore and bloated your stomach is from the other occupant's seed, empowered by some unholy libido that's been compelling him to use you for a fair amount of time now.";
 						otherwise:
@@ -120,7 +120,7 @@ to say Yamato Dragoness attack:
 							say "     Twisted, heated confines filled with the wet sounds of her persisting motion, you're eventually met with a long, exhausted groan by the creature, hot honey drenching your groin, before she -- finally -- goes limp, spent, and loosens up her hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to gather your things and head back out from where you came.";
 							infect;
 					otherwise:
-						say "     In spite what better judgement you might have, you oblige the serpentine creature's need";
+						say "     In spite what better judgment you might have, you oblige the serpentine creature's need";
 						if "Horny Bastard" is listed in feats of player:
 							say ". Shifting slightly against this tight prison, you quickly realize how sore and used you are, [if cocks of player > 0]cock[smn] strained by overuse[otherwise]body strained from the constant grinding of her scaled form[end if], empowered by some unholy libido that's been compelling her to use you for a fair amount of time now.";
 						otherwise:
@@ -209,7 +209,7 @@ to say Yamato Dragoness attack:
 				say "     After a few moments, she finally wrenches you free of her, setting you down on the ground by your tail. Satisfied, she grins at you for a moment before silently floating off, away from you[if cocks of player > 1] and your cum-soiled self[end if], doubtlessly fatigued and lust sated. You gather your things[if cocks of player > 1], clean yourself off,[end if] and depart back from whence you came.";
 		otherwise:
 			if cocks of player > 0 and a random chance of 1 in 2 succeeds:
-				say "     [if hp of player < 1 and player is not submissive]Charged by a surge of rebellion, you make one final attempt to crawl away, only to be grabbed by the dragoness and dragged closer[otherwise]Tainted need clear in her eyes, the dragoness shows no restraint in pulling you closer to her[end if]. [if scalevalue of player > 4]Massive as you are, [one of]it's clear[or]you're reminded[stopping] that she eclipses even you in size[otherwise if scalevalue of player is 4]Fairly large as you are, [one of]it's clear[or]you're reminded[stopping] that she's much, much larger than you[otherwise]Her appearance is somewhat intimidating, given how absolutely massive she is[end if]; regardless, you're forced to watch on as her scaled snout descends on you, tongue emerging to caress your  [if cockname of player is listed in infections of Internallist]crotch, coaxing your [cock size desc of player] cock[smn] out into the open air[otherwise]exposed, [cock size desc of player] cock[smn], coaxing you into becoming fully hard[end if][if hp of player > 0 and player is not submissive], in spite of your better judgement[end if].";
+				say "     [if hp of player < 1 and player is not submissive]Charged by a surge of rebellion, you make one final attempt to crawl away, only to be grabbed by the dragoness and dragged closer[otherwise]Tainted need clear in her eyes, the dragoness shows no restraint in pulling you closer to her[end if]. [if scalevalue of player > 4]Massive as you are, [one of]it's clear[or]you're reminded[stopping] that she eclipses even you in size[otherwise if scalevalue of player is 4]Fairly large as you are, [one of]it's clear[or]you're reminded[stopping] that she's much, much larger than you[otherwise]Her appearance is somewhat intimidating, given how absolutely massive she is[end if]; regardless, you're forced to watch on as her scaled snout descends on you, tongue emerging to caress your  [if cockname of player is listed in infections of Internallist]crotch, coaxing your [cock size desc of player] cock[smn] out into the open air[otherwise]exposed, [cock size desc of player] cock[smn], coaxing you into becoming fully hard[end if][if hp of player > 0 and player is not submissive], in spite of your better judgment[end if].";
 				say "     Blatantly revealing her plans for you, she slowly begins to shift over, lengthy, serpentine frame giving way until the creature's reptilian vent is exposed before you";
 				if FYDM is 0:
 					say ". Patiently lining herself up with you, [if cock length of player < 20]you're not rightly sure how she intends to get anything out of this exchange, there's no way anyone of your size could be reasonably equipped for this monster.[run paragraph on] This reality never seems to cross her mind as[otherwise]you imagine it must be uncommon for the monster to encounter someone as well-endowed as you are, clearly eager to get things going as[end if] she sinks ";
