@@ -1229,6 +1229,7 @@ to say SonyaSex1:  [fucking her]
 		say "     [WaitLineBreak]";
 		say "     As much as you wish this could last forever, there are limits to everything. Her pants having gotten louder and faster quickly, Sonya suddenly pulls you even tighter against herself, holding you there as she shouts 'I'm coming!' You can feel her whole body shuddering under yours, a tremble running through the dildo in your hand as her inner muscles grip it. A trickle of her femcum runs down over the sex toy, to soak into the furs under you.";
 		say "     Exhausted, you roll the two of you over to lie on your sides, the dildo still connecting you, and try to catch your breath. Sonya strokes your chest softly and looks deep into your eyes, content in just lying there on the warm furs with you for a while, resting and holding one another. Then, she sighs 'I love you, my wife', rubbing your nose with hers before sitting up. After cleaning up a bit with a soft towel from one of the two chests against the wall, she gathers up her clothes and gets dressed.";
+	now lastfuck of Sonya is turns;
 			
 to say SonyaSex2:  [doggy-style]
 	say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her husband while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
@@ -1250,6 +1251,7 @@ to say SonyaSex2:  [doggy-style]
 				now VikingKidShape is bodyname of player;
 			otherwise:    [human player]
 				now VikingKidShape is "human";
+	now lastfuck of Sonya is turns;
 
 to say SonyaSex3:  [feline spines]
 	say "     Wrapping an arm around your beautiful Viking wife, you pull her close and meet her lips with yours, sharing a hot kiss that leaves you wanting more. And Sonya is only too happy to give you that, making out with her husband while at the same time snaking a hand down your back to grab your butt. Some moments full of breathless kissing and fondling later, she pulls back from you, softly pushing against your chest as she tells you to wait there with a teasing smile on her lips. Then the blond goddess saunters over to her bed, swaying her hips seductively and giving you lusty looks over her shoulders. After quickly pulling off her boots, Sonya gets on the bed, kneeling on its soft furs, and starts to undress in an incredibly hot little strip-show.";
@@ -1272,6 +1274,7 @@ to say SonyaSex3:  [feline spines]
 				now VikingKidShape is bodyname of player;
 			otherwise:    [human player]
 				now VikingKidShape is "human";
+	now lastfuck of Sonya is turns;
 				
 to say SonyaArrivalSexMenu:
 	now sextablerun is 0;
@@ -1364,6 +1367,7 @@ to say SonyaArrivalSex1:
 		say "     You keep going for a while like this, playing with Sonya's body as she plays with yours, making each other tremble, pant and gasp, before you finally go all out, intensifying your finger-work to get her to the climax that has been building all this time. The beautiful woman's moans get louder and more high-pitched as they come faster and faster, then she gives something halfway between a squeak and an aroused shout as the point of no return is reached. You can feel Sonya's breath hotly against your own pussy as she pants loudly and trembles all over in orgasm.";
 		say "     [WaitLineBreak]";
 		say "     Head sinking back to rest on the furs below, Sonya regains her breath after a minute or two, then goes right back to lapping at your own private parts, down below. As hot and bothered as you are from all the fun you had with your wife, it doesn't take long before her attention allows you to reach a breathtaking climax, trembling all over as your body reaches release.";
+	now lastfuck of Sonya is turns;
 
 to say SonyaArrivalSex2:
 	if cocks of player > 0:                      [male+herm]
@@ -1426,6 +1430,7 @@ to say SonyaArrivalSex2:
 		say "     [line break]";
 		say "     As you move along and leave the watchers behind to get back to whatever they were doing before your little show, you notice two shapes glide through the water under you. A moment later, they surface in front of you, revealing themselves to be a pair of mer-people, with long fish's tails and fins as well as attractive human upper halves. They're male and female, with relatively similar features and long, brown hair - and you can see the flare of lust in their eyes. 'Hello there,' the mermaid says with a smile, then nods to Sonya and yourself before continuing, 'I'm Sylvie, and this is Kev. We watched your very nice performance back there and... would like to extend an invitation to share some good times.'";
 		say "     Her companion speaks up after that, giving a charming smile and saying, 'We love having fun with other couples. Just think about what we could do together...' That said, both merfolk present themselves a bit, posing while they let their eyes wander over you - and they don't just have eyes for their opposite sex. You do notice Sylvie licking her lips as she glances at Sonya's breasts, while Kev lets his gaze wander over you with an intrigued expression. After a moment of mutual inspection, Sylvie says, 'We'll be in the area,' then nods towards the viking ship and continues, 'you've parked not far from where we live... so, if you wanna have some fun, it shouldn't be hard to find us.' With that, the two of them give a wave and dive underwater, swimming away.";
+	now lastfuck of Sonya is turns;
 
 Section 6 - Drop Item
 
