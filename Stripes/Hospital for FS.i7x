@@ -1099,7 +1099,7 @@ to say tlabsbigfight:
 	say "     You silently step up behind Dr Matt and stab the needle into him.  He cries out for Orthas and jabs a finger into an emergency button, sounding an alarm as well.  Trying to free himself from your grip, he struggles to reach the anti-infection microwave device he has on his desk.  As you fight to hold him, his now useless environment suit starts to come off.";
 	attempttowait;
 	project the icon of Sally;
-	say "     You can see that he's becoming some strange hybrid of husky and rabbit, with a cute, rabbit-like muzzle and ears, but a coat of fluffy fur and curled tail like a husky.  As six breasts with perky nipples start to form on his chest and a wet slit grows in under his fuzzy sheath, the struggles to get away start to become lustful grinding against your body as the hormones course through her system, clouding the doctor's judgement.";
+	say "     You can see that he's becoming some strange hybrid of husky and rabbit, with a cute, rabbit-like muzzle and ears, but a coat of fluffy fur and curled tail like a husky.  As six breasts with perky nipples start to form on his chest and a wet slit grows in under his fuzzy sheath, the struggles to get away start to become lustful grinding against your body as the hormones course through her system, clouding the doctor's judgment.";
 	attempttowait;
 	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door slams open almost off its hinges as an angry dragon bursts in.  Orthas growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
 	if Susan is visible:
