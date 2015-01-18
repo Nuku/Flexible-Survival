@@ -1,14 +1,14 @@
-Chinchilla Cuntboy for FS by Auto Translator begins here. 
+Chinchilla Cuntboy for FS by Auto Translator begins here.
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
- 
+
 "Adds Chinchilla Cuntboy to Flexible Survival."
- 
+
 Section 2 - Monster Insertion
- 
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
- 
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Chinchilla Cuntboy"; [Name of your new Monster]
@@ -16,11 +16,11 @@ When Play begins:
 	now defeated entry is "[if Chinchilla Cuntboy is male and you is female]A surge from your mating instinct takes over and you pounce on Chinchilla Cuntboy, shoving their manhood into your aching cunt and fucking yourself silly on their meat. Though you're pretty sure it was just to humiliate them as much as it was to sate your lust.[impregnate you with Chinchilla Cuntboy][end if][line break][if Chinchilla Cuntboy is male and you is not female]A surge from your mating instinct takes over and you pounce on Chinchilla Cuntboy, shoving your crotch into whatever passed for their face since you couldn't see any interesting sexual organs on their body. After driving yourself to orgasm, you give a satisfied squeak at their humiliated aura as you finally get back up.[end if][line break][if Chinchilla Cuntboy is not male and you is female]A surge from your mating instinct takes over and you pounce on Chinchilla Cuntboy, shoving your aching cunt into hers and fucking yourself silly in the tribadism fest. Though you're pretty sure it was just to humiliate them as much as it was to sate your lust.[end if][line break][if Chinchilla Cuntboy is not male and Chinchilla Cuntboy is not female]A surge of instinct takes over and you pounce on Chinchilla Cuntboy, shoving your crotch into whatever passed for their face since you couldn't see any sexual organs on their body. After driving yourself to orgasm, you give a satisfied squeak at their humiliated aura as you finally get back up.[end if][line break]";
 	now victory entry is  "[if you is male]A surge from their mating instinct takes over and Chinchilla Cuntboy pounces on you, shoving their aching cunt into you and fucking them silly in on their meat. Though it's pretty sure it was just to humiliate you as much as it was to sate their lust.[end if][line break][if you is not male]A surge from their mating instinct takes over and Chinchilla Cuntboy pounces on you, shoving their aching cunt into you and fucking them silly in the tribadism fest. Though it's pretty sure it was just to humiliate you as much as it was to sate their lust.[end if][line break][if you is not female and you is not male]A surge from their mating instinct takes over and Chinchilla Cuntboy pounces on you, shoving their crotch into whatever passed for their face since Chinchilla Cuntboy couldn't see any sexual organs on their body. After driving yourself to orgasm, Chinchilla Cuntboy gives a satisfied squeak at the humiliated you as they finally get back up.[end if][line break][line break][line break][line break][line break]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "Looking over Chinchilla Cuntboy, her body is covered in a fluffy pelt of dark grey fur with white on the chest, belly, and thighs. flesh. Her head is a narrow-skulled head with a blunt and short cone-like rodentine snout and whiskers. Two rather long mouse-like ears rest on top of the skull. Just like a chinchilla, though more human looking. Her body is a fairly narrow torso with just the right amount of muscle and body fat. It looks deceptively masculine. She has 2 nipples. Her arms are cute and fluffy arms with very human looking hands that have fingers tipped with small sharp claws. Her legs are well toned digitigrade legs with long and narrow feet, like that of a chinchilla. They have a cute and fluffy ass. Its so huggable! Right above it rests a slim but fluffy knee-length tail that gets more puffy towards the end of its length and ends in a tuft. A private peek would reveal that she has: Her groin resembles that of a chinchilla cuntboy. She has a wide vagina.";[ Description of the creature when you encounter it.]
-	now face entry is "a narrow-skulled head with a blunt and short cone-like rodentine snout and whiskers. Two rather long mouse-like ears rest on top of the skull. Just like a chinchilla, though more human looking.";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "a narrow-skulled head with a blunt and short cone-like rodentine snout and whiskers. Two rather long mouse-like ears rest on top of the skull. Just like a chinchilla, though more human looking.";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "a fairly narrow torso with just the right amount of muscle and body fat. It looks fairly masculine... Your arms are cute and fluffy arms with very human looking hands that have fingers tipped with small sharp claws.. Your legs are well toned digitigrade legs with long and narrow feet, like that of a chinchilla.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "a fluffy pelt of dark gray fur with white on the chest, belly, and thighs.";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "a cute and fluffy ass. Its so huggable! Right above it rests a slim but fluffy knee-length tail that gets more puffy toward the end of its length and ends in a tuft.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]a very featureless[or]a generic boring dildo-like[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now skin entry is "a fluffy pelt of dark gray fur with white on the chest, belly, and thighs.";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "a cute and fluffy ass. Its so huggable! Right above it rests a slim but fluffy knee-length tail that gets more puffy toward the end of its length and ends in a tuft.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]a very featureless[or]a generic boring dildo-like[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "The nanites get to work, turning your entire head (but thankfully not your brain) into some kind of jelly-like substance as they rearrange your features into a more rodentine appearance. Your nose and jaws grow longer and taper into a blunt button-nosed snout with whiskers sprouting on both of your new cheekbones. Your ears move to the either side of the top of your head and elongate, suddenly giving you much better auditory sensitivity and range."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "Your internal organs suddenly revolt against you with a violent bout of nausea. You hear cracking from your ribs as it is reshaped, your organs also being remodeled to better fit within your new torso. Yet your nausea continues as you find that you can no longer process meat any meat products you had eaten recently end up being ejected by your bout of vomiting. A new instinct tells you that fruits, vegetables, grasses, and insects are the only things you can digest for as long as this mutation sticks around. Your arms break out in intense itching as the nanites in your body receive new instructions. The itching continues as your arms warp and flop like they're suddenly made of rubber. After several seconds they solidify into a pair of nearly human looking arms! Well..except for the claws and that chinchilla feel, but they're still arms and you kept your opposable thumbs! Your legs burn with a dull pain, making you collapse onto something as bones are remade and muscles are forcefully altered at the cellular level. On the outside, your legs crack and snap as they take on a digitigrade shape and your feet grow much longer and narrower, mirroring that of a chinchilla if it were anthropomorphous."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "Your body breaks out with an intense burning itch from the INSIDE. You try to scratch yourself to relieve it but its hopeless. You can only whimper and squirm as your skin churns like its alive and a coat of fur appears all over your body from head to foot. Once the itching finally ends, you look over yourself to see that the fur on your chest, belly, and thighs is an off-white colour and the rest is a dark gray."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -28,13 +28,13 @@ When Play begins:
 	now cock change entry is "your groin feels very strange. It squirms and flops about as if its got a life of its own, its features melting into nothingness and leaving you with a very bland and featureless (but still sensitive) phallic thing!"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 25;   [a big strong bear]
 	now dex entry is 8;   [not so limber]
-	now sta entry is 11;  [not too much stamina  -a lot of bear to lug about.] 				
+	now sta entry is 11;  [not too much stamina  -a lot of bear to lug about.]
 	now per entry is 20;  [bears are good at finding stuff]
 	now int entry is 14;   [not that much of a bear with little brain]
 	now cha entry is 14;  [because you wouldn't want to argue]
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 60;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -45,9 +45,9 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 7;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 7;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
- 
-Chinchilla Cuntboy for FS ends here. 
+
+Chinchilla Cuntboy for FS ends here.
