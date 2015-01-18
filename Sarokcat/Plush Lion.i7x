@@ -1,5 +1,5 @@
 Version 2 of Plush Lion by Sarokcat begins here.
-[ Version 2.1 - Plush Lion vore loss ]
+[ Version 2.1.1 - Plush Lion vore loss - scene fix ]
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
@@ -62,7 +62,7 @@ to plushlionvored:
 		increase hunger of player by 4;
 		increase thirst of player by 2;
 	otherwise:
-		say "     As you slumber inside that soft belly, you dream of teddy bears and warm hugs.  These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains.  You come to shortly after being let out of the plush bear, rising up and giving her a soft, padded hug with your teddy bear body.  You, like her, are a living teddy bear creature, both in body and in mind.  After some playful, kinky cuddling together, you skip down the midway, padded paw in padded paw.";
+		say "     As you slumber inside that soft belly, you dream of padded felines and soft hugs.  These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains.  You come to shortly after being let out of the stuffed lion, rising up and nuzzling him with your plush face.  You, like him, are a living plush lion creature, both in body and in mind.  After a playful, kinky romp together, you pad down the midway, fuzzy side by fuzzy side.";
 		now plionvored is -100;
 		now xp of player is 0;				[prevents accidental level up]
 		if the player is not lonely, now xp of companion of player is 0;

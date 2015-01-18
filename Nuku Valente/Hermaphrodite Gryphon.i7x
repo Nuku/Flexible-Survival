@@ -1,7 +1,7 @@
 Version 1 of Hermaphrodite Gryphon by Nuku Valente begins here.
 [Version 1 -- Taken from Story.ni file and given dedicated file.]
 
-"Adds a Hermaphrodite Gryphon creature to Flexible Survivals Wandering Monsters table"
+"Adds a Hermaphrodite Gryphon creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -27,7 +27,7 @@ To say gryphon lose:
 			say "Realizing that knot is not going in without a bit more force than gravity can provide, you get an idea. Taking your large [cock of player] rod you push it down between your lovers massive blue furred tits. You take the gryphon's arms and have her cross her chest, under her breasts but over your cock, effectively locking you in place. 'Hold on tight!' you say as you lean back, using the leverage your giant cock provides to force the knot inside. you both moan loudly as the pain quickly transforms to intense pleasure, the gryphon starting to rock back and forth as you become accustomed to her size.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "Enjoying the sensation you join in, rocking your hips back and forth, causing your cock to start fucking the gryphon's ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft, you look down to see the gryphon's beak encasing the head of your cock. Worrying that the gryphon's impressive beak is about to take a bite our of your favorite organ you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel the your [ball size] sized balls start to contract as you near orgasm. Sensing your near the gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
+			say "Enjoying the sensation you join in, rocking your hips back and forth, causing your cock to start fucking the gryphon's ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft, you look down to see the gryphon's beak encasing the head of your cock. Worrying that the gryphon's impressive beak is about to take a bite our of your favorite organ you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel the your [ball size] sized balls start to contract as you near orgasm. Sensing you're near the gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the gryphon's throat. Not to be left out the gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the gryphon is done cumming you ease yourself forward and rest your head on one of her bountiful blue breasts.";

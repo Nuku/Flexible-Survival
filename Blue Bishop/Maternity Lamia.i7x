@@ -13,7 +13,6 @@ mlamiabeaten is a number that varies.			[fights won]
 
 when play begins:
 	add { "Lamia" } to infections of girl;
-	add { "Lamia" } to infections of Tailweapon;		[usable for Tail Strike feat]
 	add { "Lamia" } to infections of Reptilelist;	[list of reptile infections]
 	add { "Lamia" } to infections of Internallist;	[list of infections w/internal male genitals]
 

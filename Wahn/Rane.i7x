@@ -175,21 +175,21 @@ Instead of resolving a The blue Oni:
 	say "     [WaitLineBreak]";
 	say "     Following the oni, you walk along the narrow path to the shrine itself, where you find Rane standing in front of the small, but well-kept stone structure. He watches your approach in the large round mirror forming its center, where the perfectly polished bronze disc is resting in an elaborately carved stone stand. Rane's gaze rests on your reflection for a long moment, closely examining it with an intense expression, ";
 	if hellHoundLevel > 0:  [Hellhound Pact]
-		say "then is eyes go wide as the image changes. The mirror now shows you on your hands and knees, with the hellhound you made your deal with mounting you, hips thrusting mercilessly as he knots and breeds you. The beast gives a silent howl in the reflection, then turns its head to look straight at you out of the mirror, eyes burning in an unholy fire. Then suddenly, from one blink to the next, the mirror returns to just showing the normal reflection of what's in front of it.";
+		say "then his eyes go wide as the image changes. The mirror now shows you on your hands and knees, with the hellhound you made your deal with mounting you, hips thrusting mercilessly as he knots and breeds you. The beast gives a silent howl in the reflection, then turns its head to look straight at you out of the mirror, eyes burning in an unholy fire. Then suddenly, from one blink to the next, the mirror returns to just showing the normal reflection of what's in front of it.";
 		say "     Rane looks at you with a shocked expression, then says 'You made a deal with that beast? I would never have expected something so vile from you. Stay away from me.' After a quick murmur in Japanese and a bowing towards the mirror, the blue oni then dashes off, vanishing between the bamboo poles before you can do or say anything.";
 		now hp of Rane is 99;
 		now battleground is "void";	[blocks a random fight after this]
 		move player to shrine;
 		remove Rane from play;
 	otherwise if jackalmantf is 4:  [Jackalman Transformation]
-		say "then is eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
+		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now hp of Rane is 6;
 		now battleground is "void";	[blocks a random fight after this]
 		move player to shrine;
 	otherwise if Nightmaremastery is 1:   [Player is Stablemaster]
-		say "then is eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
+		say "then his eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";
 	otherwise:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
@@ -309,7 +309,7 @@ When Play begins:
 
 Section 2 - NPC
 
-Rane is a man. 
+Rane is a man.
 The description of Rane is "[RaneDesc]".
 The conversation of Rane is { "Oh, hello." }.
 lastfuck of Rane is usually 555.
@@ -381,7 +381,7 @@ instead of conversing the Rane:
 		otherwise:
 			say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-			
+
 to say RaneTalk1:   [talk about him]
 	let randomnumber be a random number from 1 to 4;
 	if randomnumber is:
@@ -492,7 +492,7 @@ Instead of fucking Rane:
 			otherwise:
 				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
-		
+
 to say RaneFirstFuck:
 	say "     You breathe in deeply then step up to Rane, pressing the lock of his belt, then watch it and the fabric around his hips fall to the ground. The blue oni gives a pleased sigh at your initiative, confidently standing bare-ass naked before you and allowing you to take in all of him. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
 	say "     Well, it's big and blue, like its owner. Same colour as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. While you had your eyes firmly riveted to his crotch, Rane's hands in the meantime were busy wandering over your body and feeling you up - until he acts right now, quickly pulling down and discarding your lower clothing.";
@@ -527,7 +527,7 @@ to say RaneFirstFuck:
 		say "     Declining to bring the Japanese demon home - and likely get fucked again and again by him - you see Rane's expression fall for just a second, then he shrugs the disappointment off and puts the flirty grin back on his face. 'Well then, hope I'll see you again sometime. Who knows when we might run into each other.' Putting his arm around you to get a last grope of your ass, the blue oni gives your cheek a playful lick with his long tongue, then dashes off, vanishing behind the high bamboo poles in a moment.";
 		remove Rane from play;
 		now hp of Rane is 50;
-		
+
 to say RaneSex1:        [player sucks him]
 	say "     Rane smiles broadly as he sees the lusty gleam in your eye and says 'Can't get enough of my cum, can you?' The tall oni waits for you to approach with his hands on his hips, humming in satisfaction as you rub his crotch, then let your hands wander to the release of his belt. With a quick push, the flexible metal band falls away, immediately followed by the now no longer secured white fabric of his loincloth. Now confidently standing bare-ass naked before you, the blue man allows you to take in all of him and even sinuously moves his hips a bit to show off. Under a thick bush of spiky white pubic hair, Rane's respectably big manhood dangles down between those chiseled legs of his - or at least at first it does. Reveling in your attention, the blue man's shaft rises and expands, getting harder and longer by the moment. Starting out big, it really becomes quite a sight to behold - thick and long to match the scale of the rest of him. For a moment you think it might not stop growing, but then it finally reaches its full extension, now standing erect pointing at you in a slight upward angle.";
 	say "     Well, it's big and blue, like its owner. Same colour as the rest of Rane's skin for the most part, except for the enlarged mushroom head which has a dark pink tinge to it. Like the rest of his body, it's the details which stand out, and you definitely take notice of enlarged bulging veins running along its length, which by your estimate is somewhere in the vicinity of a foot long, though that's maybe a bit modest. Underneath, you catch glimpse of what looks to be a very firm scrotum holding two about softball sized testicles. With your eyes firmly riveted to his crotch, you don't notice the large oni putting his hands on your shoulders until he pushes down to get you to kneel, that is.";
