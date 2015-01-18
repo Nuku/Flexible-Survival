@@ -2,7 +2,7 @@ Version 4 of Yamato Dragon For FS by Kohryu begins here.
 [ Version 4.5 - Dragonpalooza 2 - player loss and bound state]
 [ - Originally Written by Kohryu - ]
 
-"Adds a Yamato Dragon to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Yamato Dragon to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 Section 1 - Monster Responses
 
