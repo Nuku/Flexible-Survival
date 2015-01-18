@@ -400,7 +400,7 @@ to say yolandaspecial01f:
 
 
 to say yolandaspecial02:
-	say "     Yolanda tries to appear disinterested when you first reveal the jewelry box to her, but you can see the gleam of interest in her eye.  'Oh, a jewelry box.  I've already got a few of those,' she says, motioning to a few scattered among her collection of shiny objects.  'But I guess another one wouldn't hurt.  I'll just set it here and you can have a little fun as a reward.  How does a turn on top sound to you?'  She turns around and raises her tailfeathers and she puts her new acquisition in the center of her collection, giving you an enticing view of her cloacal cunny as she does.  With thoughts of sex clouding your judgement, you agree to the trade - as long as you can take her on her back.  Eager to get the ornate box and its shiny contents for her collection, she agrees with little reluctance.";
+	say "     Yolanda tries to appear disinterested when you first reveal the jewelry box to her, but you can see the gleam of interest in her eye.  'Oh, a jewelry box.  I've already got a few of those,' she says, motioning to a few scattered among her collection of shiny objects.  'But I guess another one wouldn't hurt.  I'll just set it here and you can have a little fun as a reward.  How does a turn on top sound to you?'  She turns around and raises her tailfeathers and she puts her new acquisition in the center of her collection, giving you an enticing view of her cloacal cunny as she does.  With thoughts of sex clouding your judgment, you agree to the trade - as long as you can take her on her back.  Eager to get the ornate box and its shiny contents for her collection, she agrees with little reluctance.";
 	if cocks of player > 0:
 		say "[yolandaspecial02m]";
 	otherwise:
