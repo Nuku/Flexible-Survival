@@ -2,12 +2,12 @@ Version 2 of Harpy by Nuku Valente begins here.
 [Version 2 - Central Library content by Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Harpy to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Harpy to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
 
@@ -81,15 +81,15 @@ When Play begins:
 	add "Harpy" to infections of girl;
 	Choose a blank row from Table of random critters;
 	now name entry is "Harpy"; [Name of your new Monster]
-	now attack entry is "[one of]She manages to get a good grip with a talon around an arm, digging her claws in as her wings-arms beat powerfully.[or]She dive bombs from above, knocking you to the ground.[or]A sudden hug has you pressed to her soft front, only to be released above the ground.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She manages to get a good grip with a talon around an arm, digging her claws in as her wings-arms beat powerfully[or]She dive bombs from above, knocking you to the ground[or]A sudden hug has you pressed to her soft front, only to be released above the ground[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Harpy loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Harpy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Harpy attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "An athletic looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless, flesh where exposed on her front and chubby, elfin, face. She would be cute if she wasn't scary.";[ Description of the creature when you encounter it.]
-	now face entry is "young woman with large, elfin, ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in colour. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "Above your pert ass is a fan of brown feathers curved upwards. ";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "young woman with large, elfin, ears and unruly red hair that barely reaches your shoulders. While a little chubby, it could pass as a human";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "built slightly, with slender curves that remind of a teenaged female and an exposed belly button on your [skin of player] front. Feathers spread over your shoulders and back, light brown in colour. Your thighs are covered in downy looking feathers, but shins fade into tough looking bird talons that grip the ground securely. Your arms have wings like fins, with powerful flight feathers ready.";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "Above your pert ass is a fan of brown feathers curved upwards. ";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a soft warmth flows through your head as it dwindles and rounds to nymph like appeal. Your ears stretch a little to the sides as hair shifts in hue."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "light brown feathers spread rapidly, covering your shoulders and back. Brown feathers spread over your legs, from the hips down towards your shin where it fades towards yellow scaly skin. Your feet become powerful looking bird talons with wicked claws. Even as you consider reaching to touch, wing fins burst from your arms with new feathers."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth."; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -97,13 +97,13 @@ When Play begins:
 	now cock change entry is "it thrums with an alien pleasure."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
-	now sta entry is 16;					
+	now sta entry is 16;
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 50;			[ How many HP has the monster got? ]
-	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 10;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -114,12 +114,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
