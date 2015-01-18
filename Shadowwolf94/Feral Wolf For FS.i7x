@@ -1,7 +1,7 @@
 Version 4 of Feral Wolf For FS by Shadowwolf94 begins here.
 [ Version 4.5 - Relocated to Urban Forest area. ]
 
-"Adds a Feral Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Feral Wolf to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -67,7 +67,7 @@ to say beatferalwolf:
 		if a random number between 1 and 100 < ( fangcount - 95 ) and (cocks of player > 0 or cunts of player > 0 ):	[3rd to 5th wolf]
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you.  He even pisses a little to show his submission to you.  From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves.  This wolf, clearly a lowly member of his pack, might make a obedient, if still somewhat feral, pet.  You could take him off with you, if you're willing to risk bringing such a beast back with you.  Shall you try to [bold type]tame[roman type] this beastly wolf creature?";
 			if the player consents:
-				say "     Against your better judgement, you take pity on this battered wolf and decide to take him as your own.  You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
+				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own.  You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if cocks of player > 0 and cunts of player > 0:
 					say "you decide what to do with him.  You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.  But being both male and female, there are options open to you.  Would you prefer to fuck the wolf (Y) or ride his lupine cock (N)?";
 					if the player consents:
@@ -140,7 +140,7 @@ When Play begins:
 	now defeated entry is "[beatferalwolf]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Feral Wolf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A large canine on all fours. A feral looking wolf on four feet, almost three quarts your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine, teeth. His legs a thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. When he sees you, his lips peel in a snarl, expose those deadly teeth.  [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";[ Description of the creature when you encounter it.]
-	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw";[ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly.";[ Tail description, write a whole Sentence or leave blank. ] 
