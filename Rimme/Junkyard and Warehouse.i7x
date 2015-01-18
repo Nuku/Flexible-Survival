@@ -32,6 +32,8 @@ Definition: a person is facially human:
 	if the facename of the player is "Naiad", yes;
 	if the facename of the player is "Math Teacher", yes;
 	if the facename of the player is "Viking", yes;
+	if the facename of the player is "Knight", yes;
+	if the facename of the player is "Squire", yes;
 	no;
 
 Definition: a person is skintone human:
@@ -53,6 +55,8 @@ Definition: a person is skintone human:
 	if the skinname of the player is "Caveman", yes;
 	if the skinname of the player is "Math Teacher", yes;
 	if the skinname of the player is "Viking", yes;
+	if the skinname of the player is "Knight", yes;
+	if the skinname of the player is "Squire", yes;
 	no;
 
 Definition: a person is bodily human:
@@ -68,6 +72,8 @@ Definition: a person is bodily human:
 	if the bodyname of the player is "Naiad", yes;
 	if the bodyname of the player is "Math Teacher", yes;
 	if the bodyname of the player is "Viking", yes;
+	if the bodyname of the player is "Knight", yes;
+	if the bodyname of the player is "Squire", yes;
 	no;
 
 Instead of entering the Storage Room:
