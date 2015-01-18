@@ -1,7 +1,7 @@
-Version 1 of Male Peacock For FS by Nuku Valente begins here. 
+Version 1 of Male Peacock For FS by Nuku Valente begins here.
 
 
-"Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
+"Adds a Male Peacock to Flexible Survival's Wandering Monsters table."
 
 
 Section 1 - Monster Responses
@@ -28,7 +28,7 @@ to say peacockasschange:
 		say "brown feathers emerge from it.  They form a tail that comes down to your knees";
 
 to say peacockdesc:
-	say "A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you[']d better end this battle quickly...";
+	say "A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so... beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you[']d better end this battle quickly...";
 	now peacockcontrol is 0;
 
 to say peacockattack:
@@ -63,12 +63,12 @@ When Play begins:
 	add "peacock" to infections of guy;
 	add "peacock" to infections of furry;
 	Choose a blank row from Table of random critters;
-	now name entry is "peacock"; 
+	now name entry is "peacock";
 	now attack entry is "[peacockattack]";
 	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
-	now face entry is "bird-like head. You pass quite a bit of your time admiring your";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "bird-like head. You pass quite a bit of your time admiring your";[ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[peacockskin]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "[peacocktail]";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -101,7 +101,7 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Peacock feather";			[ Loot monster drops, ]
 	now lootchance entry is 35;		[ Chance of loot dropping 0-100 ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[as decreasingly likely outcomes]";
 	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -115,7 +115,7 @@ Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule	
+"pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule
 
 
 this is the peacockhypno rule:
@@ -147,7 +147,7 @@ name	desc	weight	object
 the usedesc of Peacock feather is "[Peacock feather use]";
 
 to say Peacock feather use:
-	say "You remember that many were infected and mutated by contaminated food. It seems...no, it[']s stupid, but you bite down the feather anyway.";
+	say "You remember that many were infected and mutated by contaminated food. It seems... no, it[']s stupid, but you bite down the feather anyway.";
 
 Peacock feather is infectious. The strain of Peacock feather is "peacock".
 
@@ -161,11 +161,11 @@ when play ends:
 	if bodyname is "peacock":
 		if humanity of player is less than 10:
 			if cock length of player > cunt length of player:
-				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[']fruits['] to taste.";
+				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			otherwise:
-				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
+				say "You decide to remain in the quarantined city. You become the mate of a male peacock... or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
 		otherwise:
-			say "You decide to leave and join civilization. Your pretty look and overall self controlled behaviour gives you a job in what is considered the high society. You still have your...[']teeny sins['], you could say...";
+			say "You decide to leave and join civilization. Your pretty look and overall self controlled behaviour gives you a job in what is considered the high society. You still have your... [']teeny sins['], you could say...";
 			if cunt length of player > cock length of player:
 				if intelligence of player > 18:
 					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";
