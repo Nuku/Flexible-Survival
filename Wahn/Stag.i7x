@@ -1672,6 +1672,8 @@ to say WalkingAres:
 			say "     [AresParkMounting]";
 
 to say AresParkMounting:
+	setmonster "human";
+	choose row monster from the table of random critters;	
 	if hp of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly all of its own, though obviously the concept of clothing being in the way did escape Ares.";
 		say "     [line break]";
@@ -1738,12 +1740,14 @@ to say AresHelenWalk:
 			say "     Looks as if Helen and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Helen back to the library.";
 		otherwise if fightoutcome >= 30:			[fled]
 			say "     When you ran, Helen and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
-			say "     [AresParkMounting]";
+			say "     [AresHelenParkMounting]";
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
 			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares for one isn't bothered at all by these things and just rushes ahead to one specific, seemingly very interesting tree that he sniffs all around for quite a bit before marking it himself.";
 			say "     [AresHelenParkMounting]";
 
 to say AresHelenParkMounting:
+	setmonster "human";
+	choose row monster from the table of random critters;		
 	if hp of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly all of its own, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		say "     [line break]";
@@ -1785,6 +1789,8 @@ to say AresHelenParkMounting:
 	say "     Getting back to the original thing you were out here for, dog-walking, you do a quick tour through the small park, with Ares marking another tree at the entrance on the other side. Then the three of you turn back into the street leading to Mike's house, where you arrive a short while later. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him into his kennel, then make your way back to the library with Helen.";
 
 to say AresHelenParkFuck:
+	setmonster "human";
+	choose row monster from the table of random critters;	
 	say "     [if cocks of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own cock hard as a rock, [otherwise if cunts of player > 0]Seeing Ares thrust into Helen's welcoming pussy has your own sex swollen and dripping wet, [otherwise]Seeing Ares thrust into Helen's welcoming pussy has you all tingly inside, [end if]and thoughts of joining in for some fun are at the forefront of your mind. Do you do so?";
 	if player consents:
 		say "     [line break]";
@@ -1905,13 +1911,15 @@ to say AresXerxesWalk:
 		if fightoutcome >= 20 and fightoutcome <= 29:									[lost]
 			say "     Looks as if Xerxes and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Xerxes back to the library.";
 		otherwise if fightoutcome >= 30:			[fled]
-			say "     When you ran, Xerxes and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniffs all around for quite a bit before marking it, one after another.";
-			say "     [AresParkMounting]";
+			say "     When you ran, Xerxes and Ares followed your lead and even overtook you. Incidentally, your flight led you in roughly the direction you wanted to go anyways, so it's just a short walk until you come to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
+			say "     [AresXerxesParkMounting]";
 		otherwise if fightoutcome >= 10 and fightoutcome <= 19:  			[won]
-			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniffs all around for quite a bit before marking it, one after another.";
+			say "     Having beaten off the threat with the help of Ares, you continue on and not long afterwards get to the park Mike mentioned. It is in a rather peculiar state, just like most things these days. Seems like all the seasons are happening at the same time, as there are spring flowers coming up and new shoots sprouting on some plants, while others stand in full growth and others again have browning leaves or are totally bare. Ares and Xerxes aren't bothered at all by these things and just rush ahead to one specific, seemingly very interesting tree that they sniff all around for quite a bit before marking it, one after another.";
 			say "     [AresXerxesParkMounting]";
 
 to say AresXerxesParkMounting:
+	setmonster "human";
+	choose row monster from the table of random critters;	
 	if hp of Ares < 3:  [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly all of its own, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		say "     [line break]";
@@ -1953,6 +1961,8 @@ to say AresXerxesParkMounting:
 	say "     Getting back to the original thing you were out here for, dog-walking, you do a quick tour through the small park, with both Ares and Xerxes marking another tree at the entrance on the other side. Then the three of you turn back into the street leading to Mike's house, where you arrive a short while later. With a friendly nod at the stag as he welcomes you back, you take Ares to the back room and put him into his kennel, then make your way back to the library with Xerxes.";
 
 to say AresXerxesParkFuck:
+	setmonster "human";
+	choose row monster from the table of random critters;	
 	say "     [if cocks of player > 0]Seeing Ares thrust into Xerxes['] welcoming hole has your own cock hard as a rock, [otherwise if cunts of player > 0]Seeing Ares thrust into Xerxes['] welcoming hole has your own sex swollen and dripping wet, [otherwise]Seeing Ares thrust into Xerxes['] welcoming hole has you all tingly inside, [end if]and thoughts of joining in for some fun are at the forefront of your mind. Do you do so?";
 	if player consents:
 		say "     [line break]";
