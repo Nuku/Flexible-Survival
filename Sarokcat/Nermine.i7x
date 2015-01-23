@@ -1,6 +1,8 @@
 Version 3 of Nermine by Sarokcat begins here.
 [ Version 3.1 - Wereraptor Curse bad end by Stripes.]
 [ Version 3.2 - Extra Scenes for Jackals fucking Nermine in her store, Nermine set to consistently speak of herself in the third person (by Wahn)]
+[ Version 3.2.1 - Fix for Nermine's first convo]
+
 
 "Adds Nermine and her Mysterious Shop to Flexible Survival to handle many of the player's mystical needs."
 
@@ -21,7 +23,7 @@ the scent of Mysterious Shop is "The mysterious shop smells of scented candles a
 section 2- Nermine
 
 romancebooksfound is a number that varies.
-Nerminetalk is a number that varies. Nerminetalk is usually 1.
+Nerminetalk is a number that varies.
 Nerminearoused is a number that varies.
 Nerminefeat is a number that varies.
 Nerminequest is a number that varies.
