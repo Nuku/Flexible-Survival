@@ -170,7 +170,7 @@ to say siamsex4:	[fuck pussy]
 
 
 to say siameseattack:
-	if a random chance of 1 in 4 succeeds:
+	if a random chance of 2 in 7 succeeds:
 		[Dmg calc for first blow]
 		choose row monster from the table of random critters;
 		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
@@ -184,22 +184,22 @@ to say siameseattack:
 		increase hp of player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:
-			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [dammy] damage!";
+			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
 		if T is 2:
-			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [dammy] damage!";
+			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [special-style-2][dammy][roman type] damage damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
 		if T is 3:
-			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [dammy] damage!";
+			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [special-style-2][dammy][roman type] damage damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
 		if T is 4:
-			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [dammy] damage!";
+			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [special-style-2][dammy][roman type] damage damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
@@ -370,7 +370,7 @@ when play ends:
 				say "     After your rescue, you are eventually cleared by the military and released with many others.  You wander from place to place for a time before settling down when you meet a [if cunts of player > 0 and cocks of player > 0]herm[otherwise if cunts of player > 0]male[otherwise if cocks of player > 0]female[otherwise]neuter[end if] feline that you hit it off with[if cocks of player > 0].  She[otherwise].  He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
 				say "     You move in together and have a pleasant life of indolence and sex [if cocks of player > 0].  She[otherwise].  He[end if] is well-to-do, so you can take it easy.  Which suits the feline in you just fine.";
 				if tailname of player is "Siamese Cat":
-					say "     Over time, you do start to feel like something is missing though and you can't tell what.  But one late night, after a particularly energetic romp with your lover and mate, it clicks.  You nuzzle and nibble their ears, whispering that you love them as you bring his tailtip to yours.  Moments later, they start to fuse together and you are joined at the end of your tails.";
+					say "     Over time, you do start to feel like something is missing though and you can't tell what.  But one late night, after a particularly energetic romp with your lover and mate, it clicks.  You nuzzle and nibble their ears, whispering that you love them as you bring [if cocks of player > 0]her[otherwise]his[end if] tailtip to yours.  Moments later, they start to fuse together and you are joined at the end of your tails.";
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you.  You can feel yourself becoming linked to your mate, sharing some sensation with them, as well as a deep, emotional bonding.  You both remain individuals, but are also one.  You are partners and lovers meant to be together and now inseparable.";
 					say "     You kiss and nuzzle your lover as [if cocks of player > 0]she[otherwise]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin.  Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously.  Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Your partner is briefly surprised by all this, but the loving bond you share soon overcomes the shock of the unforeseen change.  You and your lover, now permanently joined, adjust quickly.  As you should, for you are whole now.";

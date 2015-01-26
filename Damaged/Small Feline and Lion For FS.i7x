@@ -283,7 +283,7 @@ When Play begins:
 	now body change entry is "[if hp of Leonard >= 15 and hp of Leonard < 100]it shifts back into that of a womanly lioness.  You can't help but moan and purr in pleasure at this change, feeling drawn to your handsome mate once more[otherwise]urge to giggle becomes powerful as you shrink and gain the softness of a small lioness[end if]"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front  and back, slightly lighter on the front"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "[if hp of Leonard >= 15 and hp of Leonard < 100]you hips gain a pair of wide birthing hips and a sexy bottom to go with it.  A leonine tail forms to go with it, twitching excitedly as you find yourself longing to feel your handsome mate's paws on your ass again[otherwise]it shrinks even as it becomes rounder, Pleasantly grabbable. It is covered in tan fur, you have a female lion's butt[end if]"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "[if hp of Leonard >= 15 and hp of Leonard < 100]your cock takes on a more feline form[otherwise]you no longer think of yourself as male[end if]"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "[if hp of Leonard >= 15 and hp of Leonard < 100]your cock takes on a more feline form[otherwise]your cock takes on a more feline form even as you feel cute and girly rather than as a male[end if]"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 21;
 	now sta entry is 8;
