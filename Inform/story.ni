@@ -5636,6 +5636,13 @@ This is the self examine rule:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		otherwise if gestation of child is less than 30:
 			say "You feel a soft subtle glow somewhere in your belly.";
+	otherwise if heat enabled is true:
+		if inheat is true:
+			say "You also feel [if heatlevel is 3]an intense[otherwise]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
+		otherwise if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
+		otherwise if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	if the number of entries in childrenfaces is greater than 0:
 		if the number of entries in childrenfaces is 1:
 			now facename of child is entry 1 of childrenfaces;
