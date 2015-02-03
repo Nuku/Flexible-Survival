@@ -47,7 +47,7 @@ Section 2 - Appearance
 
 to say larissadesc:
 	if hp of Larissa < 3:				[base description]
-		say "     She is about five and a half feet, with suntanned flesh.  She seems perfectly human - an oddness in this city.  Her name badge, worn on her generous chest, reads 'Larissa'.  She had brown straight hair that goes down a little past her shoulders.  She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences.  It certainly looks cute on her though.  Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
+		say "     She is about five and a half feet, with suntanned flesh.  She seems perfectly human - an oddness in this city.  Her name badge, worn on her generous chest, reads 'Larissa'.  She has straight brown hair that goes down a little past her shoulders.  She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences.  It certainly looks cute on her though.  Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 	otherwise if hp of Larissa is 3:
 [		say "***human form, to be revised later.";	]
 		say "     She is about five and a half feet, with suntanned flesh.  She seems perfectly human - an oddness in this city.  Her name badge, worn on her generous chest, reads 'Larissa'.  She had brown straight hair that goes down a little past her shoulders.  She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences.  It certainly looks cute on her though.  Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
