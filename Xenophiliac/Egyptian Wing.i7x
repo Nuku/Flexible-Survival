@@ -1,4 +1,5 @@
 Version 1 of Egyptian Wing by Xenophiliac begins here.
+[ Version 1.1 - Adjusted fights to use 'fightoutcome' to determine results. Flagged special events as 'situations'. ]
 
 "Adds a NPC and NPC area to Flexible Survival's Wandering Monster table."
 
@@ -258,6 +259,7 @@ The description of Temple of Set is "[TempleOfSetDesc]".
 to say TempleOfSetDesc:
 	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[otherwise]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of heiroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues; Jackal-headed guards watch over the shrine, holding deadly metal blades.";
 	say "     Finally drawing your eyes to what lies on the altar, you barely contain a gasp as the item lying there. An exquisite golden sword lies on the altar, torchlight glinting off of the exquisite blade. It would take almost no effort to [bold type]pick up[roman type] the[bold type] antique sword[roman type] off of the altar.";
+
 instead of sniffing Temple of Set:
 	say "     You're unable to pin down the smell of this room; you think it's constantly changing.";
 
@@ -275,21 +277,24 @@ understand "pick up" as SwordOfSeth.
 
 carry out SwordOfSeth:
 	say "     Taking a deep breath and dashing forward, you grasp the sword lying on the altar. Instantly, the torchlight dims to a dark red and you get the overwhelming feeling that you just did something incredibly [italic type]bad[roman type]. Sprinting towards the door, you almost run face-first into something blocking your path; a mass of stone now blocks your way. You quickly realize that the stone guardians have somehow animated, both of the beasts blocking your way out.";
+	now inasituation is true;
 	challenge "Jackal Guard";
-	if lost is 1:
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		challenge "Jackal Guard";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
+			now carried of ancient blade is 1;
+			now SethTempleNumber is 1;
+			move player to Golden Doors;
+	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the temple, blocking your passage in.";
 		now SethTempleNumber is 1;
 		move player to Golden Doors;
-	challenge "Jackal Guard";
-	if lost is 1:
-		say "     Thoroughly destroyed by the Jackal guardians, you're forced to relinquish the sword while barely keeping your life. A thick stone door seals the temple, blocking your passage in.";
+	otherwise if fightoutcome >= 30:
+		say "     Rather than continue to fight, you relinquish the sword and flee.  A thick stone door seals the temple, blocking your passage in.";
 		now SethTempleNumber is 1;
 		move player to Golden Doors;
-	otherwise:
-		say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
-		increase carried of ancient blade by 1;
-		now SethTempleNumber is 1;
-		move player to Golden Doors;
+	now inasituation is false;
 
 [Sanctum of Horus]
 The description of Sanctum of Horus is "[SanctumOfHorusDesc]";
@@ -494,29 +499,31 @@ to say AmuranFinalQuest: [Includes foreboding about (possibly) nothing, or anoth
 	say "[WaitLineBreak]";
 	say "     Hovering magically in the air is a silver ankh; engraved into it is a carving of an eye, an eyebrow carved above it. A long carving curves under the eye, ending in a spiral tail. Finally, an elegant line extends down somewhat, completing the engraving. Surrounding the engraved ankh is a shimmering fog; a protective shield of some sort? Gesturing you forward, Amuran looks intently at the missing artifact, his goal nearly at hand. Approaching him, you let Amuran speak.";
 	say "     'My lord Horus['] ankh has protected itself over the aeons of separation. Be on guard, young one. I must free it, but enemies approach. Do your best to prevent interruptions; they will make the ritual take longer.' Giving you one final nod before walking forward into the crater, Amuran stands before the floating relic and begins to chant in a language you can't understand. Now that he's distracted, the beast that's been tracking you makes an appearance and charges!";
+	now inasituation is true;
 	challenge "Ash Dragator";
-	if lost is 1:
-		say "     Having had its way with you, the beast charges down the crater, intent on attacking Amuran. To its sudden surprise, however, it soon ceases to exist, a massive beam of light emanating from Amuran's hands colliding with the beast. Immediately turning back to the task at hand, Amuran returns to chanting, just as another creature charges you!";
-		challenge "Dark Elf";
-		if lost is 1:
-			say "     Once again, you're thoroughly beaten. And once again, the beast charges down, intent on taking the relic for itself. Amuran notices this, and the same beam of white-light blasts out of his outstretched hands, obliterating the onrushing creature. Rising shakily to your feet, you hope this monster is the last one to attack you!";
-			challenge "Dark Elf";
-			if lost is 1:
-				say "     Every creature thus far has been able to best you, but as Amuran obliterates this last beast, the glimmering shield around the ankh dissipates. Stepping forward and grabbing the ankh, he swiftly turns around and sprints out of the crater, scooping you up on the way out. You don't really remember much of the trip back, but when you come to, you're back at the shrine again, Amuran watching over you carefully. Helping you up and dusting you off, Amuran stands you up before him, doing his best to help you recover after your [']escapades['].";
-				say "[WaitLineBreak]";
-				say "[FinalQuestConclusion]";
-			otherwise:
-				say "     Luck finally seems to be on your side; you're able to beat down the marauding beast, sending it skulking back into the ruins. As you do so, Amuran finishes his ritual, the silver ankh revealed to the world for the first time in aeons. Slowly and carefully taking the ankh in his grasp, he subsequently leaves the crater, the scar of his presence remaining open to the world. Patiently waiting for you to recover somewhat, the both of you soon depart, leaving the husk of the Capitol district behind you. And after a quick trip back, you and Amuran find yourselves at the Sanctum of Horus, (relatively) safe and sound.";
-				say "[WaitLineBreak]";
-				say "[FinalQuestConclusion]";
-		otherwise:
-			say "     While you lost to the first beast to charge you, the second creature to do so fell before you, driven off by your fighting abilities. In due time, Amuran finishes his ritual, close to completing the task that was assigned to him. Casually stepping out of his crater, he bows slightly to you, thanking you for your stalwart defense. Stepping forward, it seems that Amuran is taking the lead; you're quite content to let him do so. Soon enough, the both of you find your way back to the shrine that Amuran calls home.";
-			say "[WaitLineBreak]";
-			say "[FinalQuestConclusion]";
-	otherwise:
+	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     So handily defeating the beast that was stalking you, whatever other creatures may have been interested in attacking you decide to back off. Nothing else interrupts you as Amuran leisurely completes his ritual, the shimmering fog around the ankh disappearing completely. Walking forward and gingerly picking up the ankh, he prepares to leave with the relic, his task almost complete. Nodding gratefully, Amuran gestures to you to lead the way. Picking yourself up, you heroically lead the way forward, glad that you could have been of help to such a powerful being. The both of you leisurely make your way back to the shrine, once again chatting happily with each other.";
 		say "[WaitLineBreak]";
 		say "[FinalQuestConclusion]";
+	otherwise:
+		say "     Having [if fightoutcome >= 20 and fightoutcome <= 29]had its way with you[otherwise]driven you off[end if], the beast charges down the crater, intent on attacking Amuran. To its sudden surprise, however, it soon ceases to exist, a massive beam of light emanating from Amuran's hands colliding with the beast. Immediately turning back to the task at hand, Amuran returns to chanting, just as another creature charges you!";
+		challenge "Dark Elf";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     While you lost to the first beast to charge you, the second creature to do so fell before you, driven off by your fighting abilities. In due time, Amuran finishes his ritual, close to completing the task that was assigned to him. Casually stepping out of his crater, he bows slightly to you, thanking you for your stalwart defense. Stepping forward, it seems that Amuran is taking the lead; you're quite content to let him do so. Soon enough, the both of you find your way back to the shrine that Amuran calls home.";
+			say "[WaitLineBreak]";
+			say "[FinalQuestConclusion]";
+		otherwise:
+			say "     Once again, you're [if fightoutcome >= 20 and fightoutcome <= 29]thoroughly beaten[otherwise]forced to flee[end if]. And once again, the beast charges down, intent on taking the relic for itself. Amuran notices this, and the same beam of white-light blasts out of his outstretched hands, obliterating the onrushing creature. Rising shakily to your feet, you hope this monster is the last one to attack you!";
+			challenge "Dark Elf";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Luck finally seems to be on your side; you're able to beat down the marauding beast, sending it skulking back into the ruins. As you do so, Amuran finishes his ritual, the silver ankh revealed to the world for the first time in aeons. Slowly and carefully taking the ankh in his grasp, he subsequently leaves the crater, the scar of his presence remaining open to the world. Patiently waiting for you to recover somewhat, the both of you soon depart, leaving the husk of the Capitol district behind you. And after a quick trip back, you and Amuran find yourselves at the Sanctum of Horus, (relatively) safe and sound.";
+				say "[WaitLineBreak]";
+				say "[FinalQuestConclusion]";
+			otherwise:
+				say "     Every creature thus far has been able to best you, but as Amuran obliterates this last beast, the glimmering shield around the ankh dissipates. Stepping forward and grabbing the ankh, he swiftly turns around and sprints out of the crater, scooping you up on the way out. You don't really remember much of the trip back, but when you come to, you're back at the shrine again, Amuran watching over you carefully. Helping you up and dusting you off, Amuran stands you up before him, doing his best to help you recover after your [']escapades['].";
+				say "[WaitLineBreak]";
+				say "[FinalQuestConclusion]";
+	now inasituation is false;
 
 to say FinalQuestConclusion:
 	say "     Looking at you sincerely, it's easy to tell that Amuran is extremely grateful for your help. Placing his spiky hands on your shoulders, he bows his head, thanking you in what seems to be his traditional way.";
