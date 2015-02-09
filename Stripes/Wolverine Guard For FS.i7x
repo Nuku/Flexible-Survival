@@ -1,5 +1,5 @@
 Version 2 of Wolverine Guard For FS by Stripes begins here.
-[Version 2 - Central Library content added]
+[Version 2.1 - Player loss oral]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Wolverine Guard creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
@@ -17,34 +17,42 @@ wolvfightresult is a number that varies.
 
 to say losetowolverine:
 	now wolvfightresult is 2;
-	if lbfight is 0 and libfight is not 1 and wrknifefight is false:
+	if lbfight is 1:						[Viking Longboat - Hospital Quest]
 		if cunts of player > 0:
 			if a random chance of 2 in 3 succeeds:
-				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[']s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
-				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around as well, but you can[']t spot anything of use or wealth around.  Any food has long since been eaten by the wolverine and you don[']t see anything of particular value to you or anyone in this crisis.";
-				say "     Satisfied that he won[']t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
-				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way.";
-			otherwise:
-				say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[']s satisfied that you won[']t dare return and then finally drives you off from the [wolvloc] he[']s protecting so aggressively.";
-		otherwise:
-			say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[']s satisfied that you won[']t dare return and then finally drives you off from the [wolvloc] he[']s protecting so aggressively.";
-	otherwise if lbfight is 1:
-		if cunts of player > 0:
-			if a random chance of 2 in 3 succeeds:
-				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[']s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he's buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around for a way out of this predicament, but find none.";
-				say "     Satisfied that he won[']t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
+				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
 				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
 			otherwise:
-				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[']s satisfied that you won[']t dare return and then finally drives you off from the Medieval History wing of the museum.";
+				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
 		otherwise:
-			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[']s satisfied that you won[']t dare return and then finally drives you off from the Medieval History wing of the museum.";
+			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
 			if hp of player > 0, now hp of player is hp of player / 2;
-	otherwise if libfight is 1:
+	otherwise if libfight is 1:				[Central Library]
 		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
-	otherwise if wrknifefight is false:
+	otherwise if wrknifefight is false:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if hp of player > 0, now hp of player is hp of player / 2;
+	otherwise:								[Normal encounter]
+		if cunts of player > 0:
+			if a random chance of 3 in 5 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he's buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around as well, but you can't spot anything of use or wealth around.  Any food has long since been eaten by the wolverine and you don't see anything of particular value to you or anyone in this crisis.";
+				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way.";
+			otherwise if a random chance of 1 in 2 succeeds:
+				say "[wolv_oral]";
+			otherwise:
+				say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you off from the [wolvloc] he's protecting so aggressively.";
+		otherwise:
+			if a random chance of 2 in 5 succeeds:
+				say "[wolv_oral]";
+			otherwise:
+				say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you off from the [wolvloc] he's protecting so aggressively.";
+
+to say wolv_oral:
+	say "     The fanatical wolverine knocks you down with a growl.  As he gets ready to strike you again, he holds back and instead grapples you roughly.  Your face is pressed into the creature's groin, his dark brown cock emerging from its sheath to grind against your cheek.  Precum drools across your cheek and lips, the beast's musky scent arousing you.  You lick the sticky precum from your lips and then lick at its source.  Eager for more, the lustful mutant forces his meaty shaft into your mouth and fucks it hard.  He pounds his pulsing rod into your mouth with firm thrusts while holding your head with his powerful paws.  Despite the rough treatment, you moan and try your best to lick and suck at the throbbing penis stuffed into your mouth and throat.  With a growl, he cums, shooting his strong flavoured cum down your throat, warming your belly with it.  Once spent, the bestial wolverine is less crazed, sending you firmly on your way before wandering back to the [wolvloc] he's guarding so adamantly.";
 
 
 to say beatthewolverine:
@@ -53,14 +61,14 @@ to say beatthewolverine:
 		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
 			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you.  The excitement of the fight has gotten your wolverine body quite aroused.  Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.  Do you give in to your urges and ride that thick monster?";
 			if the player consents:
-				say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection.  He rumbles appreciatively and rocks his hips, thrusting into your warm paw.  Once you[']ve gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
-				say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you.  But once you[']ve finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
-				say "     As you ride him, you start growling and snapping at him and he growls and nips in return.  As your mating continues, it only grows more loud and aggressive, almost as violent as the fight that led up to it until finally he[']s pumping his hot load into you and satisfying that burning need inside you.[impregchance]";
+				say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection.  He rumbles appreciatively and rocks his hips, thrusting into your warm paw.  Once you've gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
+				say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you.  But once you've finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
+				say "     As you ride him, you start growling and snapping at him and he growls and nips in return.  As your mating continues, it only grows more loud and aggressive, almost as violent as the fight that led up to it until finally he's pumping his hot load into you and satisfying that burning need inside you.[impregchance]";
 				say "     Your mating done, you both settle down, licking and nuzzling each other for a few minutes.  You pull yourself off his flagging erection and head back on your way, leaving him to continue to guard his [wolvloc] with strong, instinctual dedication.";
 			otherwise:
 				say "     You resist the urge to give in to your lust and turn away, quickly leaving him before you can have second thoughts.";
 		otherwise:
-			say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious.  You move past him to look at the [wolvloc] was guarding.  You search around carefully, but can[']t seem to find anything to warrant the aggressive defense of this location.  Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use.  You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
+			say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious.  You move past him to look at the [wolvloc] was guarding.  You search around carefully, but can't seem to find anything to warrant the aggressive defense of this location.  Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use.  You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
 	otherwise if lbfight is 1:
 		say "     Having managed to beat the wolverine until you finally knocked him down, you give him a finally blow to put him unconscious.  You move past him to look up at the longship he was guarding, ready to continue with your mission.";
 	otherwise if libfight is 1:
@@ -182,7 +190,7 @@ when play ends:
 			if jamessex is 3 and cunts of player > 0:
 				say "     You find your growing urge to protect and defend your post increasing.  Joining James at the Central Library, you become his mate and share the duty with him.  He accepts him place now, no longer fighting his powerful body.  Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap.  As with that first time, you rut often on the library steps.  The lustful growls of your animalistic sex carry far, warning any would be interlopers away.  You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well.  You live peaceably with the librarians inside, guarding their home and leaving them undisturbed.  There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
 			otherwise:
-				say "     You find your growing urge to protect and defend your post increasing.  Cutting short your wandering, you head back to the bunker at the Abbey to clear your head.  Once there, you decide to scout around from top to bottom, making sure it[']s secure before you relax.  You find nothing, but still remain on edge, and patrol on guard for any disturbances.  You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive.  You keep it, and its contents, safe from interlopers day after day.";
+				say "     You find your growing urge to protect and defend your post increasing.  Cutting short your wandering, you head back to the bunker at the Abbey to clear your head.  Once there, you decide to scout around from top to bottom, making sure it's secure before you relax.  You find nothing, but still remain on edge, and patrol on guard for any disturbances.  You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive.  You keep it, and its contents, safe from interlopers day after day.";
 		otherwise:
 			if centrallib is 5:
 				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met.  Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments.  He joins you in one of the military staging camps, happy to see a friendly face[if cunts of player > 0].  You share a good romp with him that evening[end if].";
@@ -197,7 +205,7 @@ when play ends:
 			otherwise if hp of doctor matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military.  You wait impatiently for your release, always on edge and feeling that there's something you should be doing.  You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection.  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			otherwise:
-				say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there[']s something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompany him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
+				say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there's something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompany him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 
 [ Edit this to have the correct Name as well]
 Wolverine Guard For FS ends here.
