@@ -33,7 +33,7 @@ carry out ScXInventorying:
 			now needstradecheck is 1;
 		otherwise if Kristen is visible and hp of Kristen is 10:
 			now needstradecheck is 1;
-		otherwise if Christy is visible and hp of Christy > 1 and hp of Christy < 50:
+		otherwise if Christy is visible and hp of Christy > 1:
 			now needstradecheck is 1;
 		[go through all the stuff]
 		repeat with x running from 1 to the number of rows in the table of game objects:
