@@ -1,5 +1,12 @@
 invSpeedup by ScaniX begins here.
 
+[
+Table of scxinvcache
+name						verb		value	
+"tho unholy grail"	"drink"	"You've found it!"
+with 150 blank rows.
+]
+
 ScXInventorying is an action applying to nothing.
 understand "scxinv" as ScXInventorying.
 carry out ScXInventorying:
@@ -37,8 +44,18 @@ carry out ScXInventorying:
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
-					repeat with itemaction running through itemactions:
-						say "[link item (itemname) for (itemaction)]";
+						repeat with itemaction running through itemactions:
+							say "[link item (itemname) for (itemaction)]";
+				[
+				if hypernull is not 1:
+					if there is a value corresponding to a name of itemname in the Table of scxinvcache:
+						let outputtext be the value corresponding to a name of itemname in the Table of scxinvcache;
+						say "[outputtext] ";
+					otherwise:
+						repeat with itemaction running through itemactions:
+							say "[link item (itemname) for (itemaction)]";
+				]
+				[
 				if trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and itemname is "demon seed":
@@ -56,6 +73,7 @@ carry out ScXInventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
 				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
+				]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
@@ -79,10 +97,32 @@ carry out ScXInventorying:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 	say "[line break]";
 
-To say link item (itemname - a text) for (itemaction - a list of texts):
+To say link olditem (itemname - a text) for (itemaction - a list of texts):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	add linkcommand to hyperlink list;
 	let invlinkindex be the number of entries of hyperlink list;
+	choose a blank row in the Table of scxinvcache; 
+	now name entry is the itemname; 
+	now value entry is linktext;
 	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
-		
+
+[ links are not working in cached texts
+To say link item (itemname - a text) for (itemaction - a list of texts):
+	let outputtext be a text;
+	if there is a value corresponding to a name of itemname in the Table of scxinvcache:	
+		now outputtext is the value corresponding to a name of itemname in the Table of scxinvcache;
+	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
+	add linkcommand to hyperlink list;
+	let invlinkindex be the number of entries of hyperlink list;
+	now outputtext is the substituted form of "[outputtext][set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";
+	if there is a value corresponding to a name of itemname in the Table of scxinvcache:	
+		choose row with a name of itemname in the Table of scxinvcache; 
+		now value entry is outputtext;
+	otherwise:
+		choose a blank row in the Table of scxinvcache; 
+		now name entry is the itemname; 
+		now value entry is outputtext;
+	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";
+]
+	
 invSpeedup ends here.
