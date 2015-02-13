@@ -6474,6 +6474,7 @@ Include Alt Vore by Stripes.
 Include BFandI by Stripes.
 Include Parasite by Stripes.
 Include NPC Debug by Wahn.
+Include invSpeedup by ScaniX.
 
 [Locations]
 Include Zephyr Inc by Nuku Valente.
