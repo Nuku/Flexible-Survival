@@ -1,12 +1,5 @@
 invSpeedup by ScaniX begins here.
-
-[
-Table of scxinvcache
-name						verb		value	
-"tho unholy grail"	"drink"	"You've found it!"
-with 150 blank rows.
-]
-
+ 
 ScXInventorying is an action applying to nothing.
 understand "scxinv" as ScXInventorying.
 carry out ScXInventorying:
@@ -30,6 +23,19 @@ carry out ScXInventorying:
 		otherwise:
 			now baseavailcolumns is 29;
 		let owneditemindex be a number;
+		[do this here as the check takes quite some time for some reason]
+		let needstradecheck be 0;
+		if Ronda is visible and hp of Ronda is 0:
+			now needstradecheck is 1;
+		otherwise if Xerxes is visible and lust of Xerxes is 2:
+			now needstradecheck is 1;
+		otherwise if Helen is visible and lust of Helen is 2:
+			now needstradecheck is 1;
+		otherwise if Kristen is visible and hp of Kristen is 10:
+			now needstradecheck is 1;
+		otherwise if Christy is visible and hp of Christy > 1 and hp of Christy < 50:
+			now needstradecheck is 1;
+		[go through all the stuff]
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let number be carried of object entry;
@@ -44,19 +50,9 @@ carry out ScXInventorying:
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
-						repeat with itemaction running through itemactions:
-							say "[link item (itemname) for (itemaction)]";
-				[
-				if hypernull is not 1:
-					if there is a value corresponding to a name of itemname in the Table of scxinvcache:
-						let outputtext be the value corresponding to a name of itemname in the Table of scxinvcache;
-						say "[outputtext] ";
-					otherwise:
-						repeat with itemaction running through itemactions:
-							say "[link item (itemname) for (itemaction)]";
-				]
-				[
-				if trade of object entry is empty:
+					repeat with itemaction running through itemactions:
+						say "[link item (itemname) for (itemaction)]";
+				if needstradecheck is 1 and trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and itemname is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
@@ -73,7 +69,6 @@ carry out ScXInventorying:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
 				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
-				]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
@@ -97,32 +92,10 @@ carry out ScXInventorying:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 	say "[line break]";
 
-To say link olditem (itemname - a text) for (itemaction - a list of texts):
-	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
-	add linkcommand to hyperlink list;
-	let invlinkindex be the number of entries of hyperlink list;
-	choose a blank row in the Table of scxinvcache; 
-	now name entry is the itemname; 
-	now value entry is linktext;
-	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
-
-[ links are not working in cached texts
 To say link item (itemname - a text) for (itemaction - a list of texts):
-	let outputtext be a text;
-	if there is a value corresponding to a name of itemname in the Table of scxinvcache:	
-		now outputtext is the value corresponding to a name of itemname in the Table of scxinvcache;
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	add linkcommand to hyperlink list;
 	let invlinkindex be the number of entries of hyperlink list;
-	now outputtext is the substituted form of "[outputtext][set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";
-	if there is a value corresponding to a name of itemname in the Table of scxinvcache:	
-		choose row with a name of itemname in the Table of scxinvcache; 
-		now value entry is outputtext;
-	otherwise:
-		choose a blank row in the Table of scxinvcache; 
-		now name entry is the itemname; 
-		now value entry is outputtext;
-	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";
-]
+	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
 	
 invSpeedup ends here.
