@@ -41,7 +41,13 @@ Petcounting is an action applying to nothing.
 understand "pet" or "pets" as petcounting.
 
 Carry out petcounting:
-	say "Pets: [list of tamed pets]";
+	say "Pets: ";
+	if hypernull is 0:
+		repeat with pet running through tamed pets:
+			say "[link][pet][as]pet [pet][end link] ";
+		say "[line break]";
+	otherwise:
+		say "[list of tamed pets]";
 
 carry out calling a pet(called x):
 	now the companion of player is x;
