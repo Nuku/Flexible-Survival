@@ -17,7 +17,7 @@ To stop stopwatch:
 		if (glk_gestalt(gestalt_DateTime, 0)) {
 			print "StopWatch: ", readStopWatch(), "ms.@@10";
 		} else {
-			print "No StopWatch available.@10";
+			print "No StopWatch available.@@10";
 		}
 	-)
 
