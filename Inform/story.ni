@@ -2416,7 +2416,9 @@ carry out Inventorying:
 	if demon seed is owned, now dseed is 1;
 	if Janice's blouse is owned, now jblouse is 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
-	now hyperlink list is {};
+	[apparently adding entries to a list is faster than looking for it, so we clear the previous item actions in one call]
+	[now hyperlink list is {};]
+	[these are the default item actions in front of the item name]
 	let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
 	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and hp of Christy > 1 and hp of Christy < 50 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
@@ -2505,8 +2507,15 @@ carry out Inventorying:
 
 To say invquicklink (itemname - a text) for (itemaction - a list of texts):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
-	add linkcommand to hyperlink list;
-	let invlinkindex be the number of entries of hyperlink list;
+	let the invlinkindex be zero;
+	repeat with linktext running through the hyperlink list:
+		decrease invlinkindex by 1;
+		if linkcommand is linktext:
+			now invlinkindex is 0 - invlinkindex;
+			break;
+	if the invlinkindex <= 0:
+		add linkcommand to hyperlink list;
+		let invlinkindex be the number of entries of hyperlink list;
 	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
 
 Definition: A grab object (called D) is fiveowned:
