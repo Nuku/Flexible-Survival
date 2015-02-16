@@ -2505,17 +2505,26 @@ carry out Inventorying:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 
+[used to speed up link command lookup inbetween clears on the hyperlink list, because we know something about the list:
+ the order of items is in all likelihood the same that we are now creating links in
+]
+lastinvfoundindex is a number that varies.
 To say invquicklink (itemname - a text) for (itemaction - a list of texts):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	let the invlinkindex be zero;
-	repeat with linktext running through the hyperlink list:
-		decrease invlinkindex by 1;
-		if linkcommand is linktext:
-			now invlinkindex is 0 - invlinkindex;
-			break;
+	if lastinvfoundindex > 0 and lastinvfoundindex <= number of entries of hyperlink list and linkcommand exactly matches the text entry (lastinvfoundindex) of the hyperlink list:
+		now invlinkindex is lastinvfoundindex;
+	otherwise:
+		repeat with linktext running through the hyperlink list:
+			decrease invlinkindex by 1;
+			if linkcommand is linktext:
+				now invlinkindex is 0 - invlinkindex;
+				break;
 	if the invlinkindex <= 0:
 		add linkcommand to hyperlink list;
 		let invlinkindex be the number of entries of hyperlink list;
+	otherwise:
+		now lastinvfoundindex is invlinkindex + 1;
 	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
 
 Definition: A grab object (called D) is fiveowned:
