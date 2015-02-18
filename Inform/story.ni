@@ -66,6 +66,7 @@ To change the current menu to (X - table name):
 
 to clear the screen and hyperlink list:
 	clear the screen;
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}.
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
@@ -2504,27 +2505,34 @@ carry out Inventorying:
 		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if]";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
+	now invlinklistfilled is one;
 
 [used to speed up link command lookup inbetween clears on the hyperlink list, because we know something about the list:
  the order of items is in all likelihood the same that we are now creating links in
 ]
 lastinvfoundindex is a number that varies.
+[another speed up: if we know that the link list is empty (or at least not filled with inventory links) we can skipping searching through it]
+invlinklistfilled is a number that varies.
 To say invquicklink (itemname - a text) for (itemaction - a list of texts):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	let the invlinkindex be zero;
-	if lastinvfoundindex > 0 and lastinvfoundindex <= number of entries of hyperlink list and linkcommand exactly matches the text entry (lastinvfoundindex) of the hyperlink list:
-		now invlinkindex is lastinvfoundindex;
-	otherwise:
-		repeat with linktext running through the hyperlink list:
-			decrease invlinkindex by 1;
-			if linkcommand is linktext:
-				now invlinkindex is 0 - invlinkindex;
-				break;
-	if the invlinkindex <= 0:
+	if invlinklistfilled is zero:
 		add linkcommand to hyperlink list;
 		let invlinkindex be the number of entries of hyperlink list;
 	otherwise:
-		now lastinvfoundindex is invlinkindex + 1;
+		if lastinvfoundindex > 0 and lastinvfoundindex <= number of entries of hyperlink list and linkcommand exactly matches the text entry (lastinvfoundindex) of the hyperlink list:
+			now invlinkindex is lastinvfoundindex;
+		otherwise:
+			repeat with linktext running through the hyperlink list:
+				decrease invlinkindex by 1;
+				if linkcommand is linktext:
+					now invlinkindex is 0 - invlinkindex;
+					break;
+		if the invlinkindex <= 0:
+			add linkcommand to hyperlink list;
+			let invlinkindex be the number of entries of hyperlink list;
+		otherwise:
+			now lastinvfoundindex is invlinkindex + 1;
 	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
 
 Definition: A grab object (called D) is fiveowned:
@@ -3528,6 +3536,7 @@ To AttemptToWait: [use where you want a wait (which might be turned off by playe
 To AttemptToClearHyper: [use where you want a clear (which might be turned off by player settings)]
 	if clearnomore is 0:
 		clear the screen; [clears if clearing is active]
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}; [empties hyperlink list regardless of clear status]
 
 To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a seperate clear]
@@ -3540,6 +3549,7 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear.  Much like 
 	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
 		wait for any key;
 		clear the screen;
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}. [empties hyperlink list regardless of clear status]
 
 Section Waithate
