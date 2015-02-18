@@ -27,7 +27,7 @@ Array currentTime --> 3;   ! this holds the number of microseconds elapsed since
 [ readStopWatch;
 	! you would get fired for this calculation in real life, but for stopping the time over short periods (some hours ^^) this should be fine
 	glk_current_time(currentTime);
-	return (currentTime-->1 - stopWatchStartTime-->1) * 1000 + (currentTime-->2 / 1000 - stopWatchStartTime-->2 / 1000);
+	return (currentTime-->1 - stopWatchStartTime-->1) * 1000 + (currentTime-->2 - stopWatchStartTime-->2) / 1000;
 ];
 -)
 	
