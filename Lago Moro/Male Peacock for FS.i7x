@@ -1,5 +1,5 @@
 Version 2 of Male Peacock For FS by Lago Moro begins here.
-[Version 2.1 - Updated to extended heat table - no Mpreg heat - Stripes]
+[Version 2.2 - M/M player loss oral - Stripes]
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
 
@@ -28,7 +28,7 @@ to say peacockasschange:
 		say "brown feathers emerge from it.  They form a tail that comes down to your knees";
 
 to say peacockdesc:
-	say "A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you[']d better end this battle quickly...";
+	say "     A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you'd better end this battle quickly...";
 	now peacockcontrol is 0;
 
 to say peacockattack:
@@ -41,16 +41,22 @@ to say peacockattack:
 
 to say peacockvictory:
 	now peacockcontrol is 0;
-	say "You are not able to think clearly anymore.  You find yourself standing up and facing the avian, your thoughts mixed in a blur.  He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
+	choose row monster from the table of random critters;
 	if cunts of player > 0:
-		say "You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened.  You don't think you would be able to actually oppose what is about to happen, though...";
-		say "He motions towards the bed in the middle of the room.  You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit.  He slides over your [bodydesc of player] body... it feels like a light, warm blanket.  You think that maybe this won't be SO bad after all...";
+		say "     You are not able to think clearly anymore.  You find yourself standing up and facing the avian, your thoughts mixed in a blur.  He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
+		say "     You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened.  You don't think you would be able to actually oppose what is about to happen, though...";
+		say "     He motions towards the bed in the middle of the room.  You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit.  He slides over your [bodydesc of player] body... it feels like a light, warm blanket.  You think that maybe this won't be SO bad after all...";
 		attempttowait;
-		say "After you don't know how much pleasant time, you find yourself back in the city, no idea how or when.  You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
+		say "     After you don't know how much pleasant time, you find yourself back in the city, no idea how or when.  The time you shared with the strange bird is a hazy, yet blissful, blur.  You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
 	otherwise:
-		say "He orders you to sit on the bed.  You have no choice but to obey, your [bodytype of player] body out of your control.  He examines you and, to your surprise, he sighs, mildly irritated.  'Look,' he says, 'it will be better for both of us if you won[']t remember this...'. Before you can reply, he fans his tail again...";
+		say "     You are not able to think clearly anymore.  You find yourself standing up and facing the avian, your thoughts jumbled and unfocused.  He beckons you to follow him; you have no choice but to walk with him into the alleyway.";
+		say "     With another flourish of his tail, you drop to your knees in front of him.  You can see his growing member emerging from a slit buried in the soft plumage of his crotch.  'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers.  Unresisting, you lean in, taking the bird cock into your mouth.  Running your hands over his feathered hips, you work that avian shaft with your lips, tongue and palate until finally rewarded with a hot, sticky mess as the bird groans in orgasmic release.";
 		attempttowait;
-		say "...then you find yourself back in the city?  You don't remember how did you come here, or what happened in the apartment, or even where that was... and then it occurs to you that you should check what happened to your body.";
+		say "     Once drained, the peacock's shaft withdraws and he gently raises your head back up to look at him and his colourful tail.  He gives it a mesmerizing wave and your mind rapidly drifts away.  'It will be better for both of us if you don't remember this...  Forget...  Forget...' he says softly.  You slump over, passing out.  When you awaken, you find yourself in an alleyway with no memories of how you'd gotten there, the encounter entirely forgotten.";
+		decrease xp of player by lev entry / 2;		[no xp from forgotten encounter]
+		if ktspeciesbonus > 0, decrease the XP of the player by 1;
+		if "Submissive" is listed in feats of the player and hp of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+
 
 Section 2 - Monster Insertion
 
@@ -74,7 +80,7 @@ When Play begins:
 	now tail entry is "[peacocktail]";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can[']t fly, though"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can't fly, though"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes slim and undulated. It retracts into a new, just formed, slit.  Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
@@ -202,7 +208,7 @@ name	desc	weight	object
 the usedesc of peacock feather is "[peacock feather use]";
 
 to say peacock feather use:
-	say "You remember that many were infected and mutated by contaminated food. It seems...no, it[']s stupid, but you bite down the feather anyway.";
+	say "You remember that many were infected and mutated by contaminated food. It seems...no, it's stupid, but you bite down the feather anyway.";
 
 instead of sniffing peacock feather:
 	say "The long feather smells of an avian male and makes your mind foggy momentarily.";
