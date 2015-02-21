@@ -66,6 +66,7 @@ To change the current menu to (X - table name):
 
 to clear the screen and hyperlink list:
 	clear the screen;
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}.
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
@@ -2416,67 +2417,123 @@ carry out Inventorying:
 	if demon seed is owned, now dseed is 1;
 	if Janice's blouse is owned, now jblouse is 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
+	[apparently adding entries to a list is faster than looking for it, so we clear the previous item actions in one call]
+	[now hyperlink list is {};]
+	[these are the default item actions in front of the item name]
+	let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
 	if the number of owned grab objects is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and hp of Christy > 1 and hp of Christy < 50 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and hp of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and hp of Christy > 1 and hp of Christy < 50 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if], [bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
 		let weight be 0;
-		let newline be 0;
+		[5 more than in the original version, but therefore the indicators will not add to it anymore]
+		let baseavailcolumns be a number;
+		if invcolumns > 1:
+			now baseavailcolumns is 20;
+		otherwise:
+			now baseavailcolumns is 29;
+		let owneditemindex be a number;
+		[preparations, put all calculations here that would slow down the loop]
+		[! for every "trade if" you have to add a corresponding "needstradechek if" here !]
+		let needstradecheck be 0;
+		if Ronda is visible and hp of Ronda is 0:
+			now needstradecheck is 1;
+		otherwise if Xerxes is visible and lust of Xerxes is 2:
+			now needstradecheck is 1;
+		otherwise if Helen is visible and lust of Helen is 2:
+			now needstradecheck is 1;
+		otherwise if Kristen is visible and hp of Kristen is 10:
+			now needstradecheck is 1;
+		otherwise if Christy is visible and hp of Christy > 1:
+			now needstradecheck is 1;
+		[generic trader check]
+		let traderavailable be 0;
+		let tradeguy be a person;
+		if the number of trader in the location of the player is greater than 0:
+			now tradeguy is a random trader in the location of the player;
+			let traderavailable be 1;
+		[go through all the stuff]
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
-			if object entry is owned:
-				say "[variable letter spacing][link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
-				say " [link][bracket][bold type]L[roman type][close bracket][as]look [name entry][end link]";
-				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
-				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
-				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [name entry][end link]";
-				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [name entry][end link]";
-				if trade of object entry is empty:
-					let notval be 0;
-					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
-					if Xerxes is visible and lust of Xerxes is 2 and name entry is "awesome fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Xerxes[end link]";
-					if Helen is visible and lust of Helen is 2 and name entry is "awesomer fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Helen[end link]";
-					if Kristen is visible and hp of Kristen is 10 and name entry is "Janice's blouse":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Kristen[end link]";
-					if Christy is visible and hp of Christy > 1 and hp of Christy < 50 and name entry is "super spicy sausage":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Christy[end link]";
-				otherwise if the number of trader in the location of the player is greater than 0:
-					let tradeguy be a random trader in the location of the player;
-					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
-				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the name entry is "nanite collector" ) and the number of smither in the location of the player is greater than 0:
-					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
-				if invcolumns > 1:
-					say " [fixed letter spacing][name entry formatted to 15 characters]";
-				otherwise:
-					say " [fixed letter spacing][name entry formatted to 24 characters]";
-				if object entry is wielded and object entry is armament:
-					say " (*)";
-				if object entry is equipment and object entry is equipped:
-					say " (*)";
-				if object entry is improved and ( object entry is armament or object entry is equipment ):
-					say " (+)";
-				say " x ";
-				let number be carried of object entry;
-				let weighttxt be text;
-				let weightnum be weight entry times number;
-				say "[number]([weightnum][if weightnum < 10] [end if] lbs)";
-				increase weight by weight entry times number;
-				if newline < (invcolumns - 1):
-					say "  --  ";
-					increase newline by 1;
-				otherwise:
+			let ownedCount be carried of object entry;
+			if ownedCount > 0:
+				increase owneditemindex by 1;
+				let itemname be name entry;
+				[line feed or switch to next column]
+				if remainder after dividing owneditemindex by invcolumns is 1:
 					say "[line break]";
-					now newline is 0;
-		if newline > 0, say "[line break]";
-		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs";
-		if the player is overburdened:
-			say ". *OVERBURDENED*[line break]";
-		otherwise:
-			say ".";
+				otherwise:
+					say "  --  ";
+				[new (old) linking without text capturing]
+				say "[variable letter spacing]";
+				if hypernull is not 1:
+					repeat with itemaction running through itemactions:
+						say "[invquicklink (itemname) for (itemaction)]";
+				if needstradecheck is 1 and trade of object entry is empty:
+					let notval be 0;
+					[! for every if block here there has to be a corresponding if before the loop !]
+					if Ronda is visible and hp of Ronda is 0 and itemname is "demon seed":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+					if Kristen is visible and hp of Kristen is 10 and itemname is "Janice's blouse":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+					if Christy is visible and hp of Christy > 1 and hp of Christy < 50 and itemname is "super spicy sausage":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+				otherwise if traderavailable is 1:
+					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player is greater than 0:
+					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
+				[get available columns, plus 6 to show the increase to the original value]
+				let availcolumns be baseavailcolumns;
+				[add use and improve indicators which will reduce the available width for the item name]
+				let useindicator be "";
+				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+					now useindicator is " (*)";
+					now availcolumns is availcolumns minus 4;
+				let improveindicator be "";
+				if object entry is improved and ( object entry is armament or object entry is equipment ):
+					now improveindicator is " (+)";
+					now availcolumns is availcolumns minus 4;
+				[print item name and indicators]
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				let weighttxt be text;
+				let weightnum be weight entry times ownedCount;
+				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
+				increase weight by weightnum;
+		say "[line break]";
+		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if]";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
+	now invlinklistfilled is one;
 
+[used to speed up link command lookup inbetween clears on the hyperlink list, because we know something about the list:
+ the order of items is in all likelihood the same that we are now creating links in
+]
+lastinvfoundindex is a number that varies.
+[another speed up: if we know that the link list is empty (or at least not filled with inventory links) we can skipping searching through it]
+invlinklistfilled is a number that varies.
+To say invquicklink (itemname - a text) for (itemaction - a list of texts):
+	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
+	let the invlinkindex be zero;
+	if invlinklistfilled is zero:
+		add linkcommand to hyperlink list;
+		let invlinkindex be the number of entries of hyperlink list;
+	otherwise:
+		if lastinvfoundindex > 0 and lastinvfoundindex <= number of entries of hyperlink list and linkcommand exactly matches the text entry (lastinvfoundindex) of the hyperlink list:
+			now invlinkindex is lastinvfoundindex;
+		otherwise:
+			repeat with linktext running through the hyperlink list:
+				decrease invlinkindex by 1;
+				if linkcommand is linktext:
+					now invlinkindex is 0 - invlinkindex;
+					break;
+		if the invlinkindex <= 0:
+			add linkcommand to hyperlink list;
+			let invlinkindex be the number of entries of hyperlink list;
+		otherwise:
+			now lastinvfoundindex is invlinkindex + 1;
+	say "[set link (invlinkindex)][bracket][entry 1 of itemaction][close bracket][terminate link] ";		
 
 Definition: A grab object (called D) is fiveowned:
 	let count be 0;
@@ -3479,6 +3536,7 @@ To AttemptToWait: [use where you want a wait (which might be turned off by playe
 To AttemptToClearHyper: [use where you want a clear (which might be turned off by player settings)]
 	if clearnomore is 0:
 		clear the screen; [clears if clearing is active]
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}; [empties hyperlink list regardless of clear status]
 
 To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a seperate clear]
@@ -3491,6 +3549,7 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear.  Much like 
 	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
 		wait for any key;
 		clear the screen;
+	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}. [empties hyperlink list regardless of clear status]
 
 Section Waithate

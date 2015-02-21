@@ -115,7 +115,7 @@ instead of conversing the Nermine:
 				now sextablerun is 1;
 				if (nam is "Her and her store"):
 					say "[NermineTalk1]";
-				if (nam is "The Wereraptor Curse"):
+				if (nam is "The wereraptor curse"):
 					say "[NermineTalk2]";
 				if (nam is "Hayato"):
 					say "[NermineTalk3]";

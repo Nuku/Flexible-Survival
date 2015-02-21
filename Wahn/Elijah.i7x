@@ -1122,6 +1122,8 @@ Instead of fucking the Elijah:
 				decrease humanity of player by 25;
 				now the icon of Elijah is Figure of Elijah_evil_icon;
 				now lastElijahfucked is turns;
+				now hp of Gabriel is 1;
+				now Angel vs Demons is not resolved;
 			otherwise if lastElijahfucked is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
 				now lastElijahfucked is 400; [using to mark resisting this impulse]
