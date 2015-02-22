@@ -6857,6 +6857,8 @@ Include Voodoo Gecko for FS by Stripes.
 Include Magic Drake by Stripes.
 Include Horny Doctor for FS by Stripes.
 Include Fruit Bat for FS by Stripes.
+Include Knight for FS by Stripes.
+Include Squire for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Human Infections by Wahn.
 Include Reptaur by Kaleem mcintyre.

@@ -596,7 +596,6 @@ This is the submit rule:
 	now fightoutcome is 22;
 	Lose;
 	if "Submissive" is listed in feats of the player, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if ktspeciesbonus > 0, increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 
 
