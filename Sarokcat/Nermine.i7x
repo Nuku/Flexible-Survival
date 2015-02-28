@@ -968,7 +968,7 @@ carry out bargainhunting:
 	Otherwise:
 		say "Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
 	if bargainbinusagetotal is greater than 41: [ie 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
-		say "With the removal of your latest findings, the Bargain Bin appears oddly empty. The few things left in it are one's you have rejected already. Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
+		say "With the removal of your latest findings, the Bargain Bin appears oddly empty. The few things left in it are ones you have rejected already. Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
 		move Bargain Bin to dark basement;
 		remove Bargain Bin from play;
 
