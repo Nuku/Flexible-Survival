@@ -152,7 +152,7 @@ to say estosterogen pill use:
 		follow the cunt descr rule;
 		say "You feel an aching warmth rush to your loins[run paragraph on]";
 		say ".  You watch as your puss[if cunts of player > 1]ies['][otherwise]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth[run paragraph on]";
-		say ".  As this is occurring, a twinge centred at your clit increases rapidly.  With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt that from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if][run paragraph on]";
+		say ".  As this is occurring, a twinge centred at your clit increases rapidly.  With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if][run paragraph on]";
 	otherwise if cocks of player > 0:				[MALE]
 		increase cock length of player by 2;
 		increase cock width of player by 1;
