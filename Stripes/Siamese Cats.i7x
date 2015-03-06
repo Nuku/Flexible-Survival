@@ -189,17 +189,17 @@ to say siameseattack:
 				say "  You prevent [absorbby] damage!";
 			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
 		if T is 2:
-			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [special-style-2][dammy][roman type] damage damage!";
+			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
 		if T is 3:
-			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [special-style-2][dammy][roman type] damage damage!";
+			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
 		if T is 4:
-			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [special-style-2][dammy][roman type] damage damage!";
+			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [special-style-2][dammy][roman type] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
 			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
