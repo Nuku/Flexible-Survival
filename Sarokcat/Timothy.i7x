@@ -14,7 +14,7 @@ Gryphon nest is a room.
 
 The description of Gryphon nest is "This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.".
 Timothy is in Gryphon nest.
-Gryphon nest is west of City Plaza.
+Gryphon nest is west of Qytat Plaza.
 
 instead of sniffing the Gryphon nest:
 	say "The nest area smells strongly of gryphon arousal, sex and egg-laying.";
