@@ -508,27 +508,27 @@ to say sfn:    [stick an s on if multiple female - noun]
 
 to say esmn:   [stick an es on if multiple male - noun]
 	if cocks of player > 1:
-		say "s";
+		say "es";
 	otherwise:
 		say "";
 
 to say esfn:    [stick an es on if multiple female - noun]
 	if cunts of player > 1:
-		say "s";
+		say "es";
 	otherwise:
 		say "";
 
 to say ymn:   [sticks y/ies on if multiple male - noun]
 	if cocks of player > 1:
-		say "s";
+		say "ies";
 	otherwise:
-		say "";
+		say "y";
 
 to say yfn:    [sticks y/ies on if multiple female - noun]
 	if cunts of player > 1:
-		say "s";
+		say "ies";
 	otherwise:
-		say "";
+		say "y";
 
 to say smv:    [stick an s on if single male - verb]
 	if cocks of player > 1:
@@ -556,15 +556,15 @@ to say esfv:    [stick an es on if single female - verb]
 
 to say ymv:    [stick an y/ies on if single male - verb]
 	if cocks of player > 1:
-		say "";
+		say "y";
 	otherwise:
-		say "s";
+		say "ies";
 
 to say yfv:    [sticks y/ies on if single female - verb]
 	if cunts of player > 1:
-		say "s";
+		say "y";
 	otherwise:
-		say "";
+		say "ies";
 
 [
 Example:
@@ -1111,8 +1111,8 @@ name	desc	weight	object	sortname (indexed text)
 "journal"	"A small leather clad book. Spending some time writing in it can help clear your thoughts and recenter your troubled mind."	2	journal
 "pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
 "chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
-"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	3	gryphon milk
-"distilled milk"	"Gryphon milk boiled down to a concentrated, powdery, form? That can[apostrophe]t be dangerous!"	1	distilled milk
+"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
+"distilled milk"	"Gryphon milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
 "glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
@@ -6913,6 +6913,7 @@ Include RodAndRonda by Stripes.
 Include Lucy by Stripes.
 Include Larissa for FS by Stripes.
 Include Matriarch NPC by Stripes.
+Include Garrett by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
 Include Deer by Nuku Valente.

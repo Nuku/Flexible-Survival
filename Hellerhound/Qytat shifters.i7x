@@ -8,7 +8,7 @@ It is fasttravel.
 shiftcatch is a number that varies.
 an everyturn rule:
 	if shiftcatch is 0 and shiftable is 1:
-		change the north exit of City Plaza to Shifting Room;
+		change the north exit of Qytat Plaza to Shifting Room;
 		now shiftcatch is 1;
 	
 

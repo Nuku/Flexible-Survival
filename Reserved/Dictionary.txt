@@ -1,4 +1,4 @@
-|Jon Ingold|Flexible Windows|20140828183802/7406:Thu 28 August 2014 18:38|indexing|
+﻿|Jon Ingold|Flexible Windows|20140828183802/7406:Thu 28 August 2014 18:38|indexing|
 |Jon Ingold|Flexible Windows|g-window|kind|
 |Jon Ingold|Flexible Windows|g-window-position|kind|
 |Jon Ingold|Flexible Windows|g-window-type|kind|
@@ -1011,7 +1011,7 @@
 |Hellerhound|Qytat A'th Lundrues|Bright Alley Exit|door|
 |Hellerhound|Qytat A'th Lundrues|Staircase Entry|room|
 |Hellerhound|Qytat A'th Lundrues|Stairs|room|
-|Hellerhound|Qytat A'th Lundrues|City Plaza|room|
+|Hellerhound|Qytat A'th Lundrues|Qytat Plaza|room|
 |Hellerhound|Qytat A'th Lundrues|Spiral Pattern|thing|
 |Hellerhound|Qytat A'th Lundrues|findablestairs|value|
 |Hellerhound|Qytat A'th Lundrues|staircaselocation|value|
