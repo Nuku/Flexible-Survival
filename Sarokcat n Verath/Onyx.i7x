@@ -1,5 +1,5 @@
 Version 4 of Onyx by Sarokcat n Verath begins here.
-[ Version 4 - Alternate submissive male Onyx at Bunker ]
+[ Version 4.0.1 - Fix for submissive male Onyx at Bunker ]
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
@@ -396,7 +396,7 @@ to say onyxbunkersex:
 			otherwise:
 				say "[onyxboral2]";
 		now lastfuck of Onyx is turns;
-	otherwise if xp of onyx >= 20:
+	otherwise if xp of onyx is 20:
 		if cocks of player > 0:
 			say "[onyxbsubanal0]";
 		otherwise:
