@@ -354,7 +354,16 @@ to hadiyahyenaify:
 		infect "Herm Hyena";
 
 
-Section 9 - Character Notes
+Section 9 - Endings
+
+when play ends:
+	if ( ( hp of Hadiya >= 13 and hp of Hadiya < 50 ) or ( hp of Hadiya >= 63 and hp of Hadiya < 100 ) ) and humanity of player >= 10:
+		say "     When Hadiya and Gobby are taken by the military, she insists that they stay together.  During the waiting period, they are both given a quick screening.  While the hyena passes, the goblin does not fare as well.  While he's fairly stable, his previous identity - if he ever had one - has been lost.  In the end, he is given a conditional release under Hadiya's care.";
+		say "     After her release, Hadiya becomes a Zephyr operative, doing field work for them.  On the occasions you do get to see her, she doesn't talk about it much[if cocks of player > 0].  She much prefers to use those opportunities to enjoy the company of her slutty sub[end if].  Gobby remains with her, acting as servant and housekeeper while she's on mission... or so you're told.  There's the occasional slip that leads you to suspect the goblin thief and his nimble fingers accompany her on some missions.";
+		say "     A couple of years after the events in the city, you're surprised to find out that Hadiya's become pregnant.  Her kids turn out to be a mix of red-skinned and -furred goblins, some with hyena-like heads.  And while their relationship as harsh mistress and loyal servant remains unchanged, you can tell there is a bond of love there as well.  Hadiya's certainly quite proud of her tough little brood of hybrid scrappers, but carrying, birthing and raising them gets added to her reasons to [']punish['] her sextoy servant.  Despite her complaints on these matters, she's pregnant again soon enough with another hybrid litter.";
+
+
+Section 10 - Character Notes
 
 [ Hadiya:
 - Hadiya's not particularly sociable, preferring her largely solitary life.  Being a bit of a misanthrope, she prefers simply having some playmates who'll put up with her attitude and desires for rough, dominant sex.
@@ -372,7 +381,7 @@ Section 9 - Character Notes
 ]
 
 
-Section 10 - Variables
+Section 11 - Variables
 
 [        hp of Hadiya        ]
 [  0 = not met               ]

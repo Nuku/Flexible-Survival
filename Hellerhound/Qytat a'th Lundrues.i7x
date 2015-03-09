@@ -121,19 +121,19 @@ Stairs is a room. "     The glowing steps extend above and behind you, spiraling
 
 Up from Staircase Entry is Stairs.
 
-City Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and there is nobody here that you can see.".
+Qytat Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents and huts, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and there is nobody here that you can see.  The only person you can see here is a male gryphon in a white uniform lounging nearby.".
 
 the scent of Staircase Entry is "There is a strange, otherworldly scent here.".
 the scent of Stairs is "There is a strange, otherworldly scent here.".
-the scent of City Plaza is "This area is strong with the scent of those herm gryphons.  It seems you have indeed found their home.".
+the scent of Qytat Plaza is "This area is strong with the scent of those herm gryphons.  It seems you have indeed found their home.".
 the scent of Spiral Pattern is "There is a strange, otherworldly scent here.".
 
 
-Up from Stairs is City Plaza.
+Up from Stairs is Qytat Plaza.
 
 Spiral Pattern is a thing. "     The pattern is shifting, and it looks like a great circle, so large you cannot see the other side, with images of DNA and small spheres with arms, odd spherical bubbles with rotating balls around them, the only obvious things that change place, and what looks like a circuit diagram below all of that. It feels soft and warm, yet it doesn't give when you step. You feel creeped out.".
 
-Spiral Pattern is in City Plaza.
+Spiral Pattern is in Qytat Plaza.
 
 understand "platform" and "spiral" and "ground" as the Spiral Pattern.
 

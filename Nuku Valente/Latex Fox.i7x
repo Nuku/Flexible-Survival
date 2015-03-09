@@ -107,7 +107,7 @@ When Play begins:
 	now defeated entry is "[latexfoxdefeat]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[latexfoxvictory]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "You encounter a creature made of glistening latex. It is largely red in colour, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry.";						[ Description of the creature when you encounter it. ]
-	now face entry is "mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination";		[ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "red, black, and white latex covering your";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "You have a long tail, shaped like a fox tail. It instinctively sways back and forth.";	[ Tail desc., written as a full sentence or left blank for none. ]

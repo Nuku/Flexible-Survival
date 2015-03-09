@@ -1,5 +1,5 @@
 Version 2 of Wolverine Guard For FS by Stripes begins here.
-[Version 2.1 - Player loss oral]
+[Version 2.1.1 - Player loss fixed]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Wolverine Guard creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
@@ -31,7 +31,7 @@ to say losetowolverine:
 			if hp of player > 0, now hp of player is hp of player / 2;
 	otherwise if libfight is 1:				[Central Library]
 		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
-	otherwise if wrknifefight is false:		[Getting the Knife - Wereraptor]
+	otherwise if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if hp of player > 0, now hp of player is hp of player / 2;
 	otherwise:								[Normal encounter]
