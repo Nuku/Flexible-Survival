@@ -5,7 +5,7 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 Section 1 - The Situation
 
-Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese gently roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shinto Shrine.
 
 instead of sniffing Shinto Shrine:
@@ -27,7 +27,7 @@ The description of hammer is "A tiny black mallet on a string.".
 
 Instead of taking the ornate bell:
 	say "The bell is securely attached to the shrine.";
-	
+
 Instead of taking the donation box:
 	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands.";
 
@@ -37,7 +37,7 @@ instead of taking the hammer:
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
 	if SatisfiedTanuki is less than 1, say "Nothing happens." instead;
-	
+
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
@@ -73,7 +73,7 @@ understand "leaf" as leafing.
 
 check leafing:
 	if SatisfiedTanuki is greater than 0, say "What?" instead;
-	
+
 
 carry out leafing:
 	say "Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
@@ -92,7 +92,7 @@ carry out leafing:
 	infect;
 	now non-infectious entry is true;	[...then close to prevent random infection]
 	say "With the changes complete, you feel you could [bold type]expand balls[roman type] and [bold type]contract balls[roman type] and also grow or contract your cock or breasts!";
-	
+
 ballgrowing is an action applying to nothing.
 
 understand "expand balls" and "grow balls" as ballgrowing.
@@ -125,7 +125,7 @@ carry out ballshrinking:
 		follow the cock descr rule;
 	otherwise:
 		say "Your tanuki magic surges down into your balls as they begin to shrink rapidly! Your balls feel like they have become [ball size]!";
-	
+
 cockgrowing is an action applying to nothing.
 
 understand "expand cock" and "grow cock" as cockgrowing.
@@ -203,8 +203,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Tanuki"; [Name of your new Monster]
 	now attack entry is "";
-	now defeated entry is ""; 
-	now victory entry is  ""; 
+	now defeated entry is "";
+	now victory entry is  "";
 	now desc entry is "";[ Description of the creature when you encounter it.]
 	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
@@ -218,7 +218,7 @@ When Play begins:
 	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)" -]
 	now str entry is 12;
 	now dex entry is 18;
-	now sta entry is 14;                    
+	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
@@ -240,7 +240,7 @@ When Play begins:
 	now loot entry is "";            [- Loot monster drops, -]
 	now lootchance entry is 0;        [- Chance of loot dropping 0-100 -]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
 	now type entry is "[one of]raccoon[or]tanuki[at random]";
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
