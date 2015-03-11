@@ -1,7 +1,7 @@
 Version 4 of Desperate Bunny by Nuku Valente begins here.
 [Version 5 - Sandra Overhaul - Blue Bishop]
 
-"Adds a situation to Flexible Survival with a needy, but uninfectious, rabbit."
+"Adds a situation to Flexible Survival with a needy, but noninfectious, rabbit."
 
 Section 0 - Variables
 
@@ -26,7 +26,7 @@ After resolving a needy rabbit girl, try looking;
 
 Instead of Resolving a Needy Rabbit Girl:
 	if ngrp is 0:
-		say "     Drifting about the city streets is a woman. She is wearing a long skirt and a jean jacket over a bright yellow blouse. Sprouting from her shoulder length, brown, hair are two long white rabbit ears. She doesn't look feral, and is picking around through the rubble as if searching for something. One of her great ears suddenly lifts and she looks directly at you a moment, wide eyed, then she flees before you can say anything. How odd.";
+		say "     Drifting about the city streets is a woman. She is wearing a long skirt and a jean jacket over a bright yellow blouse. Sprouting from her brown, shoulder-length hair are two long white rabbit ears. She doesn't look feral, and is picking around through the rubble as if searching for something. One of her great ears suddenly lifts and she looks directly at you for a moment, wide eyed, then flees before you can say anything. How odd.";
 		increase ngrp by 1;
 		stop the action;
 	if ngrp is 1:
@@ -43,7 +43,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		if the cocks of the player is greater than 0:
 			say "     As you approach her, slowly, you speak in gentle tones. She seems to be relaxing a little bit. When you get within twelve feet, you see that her eyes have wandered down, not meeting your gaze, instead she's looking at your belly, or groin. When you reach easy conversational distance, she grabs at your hand, 'I thought I would die alone in this city!' she gasps out, 'I can't even tell you how happy I am to see you.'";
 			now battleground is "Outside";
-			choose row with a area of battleground in the Table of random critters; 
+			choose row with a area of battleground in the Table of random critters;
 			follow cock descr rule;
 			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [name entry]s? Crazy right?' She presses to your front as she talks, letting her shapely front compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of player] [cock of player] cock stiffen lightly.";
 			say "     Do you follow your urges?";
@@ -110,7 +110,7 @@ to say sandtalk:
 			sangenderquery;
 			now rabbitsibling is 1;
 		otherwise:
-			say "    'Oh, okay!' She turns a deeper shade of red, 'It's no problem, I won't bring it up again.'";
+			say "     'Oh, okay!' She turns a deeper shade of red, 'It's no problem, I won't bring it up again.'";
 	otherwise:
 		if rabbitsibling > 0 and a random chance of 1 in 10 succeeds:
 			say "     '[one of]Oh, the way things are right now, if you feel me calling you [sangr] is no longer right[or]Remember, if want to change your mind on me calling you [sangr][stopping], just make a [bold type]Request[roman type].";
@@ -118,7 +118,7 @@ to say sandtalk:
 			say "     '[one of]Did I mention my name is Sandra yet?[run paragraph on] I can be a ditz sometimes about that.[run paragraph on][or]It is so nice having someone around to talk with.[run paragraph on][or]Do you think someone will come rescue us?[run paragraph on][or]I hope my rabbit is ok.[run paragraph on] I mean, yeah, it did kind of bite me and turn me into a crazy rabbit lady, but he's still my pet.[run paragraph on][or]You smell nice.[run paragraph on] God that sounded weird, sorry.[run paragraph on][or]Hello there![run paragraph on][at random]'";
 
 to sangenderquery:
-	say "    'Oh, thank you!' She seems very giddy over you agreeing to these terms, 'Alright, so";
+	say "     'Oh, thank you!' She seems very giddy over you agreeing to these terms, 'Alright, so";
 	if breast size of player > 0:
 		say "... Sister would be most appropriate, right?'";
 		if player consents:
@@ -367,7 +367,7 @@ to say sandrasex1:		[fuck the bunny]
 						now the rabbit den is not known;
 						follow turnpass rule;
 					otherwise:
-						say "     'Oh... well.. ok, well, you know where to find me,' she sighs out and settles on her cot, watching you.";
+						say "     'Oh... well... ok, well, you know where to find me,' she sighs out and settles on her cot, watching you.";
 			now lastfuck of Sandra is turns;
 		[try looking;]
 
@@ -383,7 +383,7 @@ to say sandrasex2:		[become bunny siblings]
 			say "     'Well, let me know when you're ready to get started,' says Sandra as she moves to grab a book.";
 			now lastfuck of Sandra is 250;
 			stop the action;
-		say "      She hikes up her dress, revealing her huge pussy. The vulva is about three inches long, and she reaches down to parts those thick lips wetly with two fingers, as a third finger dips inside, rubbing around slowly. She tenses and shudders with the intense feel of it, but does not linger for long, bringing out her, now glistening, finger and holding it in front of your face. The musky fluid smells good, no, great, intoxicating your senses.";
+		say "     She hikes up her dress, revealing her huge pussy. The vulva is about three inches long, and she reaches down to parts those thick lips wetly with two fingers, as a third finger dips inside, rubbing around slowly. She tenses and shudders with the intense feel of it, but does not linger for long, bringing out her, now glistening, finger and holding it in front of your face. The musky fluid smells good, no, great, intoxicating your senses.";
 		say "     Without thinking much about it, you flick your tongue over it. As the sweet substance is swallowed, prickles run over your [skin of player] skin. Your head tingles intensely as your ears begin to go warm. Sandra giggles as she watches you, then pulls out a mirror quickly, letting you watch. A large pair of white rabbit ears gradually begin to sprout from your head, replacing what old ones you might've had. They grow long and sensitive, new sounds reaching you. Even Sandra's excited heartbeat seems to softly tick in those great furry limbs.";
 		say "[bold type]YOUR PERCEPTION HAS INCREASED BY 1[roman type][line break]";
 		increase perception of player by 1;
@@ -564,7 +564,7 @@ to say sandrasex5: [Post-transformation toy sex]
 		say "     '[one of]Hmm[or]Tsk[or]Hmpf[at random], [one of]little [sangr] needs a good filling[or]I bet you like getting rammed by your bigger sister[or]I think my little [sangr] enjoys being their sister's plaything[at random]!' [if scalevalue of player < 4]Rabbit girl teasing you as she begins preparations[otherwise]An amusing sight to see as the smaller rabbit girl tease you as she begins preparations[end if], she forces a finger past ";
 		if cunts of player is 0 or (anallevel is 3 and a random chance of 2 in 3 succeeds):
 			say "your tight anal ring. Sending jolts up your spine as she methodically massages your soft inner-flesh, you stretch to accommodate her digits [if scalevalue of player > 3 or player is twistcapped]easily[otherwise]with a little work[end if]. In her second hand, she casually fondles the carrot-shaped tool, tongue moving caress its substantive length in meagre lubrication for its inevitable use.";
-			say "    Concluding her preparation, her lips -- once encircled around the tip of the rod -- are wetly pulled from it along with her hand from you, only soon to be replaced thereafter by that same tip, gradually shoving its way through your supple hole. A soft moan forced to escape your lips, you're made to take more and more of its distinctive, ridged length, even as its tapered girth becomes increasingly wide.";
+			say "     Concluding her preparation, her lips -- once encircled around the tip of the rod -- are wetly pulled from it along with her hand from you, only soon to be replaced thereafter by that same tip, gradually shoving its way through your supple hole. A soft moan forced to escape your lips, you're made to take more and more of its distinctive, ridged length, even as its tapered girth becomes increasingly wide.";
 			say "     '[one of]Hmpf[or]Oh[or]Ah[at random], [one of]somebody looks like they're enjoying themselves[or]I bet you like that[or]the fun's just getting started[at random]!' Teasing you, the lady begins to force the core of the length in and out of your eager hole, causing you to writhe and twitch with each thrust. Easily aroused by being so thoroughly penetrated, [if cocks of player > 1]your [cock size desc of player] dicks bob against the open air, staining the ground and your underside with precum and inviting her to grab one and casually stroke you off[otherwise if cocks of player is 1]your [cock size desc of player] dick bobs against the open air, staining the ground and your underside with precum and inviting her to grab it and casually stroke you off[otherwise]much in spite your lack of outlet, though she casually strokes you in reassurance[end if]. The wet sound of her continued abuse of your ass filling the air for what seems like a blissful eternity, sweat-slicked body quickly becoming exhausted from all the methodical attention.";
 			say "     Finally, you cry out in bliss, Sandra releasing her touch from you that she might stimulate you the rest of the way entirely by the toy, as well as fondle herself[if cocks of player > 0], cock[smn] sputtering your strained, [cum load size of player] load all over the ground[end if]. With one final push she forces the large toy [if scalevalue of player > 3 or player is twistcapped]entirely down your hole, barely able to keep a hold on it[otherwise]as far down as she can[end if], bringing squeezing all the ecstasy she can out of you until you finally collapse, completely spent.";
 		otherwise:
