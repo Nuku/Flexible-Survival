@@ -1,5 +1,5 @@
 Version 3 of Hadiya by Kaxin begins here.
-[Version 3.1.1 - Eventual skip for target gender query to allow quest start - Stripes]
+[Version 3.2 - Post-quest threesomes w/Hadiya & Gobby - Stripes]
 [Character originally by Kaxin.  Expanded sex scenes and quest by Stripes.]
 
 "Adds a situation to Flexible Survival with a very annoyed Hyena woman."
@@ -109,24 +109,9 @@ to say sexwithHadiya:
 		say "She just grins at you.  'Eager to be fucked more, are you?  Too bad, I'm busy now.  Come back later.'";
 	otherwise if cocks of player is 0:
 		say "     'Yeah, not really interested in you. I'm more into the boys if you know what I mean. Though I can take them in between just as well. Grow some parts and we'll talk.'";
-	otherwise if a random chance of 1 in 3 succeeds: [She's thirsty]
-		say "     'I'm not really up for anything right about now... though I might be a little... thirsty.'  She licks her lips suggestively, showing off those feral teeth of hers, making you have very mixed feelings about the whole thing, but the raging hardness that soon greets her oversized paw helps tell her exactly what you think about the situation.  'That's a good boy.  Give me what I want and you probably won't get hurt.'";
-		attempttowait;
-		say "     With those reassuring words, the hyena just shoves you down on the nearest pile of clothes and pins you there with her [if scalevalue of player < 4]greater weight[otherwise]not inconsiderable[end if], not exactly helping your arousal anyway.  Just tearing your pants off with a single swipe of her claws, reducing the crotch to shreds and allowing your straining shaft to be released.  Bobbing in the air, she quickly wraps her paw around the very base of it, stroking... squeezing it.  Bumping her nose against the very tip to see just what your scent is. 'Quite the delicious looking cock you've got here.  It would be a shame if anything happened to it, now wouldn't it?' she asks with an evil chuckle.";
-		attempttowait;
-		say "     Wrapping her lips around the very tip of it, she takes it into the heat of her maw, starting to suckle on it greedily.  Applying a firm suction, inch after inch just disappearing into her, though thankfully she doesn't seem to be using her teeth just yet.  The large tongue lapping along the underside, getting a better taste of it even as you moan and try to resist the urge to thrust into her maw, as you doubt she would take kindly to such a thing.";
-		attempttowait;
-		say "     Grazing her teeth lightly against either side of your shaft, you can't help but whimper... but it just seems to be her toying with her prey more than anything else. Bobbing her head slowly, she relaxes her grip on the shaft to replace her teeth with the warm, welcoming suction.  Wet sounds coming from her lips as she starts to work on getting the drink that she desires.  Squeezing her lips right back around the shaft as she pulls back until just the head remains.  Her tongue probes at your slit to sample some of the droplets of stickiness that you're already beginning to produce.";
-		attempttowait;
-		say "     Suckling firmly on the head, she urges you to produce more, which you happily do.  Already moaning in arousal, instinctively reaching down to cup the back of her head only to have your hand knocked away angrily, and the tip of your shaft nipped in the process.  A warning about exactly who is in control in this situation... though soon enough she relaxes and gets back to work.  Her movements are quick and needy, not letting you savor it at all, just trying to get her sticky gift as soon as she possibly can.";
-		attempttowait;
-		say "     Something that you're happy to provide, your hips involuntarily thrusting upwards to feed her more of your throbbing need.  Something that she doesn't seem to mind, permitting you to do this, just letting out a warning growl in the process.  The slick movements of her tongue coming faster and fast, until it's simply too much for you to take.  With a strangled warning you erupt suddenly inside her waiting muzzle.  Something that she gulps down... not letting a single drop leak out, just making it all disappear into her furry maw.";
-		attempttowait;
-		say "     Satisfied for the moment, she finally pulls back, grinning back up into your eyes.  'Not bad, I'll definitely use you more later..'";
-		if hp of Hadiya is 2, now hp of Hadiya is 3;
-		hadiyahyenaify;
-		now lastfuck of Hadiya is turns;
-	otherwise if hp of Hadiya >= 6 and a random chance of 3 in 5 succeeds:
+	otherwise if ( hp of Hadiya >= 14 and hp of Hadiya < 50 ) or ( hp of Hadiya >= 64 and hp of Hadiya < 100 ) and a random chance of 3 in 10 succeeds:
+		say "[hadiya_gobby_3somes]";
+	otherwise if hp of Hadiya >= 6 and a random chance of 2 in 5 succeeds:
 		say "     You approach Hadiya again, finding you needing more of her rough attention to satisfy you.  She grins and spreads her arms, as if welcoming you for a hug and kiss.  But as you come into her arms, she locks her jaws around your throat and grips you tightly, dropping you to the floor beside her plush chair.  Her paws grab your ass roughly, claws digging into you as she bares your bottom.  Holding it up, she starts grinding her shaft against it, spurting precum across it, tantalizing your asshole with gooey pre and brushes of her throbbing maleness.";
 		attempttowait;
 		say "     You moan in pleasure, growing more and more excited, but soon frustrated as well, for she makes no attempt to penetrate her fucktoy.  With her jaws still around your neck, you moan softly, a weak 'Please...'  With that, she releases your throat and licks across it slowly.  'Mmm... beg for it.  Beg your mistress to fuck you, to pound her cock into you, to use you like the horny bitch you are,' she rumbles.  Another lick and another grind across your rear sends shivers down your spine.  Soon enough, you're begging her to take you rough and hard.  She laughs at this, but finally gives you what you need, driving her pulsing rod into you, cramming it into your [bodytype of player] body.";
@@ -161,7 +146,7 @@ to say sexwithHadiya:
 					now hp of Hadiya is 57;		[repeated male results in male target]
 		hadiyahyenaify;		
 		now lastfuck of Hadiya is turns;
-	otherwise if hp of Hadiya >= 4 and a random chance of 3 in 5 succeeds:
+	otherwise if hp of Hadiya >= 4 and a random chance of 2 in 5 succeeds:
 		say "     'Mmm... Mistress is going to play with her sexy toy again,' she rumbles, pushing you down over [if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 )]a barrel in the yard[otherwise]the footrest she was using[end if].  As you yelp, she wraps her paw over your mouth, keeping it closed.  Pinning you down with her [if scalevalue of player < 4]larger body[otherwise]strong body[end if], she bares your ass and rubs her cock against it.  'You don't have any objections, do you?' she asks, getting her meaty missile lined up.  You try to say something, but it comes out as a mumble as she keeps you muzzled.";
 		attempttowait;
 		say "     'I didn't think so.  Not from a needy bitch like you,' she laughs, thrusting hard into you.  Your anus is once again spread open by the horny hyena as she drives into you with little consideration for warming you up.  As her hand moves away, all you can do is cry out at the rough intrusion.  By the time her paw makes it to your cock moments later, you're already hard and leaking with arousal.  Clearly taking this as a sign of consent, she starts pounding away at you, sliding her pointed red shaft in and out of you.";
@@ -177,6 +162,19 @@ to say sexwithHadiya:
 			otherwise:
 				say "     This rough play of hers continues, but you know better this time and do your best to hold back. You [if a random chance of 1 in 3 succeeds or the player is submissive]moan for her to let you cum, which makes her laugh[otherwise]whimper and bite your lip, trying to hold it back until she's done[end if].  She continues to pound away at you steadily, her precum having make your hole slick and juicy for her to fuck.  Just before you think you can't take any more, she pulls out suddenly and takes her meat in her paws.  She strokes her pulsing shaft and kneads her heavy balls, growling as she cums hard, painting your ass with her seed.  'Mmm... that's my bitch, messy and sticky with my seed,' she moans between gritted teeth even as she continues to cum, draining those large balls onto you.  Having the scent of her on you is too much to take and you slide off the [if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63)]barrel[otherwise]footrest[end if], stroking yourself until you cum all over yourself while she watches and laughs at her horny plaything.";
 				if hp of Hadiya is 5, now hp of Hadiya is 6;
+		hadiyahyenaify;
+		now lastfuck of Hadiya is turns;
+	otherwise if a random chance of 2 in 5 succeeds: [She's thirsty]
+		say "     'I'm not really up for anything right about now... though I might be a little... thirsty.'  She licks her lips suggestively, showing off those feral teeth of hers, making you have very mixed feelings about the whole thing, but the raging hardness that soon greets her oversized paw helps tell her exactly what you think about the situation.  'That's a good boy.  Give me what I want and you probably won't get hurt.'";
+		say "     With those reassuring words, the hyena just shoves you down on the nearest pile of clothes and pins you there with her [if scalevalue of player < 4]greater[otherwise]not inconsiderable[end if] weight, not exactly helping your arousal anyway.  Just tearing your pants off with a single swipe of her claws, reducing the crotch to shreds and allowing your straining shaft to be released.  Bobbing in the air, she quickly wraps her paw around the very base of it, stroking... squeezing it.  Bumping her nose against the very tip to see just what your scent is. 'Quite the delicious looking cock you've got here.  It would be a shame if anything happened to it, now wouldn't it?' she asks with an evil chuckle.";
+		attempttowait;
+		say "     Wrapping her lips around the very tip of it, she takes it into the heat of her maw, starting to suckle on it greedily.  Applying a firm suction, inch after inch just disappearing into her, though thankfully she doesn't seem to be using her teeth just yet.  The large tongue lapping along the underside, getting a better taste of it even as you moan and try to resist the urge to thrust into her maw, as you doubt she would take kindly to such a thing.";
+		say "     Grazing her teeth lightly against either side of your shaft, you can't help but whimper... but it just seems to be her toying with her prey more than anything else. Bobbing her head slowly, she relaxes her grip on the shaft to replace her teeth with the warm, welcoming suction.  Wet sounds coming from her lips as she starts to work on getting the drink that she desires.  Squeezing her lips right back around the shaft as she pulls back until just the head remains.  Her tongue probes at your slit to sample some of the droplets of stickiness that you're already beginning to produce.";
+		attempttowait;
+		say "     Suckling firmly on the head, she urges you to produce more, which you happily do.  Already moaning in arousal, instinctively reaching down to cup the back of her head only to have your hand knocked away angrily, and the tip of your shaft nipped in the process.  A warning about exactly who is in control in this situation... though soon enough she relaxes and gets back to work.  Her movements are quick and needy, not letting you savor it at all, just trying to get her sticky gift as soon as she possibly can.";
+		say "     Something that you're happy to provide, your hips involuntarily thrusting upwards to feed her more of your throbbing need.  Something that she doesn't seem to mind, permitting you to do this, just letting out a warning growl in the process.  The slick movements of her tongue coming faster and fast, until it's simply too much for you to take.  With a strangled warning you erupt suddenly inside her waiting muzzle.  Something that she gulps down... not letting a single drop leak out, just making it all disappear into her furry maw.";
+		say "     Satisfied for the moment, she finally pulls back, grinning back up into your eyes.  'Not bad, I'll definitely use you more later..'";
+		if hp of Hadiya is 2, now hp of Hadiya is 3;
 		hadiyahyenaify;
 		now lastfuck of Hadiya is turns;
 	otherwise:
@@ -208,6 +206,23 @@ to say sexwithHadiya:
 		now lastfuck of Hadiya is turns;
 
 
+to say hadiya_gobby_3somes:
+	say "     'Mmm... get over here Gobby.  I want the two of you going to town on this,' she says, giving her heavy cock a meaningful stroke.  As her goblin servant comes over, she pushes you down to your knees and slaps her manmeat across your face.  You give a soft whimper, mostly for show, and obediently start licking at the herm's drippy shaft.  With the goblin at the other side, the two of you start slathering your tongues across the hyena dick.";
+	say "     Hadiya releases an excited growl and puts a paw on each of your heads, guiding you both towards the tip of her cock.  Meeting there, the two of you kiss.  She gives a laugh and presses your faces together all the more.  'That's so sweet.  It's good to see my sluts getting along so well,' she says, grinding her cock against your faces while your tongues slide against one another's.  The two of you kiss for about half a minute before breaking it off before the aggressive hyena gets demanding for attention to her penis again.  Besides, the kiss has made you even more eager to get at that cock.";
+	say "     Gobby lets you go at it first, ducking a little lower so he can slather attention upon the herm's hefty ballsac.  You take the opportunity to take Hadiya's erection into your mouth.  You suck down on her throbbing member while your tongue slides across it.  That red pillar twitches and throbs in your mouth, drooling pre down your throat as you suck on it, the flow encouraged by the goblin's determined licking across her sac and swelling knot.";
+	say "     Eventually she pushes you back, letting the goblin have a turn sucking her while you swap to her scrotum.  Gobby struggles a bit with taking all of the hyena's cock into his maw, but he does his best for his beastly mistress, though having her paw forcing him onto her prick certainly accounts for how much of it's been shoved in.  Even with the thorough cleaning the goblin's tongue gave them, her arousing scent is strong and musky off of her balls.  The hyena's scent fills your senses as you press up against that furry sac and get to licking.";
+	say "     You and the goblin swap positions like this a few times, taking turns sucking her cock and occasionally both licking it together.  The flow of precum from it picks up as you pleasure the hyena and eventually she climaxes with a lustful growl";
+	if a random chance of 1 in 3 succeeds:
+		say " while you've got your lips wrapped around it.  You're fed shot after shot of her sticky seed, forced to swallow it down as she keeps a tight grip on you as she cums.  And when she does release you, Gobby's there to go for another kiss, his tongue delving into your mouth after the remaining traces of his mistress's load before finally breaking it off.";
+	otherwise if a random chance of 1 in 2 succeeds:
+		say " while Gobby's got it stuffed into his mouth.  He releases a gurgling moan and does his best to swallow down the hyena's large load.  And you can tell it's large from how those big balls of hers are pulsing over and over again, sending numerous blasts into her servant's belly.  By the time she's done and lets him go, he's full with her seed and collapses back onto the floor with a soft moan.  His crotch bulges quite predominantly as well.";
+	otherwise:
+		say ".  Both you and Gobby happen to be licking across her glans at the time and so you both get splattered with sticky ropes of her semen.  Catching what you can on your tongues and in your mouths, you're both still left messy and sticky by the time she's done.  The two of you kiss again and lick up as much of the excess cum as you can get from the other's face before finally parting.";
+	increase lastfuck of Gobby by 2;
+	hadiyahyenaify;
+	now lastfuck of Hadiya is turns;
+
+
 Section 5 - Hadiya's Guitar
 
 Goblin Thief is a situation.  Goblin Thief is resolved.
@@ -222,7 +237,7 @@ Instead of resolving Goblin Thief:
 		say "     '...upid King.  Taking all the good stuff.  It's not fair!  Gobby done good.  Stole that leather jacket fair and square.  First guitar, now leather jacket.  Gobby doesn't know how to play, he says.  So!  Gobby could learn.  He's not dumb.  Clever goblin.  Is not fair!'";
 		say "     Hearing this piques your interest and, hopeful that it might be Hadiya's guitar, you reverse direction again.  Sneaking up on the grumbling goblin, you grab him from behind and push the dirty creature to the ground.  Twisting his arm, you ask him for more info on this guitar.";
 		attempttowait;
-		say "     'What guitar?  Gobby don't know nothing,' he squeals shiftily.  It takes a little not-so-gentle persuasion to get him talking, but it doesn't take too long before he gives.  'Okay!  Okay!  Gobby found a guitar in trash.  Shiny and black with cool fire skull on it.  But Goblin King took it from Gobby.  He takes all the best stuff.  'Big meanie.'";
+		say "     'What guitar?  Gobby don't know nothing,' he squeals shiftily.  It takes a little not-so-gentle persuasion to get him talking, but it doesn't take too long before he gives.  'Okay!  Okay!  Gobby found a guitar in trash.  Shiny and black with cool fire skull on it.  But Goblin King took it from Gobby.  He takes all the best stuff.  Big meanie.'";
 		say "     'I've been looking for it.  The owner wants it back,' you respond.  'Show me where it is.'";
 		say "     He squeals and shakes his head at that.  'No.  Can't tell.  Secretest of secret goblin tunnels.  Too secret.  Too dangerous for outsiders...  But Gobby could get it for you,' he adds hastily.  'Yeah!  Let Gobby go and he'll bring it back for you.  Gobby is good thief.'";
 		say "     Not falling for such an obvious ploy, you keep a firm grip on him.  'And you'd do this out of the goodness of your heart, little thief?  I don't think so,' you growl.  'What if I gave you something in return?'";
@@ -230,7 +245,7 @@ Instead of resolving Goblin Thief:
 		say "     It takes a little more coaxing, but the goblin's upset that their king took a leather jacket he'd [']found['] for himself.  With the king wearing it now, you know he can't take it back, so you offer him a new one in payment.  This clearly piques his interest enough that you can ease your grip and start negotiating the trade.";
 		say "     'You give Gobby new jacket.  Gobby gets guitar for you,' he says eagerly.";
 		say "     You have to shake your head at this.  'No way.  You give me the guitar and then you can get your jacket.'";
-		say "     'No.  You forget.  Gobby get jacket or you no get guitar,' he growls back.  'How does Gobby know you even have jacket for Gobby?'";
+		say "     'No.  You forget.  Gobby get jacket or you no get guitar,' he snaps back.  'How does Gobby know you even have jacket for Gobby?'";
 		say "     'Fine!  I'll bring you a leather jacket.  If you like it, you can have it when you bring me the guitar.'";
 		say "     'Deal!'";
 		say "     And thus with your bargain struck, the two of you go your separate ways for now.  Hmmm... where'll you even find a leather jacket small enough to fit a goblin?";
@@ -293,7 +308,6 @@ Instead of resolving Goblin Thief:
 		say "ERROR-Hadiya-[hp of Hadiya]E: You should not be able to get this result.  Event should be closed at this time.";
 		now Goblin Thief is resolved;
 
-
 Section 6 - Gobby
 
 Gobby is a man.
@@ -305,7 +319,7 @@ The fuckscene of Gobby is "[sexwithGobby]";
 to say gobbydesc:
 	if debugactive is 1:
 		say "DEBUG (Gobby) -> HP: [hp of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";
-	say "     Gobby looks like your typical goblin male - short, green and brown skinned and spindly.  What's different about him is his attire.  Aside from the girl's leather jacket you found for him, Hadiya's gotten some kids-sized slacks and [one of]pink[or]heart[or]unicorn[or]girly[or]red[in random order] t-shirt to wear.  His face and ears are long and pointed in structure, with slightly pointed teeth in his grinning mouth.  While by no means pretty, he does look kind of cute in a strange way now that he's gotten himself all cleaned up and is dressed in his cute outfit.  And while Hadiya treats him like her plaything and servant, she's not malicious about it and he seems to be happy enough with the situation as well.";
+	say "     Gobby looks like your typical goblin male - short, green and brown skinned and spindly.  What's different about him is his attire.  Aside from the girl's leather jacket you found for him, Hadiya's gotten some kids-sized slacks and a [one of]pink[or]heart[or]unicorn[or]girly[or]red[in random order] t-shirt to wear.  His face and ears are long and pointed in structure, with slightly pointed teeth in his grinning mouth.  While by no means pretty, he does look kind of cute in a strange way now that he's gotten himself all cleaned up and is dressed in his cute outfit.  And while Hadiya treats him like her plaything and servant, she's not malicious about it and he seems to be happy enough with the situation as well.";
 
 instead of conversing Gobby:
 	if debugactive is 1:
@@ -325,16 +339,29 @@ to say sexwithGobby:
 		say "DEBUG (Gobby) -> HP: [hp of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";
 	if hp of Gobby is 0:
 		say "You should check up on the little guy first.";
+	otherwise if cocks of player is 0 and cunts of player is 0:
+		say "You'll need at least some genitals for the goblin to play with if you're going to lure him away from his mistress for some fun.";
 	otherwise if lastfuck of Gobby - turns is less than 6:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";
 	otherwise:
-		if cocks of player > 0:
-			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you.  Already having pulled out your [cock of player] cock[s], he takes it in hand and rubs his nimble hands along your firm flesh.  His fingers are soon joined by his tongue before he slides his mouth down over it.  He licks and sucks on your manhood with an eagerness that goes beyond just his gratitude[if cockname of player is not listed in infections of internallist and cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth, sometimes moving down to play with your [ball size][otherwise if cockname of player is not listed in infections of internallist].  His fingers move down to play with your [ball size] while he sucks you off[otherwise if cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth[otherwise].  His hands rest on your hips as he bobs his mouth over your [cock size desc of player] shaft[end if][if cocks of player > 1].  He remains fairly focused on the one cock he's tending to, working to give it his full attention to satisfy you[end if].";
+		if cocks of player > 0 and hp of Gobby > 1 and lastfuck of Hadiya - turns >= 6 and a random chance of anallevel in 7 succeeds and anallevel > 1:
+			say "     Wanting a go at the goblin's ass, you grab the little guy's rear and pull out your cock.  He gives a little squeak and squirms, but doesn't pull away.  His nimble hands clutch your shaft [if cockname of player is not listed in infections of InternalList] and balls[end if], stroking and teasing to get you fully hard.  As he's doing so, you slip those tight pants of his down, baring his bottom.";
+			attempttowait;
+			say "     'Hey, if you sluts are going to go at it, I want in on this action,' Hadiya growls with a grin on her muzzle.  'Gobby, get over here and put that mouth of yours to work.'";
+			say "     'Yes, Oh-Great-Toothy-Beast.  Of course, mistress,' he responds obsequiously and hurries over to take her canine shaft in hand.  He starts off by licking and kissing at it while fondling her balls.";
+			say "     Not having forgotten you, he arches his tight little ass into the air as he plunges his mouth over the dribbly pole.  You spread those cheeks of his and grind your [cock size desc of player] shaft between them, drawing [if cock length of player > 20]a nervous whimper[otherwise]a soft moan[end if] from the goblin.  After smearing some of your pre over his pucker to help ready it, you get lined up and sink into his [if cock length of player > 20]overly tight[otherwise if cock length of player > 10]tight[otherwise]snug[end if] hole with a satisfied moan.  You sink into him slowly at first, letting his small bottom adjust to having you in him.";
+			attempttowait;
+			say "     As you fuck the little guy, you're treated to the sight of him blowing his mistress.  The sight of him licking and sucking on that big red hyena dong that you've done the very same with is quite exciting.  And the delightful way his asshole squeezes and tugs at your thrusting rod feels wonderful as well.  You grab his hips and increase your pace a little, which has Hadiya grab the goblin's head and jam her cock and knot hard into his mouth.";
+			say "     'Come on, you horny slut,' she growls commandingly at you.  'Pound his ass harder.  It makes his throat clench nice and tight.'  Your mistress's insistence is all that's needed to wear down your remaining restraint and you stop going easy on the slutty goblin beneath you.  And if his throat is anything like his clenching asshole, it must feel wonderful when it clamps down with every hard push you make.  Hadiya certainly seems pleased, tongue lolling from the side of her hyenine muzzle.  Soon you're all cumming, the goblin getting fed sticky semen from both ends even as his own balls splatter their load across the floor.  He's left panting and moaning by the time you pull out, sticky and [if cock width of player > 20]bloated [end if]full of semen.";
+			now lastfuck of Hadiya is turns;
+		otherwise if cocks of player > 0:
+			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you.  Already having pulled out your [cock of player] cock[smn], he takes it in hand and rubs his nimble hands along your firm flesh.  His fingers are soon joined by his tongue before he slides his mouth down over it.  He licks and sucks on your manhood with an eagerness that goes beyond just his gratitude[if cockname of player is not listed in infections of internallist and cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth, sometimes moving down to play with your [ball size][otherwise if cockname of player is not listed in infections of internallist].  His fingers move down to play with your [ball size] while he sucks you off[otherwise if cock length of player > 12].  His fingers work over the remainder of your [cock size desc of player] shaft that's too much for him to take comfortably into his mouth[otherwise].  His hands rest on your hips as he bobs his mouth over your [cock size desc of player] shaft[end if][if cocks of player > 1].  He remains fairly focused on the one cock he's tending to, working to give it his full attention to satisfy you[end if].";
 			say "     With Hadiya watching on, a paw casually rubbing her half-hard member with a grin on her muzzle, you enjoy the fine blow job the goblin's providing.  Putting a hand on his head, you get him to quicken the pace as your excitement grows.  You rub his pointed ears, drawing a happy sigh from him that gets him sucking harder.  Soon enough you're balls tighten up and you feel the rush of ecstasy as you pump your hot load into the goblin's mouth.  He makes a show of swallowing [if cock width of player > 15]down the last mouthful[otherwise]it down[end if] after you're done.  After licking you clean, he heads back to his mistress's side, giving her the same treatment after the show.";
 		otherwise:
 			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you.  Already having taken a seat with your legs spread, he kneels between them and runs a nimble hand across your dewy flesh.  His fingers play across your folds, working to get you increasingly aroused before bringing in his long tongue to join in.  He licks and fingers at your pussy with an eagerness that goes beyond just his gratitude, as Hadiya doesn't permit him to play with her pussy either[if cunts of player > 1].  His tongue remains largely focused on the one pussy he's eating out to satisfy you while leaving his hands to shift between them[end if].";
 			say "     Hadiya only glances over with a momentary interest, mainly eying Gobby's butt rather than his eager pussy-licking.  You're certainly enjoying it though and place your hand on his head.  You pet him and rub his pointed ears, drawing a happy sigh from him that encourages him to delve deeper.  Soon enough your back arches and you press your crotch to his face as you climax.  Your inner walls squeeze around his wriggling tongue[if cunts of player > 1] and questing fingers[end if] as you cry out in orgasmic release.  He works [itthemf] back and forth inside your clenching, tugging tunnel[sfn] while your hot juices run down his pointed chin.  After licking you clean, his long tongue makes a show of licking your remaining juices from his lips.  That done, he rushes back to his mistress's side.";
 		now lastfuck of Gobby is turns;
+	if hp of Gobby is 1, now hp of Gobby is 2;
 
 
 Section 8 - Infection by Hadiya
@@ -415,6 +442,7 @@ Section 11 - Variables
 [        hp of Gobby         ]
 [  0 = not met/talked        ]
 [  1 = talked to him         ]
+[  2 = sexed him up          ]
 
 
 Hadiya ends here.
