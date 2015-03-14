@@ -2,7 +2,7 @@ Version 2 of Greek Nymph by Sarokcat begins here.
 [Version 2 - Victory Sex - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Greek Nymph to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Greek Nymph to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -52,7 +52,7 @@ When Play begins:
 	now defeated entry is "[Greek Nymph loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Greek Nymph attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "You encounter a lovely naked woman darting through the halls giggling, spotting you she gasps in surprise.  You blink as you recognize this strange otherworldly beauty as what appears to be a classical Greek nymph! '[one of]You won't catch me so easily! [or]Did you come looking for me?[or]Tag your it![or]Lets have some fun![or]Come on! Play with me![at random]' the nymph says, letting out another giggle, before darting forward with a mischievous glint in her eyes as she reaches for you.";[ Description of the creature when you encounter it.]
-	now face entry is "beautiful female face, with lovely golden eyes and long flowing hair, the only thing marking it is as different from a normal woman's, is the near perfection of your nymph-like";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "beautiful female face, with lovely golden eyes and long flowing hair, the only thing marking it is as different from a normal woman's, is the near perfection of your nymph-like";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "that of an extremely perky young woman, with long lithe legs made for running and dancing, and curves so impossibly perfect they are almost obviously unnatural, or supernatural as the case may be";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]nymph-like[or]soft and sleek[or]beautiful[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]
