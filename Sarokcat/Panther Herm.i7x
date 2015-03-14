@@ -3,12 +3,12 @@ Version 2 of Panther Herm by Sarokcat begins here.
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Pantherherm to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a Pantherherm to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say Pantherherm attack:
 	say "'whee.'";
@@ -36,13 +36,13 @@ When Play begins:
 	now name entry is "Pantherherm"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming into you roughly![or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hooflike feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Pantherherm loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Pantherherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Pantherherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "Angie pounces you happily, mmmm angiepouncing!";[ Description of the creature when you encounter it.]
-	now face entry is "short panther like muzzle on your changed face, with bright golden panther eyes.  Your face is a perfect and erotic blend of panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["Your have a (your text) face."] 
-	now body entry is "powerful and predatory, your large frame balances easily on your rather paw-like feet, your changed legs giving you the impression of always being ready to pounce forward on an opponent, and your clawed hands have soft pads on the palms for easier pouncing"; [Your Body is (your text)"] 
-	now skin entry is "[one of]black furred[or]black fur with purple tints covers your[or]dark furred[or]panther-like[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a long feline tail extending down from your spine, the tail lashes back and forth in a predatory manner with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]feline[or]Panther[or]barbed[or]pointed feline[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "short panther like muzzle on your changed face, with bright golden panther eyes.  Your face is a perfect and erotic blend of panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["You have a (your text) face."]
+	now body entry is "powerful and predatory, your large frame balances easily on your rather paw-like feet, your changed legs giving you the impression of always being ready to pounce forward on an opponent, and your clawed hands have soft pads on the palms for easier pouncing"; [Your Body is (your text)"]
+	now skin entry is "[one of]black furred[or]black fur with purple tints covers your[or]dark furred[or]panther-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long feline tail extending down from your spine, the tail lashes back and forth in a predatory manner with every step you take.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feline[or]Panther[or]barbed[or]pointed feline[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your muscles shift and crack, your jaw stretching out slightly as your teeth take on a sharper more feline form, your face pushing out slightly into a small muzzle as all your senses seem to sharpen, the world coming into a bright new focus through your slit pupiled golden feline eyes"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it seems to stretch and lengthen, your spine cracking slightly as you stretch instinctively with the changes, your body becoming more lithe and flexible even as your hands and feet seem to shift slightly, your legs shifting so that you now can balance easily on the pads of your new hindpaws, and soft velvety pads covering your palms even as sharp claws push out of your slightly thicker fingers. Finished stretching, you smile as you realize you seem to have put on several inches of height, and a decent amount of extra muscle as well"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "a strange comforting warmth spreads over your body, soft black fur pushing out of your skin and settling into place all over your body, covering you completely with its silken softness"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -56,7 +56,7 @@ When Play begins:
 	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 20;			[Amount of Damage monster Does when attacking.]
 	now area entry is "None";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -67,7 +67,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
@@ -111,7 +111,7 @@ when play ends:
 				otherwise:
 					say "     When the military arrive, you and your fellow panthers are waiting for them peacefully right outside the zoo. While they seem somewhat surprised by your appearance, and somewhat wary of Midnight[']s feral feline form, you and Angie manage to convince the soldiers that you are all fully in control of your facilities.  When you explain that Angie was a large cat trainer, several of them relax as they escort you back to the military base to be processed and evaluated. It is relatively easy for you to convince the soldiers and scientists that you aren[']t a threat, especially considering how much they still have to deal with inside the city. Once they let you go, the three of you still need to find something to do in the outside world, and hopefully some way to show people how wonderful being a lovely panther is. At your urging, the three of you decide to visit several nature preserves, particularly those containing panthers, using the excuse of trying to find Midnight a nice new home, and some friends to play with. Most of the preserves are more then happy to welcome your visit, and are often astonished and intrigued by your and Angie[']s unusual appearance. This makes it all too easy for the two of you to seduce and tease them into playing with the two of you, both of you teasing and playing with them until they are all too willing for Midnight to mount them and make them proper panthers themselves. You often enjoy playing with the large cats on the preserves as well, you and midnight often mating the females and spreading your lovely seed around, and teaching the male cats how to play with the newly changed staff members properly, the three of you making sure that each and every new fertile pantheress is well bred and doing their part to preserve the species before you move on to the next preserve. As you go from one nature preserve to the next, building up a lovely series of glowing recommendations from the places you have already visited, you can feel a feral grin spreading across your muzzle, as looking over to where your increasingly pregnant panther mates are lounging around, looking forward to a bright future with your mates, a future which you are sure will hold a lot more lovely and erotic large black felines.";
 				if hp of Sven > 7 and hp of Sven < 50:			[Sven the fucktoy]
-					say "     Sven accompanies you and the other pantherm herms on your journeys as your pet lover and companionship on the trip, using him to slake your lusts should any of you be alone while the others take care of matters.  You make sure that your sexy pet gets his chance to enjoy the great cats as well, equally eager to mount the females as to be mounted by the feral cats.  He sires several litters of snow leopard kittens and you make sure to reward him from time to time with someone to turn into another snowmeow pet for the panthers you leave in your wake.  You all agree that having some snowmeow fucktoys for the panthers to enjoy is a good idea[if cunts of player > 0].  Thinking of this, you reach over and stroke your pet's cock, getting him hard[otherwise].  Thinking of this, you roll your pet over and squeeze his ass, mounting him[end if] again for another romp to show him how much you enjoy having him take part in this erotic endeavour.";
+					say "     Sven accompanies you and the other pantherm herms on your journeys as your pet lover and companionship on the trip, using him to slake your lusts should any of you be alone while the others take care of matters.  You make sure that your sexy pet gets his chance to enjoy the great cats as well, equally eager to mount the females as to be mounted by the feral cats.  He sires several litters of snow leopard kittens and you make sure to reward him from time to time with someone to turn into another snowmeow pet for the panthers you leave in your wake.  You all agree that having some snowmeow fucktoys for the panthers to enjoy is a good idea.  Thinking of this, you [if cunts of player > 0]reach over and stroke your pet's cock, getting him hard[otherwise]roll your pet over and squeeze his ass, mounting him[end if] again for another romp to show him how much you enjoy having him take part in this erotic endeavour.";
 		otherwise:
 			if humanity of player is less than 10:
 				say "     Your feral memories lead you back to the zoo gift shop at some point after you submit fully to your new instincts, only to find yourself growling unhappily.  You were obviously not the first infected to return here and find Angie and her feline companion, and evidence of their fight with some of the other feral creatures in the city lies scattered across the once again destroyed gift shop. Looking around, you are unable to determine just who was the victor of the obviously close fight, but no matter who won, you are pretty sure that you won't be seeing Angie and Midnight here again. Shaking your head, you follow your instincts back out into the city and to find your new life.";
