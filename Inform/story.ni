@@ -2458,7 +2458,7 @@ carry out Inventorying:
 				increase owneditemindex by 1;
 				let itemname be name entry;
 				[line feed or switch to next column]
-				if remainder after dividing owneditemindex by invcolumns is 1:
+				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
 					say "[line break]";
 				otherwise:
 					say "  --  ";
