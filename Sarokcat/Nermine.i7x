@@ -98,7 +98,7 @@ instead of conversing the Nermine:
 		now sortorder entry is 5;
 		now description entry is "Talk about your demonic companion";
 		sort the table of fucking options in sortorder order;
-	[]	
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -122,7 +122,7 @@ instead of conversing the Nermine:
 				if (nam is "The nightmare"):
 					say "[NermineTalk4]";
 				if (nam is "Brutus"):
-					say "[NermineTalk5]";					
+					say "[NermineTalk5]";
 				wait for any key;
 		otherwise if calcnumber is 100:
 			say "Break off the conversation?";
@@ -279,7 +279,7 @@ to say NermineTalk5:
 			say "     It really is a sight to behold just how flexible the little elf truly is, inside and out - with his pucker stretched tight around the full width of Brutus cock in one moment, then pulling closed to look like a virgin's dainty little asshole - even if it is by now a bit reddened from the workout he's getting. One thing is for sure though... the boy is an expertly trained bottom, with Brutus just setting a capstone on that. Cassim is quite obviously aroused by being taken hard and deep, with his erect elven manhood standing proudly as he squirms enticingly under Brutus thrusts, using not only his inner muscles but his whole body to gyrate this way or that, creating ever new sensations for the large demon fucking him.";
 			say "     [WaitLineBreak]";
 			say "     Brutus seems to revel in pounding someone he can't accidentally break, filling the room of this little store with grunts and bellows, slaps of his balls against an elvish butt and the needy whimpers of his tight bottom boy. Of course, the sounds of sex are nothing new to Nermine's store - you're sure that there is a lot of this going on, with all the deals the jackaless makes. By now, the noise of Brutus coupling even has drawn some mall-rats to gather in front of the window, peering in with interest at the show they're getting.";
-			say "     Pounding into Cassim with unrelenting sexual fury, Brutus bellows eventually get more and more intense and also deeper, rumbling in his wide chest. He soon also starts to do especially demanding penetrations - pulling out his whole shaft, glistening and wet with precum, then ramming all of it down Cassim's hole in one single thrust, reducing the little elven teen to unintelligible babbling in a language you do not understand. It doesn't take more than a few more moments before the elf starts bucking and shaking, giving a scream of, 'Oooh - I - I'm coming Effendi!' The lithe body stretched out on the counter goes tense from head to to, then starts twitching as a first blast of cum rockets out of his cock to land on his cheek with a splat. Another and another follow, soon forming a white and creamy line down Cassim's front.";
+			say "     Pounding into Cassim with unrelenting sexual fury, Brutus bellows eventually get more and more intense and also deeper, rumbling in his wide chest. He soon also starts to do especially demanding penetrations - pulling out his whole shaft, glistening and wet with precum, then ramming all of it down Cassim's hole in one single thrust, reducing the little elven teen to unintelligible babbling in a language you do not understand. It doesn't take more than a few more moments before the elf starts bucking and shaking, giving a scream of, 'Oooh - I - I'm coming Effendi!' The lithe body stretched out on the counter goes tense from head to toe, then starts twitching as a first blast of cum rockets out of his cock to land on his cheek with a splat. Another and another follow, soon forming a white and creamy line down Cassim's front.";
 			say "     [WaitLineBreak]";
 			say "     With his partner orgasming and his muscles twitching around Brutus cock, the demon reaches his own point of no return before more than two or three of Cassim's cumshots are in the air. He shouts, 'I'm gonna breed you good, you elven slut!' and gives a loud roar that shakes ancient vases and magical artifacts on their shelves. Gripping the counter hard enough to leave deep claw-marks in its wooden sides, the demon then starts to fill the elf boy with his heavy load. Pulsing with rhythmic movements, the purple demon's balls send a lot of cum to gush into Cassim - so much so, that his thin shape even starts to swell a bit, then a bit more, as his belly is filled with all that cum. Even as Brutus eventually pulls out, accompanied by a mighty gush of his demonic seed, the elf still looks maybe three months pregnant, with all the further cum locked inside his body by a quickly closing pucker.";
 			say "     His lusts fulfilled, the purple giant gives an appreciative grunt and remarks, 'Nice fuckhole on this one. He will serve his master well.' Then he walks back to you and takes the usual place as your bodyguard and servant again. In his wake, he leaves behind the breathlessly gasping elf on the shop counter and quite a bit of cum oozing down the counter end, not to talk of a trail of drops falling down from his wet and glistening cock - yet Nermine seems wholly unconcerned with the mess. Maybe she'll make Cassim clean it or she has some magical way of fixing things up. No matter what, with a satisfied smile at the worn-out elf boy, she quickly gathers a number of ingredients from bowls in the shelves, small drawers and even a little lockbox, then presents you with a leather bag full of everything Brutus needs for his ritual. 'A pleasure of doing business, dear customer. Nermine wishes good luck in the endeavor. Please come again.'";
@@ -289,9 +289,9 @@ to say NermineTalk5:
 		otherwise:
 			say "     [line break]";
 			say "     Deciding you don't want to make this deal right now, you shake your head at the jackaless, who gives a sigh. 'Ah, it seems that right now is not a good time. Go back and practice, Cassim. Your moves must be perfect.' Bowing reverently before her, the elf says, 'At once, mistress.' Then he vanishes into the back room again, the movement of his fleet feet accompanied by slight tinkling noises.";
-	otherwise: 
+	otherwise:
 		say "     The jackaless gives you a smooth smile as you bring up Brutus and says, 'Nermine hopes you are happy with your pet, yes? She wants to respectfully remind you that there are no refunds, no matter what.'";
-	
+
 the fuckscene of Nermine is "[sexwithnermine]".
 
 testnermine is an action applying to nothing.
