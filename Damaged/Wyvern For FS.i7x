@@ -329,11 +329,11 @@ to say WYVDESC:
 			now sex entry is "Female";
 		say "     [if showlocale is true]As you explore the city, you suddenly[otherwise]Suddenly, you[end if] [if ishunting is true]run into a wyvern[otherwise]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be the size of a truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[otherwise]female[end if][roman type].";
 		if level of player < 20:
-			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, your best bet is simply to pull yourself free and make a run for it.";
+			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but it feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
 		otherwise if WYVLEV is 0:
 			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop.  You feel a rush of excitement, of wild fervour and charge at the gigantic creature before you even realize what you're doing.  Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast.  [bold type]From this point on, you will face the monster directly.[roman type]";
 		otherwise:
-			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You [if weapon object of player is journal]raise your fists[otherwise]raise your weapon in the air[end if] and give a wild battle cry before rushing at it.";
+			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. You feel that same crazed compulsion to take on the creature so much larger than you.  You raise your [if weapon object of player is journal]fists[otherwise]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of player >= 20:
 			let debit be 0;
 			if hardmode is true and level of player > 25:
@@ -348,7 +348,7 @@ to say WYVDESC:
 			now sta entry is 20;
 			now per entry is 18;
 			now libido entry is 60;
-			
+
 Section 1-2 - Victory Sex Trees
 
 to wyvmalevic:

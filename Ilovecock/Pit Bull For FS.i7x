@@ -2,7 +2,7 @@ Version 4 of Pit Bull For FS by Ilovecock begins here.
 [ Version 4.0 - Male form and new creature victory by Blue Bishop and coded by Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Pit Bull to Flexible Survivals Wandering Monsters table"
+"Adds a Pit Bull to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -61,7 +61,7 @@ to say losetopitbull_f:
 		say "     Pulling her fist free of you with an audible, wet sound, she adds further insult to injury by cleaning it against your [if scalevalue of player > 3]large and [end if]beleaguered frame before she inevitably starts forcing your exhausted and embarrassed form to flee from her territory[if scalevalue of player < 4 and the player is twistcapped], no doubt relegated to walking funny for the while that follows[end if].";
 	otherwise:
 		say "     Exposed before the pit bull, she--in turn--relinquishes herself of her pants, revealing her already-dripping cunt before you. Her intent further elucidated when she pulls your [if scalevalue of player > 3]head[otherwise]form[end if] closer, demanding that offer up tribute for your trespass. [If hp of player > 0 or player is submissive]Implicitly complying[otherwise]After a fair amount of coaxing[end if], your [if scalevalue of player > 3]large maw engulfs the entirety of her slick portal almost immediately. The aggressive canine taking great joy in demeaning someone as large as you[otherwise]lips caress her slick portal, her strong grip forcing you more firmly against her crotch, relegating you to contend with her hungry pussy more than any better restraint might have compelled you to[end if].";
-		say "     It's not long before your mandated affections show their effect, [if scalevalue of player > 3]thick[end if] tongue penetrating her needy snatch, tasting her rising, lascivious fervor. You must contend with the canine's tight grip and belligerent grinding before your forced to deal with a sudden flood of her sexual fluids, throbbing hole tightening around your slick organ. Pulling herself free of you she sends you off, booting you from her territory now that she is satisfied.";
+		say "     It's not long before your mandated affections show their effect, [if scalevalue of player > 3]thick [end if]tongue penetrating her needy snatch, tasting her rising, lascivious fervor. You must contend with the canine's tight grip and belligerent grinding before you[']re forced to deal with a sudden flood of her sexual fluids, throbbing hole tightening around your slick organ. Pulling herself free of you she sends you off, booting you from her territory now that she is satisfied.";
 
 
 to say losetopitbull_m:
@@ -99,7 +99,7 @@ to say losetopitbull_m:
 		if player is submissive:
 			say "     You're overwhelmed by your submissive tendencies driven to take the full brunt of his acrid release. The harsh taste of his fluids against your palate, you immerse yourself in the scent of his piss, partially drinking his fluids. Laughing, he offers mocking approval to such an obliging little bitch[if scalevalue of player > 3], his amusement exacerbated further by how complicit you are in spite your large size[end if]";
 		otherwise:
-			say "     [if hp of player > 0]You reluctantly oblige his abuse, taking[otherwise]You try to turn away but he grabs you by your head, forcing you to face[end if] the full brunt of his acrid release. [if scalevalue of player > 3]It's a pitiful sight, to see a creature as large as you are pissed on by the comparatively diminutive pit bull, forcing your senses to be flooded with the taste and smell of his harsh fluids[otherwise]You can only silently take his humiliation, senses forcefully flooded with the taste and smell of his harsh fluids[end if]";
+			say "     You [if hp of player > 0]reluctantly oblige his abuse, taking[otherwise]try to turn away but he grabs you by your head, forcing you to face[end if] the full brunt of his acrid release. [if scalevalue of player > 3]It's a pitiful sight, to see a creature as large as you are pissed on by the comparatively diminutive pit bull, forcing your senses to be[otherwise]You can only silently take his humiliation, senses forcefully[end if] flooded with the taste and smell of his harsh fluids";
 		say ". His flow inevitably diminishes before ceasing altogether[if player is submissive], much to your discontent[otherwise], much to your relief[end if], before he puts his pants back on and leaves you with a harsh swat on the rear, forcing you to gather your things and retreat from his domain.";
 	otherwise if "Less Anal" is not listed in feats of player and ( a random chance of 1 in 5 succeeds or ( cunts of player is 0 and a random chance of 1 in 5 succeeds ) or ( ( "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and a random chance of 1 in 5 succeeds ) ):
 		If scalevalue of player > 4:
@@ -309,7 +309,7 @@ to say pitbulldesc:
 		now pitbullgender is 2;
 	otherwise if guy is warded and girl is warded:
 		now pitbullgender is a random number between 1 and 2;
-	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option] 
+	otherwise if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
 		if guy is warded and a random chance of 1 in 3 succeeds:
 			now pitbullgender is 1;
 		otherwise if girl is warded and a random chance of 1 in 3 succeeds:
@@ -335,15 +335,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Pit bull"; [Name of your new Monster]
-	now attack entry is "[one of]Punches at your head  and painfully connects [or] Delivers a solid knee to your midsection [or] Comes at you with a flurry of violent punches [or] Hits you square in the jaw with an incredibly solid haymaker.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "The pit bull [one of]punches at your head and painfully connects[or]delivers a solid knee to your midsection[or]comes at you with a flurry of violent punches[or]hits you square in the jaw with an incredibly solid haymaker[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthepitbull]";
 	now victory entry is "[losetopitbull]";
 	now desc entry is "[pitbulldesc]";[ Description of the creature when you encounter it.]
-	now face entry is "canine, though somewhat compacted, bears a striking resemblance to a pit bull";[ Face description, format as the text "Your face is (your text)."] 
-	now body entry is "muscled to fighting form with digitigrade legs ending in paws";[ Body Description, format as the text "Your Body is (your text)."] 
-	now skin entry is "white fur over your body.  You have an the occasional black splotch, most notably one on your left eye.  It feels soft and pleasurable against your skin";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a short and nubby tail.";[ Tail description, write a whole Sentence or leave blank. ]  
-	now cock entry is "deep red, canine-knotted";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now face entry is "canine, though somewhat compacted, bears a striking resemblance to a pit bull";[ Face description, format as the text "Your face is (your text)."]
+	now body entry is "muscled to fighting form with digitigrade legs ending in paws";[ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "white fur over your body.  You have an the occasional black splotch, most notably one on your left eye.  It feels soft and pleasurable against your skin";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a short and nubby tail.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "deep red, canine-knotted";[ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it becomes more canine your ears moving towards the top of your head. It flattens a slight bit and you can feel your teeth become sharper. You appear to have the head of a pit bull"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes adapted for fighting. Muscles grow and become lean. Your legs go digitigrade and claws pop out of your feet. Make that paws now. You feel ready to take on the world"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "short, white hairs pop out all over, with a few black patches, most notably a splotch on your eye"; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -351,13 +351,13 @@ When Play begins:
 	now cock change entry is "Your cock feels funny as a knot forms on the base while a sheath forms towards the bottom, it shimmers in colour before deciding on a deep burgundy colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 16;
-	now sta entry is 14;					
+	now sta entry is 14;
 	now per entry is 10;
 	now int entry is 12;
 	now cha entry is 14;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 30;			[ How many HP has the monster got? ]
-	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
+	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ]
 	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Junkyard";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -368,7 +368,7 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dirty water";			[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]

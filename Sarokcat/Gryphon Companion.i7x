@@ -29,14 +29,14 @@ to say summongryphoness:
 	if ( tempnum is 0 or tempnum is 1 ) and T is 1:
 		say "     Landing moments after Denise is your gryphon child.  She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile.  She runs up and shares in the hug with you both.";
 	otherwise if ( tempnum is 0 or tempnum is 1 ) and T >= 2:
-		say "     Landing moments after Denise come a pair of gryphlets, your children.  They is a cute version of Denise in miniature, blue gryphon herms with a pretty faces and a happy smiles.  They run up and share in the hug with the both of you.";
+		say "     Landing moments after Denise come a pair of gryphlets, your children.  They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles.  They run up and share in the hug with the both of you.";
 	otherwise if tempnum is 2:
 		say "     Looking over your lovely companion, you can't help but notice how full and round her belly's grown.  She beams happily, rubbing her pregnant belly and you can't help but smile in return.  She kisses you and takes your hand in hers, rubbing it over her swollen, pregnant tummy.";
 		now knowpreg of gryphoness is 1;
 		if T is 1:
 			say "     Landing moments after Denise comes your gryphon child.  She is a cute version of Denise in miniature, another blue gryphon herm with a pretty face and a happy smile.  She runs up and rubs her taloned paws over Denise's maturing pregnancy as well.";
 		if T >= 2:
-			say "     Landing moments after Denise come a pair of gryphlets, your children.  They are cute versions of Denise in miniature, blue gryphon herms with pretty faces and a happy smiles.  They run up rub their taloned paws over Denise's maturing pregnancy as well, happy about another sibling coming.";
+			say "     Landing moments after Denise come a pair of gryphlets, your children.  They are cute versions of Denise in miniature, blue gryphon herms with pretty faces and happy smiles.  They run up rub their taloned paws over Denise's maturing pregnancy as well, happy about another sibling coming.";
 	otherwise if tempnum is 3:
 		if T is 0:
 			increase weapon damage of gryphoness by 1;

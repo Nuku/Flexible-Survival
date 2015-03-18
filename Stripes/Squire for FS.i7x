@@ -1,7 +1,7 @@
 Version 1 of Squire For FS by Stripes begins here.
 [ Version 1.0 - Player loss + infection.]
 
-"Adds a Squire creature to Flexible Survivals Wandering Monsters table"
+"Adds a Squire creature to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 0 - Setup
@@ -50,7 +50,7 @@ to say squiredesc:
 
 to say stateknightcrest_new:
 	if knightcrestnum is 1:
-		say "an ejaculating cock ringed by ivy"; 
+		say "an ejaculating cock ringed by ivy";
 	otherwise if knightcrestnum is 2:
 		say "a horse carnally riding a knight";
 	otherwise if knightcrestnum is 3:
@@ -215,7 +215,7 @@ to say squirewins_anal_sq:
 		say "     'That should be enough training for now, strange squire' he says with a satisfied sigh.  'Perhaps that will aid you in your quest to become a better squire.  But we should go now and rejoin our knights so we might service them.  Your knight may even now have found a means to assist you in your genderless plight,' he adds in a misguided attempt to be encouraging.  Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can.";
 	otherwise:
 		say "     'And there you are, strange [if kpstatus is 3]brigand[otherwise]beast[end if].  Perhaps that will [if kpstatus is 3]satisfy that which drives you to villainy[otherwise]slake your monstrous rampage[end if].'  Sticky, sore and aching a little, but also flush with the warm of his seed in your rear, you see little point in trying to correct the delusional lad and instead take your leave while you can.";
-	say "     As the young man sets himself to fucking you, he does so with some skill.  And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked.  And so, while this [']lesson['] is a little rough at the start, it quickly becomes enjoyable for you as well.  The pistoning of his rod into your back passage and across your prostate sends shivers of erotic pleasure through you.  This is further increased when the lustful lad reaches around to to stroke and pump at your [cock of player] cock while he fucks you.";
+	say "     As the young man sets himself to fucking you, he does so with some skill.  And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked.  And so, while this [']lesson['] is a little rough at the start, it quickly becomes enjoyable for you as well.  The pistoning of his rod into your back passage and across your prostate sends shivers of erotic pleasure through you.  This is further increased when the lustful lad reaches around to stroke and pump at your [cock of player] cock while he fucks you.";
 	say "     As his pace quickens towards climax, you find your hips pressing up into each thrust, wanting the young man to spill his seed inside you.  And given his pace and zeal, you are not left longing for long, with him thrusting deep into your tight hole and dumping several gooey shots of his seed.  You cry out in orgasm in response, your lust overtaking you as you cry out while he cums inside you.  Your [cock size desc of player] cock throbs in his hand and sprays its messy load onto the ground beneath you.";
 	say "     'That should be enough training for now, [if hp of player > 0]my fellow[otherwise]bold[end if] squire' he says with a satisfied sigh.  'Perhaps that will aid you in your quest to become a better squire.  But we should go now and rejoin our knights so we might service them,' he says with an eagerness that part of you feels as well.  You try your best to shake off the desire to run off and find [if knightcrestnum is 0]a knight to be your master[otherwise]your knight[end if].  Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can in the hopes of clearing your head.";
 

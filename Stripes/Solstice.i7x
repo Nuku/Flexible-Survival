@@ -202,8 +202,8 @@ carry out lessontiming:
 		increase libido of player by 10;
 		decrease humanity of player by 5;
 		increase morale of player by 2;
-		if "Strong Psyche" is listed in feats of player, increase humanity by 2;
-		if "Weak Psyche" is listed in feats of player, decrease humanity by 1;
+		if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
+		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "[solsticesex]";

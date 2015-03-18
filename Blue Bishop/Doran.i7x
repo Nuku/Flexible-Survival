@@ -2519,7 +2519,7 @@ to say dorrpmfn: [Doran RP: Matters of a Feral Nature Submenu]
 		say "(-) ----[line break]";
 		say "(-) ----[line break]";
 		say "[line break]";
-		say "(0) [link]Dragons and Similar Fantasy Fare[as]0[end link][line break]";
+		say "(0) [link]Return to Main Categories[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-1)>[run paragraph on]";
 			get a number;

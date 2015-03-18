@@ -1,6 +1,6 @@
 Version 2 of Coyote by Darthan begins here.
 [ Version 2 - Tweaked target gender shifting ]
-"Adds a Coyote creature to Flexible Survivals Wandering Monsters table for impregchance and infect for Diego."
+"Adds a Coyote creature to Flexible Survival's Wandering Monsters table for impregchance and infect for Diego."
 
 
 Section 1 - Monster Responses
@@ -52,7 +52,7 @@ When Play begins:
 	now face entry is "a tan furred canine muzzle full of sharp teeth, your golden eyes survey your surroundings taking in everything around you, your coyote ears twitch as if listening for something. Your lips curl back in a wicked grin as you think about all the mischief you will cause";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "thin and lanky, with digitigrade legs that end in padded coyote paws, your hands a cross between a human's and a coyote's padded paws. Your bony body's appearance belies its actual strength and agility";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "tan, fur covered";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a [one of]bushy[or]scruffy[at random] tail that sways happily as you move.";	[ Tail desc., written as a full sentence or left blank for none. ] 
+	now tail entry is "You have a [one of]bushy[or]scruffy[at random] tail that sways happily as you move.";	[ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]canine[or]coyote[or]coyote-like[or]knotted[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
 	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek tan muzzle, while your eyes blur as they shift in both colour and position. New sounds and smells explode through your enhanced senses as your new coyote muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a coyote's";	[ Face TF text, format as "Your face feels funny as (your text)." ]
 	now body change entry is "your shape changes and seems to become lanky, even looking a little bony and malnourished.  Your muscles become smaller and thinner, but you feel no loss of strength or agility from this.  When the changes start to affect your feet, they almost slip out from under you as your heels shift upwards and your weight shifts to balance on the balls of your changing feet.  You almost stumble before suddenly finding yourself able to balance easily on your new coyote-like paws.  As you take a few steps, you flex your coyote-like hands, a mix of paw and hand with pads and blunted claws";	[ Body TF text, format as "Your body feels funny as (your text)." ]
@@ -83,7 +83,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]wiry[or]lanky[or]bony[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
