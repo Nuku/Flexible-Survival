@@ -24,7 +24,7 @@ the scent of Alexandra is "[if hp of Alexandra < 50][alexandrascent_bg][otherwis
 Instead of conversing the Alexandra:
 	say "[if hp of Alexandra < 50][alexandratalk_bg][otherwise][alexandratalk_gg][end if]";
 
-the fuckscene of alexandra is "[if hp of Alexandra < 50][sexwithAlexandra_bg][otherwise][sexwithAlexandra_bg][end if]";
+the fuckscene of alexandra is "[if hp of Alexandra < 50][sexwithAlexandra_bg][otherwise][sexwithAlexandra_gg][end if]";
 
 
 Section 1 - Alexandra the Bad Girl
