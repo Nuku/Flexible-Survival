@@ -265,7 +265,7 @@ Instead of resolving a Friendship's Proof:
 			say "The hands on your head tighten hard enough that you actually feel as though your skull will break into pieces, and yet, the growl that comes from behind you has you more terrified mentally more terrified than anything physically happening to you at the moment. '[italic type]Friend[roman type] you are a bad liar and someone that does not want to try my patients. I don't know what your game is, but you better be ready to play some serious hardball if you stick your nose in where it doesn't belong. The things happening are not...' The other person behind you stops himself from speaking all of a sudden and then lets out a roar before throwing you down onto the ground suddenly.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "The sudden impact makes your chest heave, but at getting in much needed air you figure that it's worth the effort. When you turn to look at your captor you find your eyes, which have long adjusted to the gloom, not able to find anyone.";
+			say "The sudden impact makes your chest heave, but at getting in much-needed air you figure that it's worth the effort. When you turn to look at your captor you find your eyes, which have long adjusted to the gloom, not able to find anyone.";
 			now tpfs is 3;
 			decrease hp of player by 30;
 			increase score by 10;
