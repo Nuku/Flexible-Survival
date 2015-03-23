@@ -74,7 +74,7 @@ when play begins:
 	add Flooded Street to badspots of humorous;
 
 Instead of resolving a Flooded Street:
-	say "     You come across a small lake of cum blocking your path.  This section of street is literally flooded with cum.  Wading through musky pond are several of those giant walking cocks.  At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen.  You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
+	say "     You come across a small lake of cum blocking your path.  This section of street is literally flooded with cum.  Wading through the musky pond are several of those giant walking cocks.  At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen.  You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if a random chance of 1 in 3 succeeds:
 		say "     You are spotted by one of the ambulatory cock creatures and its rush towards you alerts the others.";
