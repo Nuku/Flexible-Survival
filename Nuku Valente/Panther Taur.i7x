@@ -2,7 +2,7 @@ Version 1 of Panther Taur by Nuku Valente begins here.
 [ Version 1.1 - Promoted to level 4. ]
 [ Commissioned by AsureaSkie. ]
 
-"Adds a Panther Taur creature to Flexible Survivals Wandering Monsters table"
+"Adds a Panther Taur creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -47,10 +47,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Panther Taur";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]She leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had.[or]She strikes at your with her clawed hands.[or]She lashes out with a powerful set of sharp claws.[or]She rushes right at you, forcing you to back against a wall.[at random]";	[Text used when the monster succeeds on an attack]
+	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at your with her clawed hands.[or]She lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[defeated_panthertaur]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[felitaur rape]";					[ Text when monster wins.  Change 'template' as above. ]
-	now desc entry is "An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her pretty [one of]blue[or]brown[or]green[at random] slitted eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";						[ Description of the creature when you encounter it. ]
+	now desc entry is "An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";						[ Description of the creature when you encounter it. ]
 	now face entry is "feline face, with blunt snout, wet black nose and pointed ears above your";		[ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "is bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws.[if breasts of player is greater than 2] All your breasts except the first two rest on the chest of that lower torso, swaying with each step.[end if]";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "[one of]furry[or]black furred[at random]";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
