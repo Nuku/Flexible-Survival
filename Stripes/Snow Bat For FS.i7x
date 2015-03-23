@@ -13,7 +13,7 @@ when play begins:
 
 to say losetosnowbat:
 	now snowbatfight is 2;				[lost]
-	if scalevalue of player > 0 and ( cunts of player > 0 or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and daytimer is day and a random chance of 2 in 5 succeeds:
+	if scalevalue of player > 0 and ( cunts of player > 0 or "More Anal" is listed in feats of player or "MPreg" is listed in feats of player ) and daytimer is night and a random chance of 2 in 5 succeeds:
 		say "     As you [if hp of player > 0]submit[otherwise]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky[if hp of player > 0].  You show no protest, lest the twisted feline release its hold upon you[otherwise].  You briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if].  There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms.  Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teases your [bodytype of player] surface before he sinks his teeth into you.";
 		If cunts of player > 0:
 			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your ass, illustrating his desire to have you sate another hunger.  He skips ceremony, his expedience exacerbated by the apparent urgency of your suspended state, as he thrusts his barbed rod into [if cunts of player > 1]one of your cunts[otherwise]your cunt[end if], his belligerent assault intensified with each successive flap of his wings.";
