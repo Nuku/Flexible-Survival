@@ -17,16 +17,16 @@ After resolving a New Ewe Store, try looking;
 
 Instead of Resolving a New Ewe Store:
 	if nes is 0:
-		say "     You come across a small locally owned grocery store, and to your surprise notice that the lights inside it are still on.  There could be something of value left inside you think to yourself as you approach, only to be halted by a voice from within telling you to stay away, and a strongly barred door.  Do you try to convince them to let you in?.";
+		say "     You come across a small, locally owned grocery store, and to your surprise notice that the lights inside it are still on.  There could be something of value left inside, you think to yourself as you approach, only to be halted by a voice from within telling you to stay away, and a strongly barred door.  Do you try to convince them to let you in?";
 		If player consents:
 			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll is greater than 10:
-				say "     After convincing the voice that you aren't a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you.  Looking around you find yourself being stared at by a small herd of rather sheep-like people, most of their bodies covered in soft wool, with rather sheep-like faces.  As you stare around you in astonishment, one of them steps forward and introduces himself as Leon, and wonders if you can help them with a small problem. Apparently one of their small flock was out gathering supplies and hasn't returned yet, if you can help find her then they would be happy to help you out in return.";
+				say "     After convincing the voice that you aren't a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you.  Looking around, you find yourself being stared at by a small herd of rather sheep-like people, most of their bodies covered in soft wool, with rather sheep-like faces.  As you stare around you in astonishment, one of them steps forward and introduces himself as Leon, wondering if you can help them with a small problem. Apparently one of their small flock was out gathering supplies and hasn't returned yet, and if you can help find her they would be happy to help you out in return.";
 				If player consents:
-					say "     'Thank you very much, we've all been worried sick about her. It's not good for someone to be away from the flock for to long' The watching sheep nod at this statement.";
+					say "     'Thank you very much, we've all been worried sick about her. It's not good for someone to be away from the flock for too long.' The watching sheep nod at this statement.";
 					increase nes by 1;
 				otherwise:
 					say "     They stare at you reproachfully with their big black sheep eyes making you uncomfortable, until you can't take it any more and leave.";
