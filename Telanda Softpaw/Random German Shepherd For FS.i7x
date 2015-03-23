@@ -117,9 +117,9 @@ to say take gsd:
 				otherwise:
 					say "Not wanting to waste more time with the cur, you push him to the ground roughly and leave him there to lick his wounds.";
 			otherwise:
-				say "The German Shepherd lets out a pained and injured whine as he sinks to the ground looking at you with a hurt expression for a few moments before his head drops onto the ground, unconscious.";
+				say "The German Shepherd lets out a pained and injured whine as he sinks to the ground, looking at you with a hurt expression for a few moments before lapsing into unconsciousness.";
 	else:
-		say "The German Shepherd lets out a pained and injured whine as he sinks to the ground looking at you with a hurt expression for a few moments before his head drops onto the ground, unconscious.";
+		say "The German Shepherd lets out a pained and injured whine as he sinks to the ground, looking at you with a hurt expression for a few moments before lapsing into unconsciousness.";
 
 to say attk gsd:
 	now gsd attack is 1; [You've attacked the monster, he won't be happy!]
