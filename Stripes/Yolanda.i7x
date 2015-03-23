@@ -1,5 +1,5 @@
 Version 2 of Yolanda by Stripes begins here.
-[Version 2.2 - Yolanda & Dom Icarus threesomes]
+[Version 2.2.1 - Another Yolanda & Dom Icarus threesomes]
 
 "Adds a dominant Raven NPC named Yolanda to the Flexible Survival game."
 
@@ -160,13 +160,18 @@ to say sexwithYolanda:
 		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 51 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 1";
-			now sortorder entry is 11;
+			now sortorder entry is 10;
 			now description entry is "have a threesome with light bondage and sex";
 		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 2";
-			now sortorder entry is 10;
+			now sortorder entry is 11;
 			now description entry is "have a threesome with sex and footplay";
+		if hp of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and hp of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+			choose a blank row in table of fucking options;
+			now title entry is "3some w/Dom Icarus - 3";
+			now sortorder entry is 12;
+			now description entry is "have a threesome with bondage, sex and orgasm denial";
 		if treasurefound > 0 and yolandatreasure is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Pirate gold reward";
@@ -218,6 +223,8 @@ to say sexwithYolanda:
 						say "[yolanda+domicarus01]";
 					otherwise if nam is "3some w/Dom Icarus - 2":
 						say "[yolanda+domicarus02]";
+					otherwise if nam is "3some w/Dom Icarus - 2":
+						say "[yolanda+domicarus03]";
 			otherwise:
 				say "Invalid Option.  Pick between 1 and [the number of filled rows in the table of fucking options].";
 		if hp of Yolanda is 1, now hp of Yolanda is 2;
@@ -459,6 +466,7 @@ to say yolanda+domicarus01:
 	say "     This self-restraint is only short-lived, as he is only holding back long enough for Yolanda to enclose your hands in leather mitts shaped like hooves and to strap a harness and reins onto your head.  Tugging firmly on those reins, she pulls your head into her crotch, pressing your face to her cloacal pussy.  Getting a nod from her, Icarus lets himself pound away at you hard and fast, nipping [if avpred is true]firmly [end if]at your shoulder as he does.  That initial hard thrust drives you all the harder against the raven's loins and causes you to moan, resulting in some of her juices wetting your lips and running into your mouth.  Having gotten a taste of her, you dive in for more, your tongue working across and past those quivering folds to lap up her juices in an effort to please the dominant femme.";
 	say "     Between the mitts enclosing your hands, the harness holding your head in place and the bird pounding you from behind, you can do little else.  Not that it isn't enjoyable; having no control in the situation is actually quite arousing.  The feel of Icarus's stiff cock pushing into you, spreading your inner walls while Yolanda's juices fills your sense of smell and taste has you moaning for more.  You push your hips back as best you can and work your [if cunts of player > 0]vaginal[otherwise]anal[end if] muscles around that throbbing prick.  He calls you a slut again and you can't help but feel he's right given how much you want to feel the birdie's hot seed in you.";
 	say "     This intense session goes on for some time, the passarine atop you holding back as long as he can to draw it out.  Yolanda's in the throws of her second orgasm from your overeager tonguework by the time the songbird [if avpred is true]bites down onto your shoulder hard again[otherwise]gives out a musical cry[end if] moments before he cums.  He pumps a larger than normal load of sticky bird semen into your [if cunts of player > 0]sopping cunny in an effort to breed you[otherwise]quivering asshole, painting your prostate[end if].  He continues to pound into you, maybe even harder than before, as he drains his balls into you.  Your well-used hole is left gaping and dripping with white goo by the time he pulls out.  He pushes your worn body aside and you roll over onto the padded nest while he moves past you to share a beak nuzzle and lick with the raven before leaving as quickly as he came.[ovichance]";
+	now lastfuck of Icarus is turns;
 	
 
 to say yolanda+domicarus02:
@@ -479,6 +487,22 @@ to say yolanda+domicarus02:
 	say "     This second round doesn't last as long as the first, both dommy birds in need of release after the first round.  Icarus finishes first with a musical cry, pumping several shots of passarine seed into your well-fucked hole.  The feel of the little guy's hot, virile seed shooting into you makes you moan in lustful excitement and dive your tongue deep into the raven atop you.  A few final wriggles of your tongue is all it takes at this point to put her over the edge and soon Yolanda's cawing out in orgasmic delight.  Having them both get off in quick succession is enough to push your arousal over the top as well and you cum again.  This second orgasm leaves you thoroughly exhausted and unable to resist when the finish up by wiping off their cock and strap-on across your well-used body.[ovichance]";
 	now lastfuck of Icarus is turns;
 	
+to say yolanda+domicarus03:
+	setmonster "Blue Chaffinch";
+	let avpred be false;
+	if bodyname of player is listed in infections of Avianpredlist and facename of player is listed in infections of Avianpredlist:
+		now avpred is true;
+	say "     Asking if it would be alright for Icarus to come join you, Yolanda smiles at the corner of her beak.  'Oh, are my toys not enough for you?  I will simply have to try harder,' she caws, laughing as she waves a black wing to the watching passarine.  He flies over as the raven snatches some leather straps from her collection.  She passes them to the blue bird when he lands next to you, who nods with a grin of his own.";
+	say "     Icarus grabs you by the wrists and shoves a joined pair of leather mitts over them.  The laces are tightened and the straps secured, locking your hands inside them.  Next comes a spreader bar for your legs, cuffed around each ankle.  The final piece comes in the form of a ball gag that gets stuffed into your mouth and strapped behind your head.  The mitts encasing your hands get attached to a cable going through a ring in the ceiling and the bar is attached to at the floor.  The two birds raise you up slowly until you're suspended with your arms upright and your legs spread and immobilized.";
+	say "     During this period of trussing you up, the two birds have been rubbing your aroused body and nipping at you.  By the time they're finished, you're quite turned on.  And while Yolanda looks like she might want to take her time, Icarus is eager to get into it.  Moving up behind you, the aggressive songbird moves up behind you and grinds his erect cock against your rear.  He leaves streaks of precum on your ass as he gets lined up, then thrusts [if avpred is true]hard [end if]into your [if cunts of player > 0]cunt[otherwise]asshole[end if].";
+	say "     Yolanda watches the show for a little while before moving around to the front.  She brings her wingtip to your crotch, letting her feathers brush across your [if cocks of player > 0][cock of player] cock[smn], making [itthemm] twitch and throb[otherwise]pulsing clit[sfn] and spread folds, making them quiver[end if].  You moan at this teasing touch and try to grind forward into it for further sensation, but the lustful passarine's grip is firm and your restraints leave you unable to move much at all.  You moan again, louder, but the gag keeps you from begging for her to [if cocks of player > 0]jerk you off[otherwise]finger you[end if] properly.";
+	say "     'That feels good, doesn't it?' she teases.  'You want more, don't you?'  You nod eagerly and she smiles, continuing with those light, feathery touches.  Your needy moans and whimpers please the dominant birds and they keep it up like this.  Icarus savours fucking you by taking an unusually leisurely pace with it[if cunts of player > 1] and changing from one pussy to another[end if], ensuring you're outright aching with need as the session goes on.  They even stop partway, leaving you hanging there while the two of them make out right in front of you while your [if cocks of player > 0 and cunts of player > 0]cock[smn] stand[smv] rock hard and drooling and your now-vacant cunt[sfn] leak[sfv] juices down your legs[otherwise if cocks of player > 0]cock[smn] stand[smv] rock hard and drooling[otherwise]now-vacant cunt[sfn] leak[sfv] juices down your legs[end if].  They nip playfully at one another while rubbing each other's loins in a lewd display.";
+	attempttowait;
+	say "     Thankfully, when they get back to you after what seems an eternity to you, Icarus is quite worked up and throws himself into fucking you hard and fast.  [if avpred is true]As he digs his taloned hands into you and pounds you from behind[otherwise]As he pounds you from behind[end if], your muffled moans only seem to egg him on further.  And at this point, that's exactly what your aching body needs.  Yolanda moves in and [if cocks of player > 0]puts a hidden hand on your pulsing cock and strokes it[otherwise]presses a wing to your crotch so she can rub her hidden hand over your clit[sfn] and puss[yfn][end if] while the passarine fucks you senseless.";
+	say "     You cry into the gag stuffing your mouth as you orgasm, your hot hole squeezing down on the chaffinch's thrusting member[if cocks of player > 0].  Blast after blast of your pent-up seed shoots onto Yolanda's feathery wing as she plays with your spurting cock[otherwise].  Yolanda rubs at your clit and your wet folds as they quiver around the hard cock stuffed into you[end if].  With a musical cry, Icarus thrusts as deep as he can into you and unloads shot after shot of his gooey bird semen [if cunts of player > 0]into your vagina in an instinctual effort to breed you[otherwise]into your bowels as a show of sexual dominance[end if].  Your climax seems all the stronger and more fulfilling after its long denial.  Thus sated and claimed by the birds, you pant, worn and immobile, as the songbird's sperm leaks slowly out of you.  They even leave you strung up like that for some time before finally letting you down onto the cushions.  You're left sore and aching from your extended bondage, but it is an oddly pleasant one as well, an added reminder of the wonderfully satisfying session.[ovichance]";
+	now lastfuck of Icarus is turns;
+	follow the turnpass rule;
+
 
 Section 4 - Events
 

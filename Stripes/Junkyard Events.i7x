@@ -159,10 +159,10 @@ to say dirtysnow:
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Snow Bat":
+			now area entry is "Junkyard";
+			now non-infectious entry is false;
 			now monster is y;
 			break;
-	now area entry is "Junkyard";
-	now non-infectious entry is false;
 	now snowbatfight is 3;
 	challenge "Snow Bat";
 	if snowbatfight is 1:
@@ -180,6 +180,7 @@ to say bottlesnow:
 	delete water bottle;
 	say "     Quickly pulling off your pack, you reach into it and pull out a bottle of water.  You toss it to the charging feline, who bats it aside at first, but then realizes what it is.  He drops to all fours, scrambling on the hard ground in an attempt to turn, then runs to chase after the water bottle.  Taking the opportunity to head off, you can hear the parched feline gulping it down and a distant [']Thank you['] when he's finished.  Wanting to be safe, you keep moving, just in case he decides to come back for more.";
 	increase score by 10;
+	increase morale of player by 3;
 
 
 Junkyard Events ends here.
