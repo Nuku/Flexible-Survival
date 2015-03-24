@@ -1,5 +1,5 @@
 Version 1 of Garrett by Stripes begins here.
-[Version 1 - Initial NPC]
+[ Version 1.1 - M/M specific sex scenes ]
 "Adds a male gryphon milkman NPC to the Flexible Survival game."
 
 Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
@@ -94,6 +94,8 @@ Section 3 - Sex Mechanics
 the fuckscene of Garrett is "[sexwithGarrett]".
 
 to say sexwithGarrett:
+	setmonster "Hermaphrodite Gryphon";
+	choose row monster from the table of random critters;
 	let player_puregryph be false;
 	if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
 		now player_puregryph is true;
@@ -101,19 +103,17 @@ to say sexwithGarrett:
 		say "     You know those blue gryphons are always ready and willing for sex, but you should probably get to know him a little before making such an offer.";
 	otherwise if lastfuck of Garrett - turns < 6:
 		say "     'That sounds like fun, but I could use a bit of time to reload,' he says, rubbing his recently emptied balls.  'Besides, the semen we've already collected needs some time to be processed.'";
-[	otherwise cocks of player > 0 and cunts of player is 0:		[male players only]
-		if hp of Garrett is 1:
-			say "[garrett_handjob_1]";
-		otherwise if player_hgryph is true and a random chance of anallevel in 5 succeeds and anallevel is not 1:
-			say "***garrett fucks the player.  Semen collected from both.";
-		otherwise if a random chance of anallevel in 5 succeeds and anallevel is not 1:
-			say "***player fucks garrett.  Semen collected from Garrett.";
-		otherwise if player_hgryph is true:
-			say "***mutual jack-off session.  Semen collected from both.";
+	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of player > 1:		[male players only]
+		if player_puregryph is true and a random chance of anallevel in 5 succeeds and anallevel is not 1:
+			say "[garrett_analtop_1]";
+[		otherwise if a random chance of anallevel in 5 succeeds and anallevel is not 1:
+			say "[garrett_analtop_2]";		]
+		otherwise if player_puregryph is true:
+			say "[garrett_handjob_2]";
 		otherwise:
 			say "[garrett_handjob_1]";
-		now lastfuck of Garrett is turns;		]
-	otherwise:
+		now lastfuck of Garrett is turns;
+	otherwise:		[first time or non-male]
 		say "[garrett_handjob_1]";
 		now lastfuck of Garrett is turns;
 
@@ -121,8 +121,6 @@ to say sexwithGarrett:
 Section 4 - Sex Scenees
 
 to say garrett_handjob_1:
-	setmonster "Hermaphrodite Gryphon";
-	choose row monster from the table of random critters;
 	let player_puregryph be false;
 	if ( bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon" ) and player is pure:
 		now player_puregryph is true;
@@ -144,24 +142,55 @@ to say garrett_handjob_1:
 		now xp of garrett is 1;
 	otherwise:
 		say "     'Thanks again for your help with that.  It's so much more fun to get a helping hand with that,' he says with a satisfied grin";
-		if xp of garrett is 0 or xp of garrett is 1:
+		if xp of garrett < 3:
 			increase xp of garrett by 1;
 			say ".  I'm going to need to collect some more before I've got enough to run through the processor again.  I hope you'll be willing to help me with that once I'm ready to go again.  And if you're a pure gryphon stud by then, you can even help add to the mix.'";
 		otherwise:
 			say ".  That should be enough to run it through the processor and get some more of my male gryphon milk ready for market.  As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin.  'Let's see if we can't get you to become a sexy gryphon stud so you can help add to the product in a more personal manner.'";
 			increase carried of gryphon cum by 1;
 			now xp of garrett is 0;
-	if bodyname of player is "Feral Gryphon" and player is pure and guy is not banned:
-		say "     Consuming Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
-		infect "Feral Gryphon";
-	otherwise:
-		if name entry is "Hermaphrodite Gryphon":
-			now sex entry is "Male";
-			infect;
-			now sex entry is "Both";
-		otherwise:
-			say "ERROR: Hermaphrodite Gryphon infection not found.";
+	say "[garrettinfect]";
 	if hp of Garrett is 1, now hp of Garrett is 2;
+
+to say garrett_handjob_2:
+	let player_puregryph be false;
+	say "     'Since you're fully a gryphon stud, why don't we get you in on this?' he says, taking your cock in hand.  'The more, the merrier.'  His taloned fingers brush over your manhood, making it throb and stiffen.  He smiles and nuzzles you, letting his own erection brush against your feathers.  You take hold of his black cock and start returning the favour, drawing a pleased rumble from him.";
+	say "     His touch is strong, but gentle, working to please you with his steady pumping.  He works your [cock size desc of player] manhood with an eagerness that further excites you, as does the throbbing of his eighteen inch cock in your hand.  You swap between stroking each other off and grinding your cocks against one another while kissing.  You even take turns briefly on your knees, licking and sucking the other's gryphon cock.";
+	attempttowait;
+	say "     As you build towards your climax, he slips around behind you, still pumping at your pulsing rod while holding a [if cock width of player >= 24]bucket[otherwise if cock width of player >= 16]jug[otherwise]bottle[end if] to catch your approaching load.  This reminds you that he plans to convert your semen into a batch of his infectious gryphon milk.  Aroused as you are at this point, the thought of that is quite exciting.  You [one of]picture some thirsty soldier drinking the tainted milk and becoming a male studly male gryphon[or]imagine some survivor finding a bottle of your tainted milk and becoming a sexy male gryphon like you[or]imagine someone finding a bottle of your tainted milk and turning into a horny gryphon stud[at random].  Picturing that happening in your mind is enough to put you over the top and you cry out as your orgasm, spurting shot after shot of sticky sperm into the waiting container.  You clench your beak and focus on the erotic fantasy in your mind, trying to get as much out of your climax as you can so it might come to be.";
+	say "     Once you've been fully drained, you return your attention to Garrett with even greater enthusiasm.  You take his large cock in one hand and caress his balls with the other, urging him to hold another container.  You nuzzle and nip at the studly gryphon's neck, moaning for him to add his cum.  With the bottle ready, he stops holding back with a satisfied groan of release.  Blast after blast of gooey gryphon seed sprays into the bottle and across his hand.  Excited and amused by this sight, you do your best to hold his mighty rod steady while fondling his pulsing orbs, trying to help the gryphon stud release as much of his semen as possible.  When finally done, the bottle is mostly full and his paw and the bottle are quite sticky with the excess.  He grins and the two of you snuggle together in your mutual afterglow, licking the excess cum from your hands and the outside of the containers.";
+	attempttowait;
+	increase xp of Garrett by 1;
+	if cock width of player > 15 or a random chance of 1 in 2 succeeds, increase xp of Garrett by 1;
+	say "     'Mmmm... good stuff,' he purrs while licking a big gob of your cum from his hand.  'It's definitely more fun and faster having help with the production";
+	if xp of Garrett < 3:
+		say ".  I'm going to need to collect some more before I've got enough to run through the processor again.  I hope you'll be willing to help me with that once I'm ready to go again.'";
+	otherwise:
+		say ".  That should be enough to run it through the processor and get some more male gryphon milk ready for market.  As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin.  'With you helping now as a gryphon stud, I can make so much more of this stuff.'";
+		increase carried of gryphon cum by 1;
+		now xp of garrett is 0;
+
+to say garrett_analtop_1:
+	setmonster "Hermaphrodite Gryphon";
+	choose row monster from the table of random critters;
+	say "     Garrett strokes his own cock as he gives your ass a playful swat.  'Come on.  Let's milk a nice, big load out of you,' he says.  He nudges you to lean on his wooden chair, places a [if cock width of player >= 24]bucket[otherwise if cock width of player >= 16]jug[otherwise]bowl[end if] on the seat to catch load before moving up behind you.  'And there's nothing better for getting a nice, big load out of someone than proper stimulation.'  Grinding his stiff manhood against your rear gets your tail to raise for him, making it 100% clear just what kind of stimulation he has in mind for you.";
+	say "     [if anallevel is 3 and a random chance of 1 in 2 succeeds]Taking a moment to lube your asshole with several probing licks[otherwise]Teasing your asshole with his glans for a few soft presses[end if], he draws a needy moan from you.  He takes his time thrusting into you initially, letting his oversized cock stretch your [if the player is twistcapped]accommodating [end if]anus slowly.  The feel of that ebon member of his pressing its way into you sends shivers of delight through you that make your cock throb and pulse all the harder.  After sinking about halfway into you, he reaches around and runs his hand over your [cock size desc of player] penis.";
+	attempttowait;
+	say "     Bending over your leaning back, he [if breast size of player is 0]runs his free hand over your manly chest[otherwise]grips your hip[end if] as he starts thrusting in and out of your back door.  The horny milkman nips and nuzzles at your shoulders and neck as he pounds away at you with increasing zeal.  All the while, his hand keeps working at your cock and balls, coaxing it to drool and dribble.  He spreads your precum across your pulsing shaft, making his stroking grip smoother and slicker, increasing your pleasure.";
+	say "     'Mmm... yeah... feels good, doesn't it?  Just think, soon we'll have plenty more sexy gryphon studs around to do this with.  I can hardly wait,' he rumbles in your ear.  He fucks you harder and faster as he talks, building himself up to his release.  The pounding at your prostate is soon followed by the wet pop of his knot into you.  Hot splashes of the gryphon's copious cum shoot into your ass, finally pushing you over the edge into orgasm yourself.  Crying out lustfully, you start unloading your balls in [if cock width of player >= 24]massive spurts[otherwise if cock width of player >= 16]large spurts[otherwise]sticky spurts[end if] while Garrett aims your cock so much of your semen lands in the waiting container.  By the time you're done and drained, your lower bowels are warm and wet with the productive gryphon's load sloshing around inside you.  He remains inside you for a while, nuzzling at you as he waits for his knot to eventually go down before pulling out.  By the time it does, only a little of his seed leaks out, your body keeping the rest so it might be absorbed.[movichance]";
+	attempttowait;
+	if cock width of player > 15 or a random chance of 3 in 4 succeeds, increase xp of Garrett by 1;
+	say "     'I must say, that's a fine ass you've got there,' he says, caressing your warmth-filled bottom.  'It's nice to have such a sexy and willing helper";
+	if xp of Garrett < 3:
+		say ".  That won't quite be enough to run through the processor, but I don't mind giving you some of the raw stuff to help you be a bigger stud.  I hope you'll be willing to help me collect even more once I'm ready to go again.'";
+	otherwise:
+		say ".  That should be enough to run it through the processor and get some more male gryphon milk ready for market.  As thanks for helping out, you can have another bottle of the processed,' he says, pushing one into your hands with a grin.  'Though you certainly seemed to enjoy your recent dose of the raw materials,' he adds with a caress to your warmth-filled bottom.";
+		increase carried of gryphon cum by 1;
+		now xp of garrett is 0;
+
+
+to say garrett_analtop_2:
+	say "***player fucks garrett.  Semen collected from Garrett.";
 
 
 Section 5 - Gryphon Cum
@@ -192,6 +221,20 @@ to say drinkgryphoncum:
 
 the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing scent of male gryphon semen.".
 
+to say garrettinfect:
+	if bodyname of player is "Feral Gryphon" and player is pure and guy is not banned:
+		say "     Consuming Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
+		infect "Feral Gryphon";
+	otherwise:
+		setmonster "Hermaphrodite Gryphon";
+		choose row monster from the table of random critters;
+		if name entry is "Hermaphrodite Gryphon":
+			now sex entry is "Male";
+			infect;
+			now sex entry is "Both";
+		otherwise:
+			say "ERROR: Hermaphrodite Gryphon infection not found.";
+
 
 Section X - Notes
 
@@ -200,10 +243,10 @@ Section X - Notes
 [ 1 = talked to Garrett    ]
 [ 2 = masturbated Garrett  ]
 
-[      xp of Garrett     ]
-[ 0 = no saved spunk     ]
-[ 1 = one sample saved   ]
-[ 2 = two samples saved  ]
+[       xp of Garrett      ]
+[ 0 = no saved spunk       ]
+[ 1 = one sample saved     ]
+[ 2 = two samples saved    ]
 [ 3+ = enough samples saved - reset to zero upon giving another bottle  ]
 
 
