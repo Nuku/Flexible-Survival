@@ -1,5 +1,5 @@
 Version 1 of Garrett by Stripes begins here.
-[ Version 1.1 - M/M specific sex scenes ]
+[ Version 1.2 - More M/M specific sex scenes ]
 "Adds a male gryphon milkman NPC to the Flexible Survival game."
 
 Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
@@ -104,17 +104,25 @@ to say sexwithGarrett:
 	otherwise if lastfuck of Garrett - turns < 6:
 		say "     'That sounds like fun, but I could use a bit of time to reload,' he says, rubbing his recently emptied balls.  'Besides, the semen we've already collected needs some time to be processed.'";
 	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of player > 1:		[male players only]
-		if player_puregryph is true and a random chance of anallevel in 5 succeeds and anallevel is not 1:
-			say "[garrett_analtop_1]";
-[		otherwise if a random chance of anallevel in 5 succeeds and anallevel is not 1:
-			say "[garrett_analtop_2]";		]
-		otherwise if player_puregryph is true:
-			say "[garrett_handjob_2]";
+		if player_puregryph is true:
+			if ( hp of Garrett is 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+				say "[garrett_analtop_2]";
+			otherwise if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+				say "[garrett_analbottom_2]";
+			otherwise:
+				say "[garrett_handjob_2]";
 		otherwise:
-			say "[garrett_handjob_1]";
+			if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+				say "[garrett_analtop_1]";
+			otherwise if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+				say "[garrett_analbottom_1]";
+			otherwise:
+				say "[garrett_handjob_1]";
+		say "[garrettinfect]";
 		now lastfuck of Garrett is turns;
 	otherwise:		[first time or non-male]
 		say "[garrett_handjob_1]";
+		say "[garrettinfect]";
 		now lastfuck of Garrett is turns;
 
 
@@ -149,12 +157,14 @@ to say garrett_handjob_1:
 			say ".  That should be enough to run it through the processor and get some more of my male gryphon milk ready for market.  As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin.  'Let's see if we can't get you to become a sexy gryphon stud so you can help add to the product in a more personal manner.'";
 			increase carried of gryphon cum by 1;
 			now xp of garrett is 0;
-	say "[garrettinfect]";
-	if hp of Garrett is 1, now hp of Garrett is 2;
+	if hp of Garrett is 1:
+		now hp of Garrett is 2;
+	otherwise if hp of Garrett is 2 and a random chance of 1 in 2 succeeds:
+		now hp of Garrett is 3;
 
 to say garrett_handjob_2:
 	let player_puregryph be false;
-	say "     'Since you're fully a gryphon stud, why don't we get you in on this?' he says, taking your cock in hand.  'The more, the merrier.'  His taloned fingers brush over your manhood, making it throb and stiffen.  He smiles and nuzzles you, letting his own erection brush against your feathers.  You take hold of his black cock and start returning the favour, drawing a pleased rumble from him.";
+	say "     'Since you're fully a gryphon stud, why don't we get you in on this?' he says, taking your cock in hand.  'The more, the merrier.'  His taloned fingers brush over your manhood, making it throb and stiffen.  He smiles and nuzzles you, letting his own erection brush against your fur.  You take hold of his black cock and start returning the favour, drawing a pleased rumble from him.";
 	say "     His touch is strong, but gentle, working to please you with his steady pumping.  He works your [cock size desc of player] manhood with an eagerness that further excites you, as does the throbbing of his eighteen inch cock in your hand.  You swap between stroking each other off and grinding your cocks against one another while kissing.  You even take turns briefly on your knees, licking and sucking the other's gryphon cock.";
 	attempttowait;
 	say "     As you build towards your climax, he slips around behind you, still pumping at your pulsing rod while holding a [if cock width of player >= 24]bucket[otherwise if cock width of player >= 16]jug[otherwise]bottle[end if] to catch your approaching load.  This reminds you that he plans to convert your semen into a batch of his infectious gryphon milk.  Aroused as you are at this point, the thought of that is quite exciting.  You [one of]picture some thirsty soldier drinking the tainted milk and becoming a male studly male gryphon[or]imagine some survivor finding a bottle of your tainted milk and becoming a sexy male gryphon like you[or]imagine someone finding a bottle of your tainted milk and turning into a horny gryphon stud[at random].  Picturing that happening in your mind is enough to put you over the top and you cry out as your orgasm, spurting shot after shot of sticky sperm into the waiting container.  You clench your beak and focus on the erotic fantasy in your mind, trying to get as much out of your climax as you can so it might come to be.";
@@ -169,11 +179,22 @@ to say garrett_handjob_2:
 		say ".  That should be enough to run it through the processor and get some more male gryphon milk ready for market.  As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin.  'With you helping now as a gryphon stud, I can make so much more of this stuff.'";
 		increase carried of gryphon cum by 1;
 		now xp of garrett is 0;
+	if hp of Garrett is 2, now hp of Garrett is 3;
 
 to say garrett_analtop_1:
 	setmonster "Hermaphrodite Gryphon";
 	choose row monster from the table of random critters;
-	say "     Garrett strokes his own cock as he gives your ass a playful swat.  'Come on.  Let's milk a nice, big load out of you,' he says.  He nudges you to lean on his wooden chair, places a [if cock width of player >= 24]bucket[otherwise if cock width of player >= 16]jug[otherwise]bowl[end if] on the seat to catch load before moving up behind you.  'And there's nothing better for getting a nice, big load out of someone than proper stimulation.'  Grinding his stiff manhood against your rear gets your tail to raise for him, making it 100% clear just what kind of stimulation he has in mind for you.";
+	say "     Garrett strokes his own cock as he gives your ass a playful swat.  'Come on.  I'm in the mood to showing you just how good having some of my special gryphon milk in you can be,' he says.  He nudges you to lean over his wooden chair and grinds his stiff manhood against your rear.  Feeling dribbles of his pre wet your ass, you can tell just how he plans on giving you this sample.";
+	say "     [if anallevel is 3 and a random chance of 1 in 2 succeeds]Dipping one of his fingers into a bottle, he splatters the gooey [']milk['] across your asshole before wriggling the digit into it[otherwise]Pouring some of a bottle's contents onto his cock, he gets himself lubed up and ready[end if].  He takes his time thrusting into you initially, letting his oversized cock stretch your [if the player is twistcapped]accommodating [end if]anus slowly.  The feel of that ebon member of his pressing its way into you sends shivers of delight through you that make your cock throb and pulse all the harder.  The sensation is accompanied by the arousing tingles of the refined semen suffusing into you.  After sinking about halfway into you, he reaches around and runs his sticky hand over your [cock size desc of player] penis, spreading that tingly sensation to it as well.";
+	attempttowait;
+	say "     Bending over your leaning back, he [if breast size of player is 0]runs his free hand over your manly chest[otherwise]grips your hip[end if] as he starts thrusting in and out of your back door.  The horny milkman nips and nuzzles at your shoulders and neck as he pounds away at you with increasing zeal.  All the while, his hand keeps working at your cock and balls, coaxing it to drool and dribble.  He spreads your precum across your pulsing shaft, making his stroking grip smoother and slicker, increasing your pleasure.";
+	say "     'Mmm... yeah... feels good, doesn't it?  Just think, soon you can be even sexier as a gryphon stud.  I can hardly wait,' he rumbles in your ear.  He fucks you harder and faster as he talks, building himself up to his release.  The pounding at your prostate is soon followed by the wet pop of his knot into you.  Hot splashes of the gryphon's copious cum shoot into your ass, finally pushing you over the edge into orgasm yourself.  Crying out lustfully, you start unloading your balls in [if cock width of player >= 24]massive spurts[otherwise if cock width of player >= 16]large spurts[otherwise]sticky spurts[end if] while Garrett pumps your cock dry.  By the time you're done and drained, your lower bowels are warm and wet with the productive gryphon's load sloshing around inside you.  He remains inside you for a while, nuzzling at you as he waits for his knot to eventually go down before pulling out.  By the time it does, only a little of his seed leaks out, your body keeping the rest so it might be absorbed.[movichance]";
+	if hp of Garrett is 3 and a random chance of 1 in 2 succeeds, now hp of Garrett is 4;
+
+to say garrett_analtop_2:
+	setmonster "Hermaphrodite Gryphon";
+	choose row monster from the table of random critters;
+	say "     Garrett strokes his own cock as he gives your ass a playful swat.  'Come on.  Let's milk a nice, big load out of you,' he says.  He nudges you to lean on his wooden chair, places a [if cock width of player >= 24]bucket[otherwise if cock width of player >= 16]jug[otherwise]bowl[end if] on the seat to catch load before moving up behind you.  'And there's nothing better for getting a nice, big load out of someone than proper stimulation.'  Grinding his stiff manhood against your rear gets your tail to raise for him as he makes it 100% clear just what kind of stimulation he has in mind for you.";
 	say "     [if anallevel is 3 and a random chance of 1 in 2 succeeds]Taking a moment to lube your asshole with several probing licks[otherwise]Teasing your asshole with his glans for a few soft presses[end if], he draws a needy moan from you.  He takes his time thrusting into you initially, letting his oversized cock stretch your [if the player is twistcapped]accommodating [end if]anus slowly.  The feel of that ebon member of his pressing its way into you sends shivers of delight through you that make your cock throb and pulse all the harder.  After sinking about halfway into you, he reaches around and runs his hand over your [cock size desc of player] penis.";
 	attempttowait;
 	say "     Bending over your leaning back, he [if breast size of player is 0]runs his free hand over your manly chest[otherwise]grips your hip[end if] as he starts thrusting in and out of your back door.  The horny milkman nips and nuzzles at your shoulders and neck as he pounds away at you with increasing zeal.  All the while, his hand keeps working at your cock and balls, coaxing it to drool and dribble.  He spreads your precum across your pulsing shaft, making his stroking grip smoother and slicker, increasing your pleasure.";
@@ -187,10 +208,40 @@ to say garrett_analtop_1:
 		say ".  That should be enough to run it through the processor and get some more male gryphon milk ready for market.  As thanks for helping out, you can have another bottle of the processed,' he says, pushing one into your hands with a grin.  'Though you certainly seemed to enjoy your recent dose of the raw materials,' he adds with a caress to your warmth-filled bottom.";
 		increase carried of gryphon cum by 1;
 		now xp of garrett is 0;
+	if hp of Garrett is 3, now hp of Garrett is 4;
 
+to say garrett_analbottom_1:
+	say "     When you offer having sex with the gryphon again, Garrett turns and raises his leonine tail with a grin.  'Great to hear.  Nothing like a guy's hard cock in my ass to make me extra-productive.'  Leaning on his chair, he reaches back to place a taloned paw on one cheek to hold them apart.  With his crinkled hole on tantalizing display, you stiffen to full hardness and move to mount the horny milkman.";
+	say "     Moving up behind him, you place a hand on his other cheek and press your rod between them.  After a few teasing strokes across the soft fur of his bottom, you get lined up with his tailhole and sink slowly into him.  His passage is quite slick and easy to penetrate, making you conclude he's been using some of his own product.  The feel of that warm hole squeezing around your meat has you thrusting lustfully in no time.  The gryphon releases satisfied moans as you pound away.";
+	attempttowait;
+	say "     He proves to be a very eager and talented bottom, proving this horny stud's quite willing and able to be on either end for a sexy male.  His toned ass squeezes firmly around you with each thrust you make.  Your hands move from his hips to run over his muscular, masculine body.  His shoulders and thighs are particularly firm, but you can also feel the hard abs under his belly fur.  One of your hands ends up on his, helping to stroke his throbbing manhood.";
+	say "     When your climax comes, he pushes back into your thrusts, moaning for you to give him your hot seed.  And give it to him you do, sinking fully into him and pumping your [cum load size of player] load into his clenching bowels.  The feel of your hot cream and throbbing manhood inside him soon become too much for him to hold back any longer.  His impressive shaft pulses within your mutual grip, shooting numerous globs of gryphon spunk into the jug resting on the chair's seat.  By the time his climax ends, it's over half full and the chair is streaked with overspray.";
+	attempttowait;
+	increase xp of Garrett by 1;
+	say "     Turning his head back, he nuzzles and kisses you while waiting for your knot to go down and pop free.  When it does, he clenches his leaky hole to keep your sticky spunk inside while stretching his impressive body and wings out.  The studly gryphon runs a paw [if breast size of player is 0]along your side[otherwise]down your chest[end if].  'That was real fun.  And it'll be even better once we've got you as a sexy man-gryphon.  The herms are great, but it's just not the same";
+	if xp of Garrett < 3:
+		say ".  Taste it and you'll agree,' he says, holding out his cock as it drools out the last dregs of his load.  Licking your lips at the sight of it, you get on your knees and slurp up those gooey droplets.  You moan softly at the taste of his virile spunk and suck every last drop, part of you eager for the tainted nature of the seed you're accepting into yourself.";
+	otherwise:
+		say ".  This'll be enough to top up the processor for another batch, so you should take another bottle.  It'll help make you into a gryphon stud faster so you can help me make even more.'";
+		now xp of garrett is 0;
+	if hp of Garrett is 4 and a random chance of 1 in 2 succeeds, now hp of Garrett is 5;
 
-to say garrett_analtop_2:
-	say "***player fucks garrett.  Semen collected from Garrett.";
+to say garrett_analbottom_2:
+	say "     When you offer having sex with the gryphon again, Garrett turns and raises his leonine tail with a grin.  'Great to hear.  I could go for having a studly gryphon in me.'  Leaning on his chair, he reaches back to place a taloned paw on one cheek to hold them apart.  With his crinkled hole on tantalizing display, you stiffen to full hardness and move to mount the horny milkman.";
+	say "     Moving up behind him, you place a hand on his other cheek and press your rod between them.  After a few teasing strokes across the soft fur of his bottom, you get lined up with his tailhole and sink slowly into him.  His passage is slick and easy to penetrate, making you conclude he's been using some of his own product as lube.  The feel of that warm hole squeezing around your meat has you thrusting lustfully in no time.  The gryphon releases satisfied moans as you pound away.";
+	attempttowait;
+	say "     He proves to be a very eager and talented bottom, proving this horny stud's quite willing and able to be on either end for a sexy male.  His toned ass squeezes firmly around you with each thrust you make.  Your hands move from his hips to run over his muscular, masculine body.  His shoulders and thighs are particularly firm, but you can also feel the hard abs under his belly fur.  One of your paws ends up on his, helping to stroke his throbbing manhood.";
+	say "     When your climax comes, he pushes back into your thrusts, moaning for you to give him your hot seed.  And give it to him you do, popping your knot past his anal sphincter and pumping your [cum load size of player] load into his clenching bowels.  The feel of your hot cream and throbbing knot inside him soon become too much for him to hold back any longer.  His impressive shaft pulses within your mutual grip, shooting numerous globs of gryphon spunk into the jug resting on the chair's seat.  By the time his climax ends, it's mostly full and the chair is streaked with overspray.";
+	attempttowait;
+	increase xp of Garrett by 1;
+	if a random chance of 1 in 2 succeeds, increase xp of Garrett by 1;
+	say "     Turning his head back, he nuzzles and kisses you before easing himself off your spent shaft.  When it does, he clenches his leaky hole to keep your sticky spunk inside while stretching his impressive body and wings out.  The studly gryphon runs a paw [if breast size of player is 0]along your side[otherwise]down your chest[end if].  'That was wonderful, you sexy beast.  Mmm... feels good to have a proper man-stud atop me again.  The herms are great, but it's just not the same.  And if we keep collecting loads like this, there'll be many more males of us around soon enough";
+	if xp of Garrett < 3:
+		say ".'";
+	otherwise:
+		say ".  This should be more than enough to top up the processor to make more of my special milk.  Speaking of, you should take another bottle; I'll have more for myself once that next batch is done.'";
+		now xp of garrett is 0;
+	if hp of Garrett is 4, now hp of Garrett is 5;
 
 
 Section 5 - Gryphon Cum
@@ -223,7 +274,7 @@ the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing
 
 to say garrettinfect:
 	if bodyname of player is "Feral Gryphon" and player is pure and guy is not banned:
-		say "     Consuming Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
+		say "     Absorbing Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
 		infect "Feral Gryphon";
 	otherwise:
 		setmonster "Hermaphrodite Gryphon";
@@ -238,10 +289,13 @@ to say garrettinfect:
 
 Section X - Notes
 
-[       hp of Garrett      ]
-[ 0 = not talked           ]
-[ 1 = talked to Garrett    ]
-[ 2 = masturbated Garrett  ]
+[        hp of Garrett        ]
+[ 0 = not talked              ]
+[ 1 = talked to Garrett       ]
+[ 2 = masturbated Garrett     ]
+[ 3 = Garrett ready to top    ]
+[ 4 = Garrett ready to bottom ]
+[ 5 = topped Garrett          ]
 
 [       xp of Garrett      ]
 [ 0 = no saved spunk       ]
