@@ -1521,27 +1521,15 @@ carry out hunting:
 				if "Curious" is listed in feats of player, increase bonus by 2;
 				increase dice by bonus;
 				if dice >= 15 or "Unerring Hunter" is listed in feats of player:
-					say "You manage to find your way to [z]!";
+					say "You manage to find your way towards [z]!";
+					huntingfightchance;
 					move the player to z;
 					now z is known;
-					now dice is a random number from 1 to 20;
-					if "Bad Luck" is listed in feats of player, increase dice by 1;
-					if "Curious" is listed in feats of player, increase dice by 2;
-					if dice is greater than 14 and battleground is not "void":
-						Fight;
-						if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-							say "As you are trying to recover from your last encounter, another roving creature finds you.";
-							Fight;
+					now battleground is "void";
 				otherwise:
 					say "Despite your searches, you fail to find it.[line break]";
-					now dice is a random number from 1 to 20;
-					if "Bad Luck" is listed in feats of player, increase dice by 1;
-					if "Curious" is listed in feats of player, increase dice by 2;
-					if dice is greater than 14 and battleground is not "void":
-						Fight;
-						if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-							say "As you are trying to recover from your last encounter, another roving creature finds you.";
-							Fight;
+					huntingfightchance;
+					now battleground is "void";
 				break;
 		if found is 0:
 			repeat with z running through unresolved situations:
@@ -1566,29 +1554,11 @@ carry out hunting:
 						say "You manage to find your way to [z]!";
 						try resolving z;
 						now inasituation is false;
-						now dice is a random number from 1 to 20;
-						if "Bad Luck" is listed in feats of player, increase dice by 1;
-						if "Curious" is listed in feats of player, increase dice by 2;
-						if dice is greater than 14 and battleground is not "void":
-							now combat abort is 0;
-							now lost is 0;
-							Fight;
-							if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-								now combat abort is 0;
-								now lost is 0;
-								say "As you are trying to recover from your last encounter, another roving creature finds you.";
-								Fight;
+						huntingfightchance;
 					otherwise:
 						now inasituation is false;
 						say "Despite your searches, you fail to find it.[line break]";
-						now dice is a random number from 1 to 20;
-						if "Bad Luck" is listed in feats of player, increase dice by 1;
-						if "Curious" is listed in feats of player, increase dice by 2;
-						if dice is greater than 14 and battleground is not "void":
-							Fight;
-							if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-								say "As you are trying to recover from your last encounter, another roving creature finds you.";
-								Fight;
+						huntingfightchance;
 					break;
 		if found is 0:
 			if foundbadtime is 1:
@@ -1599,14 +1569,7 @@ carry out hunting:
 				say "[bold type]You don't think what you're looking for can be found here...[roman type][line break]";
 			otherwise if sitfound is 1:
 				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type][line break]";
-			let dice be a random number from 1 to 20;
-			if "Bad Luck" is listed in feats of player, increase dice by 1;
-			if "Curious" is listed in feats of player, increase dice by 2;
-			if dice is greater than 14 and battleground is not "void":
-				Fight;
-				if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-					say "As you are trying to recover from your last encounter, another roving creature finds you.";
-					Fight;
+			huntingfightchance;
 		follow the turnpass rule;
 
 to new ban menu:
@@ -2263,7 +2226,7 @@ carry out navigating:
 		stop the action;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
-	if a random number from 1 to 20 is less than 10 minus bonus:
+	if a random number from 1 to 20 is less than 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
@@ -4933,10 +4896,12 @@ This is the explore rule:
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 1:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
-			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			randomfightchance;
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [L].";
 			move player to L;
 			now something is 1;
 			plot;
+			now battleground is "void";
 			wait for any key;
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 8 ) and there is an unresolved situation:
 		let L be a random available situation;
@@ -4951,14 +4916,16 @@ This is the explore rule:
 	if something is 0 and a random number from 1 to 20 is less than ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
-			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			randomfightchance;
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [L].";
 			move player to L;
 			now something is 1;
 			plot;
+			now battleground is "void";
 			wait for any key;
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
-	if a random number from 1 to 20 is less than 10 plus bonus:
+	if a random number from 1 to 20 is less than 10 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
@@ -4984,6 +4951,29 @@ carry out exploring:
 	if l is nothing, now battleground is "Outside";	[***]
 	follow the explore rule;
 
+to randomfightchance:
+	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	if "Stealthy" is listed in feats of player, now bonus is -1;
+	if "Curious" is listed in feats of player, increase bonus by 2;
+	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if a random number from 1 to 20 is less than 10 plus bonus and battleground is not "void":
+		if there is a area of Battleground in the table of random critters:
+			Fight;
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
+				Fight;
+
+to huntingfightchance:
+	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	if "Stealthy" is listed in feats of player, now bonus is -1;
+	if "Curious" is listed in feats of player, increase bonus by 2;
+	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if a random number from 1 to 20 is less than 7 plus bonus and battleground is not "void":
+		if there is a area of Battleground in the table of random critters:
+			Fight;
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
+				Fight;
 
 restoration is a number that varies.
 balloversize is a number that varies.
@@ -6049,12 +6039,7 @@ carry out scavenging:
 	let z be 7;
 	if "Stealthy" is listed in feats of player, decrease z by 2;
 	if "Bad Luck" is listed in feats of player, increase z by 1;
-	if a random number from 1 to 20 is less than z:
-		if there is a area of Battleground in the table of random critters:
-			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
-				say "As you are trying to recover from your last encounter, another roving creature finds you.";
-				Fight;
+	randomfightchance;
 	follow turnpass rule;
 
 To Challenge (x - text):
