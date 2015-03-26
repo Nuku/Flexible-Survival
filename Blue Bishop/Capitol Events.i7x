@@ -55,7 +55,7 @@ Instead of resolving Ashen Nest:
 		if hardmode is true, increase target by 2;
 		let dice be a random number from 1 to 20;
 		if bonus + dice is greater than target:
-			say ".  Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake.  Dusting yourself off, you move to see what your poor luck might of had in store for you.";
+			say ".  Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake.  Dusting yourself off, you move to see what your poor luck might have had in store for you.";
 			say "     Looking down, you can see the shadows of a handful of ashen whelps, now suddenly roused from their prior rest.  Further observation indicates that it's some manner of nest, you also see a bit of food and water.";
 			say "     You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.  Descend upon the whelps?";
 			if player consents:
