@@ -16,6 +16,7 @@ Instead of resolving a Eager Dal:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[otherwise]Not given[end if]. <- DEBUG[line break]";
 	if hp of Stella is 0:
+		project the figure of Stella_icon;
 		say "     As you're sneaking through an alley between two buildings, you hear a cheerful British voice call out to you from behind.  'Hey there, hon.  Care to bang?'  Expecting it to be a sex-crazed monster by this point, you turn and take up a fighting stance.  'Whoa there, cowboy!  Kind of touchy, aren't we?  No need to spaz out!' the cute dalmatian herm in front of you says, paws up as she takes a quick couple of steps back.";
 		say "     Realizing you'd misjudged the situation, you relax a little and try to strike up a conversation.  As you do, you look her over more closely.  Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle.  She's got shoulder-length white hair with a splash of black on her bangs.  She's wearing a pair of glasses in front of her bright, blue eyes.  And between her legs is an obviously canine cock.";
 		say "     Aside from learning that her name is Stella, most of your conversation's pretty vacuous babbling.  She mainly talks about how she's been enjoying herself since she'd woken up as a dalmatian.  Actually, her big thing's her new dick, which she's been trying out all around town.  It's no wonder she's ended up in this neighbourhood with an attitude like that.  When she mentions having been looking for somewhere safe to hang out when she needs to rest, you wonder about inviting her to come with you.  Shall you do just that?";
@@ -66,6 +67,7 @@ Section 1 - Stella the Dalmatian
 Stella is a woman.
 The description of Stella is "[stelladesc]".
 The conversation of Stella is { "Try my dick!" }.
+The icon of Stella is Figure of Stella_icon.
 StellaNPCInt is a text that varies.  StellaNPCInt is usually "AAAAAAAAAAAA".
 
 the scent of the Stella is "Stella smells of canine arousal, the scent of sex lingering around her always.".

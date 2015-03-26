@@ -474,6 +474,10 @@ To reciting2:
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
+					if alexbrunch >= 4:
+						now the icon of Alex is Figure of Alex_icon;
+					otherwise:
+						now the icon of Alex is figure of pixel;
 			-- 69:	[Treasure found]
 				if the player's command matches "[number]":
 					now treasurefound is the number understood;
@@ -2513,6 +2517,10 @@ Carry out reciting:
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
+					if alexbrunch >= 4:
+						now the icon of Alex is Figure of Alex_icon;
+					otherwise:
+						now the icon of Alex is figure of pixel;
 			-- 69:	[Treasure found]
 				if the player's command matches "[number]":
 					now treasurefound is the number understood;

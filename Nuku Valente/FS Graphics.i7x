@@ -35,6 +35,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
+Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
 Figure of succubus_icon is the file "succubus.jpg".
@@ -47,6 +48,7 @@ Figure of Zebra_icon is the file "Zebra.png".
 
 [npc icons]
 Figure of Adam_icon is the file "Adam.png".
+Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.png".
 Figure of Andre_icon is the file "Andre.png".
 Figure of Andrew_icon is the file "andrew_ig.jpg".
@@ -69,14 +71,22 @@ Figure of Elijah_good_icon is the file "Elijah_good.png".
 Figure of Elijah_virgin_icon is the file "Elijah_virgin.png".
 Figure of Elijah_naked_icon is the file "Elijah_naked.png".
 Figure of Felix_icon is the file "Felix.png".
+Figure of Francois_icon is the file "Francois_ig.jpg".
+Figure of Frank_icon is the file "Frank_paw_ig.png".
+Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
+Figure of Grant2_icon is the file "grant_ig2.jpg".
+Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of James_icon is the file "james_ig.jpg".
+Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of LeonardViolin_icon is the file "leonardv_ig.jpg".
+Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.png".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Orthas_icon is the file "orthas.jpg".
+Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
@@ -84,6 +94,7 @@ Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of sandy_icon is the file "sandra.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
+Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of TinyTim_icon is the file "TinyTim.jpg".
 Figure of Thomas_icon is the file "Thomas.png".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
@@ -91,6 +102,7 @@ Figure of Zigor_icon is the file "Zigor_ig.jpg".
 [scene icons]
 Figure of Christyend_icon is the file "christyend_ig.jpg".		[for 'Tourist Attraction' ending only.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg".	[The Down Under Pub's floor show.]
+Figure of Fang_Candy_icon is the file "Fang_Candy_ig.png".	[Fang topping Candy scene.]
 Figure of SamBadEnd_icon is the file "sambadend_ig.jpg".			[Sam's Bad End to assault and infection.]
 Figure of SkunkbeastLord_icon is the file "SkunkbeastLord_ig.jpg".		[Skunkbeast Lord battle.]
 Figure of SpidertaurAlleySex_icon is the file "SpidertaurAlleySex.jpg".   [mid-sex scene graphic.]
@@ -151,6 +163,7 @@ title	icon(figure name)
 "Shadow Beast"	Figure of ShadowBeast_icon
 "Siamese Cat"	Figure of SiameseCat_icon
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon
+"Snow Bat"	Figure of SnowBat_icon
 "Snow Leopard"	Figure of SnowLeopard_icon
 "Spartan"	Figure of SpartanHelot_icon
 "Succubus"	Figure of succubus_icon
@@ -209,6 +222,7 @@ carry out artistcredits:
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Shadow Beast by Fennris @ furaffinity.net[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
+	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
 	say "     Spartan by Darian821 @ y-gallery.net[line break]";
 	say "     Succubus by kv2001ar @ furaffinity.net[line break]";
@@ -223,6 +237,7 @@ carry out artistcredits:
 	say "     Amy by Sususmiles @ furaffinity.net[line break]";
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Adam by Kadel @ y-gallery.net[line break]";
+	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
 	say "     Andre by Wemd @ furaffinity.net[line break]";
 	say "     Anthony by FsMaverick @ furaffinity.net[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
@@ -239,15 +254,23 @@ carry out artistcredits:
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
 	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
 	say "     Elijah by Genelightfoot @ y-gallery.net[line break]";
+	say "     François by Xenotropos @ furaffinity.net[line break]";
+	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
+	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";
+	say "     Grant (colour) by Familliar @ furaffinity.net[line break]";
+	say "     Hadia w/Gobby by SandySchreiber @ furaffinity.net[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
+	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
+	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
+	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
@@ -255,11 +278,13 @@ carry out artistcredits:
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
+	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Thomas by Geir @ furaffinity.net[line break]";
 	say "     Tiny Tim by Astrobullet @ y-gallery.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
 	say "Scenes:[line break]";
 	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
+	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Floor Show by MoT @ furaffinity.net[line break]";
 	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
 	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
