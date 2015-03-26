@@ -296,6 +296,8 @@ Instead of resolving Goblin Thief:
 		move player to Grey Abbey 2F;
 		attempttowait;
 		say "     Arriving at the library, you quickly show the hyena around, the goblin following along with an amp he's been made to carry on his back[if the number of booked people + the number of bunkered people > 0].  After some introductions, kept brief due to the lingering odour of the junkyard on them[otherwise].  After the tour[end if], the red-furred hyena picks a side room on the upstairs level as her living space.  Gobby happily drops his burden and the Hadiya tosses down her guitar and the small pack she brought.  Aside from some supplies and a dirty sleeping bag, she doesn't have much.  The hyena grabs the little guy, pressing his face into her crotch so she might introduce him to his other duties.";
+		now the icon of Hadiya is Figure of Hadiya_icon;
+		project the Figure of Hadiya_icon;
 		if hp of Hadiya is 11 or hp of Hadiya is 12:
 			now hp of Hadiya is 13;
 		otherwise if hp of Hadiya is 61 or hp of Hadiya is 62:

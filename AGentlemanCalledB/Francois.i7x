@@ -158,6 +158,7 @@ Section 3 - François
 François is a man. François is in Bone-Appetit.
 The description of François is "[Françoisdesc]".
 The conversation of François is { "Numnum!" }.
+The icon of François is Figure of Francois_icon.
 understand "Francis" as François.
 understand "Francois" as François.
 Françoistalk1 is a truth state that varies.  Françoistalk1 is normally false.

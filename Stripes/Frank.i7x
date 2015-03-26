@@ -1,5 +1,5 @@
 Version 4 of Frank by Stripes begins here.
-[Version 4.1 - Switching Frank]
+[Version 4.2 - Special skunk form + Frank M/F fun]
 "Adds a Skunk NPC named Frank to the Flexible Survival game"
 
 Section 1 - Event and Comic Store
@@ -81,6 +81,7 @@ Frank is a man.  Frank is in Comic Shop.
 The description of Frank is "[frankdesc]".
 The conversation of Frank is { "NERD!" }.
 lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
+The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.
 
@@ -122,11 +123,45 @@ to say sexwithFrank:
 		say "[Frank_MF_sex00]";
 
 to say Frank_MM_sex00:
+	let specskunkstate be 0;
+	if bodyname of player is "Skunkbeast Lord" and the player is pure:
+		now specskunkstate is 2;	[Skunkbeast Lord]
+		if skrp is 1:
+			now specskunkstate is 3;	[Skunkbeast Lord Taur]
+	otherwise if bodyname of player is "Skunk Taur" and tailname of player is "Skunk Taur":
+		now specskunkstate is 1;	[Skunk Taur]
 	if lastFrankfucked - turns < 8:
 		say "     You don't want to rush things with him.  Maybe you should wait a little longer before having another go with him.";
 	otherwise if frankmalesex < 3:
 		say "[Frank_MM_seduction]";
 	otherwise if frankmalesex < 6 and libido of Frank is 1:
+[		if remainder after dividing frankmalesex by 3 is 0:			[***skunk variations]
+			if specskunkstate is 3:
+				say "[Frank_MM_ftop_01_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_ftop_01_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_ftop_01_SS1]";
+			otherwise:
+				say "[Frank_MM_ftop_01]";
+		otherwise if remainder after dividing frankmalesex by 3 is 1:
+			if specskunkstate is 3:
+				say "[Frank_MM_ftop_02_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_ftop_02_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_ftop_02_SS1]";
+			otherwise:
+				say "[Frank_MM_ftop_02]";
+		otherwise:
+			if specskunkstate is 3:
+				say "[Frank_MM_ftop_03_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_ftop_03_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_ftop_03_SS1]";
+			otherwise:
+				say "[Frank_MM_ftop_03]";	]
 		if remainder after dividing frankmalesex by 3 is 0:
 			say "[Frank_MM_ftop_01]";
 		otherwise if remainder after dividing frankmalesex by 3 is 1:
@@ -137,6 +172,33 @@ to say Frank_MM_sex00:
 		now lastFrankfucked is turns;
 		say "[maleskunkinfect]";
 	otherwise if frankmalesex < 6 and libido of Frank is 2:
+[		if remainder after dividing frankmalesex by 3 is 0:			[***skunk variations]
+			if specskunkstate is 3:
+				say "[Frank_MM_fbottom_01_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_fbottom_01_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_fbottom_01_SS1]";
+			otherwise:
+				say "[Frank_MM_fbottom_01]";
+		otherwise if remainder after dividing frankmalesex by 3 is 1:
+			if specskunkstate is 3:
+				say "[Frank_MM_fbottom_02_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_fbottom_02_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_fbottom_02_SS1]";
+			otherwise:
+				say "[Frank_MM_fbottom_02]";
+		otherwise:
+			if specskunkstate is 3:
+				say "[Frank_MM_fbottom_03_SS3]";
+			otherwise if specskunkstate is 2:
+				say "[Frank_MM_fbottom_03_SS2]";
+			otherwise if specskunkstate is 1:
+				say "[Frank_MM_fbottom_03_SS1]";
+			otherwise:
+				say "[Frank_MM_fbottom_03]";	]
 		if remainder after dividing frankmalesex by 3 is 0:
 			say "[Frank_MM_fbottom_01]";
 		otherwise if remainder after dividing frankmalesex by 3 is 1:
@@ -400,7 +462,7 @@ to say Frank_MM_fswitch_01:
 		say "     Rocking yourself gently overtop of your mephit lover, you work your mouth and tongue over his black cock.  It dribbles with tasty precum for you to lap up even as you gently thrust into Frank's muzzle, treating him with the same for him to lick up.  There is a brief pause in the blow job you're receiving as Frank takes a moment to lick [if scalevalue of player > 3]a trio[otherwise]a pair[end if] of fingers which you soon feel prodding their way gently into your anus.  This draws a moan of delight from you and you suck and lick with increased zeal to show the skunk how much you appreciate the added surprise.  With the added stimulation, it isn't too much longer before you cum with another long, happy moan.  Having your [cum load size of player] load pumped into his muzzle and down his throat sets the geeky skunk off, unloading his gooey seed across your tongue for you to swallow down.  Once you're both drained of and fed on semen, you flop out side by side, the big skunk wrapping his arms around you and bundling you up in his fluffy tail in a tender and loving hug.";
 	otherwise:
 		say "     Rocking yourself gently overtop of your mephit lover, you work your mouth and tongue over his black cock.  It dribbles with tasty precum for you to lap up even as you gently thrust into Frank's muzzle, treating him with the same for him to lick up.  Frank grabs your ass with his padded paws and kneads your rear, tugging your hips as you fuck his face.  You quicken your pace, sucking and licking harder as you do, knowing the skunk must be getting close.  With the added stimulation, it isn't too much longer before you cum with another long, happy moan.  Having your [cum load size of player] load pumped into his muzzle and down his throat sets the geeky skunk off, unloading his gooey seed across your tongue for you to swallow down.  Once you're both drained of and fed on semen, you flop out side by side, the big skunk wrapping his arms around you and bundling you up in his fluffy tail in a tender and loving hug.";
-
+	
 
 
 Section 8 - Male Skunk Infection Mechanics

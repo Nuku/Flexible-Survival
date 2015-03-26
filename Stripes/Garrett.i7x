@@ -11,6 +11,7 @@ when play begins:
 	add Gryphon Milkman to badspots of hermaphrodite;
 
 Instead of resolving a Gryphon Milkman:
+	project the figure of Garrett_icon;
 	say "     As you're out and about looking for supplies, you hear the flapping of wings overhead.  Before you can do much more than look up, a gryphon lands in front of you.  This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs.  He's wearing only a white peaked cap and a wire carrier with several bottles.";
 	say "     'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you.  Then he jumps in the air and flies away, leaving you standing there alone.";
 	say "     The milk bottle has a blue silver label with the text 'QaL Dairy'.  The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.";
@@ -49,6 +50,7 @@ Garrett is a man.  Garrett is in Qytat Plaza.
 The description of Garrett is "[garrettdesc]".
 The conversation of Garrett is { "Milk!" }.
 the scent of the Garrett is "This blue gryphon's scent is quite manly, though there's also the alluring scent of the [']milk['] he delivers as well.".
+The icon of Garrett is Figure of Garrett_icon.
 garrettinfo1 is a truth state that varies.  garrettinfo1 is usually false.
 
 to say garrettdesc:
@@ -105,16 +107,16 @@ to say sexwithGarrett:
 		say "     'That sounds like fun, but I could use a bit of time to reload,' he says, rubbing his recently emptied balls.  'Besides, the semen we've already collected needs some time to be processed.'";
 	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of player > 1:		[male players only]
 		if player_puregryph is true:
-			if ( hp of Garrett is 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			if ( hp of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analtop_2]";
-			otherwise if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			otherwise if ( hp of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analbottom_2]";
 			otherwise:
 				say "[garrett_handjob_2]";
 		otherwise:
-			if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			if ( hp of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analtop_1]";
-			otherwise if ( hp of Garrett is 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
+			otherwise if ( hp of Garrett >= 4 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analbottom_1]";
 			otherwise:
 				say "[garrett_handjob_1]";

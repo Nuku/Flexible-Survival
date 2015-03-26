@@ -60,6 +60,7 @@ Section 2 - Jimmy the Corgi
 Jimmy is a man.
 The description of Jimmy is "[jimmydesc]".
 The conversation of Jimmy is { "Yay!" }.
+The icon of Jimmy is Figure of Jimmy_icon.
 
 the scent of the Jimmy is "Jimmy smells pleasantly of dog.".
 

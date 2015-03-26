@@ -593,6 +593,7 @@ an everyturn rule:
 		say "     It seems like things are about to get started here.  Do you want to stick around?";
 		if the player consents:
 			now lust of Candy is 2;
+			project the figure of Fang_Candy_icon;
 			say "     Sliding your gear aside for the moment, you shift in your seat to better view the upcoming show.  You watch as Candy chats briefly with the large wolf before sliding down his panties and moving onto all fours.  With a flick of his tail, he flashes his bare ass at you, raising his skirt.  Fang strides around the coon, sniffing at him with increasing interest, then licks under his tail.  He seems to find the coon's cotton candy flavour interesting and lashes his tongue over the proffered tailhole.  The coon releases some girlish moans as the long, broad tongue laps at his asshole and even slips into it a little.";
 			say "     Once he's gotten his playmate ready, Fang moves atop him, nudging his throbbing wolf cock against the coon's back door before slowly sliding in into him.  Candy releases a sensual moan of delight and pushes back, easily taking the wolf's big girth into his practiced hole.  His bubble bottom bounces with each thrust of his feral lover.";
 			if cocks of player > 0:
