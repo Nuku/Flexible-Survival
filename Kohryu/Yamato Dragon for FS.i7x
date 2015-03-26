@@ -81,7 +81,7 @@ to say Yamato Dragon attack:
 							otherwise:
 								increase cock width of player by 1;
 						follow the cock descr rule;
-						say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+						say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]teste[or]ball[or]orb[or]cum factorie[at random]s [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 					otherwise:
 						say "     It looks like you recover to their original size after treating it.";
 				otherwise:
@@ -96,7 +96,7 @@ to say Yamato Dragon attack:
 						otherwise:
 							increase cock width of player by 1;
 					follow the cock descr rule;
-					say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [ball size]!";
+					say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]teste[or]ball[or]orb[or]cum factorie[at random]s [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 		otherwise if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
 			if anallevel is not 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 4 succeeds)):
 				say "     Talons wrapping around your serpentine frame, the dragon pulls you up into the air, dragging you along as he ascends. [if hp of player < 1 and player is not submissive]Instinctively struggling against the beast's hold, being let go quickly stops being an option, given how high up you are[otherwise]At the mercy of this beast, you watch on as the earth becomes more and more distance, instinctively driving you to cling to him in return[end if]. Entirely exposed before him as you are, he presses you against his growing arousal, forced to abide his hardening cock as he grinds it between your legs.";
