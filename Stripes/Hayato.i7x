@@ -376,7 +376,7 @@ instead of resolving Noh Mask:
 		if the player consents:
 			say "[nohmaskninja]";
 		otherwise:
-			say "     You decide to wait on getting the mask, at least for now.  Hayato'll have to wait a little longer.";
+			say "     You decide to postpone getting the mask, at least for now.  Hayato will have to wait a little longer.";
 			now hp of Hayato is 13;
 	otherwise if hp of Hayato is 13:
 		say "     Returning in search of the Japanese noh mask, you find the anime babe sitting on the office desk.  She's flipped up her short skirt and is fingering herself wildly.  'Oh, there you are!' she exclaims upon spotting you.  'Reconsidered helping me with that scene, have you?' she asks with a naughty grin.  'I could really go for it right now.'  And with that, she's off the desk and advancing towards you.";
