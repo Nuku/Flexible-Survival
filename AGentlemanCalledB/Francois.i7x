@@ -902,7 +902,7 @@ to say Bleuettonne Use:
 	otherwise:
 		increase cock width of player by a random number from 1 to 2;
 		Follow the cock descr rule;
-		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, your flesh growing taught with the expansion, leaving you with [ball size]";
+		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]ball[or]orb[or]cum factorie[at random]s [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your flesh growing taught with the expansion, leaving you with [ball size]";
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 

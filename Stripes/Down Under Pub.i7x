@@ -82,7 +82,7 @@ to say down under pub scene:
 			say "     The pub, like in its days before the infection, is only open from noon to midnight.  You should keep an eye on your [bold type]watch[roman type] and try back then.";
 	otherwise if lastpubvisit - turns < 14:
 		if hp of Gillian >= 4:
-			say "     While you are welcome back at the Down Under Pub, they have limited supplies and have asked that patrons wait a week between visits.  Since Gillian likes you, she's able to get you in every [bold type]two or three days[roman type], but you don't want to push it too much.  Since you've got to wait on visiting the pub again, you instead let Gillian know you're upstairs and go wait for her.  She's up with you shortly, getting one of the other girls to cover for her.  Given the dampness around her muzzle and the taste of pussy on her lips when she kisses you, it's easy to guess how she convinced the girl to take her shift.";
+			say "     While you are welcome back at the Down Under Pub, they have limited supplies and have asked that patrons wait a week between visits.  Since Gillian likes you, she's able to get you in every [bold type]two or three days[roman type], but you don't want to push it too much.  Since you've got to wait before visiting the pub again, you instead let Gillian know you're upstairs and go wait for her.  She's up with you shortly, getting one of the other girls to cover for her.  Given the dampness around her muzzle and the taste of pussy on her lips when she kisses you, it's easy to guess how she convinced the girl to take her shift.";
 			attempttowait;
 			now battleground is "void";
 			move the player to Gillian's Flat;
