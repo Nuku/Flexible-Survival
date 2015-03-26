@@ -88,7 +88,7 @@ Instead of resolving a Policeman:
 		if T is 3:
 			say "     As you travel through the city, you hear the pained yip of one of the husky females.  Heading over cautiously to investigate, you come face to chest with Sgt Marks as he steps out of an alley.  He is zipping up his fly and you can hear the sound of someone rushing away down the alley.  'Damn bitches,' he grumbles.  'Barely worth the time to fuck, eh?' he comments.  'But forget her.  How is your project comin['] along?  You got some good news for me?'";
 		if T is 4:
-			say "     After some fruitless searching through the city, you run into the tiger policeman again.  Sgt Marks is sitting on the roof of a car.  Somehow, even in this city gone mad, he's managed to find a bag of store-bought doughnuts.  He's got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle.  He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws.  'Did you have any luck yet?  We can't wait on this forever.'";
+			say "     After some fruitless searching through the city, you run into the tiger policeman again.  Sgt Marks is sitting on the roof of a car.  Somehow, even in this city gone mad, he's managed to find a bag of store-bought doughnuts.  He's got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle.  He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws.  'Did you have any luck yet?  We can't wait for this forever.'";
 		say "[motelkeycheck]";
 
 to say motelkeycheck:
