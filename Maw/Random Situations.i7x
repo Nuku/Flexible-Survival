@@ -104,7 +104,7 @@ Part 4 - Beast's Den
 
 [Instead of resolving Beast's Den:
 	if perception of the tribe of player is greater than 80:
-		say "Your hunters have informed you of a nearby cave, which they believe is inhabited by a large creature of some sort. They decided that it wouldn[']t be a great idea to explore, and was far to risky to attempt.[line break][line break]";
+		say "Your hunters have informed you of a nearby cave, which they believe is inhabited by a large creature of some sort. They decided that it wouldn[']t be a great idea to explore, and was far too risky to attempt.[line break][line break]";
 	otherwise:
 		say "Your hunters have informed you of a nearby cave, do you want to explore it? [bold type](Y/N)[roman type][line break][line break]";
 		if player consents:
