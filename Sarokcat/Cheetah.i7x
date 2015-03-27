@@ -2,7 +2,7 @@ Version 2 of Cheetah by Sarokcat begins here.
 [ Version 2.1 - Updated to extended heat table - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a cheetah woman to Flexible Survivals Wandering Monsters table"
+"Adds a cheetah woman to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -30,7 +30,7 @@ to say cheetah woman attack:
 
 
 To say cheetah woman loss:
-	say "Knocking the cheetah woman to the ground, you once again show that brute force can triumph over speed and precision, her lithe sprinters body not able to take the punishment you can dish out.  She scrambles away from your vicious assault, all four paws scrabbling helplessly along the ground for a second, before managing to find traction. You sigh as she darts away, even moving as slowly and painfully as she now is, you know she is still far to fast for you to catch, sighing you watch her as she leaves, constantly shooting nervous glances back at you until she is out of sight.'";
+	say "Knocking the cheetah woman to the ground, you once again show that brute force can triumph over speed and precision, her lithe sprinters body not able to take the punishment you can dish out.  She scrambles away from your vicious assault, all four paws scrabbling helplessly along the ground for a second, before managing to find traction. You sigh as she darts away, even moving as slowly and painfully as she now is, you know she is still far too fast for you to catch, sighing you watch her as she leaves, constantly shooting nervous glances back at you until she is out of sight.'";
 
 Section 2 - Monster Insertion
 
@@ -46,7 +46,7 @@ When Play begins:
 	now defeated entry is "[cheetah woman loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[cheetah woman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "As you wander around the deserted paths of the zoo, you spot of blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral like cheetah woman, her long lean body resting on her narrow paws and her long cheetah tail lashing behind her as she focuses her gaze directly on you, '[one of]Why don[']t you run, I love the chase.[or]Hmmm, not a gazelle but you look almost as fun[or]Oooo something to chase![or]Oh good, I was feeling bored.[or]I was feeling kind of lonely here, maybe you can help.[or]Finally someone to pounce![at random]' She says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation, and slips into a runners stance, her eyes locked on her newest prey... you.";[ Description of the creature when you encounter it.]
-	now face entry is "Sleek cheetah like face, with a short muzzle, soft whiskers, and small rounded ears resting on top of your new ";[ Face description, format as the text "Your have a (your text) face."]
+	now face entry is "Sleek cheetah like face, with a short muzzle, soft whiskers, and small rounded ears resting on top of your new ";[ Face description, format as the text "You have a (your text) face."]
 	now body entry is "Slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new pawlike feet, as they grip the ground tightly, you find yourself leaning forward slightly as you walk, as if you were always ready to spring into action.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]Cheetah spotted[or]Cheetah furred[or]Black and yellow spotted[or]slick furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a long thin feline tail stretching out behind you, constantly lashing and curling around from side to side as if it is always eager to be moving, it is covered in [skin of player] skin and provides an excellent counterbalance to swift movement. ";[ Tail description, write a whole Sentence or leave blank. ]
@@ -54,7 +54,7 @@ When Play begins:
 	now face change entry is "your mouth pushes out into a slim muzzle, your ears moving to the top of your head as your nose shrinks and becomes part of your new muzzle.  Your vision blurs for a minute as your eyes water, then it clears and you the world comes into a new sharper focus before your now predatory eyes, as many new sharp enticing scents fill your feline nose."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it grows slim and sleek, your legs shifting forward and growing corded with tight muscles, soft paws forming on your feet for better traction when running. Your hands grow slender and sleek as well, with thick pads forming on the paws, though your fingers are still just as dexterous as ever, if not more so."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "a slick layer of short spotted fur begins to cover your body, the fur itches for a second, before lying down close to your skin, making you look sleek, dangerous, and cheetah like."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "A long thin spotted tail begins to form behind you, the end growing a small white tip of fur as it lashes behind you as if eager to be on the move.."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "A long thin spotted tail begins to form behind you, the end growing a small white tip of fur as it lashes behind you as if eager to be on the move."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it is drawn up closer to your body by a feline sheath forming around it, your cock itself continues to stretch and change as well, becoming pointed and small barbs growing out of it, both for your feline mates pleasure and your own."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 24;
@@ -211,5 +211,5 @@ when play ends:
 			say "While barred from competition yourself on account of your changed form, you derive an almost visceral pleasure from going fast yourself, and helping others to go fast.  Soon in addition to your job at the gym, you are a track coach for one of the schools in the area, running around the track at speeds that astonish your students, and helping them learn to run and sprint even faster then they thought possible. While it may not be as much fun as chasing down prey, chasing the clock has its own sort of thrill to it, and you quickly become both popular and recognizable for you contributions to the sport.  Eventually at some point someone organizes a set of games exclusively for the changed, and your invitation is one of the first sent out.  Eager for the chance to meet other changed, perhaps even more cheetahs, you agree quickly. And while the competition is fierce, you prove once again that cheetahs are the fastest land mammals, outrunning all comers to take first in a number of events.  Achieving minor celebrity status due to this, you meet several famous people, and even end up starring in a car ad as they roll off their new line of 'Cheetah' cars.  The best perk however, is the attention you get from several other people with some cheetah alterations, your speed and pretty spots making sure that you are never alone at night again...";
 
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct Name as well]
 Cheetah ends here.
