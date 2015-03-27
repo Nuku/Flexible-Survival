@@ -2,7 +2,7 @@ Version 2 of Hawkman by Sarokcat begins here.
 [ Version 2 - M/M Hawkman victory and tweaked scenes - Blue Bishop and Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Hawkman to Flexible Survivals Wandering Monsters table"
+"Adds a Hawkman to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 nohawkmansex is a number that varies.
@@ -14,7 +14,7 @@ when play begins:
 	add { "Hawkman" } to infections of guy;
 	add { "Hawkman" } to infections of furry;
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say Hawkman attack:
 	now nohawkmansex is 0;
@@ -81,7 +81,7 @@ When Play begins:
 	now defeated entry is "[Hawkman loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Hawkman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[hawkmandesc]";[ Description of the creature when you encounter it.]
-	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large powerful wings, which catch the air behind you and make you almost feel like you could fly";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer behind you as it flexes and spreads out behind you with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -93,7 +93,7 @@ When Play begins:
 	now cock change entry is "it is drawn up almost entirely into your body, your penis narrowing into a rather avian, pointed member as it slips into your newly created vent"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 20;
-	now sta entry is 10;					
+	now sta entry is 10;
 	now per entry is 20;
 	now int entry is 12;
 	now cha entry is 16;
@@ -115,7 +115,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]winged[at random]";
 	now type entry is "[one of]avian[or]raptor[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -135,6 +135,6 @@ when play ends:
 			otherwise:
 				say "Giving in to your strong new hawk-like instincts, you spread your wings and take to the sky for the first time, enjoying the feeling of freedom as you slowly begin to master the skies above the infected city. Before long you are soaring through the skies with ease, and enjoying the feel of the wind rushing over your feathers as your eyes scan the city below for someone to play with. Unfortunately, the city is full of other infected, and most of the people have already become playtoys already, which leaves you flying aimlessly through the skies, until you realize that you are being silly. Looking up at the open skies around you, you can feel a grin tugging at your beak as you begin to angle your wings to take you down the coast a ways. There is after all a whole wide world out there full of people you can chase and catch. And the open skies are calling out to you as you head off in search of new places to hunt, and new partners to share the joys of flight with. Let the military do with the city as they wish, you find yourself thinking as you fly under the cover of the night sky, you have the world out there to play in...";
 		otherwise:
-			say "When the military rescues you from the city, you find yourself watched closely by their scientists, as they seem fascinated by your new avian form, and the changes in your muscle density and bone mass. Their attention makes you nervous, and before long you are asking to leave, especially once they start talking about bone marrow samples and similar painful tests. Fortunately enough, they are soon far to busy dealing with the fallout from the city and some of the other infected who they 'rescued' that are causing problems in camp to devote full attention to you for very long, and soon enough you are released. Wandering around outside of the city, you soon find your new looks gathering quite a bit of attention, though they certainly aren't very helpful in finding a job of some sort. Eventually you manage to get a job as a mail courier, and while it is rather dull delivering the mail and packages most days, it does let you meet some rather interesting people. One day you even meet a fellow avian, a sexy black [one of]hawkman[or]tengu[or]eagle[or]gryphon[at random], the powerful male is more than happy to meet you as well, and while both of you have never given yourself over to your new instincts enough to master your new wings and fly, you still find the draw of meeting a fellow avian to be nearly irresistible[if cunts of player > 0].  Before long the two of you are inseparable, and it isn't much longer before you are expecting your first clutch of eggs, and you find yourself eagerly anticipating seeing just how they will look when they finally hatch, and looking forward to many more clutches of eggs in the future..[otherwise].  After a few months and becoming friends, he introduces you to his sister, who was similarly infected.  He held back on telling you about her until your friendship was strong enough that he could trust you.  You both hit it off and are soon a happy couple with a clutch on the way[end if].";
+			say "When the military rescues you from the city, you find yourself watched closely by their scientists, as they seem fascinated by your new avian form, and the changes in your muscle density and bone mass. Their attention makes you nervous, and before long you are asking to leave, especially once they start talking about bone marrow samples and similar painful tests. Fortunately enough, they are soon far too busy dealing with the fallout from the city and some of the other infected who they 'rescued' that are causing problems in camp to devote full attention to you for very long, and soon enough you are released. Wandering around outside of the city, you soon find your new looks gathering quite a bit of attention, though they certainly aren't very helpful in finding a job of some sort. Eventually you manage to get a job as a mail courier, and while it is rather dull delivering the mail and packages most days, it does let you meet some rather interesting people. One day you even meet a fellow avian, a sexy black [one of]hawkman[or]tengu[or]eagle[or]gryphon[at random], the powerful male is more than happy to meet you as well, and while both of you have never given yourself over to your new instincts enough to master your new wings and fly, you still find the draw of meeting a fellow avian to be nearly irresistible.  [if cunts of player > 0]Before long the two of you are inseparable, and it isn't much longer before you are expecting your first clutch of eggs, and you find yourself eagerly anticipating seeing just how they will look when they finally hatch, and looking forward to many more clutches of eggs in the future..[otherwise]After a few months and becoming friends, he introduces you to his sister, who was similarly infected.  He held back on telling you about her until your friendship was strong enough that he could trust you.  You both hit it off and are soon a happy couple with a clutch on the way[end if].";
 
 Hawkman ends here.
