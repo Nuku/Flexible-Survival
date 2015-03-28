@@ -1,5 +1,5 @@
 Version 2 of Alt Vore by Stripes begins here.
-[Version 2.1 - Additional UB scenes list adjustments]
+[Version 2.2 - First two species-specific vore scenes]
 
 Section 0 - Variables
 
@@ -152,6 +152,8 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vorebyplayer03]";
 	otherwise if name entry is "Bald Eagle" and a random chance of 3 in 5 succeeds:
 		say "[vbp_baldeagle]";
+	otherwise if name entry is "Hawkman" and a random chance of 3 in 5 succeeds:
+		say "[vbp_hawkman]";
 	otherwise if vorespecial1 is true and (the remainder after dividing vorecount by 5 is 0) and name entry is not "Snake" and name entry is not "Naga":
 		say "[vorebyplayer04]";
 	otherwise if vorecount > 6 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
@@ -205,6 +207,13 @@ to say vbp_baldeagle:
 	say "     You even pause just before his hips to grope his cock[if anallevel is not 1]and finger his asshole[end if] to tease and taunt him before continuing.  Despite the raptor's attempts to resist, he becomes hard and even cums when you resume eating him and his erection is pressed into your hot maw.  The added rush of the bird of prey's seed across your taste buds makes you all the hungrier to consume him and you feed the basted bird down into your belly at an increased pace.";
 	say "     As his legs go down, you grab his feet and hurriedly pull him down into your raised maw.  You push those feet right in and down your throat, balling up the bird in your stretched belly.  He squirms and struggles for a while, a pleasant feeling especially because of his soft feathers.  Flopping down to take a seat on the dry grass, you give a satisfied sigh and rub your overfull tummy until the struggles gradually stop and wait for your ravenous stomach to consume your prey and return to normal.";
 
+to say vbp_hawkman:
+	say "     Grabbing the weakened avian, you pin his arms under his wings and press him to the ground as your belly rumbles.  'Mmm... fresh chicken,' you moan hungrily in his ear.  The bird of prey squawks and tries to snap at you with his beak.  You chuckle and give him a thump against the ground as a reminder that he's already lost.";
+	say "     Keeping a good grip on him, you look him over hungrily.  Mistaking your gaze for one of lust, he [if cocks of player > 0]squirms some more before giving up with a sigh.  'Look.  I'm no tail-raiser, so just get it over with,' he claims, you can feel him start to get hard beneath you[otherwise]grins a little with forced confidence.  'Look.  If you just wanted to bang, there was no need to fight like that.  Let's get it on, baby!'  You can even feel him start to get hard beneath you[end if].  You grin sinisterly and say 'Alright then.  You asked for it.' before opening your hungry maw wide and pulling the bird creature in.";
+	say "     '[one of]Stop!  What're you doing!  Don't d-[or]He's going to each me!  Oh my gawwwwwwwd!!![or]Please, don't do it[if cocks of player > 0]man[otherwise]babe[end if].  I've... uh... I've got a hen and chicks!  Five, no six of 'em!  Sto-[or]Ohpleaseohpleaseohpleaseohpleaseohpl-[at random]' the frightened hawk cries before being cut off as you stuff his beaked head into your mouth.  In your mouth and pressed into your stretchy throat, his squawking becomes thankfully muffled.  You lick and drool over your prey, saliva soaking into his feathers as you ease him towards your belly.";
+	say "     This avian's body is quite light, being built for flight, making him easy to lift and manhandle into your maw.  You feed him down into you several inches at every gulp.  Your extra-wide mouth and throat struggle briefly as you start on his torso, but eventually you get his shoulders going down your oesophagus.  It gets even easier once his wings and arms are enough in that your hands are freed.";
+	say "     Keeping a grip on one of his kicking legs, your other hand is free to move to your crotch[if cocks of player > 0 and cunts of player > 0].  You start to masturbate, rubbing your hard cock[smn] and fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[otherwise if cocks of player > 0].   You start to masturbate, rubbing your hard cock[smn], having gotten considerably aroused by the whole process[otherwise if cunts of player > 0].  You start to masturbate, fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[otherwise].  You rub at your genderless crotch, aroused by the whole process but unable to do much about it[end if].  When your tongue gets within reach of the hawkman's cock, you lick and suck down on it.  It's particularly enjoyable as it gets pressed against your throat, squeezed and rubbed by your swallowing until he cums despite himself[if cocks of player > 0 or cunts of player > 0].  The perverseness of this is enough to have you cum as well[end if].  Your pace of swallowing increases in response and he slips from thighs, knees, shins and finally feet pulled into your mouth and down your oesophagus.";
+	say "     It's not long after that the last of him ends up stuffed and bundled in your warm belly.  He struggles feebly to escape, imprints of his taloned paws and his beak pressing out from your stretched tummy.  But the effort of this quickly expends the last of his waning strength and soon it's just soft pushes and feeble rubbing before stopping entirely.  You lean back and massage your bird-filled belly, the sensation of being so delightfully full wonderful while it lasts.  In time, the excess bulge of your meal goes down and you're ready to move on, sated [if hunger of player > 30]somewhat [end if]for the moment.";
 
 
 Chapter 4 - UB by Player
