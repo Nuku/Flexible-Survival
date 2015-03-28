@@ -39,9 +39,9 @@ to say losetoDVtaur0:
 		otherwise if T is 6 or T is 7:
 			say "[losetoDVtaur1]";
 	otherwise if cunts of player > 0:				[FEMALE]
-		let T be a random number between 1 and 6;
+		let T be a random number between 1 and 5;
 		if T is 1 or T is 2 or T is 3:
-			say "[losetoDVtaur2]";
+			say "[losetoDVtaur1]";
 		otherwise if T is 4:
 			say "[losetoDVtaur3]";
 		otherwise if T is 5:
