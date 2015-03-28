@@ -148,8 +148,10 @@ Chapter 3 - Vore Scenes
 
 to say vorebyplayer00:	[master list to decide scenes]
 	choose row monster from the table of random critters;
-	if vorecount >= 5 and name entry is not "Mannequin" and name entry is not "Snake" and name entry is not "Naga" and vorespecial1 is false:
+	if vorecount >= 4 and name entry is not "Mannequin" and name entry is not "Snake" and name entry is not "Naga" and vorespecial1 is false:
 		say "[vorebyplayer03]";
+	otherwise if name entry is "Bald Eagle" and a random chance of 3 in 5 succeeds:
+		say "[vbp_baldeagle]";
 	otherwise if vorespecial1 is true and (the remainder after dividing vorecount by 5 is 0) and name entry is not "Snake" and name entry is not "Naga":
 		say "[vorebyplayer04]";
 	otherwise if vorecount > 6 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
@@ -193,7 +195,16 @@ to say vorebyplayer05:		[head first - smaller prey]
 	choose row monster from the table of random critters;
 	say "     Looking over your much smaller foe, you lick your lips and give into that dark hunger growing inside you.  Weakened by your attacks and at a disadvantage due to your larger size, they are easily detained.  With a strong grip on them, you lift your smaller foe up and bring their face to yours.  They suck in a breath to give a cry of fear, but you open wide and stuff their head and shoulders into your open maw in one go.  The [name entry] kicks and struggles in vain, your predatory body easily able to deal with your tinier opponent.  Your throat stretches and bulges as you push them steadily into your hungry mouth, tongue running over their body as you taste this little morsel.";
 	say "     With your considerable practice, eating this one down is fairly easy, letting you better focus on savouring this one than dealing with the difficulties of eating something much larger.  With a hand firmly around each leg, you pause with their hips inside your mouth and let your tongue lash across their groin[if anallevel is 3] and pucker[end if], working to tease and taunt your foe with sensual licks.  The [name entry] squirms and struggles even as they moan as well, soon adding their hot juices to the flavour of your meal.  While they're still dazed from their involuntary orgasm, you push them the rest of the way into your mouth, soon closing your lips as they slide down your throat and start to slip into your belly just as it's starting to gurgle again, ready to start digesting this fun tidbit you've caught.";
-	say "     Quickly enough, your distended belly shrinks down, the prey inside being reduced into fuel for your body.  A rush of strength and renewed energy flows into you even as you gather your things.  Already feeling a little hungry again after your light meal's gotten you excited for live prey, you rub your belly as it smoothes back down to its normal size and head back out into the city.";
+	say "     Quickly enough, your distended belly shrinks down, the prey inside being reduced into fuel for your body.  A rush of strength and renewed energy flows into you even as you gather your things.  Already feeling a little hungry again after your light meal's gotten you excited for live prey, you rub your belly as it smooths back down to its normal size and head back out into the city.";
+
+to say vbp_baldeagle:
+	say "     Grabbing the weakened avian, you press him to the ground as your belly rumbles.  'Mmm... fresh chicken,' you moan hungrily in his ear.  The powerful bird takes umbrage at this and struggles angrily in your grip, only wearing himself out further.  You chuckle and let him do so, the eagle not realizing what's in store for him.";
+	say "     Making sure his wings are well-pinned, you give his face a long, slow lick.  This calms him momentarily into thinking your plans are purely sexual.  You even feel him start to get hard beneath you.  That is until you open your hungry maw wide and start pulling the bird creature in while your drool drips onto his feathery face.";
+	say "     '[one of]What?  Wait!  No!  Nooooooo![or]Don't you dare!  I'm not a chicken!  I'm not a chi-[or]You won't get away with this!  I'll st-[or]I hope you choke on me!  I hope you choooooo-[at random]' the eagle cries before being cut off as you stuff his beaked head into your mouth.  Once he's in and your throat is squeezing tightly around his beak, his cries become muffled noises.  And so down this unplucked and kicking [']chicken['] starts to go, feathers and all, into your belly.";
+	say "     The avian's body, built for flight, is fairly light and easy for you to lift up.  You feed him down into you several inches at every gulp.  It takes a little added effort going over his wings and shoulders, but it becomes especially easy after that.  With his wings partially pinned in your mouth and throat, your hands are free to feed the rest of him down at a comfortable pace.";
+	say "     You even pause just before his hips to grope his cock[if anallevel is not 1]and finger his asshole[end if] to tease and taunt him before continuing.  Despite the raptor's attempts to resist, he becomes hard and even cums when you resume eating him and his erection is pressed into your hot maw.  The added rush of the bird of prey's seed across your taste buds makes you all the hungrier to consume him and you feed the basted bird down into your belly at an increased pace.";
+	say "     As his legs go down, you grab his feet and hurriedly pull him down into your raised maw.  You push those feet right in and down your throat, balling up the bird in your stretched belly.  He squirms and struggles for a while, a pleasant feeling especially because of his soft feathers.  Flopping down to take a seat on the dry grass, you give a satisfied sigh and rub your overfull tummy until the struggles gradually stop and wait for your ravenous stomach to consume your prey and return to normal.";
+
 
 
 Chapter 4 - UB by Player
