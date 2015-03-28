@@ -157,6 +157,12 @@ to say NadiaEggBirth:   [time to give birth]
 			now NadiaPregCounter3 is 0;		[clearing the variable]
 	otherwise:
 		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the library and check with Nadia.";
+		if NadiaPregCounter2 > 0:		    [second running pregnancy becomes first]
+			now NadiaPregCounter1 is NadiaPregCounter2;	 [pregnancy progress of the 2nd pregnancy transferred to 1st as it's the next one to pop out]
+			now NadiaPregCounter2 is 0;		[clearing the variable]
+		if NadiaPregCounter3 > 0:	      [third running pregnancy becomes second]
+			now NadiaPregCounter2 is NadiaPregCounter3;	 [pregnancy progress of the 3nd pregnancy transferred to 2st as it's second in line]
+			now NadiaPregCounter3 is 0;		[clearing the variable]	
 	increase NadiaChickCounter by 1;
 	increase NadiaFertilityCounter by 1;
 	if NadiaDescription < 6:             [she's not reached Goddess stage yet]

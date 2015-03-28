@@ -276,6 +276,103 @@ instead of sniffing Gabriel:
 	say "Gabriel is surrounded by the faint smell of sandalwood.";
 
 instead of fucking Gabriel:
-	say "<Sorry, this project hasn't advanced to full on sex with the npc yet>";
-	
+	if(lastfuck of Gabriel - turns < 5):
+		say "     Gabriel lowers his head submissivly and says 'Forgive me, [if cunts of player > 0 and cocks of player is 0]mistress [otherwise]master [end if]but I need a break...'";
+	otherwise:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Suck Gabriel's cock";
+		now sortorder entry is 1;
+		now description entry is "Give him a blow-job";
+		]
+		if (cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Have him suck your cock";
+			now sortorder entry is 2;
+			now description entry is "Get a blow-job";
+		[
+		if (cunts of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Let Gabriel fuck your pussy";
+			now sortorder entry is 3;
+			now description entry is "Let your angel pet breed you";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Let Gabriel fuck your ass";
+		now sortorder entry is 4;
+		now description entry is "Let the tame angel fill your ass with his seed";
+		[]
+		if (cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Take Gabriel's ass";
+			now sortorder entry is 5;
+			now description entry is "Fill the tame angel's ass with your cock";
+		]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Suck Gabriel's cock":
+						say "[GabrielSex1]";
+					otherwise if (nam is "Have him suck your cock"):
+						say "[GabrielSex2]";
+					otherwise if (nam is "Let Gabriel fuck your pussy"):
+						say "[GabrielSex3]";
+					otherwise if (nam is "Let Gabriel fuck your ass"):
+						say "[GabrielSex4]";
+					otherwise if (nam is "Take Gabriel's ass"):
+						say "[GabrielSex5]";
+					now lastfuck of Gabriel is turns;
+					wait for any key;
+			otherwise if calcnumber is 100:
+				say "Break off?";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the submissive angel, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				otherwise:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			otherwise:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+
+to say GabrielSex1:
+	say "     <WIP, sorry>";
+
+to say GabrielSex2:
+	say "     Just walking up to Gabriel, you stroke both hands over his hairless chest, enjoying the feel of all the little ridges and bumps his trained muscles provide. The angel gives an aroused sigh as your fingers find his nipples, lightly pinching and rubbing them, followed by a louder moan as you put an arm over his shoulder, gripping the youthful-looking male's long hair tightly and pulling him into a demanding kiss. Your tongue explores his mouth and wrestles with Gabriel's, then you suddenly draw his head aside and give him a little love-bite - or rather a mark of ownership - on the side of his neck, before going back to making out with him pretty roughly.";
+	say "     And the beauty of it all is... your little angel likes it, fully tamed to your desires now and clearly showing so with the bulge of his erection pressing against your closely entwined bodies. 'Oooh yes, master,' he gives a happy little groan when you leave him time to catch his breath a short while later, then simply moans into your mouth as you press it on his again. You revel in his complete submission for a few moments, then decide that you want to make use of his sweet mouth today and press down on both of his shoulders.";
+	say "     [WaitLineBreak]";
+	say "     Instantly reacting to the wordless command, Gabriel falls to his knees before you, then looks up with a worshipful expression - which prompts you to pull out your [cock of player] shaft to smack lightly against his chiseled cheekbones. Gabriel just endures it without complaint, even offering you his other cheek and rubbing up a bit against your erection. After a moment more of this, his lips brush over your cockhead, then spread and stretch to engulf it, slowly starting to slide down the erect shaft.";
+	say "     Looking down at the tamed Seraphim as he eagerly begins to bob up and down on your cock, you realize that the front of his tight jeans is open too by now, with a respectable piece of man-meat poking out and resting in one of his strong hands. Quite a little ego boost, to see that the handsome guy is jerking his own shaft because servicing you is now a definite turn-on for him. Oh yeah, Gabriel really did turn out well. Just the sex pet you always wanted.";	
+	say "     [WaitLineBreak]";
+	say "     Deciding that it's time to let him really have it now, you run your hands through the angel's long, soft hair and tell him what a good boy he is, which gets answered only by a content hum around your erection being almost balls-deep in his mouth. And then, you suddenly grip his head very tightly again and hold it as you thrust forward, only stopping when Gabriel's nose is buried right in your pubes and poking against the skin of your crotch with its tip.";
+	say "     You proceed to face-fuck your subby angel, filling the bunker with grunts, moans as well as slurping noises, simply going to town on him until you can feel the need to cum rise as a familiar tingling in your balls. With a last quick thrust of your hips, you bury your shaft deep in Gabriel's throat, just in time to send the first blast of cum directly into his stomach, followed by the next, and the next. After the first few spurts, you pull back a bit to cover Gabriel's tongue with the rest of your load, then tell him to show it to you.";
+	say "     [WaitLineBreak]";
+	say "     And indeed, Gabriel does so - happily sticking out a tongue covered in creamy cum. As you pat his head, telling him what a good boy he has been, the angel gives a happy little groan, then suddenly starts panting and twitching - as he reached his own climax just at that moment, hand tightly gripped around the cock between his legs. Gabriel's cum forms a little puddle between your legs, spilled happily by one fulfilled slave-boy."; 
+
+to say GabrielSex3:
+	say "     <WIP, sorry>";
+
+to say GabrielSex4:
+	say "     <WIP, sorry>";
+
+to say GabrielSex5:
+	say "     <WIP, sorry>";
+
+
 Seraphim ends here.
