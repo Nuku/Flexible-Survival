@@ -10,10 +10,14 @@ Figure of Beaver1_icon is the file "beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
+Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
 Figure of CatNinja_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.png".
 Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
 Figure of ElvenHunter_icon is the file "ElvenHunter.jpg".
+Figure of Ewe_icon is the file "FS_Ewe.jpg".
+Figure of Feline_F1_icon is the file "FS_SmallLioness_01.jpg".
+Figure of Feline_F2_icon is the file "FS_SmallLioness_02.jpg".
 Figure of FeralShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of FireSpriteMale_icon is the file "FireSpriteMale.png".
 Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
@@ -25,6 +29,7 @@ Figure of incubus2_icon is the file "incubus2.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Mannequin_icon is the file "Mannequin.png".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg".
+Figure of MentalMice_icon is the file "FS_MentalMice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.png".
 Figure of OrcWarrior_icon is the file "OrcWarrior.png".
@@ -138,11 +143,15 @@ title	icon(figure name)
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Beaver"	Figure of Beaver2_icon
 "Blue Gel"	Figure of BlueGel_icon
-"Bottlenose Toy"	Figure of Bottlenose_icon
+["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
+["Bovine"	Figure of Bovine_F_icon	]	[only shown for female version]
 ["Cat Ninja"	Figure of CatNinja_F_icon	]	[only shown for female succumb ending]
 "Demon Brute"	Figure of DemonBrute_icon
 ["Doberman"	Figure of DobermanCop_icon	]	[only shown after defeating her]
 "Elven Hunter"	Figure of ElvenHunter_icon
+"ewe"	Figure of Ewe_icon
+["Feline"	Figure of Feline_F1_icon	]	[shows one of these two for female Feline]
+["Feline"	Figure of Feline_F2_icon	]	[shows one of these two for female Feline]
 "Feral Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Giraffe"	Figure of Giraffe_icon
 "Goo Girl"	Figure of GooGirl_icon
@@ -151,8 +160,9 @@ title	icon(figure name)
 ["Horny Doctor"	Figure of HornyDoctor_M_icon	]	[only shown for males]
 "Incubus"	Figure of incubus2_icon
 ["Latex Ermine"	Figure of LatexErmine_icon	]	[only used in defeat]
-"Latex Vixen"	Figure of LatexVixen_icon
+"hermaphrodite latex vixen"	Figure of LatexVixen_icon
 "Mannequin"	Figure of Mannequin_icon
+"Mental Mouse"	Figure of MentalMice_icon
 "Messy Pig"	Figure of MessyPig_icon
 "Naga"	Figure of Naga_icon
 "Orc Warrior"	Figure of OrcWarrior_icon
@@ -199,6 +209,7 @@ carry out artistcredits:
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Elven Hunter by Aosuka @ y-gallery.net[line break]";
+	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
@@ -206,11 +217,11 @@ carry out artistcredits:
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
+	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
 	say "     Incubus (creature) by LittleTwinkle @ y-gallery.net[line break]";
 	say "     Incubus (ending) by kv2001ar @ furaffinity.net[line break]";
 	say "     Latex Ermine by Halcy0n @ furaffinity.net[line break]";
-	say "     Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mannequin by Rastear @ y-gallery.net[line break]";
 	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Naga by Rastear @ y-gallery.net[line break]";

@@ -15,13 +15,6 @@ Bovine_type is a number that varies. [0 = not chosen, 1 = cow, 2 = bull]
 Bull_run is a number that varies.
 
 
-Section 2 - Monster Insertion
-
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-[ Adds a blank row to the table, this is immediately filled ;) ]
 to say cow vict:
 	if Mooing < 1:
 		say "The cow grabs you and pulls you closer, sitting down in the process.  Its strong bovine arms lift you up, pressing your lips to one engorged teat, 'Drink, little heifer.  Sate yourself,' it says softly, motherly[one of].  The smell of the milk calls to your thirst and[or].  One little drop of milk leaks from the engorged teat and it drips down onto your lip, without thinking your tongue snakes out and pulls it in to your mouth.  Gasping,[or].  Giving her teat a squeeze, a spray of milk wets your lips and[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at the breast.  'See, it's not so bad,' the cow says softly again, rocking you back and fourth in her arms as you drink.";
@@ -104,6 +97,7 @@ to say cow attack:
 		say "[one of]Reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure.[or]Reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits.[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back.[at random]";
 
 to say cow desc:
+	project the figure of Bovine_F_icon;
 	if Mooed is 0:
 		say "A twelve foot tall cow beast stands before you, 'Mmmmoooo' it says, 'Are you thirsty? I have all the milk you will ever want.' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
 	otherwise:
@@ -214,6 +208,14 @@ to say bovine desc:
 			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[check for if the player has killed a cow (female bovine), if they have, it's time to roll out the punishment]
 		now lootchance entry is 20;
 
+
+Section 2 - Monster Insertion
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+[ Adds a blank row to the table, this is immediately filled ;) ]
 
 When Play begins:
 	Choose a blank row from Table of random critters;

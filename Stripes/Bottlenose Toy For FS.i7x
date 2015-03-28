@@ -438,6 +438,7 @@ to say dolphinflatabledesc:
 		now wdam entry is 3 + ( debit / 4 );
 		now lev entry is 1 + debit;
 		now dex entry is 15 + ( lev entry / 5 );
+		project the figure of Bottlenose_icon;
 		say "     As you walk along the beach, you encounter another of the unusual creatures that have come into being.  Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable.  Her skin is a bright pink and glossy white, with visible seams and everything.  As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing.  There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand.  She spins it into a rat-tail with a grin and moves in with a playful giggle.";
 	otherwise if dolphinmode is 2:
 		let debit be 0;

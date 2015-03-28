@@ -60,7 +60,7 @@ to say garrettdesc:
 		say "     Before you is an unusual sight.  While the blue gryphon creatures you've seen around have been hermaphroditic, this one is purely male.  His also better built than the others, with a stronger build that comes from constant exercise.  In addition, he's wearing a white milkman's cap and there's a wire bottle carrier resting beside him.";
 		say "     He seems friendly enough, giving you a polite tip of his cap when he notices you there.  He's presently leaning back in a wooden chair with a magazine in hand, as if he's taking a break from deliveries at the moment.  The cover of the magazine is plastered with nude hunks and promises 'Hot hunky action!' inside.  Seeing this prompts you to notice the heavy furry balls and the bottom of the bulging sheath he's sporting the next time he moves the porno mag to flip pages.";
 	otherwise:
-		say "     Garrett is an all-male version of those hermaphrodite gryphons you've seen out in the city.  Having the same blue colouration and hybrid anatomy, he lacks any of the female features.  If anything, he's more manly with a stronger build from his work spreading gryphon milk around the city.  His large chest is well muscled and his shoulders and wings are strong from flying.  He even has big, powerful legs from all his leaps for take-off.  And given he only wears a white milkman's cap as his uniform, all of this is on display.  And speaking of things being on display, you're also given a clear view of his heavy furry balls and extra-thick sheath, showing that this hunk's more manly than the others of his kind in that department as well.";
+		say "     Garrett is an all-male version of those hermaphrodite gryphons you've seen out in the city.  Having the same blue colouration and hybrid anatomy, he lacks any of the female features.  If anything, he's more manly with a stronger build from his work spreading gryphon milk around the city.  His large chest is well-muscled and his shoulders and wings are strong from flying.  He even has big, powerful legs from all his leaps for take-off.  And given he only wears a white milkman's cap as his uniform, all of this is on display.  And speaking of things being on display, you're also given a clear view of his heavy furry balls and extra-thick sheath, showing that this hunk's more manly than the others of his kind in that department as well.";
 
 
 Section 2 - Dialog
@@ -70,7 +70,7 @@ Instead of conversing the Garrett:
 	if bodyname of player is "Hermaphrodite Gryphon" or bodyname of player is "Feral Gryphon":
 		now nongryph is false;
 	if hp of Garrett is 0:
-		say "     The male gryphon smiles and puts down his magazine as you come speak to him.  'Hey there.  It's nice to have some company.  Things have been a little quiet around here.  Most of the gryphons have gone out into the city.  I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now.  Besides, I'm a little bored of the gryphons all being herms now.  I don't think it was always that way... maybe...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
+		say "     The male gryphon smiles and puts down his magazine as you come speak to him.  'Hey there.  It's nice to have some company.  Things have been a little quiet around here.  Most of the gryphons have gone out into the city.  I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now.  Besides, I'm a little bored of the gryphons all being herms.  Were there... even any other males besides me...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
 		if Gryphon Milkman is unresolved:
 			say "     I do have a little left, if you'd like it[if nongryph is true].  I think you'd look pretty good as a sexy gryphon[end if].'  Before you can even respond, he's pushing a cold bottle of milk into your hands.  'Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
 		otherwise:
@@ -122,10 +122,12 @@ to say sexwithGarrett:
 				say "[garrett_handjob_1]";
 		say "[garrettinfect]";
 		now lastfuck of Garrett is turns;
+		if nohgryphonsex > 2, now nohgryphonsex is 2;
 	otherwise:		[first time or non-male]
 		say "[garrett_handjob_1]";
 		say "[garrettinfect]";
 		now lastfuck of Garrett is turns;
+		if nohgryphonsex > 2, now nohgryphonsex is 2;
 
 
 Section 4 - Sex Scenees
@@ -298,6 +300,8 @@ Section X - Notes
 [ 3 = Garrett ready to top    ]
 [ 4 = Garrett ready to bottom ]
 [ 5 = topped Garrett          ]
+[ 6 = tg'd an h-gryphon       ]
+
 
 [       xp of Garrett      ]
 [ 0 = no saved spunk       ]
@@ -305,5 +309,13 @@ Section X - Notes
 [ 2 = two samples saved    ]
 [ 3+ = enough samples saved - reset to zero upon giving another bottle  ]
 
+[  hgryphon_TGcount  ]
+[ remainder / 4      ]
+[ 1 = twink          ]
+[ 2 = stud           ]
+[ 3 = girly-boy      ]
+[ 4 = dude           ]
+
+[  lasthgryphon_TG  ]
 
 Garrett ends here.

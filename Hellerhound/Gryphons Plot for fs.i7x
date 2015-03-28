@@ -44,7 +44,7 @@ instead of resolving a gryphons plot:
 								say "As soon as you catch your breath, you turn around and point your rear in his direction. Already subsumed by the infection, the former soldier does what any real gryphon herm would do - mount you and slam his still transforming cock into your waiting hole, pistoning in and out. Even though you've already come two times, feeling his manhood inside you quickly gets you going again, especially as you feel his knot form and get hard inside you. As you're quickly driven over the edge and a copious amount of femcum starts to drip onto the back seats of the jeep from your stretched pussy, the changed soldier leans in with a cry and climaxes into you.[ovichance]";
 							say "[WaitLineBreak]";
 							say "For a while, you seem to lose all sense of time and place in the lustful haze you're in, then realize you are in front of one of the feral gryphons coming at you with amorous intent.";
-							say "[gryphon fuck]";
+							say "[losetohgryphon]";
 							say "You pass out after she leaves, lying on the cum-stained back seats of the jeep when you come to later.";
 							follow turnpass rule;
 							now milsave is -1;
@@ -57,9 +57,9 @@ instead of resolving a gryphons plot:
 						if the player consents:
 							say "You run towards the small free-for-all orgy, removing any clothing on the go, and jump right in.";
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-							say "[gryphon fuck]";
-							say "[gryphon fuck]";
-							say "[gryphon fuck]";
+							say "[losetohgryphon]";
+							say "[losetohgryphon]";
+							say "[losetohgryphon]";
 							say "The orgy lasted a long time, and by the time you wake, the others are long gone. Trails of cum lead off down the road...";
 							say "As you go to collect your clothes and gear, you notice two formerly empty bottles from your pack resting on top of it, filled with obviously fresh gryphon milk. Seems like one of your sexual partners felt the need to relieve themselves of some pressure by milking their gryphon breasts and left you the result.";
 							increase carried of gryphon milk by 2;

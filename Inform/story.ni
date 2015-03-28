@@ -3877,7 +3877,7 @@ This is the sex change rule:
 			now cock width of player is 5;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]teste[or]ball[or]orb[or]nut[at random]s [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
+			say "You can [if cockname of player is listed in infections of Internallist]feel your internal[otherwise]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if cockname of player is listed in infections of Internallist]body straining to abide this[otherwise]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -3969,7 +3969,7 @@ This is the sex change rule:
 			now cunt width of player is 5;
 		if prevcunt2 < cunt width of player:	[did cunt actually widen?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][otherwise][one of]cunt[or]pussie[or]vagina[or]cleft[at random]s[end if] [one of]engorge[or]swell[or]throb[at random] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
+			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][end if] [one of]engorge[or]swell[or]throb[at random] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
 	otherwise if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt width of player > ( ( cunt width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt width of player;
 		decrease cunt width of player by 1;
