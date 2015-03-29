@@ -238,12 +238,19 @@ sarahpregnant is a number that varies.
 Sarahpups is a number that varies.
 
 To say sarahpupstate:
+	let otherhuskies be 0;
+	if Carl is booked:
+		increase otherhuskies by 1;
+	if Amy is booked:
+		increase otherhuskies by 1;
+	if Coleen is bunkered:
+		increase otherhuskies by 1;
 	if sarahpups is greater than 11:
 		say "Sarah is surrounded by her large brood of [sarahpups] puppies, several of them vying for her attention at any one second in time. Fortunately this seems to make your little husky breeder happier than ever as she smiles at your and her puppies and rubs her belly in anticipation of many more litters to come.";
 	otherwise if sarahpups is greater than 0:
 		say "Sarah is happily playing with your [sarahpups] husky puppies, keeping them happy and occupied while you explore the city, although from the looks the slutty husky is giving you even as she plays with the pups, she is already anticipating the next litter to come...";
 	otherwise:
-		say "She seems slightly lonely as the only husky around, making you want to comfort her.";
+		say "She seems slightly lonely [if otherhuskies is 0]as the only husky around[otherwise if otherhuskies is 1]when her other husky friend isn't around[otherwise]when her other husky friends aren't around[end if], making you want to comfort her.";
 
 An everyturn rule:
 	if sarahpregnant is 1:

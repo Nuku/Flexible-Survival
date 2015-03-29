@@ -1,5 +1,5 @@
 Version 3 of Random Shemale Smooth Collie For FS by Voldine begins here.
-[Version 3.2 - Updated to extended heat table - Stripes]
+[Version 3.2.1 - Alternate MPreg-pregnant player loss scene - Stripes]
 
 "Adds a Shemale Smooth Collie to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -13,8 +13,12 @@ to say Shemale Smooth Collie attack:
 		now colliedefeat is 1;
 	otherwise:
 		if gestation of child > 0:
-			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
-			say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
+			if cunts of player > 0:
+				say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
+				say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
+			otherwise:
+				say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your ass as she inhales deeply.  She then pulls back, giving you a look of surprise.";
+				say "     'Aren't you a strange one?  Somehow you've got a bun in the oven.  Don't know how that works, but I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
 			if thirst of the player > 30:
 				decrease thirst of the player by 30;
 			otherwise:
