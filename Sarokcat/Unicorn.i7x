@@ -1,26 +1,26 @@
 Unicorn by Sarokcat begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Unicorn to Flexible Survivals Wandering Monsters table"
+"Adds a Unicorn to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 to say Unicorn attack:
 	if cunts of player is greater than 0:
-		say "Stop... Haroldtime..[line break]";
+		say "Stop... Haroldtime.[line break]";
 		say ".'";
 		infect "Unicorn";
 	otherwise:
 		say ".[line break]";
 		say "ment...";
 		infect "Unicorn";
-		
+
 
 To say Unicorn loss:
-	say "Knocking the Unicorn to the ground, you once again show that brute force can triumph over speed and precision, her lithe sprinters body not able to take the punishment you can dish out.  She scrambles away from your vicious assault, all four paws scrabbling helplessly along the ground for a second, before managing to find traction. You sigh as she darts away, even moving as slowly and painfully as she now is, you know she is still far to fast for you to catch, sighing you watch her as she leaves, the Unicorn constantly shooting nervous glances back at you until she is out of sight.'";
+	say "Knocking the Unicorn to the ground, you once again show that brute force can triumph over speed and precision, her lithe sprinters body not able to take the punishment you can dish out.  She scrambles away from your vicious assault, all four paws scrabbling helplessly along the ground for a second, before managing to find traction. You sigh as she darts away, even moving as slowly and painfully as she now is, you know she is still far too fast for you to catch, sighing you watch her as she leaves, the Unicorn constantly shooting nervous glances back at you until she is out of sight.'";
 
 Section 2 - Monster Insertion
 
@@ -32,20 +32,20 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Unicorn"; [Name of your new Monster]
-	now attack entry is "[one of]His shining horn mesmerizes you completely, and you submit totally to his every sexual whim, becoming a complete and total plaything of the powerful unicorn..[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "His shining horn mesmerizes you completely, and you submit totally to his every sexual whim, becoming a complete and total plaything of the powerful unicorn."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Unicorn loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[Unicorn attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is  "[Unicorn attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "Sexy barkeep of DUUUUM.";[ Description of the creature when you encounter it.]
-	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have an amazing equine tail flicking behind you softly, its beautiful silvery white hair seeming to ripple with a rainbow of reflected colours with every move you make, even as it swishes teasingly behind you.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]equine[or]unicorn[or]blunt tipped[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like";[ Face description, format as the text "You have a (your text) face."]
+	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves.";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have an amazing equine tail flicking behind you softly, its beautiful silvery white hair seeming to ripple with a rainbow of reflected colours with every move you make, even as it swishes teasingly behind you.";[ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]unicorn[or]blunt tipped[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a small pain blossoms in your forehead, you find yourself groaning slightly as your face begins to flatten and push out into a soft unicorns muzzle, even as a shimmering spiral horn begins to peek out from the center of your forehead. The pain begins to subside as your ears and eyes finish shifting position, and you find yourself grinning a happy equine grin as you look at the shifting spots of colour reflected off your new amazing unicorns horn."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it shifts and changes, your toes merging and melting together as your feet change into beautiful silver hooves, your legs seem to grow more muscled, with a slightly shifted heel to allow for faster running, and your fingers seem to become tipped with silver as well as your fingernails shift and stretch down past the first joint. And you find yourself stretching your new lithe and powerful body almost automatically as the changes finish, leaving you feeling surprisingly energized and aroused.."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "it shifts and changes, your toes merging and melting together as your feet change into beautiful silver hooves, your legs seem to grow more muscled, with a slightly shifted heel to allow for faster running, and your fingers seem to become tipped with silver as well as your fingernails shift and stretch down past the first joint. And you find yourself stretching your new lithe and powerful body almost automatically as the changes finish, leaving you feeling surprisingly energized and aroused."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it is slowly covered in beautiful short white horse fur, your new hide of pure white hair shining brightly as it reflects the light with every move you make."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a shimmering silken tail seems to sprout behind you, its beautiful white strands falling like a waterfall down from your ass, until the tip of your new unicorn tail hangs barely a few inches above the floor.."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it seems to thicken as a sexy looking sheath begins to form around the base of your increasingly equine looking new cock.."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now ass change entry is "a shimmering silken tail seems to sprout behind you, its beautiful white strands falling like a waterfall down from your ass, until the tip of your new unicorn tail hangs barely a few inches above the floor."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it seems to thicken, a sexy looking sheath begins to form around the base of your increasingly equine looking new cock."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 18;
 	now sta entry is 13;
@@ -54,7 +54,7 @@ When Play begins:
 	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 20;			[ How many HP has the monster got? ]
-	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
 	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
@@ -65,12 +65,12 @@ When Play begins:
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 14;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ]
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]slender[or]perfect[at random]";
 	now type entry is "[one of]equine[or]unicorn[or]mythological[as decreasingly likely outcomes]";
 	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
@@ -96,7 +96,7 @@ when play ends:
 				say "You are wonderfully happy once the military finally arrives, and glad to be leaving the city, and though you get a number of awed stares from the soldiers, you are much more interested in the thought of being able to run and roam safely wherever you choose. It isn[']t long before the scientists release you to do so either, unable to bear the thought of running intrusive tests on your splendid new body. As you walk out into the world on your shining silver hooves, you find yourself smiling happily as your horn seems to shimmer with amusement as well, catching everyone's eye and making them sigh with awe.  It is easy enough to realize just how useful your new form will be in finding yourself a comfortable new position now that you are outside the city, especially with the near mesmeric powers your horn seems happy to display.  Deciding to enjoy things to the fullest you soon begin looking for a good job, and a good candidate to make into a unicorn stud for you to play with as well, your enhanced libido and slightly submissive tendencies desiring a nice stallion to tease and tempt.  Soon enough you find both, as you encounter a handsome young CEO at one of the luxury parties you are often invited too due to your unique new look.  It isn[']t long before you get the rich young man all to yourself off to the side and offer him a chance at a new life with you, a chance he wastes no time in accepting.  You take time to make sure his transformation isn[']t going to raise any questions about his identity, before the two of you go off for a week and enjoy each others body in every way possible. Soon the handsome new unicorn stud is back at work amongst the envious looks of his subordinates, while you are settling in happily with your burning heat finally sated for the season. [line break]";
 				say "The two of you soon prove to be a powerful pair, with your powers of persuasion as well as your amazing looks, it is easy enough to manipulate deals and agreements to your new companies benefit, and you both rather enjoy the adoring looks of your many fans as you begin to increase your new wealth many-fold. Soon it becomes evident that your efforts with your new stallion will be bearing fruit, a fact that you find yourself eagerly anticipating, even as you begin to help your mate to pick out several other promising prospects to add to your herd. After all, you certainly won[']t mind having several subordinate mares around to help you out, and you certainly can[']t wait to start training the new mares in just how best to pleasure you as well as your stallion... and since unicorns are rumored to be immortal, hopefully you will have  long sexy life of pleasure with your new herd to look forward as well you think happily as you watch your mate begin to transform the first of your many new herd members...";
 
-			
+
 
 
 
