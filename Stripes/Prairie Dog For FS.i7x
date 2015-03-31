@@ -1,6 +1,6 @@
 Version 1 of Prairie Dog For FS by Stripes begins here.
 
-"Adds a Prairie Dog creature to Flexible Survivals Wandering Monsters table with impregchance"
+"Adds a Prairie Dog creature to Flexible Survival's Wandering Monsters table with impregchance"
 
 
 Section 1 - Monster Responses
@@ -68,7 +68,7 @@ When Play begins:
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]chubby[or]flexible[at random]";
 	now type entry is "rodent";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -84,7 +84,7 @@ when play ends:
 	if bodyname of player is "Prairie Dog":
 		if humanity of player is less than 10:
 			say "     As your new instincts take over, your body shrinks down further, becoming smaller and end up about three feet tall, though your sexual organs remain unchanged in size.  You head back to the dry plains and wander them.  As you go, you can see the dry grasses continuing to slowly spread over the ruined buildings, making it much more beautiful, you feel.  Coming to what appears to be a grassy spot like all others, you can read the subtle signs now and start to dig.  You burrow through the soft earth with ease, enjoying the feel of it against your paws as you tunnel down.  You only have to go a few feet to find the underground tunnels of the other prairie dogs and scurry through along them to find the warren.";
-			say "     Joining the others, you have a wonderful romp to welcome you among them before its back to work.  You and the others continue your tunnels and the demolition of the last few buildings.  As some soldiers are sent to investigate the plains, they are quickly surrounded by burrowing rodents emerging all around them.  They are pounced and mated by the coterie until they are prairie dogs themselves and pulled down into the tunnels.";
+			say "     Joining the others, you have a wonderful romp to welcome you among them before it's back to work.  You and the others continue your tunnels and the demolition of the last few buildings.  As some soldiers are sent to investigate the plains, they are quickly surrounded by burrowing rodents emerging all around them.  They are pounced and mated by the coterie until they are prairie dogs themselves and pulled down into the tunnels.";
 			if centaurmate is 1 or centaurmate is 2:
 				say "     In an effort to seal off the plains area, the military starts with electric fences, then moving on to a wide ditch and high concrete wall to keep the mutated centaurs contained.  This barrier proves to be of little consequence to your people, who simply dig a long, secret tunnel past it, emerging far from their lines.  Most are happy to stay in the great grasslands that have been created, but some long to spread out, escaping and travelling out to other prairies and farmlands at the heart of the continent to create new warrens there.";
 			otherwise:

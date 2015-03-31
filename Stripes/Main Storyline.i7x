@@ -274,7 +274,7 @@ Instead of conversing the doctor matt:
 		say "[thefoodening]";
 		if tempnum > foodneed:
 			if foodneed is 0:
-				say "     'Good job!  This is sufficient food to build up our supplies.  Nothing like a good meal to keep the brain running its best' the doctor says, looking over the fare hungrily as he takes the supplies from you.  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+				say "     'Good job!  This is sufficient food to build up our supplies.  Nothing like a good meal to keep the brain running its best,' the doctor says, looking over the fare hungrily as he takes the supplies from you.  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 			otherwise:
 				say "     'I'll add that food to our supplies to raise our stocks,' the doctor says, taking the food from you.  'We still need [foodneed] more meals though.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		now tempnum is waterneed;
