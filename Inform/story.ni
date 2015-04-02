@@ -18,7 +18,7 @@ use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_DICT_ENTRIES of 15000.
 use MAX_OBJECTS of 1450.
 use MAX_ACTIONS of 320.
-use MAX_VERBS of 330.
+use MAX_VERBS of 350.
 use MAX_ARRAYS of 100000.
 Use MAX_ZCODE_SIZE of 1000000.
 Use maximum text length of at least 2000.
@@ -58,7 +58,6 @@ To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
-
 
 
 To change the current menu to (X - table name):
@@ -3151,7 +3150,7 @@ To process (X - a grab object):
 				say "You feel better having eaten.";
 	if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the lab[if labhost is 2]s[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Disappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about something.  There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		otherwise if "Junk Food Junky" is listed in feats of player:
 			if hunger of player is greater than 14:
 				increase score by 5;
@@ -3929,7 +3928,7 @@ This is the sex change rule:
 			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin to shrink. They dwindle[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[otherwise][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while[if cockname of player is listed in infections of Internallist] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
@@ -3949,7 +3948,7 @@ This is the sex change rule:
 			now cunt length of player is 8;
 		if prevcunt < cunt length of player:	[did cunt actually grow?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cunts of player is 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
+			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]pulse[or]quiver[or]throb[at random][end if] as [if cunts of player is 1]it grows[otherwise]they grow[end if] deeper into your body, becoming [descr]!";
 	otherwise if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player > ( ( cunt length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		decrease cunt length of player by 1;
@@ -4591,6 +4590,8 @@ To level up:
 		otherwise if calcnumber is 6:
 			increase intelligence of player by 1;
 			say "Your intelligence grows.";
+	otherwise:
+		increase ssstash by 1;
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
@@ -5616,9 +5617,9 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hangs[end if] a [one of]pair[or]set[at random] of [ball size]. ";
+			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] a [one of]pair[or]set[at random] of [ball size]. ";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  [if cockname of player is listed in infections of Internallist]Though they are not outwardly apparent, you wager you have[otherwise]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
@@ -6271,6 +6272,8 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
+understand "superman" as supersponsor.
+
 When play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
@@ -6610,6 +6613,7 @@ Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Story Skipper by Nuku Valente.
 Include Settings Menus by Stripes.
+Include Patreon Menu by Stripes.
 [Include items by Zero.]
 Include Central Library by Stripes.
 Include Smith Haven Mall by Anon E Mouse.
