@@ -47,6 +47,7 @@ carry out supersponsor:
 				say "     You've already recieved this reward.";
 		otherwise:
 			now trixieexit is 1;
+		say "[line break]";
 
 
 to sslvl12:
