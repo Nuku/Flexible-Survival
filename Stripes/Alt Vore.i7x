@@ -1,5 +1,5 @@
 Version 2 of Alt Vore by Stripes begins here.
-[Version 2.3 - Gazelle species-specific vore & another feet-first scene]
+[Version 2.4 - Messy Pig specific vore scene (w/male player) - by Wolfwing]
 
 Section 0 - Variables
 
@@ -156,6 +156,8 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_hawkman]";
 	otherwise if vorespecial1 is true and name entry is "Gazelle" and gazellesbeaten >= 3 and a random chance of 3 in 5 succeeds:
 		say "[vbp_gazelle]";
+	otherwise if vorespecial1 is true and name entry is "Messy Pig" and cocks of player > 0 and a random chance of 3 in 5 succeeds:
+		say "[vbp_messypig]";
 	otherwise if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and name entry is not "Snake" and name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
 	otherwise if vorecount > 6 and name entry is not "Mannequin" and scalevalue of player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
@@ -231,6 +233,22 @@ to say vbp_gazelle:
 	say "     You reach further up, grabbing her softly-furred breasts and grope them while letting your powerful throat muscles slowly pull her in deeper.  Her slender body slides past your lips and you tweak her nipples one last time as your tongue licks at the underside of them.  You then grab her head, temporarily silencing her as you hold her muzzle shut and push her shoulders in.  You take care to guide those antlers of hers safely down your throat.";
 	say "     As her head slips fully past your lips, her outstretched arms continue to grope wildly at the empty air.  '[one of]No!  Dear god, no!' she pleads[or]I knew it!  Damn nature documentaries!' she moans as her last words[or]Why am I delicious?  Nobody should be this delicious,' she states confusingly[or]Why, god?  Why'd you make me so tasty?!' she cries out[at random].  Another swallow and her body shudders inside you as a moaning bleat of pleasure shudders through your victim.  Knowing she's having one final and involuntary orgasm while being consumed, you grab her arms and press them into your open mouth and then deep down your throat.";
 	say "     With the taste of your deliciously perverse meal still on your tongue, you stretch out and rub your bloated belly, enjoying the squirming inside.  In time, your ravenous stomach absorbs your prey, your figure returns to its usual state and you're able to get up and moving again, your hunger sated for the moment.";
+
+to say vbp_messypig:
+	if cocks of player > 0:		[written by Wolfwing, edited by Stripes]
+		say "		Having beaten down the messy pig, you eye her a bit hungrily.  She turns to flee from you as you feel that familiar emptiness in your belly and pounce upon her before she can get too far.";
+		say "		The sow has a hungrily look of her own when you pin her down and your hard-on begins to push against her belly.  'I just love bacon,' you say as you press your [bodydesc of player] form down atop her porcine body.  She looks down as best as she can at your stiffening crotch.  'Well... I'm a little hungry myself,' she responds with a lick of her snout, giving you the idea in your head to try something kinky.";
+		Say "		Laying down on your back you motion her to take your cock into her snout while presenting her pussy towards you.  As she gets into position, you give it a few licks and quickly feel her tongue and snout go over your [cock of player] manhood.  She immediately begins to hungrily suck on it in return.";
+		say "		After a few moments of waiting while she's distracted, you give her pussy one last lick before moving her hooves to your mouth.  Opening up wide, you start to slowly press her hooves into your mouth as you lick over them.  A confused sound coming from her as you begin, but she's too distracted by your cock and not expecting anything dangerous.";
+		say "		Licking over her ankles, you begin to carefully slide more of her feet into your mouth while being careful to not let her feel much of your maw.  Her snout remains firmly over your cock as she sucks and licks over it, your pre leaking out and giving her a bit of a taste.  That along with your scene and musk begins to cloud her mind from much of anything else.";
+		say "		Sliding more of her into your mouth, you have to bend your body slightly along with her legs - though thankfully not too much yet - as you move up her thighs.  You lick over them as your tongue moves towards her pussy and, in a few moments, you begin to lick over it.  Her snout may be sucking heavily on your [cock size desc of player] cock, but she's starting to realize something is up at the point she feels her hooves press against your throat.  She releases a confused squeal from her and tries to look back, though a hand placed on top of her head keeps her from looking back.  She starts to ask 'What's going o....' as you stuff your penis back into her snout.";
+		say "		As she is now up to her hips in your throat, your licking over her pussy and plump belly keeps her distracted a little bit.  She does try to struggle to see, but this just adds to your pleasure.  You have to fight to widen your mouth further to get her fat belly past your lips and end up orgasming upon your success.  You spurt your seed into her snout and fill it up as she coughs slightly.  She hits her own climax from your licking and from her arousal at your shooting cock in her snout.";
+		say " 		While she's still distracted by both yours and her climax, you pull at her even more in earnest as you sit up a bit more.  This has your penis pop out from her snout and she starts to realize what's actually going on.  But by this point, she's in up to her topmost row of breasts within your mouth as you lick over them and her belly, savouring her flavour.";
+		say " 		Starting to panic, she tries to bat at you.  'Stop, what are you doing... I just wanted to suck on you...' she squeals, to which you reply, 'And I just want to suck on you... all the way down.'  Your tongue probes over her as you stand up a bit and let gravity begin to pull her wide body down your throat more and more as her feet start to enter your stomach.";
+		say "		Feeling herself slide in more, she tries unsuccessfully to grip at the edges of your mouth.  With your mouth slick with drool, her blunt little fingers are unable get a safe grip on anything.  She slowly slides more into your mouth as her head and then hands disappear in until there is nothing more than one last hand grasping at the air before descending into you.";
+		say " 		With a final few gulps, you drag her further down into your body and into your stomach.  You where you can see her struggling and even hear a couple of muffled pleas begs before finally succumbing to your stomach.  Your belly churns away and soon begins to dwindle away, abating your hunger a little for the moment.";
+	otherwise:
+		say "***coming soon?***";
 
 
 Chapter 4 - UB by Player
