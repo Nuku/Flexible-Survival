@@ -116,12 +116,12 @@ to say feralwolfvictorysex:
 					Say "The feral creature sinks to the ground, then slumps over, panting and defeated. You look at him and smile, walking over to him you roll him over onto his chest. The wolf looks back at you and whimpers, quickly understanding what you plan to do. He closes his eyes and shiver before raising his rump up into the air, tail up high and showing off his ass. You laugh and climb on top of the wolf, pressing the tip of your shaft against his tight ring and teasing it lightly. The wolf below you groans and claws lightly at the ground, pushing back against your length, obviously eager to be fucked. You waste no time after such an open invitation as that and spread his tail hole wide open, gasping out and moaning at how tight the wolf is. You take hold of his hips and begin slamming your length into the big canine's ass, his back arching as he moans loudly, enjoying the good fucking you're giving him.[line break]So you are panting hard and climaxing hard, filling the formerly dominate wolf with your thick cum. Once you finish you pull out of the wolf and walk around front and present your shaft to him for cleaning[if hp of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
 			otherwise:
 				Say "The feral creature sinks to the ground, then slumps over, panting and defeated. You look at him and smile, walking over to him you roll him over onto his chest. The wolf looks back at you and whimpers, quickly understanding what you plan to do. He closes his eyes and shiver before raising his rump up into the air, tail up high and showing off his ass. You laugh and climb on top of the wolf, pressing the tip of your shaft against his tight ring and teasing it lightly. The wolf below you groans and claws lightly at the ground, pushing back against your length, obviously eager to be fucked. You waste no time after such an open invitation as that and spread his tail hole wide open, gasping out and moaning at how tight the wolf is. You take hold of his hips and begin slamming your length into the big canine's ass, his back arching as he moans loudly, enjoying the good fucking you're giving him.[line break]So you are panting hard and climaxing hard, filling the formerly dominate wolf with your thick cum. Once you finish you pull out of the wolf and walk around front and present your shaft to him for cleaning[if hp of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
-		otherwise: 
+		otherwise:
 			if cunts of player > 0:
 				Say "You lick your lips and smile, striding over to the wolf, your [if cunts of player > 1]cunts[otherwise]cunt[end if] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[otherwise]your cunt[end if] up and down his thick length, making him squirm and moan.[line break]After a few minutes of teasing the poor wolf you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[otherwise]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur.[line break]You start to ride his canine cock, slowly at first but quickly picking up speed. By now the wolf has gained some of his strength back and is eagerly bucking up into your snatch, his cock throbbing and spurting pre into your depths. You shiver and groan, looking down at the wolf beneath you, seeing that he clearly isn't going to last much longer, and you don't think you will either.[line break]You start panting hard and begin slamming down on his length. You feel his knot swelling, slipping in and out of your cunt, steadily gaining size. Soon it's too big to just slip in, so you pull yourself almost completely of his cock before slamming back down and forcing that knot inside you.[line break]This last act pushes the wolf over the edge and he erupts into an orgasm, his knot swelling up so much that it ties you together and makes a tight seal inside your cunt, making sure not a single drop of the wolf's cum slips out.[line break]His orgasm, in turn, sets off your own, your cunt quivering around his shaft and milking it for all it's got. Your belly slightly distending from all the cum that's being pumped inside you. [impregchance][impregchance] You lie there for a while, waiting for his knot to deflate, your cunt nice and full of wolf cum. When his knot finally does deflate, you make sure to hold your cunt closed as best as you can when you slide of his length, managing to keep all that wonderful cum inside you. Before you leave, you glance back at the wolf and smile, part of you hoping you'll meet him again so he can fill you up again.";
 			otherwise:
 				Say "Before you can do anything though, you realize you lack any proper equipment to use on the wolf. You sigh and sadly walk away.";
-	otherwise: 
+	otherwise:
 		Say "Deciding against it, you turn around and head off, leaving the wolf to the mercy of any other creature that might come across it.";
 
 Section 2 - Monster Insertion
@@ -152,7 +152,7 @@ When Play begins:
 	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 15;
 	now dex entry is 16;
-	now sta entry is 12;					
+	now sta entry is 12;
 	now per entry is 17;
 	now int entry is 12;
 	now cha entry is 10;
@@ -174,7 +174,7 @@ When Play begins:
 	now loot entry is "wolf cum";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
@@ -206,8 +206,8 @@ when play ends:
 				otherwise:
 					say "Giving in to your feral nature, you prowl the city street, looking for a worthy male to mount and breed you.  Your mind is gone and now only the most primal of instincts remain.";
 			otherwise:
-				say "Returning to modern society proves to be hard for you.  Your feral tendencies make it hard for your to be accepted in large urban areas, so you move out to a more secluded area in the mountains.  You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a grey muzzle.";
-			
+				say "Returning to modern society proves to be hard for you.  Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains.  You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a grey muzzle.";
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']DNA sample - species: wolf['] is written on the side."	1	wolf cum
