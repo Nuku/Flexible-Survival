@@ -2,7 +2,7 @@ Version 2 of Salamander by Stripes begins here.
 [Version 2.0 - Bound State added by Blue Bishop]
 [Parts of this creature's appearance and transformation are based off the Salamander Femme creature from the multiplayer game]
 
-"Adds a Salamander creature to Flexible Survivals Wandering Monsters table"
+"Adds a Salamander creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -66,7 +66,7 @@ When Play begins:
 	now body change entry is "your hips and thighs become wide and rounded.  Your waist narrows to a sultry, seductive thinness that further accentuates your effeminate appearance.  Your limbs creak and twist as they bend in strange ways, your bones and joints becoming slightly flexible";
 	now skin change entry is "it loses any and all hair and becomes smooth.  It reddens over the course of the next minute, with small spots and speckles of yellow and black appearing soon after.  Your hide has a slight sheen from the thin layer of slime that coats it";
 	now ass change entry is "the base of your spine throbs.  It creaks in protest as a long, smooth tail bursts from the bottom of your spine";
-	now cock change entry is "its flesh turns red.  It pulse and throbs as your balls are drawn right up into your body.  Your transforming cock bubbles up a mix of precum and semen to coat its surface in a glistening layer of slime.  A warm slit forms at your crotch and your altered manhood retracts into it until you next become aroused";
+	now cock change entry is "its flesh turns red.  It pulses and throbs as your balls are drawn right up into your body.  Your transforming cock bubbles up a mix of precum and semen to coat its surface in a glistening layer of slime.  A warm slit forms at your crotch and your altered manhood retracts into it until you next become aroused";
 	now str entry is 15;
 	now dex entry is 20;
 	now sta entry is 13;
@@ -74,7 +74,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 9;
 	now sex entry is "Female";
-	now hp entry is 66;	
+	now hp entry is 66;
 	now lev entry is 9;
 	now wdam entry is 8;
 	now area entry is "Capitol";
@@ -105,7 +105,7 @@ Section 3 - Bound State
 
 to salabind:
 	now lustatt is libido of player;
-	now calcnumber is -1;		
+	now calcnumber is -1;
 	let trixieexit be 0;
 	while trixieexit is 0:
 		if hp of player > 0 or humanity of player < 50:
@@ -132,7 +132,7 @@ to salabind:
 				decrease humanity of player by 8 + (psycheadjust * 2);
 			otherwise:
 				decrease humanity of player by 15 + (psycheadjust * 5);
-				if struggleatt > 0, decrease struggleatt by 1;		
+				if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		if boundsegment is 1:
 			if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
@@ -142,7 +142,7 @@ to salabind:
 				increase thirst of player by 1;
 			say "     You're trapped within the stomach of a slamander. [one of]The slick walls grind relentlessly against your vulnerable form[or]The heat of this prison causes you to groan[or]The soft glow of your confines is all you can see[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		otherwise:
-			say "     You're tethered to the salamander by her long, adhesive tongue, who doesn't seem intent on letting you go anytime soon! [if struggleatt is 0]She's practically kissing you, she so close to you right now.[run paragraph on][otherwise if struggleatt is 1]There's very little distance between you and her.[run paragraph on][otherwise if struggleatt is 2]There seems a reasonable amount of distance between you and her.[run paragraph on][otherwise]She's straining to keep a hold of you, you're nearly free![run paragraph on][end if] You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";	
+			say "     You're tethered to the salamander by her long, adhesive tongue, who doesn't seem intent on letting you go anytime soon! [if struggleatt is 0]She's practically kissing you, she so close to you right now.[run paragraph on][otherwise if struggleatt is 1]There's very little distance between you and her.[run paragraph on][otherwise if struggleatt is 2]There seems a reasonable amount of distance between you and her.[run paragraph on][otherwise]She's straining to keep a hold of you, you're nearly free![run paragraph on][end if] You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[otherwise][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[otherwise][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[otherwise]Abide[end if][as]2[end link][line break][run paragraph on]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[otherwise]Recover[end if][as]3[end link][line break][run paragraph on]";
@@ -191,7 +191,7 @@ to salabind:
 						say "     You strain to pull yourself away from the [one of]salamander[or]amphibian[at random], who tries to pull back. You manage to get [if struggleatt is 1]some[otherwise if struggleatt is 2]more[otherwise]a lot of[end if] distance from her.";
 						increase lustatt by 7 + (lustadjust * 2);
 						wait for any key;
-					otherwise:	
+					otherwise:
 						say "     Stretched to her absolute limit, all it takes is a little more effort to send the thing flying back in her face. Flung onto her back with an audible snap, she appears to be stunned, leaving you to turn and make a run for it!";
 						cleanboundmemory;
 						now pewtergenitalcap is 0;
