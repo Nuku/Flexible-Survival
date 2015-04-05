@@ -39,7 +39,7 @@ To say kangaroo loss:
 
 to say redroodesc:
 	follow the monster combat mode rule;		[select the combat mode for first-strike]
-	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?'  [or]Eeeee! A new plaything for me![or]You[']re going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
+	say "     A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?[or]Eeeee! A new plaything for me![or]You[']re going to give me just what I want.[at random]'  Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
 
 Section 2 - Monster Insertion
 
@@ -158,5 +158,5 @@ to kangaroofy:
 	infect;
 	infect;
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct name as well]
 Kangaroo ends here.
