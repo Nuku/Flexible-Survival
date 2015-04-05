@@ -34,7 +34,7 @@ Instead of resolving a Canine Patrol:
 			attempttowait;
 			say "     'We're glad to help.  And we're all lucky that he didn't get a chance to complete his crime.  A good girl like you should really be having puppies, shouldn't she?' he says, now nosing at her crotch, giving it a long, slow lick.";
 			say "     The dog-woman moans in response, growing flush.  'But... puppies?' she starts to push his muzzle away, but is cut short as her arousal increases.  A few more licks has her panting and spreading her legs for the dog, her pussy lips growing fuller and more like a canine spade with each pass of the dog's tongue.  'Well... I guess you do deserve a reward for saving me,' she says with a giggle.";
-			say "     'That's a good girl,' the officer you were speaking to says, his own cock rising from its sheath as he rubs it.  'You're free to go, citizen.  We'll take it from here,' he says in conclusion, turning momentarily back to you[if gshepmood is 2].  While a part of you wants to join in, you're[otherwise]You're[end if] overall a little stunned by the odd turn of events and decide to head off for the moment.";
+			say "     'That's a good girl,' the officer you were speaking to says, his own cock rising from its sheath as he rubs it.  'You're free to go, citizen.  We'll take it from here,' he says in conclusion, turning momentarily back to you.  [if gshepmood is 2]While a part of you wants to join in, you're[otherwise]You're[end if] overall a little stunned by the odd turn of events and decide to head off for the moment.";
 			now gshepsquad is 2;
 		otherwise:
 			say "     Not wanting to get distracted or caught up in something that doesn't involve you, you slip back the way you came and find another street to take.";
