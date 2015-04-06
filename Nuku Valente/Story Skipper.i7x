@@ -1974,6 +1974,8 @@ To reciting2:
 					if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 ):
 						now hp of Gobby is 0;
 						remove Gobby from play;
+					otherwise:
+						move Gobby to Grey Abbey 2F;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
@@ -4006,6 +4008,8 @@ Carry out reciting:
 					if hp of Hadiya < 13 or ( hp of Hadiya >= 50 and hp of Hadiya < 63 ):
 						now hp of Gobby is 0;
 						remove Gobby from play;
+					otherwise:
+						move Gobby to Grey Abbey 2F;
 		if upit is 1, decrease zeta by 58;
 		if upit is 2, decrease zeta by 160;
 	if hospquest is 3, now hospquest is 2;
