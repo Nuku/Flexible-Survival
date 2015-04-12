@@ -1195,15 +1195,15 @@ when play ends:
 						if "Kinky" is listed in feats of player:
 							say ", no matter how strange";
 						say ". Ultimately, You seem more than happy with your eternal fate as her plaything...";
-	otherwise:
-		say "     After being processed by the military, you find yourself returning to the normal world -- as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
-		if player is pure:
-			say "     Your pure form makes you an incredibly high-value asset for lunar new year celebrations, bidders often paying top dollar for your attendance in their revelry. It's not even a particularly hard job, and it allows you the opportunity to travel abroad and enjoy the company of many a new people, either in public or in private.";
 		otherwise:
-			say "     Navigating the streets is still something of an awkward ordeal, regardless. When you eventually figure out how to fly, you're quickly spared this embarrassment. You soon find yourself using this to your advantage, getting paid to ferry would-be passengers who want to avoid the traffic.";
-		say "     In your off time, you run something of a modest delivery service";
-		if "Horny Bastard" is listed in feats of player:
-			say ". During the night, you sate your intense lust by offering rides of a different sort";
-		say ". Overall, you're pretty well off...";
+			say "     After being processed by the military, you find yourself returning to the normal world -- as normal as it can be after all that's happened. Your large, elongated body makes finding suitable living space something of a challenge, but you eventually manage.";
+			if player is pure:
+				say "     Your pure form makes you an incredibly high-value asset for lunar new year celebrations, bidders often paying top dollar for your attendance in their revelry. It's not even a particularly hard job, and it allows you the opportunity to travel abroad and enjoy the company of many a new people, either in public or in private.";
+			otherwise:
+				say "     Navigating the streets is still something of an awkward ordeal, regardless. When you eventually figure out how to fly, you're quickly spared this embarrassment. You soon find yourself using this to your advantage, getting paid to ferry would-be passengers who want to avoid the traffic.";
+			say "     In your off time, you run something of a modest delivery service";
+			if "Horny Bastard" is listed in feats of player:
+				say ". During the night, you sate your intense lust by offering rides of a different sort";
+			say ". Overall, you're pretty well off...";
 
 Yamato Dragon For FS ends here.
