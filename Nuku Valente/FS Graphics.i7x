@@ -6,6 +6,7 @@ Figure of pixel is the file "pixel.png".
 [infection icons]
 Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
 Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
+Figure of Bear_icon is the file "fs_bear.jpg".
 Figure of Beaver1_icon is the file "beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
 Figure of BlueGel_icon is the file "BlueGel.png".
@@ -20,6 +21,7 @@ Figure of Feline_F1_icon is the file "FS_SmallLioness_01.jpg".
 Figure of Feline_F2_icon is the file "FS_SmallLioness_02.jpg".
 Figure of FeralShaftBeast_icon is the file "AnthroSB_ig.jpg".
 Figure of FireSpriteMale_icon is the file "FireSpriteMale.png".
+Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of Giraffe_icon is the file "Giraffe_ig.jpg".
 Figure of GooGirl_icon is the file "GooGirl.png".
 Figure of griffon_icon is the file "bluegriffon.jpg".
@@ -34,6 +36,7 @@ Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Naga_icon is the file "Naga.png".
 Figure of OrcWarrior_icon is the file "OrcWarrior.png".
 Figure of PinkGel_icon is the file "PinkGel.png".
+Figure of PinkPoodle_icon is the file "fs_poodle.jpg".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
 Figure of QueenBee_icon is the file "QueenBee_ig.jpg".
 Figure of Ram_icon is the file "FS_Ram.jpg".
@@ -141,6 +144,7 @@ Table of infection graphics
 title	icon(figure name)
 "Alpha Husky"	Figure of AlphaHusky_icon
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon
+"Bear"	Figure of Bear_icon
 "Beaver"	Figure of Beaver2_icon
 "Blue Gel"	Figure of BlueGel_icon
 ["Bottlenose Toy"	Figure of Bottlenose_icon	]	[only shown for humanoid version]
@@ -154,6 +158,7 @@ title	icon(figure name)
 ["Feline"	Figure of Feline_F2_icon	]	[shows one of these two for female Feline]
 "Feral Shaft Beast"	Figure of AnthroShaftBeast_icon
 "Giraffe"	Figure of Giraffe_icon
+"Friendship Pony"	Figure of FrPony_icon
 "Goo Girl"	Figure of GooGirl_icon
 "Helot"	Figure of SpartanHelot_icon
 "Hermaphrodite Gryphon"	Figure of griffon_icon
@@ -168,6 +173,7 @@ title	icon(figure name)
 "Orc Warrior"	Figure of OrcWarrior_icon
 "Plush Lion"	Figure of PlushLion_icon
 "Pink Gel"	Figure of PinkGel_icon
+"Pink Poodle"	Figure of PinkPoodle_icon
 "ram"	Figure of Ram_icon
 "Reindeer"	Figure of Reindeer_icon
 "Shadow Beast"	Figure of ShadowBeast_icon
@@ -201,6 +207,7 @@ carry out artistcredits:
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
+	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
 [	say "     Beaver by Marc Leonhardt @ furaffinity.net[line break]";	]
 	say "     Beaver by HBruton @ furaffinity.net[line break]";
 	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
@@ -213,6 +220,7 @@ carry out artistcredits:
 	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
+	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Helot by Darian821 @ y-gallery.net[line break]";
@@ -227,6 +235,7 @@ carry out artistcredits:
 	say "     Naga by Rastear @ y-gallery.net[line break]";
 	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
 	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
+	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
