@@ -1,12 +1,12 @@
-Gator by Nuku Valente begins here. 
+Gator by Nuku Valente begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a gator to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a gator to Flexible Survival's Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 gatordefeat is a number that varies.
 gatorconsent is a number that varies.
 to say gator attack:
@@ -51,7 +51,7 @@ When Play begins:
 	now defeated entry is "[gator loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[gator attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "She emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway, '[one of]I was looking for someone to play with.[or]Did you come looking for me?[or]I love a good wrestle![at random]' she says, thick tail swaying as she crouches over, thick cock dangling between her scaly thighs and breasts heaving with her breath as she readies for battle.";[ Description of the creature when you encounter it.]
-	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your";[ Face description, format as the text "You have a (your text) face."] 
 	now body entry is "full bodied, with wide hips and narrow waist, your form feels full of strength and tough to boot, with surprisingly soft, but durable, scale patterns across front and back. Peeking behind you, you can see you have two sets of bony ridges running down towards your ass.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]green scaled[or]softly scaled[or]thick scaled[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a broad, reptilian, tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -168,7 +168,7 @@ to say gator den scene:
 			if cunts of player is greater than 0:
 				say "She presses firmly to your front, rubbing chests together in slow circles as her firmness grows against you, poking into your belly lightly, 'Gonna make you squeal,' she says with a smile, reaching for your hips and pulling up, she shimmies to light herself up to enter your moist cavern without delay.";
 				if cunt length of player is less than 8:
-					say "Her cock stretches your relatively small cunt as it spears up into your cavern. By the second motion, find find yourself gushing wet, making her motions all the easier as she works at you, loosening your sex with her eager thumps.";
+					say "Her cock stretches your relatively small cunt as it spears up into your cavern. By the second motion, you find yourself gushing wet, making her motions all the easier as she works at you, loosening your sex with her eager thumps.";
 					increase cunt length of player by 2;
 					increase cunt width of player by 2;
 				otherwise if cunt length of player is greater than 12:
@@ -215,5 +215,5 @@ After navigating gator den:
 		move the player to Grey Abbey Library;
 		follow the turnpass rule;
 
-[ Edit this to have the correct Name as wall]
+[ Edit this to have the correct Name as well]
 Gator ends here.
