@@ -15,7 +15,7 @@ Instead of resolving a Smashed Hive:
 		say "     As you search through the park, you come across a giant, devastated bee hive.  The hive was built around the branches of a large tree and may have been over 15 feet tall when completed intact.  Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size.  Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving.  Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey.  Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself.  As you look around to find a clean section to pick from, you hear a weak buzz from behind you.  Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
 		if medkit is owned:
-			say "     Do you try to help the poor bee girl with your medkit or do you grab some honey while you can and make a run for it?";
+			say "     Do you try to [link]help the poor bee girl (y)[as]y[end link] with your medkit or do you [link]grab some honey (n)[as]n[end link] while you can and make a run for it?";
 			if the player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Using your medkit, you try your best to patch her up, feeling sorry for this lone survivor";
 				if ( "Expert Medic" is not listed in feats of player and a random chance of 1 in 10 succeeds ) or ( "Expert Medic" is listed in feats of player and a random chance of 8 in 100 succeeds ):
@@ -32,7 +32,7 @@ Instead of resolving a Smashed Hive:
 				now hp of bee girl is 100;
 				now Smashed Hive is resolved;
 		otherwise if healing booster is owned:
-			say "     Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?";
+			say "     Do you try to [link]help the poor bee girl (y)[as]y[end link] with a healing booster or do you [link]grab some honey (n)[as]n[end link] while you can and make a run for it?";
 			if the player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
 				delete healing booster;
