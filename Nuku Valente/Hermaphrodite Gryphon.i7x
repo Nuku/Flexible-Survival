@@ -152,6 +152,7 @@ To say beatthehgryphon:
 			otherwise if calcnumber is 0:
 				say "     You resist the temptation of sex and turn away.  Having stopped her from assaulting you is sufficient.";
 				increase nohgryphonsex by 1;
+				now sextablerun is 1;
 			otherwise:
 				say "Invalid Option.  Pick between 0 and [the number of filled rows in the table of fucking options].";
 
