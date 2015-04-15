@@ -391,7 +391,7 @@ to say ocelotbodydesc:
 		if skinname of player is "Ocelot":
 			say ".  Your body has also formed a harness, fingerless gloves and [if cocks of player > 0 or cunts of player is 0]a codpiece[otherwise]panties[end if] all out of black leather for you as well";
 	otherwise:			[slender kitty]
-		say "that of a slender feline creature.  This body, only about five feet tall, is quite lithe, capable of using its flexibility to please your lovers.  To help with this, your paws have slender, nimble digits that are very sensitve, almost as if they're able to locate every spot needing attention";
+		say "that of a slender feline creature.  This body, only about five feet tall, is quite lithe, capable of using its flexibility to please your lovers.  To help with this, your paws have slender, nimble digits that are very sensitive, almost as if they're able to locate every spot needing attention";
 		if skinname of player is "Ocelot":
 			say ".  Your body has also formed a harness, cuffs and [if cocks of player > 0 or cunts of player is 0]a codpiece[otherwise]panties[end if] all out of black leather for you as well";
 

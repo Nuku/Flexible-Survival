@@ -79,7 +79,7 @@ When Play begins:
 	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as the text "Your Body is (your text)."]
 	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, musine tail."; [ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "pink cock"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it deforms and reshapes itself into something more rodent-like.  You gain large ears and whiskers around your muzzle.  Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse.  At only about four feet tall, your stature matches your species.  Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft, white fur covers you"; [ skin change text. format as "Your skin feels funny as (your text)." ]

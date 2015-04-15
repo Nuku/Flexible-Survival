@@ -116,7 +116,7 @@ when play begins:
 
 Instead of resolving a Anime Club:
 	say "     As you're going through one of the many buildings on campus, you hear some knocking and a voice coming from the next floor while climbing the stairwell.  Heading towards it, you quickly start to make out the female voice getting louder and more frantic about wanting to get inside.  '...from the window.  Please, I just need somewhere safe to hide.  Please.  Quick.  I can hear someth... whaaaa!'";
-	say "     Just as you're turning the corner to catch up to this other survivor, you see the door in front of her open and another female grab her.  The woman from inside isn't quite human, with cartoonishly sexy proportions, perfectly smooth pink skin and a oversized, expressive eyes.  The survivor struggles, but is pulled inside.  Cautiously approaching, you can see that the door isn't quite shut.  The sign on the door says it's the college's Anime Club.";
+	say "     Just as you're turning the corner to catch up to this other survivor, you see the door in front of her open and another female grab her.  The woman from inside isn't quite human, with cartoonishly sexy proportions, perfectly smooth pink skin and oversized, expressive eyes.  The survivor struggles, but is pulled inside.  Cautiously approaching, you can see that the door isn't quite shut.  The sign on the door says it's the college's Anime Club.";
 	say "     Inside, you can hear the sounds of both a struggle and of sex.  Shall you try to rescue the poor woman?";
 	if the player consents:
 		now animeclubfight is true;
@@ -124,7 +124,7 @@ Instead of resolving a Anime Club:
 		say "     Keeping your eyes averted from the screen, you move in the rescue the young woman before things get out of hand.  This prompts the anime babe to get up and come at you, trying to protect their prize.";
 		challenge "Anime Babe";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     Having temporarily knocked out the anime babe, the tentacled guy pushes the entranced woman from his lap, his enlarged cock pulling out of her with a wet slurp.  She releases a disappointed sound, but remains transfixed by the video.  Her eyes have grown wider and her skin isthe same even pink as the woman you just defeated, already well on her way to being transformed.  Eager to deal with the interloper, this hentai fan rushes at you, tentacles waving wildly.";
+			say "     Having temporarily knocked out the anime babe, the tentacled guy pushes the entranced woman from his lap, his enlarged cock pulling out of her with a wet slurp.  She releases a disappointed sound, but remains transfixed by the video.  Her eyes have grown wider and her skin is the same even pink as the woman you just defeated, already well on her way to being transformed.  Eager to deal with the interloper, this hentai fan rushes at you, tentacles waving wildly.";
 			challenge "Hentai Fan";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video.  The captured girl looks up at you, blinking her wide eyes.  She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus.  With her already well on her way to being transformed, she's become quite confused by you're able to coax her to her feet and flee the strange room together.";
