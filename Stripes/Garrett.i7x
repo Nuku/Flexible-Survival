@@ -105,7 +105,7 @@ to say sexwithGarrett:
 		say "     You know those blue gryphons are always ready and willing for sex, but you should probably get to know him a little before making such an offer.";
 	otherwise if lastfuck of Garrett - turns < 6:
 		say "     'That sounds like fun, but I could use a bit of time to reload,' he says, rubbing his recently emptied balls.  'Besides, the semen we've already collected needs some time to be processed.'";
-	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of player > 1:		[male players only]
+	otherwise if ( cocks of player > 0 and cunts of player is 0 ) and hp of Garrett > 1:		[male players only]
 		if player_puregryph is true:
 			if ( hp of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel is not 1:
 				say "[garrett_analtop_2]";
