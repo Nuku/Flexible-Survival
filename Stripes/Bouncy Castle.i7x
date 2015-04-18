@@ -522,7 +522,7 @@ to say bckingchair:
 		otherwise if cunts of player > 0:
 			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a [if cunts of player > 1]set of phallic dildos[otherwise]phallic dildo[end if] to push into your juicy cunt[sfn].  For some reason, you've become aroused by the chair's actions and the feel of [if cunts of player > 1]those cock-like bulges[otherwise]that cock-like bulge[end if] pushing into you has made you realize it.";
 		otherwise:
-			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a a phallic dildo to push into your relaxing anus.  For some reason, you've become aroused by the chair's actions and the feel of that cock-like bulge pushing into you has made you realize it.";
+			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a phallic dildo to push into your relaxing anus.  For some reason, you've become aroused by the chair's actions and the feel of that cock-like bulge pushing into you has made you realize it.";
 		attempttowait;
 		let playernum be ( 150 + humanity of player + level of player + strength of player - libido of player);
 		if cunts of player > 1:

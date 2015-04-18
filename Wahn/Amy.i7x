@@ -152,7 +152,7 @@ instead of going outside from Bunker while (hp of Amy is 1 and lastAmySpotted - 
 	otherwise if AmyMaturityCounter > 8:
 		say "     As you come out of the bunker, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
 	otherwise if AmyMaturityCounter > 1:
-		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
+		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
 instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotted - turns > 3):
 	say "[NavCheck Grey Abbey Library]";
@@ -166,7 +166,7 @@ instead of navigating Grey Abbey Library while (hp of Amy is 1 and lastAmySpotte
 	otherwise if AmyMaturityCounter > 8:
 		say "     As you enter the library, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
 	otherwise if AmyMaturityCounter > 1:
-		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
+		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
 instead of going outside from Bunker while ((hp of Amy > 1 and hp of Amy < 90) and (lastfuck of Amy - turns) > 12):
 	move player to Grey Abbey Library;

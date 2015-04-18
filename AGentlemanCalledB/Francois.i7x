@@ -626,7 +626,7 @@ to say FrançoisBakingMenu:
 				otherwise if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
+						say "	 François takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm sweet smell of François['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually François returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
 						decrease carried of wyvern goop by 1;
 						decrease carried of soda by 1;
 						decrease carried of Satyr wine by 1;
@@ -826,7 +826,7 @@ to say fizz-aux-pommesGet:
 
 to say vin-coeurGet:
 	say "     François scoops up your wyvern goop, sytar wine and crushed candies with a smile, 'I know just what to do with these, mon ami[if cunts of player > 0 and cocks of player is 0]e[end if]. After collecting a few other things from under the front counter François returns to his kitchen. A rich peppermint scent fills the bakery as François begins his work, making your mouth water in anticipation as you wait.";
-	say "     Eventually François returns with a a large cake and several dishes. After portioning out a couple pieces for you, François insists you try one right away, placing one in front of you before wrapping up another and slipping it into you bag. Biting into the rich wine cake, you are hit with the powerful peppermint taste. After several more bites the cake is finished, and you are left feeling quite full.";
+	say "     Eventually François returns with a large cake and several dishes. After portioning out a couple pieces for you, François insists you try one right away, placing one in front of you before wrapping up another and slipping it into you bag. Biting into the rich wine cake, you are hit with the powerful peppermint taste. After several more bites the cake is finished, and you are left feeling quite full.";
 	say "     Feeling strangely heavy, you give François your thoughts on the new dish before pushing yourself away from the counter to stand. François['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather then pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
 
 to say GingerbreadGet:
